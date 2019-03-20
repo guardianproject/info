@@ -13,6 +13,7 @@ serve: pre-serve
 
 pre-serve:
 	mkdir data > /dev/null 2> /dev/null; true
+	mkdir content > /dev/null 2> /dev/null; true
 	echo "describe: \"$$( git describe --always )\"" > data/git.yaml
 	echo "hash: \"$$( git rev-list HEAD --max-count=1 )\"" >> data/git.yaml
 	echo "project: \"$$( basename $$PWD )\"" >> data/git.yaml

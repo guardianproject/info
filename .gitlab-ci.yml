@@ -1,0 +1,34 @@
+image: debian:buster-slim
+
+stages:
+ - deploy
+
+variables:
+  OUT_DIR: build
+
+# Common steps required for each type of build
+.setup: &setup |
+  set -x
+  set -e
+  apt-get update
+  apt-get install -y curl git hugo locales make mawk python3 sassc unzip
+  grep '^en_US.UTF-8 UTF-8' /etc/locale.gen || echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+  locale-gen
+  export LC_ALL=en_US.UTF-8
+
+# Main deploy
+pages:
+  stage: deploy
+  artifacts:
+    paths:
+      - public
+    expire_in: 1w
+    when: always
+  script:
+   - *setup
+   # This is where GitLab pages will deploy to by default (e.g. "https://guardianproject.gitlab.io/info")
+   # so we need to make sure that the Hugo configuration understands this.
+   - 'echo "baseurl = \"https://${CI_PROJECT_NAMESPACE,,}.gitlab.io/$CI_PROJECT_NAME\"" > userconfig.toml'
+   - 'echo "Additional Hugo config used for CI:" && cat userconfig.toml'
+   - hugo env
+   - make

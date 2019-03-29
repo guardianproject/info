@@ -30,7 +30,7 @@ pages:
    - 'git submodule update'
    # This is where GitLab pages will deploy to by default (e.g. "https://guardianproject.gitlab.io/info")
    # so we need to make sure that the Hugo configuration understands this.
-   - 'echo "baseurl = \"https://${CI_PROJECT_NAMESPACE,,}.gitlab.io/$CI_PROJECT_NAME\"" > userconfig.toml'
+   - 'echo "baseURL = \"https://${CI_PROJECT_NAMESPACE,,}.gitlab.io/$CI_PROJECT_NAME\"" > userconfig.toml'
    - 'echo "Additional Hugo config used for CI:" && cat userconfig.toml'
    - hugo env
    - make

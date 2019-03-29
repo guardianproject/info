@@ -19,6 +19,11 @@ publish_to_discourse:
   - "0"
 publish_post_category:
   - "5"
+menu:
+  main:
+    name: Apps Overview
+    parent: apps
+    weight: -1
 ---
 <!--:en-->To achieve our goal of a comprehensive, privacy- and security-focused communications solution, Guardian is driven both by internal development and the open-source community at large. In cases where a viable, vetted, and usable product already fills the communications needs of our target audience, we will recommend apps that work.
 

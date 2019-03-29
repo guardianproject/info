@@ -15,6 +15,9 @@ catchresponsive-featured-image:
   - default
 publish_to_discourse:
   - "0"
+menu:
+  main:
+    parent: apps
 ---
 ####<img class="alignnone size-large wp-image-13245" src="https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-1024x500.png" alt="featuregraphic" width="780" height="381" srcset="https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic.png 1024w, https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-300x146.png 300w, https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-768x375.png 768w" sizes="(max-width: 780px) 100vw, 780px" /> 
 

@@ -5,6 +5,9 @@ date: 2013-09-12T12:47:19-04:00
 author: mark
 layout: page
 guid: https://guardianproject.info/?page_id=11674
+menu:
+  main:
+    parent: home
 ---
 <p style="text-align: center;">
   <a href="http://www.nytimes.com/2013/07/18/technology/personaltech/digital-tools-to-help-curb-online-eavesdropping.html?pagewanted=all&_r=0"><img style="border: 0px none;" alt="The_New_York_Times_logo" src="https://guardianproject.info/wp-content/uploads/2013/09/The_New_York_Times_logo-300x44.png" width="373" height="52" /></a>

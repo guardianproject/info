@@ -15,6 +15,10 @@ publish_post_category:
   - "5"
 update_discourse_topic:
   - "0"
+menu:
+  main:
+    name: Share Feedback
+    parent: contact
 ---
 We welcome all feedback here, from bugs and issues, to feature requests and ideas. Please provide as much information as possible, but don&#8217;t let that stop you from making a submission.
 

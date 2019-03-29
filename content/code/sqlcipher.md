@@ -16,6 +16,9 @@ catchresponsive-featured-image:
 publish_to_discourse:
   - "0"
 image: http://guardianproject.info/wp-content/uploads/2011/02/showcase.png
+menu:
+  main:
+    parent: code
 ---
 &nbsp;
 

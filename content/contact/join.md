@@ -33,6 +33,10 @@ wpdc_sync_post_comments:
   - "0"
 update_discourse_topic:
   - "0"
+menu:
+  main:
+    name: Work or Intern With Us
+    parent: contact
 ---
 [<img title="teamguardianhardatwork" src="https://guardianproject.info/wp-content/uploads/2010/03/teamguardianhardatwork.jpg" alt="" width="576" height="384" />  
 ](https://guardianproject.info/wp-content/uploads/2010/03/teamguardianhardatwork.jpg) _Don&#8217;t let the visual anonymity fool you &#8211; Team Guardian is hard at work and proud of it!_

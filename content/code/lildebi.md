@@ -1,12 +1,15 @@
 ---
 id: 1205
-title: 'Lil&#8217; Debi: Mobile Debian Installer'
+title: "Lil' Debi: Mobile Debian Installer"
 date: 2011-06-24T15:28:42-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=1205
 force_ssl:
   - "1"
+menu:
+  main:
+    parent: code
 ---
 Have an Android phone and want an easy Debian chroot running that you can trust? Install [Lil’ Debi](https://github.com/guardianproject/lildebi), and you can have a Debian install running with a single click of a button. It builds up a whole Debian chroot on your phone entirely using debootstrap. You choose the release, mirror, and size of the disk image, and away it goes. It could take up to an hour on a slow device, then its done. The entire package is built from source using publicly available, repeatable builds. It even includes `gpgv` and the Debian repository keys in the apk and verifies the packages it downloads in the first stage of debootstrap before installing them. It will also check and update a SHA1 checksum to make sure your debian.img file has not be tampered with.
 

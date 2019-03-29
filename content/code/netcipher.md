@@ -15,6 +15,9 @@ catchresponsive-featured-image:
   - default
 publish_to_discourse:
   - "0"
+menu:
+  main:
+    parent: code
 ---
 **Better TLS and Tor App Integration**
 

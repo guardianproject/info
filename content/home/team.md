@@ -13,6 +13,10 @@ publish_to_discourse:
   - "0"
 publish_post_category:
   - "5"
+menu:
+  main:
+    name: Our Team
+    parent: home
 ---
 Over the last four years, we&#8217;ve been slowly building up our team of core contributors to the project. Below you&#8217;ll find &#8220;privatized&#8221; photos of our core team, their IRC handles, and a bit about who they are and what they do for the project.
 

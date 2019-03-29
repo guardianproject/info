@@ -19,6 +19,9 @@ publish_to_discourse:
   - "0"
 publish_post_category:
   - "5"
+menu:
+  main:
+    parent: apps
 ---
 <div class="intro-header">
 </div>

@@ -5,6 +5,10 @@ date: 2010-07-13T20:48:57-04:00
 author: Derek
 layout: page
 guid: http://guardianproject.info/
+menu:
+  main:
+    name: Become an Alpha Tester
+    parent: contact
 ---
 <div>
   <p>

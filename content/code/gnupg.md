@@ -23,6 +23,9 @@ discourse_last_sync:
   - "1551701545"
 wpdc_sync_post_comments:
   - "0"
+menu:
+  main:
+    parent: code
 ---
 This project is **UNMAINTAINED**, we recommend [OpenKeychain](https://www.openkeychain.org/) instead. The core porting work has all be included upstream in the official <a href="https://gnupg.org" target="_blank">GnuPG</a> source repositories. The Android app needs a new maintainer. This could be you! Email us at <a href="&#109;&#x61;&#105;&#x6c;t&#x6f;:&#x73;u&#x70;p&#x6f;r&#x74;&#64;&#103;&#x75;&#97;&#x72;&#100;&#x69;a&#x6e;p&#x72;o&#x6a;e&#x63;t&#x2e;i&#110;&#x66;&#111;" target="_blank">s&#117;&#x70;&#x70;o&#114;&#x74;&#x40;g&#117;&#x61;&#x72;d&#105;&#x61;&#x6e;p&#114;&#x6f;&#x6a;e&#99;&#x74;&#x2e;i&#110;&#x66;&#x6f;</a>
 

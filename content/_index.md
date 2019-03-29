@@ -18,6 +18,11 @@ catchresponsive-featured-image:
 publish_to_discourse:
   - "0"
 image: http://guardianproject.info/wp-content/uploads/2013/09/cropped-GP_logo+txt_hires_black_on_trans.png
+menu:
+  main:
+    identifier: home
+    name: About Us
+    weight: -10
 ---
 While smartphones have been heralded as the coming of the next generation of communication and collaboration, they are a step backwards when it comes to personal security, anonymity and privacy.
 

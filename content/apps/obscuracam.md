@@ -5,6 +5,9 @@ date: 2011-02-19T09:12:37-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/
+menu:
+  main:
+    parent: apps
 ---
 [<img class="size-full wp-image-1155 alignnone" title="ssc_feature" alt="" src="https://guardianproject.info/wp-content/uploads/2011/02/ssc_feature.png" width="614" height="300" srcset="https://guardianproject.info/wp-content/uploads/2011/02/ssc_feature.png 1024w, https://guardianproject.info/wp-content/uploads/2011/02/ssc_feature-300x146.png 300w" sizes="(max-width: 614px) 100vw, 614px" />](https://guardianproject.info/wp-content/uploads/2011/02/ssc_feature.png)
 

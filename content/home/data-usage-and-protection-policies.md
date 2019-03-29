@@ -19,6 +19,9 @@ discourse_last_sync:
   - "1548950657"
 wpdc_sync_post_comments:
   - "0"
+menu:
+  main:
+    parent: home
 ---
 **May the 4th, 2016**
 

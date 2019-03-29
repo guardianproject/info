@@ -7,6 +7,9 @@ layout: page
 guid: https://guardianproject.info/?page_id=12059
 force_ssl:
   - "1"
+menu:
+  main:
+    parent: home
 ---
 We have a number of signing keys used for signing software releases. There are a number of different keys because there are a number of different ways of signing software. This list aims to be the comprehensive list of all the release signing keys that we use.
 

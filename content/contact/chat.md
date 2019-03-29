@@ -23,6 +23,10 @@ discourse_last_sync:
   - "1544487903"
 wpdc_sync_post_comments:
   - "0"
+menu:
+  main:
+    name: Chat on IRC
+    parent: contact
 ---
 Sign into the live chat room now by clicking on this link (it takes you to webchat.oftc.net): 
 

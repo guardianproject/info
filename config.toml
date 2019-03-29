@@ -4,7 +4,6 @@ title = "Guardian Project"
 theme = "beautifulhugo"
 
 DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
 Paginate = 20 # this is set low for demonstrating with dummy content. Set to a higher number
 pluralizeListTitles = false
 googleAnalytics = ""
@@ -14,6 +13,47 @@ enableRobotsTXT = true
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
+
+[menu]
+  [[menu.main]]
+    name = "Our Apps"
+    identifier = "apps"
+    url = "/apps/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Our Code"
+    identifier = "code"
+    url = "/code/"
+    weight = 1
+  [[menu.main]]
+    name = "Development News"
+    url = "/categories/development/"
+    parent = "code"
+    weight = -2
+  [[menu.main]]
+    name = "GitHub: Our Source Code"
+    url = "https://github.com/guardianproject"
+    parent = "code"
+    weight = -1
+
+  [[menu.main]]
+    name = "Our Research"
+    identifier = "research"
+    weight = 1
+  [[menu.main]]
+    name = "Open Secure Telephony"
+    url = "https://guardianproject.info/wiki/OSTN"
+    parent = "research"
+
+  [[menu.main]]
+    name = "Contact Us"
+    identifier = "contact"
+    weight = 100
+  [[menu.main]]
+    name = "Tweet @guardianproject"
+    url = "https://twitter.com/guardianproject"
+    parent = "contact"
 
 [params]
   favicon = ""

@@ -1,6 +1,6 @@
 ---
 id: 13034
-title: 'CameraV: Secure Verifiable Photo &#038; Video Camera'
+title: 'CameraV: Secure Verifiable Photo & Video Camera'
 date: 2015-07-28T03:07:37-04:00
 author: n8fr8
 layout: page
@@ -26,6 +26,9 @@ discourse_last_sync:
 wpdc_sync_post_comments:
   - "0"
 image: http://guardianproject.info/wp-content/uploads/2015/07/feature.png
+menu:
+  main:
+    parent: apps
 ---
 CameraV is the easiest way to capture and share verifiable photos and video proof on a smartphone or tablet, all the while keeping it entirely secure and private. _This is the official app from the [InformaCam](https://blog.witness.org/2013/01/how-informacam-improves-verification-of-mobile-media-files/) project, a partnership between the Guardian Project and [WITNESS](https://witness.org)._
 

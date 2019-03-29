@@ -25,6 +25,10 @@ wpdc_sync_post_comments:
   - "0"
 update_discourse_topic:
   - "0"
+menu:
+  main:
+    name: Join Our Email Lists
+    parent: contact
 ---
 If you&#8217;d like to learn more about Guardian [from the team directly](https://guardianproject.info/home/team/) or have a proposal for us, please let us know using of the methods below:
 

@@ -17,6 +17,10 @@ publish_post_category:
   - "5"
 update_discourse_topic:
   - "0"
+menu:
+  main:
+    name: Partners & Funding
+    parent: home
 ---
 <!--:en-->
 

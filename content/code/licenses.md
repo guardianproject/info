@@ -5,6 +5,10 @@ date: 2011-05-20T15:26:49-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=1112
+menu:
+  main:
+    name: "Licenses: Open Source"
+    parent: code
 ---
 &nbsp;
 

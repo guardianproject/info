@@ -6,4 +6,8 @@ author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=272
 image: http://guardianproject.info/wp-content/uploads/2013/09/contact-profile-dark.png
+menu:
+  main:
+    name: Our Blog
+    parent: research
 ---

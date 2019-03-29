@@ -5,6 +5,10 @@ date: 2011-03-30T18:18:41-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=812
+menu:
+  main:
+    name: Collaborate With Us
+    parent: contact
 ---
 **Guardian as Development Partner**
 

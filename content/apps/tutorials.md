@@ -5,6 +5,9 @@ date: 2013-02-21T16:46:40-04:00
 author: mark
 layout: page
 guid: https://guardianproject.info/?page_id=3320
+menu:
+  main:
+    parent: apps
 ---
 Security doesn&#8217;t have to be hard. Here are a few videos that&#8217;ll make using our apps easier (and more awesome).
 

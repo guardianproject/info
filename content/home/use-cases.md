@@ -5,6 +5,10 @@ date: 2010-02-10T20:00:14-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=38
+menu:
+  main:
+    name: How We Help
+    parent: home
 ---
 While we think that a secure, privacy-enhanced mobile phone is a good thing for just about anybody going about their daily lives, we like to also consider the extreme cases, where this technology might change the course of someones life.  
 &#8211;  

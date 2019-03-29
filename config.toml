@@ -1,7 +1,7 @@
 baseURL = "http://localhost:1313/info"
 languageCode = "en-us"
 title = "Guardian Project"
-theme = "ananke"
+theme = "beautifulhugo"
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"

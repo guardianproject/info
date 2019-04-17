@@ -1,12 +1,12 @@
 all: website
 
-userconfig.toml:
-	touch userconfig.toml
+userconfig.yaml:
+	touch userconfig.yaml
 
-website: pre-serve userconfig.toml
+website: pre-serve userconfig.yaml
 	awk '{if(/^[a-z]/){k=$$0;gsub("[ \t]*=.*$$","",k);if(!(k in A)){A[k]=$$0;print}}else{print}}' \
-		userconfig.toml config.toml > gitlab.toml
-	hugo --config gitlab.toml --i18n-warnings
+		userconfig.yaml config.yaml > gitlab.yaml
+	hugo --config gitlab.yaml --i18n-warnings
 
 serve: pre-serve
 	hugo server --i18n-warnings
@@ -24,7 +24,7 @@ pre-serve:
 clean:
 	rm -f \
 		data/git.yaml \
-		gitlab.toml userconfig.toml
+		gitlab.yaml userconfig.yaml
 	rm -rf	public
 
 # Remove everything, even things that need to be redownloaded

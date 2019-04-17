@@ -52,6 +52,7 @@ menu:
     parent: "contact"
 
 Params:
+  logo: GP_Logo_hires.png
   rss: true
   favicon: ""
   description: "People, Apps and Code You Can Trust"

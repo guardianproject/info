@@ -7,7 +7,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
+      <a class="navbar-brand" title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
+        {{ if .IsHome }}{{ else }}<div>{{ .Site.Title }}</div>{{ end }}
+        <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="110" height="110"/>
+      </a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -61,17 +64,6 @@
         {{ end }}
       </ul>
     </div>
-
-    {{ if isset .Site.Params "logo" }}
-      <div class="avatar-container">
-        <div class="avatar-img-border">
-          <a title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
-            <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
-          </a>
-        </div>
-      </div>
-    {{ end }}
-
   </div>
 </nav>
 

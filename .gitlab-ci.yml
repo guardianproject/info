@@ -24,10 +24,8 @@ pages:
     when: always
   script:
     - *setup
-    # This is where GitLab pages will deploy to by default (e.g. "https://guardianproject.gitlab.io/info")
-    # so we need to make sure that the Hugo configuration understands this.
-    - 'echo "baseURL: \"https://${CI_PROJECT_NAMESPACE,,}.gitlab.io/$CI_PROJECT_NAME\"" > userconfig.yaml'
-    - 'echo "Additional Hugo config used for CI:" && cat userconfig.yaml'
+    # set up GitLab Pages URL (e.g. "https://guardianproject.gitlab.io/info")
+    - sed -i "s,^baseURL\x3a.*,baseURL\x3a 'https://${CI_PROJECT_NAMESPACE}.gitlab.io/$CI_PROJECT_NAME'," config.yaml
     - hugo env
     - make
 
@@ -42,9 +40,7 @@ guardianproject.info:
   script:
     - test -z "$SSH_PRIVATE_KEY" && exit 1
     - *setup
-    - 'echo "baseurl: \"https://guardianproject.info\"" > userconfig.yaml'
-    - echo "Additional Hugo config used for CI:"
-    - cat userconfig.yaml
+    - sed -i "s,^baseURL\x3a.*,baseURL\x3a 'https://guardianproect.info'," config.yaml
     - hugo env
     - make
     - apt-get install -qy openssh-client rsync

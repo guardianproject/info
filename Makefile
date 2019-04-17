@@ -18,8 +18,6 @@ pre-serve:
 	echo "hash: \"$$( git rev-list HEAD --max-count=1 )\"" >> data/git.yaml
 	echo "project: \"$$( basename $$PWD )\"" >> data/git.yaml
 	echo "commitDate: \"$$( git log -n 1 --pretty=format:%ci )\"" >> data/git.yaml
-	< themes/beautifulhugo/layouts/partials/nav.html awk '{gsub("relLangURL", "absLangURL")}1' > tmp || exit 1
-	mv tmp themes/beautifulhugo/layouts/partials/nav.html
 
 clean:
 	rm -f \

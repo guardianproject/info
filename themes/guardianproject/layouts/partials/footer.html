@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
-          {{ range .Site.Data.beautifulhugo.social.social_icons }}
+          {{ range .Site.Data.guardianproject.social.social_icons }}
             {{- if isset $.Site.Author .id }}
               <li>
                 <a href="{{ printf .url (index $.Site.Author .id) }}" title="{{ .title }}">
@@ -52,7 +52,7 @@
           {{ end }}
         </p>
         <!-- Please don't remove this, keep my open source work credited :) -->
-        <p class="credits theme-by text-muted">
+        <p class="credits theme-by text-muted" style="visibility: hidden">
           {{ i18n "poweredBy" . | safeHTML }}
           {{ with .Site.Params.commit }}&nbsp;&bull;&nbsp;[<a href="{{.}}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>]{{ end }}
         </p>

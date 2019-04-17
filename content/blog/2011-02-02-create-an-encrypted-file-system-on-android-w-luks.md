@@ -15,7 +15,7 @@ categories:
 
 Building off the work from other [great](https://androidvoid.wordpress.com/2009/09/30/android-encryption-using-cryptsetup-and-luks/) [sources](http://forum.xda-developers.com/showthread.php?t=866131), the Guardian Project hack team decided to take a crack at porting LUKS to Android recently, with the goal of creating a proof of concept build process that can be easily adapted to future projects.
 
-On our stock Guardian hardware (rooted NexusOne running [CyanogenMod](http://www.cyanogenmod.com/)) we were able to create a 50MB &#8220;secretagentman.mp3&#8221; file on the device sdcard to store our encrypted filesystem. We think the possibilities for enhanced privacy here are great: to the average phone snooper, this would appear as just another harmless media file on your device storage!
+On our stock Guardian hardware (rooted NexusOne running [CyanogenMod](http://www.cyanogenmod.com/)) we were able to create a 50MB “secretagentman.mp3” file on the device sdcard to store our encrypted filesystem. We think the possibilities for enhanced privacy here are great: to the average phone snooper, this would appear as just another harmless media file on your device storage!
 
 You can give it a shot by following the instructions over at the project [wiki](https://github.com/guardianproject/LUKS/wiki). Note that the build process requires setting up the [Android NDK](http://developer.android.com/sdk/ndk/index.html) on your machine, and the current setup process must be done through adb shell or terminal, requiring root permissions. Work on a GUI is just getting started.
 

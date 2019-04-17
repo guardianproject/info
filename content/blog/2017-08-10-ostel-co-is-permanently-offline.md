@@ -32,8 +32,8 @@ In recent months, we had discussed with them a gentle transition period to a new
 
 The good news is that since the server has no user data, logs, or other sensitive content, you have lost nothing, and have nothing to fear related to your personal information. The even better news is that encrypted video and voice calling over the Internet, is easier than ever, with Signal, Wire, JitsiMeet, Matrix, Riot, Linphone and many, many other options.
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 

@@ -9,4 +9,4 @@ permalink: /2014/06/04/reset-the-net/
 categories:
   - News
 ---
-We&#8217;re making the Internet more secure, by taking part in #ResetTheNet <https://resetthenet.org>
+We’re making the Internet more secure, by taking part in #ResetTheNet <https://resetthenet.org>

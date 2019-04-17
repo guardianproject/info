@@ -69,7 +69,7 @@ To explore these topics we first asked about the challenge that barriers to Inte
 
 In our interviews we have heard that barriers to internet access can make it difficult to learn how to develop software and to easily get the libraries, documentation, and support that make developing software easier. It is not a universal challenge. Access varies widely depending upon the developer’s region. When it is a barrier it is often one of the largest barriers that is faced. We were happy to find that the challenges of designing software for users in areas with barriers to Internet access is one area where there is [existing guidance](https://developers.google.com/billions/) for developers in these regions.
 
-We also asked how a developer&#8217;s own infrastructure led to challenges when developing (**Dev**), deploying (**Dep**), and maintaining (**Maint**) software.
+We also asked how a developer’s own infrastructure led to challenges when developing (**Dev**), deploying (**Dep**), and maintaining (**Maint**) software.
 
 <div id="attachment_13477" style="width: 1011px" class="wp-caption aligncenter">
   <a href="https://guardianproject.info/wp-content/uploads/2016/12/dev_infra.png"><img aria-describedby="caption-attachment-13477" class="size-full wp-image-13477" src="https://guardianproject.info/wp-content/uploads/2016/12/dev_infra.png" alt="" width="1001" height="285" srcset="https://guardianproject.info/wp-content/uploads/2016/12/dev_infra.png 1001w, https://guardianproject.info/wp-content/uploads/2016/12/dev_infra-300x85.png 300w, https://guardianproject.info/wp-content/uploads/2016/12/dev_infra-768x219.png 768w" sizes="(max-width: 1001px) 100vw, 1001px" /></a>

@@ -17,7 +17,7 @@ While we appreciate the mention in this new guide from [MobileActive](http://mob
 > 
 > However, for those working under repressive regimes, citizen journalism can be a double-edged sword. Anything you create and disseminate can be used against you, whether through the legal system or in other more sinister forms of suppression.
 
-Unfortunately, since our port of Tor ([Orbot](/apps/orbot)), isn&#8217;t widely available or in the Android Market yet, they decided to promote the existing TorProxy+Shadow solution, which we and the Tor Project team believe to be insecure. Read more about those issue in [this article from H-Online](http://www.h-online.com/open/news/item/Anonymous-browsing-on-Android-Update-769920.html).
+Unfortunately, since our port of Tor ([Orbot](/apps/orbot)), isn’t widely available or in the Android Market yet, they decided to promote the existing TorProxy+Shadow solution, which we and the Tor Project team believe to be insecure. Read more about those issue in [this article from H-Online](http://www.h-online.com/open/news/item/Anonymous-browsing-on-Android-Update-769920.html).
 
 If you really need anonymous, secure access on an Android phone, please [contact us](/contact), and we will set you up with [Orbot](/apps/orbot).
 

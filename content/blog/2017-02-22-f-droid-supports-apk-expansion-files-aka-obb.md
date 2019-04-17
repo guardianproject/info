@@ -34,7 +34,7 @@ tags:
 ---
 Many games, mapping, and other apps require a large amount of data to work. The APK file of an Android app is limited to 100MB in size, yet it is common for a single country map file to be well over 100MB. Also, in order to get users running as quickly as possible, they should not have to wait for huge amounts of data to download in order to just start the app for the first time.
 
-Google created OBB aka &#8220;<a href="https://developer.android.com/google/play/expansion-files.html" target="_blank">APK Expansion</a>&#8221; files to provide a flexible means of delivering large amounts of data. This arragement also saves lots of bandwidth since app updates since the APK file and the OBB file can be updated separately. For example, a game&#8217;s assets do not need to change often, so they can be shipped as an OBB. Then when the app itself is updated (i.e. the APK), it does not need to include all those assets that are in the OBB file.
+Google created OBB aka “<a href="https://developer.android.com/google/play/expansion-files.html" target="_blank">APK Expansion</a>” files to provide a flexible means of delivering large amounts of data. This arragement also saves lots of bandwidth since app updates since the APK file and the OBB file can be updated separately. For example, a game’s assets do not need to change often, so they can be shipped as an OBB. Then when the app itself is updated (i.e. the APK), it does not need to include all those assets that are in the OBB file.
 
 OBB files are used by lots of apps like games and MAPS.ME. F-Droid supports OBB by downloading and installing the OBB before the APK, so that once the APK is installed, the OBB files are already in place and ready to use. F-Droid also provides an \`Intent\` method for apps to fetch the OBB download URLs in case the app itself needs to handle the OBB download/update. That is similar to how it works in Google Play.
 
@@ -49,4 +49,4 @@ To get the URL for the two possible OBB files, send an `Intent` to F-Droid using
 * `org.fdroid.fdroid.action.GET_OBB_MAIN_URL`  
 * `org.fdroid.fdroid.action.GET_OBB_PATCH_URL`
 
-Then download that URL using your favorite method, and make sure that the file ultimately ends up in \`Android/obb/<packageName>\` on the device&#8217;s External Storage.
+Then download that URL using your favorite method, and make sure that the file ultimately ends up in \`Android/obb/<packageName>\` on the device’s External Storage.

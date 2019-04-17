@@ -18,9 +18,9 @@ tags:
   - usability
   - ux
 ---
-We&#8217;ve been working away at the 0.0.9 release of [Orbot](https://guardianproject.info/apps/orbot) over the last few months, and have put a decent amount of effort into usability. Specifically, we hoped to better communicate to users what it means to run Tor on your Android phone. In addition, we wanted to clearly lay out how the various configuration options help to improve your mobile web anonymity and ability to circumvent web filters and tracking by your mobile service provider.
+We’ve been working away at the 0.0.9 release of [Orbot](https://guardianproject.info/apps/orbot) over the last few months, and have put a decent amount of effort into usability. Specifically, we hoped to better communicate to users what it means to run Tor on your Android phone. In addition, we wanted to clearly lay out how the various configuration options help to improve your mobile web anonymity and ability to circumvent web filters and tracking by your mobile service provider.
 
-The screenshots below are what you see the first time you install and run Orbot, and also whenever you open the &#8220;Help&#8221; menu. One important thing to point out is that Orbot can run with or without root, and our setup UI responds to having the capability or not accordingly.
+The screenshots below are what you see the first time you install and run Orbot, and also whenever you open the “Help” menu. One important thing to point out is that Orbot can run with or without root, and our setup UI responds to having the capability or not accordingly.
 
 Ultimately our goal is to provide a useful bootstrap experience for novice and advanced users alike. We welcome your feedback.
 
@@ -31,7 +31,7 @@ Ultimately our goal is to provide a useful bootstrap experience for novice and a
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-3-489'>
-      permissions&#8230; we actually will only be asking for INTERNET &#8211; so don&#8217;t mind the &#8220;phone status&#8221; permission
+      permissions… we actually will only be asking for INTERNET – so don’t mind the “phone status” permission
     </dd>
   </dl>
   
@@ -83,7 +83,7 @@ Ultimately our goal is to provide a useful bootstrap experience for novice and a
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-3-495'>
-      if the user doesn&#8217;t have root, we make sure they understand the implications
+      if the user doesn’t have root, we make sure they understand the implications
     </dd>
   </dl>
   
@@ -105,7 +105,7 @@ Ultimately our goal is to provide a useful bootstrap experience for novice and a
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-3-497'>
-      (Root only) choose whether to &#8220;Torify All&#8221; or choose app by app
+      (Root only) choose whether to “Torify All” or choose app by app
     </dd>
   </dl>
   
@@ -147,7 +147,7 @@ Ultimately our goal is to provide a useful bootstrap experience for novice and a
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-3-501'>
-      We&#8217;ve got root!
+      We’ve got root!
     </dd>
   </dl>
   

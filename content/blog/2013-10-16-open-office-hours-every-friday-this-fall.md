@@ -10,7 +10,7 @@ categories:
   - News
 ---
 <div>
-  <strong>Fri, Oct 18, 1:00 PM EDT &#8211; 3:00 PM</strong></p> 
+  <strong>Fri, Oct 18, 1:00 PM EDT – 3:00 PM</strong></p> 
   
   <div>
   </div>
@@ -24,7 +24,7 @@ categories:
           Members of the Guardian Project will be hosting <a href="https://plus.google.com/events/cumq8tucoc31ap55iqdn7pq9abs">weekly public hangouts</a> every Friday for the rest of year to answer questions about our apps (Orbot, Orweb, ChatSecure), building on our mobile security libraries (IOCipher, SQLCipher, NetCipher) and using services like OStel (including how to run your own secure phone service!).</p> 
           
           <p>
-            We will also be live in IRC on Freenode at <a href="https://plus.google.com/s/%23guardianproject">#guardianproject</a>  as always for those of you who don&#8217;t feel the need to be on camera.
+            We will also be live in IRC on Freenode at <a href="https://plus.google.com/s/%23guardianproject">#guardianproject</a>  as always for those of you who don’t feel the need to be on camera.
           </p>
           
           <p>
@@ -33,18 +33,18 @@ categories:
         </div>
         
         <div>
-          For EU, Africa, Asia: We&#8217;ll have some early sessions in the coming weeks. This is just our first test run. Thanks for understanding!
+          For EU, Africa, Asia: We’ll have some early sessions in the coming weeks. This is just our first test run. Thanks for understanding!
         </div>
         
         <div>
         </div>
         
         <div>
-          <strong>Fri, Oct 18, 1:00 PM EDT &#8211; 3:00 PM</strong>
+          <strong>Fri, Oct 18, 1:00 PM EDT – 3:00 PM</strong>
         </div>
         
         <div>
-          RSVP the Google+ Event today: <a href="https://plus.google.com/events/cumq8tucoc31ap55iqdn7pq9abs">https://plus.google.com/events/cumq8tucoc31ap55iqdn7pq9abs</a> or we&#8217;ll just see you on IRC.
+          RSVP the Google+ Event today: <a href="https://plus.google.com/events/cumq8tucoc31ap55iqdn7pq9abs">https://plus.google.com/events/cumq8tucoc31ap55iqdn7pq9abs</a> or we’ll just see you on IRC.
         </div>
       </div>
     </div>

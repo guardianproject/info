@@ -1,6 +1,6 @@
 ---
 id: 13356
-title: 'OpenArchive: Free &#038; Secure Mobile Media Sharing #DWebSummit'
+title: 'OpenArchive: Free & Secure Mobile Media Sharing #DWebSummit'
 date: 2016-06-07T15:37:03-04:00
 author: n8fr8
 layout: post
@@ -26,7 +26,7 @@ categories:
   - New Release
   - News
 ---
-I am excited to share another new &#8220;mini app&#8221; effort we have joined up with, as part of work we are doing to create simple, focused tools that solve a single issue. We also are aiming to builds apps that are 1 to 3MB in size, and work on Android phones back to version 2.3, in order to maximize accessibility for a global audience.  [<span class="il">OpenArchive</span>](https://open-archive.net) is one of these efforts. It is a project led by [Natalie Cadranel](http://www.aaronswartzday.org/openarchive/), who received a [Knight Foundation prototype grant in 2014](http://www.knightfoundation.org/grants/201448513/). The initial work was done by our partners at [Scal.io](http://www.scal.io/), and continued now by the core Guardian Project team. The app is now in [stable beta](https://play.google.com/store/apps/details?id=net.opendasharchive.openarchive.release) and ready for [wider testing](https://github.com/OpenArchive/openarchive/issues).
+I am excited to share another new “mini app” effort we have joined up with, as part of work we are doing to create simple, focused tools that solve a single issue. We also are aiming to builds apps that are 1 to 3MB in size, and work on Android phones back to version 2.3, in order to maximize accessibility for a global audience.  [<span class="il">OpenArchive</span>](https://open-archive.net) is one of these efforts. It is a project led by [Natalie Cadranel](http://www.aaronswartzday.org/openarchive/), who received a [Knight Foundation prototype grant in 2014](http://www.knightfoundation.org/grants/201448513/). The initial work was done by our partners at [Scal.io](http://www.scal.io/), and continued now by the core Guardian Project team. The app is now in [stable beta](https://play.google.com/store/apps/details?id=net.opendasharchive.openarchive.release) and ready for [wider testing](https://github.com/OpenArchive/openarchive/issues).
 
 <div>
 </div>
@@ -83,7 +83,7 @@ I am excited to share another new &#8220;mini app&#8221; effort we have joined 
 
 For now, we aim for the app to be the easiest and most secure way to publish photos, video and audio to the Internet <span class="il">Archive from your Android device, be it a phone, tablet and soon a Chromebook. It will even login and upload </span>over the [Tor network](https://torproject.org) if you have [Orbot](https://guardianproject.info/apps/orbot) installed.
 
-We see this as a first step towards a more distributed, decentralized way of managing and sharing your personal media, and publishing it and synchronizing it to different places and people, in different ways. This includes distributing media through nearby non-Internet networks such [Wind](https://github.com/n8fr8/talks/blob/master/wind_update_2015/Wind%20Update%20-%20October%202015.pdf), becoming a a [LibraryBox](http://librarybox.us) node, publishing through [OnionShare](https://onionshare.org/), notarizing hrough [Stamp.io](https://stamp.io)&#8216;s Blockchain-based API, and intergalactic sharing via [IPFS](https://ipfs.io/). This vision is why we are excited about the [#DWebSummit](http://www.decentralizedweb.net/) going on this week, and future gatherings related to building less centralized online ecosystems.
+We see this as a first step towards a more distributed, decentralized way of managing and sharing your personal media, and publishing it and synchronizing it to different places and people, in different ways. This includes distributing media through nearby non-Internet networks such [Wind](https://github.com/n8fr8/talks/blob/master/wind_update_2015/Wind%20Update%20-%20October%202015.pdf), becoming a a [LibraryBox](http://librarybox.us) node, publishing through [OnionShare](https://onionshare.org/), notarizing hrough [Stamp.io](https://stamp.io)‘s Blockchain-based API, and intergalactic sharing via [IPFS](https://ipfs.io/). This vision is why we are excited about the [#DWebSummit](http://www.decentralizedweb.net/) going on this week, and future gatherings related to building less centralized online ecosystems.
 
 <div>
    The <a href="http://www.aaronswartzday.org/openarchive/">benefits of this work are manyfold</a>, one of which is that if anyone needs a freely licensed video of <a href="https://archive.org/details/robot-fish-----------------r6v6">cute kids watching robot fish swim</a>, you can now have easy access to one:

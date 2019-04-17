@@ -36,13 +36,13 @@ tags:
   - fdroid
   - reproducible build
 ---
-I was just in Athens for the &#8220;[Reproducible Builds Summit](https://reproducible-builds.org/events/athens2015/)&#8220;, an <a href="https://aspirationtech.org/" target="_blank">Aspiration</a>-run meeting focused on the issues of getting all software builds to be reproducible. This means that anyone starting with the same source code can build the _exact_ same binary, bit-for-bit. At first glance, it sounds like this horrible, arcane detail, which it is really. But it provides tons on real benefits that can save lots of time. And in terms of programming, it can actually be quite fun, like doing a puzzle or sudoku, since there is a very clear point where you have &#8220;won&#8221;.
+I was just in Athens for the “[Reproducible Builds Summit](https://reproducible-builds.org/events/athens2015/)“, an <a href="https://aspirationtech.org/" target="_blank">Aspiration</a>-run meeting focused on the issues of getting all software builds to be reproducible. This means that anyone starting with the same source code can build the _exact_ same binary, bit-for-bit. At first glance, it sounds like this horrible, arcane detail, which it is really. But it provides tons on real benefits that can save lots of time. And in terms of programming, it can actually be quite fun, like doing a puzzle or sudoku, since there is a very clear point where you have “won”.
 
 Here are some examples of real benefits:
 
   * makes it easy to ensure no malware was inserted into software during the build process (e.g. the <a href="https://en.wikipedia.org/wiki/XcodeGhost" target="_blank">XCodeGhost</a> malware we just saw)
   * provides a QA tool to make sure that changes in the source code of a project produce only the expected results
-  * allows F-Droid to use the developer&#8217;s APK signature while still verifying that apps build from 100% free software
+  * allows F-Droid to use the developer’s APK signature while still verifying that apps build from 100% free software
   * make it possible to optimize and profile build processes while guaranteeing the results are exactly the same
   * for large projects, it can greatly speed up the build process (think rebuilding Gmail)
 

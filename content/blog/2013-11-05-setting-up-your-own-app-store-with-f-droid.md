@@ -22,11 +22,11 @@ tags:
 ---
 (_This blog post as now been cooked into an <a href="https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo" target="_blank">updated HOWTO</a>_)
 
-The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we&#8217;re seeing that governments are <a href="http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links" target="_blank">actively tapping</a> into <a href="http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html" target="_blank">the raw data streams</a> of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country&#8217;s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.
+The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are <a href="http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links" target="_blank">actively tapping</a> into <a href="http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html" target="_blank">the raw data streams</a> of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.
 
 <img src="https://guardianproject.info/wp-content/uploads/2013/11/your-own-app-store.png" alt="your-own-app-store" width="300" height="203" class="alignright size-full wp-image-11896" /> <a href="https://f-droid.org" title="F-Droid Home Page" target="_blank">F-Droid</a> is a wonderful, free app store for Android. It is modeled after the <a href="http://www.debian.org" title="Debian home page" target="_blank">Debian GNU/Linux</a> distro. It has its own package repositories (repos) and build servers for all the apps that are part of the official OS. Like Debian and Ubuntu, you can also setup your own repos for anyone to use. Any free software can be added to the official F-Droid repos, where they are built and signed by the F-Droid server. This can be annoying because it means that your apps in F-Droid are signed by a different key than your apps in the Google Play Store. If you host your own F-Droid repo, then people can use F-Droid to install your own builds signed by your own signing key.
 
-This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don&#8217;t need to be a terminal expert to follow along. First you need a the `fdroidserver` tools and a webserver. For the webserver, here we use _nginx_ for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: `F50E ADDD 2234 F563`):
+This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the `fdroidserver` tools and a webserver. For the webserver, here we use _nginx_ for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: `F50E ADDD 2234 F563`):
 
 `</p>
 <pre>
@@ -36,7 +36,7 @@ sudo apt-get install fdroidserver nginx
 </pre>
 <p>`
 
-In the case of this HOWTO, we&#8217;re going to setup a &#8220;<a href="https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository" target="_blank">Simple Binary Repository</a>&#8221; to host our official APKs. The repo will be set up in the recommended `fdroid/` subdirectory. This gives the `fdroid` tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let&#8217;s give our normal user control over this subdirectory in the web root so that we don&#8217;t need to run the F-Droid tools as root (with _nginx_, the webroot is `/usr/share/nginx/www`, it is different for other webservers):
+In the case of this HOWTO, we’re going to setup a “<a href="https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository" target="_blank">Simple Binary Repository</a>” to host our official APKs. The repo will be set up in the recommended `fdroid/` subdirectory. This gives the `fdroid` tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let’s give our normal user control over this subdirectory in the web root so that we don’t need to run the F-Droid tools as root (with _nginx_, the webroot is `/usr/share/nginx/www`, it is different for other webservers):
 
 <pre>sudo mkdir /usr/share/nginx/www/fdroid
 sudo chown -R $USER /usr/share/nginx/www/fdroid
@@ -56,13 +56,13 @@ fdroid update
 
 ## Customization
 
-You can also customize your repo by editing the config file. Be sure to use a programming text editor, like `editor /usr/share/nginx/www/fdroid/config.py`. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here&#8217;s the basic repo description block:
+You can also customize your repo by editing the config file. Be sure to use a programming text editor, like `editor /usr/share/nginx/www/fdroid/config.py`. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:
 
 <pre>repo_url = "http://guardianproject.info/fdroid/repo"
 repo_name = "My Local Repo"
 repo_icon = "GP_Logo_hires.png"
 repo_description = """
-This is a local test repository of Hans-Christoph Steiner &lt;&#x68;a&#x6e;&#115;&#64;&#x67;&#117;a&#x72;d&#x69;&#x61;n&#x70;&#114;o&#x6a;e&#x63;&#x74;.&#x69;&#110;f&#x6f;>.  It is a repository of Guardian Project apps.
+This is a local test repository of Hans-Christoph Steiner <&#x68;a&#x6e;s@&#x67;ua&#x72;d&#x69;&#x61;n&#x70;ro&#x6a;e&#x63;&#x74;.&#x69;nf&#x6f;>.  It is a repository of Guardian Project apps.
 """
 </pre>
 

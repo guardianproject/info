@@ -14,10 +14,10 @@ tags:
 ---
 The [InsecureSystem blog](http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html) has a nice write-up on how to get Orbot running on your Droid:
 
-> I&#8217;ve always been a supporter of net privacy and Tor in particular, and a friend of mine got me interested in [the guardian project](http://guardianproject.info/), so I grabbed the beta version of [Orbot](http://guardianproject.info/apps/orbot/) just to try it out.. sweet, tor from my phone.
+> I’ve always been a supporter of net privacy and Tor in particular, and a friend of mine got me interested in [the guardian project](http://guardianproject.info/), so I grabbed the beta version of [Orbot](http://guardianproject.info/apps/orbot/) just to try it out.. sweet, tor from my phone.
 > 
-> Unfortunately the Smoked Glass Rom I was using didn&#8217;t support the Iptables modules necessary for the transparent proxy method orbot used for tunnelling apps through privoxy/tor. So, I was forced to try out some other Roms and their respective kernels.. okay, forced is a bad way to put it, it was a lot of fun.
+> Unfortunately the Smoked Glass Rom I was using didn’t support the Iptables modules necessary for the transparent proxy method orbot used for tunnelling apps through privoxy/tor. So, I was forced to try out some other Roms and their respective kernels.. okay, forced is a bad way to put it, it was a lot of fun.
 
-[Read on&#8230;](http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html)
+[Read on…](http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html)
 
 <img class="alignnone" title="orbot on droid" src="http://1.bp.blogspot.com/_zYnlWpU7s_s/S7aqyLdAgeI/AAAAAAAAAEU/sT9KAH3F7eI/s320/CAP2010033110221.jpg" alt="" width="180" height="320" />

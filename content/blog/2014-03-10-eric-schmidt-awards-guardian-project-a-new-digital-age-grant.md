@@ -1,6 +1,6 @@
 ---
 id: 12287
-title: 'Eric Schmidt Awards Guardian Project a &#8220;New Digital Age&#8221; Grant'
+title: 'Eric Schmidt Awards Guardian Project a “New Digital Age” Grant'
 date: 2014-03-10T12:22:34-04:00
 author: n8fr8
 layout: post
@@ -15,9 +15,9 @@ An interesting turn of events (which we are very grateful for!)
 \***\***
 
 FOR IMMEDIATE RELEASE  
-Diana Del Olmo, [&#x64;&#105;a&#x6e;&#x61;&#64;g&#x75;&#x61;&#114;d&#x69;&#x61;&#110;p&#x72;&#x6f;&#106;e&#x63;&#x74;&#46;i&#x6e;&#x66;&#111;](&#109;a&#105;l&#116;o&#x3a;d&#x69;a&#x6e;a&#x40;g&#x75;a&#x72;d&#x69;a&#x6e;p&#x72;o&#x6a;e&#x63;t&#x2e;i&#x6e;f&#x6f;)  
+Diana Del Olmo, [&#x64;ia&#x6e;&#x61;@g&#x75;&#x61;rd&#x69;&#x61;np&#x72;&#x6f;je&#x63;&#x74;.i&#x6e;&#x66;o](mailto&#x3a;d&#x69;a&#x6e;a&#x40;g&#x75;a&#x72;d&#x69;a&#x6e;p&#x72;o&#x6a;e&#x63;t&#x2e;i&#x6e;f&#x6f;)  
 Nathan Freitas (in Austin / SXSW) +1.718.569.7272  
-[na&#116;&#x68;&#x61;&#x6e;&#64;gu&#97;&#x72;&#x64;&#x69;an&#112;&#114;&#x6f;&#x6a;&#x65;ct&#46;&#x69;&#x6e;&#x66;o](&#109;&#x61;i&#x6c;&#x74;&#111;&#x3a;n&#x61;&#x74;&#104;&#x61;n&#x40;&#x67;&#117;&#x61;r&#x64;&#x69;&#97;&#x6e;p&#x72;&#x6f;&#106;&#x65;c&#x74;&#x2e;&#105;&#x6e;f&#x6f;)
+[nat&#x68;&#x61;&#x6e;@gua&#x72;&#x64;&#x69;anpr&#x6f;&#x6a;&#x65;ct.&#x69;&#x6e;&#x66;o](m&#x61;i&#x6c;&#x74;o&#x3a;n&#x61;&#x74;h&#x61;n&#x40;&#x67;u&#x61;r&#x64;&#x69;a&#x6e;p&#x72;&#x6f;j&#x65;c&#x74;&#x2e;i&#x6e;f&#x6f;)
 
 Get press kit and more at: <https://guardianproject.info/press>
 

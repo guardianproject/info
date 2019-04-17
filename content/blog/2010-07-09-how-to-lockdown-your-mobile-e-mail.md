@@ -21,30 +21,30 @@ tags:
   - openpgp
   - pgp
 ---
-**Update 2015-04-27**: _We now recommend <a href="http://www.openkeychain.org/" target="_blank">OpenKeychain</a> over APG, the app described in this blog post. The set up is drastically easier, so you probably don&#8217;t even need this HOWTO anymore. Start by downloading K-9 and <a href="http://www.openkeychain.org/" target="_blank">OpenKeychain</a>, then go into OpenKeychain and start the config there._
+**Update 2015-04-27**: _We now recommend <a href="http://www.openkeychain.org/" target="_blank">OpenKeychain</a> over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and <a href="http://www.openkeychain.org/" target="_blank">OpenKeychain</a>, then go into OpenKeychain and start the config there._
 
-Over the past few years it&#8217;s become [increasingly popular](http://www.youtube.com/watch?v=Gm8NdNy4wOM) to sound the call that &#8216;[email is dead](http://www.pcmag.com/article2/0,2817,2343209,00.asp "dead"){#y8a0}.&#8217; And while many complementary forms of synchronous and asynchronous communication &#8211; from IM to social networking &#8211; have evolved since email first came on the scene, it&#8217;s hard to see email suddenly disappearing from its role as the most important way organizations communicate. I expect to be scooting around on my [hoverboard](http://en.wikipedia.org/wiki/Hoverboard) by the time email goes the way of the dinosaur.
+Over the past few years it’s become [increasingly popular](http://www.youtube.com/watch?v=Gm8NdNy4wOM) to sound the call that ‘[email is dead](http://www.pcmag.com/article2/0,2817,2343209,00.asp "dead"){#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate. I expect to be scooting around on my [hoverboard](http://en.wikipedia.org/wiki/Hoverboard) by the time email goes the way of the dinosaur.
 
-Unfortunately, many of the protocols involved in sending and receiving e-mail are not considered secure &#8211; in the sense that they are vulnerable to eavesdropping. Simple Mail Transport Protocol (SMTP) &#8211; the Internet standard for e-mail transmission across IP networks  most commonly used by client applications for sending messages to a mail server for relaying &#8211; is typically implemented without any type of transport encryption. Internet Message Access Protocol (IMAP) and Post Office Protocol (POP) suffer from the same eavesdropping issues as SMTP when implemented without transport encryption. Even when SMTP is implemented with transport encryption it does not, by default, require the authentication of e-mail message senders. As a result, mail servers cannot be sure that the senders of messages are really who they claim to be. And even though POP and IMAP require users to authenticate, messages are sent and delivered using SMTP.
+Unfortunately, many of the protocols involved in sending and receiving e-mail are not considered secure – in the sense that they are vulnerable to eavesdropping. Simple Mail Transport Protocol (SMTP) – the Internet standard for e-mail transmission across IP networks  most commonly used by client applications for sending messages to a mail server for relaying – is typically implemented without any type of transport encryption. Internet Message Access Protocol (IMAP) and Post Office Protocol (POP) suffer from the same eavesdropping issues as SMTP when implemented without transport encryption. Even when SMTP is implemented with transport encryption it does not, by default, require the authentication of e-mail message senders. As a result, mail servers cannot be sure that the senders of messages are really who they claim to be. And even though POP and IMAP require users to authenticate, messages are sent and delivered using SMTP.
 
-The result is a situation where the _recipient_ of an e-mail message can be positively identified but the _sender_ cannot. Along with the eavesdropping concerns mentioned at the top of the paragraph, this is an alarming state of affairs. Imagine if the same were true of snail mail &#8211; there would be rioting in the streets! Fortunately there has been a lot of great work done to combat these fears &#8211; the main issue being that the problem itself is  still one  that is often ignored or not fully understood by the layperson. As secure solutions for mobile platforms gain momentum, we&#8217;re hoping to change things.
+The result is a situation where the _recipient_ of an e-mail message can be positively identified but the _sender_ cannot. Along with the eavesdropping concerns mentioned at the top of the paragraph, this is an alarming state of affairs. Imagine if the same were true of snail mail – there would be rioting in the streets! Fortunately there has been a lot of great work done to combat these fears – the main issue being that the problem itself is  still one  that is often ignored or not fully understood by the layperson. As secure solutions for mobile platforms gain momentum, we’re hoping to change things.
 
-Enter [OpenPGP](http://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP), an IETF standard for encryption and decryption of data. The version of OpenPGP that exists today is the evolution of PGP, which was created in 1991 as a means for secure BBSs communication and message storage (it ironically also stands for &#8220;Pretty Good Privacy&#8221;). Why do you need PGP? In the words of its inventory, Phil Zimmerman: &#8220;[It empowers people to take their privacy into their own hands](http://www.spectacle.org/795/byzim.html).&#8221; How it works is a whole other story &#8211; one too complex for the purposes of this posting &#8211; but we&#8217;ll do our  best to scrape the surface quickly. Disclaimer: The following is meant solely as an introduction. There are many people out there who are experts in these topics, and we welcome any and all comments &#8211; especially if we misstate or misrepresent anything!
+Enter [OpenPGP](http://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP), an IETF standard for encryption and decryption of data. The version of OpenPGP that exists today is the evolution of PGP, which was created in 1991 as a means for secure BBSs communication and message storage (it ironically also stands for “Pretty Good Privacy”). Why do you need PGP? In the words of its inventory, Phil Zimmerman: “[It empowers people to take their privacy into their own hands](http://www.spectacle.org/795/byzim.html).” How it works is a whole other story – one too complex for the purposes of this posting – but we’ll do our  best to scrape the surface quickly. Disclaimer: The following is meant solely as an introduction. There are many people out there who are experts in these topics, and we welcome any and all comments – especially if we misstate or misrepresent anything!
 
-PGP uses a serial combination of hashing, data compression, symmetric-key cryptography, and, finally, public-key cryptography. From the user&#8217;s perspective, it creates two [cryptographic keys](http://en.wikipedia.org/wiki/Cryptographic_key) to encrypt and decrypt data. The first of these two is called the [Public Key](http://en.wikipedia.org/wiki/Public-key) &#8211; which can be freely shared with anyone the user wishes and is used by others to encrypt data so that it can be decrypted by **only the intended recipient**. The second key is the Private Key, which should be kept as private and safe as possible. It is used to decrypt data that has been encrypted using a specific Public Key. As long as the Private Key is kept secret, only the owner is  able to decrypt data that has been encrypted with a Public Key. One problem with older methods of encryption was the relative ease with which codes could be broken. With increasingly powerful computers that are able to crack codes via pure &#8216;brute force,&#8217; encoding methods must be incredibly complex to stand up. To combat this, PGP uses a key that is astronomically large,  meaning that the security of PGP encryption lies entirely with the key as opposed to keeping the method for key generation a secret. In fact, the methods that PGP encryption uses are known and widely documented. In addition, the size of keys can be increased whenever necessary to stay one step ahead of technological advances. And for the time being, each of the algorithms in current use by PGP is not known to have cryptanalytic weaknesses.
+PGP uses a serial combination of hashing, data compression, symmetric-key cryptography, and, finally, public-key cryptography. From the user’s perspective, it creates two [cryptographic keys](http://en.wikipedia.org/wiki/Cryptographic_key) to encrypt and decrypt data. The first of these two is called the [Public Key](http://en.wikipedia.org/wiki/Public-key) – which can be freely shared with anyone the user wishes and is used by others to encrypt data so that it can be decrypted by **only the intended recipient**. The second key is the Private Key, which should be kept as private and safe as possible. It is used to decrypt data that has been encrypted using a specific Public Key. As long as the Private Key is kept secret, only the owner is  able to decrypt data that has been encrypted with a Public Key. One problem with older methods of encryption was the relative ease with which codes could be broken. With increasingly powerful computers that are able to crack codes via pure ‘brute force,’ encoding methods must be incredibly complex to stand up. To combat this, PGP uses a key that is astronomically large,  meaning that the security of PGP encryption lies entirely with the key as opposed to keeping the method for key generation a secret. In fact, the methods that PGP encryption uses are known and widely documented. In addition, the size of keys can be increased whenever necessary to stay one step ahead of technological advances. And for the time being, each of the algorithms in current use by PGP is not known to have cryptanalytic weaknesses.
 
-So how secure does this make your information? Italian Police, the [FBI](http://www.pcworld.com/article/110841/pgp_encryption_proves_powerful.html), and [British police](http://www.theregister.co.uk/2007/11/14/ripa_encryption_key_notice/) have been unable to crack its security and have resorted to demanding private keys. It&#8217;s been likened as &#8220;the closest you&#8217;re likely to get to military-grade encryption&#8221; by cryptographer [Bruce Schneier](http://en.wikipedia.org/wiki/Bruce_Schneier). Short answer: pretty darn good, as long as you guard your private key wisely.
+So how secure does this make your information? Italian Police, the [FBI](http://www.pcworld.com/article/110841/pgp_encryption_proves_powerful.html), and [British police](http://www.theregister.co.uk/2007/11/14/ripa_encryption_key_notice/) have been unable to crack its security and have resorted to demanding private keys. It’s been likened as “the closest you’re likely to get to military-grade encryption” by cryptographer [Bruce Schneier](http://en.wikipedia.org/wiki/Bruce_Schneier). Short answer: pretty darn good, as long as you guard your private key wisely.
 
-You&#8217;ve probably guessed by now that the reason for this posting is to show you how to effectively use OpenPGP to secure your mobile email. And while we would&#8217;ve loved to just jump right into the tutorial, there are a few more things you should know first. [Android Privacy Guard](http://code.google.com/p/android-privacy-guard/ "Android Privacy Guard"){#udlg} (or APG for short), is a first step at bringing [OpenPGP](http://en.wikipedia.org/wiki/Pretty_Good_Privacy "PGP"){#qtjc} to the Android platform, letting you manage OpenPGP keys directly from your Android phone &#8211; and use them to encrypt, sign and decrypt emails and files. [Very recently](http://groups.google.com/group/k-9-mail/browse_thread/thread/921051bc0a61ed0b/d6085b925805ebf2?lnk=raot) the teams behind APG and the popular, open-source Android email client [K-9 Mail](http://code.google.com/p/k9mail/) have joined forces in a limited edition [team-up](http://en.wikipedia.org/wiki/Marvel_Team-Up) to create a beta version of K-9 that plays nice with APG quite seamlessly. We&#8217;ve been using it as our default email solution at Guardian for weeks now and want to share it with you!
+You’ve probably guessed by now that the reason for this posting is to show you how to effectively use OpenPGP to secure your mobile email. And while we would’ve loved to just jump right into the tutorial, there are a few more things you should know first. [Android Privacy Guard](http://code.google.com/p/android-privacy-guard/ "Android Privacy Guard"){#udlg} (or APG for short), is a first step at bringing [OpenPGP](http://en.wikipedia.org/wiki/Pretty_Good_Privacy "PGP"){#qtjc} to the Android platform, letting you manage OpenPGP keys directly from your Android phone – and use them to encrypt, sign and decrypt emails and files. [Very recently](http://groups.google.com/group/k-9-mail/browse_thread/thread/921051bc0a61ed0b/d6085b925805ebf2?lnk=raot) the teams behind APG and the popular, open-source Android email client [K-9 Mail](http://code.google.com/p/k9mail/) have joined forces in a limited edition [team-up](http://en.wikipedia.org/wiki/Marvel_Team-Up) to create a beta version of K-9 that plays nice with APG quite seamlessly. We’ve been using it as our default email solution at Guardian for weeks now and want to share it with you!
 
-**Note:** Currently APG only supports importing and deleting keys &#8211; not generating them &#8211; so you&#8217;ve got to use a desktop implementation of OpenPGP (such as [GNU Privacy Guard](http://www.gnupg.org/ "GNU Privacy Guard"){#vrm_}) to actually generate your keypair if you don&#8217;t already have one. A number of front-end applications and libraries are available to perform this task. If you already have a keypair set up, you should skip the first step.
+**Note:** Currently APG only supports importing and deleting keys – not generating them – so you’ve got to use a desktop implementation of OpenPGP (such as [GNU Privacy Guard](http://www.gnupg.org/ "GNU Privacy Guard"){#vrm_}) to actually generate your keypair if you don’t already have one. A number of front-end applications and libraries are available to perform this task. If you already have a keypair set up, you should skip the first step.
 
 <p style="padding-left: 30px;">
   <strong>1. Download and Install GnuPG Generate an OpenPGP keypair</strong>
 </p>
 
 <p style="padding-left: 30px;">
-  Install GnuPG  <a href="http://www.gnupg.org/download.html">here</a>. There are binaries available for <a href="http://www.gnupg.org/download/supported_systems.en.html">whatever OS flavor</a> you prefer, and since they do a great job of making documentation and <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html">How-To Guides</a> available, we&#8217;ll skip the part where we reinvent the wheel.
+  Install GnuPG  <a href="http://www.gnupg.org/download.html">here</a>. There are binaries available for <a href="http://www.gnupg.org/download/supported_systems.en.html">whatever OS flavor</a> you prefer, and since they do a great job of making documentation and <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html">How-To Guides</a> available, we’ll skip the part where we reinvent the wheel.
 </p>
 
 <p style="padding-left: 30px;">
@@ -52,7 +52,7 @@ You&#8217;ve probably guessed by now that the reason for this posting is to show
 </p>
 
 <p style="padding-left: 30px;">
-  Follow the instructions <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.1">here</a> to create a new keypair. <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.2">Export</a> your public and private keys (re-direct from stdout to a file) and stick that file on your Android device&#8217;s SD card. Usually it&#8217;s best to create a new folder /APG to keep things organized, especially if your SD card is a mess like ours 🙂
+  Follow the instructions <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.1">here</a> to create a new keypair. <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.2">Export</a> your public and private keys (re-direct from stdout to a file) and stick that file on your Android device’s SD card. Usually it’s best to create a new folder /APG to keep things organized, especially if your SD card is a mess like ours 🙂
 </p>
 
 <p style="padding-left: 30px;">
@@ -60,7 +60,7 @@ You&#8217;ve probably guessed by now that the reason for this posting is to show
 </p>
 
 <p style="padding-left: 30px;">
-  <strong> </strong>If you don&#8217;t already have it, download Android Privacy Guard from its repository <a href="http://code.google.com/p/android-privacy-guard/downloads/list">here</a> or point your barcode scanner to the QR code below. You can also find it on the Market if you prefer.
+  <strong> </strong>If you don’t already have it, download Android Privacy Guard from its repository <a href="http://code.google.com/p/android-privacy-guard/downloads/list">here</a> or point your barcode scanner to the QR code below. You can also find it on the Market if you prefer.
 </p>
 
 <p style="padding-left: 30px;">
@@ -72,7 +72,7 @@ You&#8217;ve probably guessed by now that the reason for this posting is to show
 </p>
 
 <p style="padding-left: 30px;">
-  Fire up APG and select &#8216;Manage Public Keys&#8217; from the menu:
+  Fire up APG and select ‘Manage Public Keys’ from the menu:
 </p>
 
 <p style="padding-left: 30px; text-align: center;">
@@ -81,7 +81,7 @@ You&#8217;ve probably guessed by now that the reason for this posting is to show
 
 <p style="padding-left: 30px; text-align: center;">
   <p style="padding-left: 30px;">
-    From the &#8216;Manage Public Keys&#8217; screen, select &#8216;Import Keys&#8217;:
+    From the ‘Manage Public Keys’ screen, select ‘Import Keys’:
   </p>
   
   <p style="padding-left: 30px; text-align: center;">
@@ -90,7 +90,7 @@ You&#8217;ve probably guessed by now that the reason for this posting is to show
   
   <p style="padding-left: 30px;">
     <p style="padding-left: 30px;">
-      From the popup dialog, select the public key that you&#8217;ve transferred to your SD card. It&#8217;s helpful to use a file browser program like Astro File Manager if you don&#8217;t already have it installed:
+      From the popup dialog, select the public key that you’ve transferred to your SD card. It’s helpful to use a file browser program like Astro File Manager if you don’t already have it installed:
     </p>
     
     <p style="padding-left: 30px; text-align: center;">
@@ -99,7 +99,7 @@ You&#8217;ve probably guessed by now that the reason for this posting is to show
     
     <p style="padding-left: 30px;">
       <p style="padding-left: 30px;">
-        Once your public key(s) are successfully imported, return to the main APG menu, select &#8216;Manage Secret Keys&#8217; and repeat the steps above for your Private Key.
+        Once your public key(s) are successfully imported, return to the main APG menu, select ‘Manage Secret Keys’ and repeat the steps above for your Private Key.
       </p>
       
       <p style="padding-left: 30px;">
@@ -152,7 +152,7 @@ You&#8217;ve probably guessed by now that the reason for this posting is to show
         </p>
         
         <p style="padding-left: 30px;">
-          <strong>Enjoy! </strong>As always, please post all questions, concerns, and jokes (only good ones please) in the Comments section. We&#8217;re very excited about the powerful combination that these two apps bring and we&#8217;d love to hear from you!
+          <strong>Enjoy! </strong>As always, please post all questions, concerns, and jokes (only good ones please) in the Comments section. We’re very excited about the powerful combination that these two apps bring and we’d love to hear from you!
         </p>
         
         <p style="padding-left: 30px;">

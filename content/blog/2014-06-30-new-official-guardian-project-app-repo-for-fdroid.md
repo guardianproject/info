@@ -34,15 +34,15 @@ This setup has three distribution channels that are all mirrors of a repo that i
 
 ### New Repo Signing Key
 
-For part of this, I&#8217;ve completed the process of generating a new, fully offline fdroid [signing key](https://guardianproject.info/home/signing-keys/). So that means there is a new signing key for the FDroid repo, and the old repo signing key is being retired.
+For part of this, I’ve completed the process of generating a new, fully offline fdroid [signing key](https://guardianproject.info/home/signing-keys/). So that means there is a new signing key for the FDroid repo, and the old repo signing key is being retired.
 
   * [guardianproject-rsa4096-fdroid-repo-signing-key.pem](https://guardianproject.info/releases/guardianproject-rsa4096-fdroid-repo-signing-key.pem)
   * [guardianproject-rsa4096-fdroid-repo-signing-key.pem.sig](https://guardianproject.info/releases/guardianproject-rsa4096-fdroid-repo-signing-key.pem.sig)
 
 The fingerprints for this signing key are:
 
-<pre>Owner: EMAILADDRESS=root&#64;g&#117;&#97;&#114;&#100;&#105;&#97;&#110;&#112;&#x72;&#x6f;&#x6a;&#x65;&#x63;&#x74;&#x2e;&#x69;&#x6e;&#x66;&#x6f;, CN=guardianproject.info, O=Guardian Project, OU=FDroid Repo, L=New York, ST=New York, C=US
-Issuer: &#x45;&#x4d;&#x41;&#73;&#76;ADD&#x52;&#x45;&#x53;&#x53;&#61;roo&#x74;&#x40;&#x67;&#x75;&#97;rdi&#x61;&#x6e;&#x70;&#x72;&#111;&#106;ect&#x2e;&#x69;&#x6e;&#x66;&#111;, CN=guardianproject.info, O=Guardian Project, OU=FDroid Repo, L=New York, ST=New York, C=US
+<pre>Owner: EMAILADDRESS=root@guardianp&#x72;&#x6f;&#x6a;&#x65;&#x63;&#x74;&#x2e;&#x69;&#x6e;&#x66;&#x6f;, CN=guardianproject.info, O=Guardian Project, OU=FDroid Repo, L=New York, ST=New York, C=US
+Issuer: &#x45;&#x4d;&#x41;ILADD&#x52;&#x45;&#x53;&#x53;=roo&#x74;&#x40;&#x67;&#x75;ardi&#x61;&#x6e;&#x70;&#x72;oject&#x2e;&#x69;&#x6e;&#x66;o, CN=guardianproject.info, O=Guardian Project, OU=FDroid Repo, L=New York, ST=New York, C=US
 Serial number: a397b4da7ecda034
 Valid from: Thu Jun 26 15:39:18 EDT 2014 until: Sun Nov 10 14:39:18 EST 2041
 Certificate fingerprints:

@@ -42,9 +42,9 @@ tags:
 
 * * *
 
-&nbsp;
+ 
 
-In the summer of 2014 (<https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html>{.external}), we announced that the results of work by Amogh Pradeep (<https://github.com/amoghbl1>{.external}), our 2014 Google Summer of Code student, has proven we could build Firefox for Android with some of the settings and configurations from the Tor Browser desktop software. We called this app Orfox, in homage to Orbot and our current Orweb browser. This was a good first step, but we were doing the build on Mozilla&#8217;s Firefox code repository, and then retrofitting pieces from Tor Browser&#8217;s code, which wasn&#8217;t the right way to do things, honestly.
+In the summer of 2014 (<https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html>{.external}), we announced that the results of work by Amogh Pradeep (<https://github.com/amoghbl1>{.external}), our 2014 Google Summer of Code student, has proven we could build Firefox for Android with some of the settings and configurations from the Tor Browser desktop software. We called this app Orfox, in homage to Orbot and our current Orweb browser. This was a good first step, but we were doing the build on Mozilla’s Firefox code repository, and then retrofitting pieces from Tor Browser’s code, which wasn’t the right way to do things, honestly.
 
 This summer (2015!), with fantastic continued effort by Amogh, we have switched to building the Orfox mobile app directly from the Tor Browser code repository, successfully working through any mobile OS incompatibilities in the security hardening patches added by the Tor Browser team. We also had the additional task of reviewing the Android application code in Firefox, that is not part of Tor Browser, in order to modify and patch it to work inline with the [Tor Browser requirements and design document](https://www.torproject.org/projects/torbrowser/design/).
 
@@ -55,7 +55,7 @@ Below you will find screenshots and our current set of [Orfox Frequently Asked Q
 You can access the current Orfox release by installing the [F-Droid app](https://f-droid.org/) and subscribing to our F-Droid Alpha Channel at by clicking on the following link on your phone: [https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo  
 ](https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo) 
 
-&nbsp;
+ 
 
 <div id='gallery-11' class='gallery galleryid-12999 gallery-columns-3 gallery-size-medium'>
   <dl class='gallery-item'>
@@ -141,7 +141,7 @@ Orfox is built from the same source code as Tor Browser (which is built upon Fir
 
   * Orfox does not currently include the mobile versions of HTTPS Everywhere, No Script and the Tor Browser Button, but these we will be added shortly, now that we have discovered how to properly support automatic installation of extensions on Android (<https://dev.guardianproject.info/issues/5360>{.external})
 
-  * Orfox includes a &#8220;Request Mobile Site&#8221; option that allows you to change the user-agent from the standard Tor Browser agent to a modified Android specific one: &#8220;Mozilla/5.0 (Android; Mobile; rv:31.0) Gecko/20100101 Firefox/31.0&#8221;. (<https://dev.guardianproject.info/issues/5404>{.external}). This is useful for being able to see the mobile version of a website, but does reduce the amount your browser blends in with other browsers.
+  * Orfox includes a “Request Mobile Site” option that allows you to change the user-agent from the standard Tor Browser agent to a modified Android specific one: “Mozilla/5.0 (Android; Mobile; rv:31.0) Gecko/20100101 Firefox/31.0”. (<https://dev.guardianproject.info/issues/5404>{.external}). This is useful for being able to see the mobile version of a website, but does reduce the amount your browser blends in with other browsers.
 
   * Orfox currently allows for users to bookmark sites, and may have additional data written to disk beyond what the core gecko browser component does. We are still auditing all disk write code, and determining how to appropriately disable or harden it. (<https://dev.guardianproject.info/issues/5437>{.external})
 
@@ -163,6 +163,6 @@ Beyond the core Tor Browser components, Orfox also must ensure all Android-speci
 
   * Orweb is built upon the bundled WebView (Webkit) browser component inside of the Android operating system. This has proven to be problematic because we cannot control the version of that component, and cannot upgrade it directly when bugs are found. In addition, Google has made it very difficult to effectively control the network proxy settings of all aspects of this component, making it difficult to guarantee that traffic will not leak on all devices and OS versions.
 
-  * Orweb also only provides a very limited amount of capability of Tor Browser, primarily related to reducing browser fingerprinting, minimizing disk writes, and cookie and history management. It trys to mimic some of the settings of Tor Browser, but doesn&#8217;t actually use any of the actual code written for Tor Browser security hardening.
+  * Orweb also only provides a very limited amount of capability of Tor Browser, primarily related to reducing browser fingerprinting, minimizing disk writes, and cookie and history management. It trys to mimic some of the settings of Tor Browser, but doesn’t actually use any of the actual code written for Tor Browser security hardening.
 
   * Orweb does have an advantage which is that it less than 2MB while Orfox is in the 25-30MB range. This is primarily because Orweb relies on many components built into Android, so it does not need to bundle them. Orfox contains the full stack of code necessary for a complete browser, and thus is more secure and dependable, but also larger. The Mozilla Mobile team is working on reducing the size of their binaries, and the Orfox team is focused on this, as well, since we are disabling some of the components that have contributed the browser bloat.

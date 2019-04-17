@@ -27,7 +27,7 @@ With <a href="https://f-droid.org" target="_blank">F-Droid</a>, we have been wor
 
 It also verifies that there have not been any malicious bits of code added into the app during the build process. As has been <a href="https://www.youtube.com/watch?v=5pAen7beYNc" target="_blank">demonstrated</a> in the <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6240.html" target="_blank">31c3 Reproducible Builds talk</a>, just flipping a single bit is enough to create a usable exploit in an app.
 
-The F-Droid project is leading the way with its system for publishing verified builds. We know have our first full example, building upon our previous work with making <a href="https://guardianproject.info/2014/06/09/our-first-deterministic-build-lil-debi-0-4-7/" target="_blank">Lil&#8217; Debi build reproducibly</a>. We started with our simple little utility app <a href="https://github.com/guardianproject/checkey" target="_blank">Checkey</a> since it has few moving parts (first get one working, then the rest).
+The F-Droid project is leading the way with its system for publishing verified builds. We know have our first full example, building upon our previous work with making <a href="https://guardianproject.info/2014/06/09/our-first-deterministic-build-lil-debi-0-4-7/" target="_blank">Lil’ Debi build reproducibly</a>. We started with our simple little utility app <a href="https://github.com/guardianproject/checkey" target="_blank">Checkey</a> since it has few moving parts (first get one working, then the rest).
 
 <p style="float: left" >
   <a href="https://guardianproject.info/releases/Checkey-0.1.1.apk"><img src="https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png" alt="Checkey" width="128" height="128" /></a>
@@ -51,5 +51,5 @@ The F-Droid project is leading the way with its system for publishing verified b
   </p>
   
   <p>
-    The next two apps that are in the reproducible pipeline are <a href="https://leap.se/" target="_blank">LEAP</a>&#8216;s <a href="https://gitlab.com/fdroid/fdroiddata/tree/master/metadata/se.leap.bitmaskclient.txt" target="_blank">Bitmask</a> and our <a href="https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/info.guardianproject.locationprivacy.txt" target="_blank">LocationPrivacy</a>.
+    The next two apps that are in the reproducible pipeline are <a href="https://leap.se/" target="_blank">LEAP</a>‘s <a href="https://gitlab.com/fdroid/fdroiddata/tree/master/metadata/se.leap.bitmaskclient.txt" target="_blank">Bitmask</a> and our <a href="https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/info.guardianproject.locationprivacy.txt" target="_blank">LocationPrivacy</a>.
   </p>

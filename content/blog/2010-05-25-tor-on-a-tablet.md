@@ -14,11 +14,11 @@ tags:
   - tablet
   - tor
 ---
-We recently acquired a Moons e-7001 &#8220;iRobot&#8221; tablet which runs Android 1.5. This device is also known as the &#8220;aPad&#8221;. It is a very basic iPad-clone, though honestly, it can&#8217;t really compare with the iPad in terms of quality of screen, build or general use. However, it does only cost $185, supports USB host mode, has a built-in camera, and it is running Android, an actual open-source operating system! It should also be pointed out that you can also now get the [Archos 7 Android tablet](http://www.amazon.com/Archos-Home-Tablet-Android-Black/dp/B003COZM2C/ref=sr_1_1?ie=UTF8&s=electronics&qid=1274748337&sr=1-1), which is basically the same thing as this, from Amazon for $199.
+We recently acquired a Moons e-7001 “iRobot” tablet which runs Android 1.5. This device is also known as the “aPad”. It is a very basic iPad-clone, though honestly, it can’t really compare with the iPad in terms of quality of screen, build or general use. However, it does only cost $185, supports USB host mode, has a built-in camera, and it is running Android, an actual open-source operating system! It should also be pointed out that you can also now get the [Archos 7 Android tablet](http://www.amazon.com/Archos-Home-Tablet-Android-Black/dp/B003COZM2C/ref=sr_1_1?ie=UTF8&s=electronics&qid=1274748337&sr=1-1), which is basically the same thing as this, from Amazon for $199.
 
-The reason we purchased one of these was to be able to tangibly have Orbot (aka [Tor on Android](https://www.torproject.org/docs/android.html)) running on a tablet &#8220;MID&#8221; style device. Since it is running Android 1.5, we were able to easily do this using Orbot and Orweb together without requiring the device to be rooted.
+The reason we purchased one of these was to be able to tangibly have Orbot (aka [Tor on Android](https://www.torproject.org/docs/android.html)) running on a tablet “MID” style device. Since it is running Android 1.5, we were able to easily do this using Orbot and Orweb together without requiring the device to be rooted.
 
-So here you have it &#8211; Tor on a Tablet, the AnonaPad, GuardianSlate, OrTab, OnionBook, or whatever other clever name you may want to come up with!
+So here you have it – Tor on a Tablet, the AnonaPad, GuardianSlate, OrTab, OnionBook, or whatever other clever name you may want to come up with!
 
 <div id='gallery-2' class='gallery galleryid-314 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>

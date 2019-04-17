@@ -11,7 +11,7 @@ categories:
 ---
 I am so happy to announce that **ChatSecure for Android v14 IS FINALLY HERE!**
 
-BUT This is our first &#8220;release candidate&#8221; of v14 for public use, and while we love it dearly, you may want to wait for 14.0.1 for us to work out any hiccups.
+BUT This is our first “release candidate” of v14 for public use, and while we love it dearly, you may want to wait for 14.0.1 for us to work out any hiccups.
 
 The update should be out on Google Play shortly, and FDroid in the next few days. Otherwise, you can always download the APK direct from us:
 
@@ -29,18 +29,18 @@ Sig: <a href="https://guardianproject.info/releases/ChatSecure-v14.0.0.apk.asc">
 
 PLEASE CONTACT US with any upgrade problems!
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
 Source tag: <https://github.com/guardianproject/ChatSecureAndroid/releases/tag/14.0.0>
 
 Full changelog for all the v13/v14 work is here: <https://github.com/guardianproject/ChatSecureAndroid/blob/master/CHANGELOG>
 
-&nbsp;
+ 

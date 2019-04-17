@@ -20,7 +20,7 @@ tags:
 ---
 These are interesting times, if you go by Times Magazine as an indicator. The magazine’s person of the year for 2011 was The Protester, preceded in 2010 by Facebook founder Mark Zuckerberg. Both entities partners with equal stake in freely sharing the digital content that shows the world what’s going on in it, at any time, from behind any pair of eyes.<img class="alignright size-medium wp-image-1471" alt="The Protester: Person of the Year" src="https://guardianproject.info/wp-content/uploads/2012/01/poy_cover-225x300.jpg" width="225" height="300" srcset="https://guardianproject.info/wp-content/uploads/2012/01/poy_cover-225x300.jpg 225w, https://guardianproject.info/wp-content/uploads/2012/01/poy_cover.jpg 474w" sizes="(max-width: 225px) 100vw, 225px" /> Also casting in their lot with the others is Time Magazine’s 2006 person of the year, You: the You that puts the “you” in “user-generated content;” the You whose miasma of bits, bytes, and the powerful images they express are becoming increasingly problematic. Problematic and exciting. As governments, police forces, and other power players here and abroad crack down on voices of dissent, it is only You, The Protester, armed not with a press pass, but with a smartphone and a Twitter account, who brings the rest of the world its news. You do it mainly without either the support or permission of those in power, and this makes you a very important person in the world.
 
-The smartphone’s role in the defense of human rights has thus become ever-more clear. How can we make it clearer? Our latest project, InformaCam, tackles this issue head-on. In collaboration with <a href="http://witness.org/" target="_blank">Witness.ORG</a> and the <a href="www.ibanet.org/" target="_blank">International Bar Association</a>, we’re building a powerful tool to create iron-clad digital images and video that could, should the occasion arise, be used in courts of law to bring justice. This is no small feat&#8211; with this project we are helping create the first evidentiary standards for digital media in the social networking age. So, <a href="http://www.economist.com/node/21542748" target="_blank">there’s been a lot of excitement</a> these past few weeks about InformaCam, as well as a lot of mystery. It’s time to give the project a proper unveiling.
+The smartphone’s role in the defense of human rights has thus become ever-more clear. How can we make it clearer? Our latest project, InformaCam, tackles this issue head-on. In collaboration with <a href="http://witness.org/" target="_blank">Witness.ORG</a> and the <a href="www.ibanet.org/" target="_blank">International Bar Association</a>, we’re building a powerful tool to create iron-clad digital images and video that could, should the occasion arise, be used in courts of law to bring justice. This is no small feat– with this project we are helping create the first evidentiary standards for digital media in the social networking age. So, <a href="http://www.economist.com/node/21542748" target="_blank">there’s been a lot of excitement</a> these past few weeks about InformaCam, as well as a lot of mystery. It’s time to give the project a proper unveiling.
 
 InformaCam is a plugin for ObscuraCam that allows the user, without much intervention on their own part, to inflate image and video with extra points of data, or metadata. The metadata includes information like the user’s current GPS coordinates, altitude, compass bearing, light meter readings, the signatures of neighboring devices, cell towers, and wifi networks; and serves to shed light on the exact circumstances and contexts under which the digital image was taken. Some users will already be familiar with ObscuraCam, which allows for capturing and digitally manipulating media. With InformaCam included, the app starts to behave almost like Adobe Photoshop or GIMP, supporting non-destructive, layer-based edits to media. This means that a version of an image can be created with any sensitive image data and metadata preserved and encrypted to trusted entities, along with a redacted version that has its metadata stripped which can be easily shared to Facebook, Twitter, Flickr, or any public service the user wishes to use.
 
@@ -29,8 +29,8 @@ InformaCam is a plugin for ObscuraCam that allows the user, without much interve
 <img class="alignleft size-full wp-image-1459" alt="InformaCam (1)" src="https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM.png" width="205" height="341" srcset="https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM.png 205w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM-180x300.png 180w" sizes="(max-width: 205px) 100vw, 205px" /> The workflow is similar to that of ObscuraCam, but with a few key differences. Notice that on start-up, the app triggers the on-board sensors. (Notifications in the top right corner clearly indicate the GPS and Bluetooth modules have been turned on.) This allows the app to register sensory and atmospheric data throughout the session. These “bundles” of data contain the following:
 
   * Current timestamp
-  * Device&#8217;s identification
-  * User&#8217;s public (PGP) key
+  * Device’s identification
+  * User’s public (PGP) key
   * Image Regions created in the image/video
   * Current latitude & longitude
   * Current cell ID (if available)
@@ -56,7 +56,7 @@ When the user saves the image or video, a dialog appears prompting her to choose
   
   <tr>
     <td>
-      <i>Using the InformaCam &#8220;Identify&#8221; filter.</i>
+      <i>Using the InformaCam “Identify” filter.</i>
     </td>
     
     <td>
@@ -142,7 +142,7 @@ A sample metadata bundle for an image taken with InformaCam looks like this in J
 "ownerKey":"MY-IDENTITY-IS-HERE"<br />
 },<br />
 "securityLevel":1,<br />
-"intendedDestination":"[\"&#x68;&#97;r&#x6c;&#x6f;.h&#x6f;&#x6c;me&#x73;&#64;g&#x6d;&#x61;&#105;l&#x2e;&#x63;om\"]"<br />
+"intendedDestination":"[\"&#x68;ar&#x6c;&#x6f;.h&#x6f;&#x6c;me&#x73;@g&#x6d;&#x61;il&#x2e;&#x63;om\"]"<br />
 }<br />
 ` 
 

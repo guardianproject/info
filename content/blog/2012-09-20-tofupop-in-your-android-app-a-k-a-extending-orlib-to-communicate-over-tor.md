@@ -10,32 +10,32 @@ categories:
   - HowTo
   - Research
 ---
-In doing my research for InformaCam, I learned a couple of neat tricks for getting an app to communicate over Tor. Here&#8217;s a how-to for app developers to use depending on your threat model, and how you have your web server set-up. Enjoy, and please post your comments/questions/suggestions below&#8230;
+In doing my research for InformaCam, I learned a couple of neat tricks for getting an app to communicate over Tor. Here’s a how-to for app developers to use depending on your threat model, and how you have your web server set-up. Enjoy, and please post your comments/questions/suggestions below…
 
-## Before we begin&#8230;
+## Before we begin…
 
-You&#8217;re going to need some basic stuff up-and-running for this to work. Before you get coding, make sure you have the following:
+You’re going to need some basic stuff up-and-running for this to work. Before you get coding, make sure you have the following:
 
 **Your Android device should have:**
 
   * Orbot downloaded and running
-  * An encrypted data store to save keys, certificates, and addresses to, such as Guardian Project&#8217;s <a href="https://github.com/guardianproject/sqlcipher-android" target="_blank">SQLCipher</a> or <a href="https://github.com/guardianproject/IOCipher" target="_blank">IOCipher</a>. (SQLCipher is a database; if you want to have records for each hidden service such as &#8220;Onion Address,&#8221; &#8220;Certificate,&#8221; &#8220;Display Name,&#8221; etc. this is the model you can use. IOCipher is used like an encrypted java.io.File partition; you could easily store certificates in a java keystore with a .jks extension, and save a text file with a list of onion addresses. However you manage your backend is up to you.)
+  * An encrypted data store to save keys, certificates, and addresses to, such as Guardian Project’s <a href="https://github.com/guardianproject/sqlcipher-android" target="_blank">SQLCipher</a> or <a href="https://github.com/guardianproject/IOCipher" target="_blank">IOCipher</a>. (SQLCipher is a database; if you want to have records for each hidden service such as “Onion Address,” “Certificate,” “Display Name,” etc. this is the model you can use. IOCipher is used like an encrypted java.io.File partition; you could easily store certificates in a java keystore with a .jks extension, and save a text file with a list of onion addresses. However you manage your backend is up to you.)
 
 **Your server should have:**
 
-  * A lightweight web server. According to the Tor documentation, smaller servers like LightTPD are preferred over Apache since there&#8217;s less of an opportunity to accidentally reveal your IP address in error logs or publicly-accessible config files.
+  * A lightweight web server. According to the Tor documentation, smaller servers like LightTPD are preferred over Apache since there’s less of an opportunity to accidentally reveal your IP address in error logs or publicly-accessible config files.
   * Tor set up and running a hidden service
   * Your own self-signed SSL certificate for your server. (Directions can be found <a href="http://www.digicert.com/ssl-certificate-installation-lighttpd.htm" target="_blank">here</a>)
   * _For extra credit,_ you can set yourself up your own certificate authority. This can be used to sign client authentication keys (how you distribute them to users is also up to you) and directions to do this can be found <a href="http://it.toolbox.com/blogs/securitymonkey/howto-securing-a-website-with-client-ssl-certificates-11500" target="_blank">here</a>.
 
-## Ok, let&#8217;s get coding!
+## Ok, let’s get coding!
 
-  1. **Use case: I don&#8217;t actually need Tor support, but I do want to add my custom SSL certificate to the app&#8217;s trust chain.**</p> 
+  1. **Use case: I don’t actually need Tor support, but I do want to add my custom SSL certificate to the app’s trust chain.**</p> 
     What you need to do this is to create a custom Trust Manager, and use it when you instantiate your SSL connection. 
     
-    In this example, the trust manager loads (or creates, if it&#8217;s the first time use) your encrypted keystore. When your app makes a request to your web server, the Trust Manager will first check to see if the host name is in your &#8220;white list&#8221; (either in your SQLite database or in the encrypted flat file you created.) If that checks out, the Trust Manager will add the X509 certificate to your encrypted keystore (if it doesn&#8217;t exist there already.) I&#8217;ve omitted the part of the code where you load up your keystore, and where you save any changes to it; you can do that on your own, depending on how you have it set up.
+    In this example, the trust manager loads (or creates, if it’s the first time use) your encrypted keystore. When your app makes a request to your web server, the Trust Manager will first check to see if the host name is in your “white list” (either in your SQLite database or in the encrypted flat file you created.) If that checks out, the Trust Manager will add the X509 certificate to your encrypted keystore (if it doesn’t exist there already.) I’ve omitted the part of the code where you load up your keystore, and where you save any changes to it; you can do that on your own, depending on how you have it set up.
     
-    The following code I cribbed heavily from <a href="https://github.com/ge0rg/MemorizingTrustManager" target="_blank">ge0rg&#8217;s memorizing trust manager</a>. Please have a look at that, too, and thank the guy for his great work!
+    The following code I cribbed heavily from <a href="https://github.com/ge0rg/MemorizingTrustManager" target="_blank">ge0rg’s memorizing trust manager</a>. Please have a look at that, too, and thank the guy for his great work!
     
     <pre style="font-size:0.8em;">public class MyTrustManager implements X509TrustManager {
 	private KeyStore keyStore;
@@ -181,11 +181,11 @@ You&#8217;re going to need some basic stuff up-and-running for this to work. Bef
 }
 </pre>
     
-    Next, you want to initiate an Https request to use this custom Trust Manager. As most of you Android programmers know, you have to do any network stuff on another, non-UI thread. I like to use Future/Callables because it returns the contents of the web site you access into a variable that I can parse. Here&#8217;s how you do that for a standard POST request:
+    Next, you want to initiate an Https request to use this custom Trust Manager. As most of you Android programmers know, you have to do any network stuff on another, non-UI thread. I like to use Future/Callables because it returns the contents of the web site you access into a variable that I can parse. Here’s how you do that for a standard POST request:
     
-    <pre style="font-size:0.8em;">public static String executeHttpsPost(final String host, final Map&lt;String, Object> postData, final String contentType) {
+    <pre style="font-size:0.8em;">public static String executeHttpsPost(final String host, final Map<String, Object> postData, final String contentType) {
 		ExecutorService ex = Executors.newFixedThreadPool(100);
-		Future&lt;String> future = ex.submit(new Callable&lt;String>() {
+		Future<String> future = ex.submit(new Callable<String>() {
 			String result = "FAIL";
 			String HYPHENS = "--";
 			STRING LINE_END = "\r\n";
@@ -201,7 +201,7 @@ You&#8217;re going to need some basic stuff up-and-running for this to work. Bef
 			MyTrustManager itm;
 			
 			private void buildQuery() {
-				Iterator&lt;Entry&lt;String, Object&gt;&gt; it = postData.entrySet().iterator();
+				Iterator<Entry<String, Object>> it = postData.entrySet().iterator();
 				
 				connection.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + BOUNDARY);
 				StringBuffer sb = new StringBuffer();
@@ -210,7 +210,7 @@ You&#8217;re going to need some basic stuff up-and-running for this to work. Bef
 					sb = new StringBuffer();
 					while(it.hasNext()) {
 						sb = new StringBuffer();
-						Entry&lt;String, Object&gt; e = it.next();
+						Entry<String, Object> e = it.next();
 						
 						sb.append(HYPHENS + BOUNDARY + LINE_END);
 						
@@ -299,7 +299,7 @@ You&#8217;re going to need some basic stuff up-and-running for this to work. Bef
 </pre>
 
   2. **Use case: I have a web server set up with a hidden service running. How can my app access the web site?**</p> 
-    Simple! Just make some minor modifications to your SSLContext by adding a proxy! Take the executeHttpsPost method above, and add the following _after_ the line &#8220;HttpsURLConnection.setDefaultHostnameVerifier(hnv);&#8221;
+    Simple! Just make some minor modifications to your SSLContext by adding a proxy! Take the executeHttpsPost method above, and add the following _after_ the line “HttpsURLConnection.setDefaultHostnameVerifier(hnv);”
     
     <pre style="font-size:0.8em;">Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 8118));
 </pre>
@@ -312,7 +312,7 @@ You&#8217;re going to need some basic stuff up-and-running for this to work. Bef
     So, as long as your device is also running Orbot (Tor) you can do the same POST over Tor! </li> 
     
       * **Use case: I have a web server that requires client authentification. How can I add a client certificate to the SSL context?**</p> 
-        To do this, you&#8217;re going to need to add a KeyManager to your SSLContext. As I stated before, getting your client auth key to your app users is up to you (bluetooth, NFC, sneakernet???) but once it&#8217;s in there, and visible to your app, install it by adding your own custom KeyManager. In my testing, I added this method below to the MyTrustManager class, simply because it already had access to my encrypted keystore. But you can ostensibly place this anywhere:
+        To do this, you’re going to need to add a KeyManager to your SSLContext. As I stated before, getting your client auth key to your app users is up to you (bluetooth, NFC, sneakernet???) but once it’s in there, and visible to your app, install it by adding your own custom KeyManager. In my testing, I added this method below to the MyTrustManager class, simply because it already had access to my encrypted keystore. But you can ostensibly place this anywhere:
         
         <pre style="font-size:0.8em;">public X509KeyManager[] getKeyManagers(byte[] kBytes, String clientCertificatePassword, String keystorePassword) {
 	KeyManagerFactory kmf = null;
@@ -331,7 +331,7 @@ You&#8217;re going to need some basic stuff up-and-running for this to work. Bef
 		km = kmf.getKeyManagers();
 		xkm = new X509KeyManager[km.length];
 				
-		for(int x=0;x&gt;km.length;x++) {
+		for(int x=0;x>km.length;x++) {
 			X509KeyManager k = (X509KeyManager) km[x];
 			xkm[x] = k;
 		}
@@ -367,4 +367,4 @@ You&#8217;re going to need some basic stuff up-and-running for this to work. Bef
 ssl.init(x509KeyManager, new TrustManager[] {itm}, new SecureRandom());
 </pre></ol> 
     
-    That&#8217;s it! Good luck hacking, hackers&#8230;
+    That’s it! Good luck hacking, hackers…

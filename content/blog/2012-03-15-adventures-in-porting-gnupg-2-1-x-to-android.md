@@ -24,7 +24,7 @@ tags:
   - preview
   - prototype
 ---
-PGP started with Phil Zimmerman&#8217;s Pretty Good Privacy, which is now turned into an open IETF standard known as OpenPGP. These days, the reference OpenPGP platform seems to be [GnuPG](http://gnupg.org/): its used by Debian and all its derivatives in the OS itself for verifying packages and more. It is also at the core of all Debian development work, allowing the very diffuse body of Debian, Ubuntu, etc developers to communicate and share work effectively while maintaining a high level of security. It is also used for email encryption in Thunderbird + Enigmail, Apple Mail + GPGMail, GNOME Evolution, KDE KMail, Microsoft Outlook + Gpg4win.
+PGP started with Phil Zimmerman’s Pretty Good Privacy, which is now turned into an open IETF standard known as OpenPGP. These days, the reference OpenPGP platform seems to be [GnuPG](http://gnupg.org/): its used by Debian and all its derivatives in the OS itself for verifying packages and more. It is also at the core of all Debian development work, allowing the very diffuse body of Debian, Ubuntu, etc developers to communicate and share work effectively while maintaining a high level of security. It is also used for email encryption in Thunderbird + Enigmail, Apple Mail + GPGMail, GNOME Evolution, KDE KMail, Microsoft Outlook + Gpg4win.
 
 <div id="attachment_1651" style="width: 160px" class="wp-caption alignleft">
   <a href="https://guardianproject.info/wp-content/uploads/2012/03/Encryption.jpg"><img aria-describedby="caption-attachment-1651" src="https://guardianproject.info/wp-content/uploads/2012/03/Encryption-150x150.jpg" alt="lots of one and zeros" width="150" height="150" class="size-thumbnail wp-image-1651" /></a>

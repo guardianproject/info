@@ -35,7 +35,7 @@ You can download it here:
 Adding IOCipher to our InformaCam and NoteCipher apps is already in the  
 works. There is already one app in the Play Store built with IOCipher: <a title="Gryphn Secure Messaging in the Play Store" href="https://play.google.com/store/apps/details?id=com.Gryphn.mms&hl=en" target="_blank">Gryphn Secure Messaging</a>
 
-We&#8217;ve recently done some heavy testing and bug fixing and this is ready for beta status. That means for many applications, it should be stable with reasonable performance. But its not done yet, and there are some known edge cases documented in our bug tracker which we aim to address in the next beta release:
+We’ve recently done some heavy testing and bug fixing and this is ready for beta status. That means for many applications, it should be stable with reasonable performance. But its not done yet, and there are some known edge cases documented in our bug tracker which we aim to address in the next beta release:
 
 <https://dev.guardianproject.info/projects/iocipher/issues>
 
@@ -46,6 +46,6 @@ Some additional notes on usage:
   * VFS now has beginTransaction and completeTransaction to optimize performance
   * parts of java.io not currently supported: vectored I/O, memory-mapped files
 
-&nbsp;
+ 
 
-_featured photo [&#8220;Safe&#8221; from Pong on Flickr](http://www.flickr.com/photos/pong/288491653/)_
+_featured photo [“Safe” from Pong on Flickr](http://www.flickr.com/photos/pong/288491653/)_

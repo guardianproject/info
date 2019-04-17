@@ -18,14 +18,14 @@ tags:
   - security
   - tor
 ---
-There is currently a <a href="http://lists.debian.org/debian-security/2013/10/msg00027.html" target="_blank">discussion underway on the Debian-security list</a> about adding TLS and Tor functionality to the official repositories (repos) of Debian packages that is highlighting how we need to update how we think about the risks when distributing software. Mostly, we are used to thinking about making sure that the software that the user is installing is the same exact software that has been posted for distribution. This is generally handled by signing the software package, then verifying that signature on the user&#8217;s machine. This is how it works on Mac OS X, Windows, Debian, etc. etc.
+There is currently a <a href="http://lists.debian.org/debian-security/2013/10/msg00027.html" target="_blank">discussion underway on the Debian-security list</a> about adding TLS and Tor functionality to the official repositories (repos) of Debian packages that is highlighting how we need to update how we think about the risks when distributing software. Mostly, we are used to thinking about making sure that the software that the user is installing is the same exact software that has been posted for distribution. This is generally handled by signing the software package, then verifying that signature on the user’s machine. This is how it works on Mac OS X, Windows, Debian, etc. etc.
 
 But the authenticity of a software package is not the only issue that needs to be addressed, especially these days where many companies and governments around the world are trying to track everything that anyone is doing on the internet. In order to understand why Tor and TLS would be useful here, it good to break down the various concerns (or threats if you prefer):
 
   1. package authenticity _(software can be modified while being downloaded)_
   2. package availability _(software security updates can be individually blocked)_
   3. repo availability _(internet services can be blocked by governments and companies)_
-  4. who&#8217;s downloading what package _(currently visible to anyone who can see the network traffic, including open wifi, etc.)_
+  4. who’s downloading what package _(currently visible to anyone who can see the network traffic, including open wifi, etc.)_
 
 Most people distributing software are used to thinking about #1 verifying packages when thinking about the security of software distribution. #2, #3, and #4 are also important, and currently not well addressed. This is where TLS and Tor come in. Both can help prevent Man-In-The-Middle manipulations as well as reduce the amount of information that is leaked to the network. Tor can also help with #3. Since Tor is difficult to block, it is often uses to circumvent censorship. In this case a software repo could be blocked entirely, and Tor could help with gaining access to it. The Update Framework has <a href="https://github.com/theupdateframework/tuf/blob/develop/README.md" title="TUF: The Update Framework -  Security" target="_blank">a good overview of the possible attacks</a> against software repos.
 

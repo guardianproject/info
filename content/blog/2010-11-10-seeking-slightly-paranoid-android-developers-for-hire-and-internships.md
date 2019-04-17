@@ -14,7 +14,7 @@ tags:
   - hiring
   - jobs
 ---
-The Guardian Project is kicking off a three month project focused on finishing up our secure chat app, codenamed [Gibber](/apps/gibber) but also known as &#8220;OtRChat&#8221;. We are looking for developers of all levels to join us in this work. We have already implemented the primary  [&#8220;Off the Record&#8221; messaging](http://www.cypherpunks.ca/otr/) functionality, and achieved interoperability with desktop clients such as Pidgin and AdiumX. From here, there is work to be done on implementing some unique features, cleaning up the user experience, and ensuring that the implementation is as secure as possible, providing all the necessary features for verifying and managing secure identities and sessions.
+The Guardian Project is kicking off a three month project focused on finishing up our secure chat app, codenamed [Gibber](/apps/gibber) but also known as “OtRChat”. We are looking for developers of all levels to join us in this work. We have already implemented the primary  [“Off the Record” messaging](http://www.cypherpunks.ca/otr/) functionality, and achieved interoperability with desktop clients such as Pidgin and AdiumX. From here, there is work to be done on implementing some unique features, cleaning up the user experience, and ensuring that the implementation is as secure as possible, providing all the necessary features for verifying and managing secure identities and sessions.
 
 We have a few contract positions available, but are also looking for interns and students interested in getting real-world production development under their belt. _All in all, you should be keenly interested in work that strives to find the right balance of usability and security on mobile devices._
 

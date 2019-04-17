@@ -36,6 +36,6 @@ With that in mind, we want to hear from you, as a developers and users intereste
 
 (the survey is now closed, thanks!)
 
-&nbsp;
+ 
 
 Image By Dave Morice Uploaded by Mkacer at en.wikipedia (Author  Transferred from en.wikipedia by SreeBot) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons

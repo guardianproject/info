@@ -14,9 +14,9 @@ tags:
   - hackday
   - openvideoconference
 ---
-Nathan Freitas will be on a panel at the 2nd annual [Open Video Conference](http://www.openvideoconference.org/) in New York this Friday and Saturday. He will be on the panel entitled &#8220;Cameras Everywhere&#8221; led by our partners at [Witness](http://witness.org), on Saturday at 3pm.
+Nathan Freitas will be on a panel at the 2nd annual [Open Video Conference](http://www.openvideoconference.org/) in New York this Friday and Saturday. He will be on the panel entitled “Cameras Everywhere” led by our partners at [Witness](http://witness.org), on Saturday at 3pm.
 
-> **Summary**: Cameras Everywhere: Human Rights and Web Video &#8211; (_2:45 PM &#8211; 3:30 PM_)
+> **Summary**: Cameras Everywhere: Human Rights and Web Video – (_2:45 PM – 3:30 PM_)
 > 
 > **Description**: Once upon a time, video cameras were rare. Now they are ubiquitous—as are the opportunities to share, use, and re-use video. What are the limits and possibilities of an ethics of openness when it comes to human rights footage?
 > 
@@ -28,7 +28,7 @@ Nathan Freitas will be on a panel at the 2nd annual [Open Video Conference](http
 > Sam Gregory — WITNESS  
 > Gabriella Coleman — NYU  
 > Nathan Freitas — The Guardian Project  
-> Steve Grove &#8211; News and Politics, YouTube
+> Steve Grove – News and Politics, YouTube
 
 Following the panel, there will be an open workshop, to continue the discussion and brainstorm new approaches and tools to address the issues raised. This feedback will be gathered and fed into the [OVC Hackday](http://www.openvideoconference.org/hacklabs/), held at [NYU ITP](http://itp.nyu.edu) on Sunday. Team Guardian will join in with whoever shows up at the hackday, take the ideas from the previous day, and build prototyped mobile video solutions in response to them.
 
@@ -36,7 +36,7 @@ You can get more information and register for the hackday here: <http://www.open
 
 > OVC hack labs: Sunday, October 3
 > 
-> Join us at NYU&#8217;s Interactive Telecommunications Program for an all-day open space gathering for innovators of all stripes. Meet and collaborate with conference attendees, HTML5 developers, transmedia storytelling experts, and more. Among the planned activities:
+> Join us at NYU’s Interactive Telecommunications Program for an all-day open space gathering for innovators of all stripes. Meet and collaborate with conference attendees, HTML5 developers, transmedia storytelling experts, and more. Among the planned activities:
 > 
 > Make interactive HTML5 video using WebMadeMovies technology like popcorn.js  
 > Map out a transmedia strategy for your content  

@@ -21,7 +21,7 @@ At the core of all software that aims to be secure, private and anonymous is enc
 
 [<img src="http://farm4.staticflickr.com/3589/3378152784_2be2969ae6.jpg" alt="Skeleton Keys IMG_0774" width="500" height="333" />](http://www.flickr.com/photos/stevendepolo/3378152784/ "Skeleton Keys IMG_0774 by stevendepolo, on Flickr")
 
-It turns out that managing these sets of really large numbers can be tricky to do well, so there are all manner of key management apps and approaches. On top of that, there seems to be decades of people wanting to make their own formats for these sets of really large numbers. So if you want to work directly with the keys themselves, you not only have to sort out the difference between the kinds of numbers used in DSA, RSA, Elliptical Curve, etc., but you will also have to figure out which of the many many formats those numbers are stored in. There are base64 formats, hex formats, standardized binary formats with names like PKCS#8/DER and X.509, old formats like S-Expressions (sexp) as well as non-standard formats like keyczar&#8217;s JSON format that uses web-safe base64. Then, there are different ways of reading and writing those different formats into a file.
+It turns out that managing these sets of really large numbers can be tricky to do well, so there are all manner of key management apps and approaches. On top of that, there seems to be decades of people wanting to make their own formats for these sets of really large numbers. So if you want to work directly with the keys themselves, you not only have to sort out the difference between the kinds of numbers used in DSA, RSA, Elliptical Curve, etc., but you will also have to figure out which of the many many formats those numbers are stored in. There are base64 formats, hex formats, standardized binary formats with names like PKCS#8/DER and X.509, old formats like S-Expressions (sexp) as well as non-standard formats like keyczar’s JSON format that uses web-safe base64. Then, there are different ways of reading and writing those different formats into a file.
 
 We started out working on the particular problem of translating the 5 numbers (x, y, p, q, g) used in DSA keys. DSA keys are used for OTR encryption, and we want to make it possible to translate the DSA key information stored by one OTR messaging app into the format used by others. Here are three examples of storing DSA keys:
 
@@ -30,7 +30,7 @@ _(In general, its a very bad idea to post private keys anywhere at all public. T
 libotr private key from Pidgin (sexp with hex numbers):
 
 > (account  
-> (name &#8220;&#x67;p&#x74;&#x65;s&#x74;&#64;j&#x61;&#98;b&#x65;&#114;.&#x6f;&#114;g/&#8221;)  
+> (name “&#x67;p&#x74;&#x65;s&#x74;@j&#x61;bb&#x65;r.&#x6f;rg/”)  
 > (protocol prpl-jabber)  
 > (private-key  
 > (dsa  
@@ -47,24 +47,24 @@ libotr private key from Pidgin (sexp with hex numbers):
 
 otr4j private key from Gibberbot (PKCS#8 DER with ASCII armor, escaped for Java Properties):
 
-> &#x67;p&#x74;&#101;s&#x74;&#64;&#x6a;&#97;b&#x62;e&#x72;&#46;o&#x72;g&#x2e;&#x70;r&#x69;&#118;a&#x74;e&#x4b;&#101;y=MIIBSgIBADCCASsGByqGSM44BAEwggEeAoGBAMtPbcgvf2CAHN4djUb+gCPw/e8Xpeyc9GknS9zs\nJjSCg9vgiKBVlQBceiKAkK8SVVEaA671SS0XO575OK/sAc4j0n2t9QJP1wyGCOhV79WbwhPPEVhs\ncpAHakr9IAW6WdSnwhL/seZLYRKiVGpxXJffwN+sYjH00PulKNxmz2+DAhUAxh9yFSC1uuGk6IR0\ntnVAfsPUt7cCgYBGfHU40n0HgKIkVe3XtX0G3CbiGbR++qaEjNqnfWynggqeeVkYliLaDlVrR4B0\nnLrHZLEcUMO38YKmrwug02acp9P65IcjZ2yaioPBSmV7R6pMGOdJFR3V7Pd5R2+NcUdJd2xSffLf\nrChM82SKqa7b3DOPHkSoIdp/vJiRgikZrwQWAhRE5snYBaoR84hWVdxlumAYkBRUEA\=\=
+> &#x67;p&#x74;es&#x74;@&#x6a;ab&#x62;e&#x72;.o&#x72;g&#x2e;&#x70;r&#x69;va&#x74;e&#x4b;ey=MIIBSgIBADCCASsGByqGSM44BAEwggEeAoGBAMtPbcgvf2CAHN4djUb+gCPw/e8Xpeyc9GknS9zs\nJjSCg9vgiKBVlQBceiKAkK8SVVEaA671SS0XO575OK/sAc4j0n2t9QJP1wyGCOhV79WbwhPPEVhs\ncpAHakr9IAW6WdSnwhL/seZLYRKiVGpxXJffwN+sYjH00PulKNxmz2+DAhUAxh9yFSC1uuGk6IR0\ntnVAfsPUt7cCgYBGfHU40n0HgKIkVe3XtX0G3CbiGbR++qaEjNqnfWynggqeeVkYliLaDlVrR4B0\nnLrHZLEcUMO38YKmrwug02acp9P65IcjZ2yaioPBSmV7R6pMGOdJFR3V7Pd5R2+NcUdJd2xSffLf\nrChM82SKqa7b3DOPHkSoIdp/vJiRgikZrwQWAhRE5snYBaoR84hWVdxlumAYkBRUEA\=\=
 
 private key from keyczar (JSON with websafe base64):
 
 > {  
-> &#8220;publicKey&#8221;: {  
-> &#8220;q&#8221;: &#8220;AJJfsQZrhUV8p6TmpPqa084JwX9j&#8221;,  
-> &#8220;p&#8221;: &#8220;AIAAAAAAAAXxHhQxJRZ-PPj2BDrHHLV8c8pX6nyOLAW3Bc7CX\_SfBiGH2VyImoz6JlAOZi6x\_XspxdUvpTjV7J9uO9hwnF31m3SQjdkZW2DQDb5OS1rW\_4MGrTJCktKtlZz7f8\_5AoO8yHSY2XWNDqrpBEiNvaTX1ttQ59nREiR1&#8221;,  
-> &#8220;y&#8221;: &#8220;AGlQuRpbat4drE\_fcdSZrEVfS6Fme3tNfUoJVRec1pUhoSo9PBHKFx3lbBmI8Vnub8vuY1nM2yTadOZ8H4-TYxB5JNMVTK7vLNdVcWvUUF9zRZCwps1bl0\_Al29X0I1iQYJN6Klxi\_QbKaSf5PhfXLVom9bJYp7\_TwZCouaab296&#8221;,  
-> &#8220;g&#8221;: &#8220;AES5hk-DKXP\_\_t6yDsXIdykf7lhSKHqQCW5H2V5dMg8JkoFBSP7mIvaCHT4IxoxdM2AIpWgcoi5XSrd\_hD2sjNa1JHTb9BUh31dHJLym6rTsV12ClN6f78Cjt0oKFIRI\\_\_yWn9KM-vLEsjpd10VHlPfbEgKYePCnXFt7Y78G0wGr&#8221;,  
-> &#8220;size&#8221;: 1024  
+> “publicKey”: {  
+> “q”: “AJJfsQZrhUV8p6TmpPqa084JwX9j”,  
+> “p”: “AIAAAAAAAAXxHhQxJRZ-PPj2BDrHHLV8c8pX6nyOLAW3Bc7CX\_SfBiGH2VyImoz6JlAOZi6x\_XspxdUvpTjV7J9uO9hwnF31m3SQjdkZW2DQDb5OS1rW\_4MGrTJCktKtlZz7f8\_5AoO8yHSY2XWNDqrpBEiNvaTX1ttQ59nREiR1”,  
+> “y”: “AGlQuRpbat4drE\_fcdSZrEVfS6Fme3tNfUoJVRec1pUhoSo9PBHKFx3lbBmI8Vnub8vuY1nM2yTadOZ8H4-TYxB5JNMVTK7vLNdVcWvUUF9zRZCwps1bl0\_Al29X0I1iQYJN6Klxi\_QbKaSf5PhfXLVom9bJYp7\_TwZCouaab296”,  
+> “g”: “AES5hk-DKXP\_\_t6yDsXIdykf7lhSKHqQCW5H2V5dMg8JkoFBSP7mIvaCHT4IxoxdM2AIpWgcoi5XSrd\_hD2sjNa1JHTb9BUh31dHJLym6rTsV12ClN6f78Cjt0oKFIRI\\_\_yWn9KM-vLEsjpd10VHlPfbEgKYePCnXFt7Y78G0wGr”,  
+> “size”: 1024  
 > },  
-> &#8220;x&#8221;: &#8220;AGLJry5Q0CZo9cH6XRYd2ZZZppwg&#8221;,  
-> &#8220;size&#8221;: 1024,  
+> “x”: “AGLJry5Q0CZo9cH6XRYd2ZZZppwg”,  
+> “size”: 1024,  
 > }
 
 There are many instant messaging (IM) apps that provide solid support for the OTR chat encryption protocol. Many people use the same IM account across multiple computers and programs, but this generally causes lots of headaches when using OTR. One technique for eliminating these headaches is to use the same private OTR key across all programs and computers, but since each program has a different file format, this is hard to setup. In order to address this issue, we first mapped out the key and file formats for a number of the most widely used OTR programs (Pidgin, Adium, Gibberbot, Jitsi, irssi). As part of the [OTRFileConverter project](https://github.com/guardianproject/otrfileconverter), we have written parsers for these file formats, and are close to being able to convert between all of them. These parsers not only convert the private keys for each account, but also the known public keys of remote accounts as well as their verified status. In this process, we discovered a fundamental incompatibility in the otr4j library used in Gibberbot, Jitsi, beem-otr, and other software. Fortunately, it should be possible to fix the otr4j library itself and all the software based on it should have the issue transparently fixed by including the updated otr4j.
 
-Coming soon, OTRFileConverter will be able to sync all of your key information between Pidgin and Gibberbot, so that means private keys, other people&#8217;s public keys, and whether those keys have been manually verified, or verified via the Socialist Millionaire&#8217;s Protocol (SMP).
+Coming soon, OTRFileConverter will be able to sync all of your key information between Pidgin and Gibberbot, so that means private keys, other people’s public keys, and whether those keys have been manually verified, or verified via the Socialist Millionaire’s Protocol (SMP).
 
 Track our progress at: <https://github.com/guardianproject/otrfileconverter>

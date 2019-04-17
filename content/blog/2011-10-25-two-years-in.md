@@ -1,6 +1,6 @@
 ---
 id: 1291
-title: 'Two years in&#8230;'
+title: 'Two years in…'
 date: 2011-10-25T15:11:39-04:00
 author: n8fr8
 layout: post
@@ -25,12 +25,12 @@ Since that event, so much has happened, both in the world and within our work he
 This same analogy can be used for the state of the Guardian Project itself. It was two years ago, we had our first breakthrough with the port of Tor to Android:  
  <http://openideals.com/2009/10/22/orbot-proxy/>
 
-This was about as raw as it gets &#8211; source code, a user interface made up of a few grey buttons and a console log output, and very complex set of steps to actually get proxying working. However, it was a start &#8211; &#8220;Day 0&#8221; if you will &#8211; and where I mark the public entry of our project into the world.
+This was about as raw as it gets – source code, a user interface made up of a few grey buttons and a console log output, and very complex set of steps to actually get proxying working. However, it was a start – “Day 0” if you will – and where I mark the public entry of our project into the world.
 
 Now, today, October 25, 2011, two years since Tor port, and one year since the LibTech event, we are quite a bit further than that. We have real, polished apps, and perhaps, some of the best user experience design in mobile security solutions. There have been over 100,000 downloads of Orbot, both from the Android Market and through direct distribution:  
  <https://www.torproject.org/docs/android.html.en>
 
-Beyond Orbot, we have an entire suite of (literally &#8220;award-winning&#8221;) apps in the Android Market, covering the range of capabilities expected from anonymous, circumventing web browsing, encrypted chat, secure file storage, to our more original projects, such as ObscuraCam, a privacy-aware camera app.
+Beyond Orbot, we have an entire suite of (literally “award-winning”) apps in the Android Market, covering the range of capabilities expected from anonymous, circumventing web browsing, encrypted chat, secure file storage, to our more original projects, such as ObscuraCam, a privacy-aware camera app.
 
 View all of our apps in the Android Market:  
  <https://market.android.com/search?q=guardianproject&so=1&c=apps>
@@ -41,7 +41,7 @@ We have stayed true to our open-source, grant-funded goals, and have built a vib
 We have also collaborated with many other human rights and activist organizations, to ensure our tools and technology are directly informed by their tangible day-to-day needs. ObscuraCam is a project with WITNESS, the leading human-rights video organization, and is part of a larger effort called the SecureSmartCam, which we aim to one day power international human rights evidence gathering.  
  <https://guardianproject.info/2011/09/10/progress-on-mobile-video-privacy-tools/>
 
-We also joined MobileActive, in the development of the SaferMobile project&#8217;s InTheClear app for Blackberry, Nokia and Android phones, a mobile panic button for quickly erasing sensitive data and sending emergency distress calls, via SMS:  
+We also joined MobileActive, in the development of the SaferMobile project’s InTheClear app for Blackberry, Nokia and Android phones, a mobile panic button for quickly erasing sensitive data and sending emergency distress calls, via SMS:  
  <https://lab.safermobile.org/wiki/InTheClear>
 
 Finally, SQLCipher for Android, our port of an existing, tested, trusted open-source encrypted database solution by Zetetic, is gathering a lot of support quickly, because we consciously made it easy for developers to implement. We have a number of major partners who will be using it in their solutions, and we hope we can talk about them more soon.

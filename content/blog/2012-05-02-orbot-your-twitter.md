@@ -14,17 +14,17 @@ categories:
   - App Reviews
   - HowTo
 ---
-In some ways, Twitter is the perfect application to run over the [Tor network](https://torproject.org). It works with small bits of data, it is asynchronous, works naturally in a &#8220;store and forward&#8221; queue model, and in general, has a decent amount of [default security built-in](http://twitter.com/about/security) through HTTP/S support and OAuth. Compared to the problem-child of the open web, which often involves large websites, streaming video, flash embeds, and malicious javascript, Twitter is a nearly perfect candidate for use over a secure, anonymous (but sometimes high latency) network. Add to the fact that Twitter is often [blocked or monitored in many countries](http://en.wikipedia.org/wiki/List_of_websites_blocked_in_the_People's_Republic_of_China)who do not care for free speech and human rights, and it becomes almost a necessity that you use it with a service like Tor.
+In some ways, Twitter is the perfect application to run over the [Tor network](https://torproject.org). It works with small bits of data, it is asynchronous, works naturally in a “store and forward” queue model, and in general, has a decent amount of [default security built-in](http://twitter.com/about/security) through HTTP/S support and OAuth. Compared to the problem-child of the open web, which often involves large websites, streaming video, flash embeds, and malicious javascript, Twitter is a nearly perfect candidate for use over a secure, anonymous (but sometimes high latency) network. Add to the fact that Twitter is often [blocked or monitored in many countries](http://en.wikipedia.org/wiki/List_of_websites_blocked_in_the_People's_Republic_of_China)who do not care for free speech and human rights, and it becomes almost a necessity that you use it with a service like Tor.
 
 > **WARNING AND DISCLAIMER: Twitter for Android is proprietary, closed-source software. Details of the implementation of proxy support have not been publicly disclosed or audited by a third-party at this time. In particular, resolution of hostnames via DNS may not be properly routed through Tor (this is a common issue with proxied software). In addition, through other permissions that Twitter for Android may have you on your device, there may be a strong ability to correlate identity between your registered Google Account and your activities on Twitter.**
 
 Until recently, in order to run [Twitter for Android](https://play.google.com/store/apps/details?id=com.twitter.android&hl=en) through Tor for Android, aka [Orbot](https://guardianproject.info/apps/orbot/), you would need to [root your device](http://shortfuse.org/?page_id=2), or deal with complex proxy settings. However, as of last week, Twitter became _one of the first and only major apps (aka 100M+ installs!)_ to [add direct proxy support into their app](http://twitter.com/#!/moxie/status/195622774348324864), in a very easy to find and activate way.
 
-_**UPDATE June 13, 2012: After a recent audit, we now recommend turning off the &#8220;Sync Data&#8221; option through Twitter&#8217;s Settings menu, under your registered Twitter account. This will stop push notifications from being sent, which are currently not handled by Orbot/Tor.**_
+_**UPDATE June 13, 2012: After a recent audit, we now recommend turning off the “Sync Data” option through Twitter’s Settings menu, under your registered Twitter account. This will stop push notifications from being sent, which are currently not handled by Orbot/Tor.**_
 
   1. Install and activate Orbot, open Twitter, tap the gear icon on the home screen.
-  2. Check the &#8220;proxy&#8221; box, enter &#8216;localhost&#8217; and &#8216;8118&#8217;.
-  3. Open your account settings, and disable the &#8220;Sync Data&#8221; option to stop push notifications which cannot be proxied through Orbot/Tor.
+  2. Check the “proxy” box, enter ‘localhost’ and ‘8118’.
+  3. Open your account settings, and disable the “Sync Data” option to stop push notifications which cannot be proxied through Orbot/Tor.
 
 See the screenshots below for a full walkthrough, and please spread the word to those in need.
 
@@ -45,7 +45,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2042'>
-      When you setup Orbot, your device does not need root or &#8220;superuser&#8221; access in order to work with Twitter, or with other apps like Gibberbot (Chat) or ORWeb (safe web access)
+      When you setup Orbot, your device does not need root or “superuser” access in order to work with Twitter, or with other apps like Gibberbot (Chat) or ORWeb (safe web access)
     </dd>
   </dl>
   
@@ -55,7 +55,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2043'>
-      Orbot by default provides an HTTP proxy server on &#8220;localhost&#8221; and port 8118
+      Orbot by default provides an HTTP proxy server on “localhost” and port 8118
     </dd>
   </dl>
   
@@ -77,7 +77,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2045'>
-      Enable the proxy, set Proxy Host to &#8216;localhost&#8217; and Proxy Port to &#8216;8118&#8217;
+      Enable the proxy, set Proxy Host to ‘localhost’ and Proxy Port to ‘8118’
     </dd>
   </dl>
   
@@ -126,7 +126,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   <br style="clear: both" />
 </div>
 
-&nbsp;
+ 
 
 Learn more and install apps
 

@@ -13,9 +13,9 @@ tags:
   - security
   - updates
 ---
-There is a new <a href="https://lists.debian.org/debian-security-announce/2019/msg00010.html" target="_blank">vulnerability in Debian&#8217;s apt</a> that allows anything that can Man-in-the-Middle (MITM) your traffic to get root on your Debian/Ubuntu/etc boxes. Using encrypted connections for downloading updates, like HTTPS or Tor Onion Services, reduces this vulnerability to requiring root on the mirror server in order to exploit it. That is a drastic reduction in exposure. We have been pushing for this [since 2014](https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/), and <a href="https://onion.debian.org" target="_blank">Debian</a>, <a href="https://ftp.fau.de" target="_blank">mirror</a> <a href="https://mirrors.kernel.org" target="_blank">operators</a>, and others in the ecosystem have taken some big steps towards making this the standard. This should finally put to rest the idea that plain <a href="https://whydoesaptnotusehttps.com/" target="_blank">HTTP is enough</a> for software updates with signed metadata.
+There is a new <a href="https://lists.debian.org/debian-security-announce/2019/msg00010.html" target="_blank">vulnerability in Debian’s apt</a> that allows anything that can Man-in-the-Middle (MITM) your traffic to get root on your Debian/Ubuntu/etc boxes. Using encrypted connections for downloading updates, like HTTPS or Tor Onion Services, reduces this vulnerability to requiring root on the mirror server in order to exploit it. That is a drastic reduction in exposure. We have been pushing for this [since 2014](https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/), and <a href="https://onion.debian.org" target="_blank">Debian</a>, <a href="https://ftp.fau.de" target="_blank">mirror</a> <a href="https://mirrors.kernel.org" target="_blank">operators</a>, and others in the ecosystem have taken some big steps towards making this the standard. This should finally put to rest the idea that plain <a href="https://whydoesaptnotusehttps.com/" target="_blank">HTTP is enough</a> for software updates with signed metadata.
 
-To this end, we have always supported <a href="https://f-droid.org/docs/Security_Model/" target="_blank">F-Droid&#8217;s practice</a> of requiring HTTPS connections to f-droid.org and mirrors, even though the signed metadata file is the essential mechanism for providing security.
+To this end, we have always supported <a href="https://f-droid.org/docs/Security_Model/" target="_blank">F-Droid’s practice</a> of requiring HTTPS connections to f-droid.org and mirrors, even though the signed metadata file is the essential mechanism for providing security.
 
 ## Using encrypted connections on your server
 
@@ -25,7 +25,7 @@ Over the years, we have been honing our `apt` sources setup to use encrypted con
   2. First try Tor Onion, then try HTTPS. This provides a backup connection method in case Tor is not working, for whatever reason, but still could get updates slower than the official security source
   3. First try Tor Onion, then try HTTPS, then try HTTP. But HTTP is only enabled for `security.debian.org`
 
-You can see an example of the final option by looking at <a href="https://gitlab.com/fdroid/fdroid-cfarm-bootstrap/commit/24389018a164e110e7204f2b2c62a7b81863cdd4" target="_blank">F-Droid&#8217;s compile farm server config</a>.
+You can see an example of the final option by looking at <a href="https://gitlab.com/fdroid/fdroid-cfarm-bootstrap/commit/24389018a164e110e7204f2b2c62a7b81863cdd4" target="_blank">F-Droid’s compile farm server config</a>.
 
 ## Fixing your boxes
 

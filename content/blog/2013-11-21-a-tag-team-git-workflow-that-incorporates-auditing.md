@@ -20,13 +20,13 @@ Git is as wonderful as it is terrible, it is immensly flexible but also far from
   <p id="caption-attachment-11990" class="wp-caption-text">
     Integration-Manager Workflow
   </p>
-</div>We use a simple version of the &#8220;
+</div>We use a simple version of the “
 
-<a href="http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows" target="_blank">Integration-Manager Workflow</a>&#8220;. One key difference is that we often have multiple contributors acting as the integration manager. This means that there is always someone else besides the original author reviewing each commit. For example: I make a commit and push it to my public developer&#8217;s repo. I ask Abel to review my commit, and if he agrees with it, he then pushes it to the official public &#8220;_upstream_&#8221; repo (aka &#8220;blessed repository&#8221;). And since git will tell us if a remote repo is different than our local repo, this process makes it harder for an attacker to slip a commit into our remote repo without us noticing.
+<a href="http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows" target="_blank">Integration-Manager Workflow</a>“. One key difference is that we often have multiple contributors acting as the integration manager. This means that there is always someone else besides the original author reviewing each commit. For example: I make a commit and push it to my public developer’s repo. I ask Abel to review my commit, and if he agrees with it, he then pushes it to the official public “_upstream_” repo (aka “blessed repository”). And since git will tell us if a remote repo is different than our local repo, this process makes it harder for an attacker to slip a commit into our remote repo without us noticing.
 
-The key to this workflow is that all contributors must fork from the same git repo, and mark that one as the one _upstream_ repo. We often end up <a href="http://git-scm.com/book/en/Git-Branching-Rebasing" target="_blank">rebasing</a> things to make sure each commit is based on the most up-to-date code. It also makes for a clean, readable history. That means each contributor&#8217;s public repo will be rebased from time to time, so you cannot rely on those repos as something to base your own work off of.
+The key to this workflow is that all contributors must fork from the same git repo, and mark that one as the one _upstream_ repo. We often end up <a href="http://git-scm.com/book/en/Git-Branching-Rebasing" target="_blank">rebasing</a> things to make sure each commit is based on the most up-to-date code. It also makes for a clean, readable history. That means each contributor’s public repo will be rebased from time to time, so you cannot rely on those repos as something to base your own work off of.
 
-At the very least, a contributor&#8217;s local repo should be set up to talk to two remote repos: the contributor&#8217;s own public repo and the _upstream_ repo. I&#8217;ll use github as an example of how to get started in this workflow. Say you want to contribute to https://github.com/guardianproject/keysync, start by making a fork via the github.com<img src="https://guardianproject.info/wp-content/uploads/2013/11/fork.png" alt="fork" width="65" height="19" /> button. Once that is setup, its time to clone it and configure the rest. I&#8217;m **eighthave** on github, so this example will use my public repo. I work with Abel Luck on KeySync, so we&#8217;ll add his repo as another contributor repo.
+At the very least, a contributor’s local repo should be set up to talk to two remote repos: the contributor’s own public repo and the _upstream_ repo. I’ll use github as an example of how to get started in this workflow. Say you want to contribute to https://github.com/guardianproject/keysync, start by making a fork via the github.com<img src="https://guardianproject.info/wp-content/uploads/2013/11/fork.png" alt="fork" width="65" height="19" /> button. Once that is setup, its time to clone it and configure the rest. I’m **eighthave** on github, so this example will use my public repo. I work with Abel Luck on KeySync, so we’ll add his repo as another contributor repo.
 
 <pre>git clone https://github.com/eighthave/keysync
 cd keysync
@@ -62,7 +62,7 @@ git rebase abeluck/master
 git push origin master
 </pre>
 
-Now I&#8217;ve reviewed Abel&#8217;s new commits and incorporated them into my public repo. Abel is ready to review my new commits, which are rebased on top of his. If he agrees with them, he&#8217;ll push them to the official &#8220;blessed&#8221; repo `upstream`. Then his local repo will be in sync with the latest _upstream_.
+Now I’ve reviewed Abel’s new commits and incorporated them into my public repo. Abel is ready to review my new commits, which are rebased on top of his. If he agrees with them, he’ll push them to the official “blessed” repo `upstream`. Then his local repo will be in sync with the latest _upstream_.
 
 <pre>git checkout master
 git fetch eighthave
@@ -82,7 +82,7 @@ git checkout master
 
 **Undoing A Bad Rebase**
 
-Git doesn&#8217;t provide any undo, and it also will let you delete things, not a good situation for learning this stuff. Luckily it does give you the tools for making something like an undo function. I use a tag for this, and I always use the same name for that tag: `pre-rebase`. Before starting anything that involves rebasing, I first do:
+Git doesn’t provide any undo, and it also will let you delete things, not a good situation for learning this stuff. Luckily it does give you the tools for making something like an undo function. I use a tag for this, and I always use the same name for that tag: `pre-rebase`. Before starting anything that involves rebasing, I first do:
 
 <pre>git checkout master
 git tag pre-rebase
@@ -95,7 +95,7 @@ Then after the rebase is successfully deleted, I remove that tag:
 
 **Switching Your Master When Things Have Diverged**
 
-It is often the case that in the process of merging and rebasing, the developers&#8217; repos will be in separate branches of the original tree. Once the &#8220;integration manager&#8221; person has pulled in all the commits, rebased and merged everything, and pushed the approved commits to the upstream repo, the other developers will likely need to reset their repos to resync with the upstream:
+It is often the case that in the process of merging and rebasing, the developers’ repos will be in separate branches of the original tree. Once the “integration manager” person has pulled in all the commits, rebased and merged everything, and pushed the approved commits to the upstream repo, the other developers will likely need to reset their repos to resync with the upstream:
 
 <pre>git fetch upstream
 git checkout upstream/master
@@ -109,4 +109,4 @@ So `git branch -D master` does indeed mean force-delete your master branch. That
 
 **Keeping All The History**
 
-One addition to this process is for each contributor to mark their own tree with a labeled branch before rebasing, and then pushing those branches to the contributor&#8217;s public repo. This will then provide a complete history of the process, if that is desired. For example: I push some commits to my public repo, then Abel rebases my commits onto some of his work and pushes to the _upstream_. In this case, the history in my public repo will be different than what is in the _upstream_ repo as well as Abel&#8217;s public repo.
+One addition to this process is for each contributor to mark their own tree with a labeled branch before rebasing, and then pushing those branches to the contributor’s public repo. This will then provide a complete history of the process, if that is desired. For example: I push some commits to my public repo, then Abel rebases my commits onto some of his work and pushes to the _upstream_. In this case, the history in my public repo will be different than what is in the _upstream_ repo as well as Abel’s public repo.

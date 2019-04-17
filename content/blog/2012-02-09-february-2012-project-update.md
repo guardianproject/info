@@ -24,7 +24,7 @@ With the public awareness of internet censorship and surveillence growing thank
 We pushed a small fix to **ObscuraCam** to solve a problem with saving processed images on many Samsung Galaxy devices, and a number of fixes in the native Android JPEG Redaction library which has been developed as part of the project.  
 <https://github.com/guardianproject/securesmartcam/tree/obscurav1>
 
-Along with our partners at WITNESS, we presented the entire **SecureSmartCam** project at the monthly New York Tech Meetup event, attended by hundreds of the city&#8217;s top developers, entrepreneurs and investors. Our goal was too raise awareness about visual privacy, show off our app, and highlight the fact that we are doing grant-funded, open-source human rights tech work in the middle of Silicon Alley. The project was well received with the demo going off without a hitch. The Economist also featured the SecureSmartCam project in print and online through a story focused on the future of protest video.
+Along with our partners at WITNESS, we presented the entire **SecureSmartCam** project at the monthly New York Tech Meetup event, attended by hundreds of the city’s top developers, entrepreneurs and investors. Our goal was too raise awareness about visual privacy, show off our app, and highlight the fact that we are doing grant-funded, open-source human rights tech work in the middle of Silicon Alley. The project was well received with the demo going off without a hitch. The Economist also featured the SecureSmartCam project in print and online through a story focused on the future of protest video.
 
 Economist blog and video: <http://www.economist.com/blogs/babbage/2012/01/technology-and-democracy>  
 New York Tech Meetup full stream: <http://vimeo.com/34608516>

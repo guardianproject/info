@@ -42,9 +42,9 @@ tags:
 ---
 [<img src="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg" alt="alberti cipher disk" width="150" height="150" class="alignright size-thumbnail wp-image-3079" srcset="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w" sizes="(max-width: 150px) 100vw, 150px" />](https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg)
 
-We have been on a kick recently with making our build process support &#8220;reproducible builds&#8221; aka &#8220;deterministic builds&#8221;. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the _exact_ same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).
+We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the _exact_ same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).
 
-Our core CipherKit libraries are the more sensitive areas, so that&#8217;s where we&#8217;ve started. We generally work on Debian and Ubuntu and recommend that platform, but we recognized that OSX is a popular platform for Android developers also. So this process will work on OSX too, using your favorite package manager (e.g. Fink, MacPorts, or Homebrew).
+Our core CipherKit libraries are the more sensitive areas, so that’s where we’ve started. We generally work on Debian and Ubuntu and recommend that platform, but we recognized that OSX is a popular platform for Android developers also. So this process will work on OSX too, using your favorite package manager (e.g. Fink, MacPorts, or Homebrew).
 
 Then you will end up with `IOCipher-v0.3.zip`, which includes the .jar and .so files. If your setup is close enough to our release build setup, the contents of that ZIP file will be the same as the official release. Right now, it is difficult to get the exact same binary file (e.g. the same sha256 sum) because of the timestamps in the .zip and varitions caused by using different versions of Java, and Android SDK and NDK. To check the contents of your build versus the official release:
 
@@ -102,4 +102,4 @@ compile 'net.freehaven.tor.control:jtorctl:0.2'
 
 SQLCipher-for-Android is coming soon:  
 <a href="https://github.com/sqlcipher/android-database-sqlcipher/pull/197" target="_blank">https://github.com/sqlcipher/android-database-sqlcipher/pull/197</a>  
-I hope to also get them up on MavenCentral as well, since that one is also quite common on Android, and is a community run resource versus Bintray&#8217;s jCenter, which is purely a for-profit company.
+I hope to also get them up on MavenCentral as well, since that one is also quite common on Android, and is a community run resource versus Bintray’s jCenter, which is purely a for-profit company.

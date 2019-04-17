@@ -25,7 +25,7 @@ wpdc_sync_post_comments:
 categories:
   - News
 ---
-<span style="font-weight: 400">In the </span>[<span style="font-weight: 400">Guardian Project</span>](https://guardianproject.info/)<span style="font-weight: 400">&#8216;s current work with the </span>[<span style="font-weight: 400">FDroid</span>](https://f-droid.org/) <span style="font-weight: 400">community to make it a secure, streamlined, and verifiable app distribution channel for high-risk environments we have started to become more aware of the challenges and risks facing software developers who build software in around the world.</span>
+<span style="font-weight: 400">In the </span>[<span style="font-weight: 400">Guardian Project</span>](https://guardianproject.info/)<span style="font-weight: 400">‘s current work with the </span>[<span style="font-weight: 400">FDroid</span>](https://f-droid.org/) <span style="font-weight: 400">community to make it a secure, streamlined, and verifiable app distribution channel for high-risk environments we have started to become more aware of the challenges and risks facing software developers who build software in around the world.</span>
 
 <span style="font-weight: 400">There are a wealth of resources available on how to support and collaborate with high-risk users. Surprisingly, we could not find any guidance on how to support and collaborate with developers where the internet is heavily monitored and/or filtered, let alone developers who might be at risk because of the software they develop.</span>
 
@@ -33,7 +33,7 @@ categories:
 
 <span style="font-weight: 400">Part of this user research was the development of the </span>**[challenges.tech survey](https://challenges.tech/)** <span style="font-weight: 400">which will be used to help us form a better understanding of the challenges international developers face, their motivations, and their priorities. With the help of the </span>[<span style="font-weight: 400">Localization Lab</span>](https://www.localizationlab.org/) <span style="font-weight: 400">we have translated this survey into <a href="https://challenges.tech/?lang=zh">Chinese</a>, <a href="https://challenges.tech/?lang=es">Spanish</a>, <a href="https://challenges.tech/?lang=fa">Farsi</a>, <a href="https://challenges.tech/?lang=ru">Russian</a>, <a href="https://www.challenges.tech/?lang=fr">French</a>, and <a href="https://www.challenges.tech">English</a>.</span>
 
-&nbsp;
+ 
 
 <span style="font-weight: 400">We have two requests:</span>
 
@@ -44,7 +44,7 @@ categories:
   <span style="font-weight: 400">Share the survey with your networks and encourage them to pass it along. We would like to get a diverse range of developers to take the survey.</span>
 </li>
 
-&nbsp;
+ 
 
 <span style="font-weight: 400">We will close down the survey in a month. We will then replace the challenges.tech website with the aggregated survey results. </span>
 

@@ -25,11 +25,11 @@ tags:
 ---
 ****
 
-# F-Droid LBK Usability Study Report &#8211; What We Want to Know</p> 
+# F-Droid LBK Usability Study Report – What We Want to Know</p> 
 
 Prepared by Carrie Winfrey
 
-_Preliminary Version &#8211; April 17, 2017_</p> 
+_Preliminary Version – April 17, 2017_</p> 
 
 ## Introduction
 
@@ -45,7 +45,7 @@ In the Lubbock sessions, 11 people participated in this focused usability study.
 
 **PAGE_BREAK: PageBreak**
 
-# TASK A &#8211; Search for an app that you would like to download. Install the app you have selected.
+# TASK A – Search for an app that you would like to download. Install the app you have selected.
 
 Average difficulty: 1.9
 
@@ -53,7 +53,7 @@ Number of participants with critical errors: 0</p>
 
 PARTICIPANT QUOTES
 
-_“App won’t install. Found the game easily, though.&#8221;_
+_“App won’t install. Found the game easily, though.”_
 
 __
 
@@ -69,7 +69,7 @@ __
       * Yes.
   3. Are they able to find what they’re looking for? 
       * Not always. Searching for mainstream apps like Gmail, ESPN, Facebook and Twitter returns no relevant results.
-      * &#8220;It took about 10 tries to find an app I searched for. It might be difficult for users to find the app they have an interest in.”
+      * “It took about 10 tries to find an app I searched for. It might be difficult for users to find the app they have an interest in.”
       * One participant searched for recipes, but misspelled it, so no relevant results were displayed.
   4. Other insights:
   5. Many users expressed that it was difficult to know if and app had installed. 
@@ -94,7 +94,7 @@ __
 
 **PAGE_BREAK: PageBreak**
 
-# TASK B &#8211; There is an app that needs to be updated. Find the app and install the update.
+# TASK B – There is an app that needs to be updated. Find the app and install the update.
 
 Average difficulty: 2.3
 
@@ -114,13 +114,13 @@ __
 
   1. Is it clear where to go to find updates? 
       * Yes. Every participant easily located the updates tab.
-      * &#8220;It was very easy to spot apps that need updating.&#8221;
+      * “It was very easy to spot apps that need updating.”
   2. Can users successfully update an app? 
       * No.
       * The difference in word choice on app details than in updates view confused multiple users. 
-          * &#8220;The update icon at the bottom with red number notifications was easy to find. Once I clicked on the specific app to update it gave the option to uninstall or upgrade. I wasn&#8217;t sure if upgrade was the same as update or not &#8211; it sounded like something I&#8217;d have to pay for.”
+          * “The update icon at the bottom with red number notifications was easy to find. Once I clicked on the specific app to update it gave the option to uninstall or upgrade. I wasn’t sure if upgrade was the same as update or not – it sounded like something I’d have to pay for.”
       * Every participant that tried to update an app from the updates view had problems. 
-          * &#8220;Took me multiple attempts to update the applications. Not positive the update occurred. There was no indication of completion.”
+          * “Took me multiple attempts to update the applications. Not positive the update occurred. There was no indication of completion.”
       * It was unclear if an app had successfully updated. Participants were not confident that they had updated the app.
       * We need to provide better feedback once an update is complete and successful.</ul> 
 
@@ -137,7 +137,7 @@ __
 
 PAGE_BREAK: PageBreak
 
-# TASK C &#8211; Find a game app that looks interesting to you. Install the app.
+# TASK C – Find a game app that looks interesting to you. Install the app.
 
 Average difficulty: 1.7
 
@@ -149,7 +149,7 @@ Number of participants with critical errors: 0</p>
       * Most participants looked through the games category. Some browsed latest. Some used search.
       * Many people found the categories view appealing, and spent more time there than on the latest view, when looking for apps. One participant compared it to the iTunes Store, but commented that it was even easier.</ul> </p> 
 
-# TASK D &#8211; Search for a crossword puzzle app within the games category.
+# TASK D – Search for a crossword puzzle app within the games category.
 
 Average difficulty: 1.1
 
@@ -172,7 +172,7 @@ Number of participants with critical errors: 0</p>
 
 **PAGE_BREAK: PageBreak**
 
-# TASK E &#8211; If you had no internet, how would you download an app?
+# TASK E – If you had no internet, how would you download an app?
 
 Average difficulty: 3.1
 
@@ -193,7 +193,7 @@ __
   2. Is it clear that you use they nearby feature to do this? 
       * No. 
       * 70% of participants never identified the nearby feature as the means for doing this.
-      * “Nearby didn&#8217;t give me the idea of downloading while offline.&#8221;
+      * “Nearby didn’t give me the idea of downloading while offline.”
       * 30% successfully identified nearby. Though, most after looking several other places?
   3. What other behaviors are observed? 
       * Turning WiFi off to see if the interface changed
@@ -207,7 +207,7 @@ __
   * People did not make the connection between ‘nearby’ and downloading apps offline.
   * Not one participant read the text on the Nearby view when they initially tapped on it.
   * Multiple people compared nearby to Air Drop on iOS
-  * &#8220;It&#8217;s going to airdrop a virus to your phone.”
+  * “It’s going to airdrop a virus to your phone.”
 
 <u>Suggestions for improvement:</u>
 
@@ -225,7 +225,7 @@ __
 
 **PAGE_BREAK: PageBreak**
 
-# TASK F &#8211; Your friend emails you a link to a collection of their favorite apps. Open gmail and click on the link they have sent you. Add the collection of apps that your friend emailed to you to F-Droid. Locate an app called Habitica from the collection you just downloaded.
+# TASK F – Your friend emails you a link to a collection of their favorite apps. Open gmail and click on the link they have sent you. Add the collection of apps that your friend emailed to you to F-Droid. Locate an app called Habitica from the collection you just downloaded.
 
 Average difficulty: 2.2
 
@@ -248,7 +248,7 @@ __
   3. Are users able to find the apps from a repo they have added? 
       * No. Participants were very confused. 
       * 100% participants didn’t know if they had added the repo successfully after completing the steps.
-      * &#8220;I was able to find the link in the email and accept the apps, but I have no idea where to find the collection from my friend in F-Droid.&#8221;
+      * “I was able to find the link in the email and accept the apps, but I have no idea where to find the collection from my friend in F-Droid.”
       * Some were able to find one app by searching for it.
       * Average non-critical errors for finding the app—2 
           * 5 users were able to locate the app; most after multiple attempts
@@ -279,7 +279,7 @@ __
 
 **PAGE_BREAK: PageBreak**
 
-# TASK G (Last Task) &#8211; Add the collection of apps displayed on the computer to F-Droid.
+# TASK G (Last Task) – Add the collection of apps displayed on the computer to F-Droid.
 
 Average difficulty: 2.6
 
@@ -287,7 +287,7 @@ Number of participants with critical errors: 0</p>
 
 PARTICIPANT QUOTES
 
-“I followed the steps on the computer but wasn’t sure where the code from the QR scanner went. I added a new repository and there was a link already in it so I just clicked add, but have no idea what it did.&#8221;
+“I followed the steps on the computer but wasn’t sure where the code from the QR scanner went. I added a new repository and there was a link already in it so I just clicked add, but have no idea what it did.”
 
 __
 
@@ -298,7 +298,7 @@ __
   1. Are users able to add a repo from a collection they view on desktop? 
       * Yes. Surprisingly, the majority of participants did not have trouble scanned the QR code and adding the repo.
       * Same confusions as mentioned above about knowing if it worked and locating the repo.
-      * “I don’t know if it worked. How do I know if it worked?&#8221;
+      * “I don’t know if it worked. How do I know if it worked?”
   2. Is the word choice clear? 
       * Somewhat. It didn’t trip people up from completing the task.
       * Multiple people commented that the word repository didn’t resonate with them. They preferred the word Collections.</ul> </p> 

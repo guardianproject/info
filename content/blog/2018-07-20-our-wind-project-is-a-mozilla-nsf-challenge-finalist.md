@@ -1,6 +1,6 @@
 ---
 id: 13982
-title: 'Our &#8220;Wind&#8221; project is a Mozilla-NSF challenge finalist!'
+title: 'Our “Wind” project is a Mozilla-NSF challenge finalist!'
 date: 2018-07-20T14:28:23-04:00
 author: n8fr8
 layout: post
@@ -23,7 +23,7 @@ tags:
   - off-grid
   - wind
 ---
-For the last few years, we&#8217;ve been working on the [Wind network concept](https://guardianproject.info/wind/), as a nearby, local, off-grid companion, or alternative, to the Web. This year, we decided to participate in the [Wireless Innovation Challenge](https://wirelesschallenge.mozilla.org/), sponsored by Mozilla and the National Science Foundation. Today, it was announced that we are a finalist in, as they put it, [&#8220;A Science Fair with $1.6 Million in Prizes&#8221;](https://blog.mozilla.org/blog/2018/07/19/a-science-fair-with-1-6-million-in-prizes/). 
+For the last few years, we’ve been working on the [Wind network concept](https://guardianproject.info/wind/), as a nearby, local, off-grid companion, or alternative, to the Web. This year, we decided to participate in the [Wireless Innovation Challenge](https://wirelesschallenge.mozilla.org/), sponsored by Mozilla and the National Science Foundation. Today, it was announced that we are a finalist in, as they put it, [“A Science Fair with $1.6 Million in Prizes”](https://blog.mozilla.org/blog/2018/07/19/a-science-fair-with-1-6-million-in-prizes/). 
 
 Watch the video below to learn more about Wind, or jump right over to the [Wind project page](https://guardianproject.info/wind/).
 

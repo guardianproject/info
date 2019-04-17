@@ -12,9 +12,9 @@ categories:
   - New Release
   - News
 ---
-&nbsp;
+ 
 
-Team GP along with the good folks at [Zetetic](http://zetetic.net/), are happy to announce that we have reached _**FINAL**_ on our first release (&#8220;v1&#8221; 0.0.6 build) of [SQLCipher for Android](https://guardianproject.info/code/sqlcipher/). This means we consider this a production release, ready for shipping with your apps to provide for reliable, open-source, secure application data encryption.
+Team GP along with the good folks at [Zetetic](http://zetetic.net/), are happy to announce that we have reached _**FINAL**_ on our first release (“v1” 0.0.6 build) of [SQLCipher for Android](https://guardianproject.info/code/sqlcipher/). This means we consider this a production release, ready for shipping with your apps to provide for reliable, open-source, secure application data encryption.
 
 
 
@@ -37,13 +37,13 @@ Finally, while full disk encryption is offered newer Android devices from Motoro
 
 You can see all the [closed issues addressed](https://github.com/guardianproject/android-database-sqlcipher/issues?sort=updated&direction=desc&state=closed&page=1) in this release.
 
-If you want to build from source, you will need the Android NDK, as well as the SDK. Pull the repo, and run &#8216;make all&#8217; with the included [SQLCipher Makefile](https://github.com/guardianproject/android-database-sqlcipher/blob/master/Makefile).
+If you want to build from source, you will need the Android NDK, as well as the SDK. Pull the repo, and run ‘make all’ with the included [SQLCipher Makefile](https://github.com/guardianproject/android-database-sqlcipher/blob/master/Makefile).
 
 Our partners at [Zetetic](http://zetetic.net/) have published a [step-by-step application integration tutorial](http://sqlcipher.net/sqlcipher-for-android/).[  
 ](http://sqlcipher.net/sqlcipher-for-android/) [<img class="alignnone size-medium wp-image-1345" title="eclipse-class-libraries" src="https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries-300x214.png" alt="" width="300" height="214" srcset="https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries-300x214.png 300w, https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries.png 754w" sizes="(max-width: 300px) 100vw, 300px" />](http://sqlcipher.net/sqlcipher-for-android/)[  
 ](http://sqlcipher.net/sqlcipher-for-android/) 
 
-You can also get started by working with our [sample &#8216;NoteCipher&#8217; project available on Github](https://github.com/guardianproject/notepadbot).
+You can also get started by working with our [sample ‘NoteCipher’ project available on Github](https://github.com/guardianproject/notepadbot).
 
 If you happen to encounter them, [please report any unexpected behaviours](https://github.com/guardianproject/android-database-sqlcipher/issues/new), bugs, typos or other abnormalities, as soon as you can. We know there are still some [outstanding issues](https://github.com/guardianproject/android-database-sqlcipher/issues?sort=updated&direction=desc&state=open) faced in some cases, but we did not consider them blockers.
 

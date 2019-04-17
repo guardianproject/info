@@ -35,13 +35,13 @@ tags:
 
 **New York, NY:** <span style="font-weight: 400;">Two innovative organizations have partnered to bring increased digital security and privacy capabilities to users interested in improved safety for their mobile devices. Tech 4 Good, the developer of Circle of 6, a highly regarded mobile safety app developed to promote safety and health through networks of trust, has partnered with Guardian Project, a leader in mobile security and privacy technologies. The two organizations will work to upgrade the capabilities of the Circle of 6 app to provide users with secure messaging, private identities and improved physical security of device data.</span>
 
-&nbsp;
+ 
 
 <img class="alignnone wp-image-13488 size-large" src="https://guardianproject.info/wp-content/uploads/2017/01/Co6-Screens-1024x921.png" width="945" height="850" srcset="https://guardianproject.info/wp-content/uploads/2017/01/Co6-Screens-1024x921.png 1024w, https://guardianproject.info/wp-content/uploads/2017/01/Co6-Screens-300x270.png 300w, https://guardianproject.info/wp-content/uploads/2017/01/Co6-Screens-768x691.png 768w" sizes="(max-width: 945px) 100vw, 945px" /> 
 
 <span style="font-weight: 400;">Circle of 6 is coordinating with a number of organizations interested in expanding the focus of the app beyond general safety and defense against sexual violence, to include other high risk communities. </span>
 
-_<span style="font-weight: 400;">“Circle of 6 is excited to forge this partnership with Guardian Project to bring increased privacy and security to our existing users and to new communities. We’ve received much interest globally in expanding the ways that Circle of 6 and its safety and connectivity features can be used in multiple contexts. This a thrilling step forward.”</span>_ _<span style="font-weight: 400;">&#8211; Nancy Schwartzman</span>_
+_<span style="font-weight: 400;">“Circle of 6 is excited to forge this partnership with Guardian Project to bring increased privacy and security to our existing users and to new communities. We’ve received much interest globally in expanding the ways that Circle of 6 and its safety and connectivity features can be used in multiple contexts. This a thrilling step forward.”</span>_ _<span style="font-weight: 400;">– Nancy Schwartzman</span>_
 
 <span style="font-weight: 400;">Guardian Project will integrate its free and open-source software libraries to provide support for <a href="https://guardianproject.info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/">multiple emergency hardware triggers</a>, more <a href="https://guardianproject.info/code/netcipher">secure network communication</a>, and defense against surveillance and censorship.</span>
 

@@ -1,6 +1,6 @@
 ---
 id: 13986
-title: 'IOCipher is the antidote to &#8220;Man-in-the-Disk&#8221; attack'
+title: 'IOCipher is the antidote to “Man-in-the-Disk” attack'
 date: 2018-08-17T16:56:00-04:00
 author: n8fr8
 layout: post
@@ -29,7 +29,7 @@ While Google does provide <a href="https://developer.android.com/training/articl
   * “Do not store executables or class files on External Storage”
   * “External Storage files should be signed and cryptographically verified prior to dynamic loading”
 
-This is most likely due to lack of time or knowledge&#8230;. and, that is where our [IOCipher encrypted virtual filesystem library for Android](https://guardianproject.info/code/iocipher/) comes in!
+This is most likely due to lack of time or knowledge…. and, that is where our [IOCipher encrypted virtual filesystem library for Android](https://guardianproject.info/code/iocipher/) comes in!
 
 IOCipher provides a virtual encrypted disk for Android apps without requiring the device to be rooted. It uses a clone of the standard `java.io` API for working with files, so developers already know how to use it. Only password handling, and opening the virtual disk are what stand between the developer and working encrypted file storage. It is based on and <a href="http://sqlcipher.net/" target="_blank" rel="noopener">SQLCipher</a>, and designed to work with <a href="https://github.com/guardianproject/IOCipher" target="_blank" rel="noopener">CacheWord</a> for handling the keys and passwords.
 
@@ -39,4 +39,4 @@ You can find IOCipher on Github today (and likely get it implemented in your app
 
 <https://github.com/guardianproject/IOCipher>
 
-&nbsp;
+ 

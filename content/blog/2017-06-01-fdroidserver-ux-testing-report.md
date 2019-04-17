@@ -101,9 +101,9 @@ During this activity the participants were consistently confused by the document
 
   * The participant was confused about where the documentation begins to start deploying the server.
   * The participant stated that there is not enough information on how to configure the remote server.
-  * It is missing in the documentation that before doing &#8220;fdroid server update&#8221; the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.
+  * It is missing in the documentation that before doing “fdroid server update” the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.
   * In the documentation, the information about the file permissions and configuration of the server at Fdroid level is missing. The documentation should say what permissions contain the generated files, (or what permissions they should contain).
-  * It is missing in the documentation that before doing &#8220;fdroid server update&#8221; the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.
+  * It is missing in the documentation that before doing “fdroid server update” the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.
   * The participant did not use the command fdroid server update to push the apps to the remote server, instead of that, he used the command SCP to send the data of manually.
   * The participant was confused about the location of the files hosted on the web server. Doubt resolved after reviewing the documentation.
 
@@ -116,7 +116,7 @@ The participants felt that the documentation was confusingly ordered. While a fe
   * There were many doubts regarding the order of the steps, there was also a sensation of ordered list of steps when in practice the information were related to different activities (eg. Local Demo and Real World setup)
   * The documentation is not understandable, not in terms of language but in the way of explaining, it should be more detailed. It feels difficult to understand for entry level people.
   * The way information is presented and how it is structured seems to be disconcerting and overloaded.
-  * In outlines, poorly structured, getting started should have the section &#8220;set repo&#8221; and &#8220;install&#8221;, should not make emphasis on FAQs.
+  * In outlines, poorly structured, getting started should have the section “set repo” and “install”, should not make emphasis on FAQs.
   * The participant considers that documentation is confusing as to the step by step, he ends up diverting from the task received.
   * The participant said that the content of the list in the overview section is not detailed in subsequent sections in the Setup an Fdroid App Repo page.
   * It seems more logical for him if in the main page of the documentation are placed first the tutorials and in the end the FAQs.
@@ -219,13 +219,13 @@ The participants encountered multiple difficult to diagnose issues related to fi
 
 #### Feedback:
 
-  * The participant received in the Android client the error &#8220;Unsuccessful Non-critical error download&#8221;, understood at the time as a permissions error on the (min 1) remote server, which he modified directly at the time by accessing through SSH before re-testing the download. 
-  * Extremely comfortable and fast if the operation of permissions on the Subjective remote server is known. The participant works with this permissions evaluation management every day and says that&#8217;s why it became so easy, but perhaps for another person without such familiarity on web servers could be more complicated.
-  * “It&#8217;s easy once you know how to configure file permissions.”
+  * The participant received in the Android client the error “Unsuccessful Non-critical error download”, understood at the time as a permissions error on the (min 1) remote server, which he modified directly at the time by accessing through SSH before re-testing the download. 
+  * Extremely comfortable and fast if the operation of permissions on the Subjective remote server is known. The participant works with this permissions evaluation management every day and says that’s why it became so easy, but perhaps for another person without such familiarity on web servers could be more complicated.
+  * “It’s easy once you know how to configure file permissions.”
   * The participant did not locate any documentation about remote server configuration, especially related to file permissions on the web server. The participant suggests that for many people this would be necessary.
   * In the documentation, the information about the file permissions and configuration of the server at Fdroid level is missing. The documentation should say what permissions contain the generated files, (or what permissions they should contain).
-  * The participant understood how to resolve the permissions problem on the remote server and corrected it by placing 775 permissions on the remote server&#8217;s files. However other actions meant that the activity could not be completed successfully.
-  * The client displayed the error &#8220;Connection refused&#8221;, the participant concluded that it was due to a problem of permissions on the remote server, however decided to address it by modifying the nginx configuration file, resulting in the inability to read and download files from the remote server.</p> 
+  * The participant understood how to resolve the permissions problem on the remote server and corrected it by placing 775 permissions on the remote server’s files. However other actions meant that the activity could not be completed successfully.
+  * The client displayed the error “Connection refused”, the participant concluded that it was due to a problem of permissions on the remote server, however decided to address it by modifying the nginx configuration file, resulting in the inability to read and download files from the remote server.</p> 
 
 ## Task 5: Update the F-Droid repository with an update to the barcode scanner app.
 
@@ -270,9 +270,9 @@ Permissions issues that went unaddressed in task 5 caused issues during the, oth
 #### Feedback:
 
   * Once understood the issue of file permissions on the remote server, is easy to address the download of the update.
-  * It&#8217;s easy once you know how to configure file permissions.
-  * Replaying of the same issue of permissions and the error &#8220;Download unsuccessful&#8221;, then resolved by knowing how permissions are handled on the remote server.
-  * It is missing in the documentation that before doing &#8220;fdroid server update&#8221; the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.
+  * It’s easy once you know how to configure file permissions.
+  * Replaying of the same issue of permissions and the error “Download unsuccessful”, then resolved by knowing how permissions are handled on the remote server.
+  * It is missing in the documentation that before doing “fdroid server update” the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.
   * Very pleasant on the Android client side, but it should be documented the type of permissions that the files on the remote server should contain.
   * The update is loaded in the remote repo but it does not show on the
   * Fdroid client, then the participant suspects it is because of the file permissions. After 12 minutes the participant says that he does not know how to fix the issue and stopped the task. The participant suspects before notifying the failure in the task completion that the issue could be related to some commands and files created as root that creating conflicts with the tasks triggered by the server update command.</p> 

@@ -22,9 +22,9 @@ For all of you out there looking for a safe way to find and download apps outsid
 
 > The [FDroid Repository](http://f-droid.org) is an easily-installable catalogue of FOSS applications for the Android platform. The server contains the details of multiple versions of each application, and the Android client makes it easy to browse, install them onto your device, and keep track of updates.
 
-In other words, F-Droid is like an app store for open-source. More importantly, there is not just one &#8220;store&#8221;. Anyone can deploy their own repositories of apps, or Repos, much like the way the Debian repo model works.
+In other words, F-Droid is like an app store for open-source. More importantly, there is not just one “store”. Anyone can deploy their own repositories of apps, or Repos, much like the way the Debian repo model works.
 
-We&#8217;ve now begun creating our own hosted F-Droid compliant repo where we can easily provide the latest greatest versions of all our apps. As we update the apps, F-Droid should notify you and allow you to update quickly and without hassle.
+We’ve now begun creating our own hosted F-Droid compliant repo where we can easily provide the latest greatest versions of all our apps. As we update the apps, F-Droid should notify you and allow you to update quickly and without hassle.
 
 **Quick Steps for using F-Droid with Guardian Project Repo**
 
@@ -32,7 +32,7 @@ We&#8217;ve now begun creating our own hosted F-Droid compliant repo where we ca
 
 2) Run the app and go to Menu > Manage Repos
 
-3) Turn on the &#8220;Guardian Project Official Releases&#8221; repo
+3) Turn on the “Guardian Project Official Releases” repo
 
 3) <del datetime="2015-02-24T16:10:07+00:00">Enter: https://guardianproject.info/repo/</del>
 
@@ -42,7 +42,7 @@ We&#8217;ve now begun creating our own hosted F-Droid compliant repo where we ca
 
 <del datetime="2015-02-24T16:10:07+00:00">6) Verify the repo fingerprint by clicking on the repo to see the repo details view. The fingerprint you see there should match this: <code>59050C8155DCA377F23D5A15B77D3713400CDBD8B42FBFBE0E3F38096E68CECE</code>. </del>
 
-From here you will see the &#8220;Available&#8221; tab for apps you don&#8217;t have the &#8220;Installed&#8221; tab for apps you have the latest version of, and the &#8220;Updates&#8221; tab for apps you have, but that are not up to date.
+From here you will see the “Available” tab for apps you don’t have the “Installed” tab for apps you have the latest version of, and the “Updates” tab for apps you have, but that are not up to date.
 
 You can open each app by browsing and selecting them, and then via Menu options, choose to install them, or access their websites, source code links, or issue tracking pages.
 

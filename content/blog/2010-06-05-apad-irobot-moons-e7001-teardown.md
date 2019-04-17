@@ -14,13 +14,13 @@ tags:
   - tablet
   - teardown
 ---
-This is the aPad or iRobot Android 7&#8243; tablet device from <a rel="nofollow" href="http://www.hiapad.com/">www.hiapad.com</a>. I decided to tear mine apart, as the unit I received has a battery issue, and I hoped to see if I could find a bad solder point. In addition, I was curious to see just how hackable or extensible the hardware was. In the end, I was mostly surprised by how much of the thing is put together with tape. I suppose that is what you get for < $200 Android tablet! You can find the [full product overview on the Hiapad site](http://www.hiapad.com/?p=9&lang=en). I have also pasted in the basic specs below.
+This is the aPad or iRobot Android 7″ tablet device from <a rel="nofollow" href="http://www.hiapad.com/">www.hiapad.com</a>. I decided to tear mine apart, as the unit I received has a battery issue, and I hoped to see if I could find a bad solder point. In addition, I was curious to see just how hackable or extensible the hardware was. In the end, I was mostly surprised by how much of the thing is put together with tape. I suppose that is what you get for < $200 Android tablet! You can find the [full product overview on the Hiapad site](http://www.hiapad.com/?p=9&lang=en). I have also pasted in the basic specs below.
 
 See the [Slatedroid forums](http://slatedroid.com) for more tear down and custom rom news: <a rel="nofollow" href="http://slatedroid.com/index.php?board=18.0">slatedroid.com/index.php?board=18.0</a>
 
 
 
-p.s. &#8211; the older, distinguished gentleman in the photos is my father, who at age 75, is still fascinated, engaged, and into hacking with all things digital.
+p.s. – the older, distinguished gentleman in the photos is my father, who at age 75, is still fascinated, engaged, and into hacking with all things digital.
 
 Summary of hardware specifications for our Rockchip Apad iRobot Android Tablet, Batch 2:  
 CPU: RK2808 Chipset (ARM9 @ 600 MHz + DSP @ 550 MHz dual-core)  

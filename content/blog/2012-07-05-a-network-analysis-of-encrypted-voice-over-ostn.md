@@ -19,10 +19,10 @@ tags:
 ---
 **Introduction to OSTN**
 
-The [OSTN](http://guardianproject.info/wiki/OSTN) network stands for Open Source Telephony Network. It is a federated network standard for supporting Internet calling with end-to-end encryption ala ZRTP. Its very similar to e-mail in that VOIP calls can be routed to addresses such as &#x75;&#x73;&#x65;&#x72;&#64;doma&#x69;&#x6e;&#x2e;&#x74;&#108;d. Its a simple concept, but I believe it to be ground breaking implementation! Never before have I seen such an accessible solution to encrypted VOIP calls. OSTN is platform independent, is a federated network, and it is an open standard such that it is widely adoptable. There are two main components that are required to use OSTN with encryption: a VOIP client that supports ZRTP for end-to-end encryption and user account with an OSTN provider.
+The [OSTN](http://guardianproject.info/wiki/OSTN) network stands for Open Source Telephony Network. It is a federated network standard for supporting Internet calling with end-to-end encryption ala ZRTP. Its very similar to e-mail in that VOIP calls can be routed to addresses such as &#x75;&#x73;&#x65;&#x72;@doma&#x69;&#x6e;&#x2e;&#x74;ld. Its a simple concept, but I believe it to be ground breaking implementation! Never before have I seen such an accessible solution to encrypted VOIP calls. OSTN is platform independent, is a federated network, and it is an open standard such that it is widely adoptable. There are two main components that are required to use OSTN with encryption: a VOIP client that supports ZRTP for end-to-end encryption and user account with an OSTN provider.
 
   * OSTEL is the first working OSTN provider. Sign up for an account at [ostel.me](https://ostel.me/ "ostel.me").
-  * CSipSimple is the recommended VOIP client for use with OSTN. It has a built in  profile for OSTN accounts and supports ZRTP. You must use the [nightly build](http://nightlies.csipsimple.com/trunk/)! This is the latest version and requires that you allow outside applications on Android by checking the Settings>Applications>&#8217;Unknown sources&#8217; box. Information on setting it up for your Android device can be found on [our wiki](http://guardianproject.info/wiki/Ostel "our wiki").
+  * CSipSimple is the recommended VOIP client for use with OSTN. It has a built in  profile for OSTN accounts and supports ZRTP. You must use the [nightly build](http://nightlies.csipsimple.com/trunk/)! This is the latest version and requires that you allow outside applications on Android by checking the Settings>Applications>’Unknown sources’ box. Information on setting it up for your Android device can be found on [our wiki](http://guardianproject.info/wiki/Ostel "our wiki").
 
 While this post focuses on using OSTN with the recommended CSipSimple software, the concepts extend to all OSTN platforms. Check out [the project page](https://guardianproject.info/wiki/OSTN) for more info on alternative clients.
 
@@ -52,33 +52,33 @@ I can confirm that the encryption works as expected. The traffic logs of both ph
   </p>
 </div>
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
 It is quite clear to the user that ZTRP has been enabled by the lock icon that appears in both phones.  Traffic logging has also confirmed that when you see the lock icon, ZRTP has successfully been set up and is being used. So far, so good. Make sure you see the lock sign if you are expecting to be talking on a secure conversation.
 
-CSipSimple uses **opportunistic** ZRTP encryption that is enabled by default for OSTN accounts with CSipSimple. This means that all calls will begin without encryption and then send &#8216;ZRTP Hello&#8217; packets to let each host know that a ZRTP conversation can begin. From here ZRTP negotiates a secure connection and then transfers the conversation to encrypted voice. Here are two pictures from Wireshark showing the very beginning of a (ZRTP enabled) OSTN phone call and where the encryption actually switches on. The SRTP protocol indicates that you are using encrypted voice. ZRTP simply defines the negotiation process for SRTP. This is not a minor thing however, it is because of this that ZRTP can provide end-to-end encryption. End-to-end encryption prevents a third-party from eavesdropping and possibly passing information on to higher authorities.
+CSipSimple uses **opportunistic** ZRTP encryption that is enabled by default for OSTN accounts with CSipSimple. This means that all calls will begin without encryption and then send ‘ZRTP Hello’ packets to let each host know that a ZRTP conversation can begin. From here ZRTP negotiates a secure connection and then transfers the conversation to encrypted voice. Here are two pictures from Wireshark showing the very beginning of a (ZRTP enabled) OSTN phone call and where the encryption actually switches on. The SRTP protocol indicates that you are using encrypted voice. ZRTP simply defines the negotiation process for SRTP. This is not a minor thing however, it is because of this that ZRTP can provide end-to-end encryption. End-to-end encryption prevents a third-party from eavesdropping and possibly passing information on to higher authorities.
 
 <div id="attachment_2474" style="width: 709px" class="wp-caption alignnone">
   <a href="https://guardianproject.info/wp-content/uploads/2012/06/zrtpstart.png"><img aria-describedby="caption-attachment-2474" class="size-full wp-image-2474 " title="zrtpstart" src="https://guardianproject.info/wp-content/uploads/2012/06/zrtpstart.png" alt="" width="699" height="97" srcset="https://guardianproject.info/wp-content/uploads/2012/06/zrtpstart.png 699w, https://guardianproject.info/wp-content/uploads/2012/06/zrtpstart-300x41.png 300w" sizes="(max-width: 699px) 100vw, 699px" /></a>
@@ -96,18 +96,18 @@ CSipSimple uses **opportunistic** ZRTP encryption that is enabled by default fo
   </p>
 </div>
 
-The important part to notice here is that the hand-off is fast. Comparing the times of the first RTP packet to the first encrypted packet takes about 1.5 seconds. Multiple traffic logs confirmed that this is a consistent number. This means that if you immediately start talking during the start of an encrypted phone it is possible for some of your voice to be transmitted clear-text. I attempted to record this section by talking in the very beginning of a call and extracting voice. I wasn&#8217;t successful, but I wouldn&#8217;t discount that you will release some clear voice audio at the beginning of a conversation.
+The important part to notice here is that the hand-off is fast. Comparing the times of the first RTP packet to the first encrypted packet takes about 1.5 seconds. Multiple traffic logs confirmed that this is a consistent number. This means that if you immediately start talking during the start of an encrypted phone it is possible for some of your voice to be transmitted clear-text. I attempted to record this section by talking in the very beginning of a call and extracting voice. I wasn’t successful, but I wouldn’t discount that you will release some clear voice audio at the beginning of a conversation.
 
 **What ZRTP Guarantees**
 
 So, things look good with OSTN calls. ZRTP is enabled by default on all OSTN accounts with CSipSimple and it uses opportunistic encryption. Also, it is very easy for the user to tell that their call has been successfully encrypted. Great! What does this mean for the user? When correctly using ZRTP, a user can expect that their phone calls are fully **confidential**. No third party can intercept, listen, or mangle your phone call. This includes your OSTN provider of course.
 
-**What ZRTP Doesn&#8217;t Guarantee**
+**What ZRTP Doesn’t Guarantee**
 
 ZRTP does not stop** censorship ** or provide **anonymity.  **This is something Orbot might be able to help with one day. Currently, the latency of the Tor network prevents real-time protocols from working. The current best solution would be to use a VPN provider to tunnel ZRTP traffic. However, now that VOIP is illegal in many countries it is not recommended that anyone trust this solution until a tested and verified method is published.
 
 **Conclusion**
 
-Using end-to-end voice encryption has never been this easy! This analysis confirmed that OSTN works quite well in practice. There are two things the user should do to ensure secure communication: make sure to read and confirm the verification dialog boxes and check to make sure your calls have the lock icon when you are counting on them to be encrypted. Just like that, you too can be a [cypherpunk](http://en.wikipedia.org/wiki/Cypherpunk) (or just someone with a reasonable expectation of privacy!). Like Phil Zimmerman, the creator of ZRTP,  has said: &#8220;[OSTN] lets you whisper in someone&#8217;s ear a thousand miles away&#8221; Check back for our upcoming post which will look in more detail at the threat model of an OSTN phone call.
+Using end-to-end voice encryption has never been this easy! This analysis confirmed that OSTN works quite well in practice. There are two things the user should do to ensure secure communication: make sure to read and confirm the verification dialog boxes and check to make sure your calls have the lock icon when you are counting on them to be encrypted. Just like that, you too can be a [cypherpunk](http://en.wikipedia.org/wiki/Cypherpunk) (or just someone with a reasonable expectation of privacy!). Like Phil Zimmerman, the creator of ZRTP,  has said: “[OSTN] lets you whisper in someone’s ear a thousand miles away” Check back for our upcoming post which will look in more detail at the threat model of an OSTN phone call.
 
 You can download the traffic log of a encrypted and unencrypted OSTN call [here](https://guardianproject.info/wp-content/uploads/2012/07/ostnlogs.zip)

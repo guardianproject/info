@@ -69,6 +69,6 @@ categories:
 **Source Code**
 
   * [Orfox build repo](https://github.com/guardianproject/Orfox/commits/Fennec-45.4.0esr/TorBrowser-6.5-1/Orfox-1.2):
-  * Orfox&#8217;s [Tor Browser repo](https://github.com/guardianproject/orfox)
+  * Orfox’s [Tor Browser repo](https://github.com/guardianproject/orfox)
 
-&nbsp;
+ 

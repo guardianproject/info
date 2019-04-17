@@ -48,11 +48,11 @@ Email is a great example of a federated system. Each email provider acts like a 
 
 Peer-to-peer systems can provide unique benefits of bandwidth efficiency as well as working around blockages in the internet. Sharing large files with thousands of people is quite expensive when using a central server, but with bittorrent, anyone can share large files to many many people using only a basic broadband connection. 
 
-Over the past year and a half of our Bazaar project, we have been thinking a lot about how to distribute apps to people who face a number of challenges. Each of these systems offers distinct advantages and disadvantages, so it is quite difficult to choose only one. Instead, we thought why not try to make a system that combines all three? Android&#8217;s APK app package format is a good format to work in this model because they are self-contained and containing a form of embedded identity in the app signature. So if you already have an Android app installed, then Android will enforce that only APKs signed by the same key as the installed app can be installed over it.
+Over the past year and a half of our Bazaar project, we have been thinking a lot about how to distribute apps to people who face a number of challenges. Each of these systems offers distinct advantages and disadvantages, so it is quite difficult to choose only one. Instead, we thought why not try to make a system that combines all three? Android’s APK app package format is a good format to work in this model because they are self-contained and containing a form of embedded identity in the app signature. So if you already have an Android app installed, then Android will enforce that only APKs signed by the same key as the installed app can be installed over it.
 
-That means in theory, it does not matter where the APK came from as long as it has a valid signature. There are some details where it does matter, mostly related to exploits like &#8220;Master Key&#8221; that can inject code into an existing APK. The FDroid app repository signature has a similar property: once you trust the repository signing key, it does not matter how you got the repository files as long as the signature validates. This is a model proven by GNU/Linux distros like Debian. The repository metadata also provides a way to validate APKs have not been modified since they were added to the signed repository. Since both of these do not rely on the method of transport to prove their authenticity, this combination provides a great testbed for this idea of combining a central service, with decentralized servers and peer-to-peer distribution.
+That means in theory, it does not matter where the APK came from as long as it has a valid signature. There are some details where it does matter, mostly related to exploits like “Master Key” that can inject code into an existing APK. The FDroid app repository signature has a similar property: once you trust the repository signing key, it does not matter how you got the repository files as long as the signature validates. This is a model proven by GNU/Linux distros like Debian. The repository metadata also provides a way to validate APKs have not been modified since they were added to the signed repository. Since both of these do not rely on the method of transport to prove their authenticity, this combination provides a great testbed for this idea of combining a central service, with decentralized servers and peer-to-peer distribution.
 
-This work was all incorporated in the <a href="https://f-droid.org" target="_blank">FDroid</a> app store for Android. The central f-droid.org app repository means that FDroid can deliver well over one thousand apps without any configuration on the part of the user. The &#8220;fdroidserver&#8221; developer tools means that anyone can set up their own repository of apps, and users can easily add that repository to FDroid. It is not quite zero configuration, but the process is not too difficult, and there is more we are planning to do to smooth out that process even more. This also provides a channel for users to get apps via &#8220;collateral freedom&#8221; techniques like using Amazon S3, Akamai, etc. to distribute files where many such services are filtered or blocked. Lastly, we made it possible to have the FDroid app itself act as an app repository, and other devices can connect to that repository using local WiFi, mesh, Bluetooth, and removable media.
+This work was all incorporated in the <a href="https://f-droid.org" target="_blank">FDroid</a> app store for Android. The central f-droid.org app repository means that FDroid can deliver well over one thousand apps without any configuration on the part of the user. The “fdroidserver” developer tools means that anyone can set up their own repository of apps, and users can easily add that repository to FDroid. It is not quite zero configuration, but the process is not too difficult, and there is more we are planning to do to smooth out that process even more. This also provides a channel for users to get apps via “collateral freedom” techniques like using Amazon S3, Akamai, etc. to distribute files where many such services are filtered or blocked. Lastly, we made it possible to have the FDroid app itself act as an app repository, and other devices can connect to that repository using local WiFi, mesh, Bluetooth, and removable media.
 
 This stuff is all implemented and included in the FDroid app and fdroidserver developer tools. The big remaining challenge is combining them all into a usable experience for people who do not know the technical details. This has been tested, discussed, sketched out, and there is a prototype implementation in the works. So I can end with a quick overview of some positive and negative observations about the various peer-to-peer connections that we experimented with:
 
@@ -61,10 +61,10 @@ This stuff is all implemented and included in the FDroid app and fdroidserver de
     <strong>+</strong> Bluetooth is ubiquitous
   </li>
   <li>
-    <strong>&ndash;</strong> very slow data rate
+    <strong>–</strong> very slow data rate
   </li>
   <li>
-    <strong>&ndash;</strong> pairing is difficult
+    <strong>–</strong> pairing is difficult
   </li>
 </ul>
 
@@ -76,10 +76,10 @@ This stuff is all implemented and included in the FDroid app and fdroidserver de
     <strong>+</strong> local connections are very fast
   </li>
   <li>
-    <strong>&ndash;</strong> access points and proxies can block host-to-host connections
+    <strong>–</strong> access points and proxies can block host-to-host connections
   </li>
   <li>
-    <strong>&ndash;</strong> running access points on a device is not common nor easy
+    <strong>–</strong> running access points on a device is not common nor easy
   </li>
 </ul>
 
@@ -88,10 +88,10 @@ This stuff is all implemented and included in the FDroid app and fdroidserver de
     <strong>+</strong> NFC makes Bluetooth very easy to use
   </li>
   <li>
-    <strong>&ndash;</strong> NFC is not commonly used or available
+    <strong>–</strong> NFC is not commonly used or available
   </li>
   <li>
-    <strong>&ndash;</strong> NFC is far to slow and fiddly to be used as the data transmission medium
+    <strong>–</strong> NFC is far to slow and fiddly to be used as the data transmission medium
   </li>
 </ul>
 
@@ -100,13 +100,13 @@ This stuff is all implemented and included in the FDroid app and fdroidserver de
     <strong>+</strong> SD cards can move lots of data securely
   </li>
   <li>
-    <strong>&ndash;</strong> not all devices have removable SD cards
+    <strong>–</strong> not all devices have removable SD cards
   </li>
   <li>
-    <strong>&ndash;</strong> swapping SD cards can be a fiddly process
+    <strong>–</strong> swapping SD cards can be a fiddly process
   </li>
   <li>
-    <strong>&ndash;</strong> swapping SD cards can not be automatic
+    <strong>–</strong> swapping SD cards can not be automatic
   </li>
 </ul>
 
@@ -118,12 +118,12 @@ This stuff is all implemented and included in the FDroid app and fdroidserver de
     <strong>+</strong> they can be easily swapped between devices
   </li>
   <li>
-    <strong>&ndash;</strong> swapping SD cards can not be automatic
+    <strong>–</strong> swapping SD cards can not be automatic
   </li>
   <li>
-    <strong>&ndash;</strong> not all devices support USB-OTG i.e. attached devices
+    <strong>–</strong> not all devices support USB-OTG i.e. attached devices
   </li>
   <li>
-    <strong>&ndash;</strong> USB-OTG is not widely used
+    <strong>–</strong> USB-OTG is not widely used
   </li>
 </ul>

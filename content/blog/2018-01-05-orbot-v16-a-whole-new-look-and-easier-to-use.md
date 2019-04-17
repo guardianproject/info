@@ -39,9 +39,9 @@ tags:
 ---
 [Orbot: Tor for Android](https://guardianproject.info/apps/orbot/) has a new release ([tag](https://gitweb.torproject.org/orbot.git/tag/?h=16.0.0-RC-2) and [changelog](https://gitweb.torproject.org/orbot.git/diff/CHANGELOG?h=16.0.0-RC-1-CHANGELOG&id=5542e8e192fcff24284179e7fdb31cf877f79efd)), with a major update to the user experience and interface. This is the 16th major release of Orbot, since it was launched in late 2009.
 
-The main screen of the app now looks quite different, with all the major features and functions exposed for easy access. We have also added a new onboarding setup wizard for first time users, that assists with configuring connections to the Tor network for users in places where Tor itself is blocked. This release also continues to support users looking to use Orbot to unblock specific apps, that may not be available on their network or country. From the main screen, users can activate Orbot&#8217;s built-in VPN feature, and easily choose which specific apps they want to be routed over the Tor network. You can also refresh your Tor identity, rebuilding all circuit connections through the network, using the circular reload icon in the expanded notification provided by Orbot.
+The main screen of the app now looks quite different, with all the major features and functions exposed for easy access. We have also added a new onboarding setup wizard for first time users, that assists with configuring connections to the Tor network for users in places where Tor itself is blocked. This release also continues to support users looking to use Orbot to unblock specific apps, that may not be available on their network or country. From the main screen, users can activate Orbot’s built-in VPN feature, and easily choose which specific apps they want to be routed over the Tor network. You can also refresh your Tor identity, rebuilding all circuit connections through the network, using the circular reload icon in the expanded notification provided by Orbot.
 
-The update is rolling out on [Google Play](https://play.google.com/store/apps/details?id=org.torproject.android), and will also be available on [Guardian Project&#8217;s F-Droid Repo](https://guardianproject.info/fdroid/) soon. You can also find [Android APKs on Github](https://github.com/n8fr8/orbot/releases).
+The update is rolling out on [Google Play](https://play.google.com/store/apps/details?id=org.torproject.android), and will also be available on [Guardian Project’s F-Droid Repo](https://guardianproject.info/fdroid/) soon. You can also find [Android APKs on Github](https://github.com/n8fr8/orbot/releases).
 
 THANKS TO: pgerber, syphyr, Khsed4, BjarniRunar, Unpublished, igortoliveira, goapunk, SpotComms, AkshatAgrawal05, dixidroid, arrase and others for the bug reports and fixes on the Orbot app. Thanks to [Sina](https://twitter.com/wwwiretap) with Team Cymru for the extra infrastructure provided to help users in places where Tor itself is blocked. Also, [Nima](https://twitter.com/mrphs) for the guidance, support and motivation to get this release out sooner rather than later!
 
@@ -86,10 +86,10 @@ THANKS TO: pgerber, syphyr, Khsed4, BjarniRunar, Unpublished, igortoliveira, goa
 7e9890e tweak default bridge behavior based on locale  
 fec853c updates to notification for Android O / SDK26  
 b161043 Merge pull request #106 from Unpublished/fix\_binary\_search  
-ab472d5 Merge branch &#8216;syphyr-master&#8217;  
-4fc3e7e Merge branch &#8216;master&#8217; of https://github.com/syphyr/orbot into syphyr-master  
-792ee2b Merge branch &#8216;BjarniRunar-master&#8217;  
-0d4a735 Merge branch &#8216;master&#8217; of https://github.com/BjarniRunar/orbot into BjarniRunar-master  
+ab472d5 Merge branch ‘syphyr-master’  
+4fc3e7e Merge branch ‘master’ of https://github.com/syphyr/orbot into syphyr-master  
+792ee2b Merge branch ‘BjarniRunar-master’  
+0d4a735 Merge branch ‘master’ of https://github.com/BjarniRunar/orbot into BjarniRunar-master  
 c7b1441 add comment about app updates URL  
 d21ff80 update strings and code for switching Locale in app  
 5c5790c fix binary search  
@@ -136,14 +136,14 @@ e6bd23a more UI updates and small improvements
 d9bd32a more UI updates  
 7303a33 work on the new UI update  
 6a19bf6 update UI tweaks for next release  
-3741434 don&#8217;t show app selection each time you turn VPN on/off  
-4df2fcf move &#8220;other&#8221; installer back to tor resource installer  
-f3f9162 don&#8217;t delete installed binaries  
+3741434 don’t show app selection each time you turn VPN on/off  
+4df2fcf move “other” installer back to tor resource installer  
+f3f9162 don’t delete installed binaries  
 6493d8d Merge pull request #104 from igortoliveira/remove-java-file  
 fc4d6aa improve app loading time for VPN app dialog  
 fbeff25 Remove leftover Java file  
 544ea7b update build to use tor version constant from tor-android-binary  
-977167b ZMerge branch &#8216;master&#8217; of github.com:n8fr8/orbot  
+977167b ZMerge branch ‘master’ of github.com:n8fr8/orbot  
 b07d4fe removed unused submodules, moved to gradle tor-android  
 d392ecd remove unneeded external dirs for making tor  
 3d729fc switch to using tor-android binary in TorService  

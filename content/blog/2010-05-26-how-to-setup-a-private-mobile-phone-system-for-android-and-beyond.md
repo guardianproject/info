@@ -17,7 +17,7 @@ tags:
 ---
 <div>
   <div>
-    <strong>MAY 2011: Learn more about our new efforts on the Open Secure Telephony Network at <a href="https://guardianproject.info/wiki/OSTN">https://guardianproject.info/wiki/OSTN</a> &#8211; we currently recommend the <a href="http://code.google.com/p/csipsimple/">CSipSimple</a> Android app instead of SIPDroid, for secure voice calls.</strong>
+    <strong>MAY 2011: Learn more about our new efforts on the Open Secure Telephony Network at <a href="https://guardianproject.info/wiki/OSTN">https://guardianproject.info/wiki/OSTN</a> – we currently recommend the <a href="http://code.google.com/p/csipsimple/">CSipSimple</a> Android app instead of SIPDroid, for secure voice calls.</strong>
   </div>
   
   <div>
@@ -40,7 +40,7 @@ tags:
   </p>
   
   <p>
-    <span><span><span>We are also investigating solutions that uses a public key exchange model, such as Philip Zimmermann&#8217;s <a id="s_.7" title="ZFone" href="http://zfoneproject.com/">ZFone</a>, such as the new </span><a href="http://whispersys.com/">RedPhone app just announced by WhisperSystems</a><span>.</span></span></span>
+    <span><span><span>We are also investigating solutions that uses a public key exchange model, such as Philip Zimmermann’s <a id="s_.7" title="ZFone" href="http://zfoneproject.com/">ZFone</a>, such as the new </span><a href="http://whispersys.com/">RedPhone app just announced by WhisperSystems</a><span>.</span></span></span>
   </p>
   
   <p>
@@ -56,11 +56,11 @@ tags:
   </p>
   
   <p>
-    &nbsp;
+     
   </p>
   
   <p>
-    <span><span>Next, select ‘Extensions’ from the left-hand navigation menu, <span><span>then<span><span> choose ‘SIP&#8217; under &#8216;Add an Extension.&#8217; </span></span></span></span></span></span>
+    <span><span>Next, select ‘Extensions’ from the left-hand navigation menu, <span><span>then<span><span> choose ‘SIP’ under ‘Add an Extension.’ </span></span></span></span></span></span>
   </p>
   
   <p>
@@ -89,7 +89,7 @@ tags:
   
   <div>
     <p>
-      <span><span>After clicking &#8216;Submit,&#8217; go ahead and repeat the process for as many extensions as  you&#8217;d like to set up. Each of these will be specific for a unique Android device. Don&#8217;t forget to APPLY your changes when finished by clicking the bright red bar &#8211; this ensures your changes take effect.</span></span>
+      <span><span>After clicking ‘Submit,’ go ahead and repeat the process for as many extensions as  you’d like to set up. Each of these will be specific for a unique Android device. Don’t forget to APPLY your changes when finished by clicking the bright red bar – this ensures your changes take effect.</span></span>
     </p>
   </div>
   
@@ -140,7 +140,7 @@ tags:
   </div>
   
   <p>
-    &nbsp;
+     
   </p>
   
   <p>
@@ -156,7 +156,7 @@ tags:
   </p>
   
   <p>
-    &nbsp;
+     
   </p>
   
   <p>
@@ -205,19 +205,19 @@ tags:
   </p>
   
   <p>
-    &nbsp;
+     
   </p>
   
   <p>
-    <span style="color: #000000;"><span><strong>That&#8217;s it! </strong><span>If you come across any issues or have any questions along the way, please let us know in the &#8220;Comments&#8221; below and we&#8217;ll do our best to help you out or clarify. And if you&#8217;re itching for more, here are a couple next steps. We&#8217;re not presenting a deep tutorial on these (yet), so we&#8217;d love to hear from you if you have pursued either &#8211; or even better &#8211; if you&#8217;ve used sipdroid and/or PBXes in any other creative ways!</span></span></span>
+    <span style="color: #000000;"><span><strong>That’s it! </strong><span>If you come across any issues or have any questions along the way, please let us know in the “Comments” below and we’ll do our best to help you out or clarify. And if you’re itching for more, here are a couple next steps. We’re not presenting a deep tutorial on these (yet), so we’d love to hear from you if you have pursued either – or even better – if you’ve used sipdroid and/or PBXes in any other creative ways!</span></span></span>
   </p>
   
   <ol>
     <li>
-      <span><span>Hook your PBXes account into an external DID / VOIP number to dial out to standard phone. Think of it as the equivalent of &#8216;Skype Out&#8217; for sipdroid. You can use a service such as CallCentric (<a href="http://www.callcentric.com/">http://www.callcentric.com/</a>) for this. </span></span>
+      <span><span>Hook your PBXes account into an external DID / VOIP number to dial out to standard phone. Think of it as the equivalent of ‘Skype Out’ for sipdroid. You can use a service such as CallCentric (<a href="http://www.callcentric.com/">http://www.callcentric.com/</a>) for this. </span></span>
     </li>
     <li>
-      <span><span>You can also integrate desktop VOIP programs or other mobile device client into the same PBXes accounts. Here&#8217;s a great list of </span><a href="http://en.wikipedia.org/wiki/List_of_SIP_software#Free_and.2For_open_source_software">free, open-source SIP clients</a><span>. We personally like </span><a href="http://icanblink.com/">Blink for Mac OS</a><span>.</span></span>
+      <span><span>You can also integrate desktop VOIP programs or other mobile device client into the same PBXes accounts. Here’s a great list of </span><a href="http://en.wikipedia.org/wiki/List_of_SIP_software#Free_and.2For_open_source_software">free, open-source SIP clients</a><span>. We personally like </span><a href="http://icanblink.com/">Blink for Mac OS</a><span>.</span></span>
     </li>
     <li>
       <span><span>If you have a privately maintained <a id="zdnk" title="Asterisk" href="http://en.wikipedia.org/wiki/Asterisk_(PBX)">Asterisk</a> or other SIP compatible-server, you can use this same approach with that box, and integrate with your own VPN server. We will be covering this in more detail with a future post, as this is a more secure solution that using a provide such as PBXes.</span></span>
@@ -225,6 +225,6 @@ tags:
   </ol>
   
   <p>
-    &nbsp;
+     
   </p>
 </div>

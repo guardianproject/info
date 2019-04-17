@@ -45,11 +45,11 @@ Prepared by Carrie Winfrey and Tiffany Robertson, Okthanks, in partnership with 
   <a href="https://guardianproject.info/wp-content/uploads/2017/06/okt-gp.png"><img aria-describedby="caption-attachment-13844" src="https://guardianproject.info/wp-content/uploads/2017/06/okt-gp-300x72.png" alt="" width="300" height="72" class="size-medium wp-image-13844" srcset="https://guardianproject.info/wp-content/uploads/2017/06/okt-gp-300x72.png 300w, https://guardianproject.info/wp-content/uploads/2017/06/okt-gp-768x184.png 768w, https://guardianproject.info/wp-content/uploads/2017/06/okt-gp-1024x246.png 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p id="caption-attachment-13844" class="wp-caption-text">
-    OK Thanks &#8211; Guardian Project
+    OK Thanks – Guardian Project
   </p>
 </div>
 
-For more information, contact [ca&#x72;&#x72;&#x69;e&#64;&#111;&#x6b;&#x74;ha&#110;&#x6b;&#x73;.c&#111;&#x6d;](ma&#105;&#x6c;&#x74;&#x6f;:c&#97;&#x72;&#x72;&#x69;e&#64;&#111;&#x6b;&#x74;&#x68;ank&#115;&#x2e;&#x63;&#x6f;m).
+For more information, contact [ca&#x72;&#x72;&#x69;e@o&#x6b;&#x74;han&#x6b;&#x73;.co&#x6d;](mai&#x6c;&#x74;&#x6f;:ca&#x72;&#x72;&#x69;e@o&#x6b;&#x74;&#x68;anks&#x2e;&#x63;&#x6f;m).
 
 # Purpose
 
@@ -319,7 +319,7 @@ The study consisted of 3 parts.
                             
                               * **Average Difficulty**: 1.83
                               * **Number of Participants with Critical Errors**: 1
-                              * **No problem** &#8211; 4/9 (44%)<img src="https://guardianproject.info/wp-content/uploads/2017/06/image.png" width="693" height="381" alt="" title="" />
+                              * **No problem** – 4/9 (44%)<img src="https://guardianproject.info/wp-content/uploads/2017/06/image.png" width="693" height="381" alt="" title="" />
                             
                             __
                             
@@ -345,34 +345,34 @@ The study consisted of 3 parts.
                             
                             #### Observations:
                             
-                            Apps Index View &#8211; Before Apps are Added
+                            Apps Index View – Before Apps are Added
                             
-                              * Clicked ‘add’ first &#8211; 4/9 (44%)
-                              * Thought the ‘+’ in the nav bar was to add apps &#8211; 2/9 (22%)
-                              * Unclear that this was only for Android apps; Was confused about which apps could be added; thought she could add things from her applications folder on her computer &#8211; 1/9 (11%)
-                              * Confused about adding .apk files &#8211; 1/9 (11%)</p> 
+                              * Clicked ‘add’ first – 4/9 (44%)
+                              * Thought the ‘+’ in the nav bar was to add apps – 2/9 (22%)
+                              * Unclear that this was only for Android apps; Was confused about which apps could be added; thought she could add things from her applications folder on her computer – 1/9 (11%)
+                              * Confused about adding .apk files – 1/9 (11%)</p> 
                             
                             Add from Repos View
                             
                               * Thought when they tapped ‘add’ it would add the app, but it didn’t until they tapped done
                               * The problem was that people went to the next page or changed the filter and their selections were cleared- 3/9 (33%)
-                              * Users noticed that some apps showed up multiple times &#8211; 2/9 (22%)
-                              * Some left the page without hitting done (ie. used the back button in the browser) &#8211; 1/9 (11%)
+                              * Users noticed that some apps showed up multiple times – 2/9 (22%)
+                              * Some left the page without hitting done (ie. used the back button in the browser) – 1/9 (11%)
                             
                             #### Participant Feedback:
                             
-                              * Wanted to sign up using a google account &#8211; 1/9 (11%)
+                              * Wanted to sign up using a google account – 1/9 (11%)
                               * Participants glad to see the apps they wanted are available
                               * Be specific about what file types can be added
                               * _“Can I add my own files?” (Participant 9)_
-                              * Create buttons appears to ‘lag’ &#8211; 7/9 or (77%)
+                              * Create buttons appears to ‘lag’ – 7/9 or (77%)
                               * How do I ensure my repo is private?</p> 
                             
                             ## Task 2: Add the Twitter app.
                             
                               * **Average Difficulty**: 1.55 
                               * **Number of Participants with Critical Errors**: 0
-                              * **No problem** &#8211; 4/9 (44%)
+                              * **No problem** – 4/9 (44%)
                             
 <img src="https://guardianproject.info/wp-content/uploads/2017/06/image1.png" width="702" height="356" alt="" title="" /> </p> 
                             
@@ -390,10 +390,10 @@ The study consisted of 3 parts.
                             
                             #### Observations:
                             
-                            Apps Index View &#8211; After (task 2)
+                            Apps Index View – After (task 2)
                             
-                              * Big shiny add button was distracting; thought they would click there to add more apps &#8211; 2/9 (22%)
-                              * Were confused or didn’t like that the initial action cards merged &#8211; 4/9 (44%)
+                              * Big shiny add button was distracting; thought they would click there to add more apps – 2/9 (22%)
+                              * Were confused or didn’t like that the initial action cards merged – 4/9 (44%)
                             
                             #### Participant Feedback:
                             
@@ -424,8 +424,8 @@ The study consisted of 3 parts.
                             
                             Add from Repos View
                             
-                              * Need better categories (ex: ‘internet’ category is a little abstract &#8211; includes browser&#8217;s, privacy twitter and facebook) A social media category would be more relevant __&#8211; 2/9 (22%)
-                              * It’s not immediately clear that categories filter &#8211; 2/9 (22%) 
+                              * Need better categories (ex: ‘internet’ category is a little abstract – includes browser’s, privacy twitter and facebook) A social media category would be more relevant __– 2/9 (22%)
+                              * It’s not immediately clear that categories filter – 2/9 (22%) 
                                   * Participant chose a category filter, then searched. The app didn’t show up, because it was searching within the category.
                               * Search was not easy to find- 1/9 (11%) 
                             
@@ -446,7 +446,7 @@ The study consisted of 3 parts.
                             
                               * **Average Difficulty**: 1.22
                               * **Number of Participants with Critical Errors**: 1
-                              * **No problem** &#8211; 8/9 (88%)
+                              * **No problem** – 8/9 (88%)
                             
 <img src="https://guardianproject.info/wp-content/uploads/2017/06/image2.png" width="714" height="340" alt="" title="" /> </p> 
                             
@@ -466,7 +466,7 @@ The study consisted of 3 parts.
                             
                               * **Average Difficulty**: 1.5
                               * **Number of Participants with Critical Errors**: 2
-                              * **No problem**&#8211; 5/9 (55%)
+                              * **No problem**– 5/9 (55%)
                             
 <img src="https://guardianproject.info/wp-content/uploads/2017/06/image3.png" width="692" height="348" alt="" title="" /> </p> 
                             
@@ -496,12 +496,12 @@ The study consisted of 3 parts.
                             
                             #### Observations:
                             
-                              * Added description to the summary field &#8211; 3/9 (33%)
-                              * Commented that they wouldn’t have known they could edit an app, unless we asked them to do it &#8211; 3/9 (33%)
-                              * Description view takes too long to load &#8211; 2/9 (22%)
-                              * No indication in the description text box that this is where you add a description &#8211; 2/9 (22%)
-                              * Want a ‘save’ button with the description box &#8211; 2/9 (22%)
-                              * Want a back button on this page (wants it to say ‘back to repo’) &#8211; 2/9 (22%)
+                              * Added description to the summary field – 3/9 (33%)
+                              * Commented that they wouldn’t have known they could edit an app, unless we asked them to do it – 3/9 (33%)
+                              * Description view takes too long to load – 2/9 (22%)
+                              * No indication in the description text box that this is where you add a description – 2/9 (22%)
+                              * Want a ‘save’ button with the description box – 2/9 (22%)
+                              * Want a back button on this page (wants it to say ‘back to repo’) – 2/9 (22%)
                             
                             __
                             
@@ -516,7 +516,7 @@ The study consisted of 3 parts.
                             
                               * **Average Difficulty**: 2.16
                               * **Number of Participants with Critical Errors**: 1
-                              * **No problem** &#8211; 4/9 (44%)
+                              * **No problem** – 4/9 (44%)
                             
 <img src="https://guardianproject.info/wp-content/uploads/2017/06/image4.png" width="713" height="328" alt="" title="" /> </p> 
                             
@@ -530,29 +530,29 @@ The study consisted of 3 parts.
                             
                             #### Observations
                             
-                              * Expected to be able to remove apps from the main apps index view &#8211; 7/9 (77%) 
+                              * Expected to be able to remove apps from the main apps index view – 7/9 (77%) 
                                   * Most people searched main page, but remembered that they had seen something in the edit view previously.
                                   * _I’m not making any changes to the app._ 
                                   * _Wasn’t immediately apparent_ 
                                   * _Not difficult, just requires a lot of clicks_
                                   * I would expect to hover over or long press an app and get the option to remove
                                   * I want a ‘remove app’ button on the app page
-                              * Likes confirmation to remove the app &#8211; 1/9 (11%)</p> 
+                              * Likes confirmation to remove the app – 1/9 (11%)</p> 
                             
                             ## Task 6: Create a second repo. You don’t need to add any apps.
                             
                               * **Average Difficulty**: 1.72
                               * **Number of Participants with Critical Errors**: 0
-                              * **No problem**&#8211; 6/9 (66%)
+                              * **No problem**– 6/9 (66%)
                             
                             ####<img src="https://guardianproject.info/wp-content/uploads/2017/06/image5.png" width="740" height="333" alt="" title="" /> 
                             
                             #### Observations:
                             
-                              * Not completely clear, but figured it out &#8211; 3/9 (33%)
-                              * Trying to find empty state of My Repo view &#8211; 2/9 (22%)
+                              * Not completely clear, but figured it out – 3/9 (33%)
+                              * Trying to find empty state of My Repo view – 2/9 (22%)
                               * Many had tapped + by mistake already (thought it was to add apps)- 2/9 (22%)
-                              * Wanted to tap on the name of the repo or near it &#8211; 1/9 (11%)
+                              * Wanted to tap on the name of the repo or near it – 1/9 (11%)
                             
                             Participant Feedback:
                             
@@ -567,7 +567,7 @@ The study consisted of 3 parts.
                             
                               * **Average Difficulty**: 1.44
                               * **Number of Participants with Critical Errors**: 0
-                              * **No problem** &#8211; 8/9 (88%)
+                              * **No problem** – 8/9 (88%)
                             
 <img src="https://guardianproject.info/wp-content/uploads/2017/06/image6.png" width="709" height="324" alt="" title="" /> </p> 
                             
@@ -581,8 +581,8 @@ The study consisted of 3 parts.
                             
                             #### Observations:
                             
-                              * Had figured out how to do it in a previous task &#8211; 1/9 (11%)
-                              * Tapped back in browser &#8211; 1/9 (11%)
+                              * Had figured out how to do it in a previous task – 1/9 (11%)
+                              * Tapped back in browser – 1/9 (11%)
                             
                             #### Bug:
                             
@@ -594,19 +594,19 @@ The study consisted of 3 parts.
                             
                               * **Average Difficulty**: 1.72
                               * **Number of Participants with Critical Errors**: 1
-                              * **No problem**&#8211; 3/9 (33%)<img src="https://guardianproject.info/wp-content/uploads/2017/06/image7.png" width="716" height="305" alt="" title="" />
+                              * **No problem**– 3/9 (33%)<img src="https://guardianproject.info/wp-content/uploads/2017/06/image7.png" width="716" height="305" alt="" title="" />
                             
                             #### 
                             
                             #### Observations:
                             
-                              * Copy and pasted the link in a new tab (without prompting) &#8211; 4/9 (44%)
-                              * Went to share right away &#8211; most everyone
-                              * Participants tapped ‘copy link,’ saw a blue check and did nothing else &#8211; 2/9 (22%)
-                              * Used Facebook &#8211; 1/9 (11%) 
-                              * Used Twitter &#8211; 1/9 (11%)
+                              * Copy and pasted the link in a new tab (without prompting) – 4/9 (44%)
+                              * Went to share right away – most everyone
+                              * Participants tapped ‘copy link,’ saw a blue check and did nothing else – 2/9 (22%)
+                              * Used Facebook – 1/9 (11%) 
+                              * Used Twitter – 1/9 (11%)
                               * Opened the public link right away. Was going to add it to F-Droid then share with people from there 1/9 (11%)
-                              * Not clear how to publish the repo &#8211; 1/9 (11%)
+                              * Not clear how to publish the repo – 1/9 (11%)
                             
                             #### Participant Feedback:
                             
@@ -619,7 +619,7 @@ The study consisted of 3 parts.
                               * Like the QR code, because very familiar using these
                               * Steps aren’t extremely clear
                               * Likes that it shows how many apps are in your repo
-                              * Step by step &#8212; this is how you share it with journalists (3 step process)
+                              * Step by step — this is how you share it with journalists (3 step process)
                               * Having the QR code and link on the same page is helpful
                               * Would like to see a reminder about F-Droid on the share screen
                               * Need to have a clear understanding about F-Droid and how it works
@@ -630,7 +630,7 @@ The study consisted of 3 parts.
                             
                               * **Average Difficulty**: 1
                               * **Number of Participants with Critical Errors**: 0
-                              * **No problem**&#8211; 9/9 (100%)<img src="https://guardianproject.info/wp-content/uploads/2017/06/image8.png" width="704" height="320" alt="" title="" />
+                              * **No problem**– 9/9 (100%)<img src="https://guardianproject.info/wp-content/uploads/2017/06/image8.png" width="704" height="320" alt="" title="" />
                             
                             #### Observations:
                             
@@ -652,7 +652,7 @@ The study consisted of 3 parts.
                             
                             __
                             
-                            _“The concept of a repo is very abstract &#8211; the hardest part would be understanding what it is.” (Participant 6)_
+                            _“The concept of a repo is very abstract – the hardest part would be understanding what it is.” (Participant 6)_
                             
                             __
                             
@@ -730,7 +730,7 @@ The study consisted of 3 parts.
                             #### Participant Feedback:
                             
                               * Could offer a FAQ’s section
-                              * On home screen have a few quick questions and answers regarding Repomaker&#8211; _What’s a repo? What would I use repomaker for? Learn more here.</li> 
+                              * On home screen have a few quick questions and answers regarding Repomaker– _What’s a repo? What would I use repomaker for? Learn more here.</li> 
                                 
                                   * Additional verification step?
                                   * How much will it cost to run the apps? 
@@ -855,14 +855,14 @@ The study consisted of 3 parts.
                                 
                                 **How to use F-Droid Repos**
                                 
-                                &#8211; how to add one / how to get a repo on your phone
+                                – how to add one / how to get a repo on your phone
                                 
-                                &#8211; how to get a repo from the desktop computer to your phone
+                                – how to get a repo from the desktop computer to your phone
                                 
-                                &#8211; how to share a repo link
+                                – how to share a repo link
                                 
-                                &#8211; how to share a repo from F-Droid when there’s no internet; how to share one offline / how to share apps with peers when there’s no internet.
+                                – how to share a repo from F-Droid when there’s no internet; how to share one offline / how to share apps with peers when there’s no internet.
                                 
-                                &#8211; how to remove one
+                                – how to remove one
                                 
-                                &#8211; how do I update files and apps I add?
+                                – how do I update files and apps I add?

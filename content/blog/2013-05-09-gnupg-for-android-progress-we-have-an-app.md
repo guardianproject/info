@@ -35,7 +35,7 @@ Or download the `.apk` from our nightly builds:
 
 ## Setup
 
-Before using gpgcli, be sure to launch the app and let it finish its installation process. Once it has completed, then you&#8217;re ready to use it. The easiest way to get started with gpgcli is to install <a href="https://play.google.com/store/apps/details?id=jackpal.androidterm" title="download Android Terminal emulator from the Google Play Store"  target="_blank">Android Terminal Emulator</a>. gpgcli will automatically configure Android Terminal Emulator as long as you have the _Allow PATH extensions</em settings enabled. 
+Before using gpgcli, be sure to launch the app and let it finish its installation process. Once it has completed, then you’re ready to use it. The easiest way to get started with gpgcli is to install <a href="https://play.google.com/store/apps/details?id=jackpal.androidterm" title="download Android Terminal emulator from the Google Play Store"  target="_blank">Android Terminal Emulator</a>. gpgcli will automatically configure Android Terminal Emulator as long as you have the _Allow PATH extensions</em settings enabled. 
 
 ## Features
 

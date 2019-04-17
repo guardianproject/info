@@ -1,6 +1,6 @@
 ---
 id: 2760
-title: 'From #HOPE9: Your Cell Phone Is Covered in Spiders! &#8211; Practical Android Security'
+title: 'From #HOPE9: Your Cell Phone Is Covered in Spiders! – Practical Android Security'
 date: 2012-07-19T14:53:21-04:00
 author: n8fr8
 layout: post
@@ -15,20 +15,20 @@ categories:
 > 
 > ## Additional Resources
 > 
-> [https://guardianproject.org](https://guardianproject.org/) &#8211; Awsome android devs creating the best security tools for android.
+> [https://guardianproject.org](https://guardianproject.org/) – Awsome android devs creating the best security tools for android.
 > 
-> [https://encrypteverything.ca/index.php/Cell\_phone\_privacy\_guide\_%28Android%29](https://encrypteverything.ca/index.php/Cell_phone_privacy_guide_%28Android%29) &#8211; How to encrypt lots of things on android
+> [https://encrypteverything.ca/index.php/Cell\_phone\_privacy\_guide\_%28Android%29](https://encrypteverything.ca/index.php/Cell_phone_privacy_guide_%28Android%29) – How to encrypt lots of things on android
 > 
-> <http://forum.xda-developers.com/> &#8211; Very knowlegable android enthusiast and dev forum
+> <http://forum.xda-developers.com/> – Very knowlegable android enthusiast and dev forum
 > 
-> <http://developer.android.com/index.html> &#8211; The Documentation
+> <http://developer.android.com/index.html> – The Documentation
 > 
-> <http://forensics.spreitzenbarth.de/> &#8211; Info on android malware
+> <http://forensics.spreitzenbarth.de/> – Info on android malware
 > 
-> <http://androidsecuritytest.com/features/logs-and-services/loggers/carrieriq/> &#8211; Info on carrier IQ
+> <http://androidsecuritytest.com/features/logs-and-services/loggers/carrieriq/> – Info on carrier IQ
 > 
-> <https://groups.google.com/forum/?fromgroups#!forum/android-security-discuss> &#8211; Android security google group
+> <https://groups.google.com/forum/?fromgroups#!forum/android-security-discuss> – Android security google group
 
-&nbsp;
+ 
 
 Thanks Cooper and [Hackbloc](http://hackbloc.org) for all your support and feedback!

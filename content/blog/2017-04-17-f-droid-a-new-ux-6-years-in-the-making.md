@@ -48,7 +48,7 @@ Some of the big ticket items include:
 
 * Screenshots and feature graphics  
 * Bulk download and install  
-* Offline &#8220;queue for download&#8221;  
+* Offline “queue for download”  
 * Ability to translate apps metadata  
 * Improved notifications for downloads and pending updates
 

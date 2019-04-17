@@ -25,7 +25,7 @@ wpdc_sync_post_comments:
 categories:
   - News
 ---
-We&#8217;ve released a new version of [Orfox](https://guardianproject.info/apps/orfox/), our Tor Browser for Android, that contains an an <a href="https://blog.mozilla.org/security/2016/11/30/fixing-an-svg-animation-vulnerability/" rel="nofollow">important security update to Firefox</a>.
+We’ve released a new version of [Orfox](https://guardianproject.info/apps/orfox/), our Tor Browser for Android, that contains an an <a href="https://blog.mozilla.org/security/2016/11/30/fixing-an-svg-animation-vulnerability/" rel="nofollow">important security update to Firefox</a>.
 
 This update is based on the [latest release of Tor Browser](https://blog.torproject.org/blog/tor-browser-607-released), which was announced with this message:
 

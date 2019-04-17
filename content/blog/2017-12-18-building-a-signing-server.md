@@ -55,7 +55,7 @@ Ideally, this machine would only be accessible via Tor. That hides the physical 
 
 For the HSM, we recommend using [Nitrokey](https://www.nitrokey.com/) hardware, since they are free software/hardware, and provide a wide range of options. Use a separate machine to put the signing keys on HSM. A good HSM will keep an audit trail of how many signatures have been made, so that information could be used to create an automatic auditing process to raise alarms if too many signatures have been made. That could mean that this server was breached and used to sign unauthorized packages.
 
-Other possibility it to use a setup like [Fedora](https://pagure.io/sigul)&#8216;s [Sigul](http://www.devops-blog.net/koji/gpg-signing-rpms-with-sigul-signing-server-koji-integration) that involves three machines.
+Other possibility it to use a setup like [Fedora](https://pagure.io/sigul)‘s [Sigul](http://www.devops-blog.net/koji/gpg-signing-rpms-with-sigul-signing-server-koji-integration) that involves three machines.
 
 ### Basic laptop dedicated to signing {#basic-laptop-dedicated-to-signing}
 
@@ -65,7 +65,7 @@ This could be made quite automatic with some custom scripts. The person running 
 
 ### Fully offline signing laptop with USB thumb drives {#fully-offline-signing-laptop-with-usb-thumb-drives}
 
-This process is based on the same basic, stripped down laptop as the previous example. But this time, the networking should be entirely disabled before the install process. For example, it is easy in many laptops to physically remove the WiFi card. Therefore, it makes sense to use a laptop that does not include an ethernet jack, which are usually not possible to remove. Otherwise, blacklisting all kernel modules related to neworking can suffice. Since this machine is fully offline, the extra work of using an HSM is not as important, but it can&#8217;t hurt to include it.
+This process is based on the same basic, stripped down laptop as the previous example. But this time, the networking should be entirely disabled before the install process. For example, it is easy in many laptops to physically remove the WiFi card. Therefore, it makes sense to use a laptop that does not include an ethernet jack, which are usually not possible to remove. Otherwise, blacklisting all kernel modules related to neworking can suffice. Since this machine is fully offline, the extra work of using an HSM is not as important, but it can’t hurt to include it.
 
 Download the full "CD" or "DVD" image of Debian to run the install. Be sure to [verify](https://www.debian.org/CD/verify) the GPG signatures and the SHA-256 hashes. One essential utility is _apt-offline_, which automates the process of downloading Debian packages, verifying their signatures, and copying them over to an offline machine.
 

@@ -23,7 +23,7 @@ categories:
 </p>
 
 <p dir="ltr">
-  <span style="font-size: 13px;">October 20, New York, NY &#8211; The Guardian Project, a New York-based open-source mobile security incubator, has launched version 12 of its well-regarded secure messaging app for Android, rebranding it to “ChatSecure” to unify branding with existing open-source iPhone and iPad apps. The new upgrade brings an entirely new fluid user interface, and unprecedented security features for users looking to protect their message content (what they are saying) and their metadata (who, why and where) from malicious adversaries and apps, hostile network operators, and dragnet surveillance. It is completely open-source, utilizes interoperable protocols, and has undergone third-party security audits and code reviews.</span>
+  <span style="font-size: 13px;">October 20, New York, NY – The Guardian Project, a New York-based open-source mobile security incubator, has launched version 12 of its well-regarded secure messaging app for Android, rebranding it to “ChatSecure” to unify branding with existing open-source iPhone and iPad apps. The new upgrade brings an entirely new fluid user interface, and unprecedented security features for users looking to protect their message content (what they are saying) and their metadata (who, why and where) from malicious adversaries and apps, hostile network operators, and dragnet surveillance. It is completely open-source, utilizes interoperable protocols, and has undergone third-party security audits and code reviews.</span>
 </p>
 
 <p dir="ltr">

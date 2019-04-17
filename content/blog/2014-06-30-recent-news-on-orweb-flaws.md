@@ -12,9 +12,9 @@ categories:
 ---
 **August 2014: New browser development news here, including Orfox, our Firefox-based browser solution: <https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html>**
 
-&nbsp;
+ 
 
-On Saturday, a new post was relased by Xordern entitled [IP Leakage of Mobile Tor Browsers](http://xordern.net/ip-leakage-of-mobile-tor-browsers.html). As the title says, the post documents flaws in mobile browser apps, such as [Orweb](/apps/orweb) and [Onion Browser](https://mike.tig.as/onionbrowser/), both which automatically route communication traffic over Tor. While we appreciate the care the author has taken, he does make the mistake of using the term &#8220;security&#8221; to lump together the need for total anonymity up with the needs of anti-censorship, anti-surveillance, circumvention and local device privacy. We do understand the seriousness of this bug, but at the same time, it is not an issue encountered regularly in the wild.
+On Saturday, a new post was relased by Xordern entitled [IP Leakage of Mobile Tor Browsers](http://xordern.net/ip-leakage-of-mobile-tor-browsers.html). As the title says, the post documents flaws in mobile browser apps, such as [Orweb](/apps/orweb) and [Onion Browser](https://mike.tig.as/onionbrowser/), both which automatically route communication traffic over Tor. While we appreciate the care the author has taken, he does make the mistake of using the term “security” to lump together the need for total anonymity up with the needs of anti-censorship, anti-surveillance, circumvention and local device privacy. We do understand the seriousness of this bug, but at the same time, it is not an issue encountered regularly in the wild.
 
 Here are thoughts on the three specific issues covered:
 
@@ -26,14 +26,14 @@ Here are thoughts on the three specific issues covered:
 
 At this point, we still recommend [Orweb](/apps/orweb) for most people who want a very simple solution for a browser that is proxied through Tor. This will defeat mass traffic surveillance, network censorship, filtering by your mobile operator, work or school, and more. Orweb also keeps little data cached on the local system, and so protects against physical inspection and analysis of your device, to retrieve your browser history. HOWEVER if you do seem to visit sites that have HTML5 media players in the them, then we recommend you do not use Orweb, and again, that you use [Firefox with our Privacy-Enhanced Configuration](https://guardianproject.info/apps/firefoxprivacy).
 
-If you are truly worried about IP leakage, then you MUST root your phone, and use Orbot&#8217;s Transparent Proxying feature. This provides the best defense against leaking of your real IP. Even further, if you require even more assurance than that, you should follow Mike Perry&#8217;s [Android Hardening Guide](https://blog.torproject.org/blog/mission-impossible-hardening-android-security-and-privacy), which uses AFWall firewall in combination with Orbot, to block traffic to apps, and even stops Google Play from updating apps without your permission.
+If you are truly worried about IP leakage, then you MUST root your phone, and use Orbot’s Transparent Proxying feature. This provides the best defense against leaking of your real IP. Even further, if you require even more assurance than that, you should follow Mike Perry’s [Android Hardening Guide](https://blog.torproject.org/blog/mission-impossible-hardening-android-security-and-privacy), which uses AFWall firewall in combination with Orbot, to block traffic to apps, and even stops Google Play from updating apps without your permission.
 
-Finally, the best news is that we are making great progress in a fully privacy-by-default version of Firefox, under the project named &#8220;Orfox&#8221;. This is being done in partnership with the Tor Project, as a [Google Summer of Code](http://www.google-melange.com/gsoc/proposal/public/google/gsoc2014/amoghbl1/5629499534213120) effort, along with the Orweb team. We aim to use as much of the same code that Tor Browser does to harden Firefox in our browser, and are getting close to an alpha release. If you are interested in a testing the first prototype build, which address the HTML5 and Download leak issues, you can find it here: [https://guardianproject.info/releases/FennecForTor\_GSoC\_prototype.apk](https://guardianproject.info/releases/FennecForTor_GSoC_prototype.apk) and track the project here: <https://github.com/guardianproject/orfox>
+Finally, the best news is that we are making great progress in a fully privacy-by-default version of Firefox, under the project named “Orfox”. This is being done in partnership with the Tor Project, as a [Google Summer of Code](http://www.google-melange.com/gsoc/proposal/public/google/gsoc2014/amoghbl1/5629499534213120) effort, along with the Orweb team. We aim to use as much of the same code that Tor Browser does to harden Firefox in our browser, and are getting close to an alpha release. If you are interested in a testing the first prototype build, which address the HTML5 and Download leak issues, you can find it here: [https://guardianproject.info/releases/FennecForTor\_GSoC\_prototype.apk](https://guardianproject.info/releases/FennecForTor_GSoC_prototype.apk) and track the project here: <https://github.com/guardianproject/orfox>
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 
 
-&nbsp;
+ 

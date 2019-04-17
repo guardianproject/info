@@ -18,11 +18,11 @@ tags:
 ---
 Nathan and I just got the first complete test of IOCipher working in the IOCipherServer/SpotSync app. We created a filesystem sqlite.db file, then mounted it and got all the files via HTTP. In the test suite, I have lots of operations all running fine and encrypting! The core idea here is a java.io API replacement that transparently writes to an encrypted store. So for the most part, just change your import statements from:
 
-<pre>java.io.*   ---&gt;   info.guardianproject.iocipher.*</pre>
+<pre>java.io.*   --->   info.guardianproject.iocipher.*</pre>
 
-Then in your code, make a `VirtualFileSystem` instance and mount it, and unmount it. That&#8217;s about it. Right now, you can have only a single filesystem per app, but you can unmount one and mount another. We hope to add support for multiple filesystems in the not-too-distant future.
+Then in your code, make a `VirtualFileSystem` instance and mount it, and unmount it. That’s about it. Right now, you can have only a single filesystem per app, but you can unmount one and mount another. We hope to add support for multiple filesystems in the not-too-distant future.
 
-Its ready for people to try, some kind of early alpha. Here&#8217;s the framework itself:  
+Its ready for people to try, some kind of early alpha. Here’s the framework itself:  
 <a href="https://github.com/guardianproject/IOCipher" target="_blank">https://github.com/guardianproject/IOCipher</a>
 
 THe easiest way to get started right now is probably the test suite:  

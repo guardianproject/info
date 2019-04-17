@@ -12,7 +12,7 @@ categories:
 ---
 **Update (6/26/12): I Found Orbot to have lower idle usage then previously recorded. The post now reflects the new statistics. The previous stats were based on idle usage at 92 bytes/s**
 
-There have been many inquiries about the cost of Orbot&#8217;s data usage. I ran five different tests to record the types of data tax a user might encounter. Heavy usage of Orbot combined with a low monthly data allotment could be an issue.
+There have been many inquiries about the cost of Orbot’s data usage. I ran five different tests to record the types of data tax a user might encounter. Heavy usage of Orbot combined with a low monthly data allotment could be an issue.
 
 Below is the compiled data for 4 different use cases:
 
@@ -47,7 +47,7 @@ Below is the compiled data for 4 different use cases:
     </td>
     
     <td>
-      &#8212;
+      —
     </td>
   </tr>
   
@@ -109,7 +109,7 @@ Below is the compiled data for 4 different use cases:
     </td>
     
     <td>
-      &#8212;
+      —
     </td>
   </tr>
   
@@ -123,7 +123,7 @@ Below is the compiled data for 4 different use cases:
     </td>
     
     <td rowspan="3">
-      &#8212;
+      —
     </td>
   </tr>
   
@@ -149,7 +149,7 @@ Below is the compiled data for 4 different use cases:
     </td>
     
     <td>
-      &#8212;
+      —
     </td>
   </tr>
 </table>
@@ -160,7 +160,7 @@ The test cases were fairly straight forward. I used Droidwall to limit traffic o
 
   * **Web Browsing:** Browsed five common websites (guardianproject.info, boingboing.net, facebook.com, slashdot.org, twitter.com) with Orbot/Orweb and javascript OFF, the default browser with Orbot running as a transparent proxy, and just the default browser by itself
   * **Idle:** Started Orbot and began recording on Idle for ~10 minutes. The traffic graph clearly shows a small data spike approximately every minute.
-  * **Bulk Download:** Downloaded a 5 MB file with the download manager 3 times both with Orbot&#8217;s transparent proxy and without
+  * **Bulk Download:** Downloaded a 5 MB file with the download manager 3 times both with Orbot’s transparent proxy and without
   * **Client Stop/Start:** Recorded traffic incurred by starting and stopping Orbot
 
 **Contextualizing the Data**
@@ -271,7 +271,7 @@ I have calculated how much data you could use for 3 different plans if you used 
 
 **Reducing Data Cost**
 
-These numbers may be high for some, but they represent very heavy usage of Orbot. If a user only wishes to use Orbot for a specific set of apps that have proxy support, there is no reason to leave Orbot running 24/7. Twitter is a great example of this because it caches its data asynchronously and would only need Orbot turned on to gather new tweets or search. If the application&#8217;s proxy is on but Orbot is off it will simply not be able to update rather then updating outside the Tor network.
+These numbers may be high for some, but they represent very heavy usage of Orbot. If a user only wishes to use Orbot for a specific set of apps that have proxy support, there is no reason to leave Orbot running 24/7. Twitter is a great example of this because it caches its data asynchronously and would only need Orbot turned on to gather new tweets or search. If the application’s proxy is on but Orbot is off it will simply not be able to update rather then updating outside the Tor network.
 
 > **Warning: **Turning off Orbot to save data will also remove the transparent proxy rules. This means applications relying on the transparent proxy rules as opposed to proxy support (Twitter) will be free to broadcast data outside Orbot if you have not taken other precautions.
 

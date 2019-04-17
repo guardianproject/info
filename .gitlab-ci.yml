@@ -2,9 +2,7 @@ image: debian:buster-slim
 
 stages:
  - deploy
-
-variables:
-  OUT_DIR: build
+ - publish
 
 # Common steps required for each type of build
 .setup: &setup |
@@ -16,7 +14,7 @@ variables:
   locale-gen
   export LC_ALL=en_US.UTF-8
 
-# Main deploy
+# test deploy to GitLab Pages
 pages:
   stage: deploy
   artifacts:
@@ -25,10 +23,36 @@ pages:
     expire_in: 1w
     when: always
   script:
-   - *setup
-   # This is where GitLab pages will deploy to by default (e.g. "https://guardianproject.gitlab.io/info")
-   # so we need to make sure that the Hugo configuration understands this.
-   - 'echo "baseURL: \"https://${CI_PROJECT_NAMESPACE,,}.gitlab.io/$CI_PROJECT_NAME\"" > userconfig.yaml'
-   - 'echo "Additional Hugo config used for CI:" && cat userconfig.yaml'
-   - hugo env
-   - make
+    - *setup
+    # This is where GitLab pages will deploy to by default (e.g. "https://guardianproject.gitlab.io/info")
+    # so we need to make sure that the Hugo configuration understands this.
+    - 'echo "baseURL: \"https://${CI_PROJECT_NAMESPACE,,}.gitlab.io/$CI_PROJECT_NAME\"" > userconfig.yaml'
+    - 'echo "Additional Hugo config used for CI:" && cat userconfig.yaml'
+    - hugo env
+    - make
+
+guardianproject.info:
+  stage: publish
+  only:
+    - master@guardianproject/info
+  artifacts:
+    paths:
+      - public
+    expire_in: 1d
+  script:
+    - test -z "$SSH_PRIVATE_KEY" && exit 1
+    - *setup
+    - 'echo "baseurl: \"https://guardianproject.info\"" > userconfig.yaml'
+    - echo "Additional Hugo config used for CI:"
+    - cat userconfig.yaml
+    - hugo env
+    - make
+    - apt-get install -qy openssh-client rsync
+    - mkdir -p ~/.ssh
+    - chmod 0700 ~/.ssh
+    - cat known_hosts >> ~/.ssh/known_hosts
+    - chmod 0644 ~/.ssh/known_hosts
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - chmod -R a+rX,go-w public/
+    - rsync -axv --delete public/ gpbuilds@guardianproject.info:/var/www/news/

@@ -26,8 +26,6 @@ pages:
     when: always
   script:
    - *setup
-   - 'git submodule init'
-   - 'git submodule update'
    # This is where GitLab pages will deploy to by default (e.g. "https://guardianproject.gitlab.io/info")
    # so we need to make sure that the Hugo configuration understands this.
    - 'echo "baseURL = \"https://${CI_PROJECT_NAMESPACE,,}.gitlab.io/$CI_PROJECT_NAME\"" > userconfig.toml'

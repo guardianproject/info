@@ -26,7 +26,6 @@ clean:
 		data/git.yaml \
 		gitlab.toml userconfig.toml
 	rm -rf	public
-	( cd themes/beautifulhugo && git reset --hard )
 
 # Remove everything, even things that need to be redownloaded
 distclean: clean

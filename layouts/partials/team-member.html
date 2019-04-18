@@ -1,0 +1,26 @@
+<div class="team-member">
+  <h3>{{ .name }}
+    {{ if .gitlab }}
+    <a href="https://gitlab.com/{{ .gitlab }}" target="_blank" title="{{ .name }} on Gitlab">
+      <i class="fab fa-gitlab"></i>
+    </a>
+    {{ end }}
+    {{ if .github }}
+    <a href="https://github.com/{{ .github }}" target="_blank" title="{{ .name }} on Github">
+      <i class="fab fa-github"></i>
+    </a>
+    {{ end }}
+    {{ if .twitter }}
+    <a href="https://twitter.com/{{ .twitter }}" target="_blank" title="{{ .name }} on Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    {{ end }}
+  </h3>
+  <img style="float: right;" src="{{ .Site.BaseURL }}/{{ .name }}.png" title="{{ .name }}" class="alignleft size-full" width="64" height="64"/>
+  <ul>
+    {{ if .title }}<li>{{ .title }}</li>{{ end }}
+    {{ if .description }}<li>{{ .description }}</li>{{ end }}
+    {{ if .matrix }}<li><tt>{{ .matrix }}</tt></li>{{ end }}
+    {{ if .gpg }}<li>PGP: <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0x{{ .gpg }}">{{ .gpg }}</a></li>{{ end }}
+  </ul>
+</div>

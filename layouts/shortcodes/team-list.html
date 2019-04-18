@@ -1,0 +1,7 @@
+{{ range (shuffle .Site.Data.teamlist.current) }}
+{{ partial "team-member" . }}
+{{ end }}
+<h2>Emeritus</h2>
+{{ range (shuffle .Site.Data.teamlist.emeritus) }}
+{{ partial "team-member" . }}
+{{ end }}

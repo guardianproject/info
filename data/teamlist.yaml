@@ -1,0 +1,95 @@
+current:
+  - name: n8fr8
+    title: Founder and Director
+    description: Developer on Orbot, Orweb, ChatSecure
+    gpg: BBE20FD6DA48A3DD4CC7DF41A801183E69B37AA9
+    github: n8fr8
+    gitlab: n8fr8
+    twitter: n8fr8
+    matrix: "@n8fr8:matrix.org"
+
+  - name: _hc
+    title: Hacker & Researcher
+    description: Developer on Guardian developer tool suite
+    gpg: EE6620C7136B0D2C456C0A4DE9E28DEA00AA5556
+    github: eighthave
+    gitlab: eighthave
+    twitter: hansstatus
+    matrix: "@eighthave:matrix.org"
+
+  - name: abeluck
+    title: Security Surgeon
+    description: Developer on Guardian developer tool suite
+    gpg: 9185813DDCCD789E5D4BA51B884B649C340C81F4
+    gitlab: abeluck
+    github: abeluck
+
+  - name: carrie
+    title: Interaction Designer
+    description: UI & UX Developer
+    gitlab: crwinfrey
+
+  - name: rosa
+    title: Operations Operative
+    description: Partnership, products and for-hire services
+
+  - name: daveo
+    title: Operations Operative
+    description: Partnership, products and for-hire services
+
+  - name: jlhads
+    title: Advisor, Evangelist, Alpha User Extraordinaire
+    description: Grant writing, speaking, meeting and other outreach
+
+  - name: n-pex
+    title: Mobile Master
+    github: n-pex
+    gitlab: n-pex
+
+  - name: uniq
+    gpg: 3DBDBA23810AEE377CC8E9D7C84324635610899F
+    github: uniqx
+    gitlab: uniqx
+
+emeritus:
+  - name: noneck
+    twitter: noneck
+    github: noneck
+    gpg: 43CAAB63BC96216D323ED8BA0DC78D8C8A21A058
+
+  - name: harlo
+    title: Metadata Rockstar & App Maker
+    description: Developer on InformaCam, ObscuraCam
+    gpg: 60FB69097B2A759811A86E0E67866BECA4469630
+    github: harlo
+
+  - name: vanevery
+    title: Guru of All Things Android
+    gpg: 627180FBC6138C3E8E542D696C5B667D16790E46
+
+  - name: lee
+    title: Hacker & Phreaker
+    description: Lead Developer on Open Secure Telephony Network/Ostel
+    gpg: D16F04E928688169B64088D5A84BF48A12CA3765
+
+  - name: dj
+    title: Design, User Experience and Strategy
+    description: Product Manager on Orbot, Gibberbot and beyond
+    gpg: 29D99C07BEA7598B280782BE6692829CD2D2BE81
+
+  - name: mark
+    title: Creative Technologist
+    description: Strategy and Project Management
+    gpg: B605F087AE875CCA9B762A39EFBFA7278D8EFFDA
+
+  - name: josh
+    title: Designer and Code Ninja
+    description: Storymaker Developer
+    gpg: C1A794D89F7846996245B7CAF2726EBB38D2C97C
+    github: vitriolix
+    gitlab: vitriolix
+    twitter: vitriolix
+
+  - name: miron
+    title: Futurist, computer geek, & entrepreneur
+    gpg: BF6273FAEF7CC0BA1F562E50989F6B3048A116B5

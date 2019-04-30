@@ -14,7 +14,7 @@ menu:
 
 The Guardian Project can be utilized by partner organizations in three ways. First, as a turn-key product, for daily personal use as well as organizational deployment in sensitive field world. Second, as a mobile security platform, on which developers can build custom applications that required circumvention, anonymity, encryption and other capabilities. Finally, as an open-source project, with which to collaborate on in core mobile security research and development.
 
-You can view our [current set of partners here](/about/partners/).
+You can view our [current set of partners here](/home/partners/).
 
 **1. Turn-key &#8220;Beta&#8221; Product**  
 Through apps available in the Android Market and distributed through direct secure download, any person with an Android phone can utilize specific capabilities of the Guardian Project app suite. This includes Orbot for access to the Tor network, Gibberbot for encrypted chat, and Orweb and ProxyMob for secured web access. Guardian also offers tuned configuration and documentation for use a variety of third-party open-source solutions for secure voice communications and email. The current state of our apps is definitely pre-release and &#8220;beta&#8221;, and any user or organization is expected to have some technical capability and be motivated to participate in improving our product.

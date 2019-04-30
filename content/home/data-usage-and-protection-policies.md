@@ -22,6 +22,8 @@ wpdc_sync_post_comments:
 menu:
   main:
     parent: home
+aliases:
+  - privacy
 ---
 **May the 4th, 2016**
 

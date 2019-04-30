@@ -1,18 +1,20 @@
 ---
 id: 11393
-title: 'Building, Securing, &#038; Anonymizing Android Apps'
+title: 'Building, Securing, and Anonymizing Android Apps'
 date: 2013-07-05T13:02:37-04:00
 author: mark
 layout: page
 guid: http://guardianproject.info/?page_id=11393
+aliases:
+  - building_secure_androids
 ---
-<div id="event-title" data-name="Building, Securing, & Anonymizing Android Apps">
+<div id="event-title" data-name="Building, Securing, and Anonymizing Android Apps">
   <h1 itemprop="name">
     Calling all Android devs:
   </h1>
   
   <p>
-    <img class="aligncenter" alt="" src="http://www.jobspringpartners.com/posts/images/456/582/break1.jpeg" width="600" height="450" />
+    <img class="aligncenter" alt="" src="break1.jpeg" width="600" height="450" />
   </p>
 </div>
 

@@ -7,7 +7,9 @@ layout: page
 guid: https://guardianproject.info/?page_id=3320
 menu:
   main:
-    parent: apps
+    parent: archive
+aliases:
+   - tutorials
 ---
 Security doesn&#8217;t have to be hard. Here are a few videos that&#8217;ll make using our apps easier (and more awesome).
 

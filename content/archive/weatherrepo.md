@@ -5,6 +5,11 @@ date: 2013-06-13T13:52:02-04:00
 author: mark
 layout: page
 guid: http://guardianproject.info/?page_id=4245
+menu:
+  main:
+    parent: archive
+aliases:
+  - code/weatherrepo
 ---
 <div title="Page 1">
   <div>

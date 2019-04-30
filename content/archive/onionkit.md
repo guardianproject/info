@@ -5,6 +5,11 @@ date: 2010-10-07T21:11:55-04:00
 author: Derek
 layout: page
 guid: https://guardianproject.info/
+menu:
+  main:
+    parent: archive
+aliases:
+  - code/onionkit
 ---
 # <a style="font-size: 13px;" href="https://github.com/guardianproject/onionkit">https://github.com/guardianproject/onionkit</a>
 

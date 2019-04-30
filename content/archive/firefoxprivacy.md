@@ -25,6 +25,11 @@ discourse_last_sync:
   - "1552062211"
 wpdc_sync_post_comments:
   - "0"
+menu:
+  main:
+    parent: archive
+aliases:
+  - apps/firefoxprivacy
 ---
 <!--:-->
 

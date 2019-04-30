@@ -6,6 +6,11 @@ author: mark
 layout: page
 guid: https://guardianproject.info/?page_id=11689
 image: http://guardianproject.info/wp-content/uploads/2013/09/keysync.png
+menu:
+  main:
+    parent: archive
+aliases:
+  - apps/keysync
 ---
 [<img src="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png" alt="KeySync" width="196" height="196" class="alignright size-full wp-image-11797" srcset="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png 256w, https://guardianproject.info/wp-content/uploads/2013/09/keysync-150x150.png 150w" sizes="(max-width: 196px) 100vw, 196px" />](https://guardianproject.info/wp-content/uploads/2013/09/keysync.png)Privacy and security software like OTR encryption for chat and GnuPG for email and files all create digital identities that we can mark as trusted through a verification process. When using this software, each app needs completely new security identities that are separate from any existing identities used by the other apps. Then again, mobile software needs it own versions of these identity files. When setting up ChatSecure on a mobile device, all of the trust information from existing chat apps like Adium or Pidgin also needs to be converted and transferred so that ChatSecure has the same trusted identities. Or when switching from Pidgin to Jitsi for instant messaging, the trust information needs to be converted and synced so the trust information is not lost.
 

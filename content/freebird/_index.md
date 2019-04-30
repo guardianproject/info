@@ -1,6 +1,6 @@
 ---
 id: 1871
-title: '<!--:en-->Freebird<!--:--><!--:pt-->O que é o Freebird?<!--:--><!--:es-->¿QUÉ ES FREEBIRD?<!--:-->'
+title: Freebird Workshop
 date: 2012-04-25T21:59:05-04:00
 author: n8fr8
 layout: page
@@ -9,6 +9,9 @@ force_ssl:
   - "1"
 force_ssl_children:
   - "1"
+menu:
+  main:
+    parent: archive
 ---
 <!--:en-->
 

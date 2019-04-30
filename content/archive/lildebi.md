@@ -9,8 +9,14 @@ force_ssl:
   - "1"
 menu:
   main:
-    parent: code
+    parent: archive
+aliases:
+  - code/lildebi
 ---
+
+# NO LONGER MAINTAINED
+<br/><br/>
+
 Have an Android phone and want an easy Debian chroot running that you can trust? Install [Lil’ Debi](https://github.com/guardianproject/lildebi), and you can have a Debian install running with a single click of a button. It builds up a whole Debian chroot on your phone entirely using debootstrap. You choose the release, mirror, and size of the disk image, and away it goes. It could take up to an hour on a slow device, then its done. The entire package is built from source using publicly available, repeatable builds. It even includes `gpgv` and the Debian repository keys in the apk and verifies the packages it downloads in the first stage of debootstrap before installing them. It will also check and update a SHA1 checksum to make sure your debian.img file has not be tampered with.
 
 Then it has a simple chroot manager that `fsck`s your disk, mounts and unmounts things, and starts/stops sshd if you have it installed. You can also then use ‘apt-get’ to install any package that is released for ARM processors. This includes things like a complete real shell, Tor, TraceRouteTCP, iwconfig/ipconfig, and other security and crypto tools.

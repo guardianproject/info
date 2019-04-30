@@ -18,7 +18,9 @@ publish_to_discourse:
 menu:
   main:
     name: Securing Visual Media
-    parent: research
+    parent: archive
+aliases:
+  - apps/informacam
 ---
 We&#8217;ve launched [CameraV](https://guardianproject.info/apps/camerav), the first public InformaCam App! Click the image below to learn more and get the app&#8230;
 

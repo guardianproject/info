@@ -9,6 +9,11 @@ publish_post_category:
   - "5"
 publish_to_discourse:
   - "0"
+menu:
+  main:
+    parent: archive
+aliases:
+  - code/luks
 ---
 If you are looking for the homepage for LUKS, you can find it here: [**https://gitlab.com/cryptsetup/cryptsetup/**](https://gitlab.com/cryptsetup/cryptsetup/)
 

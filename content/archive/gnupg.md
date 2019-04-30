@@ -25,8 +25,13 @@ wpdc_sync_post_comments:
   - "0"
 menu:
   main:
-    parent: code
+    parent: archive
+aliases:
+  - code/gnupg
 ---
+# NO LONGER MAINTAINED
+<br/><br/>
+
 This project is **UNMAINTAINED**, we recommend [OpenKeychain](https://www.openkeychain.org/) instead. The core porting work has all be included upstream in the official <a href="https://gnupg.org" target="_blank">GnuPG</a> source repositories. The Android app needs a new maintainer. This could be you! Email us at <a href="&#109;&#x61;&#105;&#x6c;t&#x6f;:&#x73;u&#x70;p&#x6f;r&#x74;&#64;&#103;&#x75;&#97;&#x72;&#100;&#x69;a&#x6e;p&#x72;o&#x6a;e&#x63;t&#x2e;i&#110;&#x66;&#111;" target="_blank">s&#117;&#x70;&#x70;o&#114;&#x74;&#x40;g&#117;&#x61;&#x72;d&#105;&#x61;&#x6e;p&#114;&#x6f;&#x6a;e&#99;&#x74;&#x2e;i&#110;&#x66;&#x6f;</a>
 
 [<img src="https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png" alt="GnuPG for Android" width="150" height="150" class="alignleft size-thumbnail wp-image-3680" srcset="https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/05/icon-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/05/icon.png 512w" sizes="(max-width: 150px) 100vw, 150px" />](https://guardianproject.info/wp-content/uploads/2013/05/icon.png)Gnu Privacy Guard (GnuPG) for Android brings the widespread standard in OpenPGP encryption to Android. GnuPG provides solid encryption for keeping emails and files private, and for verifying that emails and files are who you think they are. GnuPG is built-in to basically every GNU/Linux distro, in <a href="https://gpgtools.org/" target="_blank">GPGTools</a> for Mac OS X and Apple Mail, a <a href="http://gpg4win.org/" target="_blank">GPG4Win</a> for Windows and Outlook, <a href="https://www.enigmail.net/" target="_blank">Enigmail</a> for Thunderbird, etc. We are working to bring GnuPG to Android to make it the cornerstone of Android encryption like it is elsewhere.

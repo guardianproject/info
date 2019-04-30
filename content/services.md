@@ -24,6 +24,9 @@ wpdc_sync_post_comments:
 update_discourse_topic:
   - "0"
 image: http://guardianproject.info/wp-content/uploads/2015/06/5399436072_d9bcbbab50_b.jpg
+menu:
+  main:
+    parent: home
 ---
 We offer services for-hire for a variety of work related to our mission, projects and code-base.
 
@@ -31,11 +34,9 @@ We have deployed fully secure service infrastructures for mobile devices, from c
 
 We build software with modularity in mind, utilizing Gradle (Android), CocoaPods (iOS), NPM and other systems, to build upon, or create if needed, reusable, testable, reproducible code libraries. Finally, we offer usability testing, quality assurance, and release acceptance processes, to ensure we are effectively delivering upon the desired enhancements and product roadmap.
 
-### **Engagement Team  
-** 
+## Engagement Team
 
-Our team is made of product leads, software developers, user experience designers, and user advocates who have been working in mobile application and platform development for over twenty years. For the past nine years, as Guardian Project, we have focused equally on developing our own technology, while fostering deep partnerships with human rights and activists organizations in need of our services. This includes engaging deeply with partners’ staff to uplift their knowledge and skill set to be able to support their technical programs long term. We have also worked to incubate mobile support for keyprivacy technologies such as Tor, GnuPG, OTR, SQLCipher and Debian, where interest in emerging platforms directly within the communities themselves was nascent.**  
-** 
+Our team is made of product leads, software developers, user experience designers, and user advocates who have been working in mobile application and platform development for over twenty years. For the past nine years, as Guardian Project, we have focused equally on developing our own technology, while fostering deep partnerships with human rights and activists organizations in need of our services. This includes engaging deeply with partners’ staff to uplift their knowledge and skill set to be able to support their technical programs long term. We have also worked to incubate mobile support for keyprivacy technologies such as Tor, GnuPG, OTR, SQLCipher and Debian, where interest in emerging platforms directly within the communities themselves was nascent.
 
   * Engagement Manager: Works with client to define needs, scope, milestones and schedule  
     Solution Architect: Works with all parties to design the solution specification and specific tickets
@@ -43,7 +44,7 @@ Our team is made of product leads, software developers, user experience designer
   * Systems Developer (SysAdmin, DevOps): Implementations server/infrastructure features, configurations, images, scripts, as well as security controls, access protocol, etc.
   * Quality Assurance / Testing: Tracks progress by development teams, provide QA feedback, and handles acceptance testing for all features, enhancements, bug fixes
 
-### **Menu of Services**
+## Menu of Services
 
 Some examples of work we do for hire include:
 

@@ -11,6 +11,11 @@ publish_to_discourse:
   - "0"
 update_discourse_topic:
   - "0"
+menu:
+  main:
+    parent: code
+aliases:
+  - wind
 ---
 <span style="font-weight: 400;">When disaster strikes, connectivity becomes difficult. Information can save your life, guiding you to safety and services. Networks today are fragile and easy overloaded. There has not been enough investment in the many other possible nets, that may be better suited for situations where connections to the global internet are not available or affordable. The potential in radios, sensors and processing available in the cheapest of smartphones and routers are not fully utilized or realized.</span>
 

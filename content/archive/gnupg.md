@@ -5,24 +5,6 @@ date: 2012-10-04T00:42:29-04:00
 author: mark
 layout: page
 guid: https://guardianproject.info/?page_id=2873
-has_been_saved:
-  - "1"
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "405"
-discourse_permalink:
-  - https://talk.developersquare.net/t/gnupg-openpgp-encryption/285
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":285,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1551701545"
-wpdc_sync_post_comments:
-  - "0"
 menu:
   main:
     parent: archive

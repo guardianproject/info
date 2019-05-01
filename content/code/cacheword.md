@@ -5,18 +5,6 @@ date: 2014-09-26T21:44:19-04:00
 author: Hans-Christoph Steiner
 layout: page
 guid: https://guardianproject.info/?page_id=12672
-spacious_page_layout:
-  - default_layout
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
-publish_post_category:
-  - "5"
 ---
 CacheWord is an Android library project for passphrase caching and management.  
 It helps app developers securely generate, store, and access secrets derived  

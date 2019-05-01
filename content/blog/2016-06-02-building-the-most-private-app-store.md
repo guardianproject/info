@@ -6,20 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=13332
 permalink: /2016/06/02/building-the-most-private-app-store/
-discourse_post_id:
-  - "380"
-discourse_permalink:
-  - https://talk.developersquare.net/t/building-the-most-private-app-store/262
-publish_to_discourse:
-  - "1"
-discourse_comments_count:
-  - "1"
-discourse_comments_raw:
-  - '{"id":262,"posts_count":2,"filtered_posts_count":2,"posts":[],"participants":[{"id":148,"username":"pEp","avatar_template":"https://avatars.discourse.org/v2/letter/p/c67d28/{size}.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553081868"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - News
 tags:

@@ -5,34 +5,6 @@ date: 2010-03-31T18:30:31-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=248
-force_ssl:
-  - "1"
-spacious_page_layout:
-  - default_layout
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
-publish_post_category:
-  - "5"
-discourse_post_id:
-  - "464"
-discourse_permalink:
-  - https://talk.developersquare.net/t/internships-and-jobs/335
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":335,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1548950664"
-wpdc_sync_post_comments:
-  - "0"
-update_discourse_topic:
-  - "0"
 menu:
   main:
     name: Work or Intern With Us

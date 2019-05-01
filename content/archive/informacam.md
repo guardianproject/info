@@ -5,16 +5,6 @@ date: 2012-03-20T01:17:29-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=1697
-force_ssl:
-  - "1"
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
 menu:
   main:
     name: Securing Visual Media

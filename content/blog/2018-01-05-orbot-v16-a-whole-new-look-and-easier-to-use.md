@@ -6,26 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13934
 permalink: /2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/
-publish_post_category:
-  - "6"
-publish_to_discourse:
-  - "0"
-update_discourse_topic:
-  - "0"
-discourse_post_id:
-  - "614"
-discourse_topic_id:
-  - "420"
-discourse_permalink:
-  - https://talk.developersquare.net/t/orbot-v16-a-whole-new-look-and-easier-to-use/420
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":420,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553110512"
-wpdc_sync_post_comments:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2018/01/IMG_20180105_133116.jpg
 categories:
   - New Release

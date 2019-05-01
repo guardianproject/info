@@ -6,8 +6,6 @@ author: lee
 layout: post
 guid: https://guardianproject.info/?p=2079
 permalink: /2012/05/04/cross-domain-voip-milestones-and-hurdles/
-force_ssl:
-  - "1"
 categories:
   - Development
   - News

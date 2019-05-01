@@ -5,10 +5,6 @@ date: 2012-10-04T12:29:35-04:00
 author: mark
 layout: page
 guid: https://guardianproject.info/?page_id=2889
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "0"
 menu:
   main:
     parent: archive

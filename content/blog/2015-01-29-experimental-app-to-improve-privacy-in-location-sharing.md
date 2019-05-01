@@ -6,8 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12831
 permalink: /2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/
-spacious_page_layout:
-  - default_layout
 categories:
   - News
 tags:

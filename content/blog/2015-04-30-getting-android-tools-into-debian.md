@@ -6,10 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12912
 permalink: /2015/04/30/getting-android-tools-into-debian/
-spacious_page_layout:
-  - default_layout
-publish_to_discourse:
-  - "0"
 categories:
   - News
 tags:

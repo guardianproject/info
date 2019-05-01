@@ -6,8 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12868
 permalink: /2015/02/24/phishing-for-developers/
-spacious_page_layout:
-  - default_layout
 categories:
   - News
 tags:

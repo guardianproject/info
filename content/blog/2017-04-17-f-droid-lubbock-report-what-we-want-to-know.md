@@ -6,12 +6,6 @@ author: Carrie Winfrey
 layout: post
 guid: https://guardianproject.info/?p=13839
 permalink: /2017/04/17/f-droid-lubbock-report-what-we-want-to-know/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "0"
-update_discourse_topic:
-  - "0"
 categories:
   - Development
   - Research

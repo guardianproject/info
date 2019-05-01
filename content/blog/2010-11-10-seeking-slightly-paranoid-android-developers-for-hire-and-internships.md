@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=588
 permalink: /2010/11/10/seeking-slightly-paranoid-android-developers-for-hire-and-internships/
-force_ssl:
-  - "1"
 categories:
   - Hiring
 tags:

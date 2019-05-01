@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=1632
 permalink: /2012/03/15/our-new-f-droid-app-repository/
-spacious_page_layout:
-  - default_layout
 categories:
   - Development
   - New Release

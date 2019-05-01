@@ -6,24 +6,6 @@ author: Seamus Tuohy
 layout: post
 guid: https://annoyingtechnicaldetails.wordpress.com/?p=344
 permalink: /2017/05/15/research-report-on-developer-challenges/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "543"
-discourse_permalink:
-  - https://talk.developersquare.net/t/new-research-report-on-the-challenges-developers-face/394
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":394,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553029881"
-wpdc_publishing_response:
-  - error
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - Uncategorized
 tags:

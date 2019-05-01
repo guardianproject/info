@@ -6,8 +6,6 @@ author: lee
 layout: post
 guid: https://guardianproject.info/?p=3330
 permalink: /2013/02/22/lower-bounds-of-the-narrow-bands/
-force_ssl:
-  - "1"
 categories:
   - App Reviews
   - Development

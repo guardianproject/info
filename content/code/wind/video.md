@@ -5,12 +5,6 @@ date: 2017-11-15T19:48:21-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13896
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "0"
-update_discourse_topic:
-  - "0"
 ---
 Nathan Freitas on [TWIT&#8217;s Triangulation](https://www.youtube.com/watch?v=e984EYI1M3I)  
 

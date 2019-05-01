@@ -6,22 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13519
 permalink: /2017/02/24/combating-fake-news-with-a-smartphone-proof-mode/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "484"
-discourse_permalink:
-  - https://talk.developersquare.net/t/combating-fake-news-with-a-smartphone-proof-mode/349
-discourse_comments_count:
-  - "4"
-discourse_comments_raw:
-  - '{"id":349,"posts_count":5,"filtered_posts_count":5,"posts":[],"participants":[{"id":13,"username":"n8fr81","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/n8fr81/{size}/19_1.png"},{"id":224,"username":"teeks99","avatar_template":"https://avatars.discourse.org/v2/letter/t/8e8cbc/{size}.png"},{"id":222,"username":"matclab","avatar_template":"https://avatars.discourse.org/v2/letter/m/cc9497/{size}.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553110822"
-wpdc_sync_post_comments:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2017/02/ProofMode-feature-graphic.png
 categories:
   - New Release

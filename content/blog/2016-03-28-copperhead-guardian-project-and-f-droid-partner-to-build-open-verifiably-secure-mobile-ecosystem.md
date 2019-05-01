@@ -6,20 +6,12 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13277
 permalink: /2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
 enclosure:
   - |
     http://video.fosdem.org/2016/h1309/f-droid-building-the-private-unblockable-app-store.mp4
     0
     video/mp4
     
-publish_to_discourse:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2016/03/cheadheader.jpg
 categories:
   - HowTo

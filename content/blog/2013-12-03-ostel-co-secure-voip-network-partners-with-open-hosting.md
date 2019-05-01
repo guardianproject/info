@@ -6,8 +6,6 @@ author: lee
 layout: post
 guid: https://guardianproject.info/?p=12023
 permalink: /2013/12/03/ostel-co-secure-voip-network-partners-with-open-hosting/
-force_ssl:
-  - "1"
 categories:
   - News
 tags:

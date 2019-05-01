@@ -5,26 +5,6 @@ date: 2015-07-28T03:07:37-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13034
-discourse_post_id:
-  - "219"
-discourse_permalink:
-  - https://talk.developersquare.net/t/camerav/132
-catchresponsive-layout-option:
-  - no-sidebar
-catchresponsive-header-image:
-  - enable
-catchresponsive-featured-image:
-  - full-size
-publish_to_discourse:
-  - "1"
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":132,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1552937732"
-wpdc_sync_post_comments:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2015/07/feature.png
 menu:
   main:

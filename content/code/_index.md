@@ -5,30 +5,6 @@ date: 2010-05-09T00:06:46-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=254
-spacious_page_layout:
-  - default_layout
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "1"
-publish_post_category:
-  - "5"
-discourse_post_id:
-  - "461"
-discourse_permalink:
-  - https://talk.developersquare.net/t/code-you-can-trust/332
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":332,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1544485675"
-wpdc_sync_post_comments:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2013/07/tumblr_lthb6agZVE1qlts9lo1_1280.jpg
 ---
 The Guardian Project is about more than just apps. All of our code is open-source in order to move the collective ball forward in mobile security efforts. In addition we are building developer-focused libraries, tools and source code for you to add security-oriented features and capabilities to your own apps.

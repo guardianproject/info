@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=2946
 permalink: /2012/11/15/proposal-for-secure-connection-notification-on-android/
-force_ssl:
-  - "1"
 image: http://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216.png
 categories:
   - Development

@@ -6,8 +6,6 @@ author: lee
 layout: post
 guid: https://guardianproject.info/?p=1551
 permalink: /2012/02/22/free-sip-providers-with-zrtp-support/
-force_ssl:
-  - "1"
 categories:
   - Development
 tags:

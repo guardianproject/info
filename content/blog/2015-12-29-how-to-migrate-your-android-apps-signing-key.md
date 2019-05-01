@@ -6,14 +6,6 @@ author: Abel Luck
 layout: post
 guid: https://guardianproject.info/?p=11733
 permalink: /2015/12/29/how-to-migrate-your-android-apps-signing-key/
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
 categories:
   - Development
   - HowTo

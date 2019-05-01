@@ -6,8 +6,6 @@ author: Derek
 layout: post
 guid: http://guardianproject.info/?p=1166
 permalink: /2011/06/23/announcing-obscuracam-v1-enhance-your-visual-privacy/
-force_ssl:
-  - "1"
 categories:
   - Development
   - HowTo

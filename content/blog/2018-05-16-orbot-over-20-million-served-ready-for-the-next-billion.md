@@ -6,12 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13958
 permalink: /2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "0"
-update_discourse_topic:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2018/05/orbotabillion.png
 categories:
   - News

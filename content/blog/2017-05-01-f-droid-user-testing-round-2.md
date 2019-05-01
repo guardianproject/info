@@ -6,24 +6,6 @@ author: Carrie Winfrey
 layout: post
 guid: https://annoyingtechnicaldetails.wordpress.com/?p=359
 permalink: /2017/05/01/f-droid-user-testing-round-2/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "542"
-discourse_permalink:
-  - https://talk.developersquare.net/t/f-droid-user-testing-round-2/393
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":393,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553071544"
-wpdc_publishing_response:
-  - error
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - Development
   - Research

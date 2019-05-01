@@ -5,12 +5,6 @@ date: 2017-11-15T18:11:44-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13885
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "0"
-update_discourse_topic:
-  - "0"
 menu:
   main:
     parent: code

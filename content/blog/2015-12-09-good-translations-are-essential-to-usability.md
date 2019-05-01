@@ -6,26 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=13114
 permalink: /2015/12/09/good-translations-are-essential-to-usability/
-discourse_post_id:
-  - "287"
-discourse_permalink:
-  - https://talk.developersquare.net/t/good-translations-are-essential-to-usability/175
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "1"
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":175,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553060057"
-wpdc_sync_post_comments:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone.jpg
 categories:
   - News

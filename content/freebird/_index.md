@@ -5,10 +5,6 @@ date: 2012-04-25T21:59:05-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=1871
-force_ssl:
-  - "1"
-force_ssl_children:
-  - "1"
 menu:
   main:
     parent: archive

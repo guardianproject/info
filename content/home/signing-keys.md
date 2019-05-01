@@ -5,8 +5,6 @@ date: 2013-12-16T14:01:41-04:00
 author: Hans-Christoph Steiner
 layout: page
 guid: https://guardianproject.info/?page_id=12059
-force_ssl:
-  - "1"
 menu:
   main:
     parent: home

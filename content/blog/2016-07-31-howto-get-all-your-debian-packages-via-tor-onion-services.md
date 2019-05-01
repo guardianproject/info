@@ -6,24 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=13379
 permalink: /2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/
-has_been_saved:
-  - "1"
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "425"
-discourse_permalink:
-  - https://talk.developersquare.net/t/howto-get-all-your-debian-packages-via-tor-onion-services/305
-discourse_comments_count:
-  - "1"
-discourse_comments_raw:
-  - '{"id":305,"posts_count":2,"filtered_posts_count":2,"posts":[],"participants":[{"id":218,"username":"tmp","avatar_template":"https://avatars.discourse.org/v2/letter/t/e47774/{size}.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553095845"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - anonymity
   - HowTo

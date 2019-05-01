@@ -5,24 +5,6 @@ date: 2010-05-09T00:26:38-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=276
-spacious_page_layout:
-  - default_layout
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "466"
-discourse_permalink:
-  - https://talk.developersquare.net/t/live-chatrooms-irc/337
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":337,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1544487903"
-wpdc_sync_post_comments:
-  - "0"
 menu:
   main:
     name: Chat on IRC

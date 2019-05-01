@@ -5,16 +5,6 @@ date: 2011-02-19T08:27:13-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/
-spacious_page_layout:
-  - default_layout
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2011/02/showcase.png
 menu:
   main:

@@ -6,10 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=2041
 permalink: /2012/05/02/orbot-your-twitter/
-force_ssl:
-  - "1"
-force_ssl_children:
-  - "1"
 categories:
   - App Reviews
   - HowTo

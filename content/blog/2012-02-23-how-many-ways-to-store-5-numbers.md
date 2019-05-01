@@ -6,8 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=1562
 permalink: /2012/02/23/how-many-ways-to-store-5-numbers/
-force_ssl:
-  - "1"
 categories:
   - Development
 tags:

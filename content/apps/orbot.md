@@ -5,16 +5,6 @@ date: 2010-02-08T06:09:43-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=12
-spacious_page_layout:
-  - default_layout
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
 menu:
   main:
     parent: apps

@@ -5,20 +5,6 @@ date: 2010-02-08T06:09:05-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=10
-force_ssl:
-  - "1"
-spacious_page_layout:
-  - default_layout
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
-publish_post_category:
-  - "5"
 menu:
   main:
     name: Apps Overview

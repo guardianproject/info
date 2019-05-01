@@ -5,26 +5,6 @@ date: 2010-11-15T13:48:35-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/
-spacious_page_layout:
-  - default_layout
-publish_to_discourse:
-  - "1"
-has_been_saved:
-  - "1"
-publish_post_category:
-  - "5"
-discourse_post_id:
-  - "449"
-discourse_permalink:
-  - https://talk.developersquare.net/t/firefox-mobile-privacy-enhanced/323
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":323,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1552062211"
-wpdc_sync_post_comments:
-  - "0"
 menu:
   main:
     parent: archive

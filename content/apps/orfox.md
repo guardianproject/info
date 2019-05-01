@@ -5,32 +5,6 @@ date: 2016-01-21T11:09:09-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13260
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
-has_been_saved:
-  - "1"
-publish_post_category:
-  - "5"
-discourse_post_id:
-  - "451"
-discourse_permalink:
-  - https://talk.developersquare.net/t/orfox-private-browser-for-orbot/325
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":325,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553096761"
-wpdc_sync_post_comments:
-  - "0"
-update_discourse_topic:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2016/01/Orfox-feature-graphic.png
 ---
 **September 2018 Update!**  

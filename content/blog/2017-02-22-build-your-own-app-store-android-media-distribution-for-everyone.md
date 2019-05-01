@@ -6,22 +6,6 @@ author: Torsten Grote
 layout: post
 guid: https://guardianproject.info/?p=13514
 permalink: /2017/02/22/build-your-own-app-store-android-media-distribution-for-everyone/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "483"
-discourse_permalink:
-  - https://talk.developersquare.net/t/build-your-own-app-store-android-media-distribution-for-everyone/348
-discourse_comments_count:
-  - "2"
-discourse_comments_raw:
-  - '{"id":348,"posts_count":3,"filtered_posts_count":3,"posts":[],"participants":[{"id":6,"username":"devsq","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/devsq/{size}/83_1.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553111091"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - News
 tags:

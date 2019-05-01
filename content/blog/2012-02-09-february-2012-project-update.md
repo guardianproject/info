@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=1503
 permalink: /2012/02/09/february-2012-project-update/
-force_ssl:
-  - "1"
 categories:
   - News
 ---

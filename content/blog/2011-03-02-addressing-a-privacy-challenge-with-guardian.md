@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: http://guardianproject.info/?p=775
 permalink: /2011/03/02/addressing-a-privacy-challenge-with-guardian/
-force_ssl:
-  - "1"
 categories:
   - Development
   - News

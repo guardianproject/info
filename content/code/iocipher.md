@@ -5,20 +5,6 @@ date: 2012-10-04T00:39:12-04:00
 author: mark
 layout: page
 guid: https://guardianproject.info/?page_id=2871
-force_ssl:
-  - "1"
-spacious_page_layout:
-  - default_layout
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
-publish_post_category:
-  - "5"
 image: http://guardianproject.info/wp-content/uploads/2013/02/288491653_a9b6251477.jpg
 menu:
   main:

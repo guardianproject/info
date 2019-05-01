@@ -6,8 +6,6 @@ author: cpu
 layout: post
 guid: https://guardianproject.info/?p=11953
 permalink: /2013/11/18/turn-your-device-into-an-app-store/
-force_ssl:
-  - "1"
 categories:
   - Development
   - New Release

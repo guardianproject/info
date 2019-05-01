@@ -6,26 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=13185
 permalink: /2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/
-discourse_post_id:
-  - "291"
-discourse_permalink:
-  - https://talk.developersquare.net/t/panickit-making-your-whole-phone-respond-to-a-panic-button/179
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "1"
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":179,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553099645"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - News
 tags:

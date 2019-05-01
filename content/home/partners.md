@@ -5,18 +5,6 @@ date: 2010-02-11T05:53:10-04:00
 author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=116
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "0"
-publish_post_category:
-  - "5"
-update_discourse_topic:
-  - "0"
 menu:
   main:
     name: Partners & Funding

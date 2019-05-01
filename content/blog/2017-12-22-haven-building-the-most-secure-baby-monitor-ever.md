@@ -6,26 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13924
 permalink: /2017/12/22/haven-building-the-most-secure-baby-monitor-ever/
-publish_post_category:
-  - "6"
-publish_to_discourse:
-  - "0"
-update_discourse_topic:
-  - "0"
-discourse_post_id:
-  - "583"
-discourse_topic_id:
-  - "412"
-discourse_permalink:
-  - https://talk.developersquare.net/t/haven-building-the-most-secure-baby-monitor-ever/412
-discourse_comments_count:
-  - "2"
-discourse_comments_raw:
-  - '{"id":412,"posts_count":3,"filtered_posts_count":3,"posts":[],"participants":[{"id":274,"username":"Loxmyth","avatar_template":"https://avatars.discourse.org/v2/letter/l/4bbf92/{size}.png"},{"id":282,"username":"Pentiummania","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/pentiummania/{size}/340_1.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553111199"
-wpdc_sync_post_comments:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2017/12/Haven_app.jpg
 categories:
   - Development

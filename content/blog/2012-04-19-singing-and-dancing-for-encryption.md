@@ -6,8 +6,6 @@ author: mark
 layout: post
 guid: https://guardianproject.info/?p=1842
 permalink: /2012/04/19/singing-and-dancing-for-encryption/
-force_ssl:
-  - "1"
 categories:
   - News
 tags:

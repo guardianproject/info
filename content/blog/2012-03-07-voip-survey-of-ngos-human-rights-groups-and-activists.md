@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=1605
 permalink: /2012/03/07/voip-survey-of-ngos-human-rights-groups-and-activists/
-force_ssl:
-  - "1"
 categories:
   - Research
 tags:

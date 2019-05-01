@@ -6,26 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12682
 permalink: /2015/09/21/cipherkit-reproducible-builds/
-discourse_post_id:
-  - "258"
-discourse_permalink:
-  - https://talk.developersquare.net/t/cipherkit-reproducible-builds/155
-catchresponsive-layout-option:
-  - default
-catchresponsive-header-image:
-  - default
-catchresponsive-featured-image:
-  - default
-publish_to_discourse:
-  - "1"
-discourse_comments_count:
-  - "4"
-discourse_comments_raw:
-  - '{"id":155,"posts_count":5,"filtered_posts_count":5,"posts":[],"participants":[{"id":14,"username":"marvin","avatar_template":"https://avatars.discourse.org/v2/letter/m/2bfe46/{size}.png"},{"id":13,"username":"n8fr81","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/n8fr81/{size}/19_1.png"},{"id":17,"username":"hans","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/hans/{size}/33_1.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553108420"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - News
 tags:

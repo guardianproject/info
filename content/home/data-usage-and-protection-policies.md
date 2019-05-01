@@ -5,20 +5,6 @@ date: 2016-05-04T14:22:36-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13321
-discourse_post_id:
-  - "370"
-discourse_permalink:
-  - https://talk.developersquare.net/t/data-usage-and-protection-policies/254
-publish_to_discourse:
-  - "1"
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":254,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1548950657"
-wpdc_sync_post_comments:
-  - "0"
 menu:
   main:
     parent: home

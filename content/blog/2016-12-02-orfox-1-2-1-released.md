@@ -6,22 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13467
 permalink: /2016/12/02/orfox-1-2-1-released/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "467"
-discourse_permalink:
-  - https://talk.developersquare.net/t/orfox-1-2-1-released/338
-discourse_comments_count:
-  - "1"
-discourse_comments_raw:
-  - '{"id":338,"posts_count":2,"filtered_posts_count":2,"posts":[],"participants":[{"id":225,"username":"DroidOne","avatar_template":"https://avatars.discourse.org/v2/letter/d/6a8cbe/{size}.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553074284"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - News
 ---

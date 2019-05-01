@@ -6,8 +6,6 @@ author: lee
 layout: post
 guid: https://guardianproject.info/?p=3184
 permalink: /2013/01/31/anonymous-cb-radio-with-mumble-and-tor/
-force_ssl:
-  - "1"
 categories:
   - Research
 tags:

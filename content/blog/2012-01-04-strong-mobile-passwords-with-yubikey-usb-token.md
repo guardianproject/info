@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=1383
 permalink: /2012/01/04/strong-mobile-passwords-with-yubikey-usb-token/
-force_ssl:
-  - "1"
 categories:
   - Development
 ---

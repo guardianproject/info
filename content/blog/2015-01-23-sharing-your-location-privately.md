@@ -6,8 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12769
 permalink: /2015/01/23/sharing-your-location-privately/
-spacious_page_layout:
-  - default_layout
 categories:
   - News
 tags:

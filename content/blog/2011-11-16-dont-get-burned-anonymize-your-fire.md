@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=1301
 permalink: /2011/11/16/dont-get-burned-anonymize-your-fire/
-force_ssl:
-  - "1"
 categories:
   - App Reviews
   - News

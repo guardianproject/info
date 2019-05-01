@@ -6,22 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=13552
 permalink: /2017/03/13/build-android-apps-with-debian-apt-install-android-sdk/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "492"
-discourse_permalink:
-  - https://talk.developersquare.net/t/topic/353
-discourse_comments_count:
-  - "1"
-discourse_comments_raw:
-  - '{"id":353,"posts_count":2,"filtered_posts_count":2,"posts":[],"participants":[{"id":6,"username":"devsq","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/devsq/{size}/83_1.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553110201"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - News
 tags:

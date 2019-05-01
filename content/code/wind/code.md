@@ -5,12 +5,6 @@ date: 2017-11-15T20:45:38-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13901
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "0"
-update_discourse_topic:
-  - "0"
 ---
 You can find our Github repo for the project here: <https://github.com/guardianproject/wind>
 

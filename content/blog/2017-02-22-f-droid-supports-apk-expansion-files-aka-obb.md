@@ -6,22 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=13604
 permalink: /2017/02/22/f-droid-supports-apk-expansion-files-aka-obb/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "502"
-discourse_permalink:
-  - https://talk.developersquare.net/t/f-droid-supports-apk-expansion-files-aka-obb/361
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":361,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553098431"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - News
 tags:

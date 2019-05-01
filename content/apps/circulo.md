@@ -5,16 +5,6 @@ date: 2019-01-21T14:57:14-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=14019
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-update_discourse_topic:
-  - "0"
-wpdc_publishing_error:
-  - 'cURL error 6: Could not resolve host: talk.developersquare.net'
-wpdc_publishing_response:
-  - error
 ---
 <div class="wp-block-image">
   <figure class="alignleft is-resized"><img src="https://guardianproject.info/wp-content/uploads/2019/01/mainlogo.png" alt="" class="wp-image-14035" width="141" height="141" srcset="https://guardianproject.info/wp-content/uploads/2019/01/mainlogo.png 1024w, https://guardianproject.info/wp-content/uploads/2019/01/mainlogo-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2019/01/mainlogo-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2019/01/mainlogo-768x768.png 768w" sizes="(max-width: 141px) 100vw, 141px" /></figure>

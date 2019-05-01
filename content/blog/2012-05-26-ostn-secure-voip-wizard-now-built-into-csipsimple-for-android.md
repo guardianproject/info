@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=2281
 permalink: /2012/05/26/ostn-secure-voip-wizard-now-built-into-csipsimple-for-android/
-force_ssl:
-  - "1"
 categories:
   - News
 tags:

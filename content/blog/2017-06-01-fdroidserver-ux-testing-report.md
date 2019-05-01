@@ -6,24 +6,6 @@ author: Seamus Tuohy
 layout: post
 guid: https://annoyingtechnicaldetails.wordpress.com/?p=337
 permalink: /2017/06/01/fdroidserver-ux-testing-report/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-discourse_post_id:
-  - "541"
-discourse_permalink:
-  - https://talk.developersquare.net/t/fdroidserver-ux-testing-report/392
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":392,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553103387"
-wpdc_publishing_response:
-  - error
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - Development
   - Research

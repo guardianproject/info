@@ -6,22 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=12937
 permalink: /2015/05/07/hiding-apps-in-plain-sight/
-spacious_page_layout:
-  - default_layout
-discourse_post_id:
-  - "115"
-discourse_permalink:
-  - https://talk.developersquare.net/t/hiding-apps-in-plain-sight/71
-publish_to_discourse:
-  - "1"
-discourse_comments_count:
-  - "2"
-discourse_comments_raw:
-  - '{"id":71,"posts_count":3,"filtered_posts_count":3,"posts":[],"participants":[{"id":12,"username":"david","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/david/{size}/22_1.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"},{"id":9,"username":"n8fr8","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/n8fr8/{size}/19_1.png"}]}'
-discourse_last_sync:
-  - "1553083698"
-wpdc_sync_post_comments:
-  - "0"
 image: http://guardianproject.info/wp-content/uploads/2015/05/Tanzania_0607_cropped_Nevit.jpg
 categories:
   - Development

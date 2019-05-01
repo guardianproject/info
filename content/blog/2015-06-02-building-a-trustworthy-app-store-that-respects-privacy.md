@@ -6,22 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12950
 permalink: /2015/06/02/building-a-trustworthy-app-store-that-respects-privacy/
-spacious_page_layout:
-  - default_layout
-discourse_post_id:
-  - "179"
-discourse_permalink:
-  - https://talk.developersquare.net/t/building-a-trustworthy-app-store-that-respects-privacy/99
-publish_to_discourse:
-  - "1"
-discourse_comments_count:
-  - "4"
-discourse_comments_raw:
-  - '{"id":99,"posts_count":5,"filtered_posts_count":5,"posts":[],"participants":[{"id":37,"username":"jvspl","avatar_template":"https://avatars.discourse.org/v2/letter/j/b782af/{size}.png"},{"id":13,"username":"n8fr81","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/n8fr81/{size}/19_1.png"},{"id":17,"username":"hans","avatar_template":"https://discourse-cdn-sjc2.com/standard16/user_avatar/talk.developersquare.net/hans/{size}/33_1.png"},{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553109705"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - News
 tags:

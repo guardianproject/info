@@ -6,8 +6,6 @@ author: lee
 layout: post
 guid: https://guardianproject.info/?p=2189
 permalink: /2012/05/17/build-your-own-open-secure-telephony-network-some-assembly-required/
-force_ssl:
-  - "1"
 categories:
   - HowTo
 tags:

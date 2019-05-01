@@ -6,8 +6,6 @@ author: lee
 layout: post
 guid: http://guardianproject.info/?p=3941
 permalink: /2013/06/12/carrier-grade-verizon-and-the-nsa/
-force_ssl:
-  - "1"
 categories:
   - News
   - Research

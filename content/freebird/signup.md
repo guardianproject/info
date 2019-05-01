@@ -5,8 +5,6 @@ date: 2012-04-27T12:24:47-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=1891
-force_ssl:
-  - "1"
 ---
 <!--:en-->
 

@@ -6,8 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12819
 permalink: /2015/01/26/first-working-test-of-iocipher-for-obj-c/
-spacious_page_layout:
-  - default_layout
 categories:
   - News
 tags:

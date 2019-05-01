@@ -6,8 +6,6 @@ author: mark
 layout: post
 guid: https://guardianproject.info/?p=1718
 permalink: /2012/03/22/call-my-email/
-force_ssl:
-  - "1"
 categories:
   - Development
   - News

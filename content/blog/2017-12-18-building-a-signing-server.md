@@ -6,26 +6,6 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=13920
 permalink: /2017/12/18/building-a-signing-server/
-publish_post_category:
-  - "5"
-publish_to_discourse:
-  - "1"
-update_discourse_topic:
-  - "0"
-discourse_post_id:
-  - "582"
-discourse_topic_id:
-  - "411"
-discourse_permalink:
-  - https://talk.developersquare.net/t/building-a-signing-server/411
-discourse_comments_count:
-  - "0"
-discourse_comments_raw:
-  - '{"id":411,"posts_count":1,"filtered_posts_count":1,"posts":[],"participants":[{"id":19,"username":"gpadmin","avatar_template":"https://avatars.discourse.org/v2/letter/g/d07c76/{size}.png"}]}'
-discourse_last_sync:
-  - "1553109853"
-wpdc_sync_post_comments:
-  - "0"
 categories:
   - HowTo
 tags:

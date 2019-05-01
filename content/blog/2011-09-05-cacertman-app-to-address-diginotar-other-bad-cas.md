@@ -6,8 +6,6 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=1249
 permalink: /2011/09/05/cacertman-app-to-address-diginotar-other-bad-cas/
-force_ssl:
-  - "1"
 categories:
   - Development
 tags:

@@ -1,0 +1,3 @@
+
+RedirectPermanent /feed/ /index.xml
+RedirectPermanent /feed  /index.xml

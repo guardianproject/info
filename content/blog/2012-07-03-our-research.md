@@ -4,6 +4,8 @@ title: Our Research
 date: 2012-07-03T11:48:40-04:00
 author: n8fr8
 guid: https://guardianproject.info/?page_id=2493
+aliases:
+  - home/our-research
 ---
 You can track our latest work on our public research wiki located at <https://guardianproject.info/wiki> or through the links below.
 

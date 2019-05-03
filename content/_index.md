@@ -6,6 +6,8 @@ author: n8fr8
 layout: page
 guid: http://guardianproject.info/?page_id=8
 image: http://guardianproject.info/wp-content/uploads/2013/09/cropped-GP_logo+txt_hires_black_on_trans.png
+aliases:
+  - home
 menu:
   main:
     identifier: home

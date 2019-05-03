@@ -3,12 +3,12 @@ id: 13321
 title: Data Usage and Protection Policies
 date: 2016-05-04T14:22:36-04:00
 author: n8fr8
-layout: page
 guid: https://guardianproject.info/?page_id=13321
 menu:
   main:
     parent: home
 aliases:
+  - home/data-usage-and-protection-policies
   - privacy
 ---
 **May the 4th, 2016**

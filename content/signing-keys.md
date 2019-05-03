@@ -3,12 +3,14 @@ id: 12059
 title: Signing Keys
 date: 2013-12-16T14:01:41-04:00
 author: Hans-Christoph Steiner
-layout: page
 guid: https://guardianproject.info/?page_id=12059
+aliases:
+  - home/signing-keys
 menu:
   main:
     parent: home
 ---
+
 We have a number of signing keys used for signing software releases. There are a number of different keys because there are a number of different ways of signing software. This list aims to be the comprehensive list of all the release signing keys that we use.
 
 ## OpenPGP

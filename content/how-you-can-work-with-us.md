@@ -1,10 +1,11 @@
 ---
 id: 812
-title: Ways to Collaborate
+title: How You Can Work With Us
 date: 2011-03-30T18:18:41-04:00
 author: n8fr8
-layout: page
 guid: http://guardianproject.info/?page_id=812
+aliases:
+  - home/how-you-can-work-with-us/
 menu:
   main:
     name: Collaborate With Us

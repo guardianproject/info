@@ -3,7 +3,6 @@ id: 11674
 title: Press
 date: 2013-09-12T12:47:19-04:00
 author: mark
-layout: page
 guid: https://guardianproject.info/?page_id=11674
 aliases:
   - home/press

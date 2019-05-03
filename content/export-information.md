@@ -3,8 +3,9 @@ id: 1238
 title: Export Information
 date: 2011-08-19T15:52:01-04:00
 author: n8fr8
-layout: page
 guid: https://guardianproject.info/?page_id=1238
+aliases:
+  - home/export-information
 ---
 This page provides detailed information on the export control status of the Guardian Project&#8217;s products, as well as pointers to the open source code from which those products are built.
 

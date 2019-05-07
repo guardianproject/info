@@ -23,8 +23,8 @@
             <a href="{{ .Site.RSSLink }}" title="RSS">
             {{ end }}
               <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
               </span>
             </a>
           </li>
@@ -51,11 +51,9 @@
             <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
           {{ end }}
         </p>
-        <!-- Please don't remove this, keep my open source work credited :) -->
-        <p class="credits theme-by text-muted" style="visibility: hidden">
-          {{ i18n "poweredBy" . | safeHTML }}
-          {{ with .Site.Params.commit }}&nbsp;&bull;&nbsp;[<a href="{{.}}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>]{{ end }}
-        </p>
+	<p class="credits text-center text-muted">
+	  Edit on <a href="https://gitlab.com/guardianproject/info/edit/master/content/{{ .File.Path }}"><i class="fa fa-gitlab"></i> GitLab</a>
+	</p>
       </div>
     </div>
   </div>

@@ -5,6 +5,10 @@ date: 2010-03-10T19:20:33-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=189
+sourceCode: https://github.com/guardianproject/orweb
+menu:
+  main:
+    parent: apps
 ---
 <p style="text-align: left;">
   <strong>Our new Orfox browser is now released and makes Orweb obsolete. </strong>

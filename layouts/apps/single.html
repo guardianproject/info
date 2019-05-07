@@ -1,0 +1,83 @@
+{{ define "main" }}
+
+<div class="container" role="main">
+  <img src="{{ .Params.icon }}"/>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+
+{{ $localized := dict "description" "" }}
+
+{{ if .Params.packageName }}
+{{ $app := index .Site.Data.repo.apps .Params.packageName }}
+
+{{ if $app.localized }}
+  {{ if (in $app.localized .Lang) }}
+    {{ .Scratch.Set "localized" (index $app.localized .Lang) }}
+  {{ else }}
+    {{ .Scratch.Set "localized" (index $app.localized .Site.LanguageCode) }}
+  {{ end }}
+{{ else }}
+  {{ .Scratch.Set "localized" $localized }}
+{{ end }}
+{{ $localized := .Scratch.Get "localized" }}
+
+<div class="app-header" style="text-align: center;">
+  {{ if (hasPrefix $app.sourceCode "https://github.com/") }}
+  <a href="{{ $app.sourceCode }}" target="_blank" title="{{ $app.name }} source code">
+    <i class="fa fa-github"></i> GitHub
+  </a>
+  {{ end }}
+  {{ if (hasPrefix $app.sourceCode "https://gitlab.com/") }}
+  <a href="{{ $app.sourceCode }}" target="_blank" title="{{ $app.name }} source code">
+    <i class="fa fa-gitlab"></i> GitLab
+  </a>
+  {{ end }}
+  -
+  <a href="{{ .Site.BaseURL }}tags/{{ $app.name | lower }}">
+    <i class="fa fa-rss"></i> Blog posts
+  </a>
+  {{ with $app.translation }}
+  - 
+  <a href="{{ . }}" target="_blank"><i class="fa fa-language"></i> Translation</a>
+  {{ end }}
+  {{ with $app.license }}
+  -
+  <a href="https://spdx.org/licenses/{{ . }}.html" target="_blank">
+    <i class="fa fa-copyright"></i> {{ . }}
+  </a>
+  {{ end }}
+</div>
+
+<div class="app-description">
+  {{ if $localized.description }}
+  {{ $localized.description | markdownify }}
+  {{ end }}
+</div>
+
+{{ end }}
+
+{{ .Content }}
+
+<div>
+{{ if .Params.packageName }}
+<a href="https://f-droid.org/packages/{{ .Params.packageName }}" target="_blank">
+<img src="{{ .Site.BaseURL }}/img/get-it-on-fdroid.png" alt="Get it on F-Droid" height="80"/>
+</a>
+<a href="https://play.google.com/store/apps/details?id={{ .Params.packageName }}" target="_blank">
+<img src="{{ .Site.BaseURL }}/img/en-play-badge.png" alt="Get it on Google Play" height="80"/>
+</a>
+{{ end }}
+{{ with .Params.itunes }}
+<a href="{{ . }}" target="_blank">
+<img src="{{ .Site.BaseURL }}/img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="55"/>
+</a>
+{{ end }}
+</div>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+{{ end }}

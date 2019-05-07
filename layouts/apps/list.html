@@ -1,0 +1,67 @@
+{{ define "main" }}
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {{ with .Content }}
+          <div class="well">
+            {{.}}
+          </div>
+        {{ end }}
+        <div class="posts-list">
+          {{ range .Paginator.Pages }}
+            <article class="post-preview">
+	      {{ if .Params.icon }}
+              <img src="{{ .Params.icon }}" style="float: left; margin-right: 15px;" width="96" height="96" />
+	      {{ else }}
+              {{ $filler := printf "%s/img/1x1.png" .Site.BaseURL }}
+              <img src="{{ $filler }}" style="float: left; margin-right: 15px;" width="96" height="96" />
+	      {{ end }}
+              <a href="{{ .Permalink }}">
+                <h2 class="post-title">{{ .Title }}</h2>
+
+                {{ if .Params.subtitle }}
+                  <h3 class="post-subtitle">
+                    {{ .Params.subtitle }}
+                  </h3>
+                {{ end }}
+              </a>
+
+	      <div class="source-code" style="text-align: right;">
+		{{ if .Params.sourceCode }}
+		{{ if (hasPrefix .Params.sourceCode "https://gitlab.com") }}
+		<a href="{{ .Params.sourceCode }}" target="_blank" title="{{ .Params.title }} on Gitlab">
+		  <i class="fa fa-gitlab"></i> GitLab
+		</a>
+		{{ end }}
+		{{ if (hasPrefix .Params.sourceCode "https://github.com") }}
+		<a href="{{ .Params.sourceCode }}" target="_blank" title="{{ .Params.title }} on Github">
+		  <i class="fa fa-github"></i> Github
+		</a>
+		{{ end }}
+		-
+		{{ end }}
+		<a href="{{ .Site.BaseURL }}/tags/{{ (index (split .Params.title ":") 0) | lower }}" title="{{ .Params.title }} blog posts">
+		  <i class="fa fa-rss"></i> blog posts
+		</a>
+	      </div>
+            </article>
+          {{ end }}
+        </div>
+        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+          <ul class="pager main-pager">
+            {{ if .Paginator.HasPrev }}
+              <li class="previous">
+                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+              </li>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+              <li class="next">
+                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+{{ end }}

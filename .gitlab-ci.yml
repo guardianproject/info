@@ -1,4 +1,4 @@
-image: debian:buster-slim
+image: debian:buster
 
 stages:
  - deploy
@@ -8,8 +8,11 @@ stages:
 .setup: &setup |
   set -x
   set -e
+  printf 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";\n' > /etc/apt/apt.conf.d/99no-install-recommends
+  printf 'APT::Acquire::Retries "20";\n' > /etc/apt/apt.conf.d/99acquire-retries
+  printf 'APT::Get::Assume-Yes "true";\n' > /etc/apt/apt.conf.d/99assumeyes
   apt-get update
-  apt-get install -y curl git hugo locales make mawk python3 sassc unzip
+  apt-get install curl fdroidserver git hugo locales make mawk python3 sassc unzip
   grep '^en_US.UTF-8 UTF-8' /etc/locale.gen || echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
   locale-gen
   export LC_ALL=en_US.UTF-8

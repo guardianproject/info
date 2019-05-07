@@ -20,7 +20,7 @@
   <ul>
     {{ if .title }}<li>{{ .title }}</li>{{ end }}
     {{ if .description }}<li>{{ .description }}</li>{{ end }}
-    {{ if .matrix }}<li><tt>{{ .matrix }}</tt></li>{{ end }}
+    {{ if .matrix }}<li><i class="fab fa-matrix-org"></i><a href="https://matrix.to/#/{{ .matrix }}"><tt>{{ .matrix }}</tt></a></li>{{ end }}
     {{ if .gpg }}<li>PGP: <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0x{{ .gpg }}">{{ .gpg }}</a></li>{{ end }}
   </ul>
 </div>

@@ -51,6 +51,13 @@ current:
     github: uniqx
     gitlab: uniqx
 
+  - name: threeletteracronym
+    title: Programmer
+    github: https://github.com/tladesignz
+    gitlab: https://gitlab.com/threeletteracronym
+    twitter: https://twitter.com/tladesignz
+    matrix: "@threeletteracronym:matrix.org"
+
 emeritus:
   - name: noneck
     twitter: noneck

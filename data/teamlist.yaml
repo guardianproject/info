@@ -53,9 +53,9 @@ current:
 
   - name: threeletteracronym
     title: Programmer
-    github: https://github.com/tladesignz
-    gitlab: https://gitlab.com/threeletteracronym
-    twitter: https://twitter.com/tladesignz
+    github: tladesignz
+    gitlab: threeletteracronym
+    twitter: tladesignz
     matrix: "@threeletteracronym:matrix.org"
 
 emeritus:

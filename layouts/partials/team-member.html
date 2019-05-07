@@ -17,7 +17,7 @@
     {{ end }}
   </h3>
   <img style="float: right;" src="../{{ .name }}.png" title="{{ .name }}" class="alignleft size-full" width="64" height="64"/>
-  <ul>
+  <ul class="team-member">
     {{ if .title }}<li>{{ .title }}</li>{{ end }}
     {{ if .description }}<li>{{ .description }}</li>{{ end }}
     {{ if .matrix }}<li><i class="fa fa-matrix-org"></i> <a href="https://matrix.to/#/{{ .matrix }}"><tt>{{ .matrix }}</tt></a></li>{{ end }}

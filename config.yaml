@@ -61,4 +61,3 @@ Params:
 # disable all the external Javascript, etc services from theme
   selfHosted: true
   useHLJS: false
-  gcse: false

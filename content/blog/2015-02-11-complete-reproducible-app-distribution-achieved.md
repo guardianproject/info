@@ -6,7 +6,7 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12847
 permalink: /2015/02/11/complete-reproducible-app-distribution-achieved/
-image: http://guardianproject.info/wp-content/uploads/2015/02/checkeycheckey.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2015/02/checkeycheckey.png",}]
 categories:
   - News
 tags:

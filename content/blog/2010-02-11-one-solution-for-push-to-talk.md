@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: http://guardianproject.info/?p=95
 permalink: /2010/02/11/one-solution-for-push-to-talk/
-image: http://guardianproject.info/wp-content/uploads/2010/02/screencapture2-64x64.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/02/screencapture2-64x64.png",}]
 categories:
   - App Reviews
 tags:

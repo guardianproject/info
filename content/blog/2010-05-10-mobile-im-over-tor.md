@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: http://guardianproject.info/?p=279
 permalink: /2010/05/10/mobile-im-over-tor/
-image: http://guardianproject.info/wp-content/uploads/2010/05/friends-64x64.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/05/friends-64x64.png",}]
 categories:
   - App Reviews
 tags:

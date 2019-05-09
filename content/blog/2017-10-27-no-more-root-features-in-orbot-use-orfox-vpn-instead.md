@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13828
 permalink: /2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/
-image: http://guardianproject.info/wp-content/uploads/2017/10/orbotvpn4.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2017/10/orbotvpn4.png",}]
 categories:
   - Development
   - New Release

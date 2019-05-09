@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13924
 permalink: /2017/12/22/haven-building-the-most-secure-baby-monitor-ever/
-image: http://guardianproject.info/wp-content/uploads/2017/12/Haven_app.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2017/12/Haven_app.jpg",}]
 categories:
   - Development
   - New Release

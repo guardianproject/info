@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=11695
 permalink: /2013/09/20/gibberbots-chatsecure-makeover-almost-done/
-image: http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light.png",}]
 categories:
   - Development
   - New Release

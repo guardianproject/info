@@ -6,7 +6,7 @@ author: patch
 layout: post
 guid: https://guardianproject.info/?p=2338
 permalink: /2012/06/13/auditing-twitter-with-orbot/
-image: http://guardianproject.info/wp-content/uploads/2012/06/twitterSYNC3.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2012/06/twitterSYNC3.png",}]
 categories:
   - News
 ---

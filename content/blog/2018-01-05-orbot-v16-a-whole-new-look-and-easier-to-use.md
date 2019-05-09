@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13934
 permalink: /2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/
-image: http://guardianproject.info/wp-content/uploads/2018/01/IMG_20180105_133116.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2018/01/IMG_20180105_133116.jpg",}]
 categories:
   - New Release
   - News

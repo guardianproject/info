@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13356
 permalink: /2016/06/07/openarchive-free-secure-mobile-media-sharing-dwebsummit/
-image: http://guardianproject.info/wp-content/uploads/2016/06/OpenArchive-feature-graphic.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2016/06/OpenArchive-feature-graphic.png",}]
 categories:
   - App Reviews
   - New Release

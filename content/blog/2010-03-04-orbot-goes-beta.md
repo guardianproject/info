@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: http://guardianproject.info/?p=175
 permalink: /2010/03/04/orbot-goes-beta/
-image: http://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest-64x64.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest-64x64.png",}]
 categories:
   - News
 tags:

@@ -6,7 +6,7 @@ author: patch
 layout: post
 guid: https://guardianproject.info/?p=2478
 permalink: /2012/07/10/threats-and-usability-of-secure-voice/
-image: http://guardianproject.info/wp-content/uploads/2012/07/whitdiff.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2012/07/whitdiff.jpg",}]
 categories:
   - News
 tags:

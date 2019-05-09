@@ -6,7 +6,7 @@ author: lee
 layout: post
 guid: https://guardianproject.info/?p=12004
 permalink: /2013/11/21/voip-security-architecture-in-brief/
-image: http://guardianproject.info/wp-content/uploads/2013/11/relation.gif
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/11/relation.gif",}]
 categories:
   - News
 tags:

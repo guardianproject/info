@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13498
 permalink: /2017/01/30/how-can-we-learn-without-watching/
-image: http://guardianproject.info/wp-content/uploads/2017/01/1024px-Blindfold_Marathon.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2017/01/1024px-Blindfold_Marathon.jpg",}]
 categories:
   - News
 ---

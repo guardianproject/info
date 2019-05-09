@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=12999
 permalink: /2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/
-image: http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png",}]
 categories:
   - News
   - privacy

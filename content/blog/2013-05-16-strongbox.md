@@ -6,7 +6,7 @@ author: mark
 layout: post
 guid: https://guardianproject.info/?p=3715
 permalink: /2013/05/16/strongbox/
-image: http://guardianproject.info/wp-content/uploads/2013/05/Screen-shot-2013-05-16-at-5.50.31-PM.png
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/05/Screen-shot-2013-05-16-at-5.50.31-PM.png",}]
 categories:
   - News
 tags:

@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=11519
 permalink: /2013/07/24/orbot-v12-now-in-beta/
-image: http://guardianproject.info/wp-content/uploads/2013/07/mightyorbot.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/07/mightyorbot.jpg",}]
 categories:
   - App Reviews
   - News

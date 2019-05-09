@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13423
 permalink: /2016/10/17/if-this-then-panic-sample-code-for-triggering-emergency-alerts/
-image: http://guardianproject.info/wp-content/uploads/2016/10/9c96b071463f74e8567536dde06b1591.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2016/10/9c96b071463f74e8567536dde06b1591.jpg",}]
 categories:
   - Development
   - HowTo

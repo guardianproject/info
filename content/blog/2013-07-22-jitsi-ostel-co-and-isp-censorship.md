@@ -6,7 +6,7 @@ author: lee
 layout: post
 guid: https://guardianproject.info/?p=11507
 permalink: /2013/07/22/jitsi-ostel-co-and-isp-censorship/
-image: http://guardianproject.info/wp-content/uploads/2013/07/1347254257_genie.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/07/1347254257_genie.jpg",}]
 categories:
   - Research
 tags:

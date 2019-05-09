@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=12937
 permalink: /2015/05/07/hiding-apps-in-plain-sight/
-image: http://guardianproject.info/wp-content/uploads/2015/05/Tanzania_0607_cropped_Nevit.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2015/05/Tanzania_0607_cropped_Nevit.jpg",}]
 categories:
   - Development
   - HowTo

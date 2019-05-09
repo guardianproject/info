@@ -6,7 +6,7 @@ author: Derek
 layout: post
 guid: http://guardianproject.info/?p=400
 permalink: /2010/07/13/calling-all-guardians-alpha-testers-needed/
-image: http://guardianproject.info/wp-content/uploads/2010/05/IMG_3209-64x64.jpg
+bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/05/IMG_3209-64x64.jpg",}]
 categories:
   - News
 ---

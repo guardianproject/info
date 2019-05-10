@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=12999
 permalink: /2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png",}]
 categories:
   - News
   - privacy
@@ -40,7 +40,7 @@ You can access the current Orfox release by installing the [F-Droid app](https:/
 <div id='gallery-11' class='gallery galleryid-12999 gallery-columns-3 gallery-size-medium'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13003" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13003" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-11-13003'>
@@ -50,7 +50,7 @@ You can access the current Orfox release by installing the [F-Droid app](https:/
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13005" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13005" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-11-13005'>
@@ -60,7 +60,7 @@ You can access the current Orfox release by installing the [F-Droid app](https:/
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13000" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13000" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-11-13000'>
@@ -72,7 +72,7 @@ You can access the current Orfox release by installing the [F-Droid app](https:/
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13001" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13001" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-11-13001'>
@@ -82,7 +82,7 @@ You can access the current Orfox release by installing the [F-Droid app](https:/
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13002" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13002" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-11-13002'>
@@ -92,7 +92,7 @@ You can access the current Orfox release by installing the [F-Droid app](https:/
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13004" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13004" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-11-13004'>

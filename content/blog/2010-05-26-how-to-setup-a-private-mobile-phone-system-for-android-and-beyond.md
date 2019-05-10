@@ -4,9 +4,9 @@ title: 'How To: Setup a Private VOIP Phone System for Android'
 date: 2010-05-26T05:53:54-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=332
+guid: https://guardianproject.info/?p=332
 permalink: /2010/05/26/how-to-setup-a-private-mobile-phone-system-for-android-and-beyond/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall-64x64.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall-64x64.png",}]
 categories:
   - HowTo
 tags:
@@ -24,7 +24,7 @@ tags:
   </div>
   
   <div>
-    Near the very top of Guardian’s open-source application suite <a href="http://guardianproject.info/apps/"><span style="color: #0000ff;"><span>wish l<span style="color: #0000ff;"><span>ist</span></span></span></span></a> is something that might seem like a no-brainer for a secure mobile device: voice. When we take into account network performance and audio fidelity requirements, as well as the International nature of Guardian’s target users (everything from average citizens to multi-national journalists or humanitarian organizations), the prospect of a truly real-time secure VOIP solution starts to reveal itself as quite the challenge. Fortunately, a number of efforts have been underway for some time on the Android platform. <strong>The following is an introduction to one such effort, and this post provides a very easy step-by-step how to enable your very own private mobile phone system.</strong>
+    Near the very top of Guardian’s open-source application suite <a href="https://guardianproject.info/apps/"><span style="color: #0000ff;"><span>wish l<span style="color: #0000ff;"><span>ist</span></span></span></span></a> is something that might seem like a no-brainer for a secure mobile device: voice. When we take into account network performance and audio fidelity requirements, as well as the International nature of Guardian’s target users (everything from average citizens to multi-national journalists or humanitarian organizations), the prospect of a truly real-time secure VOIP solution starts to reveal itself as quite the challenge. Fortunately, a number of efforts have been underway for some time on the Android platform. <strong>The following is an introduction to one such effort, and this post provides a very easy step-by-step how to enable your very own private mobile phone system.</strong>
   </div>
   
   <p>

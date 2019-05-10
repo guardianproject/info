@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=576
 permalink: /2010/11/08/proxy-settings-add-on-for-firefox-mobile/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/11/fennecoptions.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/11/fennecoptions.png",}]
 categories:
   - Development
   - News

@@ -4,9 +4,9 @@ title: One Solution for Push-to-Talk
 date: 2010-02-11T03:50:22-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=95
+guid: https://guardianproject.info/?p=95
 permalink: /2010/02/11/one-solution-for-push-to-talk/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/02/screencapture2-64x64.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/02/screencapture2-64x64.png",}]
 categories:
   - App Reviews
 tags:

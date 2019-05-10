@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13356
 permalink: /2016/06/07/openarchive-free-secure-mobile-media-sharing-dwebsummit/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2016/06/OpenArchive-feature-graphic.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2016/06/OpenArchive-feature-graphic.png",}]
 categories:
   - App Reviews
   - New Release
@@ -28,19 +28,19 @@ I am excited to share another new “mini app” effort we have joined up with,
 <div id='gallery-12' class='gallery galleryid-13356 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-105614.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-105614-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-105614.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-105614-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160805.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160805-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160805.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160805-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160818.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160818-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160818.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160818-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -48,19 +48,19 @@ I am excited to share another new “mini app” effort we have joined up with,
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160829.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160829-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160829.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160829-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160837.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160837-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160837.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160837-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160912.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160912-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160912.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160912-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   

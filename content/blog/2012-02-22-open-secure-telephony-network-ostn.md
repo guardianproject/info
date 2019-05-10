@@ -13,7 +13,7 @@ tags:
   - voip
   - zrtp
 ---
-Over the last two months, I have been working on a project to research and develop a set of tools to provide secure peer to peer Voice over IP on the Android mobile platform. It is called the Open Secure Telephony Network, or [OSTN](https://guardianproject.info/wiki/OSTN). This work is done under the umbrella of [The Guardian Project](http://guardianproject.info/).
+Over the last two months, I have been working on a project to research and develop a set of tools to provide secure peer to peer Voice over IP on the Android mobile platform. It is called the Open Secure Telephony Network, or [OSTN](https://guardianproject.info/wiki/OSTN). This work is done under the umbrella of [The Guardian Project](https://guardianproject.info/).
 
 [<img src="http://farm6.staticflickr.com/5119/5893549665_24943d362e.jpg" alt="Telephone wires" width="500" height="333" />  
 ](http://www.flickr.com/photos/stuartbarr/5893549665/ "Telephone wires by Stuart Barr, on Flickr") _this is not the type of “open” we mean, and definitely not secure_

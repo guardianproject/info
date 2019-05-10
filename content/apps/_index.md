@@ -4,7 +4,7 @@ title: Secure Mobile Apps
 date: 2010-02-08T06:09:05-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/?page_id=10
+guid: https://guardianproject.info/?page_id=10
 menu:
   main:
     name: Apps Overview

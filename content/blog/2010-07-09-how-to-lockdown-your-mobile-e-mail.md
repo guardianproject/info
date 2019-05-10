@@ -4,9 +4,9 @@ title: 'How To: Lockdown Your Mobile E-Mail'
 date: 2010-07-09T11:00:25-04:00
 author: Derek
 layout: post
-guid: http://guardianproject.info/?p=383
+guid: https://guardianproject.info/?p=383
 permalink: /2010/07/09/how-to-lockdown-your-mobile-e-mail/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-64x64.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-64x64.png",}]
 categories:
   - App Reviews
   - HowTo
@@ -66,7 +66,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
 </p>
 
 <p style="padding-left: 30px; text-align: center;">
-  <a href="http://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png"><img class="size-full wp-image-385 aligncenter" title="qrcode_apg" src="http://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png" alt="" width="120" height="120" srcset="https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png 120w, https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg-64x64.png 64w" sizes="(max-width: 120px) 100vw, 120px" /></a>
+  <a href="https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png"><img class="size-full wp-image-385 aligncenter" title="qrcode_apg" src="https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png" alt="" width="120" height="120" srcset="https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png 120w, https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg-64x64.png 64w" sizes="(max-width: 120px) 100vw, 120px" /></a>
 </p>
 
 <p style="padding-left: 30px;">
@@ -74,7 +74,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
 </p>
 
 <p style="padding-left: 30px; text-align: center;">
-  <a href="http://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png"><img class="size-medium wp-image-390 aligncenter" title="apg_menu" src="http://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a>
+  <a href="https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png"><img class="size-medium wp-image-390 aligncenter" title="apg_menu" src="https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a>
 </p>
 
 <p style="padding-left: 30px; text-align: center;">
@@ -83,7 +83,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
   </p>
   
   <p style="padding-left: 30px; text-align: center;">
-    <a href="http://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png"><img class="size-medium wp-image-391 aligncenter" title="apg_manage_public_keys_blur" src="http://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a>
+    <a href="https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png"><img class="size-medium wp-image-391 aligncenter" title="apg_manage_public_keys_blur" src="https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a>
   </p>
   
   <p style="padding-left: 30px;">
@@ -92,7 +92,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
     </p>
     
     <p style="padding-left: 30px; text-align: center;">
-      <span style="line-height: 8px;"><a href="http://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png"><img class="size-medium wp-image-392 aligncenter" title="apg_import_keys_blur" src="http://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a></span>
+      <span style="line-height: 8px;"><a href="https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png"><img class="size-medium wp-image-392 aligncenter" title="apg_import_keys_blur" src="https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a></span>
     </p>
     
     <p style="padding-left: 30px;">
@@ -117,12 +117,12 @@ You’ve probably guessed by now that the reason for this posting is to show you
       </p>
       
       <p style="padding-left: 30px;">
-        <a href="http://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png"><img class="aligncenter size-medium wp-image-451" title="k9_setup" src="http://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png" alt="" width="168" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png 480w" sizes="(max-width: 168px) 100vw, 168px" /></a>
+        <a href="https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png"><img class="aligncenter size-medium wp-image-451" title="k9_setup" src="https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png" alt="" width="168" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png 480w" sizes="(max-width: 168px) 100vw, 168px" /></a>
       </p>
       
       <p style="padding-left: 30px;">
         <p style="padding-left: 30px; text-align: center;">
-          <img class="aligncenter" title="k9_almost_done" src="http://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done-168x300.png" alt="" width="168" height="300" />
+          <img class="aligncenter" title="k9_almost_done" src="https://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done-168x300.png" alt="" width="168" height="300" />
         </p>
         
         <p style="padding-left: 30px;">
@@ -138,7 +138,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
         </p>
         
         <p style="padding-left: 30px;">
-          <a href="http://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png"><img class="aligncenter size-medium wp-image-453" title="k9_compose" src="http://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png" alt="" width="168" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png 480w" sizes="(max-width: 168px) 100vw, 168px" /></a>
+          <a href="https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png"><img class="aligncenter size-medium wp-image-453" title="k9_compose" src="https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png" alt="" width="168" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png 480w" sizes="(max-width: 168px) 100vw, 168px" /></a>
         </p>
         
         <p style="padding-left: 30px;">
@@ -146,7 +146,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
         </p>
         
         <p style="padding-left: 30px;">
-          <a href="http://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done.png"></a><a href="http://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png"><img class="aligncenter size-medium wp-image-455" title="k9_view_decrypt" src="http://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-90x150.png 90w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a>
+          <a href="https://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done.png"></a><a href="https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png"><img class="aligncenter size-medium wp-image-455" title="k9_view_decrypt" src="https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-90x150.png 90w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a>
         </p>
         
         <p style="padding-left: 30px;">

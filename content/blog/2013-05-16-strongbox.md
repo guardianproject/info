@@ -6,7 +6,7 @@ author: mark
 layout: post
 guid: https://guardianproject.info/?p=3715
 permalink: /2013/05/16/strongbox/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/05/Screen-shot-2013-05-16-at-5.50.31-PM.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2013/05/Screen-shot-2013-05-16-at-5.50.31-PM.png",}]
 categories:
   - News
 tags:
@@ -42,7 +42,7 @@ tags:
 </p>
 
 <p dir="ltr">
-  The website exists as a hidden site on what is widely known as the darknet, since you are going there hidden or “in the dark.” Instead of a .com, .org, or .info address (like <a href="http://guardianproject.info/" target="_blank">guardianproject.info</a>) the sites like Strongbox show up with a .onion. And like you need a web browser to go to a .com web address, you need a darknet browser to go to a .onion darknet address. On a mobile, we make the most secure and anonymous darknet & web browser, Orweb. And if you want to get to strongbox on your phone, we’re the only way to do it.
+  The website exists as a hidden site on what is widely known as the darknet, since you are going there hidden or “in the dark.” Instead of a .com, .org, or .info address (like <a href="https://guardianproject.info/" target="_blank">guardianproject.info</a>) the sites like Strongbox show up with a .onion. And like you need a web browser to go to a .com web address, you need a darknet browser to go to a .onion darknet address. On a mobile, we make the most secure and anonymous darknet & web browser, Orweb. And if you want to get to strongbox on your phone, we’re the only way to do it.
 </p>
 
 <p dir="ltr">

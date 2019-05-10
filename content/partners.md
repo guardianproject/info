@@ -3,7 +3,7 @@ id: 116
 title: Partners and Funding
 date: 2010-02-11T05:53:10-04:00
 author: n8fr8
-guid: http://guardianproject.info/?page_id=116
+guid: https://guardianproject.info/?page_id=116
 aliases:
   - home/partners
 menu:

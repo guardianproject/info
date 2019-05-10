@@ -4,7 +4,7 @@ title: Our Foolish Hackday!
 date: 2011-04-06T21:51:12-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=899
+guid: https://guardianproject.info/?p=899
 permalink: /2011/04/06/our-foolish-hackday/
 categories:
   - Development
@@ -19,27 +19,13 @@ Thanks to all for coming, and hope you enjoyed the donuts and beer!
 <div id='gallery-4' class='gallery galleryid-899 gallery-columns-2 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2011/04/donuts.jpg'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2011/04/donuts-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2011/04/donuts.jpg'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2011/04/donuts-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2011/04/eyes.jpg'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2011/04/eyes-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <br style="clear: both" />
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2011/04/hackers.jpg'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2011/04/hackers-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2011/04/noneck.jpg'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2011/04/noneck-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2011/04/eyes.jpg'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2011/04/eyes-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -47,7 +33,21 @@ Thanks to all for coming, and hope you enjoyed the donuts and beer!
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2011/04/table.jpg'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2011/04/table-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2011/04/hackers.jpg'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2011/04/hackers-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon landscape'>
+      <a href='https://guardianproject.info/wp-content/uploads/2011/04/noneck.jpg'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2011/04/noneck-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <br style="clear: both" />
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon landscape'>
+      <a href='https://guardianproject.info/wp-content/uploads/2011/04/table.jpg'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2011/04/table-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   

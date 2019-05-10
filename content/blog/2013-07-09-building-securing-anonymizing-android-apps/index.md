@@ -4,7 +4,7 @@ title: 'Building, Securing, and Anonymizing Android Apps'
 date: 2013-07-05T13:02:37-04:00
 author: mark
 layout: page
-guid: http://guardianproject.info/?page_id=11393
+guid: https://guardianproject.info/?page_id=11393
 aliases:
   - building_secure_androids
 ---

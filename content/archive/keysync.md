@@ -5,7 +5,7 @@ date: 2013-09-12T15:50:07-04:00
 author: mark
 layout: page
 guid: https://guardianproject.info/?page_id=11689
-image: http://guardianproject.info/wp-content/uploads/2013/09/keysync.png
+image: https://guardianproject.info/wp-content/uploads/2013/09/keysync.png
 menu:
   main:
     parent: archive

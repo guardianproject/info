@@ -6,7 +6,7 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=3205
 permalink: /2013/01/31/report-on-iocipher-beta-dev-sprint/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg",}]
 categories:
   - Development
 tags:

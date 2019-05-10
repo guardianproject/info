@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=12755
 permalink: /2015/01/02/2015-is-the-year-of-bore-sec/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2015/01/Old-seatbelt-image.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2015/01/Old-seatbelt-image.jpg",}]
 categories:
   - Advisory
   - privacy

@@ -4,7 +4,7 @@ title: 'Announcing ObscuraCam v1 – Enhance Your Visual Privacy!'
 date: 2011-06-23T21:28:20-04:00
 author: Derek
 layout: post
-guid: http://guardianproject.info/?p=1166
+guid: https://guardianproject.info/?p=1166
 permalink: /2011/06/23/announcing-obscuracam-v1-enhance-your-visual-privacy/
 categories:
   - Development

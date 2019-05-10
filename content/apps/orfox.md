@@ -5,7 +5,7 @@ date: 2016-01-21T11:09:09-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13260
-image: http://guardianproject.info/wp-content/uploads/2016/01/Orfox-feature-graphic.png
+image: https://guardianproject.info/wp-content/uploads/2016/01/Orfox-feature-graphic.png
 ---
 **September 2018 Update!**  
 Since 2015, Orfox has been the only mobile app recommended by the Tor Project to utilize the privacy protections of Tor on Android. The Tor Project has launched an official browser, Tor Browser for Android, now in its alpha release. Orfox will be sunsetted by early 2019 when the stable Tor Browser for Android comes out. To experience real private browsing without tracking, surveillance, or censorship, download Tor Browser for Android from Google Play here: <a href="https://play.google.com/store/apps/details?id=org.torproject.torbrowser_alpha" rel="nofollow">https://play.google.com/store/apps/details?id=org.torproject.torbrowser_alpha</a>.
@@ -26,7 +26,7 @@ Orfox is built from the same source code as Tor Browser (which is built upon Fir
 <div id='gallery-15' class='gallery galleryid-13260 gallery-columns-3 gallery-size-medium'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-15-13004" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-15-13004" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-15-13004'>
@@ -36,7 +36,7 @@ Orfox is built from the same source code as Tor Browser (which is built upon Fir
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-15-13003" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-15-13003" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-15-13003'>
@@ -46,7 +46,7 @@ Orfox is built from the same source code as Tor Browser (which is built upon Fir
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-15-13001" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-15-13001" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-15-13001'>

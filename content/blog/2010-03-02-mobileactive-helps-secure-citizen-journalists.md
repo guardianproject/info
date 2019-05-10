@@ -4,7 +4,7 @@ title: MobileActive Helps Secure Citizen Journalists
 date: 2010-03-02T17:28:30-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=171
+guid: https://guardianproject.info/?p=171
 permalink: /2010/03/02/mobileactive-helps-secure-citizen-journalists/
 categories:
   - News

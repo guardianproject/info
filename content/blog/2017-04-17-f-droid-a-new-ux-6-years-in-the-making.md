@@ -6,7 +6,7 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=13583
 permalink: /2017/04/17/f-droid-a-new-ux-6-years-in-the-making/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2017/04/appdetails-a.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2017/04/appdetails-a.png",}]
 categories:
   - News
 tags:

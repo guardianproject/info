@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=11695
 permalink: /2013/09/20/gibberbots-chatsecure-makeover-almost-done/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light.png",}]
 categories:
   - Development
   - New Release
@@ -28,39 +28,19 @@ You can get your hands on this fully functional beta right here on HockeyApp: <
 <div id='gallery-8' class='gallery galleryid-11695 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/account-list-light.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/account-list-light-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/account-list-light.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/account-list-light-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/account-list-dark.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/account-list-dark-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/account-list-dark.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/account-list-dark-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/account-create-new.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/account-create-new-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <br style="clear: both" />
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-dark.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-dark-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/account-create-new.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/account-create-new-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -68,39 +48,19 @@ You can get your hands on this fully functional beta right here on HockeyApp: <
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/contact-profile-dark.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/contact-profile-dark-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/chat-dark-emoji.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/chat-dark-emoji-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/chat-light-sticker.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/chat-light-sticker-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <br style="clear: both" />
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/chat-profile-overlay.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/chat-profile-overlay-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/chat-with-sharebar.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/chat-with-sharebar-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-dark.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-dark-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -108,19 +68,19 @@ You can get your hands on this fully functional beta right here on HockeyApp: <
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-notifications.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-notifications-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/contact-profile-dark.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/contact-profile-dark-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/chat-with-wallpaper.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/chat-with-wallpaper-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/chat-dark-emoji.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/chat-dark-emoji-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/chat-MUC-join.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/chat-MUC-join-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/chat-light-sticker.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/chat-light-sticker-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -128,7 +88,47 @@ You can get your hands on this fully functional beta right here on HockeyApp: <
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2013/09/chat-muc-beer.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/09/chat-muc-beer-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/chat-profile-overlay.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/chat-profile-overlay-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/chat-with-sharebar.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/chat-with-sharebar-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <br style="clear: both" />
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-notifications.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-notifications-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/chat-with-wallpaper.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/chat-with-wallpaper-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/chat-MUC-join.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/chat-MUC-join-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <br style="clear: both" />
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2013/09/chat-muc-beer.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/09/chat-muc-beer-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   

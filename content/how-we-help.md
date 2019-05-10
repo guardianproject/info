@@ -3,7 +3,7 @@ id: 38
 title: How We Help
 date: 2010-02-10T20:00:14-04:00
 author: n8fr8
-guid: http://guardianproject.info/?page_id=38
+guid: https://guardianproject.info/?page_id=38
 aliases:
   - home/use-cases
 menu:

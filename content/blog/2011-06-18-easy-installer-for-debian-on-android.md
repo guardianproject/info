@@ -4,7 +4,7 @@ title: 'Lil’ Debi: Easy Installer for Debian on Android'
 date: 2011-06-18T04:22:52-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=1133
+guid: https://guardianproject.info/?p=1133
 permalink: /2011/06/18/easy-installer-for-debian-on-android/
 categories:
   - Development

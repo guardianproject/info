@@ -4,7 +4,7 @@ title: Carrier Grade, Verizon and the NSA
 date: 2013-06-12T06:38:46-04:00
 author: lee
 layout: post
-guid: http://guardianproject.info/?p=3941
+guid: https://guardianproject.info/?p=3941
 permalink: /2013/06/12/carrier-grade-verizon-and-the-nsa/
 categories:
   - News

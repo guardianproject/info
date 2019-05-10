@@ -3,7 +3,7 @@ id: 812
 title: How You Can Work With Us
 date: 2011-03-30T18:18:41-04:00
 author: n8fr8
-guid: http://guardianproject.info/?page_id=812
+guid: https://guardianproject.info/?page_id=812
 aliases:
   - home/how-you-can-work-with-us/
 menu:

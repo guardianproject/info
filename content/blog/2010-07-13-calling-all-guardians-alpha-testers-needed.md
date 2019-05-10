@@ -4,9 +4,9 @@ title: 'Calling all Guardians – Alpha Testers Needed!'
 date: 2010-07-13T20:50:31-04:00
 author: Derek
 layout: post
-guid: http://guardianproject.info/?p=400
+guid: https://guardianproject.info/?p=400
 permalink: /2010/07/13/calling-all-guardians-alpha-testers-needed/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/05/IMG_3209-64x64.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/05/IMG_3209-64x64.jpg",}]
 categories:
   - News
 ---
@@ -23,4 +23,4 @@ Prerequisites:
   * Willing to regularly engage with the Guardian team through phone calls, online forums & surveys, etc. (at least once per week)
   * Preferably a part of an organization >3 people also matching the above criteria
 
-If this sounds like you, we want to hear from you. Fill out a quick contact form [here](http://guardianproject.info/contact/alpha-testers-apply-here/).
+If this sounds like you, we want to hear from you. Fill out a quick contact form [here](https://guardianproject.info/contact/alpha-testers-apply-here/).

@@ -41,19 +41,19 @@ categories:
 <div id='gallery-9' class='gallery galleryid-11821 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013158/'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013158-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013158/'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013158-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013343/'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013343-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013343/'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013343-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013623/'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013623-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013623/'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013623-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -61,19 +61,19 @@ categories:
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013652/'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013652-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013652/'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013652-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-014752/'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-014752-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-014752/'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-014752-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-014836/'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-014836-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-014836/'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-014836-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   

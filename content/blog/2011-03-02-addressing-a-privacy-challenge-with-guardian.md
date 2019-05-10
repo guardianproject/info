@@ -4,7 +4,7 @@ title: 'Addressing a “Privacy Challenge” with Guardian'
 date: 2011-03-02T20:39:18-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=775
+guid: https://guardianproject.info/?p=775
 permalink: /2011/03/02/addressing-a-privacy-challenge-with-guardian/
 categories:
   - Development

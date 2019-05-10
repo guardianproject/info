@@ -4,9 +4,9 @@ title: A Weather Report On Security
 date: 2013-06-14T13:22:28-04:00
 author: mark
 layout: post
-guid: http://guardianproject.info/?p=4237
+guid: https://guardianproject.info/?p=4237
 permalink: /2013/06/14/a-weather-report-on-security/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/06/weather.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2013/06/weather.jpg",}]
 categories:
   - News
   - Research

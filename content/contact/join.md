@@ -4,7 +4,7 @@ title: Jobs and Internships
 date: 2010-03-31T18:30:31-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/?page_id=248
+guid: https://guardianproject.info/?page_id=248
 menu:
   main:
     name: Work or Intern With Us

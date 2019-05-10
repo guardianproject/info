@@ -4,7 +4,7 @@ title: Contact Us
 date: 2010-02-08T06:13:07-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/?page_id=22
+guid: https://guardianproject.info/?page_id=22
 menu:
   main:
     name: Join Our Email Lists

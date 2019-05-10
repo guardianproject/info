@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13934
 permalink: /2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2018/01/IMG_20180105_133116.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2018/01/IMG_20180105_133116.jpg",}]
 categories:
   - New Release
   - News
@@ -28,19 +28,19 @@ THANKS TO: pgerber, syphyr, Khsed4, BjarniRunar, Unpublished, igortoliveira, goa
 <div id='gallery-13' class='gallery galleryid-13934 gallery-columns-3 gallery-size-medium'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
   </dl>
   
@@ -48,13 +48,13 @@ THANKS TO: pgerber, syphyr, Khsed4, BjarniRunar, Unpublished, igortoliveira, goa
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344.png'><img width="169" height="300" src="http://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-169x300.png" class="attachment-medium size-medium" alt="" srcset="https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344.png 1440w" sizes="(max-width: 169px) 100vw, 169px" /></a>
     </dt>
   </dl>
   

@@ -4,7 +4,7 @@ title: "Lil' Debi: Mobile Debian Installer"
 date: 2011-06-24T15:28:42-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/?page_id=1205
+guid: https://guardianproject.info/?page_id=1205
 menu:
   main:
     parent: archive

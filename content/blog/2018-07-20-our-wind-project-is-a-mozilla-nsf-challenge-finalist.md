@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13982
 permalink: /2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1.jpg",}]
 categories:
   - New Release
   - News

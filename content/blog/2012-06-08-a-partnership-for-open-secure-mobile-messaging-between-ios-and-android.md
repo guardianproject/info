@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=2322
 permalink: /2012/06/08/a-partnership-for-open-secure-mobile-messaging-between-ios-and-android/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2012/06/mza_2639493050739819523.320x480-75-320x180.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2012/06/mza_2639493050739819523.320x480-75-320x180.jpg",}]
 categories:
   - News
 ---

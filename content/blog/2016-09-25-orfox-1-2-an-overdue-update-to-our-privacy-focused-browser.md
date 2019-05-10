@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13407
 permalink: /2016/09/25/orfox-1-2-an-overdue-update-to-our-privacy-focused-browser/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2016/01/Orfox-feature-graphic.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2016/01/Orfox-feature-graphic.png",}]
 categories:
   - App Reviews
   - News

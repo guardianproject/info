@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=536
 permalink: /2010/09/30/open-video-conference-panel-and-hackday/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/09/ovcbadge1.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/09/ovcbadge1.png",}]
 categories:
   - News
 tags:

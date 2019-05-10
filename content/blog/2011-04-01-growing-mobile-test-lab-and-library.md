@@ -4,7 +4,7 @@ title: Growing Mobile Test Lab and Library
 date: 2011-04-01T00:32:08-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=892
+guid: https://guardianproject.info/?p=892
 permalink: /2011/04/01/growing-mobile-test-lab-and-library/
 categories:
   - Development

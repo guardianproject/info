@@ -1,7 +1,7 @@
 ---
 id: 809
 title: The Team
-guid: http://guardianproject.info/?page_id=809
+guid: https://guardianproject.info/?page_id=809
 aliases:
   - /home/team/
 menu:

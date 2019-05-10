@@ -4,7 +4,7 @@ title: Photos from our January Hackday
 date: 2011-03-10T17:41:18-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=806
+guid: https://guardianproject.info/?p=806
 permalink: /2011/03/10/photos-from-our-january-hackday/
 categories:
   - News

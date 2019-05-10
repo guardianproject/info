@@ -4,7 +4,7 @@ title: Hardware Guide
 date: 2011-02-24T03:47:39-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/?page_id=738
+guid: https://guardianproject.info/?page_id=738
 menu:
   main:
     parent: archive

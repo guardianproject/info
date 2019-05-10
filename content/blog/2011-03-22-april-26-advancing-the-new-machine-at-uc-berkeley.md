@@ -4,7 +4,7 @@ title: 'April 26: “Advancing the New Machine” at UC Berkeley'
 date: 2011-03-22T20:20:56-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=873
+guid: https://guardianproject.info/?p=873
 permalink: /2011/03/22/april-26-advancing-the-new-machine-at-uc-berkeley/
 categories:
   - News

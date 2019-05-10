@@ -6,7 +6,7 @@ author: patch
 layout: post
 guid: https://guardianproject.info/?p=2464
 permalink: /2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2012/06/zrtpswitch.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2012/06/zrtpswitch.png",}]
 categories:
   - News
 tags:
@@ -19,10 +19,10 @@ tags:
 ---
 **Introduction to OSTN**
 
-The [OSTN](http://guardianproject.info/wiki/OSTN) network stands for Open Source Telephony Network. It is a federated network standard for supporting Internet calling with end-to-end encryption ala ZRTP. Its very similar to e-mail in that VOIP calls can be routed to addresses such as &#x75;&#x73;&#x65;&#x72;@doma&#x69;&#x6e;&#x2e;&#x74;ld. Its a simple concept, but I believe it to be ground breaking implementation! Never before have I seen such an accessible solution to encrypted VOIP calls. OSTN is platform independent, is a federated network, and it is an open standard such that it is widely adoptable. There are two main components that are required to use OSTN with encryption: a VOIP client that supports ZRTP for end-to-end encryption and user account with an OSTN provider.
+The [OSTN](https://guardianproject.info/wiki/OSTN) network stands for Open Source Telephony Network. It is a federated network standard for supporting Internet calling with end-to-end encryption ala ZRTP. Its very similar to e-mail in that VOIP calls can be routed to addresses such as &#x75;&#x73;&#x65;&#x72;@doma&#x69;&#x6e;&#x2e;&#x74;ld. Its a simple concept, but I believe it to be ground breaking implementation! Never before have I seen such an accessible solution to encrypted VOIP calls. OSTN is platform independent, is a federated network, and it is an open standard such that it is widely adoptable. There are two main components that are required to use OSTN with encryption: a VOIP client that supports ZRTP for end-to-end encryption and user account with an OSTN provider.
 
   * OSTEL is the first working OSTN provider. Sign up for an account at [ostel.me](https://ostel.me/ "ostel.me").
-  * CSipSimple is the recommended VOIP client for use with OSTN. It has a built in  profile for OSTN accounts and supports ZRTP. You must use the [nightly build](http://nightlies.csipsimple.com/trunk/)! This is the latest version and requires that you allow outside applications on Android by checking the Settings>Applications>’Unknown sources’ box. Information on setting it up for your Android device can be found on [our wiki](http://guardianproject.info/wiki/Ostel "our wiki").
+  * CSipSimple is the recommended VOIP client for use with OSTN. It has a built in  profile for OSTN accounts and supports ZRTP. You must use the [nightly build](http://nightlies.csipsimple.com/trunk/)! This is the latest version and requires that you allow outside applications on Android by checking the Settings>Applications>’Unknown sources’ box. Information on setting it up for your Android device can be found on [our wiki](https://guardianproject.info/wiki/Ostel "our wiki").
 
 While this post focuses on using OSTN with the recommended CSipSimple software, the concepts extend to all OSTN platforms. Check out [the project page](https://guardianproject.info/wiki/OSTN) for more info on alternative clients.
 

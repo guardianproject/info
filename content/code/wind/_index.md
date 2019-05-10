@@ -31,7 +31,7 @@ Source code & Public Works
 <div id='gallery-16' class='gallery galleryid-13885 gallery-columns-1 gallery-size-large'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <img width="945" height="945" src="http://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
+      <img width="945" height="945" src="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
     </dt>
   </dl>
   
@@ -39,7 +39,7 @@ Source code & Public Works
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <img width="945" height="945" src="http://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
+      <img width="945" height="945" src="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
     </dt>
   </dl>
   
@@ -47,7 +47,7 @@ Source code & Public Works
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <img width="945" height="945" src="http://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
+      <img width="945" height="945" src="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
     </dt>
   </dl>
   
@@ -55,7 +55,7 @@ Source code & Public Works
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <img width="945" height="945" src="http://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
+      <img width="945" height="945" src="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
     </dt>
   </dl>
   
@@ -63,7 +63,7 @@ Source code & Public Works
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <img width="945" height="945" src="http://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
+      <img width="945" height="945" src="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-1024x1024.jpg" class="attachment-large size-large" alt="" srcset="https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5.jpg 1275w" sizes="(max-width: 945px) 100vw, 945px" />
     </dt>
   </dl>
   

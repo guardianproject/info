@@ -4,8 +4,8 @@ title: 'SQLCipher: Encrypted Database'
 date: 2011-02-19T08:27:13-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/
-image: http://guardianproject.info/wp-content/uploads/2011/02/showcase.png
+guid: https://guardianproject.info/
+image: https://guardianproject.info/wp-content/uploads/2011/02/showcase.png
 menu:
   main:
     parent: code

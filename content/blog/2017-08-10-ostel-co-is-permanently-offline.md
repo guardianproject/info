@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13805
 permalink: /2017/08/10/ostel-co-is-permanently-offline/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2017/08/hangup.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2017/08/hangup.jpg",}]
 categories:
   - News
 ---

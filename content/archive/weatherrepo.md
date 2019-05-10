@@ -4,7 +4,7 @@ title: Weather Repo
 date: 2013-06-13T13:52:02-04:00
 author: mark
 layout: page
-guid: http://guardianproject.info/?page_id=4245
+guid: https://guardianproject.info/?page_id=4245
 menu:
   main:
     parent: archive

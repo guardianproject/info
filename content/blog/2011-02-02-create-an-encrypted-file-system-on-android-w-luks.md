@@ -4,7 +4,7 @@ title: Create an encrypted file system on Android with LUKS
 date: 2011-02-02T23:29:15-04:00
 author: Derek
 layout: post
-guid: http://guardianproject.info/?p=625
+guid: https://guardianproject.info/?p=625
 permalink: /2011/02/02/create-an-encrypted-file-system-on-android-w-luks/
 categories:
   - Development

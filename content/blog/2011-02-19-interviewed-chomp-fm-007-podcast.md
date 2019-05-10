@@ -4,7 +4,7 @@ title: Interviewed CHOMP.FM 007 Podcast
 date: 2011-02-19T09:58:04-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=685
+guid: https://guardianproject.info/?p=685
 permalink: /2011/02/19/interviewed-chomp-fm-007-podcast/
 enclosure:
   - |

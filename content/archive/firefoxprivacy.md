@@ -4,7 +4,7 @@ title: 'Firefox Mobile: Privacy Enhanced'
 date: 2010-11-15T13:48:35-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/
+guid: https://guardianproject.info/
 menu:
   main:
     parent: archive

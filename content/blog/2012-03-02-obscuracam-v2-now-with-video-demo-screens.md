@@ -23,39 +23,19 @@ Latest ALPHA test build at: [https://github.com/guardianproject/SecureSmartCam/
 <div id='gallery-5' class='gallery galleryid-1590 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120646.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120646-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120646.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120646-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120717.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120717-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120717.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120717-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120826.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120826-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <br style="clear: both" />
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121031.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121031-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121111.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121111-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121126.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121126-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120826.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-120826-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -63,7 +43,27 @@ Latest ALPHA test build at: [https://github.com/guardianproject/SecureSmartCam/
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121143.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121143-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121031.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121031-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon landscape'>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121111.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121111-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon landscape'>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121126.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121126-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <br style="clear: both" />
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon landscape'>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121143.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-02-121143-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   

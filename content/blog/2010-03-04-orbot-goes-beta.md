@@ -4,9 +4,9 @@ title: Orbot goes Beta
 date: 2010-03-04T16:14:01-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=175
+guid: https://guardianproject.info/?p=175
 permalink: /2010/03/04/orbot-goes-beta/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest-64x64.png",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest-64x64.png",}]
 categories:
   - News
 tags:
@@ -22,4 +22,4 @@ There are some really cool features in Orbot, specifically “Per App Torificati
 
 If you’d like to do the QRCode scan install thing, point your Android camera at this:
 
-[<img class="alignnone size-full wp-image-186" title="orbot-qr-code-latest" src="http://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png" alt="" width="123" height="123" srcset="https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png 123w, https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest-64x64.png 64w" sizes="(max-width: 123px) 100vw, 123px" />](http://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png)
+[<img class="alignnone size-full wp-image-186" title="orbot-qr-code-latest" src="https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png" alt="" width="123" height="123" srcset="https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png 123w, https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest-64x64.png 64w" sizes="(max-width: 123px) 100vw, 123px" />](https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png)

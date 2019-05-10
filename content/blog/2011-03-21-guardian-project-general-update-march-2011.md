@@ -4,7 +4,7 @@ title: 'Guardian Project: General Update March 2011'
 date: 2011-03-21T05:18:48-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=860
+guid: https://guardianproject.info/?p=860
 permalink: /2011/03/21/guardian-project-general-update-march-2011/
 categories:
   - News

@@ -47,39 +47,19 @@ You can open each app by browsing and selecting them, and then via Menu options,
 <div id='gallery-6' class='gallery galleryid-1632 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/cats.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/cats-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/cats.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/cats-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110254.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110254-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110254.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110254-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110305.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110305-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <br style="clear: both" />
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110320.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110320-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110341.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110341-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110351.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110351-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110305.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110305-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -87,13 +67,33 @@ You can open each app by browsing and selecting them, and then via Menu options,
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110404.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110404-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110320.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110320-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110434.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110434-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110341.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110341-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110351.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110351-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <br style="clear: both" />
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110404.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110404-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110434.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110434-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   

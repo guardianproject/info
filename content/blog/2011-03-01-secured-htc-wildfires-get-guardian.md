@@ -4,7 +4,7 @@ title: 'SECURED: HTC Wildfires get Guardian'
 date: 2011-03-01T23:23:14-04:00
 author: Derek
 layout: post
-guid: http://guardianproject.info/?p=770
+guid: https://guardianproject.info/?p=770
 permalink: /2011/03/01/secured-htc-wildfires-get-guardian/
 categories:
   - News

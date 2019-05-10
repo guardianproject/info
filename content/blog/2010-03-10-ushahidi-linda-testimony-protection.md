@@ -4,7 +4,7 @@ title: 'Ushahidi-Linda: “Testimony” + “Protection”'
 date: 2010-03-10T19:53:00-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=215
+guid: https://guardianproject.info/?p=215
 permalink: /2010/03/10/ushahidi-linda-testimony-protection/
 categories:
   - Development
@@ -17,7 +17,7 @@ Ushahidi-linda (“Testimony” + “Protection” – _disclaimer: we don’t s
 
 This is a fork of the [Ushahidi on Android](http://github.com/ushahidi/Ushahidi_Android) app, done as a way to prototype the implementation of increased security, anonymity and privacy for users viewing and submitting reports through [Ushahidi](http://ushahidi.com).
 
-[<img class="size-full wp-image-199 alignleft" title="ushahidi_android_splash" src="http://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png" alt="" width="224" height="336" srcset="https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png 320w, https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash-200x300.png 200w" sizes="(max-width: 224px) 100vw, 224px" />](http://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png)
+[<img class="size-full wp-image-199 alignleft" title="ushahidi_android_splash" src="https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png" alt="" width="224" height="336" srcset="https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png 320w, https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash-200x300.png 200w" sizes="(max-width: 224px) 100vw, 224px" />](https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png)
 
 Ushahidi is a platform that crowdsources crisis information, allowing anyone to submit crisis information through text messaging using a mobile phone, email or web form.
 

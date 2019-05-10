@@ -4,7 +4,7 @@ title: A note on funding and our mention in Wired
 date: 2011-02-23T16:50:38-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=708
+guid: https://guardianproject.info/?p=708
 permalink: /2011/02/23/a-note-on-funding-and-our-mention-in-wired/
 categories:
   - News

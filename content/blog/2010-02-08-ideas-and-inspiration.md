@@ -3,7 +3,7 @@ id: 2
 title: 'Ideas and Inspiration'
 date: 2010-02-08T05:34:33-04:00
 author: n8fr8
-guid: http://guardianproject.info/?page_id=2
+guid: https://guardianproject.info/?page_id=2
 aliases:
   - home/stories
 ---

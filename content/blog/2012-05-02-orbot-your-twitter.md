@@ -27,7 +27,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
 <div id='gallery-7' class='gallery galleryid-2041 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-165201.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-165201-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2047" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-165201.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-165201-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2047" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2047'>
@@ -37,7 +37,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164620.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164620-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2042" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164620.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164620-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2042" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2042'>
@@ -47,7 +47,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164656.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164656-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2043" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164656.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164656-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2043" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2043'>
@@ -59,7 +59,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164743.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164743-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2044" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164743.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164743-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2044" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2044'>
@@ -69,7 +69,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164753.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164753-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2045" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164753.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164753-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2045" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2045'>
@@ -79,7 +79,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164807.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164807-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2046" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164807.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164807-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2046" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2046'>
@@ -91,7 +91,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170011.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170011-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2054" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170011.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170011-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2054" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2054'>
@@ -101,7 +101,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170043.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170043-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2055" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170043.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170043-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2055" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2055'>
@@ -111,7 +111,7 @@ See the screenshots below for a full walkthrough, and please spread the word to 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170118.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170118-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2056" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170118.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170118-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" aria-describedby="gallery-7-2056" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-7-2056'>

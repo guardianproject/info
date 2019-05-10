@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=3145
 permalink: /2013/01/27/informacam-wins-knight-news-challenge/
-bigimg: [{src: "http://guardianproject.info/wp-content/uploads/2013/01/TEST_Knight_NOT_FINAL.jpg",}]
+bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2013/01/TEST_Knight_NOT_FINAL.jpg",}]
 categories:
   - News
 ---

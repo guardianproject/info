@@ -4,7 +4,7 @@ title: aPad / iRobot / Moons e7001 Teardown
 date: 2010-06-05T13:38:23-04:00
 author: n8fr8
 layout: post
-guid: http://guardianproject.info/?p=373
+guid: https://guardianproject.info/?p=373
 permalink: /2010/06/05/apad-irobot-moons-e7001-teardown/
 categories:
   - Development

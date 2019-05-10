@@ -4,7 +4,7 @@ title: 'LUKS: Disk Encryption'
 date: 2011-02-19T09:05:06-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/
+guid: https://guardianproject.info/
 menu:
   main:
     parent: archive

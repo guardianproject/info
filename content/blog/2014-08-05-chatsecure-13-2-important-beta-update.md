@@ -23,39 +23,19 @@ This beta also features a new account setup wizard that we are eager for feedba
 <div id='gallery-10' class='gallery galleryid-12577 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122247.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122247-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122247.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122247-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122226.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122226-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122226.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122226-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122048.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122048-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <br style="clear: both" />
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122039.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122039-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121908.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121908-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
-    </dt>
-  </dl>
-  
-  <dl class='gallery-item'>
-    <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2014/08/sidebar.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2014/08/sidebar-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122048.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122048-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   
@@ -63,7 +43,27 @@ This beta also features a new account setup wizard that we are eager for feedba
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121532.png'><img width="150" height="150" src="http://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121532-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+      <a href='https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122039.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122039-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121908.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121908-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2014/08/sidebar.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2014/08/sidebar-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
+    </dt>
+  </dl>
+  
+  <br style="clear: both" />
+  
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121532.png'><img width="150" height="150" src="https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121532-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" /></a>
     </dt>
   </dl>
   

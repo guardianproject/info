@@ -58,7 +58,7 @@ fdroid update
 
 You can also customize your repo by editing the config file. Be sure to use a programming text editor, like `editor /usr/share/nginx/www/fdroid/config.py`. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:
 
-<pre>repo_url = "http://guardianproject.info/fdroid/repo"
+<pre>repo_url = "https://guardianproject.info/fdroid/repo"
 repo_name = "My Local Repo"
 repo_icon = "GP_Logo_hires.png"
 repo_description = """

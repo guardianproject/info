@@ -4,8 +4,8 @@ title: About the Guardian Project
 date: 2010-02-08T06:08:34-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/?page_id=8
-image: http://guardianproject.info/wp-content/uploads/2013/09/cropped-GP_logo+txt_hires_black_on_trans.png
+guid: https://guardianproject.info/?page_id=8
+image: https://guardianproject.info/wp-content/uploads/2013/09/cropped-GP_logo+txt_hires_black_on_trans.png
 aliases:
   - home
 menu:

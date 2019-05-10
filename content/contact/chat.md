@@ -4,7 +4,7 @@ title: Live Chatrooms (IRC)
 date: 2010-05-09T00:26:38-04:00
 author: n8fr8
 layout: page
-guid: http://guardianproject.info/?page_id=276
+guid: https://guardianproject.info/?page_id=276
 menu:
   main:
     name: Chat on IRC

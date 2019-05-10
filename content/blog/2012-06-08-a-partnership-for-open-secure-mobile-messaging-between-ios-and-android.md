@@ -34,7 +34,7 @@ A message below from the ChatSecure team…
 
 Read more and learn about this great open-source effort on the ChatSecure blog: <https://chatsecure.org/blog#2>
 
-If you are reading this on an iOS device, [go to the App Store and install ChatSecure now!](http://itunes.apple.com/us/app/chatsecure/id464200063?mt=8)<!--:-->
+If you are reading this on an iOS device, [go to the App Store and install ChatSecure now!](https://itunes.apple.com/us/app/chatsecure/id464200063?mt=8)<!--:-->
 
 <!--:pt-->
 

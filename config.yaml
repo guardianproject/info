@@ -8,6 +8,9 @@ Paginate: 20 # this is set low for demonstrating with dummy content. Set to a hi
 pluralizeListTitles: false
 enableRobotsTXT: true
 
+permalinks:
+  blog: /:year/:month/:day/:title/
+
 # ensure this stuff is all disabled, key bits have also been deleted
 googleAnalytics: ""
 

@@ -175,7 +175,7 @@ Thanks to all for coming, and hope you enjoyed the donuts and beer!
 <div id="magicdomid26">
   <ul>
     <li>
-      <a href="http://www.google.com/products?q=%22Cell+phone+signal+blocker+pouch%22">http://www.google.com/products?q</a><a href="http://piratepad.net/ep/search?query=%2522Cell+phone+signal+blocker+pouch%2522"></a><a href="http://www.google.com/products?q=%22Cell+phone+signal+blocker+pouch%22">=%22Cell+phone+signal+blocker+pouch%22</a>
+      <a href="https://www.google.com/products?q=%22Cell+phone+signal+blocker+pouch%22">https://www.google.com/products?q</a><a href="http://piratepad.net/ep/search?query=%2522Cell+phone+signal+blocker+pouch%2522"></a><a href="https://www.google.com/products?q=%22Cell+phone+signal+blocker+pouch%22">=%22Cell+phone+signal+blocker+pouch%22</a>
     </li>
   </ul>
 </div>

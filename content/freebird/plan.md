@@ -10,7 +10,7 @@ guid: https://guardianproject.info/?page_id=1917
 
 ## Agenda 9am to 5pm &#8211; May 30, 2012
 
-The workshop will have time for all participants to join together, as well as breakout tracks for users and developers. This is a [BARCAMP](http://en.wikipedia.org/wiki/BarCamp) type event, so come prepared to interact, share and participate.
+The workshop will have time for all participants to join together, as well as breakout tracks for users and developers. This is a [BARCAMP](https://en.wikipedia.org/wiki/BarCamp) type event, so come prepared to interact, share and participate.
 
 The USING track will involve expanding mobile users understanding of how their phone works, or is working against them, and enabling them to replace the built-in software with more open or secure versions.
 
@@ -39,7 +39,7 @@ Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should at
   Agenda 9 h às 17 h – 30 de Maio de 2012
 </h2>
 
-<span style="font-family: Times, serif;">O workshop terá tempo para todos os participantes se juntarem, bem como faixas de novidades para usuários e desenvolvedores. Esse é um evento do tipo <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="http://en.wikipedia.org/wiki/BarCamp">BARCAMP</a></span></span>, então venha preparado para interagir, compartilhar e participar.</span>
+<span style="font-family: Times, serif;">O workshop terá tempo para todos os participantes se juntarem, bem como faixas de novidades para usuários e desenvolvedores. Esse é um evento do tipo <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/BarCamp">BARCAMP</a></span></span>, então venha preparado para interagir, compartilhar e participar.</span>
 
 <p lang="pt-BR">
   <span style="font-family: Times, serif;">A faixa USING envolverá expandir a compreensão dos usuários de celulares sobre o funcionamento de seu telefone, ou se está trabalhando contra eles e que possam substituir o software integrado com versões mais abertas ou seguras.</span>
@@ -106,7 +106,7 @@ Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should at
     </h2>
     
     <p lang="es-ES">
-      El taller permitirá que todos los participantes puedan reunirse y que se organicen grupos de debate entre usuarios y desarrolladores. Este evento es un <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="http://en.wikipedia.org/wiki/BarCamp">BARCAMP</a></span></span>, entonces prepárese para relacionarse, compartir experiencias y participar.
+      El taller permitirá que todos los participantes puedan reunirse y que se organicen grupos de debate entre usuarios y desarrolladores. Este evento es un <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://en.wikipedia.org/wiki/BarCamp">BARCAMP</a></span></span>, entonces prepárese para relacionarse, compartir experiencias y participar.
     </p>
     
     <p lang="es-ES">

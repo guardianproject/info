@@ -22,7 +22,7 @@ The project will continue for another four months and I will post my public find
 
 Right now the stack looks like this
 
-  * A client that understands the [SIP](http://en.wikipedia.org/wiki/Session_Initiation_Protocol) protocol and the [ZRTP](http://en.wikipedia.org/wiki/ZRTP) protocol
+  * A client that understands the [SIP](https://en.wikipedia.org/wiki/Session_Initiation_Protocol) protocol and the [ZRTP](https://en.wikipedia.org/wiki/ZRTP) protocol
   * A server that can register SIP users and pass off the ZRTP traffic to peers
 
 Sounds simple enough, though the development landscape for these applications changes quickly, as does the legal implications of various implementations of both protocols.

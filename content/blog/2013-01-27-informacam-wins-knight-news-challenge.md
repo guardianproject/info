@@ -18,7 +18,7 @@ The Knight News Challenge accelerates media innovation by funding breakthrough i
 
 Some more about InformaCam from a recent post titled [“Is This For Real?”](http://blog.witness.org/2013/01/how-informacam-improves-verification-of-mobile-media-files/) on the WITNESS site:
 
-> To address those needs we’ve been working on [InformaCam](https://guardianproject.info/apps/informacam/), a mobile app that allows Android devices to take images and videos, embed them with geotemporal and other metadata, sign them with a digital signature unique to the device’s camera censor, encrypt and then send those files to someone they trust who maintains a secure server. Among other elements, the process preserves the [chain of custody](http://en.wikipedia.org/wiki/Chain_of_custody) of the media, making it more likely to be admissible in a court of law.
+> To address those needs we’ve been working on [InformaCam](https://guardianproject.info/apps/informacam/), a mobile app that allows Android devices to take images and videos, embed them with geotemporal and other metadata, sign them with a digital signature unique to the device’s camera censor, encrypt and then send those files to someone they trust who maintains a secure server. Among other elements, the process preserves the [chain of custody](https://en.wikipedia.org/wiki/Chain_of_custody) of the media, making it more likely to be admissible in a court of law.
 > 
 ><img class="alignnone" alt="" src="http://blog.witness.org/wp-content/uploads/2013/01/InformaCam3-1024x504.png" width="614" height="302" /> 
 > 

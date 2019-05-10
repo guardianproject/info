@@ -22,7 +22,7 @@ _Here then, as inspiration and our guiding lights, is our list of safety inventi
 Boring Like [Seat Belts](http://blog.esurance.com/seat-belt-history/) (buckle up!)
 
 [<img class="alignnone size-full wp-image-12757" src="https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939.jpg" alt="StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory,_1939" width="1000" height="722" srcset="https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939.jpg 1000w, https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939-300x217.jpg 300w" sizes="(max-width: 1000px) 100vw, 1000px" />  
-](http://en.wikipedia.org/wiki/Pasteurization) Boring Like [Pasteurized Milk](http://en.wikipedia.org/wiki/Pasteurization) (though of course, we do respect your raw dairy folks out there…)
+](https://en.wikipedia.org/wiki/Pasteurization) Boring Like [Pasteurized Milk](https://en.wikipedia.org/wiki/Pasteurization) (though of course, we do respect your raw dairy folks out there…)
 
  
 

@@ -12,7 +12,7 @@ enclosure:
     0
     video/mp4
     
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2016/03/cheadheader.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2016/03/cheadheader.jpg",}]
 categories:
   - HowTo
   - New Release

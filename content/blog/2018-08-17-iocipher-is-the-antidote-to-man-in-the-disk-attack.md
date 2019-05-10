@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13986
 permalink: /2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2018/08/Man-in-the-Disk-Crash-Phone.png",}]
+bigimg: [{src: "/wp-content/uploads/2018/08/Man-in-the-Disk-Crash-Phone.png",}]
 categories:
   - Development
 tags:

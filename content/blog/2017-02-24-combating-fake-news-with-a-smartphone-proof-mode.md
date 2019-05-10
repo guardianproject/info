@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13519
 permalink: /2017/02/24/combating-fake-news-with-a-smartphone-proof-mode/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2017/02/ProofMode-feature-graphic.png",}]
+bigimg: [{src: "/wp-content/uploads/2017/02/ProofMode-feature-graphic.png",}]
 categories:
   - New Release
 ---

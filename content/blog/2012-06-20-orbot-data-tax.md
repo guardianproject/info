@@ -6,7 +6,7 @@ author: patch
 layout: post
 guid: https://guardianproject.info/?p=2387
 permalink: /2012/06/20/orbot-data-tax/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/05/toron-64x64.png",}]
+bigimg: [{src: "/wp-content/uploads/2010/05/toron-64x64.png",}]
 categories:
   - News
 ---

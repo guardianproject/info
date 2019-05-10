@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=314
 permalink: /2010/05/25/tor-on-a-tablet/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/05/IMG_3208-64x64.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2010/05/IMG_3208-64x64.jpg",}]
 categories:
   - Development
   - News

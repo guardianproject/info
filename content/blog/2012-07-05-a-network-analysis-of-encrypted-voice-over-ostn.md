@@ -6,7 +6,7 @@ author: patch
 layout: post
 guid: https://guardianproject.info/?p=2464
 permalink: /2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2012/06/zrtpswitch.png",}]
+bigimg: [{src: "/wp-content/uploads/2012/06/zrtpswitch.png",}]
 categories:
   - News
 tags:

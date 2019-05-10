@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13998
 permalink: /2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-6.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2018/09/disaster_1-6.jpg",}]
 categories:
   - News
 tags:

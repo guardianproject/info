@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=11448
 permalink: /2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2013/07/tumblr_lthb6agZVE1qlts9lo1_1280.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2013/07/tumblr_lthb6agZVE1qlts9lo1_1280.jpg",}]
 categories:
   - Development
   - Research

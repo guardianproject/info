@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=1321
 permalink: /2011/11/29/sqlcipher-for-android-v1-final/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2011/11/logo-sqlcipher-android.png",}]
+bigimg: [{src: "/wp-content/uploads/2011/11/logo-sqlcipher-android.png",}]
 categories:
   - Development
   - New Release

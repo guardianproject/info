@@ -6,7 +6,7 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=12148
 permalink: /2013/12/06/getting-keys-into-your-keyring-with-gpg-for-android/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr.png",}]
+bigimg: [{src: "/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr.png",}]
 categories:
   - HowTo
 tags:

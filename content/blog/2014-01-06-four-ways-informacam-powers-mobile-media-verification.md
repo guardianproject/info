@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=12084
 permalink: /2014/01/06/four-ways-informacam-powers-mobile-media-verification/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2014/01/informacambanner1.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2014/01/informacambanner1.jpg",}]
 categories:
   - Research
 tags:

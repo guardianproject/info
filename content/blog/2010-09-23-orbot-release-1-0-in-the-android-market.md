@@ -6,7 +6,7 @@ author: Derek
 layout: post
 guid: https://guardianproject.info/?p=512
 permalink: /2010/09/23/orbot-release-1-0-in-the-android-market/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/09/qr_orbot-64x64.png",}]
+bigimg: [{src: "/wp-content/uploads/2010/09/qr_orbot-64x64.png",}]
 categories:
   - News
 ---

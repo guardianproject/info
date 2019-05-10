@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=49
 permalink: /2010/02/10/orbot-initial-release-repost/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/02/apple-touch-icon-256-150x150.png",}]
+bigimg: [{src: "/wp-content/uploads/2010/02/apple-touch-icon-256-150x150.png",}]
 categories:
   - News
 ---

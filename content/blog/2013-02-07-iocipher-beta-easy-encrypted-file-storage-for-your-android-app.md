@@ -6,7 +6,7 @@ author: Hans-Christoph Steiner
 layout: post
 guid: https://guardianproject.info/?p=3056
 permalink: /2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2013/02/288491653_a9b6251477.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2013/02/288491653_a9b6251477.jpg",}]
 categories:
   - Development
   - New Release

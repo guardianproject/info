@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=11559
 permalink: /2013/08/21/orweb-security-advisory-possible-ip-leakage-with-html5-videoaudio/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/03/orweb.png",}]
+bigimg: [{src: "/wp-content/uploads/2010/03/orweb.png",}]
 categories:
   - Advisory
 tags:

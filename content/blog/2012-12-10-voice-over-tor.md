@@ -6,7 +6,7 @@ author: patch
 layout: post
 guid: https://guardianproject.info/?p=2929
 permalink: /2012/12/10/voice-over-tor/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2012/12/onioncart.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2012/12/onioncart.jpg",}]
 categories:
   - News
 tags:

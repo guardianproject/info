@@ -6,7 +6,7 @@ author: Derek
 layout: post
 guid: https://guardianproject.info/?p=383
 permalink: /2010/07/09/how-to-lockdown-your-mobile-e-mail/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-64x64.png",}]
+bigimg: [{src: "/wp-content/uploads/2010/07/k9_view_decrypt-64x64.png",}]
 categories:
   - App Reviews
   - HowTo

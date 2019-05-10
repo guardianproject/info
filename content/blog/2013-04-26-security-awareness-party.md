@@ -6,7 +6,7 @@ author: mark
 layout: post
 guid: https://guardianproject.info/?p=3417
 permalink: /2013/04/26/security-awareness-party/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2013/04/kegdroid.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2013/04/kegdroid.jpg",}]
 categories:
   - HowTo
   - News

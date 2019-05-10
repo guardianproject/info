@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=332
 permalink: /2010/05/26/how-to-setup-a-private-mobile-phone-system-for-android-and-beyond/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall-64x64.png",}]
+bigimg: [{src: "/wp-content/uploads/2010/05/sipdroidcall-64x64.png",}]
 categories:
   - HowTo
 tags:

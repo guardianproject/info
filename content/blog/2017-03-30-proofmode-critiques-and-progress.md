@@ -6,7 +6,7 @@ author: n8fr8
 layout: post
 guid: https://guardianproject.info/?p=13577
 permalink: /2017/03/30/proofmode-critiques-and-progress/
-bigimg: [{src: "https://guardianproject.info/wp-content/uploads/2017/03/Sherlock-Holmes-and-the-Tools-of-Deduction-spillwords.jpg",}]
+bigimg: [{src: "/wp-content/uploads/2017/03/Sherlock-Holmes-and-the-Tools-of-Deduction-spillwords.jpg",}]
 categories:
   - Advisory
   - Development

@@ -63,7 +63,7 @@ sudo wget http://download.opensuse.org/repositories/security:guardianproject/Fed
 sudo yum install keysync
 </pre>
     
-      *![Debian](https://guardianproject.info/builds/.icons/platform_debian_gnu_linux.gif) **Debian**: <a href="http://packages.debian.org/search?keywords=keysync" target="_blank">included in the official repos</a>. For wheezy, get it from backports: <pre style="font-size: small;">apt-get -t wheezy-backports install keysync
+      *![Debian](https://guardianproject.info/builds/.icons/platform_debian_gnu_linux.gif) **Debian**: <a href="https://packages.debian.org/search?keywords=keysync" target="_blank">included in the official repos</a>. For wheezy, get it from backports: <pre style="font-size: small;">apt-get -t wheezy-backports install keysync
 </pre>
     
       *![Arch Linux](https://guardianproject.info/builds/.icons/platform_arch_linux.gif) **Arch Linux**: <a href="https://aur.archlinux.org/packages/keysync/" target="_blank">included in the AUR</a>. Please vote for it so it can be included in the official community repository. 

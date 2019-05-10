@@ -21,10 +21,7 @@ For the last few years, we’ve been working on the [Wind network concept](https
 
 Watch the video below to learn more about Wind, or jump right over to the [Wind project page](https://guardianproject.info/wind/).
 
-<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-fGuiy3rlOVQ" style="max-width:945px;" itemscope itemtype="http://schema.org/VideoObject">
-  <div class="arve-embed-container" style="padding-bottom:56.250000%">
-  </div>
-</div>
+{{< youtube fGuiy3rlOVQ >}}
 
 _  
 When disaster strikes, connectivity becomes difficult. Information can save your life, guiding you to safety and services. Networks today are fragile and easy overloaded. There has not been enough investment in the many other possible nets, that may be better suited for situations where connections to the global internet are not available or affordable. The potential in radios, sensors and processing available in the cheapest of smartphones and routers are not fully utilized or realized._

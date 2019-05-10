@@ -27,10 +27,7 @@ At some point soon, we should stop calling the smartphones that over two billion
 
 This re-imagining of a smartphone as something more, is what inspired the development of [Haven](https://guardianproject.github.io/haven/), a new open-source project and mobile app we are announcing today, built in partnership with Freedom of the Press Foundation. The concept of [Haven](https://guardianproject.github.io/haven/), as imagined by Micah F. Lee and Edward Snowden, is based on the notion that any smartphone could be turned into a personal, portable security device, to watch for unexpected intrusions into physical spaces.
 
-<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-Fr0wEsISRUw" style="max-width:945px;" itemscope itemtype="http://schema.org/VideoObject">
-  <div class="arve-embed-container" style="padding-bottom:56.250000%">
-  </div>
-</div>
+{{< youtube Fr0wEsISRUw >}}
 
 They call it a “safe room” in your pocket, or way to defeat “evil maid” attacks, that lets you know when you’ve been targeted by a “black bag” operation. I also like to think that through Haven, we have unexpectedly created the most powerful, secure and private baby monitor system ever. By tapping into the sensors and processing power on these devices with custom software, a system could feel the vibrations of someone walking, detect the shine of a flashlight, hear the sound of a door opening (or a child crying), or see someone entering into the view of a camera. All of these “intruder alerts” are recorded on the device, so that the victim can have evidence of their unwanted guest. Even better, they can receive real-time secure and private notifications, with images and sound, as it happens, and take appropriate actions.
 

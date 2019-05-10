@@ -60,9 +60,6 @@ You can read a bit more in the project [README](https://github.com/guardianproje
 
 If you’d like to learn more about the [CameraV](https://guardianproject.info/apps/camerav) app and our collaboration with [WITNESS](https://witness.org) and [Coletivo Papo Reto](https://www.facebook.com/ColetivoPapoReto/) video activist group in Brazil, please watch this video below from the [Al Jazeera “Rebel Geeks” documentary](http://www.aljazeera.com/programmes/rebelgeeks/2015/12/bigger-brother-151216102151145.html).
 
-<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-ssbezlRkxt8" style="max-width:945px;" itemscope itemtype="http://schema.org/VideoObject">
-  <div class="arve-embed-container" style="padding-bottom:56.250000%">
-  </div>
-</div>
+{{< youtube ssbezlRkxt8 >}}
 
  

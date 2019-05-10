@@ -19,14 +19,8 @@ tags:
 On August 14th, members of the Guardian Project team traveled to Mountain View to compete in the final round of the [Wireless Innovation for a Networked Society (WINS) Challenge](https://wirelesschallenge.mozilla.org/). We learned in July that our [Wind  project was a finalist](https://guardianproject.info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/), and we now had the opportunity to compete for one of the grand prizes, in a TED-meets-SharkTank style event, at Mozilla HQ.
 
 [Wind](https://guardianproject.info/wind) is a network designed for opportunistic communication and sharing of local knowledge that provides off-grid services for everyday people, using the mobile devices they already have. In the Wind network, Chime is the hyperlink, but one that exists in time and space, discoverable through beacon broadcasts and human-to-human sharing. All of this is powered by free and open-source software, running on readily available consumer hardware, and can be deployed at little to no cost, in a very short amount of time.  
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-has-aspect-ratio wp-embed-aspect-16-9">
 
-<div class="wp-block-embed__wrapper">
-  <div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-fGuiy3rlOVQ-2" style="max-width:945px;" itemscope itemtype="http://schema.org/VideoObject">
-    <div class="arve-embed-container" style="padding-bottom:56.250000%">
-    </div>
-  </div>
-</div></figure> 
+{{< youtube fGuiy3rlOVQ >}}
 
 <p style="font-size:23px">
   Yesterday, on the Mozilla blog, the <a href="https://blog.mozilla.org/blog/2018/09/25/1-6-million-to-connect-unconnected-americans-our-nsf-wins-competition-grand-prize-winners/">winners were announced.</a> We are honored to be one of them, claiming the 4th Grand Prize.
@@ -34,14 +28,8 @@ On August 14th, members of the Guardian Project team traveled to Mountain View t
 
 <p class="has-background has-pale-cyan-blue-background-color">
   You can watch our 5 minute power presentation below, or jump to the <a href="https://guardianproject.info/wind/">project page</a> or <a href="https://github.com/guardianproject/wind">github repo</a> for more detail. We have also published our entire <a href="https://github.com/guardianproject/wind/blob/master/Mozilla%20NSF%20Off-Grid%20Challenge_%20Wind.pdf">Wind Concept Proposal Submission paper.</a><br />
-</p><figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-has-aspect-ratio wp-embed-aspect-16-9">
 
-<div class="wp-block-embed__wrapper">
-  <div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-FOWrappjLsY" style="max-width:945px;" itemscope itemtype="http://schema.org/VideoObject">
-    <div class="arve-embed-container" style="padding-bottom:56.250000%">
-    </div>
-  </div>
-</div></figure> 
+{{< youtube FOWrappjLsY >}}
 
 We are so grateful to be associated not only with the challenge itself, but with all the other impressive finalists and winners. Our work on Wind took quite a different approach than the others, and thus fills some niches and gaps not addressed by the other systems. We believe there are numerous opportunities for collaboration, and looking forward to helping fulfill the complete vision set forth by the WINS challenges.
 

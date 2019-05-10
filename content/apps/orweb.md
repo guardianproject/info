@@ -60,10 +60,8 @@ Orweb is based on the open-source [Shadow browser](http://www.cl.cam.ac.uk/resea
 
 You can also help us translate this howto video: [http://www.amara.org/en/videos/8YqG1DmIXHWs/info/howto-using-orweb-for-anonymous-browsing](http://www.amara.org/en/videos/8YqG1DmIXHWs/info/howto-using-orweb-for-anonymous-browsing "amara orweb")
 
-<div class="arve-wrapper" data-mode="normal" data-provider="youtube" id="arve-Dcf5sh99ze0" style="max-width:945px;" itemscope itemtype="http://schema.org/VideoObject">
-  <div class="arve-embed-container" style="padding-bottom:56.250000%">
-  </div>
-</div>
+{{< youtube Dcf5sh99ze0 >}}
+
 
 # Orweb for iOS?
 

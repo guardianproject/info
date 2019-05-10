@@ -106,7 +106,7 @@ You can access the current Orfox release by installing the [F-Droid app](https:/
 **Where can I find all the relevant Orfox project pieces?**
 
   * The Orfox project tracker roadmap is here: <https://dev.guardianproject.info/projects/orfox-private-browser/roadmap>{.external}
-  * The Orfox branch of the Tor Browser repository is here: <http://github.com/guardianproject/tor-browser>{.external}
+  * The Orfox branch of the Tor Browser repository is here: <https://github.com/guardianproject/tor-browser>{.external}
   * The Orfox build project is here: <https://github.com/guardianproject/orfoxfennec>{.external}
   * The primary Tor Browser repository is here: <https://gitweb.torproject.org/tor-browser.git/>{.external}
   * Automated debug builds of Orfox alpha are available via F-Droid here (install F-Droid on your phone, then copy/paste or open the link to add the repo): <https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo>{.external}

@@ -27,7 +27,7 @@ Along with our partners at WITNESS, we presented the entire **SecureSmartCam** p
 Economist blog and video: <http://www.economist.com/blogs/babbage/2012/01/technology-and-democracy>  
 New York Tech Meetup full stream: <http://vimeo.com/34608516>
 
-Formal management of the **SQLCipher for Android** project has been moved over to a joint effort between Zetetic, LLC and the Guardian Project, with the new online home being <http://github.com/sqlcipher> and the code packaging moving to a net.sqlcipher.* base. Zetetic is the creator of the original core SQLCipher project and they have been critical in our efforts to bring it to Android. We expect to release an update to SQLCipher 2 with support for Android ICS 4.x this month.
+Formal management of the **SQLCipher for Android** project has been moved over to a joint effort between Zetetic, LLC and the Guardian Project, with the new online home being <https://github.com/sqlcipher> and the code packaging moving to a net.sqlcipher.* base. Zetetic is the creator of the original core SQLCipher project and they have been critical in our efforts to bring it to Android. We expect to release an update to SQLCipher 2 with support for Android ICS 4.x this month.
 
 Our **Portable Shared Security Tokens (PSST)** research project made great headway in sorting through the many, many formats for storing cryptographic keys in open-source software, specifically messaging apps using the Off-the-Record private messaging protocol. One of the project goals is to enable synchronization of keys, included trusted or verified status, from desktop to mobile contexts. An initial set of code has been posted which enables transfer of key between Pidgin and Gibberbot. Learn more at <https://guardianproject.info/wiki/PSST>
 

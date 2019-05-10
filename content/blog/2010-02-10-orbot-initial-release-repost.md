@@ -16,7 +16,7 @@ I’d like to make this post without much fanfare. Just looking to share informa
 
 However, there is still much work to be done… read on!
 
-1) **Tor 0.2.2.5-alpha release** contains all the necessary code for building the Tor binary exe using the Android C SDK. I utilized <a href="http://github.com/tmurakam/droid-wrapper" target="_blank">http://github.com/tmurakam/droid-wrapper</a> toolchain wrapper scripts to make life easier. This will produce the output Tor exe that can run on Android w/o needing root.
+1) **Tor 0.2.2.5-alpha release** contains all the necessary code for building the Tor binary exe using the Android C SDK. I utilized <a href="https://github.com/tmurakam/droid-wrapper" target="_blank">https://github.com/tmurakam/droid-wrapper</a> toolchain wrapper scripts to make life easier. This will produce the output Tor exe that can run on Android w/o needing root.
 
 _Update: Thanks to [Jake](http://www.appelbaum.net/), you can now read the updated [Orbot BUILD doc](https://svn.torproject.org/svn/projects/android/trunk/Orbot/BUILD) for the step by step build how to._
 

@@ -11,6 +11,10 @@ enableRobotsTXT: true
 permalinks:
   blog: /:year/:month/:day/:title/
 
+frontmatter:
+  date: ["date", ":filename", ":git", ":default"]
+  lastmod: ["lastmod", ":fileModTime", ":git", ":default"]
+
 # ensure this stuff is all disabled, key bits have also been deleted
 googleAnalytics: ""
 

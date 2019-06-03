@@ -1,0 +1,30 @@
+<style>
+  div.gallery {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  div.gallery a {
+      flex-grow: 1;
+      object-fit: cover;
+      margin: 2px;
+      display: flex;
+  }
+
+  div.gallery a img {
+      height: 200px;
+      object-fit: cover;
+      flex-grow: 1;
+  }
+</style>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/jquery.fancybox-3.4.0.min.css" />
+<script src="{{ .Site.BaseURL }}/js/jquery-3.3.1.min.js"></script>
+<script src="{{ .Site.BaseURL }}/js/jquery.fancybox.min.js"></script>
+<div class="gallery">
+  {{ with .Page.Resources.ByType "image" }}
+  {{ range .}}
+  <a data-fancybox="gallery" href="{{ .RelPermalink }}">
+    <img src="{{ .RelPermalink }}">  <br/>
+  </a>
+  {{ end }}
+  {{ end }}
+</div>

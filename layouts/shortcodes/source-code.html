@@ -1,0 +1,18 @@
+<div class="source-code" style="width: 50%; margin: 0 auto;">
+  <a href="https://gitlab.com/guardianproject/{{ .Get "name" }}" target="_blank" title="{{ .Get "name" }} on Gitlab">
+    <i class="fa fa-gitlab"></i> GitLab
+  </a>
+  -
+  <a href="https://github.com/guardianproject/{{ .Get "name" }}" target="_blank" title="{{ .Get "name" }} on Github">
+    <i class="fa fa-github"></i> GitHub
+  </a>
+  -
+  <a href="https://guardianproject.github.io/{{ .Get "name" }}" target="_blank" title="{{ .Get "name" }} javadoc">
+    Javadoc
+  </a>
+  -
+  <a href="{{ .Site.BaseURL }}/tags/{{ .Get "name" | lower }}" target="_blank" title="{{ .Get "name" }} blog posts">
+    <i class="fa fa-rss"></i> blog posts
+  </a>
+</div>
+<hr />

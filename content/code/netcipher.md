@@ -9,6 +9,9 @@ menu:
   main:
     parent: code
 ---
+
+{{< source-code name="NetCipher" >}}
+
 **Better TLS and Tor App Integration**
 
 NetCipher is a library for Android that provides multiple means to improve  

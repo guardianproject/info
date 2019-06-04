@@ -10,7 +10,11 @@ menu:
   main:
     parent: code
 ---
-<img class="alignleft size-thumbnail wp-image-3079" alt="alberti cipher disk" src="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg" width="150" height="150" srcset="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w" sizes="(max-width: 150px) 100vw, 150px" /> IOCipher provides a virtual encrypted disk for Android apps without requiring the device to be rooted. It uses a clone of the standard `java.io` API for working with files, so developers already know how to use it. Only password handling, and opening the virtual disk are what stand between the developer and working encrypted file storage. It is based on and <a href="http://sqlcipher.net/" target="_blank">SQLCipher</a>, and designed to work with <a href="https://github.com/guardianproject/IOCipher" target="_blank">CacheWord</a> for handling the keys and passwords.
+<img class="alignleft size-thumbnail wp-image-3079" alt="alberti cipher disk" src="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg" width="150" height="150" srcset="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w" sizes="(max-width: 150px) 100vw, 150px" />
+
+{{< source-code name="IOCipher" >}}
+
+IOCipher provides a virtual encrypted disk for Android apps without requiring the device to be rooted. It uses a clone of the standard `java.io` API for working with files, so developers already know how to use it. Only password handling, and opening the virtual disk are what stand between the developer and working encrypted file storage. It is based on and <a href="http://sqlcipher.net/" target="_blank">SQLCipher</a>, and designed to work with <a href="https://github.com/guardianproject/IOCipher" target="_blank">CacheWord</a> for handling the keys and passwords.
 
 IOCipher is ultimately based on transactions in SQLite, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite&#8217;s transactions prevent the whole file system from being corrupted. This is important in Android since an `Activity` or `Service` can be killed at any moment without warning.
 

@@ -10,14 +10,20 @@ menu:
   main:
     parent: code
 ---
-&nbsp;
 
-<!--:-->
+<img class="alignnone size-medium wp-image-1329" title="logo-sqlcipher-android" src="https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png" alt="" width="300" height="50" srcset="https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png 300w, https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android.png 522w" sizes="(max-width: 300px) 100vw, 300px" />
 
-<!--:es-->
+<div class="source-code" style="width: 30%; margin: 0 auto;">
+  <a href="https://github.com/sqlcipher/android-database-sqlcipher>" target="_blank" title="SQLCipher for Android">
+    <i class="fa fa-github"></i> GitHub
+  </a>
+  -
+  <a href="{{ .Site.BaseURL }}/tags/sqlcipher" target="_blank" title="SQLCipher blog posts">
+    <i class="fa fa-rss"></i> blog posts
+  </a>
+</div>
+<hr />
 
-[<img class="alignnone size-medium wp-image-1329" title="logo-sqlcipher-android" src="https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png" alt="" width="300" height="50" srcset="https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png 300w, https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android.png 522w" sizes="(max-width: 300px) 100vw, 300px" />  
-](https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android.png) 
 
 In an environment where mobile data privacy is increasingly [in the headlines](http://www.reuters.com/article/2011/05/08/us-privacy-congress-idUSTRE7471SA20110508){.vt-p}, this project will make it easier than ever for mobile developers to properly secure their local application data, and in turn better protect the privacy of their users. The data stored by Android apps protected by this type of encryption will be less vulnerable to access by malicious apps, protected in case of device loss or theft, and highly resistant to [mobile data forensics tools](http://www.cellebrite.com/){.vt-p} that are increasingly used to mass copy a mobile device during [routine traffic stops](http://www.thenewspaper.com/news/34/3458.asp){.vt-p}.
 

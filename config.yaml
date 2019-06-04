@@ -39,9 +39,6 @@ menu:
     identifier: "archive"
     url: /archive/
     weight: 1
-  - name: Panic
-    url: https://dev.guardianproject.info/projects/panic/wiki
-    parent: "archive"
 
   - name: "Contact Us"
     identifier: "contact"

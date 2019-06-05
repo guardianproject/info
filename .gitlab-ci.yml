@@ -50,6 +50,6 @@ guardianproject.info:
     - cat .known_hosts >> ~/.ssh/known_hosts
     - chmod 0644 ~/.ssh/known_hosts
     - eval $(ssh-agent -s)
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - cat "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - chmod -R a+rX,go-w public/
     - rsync -axv --delete public/ gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/beta/

@@ -17,8 +17,8 @@ menu:
 
 While smartphones have been heralded as the coming of the next generation of communication and collaboration, they are a step backwards when it comes to personal security, anonymity and privacy.
 
-**Guardian Project** creates [easy to use secure apps](apps), open-source [software libraries](code), and [customized mobile devices](contact) that can be used around the world by any person looking to protect their communications and personal data from unjust intrusion, interception and monitoring.
+**Guardian Project** creates [easy to use secure apps](apps), open-source [software libraries](code), and [customized solutions](contact) that can be used around the world by any person looking to protect their communications and personal data from unjust intrusion, interception and monitoring.
 
-Whether your are an average citizen looking to affirm your rights or an activist, journalist or humanitarian organization looking to safeguard your work in this age of perilous global communication, we can help address the threats you face. Visit our [introductory how-to site](howto), watch on [online mobile security training](https://www.youtube.com/watch?v=KekYW8DhDkU) we held recently, or [view our full list of apps](apps) to get started.
+Whether your are an average person looking to affirm your rights or an activist, journalist or humanitarian organization looking to safeguard your work in this age of perilous global communication, we can help address the threats you face.
 
 <img src="GP_Logo_with_text.png"/>

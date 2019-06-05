@@ -7,6 +7,8 @@ menu:
     parent: code
 ---
 
+<img src="https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png" alt="round hazard button" width="150" height="150" class="alignright size-thumbnail wp-image-13221" srcset="https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png 512w" sizes="(max-width: 150px) 100vw, 150px" />
+
 {{< source-code name="PanicKit" >}}
 
 PanicKit is a collection of tools for creating "panic buttons" that

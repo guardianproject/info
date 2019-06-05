@@ -1,7 +1,6 @@
 baseURL: "http://localhost:1313"
 languageCode: "en-US"
 title: "Guardian Project"
-theme: "guardianproject"
 
 DefaultContentLanguage: "en"
 Paginate: 20 # this is set low for demonstrating with dummy content. Set to a higher number

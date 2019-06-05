@@ -23,6 +23,10 @@ certificate.  There are two general categories of response:
 * opt-in, destructive
 
 
+## Screenshots
+
+{{< gallery >}}
+
 
 # Building apps with panic support
 
@@ -93,10 +97,6 @@ These are all of the core behaviors that are required by a good PanicKit user ex
 * when already connected, clicking confirm will change the settings and keep the connection
 * when already connected, clicking cancel will discard changes to the settings but keep the connection
 
-
-## Screenshots
-
-{{< gallery >}}
 
 ## PanicKit in Action
 

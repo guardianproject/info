@@ -1,7 +1,7 @@
 current:
   - name: n8fr8
     title: Founder and Director
-    description: Developer on Orbot, Orweb, ChatSecure
+    description: Developer on Orbot, Haven, ProofMode, ObscuraCam, Keanu and More!
     gpg: BBE20FD6DA48A3DD4CC7DF41A801183E69B37AA9
     github: n8fr8
     gitlab: n8fr8
@@ -36,10 +36,6 @@ current:
   - name: daveo
     title: Operations Operative
     description: Partnership, products and for-hire services
-
-  - name: jlhads
-    title: Advisor, Evangelist, Alpha User Extraordinaire
-    description: Grant writing, speaking, meeting and other outreach
 
   - name: n-pex
     title: Mobile Master

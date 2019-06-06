@@ -1,7 +1,7 @@
 ---
 title: 'PanicKit: system-wide panic responses'
 author: eighthave
-layout: page
+date: 2015-06-11
 menu:
   main:
     parent: code

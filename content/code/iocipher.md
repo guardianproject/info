@@ -3,7 +3,6 @@ id: 2871
 title: 'IOCipher: Virtual Encrypted Disks'
 date: 2012-10-04T00:39:12-04:00
 author: mark
-layout: page
 guid: https://guardianproject.info/?page_id=2871
 image: https://guardianproject.info/wp-content/uploads/2013/02/288491653_a9b6251477.jpg
 menu:

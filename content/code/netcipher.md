@@ -3,7 +3,6 @@ id: 3609
 title: 'NetCipher: Secured Networking'
 date: 2013-04-29T11:00:55-04:00
 author: n8fr8
-layout: page
 guid: https://guardianproject.info/?page_id=3609
 menu:
   main:

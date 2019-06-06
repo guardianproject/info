@@ -6,10 +6,12 @@
   <a href="https://github.com/guardianproject/{{ .Get "name" }}" target="_blank" title="{{ .Get "name" }} on Github">
     <i class="fa fa-github"></i> GitHub
   </a>
+  {{ if (ne (.Get "skipjavadoc") "true") }}
   -
   <a href="https://guardianproject.github.io/{{ .Get "name" }}" target="_blank" title="{{ .Get "name" }} javadoc">
     Javadoc
   </a>
+  {{ end }}
   -
   <a href="{{ .Site.BaseURL }}/tags/{{ .Get "name" | lower }}" target="_blank" title="{{ .Get "name" }} blog posts">
     <i class="fa fa-rss"></i> blog posts

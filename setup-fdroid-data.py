@@ -62,3 +62,20 @@ for app in data['apps']:
 data['apps'] = appsdict
 with open('data/repo.json', 'w') as fp:
     json.dump(data, fp, indent=2, sort_keys=True)
+
+archive, etag = index.download_repo_index(archive_url + '?fingerprint=' + fingerprint)
+
+activePackageNames = appsdict.keys()
+newarchive = dict()
+newarchive['apps'] = []
+newarchive['packages'] = dict()
+for app in archive['apps']:
+    if app['packageName'] not in activePackageNames:
+        newarchive['apps'].append(app)
+
+for packageName, packageList in archive['packages'].items():
+    if packageName not in activePackageNames:
+        newarchive['packages'][packageName] = packageList
+
+with open('data/archive.json', 'w') as fp:
+    json.dump(newarchive, fp, indent=2, sort_keys=True)

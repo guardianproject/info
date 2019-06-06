@@ -1,23 +1,23 @@
 <span class="post-meta">
   {{ $lastmodstr := default (i18n "dateFormat") .Site.Params.dateformat | .Lastmod.Format }}
   {{ $datestr := default (i18n "dateFormat") .Site.Params.dateformat | .Date.Format }}
-  <i class="fas fa-calendar"></i>&nbsp;{{ $datestr | i18n "postedOnDate"}}
+  <i class="fa fa-calendar"></i>&nbsp;{{ $datestr | i18n "postedOnDate"}}
   {{ if ne $datestr $lastmodstr }}
     &nbsp;{{ $lastmodstr | i18n "lastModified"  }}
   {{ end }}
   {{ if .Site.Params.readingTime }}
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;{{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}
+    &nbsp;|&nbsp;<i class="fa fa-clock"></i>&nbsp;{{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}
   {{ end }}
   {{ if .Site.Params.wordCount }}
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
+    &nbsp;|&nbsp;<i class="fa fa-book"></i>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
   {{ end }}
   {{ if .Params.author }}
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;{{ .Params.author | safeHTML }}
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;{{ .Params.author | safeHTML }}
   {{ else }}
-    &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;{{ .Site.Author.name | safeHTML }}
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;{{ .Site.Author.name | safeHTML }}
   {{ end }}
   {{- if .Site.Params.staticman -}}
-    &nbsp;|&nbsp;<i class="fas fa-comment"></i>&nbsp;
+    &nbsp;|&nbsp;<i class="fa fa-comment"></i>&nbsp;
     {{ $slug := replace .URL "/" "" }}
     {{ if .Site.Data.comments }}
       {{ $comments := index $.Site.Data.comments $slug }}

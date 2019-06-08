@@ -810,4 +810,25 @@ h4.see-also {
 
  ul.team-member {
   list-style: none;
-}
+ }
+
+/* layouts/shortcode/gallery.html and app screenshots */
+ div.gallery {
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: 30px;
+     margin-bottom: 30px;
+ }
+
+ div.gallery a {
+     flex-grow: 1;
+     object-fit: cover;
+     margin: 2px;
+     display: flex;
+ }
+
+ div.gallery a img {
+     height: 200px;
+     object-fit: cover;
+     flex-grow: 1;
+ }

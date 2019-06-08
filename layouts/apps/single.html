@@ -49,11 +49,39 @@
   {{ end }}
 </div>
 
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/jquery.fancybox-3.4.0.min.css" />
+<script src="{{ .Site.BaseURL }}/js/jquery-3.3.1.min.js"></script>
+<script src="{{ .Site.BaseURL }}/js/jquery.fancybox.min.js"></script>
+<div class="gallery">
+  {{ range $localized.phoneScreenshots }}
+  {{ $link := printf "https://guardianproject.info/fdroid/repo/%s/en-US/phoneScreenshots/%s" $.Params.packageName . }}
+  <a data-fancybox="gallery" href="{{ $link }}">
+    <img src="{{ $link }}"/>
+    <br/>
+  </a>
+  {{ end }}
+  {{ range $localized.sevenInchScreenshots }}
+  {{ $link := printf "https://guardianproject.info/fdroid/repo/%s/en-US/sevenInchScreenshots/%s" $.Params.packageName . }}
+  <a data-fancybox="gallery" href="{{ $link }}">
+    <img src="{{ $link }}"/>
+    <br/>
+  </a>
+  {{ end }}
+  {{ range $localized.tenInchScreenshots }}
+  {{ $link := printf "https://guardianproject.info/fdroid/repo/%s/en-US/tenInchScreenshots/%s" $.Params.packageName . }}
+  <a data-fancybox="gallery" href="{{ $link }}">
+    <img src="{{ $link }}"/>
+    <br/>
+  </a>
+  {{ end }}
+</div>
+
 <div class="app-description">
   {{ if $localized.description }}
   {{ $localized.description | markdownify }}
   {{ end }}
 </div>
+
 
 {{ end }}
 

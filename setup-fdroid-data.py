@@ -56,6 +56,7 @@ for app in data['apps']:
         fp.write('  - ' + app['packageName'] + '\n')
         fp.write('  - ' + app['name'].lower() + '\n')
         fp.write('  - ' + app['license'] + '\n')
+        fp.write('aliases:\n  - apps/' + app['name'].split(':')[0].lower() + '\n')
         fp.write('menu:\n  main:\n    parent: apps\n')
         fp.write('---\n\n')
 

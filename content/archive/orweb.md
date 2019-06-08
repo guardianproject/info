@@ -8,7 +8,7 @@ guid: https://guardianproject.info/?page_id=189
 sourceCode: https://github.com/guardianproject/orweb
 menu:
   main:
-    parent: apps
+    parent: archive
 ---
 <p style="text-align: left;">
   <strong>Our new Orfox browser is now released and makes Orweb obsolete. </strong>

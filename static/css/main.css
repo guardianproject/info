@@ -289,6 +289,7 @@ img {
     max-height: 90vh;
     position: absolute;
     overflow-y: auto;
+    overflow-x: hidden;
   }
   .navbar-custom .nav .navlinks-container .navlinks-children a {
     padding-left: 10px;

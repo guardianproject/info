@@ -17,7 +17,7 @@ menu:
     <i class="fa fa-github"></i> GitHub
   </a>
   -
-  <a href="{{ .Site.BaseURL }}/tags/sqlcipher" target="_blank" title="SQLCipher blog posts">
+  <a href="/tags/sqlcipher" target="_blank" title="SQLCipher blog posts">
     <i class="fa fa-rss"></i> blog posts
   </a>
 </div>

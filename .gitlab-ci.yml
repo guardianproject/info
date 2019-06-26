@@ -56,7 +56,7 @@ guardianproject.info:
     - echo >> $SSH_PRIVATE_KEY  # ensure trailing newline
     - cat "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - chmod -R a+rX,go-w public/
-    - rsync -axv --delete
+    - rsync -axv --omit-dir-times --delete
          --exclude-from=.rsync-deploy-exclude-list
          public/
          gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/

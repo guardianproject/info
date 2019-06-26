@@ -194,6 +194,25 @@
       "webSite": "https://guardianproject.info/apps/chatsecure"
     },
     {
+      "added": 1413417600000,
+      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
+      "categories": [
+        "Connectivity"
+      ],
+      "changelog": "https://github.com/n8fr8/gilgamesh/blob/HEAD/CHANGELOG",
+      "description": "<p>Use Bluetooth to chat with others in the same area, even if Internet access is down or restricted.</p>",
+      "icon": "info.guardianproject.gilga.12.png",
+      "issueTracker": "https://github.com/n8fr8/gilgamesh/issues",
+      "lastUpdated": 1413417600000,
+      "liberapayID": "33617",
+      "license": "GPL-3.0-or-later",
+      "name": "Gilga",
+      "packageName": "info.guardianproject.gilga",
+      "sourceCode": "https://github.com/n8fr8/gilgamesh",
+      "suggestedVersionCode": "12",
+      "suggestedVersionName": "0.0.12"
+    },
+    {
       "added": 1367971200000,
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
@@ -448,184 +467,6 @@
       "suggestedVersionName": "0.7.1",
       "summary": "Privacy-enhanced browser",
       "webSite": "https://guardianproject.info/apps/orweb"
-    },
-    {
-      "added": 1480636800000,
-      "authorEmail": "support@guardianproject.info",
-      "authorName": "Guardian Project",
-      "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
-      "categories": [
-        "Guardian Project",
-        "Security"
-      ],
-      "description": "<p>Ripple is a \"panic button\" that can send it's trigger message to any app that is a \"panic responder\". Such apps can do things like lock, disguise themselves, delete private data, send an emergency message, and more. It is meant for situations where there is time to react, but where users need to be sure it is not mistakenly set off.</p><p>Here are two example scenarios:</p><ul><li> An organization gets regularly raided by the security forces, who search all of the computers and mobile devices on the premises. The organization usually has at least a minute or two of warning before a raid starts. They need a very reliable way to trigger wiping all of the data from the sensitive apps.</li><li> An aid worker has lots of sensitive data about people on their device. They regularly sync that data up with a secure, central database. Occasionally, the aid worker has to leave the country on very short notice. The border guards regularly download the entire contents of mobile devices of people crossing through. While waiting in line at the border, the aid worker sees the border guards seizing people's devices, and then remembers all the data on the device, so she unlocks her phone and hits the wipe trigger, which wipes all sensitive apps from the device. When the aid worker returns to the central office, the device is again synced up with the central database.</li></ul>",
-      "icon": "info.guardianproject.ripple.75.png",
-      "issueTracker": "https://dev.guardianproject.info/projects/panic/issues",
-      "lastUpdated": 1480636800000,
-      "liberapayID": "33617",
-      "license": "GPL-3.0-or-later",
-      "localized": {
-        "af": {
-          "summary": "Sneller apps om jou privaatheid te beskerm wanneer dit in angstig of paniekerig "
-        },
-        "ar": {
-          "summary": "\u0627\u0644\u0632\u0646\u0627\u062f \u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0644\u062d\u0645\u0627\u064a\u0629 \u062e\u0635\u0648\u0635\u064a\u062a\u0643 \u0639\u0646\u062f\u0645\u0627 \u062a\u0643\u0648\u0646 \u0641\u064a \u0627\u0644\u0642\u0644\u0642 \u0623\u0648 \u0627\u0644\u0630\u0639\u0631 \u0627\u0644\u062d\u0627\u0644\u0627\u062a"
-        },
-        "bg": {
-          "summary": "Trigger \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0434\u0430 \u0437\u0430\u0449\u0438\u0442\u0430\u0432\u0430\u0442 \u043b\u0438\u0447\u043d\u0438\u0442\u0435 \u0441\u0438 \u0434\u0430\u043d\u043d\u0438, \u043a\u043e\u0433\u0430\u0442\u043e \u0432 \u0442\u0440\u0435\u0432\u043e\u0436\u043d\u043e\u0441\u0442 \u0438\u043b\u0438 \u043f\u0430\u043d\u0438\u043a\u0430"
-        },
-        "ca": {
-          "summary": "Gallet aplicacions per protegir la seva privacitat quan en ansietat o p\u00e0nic situ"
-        },
-        "cs": {
-          "summary": "Trigger apps pro ochranu va\u0161eho soukrom\u00ed, kdy\u017e ve \u00fazkost nebo paniku situace"
-        },
-        "da": {
-          "summary": "Trigger apps til at beskytte dine personlige oplysninger, n\u00e5r i angst eller pani"
-        },
-        "de": {
-          "summary": "Trigger-Anwendungen, um Ihre Privatsph\u00e4re zu sch\u00fctzen, wenn in \u00e4ngstlich oder Pa"
-        },
-        "el": {
-          "summary": "Trigger apps \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03c3\u03c4\u03b1\u03c3\u03af\u03b1 \u03c4\u03b7\u03c2 \u03b9\u03b4\u03b9\u03c9\u03c4\u03b9\u03ba\u03ae\u03c2 \u03b6\u03c9\u03ae\u03c2 \u03c3\u03b1\u03c2 \u03cc\u03c4\u03b1\u03bd \u03b2\u03c1\u03af\u03c3\u03ba\u03b5\u03c3\u03c4\u03b5 \u03c3\u03b5 \u03ac\u03b3\u03c7\u03bf\u03c2 \u03ae "
-        },
-        "en-US": {
-          "description": "Ripple is a \"panic button\" that can send it's trigger message to any app that is a \"panic responder\".  Such apps can do things like lock, disguise themselves, delete private data, send an emergency message, and more.  It is meant for situations where there is time to react, but where users need to be sure it is not mistakenly set off.\n\nThis is a BETA version of this app!  We are working now to add support to as many other apps as possible.  ChatSecure, Orweb, Umbrella, and Zom already have support, these apps are coming soon: Courier, PanicButton, OpenKeychain, Orfox, SMSSecure, StoryMaker.\n\nHere are two example scenarios:\n\n* An organization gets regularly raided by the security forces, who search all of the computers and mobile devices on the premises. The organization usually has at least a minute or two of warning before a raid starts. They need a very reliable way to trigger wiping all of the data from the sensitive apps.\n\n* An aid worker has lots of sensitive data about people on their device. They regularly sync that data up with a secure, central database. Occasionally, the aid worker has to leave the country on very short notice. The border guards regularly download the entire contents of mobile devices of people crossing through. While waiting in line at the border, the aid worker sees the border guards seizing people's devices, and then remembers all the data on the device, so she unlocks her phone and hits the wipe trigger, which wipes all sensitive apps from the device. When the aid worker returns to the central office, the device is again synced up with the central database.\n\nThis was started as part of the T2 Panic work, since sharing location is so often a part of panic apps.  Follow our progress here:\nhttps://guardianproject.info/tag/panic\nhttps://dev.guardianproject.info/projects/panic\n\n\nDon\u2019t see your language? Join us and help translate the app:\nhttps://www.transifex.com/projects/p/rippleapp\n\n\n***Learn More***\n\n\u2605 ABOUT US: Guardian Project is a group of developers that make secure mobile apps and open-source code for a better tomorrow\n\u2605 OUR WEBSITE: https://GuardianProject.info\n\u2605 ON TWITTER: https://twitter.com/guardianproject\n\u2605 FREE SOFTWARE: Ripple is free software. You can take a look at our source code, or contribute to help make Ripple even better:\nhttps://github.com/guardianproject/ripple\n\u2605 MESSAGE US: Are we missing your favorite feature? Found an annoying bug? Please tell us! We\u2019d love to hear from you. Send us an email: support@guardianproject.info or find us in our chat room https://guardianproject.info/contact",
-          "featureGraphic": "featureGraphic.png",
-          "icon": "icon.png",
-          "phoneScreenshots": [
-            "0d8WzY8C_d5oId6GM_sPH6YftiPY8ewwt4z1_bWEuM3c94KiiJ2_9NrrlqjOeY9IMpo.png",
-            "4EuY50GOkIyQskTgkp5jxm2TIWbKpj4Gs-D_inLMJ3NLxLWmgPHoJ20hLPEGXoYUiEU.png",
-            "5srIWW8Fu2irRYVGneQ3z_TZBQJJ2kT9D-tOBeagV6ACCvWb7mhEvwJBFN2ocy6OAN0.png",
-            "KpCTqXTZZ4Q2atPQ3Q8TKuJ1v7PhTnHg_n_Z3vf1r2YDswy-lJ-Gbe8nNc56h1cMQg.png",
-            "NVVtIqkYEpHkhjuKollSTtR4E7w2GZl3hj5H4-avr14UTZGYNY1dMJaPsu-pa9Ni7uU.png",
-            "S15io96ZBVxYs4bmkuJN2E8ayRlgwfimPrgud495VrnnOc0rnl1tKUAYWgEK8QT-Qtk.png",
-            "W_OuO4UR5swVh-v4EVH3mwaWd0UIDcEPPHoi3hHZJVxc0XcGfyDIf8e360yML_ERugA.png",
-            "kGZo25qaNI5meqQTI1MPKlKaEdFzyn62JYmkW80BkMNUumYpC9GfLNJrqMRDLHd-rbI.png",
-            "oakBYIV16WCGC9OzDc-gbHI5xftX825CRdaufD8nY5B-VD7ciDlNBXFCkyITCPEZJw.png",
-            "p86v6_yI_3a54v8sIj17ObCwaiw_fxQewR1-ySrcWlo66vnxt77zjv3OJ2Y8WDedQQ.png",
-            "screenshot-done.png",
-            "screenshot-main.png",
-            "screenshot-release-to-confirm.png",
-            "screenshot-swipe-to-trigger.png",
-            "screenshot-tutorial-overlay.png",
-            "yMxyPJgOgrQ5zWD9FNdsSdXgfgljDu2o2YW8Ya_XYGuEH_uXI7lH8Ign5w9RjwZAPbII.png"
-          ],
-          "sevenInchScreenshots": [
-            "screenshot-tablet-countdown.png",
-            "screenshot-tablet-done.png",
-            "screenshot-tablet-main.png",
-            "screenshot-tablet-release-to-confirm.png",
-            "screenshot-tablet-swipe-to-trigger.png",
-            "screenshot-tablet-tutorial-overlay.png"
-          ],
-          "summary": "Trigger apps to protect your privacy when in anxious or panic situations"
-        },
-        "es": {
-          "summary": "Gatillo aplicaciones para proteger su privacidad cuando en ansiedad o p\u00e1nico sit"
-        },
-        "es-ES": {
-          "summary": "Gatillo aplicaciones para proteger su privacidad cuando en ansiedad o p\u00e1nico sit"
-        },
-        "es-US": {
-          "summary": "Gatillo aplicaciones para proteger su privacidad cuando en ansiedad o p\u00e1nico sit"
-        },
-        "et": {
-          "summary": "Trigger apps et kaitsta teie privaatsust, kui ka \u00e4revust v\u00f5i paanikat olukordade"
-        },
-        "fi": {
-          "summary": "Trigger apps yksityisyyden suojaamiseksi kun ahdistunut tai paniikki tilanteita"
-        },
-        "fr": {
-          "summary": "Trigger Apps pour prot\u00e9ger votre vie priv\u00e9e lorsque dans anxieux ou situations d"
-        },
-        "fr-CA": {
-          "summary": "Trigger Apps pour prot\u00e9ger votre vie priv\u00e9e lorsque dans anxieux ou situations d"
-        },
-        "fr-FR": {
-          "summary": "Trigger Apps pour prot\u00e9ger votre vie priv\u00e9e lorsque dans anxieux ou situations d"
-        },
-        "hi": {
-          "summary": "\u0909\u0924\u094d\u092a\u094d\u0930\u0947\u0930\u0915 \u0909\u0924\u094d\u0938\u0941\u0915 \u092e\u0947\u0902 \u091c\u092c \u0906\u092a\u0915\u0940 \u0917\u094b\u092a\u0928\u0940\u092f\u0924\u093e \u0915\u0940 \u0930\u0915\u094d\u0937\u093e \u092f\u093e \u0938\u094d\u0925\u093f\u0924\u093f\u092f\u094b\u0902 \u0906\u0924\u0902\u0915 \u0915\u0947 \u0932\u093f\u090f \u0915\u094d\u0937\u0941\u0927\u093e"
-        },
-        "hr": {
-          "summary": "Okida\u010d aplikacije kako bi za\u0161titili va\u0161u privatnost kada je u tjeskobu ili panik"
-        },
-        "hu": {
-          "summary": "Trigger apps adatainak v\u00e9delme \u00e9rdek\u00e9ben, amikor a szorong\u00e1s vagy p\u00e1nik eset\u00e9n"
-        },
-        "id": {
-          "summary": "Memicu aplikasi untuk melindungi privasi Anda ketika di cemas atau panik situasi"
-        },
-        "it": {
-          "summary": "Trigger apps per proteggere la vostra privacy quando in ansia o di panico situaz"
-        },
-        "ja": {
-          "summary": "\u30c8\u30ea\u30ac\u30fc\u306f\u3001\u6c17\u306b\u306a\u308b\u3053\u3068\u304c\u3054\u3056\u3044\u307e\u3057\u305f\u3089\u3001\u307e\u305f\u306f\u30d1\u30cb\u30c3\u30af\u72b6\u6cc1\u3067\u3042\u306a\u305f\u306e\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u3092\u4fdd\u8b77\u3059\u308b\u305f\u3081\u306b\u3001\u30a2\u30d7\u30ea"
-        },
-        "ko": {
-          "summary": "\ud2b8\ub9ac\uac70 \ubd88\uc548\uc5d0 \ub54c \uac1c\uc778 \uc815\ubcf4\ub97c \ubcf4\ud638\ud558\uac70\ub098 \uc0c1\ud669\uc744 \ud328\ub2c9 \uc571"
-        },
-        "lt": {
-          "summary": "Sukelti apps, siekiant apsaugoti j\u016bs\u0173 privatum\u0105, kai nerimo ar panikos situacija"
-        },
-        "lv": {
-          "summary": "Trigger progr, lai aizsarg\u0101tu j\u016bsu priv\u0101tumu, kad trauksmes vai panikas situ\u0101cij"
-        },
-        "nl": {
-          "summary": "Trigger apps om uw privacy bij het in angstige beschermen of paniek situaties"
-        },
-        "no": {
-          "summary": "Trigger apps for \u00e5 beskytte ditt privatliv n\u00e5r du er i engstelig eller panikksit"
-        },
-        "pl": {
-          "summary": "Wyzwalanie aplikacje, aby chroni\u0107 swoj\u0105 prywatno\u015b\u0107, gdy w sytuacji niepokoju ani"
-        },
-        "pt-BR": {
-          "summary": "Gatilho aplicativos para proteger sua privacidade quando em ansioso ou situa\u00e7\u00f5es"
-        },
-        "pt-PT": {
-          "summary": "Gatilho aplicativos para proteger sua privacidade quando em ansioso ou situa\u00e7\u00f5es"
-        },
-        "ro": {
-          "summary": "Trigger apps pentru a proteja intimitatea atunci c\u00e2nd \u00een anxietate sau panic\u0103 si"
-        },
-        "ru": {
-          "summary": "\u0417\u0430\u043f\u0443\u0441\u043a \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439 \u0434\u043b\u044f \u0437\u0430\u0449\u0438\u0442\u044b \u0432\u0430\u0448\u0435\u0439 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438, \u043a\u043e\u0433\u0434\u0430 \u0432 \u0442\u0440\u0435\u0432\u043e\u0433\u0443 \u0438\u043b\u0438 \u043f\u0430\u043d\u0438\u043a"
-        },
-        "sk": {
-          "summary": "Trigger apps pre ochranu v\u00e1\u0161ho s\u00fakromia, ke\u010f vo \u00fazkos\u0165 alebo paniku situ\u00e1cie"
-        },
-        "sl": {
-          "summary": "Trigger apps za za\u0161\u010dito va\u0161e zasebnosti, ko je v tesnobo ali pani\u010dne situacije"
-        },
-        "sv": {
-          "summary": "Trigger apps att skydda din integritet n\u00e4r \u00e4ngslig eller panik situationer"
-        },
-        "sw": {
-          "summary": "Trigger programu kulinda siri yako wakati katika wasiwasi au hofu hali"
-        },
-        "th": {
-          "summary": "\u0e1b\u0e1e\u0e25\u0e34\u0e40\u0e04\u0e0a\u0e31\u0e19\u0e17\u0e23\u0e34\u0e01\u0e40\u0e01\u0e2d\u0e23\u0e4c\u0e17\u0e35\u0e48\u0e08\u0e30\u0e1b\u0e01\u0e1b\u0e49\u0e2d\u0e07\u0e04\u0e27\u0e32\u0e21\u0e40\u0e1b\u0e47\u0e19\u0e2a\u0e48\u0e27\u0e19\u0e15\u0e31\u0e27\u0e02\u0e2d\u0e07\u0e04\u0e38\u0e13\u0e40\u0e21\u0e37\u0e48\u0e2d\u0e2d\u0e22\u0e39\u0e48\u0e43\u0e19\u0e2a\u0e16\u0e32\u0e19\u0e01\u0e32\u0e23\u0e13\u0e4c\u0e17\u0e35\u0e48\u0e01\u0e31\u0e07\u0e27\u0e25\u0e2b\u0e23"
-        },
-        "tr": {
-          "summary": "Tetik endi\u015feli ne zaman gizlili\u011finizi korumak ya da durumlar\u0131 panik apps"
-        },
-        "uk": {
-          "summary": "\u0417\u0430\u043f\u0443\u0441\u043a \u0434\u043e\u0434\u0430\u0442\u043a\u0456\u0432 \u0434\u043b\u044f \u0437\u0430\u0445\u0438\u0441\u0442\u0443 \u0432\u0430\u0448\u043e\u0457 \u043a\u043e\u043d\u0444\u0456\u0434\u0435\u043d\u0446\u0456\u0439\u043d\u043e\u0441\u0442\u0456, \u043a\u043e\u043b\u0438 \u0432 \u0442\u0440\u0438\u0432\u043e\u0433\u0443 \u0430\u0431\u043e \u043f\u0430\u043d\u0456\u043a\u0443 \u0441\u0438"
-        },
-        "vi": {
-          "summary": "K\u00edch ho\u1ea1t c\u00e1c \u1ee9ng d\u1ee5ng \u0111\u1ec3 b\u1ea3o v\u1ec7 s\u1ef1 ri\u00eang t\u01b0 c\u1ee7a b\u1ea1n khi lo l\u1eafng ho\u1eb7c s\u1ee3 h\u00e3i t\u00ecn"
-        }
-      },
-      "name": "Ripple",
-      "packageName": "info.guardianproject.ripple",
-      "sourceCode": "https://github.com/guardianproject/ripple",
-      "suggestedVersionCode": "75",
-      "summary": "Trigger apps to protect your privacy when in anxious or panic situations",
-      "translation": "https://hosted.weblate.org/projects/guardianproject/ripple/",
-      "webSite": "https://guardianproject.info/tag/panic"
     },
     {
       "added": 1385942400000,
@@ -909,6 +750,56 @@
         "targetSdkVersion": 17,
         "versionCode": 1,
         "versionName": "1.0"
+      }
+    ],
+    "info.guardianproject.gilga": [
+      {
+        "added": 1413417600000,
+        "apkName": "info.guardianproject.gilga_12.apk",
+        "hash": "35fe692018fab84cef714d53eb415396cfc726db8691acaec5e768c51b10e6dc",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "packageName": "info.guardianproject.gilga",
+        "sig": "6de574cd61a684bda38ba8e895dece7c",
+        "signer": "a8c44573cb5f69cb3e57d5d301e950a0d9c67a5e996df2105610cef91effdb93",
+        "size": 67581,
+        "targetSdkVersion": 20,
+        "uses-permission": [
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.CHANGE_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ]
+        ],
+        "versionCode": 12,
+        "versionName": "0.0.12"
       }
     ],
     "info.guardianproject.gpg": [
@@ -7095,50 +6986,6 @@
         ],
         "versionCode": 37,
         "versionName": "0.0.10-RC2"
-      }
-    ],
-    "info.guardianproject.ripple": [
-      {
-        "added": 1480636800000,
-        "apkName": "Ripple-0.2-release.apk",
-        "hash": "4b14b1b402f0197e1e6ffe2c11e052432fc8a52749f5f02d9cc67799658df239",
-        "hashType": "sha256",
-        "minSdkVersion": 10,
-        "packageName": "info.guardianproject.ripple",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 1669315,
-        "targetSdkVersion": 23,
-        "versionCode": 75,
-        "versionName": "0.2"
-      },
-      {
-        "added": 1480636800000,
-        "apkName": "Ripple-0.1.apk",
-        "hash": "9fd24cbb3552123e6ee119f912f1646dd21cd7a683734a8d502d8b44854a284b",
-        "hashType": "sha256",
-        "minSdkVersion": 10,
-        "packageName": "info.guardianproject.ripple",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 1670285,
-        "targetSdkVersion": 23,
-        "versionCode": 2,
-        "versionName": "0.1"
-      },
-      {
-        "added": 1480636800000,
-        "apkName": "Ripple-0.0.apk",
-        "hash": "025894a5f3a39a288ee60bb6c9cc2c559d395f22fed020d1086308ba12df85a3",
-        "hashType": "sha256",
-        "minSdkVersion": 10,
-        "packageName": "info.guardianproject.ripple",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 1664407,
-        "targetSdkVersion": 23,
-        "versionCode": 1,
-        "versionName": "0.0"
       }
     ],
     "info.guardianproject.soundrecorder": [

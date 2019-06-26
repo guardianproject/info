@@ -9,6 +9,8 @@ sourceCode: https://github.com/guardianproject/orweb
 menu:
   main:
     parent: archive
+aliases:
+  - getorweb
 ---
 <p style="text-align: left;">
   <strong>Our new Orfox browser is now released and makes Orweb obsolete. </strong>

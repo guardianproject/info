@@ -1,6 +1,15 @@
 
-RedirectPermanent /feed/ /index.xml
-RedirectPermanent /feed  /index.xml
+# redirect all /wind/ to /code/wind/
+RedirectMatch permanent "^/wind/(.*)" "/code/wind/$1"
+RedirectPermanent /wind /code/wind
+
+# redirect Wordpress tags to Hugo tags
+RedirectPermanent /tag/	/tags/
+RedirectPermanent /tag	/tags/
+
+# redirect Wordpress feed to Hugo feed
+RedirectMatch permanent "/feed/.*$" "/index.xml"
+RedirectPermanent /feed /index.xml
 
 
 <IfModule mod_rewrite.c>

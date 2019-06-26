@@ -44,7 +44,7 @@ guardianproject.info:
   script:
     - test -z "$SSH_PRIVATE_KEY" && exit 1
     - *setup
-    - sed -i "s,^baseURL\x3a.*,baseURL\x3a 'https://guardianproject.info/beta'," config.yaml
+    - sed -i "s,^baseURL\x3a.*,baseURL\x3a 'https://guardianproject.info'," config.yaml
     - hugo env
     - make
     - apt-get install -qy openssh-client rsync
@@ -56,4 +56,7 @@ guardianproject.info:
     - echo >> $SSH_PRIVATE_KEY  # ensure trailing newline
     - cat "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - chmod -R a+rX,go-w public/
-    - rsync -axv --delete public/ gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/beta/
+    - rsync -axv --delete
+         --exclude-from=.rsync-deploy-exclude-list
+         public/
+         gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/

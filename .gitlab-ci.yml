@@ -58,5 +58,5 @@ guardianproject.info:
     - chmod -R a+rX,go-w public/
     - rsync -axv --omit-dir-times --delete
          --exclude-from=.rsync-deploy-exclude-list
-         public/
+         public/* .htaccess
          gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/

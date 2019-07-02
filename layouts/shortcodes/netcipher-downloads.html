@@ -1,0 +1,34 @@
+{{ $libname := "IOCipher" }}
+{{ $groupId := "info.guardianproject.netcipher" }}
+{{ $artifactId := "netcipher" }}
+{{ $bintray := getJSON "https://api.bintray.com/search/packages/maven?g=" $groupId "&a=" $artifactId }}
+{{ $version := (index $bintray 0).latest_version }}
+{{ $jcenterbase := printf "https://jcenter.bintray.com/%s" (replace $groupId "." "/") }}
+
+<div class="gradle-line">
+
+{{ $libs := slice "webkit" "okhttp3" "httpclient" "volley" "chboye" }}
+<p>For working with popular HTTP libraries or <tt>android.webkit</tt>, use
+the specific NetCipher library that matches:</p>
+<pre>
+{{ range $libs }}
+  {{- printf "    implementation '%s:netcipher-%s:%s" $groupId . $version }}
+{{ end -}}
+</pre>
+
+<p>These files can also be downloaded directly from jcenter, including the PGP signatures:</p>
+<ul>
+  {{ range $libs }}
+  {{ $jar := printf "netcipher-%s-%s.jar" . $version }}
+  {{ $sourcesjar := printf "netcipher-%s-%s-sources.jar" . $version }}
+  {{ $javadocjar := printf "netcipher-%s-%s-javadoc.jar" . $version }}
+  <li><a href="{{ printf "%s/%s/%s" $jcenterbase $version $jar }}">{{ $jar }}</a> -
+    (<a href="{{ printf "%s/%s/%s" $jcenterbase $version $jar }}.asc"><i>PGP signature</i></a>)</li>
+  <li><a href="{{ printf "%s/%s/%s" $jcenterbase $version $sourcesjar }}">{{ $sourcesjar }}</a> -
+    (<a href="{{ printf "%s/%s/%s" $jcenterbase $version $sourcesjar }}.asc"><i>PGP signature</i></a>)</li>
+  <li><a href="{{ printf "%s/%s/%s" $jcenterbase $version $javadocjar }}">{{ $javadocjar }}</a> -
+    (<a href="{{ printf "%s/%s/%s" $jcenterbase $version $javadocjar }}.asc"><i>PGP signature</i></a>)</li>
+  {{ end }}
+</ul>
+
+</div>

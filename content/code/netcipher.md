@@ -22,7 +22,7 @@ configure proxies for HTTP connections and \`WebView\` instances.
 More specifically this library provides:
 
   * Hardening of TLS protocol support and cipher suites, especially on older  
-    versions of Android (e.g. 4.4 and older)
+    versions of Android
   * Proxied Connection Support: HTTP and SOCKS proxy connection support for HTTP  
     and HTTPS traffic through specific configuration
   * OrbotHelper: a utility class to support application integration with Orbot  
@@ -44,11 +44,4 @@ You can see examples of NetCipher in action here:
 
 * <a href="https://gitlab.com/fdroid/fdroidclient/commit/2c88703588a6192cbf3ffd7ccb8d01b65c693ed3" target="_blank">F-Droid</a>
 
-## Downloads
-
-The binary jar, source jar, and javadoc jar are all available on jcenter. To include them using gradle, add this line to your _build.gradle_:
-
-<pre>compile 'info.guardianproject.netcipher:netcipher:1.2'
-</pre>
-
-Otherwise, the files can also be <a href="https://dl.bintray.com/guardianproject/CipherKit/info/guardianproject/netcipher/netcipher/" target="_blank">downloaded directly from jcenter</a>.
+{{< gradle-line groupId="info.guardianproject.netcipher" artifactId="netcipher" >}}

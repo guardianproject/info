@@ -32,8 +32,6 @@ certificate.  There are two general categories of response:
 
 # Building apps with panic support
 
-To get started, add the PanicKit library to your _build.gradle_: `info.guardianproject.panic:panic:1.0`, then check out the example apps, as well as how it is implemented in real apps:
-
 
 ### Examples
 
@@ -49,6 +47,8 @@ To get started, add the PanicKit library to your _build.gradle_: `info.guardianp
 * <a href="https://github.com/SMSSecure/SMSSecure/blob/8b2d61161716dcae33c7ae2fd9540931b632030a/src/org/smssecure/smssecure/PanicResponderActivity.java" target="_blank">SMSSecure lock as default response</a>
 * <a href="https://github.com/theScrabi/NewPipe/pull/133" target="_blank">NewPipe clear search history as default response</a>
 * <a href="https://github.com/zom/Zom-Android/blob/master/app/src/main/java/org/awesomeapp/messenger/ui/PanicSetupActivity.java" target="_blank">Zom with multiple destructive responses and a default lock response</a>
+
+{{< gradle-line groupId="info.guardianproject.panic" artifactId="panic" >}}
 
 
 # Core Concepts

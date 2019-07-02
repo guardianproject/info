@@ -29,17 +29,9 @@ CacheWord manages key derivation, verification, persistence, passphrase resettin
   * Configurable timeout: after a specified time of inactivity the app locks itself
   * Manual clearing: the user can forcibly lock the application
 
-## Downloads
-
-To add Cacheword to your gradle project:
-
-<pre>compile 'info.guardianproject.cacheword:cachewordlib:0.1.1'</pre>
-
-Here you can get the complete CacheWord jar and native library files, ready to drop right into your project:
-
-  * [cachewordlib-0.1.1.jar](https://guardianproject.info/releases/cachewordlib-0.1.1.jar) 
-      * [detached gpg signature](https://guardianproject.info/releases/cachewordlib-0.1.1.jar.asc)
-
 ## Source Code Repository
 
   * library, helpers, tests, and sample project: <https://github.com/guardianproject/cacheword></ul>
+
+
+{{< gradle-line groupId="info.guardianproject.cacheword" artifactId="cachewordlib" >}}

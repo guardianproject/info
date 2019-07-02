@@ -1,0 +1,33 @@
+{{ $libname := "IOCipher" }}
+{{ $groupId := "info.guardianproject.iocipher" }}
+{{ $artifactId := "IOCipher" }}
+{{ $bintray := getJSON "https://api.bintray.com/search/packages/maven?g=" $groupId "&a=" $artifactId }}
+{{ $version := (index $bintray 0).latest_version }}
+{{ $jcenterbase := printf "https://jcenter.bintray.com/%s/%s" (replace $groupId "." "/") $artifactId }}
+{{ $standalone := printf "%sStandalone-%s.aar" $libname $version }}
+{{ $only := printf "%s-%s.aar" $libname $version }}
+
+<h2 id="downloads">Downloads</h2>
+<div class="gradle-line">
+<p>
+  For gradle projects, use one of these lines.  The quickest way to
+  get started is to use the standalone package that includes SQLCipher
+  in it.  If your project already includes SQLCipher, then use the
+  release that contains only IOCipher.
+</p>
+<pre>
+  {{- printf "    implementation '%s:%s:%s@aar'" $groupId "IOCipherStandalone" $version }}
+</pre>
+<center>- OR -</center>
+<pre>
+  {{- printf "    implementation '%s:%s:%s@aar'" $groupId $artifactId $version }}
+</pre>
+
+<p>Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:</p>
+<ul>
+  <li><a href="{{ printf "%s/%s/%s" $jcenterbase $version $standalone }}">{{ $standalone }}</a> -
+    (<a href="{{ printf "%s/%s/%s" $jcenterbase $version $standalone }}.asc"><i>PGP signature</i></a>)</li>
+  <li><a href="{{ printf "%s/%s/%s" $jcenterbase $version $only }}">{{ $only }}</a> -
+    (<a href="{{ printf "%s/%s/%s" $jcenterbase $version $only }}.asc"><i>PGP signature</i></a>)</li>
+</ul>
+</div>

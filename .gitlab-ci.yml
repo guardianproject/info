@@ -1,4 +1,4 @@
-image: debian:buster-slim
+image: debian:buster
 
 stages:
  - deploy
@@ -8,8 +8,11 @@ stages:
 .setup: &setup |
   set -x
   set -e
+  printf 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";\n' > /etc/apt/apt.conf.d/99no-install-recommends
+  printf 'APT::Acquire::Retries "20";\n' > /etc/apt/apt.conf.d/99acquire-retries
+  printf 'APT::Get::Assume-Yes "true";\n' > /etc/apt/apt.conf.d/99assumeyes
   apt-get update
-  apt-get install -y curl git hugo locales make mawk python3 sassc unzip
+  apt-get install curl fdroidserver git hugo locales make mawk python3 sassc unzip
   grep '^en_US.UTF-8 UTF-8' /etc/locale.gen || echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
   locale-gen
   export LC_ALL=en_US.UTF-8
@@ -41,7 +44,7 @@ guardianproject.info:
   script:
     - test -z "$SSH_PRIVATE_KEY" && exit 1
     - *setup
-    - sed -i "s,^baseURL\x3a.*,baseURL\x3a 'https://guardianproject.info/beta'," config.yaml
+    - sed -i "s,^baseURL\x3a.*,baseURL\x3a 'https://guardianproject.info'," config.yaml
     - hugo env
     - make
     - apt-get install -qy openssh-client rsync
@@ -53,4 +56,7 @@ guardianproject.info:
     - echo >> $SSH_PRIVATE_KEY  # ensure trailing newline
     - cat "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - chmod -R a+rX,go-w public/
-    - rsync -axv --delete public/ gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/beta/
+    - rsync -axv --omit-dir-times --delete
+         --exclude-from=.rsync-deploy-exclude-list
+         public/* .htaccess
+         gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/

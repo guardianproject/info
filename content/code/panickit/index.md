@@ -1,11 +1,13 @@
 ---
 title: 'PanicKit: system-wide panic responses'
 author: eighthave
-layout: page
+date: 2015-06-11
 menu:
   main:
     parent: code
 ---
+
+<img src="https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png" alt="round hazard button" width="150" height="150" class="alignright size-thumbnail wp-image-13221" srcset="https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png 512w" sizes="(max-width: 150px) 100vw, 150px" />
 
 {{< source-code name="PanicKit" >}}
 
@@ -30,8 +32,6 @@ certificate.  There are two general categories of response:
 
 # Building apps with panic support
 
-To get started, add the PanicKit library to your _build.gradle_: `info.guardianproject.panic:panic:1.0`, then check out the example apps, as well as how it is implemented in real apps:
-
 
 ### Examples
 
@@ -47,6 +47,8 @@ To get started, add the PanicKit library to your _build.gradle_: `info.guardianp
 * <a href="https://github.com/SMSSecure/SMSSecure/blob/8b2d61161716dcae33c7ae2fd9540931b632030a/src/org/smssecure/smssecure/PanicResponderActivity.java" target="_blank">SMSSecure lock as default response</a>
 * <a href="https://github.com/theScrabi/NewPipe/pull/133" target="_blank">NewPipe clear search history as default response</a>
 * <a href="https://github.com/zom/Zom-Android/blob/master/app/src/main/java/org/awesomeapp/messenger/ui/PanicSetupActivity.java" target="_blank">Zom with multiple destructive responses and a default lock response</a>
+
+{{< gradle-line groupId="info.guardianproject.panic" artifactId="panic" >}}
 
 
 # Core Concepts

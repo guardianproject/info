@@ -1,3 +1,28 @@
 
-RedirectPermanent /feed/ /index.xml
-RedirectPermanent /feed  /index.xml
+ErrorDocument 404 /404.html
+
+# redirect all /wind/ to /code/wind/
+RedirectMatch permanent "^/wind/(.*)" "/code/wind/$1"
+RedirectPermanent /wind /code/wind
+
+# redirect Wordpress tags to Hugo tags
+RedirectPermanent /tag/	/tags/
+RedirectPermanent /tag	/tags/
+
+# redirect Wordpress feed to Hugo feed
+RedirectMatch permanent "/feed/.*$" "/index.xml"
+RedirectPermanent /feed /index.xml
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # BEGIN (abel) letsencrypt redirect for XMPP server
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    #  testing note: `curl http://xmpp.guardianproject.info/.well-known/acme-challenge/test` outputs 'hello-world'
+    #                so when http://guardianproject.info/.well-known/acme-challenge/test also outputs that, we know
+    #                that the redirect is working                                                          ~abel
+    RewriteRule ^\.well-known/acme-challenge/(.+)$ "http://xmpp.guardianproject.info/.well-known/acme-challenge/$1" [P]
+    # END (abel) letsencrypt redirect for XMPP server
+</IfModule>

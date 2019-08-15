@@ -1,0 +1,27 @@
+{{ $bintray := getJSON "https://api.bintray.com/search/packages/maven?g=" (.Get "groupId") "&a=" (.Get "artifactId") }}
+{{ $version := (index $bintray 0).latest_version }}
+{{ $libname := .Get "artifactId" }}
+{{ $jcenterbase := printf "https://jcenter.bintray.com/%s/%s" (replace (.Get "groupId") "." "/") (.Get "artifactId") }}
+{{ $jar := printf "%s-%s.jar" $libname $version }}
+{{ $sourcesjar := printf "%s-%s-sources.jar" $libname $version }}
+{{ $javadocjar := printf "%s-%s-javadoc.jar" $libname $version }}
+<h2 id="downloads">Downloads</h2>
+<div class="gradle-line">
+<p>
+  The binary jar, source jar, and javadoc jar are all available on
+  jcenter. To include them using gradle, add this line to
+  your <i>build.gradle</i>:
+</p>
+<pre style="text-align: center;">
+  {{- printf "implementation '%s:%s:%s'" (.Get "groupId") (.Get "artifactId") $version -}}
+</pre>
+<p>Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:</p>
+<ul>
+  <li><a href="{{ printf "%s/%s/%s" $jcenterbase $version $jar }}">{{ $jar }}</a> -
+    (<a href="{{ printf "%s/%s/%s" $jcenterbase $version $jar }}.asc"><i>PGP signature</i></a>)</li>
+  <li><a href="{{ printf "%s/%s/%s" $jcenterbase $version $sourcesjar }}">{{ $sourcesjar }}</a> -
+    (<a href="{{ printf "%s/%s/%s" $jcenterbase $version $sourcesjar }}.asc"><i>PGP signature</i></a>)</li>
+  <li><a href="{{ printf "%s/%s/%s" $jcenterbase $version $javadocjar }}">{{ $javadocjar }}</a> -
+    (<a href="{{ printf "%s/%s/%s" $jcenterbase $version $javadocjar }}.asc"><i>PGP signature</i></a>)</li>
+</ul>
+</div>

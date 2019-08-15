@@ -3,3 +3,18 @@ gitlab.yaml
 userconfig.yaml
 data/git.yaml
 /public/
+
+# generated pages
+/content/apps/info.guardianproject.checkey.md
+/content/apps/info.guardianproject.courier.md
+/content/apps/info.guardianproject.locationprivacy.md
+/content/apps/info.guardianproject.pixelknot.md
+/content/apps/info.guardianproject.ripple.md
+/content/apps/net.opendasharchive.openarchive.release.md
+/content/apps/org.havenapp.main.md
+/content/apps/org.torproject.android.md
+/content/apps/org.torproject.torbrowser.md
+/content/apps/org.torproject.torbrowser_alpha.md
+/content/apps/org.witness.informacam.app.md
+/content/apps/org.witness.proofmode.md
+/content/apps/org.witness.sscphase1.md

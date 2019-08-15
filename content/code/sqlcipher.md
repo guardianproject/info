@@ -3,7 +3,6 @@ id: 643
 title: 'SQLCipher: Encrypted Database'
 date: 2011-02-19T08:27:13-04:00
 author: n8fr8
-layout: page
 guid: https://guardianproject.info/
 image: https://guardianproject.info/wp-content/uploads/2011/02/showcase.png
 menu:
@@ -14,11 +13,11 @@ menu:
 <img class="alignnone size-medium wp-image-1329" title="logo-sqlcipher-android" src="https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png" alt="" width="300" height="50" srcset="https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png 300w, https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android.png 522w" sizes="(max-width: 300px) 100vw, 300px" />
 
 <div class="source-code" style="width: 30%; margin: 0 auto;">
-  <a href="https://github.com/sqlcipher/android-database-sqlcipher>" target="_blank" title="SQLCipher for Android">
+  <a href="https://github.com/sqlcipher/android-database-sqlcipher" target="_blank" title="SQLCipher for Android">
     <i class="fa fa-github"></i> GitHub
   </a>
   -
-  <a href="{{ .Site.BaseURL }}/tags/sqlcipher" target="_blank" title="SQLCipher blog posts">
+  <a href="/tags/sqlcipher" target="_blank" title="SQLCipher blog posts">
     <i class="fa fa-rss"></i> blog posts
   </a>
 </div>
@@ -28,9 +27,14 @@ In an environment where mobile data privacy is increasingly [in the headlines](h
 
 SQLCipher is a [SQLite](http://sqlite.org/) extension that provides transparent 256-bit AES encryption of database files. To date, it has been open-sourced, sponsored and maintained by [Zetetic LLC](http://zetetic.net/). In the mobile space, SQLCipher has enjoyed widespread use in Apple’s [iOS](http://sqlcipher.net/documentation/ios.html), as well as [Nokia / QT](http://www.qtcentre.org/wiki/index.php?title=Building_QSQLITE_driver_with_AES-256_encryption_support) for quite some time. Given that Android [by default](http://developer.android.com/guide/topics/data/data-storage.html#db) provides integrated support for SQLite databases, our goal was to create an almost identical API for SQLCipher, so that developers of all skill level could use it, without a steep learning curve.
 
-**LEARN MORE AND DOWNLOAD: [https://sqlcipher.net/open-source/](http://sqlcipher.net/open-source/) <br/> SOURCE CODE: <https://github.com/sqlcipher/android-database-sqlcipher>**
 
-#### An Illustrative Terminal Listing
+## Learn More and Download
+
+* [SQLCipher for Android](https://www.zetetic.net/sqlcipher/sqlcipher-for-android/)
+* source: <https://github.com/sqlcipher/android-database-sqlcipher>
+
+
+### An Illustrative Terminal Listing
 
 A typical SQLite database in unencrypted, and visually parseable even as encoded text. The following example shows the difference between hexdumps of a standard SQLite db and one implementing SQLCipher.
 

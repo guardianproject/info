@@ -1,0 +1,53 @@
+
+<div class="container">
+{{ range sort .Site.Data.archive.apps "lastUpdated" "desc" }}
+<style>
+img {
+    float: left;
+    margin-right: 15px;
+}
+</style>
+<div class="archiveapp" style="display: inline; width: 100%; height: 100%;">
+  <img src="https://guardianproject.info/fdroid/archive/icons-320/{{ .icon }}" height="96" width="96"/>
+  <div>
+    <h2>{{ .name }}</h2>
+    <p>{{ .summary }}</p>
+    {{ $lastmodstr := dateFormat (default (i18n "dateFormat") .Site.Params.dateformat) (div (int .lastUpdated) 1000) }}
+    {{ $datestr := dateFormat (default (i18n "dateFormat") .Site.Params.dateformat) (div (int .added) 1000) }}
+    <i class="fa fa-calendar"></i>&nbsp;{{ $datestr | i18n "postedOnDate"}}
+    {{ if ne $datestr $lastmodstr }}
+    &nbsp;{{ $lastmodstr | i18n "lastModified"  }}
+    {{ end }}
+
+    <div class="source-code" style="text-align: left;">
+      {{ if .sourceCode }}
+      {{ if (hasPrefix .sourceCode "https://gitlab.com") }}
+      <a href="{{ .sourceCode }}" target="_blank" title="{{ .name }} on Gitlab">
+	<i class="fa fa-gitlab"></i> GitLab
+      </a>
+      {{ end }}
+      {{ if (hasPrefix .sourceCode "https://github.com") }}
+      <a href="{{ .sourceCode }}" target="_blank" title="{{ .name }} on Github">
+	<i class="fa fa-github"></i> Github
+      </a>
+      {{ end }}
+      -
+      {{ end }}
+      <a href="{{ .Site.BaseURL }}/tags/{{ (index (split .title ":") 0) | lower }}" title="{{ .title }} blog posts">
+	<i class="fa fa-rss"></i> blog posts
+      </a>
+      {{ if .webSite }}
+      -
+      <a href="{{ .webSite }}" title="{{ .name }} website">
+	<i class="fa fa-home"></i> website
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  <p>
+    {{ .description | markdownify }}  
+  </p>
+</div>
+<hr/>
+{{ end }}
+</div>

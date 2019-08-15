@@ -10,6 +10,7 @@ menu:
     parent: code
 aliases:
   - wind
+  - wind-demo
 ---
 
 <div class="source-code" style="text-align: center;">

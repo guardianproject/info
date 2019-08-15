@@ -1,0 +1,38 @@
+---
+title: 'TrustedIntents: flexible trusted interactions between Android apps'
+author: eighthave
+date: 2014-06-23
+menu:
+  main:
+    parent: code
+---
+
+<img style="margin: 0 auto;" title="icon" src="https://guardianproject.info/wp-content/uploads/2010/05/trustedintents-150x150.png" />
+
+{{< source-code name="TrustedIntents" skipjavadoc="true" >}}
+
+TrustedIntents is a library for flexible trusted interactions between
+Android apps. It is modeled after Android’s signature protection level
+for permissions. The key difference is that the framework allows the
+trusted signature to be set, rather than requiring to match the
+current app’s signature.
+
+For more info:
+
+* https://dev.guardianproject.info/projects/trustedintents/wiki/Wiki/
+* https://guardianproject.info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/
+* https://developer.android.com/guide/topics/manifest/permission-element.html#plevel
+
+
+{{< gradle-line groupId="info.guardianproject.trustedintents" artifactId="trustedintents" >}}
+
+
+## License
+
+This library is licensed under the LGPLv2.1.  We believe this is compatible
+with all reasonable uses, including proprietary software, but let us know if
+it provides difficulties for you.  For more info on how that works with Java,
+see:
+
+https://www.gnu.org/licenses/lgpl-java.en.html
+

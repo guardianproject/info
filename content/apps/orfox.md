@@ -6,6 +6,8 @@ author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13260
 image: https://guardianproject.info/wp-content/uploads/2016/01/Orfox-feature-graphic.png
+packageName: info.guardianproject.orfox
+sourceCode: https://github.com/guardianproject/orfox
 ---
 **September 2018 Update!**  
 Since 2015, Orfox has been the only mobile app recommended by the Tor Project to utilize the privacy protections of Tor on Android. The Tor Project has launched an official browser, Tor Browser for Android, now in its alpha release. Orfox will be sunsetted by early 2019 when the stable Tor Browser for Android comes out. To experience real private browsing without tracking, surveillance, or censorship, download Tor Browser for Android from Google Play here: <a href="https://play.google.com/store/apps/details?id=org.torproject.torbrowser_alpha" rel="nofollow">https://play.google.com/store/apps/details?id=org.torproject.torbrowser_alpha</a>.

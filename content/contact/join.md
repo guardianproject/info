@@ -37,60 +37,6 @@ Interested? [Learn how to contact us here](https://guardianproject.info/contact
 
 ### CURRENT OPEN POSITIONS
 
-**December 2017: Citizen Media Outreach Coordinator**
-
-We are looking for assistance in coordinating outreach and curriculum creation to promote the [Open Archive project](https://open-archive.net/), and similar apps we work on related to the secure publication and sharing of citizen generated content from mobile phones. Candidates should have excellent skills in writing and content creation, and experience with digital security training content and curriculum. Candidates should preferably have a background in journalism, library science or archiving.
-
-**August 2017: Nearby Networks Developer (Hired, December!)**
-
-We are looking to hire a mobile developer with significant experience in working with nearby radio communication technology like Bluetooth LE and Wifi P2P.
-
-The task is to create an Open Source Android library that will make it easy to discover nearby devices (devices running the same “nearby” library) and share files through a simple user-friendly interface. This will be accomplished in the following ways:
-
-  1. **Unified Library:** Create a single unified library to facilitate the discovery and sharing of files with nearby devices through Bluetooth classic, Bluetooth Low-Emission, WiFi LAN, WiFi Direct, and WiFi Infrastructure (“Aba”). The library will make it easy for developers to choose from a selection of peer-to-peer connection methods without having to worry about underlying implementation details.
-  2. **Automation**: The library will be able to determine the most appropriate method of connecting to a peer(s) depending on the available hardware settings. Since this approach doesn’t specify the exact connection method it provides a more automated approach seamlessly switching to the various connection protocols as needed.
-
-**User Interaction:** The library will allow users to call pre-made fragments that will provide an interface for users to discover and interact with nearby devices. The fragments can be styled & modified and dropped into a project for pre-made User-Interaction flows.
-
-&nbsp;
-
-**April 2017: Market Research and User Studies (CLOSED/HIRED)  
-** 
-
-Guardian Project is looking for someone who can help us with market and user research in Latin America on a contractual basis.
-
-Job responsibilities include the following:
-
-  * Assisting in survey distribution
-  * Communication and coordination with Latin American users and organizations
-  * Spanish Translation
-  * Handling general tech support email help in Spanish
-  * Weekly meetings
-  * Interest in technology
-
-**December 2016: Program / Engineering Manager with a dash of Dev Ops needed for open source mobile security project. (CLOSED/HIRED)  
-** 
-
-Guardian Project has a contract opening for someone who can improve our product build+test+release cycle for a mobile app at the cutting edge of usable security, combining privacy and security with usability and simplicity.
-
-<div dir="ltr">
-  <p class="defanged22-gmail-p1">
-    <span class="defanged22-gmail-s1">You’ll provide coordination and encouragement to our far flung heroic team of developers, designers and testers. Experience with setting up automated mobile builds and testing through cloud device testing services is particularly helpful. </span>
-  </p>
-  
-  <p class="defanged22-gmail-p1">
-    <span class="defanged22-gmail-s1">If you’re super organized, detailed oriented, deadline driven, dependable, strive for the best and not satisfied with less, this contract is for you! </span>
-  </p>
-  
-  <p class="defanged22-gmail-p1">
-    <span class="defanged22-gmail-s1">Your focus will be on a rewarding sub-project of the Guardian Team, but participation in the larger mission and community is highly encouraged. We pay top of the line for an open source, grant funded project organization. The upside is you can literally live anywhere you wish [almost!], and other than a few scheduled scrums, set your own schedule.</span>
-  </p>
-  
-  <p class="defanged22-gmail-p1">
-    Underrepresented minorities in technology are especially encouraged to apply.
-  </p>
-  
-  <hr />
-</div>
+No specific positions at the moment.
 
 &nbsp;

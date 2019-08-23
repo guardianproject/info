@@ -6,7 +6,7 @@ author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=1120
 ---
-**Obscura v1** is our first public release from the Secure Smart Cam Project. This an open-source collaboration between the [Guardian Project](https://guardianproject.info) and [Witness](http://witness.org) to develop new visual media software for human rights.
+**Obscura v1** is our first public release from the Secure Smart Cam Project. This an open-source collaboration between the [Guardian Project](https://guardianproject.info) and [Witness](https://www.witness.org) to develop new visual media software for human rights.
 
 Please review our [Terms of Use](https://raw.github.com/guardianproject/SecureSmartCam/obscurav1/TERMS) and our [Source Code License](https://raw.github.com/guardianproject/SecureSmartCam/obscurav1/LICENSE). The entire source code of this app is [available on Github](https://github.com/guardianproject/SecureSmartCam/blob/obscurav1/).
 

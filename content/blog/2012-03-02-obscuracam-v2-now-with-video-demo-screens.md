@@ -11,7 +11,7 @@ categories:
 tags:
   - obscuracam
 ---
-We’ve been making exciting progress with our work on [ObscuraCam](https://guardianproject.info/apps/securecam/), part of the SecureSmartCam project with our partner [WITNESS](http://witness.org). The biggest jump forward is the addition of video support, including automated face detection, pixelization and redaction.
+We’ve been making exciting progress with our work on [ObscuraCam](https://guardianproject.info/apps/securecam/), part of the SecureSmartCam project with our partner [WITNESS](https://www.witness.org). The biggest jump forward is the addition of video support, including automated face detection, pixelization and redaction.
 
 Screenshots below, and soon a video below (also at: <http://youtu.be/9hi4c_DCrkw>)
 

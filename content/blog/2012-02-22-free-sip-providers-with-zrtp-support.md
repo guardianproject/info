@@ -14,7 +14,7 @@ tags:
   - voip
   - zrtp
 ---
-This post is part of a series on our work researching the [Open Secure Telephony Network](https://guardianproject.info/tag/ostn/). After you have [CSipSimple installed](http://code.google.com/p/csipsimple/) on your mobile handset, you will need a place to register a SIP username so you can contact others. The fastest way to get started with this is to use one of a handful of free SIP providers. I like the [Ekiga free SIP service](https://www.ekiga.net/index.php?page=register).
+This post is part of a series on our work researching the [Open Secure Telephony Network](https://guardianproject.info/tag/ostn/). After you have [CSipSimple installed](https://code.google.com/p/csipsimple/) on your mobile handset, you will need a place to register a SIP username so you can contact others. The fastest way to get started with this is to use one of a handful of free SIP providers. I like the [Ekiga free SIP service](https://www.ekiga.net/index.php?page=register).
 
 [<img src="http://farm1.staticflickr.com/26/45070135_a1dd5889a7.jpg" alt="Red Telephone Boxes" width="500" height="375" />](http://www.flickr.com/photos/andwar/45070135/ "Red Telephone Boxes by Andwar, on Flickr")
 

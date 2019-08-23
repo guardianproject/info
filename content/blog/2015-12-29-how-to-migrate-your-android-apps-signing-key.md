@@ -80,7 +80,7 @@ For <a href="https://f-droid.org" target="_blank">F-Droid</a>, there will be som
 
 ### A Note on Compatibility
 
-There is security vs compatibility trade off a few might be interested in. Pre-4.3, Android did not support any signature algorithms except SHA1. With Android >= 4.3, SHA256 support was fixed, and SHA384, SHA512, and ECDSA were added ([source](http://code.google.com/p/android/issues/detail?id=38321)). There are still android 2.3.3 (`android-10`) devices being sold, so anyone interested in backwards compatibility will have to heed this.
+There is security vs compatibility trade off a few might be interested in. Pre-4.3, Android did not support any signature algorithms except SHA1. With Android >= 4.3, SHA256 support was fixed, and SHA384, SHA512, and ECDSA were added ([source](https://code.google.com/p/android/issues/detail?id=38321)). There are still android 2.3.3 (`android-10`) devices being sold, so anyone interested in backwards compatibility will have to heed this.
 
 Also, the larger the keysize and hashsize used, the longer it takes to install and update the application. So extremely large values might be unsuitable for slower hardware. The following probably doesn’t buy you a tremendous amount of additional security but cranks the paranoia to 11. It does so at the cost of compatibility and performance.  
 `<br />

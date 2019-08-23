@@ -14,7 +14,7 @@ tags:
   - hackday
   - openvideoconference
 ---
-Nathan Freitas will be on a panel at the 2nd annual [Open Video Conference](http://www.openvideoconference.org/) in New York this Friday and Saturday. He will be on the panel entitled “Cameras Everywhere” led by our partners at [Witness](http://witness.org), on Saturday at 3pm.
+Nathan Freitas will be on a panel at the 2nd annual [Open Video Conference](http://www.openvideoconference.org/) in New York this Friday and Saturday. He will be on the panel entitled “Cameras Everywhere” led by our partners at [Witness](https://www.witness.org), on Saturday at 3pm.
 
 > **Summary**: Cameras Everywhere: Human Rights and Web Video – (_2:45 PM – 3:30 PM_)
 > 

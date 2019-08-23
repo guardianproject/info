@@ -11,7 +11,7 @@ categories:
 ---
 Our flagship app, [Orbot: Tor on Android](/apps/orbot), has been updated to version 1.0.5.2. It is available in the [Android Market](https://market.android.com/details?id=org.torproject.android&feature=search_result), or through direct download from the [Tor Project’s website](https://www.torproject.org/docs/android.html.en).
 
-This release fixes a number of long standing bigs, includes the latest and greatest release of Tor itself, cleans up the user interface a bit, and adds some new advanced options (you can specify your exit node country!). It also fixes an issue with our “Tor Everything” capability, that allowed some Android system network traffic to leak and bypass the Tor routing. Finally, it provides for compatibility for [CyanogenMOD 7](http://code.google.com/p/cyanogenmod/issues/detail?id=1120), as well as Android Gingerbread and Honeycomb.
+This release fixes a number of long standing bigs, includes the latest and greatest release of Tor itself, cleans up the user interface a bit, and adds some new advanced options (you can specify your exit node country!). It also fixes an issue with our “Tor Everything” capability, that allowed some Android system network traffic to leak and bypass the Tor routing. Finally, it provides for compatibility for [CyanogenMOD 7](https://code.google.com/p/cyanogenmod/issues/detail?id=1120), as well as Android Gingerbread and Honeycomb.
 
 Enjoy and stay safe out there!
 

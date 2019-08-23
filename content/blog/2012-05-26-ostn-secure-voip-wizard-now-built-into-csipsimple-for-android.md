@@ -19,9 +19,9 @@ tags:
 
 [setup your own secure voice-over-IP server instance](https://guardianproject.info/2012/05/17/build-your-own-open-secure-telephony-network-some-assembly-required/), then this news is for you.
 
-If you are an Android user looking for the [best open-source VoIP app](http://code.google.com/p/csipsimple/), and really need one that can support [secure communications](https://OSTel.co), then this post is ALSO for you.
+If you are an Android user looking for the [best open-source VoIP app](https://code.google.com/p/csipsimple/), and really need one that can support [secure communications](https://OSTel.co), then this post is ALSO for you.
 
-[CSipSimple](http://code.google.com/p/csipsimple/), the previously mentioned “best VoIP app”, now includes a wizard for setting up an account configuration for any server which complies with our [Open Secure Telephony Network specification](https://guardianproject.info/wiki/OSTN_Compliance_Specification). In short, this means it uses TLS or SSL to secure the SIP signaling traffic, and supports proxying of the RTP media streams for the actual voice or video calls, without in any way interfering with the ZRTP encryption passing through it.
+[CSipSimple](https://code.google.com/p/csipsimple/), the previously mentioned “best VoIP app”, now includes a wizard for setting up an account configuration for any server which complies with our [Open Secure Telephony Network specification](https://guardianproject.info/wiki/OSTN_Compliance_Specification). In short, this means it uses TLS or SSL to secure the SIP signaling traffic, and supports proxying of the RTP media streams for the actual voice or video calls, without in any way interfering with the ZRTP encryption passing through it.
 
 There are currently two OSTN compliant public services, [OSTel](https://OSTel.co) and [PillowTalk](https://intimi.ca:4242/), but we hope and expect there to be many more, both public and private, and are very happy that this secure by default wizard configuration is now included in the core CSipSimple project. In addition, by having this support in a multiple purpose client (as opposed to a single OStel-only app), you can simultaneously use multiple VoIP accounts. For example, you might setup a second account with Callcentric, that is less secure, but that would allow you to make calls over the standard telephone system.
 
@@ -37,7 +37,7 @@ Then enter your username, password, and the OSTN compliant server you wish to co
 
 Once you hit “Save”, the account should be configured, attempt to register, and be ready to make calls.
 
-Learn more about the CSipSimple project: <http://code.google.com/p/csipsimple/>
+Learn more about the CSipSimple project: <https://code.google.com/p/csipsimple/>
 
 Download the latest [CSipSimple nightly trunk here.](http://nightlies.csipsimple.com/trunk/)
 

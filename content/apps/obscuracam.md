@@ -33,7 +33,7 @@ _Download ObscuraCam Today (via link or scan the qr code above!)_
 
 #### Background
 
-We developed our more  secure and private camera application in partnership with [Witness.org](http://witness.org), the leading human rights video advocacy and training organization. This collaboration grew out of an [open hackday at the 2010 Open Video Conference](http://blog.witness.org/2010/10/ovc2010-opensubtitles/).
+We developed our more  secure and private camera application in partnership with [Witness.org](https://www.witness.org), the leading human rights video advocacy and training organization. This collaboration grew out of an [open hackday at the 2010 Open Video Conference](https://blog.witness.org/2010/10/ovc2010-opensubtitles/).
 
 This is an open-source project and you can track our progress here: <https://github.com/guardianproject/SecureSmartCam>.
 

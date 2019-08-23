@@ -59,7 +59,7 @@ sudo apt-get install keysync
 </pre>
     
       *![Fedora](https://guardianproject.info/builds/.icons/platform_fedora_linux.gif) **Fedora 17, 18, 19**: Run this in your Terminal to add <a href="https://build.opensuse.org/project/show/security:guardianproject"  target="_blank">our repository</a> to your package sources. You only need to do this once, you&#8217;ll get updated versions automatically once this is complete (fingerprint: `AC38 BED1 E879 79EA FD54`): <pre style="font-size: small;">source /etc/os-release
-sudo wget http://download.opensuse.org/repositories/security:guardianproject/Fedora_${VERSION_ID}/security:guardianproject.repo -O /etc/yum.repos.d/security:guardianproject.repo
+sudo wget https://download.opensuse.org/repositories/security:guardianproject/Fedora_${VERSION_ID}/security:guardianproject.repo -O /etc/yum.repos.d/security:guardianproject.repo
 sudo yum install keysync
 </pre>
     

@@ -78,7 +78,7 @@ In January 2011, the Guardian Project received a no strings attached donation fr
 </p>
 
 <p style="text-align: left;">
-  We are working with <a href="http://witness.org">Witness.org</a> on InformaCam and ObscuraCam, human rights-focused secure camera applications for mobile phones. WITNESS receives funding from the International Bar Association and the <a href="http://knightfoundation.org">Knight Foundation</a>, among other funders, to support this work.
+  We are working with <a href="https://www.witness.org">Witness.org</a> on InformaCam and ObscuraCam, human rights-focused secure camera applications for mobile phones. WITNESS receives funding from the International Bar Association and the <a href="http://knightfoundation.org">Knight Foundation</a>, among other funders, to support this work.
 </p>
 
 [<img title="mLogo2" src="https://guardianproject.info/wp-content/uploads/2010/02/mLogo2.png" alt="" width="301" height="75" />](http://mobileactive.org)

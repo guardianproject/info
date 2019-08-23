@@ -15,7 +15,7 @@ While we think that a secure, privacy-enhanced mobile phone is a good thing for 
 &#8211;  
 
 
-The Economist covered our work with WITNESS on [Secure Smart Cameras](http://www.witness.org/cameras-everywhere/witness-labs), and the [&#8220;Future of Protest Video&#8221;](https://www.youtube.com/watch?v=lk2dTeDSHB8&feature=player_embedded).
+The Economist covered our work with WITNESS on [Secure Smart Cameras](https://www.witness.org/cameras-everywhere/witness-labs), and the [&#8220;Future of Protest Video&#8221;](https://www.youtube.com/watch?v=lk2dTeDSHB8&feature=player_embedded).
 
 
 

@@ -15,7 +15,7 @@ guid: https://guardianproject.info/?page_id=11633
 ## <span style="color: #c0c0c0;">TRUSTED BY THE PRESS</span>
 
 <p style="text-align: center;">
-  <a href="https://guardianproject.info/wp-content/uploads/2013/09/The_New_York_Times_logo.png"><img style="border: 0px none;" alt="The_New_York_Times_logo" src="https://guardianproject.info/wp-content/uploads/2013/09/The_New_York_Times_logo-300x44.png" width="300" height="44" /></a><a href="http://arstechnica.com/information-technology/2011/04/for-paranoid-androids-guardian-project-supplies-smartphone-security/" target="_blank"><img style="border: 0px none;" alt="ars-logo" src="https://guardianproject.info/wp-content/uploads/2013/09/ars-logo-300x300.png" width="72" height="72" /></a>
+  <a href="https://guardianproject.info/wp-content/uploads/2013/09/The_New_York_Times_logo.png"><img style="border: 0px none;" alt="The_New_York_Times_logo" src="https://guardianproject.info/wp-content/uploads/2013/09/The_New_York_Times_logo-300x44.png" width="300" height="44" /></a><a href="https://arstechnica.com//information-technology/2011/04/for-paranoid-androids-guardian-project-supplies-smartphone-security/" target="_blank"><img style="border: 0px none;" alt="ars-logo" src="https://guardianproject.info/wp-content/uploads/2013/09/ars-logo-300x300.png" width="72" height="72" /></a>
 </p>
 
 <!--more-->

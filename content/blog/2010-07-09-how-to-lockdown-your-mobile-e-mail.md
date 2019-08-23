@@ -33,7 +33,7 @@ PGP uses a serial combination of hashing, data compression, symmetric-key crypto
 
 So how secure does this make your information? Italian Police, the [FBI](http://www.pcworld.com/article/110841/pgp_encryption_proves_powerful.html), and [British police](http://www.theregister.co.uk/2007/11/14/ripa_encryption_key_notice/) have been unable to crack its security and have resorted to demanding private keys. It’s been likened as “the closest you’re likely to get to military-grade encryption” by cryptographer [Bruce Schneier](https://en.wikipedia.org/wiki/Bruce_Schneier). Short answer: pretty darn good, as long as you guard your private key wisely.
 
-You’ve probably guessed by now that the reason for this posting is to show you how to effectively use OpenPGP to secure your mobile email. And while we would’ve loved to just jump right into the tutorial, there are a few more things you should know first. [Android Privacy Guard](http://code.google.com/p/android-privacy-guard/ "Android Privacy Guard"){#udlg} (or APG for short), is a first step at bringing [OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy "PGP"){#qtjc} to the Android platform, letting you manage OpenPGP keys directly from your Android phone – and use them to encrypt, sign and decrypt emails and files. [Very recently](http://groups.google.com/group/k-9-mail/browse_thread/thread/921051bc0a61ed0b/d6085b925805ebf2?lnk=raot) the teams behind APG and the popular, open-source Android email client [K-9 Mail](http://code.google.com/p/k9mail/) have joined forces in a limited edition [team-up](https://en.wikipedia.org/wiki/Marvel_Team-Up) to create a beta version of K-9 that plays nice with APG quite seamlessly. We’ve been using it as our default email solution at Guardian for weeks now and want to share it with you!
+You’ve probably guessed by now that the reason for this posting is to show you how to effectively use OpenPGP to secure your mobile email. And while we would’ve loved to just jump right into the tutorial, there are a few more things you should know first. [Android Privacy Guard](https://code.google.com/p/android-privacy-guard/ "Android Privacy Guard"){#udlg} (or APG for short), is a first step at bringing [OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy "PGP"){#qtjc} to the Android platform, letting you manage OpenPGP keys directly from your Android phone – and use them to encrypt, sign and decrypt emails and files. [Very recently](http://groups.google.com/group/k-9-mail/browse_thread/thread/921051bc0a61ed0b/d6085b925805ebf2?lnk=raot) the teams behind APG and the popular, open-source Android email client [K-9 Mail](https://code.google.com/p/k9mail/) have joined forces in a limited edition [team-up](https://en.wikipedia.org/wiki/Marvel_Team-Up) to create a beta version of K-9 that plays nice with APG quite seamlessly. We’ve been using it as our default email solution at Guardian for weeks now and want to share it with you!
 
 **Note:** Currently APG only supports importing and deleting keys – not generating them – so you’ve got to use a desktop implementation of OpenPGP (such as [GNU Privacy Guard](http://www.gnupg.org/ "GNU Privacy Guard"){#vrm_}) to actually generate your keypair if you don’t already have one. A number of front-end applications and libraries are available to perform this task. If you already have a keypair set up, you should skip the first step.
 
@@ -58,7 +58,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
 </p>
 
 <p style="padding-left: 30px;">
-  <strong> </strong>If you don’t already have it, download Android Privacy Guard from its repository <a href="http://code.google.com/p/android-privacy-guard/downloads/list">here</a> or point your barcode scanner to the QR code below. You can also find it on the Market if you prefer.
+  <strong> </strong>If you don’t already have it, download Android Privacy Guard from its repository <a href="https://code.google.com/p/android-privacy-guard/downloads/list">here</a> or point your barcode scanner to the QR code below. You can also find it on the Market if you prefer.
 </p>
 
 <p style="padding-left: 30px;">
@@ -105,7 +105,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
       </p>
       
       <p style="padding-left: 30px;">
-        Download the latest version of K-9 mail featuring APG integration. You can find it on the Downloads page <a href="http://code.google.com/p/k9mail/downloads/list">here</a> or, again, point your barcode scanner to the QR Code below. Whatever floats your boat.
+        Download the latest version of K-9 mail featuring APG integration. You can find it on the Downloads page <a href="https://code.google.com/p/k9mail/downloads/list">here</a> or, again, point your barcode scanner to the QR Code below. Whatever floats your boat.
       </p>
       
       <p style="padding-left: 30px; text-align: center;">
@@ -126,7 +126,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
         </p>
         
         <p style="padding-left: 30px;">
-          For more popular accounts such as gmail, Yahoo!, etc., K-9 will automatically detect the correct configuration. For more complex accounts such as Exchange, please check out the K-9 wiki page <a href="http://code.google.com/p/k9mail/w/list">here</a>.
+          For more popular accounts such as gmail, Yahoo!, etc., K-9 will automatically detect the correct configuration. For more complex accounts such as Exchange, please check out the K-9 wiki page <a href="https://code.google.com/p/k9mail/w/list">here</a>.
         </p>
         
         <p style="padding-left: 30px;">
@@ -154,9 +154,9 @@ You’ve probably guessed by now that the reason for this posting is to show you
         </p>
         
         <p style="padding-left: 30px;">
-          If you find any issues with APG, please report them <a href="http://code.google.com/p/android-privacy-guard/issues/list">here</a>:
+          If you find any issues with APG, please report them <a href="https://code.google.com/p/android-privacy-guard/issues/list">here</a>:
         </p>
         
         <p style="padding-left: 30px;">
-          <span style="line-height: 13px;"><span style="line-height: 16px;">Likewise, report issues with K-9 <a href="http://code.google.com/p/k9mail/issues/list">here</a>. </span></span>
+          <span style="line-height: 13px;"><span style="line-height: 16px;">Likewise, report issues with K-9 <a href="https://code.google.com/p/k9mail/issues/list">here</a>. </span></span>
         </p>

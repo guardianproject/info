@@ -25,7 +25,7 @@ This project is the port of LUKS to Android. You can find more information on t
 
 ### Design
 
-LUKS was designed according to TKS1, a template design developed in [TKS1](http://code.google.com/p/cryptsetup/wiki/TKS1) for secure key setup. LUKS closely reassembles the structure recommended in the TKS1 paper, but also adds meta data for cipher setup management and LUKS also supports for multiple keys/passphrases.
+LUKS was designed according to TKS1, a template design developed in [TKS1](https://code.google.com/p/cryptsetup/wiki/TKS1) for secure key setup. LUKS closely reassembles the structure recommended in the TKS1 paper, but also adds meta data for cipher setup management and LUKS also supports for multiple keys/passphrases.
 
 ### <a name="Why_LUKS?"></a>Why LUKS?
 
@@ -35,4 +35,4 @@ LUKS was designed according to TKS1, a template design developed in [TKS1](http
   * effective passphrase revocation,
   * free
 
-The original LUKS CryptSetup project is here: <http://code.google.com/p/cryptsetup/>
+The original LUKS CryptSetup project is here: <https://code.google.com/p/cryptsetup/>

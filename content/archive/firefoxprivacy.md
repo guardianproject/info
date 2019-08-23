@@ -27,7 +27,7 @@ Please use our new [Orfox browser for Android](https://guardianproject.info/apps
 
 <!--:de-->The latest releases of 
 
-[Firefox on Android](http://www.mozilla.com/en-US/mobile/) are proving to be very usable, stable and an increasingly viable alternative to the built-in webkit browser. However, it unfortunately lacks the ability to manually configure proxy settings through any sort of standard user interface. This is a common problem for Android, which also lacks the ability to set browser or system-wide proxy settings. To solve this problem, we have created a very simple Firefox add-on [Proxy Mobile](https://addons.mozilla.org/en-US/firefox/?browse=featured) that exposes the Firefox browser&#8217;s proxy settings through a simple, graphical options menu.
+[Firefox on Android](https://www.mozilla.com/en-US/mobile/) are proving to be very usable, stable and an increasingly viable alternative to the built-in webkit browser. However, it unfortunately lacks the ability to manually configure proxy settings through any sort of standard user interface. This is a common problem for Android, which also lacks the ability to set browser or system-wide proxy settings. To solve this problem, we have created a very simple Firefox add-on [Proxy Mobile](https://addons.mozilla.org/en-US/firefox/?browse=featured) that exposes the Firefox browser&#8217;s proxy settings through a simple, graphical options menu.
 
 [<img class="alignleft" src="https://guardianproject.info/wp-content/uploads/2010/11/proxymob-180x300.png" alt="proxymob" width="126" height="211" />](https://guardianproject.info/wp-content/uploads/2010/11/proxymob.png)
 
@@ -42,7 +42,7 @@ That said, there are many things you can do to configure Firefox for Android to 
 First, you will need to get Firefox for Android:
 
   * **<a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" rel="nofollow">Install Firefox from the Google Play Store</a>**
-  * or go to **<a href="http://firefox.com/m" rel="nofollow">firefox.com/m</a>** in your phone&#8217;s web browser.
+  * or go to **<a href="https://firefox.com/m" rel="nofollow">firefox.com/m</a>** in your phone&#8217;s web browser.
   * or download the Firefox APK file **<a href="https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/multi/" rel="nofollow">directly from the Mozilla FTP server</a>**.
 
 Then follow the 10 steps below to enhance your mobile web privacy!

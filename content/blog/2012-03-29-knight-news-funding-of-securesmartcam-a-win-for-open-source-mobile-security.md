@@ -18,7 +18,7 @@ tags:
   - securesmartcam
   - witness
 ---
-Along with our partner [WITNESS](http://witness.org), we’ve entered our [SecureSmartCam project](http://newschallenge.tumblr.com/post/19436756887/securesmartcam-protecting-the-privacy-and-data-of) into the [Knight News Challenge](http://newschallenge.tumblr.com/), and we need your support to get to the next round.
+Along with our partner [WITNESS](https://www.witness.org), we’ve entered our [SecureSmartCam project](http://newschallenge.tumblr.com/post/19436756887/securesmartcam-protecting-the-privacy-and-data-of) into the [Knight News Challenge](http://newschallenge.tumblr.com/), and we need your support to get to the next round.
 
 Here’s a bit more about the challenge:
 

@@ -17,7 +17,10 @@ If you&#8217;d like to learn more about Guardian [from the team directly](https:
     <a href="https://lists.mayfirst.org/mailman/listinfo/guardian-dev">Guardian-Dev Discussion List</a>: If you are a developer, designer, power user, hacker, MOD&#8217;r, cryptophreak or just anyone interested in following the development side, this is for you!
   </li>
   <li>
-    Follow us us on Twitter: <a href="http://twitter.com/guardianproject">@guardianproject</a>
+    Follow us on Mastodon: <a rel="me" href="https://social.librem.one/@guardianproject">@guardianproject@librem.one</a>
+  </li>
+  <li>
+    Follow us on Twitter: <a href="https://twitter.com/guardianproject">@guardianproject</a>
   </li>
   <li>
     Email us <ul>

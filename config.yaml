@@ -42,6 +42,11 @@ menu:
   - name: "Contact Us"
     identifier: "contact"
     weight: 100
+
+  - name: "Toot @guardianproject@librem.one"
+    url: "https://social.librem.one/@guardianproject"
+    parent: "contact"
+
   - name: "Tweet @guardianproject"
     url: "https://twitter.com/guardianproject"
     parent: "contact"
@@ -52,6 +57,7 @@ Params:
   rss: true
   favicon: ""
   description: "People, Apps and Code You Can Trust"
+  mastodon: "https://social.librem.one/@guardianproject"
   twitter: "https://twitter.com/guardianproject"
   github: "https://github.com/guardianproject/"
   gitlab: "https://gitlab.com/guardianproject/"

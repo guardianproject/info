@@ -50,7 +50,8 @@ Learn more about Orfox at <https://guardianproject.info/apps/orfox>
 </p>
 
 \*\\*\*IMPORTANT\*\**  
-Requires the free Orbot plugin. Download it here: <a href="https://www.google.com/url?q=http://goo.gl/IzfFG&sa=D&usg=AFQjCNHf8GkhZF3BDQZB6Sv20s7LEGj2dA" target="_blank">http://goo.gl/IzfFG</a>
+Requires the free Orbot plugin. Download it here: <https://play.google.com/store/apps/details?id=org.torproject.android>
+
 
 <h1 style="text-align: left;">
   Features

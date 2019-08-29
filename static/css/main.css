@@ -126,16 +126,6 @@ img {
   width: 100%;
 }
 
-.disqus-comments {
-  margin-top: 30px;
-}
-
-@media only screen and (min-width: 768px) {
-  .disqus-comments {
-    margin-top: 40px;
-  }
-}
-
 /* --- Navbar --- */
 
 .navbar-custom {
@@ -743,30 +733,6 @@ div.splitbox div.left {
 div.splitbox div.right {
                width:100%;
                float:left;}
-}
-
-/* Delayed Disqus */
-.disqus-comments button {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 10px 5px;
-  background: #FFF;
-  border-radius: 0;
-  color: #404040;
-}
-@media only screen and (min-width: 768px) {
-  .disqus-comments button {
-    padding: 15px 25px;
-  }
-}
-.disqus-comments button:hover, 
-.disqus-comments button:focus {
-  color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
 }
 
 /* Related posts */

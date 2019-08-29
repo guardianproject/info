@@ -26,3 +26,19 @@ RedirectPermanent /feed /index.xml
     RewriteRule ^\.well-known/acme-challenge/(.+)$ "http://xmpp.guardianproject.info/.well-known/acme-challenge/$1" [P]
     # END (abel) letsencrypt redirect for XMPP server
 </IfModule>
+
+
+# cache all files without checking until max-age, after that, the
+# browser check the ETag value to see whether it needs to redownload
+
+<IfModule mod_headers.c>
+    # 10 minutes
+    <FilesMatch "\.(css|html|js)$">
+	Header set Cache-Control "max-age=600, public, immutable"
+    </FilesMatch>
+
+    # 1 month
+    <FilesMatch "\.(gif|jpg|jpeg|png|svg)$">
+	Header set Cache-Control "max-age=2592000, public, immutable"
+    </FilesMatch>
+</IfModule>

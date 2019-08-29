@@ -1,20 +1,12 @@
 ---
 id: 276
-title: Live Chatrooms (IRC)
-date: 2010-05-09T00:26:38-04:00
-author: n8fr8
-layout: page
+title: Live Chatrooms
 guid: https://guardianproject.info/?page_id=276
 menu:
   main:
     name: Chat on IRC
     parent: contact
 ---
-Sign into the live chat room now by clicking on this link (it takes you to webchat.oftc.net): 
-
-<a href="https://webchat.freenode.net/?randomnick=1&#038;channels=%23guardianproject&#038;uio=MT1mYWxzZSYyPXRydWUmND10cnVlJjk9dHJ1ZSYxMD10cnVlJjEyPXRydWU84" title="Freenode IRC Webchat" target="_blank"><img src="https://guardianproject.info/wp-content/uploads/2010/05/chat-150x150.jpg" alt="chat" width="150" height="150" class="size-thumbnail wp-image-12341" style="vertical-align:middle" srcset="https://guardianproject.info/wp-content/uploads/2010/05/chat-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2010/05/chat-100x100.jpg 100w, https://guardianproject.info/wp-content/uploads/2010/05/chat-200x200.jpg 200w, https://guardianproject.info/wp-content/uploads/2010/05/chat.jpg 290w" sizes="(max-width: 150px) 100vw, 150px" /><strong style="font-size: 300%;">&nbsp;&nbsp;#guardianproject</strong></a>
-
-If that one doesn&#8217;t work, try this one: <a href="https://webchat.oftc.net/?randomnick=1&#038;channels=guardianproject&#038;uio=MT1mYWxzZSYyPXRydWUmND10cnVlJjk9dHJ1ZSYxMD10cnVlJjExPTIwNSYxMj10cnVlb6#" title="OFTC IRC Webchat" target="_blank">#guardianproject</a>
 
 <ul style="line-height:150%">
   <li>
@@ -31,18 +23,18 @@ If that one doesn&#8217;t work, try this one: <a href="https://webchat.oftc.net/
   </li>
 </ul>
 
-## Additional Options
+[![#guardianproject:matrix.org](/wp-content/uploads/2010/05/chat.jpg)](https://matrix.to/#/%23guardianproject%3amatrix.org)
+<br/>
+<center><a href="https://matrix.to/#/%23guardianproject%3amatrix.org">#guardianproject:matrix.org</a></center>
 
-Join us on IRC if you have a chat program installed:
+## Freenode IRC
 
-<ul style="line-height:150%">
-  <li>
-    <a href="irc://irc.freenode.net/guardianproject" title="Guardian Project on IRC Freenode" target="_blank">#guardianproject on freenode</a> &#8211; the main chat room
-  </li>
-  <li>
-    <a href="irc://irc.oftc.net/guardianproject" title="Guardian Project on IRC OFTC" target="_blank">#guardianproject on oftc</a> &#8211; alternate with easier Tor support
-  </li>
-</ul>
+Sign into the live chat room now by clicking on this link (it takes you to webchat.oftc.net): 
+
+<a href="https://webchat.freenode.net/?randomnick=1&#038;channels=%23guardianproject&#038;uio=MT1mYWxzZSYyPXRydWUmND10cnVlJjk9dHJ1ZSYxMD10cnVlJjEyPXRydWU84" title="Freenode IRC Webchat" target="_blank"><strong style="font-size: 150%;">#guardianproject</strong></a>
+
+Join us on IRC if you have a chat program installed, click:<br/> <a href="irc://irc.freenode.net/guardianproject" title="Guardian Project on IRC Freenode">irc://irc.freenode.net/guardianproject</a>
+
 
 ## Chat apps that use IRC
 

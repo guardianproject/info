@@ -47,7 +47,6 @@
 - id: gcseClose
   translation: "Fechar"
 
-# Staticman
 - id: noComment
   translation: "Sem comentários"
 - id: oneComment
@@ -63,7 +62,6 @@
 - id: yourWebsite
   translation: "Seu website"
 
-# Delayed Disqus
 - id: show
   translation: "Mostrar"
 - id: comments

@@ -47,7 +47,6 @@
 - id: gcseClose
   translation: "Lukk"
 
-# Staticman
 - id: noComment
   translation: "Ingen kommentarer"
 - id: oneComment
@@ -63,7 +62,6 @@
 - id: yourWebsite
   translation: "Din webside"
 
-# Delayed Disqus
 - id: show
   translation: "Vis"
 - id: comments

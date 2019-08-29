@@ -47,7 +47,6 @@
 - id: gcseClose
   translation: "Fermi"
 
-# Staticman
 - id: noComment
   translation: "Sen komentoj"
 - id: oneComment
@@ -63,7 +62,6 @@
 - id: yourWebsite
   translation: "Via retpaĝaro"
 
-# Delayed Disqus
 - id: show
   translation: "Montru"
 - id: comments

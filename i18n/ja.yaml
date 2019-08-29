@@ -47,7 +47,6 @@
 - id: gcseClose
   translation: "閉じる"
 
-# Staticman
 - id: noComment
   translation: "0 件のコメント"
 - id: oneComment
@@ -63,7 +62,6 @@
 - id: yourWebsite
   translation: "ウェブサイト"
 
-# Delayed Disqus
 - id: show
   translation: "ショー"
 - id: comments

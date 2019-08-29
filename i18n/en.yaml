@@ -47,7 +47,6 @@
 - id: gcseClose
   translation: "Close"
 
-# Staticman
 - id: noComment
   translation: "No comment"
 - id: oneComment
@@ -61,9 +60,8 @@
 - id: yourEmail
   translation: "Your email address"
 - id: yourWebsite
-  translation: "You website"
+  translation: "Your website"
 
-# Delayed Disqus
 - id: show
   translation: "Show"
 - id: comments

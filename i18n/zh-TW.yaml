@@ -47,7 +47,6 @@
 - id: gcseClose
   translation: "關閉"
 
-# Staticman
 - id: noComment
   translation: "沒有評論"
 - id: oneComment
@@ -63,7 +62,6 @@
 - id: yourWebsite
   translation: "您的網頁"
 
-# Delayed Disqus
 - id: show
   translation: "顯示"
 - id: comments

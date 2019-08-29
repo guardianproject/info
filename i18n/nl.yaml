@@ -47,7 +47,6 @@
 - id: gcseClose
   translation: "Sluiten"
 
-# Staticman
 - id: noComment
   translation: "Geen commentaar"
 - id: oneComment
@@ -63,7 +62,6 @@
 - id: yourWebsite
   translation: "Jouw website"
 
-# Delayed Disqus
 - id: show
   translation: "Laat"
 - id: comments

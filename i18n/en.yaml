@@ -70,3 +70,13 @@
 # Related posts
 - id: seeAlso
   translation: "See also"
+
+# appslist
+- id: blogPosts
+  translation: "blog posts"
+- id: onGitHub
+  translation: "on GitHub"
+- id: onGitLab
+  translation: "on GitLab"
+- id: webSite
+  translation: "website"

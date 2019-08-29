@@ -22,24 +22,24 @@ img {
     <div class="source-code" style="text-align: left;">
       {{ if .sourceCode }}
       {{ if (hasPrefix .sourceCode "https://gitlab.com") }}
-      <a href="{{ .sourceCode }}" target="_blank" title="{{ .name }} on Gitlab">
+      <a href="{{ .sourceCode }}" target="_blank" title="{{ .name }} {{ i18n "onGitLab" }}">
 	<i class="fa fa-gitlab"></i> GitLab
       </a>
       {{ end }}
       {{ if (hasPrefix .sourceCode "https://github.com") }}
-      <a href="{{ .sourceCode }}" target="_blank" title="{{ .name }} on Github">
-	<i class="fa fa-github"></i> Github
+      <a href="{{ .sourceCode }}" target="_blank" title="{{ .name }} {{ i18n "onGitHub" }}">
+	<i class="fa fa-github"></i> GitHub
       </a>
       {{ end }}
       -
       {{ end }}
-      <a href="{{ .Site.BaseURL }}/tags/{{ (index (split .title ":") 0) | lower }}" title="{{ .title }} blog posts">
-	<i class="fa fa-rss"></i> blog posts
+      <a href="{{ .Site.BaseURL }}/tags/{{ (index (split .title ":") 0) | lower }}" title="{{ .title }} {{ i18n "blogPosts" }}">
+	<i class="fa fa-rss"></i> {{ i18n "blogPosts" }}
       </a>
       {{ if .webSite }}
       -
-      <a href="{{ .webSite }}" title="{{ .name }} website">
-	<i class="fa fa-home"></i> website
+      <a href="{{ .webSite }}" title="{{ .name }} {{ i18n "webSite" }}">
+	<i class="fa fa-home"></i> {{ i18n "webSite" }}
       </a>
       {{ end }}
     </div>

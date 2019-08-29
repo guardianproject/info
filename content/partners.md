@@ -8,8 +8,7 @@ aliases:
   - home/partners
 menu:
   main:
-    name: Partners & Funding
-    parent: home
+    parent: about
 ---
 <!--:en-->
 

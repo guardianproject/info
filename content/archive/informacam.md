@@ -7,7 +7,6 @@ layout: page
 guid: https://guardianproject.info/?page_id=1697
 menu:
   main:
-    name: Securing Visual Media
     parent: archive
 aliases:
   - apps/informacam

@@ -8,8 +8,7 @@ aliases:
   - home/use-cases
 menu:
   main:
-    name: How We Help
-    parent: home
+    parent: about
 ---
 While we think that a secure, privacy-enhanced mobile phone is a good thing for just about anybody going about their daily lives, we like to also consider the extreme cases, where this technology might change the course of someones life.  
 &#8211;  

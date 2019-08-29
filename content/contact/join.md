@@ -7,7 +7,6 @@ layout: page
 guid: https://guardianproject.info/?page_id=248
 menu:
   main:
-    name: Work or Intern With Us
     parent: contact
 ---
 [<img title="teamguardianhardatwork" src="https://guardianproject.info/wp-content/uploads/2010/03/teamguardianhardatwork.jpg" alt="" width="576" height="384" />  

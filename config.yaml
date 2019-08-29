@@ -24,32 +24,22 @@ sitemap:
 
 menu:
   main:
-  - name: "Our Apps"
-    identifier: "apps"
-    url: "/apps/"
-    weight: 1
-
-  - name: "Our Code"
-    identifier: "code"
-    url: "/code/"
-    weight: 1
-
-  - name: "Research Archive"
-    identifier: "archive"
-    url: /archive/
-    weight: 1
-
-  - name: "Contact Us"
-    identifier: "contact"
-    weight: 100
-
-  - name: "Toot @guardianproject@librem.one"
-    url: "https://social.librem.one/@guardianproject"
-    parent: "contact"
-
-  - name: "Tweet @guardianproject"
-    url: "https://twitter.com/guardianproject"
-    parent: "contact"
+    - name: about
+      weight: -10
+    - name: apps
+      weight: 1
+    - name: code
+      weight: 1
+    - name: archive
+      weight: 2
+    - name: contact
+      weight: 10
+    - name: "Toot @guardianproject@librem.one"
+      url: "https://social.librem.one/@guardianproject"
+      parent: contact
+    - name: "Tweet @guardianproject"
+      url: "https://twitter.com/guardianproject"
+      parent: contact
 
 Params:
   since: 2009

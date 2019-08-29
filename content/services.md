@@ -7,7 +7,7 @@ guid: https://guardianproject.info/?page_id=13442
 image: https://guardianproject.info/wp-content/uploads/2015/06/5399436072_d9bcbbab50_b.jpg
 menu:
   main:
-    parent: home
+    parent: about
 ---
 We offer services for-hire for a variety of work related to our mission, projects and code-base.
 

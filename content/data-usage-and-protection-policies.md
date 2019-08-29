@@ -6,7 +6,7 @@ author: n8fr8
 guid: https://guardianproject.info/?page_id=13321
 menu:
   main:
-    parent: home
+    parent: about
 aliases:
   - home/data-usage-and-protection-policies
   - privacy

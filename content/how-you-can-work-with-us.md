@@ -8,7 +8,6 @@ aliases:
   - home/how-you-can-work-with-us/
 menu:
   main:
-    name: Collaborate With Us
     parent: contact
 ---
 **Guardian as Development Partner**

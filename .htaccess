@@ -94,6 +94,8 @@ Header always set Content-Security-Policy: "\
     style-src 'self' 'unsafe-inline'; \
 "
 
+# Disallow plain HTTP connections
+Header always set Strict-Transport-Security: "max-age=31536000"
 
 # The browser will set the referrer header to the origin from which
 # the request was made, but only send referrer info to HTTPS

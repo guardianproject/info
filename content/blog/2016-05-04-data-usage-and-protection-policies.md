@@ -1,18 +1,13 @@
 ---
 id: 13321
 title: Data Usage and Protection Policies
-date: 2016-05-04T14:22:36-04:00
 author: n8fr8
 guid: https://guardianproject.info/?page_id=13321
-menu:
-  main:
-    parent: about
 aliases:
   - home/data-usage-and-protection-policies
+  - data-usage-and-protection-policies
   - privacy
 ---
-**May the 4th, 2016**
-
 _We are proud to be a signatory and supporter of the [That&#8217;s Not Privacy](https://www.thatsnotprivacy.com/) campaign._
 
 At a high level, it is easy say that &#8220;we know nothing&#8221;. We do not log data or include analytics in our websites or applications. When we do operate servers to support our applications, they are configured to store as minimal data as possible, usually just a username and password, if that is required. We also only recommend third party services, such as [XMPP services](https://www.otr.im/chat.html), [VoIP services](https://ostel.co), or [Proxy and VPN providers](https://torproject.org), who abide by these same policies.

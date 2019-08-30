@@ -32,34 +32,22 @@
           {{ end }}
         {{ end }}
 
-        {{ if .Site.IsMultiLingual }}
-          {{ if ge (len .Site.Languages) 3 }}
             <li class="navlinks-container">
               <a class="navlinks-parent" title="{{ i18n "languageSwitcherLabel" }}">
 		<i class="fa fa-language" style="font-size: 1.75em"></i>
 	      </a>
+	      {{ if .Params.languages }}
               <div class="navlinks-children">
-                {{ range .Site.Languages }}
-                  {{ if not (eq .Lang $.Site.Language.Lang) }}
-                  <a href="/{{ .Lang }}" lang="{{ .Lang }}">
-		    {{ default .Lang (index $.Site.Data.languagenames .Lang) }}
+                {{ range .Params.languages }}
+                  {{ if not (eq . $.Site.Language.Lang) }}
+                  <a href="/{{ . }}" lang="{{ . }}">
+		    {{ default . (index $.Site.Data.languagenames .) }}
 		  </a>
                   {{ end }}
                 {{ end }}
               </div>
+	      {{ end }}
             </li>
-          {{ else }}
-            <li>
-              {{ range .Site.Languages }}
-                {{ if not (eq .Lang $.Site.Language.Lang) }}
-                  <a href="/{{ .Lang }}" lang="{{ .Lang }}">
-		    {{ default .Lang (index $.Site.Data.languagenames .Lang) }}
-		  </a>
-                {{ end }}
-              {{ end }}
-            </li>
-          {{ end }}
-        {{ end }}
 
         {{ if isset .Site.Params "gcse" }}
           <li>

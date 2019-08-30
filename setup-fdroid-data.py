@@ -38,9 +38,15 @@ data, etag = index.download_repo_index(repo_url + '?fingerprint=' + fingerprint)
 appsdict = dict()
 for app in data['apps']:
     appsdict[app['packageName']] = app
+    if 'localized' in app:
+        languages = app['localized'].keys()
+    else:
+        languages = None
     with open('content/apps/%s.md' % app['packageName'], 'w') as fp:
         fp.write('---\n')
         fp.write('title: ' + app['name'] + ' ' + '\n')
+        if languages:
+            fp.write('languages: [ ' + ', '.join(languages) + ' ]\n')
         subtitle = app.get('summary')
         lastUpdated = app.get('lastUpdated')
         if lastUpdated:

@@ -7,6 +7,15 @@ from fdroidserver import common
 from fdroidserver import index
 
 
+def get_localized_icon(app):
+    if 'localized' in app \
+       and 'en-US' in app['localized'] \
+       and 'icon' in app['localized']['en-US']:
+        return ('https://guardianproject.info/fdroid/repo/'
+                + app['packageName'] + '/en-US/' + app['localized']['en-US']['icon'])
+    return 'https://guardianproject.info/fdroid/repo/icons-480/' + app['icon']
+
+
 config = dict()
 config['jarsigner'] = 'jarsigner'
 common.config = config
@@ -47,7 +56,7 @@ for app in data['apps']:
                 subtitle = app['localized']['en-US']['summary']
         if subtitle:
             fp.write('subtitle: ' + subtitle + '\n')
-        fp.write('icon: https://guardianproject.info/fdroid/repo/icons-480/' + app['icon'] + '\n')
+        fp.write('icon: ' + get_localized_icon(app) + '\n')
         if app.get('sourceCode'):
             fp.write('sourceCode: ' + app['sourceCode'] + '\n')
         fp.write('blackfriday:\n  extensions:\n    - hardLineBreak\n')

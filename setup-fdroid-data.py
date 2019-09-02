@@ -26,7 +26,7 @@ def get_languages(app):
     if 'localized' in app:
         languages = app['localized'].keys()
         for language in languages:
-            if language in ('en', 'en-US', 'es-ES', 'es-US', 'fr-CA', 'fr-FR'):
+            if language in ('en', 'en-US', 'es-ES', 'es-US', 'fr-CA', 'fr-FR', 'no'):
                 continue
             ret.add(language)
     site_languages.update(ret)

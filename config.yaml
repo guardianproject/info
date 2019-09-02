@@ -65,7 +65,6 @@ languages:
   lt: {weight: 2}
   lv: {weight: 2}
   nl: {weight: 2}
-  no: {weight: 2}
   pl: {weight: 2}
   pt-BR: {weight: 2}
   pt-PT: {weight: 2}

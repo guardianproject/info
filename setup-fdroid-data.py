@@ -9,6 +9,9 @@ from fdroidserver import common
 from fdroidserver import index
 
 
+site_languages = set()
+
+
 def get_localized_icon(app):
     if 'localized' in app \
        and 'en-US' in app['localized'] \
@@ -26,6 +29,7 @@ def get_languages(app):
             if language in ('en', 'en-US', 'es-ES', 'es-US', 'fr-CA', 'fr-FR'):
                 continue
             ret.add(language)
+    site_languages.update(ret)
     return sorted(ret)
 
 
@@ -120,3 +124,8 @@ for packageName, packageList in archive['packages'].items():
 
 with open('data/archive.json', 'w') as fp:
     json.dump(newarchive, fp, indent=2, sort_keys=True)
+
+print('languages:\n  en: {weight: 1}')
+for lang in sorted(site_languages):
+    if not lang.startswith('en'):
+        print('  %s: {weight: 2}' % lang)

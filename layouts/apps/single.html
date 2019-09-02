@@ -6,21 +6,24 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
 
-{{ $localized := dict "description" "" }}
 
 {{ if .Params.packageName }}
 {{ $app := index .Site.Data.repo.apps .Params.packageName }}
 
 {{ if $app.localized }}
-  {{ if (in $app.localized .Lang) }}
-    {{ .Scratch.Set "localized" (index $app.localized .Lang) }}
-  {{ else }}
-    {{ .Scratch.Set "localized" (index $app.localized .Site.LanguageCode) }}
+  {{ .Scratch.Set "graphics" (index $app.localized "en-US") }}
+  {{ .Scratch.Set "localized" (index $app.localized "en-US") }}
+  {{ if (index $app.localized .Lang) }}
+    {{ if (index (index $app.localized .Lang) "description") }}
+      {{ .Scratch.Set "localized" (index $app.localized .Lang) }}
+    {{ end }}
   {{ end }}
 {{ else }}
-  {{ .Scratch.Set "localized" $localized }}
+  {{ .Scratch.Set "graphics" (dict "description" "") }}
+  {{ .Scratch.Set "localized" (dict "description" $app.description) }}
 {{ end }}
 {{ $localized := .Scratch.Get "localized" }}
+{{ $graphics := .Scratch.Get "graphics" }}
 
 <div class="app-header" style="text-align: center;">
   {{ if (hasPrefix $app.sourceCode "https://github.com/") }}
@@ -53,21 +56,21 @@
 <script src="{{ .Site.BaseURL }}/js/jquery-3.3.1.min.js"></script>
 <script src="{{ .Site.BaseURL }}/js/jquery.fancybox.min.js"></script>
 <div class="gallery">
-  {{ range $localized.phoneScreenshots }}
+  {{ range $graphics.phoneScreenshots }}
   {{ $link := printf "https://guardianproject.info/fdroid/repo/%s/en-US/phoneScreenshots/%s" $.Params.packageName . }}
   <a data-fancybox="gallery" href="{{ $link }}">
     <img src="{{ $link }}"/>
     <br/>
   </a>
   {{ end }}
-  {{ range $localized.sevenInchScreenshots }}
+  {{ range $graphics.sevenInchScreenshots }}
   {{ $link := printf "https://guardianproject.info/fdroid/repo/%s/en-US/sevenInchScreenshots/%s" $.Params.packageName . }}
   <a data-fancybox="gallery" href="{{ $link }}">
     <img src="{{ $link }}"/>
     <br/>
   </a>
   {{ end }}
-  {{ range $localized.tenInchScreenshots }}
+  {{ range $graphics.tenInchScreenshots }}
   {{ $link := printf "https://guardianproject.info/fdroid/repo/%s/en-US/tenInchScreenshots/%s" $.Params.packageName . }}
   <a data-fancybox="gallery" href="{{ $link }}">
     <img src="{{ $link }}"/>

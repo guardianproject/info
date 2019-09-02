@@ -24,22 +24,22 @@
 
 <div class="app-header" style="text-align: center;">
   {{ if (hasPrefix $app.sourceCode "https://github.com/") }}
-  <a href="{{ $app.sourceCode }}" target="_blank" title="{{ $app.name }} source code">
+  <a href="{{ $app.sourceCode }}" target="_blank" title="{{ $app.name }} {{ i18n "sourceCode" }}">
     <i class="fa fa-github"></i> GitHub
   </a>
   {{ end }}
   {{ if (hasPrefix $app.sourceCode "https://gitlab.com/") }}
-  <a href="{{ $app.sourceCode }}" target="_blank" title="{{ $app.name }} source code">
+  <a href="{{ $app.sourceCode }}" target="_blank" title="{{ $app.name }} {{ i18n "sourceCode" }}">
     <i class="fa fa-gitlab"></i> GitLab
   </a>
   {{ end }}
   -
   <a href="{{ .Site.BaseURL }}/tags/{{ $app.name | lower }}">
-    <i class="fa fa-rss"></i> Blog posts
+    <i class="fa fa-rss"></i> {{ i18n "blogPosts" }}
   </a>
   {{ with $app.translation }}
   - 
-  <a href="{{ . }}" target="_blank"><i class="fa fa-language"></i> Translation</a>
+  <a href="{{ . }}" target="_blank"><i class="fa fa-language"></i> {{ i18n "translation" }}</a>
   {{ end }}
   {{ with $app.license }}
   -

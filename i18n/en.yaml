@@ -73,10 +73,24 @@
 
 # appslist
 - id: blogPosts
-  translation: "blog posts"
+  translation: "Blog Posts"
 - id: onGitHub
   translation: "on GitHub"
 - id: onGitLab
   translation: "on GitLab"
 - id: webSite
   translation: "website"
+- id: translation
+  translation: "Translation"
+- id: translateOn
+  translation: "Translate on"
+- id: edit
+  translation: "Edit"
+- id: editOn
+  translation: "Edit on"
+- id: metadata
+  translation: "metadata"
+- id: description
+  translation: "description"
+- id: sourceCode
+  translation: "source code"

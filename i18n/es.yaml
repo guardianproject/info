@@ -70,3 +70,27 @@
 # Related posts
 - id: seeAlso
   translation: "Ver también"
+
+# appslist
+- id: blogPosts
+  translation: "Entradas de blog"
+- id: onGitHub
+  translation: "en GitHub"
+- id: onGitLab
+  translation: "en GitLab"
+- id: webSite
+  translation: "Sitio web"
+- id: translation
+  translation: "Traducción"
+- id: translateOn
+  translation: "Traducir en"
+- id: edit
+  translation: "Editar"
+- id: editOn
+  translation: "Editar en"
+- id: metadata
+  translation: "metadatos"
+- id: description
+  translation: "descripción"
+- id: sourceCode
+  translation: "código fuente"

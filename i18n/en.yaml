@@ -1,3 +1,23 @@
+# Menu
+- id: about
+  translation: about
+- id: apps
+  translation: apps
+- id: code
+  translation: code
+- id: archive
+  translation: archive
+- id: contact
+  translation: contact
+- id: team
+  translation: Team
+- id: press
+  translation: Press
+- id: archivedApps
+  translation: Archived Apps
+- id: tutorials
+  translation: Tutorials
+
 # Content
 - id: dateFormat
   translation: "January 2, 2006"
@@ -94,3 +114,35 @@
   translation: "description"
 - id: sourceCode
   translation: "source code"
+
+# page titles
+- id: Blog
+  translation: Blog
+- id: Export Information
+  translation: Export Information
+- id: How You Can Work With Us
+  translation: How You Can Work With Us
+- id: About the Guardian Project
+  translation: About the Guardian Project
+- id: Partners and Funding
+  translation: Partners and Funding
+- id: Press
+  translation: Press
+- id: Services
+  translation: Services
+- id: Signing Keys
+  translation: Signing Keys
+- id: Team
+  translation: Team
+- id: Security You Can Trust
+  translation: Security You Can Trust
+
+- id: Archived Apps
+  translation: Archived Apps
+
+- id: Live Chatrooms
+  translation: Live Chatrooms
+- id: Contact
+  translation: Contact
+- id: Jobs and Internships
+  translation: Jobs and Internships

@@ -1,6 +1,6 @@
 ---
 id: 8
-title: About the Guardian Project
+title: About Guardian Project
 date: 2010-02-08T06:08:34-04:00
 author: n8fr8
 layout: page

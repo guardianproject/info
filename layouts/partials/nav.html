@@ -15,19 +15,19 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
-        {{ range .Site.Menus.main.ByWeight }}
+        {{ range .Sites.First.Menus.main.ByWeight }}
           {{ if .HasChildren }}
             <li class="navlinks-container">
-              <a class="navlinks-parent">{{ .Name }}</a>
+              <a class="navlinks-parent">{{ i18n .Name | default .Name }}</a>
               <div class="navlinks-children">
                 {{ range .Children }}
-                  <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                  <a href="{{ .URL | absLangURL }}">{{ i18n .Name | default .Name }}</a>
                 {{ end }}
               </div>
             </li>
           {{ else }}
             <li>
-              <a title="{{ .Name }}" href="{{ .URL  | absLangURL }}">{{ .Name }}</a>
+              <a title="{{ .Name }}" href="{{ .URL  | absLangURL }}">{{ i18n .Name | default .Name }}</a>
             </li>
           {{ end }}
         {{ end }}
@@ -38,9 +38,13 @@
 	      </a>
 	      {{ if .Params.languages }}
               <div class="navlinks-children">
-                {{ range .Params.languages }}
+                {{ range (union (slice "en") .Params.languages) }}
                   {{ if not (eq . $.Site.Language.Lang) }}
-                  <a href="/{{ . }}" lang="{{ . }}">
+                    {{ if eq . "en" }}
+                  <a href="{{ replaceRE (printf "^/(%s)" $.Lang) "" $.RelPermalink }}" lang="en">
+                    {{ else }}
+                  <a href="/{{ . }}{{ replaceRE (printf "^/(%s)" $.Lang) "" $.RelPermalink }}" lang="{{ . }}">
+                    {{ end }}
 		    {{ default . (index $.Site.Data.languagenames .) }}
 		  </a>
                   {{ end }}

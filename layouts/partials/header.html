@@ -11,6 +11,7 @@
 {{ end }}
 {{ $bigimg := $.Scratch.Get "bigimg" }}
 {{ $title := $.Scratch.Get "title" }}
+{{ $title := i18n $title | default $title }}
 {{ $subtitle := $.Scratch.Get "subtitle" }}
 
 {{ if or $bigimg $title }}

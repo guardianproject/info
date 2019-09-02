@@ -28,7 +28,7 @@
           <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
           <ul>
           {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            <li><a href="{{ .RelPermalink }}">{{ i18n .Title | default .Title }}</a></li>
           {{ end }}
           </ul>
           {{ end }}

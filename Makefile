@@ -5,6 +5,7 @@ userconfig.yaml:
 
 website: pre-serve userconfig.yaml
 	./setup-fdroid-data.py
+	./setup-pages-for-supported-languages.py
 	awk '{if(/^[a-z]/){k=$$0;gsub("[ \t]*=.*$$","",k);if(!(k in A)){A[k]=$$0;print}}else{print}}' \
 		userconfig.yaml config.yaml > gitlab.yaml
 	hugo --config gitlab.yaml --i18n-warnings

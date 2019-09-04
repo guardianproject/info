@@ -16,7 +16,7 @@ tags:
 
 Last month, we tagged the [final release of Orfox](https://github.com/guardianproject/Orfox/releases/tag/Orfox-Final-RIP-v16), an important milestone for us in our work on Tor. Today, we pushed this final build out to all the Orfox users on Google Play, which forces them to upgrade to the official Tor Browser for Android..
 
-![Orfox RIP app image](https://blog.torproject.org/sites/default/files/inline-images/Orfox%20Download.2.png "Orfox RIP")
+![Orfox RIP app image](orfoxrip.png)
 
 Our goal was never to become the primary developer or maintainer of the "best" tor-enabled web browser app on Android. Instead, we chose to act as a catalyst to get the Tor Project and the Tor Browser development team themselves to take on Android development, and upstream our work into the primary codebase. This has happened, and it is a great news for everyone. The work for developing and updating Tor Browser on the desktop and Android are now coordinated and synchronized, and end-users benefit from more frequent updates and improvements.
 

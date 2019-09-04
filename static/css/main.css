@@ -244,8 +244,9 @@ img {
   content: " \25BC";
 }
 .navbar-custom .nav .navlinks-children {
-  width: 100%;
+  width: 8em;
   display: none;
+  margin-left: -3em;
   word-break: break-word;
 }
 .navbar-custom .nav .navlinks-container .navlinks-children a {

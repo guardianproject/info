@@ -15,7 +15,7 @@ tags:
 ---
 Over the last two months, I have been working on a project to research and develop a set of tools to provide secure peer to peer Voice over IP on the Android mobile platform. It is called the Open Secure Telephony Network, or [OSTN](https://guardianproject.info/wiki/OSTN). This work is done under the umbrella of [The Guardian Project](https://guardianproject.info/).
 
-[<img src="http://farm6.staticflickr.com/5119/5893549665_24943d362e.jpg" alt="Telephone wires" width="500" height="333" />  
+[<img src="https://farm6.staticflickr.com/5119/5893549665_24943d362e.jpg" alt="Telephone wires" width="500" height="333" />  
 ](http://www.flickr.com/photos/stuartbarr/5893549665/ "Telephone wires by Stuart Barr, on Flickr") _this is not the type of “open” we mean, and definitely not secure_
 
 The project will continue for another four months and I will post my public findings here. It’s well underway and I have developed a functional system in the SATELLITE lab in New York City. The goal by the the end of the project is to offer an alternative to Skype or Google Talk, which are both good voice services but don’t offer the kind of security needed by human rights activists and journalists.

@@ -55,11 +55,11 @@ aliases:
     </p>
     
     <p style="text-align: center;">
-      <img alt="" src="http://media.getchute.com/media/B6VnNisdh/w/260" width="260" height="173" />
+      <img alt="" src="https://media.getchute.com/media/B6VnNisdh/w/260" width="260" height="173" />
     </p>
     
     <p>
-      <img class="aligncenter" alt="260" src="http://media.getchute.com/media/B6Md5cmis/w/260" />
+      <img class="aligncenter" alt="260" src="https://media.getchute.com/media/B6Md5cmis/w/260" />
     </p>
   </div>
 </div>

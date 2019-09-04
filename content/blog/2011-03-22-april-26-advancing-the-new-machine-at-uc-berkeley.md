@@ -13,7 +13,7 @@ I, along with a number of others from the Guardian Project core dev team, will 
 
 You can learn more about the event here:  
 <http://www.law.berkeley.edu/HRCweb/events/TechConference2011/index.html>  
-<img class="alignnone" src="http://www.law.berkeley.edu/HRCweb/events/TechConference2011/images/Conference-Logo-Large.jpg" alt="" width="394" height="224" /> 
+<img class="alignnone" src="https://www.law.berkeley.edu/HRCweb/events/TechConference2011/images/Conference-Logo-Large.jpg" alt="" width="394" height="224" /> 
 
 It was the 2009 version of the same conference hosted by UC Berkeley’s Human Rights Conference, the “Soul of the New Machine”, where I initially pitched the idea of Guardian, and happily won a $15,000 grant which acted as our seed funding.  
 <http://www.netsquared.org/challenges/hrc-mobile/uc-berkeley-human-rights-center-mobile-challenge-winners>

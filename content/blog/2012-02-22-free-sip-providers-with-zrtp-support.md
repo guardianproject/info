@@ -16,7 +16,7 @@ tags:
 ---
 This post is part of a series on our work researching the [Open Secure Telephony Network](https://guardianproject.info/tag/ostn/). After you have [CSipSimple installed](https://code.google.com/p/csipsimple/) on your mobile handset, you will need a place to register a SIP username so you can contact others. The fastest way to get started with this is to use one of a handful of free SIP providers. I like the [Ekiga free SIP service](https://www.ekiga.net/index.php?page=register).
 
-[<img src="http://farm1.staticflickr.com/26/45070135_a1dd5889a7.jpg" alt="Red Telephone Boxes" width="500" height="375" />](http://www.flickr.com/photos/andwar/45070135/ "Red Telephone Boxes by Andwar, on Flickr")
+[<img src="https://farm1.staticflickr.com/26/45070135_a1dd5889a7.jpg" alt="Red Telephone Boxes" width="500" height="375" />](http://www.flickr.com/photos/andwar/45070135/ "Red Telephone Boxes by Andwar, on Flickr")
 
 The only drawback to this service is the userbase is large enough that the namespace of easy to remember words is frequently occupied. Chances are you will not be able to register your name and must make some novel admendments to ensure a unique name. Since telephony is closely associated with numbers, not words, it will be easier to find a 10 digit number combination to use as your username. This makes username input simpler since CSipSimple gives you the familliar telephone dial pad as the default interface.
 

@@ -35,7 +35,7 @@ The Orbot app contains an HTTP and SOCKS proxy server which allows any Android a
 
 If you don’t have BEEM installed, you can [download it here](http://www.beem-project.com/news/11) or scan the barcode below:
 
-<img class="alignnone" src="http://dev.beem-project.com/screenshot_rc1/qr-code.png" alt="" width="100" height="100" /> 
+<img class="alignnone" src="https://dev.beem-project.com/screenshot_rc1/qr-code.png" alt="" width="100" height="100" /> 
 
 You can use any XMPP service, but we recommend one that supports TLS or SSL security. You can use your Gmail / Google Talk account or you can find a list of public services here: http://xmpp.org/services/</p> 
 

@@ -20,4 +20,4 @@ The [InsecureSystem blog](http://www.insecuresystem.org/2010/04/ultimate-droid-a
 
 [Read on…](http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html)
 
-<img class="alignnone" title="orbot on droid" src="http://1.bp.blogspot.com/_zYnlWpU7s_s/S7aqyLdAgeI/AAAAAAAAAEU/sT9KAH3F7eI/s320/CAP2010033110221.jpg" alt="" width="180" height="320" />
+<img class="alignnone" title="orbot on droid" src="https://1.bp.blogspot.com/_zYnlWpU7s_s/S7aqyLdAgeI/AAAAAAAAAEU/sT9KAH3F7eI/s320/CAP2010033110221.jpg" alt="" width="180" height="320" />

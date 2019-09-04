@@ -22,7 +22,7 @@ We&#8217;ve launched [CameraV](https://guardianproject.info/apps/camerav), the f
 &nbsp;
 
 [  
-<img class="alignnone size-full wp-image-3267" src="https://guardianproject.info/wp-content/uploads/2012/03/knight-logo-300.jpg" alt="knight-logo-300" width="300" height="50" />](http://www.knightfoundation.org/grants/20123674/) [_A project funded by the_](http://www.knightfoundation.org/grants/20123674/) _[Knight News Challen](https://guardianproject.info/2013/01/27/informacam-wins-knight-news-challenge/)ge_
+<img class="alignnone size-full wp-image-3267" src="https://guardianproject.info/wp-content/uploads/2012/03/knight-logo-300.jpg" alt="knight-logo-300" width="300" height="50" />](https://www.knightfoundation.org/grants/20123674/) [_A project funded by the_](https://www.knightfoundation.org/grants/20123674/) _[Knight News Challen](https://guardianproject.info/2013/01/27/informacam-wins-knight-news-challenge/)ge_
 
 There is currently a deluge of media coming from the world’s mobile devices for potential use as evidence or trusted sources for journalists. WITNESS and the Guardian Project seek to provide a mechanism through InformaCam to verify and authenticate this footage. Our approach is to create an app that leverages the sensors used in modern smartphones create a “snapshot” of the environment in which a piece of media is captured. This information is used, along with a digital “fingerprint” of the cameraphone sensor, to sign the video or image and ensure that the media hasn’t been tampered. It also verifies that it was captured by a specific device at a specific time and place.
 

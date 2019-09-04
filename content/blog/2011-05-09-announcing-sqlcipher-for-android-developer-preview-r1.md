@@ -11,7 +11,7 @@ categories:
   - New Release
   - News
 ---
-After some major breakthroughs during last week’s development sprint, we’re extremely excited to announce [SQLCipher for Android](https://guardianproject.info/code/sqlcipher/), Developer Preview r1. SQLCipher is an [SQLite](http://sqlite.org/) extension that provides transparent 256-bit AES encryption of database files. To date, it has been open-sourced, sponsored and maintained by [Zetetic LLC](http://zetetic.net/), and we are glad to be able to extend their efforts to a new mobile platform. In the mobile space, SQLCipher has enjoyed widespread use in Apple’s [iOS](http://sqlcipher.net/documentation/ios.html), as well as [Nokia / QT](http://www.qtcentre.org/wiki/index.php?title=Building_QSQLITE_driver_with_AES-256_encryption_support) for quite some time. Given that Android [by default](http://developer.android.com/guide/topics/data/data-storage.html#db) provides integrated support for SQLite databases, our goal was to create an almost identical API for SQLCipher, so that developers of all skill level could use it, without a steep learning curve.
+After some major breakthroughs during last week’s development sprint, we’re extremely excited to announce [SQLCipher for Android](https://guardianproject.info/code/sqlcipher/), Developer Preview r1. SQLCipher is an [SQLite](http://sqlite.org/) extension that provides transparent 256-bit AES encryption of database files. To date, it has been open-sourced, sponsored and maintained by [Zetetic LLC](http://zetetic.net/), and we are glad to be able to extend their efforts to a new mobile platform. In the mobile space, SQLCipher has enjoyed widespread use in Apple’s [iOS](https://www.zetetic.net/sqlcipher/documentation/ios.html), as well as [Nokia / QT](http://www.qtcentre.org/wiki/index.php?title=Building_QSQLITE_driver_with_AES-256_encryption_support) for quite some time. Given that Android [by default](http://developer.android.com/guide/topics/data/data-storage.html#db) provides integrated support for SQLite databases, our goal was to create an almost identical API for SQLCipher, so that developers of all skill level could use it, without a steep learning curve.
 
 [<img title="logo-sqlcipher" src="https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-300x31.png" alt="" width="300" height="31" />](https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher.png)
 
@@ -52,7 +52,7 @@ A typical SQLite database in unencrypted, and visually parseable even as encoded
 > sqlite> SELECT * FROM t1;  
 > Error: file is encrypted or is not a database
 
-(example courtesy of [SQLCipher](http://sqlcipher.net/design))
+(example courtesy of [SQLCipher](https://www.zetetic.net/sqlcipher/design))
 
 #### Details for Developers
 

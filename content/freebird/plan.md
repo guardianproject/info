@@ -29,7 +29,7 @@ The Guardian Project team, along with their partner Zetetic, Inc. (creators of S
 **  
 Open Source Telephony Network** &#8211; building an open-source, secure, standards based telephony system: [https://guardianproject.info/wiki/OSTN  
 ](https://guardianproject.info/wiki/OSTN)  
-**SQLCipher** &#8211; an extension to the SQLite mobile database that provides transparent 256-bit AES encryption of database files created by apps on mobile phones &#8211; <http://sqlcipher.net/sqlcipher-for-android/>
+**SQLCipher** &#8211; an extension to the SQLite mobile database that provides transparent 256-bit AES encryption of database files created by apps on mobile phones &#8211; <https://www.zetetic.net/sqlcipher/sqlcipher-for-android/>
 
 Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should attend&#8230;](/freebird/who)<!--:-->
 
@@ -84,7 +84,7 @@ Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should at
     </p>
     
     <p>
-      <strong>SQLCipher</strong> – uma extensão para o banco de dados móvel de SQLite que fornece criptografia transparente AES de 256 bits dos arquivos de banco de dados criado por apps em telefones celulares- <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="http://sqlcipher.net/sqlcipher-for-android/">http://sqlcipher.net/sqlcipher-for-android/</a></span></span></span>
+      <strong>SQLCipher</strong> – uma extensão para o banco de dados móvel de SQLite que fornece criptografia transparente AES de 256 bits dos arquivos de banco de dados criado por apps em telefones celulares- <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/">https://www.zetetic.net/sqlcipher/sqlcipher-for-android/</a></span></span></span>
     </p>
     
     <p lang="pt-BR">
@@ -156,7 +156,7 @@ Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should at
     </p>
     
     <p>
-      <strong>Open Source Telephony Network [Red de Telefonía de Código Abierto]</strong> – creación de un sistema de telefonía libre, seguro y basado en estándares: <a href="https://guardianproject.info/wiki/OSTN"><span style="color: #0000ff;"><span style="text-decoration: underline;">https://guardianproject.info/wiki/OSTN</span></span><br /> </a><br /> <strong>SQLCipher</strong> – una extensión de la base de datos móviles de SQLite que proporciona una encriptación AES de 256-bit de archivos de base de datos creados por las aplicaciones de teléfonos móviles &#8211; <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="http://sqlcipher.net/sqlcipher-for-android/">http://sqlcipher.net/sqlcipher-for-android/</a></span></span>
+      <strong>Open Source Telephony Network [Red de Telefonía de Código Abierto]</strong> – creación de un sistema de telefonía libre, seguro y basado en estándares: <a href="https://guardianproject.info/wiki/OSTN"><span style="color: #0000ff;"><span style="text-decoration: underline;">https://guardianproject.info/wiki/OSTN</span></span><br /> </a><br /> <strong>SQLCipher</strong> – una extensión de la base de datos móviles de SQLite que proporciona una encriptación AES de 256-bit de archivos de base de datos creados por las aplicaciones de teléfonos móviles &#8211; <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/">https://www.zetetic.net/sqlcipher/sqlcipher-for-android/</a></span></span>
     </p>
     
     <p>

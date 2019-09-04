@@ -23,9 +23,9 @@ menu:
 </div>
 <hr />
 
-In an environment where mobile data privacy is increasingly [in the headlines](http://www.reuters.com/article/2011/05/08/us-privacy-congress-idUSTRE7471SA20110508), this project will make it easier than ever for mobile developers to properly secure their local application data, and in turn better protect the privacy of their users. The data stored by Android apps protected by this type of encryption will be less vulnerable to access by malicious apps, protected in case of device loss or theft, and highly resistant to [mobile data forensics tools](http://www.cellebrite.com/) that are increasingly used to mass copy a mobile device during [routine traffic stops](http://www.thenewspaper.com/news/34/3458.asp).
+In an environment where mobile data privacy is increasingly [in the headlines](https://www.reuters.com/article/2011/05/08/us-privacy-congress-idUSTRE7471SA20110508), this project will make it easier than ever for mobile developers to properly secure their local application data, and in turn better protect the privacy of their users. The data stored by Android apps protected by this type of encryption will be less vulnerable to access by malicious apps, protected in case of device loss or theft, and highly resistant to [mobile data forensics tools](https://www.cellebrite.com/) that are increasingly used to mass copy a mobile device during [routine traffic stops](https://www.thenewspaper.com/news/34/3458.asp).
 
-SQLCipher is a [SQLite](http://sqlite.org/) extension that provides transparent 256-bit AES encryption of database files. To date, it has been open-sourced, sponsored and maintained by [Zetetic LLC](http://zetetic.net/). In the mobile space, SQLCipher has enjoyed widespread use in Apple’s [iOS](http://sqlcipher.net/documentation/ios.html), as well as [Nokia / QT](http://www.qtcentre.org/wiki/index.php?title=Building_QSQLITE_driver_with_AES-256_encryption_support) for quite some time. Given that Android [by default](http://developer.android.com/guide/topics/data/data-storage.html#db) provides integrated support for SQLite databases, our goal was to create an almost identical API for SQLCipher, so that developers of all skill level could use it, without a steep learning curve.
+SQLCipher is a [SQLite](https://sqlite.org/) extension that provides transparent 256-bit AES encryption of database files. To date, it has been open-sourced, sponsored and maintained by [Zetetic LLC](https://zetetic.net/). In the mobile space, SQLCipher has enjoyed widespread use in Apple’s [iOS](https://www.zetetic.net/sqlcipher/documentation/ios.html), as well as [Nokia / QT](https://www.qtcentre.org/wiki/index.php?title=Building_QSQLITE_driver_with_AES-256_encryption_support) for quite some time. Given that Android [by default](https://developer.android.com/guide/topics/data/data-storage.html#db) provides integrated support for SQLite databases, our goal was to create an almost identical API for SQLCipher, so that developers of all skill level could use it, without a steep learning curve.
 
 
 ## Learn More and Download
@@ -64,7 +64,7 @@ A typical SQLite database in unencrypted, and visually parseable even as encoded
 > sqlite> SELECT * FROM t1;  
 > Error: file is encrypted or is not a database
 
-(example courtesy of [SQLCipher](http://sqlcipher.net/design))
+(example courtesy of [SQLCipher](https://www.zetetic.net/sqlcipher/design))
 
 #### Details for Developers
 
@@ -93,8 +93,8 @@ Notepadbot is a sample application pulled from the standard Android samples code
 
 #### Final Notes
 
-It&#8217;s important to note that this project is not intended to be a distinct, long-term fork of SQLCipher. We&#8217;ve been working closely with the SQLCipher team at [Zetetic](http://zetetic.net/) and fully intent to closely maintain the project as SQLCipher evolves, re-integrating changes in upcoming releases such as [SQLCipher v2](https://github.com/sjlombardo/sqlcipher/tree/v2beta).
+It&#8217;s important to note that this project is not intended to be a distinct, long-term fork of SQLCipher. We&#8217;ve been working closely with the SQLCipher team at [Zetetic](https://zetetic.net/) and fully intent to closely maintain the project as SQLCipher evolves, re-integrating changes in upcoming releases such as [SQLCipher v2](https://github.com/sjlombardo/sqlcipher/tree/v2beta).
 
-The Android support libraries are licensed under [Apache 2.0](https://github.com/guardianproject/android-database-sqlcipher/blob/master/LICENSE), in line with the Android OS code on which they are based. The SQLCipher code itself is licensed under a [BSD-style license from Zetetic LLC.](https://github.com/guardianproject/android-database-sqlcipher/blob/master/SQLCIPHER_LICENSE) Finally, the original SQLite code itself is in the [public domain](http://www.sqlite.org/copyright.html).
+The Android support libraries are licensed under [Apache 2.0](https://github.com/guardianproject/android-database-sqlcipher/blob/master/LICENSE), in line with the Android OS code on which they are based. The SQLCipher code itself is licensed under a [BSD-style license from Zetetic LLC.](https://github.com/guardianproject/android-database-sqlcipher/blob/master/SQLCIPHER_LICENSE) Finally, the original SQLite code itself is in the [public domain](https://www.sqlite.org/copyright.html).
 
 <!--:-->

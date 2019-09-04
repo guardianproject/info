@@ -37,7 +37,9 @@ for root, dirs, files in os.walk('content'):
                 if not os.path.exists(lang_file):
                     with open(os.path.join(root, f)) as fp:
                         contents = fp.read()
-                    contents = re.sub(r'\naliases:.*?\n([^ ])', r'\n\1', contents, flags=re.DOTALL)
-                    contents = re.sub(r'\nmenu:.*?\n([^ ])', r'\n\1', contents, flags=re.DOTALL)
+                    # for some reason, index.*.md copies need the menu entries
+                    if f != 'index.md':
+                        contents = re.sub(r'\naliases:.*?\n([^ ])', r'\n\1', contents, flags=re.DOTALL)
+                        contents = re.sub(r'\nmenu:.*?\n([^ ])', r'\n\1', contents, flags=re.DOTALL)
                     with open(lang_file, 'w') as fp:
                         fp.write(contents)

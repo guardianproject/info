@@ -12,7 +12,7 @@ categories:
 ---
 _This was originally posted in October 2009._
 
-I’d like to make this post without much fanfare. Just looking to share information on the work I’ve been doing with the fantastically radical team over at the [Tor Project](http://torproject.org), as part of my work on the [Guardian Project](http://openideals.com/guardian). We have successfully ported the native C Tor app to Android and built an Android application bundle that installs, runs and provides the glue needed to make it useful to end users…. secure, anonymous access to the web via Tor on Android is now a reality. (_Update: Tor doesn’t magically encrypt all of your Internet activities, though. You should [understand what Tor does and does not do for you](https://www.torproject.org/download.html.en#Warning)._)
+I’d like to make this post without much fanfare. Just looking to share information on the work I’ve been doing with the fantastically radical team over at the [Tor Project](https://www.torproject.org), as part of my work on the [Guardian Project](http://openideals.com/guardian). We have successfully ported the native C Tor app to Android and built an Android application bundle that installs, runs and provides the glue needed to make it useful to end users…. secure, anonymous access to the web via Tor on Android is now a reality. (_Update: Tor doesn’t magically encrypt all of your Internet activities, though. You should [understand what Tor does and does not do for you](https://www.torproject.org/download.html.en#Warning)._)
 
 However, there is still much work to be done… read on!
 

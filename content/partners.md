@@ -65,11 +65,11 @@ In January 2011, the Guardian Project received a no strings attached donation fr
 </p>
 
 <p style="text-align: left;">
-  <a href="http://torproject.org"><img src="https://www.torproject.org/images/top-left.png" alt="" /></a>
+  <a href="https://www.torproject.org"><img src="https://www.torproject.org/images/top-left.png" alt="" /></a>
 </p>
 
 <p style="text-align: left;">
-  Guardian has collaborated with the <a href="http://torproject.org">Tor Project</a> to bring their software to Android.
+  Guardian has collaborated with the <a href="https://www.torproject.org">Tor Project</a> to bring their software to Android.
 </p>
 
 <p style="text-align: left;">

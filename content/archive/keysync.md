@@ -19,13 +19,13 @@ This is where KeySync comes in. KeySync reads and writes many different formats 
 ## How To Sync To ChatSecure
 
 To sync between ChatSecure and your desktop apps, First plug in your phone or device  
-via USB. Start KeySync and it should automatically detect your device. If KeySync cannot find your device, it will save the file for you to manually copy the **otr_keystore.ofcaes** file over to your device&#8217;s SD Card, where ChatSecure looks for it. Once the file is in place on your device, start ChatSecure. In ChatSecure, go to the **Accounts**, then select **Activate KeySync** from the menu. This will guide you to scan the QRCode that KeySync shows you in order to complete the sync.
+via USB. Start KeySync and it should automatically detect your device. If KeySync cannot find your device, it will save the file for you to manually copy the **otr_keystore.ofcaes** file over to your device's SD Card, where ChatSecure looks for it. Once the file is in place on your device, start ChatSecure. In ChatSecure, go to the **Accounts**, then select **Activate KeySync** from the menu. This will guide you to scan the QRCode that KeySync shows you in order to complete the sync.
 
 The `otr_keystore.ofcaes` file is encrypted to prevent your private information from leaking out. That QRCode is the password to your keystore, so do not share it with anyone. Also, the `otr_keystore.ofcaes` file is only intended for use in this sync procedure. Do not email it or send it anywhere over the internet!
 
 ## Warning!
 
-This is beta software, do not rely on it for strong identity verification. It is unlikely to mess up so bad as to produce compromised private keys, but anything is possible. Also, keep in mind that program is handling your private OTR keys, so make sure that you don&#8217;t copy, send or email the \`otr_keystore.ofcaes\` file somewhere nsafe. All that said, testing and feedback is greatly appreciated, so we can get it to the point where we can trust it.
+This is beta software, do not rely on it for strong identity verification. It is unlikely to mess up so bad as to produce compromised private keys, but anything is possible. Also, keep in mind that program is handling your private OTR keys, so make sure that you don't copy, send or email the \`otr_keystore.ofcaes\` file somewhere nsafe. All that said, testing and feedback is greatly appreciated, so we can get it to the point where we can trust it.
 
 ## Reporting Bugs
 
@@ -42,10 +42,10 @@ Please report any bugs or issues that you have with this app! We want to hear fr
 
   *![Windows](https://guardianproject.info/builds/.icons/platform_windows.gif) **Windows** executable 
       * Download and install OpenSSL: [Win32OpenSSL\_Light-1\_0_1f.exe](https://slproweb.com/download/Win32OpenSSL_Light-1_0_1f.exe)
-      * When prompted install into the &#8220;Windows system directory&#8221;
+      * When prompted install into the "Windows system directory"
       * Note: The prompt asking for a donation will go to the company that produces OpenSSL installers for Windows, not The Guardian Project.
       * If you get an error when trying to install OpenSSL, you probably need in stall the [Visual C++ 2008 Redistributables](https://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF) from Microsoft.
-      * Download KeySync &#8211; no installation required: [KeySync-0.2.exe](https://guardianproject.info/releases/KeySync-0.2.exe) 
+      * Download KeySync - no installation required: [KeySync-0.2.exe](https://guardianproject.info/releases/KeySync-0.2.exe) 
           * [detached gpg signature](https://guardianproject.info/releases/KeySync-0.2.exe.asc)
           * MD5: `1fb7a5ec050d03f59104a41494c559fd`
           * SHA256: `422fd0ddb6d85a6f509a1c9a868ce87437af7ac895ba8c4fa7f366d83114be07`
@@ -53,12 +53,12 @@ Please report any bugs or issues that you have with this app! We want to hear fr
           * [detached gpg signature](https://guardianproject.info/releases/KeySync-0.2.app.zip.sig)
           * MD5: `f6a1744a783d1cc5dc3070e1a16d79fd`
           * SHA256: `429dc303fb1d2673b953a2543b0e168f0410ce1cd14d4167f0dbf888fdf162d0`
-      *![Ubuntu](https://guardianproject.info/builds/.icons/platform_ubuntu_linux.gif) **Ubuntu, Linux Mint, etc.** Run this in the Terminal to add <a href="https://launchpad.net/~guardianproject/+archive/ppa/" title="Guardian Project PPA on Launchpad" target="_blank">our PPA</a> to your package sources. You only need to do this once, you&#8217;ll get updated versions automatically once this is complete (fingerprint: `F50E ADDD 2234 F563`): <pre style="font-size: small;">sudo add-apt-repository ppa:guardianproject/ppa
+      *![Ubuntu](https://guardianproject.info/builds/.icons/platform_ubuntu_linux.gif) **Ubuntu, Linux Mint, etc.** Run this in the Terminal to add <a href="https://launchpad.net/~guardianproject/+archive/ppa/" title="Guardian Project PPA on Launchpad" target="_blank">our PPA</a> to your package sources. You only need to do this once, you'll get updated versions automatically once this is complete (fingerprint: `F50E ADDD 2234 F563`): <pre style="font-size: small;">sudo add-apt-repository ppa:guardianproject/ppa
 sudo apt-get update
 sudo apt-get install keysync
 </pre>
     
-      *![Fedora](https://guardianproject.info/builds/.icons/platform_fedora_linux.gif) **Fedora 17, 18, 19**: Run this in your Terminal to add <a href="https://build.opensuse.org/project/show/security:guardianproject"  target="_blank">our repository</a> to your package sources. You only need to do this once, you&#8217;ll get updated versions automatically once this is complete (fingerprint: `AC38 BED1 E879 79EA FD54`): <pre style="font-size: small;">source /etc/os-release
+      *![Fedora](https://guardianproject.info/builds/.icons/platform_fedora_linux.gif) **Fedora 17, 18, 19**: Run this in your Terminal to add <a href="https://build.opensuse.org/project/show/security:guardianproject"  target="_blank">our repository</a> to your package sources. You only need to do this once, you'll get updated versions automatically once this is complete (fingerprint: `AC38 BED1 E879 79EA FD54`): <pre style="font-size: small;">source /etc/os-release
 sudo wget https://download.opensuse.org/repositories/security:guardianproject/Fedora_${VERSION_ID}/security:guardianproject.repo -O /etc/yum.repos.d/security:guardianproject.repo
 sudo yum install keysync
 </pre>

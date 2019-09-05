@@ -128,7 +128,7 @@ The practice of embedding secret messages into a piece of media so that no one, 
   <span style="font-weight: 400;">EASIER SHARING: It’s now easier to share PixelKnot images with the applications you and your friends commonly use.  Note that not all image sharing services can be used with PixelKnot because they modify your images before posting them to their platform.  PixelKnot suggests apps it knows will share properly, but you’re welcome to add your own.</span>
 </li>
 <li style="font-weight: 400;">
-  <span style="font-weight: 400;">SIMPLIFIED SENDING / RECEIVING: Want to send a message? Open the PixelKnot app directly, and PixelKnot will walk you through the process.  Receiving a shared stego image? Use your receiving app to share the image with PixelKnot &#8211; it’ll take care of the message extraction directly.</span>
+  <span style="font-weight: 400;">SIMPLIFIED SENDING / RECEIVING: Want to send a message? Open the PixelKnot app directly, and PixelKnot will walk you through the process.  Receiving a shared stego image? Use your receiving app to share the image with PixelKnot - it’ll take care of the message extraction directly.</span>
 </li>
 <li style="font-weight: 400;">
   <span style="font-weight: 400;">NEW IMAGE CHOOSER:  You can use the camera to take your photo or select from picture you’ve already taken. The new chooser supports all the common image directories and allows you to select a different galleries if needed (such a “private” gallery created by a unique camera application).</span>

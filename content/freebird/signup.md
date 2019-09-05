@@ -16,7 +16,7 @@ Please visit the full [Guardian Project website](https://guardianproject.info) t
 
 **Preencha a informações abaixo e responderemos em breve com mais informações.**
 
-[contact-form-7 id=&#8221;1889&#8243; title=&#8221;Freebird: RioNYC&#8221;]
+[contact-form-7 id="1889" title="Freebird: RioNYC"]
 
 <!--:-->
 
@@ -24,6 +24,6 @@ Please visit the full [Guardian Project website](https://guardianproject.info) t
 
 **Please fill out the information below, and we will respond shortly with more information.**
 
-[contact-form-7 id=&#8221;1889&#8243; title=&#8221;Freebird: Rio<->NYC&#8221;]
+[contact-form-7 id="1889" title="Freebird: Rio<->NYC"]
 
 <!--:-->

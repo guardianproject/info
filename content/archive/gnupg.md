@@ -22,7 +22,7 @@ We are actively working on an API so that developers can easily embed this into 
 
 ### Command Line Usage
 
-If you want to use the command line, the easiest way to get started with GPG is to install Android Terminal Emulator. GPG will automatically configure Android Terminal Emulator as long as you have the &#8220;_Allow PATH extensions_&#8221; settings enabled. Get the <a href="https://play.google.com/store/apps/details?id=jackpal.androidterm" target="_blank">Android Terminal Emulator</a>.
+If you want to use the command line, the easiest way to get started with GPG is to install Android Terminal Emulator. GPG will automatically configure Android Terminal Emulator as long as you have the "_Allow PATH extensions_" settings enabled. Get the <a href="https://play.google.com/store/apps/details?id=jackpal.androidterm" target="_blank">Android Terminal Emulator</a>.
 
 ### Source
 

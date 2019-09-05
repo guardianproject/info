@@ -8,7 +8,7 @@ guid: https://guardianproject.info/?page_id=1979
 ---
 <!--:en-->&nbsp;
 
-Please download, copy, share, rewteet, remix, mashup and otherwise use the graphics below, with a link to &#8220;freebirdcamp.org&#8221; to help us spread the word about our event.
+Please download, copy, share, rewteet, remix, mashup and otherwise use the graphics below, with a link to "freebirdcamp.org" to help us spread the word about our event.
 
 **Hashtag: #FreebirdRioNYC**
 

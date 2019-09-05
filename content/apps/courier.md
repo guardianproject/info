@@ -12,9 +12,9 @@ menu:
 ---
 [<img class="alignnone wp-image-12379 size-full" src="https://guardianproject.info/wp-content/uploads/2014/05/feature.jpg" alt="feature" width="1024" height="500" srcset="https://guardianproject.info/wp-content/uploads/2014/05/feature.jpg 1024w, https://guardianproject.info/wp-content/uploads/2014/05/feature-300x146.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/05/feature-100x48.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/05/feature-150x73.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/05/feature-200x97.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/05/feature-450x219.jpg 450w, https://guardianproject.info/wp-content/uploads/2014/05/feature-600x292.jpg 600w, https://guardianproject.info/wp-content/uploads/2014/05/feature-900x439.jpg 900w" sizes="(max-width: 1024px) 100vw, 1024px" />](https://guardianproject.info/wp-content/uploads/2014/05/feature.jpg)
 
-★★★ BETA: THIS IS A BETA RELEASE&#8230;. PLEASE [REPORT BUGS HERE](https://dev.guardianproject.info/projects/secure-reader/issues) or [GIVE US SOME FEEDBACK](https://okthanks.typeform.com/to/tXYKpF)★★★
+★★★ BETA: THIS IS A BETA RELEASE.... PLEASE [REPORT BUGS HERE](https://dev.guardianproject.info/projects/secure-reader/issues) or [GIVE US SOME FEEDBACK](https://okthanks.typeform.com/to/tXYKpF)★★★
 
-**Courier is a mobile news reader with enhanced security features, offline reading and device-to-device sharing capability.  We&#8217;ve designed it to be fast and light on slow networks and secured from device and network monitoring.  
+**Courier is a mobile news reader with enhanced security features, offline reading and device-to-device sharing capability.  We've designed it to be fast and light on slow networks and secured from device and network monitoring.  
 ** 
 
 <div style="padding: 3px; background: #eeeeee;">
@@ -24,9 +24,9 @@ menu:
 FEATURES:
 
 ★ SECURE: Courier works with [Orbot, Tor for Android](/apps/orbot) to defend against network surveillance and protect your privacy  
-★ ENCRYPTED: Courier encrypts your stored news &#8211; and personal information &#8211; to protect your privacy  
-★ PANIC: Courier&#8217;s configurable &#8220;panic&#8221; action will remove your news, your personal data and optionally the app itself with one swipe  
-★ SAFE: Courier securely caches your password with a configurable timeout. You can configure for repeated password entry failures to trigger data (and app!) deletion.  And you can set a special &#8220;kill password&#8221;.
+★ ENCRYPTED: Courier encrypts your stored news - and personal information - to protect your privacy  
+★ PANIC: Courier's configurable "panic" action will remove your news, your personal data and optionally the app itself with one swipe  
+★ SAFE: Courier securely caches your password with a configurable timeout. You can configure for repeated password entry failures to trigger data (and app!) deletion.  And you can set a special "kill password".
 
 [<img class="alignleft size-medium wp-image-12422" src="https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-177x300.png" alt="05_p_tor" width="177" height="300" srcset="https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-177x300.png 177w, https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-605x1024.png 605w, https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-100x169.png 100w, https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-150x253.png 150w, https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-200x338.png 200w, https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-300x507.png 300w, https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-450x761.png 450w, https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1-600x1014.png 600w, https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1.png 845w" sizes="(max-width: 177px) 100vw, 177px" />](https://guardianproject.info/wp-content/uploads/2014/05/05_p_tor1.png)
 
@@ -54,7 +54,7 @@ FEATURES:
 &nbsp;
 
 ★ FAVORITES: mark articles as easily-retrieved favorites  
-★ PRE-CONFIGURED: Courier ships with desirable international news feeds, and it&#8217;s easy to add your own  
+★ PRE-CONFIGURED: Courier ships with desirable international news feeds, and it's easy to add your own  
 ★ LANGUAGES: English, Chinese (中國的), Tibetan (བོད་ཡིག), Ukrainian (Український), Russian (русский)  
 ★ AD-FREE: Courier is an ad-free, open-source application
 

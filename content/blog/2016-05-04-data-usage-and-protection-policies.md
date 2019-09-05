@@ -8,9 +8,9 @@ aliases:
   - data-usage-and-protection-policies
   - privacy
 ---
-_We are proud to be a signatory and supporter of the [That&#8217;s Not Privacy](https://www.thatsnotprivacy.com/) campaign._
+_We are proud to be a signatory and supporter of the [That's Not Privacy](https://www.thatsnotprivacy.com/) campaign._
 
-At a high level, it is easy say that &#8220;we know nothing&#8221;. We do not log data or include analytics in our websites or applications. When we do operate servers to support our applications, they are configured to store as minimal data as possible, usually just a username and password, if that is required. We also only recommend third party services, such as [XMPP services](https://www.otr.im/chat.html), [VoIP services](https://ostel.co), or [Proxy and VPN providers](https://torproject.org), who abide by these same policies.
+At a high level, it is easy say that "we know nothing". We do not log data or include analytics in our websites or applications. When we do operate servers to support our applications, they are configured to store as minimal data as possible, usually just a username and password, if that is required. We also only recommend third party services, such as [XMPP services](https://www.otr.im/chat.html), [VoIP services](https://ostel.co), or [Proxy and VPN providers](https://torproject.org), who abide by these same policies.
 
 In some cases, when we must distribute our applications through services like Google Play, our hands our tied and you are at the mercy of their [terms and policies](https://play.google.com/about/play-terms.html). In some cases, convenience trumps privacy, but that is a decision that is up to you. You can always get our apps from our no logging, non-tracking, free and open-source app store, [F-Droid](/fdroid).
 
@@ -18,7 +18,7 @@ Otherwise, you can read on below for our general purpose policy around data usag
 
 * * *
 
-This  policy discloses the practices for Guardian Project&#8217;s website and all apps and projects we release. It will notify you of the following:
+This  policy discloses the practices for Guardian Project's website and all apps and projects we release. It will notify you of the following:
 
   1. <div>
       What personally identifiable information is collected from you through the web site, our apps and services, and how it is used and with whom it may be shared.
@@ -57,7 +57,7 @@ You may opt out of any future contacts from us at any time. You can do the follo
 **Security**  
 We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.
 
-Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon at the bottom of your web browser, or looking for &#8220;https&#8221; at the beginning of the address of the web page.
+Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon at the bottom of your web browser, or looking for "https" at the beginning of the address of the web page.
 
 While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.
 

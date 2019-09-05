@@ -24,7 +24,7 @@ aliases:
       <li id="event-when">
         <div>
           <div id="event-when-display">
-            Tuesday, July 9, 2013 &#8211; 12:30 PM to <time id="event-end-time">1:30 PM </time>
+            Tuesday, July 9, 2013 - 12:30 PM to <time id="event-end-time">1:30 PM </time>
           </div>
         </div>
       </li>
@@ -47,7 +47,7 @@ aliases:
   
   <div id="event-description-wrap" itemprop="description">
     <p>
-      Please join us for lunch and crypto-talk with Hans-Christoph Steiner of the Guardian Project. Hans will talk about the how and why of building secure mobile applications that keep the user&#8217;s data encrypted and hidden from prying eyes. We&#8217;ll have a few short presentations on tools like SQLCipher, IOCipher, and NetCipher and how they can be used in modern applications. We&#8217;ll answer questions about general strategies and specific toolkits that we&#8217;ve created.
+      Please join us for lunch and crypto-talk with Hans-Christoph Steiner of the Guardian Project. Hans will talk about the how and why of building secure mobile applications that keep the user's data encrypted and hidden from prying eyes. We'll have a few short presentations on tools like SQLCipher, IOCipher, and NetCipher and how they can be used in modern applications. We'll answer questions about general strategies and specific toolkits that we've created.
     </p>
     
     <p>

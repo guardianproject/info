@@ -13,13 +13,13 @@ menu:
 
 Obscuracam is a photo and video app for Android that keeps certain information private.
 
-Ever capture someone in a photo or video, then realize they may not want to be in it? Not comfortable posting a friend, family member or child&#8217;s face on the internet? Worried about the geolocation data in the picture giving away private hideaway? Tired of Facebook, Google and other sites &#8220;auto detecting&#8221; faces in your photos? Then this is for you, giving you the power to better protect the identity of those captures in your photos, before you post them online.
+Ever capture someone in a photo or video, then realize they may not want to be in it? Not comfortable posting a friend, family member or child's face on the internet? Worried about the geolocation data in the picture giving away private hideaway? Tired of Facebook, Google and other sites "auto detecting" faces in your photos? Then this is for you, giving you the power to better protect the identity of those captures in your photos, before you post them online.
 
 Take a picture or load a photo or video from the Gallery, and ObscuraCam will automatically detect faces that you can pixelate, redact (blackout) or protect with funny nose and glasses. You can also invert pixelate, so that only the person you select is visible, and no one in the background can be recognized.
 
-This app will also remove all identifying data stored in photos including GPS location data and phone make & model. You can save the protected photo back to the Gallery, or share it directly to Facebook, Twitter or any other &#8220;Share&#8221; enabled app.
+This app will also remove all identifying data stored in photos including GPS location data and phone make & model. You can save the protected photo back to the Gallery, or share it directly to Facebook, Twitter or any other "Share" enabled app.
 
-We&#8217;re currently building a version of ObscuraCam for advanced users called <a title="informacam app" href="https://guardianproject.info/apps/informacam/" target="_blank">InformaCam</a>. Users will have the option to secure images with PGP, inversely, to gather and broadcast additional details in metadata.
+We're currently building a version of ObscuraCam for advanced users called <a title="informacam app" href="https://guardianproject.info/apps/informacam/" target="_blank">InformaCam</a>. Users will have the option to secure images with PGP, inversely, to gather and broadcast additional details in metadata.
 
 #### How To Get The Latest Release
 

@@ -8,7 +8,7 @@ guid: https://guardianproject.info/?page_id=1917
 ---
 <!--:en-->
 
-## Agenda 9am to 5pm &#8211; May 30, 2012
+## Agenda 9am to 5pm - May 30, 2012
 
 The workshop will have time for all participants to join together, as well as breakout tracks for users and developers. This is a [BARCAMP](https://en.wikipedia.org/wiki/BarCamp) type event, so come prepared to interact, share and participate.
 
@@ -27,11 +27,11 @@ The Guardian Project team, along with their partner Zetetic, Inc. (creators of S
 
 **ObscuraCam and InformaCam** secure smart camera projects, with video and photo encryption and enhanced metadata capture: <https://guardianproject.info/apps/obscuracam/>  
 **  
-Open Source Telephony Network** &#8211; building an open-source, secure, standards based telephony system: [https://guardianproject.info/wiki/OSTN  
+Open Source Telephony Network** - building an open-source, secure, standards based telephony system: [https://guardianproject.info/wiki/OSTN  
 ](https://guardianproject.info/wiki/OSTN)  
-**SQLCipher** &#8211; an extension to the SQLite mobile database that provides transparent 256-bit AES encryption of database files created by apps on mobile phones &#8211; <https://www.zetetic.net/sqlcipher/sqlcipher-for-android/>
+**SQLCipher** - an extension to the SQLite mobile database that provides transparent 256-bit AES encryption of database files created by apps on mobile phones - <https://www.zetetic.net/sqlcipher/sqlcipher-for-android/>
 
-Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should attend&#8230;](/freebird/who)<!--:-->
+Still not sure if Freebird is for you? [See "Who" we think should attend...](/freebird/who)<!--:-->
 
 <!--:pt-->
 
@@ -88,7 +88,7 @@ Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should at
     </p>
     
     <p lang="pt-BR">
-      <span style="font-family: Times, serif;">Ainda não tem certeza se o Freebird é para você? <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://guardianproject.info/freebird/who">Veja &#8220;Quem” que nós pensamos que deve comparecer…</a></span></span></span>
+      <span style="font-family: Times, serif;">Ainda não tem certeza se o Freebird é para você? <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://guardianproject.info/freebird/who">Veja "Quem” que nós pensamos que deve comparecer…</a></span></span></span>
     </p>
     
     <p>
@@ -102,7 +102,7 @@ Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should at
     </h2>
     
     <h2 lang="es-ES">
-      Programa: de 9 a. m. a 5 p. m. &#8211; 30 de mayo de 2012
+      Programa: de 9 a. m. a 5 p. m. - 30 de mayo de 2012
     </h2>
     
     <p lang="es-ES">
@@ -156,11 +156,11 @@ Still not sure if Freebird is for you? [See &#8220;Who&#8221; we think should at
     </p>
     
     <p>
-      <strong>Open Source Telephony Network [Red de Telefonía de Código Abierto]</strong> – creación de un sistema de telefonía libre, seguro y basado en estándares: <a href="https://guardianproject.info/wiki/OSTN"><span style="color: #0000ff;"><span style="text-decoration: underline;">https://guardianproject.info/wiki/OSTN</span></span><br /> </a><br /> <strong>SQLCipher</strong> – una extensión de la base de datos móviles de SQLite que proporciona una encriptación AES de 256-bit de archivos de base de datos creados por las aplicaciones de teléfonos móviles &#8211; <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/">https://www.zetetic.net/sqlcipher/sqlcipher-for-android/</a></span></span>
+      <strong>Open Source Telephony Network [Red de Telefonía de Código Abierto]</strong> – creación de un sistema de telefonía libre, seguro y basado en estándares: <a href="https://guardianproject.info/wiki/OSTN"><span style="color: #0000ff;"><span style="text-decoration: underline;">https://guardianproject.info/wiki/OSTN</span></span><br /> </a><br /> <strong>SQLCipher</strong> – una extensión de la base de datos móviles de SQLite que proporciona una encriptación AES de 256-bit de archivos de base de datos creados por las aplicaciones de teléfonos móviles - <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/">https://www.zetetic.net/sqlcipher/sqlcipher-for-android/</a></span></span>
     </p>
     
     <p>
-      ¿Aún no está seguro si Freebird es adecuado para usted? <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://guardianproject.info/freebird/who">Consulte la sección &#8220;Quién debería asistir&#8221; para saber quienes creemos que deberían asistir</a></span></span>
+      ¿Aún no está seguro si Freebird es adecuado para usted? <span style="color: #0000ff;"><span style="text-decoration: underline;"><a href="https://guardianproject.info/freebird/who">Consulte la sección "Quién debería asistir" para saber quienes creemos que deberían asistir</a></span></span>
     </p>
     
     <p>

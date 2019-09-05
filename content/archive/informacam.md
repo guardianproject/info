@@ -11,7 +11,7 @@ menu:
 aliases:
   - apps/informacam
 ---
-We&#8217;ve launched [CameraV](https://guardianproject.info/apps/camerav), the first public InformaCam App! Click the image below to learn more and get the app&#8230;
+We've launched [CameraV](https://guardianproject.info/apps/camerav), the first public InformaCam App! Click the image below to learn more and get the app...
 
 [<img class="alignnone size-large wp-image-13035" src="https://guardianproject.info/wp-content/uploads/2015/07/feature-1024x500.png" alt="feature" width="780" height="381" srcset="https://guardianproject.info/wp-content/uploads/2015/07/feature.png 1024w, https://guardianproject.info/wp-content/uploads/2015/07/feature-300x146.png 300w" sizes="(max-width: 780px) 100vw, 780px" />](https://guardianproject.info/apps/camerav)
 

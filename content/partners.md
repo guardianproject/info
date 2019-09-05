@@ -61,7 +61,7 @@ In January 2011, the Guardian Project received a no strings attached donation fr
 </p>
 
 <p style="text-align: left;">
-  The Guardian Project is directly supported and financially sponsored by the <a href="https://tibetaction.net">Tibet Action Institute</a>. In addition, this project wouldn&#8217;t be anywhere without the early and  enthusiastic support of <a href="https://studentsforafreetibet.org">Students for a Free Tibet</a> and the entire Tibetan community. Bhod Rangzen!
+  The Guardian Project is directly supported and financially sponsored by the <a href="https://tibetaction.net">Tibet Action Institute</a>. In addition, this project wouldn't be anywhere without the early and  enthusiastic support of <a href="https://studentsforafreetibet.org">Students for a Free Tibet</a> and the entire Tibetan community. Bhod Rangzen!
 </p>
 
 <p style="text-align: left;">
@@ -97,7 +97,7 @@ We have worked with [MobileActive.org](https://mobileactive.org) on their [Sa
 </p>
 
 <p style="text-align: left;">
-  The <a href="https://humanrights.berkeley.edu/">Human Rights Center at UC Berkeley</a> uses innovative technologies and scientific methods to investigate war crimes and human rights abuses. Guardian received first prize in their 2009 &#8220;Soul of the New Machine&#8221; Grant Competition.
+  The <a href="https://humanrights.berkeley.edu/">Human Rights Center at UC Berkeley</a> uses innovative technologies and scientific methods to investigate war crimes and human rights abuses. Guardian received first prize in their 2009 "Soul of the New Machine" Grant Competition.
 </p>
 
 <!--:-->

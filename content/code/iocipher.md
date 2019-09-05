@@ -15,7 +15,7 @@ menu:
 
 IOCipher provides a virtual encrypted disk for Android apps without requiring the device to be rooted. It uses a clone of the standard `java.io` API for working with files, so developers already know how to use it. Only password handling, and opening the virtual disk are what stand between the developer and working encrypted file storage. It is based on and <a href="https://www.zetetic.net/sqlcipher/" target="_blank">SQLCipher</a>, and designed to work with <a href="/code/cacheword" target="_blank">CacheWord</a> for handling the keys and passwords.
 
-IOCipher is ultimately based on transactions in SQLite, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite&#8217;s transactions prevent the whole file system from being corrupted. This is important in Android since an `Activity` or `Service` can be killed at any moment without warning.
+IOCipher is ultimately based on transactions in SQLite, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite's transactions prevent the whole file system from being corrupted. This is important in Android since an `Activity` or `Service` can be killed at any moment without warning.
 
 IOCipher is a cousin to <a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/" target="_blank">SQLCipher-for-Android</a> since it is also based on SQLCipher and uses the same approach of repurposing an API that developers already know well. It is built on top of <a title="libsqlfs git repo" href="https://github.com/guardianproject/libsqlfs" target="_blank">libsqlfs</a>, a filesystem implemented in SQL that exposes a FUSE API.
 
@@ -30,7 +30,7 @@ IOCipher is a cousin to <a href="https://www.zetetic.net/sqlcipher/sqlcipher-for
 
 ## Adding IOCipher to your App
 
-Here are the things you need to do in your code to make it use IOCipher encrypted storage for all of your app&#8217;s file storage:
+Here are the things you need to do in your code to make it use IOCipher encrypted storage for all of your app's file storage:
 
   1. manage the password using Cacheword or whatever works for you
   2. get the VFS singleton using `VirtualFileSystem.get()`

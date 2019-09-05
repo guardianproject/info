@@ -15,9 +15,9 @@ languages = config['languages'].keys()
 localized_pat = re.compile(r'.+\.([a-z][a-z](|-[A-Z][A-Z]|-Han[st]))$')
 
 for root, dirs, files in os.walk('content'):
-    if root.endswith('content/apps'):
+    if root.startswith('content/apps'):
         continue  # skip since it is auto-generated
-    if root.endswith('content/blog') or root.endswith('content/apps'):
+    if root.startswith('content/blog'):
         continue  # skip since it is not translated
     for f in files:
         fileroot, extension = os.path.splitext(f)

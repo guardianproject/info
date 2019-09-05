@@ -21,18 +21,6 @@ def get_localized_icon(app):
     return 'https://guardianproject.info/fdroid/repo/icons-480/' + app['icon']
 
 
-def get_languages(app):
-    ret = set()
-    if 'localized' in app:
-        languages = app['localized'].keys()
-        for language in languages:
-            if language in ('en', 'en-US', 'es-ES', 'es-US', 'fr-CA', 'fr-FR', 'no'):
-                continue
-            ret.add(language)
-    site_languages.update(ret)
-    return sorted(ret)
-
-
 def write_app_page(app, languages, lang=None):
     if lang:
         filename = 'content/apps/%s.%s.md' % (app['packageName'], lang)
@@ -42,7 +30,8 @@ def write_app_page(app, languages, lang=None):
         fp.write('---\n')
         fp.write('title: ' + app['name'] + ' ' + '\n')
         if languages:
-            fp.write('languages: ' + yaml.safe_dump(languages, width=sys.maxsize, default_flow_style=True))
+            fp.write('languages: '
+                     + yaml.safe_dump(sorted(languages), width=sys.maxsize, default_flow_style=True))
         subtitle = app.get('summary')
         lastUpdated = app.get('lastUpdated')
         if lastUpdated:
@@ -97,9 +86,28 @@ fingerprint = 'B7C2EEFD8DAC7806AF67DFCD92EB18126BC08312A7F2D6F3862E46013C7A6135'
 data, etag = index.download_repo_index(repo_url + '?fingerprint=' + fingerprint)
 
 appsdict = dict()
-for app in data['apps']:
+apps = list(data['apps'])
+for app in apps:
+    if 'localized' in app:
+        languages = set()
+        for language in list(app['localized'].keys()):
+            if language in ('en', 'en-US', 'no'):
+                continue
+            if len(language) > 3 and language != 'pt-BR' and not language.startswith('zh') :
+                if '-' in language:
+                    l, _ = language.split('-')
+                elif '_' in language:
+                    l, _ = language.split('_')
+                else:
+                    continue
+                if l in languages:
+                    continue
+                app['localized'] = app['localized'].copy()
+                app['localized'][l] = app['localized'][language]
+                language = l
+            languages.add(language)
+    site_languages.update(languages)
     appsdict[app['packageName']] = app
-    languages = get_languages(app)
     write_app_page(app, languages)
     for language in languages:
         write_app_page(app, languages, language)
@@ -127,5 +135,5 @@ with open('data/archive.json', 'w') as fp:
 
 print('languages:\n  en: {weight: 1}')
 for lang in sorted(site_languages):
-    if not lang.startswith('en'):
+    if not lang.startswith('en') and lang != 'pt-PT':
         print('  %s: {weight: 2}' % lang)

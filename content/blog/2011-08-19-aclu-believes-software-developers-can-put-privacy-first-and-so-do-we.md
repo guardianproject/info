@@ -25,4 +25,4 @@ A [bit more on our big win](http://www.aclu-wa.org/blog/software-developers-can-
 > 
 > We presented the top prize to **Harlo Holmes of the Guardian Project for Gibberbot**, a mobile chat application for Android that keeps your conversation and your identity off-the-record.
 
-<img class="alignnone" src="http://www.aclu-wa.org/sites/default/files/imagecache/main-image-275/images/d4plogo.JPG" alt="" width="275" height="246" /><img class="alignnone" src="http://www.aclu-wa.org/sites/default/files/u7/Harlo-Roland_0.jpg" alt="" width="288" height="250" />
+<img class="alignnone" src="https://www.aclu-wa.org/sites/default/files/imagecache/main-image-275/images/d4plogo.JPG" alt="" width="275" height="246" /><img class="alignnone" src="https://www.aclu-wa.org/sites/default/files/u7/Harlo-Roland_0.jpg" alt="" width="288" height="250" />

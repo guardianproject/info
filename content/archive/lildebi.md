@@ -19,7 +19,7 @@ Have an Android phone and want an easy Debian chroot running that you can trust?
 
 Then it has a simple chroot manager that `fsck`s your disk, mounts and unmounts things, and starts/stops sshd if you have it installed. You can also then use ‘apt-get’ to install any package that is released for ARM processors. This includes things like a complete real shell, Tor, TraceRouteTCP, iwconfig/ipconfig, and other security and crypto tools.
 
-The aim of Lil&#8217; Debi is to provide a transparent and tightly integrated Debian install on your Android device. It mounts all of your Android partitions in Debian space, so you see a fusion of both systems. Its even possible to have Lil&#8217; Debi launch the normal Debian `init` start-up scripts when it starts, so that all you need to do is `apt-get install` and any servers you install will just work.
+The aim of Lil' Debi is to provide a transparent and tightly integrated Debian install on your Android device. It mounts all of your Android partitions in Debian space, so you see a fusion of both systems. Its even possible to have Lil' Debi launch the normal Debian `init` start-up scripts when it starts, so that all you need to do is `apt-get install` and any servers you install will just work.
 
 The aim is to make it work with as few modifications to the Android system as possible. Currently, it only adds a `/bin` symlink, and a `/debian` mount directory. It does not touch `/system` at all.
 

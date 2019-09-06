@@ -109,7 +109,7 @@ You’ve probably guessed by now that the reason for this posting is to show you
       </p>
       
       <p style="padding-left: 30px; text-align: center;">
-        <img class="aligncenter" src="http://chart.apis.google.com/chart?chs=150x150&cht=qr&chl=http://k9mail.googlecode.com/files/k9-apg-2900-beta.apk&chld=L|1&choe=UTF-8" alt="" width="125" height="125" />
+        <img class="aligncenter" src="https://chart.apis.google.com/chart?chs=150x150&cht=qr&chl=http://k9mail.googlecode.com/files/k9-apg-2900-beta.apk&chld=L|1&choe=UTF-8" alt="" width="125" height="125" />
       </p>
       
       <p style="padding-left: 30px;">

@@ -32,13 +32,13 @@ Do you use mobile phones for protests, activism or human rights, but are worrie
 
 _**Then Freebird is for you**_
 
-## THE GROWING LIST OF PARTICIPANTS INCLUDE&#8230;
+## THE GROWING LIST OF PARTICIPANTS INCLUDE...
 
 [<img title="project-zetetic-logo" src="https://guardianproject.info/wp-content/uploads/2012/04/project-zetetic-logo-300x136.png" alt="" width="210" height="95" />](http://zetetic.net)[<img title="torproject" src="https://guardianproject.info/wp-content/uploads/2012/04/torproject.png" alt="" width="150" height="118" />](https://torproject.org)
 
 [<img title="witness-logo" src="https://guardianproject.info/wp-content/uploads/2010/02/witness-logo.gif" alt="" width="172" height="87" />](https://guardianproject.info/wp-content/uploads/2010/02/witness-logo.gif)
 
-_&#8230; and more coming soon!_<!--:-->
+_... and more coming soon!_<!--:-->
 
 <!--:pt-->
 
@@ -86,7 +86,7 @@ _**O Freebird é para você!**_
   </p>
   
   <p>
-    <em>&#8230; and more coming soon!</em>
+    <em>... and more coming soon!</em>
   </p>
   
   <p>
@@ -98,7 +98,7 @@ _**O Freebird é para você!**_
   </p>
   
   <p>
-    <span style="font-family: Times;">¿Alguna vez &#8220;rooteó&#8221;, desbloqueó o &#8220;hackeó&#8221; su teléfono<br /> para mejorarlo de alguna manera?<br /> <em><strong>Entonces Freebird es para usted.</strong></em></span>
+    <span style="font-family: Times;">¿Alguna vez "rooteó", desbloqueó o "hackeó" su teléfono<br /> para mejorarlo de alguna manera?<br /> <em><strong>Entonces Freebird es para usted.</strong></em></span>
   </p>
   
   <p>
@@ -126,5 +126,5 @@ _**O Freebird é para você!**_
   </p>
   
   <p>
-    <em>&#8230; and more coming soon!</em><!--:-->
+    <em>... and more coming soon!</em><!--:-->
   </p>

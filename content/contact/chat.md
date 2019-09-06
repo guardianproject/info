@@ -12,7 +12,7 @@ menu:
     We welcome all questions, from the most beginner to advanced topics
   </li>
   <li>
-    Just ask your question, you don&#8217;t need to ask permission first
+    Just ask your question, you don't need to ask permission first
   </li>
   <li>
     Be patient, it might take some time for someone to see and answer your question.

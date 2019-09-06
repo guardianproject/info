@@ -28,6 +28,12 @@ pages:
     when: always
   script:
     - *setup
+    - echo "fail if these documents include http:// links"
+    - sed -i 's,http://,https://,g' content/*.md content/code/*.md content/apps/*.md
+    - git diff --exit-code
+    - echo "fail if images use http:// links"
+    - find content -type f |xargs sed -Ei 's,(<img .*?src=")http://,\1https://,g'
+    - git diff --exit-code
     # set up GitLab Pages URL (e.g. "https://guardianproject.gitlab.io/info")
     - sed -i "s,^baseURL\x3a.*,baseURL\x3a 'https://${CI_PROJECT_NAMESPACE}.gitlab.io/$CI_PROJECT_NAME'," config.yaml
     - hugo env

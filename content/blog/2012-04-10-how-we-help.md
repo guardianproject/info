@@ -10,7 +10,7 @@ aliases:
 
 While we think that a secure, privacy-enhanced mobile phone is a good thing for just about anybody going about their daily lives, we like to also consider the extreme cases, where this technology might change the course of someones life.  
 
-The Economist covered our work with WITNESS on [Secure Smart Cameras](https://www.witness.org/cameras-everywhere/witness-labs), and the [&#8220;Future of Protest Video&#8221;](https://www.youtube.com/watch?v=lk2dTeDSHB8&feature=player_embedded).
+The Economist covered our work with WITNESS on [Secure Smart Cameras](https://www.witness.org/cameras-everywhere/witness-labs), and the ["Future of Protest Video"](https://www.youtube.com/watch?v=lk2dTeDSHB8&feature=player_embedded).
 
 
 
@@ -19,7 +19,7 @@ Below are a few ideas of how Guardian phones might be used in the real world.
 ### The New Mobile Journalist
 
 > <div id="_mcePaste">
->   By convincing them of its ability to safeguard information on contacts, story notes and digital media, Guardian will become the new &#8220;reporter&#8217;s notepad&#8221; for major news organizations like the New York Times, BBC, CNN and Al Jazeera. In addition the (soon to have) 12MP still camera and HD video / audio recording capabilities of new Android hardware meet the quality standards for broadcast, print and online production. In addition, emerging online citizen journalists organizations can afford to promote the use of and distribute Guardian phones to their contributors.
+>   By convincing them of its ability to safeguard information on contacts, story notes and digital media, Guardian will become the new "reporter's notepad" for major news organizations like the New York Times, BBC, CNN and Al Jazeera. In addition the (soon to have) 12MP still camera and HD video / audio recording capabilities of new Android hardware meet the quality standards for broadcast, print and online production. In addition, emerging online citizen journalists organizations can afford to promote the use of and distribute Guardian phones to their contributors.
 > </div>
 
 ### Routing around Censorship

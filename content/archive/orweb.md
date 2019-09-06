@@ -22,9 +22,9 @@ _**There are now three new options for you to browser easily through Tor with Or
 
 1) Use Orfox, the NEW browser for Orbot based on Tor Browser and Firefox, that is currently in stable BETA: <https://guardianproject.info/apps/orfox>
 
-2) Use Orbot&#8217;s VPN mode feature to proxy any app through Tor. WARNING: This does not make you anonymous, but does help you get through firewalls, filters and other network troubles that may be blocking access to a website or app. You can use Chrome browser with this, but your identity won&#8217;t be protected, ONLY your network traffic.
+2) Use Orbot's VPN mode feature to proxy any app through Tor. WARNING: This does not make you anonymous, but does help you get through firewalls, filters and other network troubles that may be blocking access to a website or app. You can use Chrome browser with this, but your identity won't be protected, ONLY your network traffic.
 
-3) Use Lightning Browser, a &#8220;light&#8221; open-source browser that supports Tor proxying with Orbot, but not all of the privacy features and security hardening of Orfox. Good for phones with less memory / storage: <https://github.com/anthonycr/Lightning-Browser>
+3) Use Lightning Browser, a "light" open-source browser that supports Tor proxying with Orbot, but not all of the privacy features and security hardening of Orfox. Good for phones with less memory / storage: <https://github.com/anthonycr/Lightning-Browser>
 
 Learn more about Orfox at <https://guardianproject.info/apps/orfox>
 
@@ -72,4 +72,4 @@ You can also help us translate this howto video: [http://www.amara.org/en/videos
 
 # Orweb for iOS?
 
-This doesn&#8217;t exist yet, but there is a web browser that uses Tor out for iPhones and iPads called <a title="onion browser" href="https://onionbrowser.com" target="_blank">Onion Browser</a>. While not an official release from <a title="Tor Project" href="https://www.torproject.org/" target="_blank">The Tor Project</a>, it is an <a title="onion browser github" href="https://github.com/mtigas/iOS-OnionBrowser" target="_blank">open source effort</a>. It&#8217;s available in the Apple <a title="onion browser app store" href="https://itunes.apple.com/us/app/onion-browser/id519296448?mt=8&partnerId=30&siteID=6P4Cgxrxf*M" target="_blank">iTunes App Store for $0.99</a>.
+This doesn't exist yet, but there is a web browser that uses Tor out for iPhones and iPads called <a title="onion browser" href="https://onionbrowser.com" target="_blank">Onion Browser</a>. While not an official release from <a title="Tor Project" href="https://www.torproject.org/" target="_blank">The Tor Project</a>, it is an <a title="onion browser github" href="https://github.com/mtigas/iOS-OnionBrowser" target="_blank">open source effort</a>. It's available in the Apple <a title="onion browser app store" href="https://itunes.apple.com/us/app/onion-browser/id519296448?mt=8&partnerId=30&siteID=6P4Cgxrxf*M" target="_blank">iTunes App Store for $0.99</a>.

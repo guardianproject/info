@@ -11,7 +11,7 @@ menu:
 aliases:
    - tutorials
 ---
-Security doesn&#8217;t have to be hard. Here are a few videos that&#8217;ll make using our apps easier (and more awesome).
+Security doesn't have to be hard. Here are a few videos that'll make using our apps easier (and more awesome).
 
 # Interactive
 

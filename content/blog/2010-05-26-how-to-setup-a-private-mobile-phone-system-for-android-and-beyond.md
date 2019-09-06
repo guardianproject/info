@@ -102,7 +102,7 @@ tags:
   </p>
   
   <div>
-    <a href="http://chart.apis.google.com/chart?cht=qr&chs=170x170&chl=http%3A%2F%2Fwww.androidzoom.com%2Fweb%2Findice%2FqrLink%3FappCode%3Dmaf%26dwnId%3D231933"><img class="alignnone size-full wp-image-335" title="dp82z4m_35fd9f9hgz_b" src="http://chart.apis.google.com/chart?cht=qr&chs=170x170&chl=http%3A%2F%2Fwww.androidzoom.com%2Fweb%2Findice%2FqrLink%3FappCode%3Dmaf%26dwnId%3D231933" alt="" width="170" height="170" /></a>
+    <a href="http://chart.apis.google.com/chart?cht=qr&chs=170x170&chl=http%3A%2F%2Fwww.androidzoom.com%2Fweb%2Findice%2FqrLink%3FappCode%3Dmaf%26dwnId%3D231933"><img class="alignnone size-full wp-image-335" title="dp82z4m_35fd9f9hgz_b" src="https://chart.apis.google.com/chart?cht=qr&chs=170x170&chl=http%3A%2F%2Fwww.androidzoom.com%2Fweb%2Findice%2FqrLink%3FappCode%3Dmaf%26dwnId%3D231933" alt="" width="170" height="170" /></a>
   </div>
   
   <div>

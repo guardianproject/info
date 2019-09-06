@@ -32,7 +32,7 @@ More specifically this library provides:
   * OrbotHelper: a utility class to support application integration with Orbot  
     (Tor for Android). Check if its installed, automatically start it, etc.
   * Optional, custom certificate store based on the open Debian root CA trust  
-    store, which is built with Mozilla&#8217;s CA collection.
+    store, which is built with Mozilla's CA collection.
 
 IT MUST BE NOTED, that you can use this library without using Orbot/Tor, but obviously we think using strong TLS/SSL connections over Tor is just about the best thing in the world.
 

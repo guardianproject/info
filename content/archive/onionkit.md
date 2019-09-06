@@ -13,7 +13,7 @@ aliases:
 ---
 # <a style="font-size: 13px;" href="https://github.com/guardianproject/onionkit">https://github.com/guardianproject/onionkit</a>
 
-This is an Android Library Project that provides multiple means to improve network security in mobile applications. The &#8220;Onion&#8221; name refers to not only the Onion Routing concept used by Tor (which provides anonymity and resistance to traffic surveillance), but also the idea of multiple layers of security that any application should utilize.
+This is an Android Library Project that provides multiple means to improve network security in mobile applications. The "Onion" name refers to not only the Onion Routing concept used by Tor (which provides anonymity and resistance to traffic surveillance), but also the idea of multiple layers of security that any application should utilize.
 
 More specifically this library provides:
 

@@ -19,7 +19,7 @@ It is no secret that we are big fans of open-source here at Guardian. In fact, i
 
 [BEEM – Android XMPP](http://www.beem-project.com/) happens to be one of these. You can find BEEM in the Android Market or you can [download it here](http://www.beem-project.com/news/11). The goal of BEEM is to provide a full featured and easy to use Jabber client on Android. Jabber is another name for XMPP, the [Extensible Messaging and Presence Protocol](https://en.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol), which is another name for Instant Messaging and Status Updates. XMPP is the open-protocol that grew out of the AIM vs. Yahoo vs. MSN vs. ICQ protocol wars of a few years ago. It is now managed by a [standards foundation](http://xmpp.org/), and is supported by an amazing number of [client](http://xmpp.org/software/clients.shtml) and [server](http://xmpp.org/software/servers.shtml) apps.
 
-Beem, available as source code and in the Android Market, is a great looking, highly functional IM application that supports a number of advanced options including SSL/TLS support and SOCKS Proxying. These two features make it ideal for use with running over the [Tor anonymity network](http://torproject.org) and [Orbot](/apps/orbot). By combining Beem with Orbot, mobile instant messaging can be more private (even anonymous if one chooses), usable without fear of eavesdropping by network operators, and made accessible in places where filtering technologies blocks access to popular instant messaging services.
+Beem, available as source code and in the Android Market, is a great looking, highly functional IM application that supports a number of advanced options including SSL/TLS support and SOCKS Proxying. These two features make it ideal for use with running over the [Tor anonymity network](https://www.torproject.org) and [Orbot](/apps/orbot). By combining Beem with Orbot, mobile instant messaging can be more private (even anonymous if one chooses), usable without fear of eavesdropping by network operators, and made accessible in places where filtering technologies blocks access to popular instant messaging services.
 
 **1) Connect to the Tor network using the Orbot app**
 
@@ -35,7 +35,7 @@ The Orbot app contains an HTTP and SOCKS proxy server which allows any Android a
 
 If you don’t have BEEM installed, you can [download it here](http://www.beem-project.com/news/11) or scan the barcode below:
 
-<img class="alignnone" src="http://dev.beem-project.com/screenshot_rc1/qr-code.png" alt="" width="100" height="100" /> 
+<img class="alignnone" src="https://dev.beem-project.com/screenshot_rc1/qr-code.png" alt="" width="100" height="100" /> 
 
 You can use any XMPP service, but we recommend one that supports TLS or SSL security. You can use your Gmail / Google Talk account or you can find a list of public services here: http://xmpp.org/services/</p> 
 

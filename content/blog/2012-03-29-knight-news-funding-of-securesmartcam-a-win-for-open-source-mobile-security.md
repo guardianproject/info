@@ -31,7 +31,7 @@ The work so far was largely funded by a generous private non-governmental donor,
 **SecureSmartCam-supported Open-Source Projects**
 
   * [GnuPG for Android](https://github.com/guardianproject/gnupg-for-android): OpenPGP Public/Private Key Infrastructure for Encryption and Verification of Communications and Data
-  * [SQLCipher for Android](https://github.com/sqlcipher/android-database-sqlcipher): AES-256 Symmetric Encryption Layer for SQLite Mobile Database. [SQLCipher](http://sqlcipher.net) is also available for many other platforms.
+  * [SQLCipher for Android](https://github.com/sqlcipher/android-database-sqlcipher): AES-256 Symmetric Encryption Layer for SQLite Mobile Database. [SQLCipher](https://www.zetetic.net/sqlcipher) is also available for many other platforms.
   * [IOCipher for Android](https://github.com/guardianproject/iocipher) (or any mobile platform): Encrypted filesystem built upon SQLCipher that works for any application without requiring root or custom device modification. This is an extension of our port of [LUKS for Android](https://github.com/guardianproject/LUKS), encrypted disk partition system.
   * [FFMPEG for Android](https://github.com/guardianproject/android-ffmpeg) (with Video Redaction Filter): a build system and patches for compiling FFMPEG for Android, with support for custom features to enable video privacy controls
   * [Jpeg Redaction Library](https://github.com/asenior/Jpeg-Redaction-Library): a generic library for redacting visual and metadata information from JPEG images without needing to decode them. Very important for limited memory mobile devices!

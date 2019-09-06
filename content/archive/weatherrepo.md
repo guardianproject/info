@@ -28,7 +28,7 @@ aliases:
                 </h2>
                 
                 <p>
-                  Many groups ask whether the apps they&#8217;re using are &#8220;safe&#8221;. While it&#8217;s hard for us to respond without knowing the specific context and doing a threat analysis, there are some short cuts. If the app is sending information in clear text, probably not. Who wants to send their data in the open? Unfortunately, most people don&#8217;t know that companies like Yahoo broadcast all of their emails in the clear. And for smaller apps and companies, it&#8217;s hard to know whether they do or not. Even further, it&#8217;s hard to know whether apps that claim to be secure really are. Have they been vetted by a third party? Are there existing case studies? Has a threat analysis been performed?
+                  Many groups ask whether the apps they're using are "safe". While it's hard for us to respond without knowing the specific context and doing a threat analysis, there are some short cuts. If the app is sending information in clear text, probably not. Who wants to send their data in the open? Unfortunately, most people don't know that companies like Yahoo broadcast all of their emails in the clear. And for smaller apps and companies, it's hard to know whether they do or not. Even further, it's hard to know whether apps that claim to be secure really are. Have they been vetted by a third party? Are there existing case studies? Has a threat analysis been performed?
                 </p>
                 
                 <div title="Page 1">
@@ -44,7 +44,7 @@ aliases:
                         </h2>
                         
                         <p>
-                          How do we make good apps more discoverable? And what does a good app entail? For The Guardian Project, it&#8217;s crucial that an app does what it says it does. In Android, that&#8217;s a bit easier to see because they ask for certain permissions before a user can install them. This app transparency is a great start, but doesn&#8217;t go far enough. We’re building a secure and federated app store for people around the world who need to know the real security behind the tools that they use and a system to find a more useful set of apps across every platform.
+                          How do we make good apps more discoverable? And what does a good app entail? For The Guardian Project, it's crucial that an app does what it says it does. In Android, that's a bit easier to see because they ask for certain permissions before a user can install them. This app transparency is a great start, but doesn't go far enough. We’re building a secure and federated app store for people around the world who need to know the real security behind the tools that they use and a system to find a more useful set of apps across every platform.
                         </p>
                         
                         <div title="Page 1">
@@ -60,10 +60,10 @@ aliases:
                                     <strong>Integrated:</strong> There are a lot of stores filled with a lot of bad apps. Instead of sorting by platform (iPhone, Android, PC), why not sort by usefulness?
                                   </li>
                                   <li>
-                                    <strong>Secure: </strong>Safety and privacy are important to users. We&#8217;re making a way for apps to be vetted by the pros and transparent to users.
+                                    <strong>Secure: </strong>Safety and privacy are important to users. We're making a way for apps to be vetted by the pros and transparent to users.
                                   </li>
                                   <li>
-                                    <strong>Easy: </strong>If it&#8217;s not simple, people won&#8217;t use it. We aim for simplicity without sacrificing depth.
+                                    <strong>Easy: </strong>If it's not simple, people won't use it. We aim for simplicity without sacrificing depth.
                                   </li>
                                 </ul>
                                 

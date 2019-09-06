@@ -14,7 +14,7 @@ tags:
   - contest
   - privacy
 ---
-Organized by the [ACLU](http://aclunc.org/), [Tor Project](http://torproject.org/), and [PrivacyByDesign.c](http://privacybydesign.ca/)a, the [“Develop for Privacy Challenge”](http://www.develop4privacy.org/) is an interesting new software development challenge that was announced last month. Developers (teams or individuals) have until May 31st to come up with apps which address this goal:
+Organized by the [ACLU](http://aclunc.org/), [Tor Project](https://www.torproject.org/), and [PrivacyByDesign.c](http://privacybydesign.ca/)a, the [“Develop for Privacy Challenge”](http://www.develop4privacy.org/) is an interesting new software development challenge that was announced last month. Developers (teams or individuals) have until May 31st to come up with apps which address this goal:
 
 > Develop apps for smartphones or other mobile devices that educate users about mobile privacy and give them the ability to claim or demand greater control of their own personal information.
 

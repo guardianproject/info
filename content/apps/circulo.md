@@ -46,4 +46,4 @@ Este proyecto es software libre y de código abierto. Está disponible en Github
 
 **Únete a la prueba beta**
 
-[contact-form-7 id=&#8221;14023&#8243; title=&#8221;Círculo: Registro de Prueba BETA&#8221;]
+[contact-form-7 id="14023" title="Círculo: Registro de Prueba BETA"]

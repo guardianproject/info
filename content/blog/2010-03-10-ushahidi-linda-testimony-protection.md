@@ -31,4 +31,4 @@ Specifically you can see how we have provided a new [SocksHTTPClient package](ht
 
 From here, the plan is to implement a security pin on startup, local data encryption for storage of data both in the database and on the sdcard, as well as quick “delete all” features.
 
-_Learn more about the Tor Project and how network anonymity works at_ [_http://torproject.org_](http://torproject.org)
+_Learn more about the Tor Project and how network anonymity works at_ [_https://www.torproject.org_](https://www.torproject.org)

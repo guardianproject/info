@@ -17,11 +17,11 @@ CameraV is the easiest way to capture and share verifiable photos and video proo
 
 **[DOWNLOAD NOW FROM GOOGLE PLAY](https://play.google.com/store/apps/details?id=org.witness.informacam.app)**
 
-CameraV is easy to learn and simple to use (and insanely secure & powerful under the covers&#8230;). All photos and videos you take are password-protected and 100% encrypted on your device. You can also add private notes and tags to any photo or video, and choose who you share them with. CameraV also privately stores data from your device sensors and provides built-in tools to see and share it. Finally, it has a built-in secure camera that is simple, streamlined and even supports selfies.
+CameraV is easy to learn and simple to use (and insanely secure & powerful under the covers...). All photos and videos you take are password-protected and 100% encrypted on your device. You can also add private notes and tags to any photo or video, and choose who you share them with. CameraV also privately stores data from your device sensors and provides built-in tools to see and share it. Finally, it has a built-in secure camera that is simple, streamlined and even supports selfies.
 
 * READ THE USER GUIDE: <https://guardianproject.github.io/informacam-guide/en/InformacamGuide.html>
 
-CameraV is based on the InformaCam platform, and was developed for use by activists, journalists, advocates and others, working in very difficult and high-risk situations, to capture and gather visual evidence and proof of abuse and rights violations. It can also be used in your daily life to capture any moment, and keep them safe and private. You can also use it for documenting your own evidence, after accidents, for real estate needs, or any where you need &#8220;proof&#8221;.
+CameraV is based on the InformaCam platform, and was developed for use by activists, journalists, advocates and others, working in very difficult and high-risk situations, to capture and gather visual evidence and proof of abuse and rights violations. It can also be used in your daily life to capture any moment, and keep them safe and private. You can also use it for documenting your own evidence, after accidents, for real estate needs, or any where you need "proof".
 
 * OPEN-SOURCE AND FREE: <https://github.com/guardianproject/camerav>  
 * JOIN THE COMMUNITY: <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://talk.developersquare.net/c/developers-corner/smart-cameras%26sa%3DD%26usg%3DAFQjCNFW0w07DleKn7DRLuRNjZltQI2psA&sa=D&usg=AFQjCNFwa9nMjOqpGMyPqs2uzG1BoY8Qhw" target="_blank">https://talk.developersquare.net/c/developers-corner/smart-cameras</a>
@@ -32,7 +32,7 @@ CameraV is based on the InformaCam platform, and was developed for use by activi
 
 <div id="watch-uploader-info">
   <p>
-    <em>&#8220;Citizen-generated data around conflict continues to grow exponentially, but when it gets to newsrooms, human rights orgs, and courts of law, it is often impossible to verify. InformaCam provides a tool to address this shortcoming. Harlo demonstrates its power.&#8221;</em>
+    <em>"Citizen-generated data around conflict continues to grow exponentially, but when it gets to newsrooms, human rights orgs, and courts of law, it is often impossible to verify. InformaCam provides a tool to address this shortcoming. Harlo demonstrates its power."</em>
   </p>
   
   <p>

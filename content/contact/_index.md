@@ -9,11 +9,11 @@ menu:
   main:
     parent: contact
 ---
-If you&#8217;d like to learn more about Guardian [from the team directly](https://guardianproject.info/home/team/) or have a proposal for us, please let us know using of the methods below:
+If you'd like to learn more about Guardian [from the team directly](https://guardianproject.info/home/team/) or have a proposal for us, please let us know using of the methods below:
 
 <ul style="line-height: 200%;">
   <li>
-    <a href="https://lists.mayfirst.org/mailman/listinfo/guardian-dev">Guardian-Dev Discussion List</a>: If you are a developer, designer, power user, hacker, MOD&#8217;r, cryptophreak or just anyone interested in following the development side, this is for you!
+    <a href="https://lists.mayfirst.org/mailman/listinfo/guardian-dev">Guardian-Dev Discussion List</a>: If you are a developer, designer, power user, hacker, MOD'r, cryptophreak or just anyone interested in following the development side, this is for you!
   </li>
   <li>
     Follow us on Mastodon: <a rel="me" href="https://social.librem.one/@guardianproject">@guardianproject@librem.one</a>
@@ -45,6 +45,6 @@ If you&#8217;d like to learn more about Guardian [from the team directly](https:
   </li>
   
   <li>
-    The best place to chat with us live is on the <a href="https://matrix.org">Matrix network</a>. We are in the <a href="https://riot.im/app/#/room/#guardianproject:matrix.org">#guardianproject:matrix.org</a> room on Matrix.org. You can most easily reach us there via the <a href="https://riot.im/app/">Matrix &#8220;Riot&#8221; web app</a>. There are also many wonderful <a href="https://matrix.org/docs/projects/try-matrix-now.html">Matrix apps for every OS</a>. We are also available via #guardianproject on Freenode and OFTC IRC networks, but aren&#8217;t as active there as we used to be.
+    The best place to chat with us live is on the <a href="https://matrix.org">Matrix network</a>. We are in the <a href="https://riot.im/app/#/room/#guardianproject:matrix.org">#guardianproject:matrix.org</a> room on Matrix.org. You can most easily reach us there via the <a href="https://riot.im/app/">Matrix "Riot" web app</a>. There are also many wonderful <a href="https://matrix.org/docs/projects/try-matrix-now.html">Matrix apps for every OS</a>. We are also available via #guardianproject on Freenode and OFTC IRC networks, but aren't as active there as we used to be.
   </li>
 </ul>

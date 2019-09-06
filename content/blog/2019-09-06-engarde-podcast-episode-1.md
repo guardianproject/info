@@ -18,5 +18,5 @@ In today's inaugural episode, @n8fr8 (Guardian Project Director, Nathan Freitas)
 
 [`EnGarde! Episode 1`](https://guardianproject.info/podcast/EnGardePodcast-GuardianProject-Episode1-20190906.aac)
 
-<audio src="https://guardianproject.info/podcast/EnGardePodcast-GuardianProject-Episode1-20190906.aac)"/>
+<audio controls="controls" src="https://guardianproject.info/podcast/EnGardePodcast-GuardianProject-Episode1-20190906.aac)"/>
 

@@ -45,6 +45,8 @@ This could be made quite automatic with some custom scripts. The person running 
 
 ### Fully offline signing laptop with USB thumb drives {#fully-offline-signing-laptop-with-usb-thumb-drives}
 
+___update__: apt-offline has a [security bug](https://bugs.debian.org/871656) so it was removed from Debian/buster. It is no longer recommended! Instead, use the Debian "[apt offline](https://www.debian.org/doc/manuals/apt-offline)" setup._
+
 This process is based on the same basic, stripped down laptop as the previous example. But this time, the networking should be entirely disabled before the install process. For example, it is easy in many laptops to physically remove the WiFi card. Therefore, it makes sense to use a laptop that does not include an ethernet jack, which are usually not possible to remove. Otherwise, blacklisting all kernel modules related to neworking can suffice. Since this machine is fully offline, the extra work of using an HSM is not as important, but it can’t hurt to include it.
 
 Download the full "CD" or "DVD" image of Debian to run the install. Be sure to [verify](https://www.debian.org/CD/verify) the GPG signatures and the SHA-256 hashes. One essential utility is _apt-offline_, which automates the process of downloading Debian packages, verifying their signatures, and copying them over to an offline machine.

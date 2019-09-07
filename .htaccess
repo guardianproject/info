@@ -10,8 +10,8 @@ RedirectPermanent /tag/	/tags/
 RedirectPermanent /tag	/tags/
 
 # redirect Wordpress feed to Hugo feed
-RedirectMatch permanent "/feed/.*$" "/index.xml"
-RedirectPermanent /feed /index.xml
+RedirectMatch permanent "/feed/.*$" "/blog/index.xml"
+RedirectPermanent /feed /blog/index.xml
 
 
 <IfModule mod_rewrite.c>

@@ -1,17 +1,12 @@
 ---
 id: 22
-title: Contact Us
+title: Contact
 date: 2010-02-08T06:13:07-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=22
-menu:
-  main:
-    name: Join Our Email Lists
-    parent: contact
 ---
-Si te gustaria saber mas acercat de Guardian Project [directamente de nuestro equipo](https://guardianproject.info/home/team/) o si tienes una propuesta para nosostros, por favor 
-dejanos saber usando alguna de las siguientes opciones: 
+Si te gustaria saber mas acercat de Guardian Project [directamente de nuestro equipo](https://guardianproject.info/home/team/) o si tienes una propuesta para nosostros, por favor dejanos saber usando alguna de las siguientes opciones: 
 
 <ul style="line-height: 200%;">
   <li>

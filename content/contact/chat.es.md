@@ -2,10 +2,6 @@
 id: 276
 title: Live Chatrooms
 guid: https://guardianproject.info/?page_id=276
-menu:
-  main:
-    name: Chat on IRC
-    parent: contact
 ---
 
 <ul style="line-height:150%">

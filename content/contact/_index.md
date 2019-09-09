@@ -5,6 +5,7 @@ date: 2010-02-08T06:13:07-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=22
+languages: [en, es, ]
 menu:
   main:
     parent: contact

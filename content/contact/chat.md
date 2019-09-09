@@ -2,6 +2,7 @@
 id: 276
 title: Live Chatrooms
 guid: https://guardianproject.info/?page_id=276
+languages: [en, es, ]
 menu:
   main:
     parent: contact

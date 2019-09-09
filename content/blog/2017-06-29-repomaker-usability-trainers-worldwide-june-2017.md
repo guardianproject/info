@@ -27,7 +27,7 @@ Prepared by Carrie Winfrey and Tiffany Robertson, Okthanks, in partnership with 
   </p>
 </div>
 
-For more information, contact [ca&#x72;&#x72;&#x69;e@o&#x6b;&#x74;han&#x6b;&#x73;.co&#x6d;](mai&#x6c;&#x74;&#x6f;:ca&#x72;&#x72;&#x69;e@o&#x6b;&#x74;&#x68;anks&#x2e;&#x63;&#x6f;m).
+For more information, contact ca&#x72;&#x72;&#x69;e@o&#x6b;&#x74;han&#x6b;&#x73;.co&#x6d;.
 
 # Purpose
 

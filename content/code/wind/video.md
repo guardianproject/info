@@ -5,6 +5,8 @@ date: 2017-11-15T19:48:21-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13896
+aliases:
+  - wind/video
 ---
 
 Nathan Freitas on [TWIT's Triangulation](https://www.youtube.com/watch?v=e984EYI1M3I)  

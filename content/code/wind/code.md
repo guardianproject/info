@@ -5,6 +5,8 @@ date: 2017-11-15T20:45:38-04:00
 author: n8fr8
 layout: page
 guid: https://guardianproject.info/?page_id=13901
+aliases:
+  - wind/code
 ---
 You can find our Github repo for the project here: <https://github.com/guardianproject/wind>
 

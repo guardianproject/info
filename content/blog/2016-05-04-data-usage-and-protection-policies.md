@@ -8,8 +8,6 @@ aliases:
   - data-usage-and-protection-policies
   - privacy
 ---
-_We are proud to be a signatory and supporter of the [That's Not Privacy](https://www.thatsnotprivacy.com/) campaign._
-
 At a high level, it is easy say that "we know nothing". We do not log data or include analytics in our websites or applications. When we do operate servers to support our applications, they are configured to store as minimal data as possible, usually just a username and password, if that is required. We also only recommend third party services, such as [XMPP services](https://www.otr.im/chat.html), [VoIP services](https://ostel.co), or [Proxy and VPN providers](https://torproject.org), who abide by these same policies.
 
 In some cases, when we must distribute our applications through services like Google Play, our hands our tied and you are at the mercy of their [terms and policies](https://play.google.com/about/play-terms.html). In some cases, convenience trumps privacy, but that is a decision that is up to you. You can always get our apps from our no logging, non-tracking, free and open-source app store, [F-Droid](/fdroid).

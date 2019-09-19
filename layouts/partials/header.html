@@ -47,7 +47,7 @@
                       <h2 class="{{ .Type }}-subheading">{{ $subtitle }}</h2>
                     {{ end }}
                   {{ end }}
-                  {{ if eq .Type "post" }}
+                  {{ if eq .Type "blog" }}
                     {{ partial "post_meta.html" . }}
                   {{ end }}
               </div>
@@ -77,7 +77,7 @@
                   <h2 class="{{ .Type }}-subheading">{{ $subtitle }}</h2>
                 {{ end }}
               {{ end }}
-              {{ if eq .Type "post" }}
+              {{ if eq .Type "blog" }}
                 {{ partial "post_meta.html" . }}
               {{ end }}
             </div>

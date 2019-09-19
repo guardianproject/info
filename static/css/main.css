@@ -367,14 +367,16 @@ footer .theme-by {
   margin-bottom: 10px;
 }
 .post-preview .post-meta,
-.post-heading .post-meta {
+.post-heading .post-meta,
+.blog-heading .post-meta {
   color: #808080;
   font-size: 18px;
   font-style: italic;
   margin: 0 0 10px;
 }
 .post-preview .post-meta a,
-.post-heading .post-meta a {
+.post-heading .post-meta a,
+.blog-heading .post-meta a {
   color: #404040;
   text-decoration: none;
 }

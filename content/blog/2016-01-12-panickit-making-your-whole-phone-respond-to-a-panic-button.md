@@ -79,5 +79,6 @@ There are of course still many open questions that we are very interested in, an
 
   * Should this be handled on the system level?
   * How the trigger app query the responder for its action without leaking private data like contacts or location?
-  * How can panic and anxiety be represented graphically, using colors, iconography, UI, etc.?/li> </ul> 
-    For more discussion and resources, check out the <a href="https://dev.guardianproject.info/projects/panic/wiki" target="_blank">PanicKit wiki</a>.
+  * How can panic and anxiety be represented graphically, using colors, iconography, UI, etc.?
+
+For more discussion and resources, check out the <a href="https://dev.guardianproject.info/projects/panic/wiki" target="_blank">PanicKit wiki</a>.

@@ -31,21 +31,6 @@ RedirectPermanent /feed /blog/index.xml
 </IfModule>
 
 
-# GPG keys in Web Key Directory using the "direct method" URL format
-# https://wiki.gnupg.org/WKD
-#
-# abel@guardianproject.info
-Redirect 301 /.well-known/openpgpkey/hu/rhgcizkjn7c9cfr7xttwjrdz1n3t75rt https://keys.openpgp.org/vks/v1/by-fingerprint/9185813DDCCD789E5D4BA51B884B649C340C81F4
-# hans@guardianproject.info
-Redirect 301 /.well-known/openpgpkey/hu/tyyfxn4t6ytctsfpzfogin37su9pzssg https://keys.openpgp.org/vks/v1/by-fingerprint/EE6620C7136B0D2C456C0A4DE9E28DEA00AA5556
-# harlo@guardianproject.info
-Redirect 301 /.well-known/openpgpkey/hu/ddtqgbus58yfcucs7bjd4u74npyckuxi https://keys.openpgp.org/vks/v1/by-fingerprint/60FB69097B2A759811A86E0E67866BECA4469630
-# nathan@guardianproject.info
-Redirect 301 /.well-known/openpgpkey/hu/f4fk1gdgyoeakzdpeuk5smpgq6iygc1i https://keys.openpgp.org/vks/v1/by-fingerprint/BBE20FD6DA48A3DD4CC7DF41A801183E69B37AA9
-# michael@guardianproject.info
-Redirect 301 /.well-known/openpgpkey/hu/n6h6dt1ftdd9w3y3sujj5oxwejt8uqob https://keys.openpgp.org/vks/v1/by-fingerprint/3DBDBA23810AEE377CC8E9D7C84324635610899F
-
-
 # cache all files without checking until max-age, after that, the
 # browser check the ETag value to see whether it needs to redownload
 

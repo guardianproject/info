@@ -18,3 +18,4 @@ data/git.yaml
 /content/apps/org.witness.informacam.app.*md
 /content/apps/org.witness.proofmode.*md
 /content/apps/org.witness.sscphase1.*md
+/.well-known/openpgpkey/hu/

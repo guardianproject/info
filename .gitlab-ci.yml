@@ -12,7 +12,7 @@ stages:
   printf 'APT::Acquire::Retries "20";\n' > /etc/apt/apt.conf.d/99acquire-retries
   printf 'APT::Get::Assume-Yes "true";\n' > /etc/apt/apt.conf.d/99assumeyes
   apt-get update
-  apt-get install curl fdroidserver git hugo locales make mawk python3 sassc unzip
+  apt-get install curl fdroidserver git gpg gpg-wks-client hugo locales make mawk python3 sassc unzip
   grep '^en_US.UTF-8 UTF-8' /etc/locale.gen || echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
   locale-gen
   export LC_ALL=en_US.UTF-8

@@ -1,5 +1,6 @@
 ---
 title: 'PanicKit 1.0: built-in panic button and full app wipes'
+author: Hans-Christoph Steiner
 categories:
   - Development
   - News

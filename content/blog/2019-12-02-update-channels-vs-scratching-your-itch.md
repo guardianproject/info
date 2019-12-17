@@ -1,5 +1,6 @@
 ---
 title: Trusted Update Channels vs. Scratching Your Itch
+author: Hans-Christoph Steiner
 categories:
   - News
 tags:

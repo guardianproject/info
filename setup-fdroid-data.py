@@ -3,6 +3,7 @@
 import json
 import os
 import sys
+import unicodedata
 import yaml
 from datetime import datetime
 from fdroidserver import common
@@ -58,10 +59,14 @@ def write_app_page(app, languages, lang=None):
         fp.write('tags:\n')
         fp.write('  - app\n')
         fp.write('  - ' + app['packageName'] + '\n')
-        fp.write('  - ' + app['name'].lower() + '\n')
         fp.write('  - ' + app['license'] + '\n')
+        normalized_name = unicodedata.normalize('NFD', app['name'].split(':')[0])\
+                                      .encode('ascii', 'ignore')\
+                                      .decode()\
+                                      .lower()
+        fp.write('  - ' + normalized_name + '\n')
         if lang is None:
-            fp.write('aliases:\n  - apps/' + app['name'].split(':')[0].lower() + '\n')
+            fp.write('aliases:\n  - apps/' + normalized_name + '\n')
             fp.write('menu:\n  main:\n    parent: apps\n')
         fp.write('---\n\n')
 
@@ -88,6 +93,9 @@ data, etag = index.download_repo_index(repo_url + '?fingerprint=' + fingerprint)
 appsdict = dict()
 apps = list(data['apps'])
 for app in apps:
+    if app['packageName'] == 'org.article19.circulo':
+        # remove Circulo until it has localized description in the fdroid repo
+        continue
     if 'localized' in app:
         languages = set()
         for language in list(app['localized'].keys()):

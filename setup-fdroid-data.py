@@ -88,6 +88,9 @@ data, etag = index.download_repo_index(repo_url + '?fingerprint=' + fingerprint)
 appsdict = dict()
 apps = list(data['apps'])
 for app in apps:
+    if app['packageName'] == 'org.article19.circulo':
+        # remove Circulo until it has localized description in the fdroid repo
+        continue
     if 'localized' in app:
         languages = set()
         for language in list(app['localized'].keys()):

@@ -12,6 +12,7 @@ categories:
 tags:
   - i18n
   - localization
+  - localization lab
   - OTF Localization Lab
   - translation
   - usability

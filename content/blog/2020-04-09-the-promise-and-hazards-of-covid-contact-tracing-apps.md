@@ -35,8 +35,9 @@ fully respect privacy, and to build trust with its users.  Unfortunately the maj
 On top of that, these audits took much more effort because the apps
 were not open soure.  There have been many pledges of making these
 apps open source, but the only one that we have found that is actually
-open source is [Private Kit](https://privatekit.mit.edu/).  Free, open
-source software is essential for software that needs to be widely
+open source is [Private Kit](https://privatekit.mit.edu/).  [Free, open
+source software is essential](https://fsfe.org/news/2020/news-20200402-02.en.html)
+for software that needs to be widely
 trusted.  This is only key design element, the CCC has laid out a
 complete list of [requirements for creating trustworthy contact
 tracing apps](https://www.ccc.de/en/updates/2020/contact-tracing-requirements).

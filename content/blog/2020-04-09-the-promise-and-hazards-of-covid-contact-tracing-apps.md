@@ -30,10 +30,10 @@ Privacy International has been collecting examples of
 
 Then there this is the specific issue of contact tracing apps that are
 being introduced around the world.  These apps can be made in a way to
-fully respect privacy, and to build trust with its users.  Unfortunately the majority of the ones introduced are failing to live up to this promise.  Singapore's TraceTogether was the first to rise to prominence, it is proprietary software with obfuscated operations.  A [some](https://medium.com/@zerotypic/reversing-tracetogether-initial-analysis-edc940e86aa8) [audits](https://splira.com/2020-03-28/) pointed to failings, including potentially sending location data to a third-party analytics service.  There are now many of these apps, and based on [this analysis](https://forensic.defensive-lab.agency/covid/), most of them are sending data to third party tracking companies.
+fully respect privacy, and to build trust with its users.  Unfortunately the majority of the ones introduced are failing to live up to this promise.  Singapore's TraceTogether was the first to rise to prominence, it is proprietary software with obfuscated operations. (_update: the source for a [reference implementation](https://github.com/opentrace-community) has since been released, but TraceTogether is still proprietary_)   A [some](https://medium.com/@zerotypic/reversing-tracetogether-initial-analysis-edc940e86aa8) [audits](https://splira.com/2020-03-28/) pointed to failings, including potentially sending location data to a third-party analytics service.  There are now many of these apps, and based on [this analysis](https://forensic.defensive-lab.agency/covid/), most of them are sending data to third party tracking companies.
 
 On top of that, these audits took much more effort because the apps
-were not open soure.  There have been many pledges of making these
+were not open source.  There have been many pledges of making these
 apps open source, but the only one that we have found that is actually
 open source is [Private Kit](https://privatekit.mit.edu/).  [Free, open
 source software is essential](https://fsfe.org/news/2020/news-20200402-02.en.html)

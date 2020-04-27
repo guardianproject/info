@@ -14,7 +14,7 @@ tags:
 
 Crowdsourced translation platforms like [Weblate](https://weblate.org/), Transifex, Crowdin, etc. have proven to be a hugely productive way to actively translate apps and desktop software.  Long form texts like documentation and websites remain much more work to translate and keep translated.  Many translation services currently support Markdown and HTML, but very basically, which means much more work for translators and webmasters.  Translators can inadvertently break things, either with a typo or because of a lack of knowledge of a specific syntax.  This can make the whole page layout break.  Webmasters and documentation maintainers must carefully check the process to ensure everything is working smoothly.  With the spread of Markdown as a standard format, there is now hope!  Software developers can focus efforts on the Markdown translation workflow, and Markdown is more tolerant of syntax errors than HTML.
 
-Guardian Project has been working for a decade on making localization and the long term maintenance of translation a lot easier for developers and translators.  We call this ongoing collaborative effort "Linguine" after a name chosen in a multi-project meeting  One of the biggest usability barriers in the world of software and the internet is language.  Most of the world does not speak English, yet most of [the internet is written in English](https://www.bbc.com/future/article/20200414-the-many-lanuages-still-missing-from-the-internet).
+Guardian Project has been working for a decade on making localization and the long term maintenance of translation a lot easier for developers and translators.  We call this ongoing collaborative effort "Linguine" after a name chosen in a multi-project meeting.  One of the biggest usability barriers in the world of software and the internet is language.  Most of the world does not speak English, yet most of [the internet is written in English](https://www.bbc.com/future/article/20200414-the-many-lanuages-still-missing-from-the-internet).
 
 [![Tortuguero Box](Tortuguero_Box_WDL2658.png)](https://en.wikipedia.org/wiki/Maya_script)
 
@@ -113,10 +113,15 @@ _Crowdin project file navigation_
 
 Unfortunately, there is no shining example of a user experience that covers this second scenario well.  Weblate provides one good tool, where the strings are presented to the translator in order of the priority set in the metadata (e.g. like [XLIFF's _priority_](https://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#priority)).  The translator just needs to start translating the first strings Weblate presents.
 
-# TODO
-Sometimes you have to make a small change to some of the coding of the website.  The website has suddenly gotten a lot more popular, so you need to work on making the caching work a lot better to reduce the load.  That means changing all of file references to include a version or hash value.  Those links are also in the source strings that are fed to the translation system.  And each change to the source strings prompts all of the translators to update their translations.  Normally, this is exactly what should happen.  But in this scenario, the translation should not change since it is just the links that changed.  To handle this, the webmaster or developer needs to be able to do mass edits on the source and translation while having a way to tell the translation system to ignore this change.
+![](crowdin-priority.png)
+_One hack to add priority to Markdown for Crowdin_
 
-You got your website fully translated into Tibetan, but now the translator has disappeared.  So those trivial changes are bumping more and more strings out of the translation, and soon
+
+## Mass Changes versus Merge Conflicts
+
+Sometimes you have to make a small change to some of the coding of the website.  The website has suddenly gotten a lot more popular, so you need to work on making the caching work a lot better to reduce the load.  That means changing all of file references to include a version or hash value.  Those links are also in the source strings that are fed to the translation system.  And each change to the source strings prompts all of the translators to update their translations.  Normally, this is exactly what should happen.  But in this scenario, the translation should not change since it is just the links that changed.  To handle this, the webmaster or developer needs to be able to do mass edits on the source and translation while having a way to tell the translation system to ignore this change.  This can easily cause merge conflicts if a translator is working at the same time.
+
+If these small changes only happen in source, the translations will be marked as needing an update.  Some platforms try to be smart about detecting changes, and will even mark strings as changed if both the source and translation were updated together.  That produces another scenario: The website fully translated into Tibetan, but now the translator has disappeared.  So those trivial changes are bumping more and more strings out of the translation, and soon it will be death by a thousand paper cuts and the Tibetan translation gets kicked out even though the underlying text is current.  It is just the inline code updates that are marking things as out of date.
 
 
 ## Automation and Checks
@@ -147,8 +152,9 @@ po4a gives fine grained control over how documents are grouped, and what percent
 
 ### Projects using _po4a_
 
+* Debian is using _po4a_ to [translate the _man_ pages](https://salsa.debian.org/manpages-l10n-team).
 * The extensive [Tails documentation](https://tails.boum.org/contribute/build/website/) uses _po4a_ to make Markdown pages translatable in [ikiwiki](https://ikiwiki.info/plugins/po/).
-* The Fedora project is using _po4a_ to translate the [documentation](https://pagure.io/fedora-docs/docs-fp-o) [their own Weblate instance](https://translate.fedoraproject.org/)
+* The Fedora project is using _po4a_ to translate the [documentation](https://pagure.io/fedora-docs/docs-fp-o) in [their own Weblate instance](https://translate.fedoraproject.org/)
 * [Stellarium Astronomy](https://stellarium.org/) uses _po4a_ to [translate](https://github.com/Stellarium/stellarium/pull/908) "sky culture descriptions".
 
 

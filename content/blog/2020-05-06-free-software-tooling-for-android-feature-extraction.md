@@ -99,6 +99,18 @@ and downloading publicly available tracker SDK.  Those scripts are
 maintained in https://gitlab.com/trackingthetrackers/scripts.
 
 
+### Gradle Plugins
+
+When working with source code, then it is possible to do other kinds
+of analysis.  Most Android apps are built with the Gradle tool.  So we
+reviewed a wide range of Gradle plugins, and found these three useful
+in our investigations.
+
+* [dependency-analysis-android-gradle-plugin](https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin) - Produce a report of unused direct dependencies and used transitive dependencies.
+* [OWASP Dependency-Check](https://github.com/jeremylong/DependencyCheck) - utility that detects publicly disclosed vulnerabilities in application dependencies
+* [gradle-dependency-graph-generator-plugin](https://github.com/vanniktech/gradle-dependency-graph-generator-plugin/) - Gradle plugin that lets you visualize your Java library dependencies in a graph.
+
+
 ## Tools we reviewed
 
 We looked at quite a few existing tools, and found many interesting
@@ -117,15 +129,3 @@ for working with large APK collections.
 * [redexer](https://github.com/plum-umd/redexer) - infer with which parameters the app uses certain permissions (we name this feature RefineDroid)
 * [apk-static-xref](https://github.com/ytliu/apk-static-xref) - staticallly generate a cross-reference-graph (XRG) of a component (e.g., Service) of Android APK file
 * [smalisca](https://github.com/dorneanu/smalisca) - Static Code analysis tool that generates call graphs
-
-
-### Gradle Plugins
-
-When working with source code, then it is possible to do other kinds
-of analysis.  Most Android apps are built with the Gradle tool.  So we
-reviewed a wide range of Gradle plugins, and found these three useful
-in our investigations.
-
-* [dependency-analysis-android-gradle-plugin](https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin) - Produce a report of unused direct dependencies and used transitive dependencies.
-* [OWASP Dependency-Check](https://github.com/jeremylong/DependencyCheck) - utility that detects publicly disclosed vulnerabilities in application dependencies
-* [gradle-dependency-graph-generator-plugin](https://github.com/vanniktech/gradle-dependency-graph-generator-plugin/) - Gradle plugin that lets you visualize your Java library dependencies in a graph.

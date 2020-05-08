@@ -9,6 +9,8 @@ tags:
   - Exodus Privacy
   - fdroid
   - machine learning
+  - NGI0 PET
+  - NLnet
   - privacy
   - research
   - surveillance

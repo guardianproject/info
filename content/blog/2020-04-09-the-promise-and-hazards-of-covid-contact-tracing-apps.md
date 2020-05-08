@@ -8,6 +8,8 @@ tags:
   - free software
   - open source
   - privacy
+  - tracking
+  - Tracking the Trackers
   - trust
   - usability
 ---

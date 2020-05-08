@@ -8,10 +8,12 @@ tags:
   - android
   - debian
   - Exodus Privacy
-  - free software
-  - open source
   - feature extraction
+  - free software
   - machine learning
+  - NGI0 PET
+  - NLnet
+  - open source
   - Tracking the Trackers
 ---
 

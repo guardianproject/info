@@ -5,6 +5,7 @@ categories:
   - Development
   - News
 tags:
+  - Linguine
   - localization
   - po4a
   - translation

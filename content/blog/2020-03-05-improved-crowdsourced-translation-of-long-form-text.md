@@ -4,16 +4,16 @@ author: Hans-Christoph Steiner
 categories:
   - News
 tags:
-  - markdown
+  - free software
+  - hugo
   - i18n
+  - jekyll
+  - Linguine
   - localization
   - localization lab
-  - weblate
-  - hugo
-  - jekyll
-  - linguine
+  - markdown
   - translation
-  - free software
+  - weblate
 ---
 
 We are happy to announce the start of work on another step in

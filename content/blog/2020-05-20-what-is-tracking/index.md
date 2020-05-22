@@ -1,5 +1,5 @@
 ---
-title: On the classification of tracking 
+title: On the classification of tracking
 author: Aaron Kaplan
 tags:
   - NGI0 PET
@@ -12,7 +12,7 @@ tags:
 
 This position paper tries to outline a framework for defining trackers
 in smart phones and lists mechanisms for identifying them.  It hopes
-to serve as the foundation for the work done in the 
+to serve as the foundation for the work done in the
 Tracking-the-Trackers project.
 
 In [section 1](#section-1-levels-of-unwanted-behaviour) we start with
@@ -55,7 +55,7 @@ done with a perspective for categories (labels) in a machine learning
 approach.
 
 
-### Level 0: No tracking at all / no network communication 
+### Level 0: No tracking at all / no network communication
 
 The most harmless situation: an app is downloaded or shared in an
 anonymous way (Tor, etc.) and only uses offline features and/or uses
@@ -80,7 +80,7 @@ days. It also checks every day, if the map viewer app is the latest version.
 Based on this information, an attack could theoretically derive weekly IP
 address "beacons" from some user. Since the update check was not personalized,
 an attack can not be for sure, if an update request is from the same person or
-not.  Hence, a user still has potentially enough anonymity.  
+not.  Hence, a user still has potentially enough anonymity.
 
 This and the next category probably (to be verified) constitute the majority of
 "clean" apps.
@@ -101,7 +101,7 @@ to the map server. In addition, the developers felt that it would be useful to
 receive APM (application performance monitoring) logs as well as crash reports
 as well as a set of libraries to measure which features of an app the users
 actually use the most. These logs are sent periodically to some log collection
-server run by the developers. 
+server run by the developers.
 
 Note that we still do not talk about (Google, Facebook etc) cookies here. We
 only talk about watching what users are typing (including backspace and
@@ -183,7 +183,7 @@ through on the maths.
 The core insight of their work is that - if you include metadata of
 communication flows over the internet, and if you assume an attacker which can
 observe the whole network (passively)[^2], then true anonymity is nearly
-impossible to achieve for any regular app or program. 
+impossible to achieve for any regular app or program.
 
 In this paper, we first briefly describe Pfitzmann's and Hansens' model and
 especially their attacker's model / threat model. We then replicate their
@@ -195,8 +195,8 @@ consider tracking in Android apps and derive feature sets for an ML based
 approach.
 
 
-## The Pfitzer-Hansen threat model 
-  
+## The Pfitzmann-Hansen threat model
+
 The threat model assumes a classical sender-receiver (source/sink) information
 model where the communication network is usually the internet. They assume an
 attacker to be yet another (possibly all-knowing) passive receiver. If messages
@@ -209,7 +209,7 @@ message.
 
 If we apply  Pfitzmann's and Hansens' model to our levels, we arrive at the following insights:
 
-* **Level 0**: the app is quiet → no harm, an all-known attacker can in the very best of cases the passive attacker may notice the download of a level 0 app. 
+* **Level 0**: the app is quiet → no harm, an all-known attacker can in the very best of cases the passive attacker may notice the download of a level 0 app.
 * **Level 1**: the passive attack may derive IP addresses (and hence some ideas of a user’s location) and time stamps of when the app was in use. → the passive attacker can already track the user to some extent iff (if and only if) he also has access to the telecom’s IP address assignment database for that particular time window. This is usually only possible for nation state attackers. → out of scope.
 * **Level 2**: In this scenario, it already depends a lot if the app is sending APMs/ crash reports or other “chatty library” messages encrypted or unencrypted. If unencrypted, a passive attacker may - already in this category gain a lot of information on the user.
 → we propose to include detection of APMs/crash reporting libraries in future versions of the tracking the trackers project.

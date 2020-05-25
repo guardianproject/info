@@ -17,12 +17,14 @@ current:
     twitter: hansstatus
     matrix: "@eighthave:matrix.org"
 
-  - name: abeluck
-    title: Security Surgeon
-    description: Developer on Guardian developer tool suite
+  - name: abelxluck
+    title: Hacker & Researcher
+    description: Developer on Guardian ops suite
     gpg: 9185813DDCCD789E5D4BA51B884B649C340C81F4
-    gitlab: abeluck
+    gitlab: abelxluck
     github: abeluck
+    twitter: abelxluck
+    matrix: "@abel:neo.keanu.im"
 
   - name: carrie
     title: Interaction Designer

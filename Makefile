@@ -22,10 +22,16 @@ pre-serve:
 	echo "commitDate: \"$$( git log -n 1 --pretty=format:%ci )\"" >> data/git.yaml
 
 wkd = public/.well-known/openpgpkey
+pgpkeysd = public/pgp-keys
 keyids := $(shell grep -Eo '^ *gpg: *[A-Fa-f0-9]{40}.*' data/teamlist.yaml | awk '{print $$2}')
 gnupg-web-key-directory:
 	gpg --import team-keyring.gpg
+	find static/pgp-keys/ -type f -iname '*.asc' -exec gpg --import {} \;
 	for keyid in $(keyids); do gpg --keyserver keys.openpgp.org --recv-keys $$keyid; done
+	test -d $(pgpkeysd) || mkdir -p $(pgpkeysd)
+	for keyid in $(keyids); do \
+		gpg --batch --yes --output $(pgpkeysd)/$$keyid.asc --export --armor --export-options export-minimal $$keyid; \
+	done
 	test -d $(wkd) || mkdir -p $(wkd)
 	touch $(wkd)/policy
 	cd $(wkd)/.. && for keyid in $(keyids); do \

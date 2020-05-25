@@ -21,6 +21,6 @@
     {{ if .title }}<li>{{ .title }}</li>{{ end }}
     {{ if .description }}<li>{{ .description }}</li>{{ end }}
     {{ if .matrix }}<li><i class="fa fa-matrix-org"></i> <a href="https://matrix.to/#/{{ .matrix }}"><tt>{{ .matrix }}</tt></a></li>{{ end }}
-    {{ if .gpg }}<li><i class="fa fa-gnupg"></i> PGP: <a href="https://pgp.mit.edu/pks/lookup?op=get&search=0x{{ .gpg }}">{{ .gpg }}</a></li>{{ end }}
+    {{ if .gpg }}<li><i class="fa fa-gnupg"></i> PGP: <a href="{{ "pgp-keys" | absURL }}/{{ .gpg }}.asc">{{ .gpg }}</a></li>{{ end }}
   </ul>
 </div>

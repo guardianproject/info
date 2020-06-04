@@ -9,6 +9,11 @@ sourceCode: https://gitlab.com/guardianproject/circulo
 menu:
   main:
     parent: apps
+tags:
+  - app
+  - org.article19.circulo
+  - GPL-3.0-or-later
+  - circulo
 ---
 
 #### **Mantén tu comunidad segura con Círculo, una aplicación fácil de usar que proporciona una forma rápida y segura de enviar alertas.**  

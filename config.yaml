@@ -33,6 +33,10 @@ menu:
       weight: 2
     - name: contact
       weight: 10
+    - name: podcast
+      url: "https://guardianproject.info/podcast/"
+      parent: about
+      weight: 2
     - name: "Toot @guardianproject@librem.one"
       url: "https://social.librem.one/@guardianproject"
       parent: contact

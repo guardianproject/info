@@ -5,6 +5,12 @@ data/git.yaml
 /public/
 
 # generated pages
+/content/*.[a-z][a-z].md
+/content/*.[a-z][a-z]-[A-Z][A-Z].md
+/content/*/*.[a-z][a-z].md
+/content/*/*.[a-z][a-z]-[A-Z][A-Z].md
+/content/*/*/*.[a-z][a-z].md
+/content/*/*/*.[a-z][a-z]-[A-Z][A-Z].md
 /content/apps/info.guardianproject.checkey.*md
 /content/apps/info.guardianproject.courier.*md
 /content/apps/info.guardianproject.locationprivacy.*md
@@ -18,3 +24,4 @@ data/git.yaml
 /content/apps/org.witness.informacam.app.*md
 /content/apps/org.witness.proofmode.*md
 /content/apps/org.witness.sscphase1.*md
+/.well-known/openpgpkey/hu/

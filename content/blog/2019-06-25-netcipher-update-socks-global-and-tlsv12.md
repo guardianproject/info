@@ -1,5 +1,6 @@
 ---
 title: 'NetCipher update: global, SOCKS, and TLSv1.2'
+author: Hans-Christoph Steiner
 categories:
   - Development
   - News

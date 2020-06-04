@@ -17,6 +17,9 @@ RedirectPermanent /feed /blog/index.xml
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    RewriteCond %{HTTP_HOST} ^www\.guardianproject\.info
+    RewriteRule ^(.*)$ https://guardianproject.info/$1 [R=301,L]
+
     # BEGIN (abel) letsencrypt redirect for XMPP server
     RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-f

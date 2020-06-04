@@ -4,4 +4,5 @@ menu:
   main:
     name: Blog
     parent: about
+    weight: 1
 ---

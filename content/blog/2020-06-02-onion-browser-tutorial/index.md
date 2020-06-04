@@ -10,9 +10,9 @@ tags:
   - tor
 ---
 
-In this tutorial we're going to talk about the best practices to browse the web securely on iOS using Onion Browser Release 2.6 and the Tor network.The Onion Browser is a free, open-source web browser app developed by Mike Tigas, with Release 2.6 as a collaboration with the Guardian Project. Onion Browser has Tor built-in and uses Tor to protect your web activity.
+In this tutorial we're going to talk about the best practices to browse the web securely on iOS using [Onion Browser](https://onionbrowser.com) Release 2.6 and the [Tor network](https://torproject.org). [Onion Browser for iOS](https://onionbrowser.com) is a free, open-source web browser app developed originally by [Mike Tigas](https://mike.tig.as/), with Release 2.6 as a collaboration with the Guardian Project. Onion Browser has Tor built-in and uses Tor to protect your web activity.
 
-You can also watch the [Onion Browser Video Tutorial](https://www.youtube.com/playlist?list=PL4-CVUWabKWeHeBpadBLjzlWVa7binXpj) on the Guardian Project YouTube Channel.
+You can also watch the [Onion Browser Video Tutorial](https://www.youtube.com/playlist?list=PL4-CVUWabKWeHeBpadBLjzlWVa7binXpj) on YouTube.
 
 <!-- ![](image25.jpg) -->
 <p class="ctr">
@@ -40,7 +40,7 @@ If any of these are true, this tutorial is for you!
 	</a>
 </p>
 
-Try Orbot, the Tor connection for Android devices developed by the Guardian Project. Orbot allows you to route the apps on your phone through Tor.
+[Try Orbot](https://guardianproject.info/apps/orbot), the Tor connection for Android devices developed by the Guardian Project. Orbot allows you to route the apps on your phone through Tor.
 
 <!-- ![](image20.png) -->
 <p class="ctr">
@@ -49,7 +49,7 @@ Try Orbot, the Tor connection for Android devices developed by the Guardian Proj
 	</a>
 </p>
 
-You may also try the Tor Browser for Android, the official Tor browser for Android developed by the Tor team.
+You may also try the [Tor Browser for Android](https://torproject.org), the official Tor browser for Android developed by the Tor Project team.
 
 
 ## First, what exactly is the Tor network?

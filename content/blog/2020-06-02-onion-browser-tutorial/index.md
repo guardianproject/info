@@ -12,11 +12,7 @@ tags:
 
 In this tutorial we're going to talk about the best practices to browse the web securely on iOS using Onion Browser Release 2.6 and the Tor network.The Onion Browser is a free, open-source web browser app developed by Mike Tigas, with Release 2.6 as a collaboration with the Guardian Project. Onion Browser has Tor built-in and uses Tor to protect your web activity.
 
-## Release 2.6 Tutorial
-
-_A Guardian Project Collaboration_
-
-_Supported by the Open Technology Fund_
+You can also watch the [Onion Browser Video Tutorial](https://www.youtube.com/playlist?list=PL4-CVUWabKWeHeBpadBLjzlWVa7binXpj) on the Guardian Project YouTube Channel.
 
 <!-- ![](image25.jpg) -->
 <p class="ctr">

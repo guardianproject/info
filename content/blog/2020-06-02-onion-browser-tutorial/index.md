@@ -39,6 +39,7 @@ If any of these are true, this tutorial is for you!
 		<img class="size1" src="image21.png">
 	</a>
 </p>
+
 Try Orbot, the Tor connection for Android devices developed by the Guardian Project. Orbot allows you to route the apps on your phone through Tor.
 
 <!-- ![](image20.png) -->
@@ -47,7 +48,9 @@ Try Orbot, the Tor connection for Android devices developed by the Guardian Proj
 		<img class="size1" src="image20.png">
 	</a>
 </p>
+
 You may also try the Tor Browser for Android, the official Tor browser for Android developed by the Tor team.
+
 
 ## First, what exactly is the Tor network?
 
@@ -57,6 +60,8 @@ You may also try the Tor Browser for Android, the official Tor browser for Andro
 		<img class="size1" src="image11.png">
 	</a>
 </p>
+
+
 The Tor network is a collection of servers, run by volunteers, that allows users to improve their privacy and security on the Internet. Tor's users employ this network by connecting to their favorite services through a series of virtual tunnels rather than making a direct connection, thus allowing both organizations and individuals to share information over public networks without compromising their privacy.
 
 Here's how Tor works: When you connect to the internet using Tor, a circuit is created. A circuit is a group of 3 different Tor relays located in different parts of the world that work together with encryption to obfuscate your connection to websites and web services, making it hard for third parties to trace the activity back to you.
@@ -99,6 +104,7 @@ After [downloading Onion Browser from the App Store](https://apps.apple.com/us/a
 		<img class="size2" src="image14.png"">
 	</a>	
 </p>
+
 There are two options here: connecting directly to Tor, as most users do, or connecting via a special "bridge". This latter option requires configuration, and we'll discuss it in a separate section of this tutorial. Select "Connect to Tor" and the app will let you know when it is ready.
 
 <!-- ![](image18.png) -->
@@ -107,6 +113,7 @@ There are two options here: connecting directly to Tor, as most users do, or con
 		<img class="size3" src="image18.png">
 	</a>
 </p>
+
 Click on " Next" to set up your security level.
 
 <!-- ![](image30.png) -->
@@ -115,6 +122,7 @@ Click on " Next" to set up your security level.
 		<img class="size3" src="image30.png">
 	</a>
 </p>
+
 There are three levels of security you can select, according to your needs. For many users, Level 2 is the best choice to start. Click on "Learn More" to see more details about each option. Tap "Start Browsing" to begin using Onion Browser.
 
 ## The Onion Browser Home Page
@@ -127,6 +135,7 @@ On the home page of Onion Browser you'll see a couple of website suggestions, as
 		<img class="size3" src="image22.png">
 	</a>
 </p>
+
 On the home page, in the top navigation bar, you'll see there are two icons you don't find in other browsers, a Shield on the top left side and an Onion on the top right side.
 
 <!-- ![](image15.jpg) --> <!-- ![](image5.jpg) -->
@@ -138,6 +147,7 @@ On the home page, in the top navigation bar, you'll see there are two icons you 
 		<img class="size2" src="image5.jpg">
 	</a>
 </p>
+
 We'll discuss these in a bit. The Onion Browser also includes features you'll recognize like Bookmarks, Share, New Tab, Switch Tabs, and Accessing Settings. These are common in other browsers and work in the same manner here.
 
 ## Visiting websites
@@ -152,6 +162,7 @@ When you visit websites, Onion Browser will give you additional information abou
 		<img class="size3" src="image1.png">
 	</a>
 </p>
+
 - Tap on the Shield icon to see your current security level 
 
 <!-- ![](image13.png) -->
@@ -160,6 +171,7 @@ When you visit websites, Onion Browser will give you additional information abou
 		<img class="size3" src="image13.png">
 	</a>
 </p>
+
 - Tap on the Onion icon to see the Tor circuit you are using, sometimes your current circuit will be too slow or it will not work properly, for those cases use the "New Circuit" button and you will be automatically connected to a new one. 
 
 <!-- ![](image7.png) -->
@@ -168,6 +180,7 @@ When you visit websites, Onion Browser will give you additional information abou
 		<img class="size3" src="image7.png">
 	</a>
 </p>
+
 On this drop-down menu, you will also find the option to connect to Tor using bridges. Please remember that you should always try to connect to Tor without using bridges and only use them if that fails. We'll talk more about bridges later.
 
 - The Share icon allows you to send a link to the website you are looking at using other apps in your device. It also allows you to open the link using Safari if the site is not opening properly using Tor. This will be out of the Tor network and is not safe 
@@ -178,6 +191,7 @@ On this drop-down menu, you will also find the option to connect to Tor using br
 		<img class="size3" src="image19.png">
 	</a>
 </p>
+
 - The same applies to open images and links with Safari. But you can also open links safely on a new tab, and navigate them the same way you will do it on any other browser
 
 <!-- ![](image12.png) -->
@@ -186,6 +200,7 @@ On this drop-down menu, you will also find the option to connect to Tor using br
 		<img class="size3" src="image12.png">
 	</a>
 </p>
+
 - If your screen times out or you send the browser to the background all your current tabs will disappear when you return to your browser, this is a security feature that can be changed in your settings
 
 - Downloading content is easiest with the Share icon. Display your content (such as a PDF-formatted article) in a tab, then tap the Share icon. Select 'Save to Files', then on the next screen, choose the desired locations ("Downloads" folder is shown here). Tap 'Save' and the content will be saved in the Downloads folder for later use or further sharing.
@@ -199,6 +214,7 @@ On this drop-down menu, you will also find the option to connect to Tor using br
 		<img class="size2" src="image16.png">
 	</a>	
 </p>
+
 ## Security & Connectivity
 
 ### Bridges
@@ -213,6 +229,7 @@ If you know bad actors are monitoring Tor usage in your geography, you'll want t
 		<img class="size3" src="image6.jpg">
 	</a>
 </p>
+
 Whether you configure your bridge immediately or after you've been using Onion Browser for a while, you need to be careful how you get your bridge information. You have several options. See the Bridge Configuration settings (accessed during on-boarding as above or by tapping on the Onion icon when viewing a website and then tapping 'Bridge Configuration').
 
 <!-- ![](image2.jpg) -->
@@ -221,6 +238,7 @@ Whether you configure your bridge immediately or after you've been using Onion B
 		<img class="size3" src="image2.jpg">
 	</a>
 </p>
+
 Your first option should be the list of bridges using the so-called Obfs4 technology, a list already built into Onion Browser. Select the "Built-in Obfs4" option and Onion Browser will instruct Tor to use that selection of bridges as it attempts to connect. Tap "connect".
 
 Unfortunately the bridges on that list can become crowded and connection may fail here, too. If you know a trustworthy person who uses a bridge to connect to Tor, your second option is to have your friend help you by sending you a bridge QRCode your device can scan and automatically configure to use that bridge. Or, less securely, you can copy/paste a bridge identifier that your friend sends you via another service (messaging, for example). To use this option, tap "Custom Bridges", and then either scan the provided QRCode or paste your provided bridge into the text area shown, then tap "Connect".
@@ -234,6 +252,7 @@ Unfortunately the bridges on that list can become crowded and connection may fai
 		<img class="size2" src="image8.jpg">
 	</a>	
 </p>
+
 If these options fail, you can get access to a fresh selection of Obfs4 bridges using the service called MOAT to get up-to-date information in real-time. This option works in a way that does not expose itself to suspicion. To use this option, select "Built-in Meek/Azure" and tap "connect".
 
 Last, the Tor Project itself also maintains a list of bridges. For this option, tap 'Custom Bridges', then 'Request Bridges from torproject.org' and follow the instructions there. You'll get a bridge identifier, and you'll paste it into the text area, same as you would if a friend provided it to you. After pasting, tap "connect". Note that this method of contacting the Tor Project to get a bridge identifier is an action that itself might be blocked.
@@ -252,6 +271,7 @@ First, you need to set up your iOS device to require security at login via a 6-d
 		<img class="size3" src="image10.png">
 	</a>
 </p>
+
 Now tap the Onion Browser settings icon to get to the Settings page. You'll see a selection option for **"Lock App with TouchID/FaceID or Device Passcode"**. Select that option to enable it and restart Onion Browser. On your next use, Onion Browser will require your ID (in whatever form you've requested) before it will start up.
 
 ## Useful Tips
@@ -266,6 +286,7 @@ The Onion Browser has a built-in Dark Mode that allows it to comply with the sys
 		<img class="size3" src="image3.png">
 	</a>
 </p>
+
 ### Tab Security - Hide Web Pages When Switching Apps
 
 Hiding web pages when switching apps is a feature required by people who are in danger of having their device removed from their person by other bad actors. If that happens, the contents of their open tabs can be seen and perhaps screen-shotted by those bad actors and used in prosecution. While hiding web pages sounds great at first, it means you lose your browsing "state" when switching back to Onion Browser later. Frankly, it is terribly inconvenient for most users. So, there are lesser options, too. From the Onion Browser Settings page, tap "Tab Security"
@@ -276,6 +297,7 @@ Hiding web pages when switching apps is a feature required by people who are in 
 		<img class="size3" src="image29.jpg">
 	</a>
 </p>
+
 Then select from:
 
 #### Forget in Background
@@ -304,6 +326,7 @@ Open the iOS Settings app. Tap "Screen Time" (if it's your first time using this
 		<img class="size3" src="image28.png">
 	</a>
 </p>
+
 Tap "Content &amp; Privacy Restrictions" to enable it. Tap "Allowed Apps". Tap "Safari" to disable it. This way, Safari won't be opened when links are clicked in any app starting with http:// or https://. OnionBrowser can now open the links safely.
 
 ### NextCloud Bookmarks
@@ -321,6 +344,7 @@ If you use NextCloud, you can manage your Onion Browser bookmarks on your other 
 		<img class="size2" src="image9.png">
 	</a>	
 </p>
+
 Tap the Bookmarks icon, then tap 'Sync with Nextcloud'.Enter the link for your Nextcloud server along with your username and password, then tap 'Sync Bookmarks'.
 
 If you're not a Nextcloud user and this sounds interesting, find more about NextCloud at nextcloud.com.
@@ -373,6 +397,7 @@ The circuit is the path your communications take through the Tor network (whose 
 		<img class="size3" src="image7.jpg">
 	</a>
 </p>
+
 The circuit display could also hint to the reason of a slow connection. If you're routed around the world, that might be the problem. However, Tor typically tries to avoid these situations automatically and chooses circuits with hops near you.
 
 ### Custom Site Settings

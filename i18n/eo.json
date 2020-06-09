@@ -1,0 +1,122 @@
+[
+  {
+    "id": "dateFormat",
+    "translation": "2006-01-02"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Jan, 2006 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Afiŝiĝis je {{ .Count }}"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Laste aliiĝis je {{ .Count }})"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Aliaj lingvoj: "
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "readMore",
+    "translation": "Legi pli"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Plimalnovaj afiŝoj"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Plinovaj afiŝoj"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Antaŭa afiŝo"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Sekva afiŝo"
+  },
+  {
+    "id": "readTime",
+    "translation": "minutoj"
+  },
+  {
+    "id": "words",
+    "translation": "vortoj"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Ups, ĉi tiu paĝo ne ekzistas. (404 Error)"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a>-povigita &nbsp;&bull;&nbsp; Haŭto de <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptiĝis al <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Navigacio"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Lingvo"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Serĉi"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Serĉi {{ .Site.Title }}"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Fermi"
+  },
+  {
+    "id": "noComment",
+    "translation": "Sen komentoj"
+  },
+  {
+    "id": "oneComment",
+    "translation": "komento"
+  },
+  {
+    "id": "moreComment",
+    "translation": "komentoj"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Vi povus uzi Markdown-sintakson"
+  },
+  {
+    "id": "yourName",
+    "translation": "Via nomo"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Via retpoŝtadreso"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Via retpaĝaro"
+  },
+  {
+    "id": "show",
+    "translation": "Montru"
+  },
+  {
+    "id": "comments",
+    "translation": "komentoj"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Vidu ankaŭ"
+  }
+]

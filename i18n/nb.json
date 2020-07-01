@@ -1,122 +1,258 @@
 [
-  {
-    "id": "dateFormat",
-    "translation": "02.01.2006"
-  },
-  {
-    "id": "shortdateFormat",
-    "translation": "2 Jan, 2006 15:04:05"
-  },
-  {
-    "id": "postedOnDate",
-    "translation": "Postet {{ .Count }}"
-  },
-  {
-    "id": "lastModified",
-    "translation": "(Sist endret {{ .Count }})"
-  },
-  {
-    "id": "translationsLabel",
-    "translation": "Andre språk: "
-  },
-  {
-    "id": "translationsSeparator",
-    "translation": ", "
-  },
-  {
-    "id": "readMore",
-    "translation": "Les Mer"
-  },
-  {
-    "id": "olderPosts",
-    "translation": "Eldre Poster"
-  },
-  {
-    "id": "newerPosts",
-    "translation": "Nyere Poster"
-  },
-  {
-    "id": "previousPost",
-    "translation": "Forrige Post"
-  },
-  {
-    "id": "nextPost",
-    "translation": "Neste Post"
-  },
-  {
-    "id": "readTime",
-    "translation": "minutter"
-  },
-  {
-    "id": "words",
-    "translation": "ord"
-  },
-  {
-    "id": "pageNotFound",
-    "translation": "Oisann! Denne siden finnes visst ikke. Prøv noe annet. (404 feil)"
-  },
-  {
-    "id": "poweredBy",
-    "translation": "Kjører på <a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Tema fra <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> tilpasset til <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
-  },
-  {
-    "id": "toggleNavigation",
-    "translation": "Navigasjon på/av"
-  },
-  {
-    "id": "languageSwitcherLabel",
-    "translation": "Språk"
-  },
-  {
-    "id": "gcseLabelShort",
-    "translation": "Søk"
-  },
-  {
-    "id": "gcseLabelLong",
-    "translation": "Søk {{ .Site.Title }}"
-  },
-  {
-    "id": "gcseClose",
-    "translation": "Lukk"
-  },
-  {
-    "id": "noComment",
-    "translation": "Ingen kommentarer"
-  },
-  {
-    "id": "oneComment",
-    "translation": "kommentar"
-  },
-  {
-    "id": "moreComment",
-    "translation": "kommentarer"
-  },
-  {
-    "id": "useMarkdown",
-    "translation": "Du kan bruke Markdown syntax"
-  },
-  {
-    "id": "yourName",
-    "translation": "Ditt navn"
-  },
-  {
-    "id": "yourEmail",
-    "translation": "Din e-postadresse"
-  },
-  {
-    "id": "yourWebsite",
-    "translation": "Din webside"
-  },
-  {
-    "id": "show",
-    "translation": "Vis"
-  },
-  {
-    "id": "comments",
-    "translation": "kommentarer"
-  },
-  {
-    "id": "seeAlso",
-    "translation": "Se også"
-  }
+    {
+        "id": "dateFormat",
+        "translation": "02.01.2006"
+    },
+    {
+        "id": "shortdateFormat",
+        "translation": "2 Jan, 2006 15:04:05"
+    },
+    {
+        "id": "postedOnDate",
+        "translation": "Postet {{ .Count }}"
+    },
+    {
+        "id": "lastModified",
+        "translation": "(Sist endret {{ .Count }})"
+    },
+    {
+        "id": "translationsLabel",
+        "translation": "Andre språk: "
+    },
+    {
+        "id": "translationsSeparator",
+        "translation": ", "
+    },
+    {
+        "id": "readMore",
+        "translation": "Les Mer"
+    },
+    {
+        "id": "olderPosts",
+        "translation": "Eldre Poster"
+    },
+    {
+        "id": "newerPosts",
+        "translation": "Nyere Poster"
+    },
+    {
+        "id": "previousPost",
+        "translation": "Forrige Post"
+    },
+    {
+        "id": "nextPost",
+        "translation": "Neste Post"
+    },
+    {
+        "id": "readTime",
+        "translation": "minutter"
+    },
+    {
+        "id": "words",
+        "translation": "ord"
+    },
+    {
+        "id": "pageNotFound",
+        "translation": "Oisann! Denne siden finnes visst ikke. Prøv noe annet. (404 feil)"
+    },
+    {
+        "id": "poweredBy",
+        "translation": "Kjører på <a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Tema fra <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> tilpasset til <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+    },
+    {
+        "id": "toggleNavigation",
+        "translation": "Navigasjon på/av"
+    },
+    {
+        "id": "languageSwitcherLabel",
+        "translation": "Språk"
+    },
+    {
+        "id": "gcseLabelShort",
+        "translation": "Søk"
+    },
+    {
+        "id": "gcseLabelLong",
+        "translation": "Søk {{ .Site.Title }}"
+    },
+    {
+        "id": "gcseClose",
+        "translation": "Lukk"
+    },
+    {
+        "id": "noComment",
+        "translation": "Ingen kommentarer"
+    },
+    {
+        "id": "oneComment",
+        "translation": "kommentar"
+    },
+    {
+        "id": "moreComment",
+        "translation": "kommentarer"
+    },
+    {
+        "id": "useMarkdown",
+        "translation": "Du kan bruke Markdown syntax"
+    },
+    {
+        "id": "yourName",
+        "translation": "Ditt navn"
+    },
+    {
+        "id": "yourEmail",
+        "translation": "Din e-postadresse"
+    },
+    {
+        "id": "yourWebsite",
+        "translation": "Din webside"
+    },
+    {
+        "id": "show",
+        "translation": "Vis"
+    },
+    {
+        "id": "comments",
+        "translation": "kommentarer"
+    },
+    {
+        "id": "seeAlso",
+        "translation": "Se også"
+    },
+    {
+        "id": "Live Chatrooms",
+        "translation": "Sanntidssludrerom"
+    },
+    {
+        "id": "Export Information",
+        "translation": "Eksporter informasjon"
+    },
+    {
+        "id": "Jobs and Internships",
+        "translation": "Jobb og lærlingeplasser"
+    },
+    {
+        "id": "Contact",
+        "translation": "Kontakt"
+    },
+    {
+        "id": "Archived Apps",
+        "translation": "Arkiverte programmer"
+    },
+    {
+        "id": "Security You Can Trust",
+        "translation": "Pålitelig sikkerhet"
+    },
+    {
+        "id": "Team",
+        "translation": "Lag"
+    },
+    {
+        "id": "Signing Keys",
+        "translation": "Signeringsnøkler"
+    },
+    {
+        "id": "Services",
+        "translation": "Tjenester"
+    },
+    {
+        "id": "Press",
+        "translation": "Presse"
+    },
+    {
+        "id": "Partners and Funding",
+        "translation": "Partnere og finansiering"
+    },
+    {
+        "id": "About the Guardian Project",
+        "translation": "Om Guardian-prosjektet"
+    },
+    {
+        "id": "How You Can Work With Us",
+        "translation": "Hvordan du kan jobbe med oss"
+    },
+    {
+        "id": "Blog",
+        "translation": "Blogg"
+    },
+    {
+        "id": "sourceCode",
+        "translation": "Kildekode"
+    },
+    {
+        "id": "description",
+        "translation": "Beskrivelse"
+    },
+    {
+        "id": "metadata",
+        "translation": "Metadata"
+    },
+    {
+        "id": "editOn",
+        "translation": "Rediger på"
+    },
+    {
+        "id": "edit",
+        "translation": "Rediger"
+    },
+    {
+        "id": "translateOn",
+        "translation": "Oversett på"
+    },
+    {
+        "id": "translation",
+        "translation": "Oversettelse"
+    },
+    {
+        "id": "webSite",
+        "translation": "Nettside"
+    },
+    {
+        "id": "onGitLab",
+        "translation": "På GitLab"
+    },
+    {
+        "id": "onGitHub",
+        "translation": "På GitHub"
+    },
+    {
+        "id": "blogPosts",
+        "translation": "Bloggposter"
+    },
+    {
+        "id": "tutorials",
+        "translation": "Veiledninger"
+    },
+    {
+        "id": "archivedApps",
+        "translation": "Arkiverte programmer"
+    },
+    {
+        "id": "press",
+        "translation": "Presse"
+    },
+    {
+        "id": "team",
+        "translation": "Lag"
+    },
+    {
+        "id": "contact",
+        "translation": "Kontakt"
+    },
+    {
+        "id": "archive",
+        "translation": "Arkiv"
+    },
+    {
+        "id": "code",
+        "translation": "Kode"
+    },
+    {
+        "id": "apps",
+        "translation": "Programmer"
+    },
+    {
+        "id": "about",
+        "translation": "Om"
+    }
 ]

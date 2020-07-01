@@ -5,7 +5,7 @@
     },
     {
         "id": "apps",
-        "translation": "apps"
+        "translation": "Apps"
     },
     {
         "id": "code",
@@ -33,7 +33,7 @@
     },
     {
         "id": "tutorials",
-        "translation": "Tutorials"
+        "translation": "Anleitungen"
     },
     {
         "id": "dateFormat",
@@ -229,7 +229,7 @@
     },
     {
         "id": "Signing Keys",
-        "translation": "Signing Keys"
+        "translation": "Signaturschlüssel"
     },
     {
         "id": "Team",
@@ -254,5 +254,9 @@
     {
         "id": "Jobs and Internships",
         "translation": "Jobs and Praktika"
+    },
+    {
+        "id": "About the Guardian Project",
+        "translation": "Über Guardian Project"
     }
 ]

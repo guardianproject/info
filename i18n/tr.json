@@ -254,5 +254,9 @@
     {
         "id": "apps",
         "translation": "uygulamalar"
+    },
+    {
+        "id": "About Guardian Project",
+        "translation": "Guardian Project Hakkında"
     }
 ]

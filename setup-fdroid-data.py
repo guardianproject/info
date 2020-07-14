@@ -96,10 +96,10 @@ for app in apps:
     if app['packageName'] == 'org.article19.circulo':
         # remove Circulo until it has localized description in the fdroid repo
         continue
+    languages = set()
     if 'localized' in app:
-        languages = set()
         for language in list(app['localized'].keys()):
-            if language in ('en', 'en-US', 'no'):
+            if language in ('en', 'en-US'):
                 continue
             if len(language) > 3 and language != 'pt-BR' and not language.startswith('zh') :
                 if '-' in language:
@@ -113,6 +113,10 @@ for app in apps:
                 app['localized'] = app['localized'].copy()
                 app['localized'][l] = app['localized'][language]
                 language = l
+            if language == 'no':
+                continue  # "no" is obsolete and conflicts with YAML true values
+            if '-' in language or '_' in language:
+                continue  # the script/Hugo setup can't handle these yet
             languages.add(language)
     site_languages.update(languages)
     appsdict[app['packageName']] = app

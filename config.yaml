@@ -69,9 +69,9 @@ languages:
   lt: {weight: 2}
   lv: {weight: 2}
   nl: {weight: 2}
+  no: {weight: 2}
   pl: {weight: 2}
-  pt-BR: {weight: 2}
-  pt-PT: {weight: 2}
+  pt: {weight: 2}
   ro: {weight: 2}
   ru: {weight: 2}
   sk: {weight: 2}
@@ -82,6 +82,7 @@ languages:
   tr: {weight: 2}
   uk: {weight: 2}
   vi: {weight: 2}
+  zh: {weight: 2}
 
 Params:
   since: 2009

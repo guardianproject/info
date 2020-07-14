@@ -77,7 +77,6 @@ languages:
   mk: {weight: 2}
   nb: {weight: 2}
   nl: {weight: 2}
-  no: {weight: 2}
   pl: {weight: 2}
   pt: {weight: 2}
   ro: {weight: 2}

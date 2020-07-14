@@ -263,6 +263,11 @@
         "vi": {
           "summary": "ti\u1ec7n \u00edch \u0111\u1ec3 nh\u1eadn th\u00f4ng tin v\u1ec1 c\u00e1c APK \u0111\u01b0\u1ee3c c\u00e0i \u0111\u1eb7t tr\u00ean thi\u1ebft b\u1ecb c\u1ee7a b\u1ea1n"
         },
+        "zh": {
+          "description": "Checkey \u662f\u4e00\u4e2a\u83b7\u5f97\u5df2\u5b89\u88c5 APK \u76f8\u5173\u4fe1\u606f\u7684\u5b9e\u7528\u5de5\u5177\u3002\u5b83\u4ece\u60a8\u7684\u8bbe\u5907\u4e0a\u5df2\u5b89\u88c5\u7684\u6240\u6709\u5e94\u7528\u5f00\u59cb\uff0c\u4e00\u952e\u89e6\u6478\u5373\u53ef\u663e\u793a APK \u7684\u6307\u7eb9\uff0c\u5e76\u4e14\u63d0\u4f9b\u5230\u8fbe virustotal.com \u548c androidobservatory.org \u7684\u5feb\u6377\u94fe\u63a5\uff0c\u8ba9\u60a8\u65b9\u4fbf\u5730\u4e86\u89e3\u7279\u5b9a APK \u7684\u6863\u6848\u3002\u5b83\u8fd8\u53ef\u4ee5\u8ba9\u60a8\u5bfc\u51fa\u7b7e\u540d\u8bc1\u4e66\u548c\u751f\u6210 ApkSignaturePin Pin \u6587\u4ef6\u4f9b TrustedIntents \u5e93\u4f7f\u7528\u3002\n\u2605 Checkey \u652f\u6301\u4e0b\u5217\u8bed\u8a00\uff1a\nDeutsch, English, espa\u00f1ol, suomi, \u65e5\u672c\u8a9e, \ud55c\uad6d\uc5b4, Norsk, portugu\u00eas (Portugal), \u0420\u0443\u0441\u0441\u043a\u0438\u0439, Sloven\u0161\u010dina, T\u00fcrk\u00e7e\n\u6ca1\u770b\u5230\u60a8\u7684\u8bed\u8a00\uff1f\u5e2e\u5fd9\u7ffb\u8bd1\u672c\u5e94\u7528\u5427\uff1a\nhttps://hosted.weblate.org/projects/guardianproject/checkey/\nhttps://hosted.weblate.org/projects/guardianproject/checkey-metadata/\n\n***\u8be6\u7ec6\u4e86\u89e3***\n\u2605 \u5173\u4e8e\u6211\u4eec\uff1aGuardian \u9879\u76ee\u662f\u4e00\u4e2a\u5f00\u53d1\u8005\u5c0f\u7ec4\uff0c\u81f4\u529b\u4e8e\u521b\u9020\u79fb\u52a8\u5e94\u7528\u548c\u5f00\u6e90\u4ee3\u7801\u7684\u7f8e\u597d\u660e\u5929\n\u2605 \u6211\u4eec\u7684\u7f51\u7ad9: https://GuardianProject.info\n\u2605 \u6211\u4eec\u7684 Twitter: https://twitter.com/guardianproject\n\u2605 \u81ea\u7531\u8f6f\u4ef6\uff1aCheckey \u662f\u81ea\u7531\u8f6f\u4ef6\u3002\u60a8\u53ef\u4ee5\u67e5\u770b\u6211\u4eec\u7684\u6e90\u4ee3\u7801\uff0c\u8fd8\u53ef\u4ee5\u5e2e\u52a9\u6211\u4eec\u8ba9 Checkey \u53d8\u5f97\u66f4\u597d\uff1a\nhttps://gitlab.com/guardianproject/checkey\n\u2605 \u81f4\u7528\u6237\uff1a\u6211\u4eec\u8fd8\u7f3a\u5c11\u4f60\u559c\u6b22\u7684\u529f\u80fd\uff1f\u53d1\u73b0\u4e86\u4e00\u4e2a bug\uff1f\u8bf7\u544a\u8bc9\u6211\u4eec\uff01\u6211\u4eec\u4e50\u4e8e\u542c\u53d6\u60a8\u7684\u610f\u89c1\u3002\u8bf7\u53d1\u9001\u7535\u5b50\u90ae\u4ef6\u81f3: support@guardianproject.info \u6216\u8005\u52a0\u5165\u6211\u4eec\u7684\u804a\u5929\u5ba4 https://guardianproject.info/contact\n",
+          "name": "Checkey\uff1a\u672c\u5730\u5e94\u7528\u7684\u4fe1\u606f\n",
+          "summary": "\u4e00\u4e2a\u5b9e\u7528\u5de5\u5177\uff0c\u83b7\u53d6\u5df2\u5b89\u88c5\u5728\u60a8\u7684\u8bbe\u5907\u4e0a\u7684\u5e94\u7528\u7684\u6709\u5173\u4fe1\u606f\n"
+        },
         "zh-CN": {
           "description": "Checkey \u662f\u4e00\u4e2a\u83b7\u5f97\u5df2\u5b89\u88c5 APK \u76f8\u5173\u4fe1\u606f\u7684\u5b9e\u7528\u5de5\u5177\u3002\u5b83\u4ece\u60a8\u7684\u8bbe\u5907\u4e0a\u5df2\u5b89\u88c5\u7684\u6240\u6709\u5e94\u7528\u5f00\u59cb\uff0c\u4e00\u952e\u89e6\u6478\u5373\u53ef\u663e\u793a APK \u7684\u6307\u7eb9\uff0c\u5e76\u4e14\u63d0\u4f9b\u5230\u8fbe virustotal.com \u548c androidobservatory.org \u7684\u5feb\u6377\u94fe\u63a5\uff0c\u8ba9\u60a8\u65b9\u4fbf\u5730\u4e86\u89e3\u7279\u5b9a APK \u7684\u6863\u6848\u3002\u5b83\u8fd8\u53ef\u4ee5\u8ba9\u60a8\u5bfc\u51fa\u7b7e\u540d\u8bc1\u4e66\u548c\u751f\u6210 ApkSignaturePin Pin \u6587\u4ef6\u4f9b TrustedIntents \u5e93\u4f7f\u7528\u3002\n\u2605 Checkey \u652f\u6301\u4e0b\u5217\u8bed\u8a00\uff1a\nDeutsch, English, espa\u00f1ol, suomi, \u65e5\u672c\u8a9e, \ud55c\uad6d\uc5b4, Norsk, portugu\u00eas (Portugal), \u0420\u0443\u0441\u0441\u043a\u0438\u0439, Sloven\u0161\u010dina, T\u00fcrk\u00e7e\n\u6ca1\u770b\u5230\u60a8\u7684\u8bed\u8a00\uff1f\u5e2e\u5fd9\u7ffb\u8bd1\u672c\u5e94\u7528\u5427\uff1a\nhttps://hosted.weblate.org/projects/guardianproject/checkey/\nhttps://hosted.weblate.org/projects/guardianproject/checkey-metadata/\n\n***\u8be6\u7ec6\u4e86\u89e3***\n\u2605 \u5173\u4e8e\u6211\u4eec\uff1aGuardian \u9879\u76ee\u662f\u4e00\u4e2a\u5f00\u53d1\u8005\u5c0f\u7ec4\uff0c\u81f4\u529b\u4e8e\u521b\u9020\u79fb\u52a8\u5e94\u7528\u548c\u5f00\u6e90\u4ee3\u7801\u7684\u7f8e\u597d\u660e\u5929\n\u2605 \u6211\u4eec\u7684\u7f51\u7ad9: https://GuardianProject.info\n\u2605 \u6211\u4eec\u7684 Twitter: https://twitter.com/guardianproject\n\u2605 \u81ea\u7531\u8f6f\u4ef6\uff1aCheckey \u662f\u81ea\u7531\u8f6f\u4ef6\u3002\u60a8\u53ef\u4ee5\u67e5\u770b\u6211\u4eec\u7684\u6e90\u4ee3\u7801\uff0c\u8fd8\u53ef\u4ee5\u5e2e\u52a9\u6211\u4eec\u8ba9 Checkey \u53d8\u5f97\u66f4\u597d\uff1a\nhttps://gitlab.com/guardianproject/checkey\n\u2605 \u81f4\u7528\u6237\uff1a\u6211\u4eec\u8fd8\u7f3a\u5c11\u4f60\u559c\u6b22\u7684\u529f\u80fd\uff1f\u53d1\u73b0\u4e86\u4e00\u4e2a bug\uff1f\u8bf7\u544a\u8bc9\u6211\u4eec\uff01\u6211\u4eec\u4e50\u4e8e\u542c\u53d6\u60a8\u7684\u610f\u89c1\u3002\u8bf7\u53d1\u9001\u7535\u5b50\u90ae\u4ef6\u81f3: support@guardianproject.info \u6216\u8005\u52a0\u5165\u6211\u4eec\u7684\u804a\u5929\u5ba4 https://guardianproject.info/contact\n",
           "name": "Checkey\uff1a\u672c\u5730\u5e94\u7528\u7684\u4fe1\u606f\n",
@@ -276,168 +281,6 @@
       "suggestedVersionName": "0.1.3",
       "translation": "https://hosted.weblate.org/projects/guardianproject/checkey/",
       "webSite": "https://dev.guardianproject.info/projects/checkey"
-    },
-    "info.guardianproject.courier": {
-      "added": 1400025600000,
-      "authorEmail": "support@guardianproject.info",
-      "authorName": "Guardian Project",
-      "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
-      "categories": [
-        "Reading",
-        "Guardian Project"
-      ],
-      "icon": "info.guardianproject.courier.15.png",
-      "lastUpdated": 1403740800000,
-      "liberapayID": "33617",
-      "license": "GPL-3.0-only",
-      "localized": {
-        "af": {
-          "summary": "Lees w\u00eareldwyd. Deel plaaslik.'N veilige News Reader met Orbot Tor ondersteuning"
-        },
-        "am": {
-          "summary": "\u1260\u12d3\u1208\u121d \u12a0\u1240\u134d \u12a0\u1295\u1265\u1265. \u1260\u12a0\u12ab\u1263\u1262\u12cd \u12eb\u130b\u1229.Orbot \u12e8\u1276\u122d \u12f5\u130b\u134d \u130b\u122d \u12a0\u1235\u1270\u121b\u121b\u129d \u12dc\u1293 \u12a0\u1295\u1263\u1262."
-        },
-        "ar": {
-          "summary": "\u0642\u0631\u0627\u0621\u0629 \u0639\u0644\u0649 \u0627\u0644\u0635\u0639\u064a\u062f \u0627\u0644\u0639\u0627\u0644\u0645\u064a. \u062a\u0628\u0627\u062f\u0644 \u0645\u062d\u0644\u064a\u0627.A \u0627\u0644\u0622\u0645\u0646\u0629 \u0642\u0627\u0631\u0626 \u0627\u0644\u0623\u062e\u0628\u0627\u0631 \u0628\u062f\u0639\u0645 Orbot \u062a\u0648\u0631."
-        },
-        "bg": {
-          "summary": "\u041f\u0440\u043e\u0447\u0435\u0442\u0435\u0442\u0435 \u0432 \u0441\u0432\u0435\u0442\u043e\u0432\u0435\u043d \u043c\u0430\u0449\u0430\u0431. \u0421\u043f\u043e\u0434\u0435\u043b\u0435\u0442\u0435 \u043b\u043e\u043a\u0430\u043b\u043d\u043e.\u0421\u0438\u0433\u0443\u0440\u043d\u0430 News Reader \u0441 \u043f\u043e\u0434\u043a\u0440\u0435\u043f\u0430\u0442\u0430 O"
-        },
-        "ca": {
-          "summary": "Llegir A nivell mundial. Comparteix localment.Un Secure lector de not\u00edcies amb e"
-        },
-        "cs": {
-          "summary": "P\u0159e\u010dt\u011bte si v celosv\u011btov\u00e9m m\u011b\u0159\u00edtku. Pod\u011blte se m\u00edstn\u011b.Secure News Reader s podpo"
-        },
-        "de": {
-          "summary": "Lesen Weltweit. Teilen Sie vor Ort.Ein sicheres News Reader mit Orbot Tor Unters"
-        },
-        "el": {
-          "summary": "\u0394\u03b9\u03b1\u03b2\u03ac\u03c3\u03c4\u03b5 \u03cc\u03bb\u03bf \u03c4\u03bf\u03bd \u03ba\u03cc\u03c3\u03bc\u03bf. \u039c\u03bf\u03b9\u03c1\u03b1\u03c3\u03c4\u03b5\u03af\u03c4\u03b5 \u03c4\u03bf\u03c0\u03b9\u03ba\u03ac.\u039c\u03b9\u03b1 \u03b1\u03c3\u03c6\u03b1\u03bb\u03ae\u03c2 News Reader \u03bc\u03b5 \u03c5\u03c0\u03bf\u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7"
-        },
-        "en-US": {
-          "description": "Courier is a mobile RSS news reader with enhanced security features, offline reading and sharing capability.  We've designed it to be fast and light on slow networks and secure in case your network is monitored.\n\nFEATURES:\n\u2605 SECURE: Courier works with Orbot, Tor for Android (https://play.google.com/store/apps/details?id=org.torproject.android) to defend against network surveillance and protect your privacy\n\u2605 ENCRYPTED: Courier encrypts your stored news - and personal information - to protect your privacy\n\u2605 PANIC: Courier's configurable \"panic\" action will remove your news, your personal data and optionally the app itself with one swipe\n\u2605 SAFE: Courier securely caches your password with a configurable timeout. You can configure for repeated password entry failures to trigger data (and app!) deletion.  And you can set a special \"kill password\".  \n\u2605 AUTOMATIC: Courier quietly synchronizes your feeds in the background (manual mode available, too!)\n\u2605 CONTENT SHARE: secure, off-network, sharing of news articles with other users of Courier via Bluetooth (unsecure share available, too!)\n\u2605 PEER-TO-PEER APP SHARING: Get your friends set up with Courier by sharing the app over a common WiFi network or hotspot.\n\u2605 LIGHTWEIGHT: configure Courier to minimize network data use on low-speed networks or sync only on wi-fi\n\u2605 FAVORITES: mark articles as easily-retrieved favorites\n\u2605 PRE-CONFIGURED: Courier ships with desirable international news feeds, and it's easy to add your own\n\u2605 LANGUAGES: English, Chinese (\u4e2d\u570b\u7684), Tibetan (\u0f56\u0f7c\u0f51\u0f0b\u0f61\u0f72\u0f42), Ukrainian (\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0438\u0439), Russian (\u0440\u0443\u0441\u0441\u043a\u0438\u0439)\n\u2605 AD-FREE: Courier is an ad-free, open-source application\n\nABOUT US:\nGuardian Project is a group of developers, designers and technologists that make secure mobile apps and open-source code for a better tomorrow.\n\n\u2605 OUR WEBSITE: https://guardianproject.info\n\u2605 ON TWITTER: https://twitter.com/guardianproject\n\u2605 OPEN-SOURCE: Courier is free software. Take a look at our source code, or join the community to make it better: https://github.com/guardianproject/securereader\n\u2605 MESSAGE US: Are we missing your favorite feature? Found an annoying bug? We\u2019d love to hear from you! Send us an email: support@guardianproject.info\n\n***Disclaimer***\nThe Guardian Project makes apps that are designed to protect your security and anonymity. The protocols that we use are widely regarded as the state of the art in security technology. While we are constantly upgrading our software to combat the latest threats and eliminate bugs, no technology is 100% foolproof. For maximum security and anonymity users must utilize best practices to keep themselves safe. You can find a good introductory guide to these topics at https://securityinabox.org",
-          "icon": "icon.png",
-          "phoneScreenshots": [
-            "-hGFHySYerrx3B7M1VXujPfwjQPYj4uW4el1t5Gq8G9mdg24_god8VzHqFzun4M_8Q.png",
-            "75HfzKrxBIDd6AZGF5NVsAhta968jvDWBpg-kkk_TR0BiNJNC5O8GVbU4AkboMUR7Q.png",
-            "8V0ydye1VMcy_TMnUyT2JGkVcRIs2kusvPk1OqBfx4FbJspTzJU_KO8VZmKVuawg2Q4U.png",
-            "9Ab_06GV8xzxRqhBsznXLGWDj7lVl5bN3I4QcVgAkMM89SF5-PoaiQqxQqDQb0ayNCs.png",
-            "NTYksHqjvK_4Q4gdRWNvNphXxMEMERKwKeiylqZiAaENNwC1XH_aAjwn8znebQ-nB_Q.png",
-            "NmIocjV46fmo7V1v_D0pv0u4_o1FrdqXURvdBsIshQlV52fzGy82nIGTbMamuIa4-uNL.png",
-            "RlKF96lts4milhul1St2_FjrqCsVW5swoATWFuzLapI0Q59-1wlMotlgD4OmRiNcBg.png",
-            "qr46aFfobCNvdtFtKUTpXpllz55FWdLilIEc13copcVbX1jfJBvBhUsqiJlHUkbjZM1Q.png"
-          ],
-          "summary": "Read Globally. Share Locally.A Secure News Reader with Orbot Tor support."
-        },
-        "es": {
-          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
-        },
-        "es-ES": {
-          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
-        },
-        "es-US": {
-          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
-        },
-        "et": {
-          "summary": "Loe terve maailma. Jaga Kohati.Secure News Reader Orbot Tor toetust."
-        },
-        "fi": {
-          "summary": "Lue maailmanlaajuisesti. Jaa Paikallisesti.Turvallinen News Reader Orbot Tor tue"
-        },
-        "fr": {
-          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
-        },
-        "fr-CA": {
-          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
-        },
-        "fr-FR": {
-          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
-        },
-        "hi": {
-          "summary": "\u0935\u093f\u0936\u094d\u0935 \u0938\u094d\u0924\u0930 \u092a\u0930 \u092a\u0922\u093c\u0947\u0902\u0964 \u0938\u094d\u0925\u093e\u0928\u0940\u092f \u0930\u0942\u092a \u0938\u0947 \u0938\u093e\u091d\u093e \u0915\u0930\u0947\u0902\u0964Orbot \u091f\u094b \u0938\u092e\u0930\u094d\u0925\u0928 \u0915\u0947 \u0938\u093e\u0925 \u090f\u0915 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924"
-        },
-        "hr": {
-          "summary": "Pro\u010ditajte globalno. Podijelite na lokalnoj razini.Sigurna \u010dita\u010d vijesti sa Orbo"
-        },
-        "hu": {
-          "summary": "Olvassa el vil\u00e1gszerte. Ossza helyben.A Secure News Reader Orbot Tor t\u00e1mogat\u00e1st."
-        },
-        "id": {
-          "summary": "Baca global. Bagi Lokal.Secure News Reader dengan dukungan Orbot Tor."
-        },
-        "it": {
-          "summary": "Leggi globale. Condividi localmente.A Secure News Reader con il supporto Orbot T"
-        },
-        "ja": {
-          "summary": "\u30b0\u30ed\u30fc\u30d0\u30eb\u3092\u304a\u8aad\u307f\u304f\u3060\u3055\u3044\u3002\u30ed\u30fc\u30ab\u30eb\u5171\u6709\u3002Orbot\u306eTor\u3092\u30b5\u30dd\u30fc\u30c8\u3059\u308b\u30bb\u30ad\u30e5\u30a2\u306a\u30cb\u30e5\u30fc\u30b9\u30ea\u30fc\u30c0\u30fc\u3002"
-        },
-        "ko": {
-          "summary": "\uc138\uacc4\uc801\uc73c\ub85c \uc77d\uae30. \ub85c\uceec \uacf5\uc720 \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.Orbot \ud1a0\ub974 \uc9c0\uc6d0 \ubcf4\uc548 \ub274\uc2a4 \ub9ac\ub354."
-        },
-        "lt": {
-          "summary": "Skaityti visame pasaulyje. Dalytis vietoje.Saugus Naujienos skaitytuvas Orbot To"
-        },
-        "lv": {
-          "summary": "Las\u012bt glob\u0101li. Dal\u012bties Lok\u0101li.Dro\u0161a News Reader ar Orbot Tor atbalstu."
-        },
-        "nl": {
-          "summary": "Lees Wereldwijd. Deel Lokaal.Een Secure News Reader met Orbot Tor ondersteuning."
-        },
-        "no": {
-          "summary": "Les globalt. Del lokalt.Et sikkert News Reader med Orbot Tor st\u00f8tte."
-        },
-        "pl": {
-          "summary": "Czytaj na ca\u0142ym \u015bwiecie. Podziel Lokalnie.Bezpieczne News Reader z obs\u0142ug\u0105 Orbot"
-        },
-        "pt": {
-          "summary": "Leia globais. Compartilhe localmente.Um seguro News Reader com o apoio Orbot Tor"
-        },
-        "pt-BR": {
-          "summary": "Leia globais. Compartilhe localmente.Um seguro News Reader com o apoio Orbot Tor"
-        },
-        "pt-PT": {
-          "summary": "Leia globais. Compartilhe localmente.Um seguro News Reader com o apoio Orbot Tor"
-        },
-        "ro": {
-          "summary": "Cite\u0219te toat\u0103 lumea. \u00cemparte local.Un Secure News Reader cu suport Orbot Tor."
-        },
-        "ru": {
-          "summary": "\u0427\u0438\u0442\u0430\u0439\u0442\u0435 \u0432 \u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u043e\u043c \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0435. \u041f\u043e\u0434\u0435\u043b\u0438\u0442\u0435\u0441\u044c \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u043e.\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u044b\u0439 \u0434\u043b\u044f \u0447\u0442\u0435\u043d\u0438\u044f \u043d\u043e\u0432\u043e\u0441\u0442\u0435"
-        },
-        "sk": {
-          "summary": "Pre\u010d\u00edtajte si v celosvetovom meradle. Pode\u013ete sa lok\u00e1lne.Secure News Reader s po"
-        },
-        "sl": {
-          "summary": "Preberite svetu. Delite Lokalno.Secure News Reader s Orbot Tor podporo."
-        },
-        "sv": {
-          "summary": "L\u00e4s globalt. Dela Lokalt.En s\u00e4ker nyhetsl\u00e4sare med Orbot Tor st\u00f6d."
-        },
-        "sw": {
-          "summary": "Kusoma Kimataifa. Ndani ya nchi kushiriki.Salama Habari Msomaji na Orbot Tor msa"
-        },
-        "th": {
-          "summary": "\u0e2d\u0e48\u0e32\u0e19\u0e17\u0e31\u0e48\u0e27\u0e42\u0e25\u0e01 \u0e41\u0e1a\u0e48\u0e07\u0e1b\u0e31\u0e19\u0e43\u0e19\u0e1e\u0e37\u0e49\u0e19\u0e17\u0e35\u0e48\u0e2d\u0e48\u0e32\u0e19\u0e02\u0e48\u0e32\u0e27\u0e01\u0e32\u0e23\u0e23\u0e31\u0e01\u0e29\u0e32\u0e04\u0e27\u0e32\u0e21\u0e1b\u0e25\u0e2d\u0e14\u0e20\u0e31\u0e22\u0e14\u0e49\u0e27\u0e22\u0e01\u0e32\u0e23\u0e2a\u0e19\u0e31\u0e1a\u0e2a\u0e19\u0e38\u0e19 Orbot Tor"
-        },
-        "tr": {
-          "summary": "D\u00fcnyaya okuyun. Yerel payla\u015f\u0131n.Orbot Tor deste\u011fi ile G\u00fcvenli News Reader."
-        },
-        "uk": {
-          "summary": "\u0427\u0438\u0442\u0430\u0439\u0442\u0435 \u0432 \u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u043e\u043c\u0443 \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0456. \u041f\u043e\u0434\u0456\u043b\u0456\u0442\u044c\u0441\u044f \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u043e.\u0411\u0435\u0437\u043f\u0435\u0447\u043d\u0438\u0439 \u0434\u043b\u044f \u0447\u0438\u0442\u0430\u043d\u043d\u044f \u043d\u043e\u0432\u0438\u043d "
-        },
-        "vi": {
-          "summary": "\u0110\u1ecdc to\u00e0n c\u1ea7u. Chia s\u1ebb t\u1ea1i \u0111\u1ecba ph\u01b0\u01a1ng.M\u1ed9t Tin t\u1ee9c B\u1ea3o m\u1eadt Reader v\u1edbi h\u1ed7 tr\u1ee3 Orbot"
-        }
-      },
-      "name": "Courier",
-      "packageName": "info.guardianproject.courier",
-      "sourceCode": "https://github.com/guardianproject/securereader",
-      "suggestedVersionCode": "15",
-      "suggestedVersionName": "0.1.9",
-      "translation": "https://www.transifex.com/otf/securereader/",
-      "webSite": "https://dev.guardianproject.info/projects/secure-reader"
     },
     "info.guardianproject.locationprivacy": {
       "added": 1422489600000,
@@ -757,7 +600,7 @@
           "summary": "M\u1ed9t tr\u00ecnh duy\u1ec7t web ri\u00eang t\u01b0 t\u1eadp trung \u0111\u1ec3 s\u1eed d\u1ee5ng v\u1edbi Orbot, d\u1ef1a tr\u00ean tr\u00ecnh duy\u1ec7"
         }
       },
-      "name": "OrfoxRIP",
+      "name": "Orfox",
       "packageName": "info.guardianproject.orfox",
       "sourceCode": "https://github.com/guardianproject/orfox",
       "suggestedVersionCode": "17",
@@ -767,8 +610,8 @@
     "info.guardianproject.pixelknot": {
       "added": 1361836800000,
       "antiFeatures": [
-        "KnownVuln",
-        "DisabledAlgorithm"
+        "DisabledAlgorithm",
+        "KnownVuln"
       ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
@@ -1287,6 +1130,9 @@
         "vi": {
           "summary": "K\u00edch ho\u1ea1t c\u00e1c \u1ee9ng d\u1ee5ng \u0111\u1ec3 b\u1ea3o v\u1ec7 s\u1ef1 ri\u00eang t\u01b0 c\u1ee7a b\u1ea1n khi lo l\u1eafng ho\u1eb7c s\u1ee3 h\u00e3i t\u00ecn"
         },
+        "zh": {
+          "summary": "\u5728\u7126\u8651\u6216\u6050\u614c\u7684\u60c5\u51b5\u4e0b\u89e6\u53d1\u5e94\u7528\u4ee5\u4fdd\u62a4\u60a8\u7684\u9690\u79c1\n"
+        },
         "zh-CN": {
           "summary": "\u5728\u7126\u8651\u6216\u6050\u614c\u7684\u60c5\u51b5\u4e0b\u89e6\u53d1\u5e94\u7528\u4ee5\u4fdd\u62a4\u60a8\u7684\u9690\u79c1\n"
         },
@@ -1311,14 +1157,14 @@
         "Multimedia"
       ],
       "description": "<p>Add metadata and Creative Commons licensing to your audiovisual media and then send it to the Internet Archive via Tor. It offers more agency over your media, while protecting civil liberties and increasing interoperability for those interested in finding it and reusing it in the future.</p>",
-      "icon": "net.opendasharchive.openarchive.release.17.png",
+      "icon": "net.opendasharchive.openarchive.release.20313.png",
       "issueTracker": "https://github.com/OpenArchive/openarchive-android/issues",
-      "lastUpdated": 1511913600000,
+      "lastUpdated": 1591118888000,
       "license": "GPL-3.0-only",
-      "name": "OpenArchive",
+      "name": "Save",
       "packageName": "net.opendasharchive.openarchive.release",
       "sourceCode": "https://github.com/OpenArchive/openarchive-android",
-      "suggestedVersionCode": "17",
+      "suggestedVersionCode": "20313",
       "summary": "Organize and share media",
       "webSite": "https://open-archive.net"
     },
@@ -1438,9 +1284,9 @@
       ],
       "donate": "https://www.torproject.org/donate/donate.html.en",
       "flattrID": "5649",
-      "icon": "org.torproject.android.16111000.png",
+      "icon": "org.torproject.android.1630200100.png",
       "issueTracker": "https://github.com/guardianproject/orbot/issues",
-      "lastUpdated": 1567731640000,
+      "lastUpdated": 1591118891000,
       "liberapayID": "33617",
       "license": "BSD-3-Clause",
       "localized": {
@@ -1590,7 +1436,7 @@
       "name": "Orbot",
       "packageName": "org.torproject.android",
       "sourceCode": "https://github.com/guardianproject/orbot",
-      "suggestedVersionCode": "16111000",
+      "suggestedVersionCode": "1630200100",
       "translation": "https://hosted.weblate.org/projects/guardianproject/orbot",
       "webSite": "https://guardianproject.info/apps/org.torproject.android"
     },
@@ -1599,19 +1445,22 @@
       "authorEmail": "playstore@torproject.org",
       "authorName": "The Tor Project",
       "authorWebSite": "https://www.torproject.org/",
+      "bitcoin": "1JADsmDFX9d2TXis63S9F9L8eDAXwJmnWE",
       "categories": [
-        "Guardian Project",
         "Internet",
-        "Security"
+        "Security",
+        "Guardian Project"
       ],
-      "description": "<p>Tor Browser for Android is the only official mobile browser supported by the Tor Project, developers of the world\u2019s strongest tool for privacy and freedom online.</p><p>Note: For this release, you also need to install Orbot, a proxy application that will connect Tor Browser for Android with the Tor network. For the upcoming Tor Browser for Android stable release, our goal is for Orbot not to be necessary to connect to Tor.</p><p>Known issue: Our Security Slider is now under \u2018Security Settings,\u2019 but because of a small issue, it\u2019s only showing up after you restart the app. We plan on fixing it for the next release.</p><p>BLOCK TRACKERS Tor Browser isolates each website you visit so third-party trackers and ads can\u2019t follow you. Any cookies automatically clear when you\u2019re done browsing.</p>",
-      "icon": "org.torproject.torbrowser.2015615413.png",
+      "description": "<p>Tor Browser for Android is the only official mobile browser supported by the Tor Project, developers of the world\u2019s strongest tool for privacy and freedom online.</p><p>BLOCK TRACKERS Tor Browser isolates each website you visit so third-party trackers and ads can\u2019t follow you. Any cookies automatically clear when you\u2019re done browsing.</p><p>DEFEND AGAINST SURVEILLANCE Tor Browser prevents someone watching your connection from knowing what websites you visit. All anyone monitoring your browsing habits can see is that you\u2019re using Tor.</p><p>RESIST FINGERPRINTING Tor aims to make all users look the same, making it difficult for you to be fingerprinted based on your browser and device information.</p><p>MULTI-LAYERED ENCRYPTION When you use Tor Browser for Android, your traffic is relayed and encrypted three times as it passes over the Tor network. The network is comprised of thousands of volunteer-run servers known as Tor relays. Watch this animation to learn more about how it works:</p><p>BROWSE FREELY With Tor Browser for Android, you are free to access sites your local internet service provider may have blocked.</p><p>THIS APP IS MADE POSSIBLE BY DONORS LIKE YOU Tor Browser is free and open source software developed the Tor Project, a nonprofit organization. You can help keep Tor strong, secure, and independent by making a donation. Give before the end of 2019, and Mozilla will match your gift: https://donate.torproject.org/donate/donate-tbi-gp</p><p>Learn more about Tor Browser for Android: - Need help? Visit https://support.torproject.org. The manual is coming soon. - Learn more about what\u2019s happening at Tor: https://blog.torproject.org - Follow the Tor Project on Twitter: https://twitter.com/torproject</p><p>ABOUT THE TOR PROJECT The Tor Project, Inc., is a 501(c)(3) organization developing free and open source software for privacy and freedom online, protecting people from tracking, surveillance, and censorship. The Tor Project\u2019s mission is to advance human rights and freedoms by creating and deploying free and open source anonymity and privacy technologies, support their unrestricted availability and use, and further their scientific and popular understanding.</p>",
+      "donate": "https://donate.torproject.org/",
+      "icon": "org.torproject.torbrowser.2015691615.png",
       "issueTracker": "https://trac.torproject.org/projects/tor/query?status=!closed&keywords=~tbb-mobile",
-      "lastUpdated": 1567731651000,
+      "lastUpdated": 1594162901000,
       "license": "MPL",
+      "litecoin": "LNAifc8nfjtDJ8azRPiancbZSBftPzhfzb",
       "name": "Tor Browser",
       "packageName": "org.torproject.torbrowser",
-      "suggestedVersionCode": "2015615413",
+      "suggestedVersionCode": "2015691615",
       "summary": "Experience real private browsing without tracking, surveillance, or censorship."
     },
     "org.torproject.torbrowser_alpha": {
@@ -1619,167 +1468,23 @@
       "authorEmail": "playstore@torproject.org",
       "authorName": "The Tor Project",
       "authorWebSite": "https://www.torproject.org/",
+      "bitcoin": "1JADsmDFX9d2TXis63S9F9L8eDAXwJmnWE",
       "categories": [
-        "Guardian Project",
         "Internet",
-        "Security"
+        "Security",
+        "Guardian Project"
       ],
-      "description": "<p>Tor Browser for Android is the only official mobile browser supported by the Tor Project, developers of the world\u2019s strongest tool for privacy and freedom online.</p><p>Note: For this release, you also need to install Orbot, a proxy application that will connect Tor Browser for Android with the Tor network. For the upcoming Tor Browser for Android stable release, our goal is for Orbot not to be necessary to connect to Tor.</p><p>Known issue: Our Security Slider is now under \u2018Security Settings,\u2019 but because of a small issue, it\u2019s only showing up after you restart the app. We plan on fixing it for the next release.</p><p>BLOCK TRACKERS Tor Browser isolates each website you visit so third-party trackers and ads can\u2019t follow you. Any cookies automatically clear when you\u2019re done browsing.</p>",
-      "icon": "org.torproject.torbrowser_alpha.2015620221.png",
+      "description": "<p>Tor Browser for Android is the only official mobile browser supported by the Tor Project, developers of the world\u2019s strongest tool for privacy and freedom online.</p><p>BLOCK TRACKERS Tor Browser isolates each website you visit so third-party trackers and ads can\u2019t follow you. Any cookies automatically clear when you\u2019re done browsing.</p><p>DEFEND AGAINST SURVEILLANCE Tor Browser prevents someone watching your connection from knowing what websites you visit. All anyone monitoring your browsing habits can see is that you\u2019re using Tor.</p><p>RESIST FINGERPRINTING Tor aims to make all users look the same, making it difficult for you to be fingerprinted based on your browser and device information.</p><p>MULTI-LAYERED ENCRYPTION When you use Tor Browser for Android, your traffic is relayed and encrypted three times as it passes over the Tor network. The network is comprised of thousands of volunteer-run servers known as Tor relays. Watch this animation to learn more about how it works:</p><p>BROWSE FREELY With Tor Browser for Android, you are free to access sites your local internet service provider may have blocked.</p><p>THIS APP IS MADE POSSIBLE BY DONORS LIKE YOU Tor Browser is free and open source software developed the Tor Project, a nonprofit organization. You can help keep Tor strong, secure, and independent by making a donation. Give before the end of 2019, and Mozilla will match your gift: https://donate.torproject.org/donate/donate-tbi-gp</p><p>Learn more about Tor Browser for Android: - Need help? Visit https://support.torproject.org. The manual is coming soon. - Learn more about what\u2019s happening at Tor: https://blog.torproject.org - Follow the Tor Project on Twitter: https://twitter.com/torproject</p><p>ABOUT THE TOR PROJECT The Tor Project, Inc., is a 501(c)(3) organization developing free and open source software for privacy and freedom online, protecting people from tracking, surveillance, and censorship. The Tor Project\u2019s mission is to advance human rights and freedoms by creating and deploying free and open source anonymity and privacy technologies, support their unrestricted availability and use, and further their scientific and popular understanding.</p>",
+      "donate": "https://donate.torproject.org/",
+      "icon": "org.torproject.torbrowser_alpha.2015696231.png",
       "issueTracker": "https://trac.torproject.org/projects/tor/query?status=!closed&keywords=~tbb-mobile",
-      "lastUpdated": 1567731668000,
+      "lastUpdated": 1594260986000,
       "license": "MPL",
+      "litecoin": "LNAifc8nfjtDJ8azRPiancbZSBftPzhfzb",
       "name": "Tor Browser Alpha",
       "packageName": "org.torproject.torbrowser_alpha",
-      "suggestedVersionCode": "2015620221",
+      "suggestedVersionCode": "2015696231",
       "summary": "Experience real private browsing without tracking, surveillance, or censorship."
-    },
-    "org.witness.informacam.app": {
-      "added": 1386720000000,
-      "authorEmail": "support@guardianproject.info",
-      "authorName": "Guardian Project",
-      "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
-      "categories": [
-        "Guardian Project",
-        "Development"
-      ],
-      "icon": "org.witness.informacam.app.206.png",
-      "issueTracker": "https://dev.guardianproject.info/projects/informacam/issues",
-      "lastUpdated": 1446508800000,
-      "liberapayID": "33617",
-      "license": "GPL-3.0-or-later",
-      "localized": {
-        "af": {
-          "summary": "Die maklikste manier om verifieerbare foto's en video bewys te vang, veilig en p"
-        },
-        "ar": {
-          "summary": "\u0623\u0633\u0647\u0644 \u0637\u0631\u064a\u0642\u0629 \u0644\u0627\u0644\u062a\u0642\u0627\u0637 \u0635\u0648\u0631\u0629 \u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u062a\u062d\u0642\u0642 \u0648\u0625\u062b\u0628\u0627\u062a \u0627\u0644\u0641\u064a\u062f\u064a\u0648\u060c \u0628\u0634\u0643\u0644 \u0622\u0645\u0646 \u0648\u0627\u0644\u0642\u0637\u0627\u0639 \u0627\u0644\u062e\u0627\u0635"
-        },
-        "bg": {
-          "summary": "\u041d\u0430\u0439-\u043b\u0435\u0441\u043d\u0438\u044f\u0442 \u043d\u0430\u0447\u0438\u043d \u0434\u0430 \u0443\u043b\u043e\u0432\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u043c\u0438 \u0444\u043e\u0442\u043e & \u0432\u0438\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u0441\u0442\u0432\u043e, \u0441\u0438\u0433\u0443\u0440\u043d\u043e \u0438 \u0447\u0430\u0441\u0442\u043d"
-        },
-        "ca": {
-          "summary": "La forma m\u00e9s f\u00e0cil de capturar la foto verificable i prova de v\u00eddeo, de forma se"
-        },
-        "cs": {
-          "summary": "Nejjednodu\u0161\u0161\u00ed zp\u016fsob, jak zachytit ov\u011b\u0159iteln\u00e9 Foto a video d\u016fkaz, bezpe\u010dn\u011b a sou"
-        },
-        "da": {
-          "summary": "Den nemmeste m\u00e5de at fange verificerbare Foto & Video bevis, sikkert & privat"
-        },
-        "de": {
-          "summary": "Der einfachste Weg, nachpr\u00fcfbare Foto & Video Beweis zu erfassen, sicher & priva"
-        },
-        "el": {
-          "summary": "\u039f \u03b5\u03c5\u03ba\u03bf\u03bb\u03cc\u03c4\u03b5\u03c1\u03bf\u03c2 \u03c4\u03c1\u03cc\u03c0\u03bf\u03c2 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c3\u03c5\u03bb\u03bb\u03ac\u03b2\u03b5\u03b9 \u03b5\u03c0\u03b1\u03bb\u03b7\u03b8\u03b5\u03cd\u03c3\u03b9\u03bc\u03b1 \u03c6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1 & \u03b2\u03af\u03bd\u03c4\u03b5\u03bf \u03b1\u03c0\u03cc\u03b4\u03b5\u03b9\u03be\u03b7, "
-        },
-        "en-US": {
-          "description": "CameraV is the easiest way to capture and share verifiable photos and video proof on a smartphone or tablet, all the while keeping it entirely secure and private.\n\nCameraV is easy to learn and simple to use (and insanely secure & powerful under the covers...). All photos and videos you take are password-protected and 100% encrypted on your device. You can also add private notes and tags to any photo or video, and choose who you share them with. CameraV also privately stores data from your device sensors and provides built-in tools to see and share it. Finally, it has a built-in secure camera that is simple, streamlined and even supports selfies.\n\nCameraV was developed in partnership with WITNESS, an international human rights video advocacy group, and with the support of the Knight News Foundation. It is built upon the open-source InformaCam platform.\n\n* READ THE USER GUIDE: https://guardianproject.github.io/informacam-guide/en/InformacamGuide.html\n\nCameraV was developed for use by activists, journalists, advocates and others, working in very difficult and high-risk situations, to capture and gather visual evidence and proof of abuse and rights violations. It can also be used in your daily life to capture any moment, and keep them safe and private. You can also use it for documenting your own evidence, after accidents, for real estate needs, or any where you need \"proof\".\n\n* OPEN-SOURCE AND FREE: https://github.com/guardianproject/InformaApp\n* JOIN THE COMMUNITY: https://talk.developersquare.net/c/developers-corner/smart-cameras\n\nCameraV is also known as Camera V or InformaCam.",
-          "summary": "The easiest way to capture verifiable photo & video proof, securely & privately"
-        },
-        "es": {
-          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
-        },
-        "es-ES": {
-          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
-        },
-        "es-US": {
-          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
-        },
-        "et": {
-          "summary": "Lihtsaim viis j\u00e4\u00e4dvustada kontrollitav foto & video t\u00f5end, turvaliselt ja privaa"
-        },
-        "fi": {
-          "summary": "Helpoin tapa tallentaa todennettavissa kuvan & video todisteita, turvallisesti j"
-        },
-        "fr": {
-          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
-        },
-        "fr-CA": {
-          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
-        },
-        "fr-FR": {
-          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
-        },
-        "hi": {
-          "summary": "\u0938\u092c\u0938\u0947 \u0906\u0938\u093e\u0928 \u0924\u0930\u0940\u0915\u093e \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0930\u0942\u092a \u0938\u0947 \u0914\u0930 \u0928\u093f\u091c\u0940 \u0924\u094c\u0930 \u092a\u0930, \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u092b\u094b\u091f\u094b \u0914\u0930 \u0935\u0940\u0921\u093f\u092f\u094b \u0938\u092c\u0942\u0924 \u0915\u092c\u094d"
-        },
-        "hr": {
-          "summary": "Najlak\u0161i na\u010din za hvatanje provjerljive Foto i video dokaz, sigurno i privatno"
-        },
-        "hu": {
-          "summary": "A legegyszer\u0171bb m\u00f3dja annak, hogy elfog ellen\u0151rizhet\u0151 fot\u00f3 \u00e9s vide\u00f3 bizony\u00edt\u00e9k, "
-        },
-        "id": {
-          "summary": "Cara termudah untuk menangkap diverifikasi foto & bukti video, aman & pribadi"
-        },
-        "it": {
-          "summary": "Il modo pi\u00f9 semplice per scattare foto verificabile & prova video, in modo sicur"
-        },
-        "ja": {
-          "summary": "\u5b89\u5168\u00b7\u975e\u516c\u958b\u3001\u691c\u8a3c\u5199\u771f\uff06\u30d3\u30c7\u30aa\u8a3c\u62e0\u3092\u30ad\u30e3\u30d7\u30c1\u30e3\u3059\u308b\u6700\u3082\u7c21\u5358\u306a\u65b9\u6cd5"
-        },
-        "ko": {
-          "summary": "\uac00\uc7a5 \uc26c\uc6b4 \ubc29\ubc95\uc740 \uc548\uc804 \ubc0f \uac1c\uc778, \uac80\uc99d \uc0ac\uc9c4 \ubc0f \ube44\ub514\uc624 \uc99d\uac70\ub97c \ucea1\ucc98"
-        },
-        "lt": {
-          "summary": "Papras\u010diausias b\u016bdas u\u017efiksuoti patikrinam\u0105 nuotrauk\u0105 ir video \u012frodym\u0105, saugiai "
-        },
-        "lv": {
-          "summary": "Viegl\u0101kais veids, lai att\u0113lotu p\u0101rbaud\u0101mu foto un video pier\u0101d\u012bjumus, dro\u0161i un p"
-        },
-        "nl": {
-          "summary": "De eenvoudigste manier om verifieerbare foto & video bewijs vastleggen, veilig e"
-        },
-        "no": {
-          "summary": "Den enkleste m\u00e5ten \u00e5 fange etterpr\u00f8vbar foto og video bevis, sikkert og privat"
-        },
-        "pl": {
-          "summary": "Najprostszym sposobem, aby uchwyci\u0107 zweryfikowania zdj\u0119cie i dow\u00f3d wideo, bezpie"
-        },
-        "pt": {
-          "summary": "A maneira mais f\u00e1cil de capturar foto verific\u00e1vel e prova de v\u00eddeo, de forma seg"
-        },
-        "pt-BR": {
-          "summary": "A maneira mais f\u00e1cil de capturar foto verific\u00e1vel e prova de v\u00eddeo, de forma seg"
-        },
-        "pt-PT": {
-          "summary": "A maneira mais f\u00e1cil de capturar foto verific\u00e1vel e prova de v\u00eddeo, de forma seg"
-        },
-        "ru": {
-          "summary": "\u0421\u0430\u043c\u044b\u0439 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0441\u043f\u043e\u0441\u043e\u0431, \u0447\u0442\u043e\u0431\u044b \u0437\u0430\u0445\u0432\u0430\u0442\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u043c\u043e\u0435 \u0444\u043e\u0442\u043e & \u0432\u0438\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u0430, \u043d"
-        },
-        "sk": {
-          "summary": "Najjednoduch\u0161\u00ed sp\u00f4sob, ako zachyti\u0165 overite\u013en\u00e9 Foto a video d\u00f4kaz, bezpe\u010dne a s\u00fa"
-        },
-        "sl": {
-          "summary": "Najla\u017eji na\u010din za zajemanje preverljive Foto in video dokaz, varno in zasebni"
-        },
-        "sv": {
-          "summary": "Det enklaste s\u00e4ttet att f\u00e5nga verifierbara foto & video bevis, s\u00e4kert och privat"
-        },
-        "sw": {
-          "summary": "Njia rahisi kukamata lithibitishwe picha na video ushahidi, salama & faragha"
-        },
-        "th": {
-          "summary": "\u0e27\u0e34\u0e18\u0e35\u0e17\u0e35\u0e48\u0e07\u0e48\u0e32\u0e22\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e08\u0e30\u0e08\u0e31\u0e1a\u0e20\u0e32\u0e1e\u0e2b\u0e25\u0e31\u0e01\u0e10\u0e32\u0e19\u0e17\u0e35\u0e48\u0e15\u0e23\u0e27\u0e08\u0e2a\u0e2d\u0e1a\u0e44\u0e14\u0e49\u0e41\u0e25\u0e30\u0e27\u0e34\u0e14\u0e35\u0e42\u0e2d\u0e44\u0e14\u0e49\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e1b\u0e25\u0e2d\u0e14\u0e20\u0e31\u0e22\u0e41\u0e25\u0e30\u0e40\u0e2d\u0e01\u0e0a\u0e19"
-        },
-        "tr": {
-          "summary": "en kolay yolu g\u00fcvenli & \u00f6zel, do\u011frulanabilir foto\u011fraf & video kan\u0131t yakalamak i\u00e7"
-        },
-        "uk": {
-          "summary": "\u041d\u0430\u0439\u043f\u0440\u043e\u0441\u0442\u0456\u0448\u0438\u0439 \u0441\u043f\u043e\u0441\u0456\u0431, \u0449\u043e\u0431 \u0437\u0430\u0445\u043e\u043f\u0438\u0442\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u043c\u043e\u0435 \u0444\u043e\u0442\u043e & \u0432\u0456\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0438, \u043d\u0430\u0434\u0456\u0439\u043d\u043e \u0456 \u0432 \u043f"
-        },
-        "vi": {
-          "summary": "C\u00e1ch d\u1ec5 d\u00e0ng nh\u1ea5t \u0111\u1ec3 ch\u1ee5p \u1ea3nh c\u00f3 th\u1ec3 ki\u1ec3m ch\u1ee9ng v\u00e0 b\u1eb1ng ch\u1ee9ng video, an to\u00e0n & t"
-        }
-      },
-      "name": "CameraV",
-      "packageName": "org.witness.informacam.app",
-      "sourceCode": "https://github.com/guardianproject/CameraV",
-      "suggestedVersionCode": "206",
-      "webSite": "https://guardianproject.info/apps/camerav/"
     },
     "org.witness.proofmode": {
       "added": 1512518400000,
@@ -1790,8 +1495,8 @@
         "Multimedia",
         "Guardian Project"
       ],
-      "icon": "org.witness.proofmode.121.png",
-      "lastUpdated": 1561644733000,
+      "icon": "org.witness.proofmode.133.png",
+      "lastUpdated": 1580945655000,
       "liberapayID": "33617",
       "license": "Unknown",
       "localized": {
@@ -1923,7 +1628,7 @@
       },
       "name": "ProofMode",
       "packageName": "org.witness.proofmode",
-      "suggestedVersionCode": "121"
+      "suggestedVersionCode": "133"
     },
     "org.witness.sscphase1": {
       "added": 1376870400000,
@@ -2142,112 +1847,6 @@
         "versionName": "0.1"
       }
     ],
-    "info.guardianproject.courier": [
-      {
-        "added": 1403740800000,
-        "apkName": "Courier-0.1.9.apk",
-        "hash": "bf6566da1f90831887f5bf5605f8d816b1f7f694969459dec599b8bc01a827d3",
-        "hashType": "sha256",
-        "minSdkVersion": 9,
-        "nativecode": [
-          "armeabi",
-          "x86"
-        ],
-        "packageName": "info.guardianproject.courier",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 16484753,
-        "targetSdkVersion": 15,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ]
-        ],
-        "versionCode": 15,
-        "versionName": "0.1.9"
-      },
-      {
-        "added": 1400025600000,
-        "apkName": "Courier-0.1.8.apk",
-        "hash": "e013db095e8da843fae5ac44be6152e51377ee717e5c8a7b6d913d7720566b5a",
-        "hashType": "sha256",
-        "minSdkVersion": 9,
-        "nativecode": [
-          "armeabi",
-          "x86"
-        ],
-        "packageName": "info.guardianproject.courier",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 16536125,
-        "targetSdkVersion": 15,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ]
-        ],
-        "versionCode": 14,
-        "versionName": "0.1.8"
-      }
-    ],
     "info.guardianproject.locationprivacy": [
       {
         "added": 1556319629000,
@@ -2324,152 +1923,6 @@
         "targetSdkVersion": 28,
         "versionCode": 17,
         "versionName": "Orfox-Final-RIP"
-      },
-      {
-        "added": 1567706803000,
-        "apkName": "Orfox-Final-RIP-v16.apk",
-        "hash": "384d03cfd96eaf4e1874c810bd2e3c546ee760442164bca8cc46417a000ddff7",
-        "hashType": "sha256",
-        "minSdkVersion": 15,
-        "packageName": "info.guardianproject.orfox",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 1606750,
-        "targetSdkVersion": 28,
-        "versionCode": 16,
-        "versionName": "Orfox-Final-RIP"
-      },
-      {
-        "added": 1531180800000,
-        "apkName": "Orfox-Fennec-52.9.0esr-TorBrowser-7.5-1-Orfox-1.5.4-RC-1.apk",
-        "features": [
-          "android.hardware.touchscreen"
-        ],
-        "hash": "2230d893f47aba32cd4a42ef4c13ae9eaca37b2c3ee2c09360af1bc80dec459a",
-        "hashType": "sha256",
-        "minSdkVersion": 15,
-        "nativecode": [
-          "armeabi-v7a"
-        ],
-        "packageName": "info.guardianproject.orfox",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 32268754,
-        "targetSdkVersion": 23,
-        "uses-permission": [
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.RECEIVE_BOOT_COMPLETED",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "com.android.launcher.permission.INSTALL_SHORTCUT",
-            null
-          ],
-          [
-            "com.android.launcher.permission.UNINSTALL_SHORTCUT",
-            null
-          ],
-          [
-            "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.SYSTEM_ALERT_WINDOW",
-            null
-          ]
-        ],
-        "versionCode": 15,
-        "versionName": "Fennec-52.9.0esr/TorBrowser-7.5-1/Orfox-1.5.4-RC-1"
-      },
-      {
-        "added": 1522972800000,
-        "apkName": "Orfox-v1.5.2-RC1-Fennec-52.7.3esr-7.5-1.apk",
-        "features": [
-          "android.hardware.touchscreen"
-        ],
-        "hash": "4dc0f1f7124a5244f4055cb3d3fb03d1aed8c852a46ec71d92aaebdd5b62e95d",
-        "hashType": "sha256",
-        "minSdkVersion": 15,
-        "nativecode": [
-          "armeabi-v7a"
-        ],
-        "packageName": "info.guardianproject.orfox",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 28744029,
-        "targetSdkVersion": 23,
-        "uses-permission": [
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.RECEIVE_BOOT_COMPLETED",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "com.android.launcher.permission.INSTALL_SHORTCUT",
-            null
-          ],
-          [
-            "com.android.launcher.permission.UNINSTALL_SHORTCUT",
-            null
-          ],
-          [
-            "com.android.browser.permission.READ_HISTORY_BOOKMARKS",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.SYSTEM_ALERT_WINDOW",
-            null
-          ]
-        ],
-        "versionCode": 13,
-        "versionName": "Fennec-52.7.3esr/TorBrowser-7.5.3/Orfox-1.5.2-RC-1"
       }
     ],
     "info.guardianproject.pixelknot": [
@@ -2595,19 +2048,34 @@
     ],
     "net.opendasharchive.openarchive.release": [
       {
-        "added": 1511913600000,
-        "apkName": "openarchive-0.0.17-alpha-1.apk",
-        "hash": "a20de1d42ccd0487b2af68d36a44bb8cb115eaad44aca6bac94aa1850083f03f",
+        "added": 1591118888000,
+        "apkName": "OpenArchive-0.2.3-BETA-3-releaseflavor-release.apk",
+        "hash": "45776b78292d15e56f22ff779e8b477cacc45fc9fe77337a27a6a7bcfeb50d5a",
         "hashType": "sha256",
-        "minSdkVersion": 16,
+        "minSdkVersion": 19,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64",
+          "x86_64/darwin"
+        ],
         "packageName": "net.opendasharchive.openarchive.release",
         "sig": "3118fb92e54c3b053903f0334596fd9e",
         "signer": "e08e63ca87fdb93247dbab38f2e7f4104896bb487af5980838ace64c93c15a3c",
-        "size": 3890238,
-        "targetSdkVersion": 23,
+        "size": 11109687,
+        "targetSdkVersion": 28,
         "uses-permission": [
           [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
             null
           ],
           [
@@ -2615,11 +2083,7 @@
             null
           ],
           [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
+            "android.permission.WRITE_EXTERNAL_STORAGE",
             null
           ],
           [
@@ -2627,7 +2091,121 @@
             null
           ],
           [
-            "android.permission.CAMERA",
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ]
+        ],
+        "versionCode": 20313,
+        "versionName": "0.2.3-BETA-3"
+      },
+      {
+        "added": 1580391136000,
+        "apkName": "OpenArchive-0.2.2-RC-1-releaseflavor-release.apk",
+        "hash": "ce1797a8ecbbc84c478e37ddc885f28b37c4610fd5932e7f98dc60792cbf962c",
+        "hashType": "sha256",
+        "minSdkVersion": 19,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64",
+          "x86_64/darwin"
+        ],
+        "packageName": "net.opendasharchive.openarchive.release",
+        "sig": "3118fb92e54c3b053903f0334596fd9e",
+        "signer": "e08e63ca87fdb93247dbab38f2e7f4104896bb487af5980838ace64c93c15a3c",
+        "size": 10955642,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ]
+        ],
+        "versionCode": 20301,
+        "versionName": "0.2.2-RC-1"
+      }
+    ],
+    "org.article19.circulo": [
+      {
+        "added": 1576715783000,
+        "apkName": "Circulo-1.0.0-RC-3-altbrand-universal-release.apk",
+        "hash": "969527959627ee88083d822b1207f111a26b14fef473c31de238720a068b0567",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi",
+          "armeabi-v7a",
+          "mips",
+          "x86",
+          "x86_64",
+          "x86_64/darwin"
+        ],
+        "packageName": "org.article19.circulo",
+        "sig": "9548d76bb4dc2c5483a1c432cd66c285",
+        "signer": "f3c7017a9c9bb304e85206a6f45723af0b31fe05acca3be974a86cc832a699d6",
+        "size": 52807267,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
             null
           ],
           [
@@ -2635,11 +2213,27 @@
             null
           ],
           [
-            "android.permission.MANAGE_DOCUMENTS",
+            "android.permission.CAMERA",
             null
           ],
           [
-            "android.permission.INTERNET",
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
             null
           ],
           [
@@ -2651,120 +2245,36 @@
             null
           ],
           [
-            "android.permission.CHANGE_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ]
-        ],
-        "versionCode": 17,
-        "versionName": "0.0.17-alpha-1"
-      },
-      {
-        "added": 1473897600000,
-        "apkName": "openarchive-0.0.16-release.apk",
-        "hash": "9a76a5d7362cd1466a78ea851745e4c4886b23a34c78eb5116908be5168b778d",
-        "hashType": "sha256",
-        "minSdkVersion": 10,
-        "packageName": "net.opendasharchive.openarchive.release",
-        "sig": "3118fb92e54c3b053903f0334596fd9e",
-        "signer": "e08e63ca87fdb93247dbab38f2e7f4104896bb487af5980838ace64c93c15a3c",
-        "size": 3287635,
-        "targetSdkVersion": 16,
-        "uses-permission": [
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
             "android.permission.ACCESS_COARSE_LOCATION",
             null
           ],
           [
-            "android.permission.MANAGE_DOCUMENTS",
+            "android.permission.ACCESS_FINE_LOCATION",
             null
           ],
           [
-            "android.permission.INTERNET",
+            "android.permission.FOREGROUND_SERVICE",
             null
           ],
           [
-            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.READ_CONTACTS",
             null
           ],
           [
-            "android.permission.CHANGE_WIFI_STATE",
+            "android.permission.READ_LOGS",
             null
           ],
           [
-            "android.permission.CHANGE_NETWORK_STATE",
+            "android.permission.REORDER_TASKS",
             null
           ],
           [
-            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.WAKE_LOCK",
             null
           ]
         ],
-        "versionCode": 16,
-        "versionName": "0.0.16"
-      },
-      {
-        "added": 1472083200000,
-        "apkName": "openarchive-0.0.15-release.apk",
-        "hash": "10e8789b01b07c1a576f436b9ec014c90418dc23d3cee6aa8a1444be80936603",
-        "hashType": "sha256",
-        "minSdkVersion": 10,
-        "packageName": "net.opendasharchive.openarchive.release",
-        "sig": "3118fb92e54c3b053903f0334596fd9e",
-        "signer": "e08e63ca87fdb93247dbab38f2e7f4104896bb487af5980838ace64c93c15a3c",
-        "size": 3254992,
-        "targetSdkVersion": 16,
-        "uses-permission": [
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.MANAGE_DOCUMENTS",
-            null
-          ],
-          [
-            "android.permission.INTERNET",
-            null
-          ]
-        ],
-        "versionCode": 15,
-        "versionName": "0.0.15"
+        "versionCode": 10023,
+        "versionName": "1.0.0-RC-3"
       }
     ],
     "org.havenapp.main": [
@@ -2834,9 +2344,9 @@
     ],
     "org.torproject.android": [
       {
-        "added": 1567731640000,
-        "apkName": "Orbot-16.1.1-BETA-2-tor-0.4.0.4-rc-fullperm-universal-release.apk",
-        "hash": "9ce2e361ebef3ea420d25a6043c1f8980570f137029a1c882fc2cb246ab5c68c",
+        "added": 1591118891000,
+        "apkName": "Orbot-16.3.0-RC-1-tor-0.4.2.7-fullperm-universal-release.apk",
+        "hash": "9e5cf830cf1c91543f4df62f84fe07e48c07bc2621d44018b1be53b7916b7d5e",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
@@ -2849,8 +2359,8 @@
         "packageName": "org.torproject.android",
         "sig": "8bd7e51b479aeba908ff46ada3305a29",
         "signer": "a454b87a1847a89ed7f5e70fba6bba96f3ef29c26e0981204fe347bf231dfd5b",
-        "size": 33323454,
-        "targetSdkVersion": 28,
+        "size": 33722632,
+        "targetSdkVersion": 29,
         "uses-permission": [
           [
             "android.permission.INTERNET",
@@ -2881,26 +2391,22 @@
             null
           ]
         ],
-        "versionCode": 16111000,
-        "versionName": "16.1.1-BETA-2-tor-0.4.0.4-rc"
+        "versionCode": 1630200100,
+        "versionName": "16.3.0-RC-1-tor-0.4.2.7"
       },
       {
-        "added": 1562781107000,
-        "apkName": "Orbot-16.1.0-RC-2-tor-0.4.0.4-rc-fullperm-universal-release.apk",
-        "hash": "c1686455a9f0c28862e39f8e5c835c89086de58a33051eac7de319beed2fdb20",
+        "added": 1580945653000,
+        "apkName": "Orbot-16.1.4-RC-1-tor-0.4.2.5-rc-fullperm-x86_64-release.apk",
+        "hash": "5cf724dffb8265adfbe57b2496422e480ec44f73f7e4e3b045e49bd4be5e79be",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
-          "arm64-v8a",
-          "armeabi",
-          "armeabi-v7a",
-          "x86",
           "x86_64"
         ],
         "packageName": "org.torproject.android",
         "sig": "8bd7e51b479aeba908ff46ada3305a29",
         "signer": "a454b87a1847a89ed7f5e70fba6bba96f3ef29c26e0981204fe347bf231dfd5b",
-        "size": 33512344,
+        "size": 10871061,
         "targetSdkVersion": 28,
         "uses-permission": [
           [
@@ -2932,26 +2438,22 @@
             null
           ]
         ],
-        "versionCode": 16108000,
-        "versionName": "16.1.0-RC-2-tor-0.4.0.4-rc"
+        "versionCode": 516142100,
+        "versionName": "16.1.4-RC-1-tor-0.4.2.5-rc"
       },
       {
-        "added": 1562781105000,
-        "apkName": "Orbot-16.1.0-RC-1-tor-0.4.0.4-rc-fullperm-universal-release.apk",
-        "hash": "5a32bf7f128f3e5a45d979bd7d8019e5b2232f38ce8253b437cda7c57c010ac8",
+        "added": 1580391144000,
+        "apkName": "Orbot-16.1.4-BETA-1-tor-0.4.2.5-rc-fullperm-x86_64-release.apk",
+        "hash": "beea768f5d3f343930984d77bc706dc69bbd3f08f04c9d4ea3faa87c59f2dc39",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
-          "arm64-v8a",
-          "armeabi",
-          "armeabi-v7a",
-          "x86",
           "x86_64"
         ],
         "packageName": "org.torproject.android",
         "sig": "8bd7e51b479aeba908ff46ada3305a29",
         "signer": "a454b87a1847a89ed7f5e70fba6bba96f3ef29c26e0981204fe347bf231dfd5b",
-        "size": 33512168,
+        "size": 10860993,
         "targetSdkVersion": 28,
         "uses-permission": [
           [
@@ -2983,18 +2485,137 @@
             null
           ]
         ],
-        "versionCode": 16107000,
-        "versionName": "16.1.0-RC-1-tor-0.4.0.4-rc"
+        "versionCode": 516141000,
+        "versionName": "16.1.4-BETA-1-tor-0.4.2.5-rc"
+      },
+      {
+        "added": 1568316052000,
+        "apkName": "Orbot-16.1.2-RC-2-tor-0.4.1.5-rc-fullperm-x86_64-release.apk",
+        "hash": "7d28222daa6a0bba088dc56bc1c6b5e36f3a3aa3d660edcd8f8aecc7f068fe42",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "org.torproject.android",
+        "sig": "8bd7e51b479aeba908ff46ada3305a29",
+        "signer": "a454b87a1847a89ed7f5e70fba6bba96f3ef29c26e0981204fe347bf231dfd5b",
+        "size": 10675542,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            null
+          ]
+        ],
+        "versionCode": 516123000,
+        "versionName": "16.1.2-RC-2-tor-0.4.1.5-rc"
       }
     ],
     "org.torproject.torbrowser": [
       {
-        "added": 1567731651000,
-        "apkName": "tor-browser-8.5.5-android-x86-multi.apk",
+        "added": 1594162901000,
+        "apkName": "tor-browser-9.5.2-android-x86_64-multi.apk",
         "features": [
           "android.hardware.touchscreen"
         ],
-        "hash": "12b6bdbf25c6f3e8ac44fab92ccce9a7cd5b2c39d08415b24c5659642e73cf7f",
+        "hash": "5ade2791c8b0afebb6fe63d482181470350def56f209d76dc0dfdcf2e0bb9ab9",
+        "hashType": "sha256",
+        "minSdkVersion": 21,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "org.torproject.torbrowser",
+        "sig": "31e36334f34e126a0e0d1efd29b84fb2",
+        "signer": "20061f045e737c67375c17794cfedb436a03cec6bacb7cb9f96642205ca2cec8",
+        "size": 63173017,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "com.android.launcher.permission.INSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ]
+        ],
+        "uses-permission-sdk-23": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ]
+        ],
+        "versionCode": 2015691615,
+        "versionName": "68.10.1"
+      },
+      {
+        "added": 1594162894000,
+        "apkName": "tor-browser-9.5.2-android-x86-multi.apk",
+        "features": [
+          "android.hardware.touchscreen"
+        ],
+        "hash": "cdcb6cfd8a4d470298c7a396b6375311f96549cc89848a0f9dd944dcaac37cd2",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
@@ -3003,9 +2624,13 @@
         "packageName": "org.torproject.torbrowser",
         "sig": "31e36334f34e126a0e0d1efd29b84fb2",
         "signer": "20061f045e737c67375c17794cfedb436a03cec6bacb7cb9f96642205ca2cec8",
-        "size": 45949501,
-        "targetSdkVersion": 26,
+        "size": 65020469,
+        "targetSdkVersion": 28,
         "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
           [
             "android.permission.ACCESS_NETWORK_STATE",
             null
@@ -3031,11 +2656,19 @@
             null
           ],
           [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
             "android.permission.WAKE_LOCK",
             null
           ],
           [
             "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
             null
           ]
         ],
@@ -3045,16 +2678,88 @@
             null
           ]
         ],
-        "versionCode": 2015615413,
-        "versionName": "60.9.0"
+        "versionCode": 2015691613,
+        "versionName": "68.10.1"
       },
       {
-        "added": 1567731647000,
-        "apkName": "tor-browser-8.5.5-android-armv7-multi.apk",
+        "added": 1594162884000,
+        "apkName": "tor-browser-9.5.2-android-aarch64-multi.apk",
         "features": [
           "android.hardware.touchscreen"
         ],
-        "hash": "43b647192cfef8feb10847373502269e5241ac09a6d5e3549563a54833b5a1aa",
+        "hash": "382a51af7976470f635965b2e960698479e2b25fd29122b2ccd085e33513e4ed",
+        "hashType": "sha256",
+        "minSdkVersion": 21,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "org.torproject.torbrowser",
+        "sig": "31e36334f34e126a0e0d1efd29b84fb2",
+        "signer": "20061f045e737c67375c17794cfedb436a03cec6bacb7cb9f96642205ca2cec8",
+        "size": 63832509,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "com.android.launcher.permission.INSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ]
+        ],
+        "uses-permission-sdk-23": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ]
+        ],
+        "versionCode": 2015691611,
+        "versionName": "68.10.1"
+      },
+      {
+        "added": 1594162889000,
+        "apkName": "tor-browser-9.5.2-android-armv7-multi.apk",
+        "features": [
+          "android.hardware.touchscreen"
+        ],
+        "hash": "9022761714d58c45a59926d76c9d460868390d2b3ef93d36c66616b2454f8442",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
@@ -3063,9 +2768,13 @@
         "packageName": "org.torproject.torbrowser",
         "sig": "31e36334f34e126a0e0d1efd29b84fb2",
         "signer": "20061f045e737c67375c17794cfedb436a03cec6bacb7cb9f96642205ca2cec8",
-        "size": 44462749,
-        "targetSdkVersion": 26,
+        "size": 58176149,
+        "targetSdkVersion": 28,
         "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
           [
             "android.permission.ACCESS_NETWORK_STATE",
             null
@@ -3091,11 +2800,19 @@
             null
           ],
           [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
             "android.permission.WAKE_LOCK",
             null
           ],
           [
             "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
             null
           ]
         ],
@@ -3105,16 +2822,88 @@
             null
           ]
         ],
-        "versionCode": 2015615409,
-        "versionName": "60.9.0"
+        "versionCode": 2015691609,
+        "versionName": "68.10.1"
       },
       {
-        "added": 1562781117000,
-        "apkName": "tor-browser-8.5.4-android-x86-multi.apk",
+        "added": 1594162877000,
+        "apkName": "tor-browser-9.5.1-android-x86_64-multi.apk",
         "features": [
           "android.hardware.touchscreen"
         ],
-        "hash": "031d7c18e6f8b4b65ed9966cb8d3d47773771d9f9d90b7051b3ffc80504c434a",
+        "hash": "68d31f8bc5ef20369ceddf759a0b72333498d2a29a4397cae6d9495171692682",
+        "hashType": "sha256",
+        "minSdkVersion": 21,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "org.torproject.torbrowser",
+        "sig": "31e36334f34e126a0e0d1efd29b84fb2",
+        "signer": "20061f045e737c67375c17794cfedb436a03cec6bacb7cb9f96642205ca2cec8",
+        "size": 63173017,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "com.android.launcher.permission.INSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ]
+        ],
+        "uses-permission-sdk-23": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ]
+        ],
+        "versionCode": 2015691607,
+        "versionName": "68.10.0"
+      },
+      {
+        "added": 1594162871000,
+        "apkName": "tor-browser-9.5.1-android-x86-multi.apk",
+        "features": [
+          "android.hardware.touchscreen"
+        ],
+        "hash": "999ef02674deadd3346a6cecef177629bc3b5b8396c40df885b5d3bf4613eb2c",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
@@ -3123,9 +2912,13 @@
         "packageName": "org.torproject.torbrowser",
         "sig": "31e36334f34e126a0e0d1efd29b84fb2",
         "signer": "20061f045e737c67375c17794cfedb436a03cec6bacb7cb9f96642205ca2cec8",
-        "size": 45879883,
-        "targetSdkVersion": 26,
+        "size": 65024565,
+        "targetSdkVersion": 28,
         "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
           [
             "android.permission.ACCESS_NETWORK_STATE",
             null
@@ -3151,11 +2944,19 @@
             null
           ],
           [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
             "android.permission.WAKE_LOCK",
             null
           ],
           [
             "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
             null
           ]
         ],
@@ -3165,16 +2966,88 @@
             null
           ]
         ],
-        "versionCode": 2015615404,
-        "versionName": "60.8.0"
+        "versionCode": 2015691605,
+        "versionName": "68.10.0"
       },
       {
-        "added": 1562781113000,
-        "apkName": "tor-browser-8.5.4-android-armv7-multi.apk",
+        "added": 1594162860000,
+        "apkName": "tor-browser-9.5.1-android-aarch64-multi.apk",
         "features": [
           "android.hardware.touchscreen"
         ],
-        "hash": "09940b3474c295aa1117266efc96e0a54fff689d532d76bfd6d88de10bdbfd9f",
+        "hash": "a92275396d3990da9068618db1576032cb68eaf55aba2f45e982b8f18ee51152",
+        "hashType": "sha256",
+        "minSdkVersion": 21,
+        "nativecode": [
+          "arm64-v8a"
+        ],
+        "packageName": "org.torproject.torbrowser",
+        "sig": "31e36334f34e126a0e0d1efd29b84fb2",
+        "signer": "20061f045e737c67375c17794cfedb436a03cec6bacb7cb9f96642205ca2cec8",
+        "size": 63836605,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "com.android.launcher.permission.INSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ]
+        ],
+        "uses-permission-sdk-23": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ]
+        ],
+        "versionCode": 2015691603,
+        "versionName": "68.10.0"
+      },
+      {
+        "added": 1594162865000,
+        "apkName": "tor-browser-9.5.1-android-armv7-multi.apk",
+        "features": [
+          "android.hardware.touchscreen"
+        ],
+        "hash": "e226fa7993587f064d43a7e07b5d03750581f893e166a64cf08501b9f0a3167d",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
@@ -3183,9 +3056,13 @@
         "packageName": "org.torproject.torbrowser",
         "sig": "31e36334f34e126a0e0d1efd29b84fb2",
         "signer": "20061f045e737c67375c17794cfedb436a03cec6bacb7cb9f96642205ca2cec8",
-        "size": 44393131,
-        "targetSdkVersion": 26,
+        "size": 58176149,
+        "targetSdkVersion": 28,
         "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
           [
             "android.permission.ACCESS_NETWORK_STATE",
             null
@@ -3211,11 +3088,19 @@
             null
           ],
           [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
             "android.permission.WAKE_LOCK",
             null
           ],
           [
             "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
             null
           ]
         ],
@@ -3225,18 +3110,90 @@
             null
           ]
         ],
-        "versionCode": 2015615401,
-        "versionName": "60.8.0"
+        "versionCode": 2015691601,
+        "versionName": "68.10.0"
       }
     ],
     "org.torproject.torbrowser_alpha": [
       {
-        "added": 1567731668000,
-        "apkName": "tor-browser-9.0a6-android-x86-multi.apk",
+        "added": 1594260986000,
+        "apkName": "tor-browser-10.0a3-android-x86_64-multi.apk",
         "features": [
           "android.hardware.touchscreen"
         ],
-        "hash": "6dc9887e8d000c637fd67d7e4e0e012b1ce058adabc36de6f28cde9a69e707b8",
+        "hash": "a2cb37fbdfc7d80d829b06bdb49da5b7ccc4f9c519eba5806e57895ff83f3e55",
+        "hashType": "sha256",
+        "minSdkVersion": 21,
+        "nativecode": [
+          "x86_64"
+        ],
+        "packageName": "org.torproject.torbrowser_alpha",
+        "sig": "779dcbfee750f281e0a8574e05216e04",
+        "signer": "15f760b41acbe4783e667102c9f67119be2af62fab07763f9d57f01e5e1074e1",
+        "size": 67124818,
+        "targetSdkVersion": 28,
+        "uses-permission": [
+          [
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "com.android.launcher.permission.INSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "com.android.launcher.permission.UNINSTALL_SHORTCUT",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.MODIFY_AUDIO_SETTINGS",
+            null
+          ]
+        ],
+        "uses-permission-sdk-23": [
+          [
+            "android.permission.REQUEST_INSTALL_PACKAGES",
+            null
+          ]
+        ],
+        "versionCode": 2015696231,
+        "versionName": "68.10.1"
+      },
+      {
+        "added": 1594260980000,
+        "apkName": "tor-browser-10.0a3-android-x86-multi.apk",
+        "features": [
+          "android.hardware.touchscreen"
+        ],
+        "hash": "3280fd9c835ea7a3c589c418182354e33e4ecc2138ebf6231f0c02d289e03140",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
@@ -3245,7 +3202,7 @@
         "packageName": "org.torproject.torbrowser_alpha",
         "sig": "779dcbfee750f281e0a8574e05216e04",
         "signer": "15f760b41acbe4783e667102c9f67119be2af62fab07763f9d57f01e5e1074e1",
-        "size": 63275066,
+        "size": 68718315,
         "targetSdkVersion": 28,
         "uses-permission": [
           [
@@ -3299,25 +3256,25 @@
             null
           ]
         ],
-        "versionCode": 2015620221,
-        "versionName": "68.1.0"
+        "versionCode": 2015696229,
+        "versionName": "68.10.1"
       },
       {
-        "added": 1567731658000,
-        "apkName": "tor-browser-9.0a6-android-aarch64-multi.apk",
+        "added": 1594260968000,
+        "apkName": "tor-browser-10.0a3-android-aarch64-multi.apk",
         "features": [
           "android.hardware.touchscreen"
         ],
-        "hash": "4876b3055e506345b68d126689f2528fbe9fdbf8f2e04abc91bdf3cec6aae028",
+        "hash": "bf1d241d37323297ee478865332962b15f6a319ad93e2122e0903a3163b976ec",
         "hashType": "sha256",
-        "minSdkVersion": 16,
+        "minSdkVersion": 21,
         "nativecode": [
           "arm64-v8a"
         ],
         "packageName": "org.torproject.torbrowser_alpha",
         "sig": "779dcbfee750f281e0a8574e05216e04",
         "signer": "15f760b41acbe4783e667102c9f67119be2af62fab07763f9d57f01e5e1074e1",
-        "size": 62095490,
+        "size": 67419769,
         "targetSdkVersion": 28,
         "uses-permission": [
           [
@@ -3371,16 +3328,16 @@
             null
           ]
         ],
-        "versionCode": 2015620219,
-        "versionName": "68.1.0"
+        "versionCode": 2015696227,
+        "versionName": "68.10.1"
       },
       {
-        "added": 1567731663000,
-        "apkName": "tor-browser-9.0a6-android-armv7-multi.apk",
+        "added": 1594260973000,
+        "apkName": "tor-browser-10.0a3-android-armv7-multi.apk",
         "features": [
           "android.hardware.touchscreen"
         ],
-        "hash": "6ca158d0e0d00e663ba52bed6aaff1e3755960b4da8bfb052e62bb846d7f439a",
+        "hash": "05586b742ec2523ce6463fe7c0a2b1e2a6fed7eb1e39f43dd0c7dbeac0de86d0",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "nativecode": [
@@ -3389,7 +3346,7 @@
         "packageName": "org.torproject.torbrowser_alpha",
         "sig": "779dcbfee750f281e0a8574e05216e04",
         "signer": "15f760b41acbe4783e667102c9f67119be2af62fab07763f9d57f01e5e1074e1",
-        "size": 56291482,
+        "size": 61640531,
         "targetSdkVersion": 28,
         "uses-permission": [
           [
@@ -3443,375 +3400,22 @@
             null
           ]
         ],
-        "versionCode": 2015620217,
-        "versionName": "68.1.0"
-      },
-      {
-        "added": 1562781122000,
-        "apkName": "tor-browser-9.0a4-android-aarch64-multi.apk",
-        "features": [
-          "android.hardware.touchscreen"
-        ],
-        "hash": "dbfaac83edcf9bbc4f1b2bc761c6bf420f23c95cdad5c54571ac6f4afa1c8e9f",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "arm64-v8a"
-        ],
-        "packageName": "org.torproject.torbrowser_alpha",
-        "sig": "779dcbfee750f281e0a8574e05216e04",
-        "signer": "15f760b41acbe4783e667102c9f67119be2af62fab07763f9d57f01e5e1074e1",
-        "size": 44708650,
-        "targetSdkVersion": 26,
-        "uses-permission": [
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "com.android.launcher.permission.INSTALL_SHORTCUT",
-            null
-          ],
-          [
-            "com.android.launcher.permission.UNINSTALL_SHORTCUT",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ]
-        ],
-        "uses-permission-sdk-23": [
-          [
-            "android.permission.REQUEST_INSTALL_PACKAGES",
-            null
-          ]
-        ],
-        "versionCode": 2015620204,
-        "versionName": "60.8.0"
-      }
-    ],
-    "org.witness.informacam.app": [
-      {
-        "added": 1446508800000,
-        "apkName": "CameraVApp-release-0.2.6.apk",
-        "hash": "508f453e26c8c83dba858b53b21d909d549fe5646d01eb198c96c22d8e521e7c",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "armeabi",
-          "armeabi-v7a",
-          "x86"
-        ],
-        "packageName": "org.witness.informacam.app",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 24123646,
-        "targetSdkVersion": 21,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.READ_PHONE_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECORD_AUDIO",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.KILL_BACKGROUND_PROCESSES",
-            null
-          ],
-          [
-            "android.permission.GET_TOP_ACTIVITY_INFO",
-            null
-          ]
-        ],
-        "versionCode": 206,
-        "versionName": "0.2.6"
-      },
-      {
-        "added": 1443744000000,
-        "apkName": "CameraV-release-0.2.4.apk",
-        "hash": "a10eefaed5a12c353525b07e655f6959fe1eb06cd5c549be56afaca6db0c6ce0",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "armeabi",
-          "armeabi-v7a",
-          "x86"
-        ],
-        "packageName": "org.witness.informacam.app",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 24062229,
-        "targetSdkVersion": 21,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.READ_PHONE_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECORD_AUDIO",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.GET_TASKS",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.KILL_BACKGROUND_PROCESSES",
-            null
-          ]
-        ],
-        "versionCode": 204,
-        "versionName": "0.2.4"
-      },
-      {
-        "added": 1442361600000,
-        "apkName": "CameraVApp-release-0.2.2.apk",
-        "hash": "8b17cbe2a5cb777b49f5ef67a390f9d9d68765c90213ac64f3ca0456860dc9b7",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "armeabi",
-          "armeabi-v7a",
-          "x86"
-        ],
-        "packageName": "org.witness.informacam.app",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 24283932,
-        "targetSdkVersion": 21,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.READ_PHONE_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECORD_AUDIO",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.GET_TASKS",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.KILL_BACKGROUND_PROCESSES",
-            null
-          ]
-        ],
-        "versionCode": 202,
-        "versionName": "0.2.2"
+        "versionCode": 2015696225,
+        "versionName": "68.10.1"
       }
     ],
     "org.witness.proofmode": [
       {
-        "added": 1561644733000,
-        "apkName": "ProofMode-v0.0.12-RC-1.apk",
-        "hash": "19294d56c3126e6f1dee383daa59f9d4894842e20b6d662f1fc9cce6d6a68713",
+        "added": 1580945655000,
+        "apkName": "ProofMode-0.0.13-RC-3-artwork-release.apk",
+        "hash": "b1dcf519c7e8c103eae5726811a19b02d63f8ee4559940177e933afe295d02b1",
         "hashType": "sha256",
         "minSdkVersion": 16,
         "packageName": "org.witness.proofmode",
         "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
         "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 8365293,
-        "targetSdkVersion": 28,
+        "size": 8144625,
+        "targetSdkVersion": 29,
         "uses-permission": [
           [
             "android.permission.READ_EXTERNAL_STORAGE",
@@ -3850,60 +3454,8 @@
             null
           ]
         ],
-        "versionCode": 121,
-        "versionName": "0.0.12-RC-1"
-      },
-      {
-        "added": 1512518400000,
-        "apkName": "ProofMode-v0.0.10-RC-3.apk",
-        "hash": "b4cb40fe5957a42ba59ed4c16d5ef3374d3b51f88c1e6c3c64ed9faac3268073",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "packageName": "org.witness.proofmode",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 4203648,
-        "targetSdkVersion": 27,
-        "uses-permission": [
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.READ_PHONE_STATE",
-            null
-          ],
-          [
-            "android.permission.REQUEST_INSTALL_PACKAGES",
-            null
-          ]
-        ],
-        "versionCode": 106,
-        "versionName": "0.0.10-RC-3"
+        "versionCode": 133,
+        "versionName": "0.0.13-RC-3"
       }
     ],
     "org.witness.sscphase1": [
@@ -3996,51 +3548,6 @@
         ],
         "versionCode": 40,
         "versionName": "4.0.0-alpha-2"
-      },
-      {
-        "added": 1513900800000,
-        "apkName": "ObscuraCam-v4.0.0.39-alpha-1.apk",
-        "hash": "9374950a1f73196687234ff715b3b6f4d724c8a7b7b319ed77f97e7d39da8297",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi",
-          "armeabi-v7a",
-          "mips",
-          "mips64",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "org.witness.sscphase1",
-        "sig": "a0eeebb161f946e3516945fae8a92a3e",
-        "signer": "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b",
-        "size": 24364187,
-        "targetSdkVersion": 25,
-        "uses-permission": [
-          [
-            "android.permission.READ_MEDIA_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            18
-          ]
-        ],
-        "versionCode": 39,
-        "versionName": "4.0.0-alpha-1"
       }
     ]
   },
@@ -4057,7 +3564,7 @@
     ],
     "name": "Guardian Project Official Releases",
     "pubkey": "308205d8308203c0020900a397b4da7ecda034300d06092a864886f70d01010505003081ad310b30090603550406130255533111300f06035504080c084e657720596f726b3111300f06035504070c084e657720596f726b31143012060355040b0c0b4644726f6964205265706f31193017060355040a0c10477561726469616e2050726f6a656374311d301b06035504030c14677561726469616e70726f6a6563742e696e666f3128302606092a864886f70d0109011619726f6f7440677561726469616e70726f6a6563742e696e666f301e170d3134303632363139333931385a170d3431313131303139333931385a3081ad310b30090603550406130255533111300f06035504080c084e657720596f726b3111300f06035504070c084e657720596f726b31143012060355040b0c0b4644726f6964205265706f31193017060355040a0c10477561726469616e2050726f6a656374311d301b06035504030c14677561726469616e70726f6a6563742e696e666f3128302606092a864886f70d0109011619726f6f7440677561726469616e70726f6a6563742e696e666f30820222300d06092a864886f70d01010105000382020f003082020a0282020100b3cd79121b9b883843be3c4482e320809106b0a23755f1dd3c7f46f7d315d7bb2e943486d61fc7c811b9294dcc6b5baac4340f8db2b0d5e14749e7f35e1fc211fdbc1071b38b4753db201c314811bef885bd8921ad86facd6cc3b8f74d30a0b6e2e6e576f906e9581ef23d9c03e926e06d1f033f28bd1e21cfa6a0e3ff5c9d8246cf108d82b488b9fdd55d7de7ebb6a7f64b19e0d6b2ab1380a6f9d42361770d1956701a7f80e2de568acd0bb4527324b1e0973e89595d91c8cc102d9248525ae092e2c9b69f7414f724195b81427f28b1d3d09a51acfe354387915fd9521e8c890c125fc41a12bf34d2a1b304067ab7251e0e9ef41833ce109e76963b0b256395b16b886bca21b831f1408f836146019e7908829e716e72b81006610a2af08301de5d067c9e114a1e5759db8a6be6a3cc2806bcfe6fafd41b5bc9ddddb3dc33d6f605b1ca7d8a9e0ecdd6390d38906649e68a90a717bea80fa220170eea0c86fc78a7e10dac7b74b8e62045a3ecca54e035281fdc9fe5920a855fde3c0be522e3aef0c087524f13d973dff3768158b01a5800a060c06b451ec98d627dd052eda804d0556f60dbc490d94e6e9dea62ffcafb5beffbd9fc38fb2f0d7050004fe56b4dda0a27bc47554e1e0a7d764e17622e71f83a475db286bc7862deee1327e2028955d978272ea76bf0b88e70a18621aba59ff0c5993ef5f0e5d6b6b98e68b70203010001300d06092a864886f70d0101050500038202010079c79c8ef408a20d243d8bd8249fb9a48350dc19663b5e0fce67a8dbcb7de296c5ae7bbf72e98a2020fb78f2db29b54b0e24b181aa1c1d333cc0303685d6120b03216a913f96b96eb838f9bff125306ae3120af838c9fc07ebb5100125436bd24ec6d994d0bff5d065221871f8410daf536766757239bf594e61c5432c9817281b985263bada8381292e543a49814061ae11c92a316e7dc100327b59e3da90302c5ada68c6a50201bda1fcce800b53f381059665dbabeeb0b50eb22b2d7d2d9b0aa7488ca70e67ac6c518adb8e78454a466501e89d81a45bf1ebc350896f2c3ae4b6679ecfbf9d32960d4f5b493125c7876ef36158562371193f600bc511000a67bdb7c664d018f99d9e589868d103d7e0994f166b2ba18ff7e67d8c4da749e44dfae1d930ae5397083a51675c409049dfb626a96246c0015ca696e94ebb767a20147834bf78b07fece3f0872b057c1c519ff882501995237d8206b0b3832f78753ebd8dcbd1d3d9f5ba733538113af6b407d960ec4353c50eb38ab29888238da843cd404ed8f4952f59e4bbc0035fc77a54846a9d419179c46af1b4a3b7fc98e4d312aaa29b9b7d79e739703dc0fa41c7280d5587709277ffa11c3620f5fba985b82c238ba19b17ebd027af9424be0941719919f620dd3bb3c3f11638363708aa11f858e153cf3a69bce69978b90e4a273836100aa1e617ba455cd00426847f",
-    "timestamp": 1567777458000,
+    "timestamp": 1594261131000,
     "version": 21
   },
   "requests": {

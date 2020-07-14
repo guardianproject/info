@@ -24,6 +24,150 @@
       "webSite": "https://guardianproject.info/2011/09/05/cacertman-app-to-address-diginotar-other-bad-cas"
     },
     {
+      "added": 1386720000000,
+      "authorEmail": "support@guardianproject.info",
+      "authorName": "Guardian Project",
+      "authorWebSite": "https://guardianproject.info",
+      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
+      "categories": [
+        "Guardian Project",
+        "Development"
+      ],
+      "icon": "org.witness.informacam.app.206.png",
+      "issueTracker": "https://dev.guardianproject.info/projects/informacam/issues",
+      "lastUpdated": 1446508800000,
+      "liberapayID": "33617",
+      "license": "GPL-3.0-or-later",
+      "localized": {
+        "af": {
+          "summary": "Die maklikste manier om verifieerbare foto's en video bewys te vang, veilig en p"
+        },
+        "ar": {
+          "summary": "\u0623\u0633\u0647\u0644 \u0637\u0631\u064a\u0642\u0629 \u0644\u0627\u0644\u062a\u0642\u0627\u0637 \u0635\u0648\u0631\u0629 \u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u062a\u062d\u0642\u0642 \u0648\u0625\u062b\u0628\u0627\u062a \u0627\u0644\u0641\u064a\u062f\u064a\u0648\u060c \u0628\u0634\u0643\u0644 \u0622\u0645\u0646 \u0648\u0627\u0644\u0642\u0637\u0627\u0639 \u0627\u0644\u062e\u0627\u0635"
+        },
+        "bg": {
+          "summary": "\u041d\u0430\u0439-\u043b\u0435\u0441\u043d\u0438\u044f\u0442 \u043d\u0430\u0447\u0438\u043d \u0434\u0430 \u0443\u043b\u043e\u0432\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u043c\u0438 \u0444\u043e\u0442\u043e & \u0432\u0438\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u0441\u0442\u0432\u043e, \u0441\u0438\u0433\u0443\u0440\u043d\u043e \u0438 \u0447\u0430\u0441\u0442\u043d"
+        },
+        "ca": {
+          "summary": "La forma m\u00e9s f\u00e0cil de capturar la foto verificable i prova de v\u00eddeo, de forma se"
+        },
+        "cs": {
+          "summary": "Nejjednodu\u0161\u0161\u00ed zp\u016fsob, jak zachytit ov\u011b\u0159iteln\u00e9 Foto a video d\u016fkaz, bezpe\u010dn\u011b a sou"
+        },
+        "da": {
+          "summary": "Den nemmeste m\u00e5de at fange verificerbare Foto & Video bevis, sikkert & privat"
+        },
+        "de": {
+          "summary": "Der einfachste Weg, nachpr\u00fcfbare Foto & Video Beweis zu erfassen, sicher & priva"
+        },
+        "el": {
+          "summary": "\u039f \u03b5\u03c5\u03ba\u03bf\u03bb\u03cc\u03c4\u03b5\u03c1\u03bf\u03c2 \u03c4\u03c1\u03cc\u03c0\u03bf\u03c2 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c3\u03c5\u03bb\u03bb\u03ac\u03b2\u03b5\u03b9 \u03b5\u03c0\u03b1\u03bb\u03b7\u03b8\u03b5\u03cd\u03c3\u03b9\u03bc\u03b1 \u03c6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1 & \u03b2\u03af\u03bd\u03c4\u03b5\u03bf \u03b1\u03c0\u03cc\u03b4\u03b5\u03b9\u03be\u03b7, "
+        },
+        "en-US": {
+          "description": "CameraV is the easiest way to capture and share verifiable photos and video proof on a smartphone or tablet, all the while keeping it entirely secure and private.\n\nCameraV is easy to learn and simple to use (and insanely secure & powerful under the covers...). All photos and videos you take are password-protected and 100% encrypted on your device. You can also add private notes and tags to any photo or video, and choose who you share them with. CameraV also privately stores data from your device sensors and provides built-in tools to see and share it. Finally, it has a built-in secure camera that is simple, streamlined and even supports selfies.\n\nCameraV was developed in partnership with WITNESS, an international human rights video advocacy group, and with the support of the Knight News Foundation. It is built upon the open-source InformaCam platform.\n\n* READ THE USER GUIDE: https://guardianproject.github.io/informacam-guide/en/InformacamGuide.html\n\nCameraV was developed for use by activists, journalists, advocates and others, working in very difficult and high-risk situations, to capture and gather visual evidence and proof of abuse and rights violations. It can also be used in your daily life to capture any moment, and keep them safe and private. You can also use it for documenting your own evidence, after accidents, for real estate needs, or any where you need \"proof\".\n\n* OPEN-SOURCE AND FREE: https://github.com/guardianproject/InformaApp\n* JOIN THE COMMUNITY: https://talk.developersquare.net/c/developers-corner/smart-cameras\n\nCameraV is also known as Camera V or InformaCam.",
+          "summary": "The easiest way to capture verifiable photo & video proof, securely & privately"
+        },
+        "es": {
+          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
+        },
+        "es-ES": {
+          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
+        },
+        "es-US": {
+          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
+        },
+        "et": {
+          "summary": "Lihtsaim viis j\u00e4\u00e4dvustada kontrollitav foto & video t\u00f5end, turvaliselt ja privaa"
+        },
+        "fi": {
+          "summary": "Helpoin tapa tallentaa todennettavissa kuvan & video todisteita, turvallisesti j"
+        },
+        "fr": {
+          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
+        },
+        "fr-CA": {
+          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
+        },
+        "fr-FR": {
+          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
+        },
+        "hi": {
+          "summary": "\u0938\u092c\u0938\u0947 \u0906\u0938\u093e\u0928 \u0924\u0930\u0940\u0915\u093e \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0930\u0942\u092a \u0938\u0947 \u0914\u0930 \u0928\u093f\u091c\u0940 \u0924\u094c\u0930 \u092a\u0930, \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u092b\u094b\u091f\u094b \u0914\u0930 \u0935\u0940\u0921\u093f\u092f\u094b \u0938\u092c\u0942\u0924 \u0915\u092c\u094d"
+        },
+        "hr": {
+          "summary": "Najlak\u0161i na\u010din za hvatanje provjerljive Foto i video dokaz, sigurno i privatno"
+        },
+        "hu": {
+          "summary": "A legegyszer\u0171bb m\u00f3dja annak, hogy elfog ellen\u0151rizhet\u0151 fot\u00f3 \u00e9s vide\u00f3 bizony\u00edt\u00e9k, "
+        },
+        "id": {
+          "summary": "Cara termudah untuk menangkap diverifikasi foto & bukti video, aman & pribadi"
+        },
+        "it": {
+          "summary": "Il modo pi\u00f9 semplice per scattare foto verificabile & prova video, in modo sicur"
+        },
+        "ja": {
+          "summary": "\u5b89\u5168\u00b7\u975e\u516c\u958b\u3001\u691c\u8a3c\u5199\u771f\uff06\u30d3\u30c7\u30aa\u8a3c\u62e0\u3092\u30ad\u30e3\u30d7\u30c1\u30e3\u3059\u308b\u6700\u3082\u7c21\u5358\u306a\u65b9\u6cd5"
+        },
+        "ko": {
+          "summary": "\uac00\uc7a5 \uc26c\uc6b4 \ubc29\ubc95\uc740 \uc548\uc804 \ubc0f \uac1c\uc778, \uac80\uc99d \uc0ac\uc9c4 \ubc0f \ube44\ub514\uc624 \uc99d\uac70\ub97c \ucea1\ucc98"
+        },
+        "lt": {
+          "summary": "Papras\u010diausias b\u016bdas u\u017efiksuoti patikrinam\u0105 nuotrauk\u0105 ir video \u012frodym\u0105, saugiai "
+        },
+        "lv": {
+          "summary": "Viegl\u0101kais veids, lai att\u0113lotu p\u0101rbaud\u0101mu foto un video pier\u0101d\u012bjumus, dro\u0161i un p"
+        },
+        "nl": {
+          "summary": "De eenvoudigste manier om verifieerbare foto & video bewijs vastleggen, veilig e"
+        },
+        "no": {
+          "summary": "Den enkleste m\u00e5ten \u00e5 fange etterpr\u00f8vbar foto og video bevis, sikkert og privat"
+        },
+        "pl": {
+          "summary": "Najprostszym sposobem, aby uchwyci\u0107 zweryfikowania zdj\u0119cie i dow\u00f3d wideo, bezpie"
+        },
+        "pt-BR": {
+          "summary": "A maneira mais f\u00e1cil de capturar foto verific\u00e1vel e prova de v\u00eddeo, de forma seg"
+        },
+        "pt-PT": {
+          "summary": "A maneira mais f\u00e1cil de capturar foto verific\u00e1vel e prova de v\u00eddeo, de forma seg"
+        },
+        "ru": {
+          "summary": "\u0421\u0430\u043c\u044b\u0439 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0441\u043f\u043e\u0441\u043e\u0431, \u0447\u0442\u043e\u0431\u044b \u0437\u0430\u0445\u0432\u0430\u0442\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u043c\u043e\u0435 \u0444\u043e\u0442\u043e & \u0432\u0438\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u0430, \u043d"
+        },
+        "sk": {
+          "summary": "Najjednoduch\u0161\u00ed sp\u00f4sob, ako zachyti\u0165 overite\u013en\u00e9 Foto a video d\u00f4kaz, bezpe\u010dne a s\u00fa"
+        },
+        "sl": {
+          "summary": "Najla\u017eji na\u010din za zajemanje preverljive Foto in video dokaz, varno in zasebni"
+        },
+        "sv": {
+          "summary": "Det enklaste s\u00e4ttet att f\u00e5nga verifierbara foto & video bevis, s\u00e4kert och privat"
+        },
+        "sw": {
+          "summary": "Njia rahisi kukamata lithibitishwe picha na video ushahidi, salama & faragha"
+        },
+        "th": {
+          "summary": "\u0e27\u0e34\u0e18\u0e35\u0e17\u0e35\u0e48\u0e07\u0e48\u0e32\u0e22\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e08\u0e30\u0e08\u0e31\u0e1a\u0e20\u0e32\u0e1e\u0e2b\u0e25\u0e31\u0e01\u0e10\u0e32\u0e19\u0e17\u0e35\u0e48\u0e15\u0e23\u0e27\u0e08\u0e2a\u0e2d\u0e1a\u0e44\u0e14\u0e49\u0e41\u0e25\u0e30\u0e27\u0e34\u0e14\u0e35\u0e42\u0e2d\u0e44\u0e14\u0e49\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e1b\u0e25\u0e2d\u0e14\u0e20\u0e31\u0e22\u0e41\u0e25\u0e30\u0e40\u0e2d\u0e01\u0e0a\u0e19"
+        },
+        "tr": {
+          "summary": "en kolay yolu g\u00fcvenli & \u00f6zel, do\u011frulanabilir foto\u011fraf & video kan\u0131t yakalamak i\u00e7"
+        },
+        "uk": {
+          "summary": "\u041d\u0430\u0439\u043f\u0440\u043e\u0441\u0442\u0456\u0448\u0438\u0439 \u0441\u043f\u043e\u0441\u0456\u0431, \u0449\u043e\u0431 \u0437\u0430\u0445\u043e\u043f\u0438\u0442\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u043c\u043e\u0435 \u0444\u043e\u0442\u043e & \u0432\u0456\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0438, \u043d\u0430\u0434\u0456\u0439\u043d\u043e \u0456 \u0432 \u043f"
+        },
+        "vi": {
+          "summary": "C\u00e1ch d\u1ec5 d\u00e0ng nh\u1ea5t \u0111\u1ec3 ch\u1ee5p \u1ea3nh c\u00f3 th\u1ec3 ki\u1ec3m ch\u1ee9ng v\u00e0 b\u1eb1ng ch\u1ee9ng video, an to\u00e0n & t"
+        }
+      },
+      "name": "CameraV",
+      "packageName": "org.witness.informacam.app",
+      "sourceCode": "https://github.com/guardianproject/CameraV",
+      "suggestedVersionCode": "206",
+      "webSite": "https://guardianproject.info/apps/camerav/"
+    },
+    {
       "added": 1363651200000,
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
@@ -194,6 +338,165 @@
       "webSite": "https://guardianproject.info/apps/chatsecure"
     },
     {
+      "added": 1400025600000,
+      "authorEmail": "support@guardianproject.info",
+      "authorName": "Guardian Project",
+      "authorWebSite": "https://guardianproject.info",
+      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
+      "categories": [
+        "Reading",
+        "Guardian Project"
+      ],
+      "icon": "info.guardianproject.courier.15.png",
+      "lastUpdated": 1403740800000,
+      "liberapayID": "33617",
+      "license": "GPL-3.0-only",
+      "localized": {
+        "af": {
+          "summary": "Lees w\u00eareldwyd. Deel plaaslik.'N veilige News Reader met Orbot Tor ondersteuning"
+        },
+        "am": {
+          "summary": "\u1260\u12d3\u1208\u121d \u12a0\u1240\u134d \u12a0\u1295\u1265\u1265. \u1260\u12a0\u12ab\u1263\u1262\u12cd \u12eb\u130b\u1229.Orbot \u12e8\u1276\u122d \u12f5\u130b\u134d \u130b\u122d \u12a0\u1235\u1270\u121b\u121b\u129d \u12dc\u1293 \u12a0\u1295\u1263\u1262."
+        },
+        "ar": {
+          "summary": "\u0642\u0631\u0627\u0621\u0629 \u0639\u0644\u0649 \u0627\u0644\u0635\u0639\u064a\u062f \u0627\u0644\u0639\u0627\u0644\u0645\u064a. \u062a\u0628\u0627\u062f\u0644 \u0645\u062d\u0644\u064a\u0627.A \u0627\u0644\u0622\u0645\u0646\u0629 \u0642\u0627\u0631\u0626 \u0627\u0644\u0623\u062e\u0628\u0627\u0631 \u0628\u062f\u0639\u0645 Orbot \u062a\u0648\u0631."
+        },
+        "bg": {
+          "summary": "\u041f\u0440\u043e\u0447\u0435\u0442\u0435\u0442\u0435 \u0432 \u0441\u0432\u0435\u0442\u043e\u0432\u0435\u043d \u043c\u0430\u0449\u0430\u0431. \u0421\u043f\u043e\u0434\u0435\u043b\u0435\u0442\u0435 \u043b\u043e\u043a\u0430\u043b\u043d\u043e.\u0421\u0438\u0433\u0443\u0440\u043d\u0430 News Reader \u0441 \u043f\u043e\u0434\u043a\u0440\u0435\u043f\u0430\u0442\u0430 O"
+        },
+        "ca": {
+          "summary": "Llegir A nivell mundial. Comparteix localment.Un Secure lector de not\u00edcies amb e"
+        },
+        "cs": {
+          "summary": "P\u0159e\u010dt\u011bte si v celosv\u011btov\u00e9m m\u011b\u0159\u00edtku. Pod\u011blte se m\u00edstn\u011b.Secure News Reader s podpo"
+        },
+        "de": {
+          "summary": "Lesen Weltweit. Teilen Sie vor Ort.Ein sicheres News Reader mit Orbot Tor Unters"
+        },
+        "el": {
+          "summary": "\u0394\u03b9\u03b1\u03b2\u03ac\u03c3\u03c4\u03b5 \u03cc\u03bb\u03bf \u03c4\u03bf\u03bd \u03ba\u03cc\u03c3\u03bc\u03bf. \u039c\u03bf\u03b9\u03c1\u03b1\u03c3\u03c4\u03b5\u03af\u03c4\u03b5 \u03c4\u03bf\u03c0\u03b9\u03ba\u03ac.\u039c\u03b9\u03b1 \u03b1\u03c3\u03c6\u03b1\u03bb\u03ae\u03c2 News Reader \u03bc\u03b5 \u03c5\u03c0\u03bf\u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7"
+        },
+        "en-US": {
+          "description": "Courier is a mobile RSS news reader with enhanced security features, offline reading and sharing capability.  We've designed it to be fast and light on slow networks and secure in case your network is monitored.\n\nFEATURES:\n\u2605 SECURE: Courier works with Orbot, Tor for Android (https://play.google.com/store/apps/details?id=org.torproject.android) to defend against network surveillance and protect your privacy\n\u2605 ENCRYPTED: Courier encrypts your stored news - and personal information - to protect your privacy\n\u2605 PANIC: Courier's configurable \"panic\" action will remove your news, your personal data and optionally the app itself with one swipe\n\u2605 SAFE: Courier securely caches your password with a configurable timeout. You can configure for repeated password entry failures to trigger data (and app!) deletion.  And you can set a special \"kill password\".  \n\u2605 AUTOMATIC: Courier quietly synchronizes your feeds in the background (manual mode available, too!)\n\u2605 CONTENT SHARE: secure, off-network, sharing of news articles with other users of Courier via Bluetooth (unsecure share available, too!)\n\u2605 PEER-TO-PEER APP SHARING: Get your friends set up with Courier by sharing the app over a common WiFi network or hotspot.\n\u2605 LIGHTWEIGHT: configure Courier to minimize network data use on low-speed networks or sync only on wi-fi\n\u2605 FAVORITES: mark articles as easily-retrieved favorites\n\u2605 PRE-CONFIGURED: Courier ships with desirable international news feeds, and it's easy to add your own\n\u2605 LANGUAGES: English, Chinese (\u4e2d\u570b\u7684), Tibetan (\u0f56\u0f7c\u0f51\u0f0b\u0f61\u0f72\u0f42), Ukrainian (\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0438\u0439), Russian (\u0440\u0443\u0441\u0441\u043a\u0438\u0439)\n\u2605 AD-FREE: Courier is an ad-free, open-source application\n\nABOUT US:\nGuardian Project is a group of developers, designers and technologists that make secure mobile apps and open-source code for a better tomorrow.\n\n\u2605 OUR WEBSITE: https://guardianproject.info\n\u2605 ON TWITTER: https://twitter.com/guardianproject\n\u2605 OPEN-SOURCE: Courier is free software. Take a look at our source code, or join the community to make it better: https://github.com/guardianproject/securereader\n\u2605 MESSAGE US: Are we missing your favorite feature? Found an annoying bug? We\u2019d love to hear from you! Send us an email: support@guardianproject.info\n\n***Disclaimer***\nThe Guardian Project makes apps that are designed to protect your security and anonymity. The protocols that we use are widely regarded as the state of the art in security technology. While we are constantly upgrading our software to combat the latest threats and eliminate bugs, no technology is 100% foolproof. For maximum security and anonymity users must utilize best practices to keep themselves safe. You can find a good introductory guide to these topics at https://securityinabox.org",
+          "icon": "icon.png",
+          "phoneScreenshots": [
+            "-hGFHySYerrx3B7M1VXujPfwjQPYj4uW4el1t5Gq8G9mdg24_god8VzHqFzun4M_8Q.png",
+            "75HfzKrxBIDd6AZGF5NVsAhta968jvDWBpg-kkk_TR0BiNJNC5O8GVbU4AkboMUR7Q.png",
+            "8V0ydye1VMcy_TMnUyT2JGkVcRIs2kusvPk1OqBfx4FbJspTzJU_KO8VZmKVuawg2Q4U.png",
+            "9Ab_06GV8xzxRqhBsznXLGWDj7lVl5bN3I4QcVgAkMM89SF5-PoaiQqxQqDQb0ayNCs.png",
+            "NTYksHqjvK_4Q4gdRWNvNphXxMEMERKwKeiylqZiAaENNwC1XH_aAjwn8znebQ-nB_Q.png",
+            "NmIocjV46fmo7V1v_D0pv0u4_o1FrdqXURvdBsIshQlV52fzGy82nIGTbMamuIa4-uNL.png",
+            "RlKF96lts4milhul1St2_FjrqCsVW5swoATWFuzLapI0Q59-1wlMotlgD4OmRiNcBg.png",
+            "qr46aFfobCNvdtFtKUTpXpllz55FWdLilIEc13copcVbX1jfJBvBhUsqiJlHUkbjZM1Q.png"
+          ],
+          "summary": "Read Globally. Share Locally.A Secure News Reader with Orbot Tor support."
+        },
+        "es": {
+          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
+        },
+        "es-ES": {
+          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
+        },
+        "es-US": {
+          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
+        },
+        "et": {
+          "summary": "Loe terve maailma. Jaga Kohati.Secure News Reader Orbot Tor toetust."
+        },
+        "fi": {
+          "summary": "Lue maailmanlaajuisesti. Jaa Paikallisesti.Turvallinen News Reader Orbot Tor tue"
+        },
+        "fr": {
+          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
+        },
+        "fr-CA": {
+          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
+        },
+        "fr-FR": {
+          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
+        },
+        "hi": {
+          "summary": "\u0935\u093f\u0936\u094d\u0935 \u0938\u094d\u0924\u0930 \u092a\u0930 \u092a\u0922\u093c\u0947\u0902\u0964 \u0938\u094d\u0925\u093e\u0928\u0940\u092f \u0930\u0942\u092a \u0938\u0947 \u0938\u093e\u091d\u093e \u0915\u0930\u0947\u0902\u0964Orbot \u091f\u094b \u0938\u092e\u0930\u094d\u0925\u0928 \u0915\u0947 \u0938\u093e\u0925 \u090f\u0915 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924"
+        },
+        "hr": {
+          "summary": "Pro\u010ditajte globalno. Podijelite na lokalnoj razini.Sigurna \u010dita\u010d vijesti sa Orbo"
+        },
+        "hu": {
+          "summary": "Olvassa el vil\u00e1gszerte. Ossza helyben.A Secure News Reader Orbot Tor t\u00e1mogat\u00e1st."
+        },
+        "id": {
+          "summary": "Baca global. Bagi Lokal.Secure News Reader dengan dukungan Orbot Tor."
+        },
+        "it": {
+          "summary": "Leggi globale. Condividi localmente.A Secure News Reader con il supporto Orbot T"
+        },
+        "ja": {
+          "summary": "\u30b0\u30ed\u30fc\u30d0\u30eb\u3092\u304a\u8aad\u307f\u304f\u3060\u3055\u3044\u3002\u30ed\u30fc\u30ab\u30eb\u5171\u6709\u3002Orbot\u306eTor\u3092\u30b5\u30dd\u30fc\u30c8\u3059\u308b\u30bb\u30ad\u30e5\u30a2\u306a\u30cb\u30e5\u30fc\u30b9\u30ea\u30fc\u30c0\u30fc\u3002"
+        },
+        "ko": {
+          "summary": "\uc138\uacc4\uc801\uc73c\ub85c \uc77d\uae30. \ub85c\uceec \uacf5\uc720 \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.Orbot \ud1a0\ub974 \uc9c0\uc6d0 \ubcf4\uc548 \ub274\uc2a4 \ub9ac\ub354."
+        },
+        "lt": {
+          "summary": "Skaityti visame pasaulyje. Dalytis vietoje.Saugus Naujienos skaitytuvas Orbot To"
+        },
+        "lv": {
+          "summary": "Las\u012bt glob\u0101li. Dal\u012bties Lok\u0101li.Dro\u0161a News Reader ar Orbot Tor atbalstu."
+        },
+        "nl": {
+          "summary": "Lees Wereldwijd. Deel Lokaal.Een Secure News Reader met Orbot Tor ondersteuning."
+        },
+        "no": {
+          "summary": "Les globalt. Del lokalt.Et sikkert News Reader med Orbot Tor st\u00f8tte."
+        },
+        "pl": {
+          "summary": "Czytaj na ca\u0142ym \u015bwiecie. Podziel Lokalnie.Bezpieczne News Reader z obs\u0142ug\u0105 Orbot"
+        },
+        "pt-BR": {
+          "summary": "Leia globais. Compartilhe localmente.Um seguro News Reader com o apoio Orbot Tor"
+        },
+        "pt-PT": {
+          "summary": "Leia globais. Compartilhe localmente.Um seguro News Reader com o apoio Orbot Tor"
+        },
+        "ro": {
+          "summary": "Cite\u0219te toat\u0103 lumea. \u00cemparte local.Un Secure News Reader cu suport Orbot Tor."
+        },
+        "ru": {
+          "summary": "\u0427\u0438\u0442\u0430\u0439\u0442\u0435 \u0432 \u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u043e\u043c \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0435. \u041f\u043e\u0434\u0435\u043b\u0438\u0442\u0435\u0441\u044c \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u043e.\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u044b\u0439 \u0434\u043b\u044f \u0447\u0442\u0435\u043d\u0438\u044f \u043d\u043e\u0432\u043e\u0441\u0442\u0435"
+        },
+        "sk": {
+          "summary": "Pre\u010d\u00edtajte si v celosvetovom meradle. Pode\u013ete sa lok\u00e1lne.Secure News Reader s po"
+        },
+        "sl": {
+          "summary": "Preberite svetu. Delite Lokalno.Secure News Reader s Orbot Tor podporo."
+        },
+        "sv": {
+          "summary": "L\u00e4s globalt. Dela Lokalt.En s\u00e4ker nyhetsl\u00e4sare med Orbot Tor st\u00f6d."
+        },
+        "sw": {
+          "summary": "Kusoma Kimataifa. Ndani ya nchi kushiriki.Salama Habari Msomaji na Orbot Tor msa"
+        },
+        "th": {
+          "summary": "\u0e2d\u0e48\u0e32\u0e19\u0e17\u0e31\u0e48\u0e27\u0e42\u0e25\u0e01 \u0e41\u0e1a\u0e48\u0e07\u0e1b\u0e31\u0e19\u0e43\u0e19\u0e1e\u0e37\u0e49\u0e19\u0e17\u0e35\u0e48\u0e2d\u0e48\u0e32\u0e19\u0e02\u0e48\u0e32\u0e27\u0e01\u0e32\u0e23\u0e23\u0e31\u0e01\u0e29\u0e32\u0e04\u0e27\u0e32\u0e21\u0e1b\u0e25\u0e2d\u0e14\u0e20\u0e31\u0e22\u0e14\u0e49\u0e27\u0e22\u0e01\u0e32\u0e23\u0e2a\u0e19\u0e31\u0e1a\u0e2a\u0e19\u0e38\u0e19 Orbot Tor"
+        },
+        "tr": {
+          "summary": "D\u00fcnyaya okuyun. Yerel payla\u015f\u0131n.Orbot Tor deste\u011fi ile G\u00fcvenli News Reader."
+        },
+        "uk": {
+          "summary": "\u0427\u0438\u0442\u0430\u0439\u0442\u0435 \u0432 \u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u043e\u043c\u0443 \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0456. \u041f\u043e\u0434\u0456\u043b\u0456\u0442\u044c\u0441\u044f \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u043e.\u0411\u0435\u0437\u043f\u0435\u0447\u043d\u0438\u0439 \u0434\u043b\u044f \u0447\u0438\u0442\u0430\u043d\u043d\u044f \u043d\u043e\u0432\u0438\u043d "
+        },
+        "vi": {
+          "summary": "\u0110\u1ecdc to\u00e0n c\u1ea7u. Chia s\u1ebb t\u1ea1i \u0111\u1ecba ph\u01b0\u01a1ng.M\u1ed9t Tin t\u1ee9c B\u1ea3o m\u1eadt Reader v\u1edbi h\u1ed7 tr\u1ee3 Orbot"
+        }
+      },
+      "name": "Courier",
+      "packageName": "info.guardianproject.courier",
+      "sourceCode": "https://github.com/guardianproject/securereader",
+      "suggestedVersionCode": "15",
+      "suggestedVersionName": "0.1.9",
+      "translation": "https://www.transifex.com/otf/securereader/",
+      "webSite": "https://dev.guardianproject.info/projects/secure-reader"
+    },
+    {
       "added": 1413417600000,
       "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
       "categories": [
@@ -347,8 +650,8 @@
     {
       "added": 1383177600000,
       "antiFeatures": [
-        "KnownVuln",
-        "DisabledAlgorithm"
+        "DisabledAlgorithm",
+        "KnownVuln"
       ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
@@ -604,6 +907,112 @@
         "targetSdkVersion": 17,
         "versionCode": 1,
         "versionName": "1.0"
+      }
+    ],
+    "info.guardianproject.courier": [
+      {
+        "added": 1403740800000,
+        "apkName": "Courier-0.1.9.apk",
+        "hash": "bf6566da1f90831887f5bf5605f8d816b1f7f694969459dec599b8bc01a827d3",
+        "hashType": "sha256",
+        "minSdkVersion": 9,
+        "nativecode": [
+          "armeabi",
+          "x86"
+        ],
+        "packageName": "info.guardianproject.courier",
+        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
+        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
+        "size": 16484753,
+        "targetSdkVersion": 15,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ]
+        ],
+        "versionCode": 15,
+        "versionName": "0.1.9"
+      },
+      {
+        "added": 1400025600000,
+        "apkName": "Courier-0.1.8.apk",
+        "hash": "e013db095e8da843fae5ac44be6152e51377ee717e5c8a7b6d913d7720566b5a",
+        "hashType": "sha256",
+        "minSdkVersion": 9,
+        "nativecode": [
+          "armeabi",
+          "x86"
+        ],
+        "packageName": "info.guardianproject.courier",
+        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
+        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
+        "size": 16536125,
+        "targetSdkVersion": 15,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ]
+        ],
+        "versionCode": 14,
+        "versionName": "0.1.8"
       }
     ],
     "info.guardianproject.gilga": [
@@ -6267,6 +6676,483 @@
         ],
         "versionCode": 2,
         "versionName": "0.2"
+      }
+    ],
+    "org.witness.informacam.app": [
+      {
+        "added": 1446508800000,
+        "apkName": "CameraVApp-release-0.2.6.apk",
+        "hash": "508f453e26c8c83dba858b53b21d909d549fe5646d01eb198c96c22d8e521e7c",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "nativecode": [
+          "armeabi",
+          "armeabi-v7a",
+          "x86"
+        ],
+        "packageName": "org.witness.informacam.app",
+        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
+        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
+        "size": 24123646,
+        "targetSdkVersion": 21,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.GET_ACCOUNTS",
+            null
+          ],
+          [
+            "android.permission.USE_CREDENTIALS",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.KILL_BACKGROUND_PROCESSES",
+            null
+          ],
+          [
+            "android.permission.GET_TOP_ACTIVITY_INFO",
+            null
+          ]
+        ],
+        "versionCode": 206,
+        "versionName": "0.2.6"
+      },
+      {
+        "added": 1443744000000,
+        "apkName": "CameraV-release-0.2.4.apk",
+        "hash": "a10eefaed5a12c353525b07e655f6959fe1eb06cd5c549be56afaca6db0c6ce0",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "nativecode": [
+          "armeabi",
+          "armeabi-v7a",
+          "x86"
+        ],
+        "packageName": "org.witness.informacam.app",
+        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
+        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
+        "size": 24062229,
+        "targetSdkVersion": 21,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.GET_TASKS",
+            null
+          ],
+          [
+            "android.permission.GET_ACCOUNTS",
+            null
+          ],
+          [
+            "android.permission.USE_CREDENTIALS",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.KILL_BACKGROUND_PROCESSES",
+            null
+          ]
+        ],
+        "versionCode": 204,
+        "versionName": "0.2.4"
+      },
+      {
+        "added": 1442361600000,
+        "apkName": "CameraVApp-release-0.2.2.apk",
+        "hash": "8b17cbe2a5cb777b49f5ef67a390f9d9d68765c90213ac64f3ca0456860dc9b7",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "nativecode": [
+          "armeabi",
+          "armeabi-v7a",
+          "x86"
+        ],
+        "packageName": "org.witness.informacam.app",
+        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
+        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
+        "size": 24283932,
+        "targetSdkVersion": 21,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.GET_TASKS",
+            null
+          ],
+          [
+            "android.permission.GET_ACCOUNTS",
+            null
+          ],
+          [
+            "android.permission.USE_CREDENTIALS",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.KILL_BACKGROUND_PROCESSES",
+            null
+          ]
+        ],
+        "versionCode": 202,
+        "versionName": "0.2.2"
+      },
+      {
+        "added": 1438041600000,
+        "apkName": "CameraV-release-0.2.1.apk",
+        "hash": "89808dc92a93a0b793d9d1da3cdbb615a761ff7479bc499558eddaa680a850dc",
+        "hashType": "sha256",
+        "minSdkVersion": 16,
+        "nativecode": [
+          "armeabi",
+          "armeabi-v7a",
+          "x86"
+        ],
+        "packageName": "org.witness.informacam.app",
+        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
+        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
+        "size": 23052881,
+        "targetSdkVersion": 19,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.GET_TASKS",
+            null
+          ],
+          [
+            "android.permission.GET_ACCOUNTS",
+            null
+          ],
+          [
+            "android.permission.USE_CREDENTIALS",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "android.permission.KILL_BACKGROUND_PROCESSES",
+            null
+          ]
+        ],
+        "versionCode": 201,
+        "versionName": "0.2.1"
+      },
+      {
+        "added": 1386720000000,
+        "apkName": "InformaCam-beta-0.1.35.apk",
+        "hash": "9a3fc49814e91a191a9a67c272d76e105add8cc3cfe2bed6c9b094f0e84a9c0a",
+        "hashType": "sha256",
+        "minSdkVersion": 10,
+        "nativecode": [
+          "armeabi"
+        ],
+        "packageName": "org.witness.informacam.app",
+        "sig": "a0eeebb161f946e3516945fae8a92a3e",
+        "signer": "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b",
+        "size": 16892544,
+        "targetSdkVersion": 18,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WRITE_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.READ_PHONE_STATE",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH",
+            null
+          ],
+          [
+            "android.permission.BLUETOOTH_ADMIN",
+            null
+          ],
+          [
+            "android.permission.CAMERA",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECORD_AUDIO",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.CHANGE_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.GET_TASKS",
+            null
+          ],
+          [
+            "android.permission.GET_ACCOUNTS",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ]
+        ],
+        "versionCode": 35,
+        "versionName": "0.1.35"
       }
     ]
   }

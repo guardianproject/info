@@ -9,18 +9,17 @@ menu:
   main:
     parent: apps
 ---
-####<img class="alignnone size-large wp-image-13245" src="https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-1024x500.png" alt="featuregraphic" width="780" height="381" srcset="https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic.png 1024w, https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-300x146.png 300w, https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-768x375.png 768w" sizes="(max-width: 780px) 100vw, 780px" /> 
+<img class="alignnone size-large wp-image-13245" src="https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-1024x500.png" alt="featuregraphic" width="780" height="381" srcset="https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic.png 1024w, https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-300x146.png 300w, https://guardianproject.info/wp-content/uploads/2010/02/featuregraphic-768x375.png 768w" sizes="(max-width: 780px) 100vw, 780px" /> 
 
 # What is Orbot?
 
 Orbot is a free proxy app that empowers other apps to use the internet more securely. Orbot uses Tor to encrypt your Internet traffic and then hides it by bouncing through a series of computers around the world. Tor is free software and an open network that helps you defend against a form of network surveillance that threatens personal freedom and privacy, confidential business activities and relationships, and state security known as traffic analysis. Orbot creates a truly private mobile internet connection.  
 <a href="https://play.google.com/store/apps/details?id=org.torproject.android" target="_blank"><br /> </a>**Download Orbot**: [Google Play](https://market.android.com/details?id=org.torproject.android) | [F-Droid](/fdroid) | [Direct Download (.apk)](https://guardianproject.info/releases/orbot-latest.apk)
 
-**Source code:** [Tor Gitweb](https://gitweb.torproject.org/orbot.git) **|** [Github Mirror](https://github.com/n8fr8/orbot)
+**Source code:** [Tor Gitweb](https://gitweb.torproject.org/orbot.git) **|** [GitHub Mirror](https://github.com/n8fr8/orbot)
 
 <img class="alignnone wp-image-13243 size-medium" src="https://guardianproject.info/wp-content/uploads/2010/02/device-2016-01-04-021058-169x300.png" alt="device-2016-01-04-021058" width="169" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/02/device-2016-01-04-021058-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2010/02/device-2016-01-04-021058-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2010/02/device-2016-01-04-021058.png 720w" sizes="(max-width: 169px) 100vw, 169px" /><img class="alignnone size-medium wp-image-13241" src="https://guardianproject.info/wp-content/uploads/2010/02/device-2016-01-07-014823-169x300.png" alt="device-2016-01-07-014823" width="169" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/02/device-2016-01-07-014823-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2010/02/device-2016-01-07-014823-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2010/02/device-2016-01-07-014823.png 720w" sizes="(max-width: 169px) 100vw, 169px" /> 
 
-★ PRIVATE WEB SURFING: Use with Orfox, the most anonymous way to access any website, even if it’s normally blocked, monitored, or on the hidden web. [Get Orfox here](https://guardianproject.info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/).  
 ★ PRIVATE CHAT MESSAGING: Use ChatSecure with Orbot to chat confidentially with anyone, anywhere for free. [GetChatSecure](/apps/chatsecure)  
 ★ PRIVACY ON TWITTER: It works with the <a title="Official Twitter app with proxy feature" href="https://play.google.com/store/apps/details?id=com.twitter.android" target="_blank">official Twitter app.</a> To Tweet anonymously, just change the proxy settings to the following: Proxy Host: localhost: Proxy Port: 8118
 

@@ -1,258 +1,258 @@
 [
-    {
-        "id": "dateFormat",
-        "translation": "January 2, 2006"
-    },
-    {
-        "id": "shortdateFormat",
-        "translation": "2 Jan, 2006 15:04:05"
-    },
-    {
-        "id": "postedOnDate",
-        "translation": "发表于 {{ .Count }}"
-    },
-    {
-        "id": "lastModified",
-        "translation": "(上次修改时间 {{ .Count }})"
-    },
-    {
-        "id": "translationsLabel",
-        "translation": "其它语言: "
-    },
-    {
-        "id": "translationsSeparator",
-        "translation": ", "
-    },
-    {
-        "id": "readMore",
-        "translation": "阅读全文"
-    },
-    {
-        "id": "olderPosts",
-        "translation": "下一页"
-    },
-    {
-        "id": "newerPosts",
-        "translation": "上一页"
-    },
-    {
-        "id": "previousPost",
-        "translation": "前一篇"
-    },
-    {
-        "id": "nextPost",
-        "translation": "后一篇"
-    },
-    {
-        "id": "readTime",
-        "translation": "分钟"
-    },
-    {
-        "id": "words",
-        "translation": "个字"
-    },
-    {
-        "id": "pageNotFound",
-        "translation": "啊哦，这篇文章不存在。 (404 错误)"
-    },
-    {
-        "id": "poweredBy",
-        "translation": "由 <a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> 强力驱动 &nbsp;&bull;&nbsp; 主题 <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a> 移植自 <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a>"
-    },
-    {
-        "id": "toggleNavigation",
-        "translation": "切换导航"
-    },
-    {
-        "id": "languageSwitcherLabel",
-        "translation": "语言"
-    },
-    {
-        "id": "gcseLabelShort",
-        "translation": "搜索"
-    },
-    {
-        "id": "gcseLabelLong",
-        "translation": "搜索 {{ .Site.Title }}"
-    },
-    {
-        "id": "gcseClose",
-        "translation": "关闭"
-    },
-    {
-        "id": "noComment",
-        "translation": "没有评论"
-    },
-    {
-        "id": "oneComment",
-        "translation": "则评论"
-    },
-    {
-        "id": "moreComment",
-        "translation": "则评论"
-    },
-    {
-        "id": "useMarkdown",
-        "translation": "您可以使用Markdown语法"
-    },
-    {
-        "id": "yourName",
-        "translation": "你的名字"
-    },
-    {
-        "id": "yourEmail",
-        "translation": "您的电子邮件地址"
-    },
-    {
-        "id": "yourWebsite",
-        "translation": "你的网页"
-    },
-    {
-        "id": "show",
-        "translation": "显示"
-    },
-    {
-        "id": "comments",
-        "translation": "则评论"
-    },
-    {
-        "id": "seeAlso",
-        "translation": "也可以看看"
-    },
-    {
-        "id": "Jobs and Internships",
-        "translation": "工作和实习"
-    },
-    {
-        "id": "Contact",
-        "translation": "联系方式"
-    },
-    {
-        "id": "Live Chatrooms",
-        "translation": "直播聊天室"
-    },
-    {
-        "id": "Archived Apps",
-        "translation": "已存档应用"
-    },
-    {
-        "id": "Security You Can Trust",
-        "translation": "您可信任的安全"
-    },
-    {
-        "id": "Team",
-        "translation": "团队"
-    },
-    {
-        "id": "Signing Keys",
-        "translation": "签名密钥"
-    },
-    {
-        "id": "Services",
-        "translation": "服务"
-    },
-    {
-        "id": "Press",
-        "translation": "媒体"
-    },
-    {
-        "id": "Partners and Funding",
-        "translation": "合作方和经费"
-    },
-    {
-        "id": "About Guardian Project",
-        "translation": "关于Guardian项目"
-    },
-    {
-        "id": "How You Can Work With Us",
-        "translation": "与我们共事的方式"
-    },
-    {
-        "id": "Export Information",
-        "translation": "导出信息"
-    },
-    {
-        "id": "Blog",
-        "translation": "博客"
-    },
-    {
-        "id": "sourceCode",
-        "translation": "源代码"
-    },
-    {
-        "id": "description",
-        "translation": "描述"
-    },
-    {
-        "id": "metadata",
-        "translation": "元数据"
-    },
-    {
-        "id": "edit",
-        "translation": "编辑"
-    },
-    {
-        "id": "translation",
-        "translation": "翻译"
-    },
-    {
-        "id": "webSite",
-        "translation": "网站"
-    },
-    {
-        "id": "onGitLab",
-        "translation": "Gitlab页面"
-    },
-    {
-        "id": "onGitHub",
-        "translation": "Github页面"
-    },
-    {
-        "id": "blogPosts",
-        "translation": "博文"
-    },
-    {
-        "id": "tutorials",
-        "translation": "教程"
-    },
-    {
-        "id": "archivedApps",
-        "translation": "已存档应用"
-    },
-    {
-        "id": "press",
-        "translation": "媒体"
-    },
-    {
-        "id": "team",
-        "translation": "团队"
-    },
-    {
-        "id": "contact",
-        "translation": "联系"
-    },
-    {
-        "id": "archive",
-        "translation": "存档"
-    },
-    {
-        "id": "code",
-        "translation": "代码"
-    },
-    {
-        "id": "apps",
-        "translation": "应用程序"
-    },
-    {
-        "id": "about",
-        "translation": "关于"
-    },
-    {
-        "id": "editOn",
-        "translation": "编辑于"
-    },
-    {
-        "id": "translateOn",
-        "translation": "翻译于"
-    }
+  {
+    "id": "dateFormat",
+    "translation": "January 2, 2006"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Jan, 2006 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "发表于 {{ .Count }}"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(上次修改时间 {{ .Count }})"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "其它语言: "
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "readMore",
+    "translation": "阅读全文"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "下一页"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "上一页"
+  },
+  {
+    "id": "previousPost",
+    "translation": "前一篇"
+  },
+  {
+    "id": "nextPost",
+    "translation": "后一篇"
+  },
+  {
+    "id": "readTime",
+    "translation": "分钟"
+  },
+  {
+    "id": "words",
+    "translation": "个字"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "啊哦，这篇文章不存在。 (404 错误)"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "由 <a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> 强力驱动 &nbsp;&bull;&nbsp; 主题 <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a> 移植自 <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a>"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "切换导航"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "语言"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "搜索"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "搜索 {{ .Site.Title }}"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "关闭"
+  },
+  {
+    "id": "noComment",
+    "translation": "没有评论"
+  },
+  {
+    "id": "oneComment",
+    "translation": "则评论"
+  },
+  {
+    "id": "moreComment",
+    "translation": "则评论"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "您可以使用Markdown语法"
+  },
+  {
+    "id": "yourName",
+    "translation": "你的名字"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "您的电子邮件地址"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "你的网页"
+  },
+  {
+    "id": "show",
+    "translation": "显示"
+  },
+  {
+    "id": "comments",
+    "translation": "则评论"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "也可以看看"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "工作和实习"
+  },
+  {
+    "id": "Contact",
+    "translation": "联系方式"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "直播聊天室"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "已存档应用"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "您可信任的安全"
+  },
+  {
+    "id": "Team",
+    "translation": "团队"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "签名密钥"
+  },
+  {
+    "id": "Services",
+    "translation": "服务"
+  },
+  {
+    "id": "Press",
+    "translation": "媒体"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "合作方和经费"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "关于Guardian项目"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "与我们共事的方式"
+  },
+  {
+    "id": "Export Information",
+    "translation": "导出信息"
+  },
+  {
+    "id": "Blog",
+    "translation": "博客"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "源代码"
+  },
+  {
+    "id": "description",
+    "translation": "描述"
+  },
+  {
+    "id": "metadata",
+    "translation": "元数据"
+  },
+  {
+    "id": "edit",
+    "translation": "编辑"
+  },
+  {
+    "id": "translation",
+    "translation": "翻译"
+  },
+  {
+    "id": "webSite",
+    "translation": "网站"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "Gitlab页面"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "Github页面"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "博文"
+  },
+  {
+    "id": "tutorials",
+    "translation": "教程"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "已存档应用"
+  },
+  {
+    "id": "press",
+    "translation": "媒体"
+  },
+  {
+    "id": "team",
+    "translation": "团队"
+  },
+  {
+    "id": "contact",
+    "translation": "联系"
+  },
+  {
+    "id": "archive",
+    "translation": "存档"
+  },
+  {
+    "id": "code",
+    "translation": "代码"
+  },
+  {
+    "id": "apps",
+    "translation": "应用程序"
+  },
+  {
+    "id": "about",
+    "translation": "关于"
+  },
+  {
+    "id": "editOn",
+    "translation": "编辑于"
+  },
+  {
+    "id": "translateOn",
+    "translation": "翻译于"
+  }
 ]

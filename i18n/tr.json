@@ -1,262 +1,262 @@
 [
-    {
-        "id": "about",
-        "translation": "hakkında"
-    },
-    {
-        "id": "translation",
-        "translation": "Çeviri"
-    },
-    {
-        "id": "gcseLabelShort",
-        "translation": "Ara"
-    },
-    {
-        "id": "translationsSeparator",
-        "translation": ", "
-    },
-    {
-        "id": "Jobs and Internships",
-        "translation": "İşler ve Stajlar"
-    },
-    {
-        "id": "Contact",
-        "translation": "İletişim"
-    },
-    {
-        "id": "Live Chatrooms",
-        "translation": "Canlı Sohbet Odaları"
-    },
-    {
-        "id": "Archived Apps",
-        "translation": "Arşivlenen Uygulamalar"
-    },
-    {
-        "id": "Security You Can Trust",
-        "translation": "Güvenebileceğiniz Güvenlik"
-    },
-    {
-        "id": "Team",
-        "translation": "Ekip"
-    },
-    {
-        "id": "Signing Keys",
-        "translation": "İmzalama Anahtarları"
-    },
-    {
-        "id": "Services",
-        "translation": "Hizmetler"
-    },
-    {
-        "id": "Press",
-        "translation": "Basın"
-    },
-    {
-        "id": "Partners and Funding",
-        "translation": "Ortaklar ve Fonlama"
-    },
-    {
-        "id": About Guardian Project",
-        "translation": "Guardian Project Hakkında"
-    },
-    {
-        "id": "How You Can Work With Us",
-        "translation": "Bizimle Nasıl Çalışabilirsiniz"
-    },
-    {
-        "id": "Export Information",
-        "translation": "İhracat Bilgileri"
-    },
-    {
-        "id": "Blog",
-        "translation": "Blog"
-    },
-    {
-        "id": "sourceCode",
-        "translation": "kaynak kodu"
-    },
-    {
-        "id": "description",
-        "translation": "açıklama"
-    },
-    {
-        "id": "metadata",
-        "translation": "üst veri"
-    },
-    {
-        "id": "editOn",
-        "translation": "Düzenle:"
-    },
-    {
-        "id": "translateOn",
-        "translation": "Çevir:"
-    },
-    {
-        "id": "edit",
-        "translation": "Düzenle"
-    },
-    {
-        "id": "webSite",
-        "translation": "web sitesi"
-    },
-    {
-        "id": "onGitLab",
-        "translation": "GitLab'da"
-    },
-    {
-        "id": "onGitHub",
-        "translation": "GitHub'da"
-    },
-    {
-        "id": "blogPosts",
-        "translation": "Blog Gönderileri"
-    },
-    {
-        "id": "seeAlso",
-        "translation": "Ayrıca bakın"
-    },
-    {
-        "id": "comments",
-        "translation": "yorum"
-    },
-    {
-        "id": "show",
-        "translation": "Göster"
-    },
-    {
-        "id": "yourWebsite",
-        "translation": "Web siteniz"
-    },
-    {
-        "id": "yourEmail",
-        "translation": "E-posta adresiniz"
-    },
-    {
-        "id": "yourName",
-        "translation": "Adınız"
-    },
-    {
-        "id": "useMarkdown",
-        "translation": "Markdown söz dizimini kullanabilirsiniz"
-    },
-    {
-        "id": "moreComment",
-        "translation": "yorum"
-    },
-    {
-        "id": "oneComment",
-        "translation": "yorum"
-    },
-    {
-        "id": "noComment",
-        "translation": "Yorum yok"
-    },
-    {
-        "id": "gcseClose",
-        "translation": "Kapat"
-    },
-    {
-        "id": "gcseLabelLong",
-        "translation": "Arama: {{ .Site.Title }}"
-    },
-    {
-        "id": "languageSwitcherLabel",
-        "translation": "Dil"
-    },
-    {
-        "id": "toggleNavigation",
-        "translation": "Gezinmeyi aç/kapat"
-    },
-    {
-        "id": "poweredBy",
-        "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> ile oluşturuldu &nbsp;&bull;&nbsp; Tema: <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>'ya uyarlanan <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a>"
-    },
-    {
-        "id": "pageNotFound",
-        "translation": "Tüh, bu sayfa mevcut değil. Devam edin. (404 hatası)"
-    },
-    {
-        "id": "words",
-        "translation": "sözcük"
-    },
-    {
-        "id": "readTime",
-        "translation": "dakika"
-    },
-    {
-        "id": "nextPost",
-        "translation": "Sonraki Gönderi"
-    },
-    {
-        "id": "previousPost",
-        "translation": "Önceki Gönderi"
-    },
-    {
-        "id": "newerPosts",
-        "translation": "Yeni Gönderiler"
-    },
-    {
-        "id": "olderPosts",
-        "translation": "Eski Gönderiler"
-    },
-    {
-        "id": "readMore",
-        "translation": "Devamını Oku"
-    },
-    {
-        "id": "translationsLabel",
-        "translation": "Diğer diller: "
-    },
-    {
-        "id": "lastModified",
-        "translation": "(En son {{ .Count }} tarihinde değiştirildi)"
-    },
-    {
-        "id": "postedOnDate",
-        "translation": "{{ .Count }} tarihinde yayınlandı"
-    },
-    {
-        "id": "shortdateFormat",
-        "translation": "2 Ocak, 2006 15:04:05"
-    },
-    {
-        "id": "dateFormat",
-        "translation": "2 Ocak, 2006"
-    },
-    {
-        "id": "tutorials",
-        "translation": "Öğreticiler"
-    },
-    {
-        "id": "archivedApps",
-        "translation": "Arşivlenen Uygulamalar"
-    },
-    {
-        "id": "press",
-        "translation": "Basın"
-    },
-    {
-        "id": "team",
-        "translation": "Ekip"
-    },
-    {
-        "id": "contact",
-        "translation": "iletişim"
-    },
-    {
-        "id": "archive",
-        "translation": "arşiv"
-    },
-    {
-        "id": "code",
-        "translation": "kod"
-    },
-    {
-        "id": "apps",
-        "translation": "uygulamalar"
-    },
-    {
-        "id": "About Guardian Project",
-        "translation": "Guardian Project Hakkında"
-    }
+  {
+    "id": "about",
+    "translation": "hakkında"
+  },
+  {
+    "id": "translation",
+    "translation": "Çeviri"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Ara"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "İşler ve Stajlar"
+  },
+  {
+    "id": "Contact",
+    "translation": "İletişim"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Canlı Sohbet Odaları"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Arşivlenen Uygulamalar"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Güvenebileceğiniz Güvenlik"
+  },
+  {
+    "id": "Team",
+    "translation": "Ekip"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "İmzalama Anahtarları"
+  },
+  {
+    "id": "Services",
+    "translation": "Hizmetler"
+  },
+  {
+    "id": "Press",
+    "translation": "Basın"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Ortaklar ve Fonlama"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Guardian Project Hakkında"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Bizimle Nasıl Çalışabilirsiniz"
+  },
+  {
+    "id": "Export Information",
+    "translation": "İhracat Bilgileri"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "kaynak kodu"
+  },
+  {
+    "id": "description",
+    "translation": "açıklama"
+  },
+  {
+    "id": "metadata",
+    "translation": "üst veri"
+  },
+  {
+    "id": "editOn",
+    "translation": "Düzenle:"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Çevir:"
+  },
+  {
+    "id": "edit",
+    "translation": "Düzenle"
+  },
+  {
+    "id": "webSite",
+    "translation": "web sitesi"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "GitLab'da"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "GitHub'da"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Blog Gönderileri"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Ayrıca bakın"
+  },
+  {
+    "id": "comments",
+    "translation": "yorum"
+  },
+  {
+    "id": "show",
+    "translation": "Göster"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Web siteniz"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "E-posta adresiniz"
+  },
+  {
+    "id": "yourName",
+    "translation": "Adınız"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Markdown söz dizimini kullanabilirsiniz"
+  },
+  {
+    "id": "moreComment",
+    "translation": "yorum"
+  },
+  {
+    "id": "oneComment",
+    "translation": "yorum"
+  },
+  {
+    "id": "noComment",
+    "translation": "Yorum yok"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Kapat"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Arama: {{ .Site.Title }}"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Dil"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Gezinmeyi aç/kapat"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> ile oluşturuldu &nbsp;&bull;&nbsp; Tema: <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>'ya uyarlanan <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a>"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Tüh, bu sayfa mevcut değil. Devam edin. (404 hatası)"
+  },
+  {
+    "id": "words",
+    "translation": "sözcük"
+  },
+  {
+    "id": "readTime",
+    "translation": "dakika"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Sonraki Gönderi"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Önceki Gönderi"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Yeni Gönderiler"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Eski Gönderiler"
+  },
+  {
+    "id": "readMore",
+    "translation": "Devamını Oku"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Diğer diller: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(En son {{ .Count }} tarihinde değiştirildi)"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "{{ .Count }} tarihinde yayınlandı"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Ocak, 2006 15:04:05"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 Ocak, 2006"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Öğreticiler"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Arşivlenen Uygulamalar"
+  },
+  {
+    "id": "press",
+    "translation": "Basın"
+  },
+  {
+    "id": "team",
+    "translation": "Ekip"
+  },
+  {
+    "id": "contact",
+    "translation": "iletişim"
+  },
+  {
+    "id": "archive",
+    "translation": "arşiv"
+  },
+  {
+    "id": "code",
+    "translation": "kod"
+  },
+  {
+    "id": "apps",
+    "translation": "uygulamalar"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Guardian Project Hakkında"
+  }
 ]

@@ -61,7 +61,7 @@ guardianproject.info:
     - eval $(ssh-agent -s)
     - echo >> $SSH_PRIVATE_KEY  # ensure trailing newline
     - cat "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    - chmod -R a+rX,go-w public/
+    - chmod -R a+rX,g+w,o-w public/
     - rsync -axv --omit-dir-times --delete
          --exclude-from=.rsync-deploy-exclude-list
          public/* .htaccess

@@ -10,6 +10,7 @@ categories:
   - News
 tags:
   - bazaar
+  - distribution
   - f-droid
   - mobile
   - open-source

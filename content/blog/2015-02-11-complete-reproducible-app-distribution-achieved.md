@@ -13,6 +13,7 @@ tags:
   - android
   - bazaar
   - checkey
+  - distribution
   - f-droid
   - f-droid.org
   - fdroid

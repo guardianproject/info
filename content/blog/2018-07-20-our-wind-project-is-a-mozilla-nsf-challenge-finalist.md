@@ -11,6 +11,7 @@ categories:
   - New Release
   - News
 tags:
+  - distribution
   - mozilla
   - nearby
   - nsf

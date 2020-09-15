@@ -11,6 +11,7 @@ categories:
 tags:
   - android
   - bazaar
+  - distribution
   - fdroid
   - orbot
   - privacy

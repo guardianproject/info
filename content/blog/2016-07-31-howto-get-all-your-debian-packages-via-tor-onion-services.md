@@ -15,6 +15,7 @@ categories:
 tags:
   - anonymity
   - debian
+  - distribution
   - howto
   - metadata
   - privacy

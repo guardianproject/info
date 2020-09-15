@@ -10,6 +10,7 @@ bigimg: [{src: "/wp-content/uploads/2018/09/disaster_1-6.jpg",}]
 categories:
   - News
 tags:
+  - distribution
   - f-droid
   - humanitarian
   - off-grid

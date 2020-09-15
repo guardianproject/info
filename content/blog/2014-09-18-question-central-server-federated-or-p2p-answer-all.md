@@ -11,6 +11,7 @@ categories:
 tags:
   - bazaar
   - bluetooth
+  - distribution
   - fdroid
   - nfc
   - p2p

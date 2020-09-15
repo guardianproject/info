@@ -11,7 +11,8 @@ categories:
   - News
 tags:
   - distribution
-  - f-droid
+  - F-Droid
+  - fdroid
   - humanitarian
   - off-grid
   - viento

@@ -13,6 +13,7 @@ tags:
   - apk
   - apk expansion
   - bazaar
+  - F-Droid
   - fdroid
   - obb
 ---

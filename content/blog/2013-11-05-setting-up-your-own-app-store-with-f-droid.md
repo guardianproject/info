@@ -13,6 +13,7 @@ tags:
   - bazaar
   - debian
   - distribution
+  - F-Droid
   - fdroid
   - free software
   - howto

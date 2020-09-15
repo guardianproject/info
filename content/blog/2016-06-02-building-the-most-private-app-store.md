@@ -14,6 +14,7 @@ tags:
   - bazaar
   - debian
   - encryption
+  - F-Droid
   - fdroid
   - identity
   - mobile

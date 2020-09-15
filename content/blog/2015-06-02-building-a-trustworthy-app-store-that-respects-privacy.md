@@ -14,6 +14,7 @@ tags:
   - cafebazaar
   - cnnic
   - distribution
+  - F-Droid
   - fdroid
   - google play
   - master key

@@ -14,8 +14,7 @@ tags:
   - bazaar
   - checkey
   - distribution
-  - f-droid
-  - f-droid.org
+  - F-Droid
   - fdroid
   - lildebi
   - prototype

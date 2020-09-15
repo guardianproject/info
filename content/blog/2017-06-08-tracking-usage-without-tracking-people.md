@@ -14,6 +14,7 @@ categories:
 tags:
   - bazaar
   - data
+  - F-Droid
   - fdroid
   - metadata
   - privacy

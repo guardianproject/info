@@ -11,7 +11,8 @@ categories:
 tags:
   - bazaar
   - distribution
-  - f-droid
+  - F-Droid
+  - fdroid
   - mobile
   - open-source
   - security

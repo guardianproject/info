@@ -12,7 +12,9 @@ categories:
 tags:
   - android
   - bazaar
-  - f-droid
+  - F-Droid
+  - fdroid
+  - F-Droid
   - fdroid
   - reproducible build
 ---

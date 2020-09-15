@@ -15,6 +15,7 @@ tags:
   - android
   - bazaar
   - distribution
+  - F-Droid
   - fdroid
   - open-source
   - privacy

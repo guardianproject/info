@@ -28,82 +28,91 @@ The key to this workflow is that all contributors must fork from the same git re
 
 At the very least, a contributor’s local repo should be set up to talk to two remote repos: the contributor’s own public repo and the _upstream_ repo. I’ll use github as an example of how to get started in this workflow. Say you want to contribute to https://github.com/guardianproject/keysync, start by making a fork via the github.com<img src="https://guardianproject.info/wp-content/uploads/2013/11/fork.png" alt="fork" width="65" height="19" /> button. Once that is setup, its time to clone it and configure the rest. I’m **eighthave** on github, so this example will use my public repo. I work with Abel Luck on KeySync, so we’ll add his repo as another contributor repo.
 
-<pre>git clone https://github.com/eighthave/keysync
+```
+git clone https://github.com/eighthave/keysync
 cd keysync
 git remote add upstream https://github.com/guardianproject/keysync
 git fetch upstream
 git remote add abeluck https://github.com/abeluck/keysync
 git fetch abeluck
-</pre>
+```
 
 Now I can see all of the remotes in my local git repo, and work with them as branches: 
 
-<pre style="background-color: black; color: white;"><strong style="color: yellow">$</strong> git remote  -v
+```console
+$ git remote  -v
 abeluck https://github.com/abeluck/keysync (fetch)
 abeluck https://github.com/abeluck/keysync (push)
 origin  https://github.com/eighthave/keysync (fetch)
 origin  https://github.com/eighthave/keysync (push)
 upstream        https://github.com/guardianproject/keysync (fetch)
 upstream        https://github.com/guardianproject/keysync (push)
-<strong style="color: yellow">$</strong> git branch -va
+$ git branch -va
 * master                  1536fcf parse version number from setuptools
   remotes/abeluck/master  1536fcf parse version number from setuptools
   remotes/origin/HEAD     -> origin/master
   remotes/origin/master   1536fcf parse version number from setuptools
   remotes/upstream/master 1536fcf parse version number from setuptools
-</pre>
+```
 
 Now I do some work, and commit it to my local repo, and want to push them for Abel to review. In the meantime Abel has pushed some commits for me to review into his remote repo `abeluck`. So I need to fetch his new commits, then rebase my new local commits on top of of his new commits. When its all ready, I push it to my remote repo `origin`.
 
-<pre>git checkout master
+```
+git checkout master
 git fetch abeluck
 (review the commits...)
 git rebase abeluck/master
 git push origin master
-</pre>
+```
 
 Now I’ve reviewed Abel’s new commits and incorporated them into my public repo. Abel is ready to review my new commits, which are rebased on top of his. If he agrees with them, he’ll push them to the official “blessed” repo `upstream`. Then his local repo will be in sync with the latest _upstream_.
 
-<pre>git checkout master
+```
+git checkout master
 git fetch eighthave
 git merge eighthave/master
 (review the commits...)
 git push upstream master
-</pre>
+```
+
 
 **Review The Commits**
 
 You can also review the commits before rebasing or merging them into the local master. This is done by switching to the remote branch, which is kind of like a local branch, but not entirely. It works for checking out and viewing just fine though:
 
-<pre>git checkout eighthave/master
+```
+git checkout eighthave/master
 (review the commits...)
 git checkout master
-</pre>
+```
 
 **Undoing A Bad Rebase**
 
 Git doesn’t provide any undo, and it also will let you delete things, not a good situation for learning this stuff. Luckily it does give you the tools for making something like an undo function. I use a tag for this, and I always use the same name for that tag: `pre-rebase`. Before starting anything that involves rebasing, I first do:
 
-<pre>git checkout master
+```
+git checkout master
 git tag pre-rebase
-</pre>
+```
 
 Then after the rebase is successfully deleted, I remove that tag:
 
-<pre>git tag -d pre-rebase
-</pre>
+```
+git tag -d pre-rebase
+```
 
 **Switching Your Master When Things Have Diverged**
 
 It is often the case that in the process of merging and rebasing, the developers’ repos will be in separate branches of the original tree. Once the “integration manager” person has pulled in all the commits, rebased and merged everything, and pushed the approved commits to the upstream repo, the other developers will likely need to reset their repos to resync with the upstream:
 
-<pre>git fetch upstream
+```
+git fetch upstream
 git checkout upstream/master
 git branch -D master
 git branch master
 git checkout master
 git push -f origin master
-</pre>
+```
 
 So `git branch -D master` does indeed mean force-delete your master branch. That is required before setting your master branch to a new branch. If you want, you can keep that old branch around by doing `git branch myfeaturedevbranch` before doing `git branch -D master`.
 

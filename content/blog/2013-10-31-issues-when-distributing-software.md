@@ -31,8 +31,7 @@ Most people distributing software are used to thinking about #1 verifying packag
 
 So having software repos available with both TLS and Tor available as options is a very good idea. As far as I have seen, there are not any Debian repos available via a Tor Hidden Service. There are a number of official mirrors that already support TLS/HTTPS. You can find them using <a href="https://gist.github.com/eighthave/7285154" title="the script in a gist paste" target="_blank">this script:</a>
 
-`</p>
-<pre>
+```python
 #!/usr/bin/python
 
 import urllib2
@@ -167,5 +166,4 @@ for url in cds:
 
 
 f.close()
-</pre>
-<p>`
+```

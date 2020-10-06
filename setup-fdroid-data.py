@@ -29,7 +29,9 @@ def write_app_page(app, languages, lang=None):
         filename = 'content/apps/%s.md' % app['packageName']
     with open(filename, 'w') as fp:
         fp.write('---\n')
-        fp.write('title: ' + app['name'] + ' ' + '\n')
+        d = {'title': app['name']}
+        fp.write(yaml.safe_dump(d, width=sys.maxsize, default_flow_style=False,
+                                encoding='utf-8', allow_unicode=True).decode())
         if languages:
             fp.write('languages: '
                      + yaml.safe_dump(sorted(languages), width=sys.maxsize, default_flow_style=True))

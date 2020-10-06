@@ -7,7 +7,7 @@ layout: page
 guid: https://guardianproject.info/?page_id=3456
 menu:
   main:
-    parent: apps
+    parent: archive
 ---
 #### [<img class="aligncenter size-full wp-image-11444" src="https://guardianproject.info/wp-content/uploads/2013/04/pixelknot_banner.002.png" alt="pixelknot banner hide messages" width="1024" height="512" srcset="https://guardianproject.info/wp-content/uploads/2013/04/pixelknot_banner.002.png 1024w, https://guardianproject.info/wp-content/uploads/2013/04/pixelknot_banner.002-300x150.png 300w" sizes="(max-width: 1024px) 100vw, 1024px" />](https://guardianproject.info/releases/PixelKnot-release-0.3-RC1.apk)What is Pixelknot?
 

@@ -12,11 +12,13 @@ categories:
   - privacy
   - Research
 tags:
+  - Apache
   - bazaar
   - data
   - F-Droid
   - fdroid
   - metadata
+  - nginx
   - privacy
   - tor
   - tracking

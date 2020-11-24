@@ -1,0 +1,258 @@
+[
+  {
+    "id": "Jobs and Internships",
+    "translation": "งานและการฝึกงาน"
+  },
+  {
+    "id": "Contact",
+    "translation": "ติดต่อ"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "ห้องสนทนาสด"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "แอปที่ถูกเก็บประวัติแล้ว"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "ดูสิ่งนี้ด้วย"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "ไม่ต้องสลับช่องทาง"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> ขับเคลื่อน &nbsp;&bull;&nbsp; ธีมโดย <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> ปรับให้เข้ากับ <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "แอปที่ถูกเก็บประวัติแล้ว"
+  },
+  {
+    "id": "archive",
+    "translation": "ถูกเก็บประวัติ"
+  },
+  {
+    "id": "press",
+    "translation": "ผู้สื่อข่าว"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "ความปลอดภัยที่คุณเชื่อถือได้"
+  },
+  {
+    "id": "Team",
+    "translation": "ทีม"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "คีย์การลงนาม"
+  },
+  {
+    "id": "Services",
+    "translation": "บริการ"
+  },
+  {
+    "id": "Press",
+    "translation": "ผู้สื่อข่าว"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "พันธมิตรและเงินทุน"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "เกี่ยวกับ Guardian Project"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "คุณสามารถทํางานกับเราได้อย่างไร"
+  },
+  {
+    "id": "Export Information",
+    "translation": "นําข้อมูลออก"
+  },
+  {
+    "id": "Blog",
+    "translation": "บล็อก"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "source code"
+  },
+  {
+    "id": "description",
+    "translation": "คำอธิบาย"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadata"
+  },
+  {
+    "id": "editOn",
+    "translation": "แก้ไข บน"
+  },
+  {
+    "id": "edit",
+    "translation": "แก้ไข"
+  },
+  {
+    "id": "translateOn",
+    "translation": "แปลบน"
+  },
+  {
+    "id": "translation",
+    "translation": "การแปล"
+  },
+  {
+    "id": "webSite",
+    "translation": "เว็บไซต์"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "บน GitLab"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "บน GitHub"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "โพสต์บล็อก"
+  },
+  {
+    "id": "comments",
+    "translation": "ความคิดเห็น"
+  },
+  {
+    "id": "show",
+    "translation": "แสดง"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "เว็บไซต์ของคุณ"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "ที่อยู่อีเมลของคุณ"
+  },
+  {
+    "id": "yourName",
+    "translation": "ชื่อคุณ"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "คุณสามารถใช้ Markdown syntax"
+  },
+  {
+    "id": "moreComment",
+    "translation": "ความคิดเห็น"
+  },
+  {
+    "id": "oneComment",
+    "translation": "แสดงความคิดเห็น"
+  },
+  {
+    "id": "noComment",
+    "translation": "ไม่มีการแสดงความคิดเห็น"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "ปิด"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "ค้นหา {{ .Site.Title }}"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "ค้นหา"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "ภาษา"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "อุ๊ย, หน้านี้ไม่มีอยู่. ย้ายไป. (ข้อผิดพลาด 404)"
+  },
+  {
+    "id": "words",
+    "translation": "คํา"
+  },
+  {
+    "id": "readTime",
+    "translation": "นาที"
+  },
+  {
+    "id": "nextPost",
+    "translation": "โพสต์ต่อไป"
+  },
+  {
+    "id": "previousPost",
+    "translation": "โพสต์ก่อนหน้า"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "โพสต์ใหม่กว่า"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "โพสต์เก่ากว่า"
+  },
+  {
+    "id": "readMore",
+    "translation": "อ่านต่อ"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "ภาษาอื่น: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(แก้ไขล่าสุด {{ .Count }})"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "โพสต์บน {{ .Count }}"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 ม.ค. 2006 15:04:05"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 มกราคม 2006"
+  },
+  {
+    "id": "tutorials",
+    "translation": "บทแนะนํา"
+  },
+  {
+    "id": "team",
+    "translation": "ทีม"
+  },
+  {
+    "id": "contact",
+    "translation": "ติดต่อ"
+  },
+  {
+    "id": "code",
+    "translation": "โค้ด"
+  },
+  {
+    "id": "apps",
+    "translation": "แอป"
+  },
+  {
+    "id": "about",
+    "translation": "เกี่ยวกับ"
+  }
+]

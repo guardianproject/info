@@ -1,0 +1,258 @@
+[
+  {
+    "id": "Signing Keys",
+    "translation": "Chaves de Assinatura"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Aplicativos Arquivados"
+  },
+  {
+    "id": "Contact",
+    "translation": "Contato"
+  },
+  {
+    "id": "Team",
+    "translation": "Equipe"
+  },
+  {
+    "id": "Services",
+    "translation": "Serviços"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Traduza no"
+  },
+  {
+    "id": "webSite",
+    "translation": "website"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "no GitHub"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Veja também"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Trabalhos e Estágios"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Salas de Bate-papo em Tempo Real"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "A Segurança que Você Pode Confiar"
+  },
+  {
+    "id": "Press",
+    "translation": "Imprensa"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Parceiros e Investidores"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Sobre o Projeto Guardian"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Como Você Pode nos Ajudar"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Exportar a Informação"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "código fonte"
+  },
+  {
+    "id": "description",
+    "translation": "descrição"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadata"
+  },
+  {
+    "id": "editOn",
+    "translation": "Editar no"
+  },
+  {
+    "id": "edit",
+    "translation": "Editar"
+  },
+  {
+    "id": "translation",
+    "translation": "Tradução"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "no GitLab"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Postagens do Blog"
+  },
+  {
+    "id": "comments",
+    "translation": "comentários"
+  },
+  {
+    "id": "show",
+    "translation": "Exibir"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "O seu site web"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "O seu endereço de e-mail"
+  },
+  {
+    "id": "yourName",
+    "translation": "O seu nome"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Você pode usar sintaxe Markdown"
+  },
+  {
+    "id": "moreComment",
+    "translation": "comentários"
+  },
+  {
+    "id": "oneComment",
+    "translation": "comentário"
+  },
+  {
+    "id": "noComment",
+    "translation": "Nenhum comentário"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Fechar"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Pesquisa {{ .Site.Title }}"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Pesquisa"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Idioma"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Alternar a navegação"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Tema do <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptado para <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Opa, esta página não existe. Segue o jogo. (Erro 404)"
+  },
+  {
+    "id": "words",
+    "translation": "palavras"
+  },
+  {
+    "id": "readTime",
+    "translation": "minutos"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Próxima Postagem"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Postagem Anterior"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Novas Postagens"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Postagens Antigas"
+  },
+  {
+    "id": "readMore",
+    "translation": "Mais Informações"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Outros Idiomas: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Modificado pela última vez no {{ .Count }})"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Postado no {{ .Count }}"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Jan, 2006 15:04:05"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 de Janeiro de 2006"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Tutoriais"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Aplicativos Arquivados"
+  },
+  {
+    "id": "press",
+    "translation": "Imprensa"
+  },
+  {
+    "id": "team",
+    "translation": "Equipe"
+  },
+  {
+    "id": "contact",
+    "translation": "contato"
+  },
+  {
+    "id": "archive",
+    "translation": "arquivo"
+  },
+  {
+    "id": "code",
+    "translation": "código"
+  },
+  {
+    "id": "apps",
+    "translation": "apps"
+  },
+  {
+    "id": "about",
+    "translation": "sobre"
+  }
+]

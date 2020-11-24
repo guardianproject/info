@@ -5,7 +5,7 @@
   },
   {
     "id": "apps",
-    "translation": "apps"
+    "translation": "aplicaciones"
   },
   {
     "id": "code",
@@ -89,7 +89,7 @@
   },
   {
     "id": "poweredBy",
-    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Theme by <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adapted to <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> equipado &nbsp;&bull;&nbsp; Tema por <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptado para <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
   },
   {
     "id": "toggleNavigation",
@@ -205,19 +205,19 @@
   },
   {
     "id": "How You Can Work With Us",
-    "translation": "How You Can Work With Us"
+    "translation": "Cómo puedes trabajar con nosotros"
   },
   {
     "id": "About Guardian Project",
-    "translation": "About Guardian Project"
+    "translation": "Acerca de Guardian Project"
   },
   {
     "id": "Partners and Funding",
-    "translation": "Partners and Funding"
+    "translation": "Socios y financiación"
   },
   {
     "id": "Press",
-    "translation": "Press"
+    "translation": "Prensa"
   },
   {
     "id": "Services",
@@ -225,7 +225,7 @@
   },
   {
     "id": "Signing Keys",
-    "translation": "Signing Keys"
+    "translation": "Claves de Firma"
   },
   {
     "id": "Team",
@@ -233,15 +233,15 @@
   },
   {
     "id": "Security You Can Trust",
-    "translation": "Security You Can Trust"
+    "translation": "Seguridad en la que puede confiar"
   },
   {
     "id": "Archived Apps",
-    "translation": "Archived Apps"
+    "translation": "Aplicaciones archivadas"
   },
   {
     "id": "Live Chatrooms",
-    "translation": "Live Chatrooms"
+    "translation": "Salas de Chat"
   },
   {
     "id": "Contact",
@@ -249,6 +249,10 @@
   },
   {
     "id": "Jobs and Internships",
-    "translation": "Jobs and Internships"
+    "translation": "De empleo y Prácticas"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Aplicaciones archivadas"
   }
 ]

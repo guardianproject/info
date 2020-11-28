@@ -54,6 +54,12 @@ current:
     twitter: tladesignz
     matrix: "@threeletteracronym:matrix.org"
 
+  - name: bim
+    title: Programmer
+    github: bitmold
+    gitlab: bitmold
+    matrix: "@lexithesponge:matrix.org"
+
 emeritus:
   - name: noneck
     twitter: noneck

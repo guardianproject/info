@@ -29,7 +29,7 @@ As of this week, we have had three new features to CameraV that all fall under w
 </div>
 
 <div id="attachment_12939" style="width: 179px" class="wp-caption alignleft">
-  <a href="https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44.png"><img aria-describedby="caption-attachment-12939" class="wp-image-12939 size-medium" src="https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-169x300.png" alt="CameraV marinading as "CV Settings"" width="169" height="300" srcset="https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+  <a href="https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44.png"><img aria-describedby="caption-attachment-12939" class="wp-image-12939 size-medium" src="https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-169x300.png" alt="CameraV marinading as CV Settings" width="169" height="300" srcset="https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
   
   <p id="caption-attachment-12939" class="wp-caption-text">
     CameraV masquerading as “CV Settings”

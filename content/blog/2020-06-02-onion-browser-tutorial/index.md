@@ -98,10 +98,10 @@ After [downloading Onion Browser from the App Store](https://apps.apple.com/us/a
 <!-- ![](image24.png) --> <!-- ![](image14.png) -->
 <p class="ctr">
 	<a href="image24.png">
-		<img class="size2" src="image24.png"">
+		<img class="size2" src="image24.png">
 	</a>
 	<a href="image14.png">
-		<img class="size2" src="image14.png"">
+		<img class="size2" src="image14.png">
 	</a>	
 </p>
 

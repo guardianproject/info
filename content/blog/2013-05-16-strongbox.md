@@ -62,7 +62,7 @@ tags:
 </p>
 
 <p dir="ltr" style="text-align: center;">
-  <a href="http://instagram.com/p/PihUXCmJzW/" target="_blank"><img class="size-medium wp-image-3730 aligncenter" title=""On the Internet, algorithms can infer you're a dog."" alt="Dog Algorithm" src="https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-300x300.jpg" width="300" height="300" srcset="https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm.jpg 612w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="http://instagram.com/p/PihUXCmJzW/" target="_blank"><img class="size-medium wp-image-3730 aligncenter" title="On the Internet, algorithms can infer you're a dog." alt="Dog Algorithm" src="https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-300x300.jpg" width="300" height="300" srcset="https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm.jpg 612w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
 <p dir="ltr">

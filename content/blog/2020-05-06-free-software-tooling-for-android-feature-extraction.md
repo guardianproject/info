@@ -131,3 +131,5 @@ for working with large APK collections.
 * [redexer](https://github.com/plum-umd/redexer) - infer with which parameters the app uses certain permissions (we name this feature RefineDroid)
 * [apk-static-xref](https://github.com/ytliu/apk-static-xref) - staticallly generate a cross-reference-graph (XRG) of a component (e.g., Service) of Android APK file
 * [smalisca](https://github.com/dorneanu/smalisca) - Static Code analysis tool that generates call graphs
+
+(_This work was supported by NLnet's [NGI Zero PET](https://nlnet.nl/thema/NGIZeroPET.html) fund._)

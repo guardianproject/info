@@ -85,3 +85,5 @@ getting started.  Hope to hear from you soon!
 * [F-Droid Forum](https://forum.f-droid.org)
 * [F-Droid chat rooms](https://f-droid.org/about/#contact)
 * [Guardian Project channels](https://guardianproject.info/contact/)
+
+(_This work was supported by NLnet's [NGI Zero PET](https://nlnet.nl/thema/NGIZeroPET.html) fund._)

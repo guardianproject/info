@@ -152,3 +152,5 @@ the features out of the binary APK file, and source code when
 available, and loop over our collections of known features. If the
 feature was found in the APK/source the tabular data will be a 1, else
 a 0.
+
+(_This work was supported by NLnet's [NGI Zero PET](https://nlnet.nl/thema/NGIZeroPET.html) fund._)

@@ -9,11 +9,11 @@
   },
   {
     "id": "postedOnDate",
-    "translation": "Afiŝiĝis je {{ .Count }}"
+    "translation": "Afiŝita je {{ .Count }}"
   },
   {
     "id": "lastModified",
-    "translation": "(Laste aliiĝis je {{ .Count }})"
+    "translation": "(Antaŭe modifita je {{ .Count }})"
   },
   {
     "id": "translationsLabel",
@@ -25,15 +25,15 @@
   },
   {
     "id": "readMore",
-    "translation": "Legi pli"
+    "translation": "Pliaj informoj"
   },
   {
     "id": "olderPosts",
-    "translation": "Plimalnovaj afiŝoj"
+    "translation": "Pli malnovaj afiŝoj"
   },
   {
     "id": "newerPosts",
-    "translation": "Plinovaj afiŝoj"
+    "translation": "Pli novaj afiŝoj"
   },
   {
     "id": "previousPost",
@@ -53,15 +53,15 @@
   },
   {
     "id": "pageNotFound",
-    "translation": "Ups, ĉi tiu paĝo ne ekzistas. (404 Error)"
+    "translation": "Ho ne, tiu ĉi paĝo ne ekzistas. (Eraro 404)"
   },
   {
     "id": "poweredBy",
-    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a>-povigita &nbsp;&bull;&nbsp; Haŭto de <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptiĝis al <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> povigata de &nbsp;&bull;&nbsp; Etoso de <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a>, adaptita al <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
   },
   {
     "id": "toggleNavigation",
-    "translation": "Navigacio"
+    "translation": "Navigo"
   },
   {
     "id": "languageSwitcherLabel",
@@ -73,7 +73,7 @@
   },
   {
     "id": "gcseLabelLong",
-    "translation": "Serĉi {{ .Site.Title }}"
+    "translation": "Serĉi en {{ .Site.Title }}"
   },
   {
     "id": "gcseClose",
@@ -81,7 +81,7 @@
   },
   {
     "id": "noComment",
-    "translation": "Sen komentoj"
+    "translation": "Neniu komento"
   },
   {
     "id": "oneComment",
@@ -105,11 +105,11 @@
   },
   {
     "id": "yourWebsite",
-    "translation": "Via retpaĝaro"
+    "translation": "Via retejo"
   },
   {
     "id": "show",
-    "translation": "Montru"
+    "translation": "Montri"
   },
   {
     "id": "comments",
@@ -118,5 +118,141 @@
   {
     "id": "seeAlso",
     "translation": "Vidu ankaŭ"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Laborpostenoj kaj staĝoj"
+  },
+  {
+    "id": "Contact",
+    "translation": "Kontakti"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Babliejo"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Arĥivitaj aplikaĵoj"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Fidinda sekureco"
+  },
+  {
+    "id": "Team",
+    "translation": "Teamo"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Subskrib‑ŝlosiloj"
+  },
+  {
+    "id": "Services",
+    "translation": "Servoj"
+  },
+  {
+    "id": "Press",
+    "translation": "Gazetaro"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Kunlaborantoj kaj financoj"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Pri la Projekto Guardian"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Kiel kunlabori kun ni"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Elporti informojn"
+  },
+  {
+    "id": "Blog",
+    "translation": "Taglibro"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "fontkodon"
+  },
+  {
+    "id": "description",
+    "translation": "priskribon"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadatumojn"
+  },
+  {
+    "id": "editOn",
+    "translation": "Redakti ĉe"
+  },
+  {
+    "id": "edit",
+    "translation": "Redakti"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Traduki ĉe"
+  },
+  {
+    "id": "translation",
+    "translation": "Traduko"
+  },
+  {
+    "id": "webSite",
+    "translation": "retejo"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "ĉe GitLab"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "ĉe GitHub"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Taglibraj afiŝoj"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Manlibroj"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Arĥivitaj aplikaĵoj"
+  },
+  {
+    "id": "press",
+    "translation": "Gazetaro"
+  },
+  {
+    "id": "team",
+    "translation": "Teamo"
+  },
+  {
+    "id": "contact",
+    "translation": "Kontakti"
+  },
+  {
+    "id": "archive",
+    "translation": "Arĥivo"
+  },
+  {
+    "id": "code",
+    "translation": "Kodoj"
+  },
+  {
+    "id": "apps",
+    "translation": "Aplikaĵoj"
+  },
+  {
+    "id": "about",
+    "translation": "Pri"
   }
 ]

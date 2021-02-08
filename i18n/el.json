@@ -1,7 +1,7 @@
 [
   {
     "id": "about",
-    "translation": "Σχετικά"
+    "translation": "σχετικά"
   },
   {
     "id": "translation",
@@ -10,5 +10,37 @@
   {
     "id": "gcseLabelShort",
     "translation": "Αναζήτηση"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Οδηγοί"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Αρχειοθετημένες εφαρμογές"
+  },
+  {
+    "id": "press",
+    "translation": "Τύπος"
+  },
+  {
+    "id": "team",
+    "translation": "Ομάδα"
+  },
+  {
+    "id": "contact",
+    "translation": "επικοινωνία"
+  },
+  {
+    "id": "archive",
+    "translation": "αρχείο"
+  },
+  {
+    "id": "code",
+    "translation": "κώδικας"
+  },
+  {
+    "id": "apps",
+    "translation": "εφαρμογές"
   }
 ]

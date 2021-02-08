@@ -11,6 +11,7 @@ categories:
   - New Release
 tags:
   - android
+  - F-Droid
   - fdroid
   - security
 ---

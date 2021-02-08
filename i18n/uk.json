@@ -1,0 +1,258 @@
+[
+  {
+    "id": "about",
+    "translation": "про"
+  },
+  {
+    "id": "translation",
+    "translation": "Переклад"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Пошук"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Робота та стажування"
+  },
+  {
+    "id": "Contact",
+    "translation": "Зв'язок"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Чати в режимі реального часу"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Заархівовані програми"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Безпека, якій можна довіряти"
+  },
+  {
+    "id": "Team",
+    "translation": "Команда"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Ключі підписування"
+  },
+  {
+    "id": "Services",
+    "translation": "Служби"
+  },
+  {
+    "id": "Press",
+    "translation": "Преса"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Партнери та фінансування"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Про Guardian Project"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Співпраця з нами"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Експортувати дані"
+  },
+  {
+    "id": "Blog",
+    "translation": "Блог"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "джерельний код"
+  },
+  {
+    "id": "description",
+    "translation": "опис"
+  },
+  {
+    "id": "metadata",
+    "translation": "метадані"
+  },
+  {
+    "id": "editOn",
+    "translation": "Змінити на"
+  },
+  {
+    "id": "edit",
+    "translation": "Змінити"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Перекласти"
+  },
+  {
+    "id": "webSite",
+    "translation": "на сайті"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "на GitLab"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "на GitHub"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Дописи блогу"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Дивіться також"
+  },
+  {
+    "id": "comments",
+    "translation": "коментарі"
+  },
+  {
+    "id": "show",
+    "translation": "Показати"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Ваш сайт"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Ваша адреса електронної пошти"
+  },
+  {
+    "id": "yourName",
+    "translation": "Ваше ім'я"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Ви можете використовувати синтаксис розмітки"
+  },
+  {
+    "id": "moreComment",
+    "translation": "коментарі"
+  },
+  {
+    "id": "oneComment",
+    "translation": "коментар"
+  },
+  {
+    "id": "noComment",
+    "translation": "Без коментарів"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Закрити"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Шукати {{ .Site.Title }}"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Мова"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Перемкнути навігацію"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Отакої, цієї сторінки не існує. Проходьте повз. (Помилка 404)"
+  },
+  {
+    "id": "words",
+    "translation": "слів"
+  },
+  {
+    "id": "readTime",
+    "translation": "хвилин"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Наступний допис"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Попередній допис"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Новіші дописи"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Попередні дописи"
+  },
+  {
+    "id": "readMore",
+    "translation": "Докладніше"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Інші мови: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Востаннє змінено {{ .Count }})"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Опубліковано {{ .Count }}"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "Jan 2, 2006 15:04:05"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 січня 2006 р."
+  },
+  {
+    "id": "tutorials",
+    "translation": "Навчальні посібники"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Заархівовані програми"
+  },
+  {
+    "id": "press",
+    "translation": "Преса"
+  },
+  {
+    "id": "team",
+    "translation": "Команда"
+  },
+  {
+    "id": "contact",
+    "translation": "зв'язок"
+  },
+  {
+    "id": "archive",
+    "translation": "архів"
+  },
+  {
+    "id": "code",
+    "translation": "код"
+  },
+  {
+    "id": "apps",
+    "translation": "застосунки"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Працює на Hugo v{{ .Hugo.Version }}</a> &nbsp;&bull;&nbsp; Тема від <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> адаптовано до <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  }
+]

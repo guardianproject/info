@@ -9,10 +9,12 @@ permalink: /2014/02/12/tweaking-https-for-better-security/
 categories:
   - News
 tags:
+  - Apache
   - bazaar
   - encryption
   - howto
   - https
+  - nginx
   - security
   - ssl
   - tls

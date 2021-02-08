@@ -12,10 +12,13 @@ categories:
   - privacy
   - Research
 tags:
+  - Apache
   - bazaar
   - data
+  - F-Droid
   - fdroid
   - metadata
+  - nginx
   - privacy
   - tor
   - tracking
@@ -48,7 +51,7 @@ This stripped version looks like:
 0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] "GET /fdroid/repo/index-v1.jar HTTP/1.1" 200 147950 "-" "-" ZH
 </pre>
 
-Since the raw data is processed by the webserver, the extra information will be discarded and never written to disk. Only the sanitized usage tracking information is ever stored. This is based on Tor Project’s <a href="https://gitweb.torproject.org/webstats.git/tree/src/sanitize.py" target="_blank">web tracking</a>. It is possible to do this with _Apache_, _lighttpd_, _nginx_, and probably other webservers. For _Apache_, _mod_geoip_ needs to be installed, then only a single line is needed to configure this private logging mode:
+Since the raw data is processed by the webserver, the extra information will be discarded and never written to disk. Only the sanitized usage tracking information is ever stored. This is based on Tor Project’s <a href="https://gitweb.torproject.org/webstats.git/tree/src/sanitize.py" target="_blank">web tracking</a>. It is possible to do this with _Apache_, _lighttpd_, _nginx_, and probably other webservers. For _Apache_, [<i>mod_geoip</i>](https://github.com/maxmind/geoip-api-mod_geoip2/blob/master/INSTALL.md#configuration) needs to be installed, then only a single line is needed to configure this private logging mode:
 
 <pre>LogFormat "0.0.0.0 - %u %{[%d/%b/%Y:00:00:00 %z]}t \"%r\" %>s %b \"%{Referer}i\" \"-\" %{GEOIP_COUNTRY_CODE}e" privacy+geo
 CustomLog ${APACHE_LOG_DIR}/access.log privacy+geo

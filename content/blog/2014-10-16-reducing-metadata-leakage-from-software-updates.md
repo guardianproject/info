@@ -12,6 +12,7 @@ tags:
   - anonymity
   - bazaar
   - debian
+  - distribution
   - encryption
   - gnu/linux
   - howto

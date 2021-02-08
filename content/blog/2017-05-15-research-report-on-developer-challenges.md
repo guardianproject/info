@@ -12,6 +12,7 @@ tags:
   - android
   - anonymity
   - bazaar
+  - F-Droid
   - fdroid
   - privacy
   - security

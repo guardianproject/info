@@ -24,7 +24,7 @@ tags:
   - zrtp
 ---
 <p style="text-align: center">
-  <span style="color: #000000"><span style="font-family: ArialMT,sans-serif"><span style="font-size: small"><a href="https://secure.flickr.com/photos/ksd-photography/4899157618/"><img class="aligncenter" src="https://farm5.staticflickr.com/4099/4899157618_b35f53be23_z.jpg" alt="【KSD Photography】"Capturing Life"" width="640" height="343" /></a></span></span></span>
+  <span style="color: #000000"><span style="font-family: ArialMT,sans-serif"><span style="font-size: small"><a href="https://secure.flickr.com/photos/ksd-photography/4899157618/"><img class="aligncenter" src="https://farm5.staticflickr.com/4099/4899157618_b35f53be23_z.jpg" alt="【KSD Photography】 Capturing Life" width="640" height="343" /></a></span></span></span>
 </p>
 
 <p style="text-align: left">

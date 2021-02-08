@@ -13,6 +13,8 @@ tags:
   - bazaar
   - cafebazaar
   - cnnic
+  - distribution
+  - F-Droid
   - fdroid
   - google play
   - master key

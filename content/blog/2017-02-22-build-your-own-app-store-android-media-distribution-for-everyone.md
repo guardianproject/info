@@ -10,7 +10,9 @@ categories:
   - News
 tags:
   - bazaar
-  - f-droid
+  - distribution
+  - F-Droid
+  - fdroid
   - mobile
   - open-source
   - security

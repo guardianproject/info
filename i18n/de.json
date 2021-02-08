@@ -1,0 +1,262 @@
+[
+  {
+    "id": "about",
+    "translation": "über"
+  },
+  {
+    "id": "apps",
+    "translation": "Apps"
+  },
+  {
+    "id": "code",
+    "translation": "Code"
+  },
+  {
+    "id": "archive",
+    "translation": "Archiv"
+  },
+  {
+    "id": "contact",
+    "translation": "Kontakt"
+  },
+  {
+    "id": "team",
+    "translation": "Team"
+  },
+  {
+    "id": "press",
+    "translation": "Presse"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Archivierte Apps"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Anleitungen"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2. Januar 2006"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2. Jan 2006 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Gepostet am {{ .Count }}"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Zuletzt geändert am {{ .Count }})"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Andere Sprachen: "
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "readMore",
+    "translation": "Mehr"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Ältere Posts"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Neuere Posts"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Letzter Post"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Nächster Post"
+  },
+  {
+    "id": "readTime",
+    "translation": "Minuten"
+  },
+  {
+    "id": "words",
+    "translation": "Wörter"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Ups, diese Seite existiert nicht. (404 Error)"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "Betrieben mit <a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Design von <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> eingerichtet für <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Navigation"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Sprache"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Suche"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Suche {{ .Site.Title }}"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Schließen"
+  },
+  {
+    "id": "noComment",
+    "translation": "Kein Kommentar"
+  },
+  {
+    "id": "oneComment",
+    "translation": "Kommentar"
+  },
+  {
+    "id": "moreComment",
+    "translation": "Kommentare"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Sie können Markdown-Syntax verwenden"
+  },
+  {
+    "id": "yourName",
+    "translation": "Ihr Name"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Ihre E-Mail-Adresse"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Ihre Webseite"
+  },
+  {
+    "id": "show",
+    "translation": "Anzeigen"
+  },
+  {
+    "id": "comments",
+    "translation": "Kommentare"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Siehe auch"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Blogeinträge"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "auf GitHub"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "auf GitLab"
+  },
+  {
+    "id": "webSite",
+    "translation": "Website"
+  },
+  {
+    "id": "translation",
+    "translation": "Übersetzung"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Übersetzen auf"
+  },
+  {
+    "id": "edit",
+    "translation": "Bearbeiten"
+  },
+  {
+    "id": "editOn",
+    "translation": "Bearbeiten auf"
+  },
+  {
+    "id": "metadata",
+    "translation": "Metadaten"
+  },
+  {
+    "id": "description",
+    "translation": "Beschreibung"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "Quellcode"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Exportinformationen"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Wie Sie mit uns arbeiten können"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Über Guardian Project"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Partner und Finanzierung"
+  },
+  {
+    "id": "Press",
+    "translation": "Presse"
+  },
+  {
+    "id": "Services",
+    "translation": "Dienstleistungen"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Signaturschlüssel"
+  },
+  {
+    "id": "Team",
+    "translation": "Team"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Sicherheit, der Sie vertrauen können"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Archivierte Apps"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Live-Chatrooms"
+  },
+  {
+    "id": "Contact",
+    "translation": "Kontakt"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Arbeitstellen and Praktika"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Über Guardian Project"
+  }
+]

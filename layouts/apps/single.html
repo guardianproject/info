@@ -37,7 +37,7 @@
   </a>
   {{ end }}
   -
-  <a href="{{ .Site.BaseURL }}/tags/{{ $app.name | lower }}">
+  <a href="{{ .Site.BaseURL }}/tags/{{ lower (index (split (index (split $app.name ":") 0) " ") 0) }}">
     <i class="fa fa-rss"></i> {{ i18n "blogPosts" }}
   </a>
   {{ with $app.translation }}

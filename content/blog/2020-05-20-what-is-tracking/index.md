@@ -231,3 +231,5 @@ ________________
 [^2]: An assumption which is not far fetched - see the Snowden papers.
 
 [^3]: Compare with the quote "we kill people based on metadata" by the former CIA/NSA director Hayden. https://abcnews.go.com/blogs/headlines/2014/05/ex-nsa-chief-we-kill-people-based-on-metadata
+
+(_This work was supported by NLnet's [NGI Zero PET](https://nlnet.nl/thema/NGIZeroPET.html) fund._)

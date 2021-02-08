@@ -13,8 +13,8 @@ tags:
   - android
   - bazaar
   - checkey
-  - f-droid
-  - f-droid.org
+  - distribution
+  - F-Droid
   - fdroid
   - lildebi
   - prototype

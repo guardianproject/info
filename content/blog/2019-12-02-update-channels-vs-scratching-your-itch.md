@@ -8,6 +8,7 @@ tags:
   - security
   - python
   - android
+  - F-Droid
   - fdroid
 ---
 

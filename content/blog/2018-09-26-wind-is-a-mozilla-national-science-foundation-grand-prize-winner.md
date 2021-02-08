@@ -10,7 +10,9 @@ bigimg: [{src: "/wp-content/uploads/2018/09/disaster_1-6.jpg",}]
 categories:
   - News
 tags:
-  - f-droid
+  - distribution
+  - F-Droid
+  - fdroid
   - humanitarian
   - off-grid
   - viento

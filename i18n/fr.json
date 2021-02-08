@@ -1,0 +1,258 @@
+[
+  {
+    "id": "dateFormat",
+    "translation": "January 2, 2006"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Jan, 2006 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Posté le {{ .Count }}"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Dernière modification le {{ .Count }})"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Autres langues : "
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "readMore",
+    "translation": "Voir plus"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Anciens posts"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Nouveaux posts"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Post précédent"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Post suivant"
+  },
+  {
+    "id": "readTime",
+    "translation": "minutes"
+  },
+  {
+    "id": "words",
+    "translation": "mots"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Oups, cette page n'existe pas. (erreur 404)"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "Carbure avec <a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a>&nbsp;&bull;&nbsp; Avec le Theme <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adapté en <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Activer/désactiver la navigation"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Langue"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Rechercher"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Rechercher {{ .Site.Title }}"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Fermer"
+  },
+  {
+    "id": "noComment",
+    "translation": "Pas de commentaire"
+  },
+  {
+    "id": "oneComment",
+    "translation": "commentaire"
+  },
+  {
+    "id": "moreComment",
+    "translation": "commentaires"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Vous pouvez utiliser la syntaxe Markdown"
+  },
+  {
+    "id": "yourName",
+    "translation": "Votre nom"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Votre addresse mail"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Votre site web"
+  },
+  {
+    "id": "show",
+    "translation": "Afficher"
+  },
+  {
+    "id": "comments",
+    "translation": "commentaires"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Voir également"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Emplois et stages"
+  },
+  {
+    "id": "Contact",
+    "translation": "Contact"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Salon de discussion en direct"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Applis archivées"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Une sécurité digne de confiance"
+  },
+  {
+    "id": "Team",
+    "translation": "Équipe"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Clés de signature"
+  },
+  {
+    "id": "Services",
+    "translation": "Services"
+  },
+  {
+    "id": "Press",
+    "translation": "Presse"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Partenaires et financement"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "À propos de Guardian Project"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Comment vous pouvez travailler avec nous"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Informations sur l’exportation"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "code source"
+  },
+  {
+    "id": "description",
+    "translation": "description"
+  },
+  {
+    "id": "metadata",
+    "translation": "métadonnées"
+  },
+  {
+    "id": "editOn",
+    "translation": "Modifier sur"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Traduire sur"
+  },
+  {
+    "id": "translation",
+    "translation": "Traduction"
+  },
+  {
+    "id": "webSite",
+    "translation": "site web"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "sur GitLab"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "sur GitHub"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Articles de blog"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Tutoriels"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Applis archivées"
+  },
+  {
+    "id": "press",
+    "translation": "Presse"
+  },
+  {
+    "id": "team",
+    "translation": "Équipe"
+  },
+  {
+    "id": "contact",
+    "translation": "contact"
+  },
+  {
+    "id": "archive",
+    "translation": "archives"
+  },
+  {
+    "id": "code",
+    "translation": "code"
+  },
+  {
+    "id": "apps",
+    "translation": "applis"
+  },
+  {
+    "id": "about",
+    "translation": "à propos"
+  },
+  {
+    "id": "edit",
+    "translation": "Modifier"
+  }
+]

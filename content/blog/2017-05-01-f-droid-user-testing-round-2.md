@@ -13,6 +13,7 @@ categories:
 tags:
   - android
   - bazaar
+  - F-Droid
   - fdroid
   - usability
 ---

@@ -14,6 +14,7 @@ tags:
   - android
   - bazaar
   - encryption
+  - F-Droid
   - fdroid
   - howto
   - identity

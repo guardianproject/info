@@ -7,6 +7,7 @@ categories:
 tags:
   - android
   - Exodus Privacy
+  - F-Droid
   - fdroid
   - machine learning
   - NGI0 PET

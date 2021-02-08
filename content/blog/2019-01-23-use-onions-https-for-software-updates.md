@@ -10,6 +10,7 @@ categories:
   - News
 tags:
   - debian
+  - distribution
   - security
   - updates
 ---

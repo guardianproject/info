@@ -10,6 +10,7 @@ categories:
   - HowTo
 tags:
   - bazaar
+  - F-Droid
   - fdroid
   - hardware
   - howto

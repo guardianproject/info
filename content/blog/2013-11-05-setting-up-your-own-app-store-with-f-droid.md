@@ -12,6 +12,8 @@ tags:
   - android
   - bazaar
   - debian
+  - distribution
+  - F-Droid
   - fdroid
   - free software
   - howto
@@ -26,31 +28,31 @@ The Google Play Store for Android is not available in all parts of the world, US
 
 <img src="https://guardianproject.info/wp-content/uploads/2013/11/your-own-app-store.png" alt="your-own-app-store" width="300" height="203" class="alignright size-full wp-image-11896" /> <a href="https://f-droid.org" title="F-Droid Home Page" target="_blank">F-Droid</a> is a wonderful, free app store for Android. It is modeled after the <a href="http://www.debian.org" title="Debian home page" target="_blank">Debian GNU/Linux</a> distro. It has its own package repositories (repos) and build servers for all the apps that are part of the official OS. Like Debian and Ubuntu, you can also setup your own repos for anyone to use. Any free software can be added to the official F-Droid repos, where they are built and signed by the F-Droid server. This can be annoying because it means that your apps in F-Droid are signed by a different key than your apps in the Google Play Store. If you host your own F-Droid repo, then people can use F-Droid to install your own builds signed by your own signing key.
 
-This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the `fdroidserver` tools and a webserver. For the webserver, here we use _nginx_ for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: `F50E ADDD 2234 F563`):
+This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the `fdroidserver` tools and a webserver. For the webserver, here we use _nginx_ for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: <tt>F50E ADDD 2234 F563</tt>):
 
-`</p>
-<pre>
+```
 sudo add-apt-repository ppa:guardianproject/ppa
 sudo apt-get update
 sudo apt-get install fdroidserver nginx
-</pre>
-<p>`
+```
 
 In the case of this HOWTO, we’re going to setup a “<a href="https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository" target="_blank">Simple Binary Repository</a>” to host our official APKs. The repo will be set up in the recommended `fdroid/` subdirectory. This gives the `fdroid` tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let’s give our normal user control over this subdirectory in the web root so that we don’t need to run the F-Droid tools as root (with _nginx_, the webroot is `/usr/share/nginx/www`, it is different for other webservers):
 
-<pre>sudo mkdir /usr/share/nginx/www/fdroid
+```
+sudo mkdir /usr/share/nginx/www/fdroid
 sudo chown -R $USER /usr/share/nginx/www/fdroid
 cd /usr/share/nginx/www/fdroid
 fdroid init
-</pre>
+```
 
 Now put your APK files into `/usr/share/nginx/www/fdroid/repo` and you are ready to run the commands to build the repo (if `fdroid init` cannot find your Android SDK in `/opt/android-sdk` or `$ANDROID_HOME`, it will prompt you for the path):
 
-<pre>cd /usr/share/nginx/www/fdroid
+```
+cd /usr/share/nginx/www/fdroid
 cp /path/to/*.apk /usr/share/nginx/www/fdroid/repo/
 fdroid update -c
 fdroid update
-</pre>
+```
 
 [<img src="https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png" alt="fdroidheader3" width="300" height="75" class="alignleft size-medium wp-image-11906" srcset="https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png 720w" sizes="(max-width: 300px) 100vw, 300px" />](https://f-droid.org)Voila! Now you have a working F-Droid Repo! Add it to an F-Droid client on your Android device to test it out. That is done in the **Manage Repos** screen available from the menu. Your repo URL will be the hostname or IP address of your machine with `/fdroid/repo/` added to the end of it, i.e. `https://mysecureserver.com/fdroid/repo/` or `http://192.168.2.53/fdroid/repo/`. You can temporarily uncheck the official repos to easily see what F-Droid found in your new repo.
 
@@ -58,13 +60,14 @@ fdroid update
 
 You can also customize your repo by editing the config file. Be sure to use a programming text editor, like `editor /usr/share/nginx/www/fdroid/config.py`. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:
 
-<pre>repo_url = "https://guardianproject.info/fdroid/repo"
+```
+repo_url = "https://guardianproject.info/fdroid/repo"
 repo_name = "My Local Repo"
 repo_icon = "GP_Logo_hires.png"
 repo_description = """
 This is a local test repository of Hans-Christoph Steiner <&#x68;a&#x6e;s@&#x67;ua&#x72;d&#x69;&#x61;n&#x70;ro&#x6a;e&#x63;&#x74;.&#x69;nf&#x6f;>.  It is a repository of Guardian Project apps.
 """
-</pre>
+```
 
 To put your icon into your repo, choose a PNG image to put in your repo. The PNG goes in `/usr/share/nginx/www/fdroid/`, the file can be named whatever you want (by default its `fdroid-icon.png`). If you change the name from the default, be sure to update `repo_icon` and `archive_icon` in `/usr/share/nginx/www/fdroid/config.py`
 

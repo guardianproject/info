@@ -44,6 +44,6 @@ e app, web app, desktop app, back-end service or operating system. Our deisgn pa
 ojects and code for implementing effective and ethical Consent UX to achieve the right kind of "opt-in".
 
 Please reach out if you have interest in using Clean Insights. We have weekly scrum meetings, email lists and a public discussion room on the Matrix 
-network. More info on these on the (Developer Page)[https://cleaninsights.org/dev]
+network. More info on these on the [Developer Page](https://cleaninsights.org/dev)
 
 

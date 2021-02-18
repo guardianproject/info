@@ -9,6 +9,10 @@ permalink: /2017/01/30/how-can-we-learn-without-watching/
 bigimg: [{src: "/wp-content/uploads/2017/01/1024px-Blindfold_Marathon.jpg",}]
 categories:
   - News
+tags:
+  - analytics
+  - CleanInsights
+  - tracking
 ---
 What kind of measurement, tracking or analytics do you use, and can you sleep at night with your decision?
 

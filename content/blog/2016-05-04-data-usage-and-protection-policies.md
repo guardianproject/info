@@ -7,6 +7,7 @@ aliases:
   - home/data-usage-and-protection-policies
   - data-usage-and-protection-policies
   - privacy
+  - tracking
 ---
 At a high level, it is easy say that "we know nothing". We do not log data or include analytics in our websites or applications. When we do operate servers to support our applications, they are configured to store as minimal data as possible, usually just a username and password, if that is required. We also only recommend third party services, such as [XMPP services](https://www.otr.im/chat.html), [VoIP services](https://ostel.co), or [Proxy and VPN providers](https://torproject.org), who abide by these same policies.
 

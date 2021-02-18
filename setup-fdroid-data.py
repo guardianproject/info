@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import json
-import os
 import sys
 import unicodedata
 import yaml
@@ -11,6 +10,15 @@ from fdroidserver import index
 
 
 site_languages = set()
+
+def get_app_name(app):
+    name = app.get('name')
+    if name:
+        return name
+    name = app.get('localized', {}).get('en-US', {}).get('name')
+    if name:
+        return name
+    return app['packageName']
 
 
 def get_localized_icon(app):
@@ -29,7 +37,7 @@ def write_app_page(app, languages, lang=None):
         filename = 'content/apps/%s.md' % app['packageName']
     with open(filename, 'w') as fp:
         fp.write('---\n')
-        d = {'title': app['name']}
+        d = {'title': get_app_name(app)}
         fp.write(yaml.safe_dump(d, width=sys.maxsize, default_flow_style=False,
                                 encoding='utf-8', allow_unicode=True).decode())
         if languages:
@@ -43,9 +51,9 @@ def write_app_page(app, languages, lang=None):
         fp.write('packageName: ' + app['packageName'] + '\n')
         if 'localized' in app and 'en-US' in app['localized']:
             if 'featureGraphic' in app['localized']['en-US']:
-               fp.write('#bigimg: [{"src": "' + 'https://guardianproject.info/fdroid/repo/'
-                        + app['packageName'] + '/en-US/'
-                        + app['localized']['en-US']['featureGraphic'] + '"},]\n')
+                fp.write('#bigimg: [{"src": "' + 'https://guardianproject.info/fdroid/repo/'
+                         + app['packageName'] + '/en-US/'
+                         + app['localized']['en-US']['featureGraphic'] + '"},]\n')
             if 'summary' in app['localized']['en-US']:
                 subtitle = app['localized']['en-US']['summary']
         if 'localized' in app and lang in app['localized'] and 'summary' in app['localized'][lang]:
@@ -62,7 +70,7 @@ def write_app_page(app, languages, lang=None):
         fp.write('  - app\n')
         fp.write('  - ' + app['packageName'] + '\n')
         fp.write('  - ' + app['license'] + '\n')
-        normalized_name = unicodedata.normalize('NFD', app['name'].split(':')[0])\
+        normalized_name = unicodedata.normalize('NFD', get_app_name(app).split(':')[0])\
                                       .encode('ascii', 'ignore')\
                                       .decode()\
                                       .lower()
@@ -103,7 +111,7 @@ for app in apps:
         for language in list(app['localized'].keys()):
             if language in ('en', 'en-US'):
                 continue
-            if len(language) > 3 and language != 'pt-BR' and not language.startswith('zh') :
+            if len(language) > 3 and language != 'pt-BR' and not language.startswith('zh'):
                 if '-' in language:
                     l, _ = language.split('-')
                 elif '_' in language:

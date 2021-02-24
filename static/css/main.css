@@ -667,9 +667,9 @@ h4.panel-title > span.badge {
 
 table {
   padding: 0;
+  border: none;
 }
 table tr {
-  border-top: 1px solid #cccccc;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -679,13 +679,11 @@ table tr:nth-child(2n) {
 }
 table tr th {
   font-weight: bold;
-  border: 1px solid #cccccc;
   text-align: left;
   margin: 0;
   padding: 6px 13px;
 }
 table tr td {
-  border: 1px solid #cccccc;
   text-align: left;
   margin: 0;
   padding: 6px 13px;

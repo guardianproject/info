@@ -6,7 +6,7 @@ categories:
   - News
 tags:
   - analytics
-  - CleanInsights
+  - Clean Insights
   - privacy
   - surveillance capitalism
   - tracking

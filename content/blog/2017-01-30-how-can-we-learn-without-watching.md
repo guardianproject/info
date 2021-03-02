@@ -11,7 +11,7 @@ categories:
   - News
 tags:
   - analytics
-  - CleanInsights
+  - Clean Insights
   - tracking
 ---
 What kind of measurement, tracking or analytics do you use, and can you sleep at night with your decision?

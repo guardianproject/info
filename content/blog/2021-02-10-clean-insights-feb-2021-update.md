@@ -6,7 +6,7 @@ categories:
   - News
 tags:
   - tracking
-  - CleanInsights
+  - Clean Insights
   - Tracking the Trackers
   - developers
   - metrics

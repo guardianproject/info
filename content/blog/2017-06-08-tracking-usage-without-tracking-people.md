@@ -14,7 +14,7 @@ categories:
 tags:
   - Apache
   - bazaar
-  - CleanInsights
+  - Clean Insights
   - data
   - F-Droid
   - fdroid

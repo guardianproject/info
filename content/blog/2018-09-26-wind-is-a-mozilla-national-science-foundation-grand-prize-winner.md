@@ -22,7 +22,7 @@ On August 14th, members of the Guardian Project team traveled to Mountain View t
 
 [Wind](https://guardianproject.info/wind) is a network designed for opportunistic communication and sharing of local knowledge that provides off-grid services for everyday people, using the mobile devices they already have. In the Wind network, Chime is the hyperlink, but one that exists in time and space, discoverable through beacon broadcasts and human-to-human sharing. All of this is powered by free and open-source software, running on readily available consumer hardware, and can be deployed at little to no cost, in a very short amount of time.  
 
-{{< youtube fGuiy3rlOVQ >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fGuiy3rlOVQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p style="font-size:23px">
   Yesterday, on the Mozilla blog, the <a href="https://blog.mozilla.org/blog/2018/09/25/1-6-million-to-connect-unconnected-americans-our-nsf-wins-competition-grand-prize-winners/">winners were announced.</a> We are honored to be one of them, claiming the 4th Grand Prize.
@@ -31,7 +31,7 @@ On August 14th, members of the Guardian Project team traveled to Mountain View t
 <p class="has-background has-pale-cyan-blue-background-color">
   You can watch our 5 minute power presentation below, or jump to the <a href="https://guardianproject.info/wind/">project page</a> or <a href="https://github.com/guardianproject/wind">github repo</a> for more detail. We have also published our entire <a href="https://github.com/guardianproject/wind/blob/master/Mozilla%20NSF%20Off-Grid%20Challenge_%20Wind.pdf">Wind Concept Proposal Submission paper.</a><br />
 
-{{< youtube FOWrappjLsY >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FOWrappjLsY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 We are so grateful to be associated not only with the challenge itself, but with all the other impressive finalists and winners. Our work on Wind took quite a different approach than the others, and thus fills some niches and gaps not addressed by the other systems. We believe there are numerous opportunities for collaboration, and looking forward to helping fulfill the complete vision set forth by the WINS challenges.
 

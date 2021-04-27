@@ -48,6 +48,15 @@ RedirectPermanent /feed /blog/index.xml
 
 
 # ============================================================================== #
+# https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
+#
+# Instruct FLoC capable browsers to not profile users on our website
+#
+
+Header always set Permissions-Policy: "interest-cohort=()"
+
+
+# ============================================================================== #
 # HTTP security headers
 
 # This site needs hardly any JS features, so disable them.

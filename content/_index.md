@@ -14,6 +14,6 @@ While smartphones have been heralded as the coming of the next generation of com
 
 **Guardian Project** creates [easy to use secure apps](apps), open-source [software libraries](code), and [customized solutions](contact) that can be used around the world by any person looking to protect their communications and personal data from unjust intrusion, interception and monitoring.
 
-Whether your are an average person looking to affirm your rights or an activist, journalist or humanitarian organization looking to safeguard your work in this age of perilous global communication, we can help address the threats you face.
+Whether you are an average person looking to affirm your rights or an activist, journalist or humanitarian organization looking to safeguard your work in this age of perilous global communication, we can help address the threats you face.
 
 <img src="GP_Logo_with_text.png"/>

@@ -1,9 +1,9 @@
 {{ $libname := "IOCipher" }}
 {{ $groupId := "info.guardianproject.iocipher" }}
 {{ $artifactId := "IOCipher" }}
-{{ $bintray := getJSON "https://api.bintray.com/search/packages/maven?g=" $groupId "&a=" $artifactId }}
-{{ $version := (index $bintray 0).latest_version }}
-{{ $jcenterbase := printf "https://jcenter.bintray.com/%s/%s" (replace $groupId "." "/") $artifactId }}
+{{ $bintray := getJSON "https://search.maven.org/solrsearch/select?wt=json&q=g:" $groupId "+AND+a:" $artifactId }}
+{{ $version := (index $bintray.response.docs 0).latestVersion }}
+{{ $jcenterbase := printf "https://repo1.maven.org/maven2/%s/%s" (replace $groupId "." "/") $artifactId }}
 {{ $standalone := printf "%sStandalone-%s.aar" $libname $version }}
 {{ $only := printf "%s-%s.aar" $libname $version }}
 

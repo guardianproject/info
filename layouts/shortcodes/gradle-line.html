@@ -1,7 +1,7 @@
-{{ $bintray := getJSON "https://api.bintray.com/search/packages/maven?g=" (.Get "groupId") "&a=" (.Get "artifactId") }}
-{{ $version := (index $bintray 0).latest_version }}
+{{ $bintray := getJSON "https://search.maven.org/solrsearch/select?wt=json&q=g:" (.Get "groupId") "+AND+a:" (.Get "artifactId") }}
+{{ $version := (index $bintray.response.docs 0).latestVersion }}
 {{ $libname := .Get "artifactId" }}
-{{ $jcenterbase := printf "https://jcenter.bintray.com/%s/%s" (replace (.Get "groupId") "." "/") (.Get "artifactId") }}
+{{ $jcenterbase := printf "https://repo1.maven.org/maven2/%s/%s" (replace (.Get "groupId") "." "/") (.Get "artifactId") }}
 {{ $jar := printf "%s-%s.jar" $libname $version }}
 {{ $sourcesjar := printf "%s-%s-sources.jar" $libname $version }}
 {{ $javadocjar := printf "%s-%s-javadoc.jar" $libname $version }}

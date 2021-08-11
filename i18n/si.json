@@ -1,0 +1,170 @@
+[
+  {
+    "id": "Live Chatrooms",
+    "translation": "සජීවී සංවාද කාමර"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "සංරක්ෂිත යෙදුම්"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "ඔබට විශ්වාස කළ හැකි ආරක්ෂාව"
+  },
+  {
+    "id": "Team",
+    "translation": "කණ්ඩායම"
+  },
+  {
+    "id": "Services",
+    "translation": "සේවා"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "ගාඩියන් ව්‍යාපෘතිය පිළිබඳව"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "ඔබට අප සමඟ වැඩ කළ හැකි ආකාරය"
+  },
+  {
+    "id": "Export Information",
+    "translation": "තොරතුරු නිර්යාත කරන්න"
+  },
+  {
+    "id": "description",
+    "translation": "විස්තර"
+  },
+  {
+    "id": "edit",
+    "translation": "සංස්කරණය"
+  },
+  {
+    "id": "translation",
+    "translation": "පරිවර්තන"
+  },
+  {
+    "id": "webSite",
+    "translation": "වියමන අඩවිය"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "ගිට්ලැබ් හි"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "ගිට්හබ් හි"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "මෙයද බලන්න"
+  },
+  {
+    "id": "comments",
+    "translation": "අදහස්"
+  },
+  {
+    "id": "show",
+    "translation": "පෙන්වන්න"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "ඔබගේ වියමන අඩවිය"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "ඔබගේ වි-තැපැල් ලිපිනය"
+  },
+  {
+    "id": "yourName",
+    "translation": "ඔබගේ නම"
+  },
+  {
+    "id": "moreComment",
+    "translation": "අදහස්"
+  },
+  {
+    "id": "oneComment",
+    "translation": "අදහස"
+  },
+  {
+    "id": "noComment",
+    "translation": "අදහස් නැත"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "වසන්න"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "{{ .Site.Title }} සොයන්න"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "සොයන්න"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "භාෂාව"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">හූගෝ අනු.{{ .Hugo.Version }}</a> න් බලගන්වා ඇත &nbsp;&bull;&nbsp; තේමාව <a href=\"http://deanattali.com/beautiful-jekyll/\">බියුටිෆුල් ජෙකියිල්</a> න් <a href=\"https://github.com/halogenica/beautifulhugo\">බියුටිෆුල් හූගෝ</a> ට අනුරූප කර ඇත"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "අපොයි, මෙම පිටුව නොපවතී. ඉදිරියට යන්න. (404 දෝෂය)"
+  },
+  {
+    "id": "words",
+    "translation": "වචන"
+  },
+  {
+    "id": "readTime",
+    "translation": "විනාඩි"
+  },
+  {
+    "id": "readMore",
+    "translation": "තව කියවන්න"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "වෙනත් භාෂා: "
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2006 දුරුතු 2, 2006 15:04:05"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2006 දුරුතු 2"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "සංරක්ෂිත යෙදුම්"
+  },
+  {
+    "id": "team",
+    "translation": "කණ්ඩායම"
+  },
+  {
+    "id": "archive",
+    "translation": "සංරක්ෂිතය"
+  },
+  {
+    "id": "code",
+    "translation": "කේතය"
+  },
+  {
+    "id": "apps",
+    "translation": "යෙදුම්"
+  },
+  {
+    "id": "about",
+    "translation": "පිළිබඳව"
+  }
+]

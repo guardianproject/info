@@ -1,0 +1,258 @@
+[
+  {
+    "id": "Jobs and Internships",
+    "translation": "Darbas ir stažuotės"
+  },
+  {
+    "id": "Contact",
+    "translation": "Kontaktai"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Tiesioginiai pokalbių kambariai"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Archyvuotos programėlės"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Saugumas, kuriuo galite pasitikėti"
+  },
+  {
+    "id": "Team",
+    "translation": "Komanda"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Pasirašymo raktai"
+  },
+  {
+    "id": "Services",
+    "translation": "Paslaugos"
+  },
+  {
+    "id": "Press",
+    "translation": "Spauda"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Partneriai ir finansavimas"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Apie „Guardian Project“"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Kaip jūs galite dirbti su mumis"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Eksportuoti informaciją"
+  },
+  {
+    "id": "Blog",
+    "translation": "Tinklaraštis"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "pirminis kodas"
+  },
+  {
+    "id": "description",
+    "translation": "aprašymas"
+  },
+  {
+    "id": "metadata",
+    "translation": "metaduomenys"
+  },
+  {
+    "id": "editOn",
+    "translation": "Redaguoti"
+  },
+  {
+    "id": "edit",
+    "translation": "Redaguoti"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Versti"
+  },
+  {
+    "id": "translation",
+    "translation": "Vertimas"
+  },
+  {
+    "id": "webSite",
+    "translation": "tinklalapis"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "„GitLab“ svetainėje"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "„GitHub“ svetainėje"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Tinklaraščio įrašai"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Taip pat žr."
+  },
+  {
+    "id": "comments",
+    "translation": "komentarai"
+  },
+  {
+    "id": "show",
+    "translation": "Rodyti"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Jūsų svetainė"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Jūsų el. pašto adresas"
+  },
+  {
+    "id": "yourName",
+    "translation": "Jūsų vardas"
+  },
+  {
+    "id": "noComment",
+    "translation": "Jokio komentaro"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Galite naudoti „Markdown“ sintaksę"
+  },
+  {
+    "id": "moreComment",
+    "translation": "komentarai"
+  },
+  {
+    "id": "oneComment",
+    "translation": "komentaras"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Uždaryti"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Ieškoti {{ . Site.Title }}"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Paieška"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Kalba"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Įjungti navigaciją"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Theme by <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adapted to <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Oi, šio puslapio nėra. Judėkite toliau. (404 klaida)"
+  },
+  {
+    "id": "words",
+    "translation": "žodžiai"
+  },
+  {
+    "id": "readTime",
+    "translation": "min."
+  },
+  {
+    "id": "nextPost",
+    "translation": "Kitas įrašas"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Ankstesnis įrašas"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Naujesni įrašai"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Senesni įrašai"
+  },
+  {
+    "id": "readMore",
+    "translation": "Skaityti daugiau"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Kitos kalbos: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Paskutinį kartą keista {{ .Count }})"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Paskelbta {{ .Count }}"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2006 m. sausio 2 d. 15:04:05"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2006 m. sausio 2 d."
+  },
+  {
+    "id": "tutorials",
+    "translation": "Pamokos"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Archyvuotos programėlės"
+  },
+  {
+    "id": "press",
+    "translation": "Spauda"
+  },
+  {
+    "id": "team",
+    "translation": "Komanda"
+  },
+  {
+    "id": "contact",
+    "translation": "kontaktai"
+  },
+  {
+    "id": "archive",
+    "translation": "archyvas"
+  },
+  {
+    "id": "code",
+    "translation": "kodas"
+  },
+  {
+    "id": "apps",
+    "translation": "programėlės"
+  },
+  {
+    "id": "about",
+    "translation": "apie"
+  }
+]

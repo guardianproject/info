@@ -26,5 +26,9 @@
   {
     "id": "gcseLabelLong",
     "translation": "Telusuri {{.Site.Title}}"
+  },
+  {
+    "id": "edit",
+    "translation": "Sunting"
   }
 ]

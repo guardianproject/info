@@ -10,5 +10,213 @@
   {
     "id": "gcseLabelShort",
     "translation": "Sök"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Jobb och praktik"
+  },
+  {
+    "id": "Contact",
+    "translation": "Kontakt"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Arkiverade appar"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Säkerhet som du kan lita på"
+  },
+  {
+    "id": "Team",
+    "translation": "Team"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Nycklar för signering"
+  },
+  {
+    "id": "Services",
+    "translation": "Tjänster"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Om Guardian-projektet"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Så här kan du jobba med oss"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Exportera information"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blogg"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "källkod"
+  },
+  {
+    "id": "description",
+    "translation": "beskrivning"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadata"
+  },
+  {
+    "id": "edit",
+    "translation": "Redigera"
+  },
+  {
+    "id": "webSite",
+    "translation": "hemsida"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "på GitLab"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "på GitHub"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Blogginlägg"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Se även"
+  },
+  {
+    "id": "comments",
+    "translation": "kommentarer"
+  },
+  {
+    "id": "show",
+    "translation": "Visa"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Din hemsida"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Din e-postadress"
+  },
+  {
+    "id": "yourName",
+    "translation": "Ditt namn"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Du kan använda Markdown-syntax"
+  },
+  {
+    "id": "moreComment",
+    "translation": "kommentarer"
+  },
+  {
+    "id": "noComment",
+    "translation": "Ingen kommentar"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Stäng"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Sök {{ .Site.Title }}"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Språk"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Hoppsan, den här sidan finns inte. Gå vidare. (404-fel)"
+  },
+  {
+    "id": "words",
+    "translation": "ord"
+  },
+  {
+    "id": "readTime",
+    "translation": "minuter"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Nästa inlägg"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Föregående inlägg"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Nyare poster"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Äldre inlägg"
+  },
+  {
+    "id": "readMore",
+    "translation": "Läs mer"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Andra språk: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Ändrades senast {{ .Count }})"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Offentliggjordes den {{ .Count }}"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2:a Januari, 2006"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2:a Januari, 2006 15:04:05"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Guider"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Arkiverade appar"
+  },
+  {
+    "id": "press",
+    "translation": "Tryck"
+  },
+  {
+    "id": "contact",
+    "translation": "kontakt"
+  },
+  {
+    "id": "archive",
+    "translation": "arkiv"
+  },
+  {
+    "id": "code",
+    "translation": "kod"
+  },
+  {
+    "id": "apps",
+    "translation": "appar"
   }
 ]

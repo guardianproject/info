@@ -1,7 +1,7 @@
 [
   {
     "id": "about",
-    "translation": "Despre"
+    "translation": "despre"
   },
   {
     "id": "translation",
@@ -10,5 +10,249 @@
   {
     "id": "gcseLabelShort",
     "translation": "Caută"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Locuri de muncă și stagii"
+  },
+  {
+    "id": "Contact",
+    "translation": "Contactați"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Camere de chat live"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Aplicații arhivate"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Securitate în care puteți avea încredere"
+  },
+  {
+    "id": "Team",
+    "translation": "Echipă"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Chei de semnare"
+  },
+  {
+    "id": "Services",
+    "translation": "Servicii"
+  },
+  {
+    "id": "Press",
+    "translation": "Presă"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Parteneri și finanțare"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Despre Guardian Project"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Cum puteți lucra cu noi"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Informații de export"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "codul sursă"
+  },
+  {
+    "id": "description",
+    "translation": "descriere"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadate"
+  },
+  {
+    "id": "editOn",
+    "translation": "Editați pe"
+  },
+  {
+    "id": "edit",
+    "translation": "Editați"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Traduceți pe"
+  },
+  {
+    "id": "webSite",
+    "translation": "site"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "pe GitLab"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "pe GitHub"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Postări pe blog"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "A se vedea și"
+  },
+  {
+    "id": "comments",
+    "translation": "comentarii"
+  },
+  {
+    "id": "show",
+    "translation": "Afișează"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Site-ul dumneavoastră"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Adresa dvs. de e-mail"
+  },
+  {
+    "id": "yourName",
+    "translation": "Numele dumneavoastră"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Puteți folosi sintaxa Markdown"
+  },
+  {
+    "id": "moreComment",
+    "translation": "comentarii"
+  },
+  {
+    "id": "oneComment",
+    "translation": "comentariu"
+  },
+  {
+    "id": "noComment",
+    "translation": "Fără comentarii"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Închideți"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Căutare {{ .Site.Title }}"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Limbă"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Schimbă navigația"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> alimentat &nbsp;&bull;&nbsp; Tema de <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptată la <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Ups, această pagină nu există. Mergeți mai departe. (eroare 404)"
+  },
+  {
+    "id": "words",
+    "translation": "cuvinte"
+  },
+  {
+    "id": "readTime",
+    "translation": "minute"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Următoarea postare"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Postarea precedentă"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Postări mai noi"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Postări vechi"
+  },
+  {
+    "id": "readMore",
+    "translation": "Citește mai mult"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Alte limbi: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Ultima modificare pe {{ .Count }})"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Publicat pe {{ .Count }}"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Ian, 2006 15:04:05"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 Ianuarie, 2006"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Tutoriale"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Aplicații arhivate"
+  },
+  {
+    "id": "press",
+    "translation": "Presă"
+  },
+  {
+    "id": "team",
+    "translation": "Echipă"
+  },
+  {
+    "id": "contact",
+    "translation": "contactați"
+  },
+  {
+    "id": "archive",
+    "translation": "arhivă"
+  },
+  {
+    "id": "code",
+    "translation": "cod"
+  },
+  {
+    "id": "apps",
+    "translation": "aplicații"
   }
 ]

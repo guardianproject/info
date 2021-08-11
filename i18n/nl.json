@@ -118,5 +118,141 @@
   {
     "id": "seeAlso",
     "translation": "Zie ook"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Live Chatkamers"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Banen en Stages"
+  },
+  {
+    "id": "Contact",
+    "translation": "Contact"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Gearchiveerde Apps"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Veiligheid waarop u kunt vertrouwen"
+  },
+  {
+    "id": "Team",
+    "translation": "Team"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Ondertekeningsleutels"
+  },
+  {
+    "id": "Services",
+    "translation": "Diensten"
+  },
+  {
+    "id": "Press",
+    "translation": "Pers"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Partners en financiering"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Over Guardian Project"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Hoe u met ons kunt werken"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Exportinformatie"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "broncode"
+  },
+  {
+    "id": "description",
+    "translation": "beschrijving"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadata"
+  },
+  {
+    "id": "editOn",
+    "translation": "Bewerk op"
+  },
+  {
+    "id": "edit",
+    "translation": "Wijzigen"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Vertaal op"
+  },
+  {
+    "id": "translation",
+    "translation": "Vertaling"
+  },
+  {
+    "id": "webSite",
+    "translation": "website"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "op GitLab"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "op GitHub"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Blog Berichten"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Handleidingen"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Gearchiveerde Apps"
+  },
+  {
+    "id": "press",
+    "translation": "Pers"
+  },
+  {
+    "id": "team",
+    "translation": "Team"
+  },
+  {
+    "id": "contact",
+    "translation": "contact"
+  },
+  {
+    "id": "archive",
+    "translation": "archief"
+  },
+  {
+    "id": "code",
+    "translation": "code"
+  },
+  {
+    "id": "apps",
+    "translation": "apps"
+  },
+  {
+    "id": "about",
+    "translation": "over"
   }
 ]

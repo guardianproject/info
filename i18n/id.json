@@ -30,5 +30,25 @@
   {
     "id": "edit",
     "translation": "Sunting"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": "꧊ "
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Di-pos @ {{ .Count }}"
+  },
+  {
+    "id": "archive",
+    "translation": "arsip"
+  },
+  {
+    "id": "code",
+    "translation": "kod"
+  },
+  {
+    "id": "apps",
+    "translation": "app"
   }
 ]

@@ -145,7 +145,7 @@
   },
   {
     "id": "gcseLabelLong",
-    "translation": "Ieškoti {{ . Site.Title }}"
+    "translation": "Ieškoti {{ .Site.Title }}"
   },
   {
     "id": "gcseLabelShort",

@@ -118,5 +118,9 @@
   {
     "id": "seeAlso",
     "translation": "Смотрите также"
+  },
+  {
+    "id": "edit",
+    "translation": "Редактировать"
   }
 ]

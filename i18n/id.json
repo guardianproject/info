@@ -10,5 +10,21 @@
   {
     "id": "gcseLabelShort",
     "translation": "Cari"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2hb Januari 2006"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Bahasa lain: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Perubahaan terakhir pada {{.Count}})"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Telusuri {{.Site.Title}}"
   }
 ]

@@ -27,7 +27,11 @@ def get_localized_icon(app):
        and 'icon' in app['localized']['en-US']:
         return ('https://guardianproject.info/fdroid/repo/'
                 + app['packageName'] + '/en-US/' + app['localized']['en-US']['icon'])
-    return 'https://guardianproject.info/fdroid/repo/icons-480/' + app['icon']
+    icon = app.get('icon')
+    if icon:
+        return 'https://guardianproject.info/fdroid/repo/icons-480/' + icon
+    else:
+        return 'https://guardianproject.info/ic_repo_app_default.png'  # placeholder
 
 
 def write_app_page(app, languages, lang=None):

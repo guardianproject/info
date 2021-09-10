@@ -13,6 +13,10 @@ RedirectPermanent /tag	/tags/
 RedirectMatch permanent "/feed/.*$" "/blog/index.xml"
 RedirectPermanent /feed /blog/index.xml
 
+# redirect standard fdroid repo per-package URLs
+RedirectMatch permanent "^/packages/(.*)" "/apps/$1"
+RedirectPermanent /packages/ /apps/
+
 
 <IfModule mod_rewrite.c>
     RewriteEngine On

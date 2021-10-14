@@ -38,7 +38,7 @@ The aim is to make it work with as few modifications to the Android system as po
   * full source (except gpgv): <a href="https://github.com/guardianproject/lildebi" target="_blank">https://github.com/guardianproject/lildebi</a>
   * gpgv is built as part of <a href="https://github.com/guardianproject/gnupg-for-android" title="GnuPG-for Android source repo" target="_blank">GnuPG-for-Android</a>
 
-Learn more (for now), from [our blog post](https://guardianproject.info/2011/06/18/easy-installer-for-debian-on-android/).
+Learn more (for now), from [our blog post](https://guardianproject.info/2011/06/18/lil-debi-easy-installer-for-debian-on-android/).
 
 <img class="alignnone" src="https://guardianproject.info/wp-content/uploads/2011/06/LilDebiInstalling.png" alt="" width="288" height="480" /> 
 

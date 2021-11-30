@@ -20,3 +20,7 @@ to run in order to complete the whole site:
 Everything can be translated via Weblate!
 
 [![translation status](https://hosted.weblate.org/widgets/guardianproject/-/info/multi-auto.svg)](https://hosted.weblate.org/engage/guardianproject/?utm_source=widget)
+
+## Hugo installation
+
+apt install hugo!

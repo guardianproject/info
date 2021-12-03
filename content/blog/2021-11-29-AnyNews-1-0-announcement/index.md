@@ -8,7 +8,7 @@ tags:
   - announcement
   - news publishing
   - AnyNews Web Client
-  - progressive web applications
+  - progressive web application
   - censorship circumvention
 ---
 

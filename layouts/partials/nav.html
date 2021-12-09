@@ -8,8 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
-        <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="48" height="48"/>
-        {{ if .IsHome }}{{ else }}{{ .Site.Title }}{{ end }}
+        <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="36" height="36"/>{{ if .IsHome }}{{ else }}{{ .Site.Title }}{{ end }}
       </a>
     </div>
 

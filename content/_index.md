@@ -28,7 +28,7 @@ Whether you are an average person looking to affirm your rights or an activist, 
 <a href="https://keanu.im"><img src="projects/keanu.jpg"/></a>
 
 
-Safety starts with community. <a href="https://encirculo.org">Círculo</a> helps connect you to a reliable network of six peers. Establish protocols, send alerts and keep those in your circle informed.
+<a href="https://encirculo.org">Círculo</a> helps connect you to a reliable network of six peers. Establish protocols, send alerts and keep those in your circle informed.
 <a href="https://encirculo.org"><img src="projects/circulo.jpg"/></a>
 
 

@@ -16,4 +16,4 @@ While smartphones have been heralded as the coming of the next generation of com
 
 Whether you are an average person looking to affirm your rights or an activist, journalist or humanitarian organization looking to safeguard your work in this age of perilous global communication, we can help address the threats you face.
 
-<img src="GP_Logo_with_text.png"/>
+<img src="GuardianProjectLogo.png"/>

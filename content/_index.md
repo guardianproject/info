@@ -41,6 +41,6 @@ Safety starts with community. <a href="https://encirculo.org">Círculo</a> helps
 <a href="https://secondwind.guardianproject.info">Second Wind</a> is an offline content and apps distribution system for Android devices, powered by the F-Droid open app store project.
 <a href="https://secondwind.guardianproject.info"><img src="projects/secondwind.jpg"/></a>
 
-< href="https://digiresilience.org/solutions/link/">CDR Link</a> is a secure helpdesk. We provide secure Signal, PGP, Whatsapp & Telegram channels for your community.
+<a href="https://digiresilience.org/solutions/link/">CDR Link</a> is a secure helpdesk. We provide secure Signal, PGP, Whatsapp & Telegram channels for your community.
 <a href="https://digiresilience.org/solutions/link/"><img src="projects/cdr.jpg"/></a>
 

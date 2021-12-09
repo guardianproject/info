@@ -7,9 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
-        <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="36" height="36"/>{{ if .IsHome }}{{ else }}{{ .Site.Title }}{{ end }}
-      </a>
+      <a class="navbar-brand" title="{{ .Site.Title }}" href="{{ "" | absLangURL }}"><img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="36" height="36" style="float:left;"/>{{ if .IsHome }}{{ else }}{{ .Site.Title }}{{ end }}</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">

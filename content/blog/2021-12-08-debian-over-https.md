@@ -100,8 +100,12 @@ HTTPS, thereby further improving the privacy protections in _apt_:
   padded](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1001335), which
   would obscure the size of the packages being downloaded from network
   observers.
-* Pipelining downloads through a reused HTTPS connection makes it even more
-  difficult for the network observer to track packages by size.
+* ~~Pipelining downloads through a reused HTTPS connection makes it even more
+  difficult for the network observer to track packages by size.~~ Update
+  2021-12-09: It turns out that _apt_ is
+  [already](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1001335#10)
+  pipelining requests, so that can be crossed off the list of things to be
+  improved.
 * The Server Name Indication (SNI) field in TLS will leak the domain name in
   plaintext.  The upcoming TLS Encrypted Client Hello standard will encrypt that.
 

@@ -32,4 +32,4 @@ We're looking for self-motivated, free software hackers to work with Guardian Pr
 
 This is for projects managed by Hans-Christoph Steiner. We work in Vienna, Austria so ideally you work in a similar time zone, but that is not a requirement. We work in English but our team members speak many languages. Work is contract-based but with the possibility to shift into full-time employment in the future.
 
-Please reply to <accounting@at.or.at> or find us in any of the regular channels!
+Please reply to <jobs@guardianproject.info> or find us in any of the regular channels!

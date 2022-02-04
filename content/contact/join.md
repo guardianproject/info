@@ -34,8 +34,8 @@ We're always on the look-out for energetic, enthusiastic, and capable interns.
 
 Interested? [Learn how to contact us here](https://guardianproject.info/contact/) or email &#x6a;&#111;b&#x73;&#x40;gu&#x61;&#114;d&#x69;&#x61;np&#x72;&#111;j&#x65;&#x63;&#116;.&#x69;&#x6e;f&#x6f; with an introduction and resume.
 
-### CURRENT OPEN POSITIONS
+### Current open positions
 
-No specific positions at the moment.
+* [Seeking Android/Python contractors for mobile/free software/privacy work](../android-python-contractor/)
 
 &nbsp;

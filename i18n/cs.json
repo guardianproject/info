@@ -10,5 +10,37 @@
   {
     "id": "gcseLabelShort",
     "translation": "Hledat"
+  },
+  {
+    "id": "team",
+    "translation": "Tým"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Archivované aplikace"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Návody"
+  },
+  {
+    "id": "contact",
+    "translation": "kontakt"
+  },
+  {
+    "id": "press",
+    "translation": "Media"
+  },
+  {
+    "id": "apps",
+    "translation": "aplikace"
+  },
+  {
+    "id": "code",
+    "translation": "kód"
+  },
+  {
+    "id": "archive",
+    "translation": "archiv"
   }
 ]

@@ -10,11 +10,11 @@ tags:
   - open-source
 ---
 
-We love [Mailvelope](https://mailvelope.com/). It's a popular browser extension for encrypting email messages. Now, Clean Insights is helping Mailvelope understand which webmail providers are most popular with their users so they can prioritize their development efforts.
+We love [Mailvelope](https://mailvelope.com/). It's a popular browser extension for encrypting email messages. Now, [Clean Insights](https://cleaninsights.org) is helping Mailvelope understand which webmail providers are most popular with their users so they can prioritize their development efforts.
 
 Anyone who has written software knows it takes hard work to craft a great user experience. That's even more challenging in Mailvelope's case. Their browser extension integrates with more than a dozen ever-changing third party webmail interfaces. The Mailvelope team asks itself questions like, "Is time better spent improving the GMail integration or the mailbox.org one?" The answer often hinges on which providers are most popular among Mailvelope users, information not yet readily available to the Mailvelope team. 
 
-So, Mailvelope asked us to set up the Clean Insights' [JavaScript SDK](https://gitlab.com/cleaninsights/clean-insights-js-sdk/) to measure which providers are most popular while respecting users' consent and preserving their privacy. In drastic contrast to the web analytics norms, we only collect what we need in order to make important decisions.
+So, Mailvelope asked us to set up the [Clean Insights JavaScript SDK](https://gitlab.com/cleaninsights/clean-insights-js-sdk/) to measure which providers are most popular while respecting users' consent and preserving their privacy. In drastic contrast to the web analytics norms, we only collect what we need in order to make important decisions.
 
 We decided we don't care _how many_ visits a user makes in a given week. We just care _that_ a user visited that webmail provider during the week. So that's all we record. We don't record what time of day they visited, how many times, or any information about their identity or who they communicate with. This results in a simple to analyze report from each user like:
 
@@ -48,4 +48,4 @@ You may remember we added consent very early in Mailvelope's user journey. That'
 
 ## Using Clean Insights in Your Project
 
-Every software project is different. Just like Mailvelope, you might have a particular question on your mind and specific aspects of user privacy you want to protect. We'd love to help you use Clean Insights to answer those questions without compromising privacy. If that's interesting to you, you can find us at [support@guardianproject.info](mailto:support@guardianproject.info).
+Every software project is different. Just like Mailvelope, you might have a particular question on your mind and specific aspects of user privacy you want to protect. We'd love to help you use [Clean Insights](https://cleaninsights.org) to answer those questions without compromising privacy. If that's interesting to you, you can find us at [support@guardianproject.info](mailto:support@guardianproject.info) or visit the project website at [cleaninsights.org](https://cleaninsights.org).

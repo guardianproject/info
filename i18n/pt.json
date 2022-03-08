@@ -133,7 +133,7 @@
   },
   {
     "id": "gcseLabelLong",
-    "translation": "Pesquisar {{ . Site.Title }}"
+    "translation": "Pesquisar {{ .Site.Title }}"
   },
   {
     "id": "gcseLabelShort",

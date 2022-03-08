@@ -21,11 +21,11 @@
   },
   {
     "id": "lastModified",
-    "translation": "(Perubahaan terakhir pada {{.Count}})"
+    "translation": "(Perubahaan terakhir pada {{ .Count }})"
   },
   {
     "id": "gcseLabelLong",
-    "translation": "Telusuri {{.Site.Title}}"
+    "translation": "Telusuri {{ .Site.Title }}"
   },
   {
     "id": "edit",
@@ -37,7 +37,7 @@
   },
   {
     "id": "postedOnDate",
-    "translation": "Diposting di {{ . Hitung }}"
+    "translation": "Diposting di {{ .Count }}"
   },
   {
     "id": "archive",

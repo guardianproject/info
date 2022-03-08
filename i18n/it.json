@@ -101,11 +101,11 @@
   },
   {
     "id": "yourEmail",
-    "translation": "Il tuo indirizzo mail"
+    "translation": "Il tuo indirizzo e-mail"
   },
   {
     "id": "yourWebsite",
-    "translation": "Il tuo website"
+    "translation": "Il tuo sito web"
   },
   {
     "id": "show",
@@ -118,5 +118,69 @@
   {
     "id": "seeAlso",
     "translation": "Guarda anche"
+  },
+  {
+    "id": "code",
+    "translation": "codice"
+  },
+  {
+    "id": "about",
+    "translation": "informazioni"
+  },
+  {
+    "id": "archive",
+    "translation": "archivio"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "su GitHub"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "su GitLab"
+  },
+  {
+    "id": "edit",
+    "translation": "Modifica"
+  },
+  {
+    "id": "editOn",
+    "translation": "Modifica su"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Messaggi del blog"
+  },
+  {
+    "id": "webSite",
+    "translation": "sito web"
+  },
+  {
+    "id": "translation",
+    "translation": "Traduzione"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Traduci su"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadati"
+  },
+  {
+    "id": "apps",
+    "translation": "applicazioni"
+  },
+  {
+    "id": "contact",
+    "translation": "contatto"
+  },
+  {
+    "id": "team",
+    "translation": "Squadra"
+  },
+  {
+    "id": "press",
+    "translation": "Stampa"
   }
 ]

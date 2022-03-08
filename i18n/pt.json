@@ -1,0 +1,254 @@
+[
+  {
+    "id": "Jobs and Internships",
+    "translation": "Empregos e estágios"
+  },
+  {
+    "id": "Contact",
+    "translation": "Contato"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Apps arquivadas"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Segurança em que pode confiar"
+  },
+  {
+    "id": "Team",
+    "translation": "Equipa"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Chaves de assinatura"
+  },
+  {
+    "id": "Services",
+    "translation": "Serviços"
+  },
+  {
+    "id": "Press",
+    "translation": "Imprensa"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Parceiros e financiamento"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Sobre o projeto Guardian"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Como pode trabalhar connosco"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Exportar a informação"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "código-fonte"
+  },
+  {
+    "id": "description",
+    "translation": "descrição"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadados"
+  },
+  {
+    "id": "editOn",
+    "translation": "Editar no"
+  },
+  {
+    "id": "edit",
+    "translation": "Editar"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Traduzir no"
+  },
+  {
+    "id": "translation",
+    "translation": "Tradução"
+  },
+  {
+    "id": "webSite",
+    "translation": "site"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "no GitLab"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "no GitHub"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Veja também"
+  },
+  {
+    "id": "comments",
+    "translation": "comentários"
+  },
+  {
+    "id": "show",
+    "translation": "Exibir"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "O seu site"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "O seu endereço de e-mail"
+  },
+  {
+    "id": "yourName",
+    "translation": "O seu nome"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Pode usar a sintaxe Markdown"
+  },
+  {
+    "id": "moreComment",
+    "translation": "comentários"
+  },
+  {
+    "id": "oneComment",
+    "translation": "comentário"
+  },
+  {
+    "id": "noComment",
+    "translation": "Sem comentários"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Fechar"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Pesquisar {{ .Site.Title }}"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Procurar"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Idioma"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Alternar a navegação"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Opa, esta página não existe. Siga. (Erro 404)"
+  },
+  {
+    "id": "words",
+    "translation": "palavras"
+  },
+  {
+    "id": "readTime",
+    "translation": "minutos"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Outros Idiomas: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Última modificação em {{ .Count }})"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 de janeiro de 2006"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Tutoriais"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Apps arquivadas"
+  },
+  {
+    "id": "press",
+    "translation": "Imprensa"
+  },
+  {
+    "id": "team",
+    "translation": "Equipa"
+  },
+  {
+    "id": "contact",
+    "translation": "contato"
+  },
+  {
+    "id": "archive",
+    "translation": "arquivo"
+  },
+  {
+    "id": "code",
+    "translation": "código"
+  },
+  {
+    "id": "apps",
+    "translation": "apps"
+  },
+  {
+    "id": "about",
+    "translation": "sobre"
+  },
+  {
+    "id": "readMore",
+    "translation": "Leia mais"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Postagens Antigas"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Novas Postagens"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Salas de bate-papo ao vivo"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2. de jan. 2006 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Postado em {{ .Count }}"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Postagem Anterior"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Próxima Postagem"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Postagens no Blog"
+  }
+]

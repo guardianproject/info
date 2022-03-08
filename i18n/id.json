@@ -13,7 +13,7 @@
   },
   {
     "id": "dateFormat",
-    "translation": "2hb Januari 2006"
+    "translation": "2 Januari 2006"
   },
   {
     "id": "translationsLabel",
@@ -21,11 +21,11 @@
   },
   {
     "id": "lastModified",
-    "translation": "(Perubahaan terakhir pada {{.Count}})"
+    "translation": "(Perubahaan terakhir pada {{ .Count }})"
   },
   {
     "id": "gcseLabelLong",
-    "translation": "Telusuri {{.Site.Title}}"
+    "translation": "Telusuri {{ .Site.Title }}"
   },
   {
     "id": "edit",
@@ -37,7 +37,7 @@
   },
   {
     "id": "postedOnDate",
-    "translation": "Di-pos @ {{ .Count }}"
+    "translation": "Diposting di {{ .Count }}"
   },
   {
     "id": "archive",
@@ -50,5 +50,209 @@
   {
     "id": "apps",
     "translation": "app"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Ekspor Informasi"
+  },
+  {
+    "id": "readMore",
+    "translation": "Baca Selengkapnya"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Postingan Berikutnya"
+  },
+  {
+    "id": "readTime",
+    "translation": "menit"
+  },
+  {
+    "id": "show",
+    "translation": "Tampilkan"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Aplikasi yang Diarsipkan"
+  },
+  {
+    "id": "oneComment",
+    "translation": "komentar"
+  },
+  {
+    "id": "moreComment",
+    "translation": "komentar"
+  },
+  {
+    "id": "yourName",
+    "translation": "Nama"
+  },
+  {
+    "id": "Services",
+    "translation": "Layanan"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Signing Keys"
+  },
+  {
+    "id": "Team",
+    "translation": "Tim"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Ups, halaman ini tidak ada. (Galat 404)"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Posting Lama"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Postingan Terbaru"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Posting Sebelumnya"
+  },
+  {
+    "id": "words",
+    "translation": "kata"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Alihkan navigasi"
+  },
+  {
+    "id": "noComment",
+    "translation": "Tidak ada komentar"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> ditenagai &nbsp;&bull;&nbsp; Tema oleh <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful-jekyll/\"&gt;Beautiful Jekyll</a> disesuaikan dengan <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo&lt; /a&gt;</a>"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Bahasa"
+  },
+  {
+    "id": "comments",
+    "translation": "komentar"
+  },
+  {
+    "id": "description",
+    "translation": "deskripsi"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "kode sumber"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Anda dapat menggunakan sintaks Markdown"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Lihat juga"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Tentang Proyek Guardian"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Mitra dan Pendanaan"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Aplikasi yang Diarsipkan"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Bagaimana Anda Dapat Bekerja Dengan Kami"
+  },
+  {
+    "id": "Press",
+    "translation": "Pers"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Keamanan yang Bisa Anda Percaya"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Ruang Obrolan Langsung"
+  },
+  {
+    "id": "Contact",
+    "translation": "Kontak"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Pekerjaan dan Magang"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Tutup"
+  },
+  {
+    "id": "team",
+    "translation": "Tim"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadata"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Terjemahkan di"
+  },
+  {
+    "id": "editOn",
+    "translation": "Sunting pada"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "di GitLab"
+  },
+  {
+    "id": "webSite",
+    "translation": "situs web"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Postingan Blog"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "di GitHub"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Alamat email"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Situs web Anda"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Jan 2006, 15:04:05"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Tutorial"
+  },
+  {
+    "id": "contact",
+    "translation": "kontak"
+  },
+  {
+    "id": "press",
+    "translation": "Pers"
   }
 ]

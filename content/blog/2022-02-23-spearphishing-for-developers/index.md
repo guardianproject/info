@@ -126,3 +126,77 @@ was applied.  Perhaps you need to re-run gnulib-tool,
 or ./bootstrap, or ./autogen.sh, or whatever-it-is-with
 your package, to re-import the patched gnulib from scratch.
 ```
+
+**Update March 23rd, 2022**
+
+So I never received a reply from the email I replied to, so this does not seem
+to be a very sophisticated attack.  Plus now, I've received the same kind of
+message again responding to the same thread.  It has a different email address
+in the _From:_ field, and talks about invoices.  So it seems clear that this is
+an automated mass spam operation, not so targeted.  Plus replying to a technical
+thread with a message about invoices or receipts seems quite tone deaf.
+
+Here's the full source text of this new message:
+
+```
+Return-Path: <INSERT.INTO@arbonnetruth.com>
+Delivered-To: gphans@rodolpho.mayfirst.org
+Received: from rodolpho.mayfirst.org
+	by rodolpho.mayfirst.org with LMTP
+	id SAA4IDlXO2KkcgAAME+P1Q
+	(envelope-from <INSERT.INTO@arbonnetruth.com>)
+	for <gphans@rodolpho.mayfirst.org>; Wed, 23 Mar 2022 13:22:01 -0400
+Received: from rodolpho.mayfirst.org (localhost [127.0.0.1])
+	by rodolpho.mayfirst.org (Postfix) with ESMTP id AE00E3CE3B
+	for <hans@guardianproject.info>; Wed, 23 Mar 2022 13:21:59 -0400 (EDT)
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	rodolpho.mayfirst.org
+X-Spam-Level: ***
+X-Spam-Status: No, score=3.2 required=5.0 tests=DKIM_SIGNED,DKIM_VALID,
+	DKIM_VALID_AU,DKIM_VALID_EF,HTML_MESSAGE,HTML_MIME_NO_HTML_TAG,
+	MIME_HTML_ONLY,RCVD_IN_PSBL,SPF_HELO_PASS,SPF_PASS,
+	T_SCC_BODY_TEXT_LINE autolearn=disabled version=3.4.2
+X-Spam-Language: en
+X-Envelope-From: <INSERT.INTO@arbonnetruth.com>
+X-Greylist: delayed 601 seconds by postgrey-1.36 at rodolpho; Wed, 23 Mar 2022 13:21:59 EDT
+Received: from arbonnetruth.com (arbonnetruth.com [93.170.123.227])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by rodolpho.mayfirst.org (Postfix) with ESMTPS id 596443CE1C
+	for <hans@guardianproject.info>; Wed, 23 Mar 2022 13:21:59 -0400 (EDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=mail; d=arbonnetruth.com;
+ h=MIME-Version:Date:Content-Type:Content-Transfer-Encoding:From:To:Subject:
+ Message-ID; i=INSERT.INTO@arbonnetruth.com;
+ bh=tyizJcC18eXfvncOzYHJ5lCpMuLeYzPK5gBPVLAfqRw=;
+ b=O19O9I/UZQxRYOrfLzW3V+Olc/uEnUNezLzdN+XqMNb4Boj5KBxyjgsQy5h18K0uBoyNF5UKQyg8
+   tqaKIYKt4PPu8K4BqLrbyXZ0UfpeTQ2oxZ7uTILWi1W+LUTz9fVGfC5lulA1q2YOlJ+Q2YNEDnFq
+   +m+bHLzVQwIJX8wT04A=
+MIME-Version: 1.0
+Date: Wed, 23 Mar 2022 09:11:54 -0800
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+From: "Paul Eggert" <INSERT.INTO@arbonnetruth.com>
+To: "Hans-Christoph Steiner" <hans@guardianproject.info>
+Subject: Re: sys/types.h on Android includes stdint.h before defining time_t
+Message-ID: <2lixlvd5g6qeonv0dkkyzyjbbx1foep1@arbonnetruth.com>
+X-Virus-Scanned: ClamAV using ClamSMTP
+
+Greetings,<br />
+Kindly review a next invoice documentation:<br />
+<br />
+<br />
+https://onedrive.live.com/download?cid=1D05D1D2994A703C&amp;resid=1D05D1D2994A703C%21116&amp;authkey=AALIqV8bfVVLE9E<br />
+<br />
+File password: MT7658<br />
+<br />
+On 01/26/2012 12:14 PM, Hans-Christoph Steiner wrote:
+> ./stdint.h:32:3: error: invalid preprocessing directive #@
+
+This looks like some sort of problem in the way the patch
+was applied.  Perhaps you need to re-run gnulib-tool,
+or ./bootstrap, or ./autogen.sh, or whatever-it-is-with
+your package, to re-import the patched gnulib from scratch.
+
+```

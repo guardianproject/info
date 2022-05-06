@@ -122,5 +122,137 @@
   {
     "id": "edit",
     "translation": "Редактировать"
+  },
+  {
+    "id": "Services",
+    "translation": "Сервисы"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Ключи подписи"
+  },
+  {
+    "id": "Team",
+    "translation": "Команда"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Безопасность, которой можно доверять"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Архивированные приложения"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Чат-комнаты"
+  },
+  {
+    "id": "Contact",
+    "translation": "Связь с нами"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Вакансии и стажировки"
+  },
+  {
+    "id": "contact",
+    "translation": "Наши контакты"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "О Guardian Project"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Блог"
+  },
+  {
+    "id": "editOn",
+    "translation": "Редактировать на"
+  },
+  {
+    "id": "about",
+    "translation": "О нас"
+  },
+  {
+    "id": "Blog",
+    "translation": "Блог"
+  },
+  {
+    "id": "Press",
+    "translation": "Пресса"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Экспорт информации"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Как вы можете нам помочь"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Партнеры и финансирование"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "Исходный код"
+  },
+  {
+    "id": "metadata",
+    "translation": "Метаданные"
+  },
+  {
+    "id": "description",
+    "translation": "Описание"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "На GitLab"
+  },
+  {
+    "id": "webSite",
+    "translation": "Сайт"
+  },
+  {
+    "id": "translation",
+    "translation": "Перевод"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Перевод на"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "На GitHub"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Архивированные приложения"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Инструкции"
+  },
+  {
+    "id": "team",
+    "translation": "Наша команда"
+  },
+  {
+    "id": "press",
+    "translation": "Для прессы"
+  },
+  {
+    "id": "apps",
+    "translation": "Приложения"
+  },
+  {
+    "id": "code",
+    "translation": "Код"
+  },
+  {
+    "id": "archive",
+    "translation": "Архив"
   }
 ]

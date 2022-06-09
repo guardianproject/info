@@ -45,7 +45,7 @@ current:
     gitlab: n-pex
 
   - name: uniq
-    gpg: 3DBDBA23810AEE377CC8E9D7C84324635610899F
+    gpg: EF909D4AD7079062A0BA1DD7725F386C05529A5A
     github: uniqx
     gitlab: uniqx
 

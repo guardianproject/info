@@ -15,7 +15,7 @@ img {
 </style>
 
 <div style="width: 90%; margin: 0 auto;">
-<a href="https://f-droid.org" target="_blank">
+<a href="https://search.f-droid.org/?q=Guardian+Project" target="_blank">
 <img src="../img/get-it-on-fdroid.png" alt="Get it on F-Droid" height="80"/>
 </a>
 <a href="https://play.google.com/store/apps/developer?id=The+Guardian+Project" target="_blank">

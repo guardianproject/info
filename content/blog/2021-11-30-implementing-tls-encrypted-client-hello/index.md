@@ -132,8 +132,8 @@ then also handle GREASE and the Retry Configs.
 This post began by saying that ECH was complex.  Most of that complexity stems
 from the concept of _ClientHelloOuter_ and _ClientHelloInner_.  They are sort of
 parallel versions of the TLS _ClientHello_, with _ClientHelloOuter_ being
-plaintext and _ClientHelloInter_ being encrypted.  Many of the same bits of
-metadata can be set in either _ClientHelloOuter_ or _ClientHelloInter_, or even
+plaintext and _ClientHelloInner_ being encrypted.  Many of the same bits of
+metadata can be set in either _ClientHelloOuter_ or _ClientHelloInner_, or even
 in both.  And the outer and inner values can be different.  For example, the
 outer plaintext SNI could be set to a generic domain name, while the inner could
 be set to a different domain name that the client wants to protect.  Whenever
@@ -186,7 +186,7 @@ Based on this outline, these are the pieces that need to be implemented:
 * A callback that gets called whenever ECH negotiation fails and the server
   offers a "Retry Config".
 * Potentially also controls of what to send in the _ClientHelloOuter_ versus the
-  _ClientHelloInter_.
+  _ClientHelloInner_.
 
 From the point of view of the client implementation, there is a big difference
 between TLS before and after ECH.  This new complexity may look scary but this

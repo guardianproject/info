@@ -18,6 +18,7 @@ tags:
   - Pithus
   - privacy
   - TechLore Plexus
+  - The Search for Ethical Apps
   - tracking
   - Tracking-the-Trackers
 

@@ -1,6 +1,9 @@
 
 ErrorDocument 404 /404.html
 
+# Redirect old home page URL
+RedirectMatch permanent "^/home/?$" "/"
+
 # redirect all /wind/ to /code/wind/
 RedirectMatch permanent "^/wind/(.*)" "/code/wind/$1"
 RedirectPermanent /wind /code/wind

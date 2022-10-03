@@ -23,6 +23,8 @@ Whether you are an average person looking to affirm your rights or an activist, 
 <a href="https://cleaninsights.org">Clean Insights</a> gives developers a way to plug into a secure, private measurement platform. It is focused on assisting in answering key questions about app usage patterns, and not on enabling invasive surveillance of all user habits. 
 <a href="https://cleaninsights.org"><img src="projects/cleaninsights.jpg"/></a>
 
+<a href="https://gitlab.com/trackingthetrackers/wiki/-/wikis/home">Tracking the Trackers</a> develops tools for helping humans inspect and audit Android apps, and sets standards for <a href="https://www.ethicsinapps.eu/">ethical</a> <a href="https://impactethics.ca/2018/02/23/the-ethics-of-apps/">apps</a>.
+<a href="https://gitlab.com/trackingthetrackers/wiki/-/wikis/home"><img src="projects/trackingthetrackers.jpg"/></a>
 
 <a href="https://keanu.im">Keanu Engine</a> offers app and web experiences that enable safe and secure communication among communities.
 <a href="https://keanu.im"><img src="projects/keanu.jpg"/></a>

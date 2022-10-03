@@ -20,16 +20,35 @@ menu:
   <em>Note: this project receives grants and sub-contracts from organizations (such as the Open Technology Fund) and research projects (such as the Tor Project) that receive funding from the U.S. Government and other governments around the world. None of this funding has modified or shaped our development plans, and we would never, ever put any sort of backdoor or compromised component into our software based on this funding.</em>
 </p>
 
-&nbsp;
-**Filecoin Foundation for the Decentralized Web**
+## Filecoin Foundation for the Decentralized Web
 
 In 2021, we received funding and support from the [Filecoin Foundation for the Decentralized Web](https://ffdweb.org/) to support our work on improving resiliency, preservation and access to essential, human rights media and content.
 
-**Freedom of the Press Foundation**
+## NLnet
+
+* https://nlnet.nl/project/F-Droid-Trackers/
+* https://nlnet.nl/project/EthicalApps/
+
+## Freedom of the Press Foundation
 
 We received funding in 2017 and support for a [crowdfunding effort](https://freedom.press/donate-support-haven-open-source-project/) from FPF related to our work on Haven.
 
-**Eric and Wendy Schmidt Foundation**
+## Vienna Science and Technology Fund ([WWTF](https://www.wwtf.at/))
+
+Ethics-in-an-app, in partnership with Aaron Kaplan and epicenter.works
+https://www.wien.gv.at/presse/2019/11/15/digitaler-humanismus-wien-als-zentrum
+
+Digital Humanism
+
+## Handshake Foundation
+
+In 2018, we received a grant from [Handshake](https://handshake.org/), an organization developing an experimental peer-to-peer root domain naming system.
+
+## ISC Project
+
+We receive some small grants from ISC Project to support localization with Weblate.
+
+## Eric and Wendy Schmidt Foundation
 
 In 2014, we received a generous grant from the [New Digital Age Grants program](https://guardianproject.info/2014/03/10/eric-schmidt-awards-guardian-project-a-new-digital-age-grant/).
 
@@ -37,11 +56,9 @@ In 2014, we received a generous grant from the [New Digital Age Grants program](
 <img class="alignnone size-full wp-image-3267" src="https://guardianproject.info/wp-content/uploads/2012/03/knight-logo-300.jpg" alt="knight-logo-300" width="300" height="50" />](https://www.knightfoundation.org/grants/20123674/)  
 In 2012, we received funding for our [InformaCam project](/apps/informacam), and related supporting technologies from <a style="font-size: 13px;" href="https://guardianproject.info/2013/01/27/informacam-wins-knight-news-challenge/">Knight News Challenge</a>
 
-**Google**
+## Google
 
 In January 2011, the Guardian Project received a no strings attached donation from Google. We used this funding to accelerate our development activities in various areas, host developer events, produce audits and guides, and support activists in the field. This should not be seen as any formal endorsement of our work by Google corporate, hence we are not putting their logo here.
-
-&nbsp;
 
 <p style="text-align: left;">
   <a href="https://www.freepressunlimited.org/"><img class="alignnone wp-image-3076" src="https://guardianproject.info/wp-content/uploads/2010/02/free_press_unlimited_herzien.jpg" alt="free_press_unlimited_herzien" width="157" height="152" /></a>

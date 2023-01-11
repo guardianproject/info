@@ -1,7 +1,7 @@
 [
   {
     "id": "about",
-    "translation": "Névjegy"
+    "translation": "rólunk"
   },
   {
     "id": "translation",
@@ -10,5 +10,249 @@
   {
     "id": "gcseLabelShort",
     "translation": "Keresés"
+  },
+  {
+    "id": "Contact",
+    "translation": "Kapcsolat"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Állások és szakmai gyakornokok"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Archivált alkalmazások"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Aláírási kulcsok"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Biztonság, amiben megbízhat"
+  },
+  {
+    "id": "Press",
+    "translation": "Nyomja meg"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Hogyan működhet együtt velünk"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Partnerek és finanszírozás"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "forráskód"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "A GitLabon"
+  },
+  {
+    "id": "webSite",
+    "translation": "weboldal"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Blogbejegyzések"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "A Githubon"
+  },
+  {
+    "id": "show",
+    "translation": "Mutat"
+  },
+  {
+    "id": "comments",
+    "translation": "hozzászólások"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Lásd még"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Az Ön e-mail címe"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Az Ön weboldala"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Használhat Markdown formázást"
+  },
+  {
+    "id": "yourName",
+    "translation": "Az Ön neve"
+  },
+  {
+    "id": "oneComment",
+    "translation": "megjegyzés"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Keresés {{ .Site.Title }}"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Nyelv"
+  },
+  {
+    "id": "words",
+    "translation": "szavak"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "HOPPÁ, ez az oldal nem létezik. (404 error)"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Előző bejegyzés"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Következő bejegyzés"
+  },
+  {
+    "id": "readTime",
+    "translation": "percek"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Régebbi bejegyzések"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Újabb bejegyzések"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "readMore",
+    "translation": "Olvass tovább"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Más nyelvek: "
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2006.01.02."
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2006.01.02. 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Közzétett {{ .Count }}"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Útmutatók"
+  },
+  {
+    "id": "contact",
+    "translation": "kapcsolat"
+  },
+  {
+    "id": "team",
+    "translation": "Csapat"
+  },
+  {
+    "id": "press",
+    "translation": "Nyomja meg"
+  },
+  {
+    "id": "apps",
+    "translation": "alkalmazások"
+  },
+  {
+    "id": "code",
+    "translation": "kód"
+  },
+  {
+    "id": "archive",
+    "translation": "archívum"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Archivált alkalmazások"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Utoljára módosítva {{{.Count}})"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> által működtetett &nbsp;&bull;&nbsp; <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> témát <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a> módosította"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Irányítás"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Bezár"
+  },
+  {
+    "id": "noComment",
+    "translation": "Nincs megjegyzés"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Exportinformáció"
+  },
+  {
+    "id": "moreComment",
+    "translation": "megjegyzések"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Lefordít"
+  },
+  {
+    "id": "metadata",
+    "translation": "metaadatok"
+  },
+  {
+    "id": "edit",
+    "translation": "Szerkesztés"
+  },
+  {
+    "id": "editOn",
+    "translation": "Szerkeszt"
+  },
+  {
+    "id": "description",
+    "translation": "leírás"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "A Guardian Project névjegye"
+  },
+  {
+    "id": "Services",
+    "translation": "Szolgáltatások"
+  },
+  {
+    "id": "Team",
+    "translation": "Csapat"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Élő csevegőszobák"
   }
 ]

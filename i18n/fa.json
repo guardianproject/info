@@ -1,0 +1,50 @@
+[
+  {
+    "id": "about",
+    "translation": "درباره"
+  },
+  {
+    "id": "apps",
+    "translation": "کاره‌ها"
+  },
+  {
+    "id": "code",
+    "translation": "کد"
+  },
+  {
+    "id": "archive",
+    "translation": "آرشیو"
+  },
+  {
+    "id": "team",
+    "translation": "تیم"
+  },
+  {
+    "id": "press",
+    "translation": "مطبوعات"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "کاره‌های آرشیو شده"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 ژانویه 2006"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 ژانویه 2006 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "فرستاده شده در {{ Count. }}"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "زبان های دیگر: "
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": "، "
+  }
+]

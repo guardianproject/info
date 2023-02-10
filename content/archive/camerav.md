@@ -13,9 +13,9 @@ aliases:
   - apps/camerav
   - informa
 ---
-CameraV is the easiest way to capture and share verifiable photos and video proof on a smartphone or tablet, all the while keeping it entirely secure and private. _This is the official app from the [InformaCam](https://blog.witness.org/2013/01/how-informacam-improves-verification-of-mobile-media-files/) project, a partnership between the Guardian Project and [WITNESS](https://witness.org)._
+THIS PROJECT IS NO LONGER ACTIVE - Please visit [ProofMode.org][https://proofmode.org] for our latest work in verifiable media capture.
 
-**[DOWNLOAD NOW FROM GOOGLE PLAY](https://play.google.com/store/apps/details?id=org.witness.informacam.app)**
+CameraV is the easiest way to capture and share verifiable photos and video proof on a smartphone or tablet, all the while keeping it entirely secure and private. _This is the official app from the [InformaCam](https://blog.witness.org/2013/01/how-informacam-improves-verification-of-mobile-media-files/) project, a partnership between the Guardian Project and [WITNESS](https://witness.org)._
 
 CameraV is easy to learn and simple to use (and insanely secure & powerful under the covers...). All photos and videos you take are password-protected and 100% encrypted on your device. You can also add private notes and tags to any photo or video, and choose who you share them with. CameraV also privately stores data from your device sensors and provides built-in tools to see and share it. Finally, it has a built-in secure camera that is simple, streamlined and even supports selfies.
 
@@ -25,8 +25,6 @@ CameraV is based on the InformaCam platform, and was developed for use by activi
 
 * OPEN-SOURCE AND FREE: <https://github.com/guardianproject/camerav>  
 * JOIN THE COMMUNITY: <a href="https://www.google.com/url?q=https://www.google.com/url?q%3Dhttps://talk.developersquare.net/c/developers-corner/smart-cameras%26sa%3DD%26usg%3DAFQjCNFW0w07DleKn7DRLuRNjZltQI2psA&sa=D&usg=AFQjCNFwa9nMjOqpGMyPqs2uzG1BoY8Qhw" target="_blank">https://talk.developersquare.net/c/developers-corner/smart-cameras</a>
-
-[<img class="alignnone size-large wp-image-13059" src="https://guardianproject.info/wp-content/uploads/2015/07/playmulti-1024x444.jpg" alt="playmulti" width="780" height="338" srcset="https://guardianproject.info/wp-content/uploads/2015/07/playmulti-1024x444.jpg 1024w, https://guardianproject.info/wp-content/uploads/2015/07/playmulti-300x130.jpg 300w" sizes="(max-width: 780px) 100vw, 780px" />](https://guardianproject.info/wp-content/uploads/2015/07/playmulti.jpg)
 
 * * *
 

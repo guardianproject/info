@@ -9,7 +9,7 @@ stages:
   set -x
   set -e
   printf 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";\n' > /etc/apt/apt.conf.d/99no-install-recommends
-  printf 'APT::Acquire::Retries "20";\n' > /etc/apt/apt.conf.d/99acquire-retries
+  printf 'Acquire::Retries "20";\n' > /etc/apt/apt.conf.d/99acquire-retries
   printf 'APT::Get::Assume-Yes "true";\n' > /etc/apt/apt.conf.d/99assumeyes
   apt-get update
   apt-get install curl fdroidserver git gpg gpg-wks-client hugo locales make mawk python3 sassc unzip

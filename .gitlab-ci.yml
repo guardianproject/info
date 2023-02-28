@@ -16,6 +16,8 @@ stages:
   grep '^en_US.UTF-8 UTF-8' /etc/locale.gen || echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
   locale-gen
   export LC_ALL=en_US.UTF-8
+  # index-v1.jar tests need SHA1 support still, TODO switch to index.download_repo_index_v2
+  sed -i 's,SHA1 denyAfter 20[0-9][0-9],SHA1 denyAfter 2024,' /usr/lib/jvm/default-java/conf/security/java.security
   set +x
 
 # test deploy to GitLab Pages

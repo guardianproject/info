@@ -16,7 +16,7 @@ tags:
   - fdroid
   - F-Droid
   - fdroid
-  - reproducible build
+  - reproducible builds
 ---
 I was just in Athens for the “[Reproducible Builds Summit](https://reproducible-builds.org/events/athens2015/)“, an <a href="https://aspirationtech.org/" target="_blank">Aspiration</a>-run meeting focused on the issues of getting all software builds to be reproducible. This means that anyone starting with the same source code can build the _exact_ same binary, bit-for-bit. At first glance, it sounds like this horrible, arcane detail, which it is really. But it provides tons on real benefits that can save lots of time. And in terms of programming, it can actually be quite fun, like doing a puzzle or sudoku, since there is a very clear point where you have “won”.
 

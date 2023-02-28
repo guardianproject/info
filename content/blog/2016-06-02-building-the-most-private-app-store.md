@@ -20,7 +20,7 @@ tags:
   - mobile
   - open-source
   - privacy
-  - reproducible build
+  - reproducible builds
   - security
   - tor
 ---

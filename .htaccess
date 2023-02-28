@@ -12,6 +12,9 @@ RedirectPermanent /wind /code/wind
 RedirectPermanent /tag/	/tags/
 RedirectPermanent /tag	/tags/
 
+# redirect tags for confusing cases
+RedirectPermanent /tags/reproducible-build/ /tags/reproducible-builds/
+
 # redirect Wordpress feed to Hugo feed
 RedirectMatch permanent "/feed/.*$" "/blog/index.xml"
 RedirectPermanent /feed /blog/index.xml

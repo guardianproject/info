@@ -18,7 +18,7 @@ tags:
   - fdroid
   - lildebi
   - prototype
-  - reproducible build
+  - reproducible builds
   - security
 ---
 With <a href="https://f-droid.org" target="_blank">F-Droid</a>, we have been working towards getting a complete app distribution channel that is able to reproducibly build each Android app from source. while this may sound like a mundane detail, it does provide lots of tangible benefits. First, it means that anyone can verify that the app that they are using is 100% built from the source code, with nothing else added. That verifies that the app is indeed 100% free, open source software.

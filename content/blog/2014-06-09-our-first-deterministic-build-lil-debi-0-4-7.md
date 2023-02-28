@@ -12,7 +12,7 @@ tags:
   - android
   - bazaar
   - deterministic build
-  - reproducible build
+  - reproducible builds
   - security
 ---
 [<img src="https://guardianproject.info/wp-content/uploads/2014/06/determinism.gif" alt="determinism" width="206" height="138" class="alignright size-thumbnail wp-image-12493" />](http://abyss.uoregon.edu/~js/ast123/lectures/lec05.html)

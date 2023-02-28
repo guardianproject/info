@@ -25,7 +25,7 @@
   },
   {
     "id": "readMore",
-    "translation": "Далее"
+    "translation": "Читать больше"
   },
   {
     "id": "olderPosts",
@@ -37,11 +37,11 @@
   },
   {
     "id": "previousPost",
-    "translation": "Предыдущий"
+    "translation": "Предыдущий пост"
   },
   {
     "id": "nextPost",
-    "translation": "Следующий"
+    "translation": "Следующий пост"
   },
   {
     "id": "readTime",
@@ -53,7 +53,7 @@
   },
   {
     "id": "pageNotFound",
-    "translation": "Уууупс, страница не найдена. Поищите ещё. (ошибка 404)"
+    "translation": "Ой, запрашиваемая страница не найдена (404)"
   },
   {
     "id": "poweredBy",

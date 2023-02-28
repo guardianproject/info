@@ -37,7 +37,7 @@
   },
   {
     "id": "postedOnDate",
-    "translation": "فرستاده شده در {{ Count. }}"
+    "translation": "فرستاده شده در {{ .Count }}"
   },
   {
     "id": "translationsLabel",

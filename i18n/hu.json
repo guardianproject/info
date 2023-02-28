@@ -193,7 +193,7 @@
   },
   {
     "id": "lastModified",
-    "translation": "(Utoljára módosítva {{{.Count}})"
+    "translation": "(Utoljára módosítva {{ .Count }})"
   },
   {
     "id": "poweredBy",

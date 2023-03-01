@@ -56,7 +56,7 @@ VPN providers must be clear about what logs they are keeping, and how long they 
 
 There are many legal ways for authorities to get private data, this is an essential part of a functioning justice system.  But these powers are sadly abused in basically every country in the world, it is only a question of degrees.  A VPN provider needs to represent its users legal interests, and push back on legal orders when there is the possibility they are unjust.  Calyx Institute's Nick Merrill provides the shining example in this regard.  With the ACLU, he fought a [legal case](https://en.wikipedia.org/wiki/Doe_v._Ashcroft) for over a decade to prevent unjust intrusion for his users.  Ladar Levison shut down his email company [Lavabit](https://en.wikipedia.org/wiki/Lavabit) rather than allow the US Government to monitor Edward Snowden's email account.
 
-There are other ways to ensure that the legal processes are not abused.  These include warranty canaries and disclosure when data had to be turned over via legal procedures.
+There are other ways to ensure that the legal processes are not abused.  These include warrant canaries and disclosure when data had to be turned over via legal procedures.
 
 * Mozilla's [Transparency](https://www.mozilla.org/en-US/about/policy/transparency/) policy
 * ProtonVPN's [Transparency Report & Warrant Canary](https://protonvpn.com/blog/transparency-report/)

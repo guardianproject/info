@@ -115,6 +115,7 @@ The VPN security model means you have to put a ton of trust in the operator.  Qu
 * [WEPN](https://we-pn.com/) is a free software kit to become your own VPN provider, designed around a small hardware device.
 
 There are also generic VPN client apps based on standard protocols:
+
 * [eduVPN](https://f-droid.org/packages/nl.eduvpn.app/)
 * [OpenVPN for Android](https://f-droid.org/packages/de.blinkt.openvpn/)
 * [Shadowsocks](https://f-droid.org/en/packages/com.github.shadowsocks/)

@@ -10,10 +10,12 @@ tags:
   - free software
   - MASQUE
   - open source
+  - OpenVPN
   - privacy
   - security
   - Tor
   - VPN
+  - WireGuard
 ---
 
 VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN's server.  That is how VPNs "unblock" the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide [adblocker](https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04).
@@ -22,7 +24,7 @@ To answer the question about whether they are a useful privacy tool, let's start
 
 [![Virtual Private Network overview](Virtual_Private_Network_overview.svg.png)](https://en.wikipedia.org/wiki/File:Virtual_Private_Network_overview.svg)
 
-This does not paint a good picture for a tool to protect privacy.  But there is hope!  It is possible to use a VPN to improve your privacy if you pay attention to some key details.  For VPN services to provide privacy, you have to put a lot of trust in the people who are operating the service.  The VPN provider can see **all** of your traffic that goes over the VPN, and they have a strong link to your user account with them.  The privacy advantage of a VPN is that the destination sites and your ISP cannot see which IP address your device is coming from, they will see the VPN provider's IP address.  With HTTPS, TLS, and end-to-end encryption being widespread, any encrypted content will be protected from the VPN provider also.  But the VPN provider will still be able to see where you are connecting from, which sites and services you are using, what time of day, and even potentially correlate traffic to link activities of their users.  In other words, the VPN operator sees lots of metadata about you, so much so that they could paint a quite detailed portrait of your personal life if they ever did let their data be analyzed.
+This does not paint a good picture for a tool to protect privacy.  But there is hope!  It is possible to use a VPN to improve your privacy if you pay attention to some key details.  For VPN services to provide privacy, you have to put a lot of trust in the people who are operating the service.  The VPN provider can see **all** of your traffic that goes over the VPN, and they have a strong link to your user account with them.  The privacy advantage of a VPN is that the destination sites cannot see which IP address your device is coming from, they will see the VPN provider's IP address.  And your ISP will see you are using a VPN, but not which sites you visit.  With HTTPS, TLS, and end-to-end encryption being widespread, any encrypted content will be protected from the VPN provider also.  But the VPN provider can still see where you are connecting from, which sites and services you are using, what time of day, and even potentially correlate traffic to link activities of their users.  In other words, the VPN operator sees lots of metadata about you, so much so that they could paint a quite detailed portrait of your personal life if they ever did let their data be analyzed.
 
 
 ## How to build a privacy-respecting VPN service
@@ -48,7 +50,7 @@ The VPN servers unavoidably see lots of information about what users are doing. 
 
 VPN providers must be clear about what logs they are keeping, and how long they are stored.  Even better, they will provide information about how they do store the data that they do keep.  For example, if the servers do not use full disk encryption, then it would be straightforward to recover the deleted logs.  That is much harder on systems using full disk encryption.
 
-* A [2019 audit](https://cure53.de/audit-report_ivpn.pdf) of [IVPN](https://www.ivpn.net/blog/independent-security-audit-concluded) showed that, at that time, the auditors confirmed that IVPN performed found no "statistical logging of customer-traffic", "logging of traffic, IP addresses or DNS requests" on the servers that the auditors were given access to.
+* A [2019 audit](https://cure53.de/audit-report_ivpn.pdf) of [IVPN](https://www.ivpn.net/blog/independent-security-audit-concluded) showed that, at that time, the auditors confirmed that IVPN performed no "statistical logging of customer-traffic", "logging of traffic, IP addresses or DNS requests" on the servers that the auditors were given access to.
 * Mullvad says, "we never store any activity logs of any kind." in their [no logging data policy](https://mullvad.net/en/help/no-logging-data-policy/)
 
 
@@ -69,6 +71,7 @@ F-Droid works to build [services](https://f-droid.org/2022/05/24/buildserver-ove
 
 * [Bitmask](https://f-droid.org/packages/se.leap.bitmaskclient/)
 * [Calyx VPN](https://f-droid.org/packages/org.calyxinstitute.vpn/)
+* [eduVPN](https://f-droid.org/packages/nl.eduvpn.app/)
 * [IVPN](https://f-droid.org/packages/net.ivpn.client/)
 * [Lavabit Encrypted Proxy](https://f-droid.org/packages/com.lavabit.pahoehoe/)
 * [Mullvad VPN](https://f-droid.org/packages/net.mullvad.mullvadvpn/)
@@ -76,6 +79,7 @@ F-Droid works to build [services](https://f-droid.org/2022/05/24/buildserver-ove
 * [ProtonVPN](https://f-droid.org/packages/ch.protonvpn.android/)
 * [Purism Librem Tunnel](https://f-droid.org/packages/one.librem.tunnel/)
 * [Riseup VPN](https://f-droid.org/packages/se.leap.riseupvpn/)
+* [Tailscale](https://f-droid.org/packages/com.tailscale.ipn/)
 
 
 ### Use external auditors to confirm source code and operations
@@ -110,12 +114,19 @@ The VPN security model means you have to put a ton of trust in the operator.  Qu
 * [Outline](https://getoutline.org/) "makes it easy to create a VPN server, giving anyone access to the free and open internet."
 * [WEPN](https://we-pn.com/) is a free software kit to become your own VPN provider, designed around a small hardware device.
 
+There are also generic VPN client apps based on standard protocols:
+* [eduVPN](https://f-droid.org/packages/nl.eduvpn.app/)
+* [OpenVPN for Android](https://f-droid.org/packages/de.blinkt.openvpn/)
+* [Shadowsocks](https://f-droid.org/en/packages/com.github.shadowsocks/)
+* [strongSwan](https://f-droid.org/packages/org.strongswan.android/)
+* [WireGuard](https://f-droid.org/packages/com.WireGuard.android/)
+
 
 ## Comparing VPNs to Tor and MASQUE
 
 If it is privacy that you seek, then there are other tools to review.  Tor is a longstanding community project that aims to make privacy proxies without compromise. Tor works similarly to VPN in that it is tunneling traffic to shared servers, the big difference is that your traffic is tunneled through three relays (in comparison to single hop VPNs). Each individual Tor relay cannot see the enough to put together a picture of who is doing what. At most, a relay can see what is done, but not who.  Or that someone is accessing Tor, but not their destination.  [Orbot](https://guardianproject.info/apps/org.torproject.android/) provides a VPN mode, but this is still full Tor protection, since it is just using the device's VPN user experience to provide access to the Tor network.  [Tor Browser](https://www.torproject.org/) then adds whole other layers of privacy protection that can only be implemented in the internet-enabled app.  This includes things like reducing metadata leaks in the HTTPS connection or web APIs, or isolating websites from each other within the browser, so they cannot read data about other sites the user has visited.
 
-A new approach that is somewhere in between a VPN and Tor are multi-hop [MASQUE](https://guardianproject.info/2020/02/25/masque-review/) relays.  MASQUE is a new protocol that is similar to VPN and proxy protocols.  MASQUE is built on HTTP/3 aka QUIC, so it does not stick out as much as VPN or Wireguard traffic.  It also allows for multi-hop configurations.  MASQUE is only newly deployed, so there is not the two decades of experience working to minimize metadata leaks in the processes for relaying traffic.
+A new approach that is somewhere in between a VPN and Tor are multi-hop [MASQUE](https://guardianproject.info/2020/02/25/masque-review/) relays.  MASQUE is a new protocol that is similar to VPN and proxy protocols.  MASQUE is built on HTTP/3 aka QUIC, so it does not stick out as much as VPN or WireGuard traffic.  It also allows for multi-hop configurations.  MASQUE is only newly deployed, so there is not the two decades of experience working to minimize metadata leaks in the processes for relaying traffic.
 
 Apple iCloud Private Relay is a [two hop deployment](https://blog.cloudflare.com/icloud-private-relay/) on MASQUE, which means that the Apple side can see that the user is sending traffic, and the Cloudflare side can see the destination, but not the user.  That does provide a real privacy improvement over a single hop system.  Unfortunately, Apple iCloud Private Relay fails most of the other tests laid out in this post.  Plus given the history of NSA programs like PRISM, and the willingness for US companies like Apple and Google to [take part](https://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data), this setup is not clear protection from NSA and Five Eyes surveillance and targeting.  It would be relatively straightforward for those kinds of agencies to correlate the data from the Apple and Cloudflare side if they have access to the metadata from both sides.
 

@@ -161,7 +161,7 @@
   },
   {
     "id": "poweredBy",
-    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Tema do <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptado para <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> powered &nbsp;•&nbsp; Tema de <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptado para <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
   },
   {
     "id": "pageNotFound",

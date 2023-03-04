@@ -253,6 +253,6 @@
   },
   {
     "id": "poweredBy",
-    "translation": "<a href=\"http://gohugo.io\">Працює на Hugo v{{ .Hugo.Version }}</a> &nbsp;&bull;&nbsp; Тема від <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> адаптовано до <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+    "translation": "<a href=\"http://gohugo.io\">Працює на Hugo v{{ .Hugo.Version }}</a> &nbsp;•&nbsp; Тема від <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> адаптовано до <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
   }
 ]

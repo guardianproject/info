@@ -72,3 +72,16 @@ guardianproject.info:
          --exclude-from=.rsync-deploy-exclude-list
          public/* .htaccess
          gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/
+
+    - echo "deploy to GitHub Pages"
+    - apt-get -qy install jq
+    - echo 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl'
+          >> /etc/ssh/ssh_known_hosts
+    - echo 'github.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg='
+          >> /etc/ssh/ssh_known_hosts
+    - cp .htaccess public/
+    - cd public
+    - git init --initial-branch=gh-pages
+    - git add --force --all .
+    - git commit . -m "public/ from https://gitlab.com/guardianproject/info/-/jobs/$CI_JOB_ID"
+    - git push --force git@github.com:guardianproject/info.git gh-pages

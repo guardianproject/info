@@ -45,6 +45,18 @@ pages:
     - hugo env
     - make
 
+
+.publish-setup: &publish-setup
+  - mkdir -p ~/.ssh
+  - chmod 0700 ~/.ssh
+  - cat .known_hosts >> ~/.ssh/known_hosts
+  - chmod 0644 ~/.ssh/known_hosts
+  - eval $(ssh-agent -s)
+  - echo >> $SSH_PRIVATE_KEY  # ensure trailing newline
+  - cat "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - chmod -R a+rX,g+w,o-w public/
+
+
 guardianproject.info:
   stage: publish
   only:
@@ -60,28 +72,34 @@ guardianproject.info:
     - hugo env
     - make
     - apt-get install -qy openssh-client rsync
-    - mkdir -p ~/.ssh
-    - chmod 0700 ~/.ssh
-    - cat .known_hosts >> ~/.ssh/known_hosts
-    - chmod 0644 ~/.ssh/known_hosts
-    - eval $(ssh-agent -s)
-    - echo >> $SSH_PRIVATE_KEY  # ensure trailing newline
-    - cat "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    - chmod -R a+rX,g+w,o-w public/
+    - *publish-setup
     - rsync -axv --omit-dir-times --delete
          --exclude-from=.rsync-deploy-exclude-list
          public/* .htaccess
          gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/
 
+
+GitHub Pages:
+  stage: deploy
+  only:
+    - master@guardianproject/info
+  script:
+    - *setup
+    # set up GitLab Pages URL (e.g. "https://guardianproject.github.io/info")
+    - sed -i "s,^baseURL\x3a.*,baseURL\x3a 'https://${CI_PROJECT_NAMESPACE}.github.io/$CI_PROJECT_NAME'," config.yaml
+    - hugo env
+    - make
+
     - echo "deploy to GitHub Pages"
-    - apt-get -qy install jq
+    - *publish-setup
     - echo 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl'
           >> /etc/ssh/ssh_known_hosts
     - echo 'github.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg='
           >> /etc/ssh/ssh_known_hosts
     - cp .htaccess public/
     - cd public
-    - git init --initial-branch=gh-pages
+    - git init
+    - git checkout -B gh-pages
     - git add --force --all .
     - git commit . -m "public/ from https://gitlab.com/guardianproject/info/-/jobs/$CI_JOB_ID"
     - git push --force git@github.com:guardianproject/info.git gh-pages

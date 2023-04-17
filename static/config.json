@@ -4,6 +4,7 @@
   }, {
     "name": "alt-fetch",
     "endpoints": [
+      "https://guardianproject.github.io/info/",
       "https://guardianproject.gitlab.io/info/"
     ]
   }],

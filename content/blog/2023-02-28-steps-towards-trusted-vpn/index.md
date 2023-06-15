@@ -80,6 +80,7 @@ F-Droid works to build [services](https://f-droid.org/2022/05/24/buildserver-ove
 * [Purism Librem Tunnel](https://f-droid.org/packages/one.librem.tunnel/)
 * [Riseup VPN](https://f-droid.org/packages/se.leap.riseupvpn/)
 * [Tailscale](https://f-droid.org/packages/com.tailscale.ipn/)
+* [WireGuard](https://f-droid.org/packages/com.wireguard.android/)
 
 
 ### Use external auditors to confirm source code and operations

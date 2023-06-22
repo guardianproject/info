@@ -1,6 +1,6 @@
 ---
 title: EU should not require sharing unpatched vulnerabilities
-author: Hans-Christoph Steiner
+author: EDRi.org
 tags:
   - security
   - vulnerability

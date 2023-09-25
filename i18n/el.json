@@ -77,7 +77,7 @@
   },
   {
     "id": "poweredBy",
-    "translation": "<a href=\"http://gohugo.io\">Hugo v {{.Hugo.Version}}</a> τροφοδοτούμενο &nbsp; • &nbsp; Θέμα από <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> προσαρμοσμένο σε <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> τροφοδοτούμενο &nbsp; • &nbsp; Θέμα από <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> προσαρμοσμένο σε <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
   },
   {
     "id": "dateFormat",
@@ -93,11 +93,11 @@
   },
   {
     "id": "postedOnDate",
-    "translation": "Δημοσιεύτηκε στις {{.Count}}"
+    "translation": "Δημοσιεύτηκε στις {{ .Count }}"
   },
   {
     "id": "lastModified",
-    "translation": "(Τελευταία τροποποίηση στις {{.Count}})"
+    "translation": "(Τελευταία τροποποίηση στις {{ .Count }})"
   },
   {
     "id": "languageSwitcherLabel",

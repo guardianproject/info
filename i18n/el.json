@@ -42,5 +42,73 @@
   {
     "id": "apps",
     "translation": "εφαρμογές"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Παλαιότερες δημοσιεύσεις"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Νεότερες δημοσιεύσεις"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Προηγούμενη δημοσίευση"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Επόμενη δημοσίευση"
+  },
+  {
+    "id": "readTime",
+    "translation": "λεπτά"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Ωχ, αυτή η σελίδα δεν υπάρχει. Προχωρήστε. (Σφάλμα 404)"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Εναλλαγή πλοήγησης"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> τροφοδοτούμενο &nbsp; • &nbsp; Θέμα από <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> προσαρμοσμένο σε <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 Ιανουαρίου, 2006"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Ιαν 2006 15:04:05"
+  },
+  {
+    "id": "readMore",
+    "translation": "Διαβάστε περισσότερα"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Δημοσιεύτηκε στις {{ .Count }}"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Τελευταία τροποποίηση στις {{ .Count }})"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Γλώσσα"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Άλλες γλώσσες: "
+  },
+  {
+    "id": "words",
+    "translation": "λέξεις"
   }
 ]

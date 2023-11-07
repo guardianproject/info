@@ -197,7 +197,7 @@
   },
   {
     "id": "poweredBy",
-    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> által működtetett &nbsp;&bull;&nbsp; <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> témát <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a> módosította"
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> által működtetett &nbsp;•&nbsp; <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> témát <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a> módosította"
   },
   {
     "id": "toggleNavigation",

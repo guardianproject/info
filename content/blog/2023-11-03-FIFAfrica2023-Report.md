@@ -9,6 +9,7 @@ tags:
   - Circulo
   - Proofmode
   - Community
+  - F-Droid
 ---
 
 [Forum on Internet Freedom in Africa (FIFAfrica)](https://web.archive.org/web/20231102110707/https://internetfreedom.africa/) organized by the [Collaboration on International ICT Policy for East and Southern Africa (CIPESA)](https://web.archive.org/web/20231102060008/https://cipesa.org/) took place in September 26-29, 2023 in Dar es Salaam, Tanzania at the Hyatt Regency Hotel. 

@@ -10,6 +10,7 @@ tags:
    - standards development
    - IETF
    - privacy
+   - OpenSSL
 ---
 
 *Day Two of the [116th IETF meeting](https://www.ietf.org/how/meetings/116/) in Yokohama Japan.  For the rundown on Day One, see my [daily report](https://guardianproject.info/2023/03/28/ietf116-conference-report-monday-march-28-2023/).*

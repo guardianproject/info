@@ -1,0 +1,258 @@
+[
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Tanca"
+  },
+  {
+    "id": "words",
+    "translation": "paraules"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Publicacions al blog"
+  },
+  {
+    "id": "press",
+    "translation": "Premsa"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Tutorials"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 de gener de 2006"
+  },
+  {
+    "id": "apps",
+    "translation": "aplicacions"
+  },
+  {
+    "id": "readTime",
+    "translation": "minuts"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Publicació següent"
+  },
+  {
+    "id": "edit",
+    "translation": "Edita"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadades"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "description",
+    "translation": "descripció"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Última modificació el {{ .Count }})"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Xats en directe"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Publicacions noves"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Claus de signatura"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Cerca"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Aplicacions arxivades"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Llengua"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Tradueix a"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Aquesta pàgina no existeix. Continueu (error 404)."
+  },
+  {
+    "id": "oneComment",
+    "translation": "comentari"
+  },
+  {
+    "id": "readMore",
+    "translation": "Més informació"
+  },
+  {
+    "id": "contact",
+    "translation": "contacte"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "Funciona amb <a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> &nbsp;•&nbsp; Tema per <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptat a <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "about",
+    "translation": "quant a"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Socis i finançament"
+  },
+  {
+    "id": "team",
+    "translation": "Equip"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 de gen de 2006, 15:04:05"
+  },
+  {
+    "id": "moreComment",
+    "translation": "comentaris"
+  },
+  {
+    "id": "translation",
+    "translation": "Traducció"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Exporta la informació"
+  },
+  {
+    "id": "editOn",
+    "translation": "Edita en"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Cerca a {{ .Site.Title }}"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Quant al Guardian Project"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Com podeu treballar amb nosaltres"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Altres llengües: "
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Commuta la navegació"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "codi font"
+  },
+  {
+    "id": "noComment",
+    "translation": "Cap comentari"
+  },
+  {
+    "id": "webSite",
+    "translation": "lloc web"
+  },
+  {
+    "id": "Team",
+    "translation": "Equip"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "La vostra adreça electrònica"
+  },
+  {
+    "id": "Press",
+    "translation": "Premsa"
+  },
+  {
+    "id": "show",
+    "translation": "Mostra"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "El vostre lloc web"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "al GitLab"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Mireu també"
+  },
+  {
+    "id": "code",
+    "translation": "codi"
+  },
+  {
+    "id": "archive",
+    "translation": "arxiu"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Aplicacions arxivades"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Podeu fer servir sintaxi Markdown"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Publicació anterior"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Publicacions antigues"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Publicat a {{ .Count }}"
+  },
+  {
+    "id": "yourName",
+    "translation": "El vostre nom"
+  },
+  {
+    "id": "Contact",
+    "translation": "Contacte"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Treball i pràctiques"
+  },
+  {
+    "id": "comments",
+    "translation": "comentaris"
+  },
+  {
+    "id": "Services",
+    "translation": "Serveis"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "al GitHub"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "Seguretat en què podeu confiar"
+  }
+]

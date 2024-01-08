@@ -8,7 +8,7 @@ import sys
 import yaml
 
 with open('config.yaml') as fp:
-    config = yaml.load(fp)
+    config = yaml.safe_load(fp)
 
 rootfiles = dict()
 languages = config['languages'].keys()

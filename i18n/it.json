@@ -182,5 +182,77 @@
   {
     "id": "press",
     "translation": "Stampa"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Guide"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "description",
+    "translation": "descrizione"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Stanze di chat"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Chiavi di firma"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "App archiviate"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Partner e finanziamenti"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Esporta informazione"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Riguardo Guardian Project"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Come puoi lavorare con noi"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "codice sorgente"
+  },
+  {
+    "id": "Team",
+    "translation": "Squadra"
+  },
+  {
+    "id": "Press",
+    "translation": "Sala stampa"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "App archiviate"
+  },
+  {
+    "id": "Contact",
+    "translation": "Contatti"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Lavori e stage"
+  },
+  {
+    "id": "Services",
+    "translation": "Servizi"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "La sicurezza di cui ti puoi fidare"
   }
 ]

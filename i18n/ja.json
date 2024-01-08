@@ -17,11 +17,11 @@
   },
   {
     "id": "translationsLabel",
-    "translation": "翻訳："
+    "translation": "その他の言語： "
   },
   {
     "id": "translationsSeparator",
-    "translation": "・"
+    "translation": "・ "
   },
   {
     "id": "readMore",
@@ -53,7 +53,7 @@
   },
   {
     "id": "pageNotFound",
-    "translation": "おっと、このページが存在しない。他にあたってください。（404エラー）"
+    "translation": "おっと、このページが存在しません。他にあたってください。（404エラー）"
   },
   {
     "id": "poweredBy",
@@ -117,6 +117,142 @@
   },
   {
     "id": "seeAlso",
-    "translation": "も参照してください"
+    "translation": "こちらも参照"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "ブログ記事"
+  },
+  {
+    "id": "press",
+    "translation": "報道関係者"
+  },
+  {
+    "id": "tutorials",
+    "translation": "チュートリアル"
+  },
+  {
+    "id": "apps",
+    "translation": "アプリ"
+  },
+  {
+    "id": "edit",
+    "translation": "編集"
+  },
+  {
+    "id": "metadata",
+    "translation": "メタデータ"
+  },
+  {
+    "id": "Blog",
+    "translation": "ブログ"
+  },
+  {
+    "id": "description",
+    "translation": "説明"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "ライブチャットルーム"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "署名キー"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "アーカイブされたアプリ"
+  },
+  {
+    "id": "translateOn",
+    "translation": "翻訳する"
+  },
+  {
+    "id": "contact",
+    "translation": "連絡"
+  },
+  {
+    "id": "about",
+    "translation": "概要"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "パートナーと資金調達"
+  },
+  {
+    "id": "team",
+    "translation": "チーム"
+  },
+  {
+    "id": "translation",
+    "translation": "翻訳"
+  },
+  {
+    "id": "Export Information",
+    "translation": "エクスポート情報"
+  },
+  {
+    "id": "editOn",
+    "translation": "編集する"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Guardian Project について"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "私たちと働く方法"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "ソースコード"
+  },
+  {
+    "id": "webSite",
+    "translation": "ウェブサイト"
+  },
+  {
+    "id": "Team",
+    "translation": "チーム"
+  },
+  {
+    "id": "Press",
+    "translation": "報道関係者"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "GitLab"
+  },
+  {
+    "id": "code",
+    "translation": "コード"
+  },
+  {
+    "id": "archive",
+    "translation": "アーカイブ"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "アーカイブされたアプリ"
+  },
+  {
+    "id": "Contact",
+    "translation": "連絡"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "仕事とインターンシップ"
+  },
+  {
+    "id": "Services",
+    "translation": "サービス"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "GitHub"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "信頼できるセキュリティ"
   }
 ]

@@ -42,5 +42,9 @@
   {
     "id": "archive",
     "translation": "archiv"
+  },
+  {
+    "id": "edit",
+    "translation": "Upravit"
   }
 ]

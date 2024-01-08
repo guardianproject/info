@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
+import fdroidserver
 import json
 import sys
 import unicodedata
 import yaml
 from datetime import datetime
-from fdroidserver import common
-from fdroidserver import index
 
 
 site_languages = set()
@@ -87,8 +86,7 @@ def write_app_page(app, languages, lang=None):
 
 fdroid_config = dict()
 fdroid_config['jarsigner'] = 'jarsigner'
-common.config = fdroid_config
-index.config = fdroid_config
+fdroidserver.common.config = fdroid_config
 
 headers = {'User-Agent': 'F-Droid'}
 timeout = 60
@@ -102,7 +100,7 @@ fdroid_url = 'https://f-droid.org/repo'
 
 fingerprint = 'B7C2EEFD8DAC7806AF67DFCD92EB18126BC08312A7F2D6F3862E46013C7A6135'
 
-data, etag = index.download_repo_index(repo_url + '?fingerprint=' + fingerprint)
+data, etag = fdroidserver.download_repo_index_v1(repo_url + '?fingerprint=' + fingerprint)
 
 appsdict = dict()
 apps = list(data['apps'])
@@ -142,7 +140,7 @@ data['apps'] = appsdict
 with open('data/repo.json', 'w') as fp:
     json.dump(data, fp, indent=2, sort_keys=True)
 
-archive, etag = index.download_repo_index(archive_url + '?fingerprint=' + fingerprint)
+archive, etag = fdroidserver.download_repo_index_v1(archive_url + '?fingerprint=' + fingerprint)
 
 activePackageNames = appsdict.keys()
 newarchive = dict()

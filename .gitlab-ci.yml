@@ -1,16 +1,22 @@
-image: debian:buster
+image: debian:bookworm-slim
 
 stages:
  - deploy
  - publish
 
 # Common steps required for each type of build
+# Pin hugo version from buster for guardianproject.info
 .setup: &setup |
   set -x
   set -e
   printf 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";\n' > /etc/apt/apt.conf.d/99no-install-recommends
   printf 'Acquire::Retries "20";\n' > /etc/apt/apt.conf.d/99acquire-retries
   printf 'APT::Get::Assume-Yes "true";\n' > /etc/apt/apt.conf.d/99assumeyes
+  printf 'Package: hugo\nPin: version 0.5*\nPin-Priority: 1000\n' > /etc/apt/preferences.d/hugo
+  apt-get update
+  apt-get install ca-certificates
+  printf 'deb https://deb.debian.org/debian/ buster main\n' > /etc/apt/sources.list.d/buster.list
+  sed -i 's,http:,https:,g' $(find /etc/apt/sources.list* -type f)
   apt-get update
   apt-get install curl fdroidserver git gpg gpg-wks-client hugo locales make mawk python3 sassc unzip
   grep '^en_US.UTF-8 UTF-8' /etc/locale.gen || echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen

@@ -10,7 +10,7 @@ tags:
   - Android
   - Tor
   - Privacy
-  - open-source
+  - open source
   - pluggable transports
   - rust
 

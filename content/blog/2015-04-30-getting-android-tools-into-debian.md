@@ -17,7 +17,7 @@ tags:
   - gsoc
   - java
   - linux
-  - open-source
+  - open source
   - packaging
   - summer of code
 ---

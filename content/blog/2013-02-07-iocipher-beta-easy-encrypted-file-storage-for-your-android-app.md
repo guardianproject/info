@@ -15,7 +15,7 @@ tags:
   - beta
   - encryption
   - iocipher
-  - open-source
+  - open source
   - privacy
   - psst
   - secure storage

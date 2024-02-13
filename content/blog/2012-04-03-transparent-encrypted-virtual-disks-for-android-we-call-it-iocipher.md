@@ -13,7 +13,7 @@ tags:
   - encryption
   - full disk encryption
   - fuse
-  - open-source
+  - open source
   - psst
 ---
 [<img src="https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png" alt="" width="200" height="200" class="alignleft size-full wp-image-1764" srcset="https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png 200w, https://guardianproject.info/wp-content/uploads/2012/04/blog_sed-150x150.png 150w" sizes="(max-width: 200px) 100vw, 200px" />](https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png)When using phones, laptops, computers, etc. it feels like a private experience, as if our screen was the same as a piece of paper, and when that paper is gone, then no one can see it anymore. Digital media works very differently. While the user interface portrays the deletion of files as very final, for someone with the right tools, it is actually not hard to recover deleted files. Also, digital information takes up so little space, we now regularly carry vast amounts of information in our pockets. Our phones have become amazingly powerful computers, storing as many photos, videos, documents, etc. in our pockets as would have required a room not so long ago. So when you lose this phone, or it gets stolen, or accessed against your wishes, the lies of the interface are laid bare, and vast troves of your information is now in someone else’s hands. So how can we capitalize on all this power without giving up control of our information?

@@ -18,7 +18,7 @@ tags:
   - fdroid
   - identity
   - mobile
-  - open-source
+  - open source
   - privacy
   - reproducible builds
   - security

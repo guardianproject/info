@@ -7,7 +7,7 @@ categories:
 tags:
   - analytics
   - Clean Insights
-  - open-source
+  - open source
 ---
 
 We love [Mailvelope](https://mailvelope.com/). It's a popular browser extension for encrypting email messages. Now, [Clean Insights](https://cleaninsights.org) is helping Mailvelope understand which webmail providers are most popular with their users so they can prioritize their development efforts.

@@ -17,7 +17,7 @@ tags:
   - distribution
   - F-Droid
   - fdroid
-  - open-source
+  - open source
   - privacy
 ---
 As we’ve touched upon in [previous blog posts ](https://guardianproject.info/2013/11/05/setting-up-your-own-app-store-with-f-droid/) the Google Play model of application distribution has some disadvantages. Google does not make the Play store universally available, instead limiting availability to a subset of countries. Using the Play store to install apps necessitates both sharing personal information with Google and enabling Google to remotely remove apps from your device (colloquially referred to as [having a ‘kill switch’](http://www.engadget.com/2008/10/16/google-implemented-an-android-kill-switch-those-rascals/)). Using the Play store also requires a functional data connection (wifi or otherwise) to allow apps to be downloaded. Often there is a need to quickly bootstrap users during training sessions in countries with unreliable/restricted data connectivity, or in extreme cases, [no internet connectivity at all](http://www.nytimes.com/2011/01/29/technology/internet/29cutoff.html?_r=0).

@@ -11,7 +11,7 @@ categories:
   - News
   - Research
 tags:
-  - open-source
+  - open source
   - ostn
   - security
   - telephony

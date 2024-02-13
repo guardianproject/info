@@ -14,7 +14,7 @@ tags:
   - encryption
   - iocipher
   - libsqlfs
-  - open-source
+  - open source
   - psst
   - sqlcipher
 ---

@@ -11,7 +11,7 @@ categories:
 tags:
   - Android
   - anonymity
-  - open-source
+  - open source
   - orbot
   - proxy
   - tor

@@ -14,7 +14,7 @@ tags:
   - distribution
   - F-Droid
   - fdroid
-  - open-source
+  - open source
   - security
 ---
 [<img src="https://guardianproject.info/wp-content/uploads/2017/05/refresh-525698_640-150x150.png" alt="" width="150" height="150" class="alignleft size-thumbnail wp-image-13626" srcset="https://guardianproject.info/wp-content/uploads/2017/05/refresh-525698_640-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2017/05/refresh-525698_640-300x297.png 300w" sizes="(max-width: 150px) 100vw, 150px" />](https://guardianproject.info/wp-content/uploads/2017/05/refresh-525698_640.png)  

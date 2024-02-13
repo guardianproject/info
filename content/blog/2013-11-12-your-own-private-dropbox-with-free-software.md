@@ -14,7 +14,7 @@ tags:
   - desktop
   - encryption
   - git
-  - open-source
+  - open source
   - privacy
   - sparkleshare
   - ssh

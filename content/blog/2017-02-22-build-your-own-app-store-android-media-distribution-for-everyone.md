@@ -14,7 +14,7 @@ tags:
   - F-Droid
   - fdroid
   - mobile
-  - open-source
+  - open source
   - security
 ---
 Most people get their Android apps from Google Play. It is usually the simplest and most secure option for them. But there are also many people who do not have access to Google Play. This might be due to lack of a proper internet connection or simply because Google Play is blocked within their country.

@@ -16,7 +16,7 @@ tags:
   - gnupg
   - gpg
   - oi2
-  - open-source
+  - open source
   - openpgp
   - pgp
   - preview

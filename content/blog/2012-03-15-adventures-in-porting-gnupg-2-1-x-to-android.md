@@ -18,7 +18,7 @@ tags:
   - java
   - jni
   - native
-  - open-source
+  - open source
   - openpgp
   - porting
   - preview

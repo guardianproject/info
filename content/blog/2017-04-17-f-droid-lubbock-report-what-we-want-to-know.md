@@ -14,7 +14,7 @@ tags:
   - bazaar
   - F-Droid
   - fdroid
-  - open-source
+  - open source
   - prototype
   - usability
 ---

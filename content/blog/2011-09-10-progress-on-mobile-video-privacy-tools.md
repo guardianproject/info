@@ -11,7 +11,7 @@ categories:
 tags:
   - ffmpeg
   - obscuracam
-  - open-source
+  - open source
   - openvideo
   - ovc11
   - privacy

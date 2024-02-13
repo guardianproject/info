@@ -15,7 +15,7 @@ tags:
   - IETF
   - metadata
   - nginx
-  - open-source
+  - open source
   - OpenSSL
   - privacy
   - resilience

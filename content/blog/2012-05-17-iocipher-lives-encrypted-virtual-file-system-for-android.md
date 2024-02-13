@@ -11,7 +11,7 @@ categories:
 tags:
   - Android
   - encryption
-  - open-source
+  - open source
   - prototype
   - psst
   - security

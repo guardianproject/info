@@ -13,7 +13,7 @@ tags:
   - bazaar
   - debian
   - howto
-  - open-source
+  - open source
   - reproducible builds
   - security
 ---

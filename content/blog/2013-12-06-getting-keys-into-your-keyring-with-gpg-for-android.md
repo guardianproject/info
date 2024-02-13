@@ -16,7 +16,7 @@ tags:
   - gpg
   - howto
   - identity
-  - open-source
+  - open source
   - openpgp
   - pgp
   - privacy

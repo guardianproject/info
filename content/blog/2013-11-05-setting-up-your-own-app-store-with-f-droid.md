@@ -18,7 +18,7 @@ tags:
   - free software
   - howto
   - mobile
-  - open-source
+  - open source
   - privacy
   - ubuntu
 ---

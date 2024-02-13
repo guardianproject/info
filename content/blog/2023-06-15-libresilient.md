@@ -10,7 +10,7 @@ tags:
   - filecoin
   - free software
   - IPFS
-  - open-source
+  - open source
   - resilience
 
 ---

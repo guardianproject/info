@@ -5,7 +5,7 @@ categories:
   - Development
   - News
 tags:
-  - android
+  - Android
   - tor
   - orfox
   - proxy

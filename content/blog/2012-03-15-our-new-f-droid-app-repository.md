@@ -10,7 +10,7 @@ categories:
   - Development
   - New Release
 tags:
-  - android
+  - Android
   - F-Droid
   - fdroid
   - security

@@ -9,7 +9,7 @@ permalink: /2013/11/05/setting-up-your-own-app-store-with-f-droid/
 categories:
   - HowTo
 tags:
-  - android
+  - Android
   - bazaar
   - debian
   - distribution

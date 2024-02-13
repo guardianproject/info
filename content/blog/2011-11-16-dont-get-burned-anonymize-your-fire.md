@@ -11,7 +11,7 @@ categories:
   - News
 tags:
   - amazon
-  - android
+  - Android
   - kindle
   - kindlefire
 ---

@@ -10,7 +10,7 @@ bigimg: [{src: "/wp-content/uploads/2017/04/appdetails-a.png",}]
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - F-Droid
   - fdroid

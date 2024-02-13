@@ -9,7 +9,7 @@ permalink: /2015/04/30/getting-android-tools-into-debian/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - debian
   - gnu/linux

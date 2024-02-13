@@ -11,7 +11,7 @@ categories:
   - Development
   - Research
 tags:
-  - android
+  - Android
   - encryption
   - mobile
   - otr

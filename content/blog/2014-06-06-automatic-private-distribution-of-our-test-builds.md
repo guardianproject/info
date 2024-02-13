@@ -9,7 +9,7 @@ permalink: /2014/06/06/automatic-private-distribution-of-our-test-builds/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - distribution
   - F-Droid

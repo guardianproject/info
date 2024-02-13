@@ -9,7 +9,7 @@ permalink: /2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardwar
 categories:
   - News
 tags:
-  - android
+  - Android
   - ant
   - bazaar
   - encryption

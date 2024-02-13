@@ -5,7 +5,7 @@ categories:
   - Development
   - News
 tags:
-  - android
+  - Android
   - Exodus Privacy
   - F-Droid
   - fdroid

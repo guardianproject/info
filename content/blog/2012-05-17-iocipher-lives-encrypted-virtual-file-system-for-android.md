@@ -9,7 +9,7 @@ permalink: /2012/05/17/iocipher-lives-encrypted-virtual-file-system-for-android/
 categories:
   - Development
 tags:
-  - android
+  - Android
   - encryption
   - open-source
   - prototype

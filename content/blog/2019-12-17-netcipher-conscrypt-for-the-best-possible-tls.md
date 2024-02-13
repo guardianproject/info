@@ -6,7 +6,7 @@ categories:
 tags:
   - security
   - privacy
-  - android
+  - Android
   - netcipher
   - conscrypt
   - tls

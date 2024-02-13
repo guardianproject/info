@@ -9,7 +9,7 @@ permalink: /2014/06/30/new-official-guardian-project-app-repo-for-fdroid/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - distribution
   - F-Droid

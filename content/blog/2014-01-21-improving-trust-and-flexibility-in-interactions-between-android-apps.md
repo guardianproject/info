@@ -10,7 +10,7 @@ categories:
   - Research
 tags:
   - activity
-  - android
+  - Android
   - informaCam
   - intent
   - mobile

@@ -9,7 +9,7 @@ permalink: /2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-butto
 categories:
   - News
 tags:
-  - android
+  - Android
   - design pattern
   - panic
   - panic button

@@ -10,7 +10,7 @@ bigimg: [{src: "/wp-content/uploads/2015/02/checkeycheckey.png",}]
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - checkey
   - distribution

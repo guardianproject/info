@@ -9,7 +9,7 @@ permalink: /2014/07/30/introducing-trustedintents-for-android/
 categories:
   - News
 tags:
-  - android
+  - Android
   - identity
   - martusvmm
   - security

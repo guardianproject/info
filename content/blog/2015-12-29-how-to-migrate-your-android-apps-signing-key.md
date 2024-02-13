@@ -11,7 +11,7 @@ categories:
   - HowTo
   - Research
 tags:
-  - android
+  - Android
   - bazaar
   - encryption
   - F-Droid

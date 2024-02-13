@@ -9,7 +9,7 @@ permalink: /2017/02/22/f-droid-supports-apk-expansion-files-aka-obb/
 categories:
   - News
 tags:
-  - android
+  - Android
   - apk
   - apk expansion
   - bazaar

@@ -12,7 +12,7 @@ categories:
   - News
   - Research
 tags:
-  - android
+  - Android
   - bazaar
   - distribution
   - F-Droid

@@ -10,7 +10,7 @@ bigimg: [{src: "/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr.png",}]
 categories:
   - HowTo
 tags:
-  - android
+  - Android
   - encryption
   - gnupg
   - gpg

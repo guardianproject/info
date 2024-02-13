@@ -10,7 +10,7 @@ categories:
   - Development
   - Research
 tags:
-  - android
+  - Android
   - bazaar
   - F-Droid
   - fdroid

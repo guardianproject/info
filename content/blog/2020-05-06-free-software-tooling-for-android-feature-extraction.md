@@ -5,7 +5,7 @@ categories:
   - Development
   - News
 tags:
-  - android
+  - Android
   - debian
   - Exodus Privacy
   - feature extraction

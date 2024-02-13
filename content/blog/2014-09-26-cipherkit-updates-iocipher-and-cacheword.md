@@ -9,7 +9,7 @@ permalink: /2014/09/26/cipherkit-updates-iocipher-and-cacheword/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - cacheword
   - cipherkit

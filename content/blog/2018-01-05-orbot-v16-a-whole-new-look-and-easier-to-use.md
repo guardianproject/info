@@ -11,7 +11,7 @@ categories:
   - New Release
   - News
 tags:
-  - android
+  - Android
   - circumvention
   - orbot
   - privacy

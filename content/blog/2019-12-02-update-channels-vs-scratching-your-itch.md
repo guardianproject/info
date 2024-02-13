@@ -7,7 +7,7 @@ tags:
   - updates
   - security
   - python
-  - android
+  - Android
   - F-Droid
   - fdroid
 ---

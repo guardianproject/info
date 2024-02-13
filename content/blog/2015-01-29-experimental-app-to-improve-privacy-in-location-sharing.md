@@ -9,7 +9,7 @@ permalink: /2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/
 categories:
   - News
 tags:
-  - android
+  - Android
   - anonymity
   - geo
   - geouri

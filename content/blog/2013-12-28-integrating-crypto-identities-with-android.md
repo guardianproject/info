@@ -9,7 +9,7 @@ permalink: /2013/12/28/integrating-crypto-identities-with-android/
 categories:
   - Research
 tags:
-  - android
+  - Android
   - encryption
   - gnupg
   - gpg

@@ -9,7 +9,7 @@ permalink: /2015/09/21/cipherkit-reproducible-builds/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - cipherkit
   - deterministic build

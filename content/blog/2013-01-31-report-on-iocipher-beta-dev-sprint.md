@@ -10,7 +10,7 @@ bigimg: [{src: "/wp-content/uploads/2012/10/alberti_cipher_disk.jpg",}]
 categories:
   - Development
 tags:
-  - android
+  - Android
   - encryption
   - iocipher
   - libsqlfs

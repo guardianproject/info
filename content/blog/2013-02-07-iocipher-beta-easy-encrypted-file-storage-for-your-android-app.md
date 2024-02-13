@@ -11,7 +11,7 @@ categories:
   - Development
   - New Release
 tags:
-  - android
+  - Android
   - beta
   - encryption
   - iocipher

@@ -9,7 +9,7 @@ permalink: /2014/06/09/our-first-deterministic-build-lil-debi-0-4-7/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - deterministic build
   - reproducible builds

@@ -9,7 +9,7 @@ permalink: /2015/01/23/sharing-your-location-privately/
 categories:
   - News
 tags:
-  - android
+  - Android
   - anonymity
   - facebook
   - google

@@ -5,7 +5,7 @@ categories:
   - Development
   - News
 tags:
-  - android
+  - Android
   - Exodus Privacy
   - feature extraction
   - machine learning

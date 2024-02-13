@@ -9,7 +9,7 @@ permalink: /2016/06/02/building-the-most-private-app-store/
 categories:
   - News
 tags:
-  - android
+  - Android
   - anonymity
   - bazaar
   - debian

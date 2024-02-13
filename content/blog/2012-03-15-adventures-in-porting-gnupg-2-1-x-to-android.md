@@ -10,7 +10,7 @@ categories:
   - Development
   - News
 tags:
-  - android
+  - Android
   - gnu privacy guard
   - gnupg
   - gpg

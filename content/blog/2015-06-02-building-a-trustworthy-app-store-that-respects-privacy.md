@@ -9,7 +9,7 @@ permalink: /2015/06/02/building-a-trustworthy-app-store-that-respects-privacy/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - cafebazaar
   - cnnic

@@ -10,7 +10,7 @@ categories:
   - News
   - Research
 tags:
-  - android
+  - Android
   - bazaar
   - F-Droid
   - fdroid

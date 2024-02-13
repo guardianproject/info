@@ -7,7 +7,7 @@ permalink: /2019/04/18/exploring-possibilities-of-pluggable-transports-on-androi
 categories:
   - News
 tags:
-  - android
+  - Android
   - circumvention
   - pluggable transports
 

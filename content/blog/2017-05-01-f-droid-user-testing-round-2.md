@@ -11,7 +11,7 @@ categories:
   - Research
   - Uncategorized
 tags:
-  - android
+  - Android
   - bazaar
   - F-Droid
   - fdroid

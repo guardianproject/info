@@ -9,7 +9,7 @@ permalink: /2017/05/15/research-report-on-developer-challenges/
 categories:
   - Uncategorized
 tags:
-  - android
+  - Android
   - anonymity
   - bazaar
   - F-Droid

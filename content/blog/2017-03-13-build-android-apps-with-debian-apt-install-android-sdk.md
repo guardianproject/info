@@ -9,7 +9,7 @@ permalink: /2017/03/13/build-android-apps-with-debian-apt-install-android-sdk/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - debian
   - howto

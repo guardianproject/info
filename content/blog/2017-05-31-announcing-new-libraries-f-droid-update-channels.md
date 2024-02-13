@@ -9,7 +9,7 @@ permalink: /2017/05/31/announcing-new-libraries-f-droid-update-channels/
 categories:
   - News
 tags:
-  - android
+  - Android
   - bazaar
   - distribution
   - F-Droid

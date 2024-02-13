@@ -9,7 +9,7 @@ permalink: /2012/04/03/transparent-encrypted-virtual-disks-for-android-we-call-i
 categories:
   - Development
 tags:
-  - android
+  - Android
   - encryption
   - full disk encryption
   - fuse

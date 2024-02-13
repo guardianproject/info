@@ -9,7 +9,7 @@ permalink: /2010/07/29/orbot-update-new-setup-wizard-at-startup/
 categories:
   - Development
 tags:
-  - android
+  - Android
   - anonymity
   - open-source
   - orbot

@@ -12,7 +12,7 @@ categories:
   - HowTo
   - News
 tags:
-  - android
+  - Android
   - apg
   - encryption
   - openkeychain

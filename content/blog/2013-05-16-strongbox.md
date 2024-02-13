@@ -10,7 +10,7 @@ bigimg: [{src: "/wp-content/uploads/2013/05/Screen-shot-2013-05-16-at-5.50.31-PM
 categories:
   - News
 tags:
-  - android
+  - Android
   - darknet
   - howto
   - journalism

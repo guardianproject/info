@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Censorship on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/censorship/</link>
+    <description>Recent content in Censorship on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/censorship/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>
+
+&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all
+sorts of issues. That&amp;rsquo;s why we took special interest in
+&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a
+JavaScript library for decentralized content delivery in web-browsers and
+markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient
+primarily in the context of static websites.  While it should work with dynamic
+websites too, that was out of focus for us.&lt;/p&gt;
+
+&lt;p&gt;Under the hood LibResilient uses &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API&#34;&gt;Web
+Workers&lt;/a&gt;.
+Technically it&amp;rsquo;s a piece of JavaScript that websites can install into the
+browsers of their visitors.  I like to compare it to cookies, except that it&amp;rsquo;s
+not just data but actually a program for manipulating your network request. The
+main purpose of Web Workers is to enable web apps to optimize their network
+connections. Web Workers are pretty low-level API.&lt;/p&gt;
+
+&lt;p&gt;LibResilient delivers implementations for common use-cases on top of Web
+Workers in the form of plug-ins.  We&amp;rsquo;ve looked at the 3 most basic of those
+plug-ins.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;fetch plugin&lt;/em&gt; - routes network requests directly to the web-server as if
+LibResilient wasn&amp;rsquo;t present.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;cache plugin&lt;/em&gt; - stores HTML, JavaScript, images and other files inside
+the browsers local storage&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;alt-fetch plugin&lt;/em&gt; - allows to configure a list of website mirrors and tries
+to fetch files from there&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These enable us to keep a website online and even update it if the main
+web-server running that site has an outage.  It&amp;rsquo;s key that visitors must have
+managed to load the website at least once before.  Only than can LibResilient
+work it&amp;rsquo;s magic and install itself and the list of site mirrors into the users
+browser.  This solution doesn&amp;rsquo;t work for first time visitors, during the period
+of an outage.&lt;/p&gt;
+
+&lt;p&gt;Of course this requires to run website mirrors. Static websites really shine in
+this regard, because they are very easy to mirror and static web-space is quite
+inexpensive these days.&lt;/p&gt;
+
+&lt;p&gt;We also looked into using IPFS Gateways as mirrors.  To accomplish this we had
+to first add and pin websites to IPFS.  Next we had to publish the pinned copy
+of the site to IPNS.  Then we could use the IPNS-key-fingerprint to use every
+public IPFS gateway as mirror.  However, public gateways tend to require quite
+long to answer requests, which is bad for LibResilient because it uses
+relatively short timeouts to fail-over between mirrors.  So to get some sense
+of reliability, paid IPFS gateways guaranteed to pin your website are a more
+stable choice.&lt;/p&gt;
+
+&lt;h1 id=&#34;publishing-libresilient-to-ipfs&#34;&gt;Publishing LibResilient to IPFS&lt;/h1&gt;
+
+&lt;p&gt;This is a for publishing a static LibResilient enabled website to IPFS.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;requirements&lt;/h2&gt;
+
+&lt;p&gt;You will need VPS, or some other kind of tiny but always online server to make
+your data available on IPFS. This guide assumes that your server is running some
+flavor of GNU/Linux. It also assumes that you are familiar with the concept of
+static websites and that your site is already hosted on the internet.&lt;/p&gt;
+
+&lt;p&gt;Mind that IPFS can be very slow, if you run into timeouts don&amp;rsquo;t give up. Just
+wait a few minutes and give it a few more retries, it will work eventually.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-ipfs&#34;&gt;Install IPFS&lt;/h2&gt;
+
+&lt;p&gt;This short snipped will install &lt;code&gt;kubo&lt;/code&gt; the official IPFS binary build on your
+server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://dist.ipfs.tech/kubo/v0.18.1/kubo_v0.18.1_linux-amd64.tar.gz
+echo &amp;quot;15d42b47b8529edda3e8e2d6fe6c14958d939c4efd07dea02e204743e05216f3 kubo_v0.18.1_linux-amd64.tar.gz&amp;quot; \
+    | sha256sum --check
+tar -xzf kubo_v0.18.1_linux-amd64.tar.gz
+mv kubo/ipfs /usr/local/bin/ipfs
+rm -rf kubo kubo_v0.18.1_linux-amd64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setup kubo daemon to always run in background as systemd service. (Note: this
+is tested for Debian and might require different steps on other GNU/Linux
+distributions.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adduser ipfs --gecos &#39;&#39; --disabled-password
+su ipfs -c &#39;/usr/local/bin/ipfs init --profile server&#39;
+
+cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/ipfs-daemon.service
+[Unit]
+Description=IPFS Daemon
+
+[Service]
+Restart=always
+User=ipfs
+group=ipfs
+WorkingDirectory=/home/ipfs
+ExecStart=/usr/local/bin/ipfs daemon
+
+[Install]
+WantedBy=default.target
+EOF
+
+systemctl enable ipfs-daemon.service
+systemctl start ipfs-daemon.service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tip: If you&amp;rsquo;re behind a firewall or NAT make sure to open ports 4001/tcp and
+4001/udp so IPFS can connect to the internet.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-site-to-ipfs&#34;&gt;Publish site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Next we&amp;rsquo;ll publish the website to IPFS. You&amp;rsquo;ll need to copy your static website
+to the IPFS server. For this guide we&amp;rsquo;ll assume there&amp;rsquo;s a copy of your website
+at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The last line of the output of this command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;added QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck website
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy the CID and pin it. Pinning means that your IPFS daemon will never
+automatically delete these files to free up memeory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs pin add QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s time to make make it available via IPNS. So we need to generate an
+IPNS key. This key will serve as address for accessing the website using IPFS.
+It also serves as key for publishing updates to your website.&lt;/p&gt;
+
+&lt;p&gt;NOTE: all commands in this section are to be executed by &lt;code&gt;ipfs&lt;/code&gt; user.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key gen --type=rsa --size=2048 example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is how you can list your keys:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key list -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the relevant output should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;k2k4r8ls72x686fmm2s0px4plejbHkhOm9uuzrxwedsaag1w72ene5rw     example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The hash of the key, on the left side is going to be the IPNS name of your
+website. It&amp;rsquo;s a fixed name that doesn&amp;rsquo;t change even when you update your site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs name publish --key=example-site QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When your IPFS node is working and could connect to some peers, your site
+should now be accessible using IPNS. Although publishing may take several
+minutes. There are so-called &lt;a href=&#34;https://ipfs.github.io/public-gateway-checker/&#34;&gt;public
+gateways&lt;/a&gt; which allow users to
+access IPFS and IPNS content using http. E.g.:
+&lt;a href=&#34;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&#34;&gt;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also use &lt;code&gt;ipfs&lt;/code&gt; to check if the files got ingested correctly. E.g.:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs ls /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw
+ipfs cat /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;update-libresilient-config-to-include-ipns-link&#34;&gt;Update LibResilient config to include IPNS link&lt;/h3&gt;
+
+&lt;p&gt;Now that your site is available on IPNS you can finally add it to your
+LibResilient &lt;code&gt;config.json&lt;/code&gt;. You can actually add as many gateways as you&amp;rsquo;d
+like with LibResilient&amp;rsquo;s &lt;code&gt;alt-fetch&lt;/code&gt; plugin. Here&amp;rsquo;s a simple example where we
+added two gateways:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;plugins&amp;quot;: [{
+    &amp;quot;name&amp;quot;: &amp;quot;fetch&amp;quot;
+  }, {
+    &amp;quot;name&amp;quot;: &amp;quot;alt-fetch&amp;quot;,
+    &amp;quot;endpoints&amp;quot;: [
+      &amp;quot;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+      &amp;quot;https://ipfs.io/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+    ]
+  }],
+  &amp;quot;loggedComponents&amp;quot;: [&amp;quot;service-worker&amp;quot;, &amp;quot;fetch&amp;quot;, &amp;quot;alt-fetch&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;NOTE: We have to use IPNS, because as you can see we need write the IPFS
+address to a file which itself is part of the website. With IPNS updating the
+site also won&amp;rsquo;t require changing &lt;code&gt;config.json&lt;/code&gt; for every update.&lt;/p&gt;
+
+&lt;p&gt;When you&amp;rsquo;ve made your pick of IPFS gateways and added them to your
+&lt;code&gt;config.json&lt;/code&gt; you can publish it to your web-server.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-updated-site-to-ipfs&#34;&gt;Publish updated site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Now you also need to publish the change to IPFS. Again start by copying the
+site to your IPFS server. We again assume the updated copy of your static
+website is located at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next we can unpin the old version of the website. (Tip: you can list pinned
+files and directories with: &lt;code&gt;ipfs pin ls&lt;/code&gt; pinned directories will be marked as
+&lt;code&gt;recursive&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs unpin QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then we can add the updated site to IPFS and publish it to IPNS again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+ipfs name publish --key=example-site QmcoZrn004DGdRvuZWf1pdcpMQXuXghjCUy7ve5Og45dNU 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can repeat this step whenever you want to publish an updated version of
+your static website.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Serving Websites Privately Over Tor Onion Services (From Your Laptop!)</title>
+      <link>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</guid>
+      <description>
+
+&lt;p&gt;In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – &lt;a href=&#34;https://community.torproject.org/onion-services/&#34;&gt;Onion Services&lt;/a&gt;. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout. But to do so, one needs to know how to set up an Onion Service.&lt;/p&gt;
+
+&lt;p&gt;While the following instructions are specific to a Mac, with minor differences this can be applied to other devices and systems.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-1-download-and-set-up-the-tor-service&#34;&gt;Step 1 → Download and Set Up the Tor Service&lt;/h2&gt;
+
+&lt;p&gt;While there are multiple ways to download and set up tor, the simplest is to follow the instructions at &lt;a href=&#34;https://torproject.org/download/&#34;&gt;https://torproject.org/download/&lt;/a&gt; that goes along with the operating system you are using.&lt;/p&gt;
+
+&lt;p&gt;For further information, you can follow the Tor installation guide: &lt;a href=&#34;https://community.torproject.org/onion-services/setup/install/&#34;&gt;https://community.torproject.org/onion-services/setup/install/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have successfully downloaded tor, to check if tor is running you can either open the browser and establish connection or use commands to check its success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/opt/homebrew/bin/brew services start tor
+/opt/homebrew/bin/brew services stop tor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Please note, in this step you are running the tor service on your machine to host the onion server. In later steps, we will be using the Tor Browser app to view the site remotely.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-2-download-and-set-up-a-web-server-optional-during-development-but-required-for-production&#34;&gt;Step 2 → Download and Set Up a Web Server (Optional during Development, but required for Production)&lt;/h2&gt;
+
+&lt;p&gt;In order to set up a website or some content for a client to access, we need to set up a local web server. A web server is the computer software and underlying hardware that communicates with a web browser using HTTP to distribute web pages to the client who requested it, with local web server examples including Apache and Nginx. The reason for this is that when it comes to the finished product, you can copy the fields into the apache web directory and that would be your web server&lt;/p&gt;
+
+&lt;p&gt;However, for websites that we are building on npm, as npm has its own built in web server for development, it has its own local host web server ready. Hence, we can just point our hidden service web server at that, for testing and development. Once we arrive at production, we will use the apache or another web server to host our local service.&lt;/p&gt;
+
+&lt;p&gt;To install these web servers on MacOS can be difficult, so specifically for this operating system, it is best to install (or update) the homebrew package, which will then allow you to run the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/opt/homebrew/bin/brew install apache
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have having trouble choosing a local web server or downloading it, a useful guidance tool is: &lt;a href=&#34;https://www.javatpoint.com/how-to-install-apache-on-mac&#34;&gt;https://www.javatpoint.com/how-to-install-apache-on-mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The default location where web servers run is on &lt;a href=&#34;https://localhost:80&#34;&gt;https://localhost:80&lt;/a&gt;. Hence, once you have downloaded the web server software, to check if it is working, open your browser and go to &lt;a href=&#34;https://localhost:80&#34;&gt;https://localhost:80&lt;/a&gt;. If you have successfully downloaded the web server software, you will be notified of this success.&lt;/p&gt;
+
+&lt;p&gt;For further steps, or multiple uses you may need to start or stop the web server software which can be done using the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apachectl start
+sudo apachectl stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-3-modify-your-tor-configuration-file&#34;&gt;Step 3 → Modify your Tor Configuration File&lt;/h2&gt;
+
+&lt;p&gt;In order to create the onion service link, you must mody the the tor configuration file (torrc) by adding the following lines and save the changes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServiceDir /var/lib/tor/my_website/
+HiddenServicePort 80 127.0.0.1:80
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The HiddenServiceDir line is to inform tor of where to save the onion v3 service link, hence you must modify this line to point to a file whose permissions include both readable and writable.
+The HiddenServicePort line is informing Tor of the port people visiting your Onion Service will be using, which is currently set as localhost.&lt;/p&gt;
+
+&lt;p&gt;While the torrc file is saved in different places depending on the operating system being used, for MacOS, the file can be found at this filepath:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /Library/”Application Support”/TorBrowser-Data/Tor/ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-4-create-the-hidden-service-folder-optional&#34;&gt;Step 4 → Create the Hidden Service Folder (Optional)&lt;/h2&gt;
+
+&lt;p&gt;While this step is not necessary, doing this reduces the chance of problems later on.&lt;/p&gt;
+
+&lt;p&gt;Once you have modified your tor configuration file, you should create the HiddenServiceDir directory where Tor will create the hostname file, which will contain your new onion v3 service address. For MacOS, this file should be created in the tor folder which can be found with this file path:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServiceDir /opt/homebrew/etc/tor/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The folder should be given the permissions to allow tor to read and write to it, which can be done by calling:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;filename chmod 700 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-5-restart-tor-and-check-for-the-onion-service-link&#34;&gt;Step 5 → Restart Tor and Check for the Onion Service Link&lt;/h2&gt;
+
+&lt;p&gt;Once you have restarted Tor, it should have created the file hostname with the new onion v3 service in the directory which you pointed it to with the HiddenServiceDir line in your torrc.
+If it has not, potential areas to check for faults are:
+- The HiddenServiceDir directory’s file permissions
+- If Tor was properly restarted
+- The torrc file modifications and if there are any incorrect file paths or mistakes
+- The log files which you can find using &lt;a href=&#34;https://support.torproject.org/#Logs&#34;&gt;https://support.torproject.org/#Logs&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;step-6-test-your-onion-service&#34;&gt;Step 6 → Test Your Onion Service&lt;/h2&gt;
+
+&lt;p&gt;If you have successfully acquired your onion service link, you can then run it on Tor and it should direct you to the page which has been initially configured on apache (the same page we saw at localhost:80). If not, potential problems could include:
+- Your web server software is no longer running and needs to be started
+- The page is found at a different port
+- One important thing to remember is that once you have gotten your onion address, a new one will not be generated, this is your permanent link whose content can be manipulated.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-7-build-the-file-web-page-being-used&#34;&gt;Step 7 → Build the File/Web Page Being Used&lt;/h2&gt;
+
+&lt;p&gt;Once your onion service link is up and running, it is now time to display on it the html files you intend to share. To do so, if the files are a Node app or a progressive web app, and not a static html page or website, it is important to build the code first by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm run build 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A potential problem could be that when you run a web service, especially a Node app or a progessive web app, it renders links for the domain it thinks it is at, not the one you intend it to be at. For a typical static website it wouldn&amp;rsquo;t matter because it is a static set of pages; however, when using a live node application, it&amp;rsquo;s helpful to know what the public address is.&lt;/p&gt;
+
+&lt;p&gt;To fix this problem, to your code you should add the following line which points directly to your new onion service address, like the example here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public:’2xx7phs7hw5fduqulcrthkmfaesxbsy5om5xpkpsn4y54mnbj4b6ekd.onion’
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-8-run-the-file-and-test-your-onion-service&#34;&gt;Step 8 → Run the File and Test your Onion Service&lt;/h2&gt;
+
+&lt;p&gt;1- For this step, there are two potential methods depending on the type of content you intend to display on your Onion Service. For html documents or simple websites, the simplest method to run the file is to copy it into the folder which localhost:80 (or whichever port you are using) is connected to. For MacOS, the folder can be found at:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/Library/WebServer/Documents
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To copy, the command to run is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo cp /path/from /path/to
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once that is done, simply restart your Tor browser, head to your new onion service address and your html file can be found there.&lt;/p&gt;
+
+&lt;p&gt;2- To run a Node app or progress website, first the file needs to be running on your local server. To do so, one tip is to specify the port you intend to run it on, especially other ports that are running other websites or html content. For that, run the following command (changing it to point to the port you are using):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm run service – –port 4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To connect to this npm web server on port 4000 instead of apache, we need to modify the onion service configuration in the torrc:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServicePort 80 127.0.0.1:4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;accessing-the-onion-site&#34;&gt;Accessing the Onion site&lt;/h2&gt;
+
+&lt;p&gt;Once the website is running on localhost at the port you have specified, restart your Tor service. Then, navigate to your new onion service address where your website is now live for all the people you have shared your secure link with. You can use any Tor-enabled browser, such as &lt;a href=&#34;https://www.torproject.org/download/&#34;&gt;Tor Browser for Desktops&lt;/a&gt;, &lt;a href=&#34;https://www.torproject.org/download/&#34;&gt;Tor Browser for Android&lt;/a&gt;, or &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser for iOS&lt;/a&gt; devices. You can also use a Tor-enabled vpn like &lt;a href=&#34;https://orbot.app&#34;&gt;Orbot for Android and iOS&lt;/a&gt;, to allow any browser, like Chrome or Brave, to access an onion address.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Jitsi, ostel.co and ISP censorship</title>
+      <link>https://guardianproject.github.io/info/2013/07/22/jitsi-ostel.co-and-isp-censorship/</link>
+      <pubDate>Mon, 22 Jul 2013 15:33:44 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/22/jitsi-ostel.co-and-isp-censorship/</guid>
+      <description>&lt;p&gt;Earlier last week n8fr8 suspected something changed on the ostel.co server, due to many users emailing support specifically about Jitsi connectivity to ostel.co. The common question was “why did it work a few weeks ago and now it doesn’t anymore?”&lt;/p&gt;
+
+&lt;p&gt;The tl;dr follows, skip to keyword CONCLUSION to hear only the punch line.&lt;/p&gt;
+
+&lt;p&gt;To support n8fr8’s hypothesis, there was a small change to the server but I wan’t convinced it effected anything since all my clients continued to work properly, including Jitsi. Obviously &lt;em&gt;something&lt;/em&gt; had changed but none of us knew what it was. After some testing we discovered the problem was related to insecure connections from Jitsi to UDP port 5060 on ostel.co. Secure connections (on TCP port 5061) continued to work as expected.&lt;/p&gt;
+
+&lt;p&gt;To make matters more confusing, I could register and make calls with two different clients (CSipSimple and Linphone) on the same network (my home ISP, Verizon FiOS) using an insecure connection to ostel.co on UDP port 5060.&lt;/p&gt;
+
+&lt;p&gt;At this point I was like WTF?&lt;/p&gt;
+
+&lt;p&gt;I went back to the server, diffed all the configs, checked server versions, connected with every client I could find that would run on any of my computers. The only change was a Kamailio upgrade from 4.0.1 to 4.0.2. A minor point release. The problem with Jitsi remained. What could the server be doing to this poor client?&lt;/p&gt;
+
+&lt;p&gt;I did a packet trace on the ostel.co server’s public network interface, filtered to dump packets only on UDP port 5060 that match my SIP username. I opened Jitsi and things got interesting. For the curious, here’s the utility and options I used. If you are new to operating a SIP network, ngrep is an excellent tool for debugging.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ngrep -d eth0 -t -p -W byline foo port 5060&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll include an excerpt (I’ve included only the relevant headers for this issue) of the initial request from Jitsi. IP addresses and usernames have been changed to protect the innocent.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;U 2013/07/19 22:17:34.920749 0.0.0.0:5060 -&amp;gt; 66.151.32.200:5060&amp;lt;br /&amp;gt;
+REGISTER sip:ostel.co SIP/2.0.&amp;lt;br /&amp;gt;
+CSeq: 1 REGISTER.&amp;lt;br /&amp;gt;
+From: &amp;quot;foo&amp;quot; &amp;lt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&amp;gt;;tag=1eb3467e.&amp;lt;br /&amp;gt;
+To: &amp;quot;foo&amp;quot; &amp;lt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&amp;gt;.&amp;lt;br /&amp;gt;
+Via: SIP/2.0/UDP 0.0.0.0:49152;branch=z9hG4bK-393535-2269e43afef0b312554eb419a8d0540e.&amp;lt;br /&amp;gt;
+User-Agent: Jitsi2.3.4752Linux.&amp;lt;br /&amp;gt;
+Contact: &amp;quot;foo&amp;quot; &amp;lt;sip:foo@0.0.0.0:49152;transport=udp;registering_acc=ostel_co&amp;gt;;expires=600.&amp;lt;br /&amp;gt;
+.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;U 2013/07/19 22:17:34.921155 66.151.32.200:5060 -&amp;gt; 0.0.0.0:5060&lt;br /&gt;
+SIP/2.0 401 Unauthorized.&lt;br /&gt;
+CSeq: 1 REGISTER.&lt;br /&gt;
+From: “foo” &lt;a href=&#34;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&#34;&gt;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&lt;/a&gt;;tag=1eb3467e.&lt;br /&gt;
+To: “foo” &lt;a href=&#34;sip:foo@&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&#34;&gt;sip:foo@&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&lt;/a&gt;;tag=e01f0de2cdfebbeefc5ff0c8eabbb8b3.2f1f.&lt;br /&gt;
+Via: SIP/2.0/UDP 0.0.0.0:49152;branch=z9hG4bK-393535-2269e43afef0b312554eb419a8d0540e;rport=5060.&lt;br /&gt;
+WWW-Authenticate: Digest realm=”ostel.co”, nonce=”Uen0alHp8z4d6ePDl83RtMwARltAxzQu”, qop=”auth”.&lt;br /&gt;
+Server: kamailio (4.0.2 (x86_64/linux)).&lt;/p&gt;
+
+&lt;p&gt;If you read the response, you’ll see Kamailio sent 401 Unauthorized. This is normal for SIP authentication. A second client request should follow it, which should contain an Authorization header with an md5 and a nonce. When Kamailio receives this request, checks the auth database and sends a 200 OK response, the client is authenticated.&lt;/p&gt;
+
+&lt;p&gt;The SIP dialog looks good but Jitsi continues not to register. The dialog flow is cut off after the 401 Unauthorized response. It’s almost like something has blocked the response to the client.&lt;/p&gt;
+
+&lt;p&gt;Since I could register Linphone using the same account, I did the same trace for that client. Here’s the excerpt.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;U 2013/07/19 22:33:18.372770 0.0.0.0:42680 -&amp;gt; 66.151.32.200:5060&amp;lt;br /&amp;gt;
+REGISTER sip:ostel.co SIP/2.0.&amp;lt;br /&amp;gt;
+Via: SIP/2.0/UDP 0.0.0.0:49153;rport;branch=z9hG4bK359459505.&amp;lt;br /&amp;gt;
+From: &amp;lt;sip:f&amp;amp;#x6f;o&amp;amp;#x40;&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;&amp;amp;#x2e;c&amp;amp;#x6f;&amp;gt;;tag=142131416.&amp;lt;br /&amp;gt;
+To: &amp;lt;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&amp;gt;.&amp;lt;br /&amp;gt;
+CSeq: 3 REGISTER.&amp;lt;br /&amp;gt;
+Contact: &amp;lt;sip:foo@0.0.0.0:49153;line=65da8bffcabe8c4&amp;gt;.&amp;lt;br /&amp;gt;
+User-Agent: LinphoneAndroid/2.1.2-1-g23b7fc0 (eXosip2/3.6.0).&amp;lt;br /&amp;gt;
+.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;U 2013/07/19 22:33:18.373112 66.151.32.200:5060 -&amp;gt; 0.0.0.0:42680&lt;br /&gt;
+SIP/2.0 401 Unauthorized.&lt;br /&gt;
+Via: SIP/2.0/UDP 0.0.0.0:49153;rport=42680;branch=z9hG4bK359459505.&lt;br /&gt;
+From: &lt;a href=&#34;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&#34;&gt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&lt;/a&gt;;tag=142131416.&lt;br /&gt;
+To: &lt;a href=&#34;sip:foo&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;el.c&amp;amp;#x6f;&#34;&gt;sip:foo&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;el.c&amp;amp;#x6f;&lt;/a&gt;;tag=e01f0de2cdfebbeefc5ff0c8eabbb8b3.4065.&lt;br /&gt;
+CSeq: 3 REGISTER.&lt;br /&gt;
+WWW-Authenticate: Digest realm=”ostel.co”, nonce=”Uen4GlHp9u4FwHNY/uE1iQQNCfGHJiob”, qop=”auth”.&lt;br /&gt;
+Server: kamailio (4.0.2 (x86_64/linux)).&lt;/p&gt;
+
+&lt;p&gt;This 401 Unauthorized response was received by the client and the follow up request with the Authorization header was sent with the correct digest. Linphone registered. I made a call. Everything worked fine. Indeed WTF?&lt;/p&gt;
+
+&lt;p&gt;I stared at these traces for a while to get a clue. Look again at the first line of the request from Jitsi. You’ll see a timestamp followed by two IP:port pairs. Notice the port on the first IP is 5060 and the port on the second IP is also 5060. This means that the &lt;strong&gt;source port&lt;/strong&gt; used by Jitsi on my home network is UDP port 5060. In order for a response to come back to Jitsi, it must enter my network on the same port it exited. Now read the top line of the response from Kamailio. Indeed, the server sent the response to UDP port 5060.&lt;/p&gt;
+
+&lt;p&gt;Now look at the same flow for Linphone. There is a very different source port in that dialog. In this case, Kamailio sent the response to UDP port 42680 and Linphone received it. Also notice the IP address used by Kamailio as the destination of the response is the same one in the dialog from Jitsi.&lt;/p&gt;
+
+&lt;p&gt;The question remained, why can’t Jitsi get the same kind of SIP response on UDP port 5060? Why is Jitsi using a single source port for outgoing traffic anyway? That value can be dynamic. I configured Jitsi to use a different port for insecure SIP. It has an advanced configuration for SIP with the key “SIP client port”. I set this to 5062 (5061 is conventionally used for secure SIP traffic so I incremented by 2) and tried to register again.&lt;/p&gt;
+
+&lt;p&gt;SUCCESSSSSSSSSSSS!&lt;/p&gt;
+
+&lt;p&gt;To be thorough, I changed Jitsi’s SIP port again to a 5 digit number I randomly typed on my keyboard without looking.&lt;/p&gt;
+
+&lt;p&gt;SUCCESSSSSSSSSSSS!&lt;/p&gt;
+
+&lt;p&gt;So if Jitsi can register to Kamailio on any port other than UDP port 5060, WTF is going on? I had a suspicion. I tried one more test before I called it. I configured Jitsi to connect on TCP port 5060. It registered successfully. Now I know what’s going on. I have a sad 🙁&lt;/p&gt;
+
+&lt;p&gt;CONCLUSION&lt;/p&gt;
+
+&lt;p&gt;My ISP, Verizon FiOS, has a firewall running somewhere upstream (it could be on the router they provided, I haven’t checked yet) that blocks incoming UDP traffic to port 5060. This probably falls under their TOS section which forbids “running servers” since Verizon provides voice services for an additional fee on top of data service, despite both running over the same fiber connection to my house. It seems like Verizon doesn’t want their data-only customers to get in the way of that sweet cheddar delivery each month in exchange for “phone service”.&lt;/p&gt;
+
+&lt;p&gt;This sucks on two levels.&lt;/p&gt;
+
+&lt;p&gt;LEVEL 1&lt;/p&gt;
+
+&lt;p&gt;Why is my ISP censoring my incoming traffic when I have 5 mbps of incoming bandwidth? I assume the answer is “because they can.” *desolate frowny face*&lt;/p&gt;
+
+&lt;p&gt;LEVEL 2&lt;/p&gt;
+
+&lt;p&gt;Why doesn’t Jitsi use a dynamic source port for SIP requests? I assume the answer is “Jitsi is open source, why don’t I change this and send a patch upstream?”&lt;/p&gt;
+
+&lt;p&gt;Both levels are formidable challenges to overcome. Convincing Verizon to play nice on the Internet feels like a vanity project. I’m writing that off. To make a change to the SIP stack in Jitsi is well within the area of the GP team’s expertise, myself included but it’s not a trivial undertaking. Since this is a default configuration change there is probably a reason upstream devs made this choice so in addition to the programming work there’s the work to convince the developers this would be a change worth a new release.&lt;/p&gt;
+
+&lt;p&gt;Since this is specific to Jitsi, I’m going to follow up with the developers and see if I missed anything. Stay tuned for part two.&lt;/p&gt;
+
+&lt;p&gt;Thanks for listening. Stay safe!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>
+
+&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here at Guardian, security is always our #1 priority. We owe that to our users who rely on us to keep them safe in places like Syria or Iran. But the time we spend on encryption is wasted if users don’t like using our tools, or can’t figure out how they work. We want to make security apps that are enjoyable and easy to use everyday, and don’t take a PHD to understand.&lt;/p&gt;
+
+&lt;p&gt;Activists in Iran and Syria know firsthand how important technologies like Tor and VPNs are for staying safe online. Our friends and neighbors might not be living under a repressive dictatorship, but that doesn’t mean they couldn’t use a little digital security in their lives. Maybe your nephew wants to get past the block on Facebook at school, or your co-worker wants to watch March Madness at work (make sure she gets that decoy spreadsheet ready). Maybe your friend just wants to send his wife a few…private messages, and he’d rather not have them stored by Google or Verizon. These people might not be pros, but they’re curious and happy to poke around their technology. With a little fun and interactive guidance, they can be well on their way to becoming a power user. Everyone starts somewhere!&lt;/p&gt;
+
+&lt;p&gt;We want to make life safer and easier for at-risk activists and everyday people alike. That’s why we make accessible and straightforward guides to help you quickly and easily get past censors, internet police, or the office IT department.&lt;/p&gt;
+
+&lt;h1 id=&#34;gibberbot-tutorial&#34;&gt;&lt;strong&gt;Gibberbot Tutorial&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Our newest tutorial is for our secure chat app, &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&amp;feature=search_result&#34; target=&#34;_blank&#34;&gt;Gibberbot&lt;/a&gt;. With your Android phone in one hand and the &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;Gibberbot Tutorial&lt;/a&gt; in the other, you can be chatting securely on Google or Facebook chat in minutes! But Google and Facebook can’t even tell what you’re talking about. It’s also more convenient to have all of your chat apps rolled into one so that it doesn’t matter where your friends message you, it still goes to the same place. Gibberbot works even if someone is trying to monitor or block your phone’s communications. If you know another language and would like to contribute, &lt;a title=&#34;Gibberbot Tutorial Transifex Translations&#34; href=&#34;https://www.transifex.com/projects/p/gibberbot-tutorial/&#34; target=&#34;_blank&#34;&gt;we’d love your help translating the tutorial (we’ve got English and Tibetan covered)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_3291&#34; style=&#34;width: 251px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-3291&#34; class=&#34; wp-image-3291&#34; alt=&#34;galaxy5&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/02/galaxy5.png&#34; width=&#34;241&#34; height=&#34;361&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-3291&#34; class=&#34;wp-caption-text&#34;&gt;
+    So you want to chat securely?
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;p&gt;
+     
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;h1&gt;
+    &lt;strong&gt;Orbot Tutorial&lt;/strong&gt;
+  &lt;/h1&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    With our Android app Orbot, browsing the web securely and safely through Tor has been a piece of cake for a while now. But we just created &lt;a title=&#34;How to Orbot Tutorial&#34; href=&#34;https://guardianproject.info/howto/browsefreely&#34; target=&#34;_blank&#34;&gt;an interactive tutorial to get you started&lt;/a&gt; and show how easy it is circumvent censorship, even if the Google Play Store is blocking direct access to our app.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    The tools themselves are getting smarter too. A new tool from &lt;a title=&#34;Tor Project&#34; href=&#34;https://www.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor&lt;/a&gt;, called &lt;a title=&#34;Tor Project Obfsproxy&#34; href=&#34;http://www.torproject.org/projects/obfsproxy.html.en&#34; target=&#34;_blank&#34;&gt;Pluggable Transports&lt;/a&gt;, hides your Tor traffic to look like regular Internet traffic, making it even easier for Tor users to stay ahead of surveillance and censorship. To use this new tool with Orbot, just follow the instructions on &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/04/How-to-browse-freely-on-your-phone-if-your-internet-is-blocked.pdf&#34; target=&#34;_blank&#34;&gt;our new one-page guide&lt;/a&gt; (and &lt;a title=&#34;How to browse freely on your phone if your internet is blocked - Farsi&#34; href=&#34;https://guardianproject.info/wp-content/uploads/2013/04/How-to-browse-freely-on-your-phone-if-your-internet-is-blocked-Farsi.pdf&#34; target=&#34;_blank&#34;&gt;in Farsi&lt;/a&gt;) and you’re all set! For a more in-depth guide to using Orbot, watch our &lt;a href=&#34;https://www.youtube.com/watch?v=Dcf5sh99ze0&#34;&gt;video tutorial&lt;/a&gt; (now in English and Arabic).
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_3585&#34; style=&#34;width: 250px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+    &lt;a href=&#34;https://guardianproject.info/howto/browsefreely&#34; target=&#34;_blank&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-3585&#34; class=&#34; wp-image-3585&#34; alt=&#34;orbot galaxy s3&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/04/galaxy15.png&#34; width=&#34;240&#34; height=&#34;361&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/04/galaxy15.png 400w, https://guardianproject.info/wp-content/uploads/2013/04/galaxy15-199x300.png 199w&#34; sizes=&#34;(max-width: 240px) 100vw, 240px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p id=&amp;quot;caption-attachment-3585&amp;quot; class=&amp;quot;wp-caption-text&amp;quot;&amp;gt;
+  So you want to escape censorship?
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;p&gt;
+      As we continue to grow our team and create new tools, we need your feedback!  Please tell us what we can do to go from security awareness training to a full-on security awareness party. Feel free to leave a comment on this post or tell us how we can make things easier through our &lt;a href=&#34;https://guardianproject.info/contact/&#34;&gt;contact page&lt;/a&gt;. You can also let us know about any upcoming parties that we should be attending.
+    &lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
+  &amp;lt;i&amp;gt;This post is partially a response to Bruce Schneier’s recent piece: &amp;lt;a title=&amp;quot;Schneier Security Awareness Training&amp;quot; href=&amp;quot;https://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&amp;quot;&amp;gt;Security Awareness Training&amp;lt;/a&amp;gt;&amp;lt;/i&amp;gt;.
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

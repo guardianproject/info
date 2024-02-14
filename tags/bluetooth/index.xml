@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bluetooth on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/bluetooth/</link>
+    <description>Recent content in Bluetooth on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 18 Sep 2014 00:30:57 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/bluetooth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Question: central server, federated, or p2p? Answer: all!</title>
+      <link>https://guardianproject.github.io/info/2014/09/18/question-central-server-federated-or-p2p-answer-all/</link>
+      <pubDate>Thu, 18 Sep 2014 00:30:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/09/18/question-central-server-federated-or-p2p-answer-all/</guid>
+      <description>&lt;p&gt;There are many ideas of core architectures for providing digital services, each with their own advantages and disadvantages. I break it down along the lines of central servers, federated servers, and peer-to-peer, serverless systems.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12631&#34; style=&#34;width: 210px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12631&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png&#34; alt=&#34;a central service with clients connecting to it&#34; width=&#34;200&#34; height=&#34;207&#34; class=&#34;size-full wp-image-12631&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png 200w, https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_-100x103.png 100w, https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_-150x155.png 150w&#34; sizes=&#34;(max-width: 200px) 100vw, 200px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12631&#34; class=&#34;wp-caption-text&#34;&gt;
+    a central service with clients connecting to it
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Most big internet companies operate in effect as a central server (even though they are implemented differently). There is only facebook.com, there are no other services that can inter-operate with facebook.com. Have a single, central repo makes problems of finding the service and finding people within the service a lot easier. Once you are in Facebook, you just need to know the name of the person you want to contact and you are connected. The Facebook apps just need to talk to facebook.com, so the user does not need to know which service they are using in order to configure the app.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12633&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;http://www.bendevane.com/RDC2012/ians/2012/10/09/campsiteofthefutur/&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12633&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-300x170.png&#34; alt=&#34;email as federated service&#34; width=&#34;300&#34; height=&#34;170&#34; class=&#34;size-medium wp-image-12633&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-300x170.png 300w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-100x56.png 100w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-150x85.png 150w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-200x113.png 200w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-450x255.png 450w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-600x341.png 600w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-900x511.png 900w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582.png 1024w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12633&#34; class=&#34;wp-caption-text&#34;&gt;
+    email as federated service
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Email is a great example of a federated system. Each email provider acts like a central server, but then each of those central servers can easily talk to each other and exchange data. So fastmail.fm and gmail.com are both centralized services, but users do not need to know any extra information in order to exchange emails between the two services, or any other of the millions of email servers out there. A federated system provides a lot of the benefits of a centralized server with more flexibility. The downside is that federated services generally require more configuration to use them (though webmail makes that much less of an issue).&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12632&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12632&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram.png&#34; alt=&#34;a peer-to-peer network&#34; width=&#34;300&#34; height=&#34;245&#34; class=&#34;size-full wp-image-12632&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram.png 300w, https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram-100x81.png 100w, https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram-150x122.png 150w, https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram-200x163.png 200w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12632&#34; class=&#34;wp-caption-text&#34;&gt;
+    a peer-to-peer network
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Peer-to-peer systems can provide unique benefits of bandwidth efficiency as well as working around blockages in the internet. Sharing large files with thousands of people is quite expensive when using a central server, but with bittorrent, anyone can share large files to many many people using only a basic broadband connection.&lt;/p&gt;
+
+&lt;p&gt;Over the past year and a half of our Bazaar project, we have been thinking a lot about how to distribute apps to people who face a number of challenges. Each of these systems offers distinct advantages and disadvantages, so it is quite difficult to choose only one. Instead, we thought why not try to make a system that combines all three? Android’s APK app package format is a good format to work in this model because they are self-contained and containing a form of embedded identity in the app signature. So if you already have an Android app installed, then Android will enforce that only APKs signed by the same key as the installed app can be installed over it.&lt;/p&gt;
+
+&lt;p&gt;That means in theory, it does not matter where the APK came from as long as it has a valid signature. There are some details where it does matter, mostly related to exploits like “Master Key” that can inject code into an existing APK. The FDroid app repository signature has a similar property: once you trust the repository signing key, it does not matter how you got the repository files as long as the signature validates. This is a model proven by GNU/Linux distros like Debian. The repository metadata also provides a way to validate APKs have not been modified since they were added to the signed repository. Since both of these do not rely on the method of transport to prove their authenticity, this combination provides a great testbed for this idea of combining a central service, with decentralized servers and peer-to-peer distribution.&lt;/p&gt;
+
+&lt;p&gt;This work was all incorporated in the &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;FDroid&lt;/a&gt; app store for Android. The central f-droid.org app repository means that FDroid can deliver well over one thousand apps without any configuration on the part of the user. The “fdroidserver” developer tools means that anyone can set up their own repository of apps, and users can easily add that repository to FDroid. It is not quite zero configuration, but the process is not too difficult, and there is more we are planning to do to smooth out that process even more. This also provides a channel for users to get apps via “collateral freedom” techniques like using Amazon S3, Akamai, etc. to distribute files where many such services are filtered or blocked. Lastly, we made it possible to have the FDroid app itself act as an app repository, and other devices can connect to that repository using local WiFi, mesh, Bluetooth, and removable media.&lt;/p&gt;
+
+&lt;p&gt;This stuff is all implemented and included in the FDroid app and fdroidserver developer tools. The big remaining challenge is combining them all into a usable experience for people who do not know the technical details. This has been tested, discussed, sketched out, and there is a prototype implementation in the works. So I can end with a quick overview of some positive and negative observations about the various peer-to-peer connections that we experimented with:&lt;/p&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; Bluetooth is ubiquitous
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; very slow data rate
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; pairing is difficult
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; WiFi is very widespread
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; local connections are very fast
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; access points and proxies can block host-to-host connections
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; running access points on a device is not common nor easy
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; NFC makes Bluetooth very easy to use
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; NFC is not commonly used or available
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; NFC is far to slow and fiddly to be used as the data transmission medium
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; SD cards can move lots of data securely
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; not all devices have removable SD cards
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; swapping SD cards can be a fiddly process
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; swapping SD cards can not be automatic
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; USB thumb drives can move lots of data securely
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; they can be easily swapped between devices
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; swapping SD cards can not be automatic
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; not all devices support USB-OTG i.e. attached devices
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; USB-OTG is not widely used
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/mobile/</link>
+    <description>Recent content in Mobile on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 Feb 2017 09:45:11 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Build Your Own App Store: Android Media Distribution for Everyone</title>
+      <link>https://guardianproject.github.io/info/2017/02/22/build-your-own-app-store-android-media-distribution-for-everyone/</link>
+      <pubDate>Wed, 22 Feb 2017 09:45:11 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/02/22/build-your-own-app-store-android-media-distribution-for-everyone/</guid>
+      <description>
+
+&lt;p&gt;Most people get their Android apps from Google Play. It is usually the simplest and most secure option for them. But there are also many people who do not have access to Google Play. This might be due to lack of a proper internet connection or simply because Google Play is blocked within their country.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://f-droid.org/&#34;&gt;F-Droid&lt;/a&gt; project already offers &lt;a href=&#34;https://guardianproject.github.io/info/2015/06/02/building-a-trustworthy-app-store-that-respects-privacy/&#34;&gt;tools to create independent app distribution channels for Android apps&lt;/a&gt;. These tools are ready for production, but require expert knowledge and the command-line to be used. Now, we want to build upon this foundation and develop curation tools that can also be used by people with little technical knowledge, thus making the app distribution technology more broadly available.&lt;/p&gt;
+
+&lt;h3 id=&#34;use-cases&#34;&gt;Use-Cases&lt;/h3&gt;
+
+&lt;p&gt;The primary use-case we want to address is to circumvent app store censorship and blocking. But there are other use-cases that benefit from easy-to-setup app stores as well.&lt;/p&gt;
+
+&lt;p&gt;There are Android phones and tablets that do not have Google Play available, either because their manufacturer did not get a license from Google or because their owners prefer their phones Google-free.&lt;/p&gt;
+
+&lt;p&gt;Similar to Apple’s app store, the terms of service of Google Play exclude certain apps from being distributed and these are being removed on a regular basis. Having alternative means for distribution of apps is often the only way to bring those apps to people.&lt;/p&gt;
+
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+
+&lt;h4 id=&#34;core-features&#34;&gt;Core Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a new app repository&lt;/li&gt;
+&lt;li&gt;Add new apps/media to the repository&lt;/li&gt;
+&lt;li&gt;Update existing apps/media to the repository&lt;/li&gt;
+&lt;li&gt;Update the description and metadata of apps/media&lt;/li&gt;
+&lt;li&gt;Remove apps/media from the repository&lt;/li&gt;
+&lt;li&gt;Automatic generation of repository website with QR Code (and instructions)&lt;/li&gt;
+&lt;li&gt;Import apps directly from other repositories&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;optional-future-features&#34;&gt;Optional Future Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Archive apps/media to archive repository&lt;/li&gt;
+&lt;li&gt;Remove installed apps/media from user’s devices&lt;/li&gt;
+&lt;li&gt;Provide hosted web-app with user-management (Sign-Up, Lost Password) as a service&lt;/li&gt;
+&lt;li&gt;Allow multiple curators to manage the same repository&lt;/li&gt;
+&lt;li&gt;Import apps (and their description) from Google Play&lt;/li&gt;
+&lt;li&gt;Check for updates from Google Play periodically and automatically import them&lt;/li&gt;
+&lt;li&gt;Making the repository available through the Tor network&lt;/li&gt;
+&lt;li&gt;Generate custom white-labelled repository app (based on F-Droid)&lt;/li&gt;
+&lt;li&gt;App security scanner for vulnerable libraries and Virus Total (opt-in) upload&lt;/li&gt;
+&lt;li&gt;App browsing and download on generated repository website&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;target-audience&#34;&gt;Target Audience&lt;/h3&gt;
+
+&lt;p&gt;The main audience for this work are activists and trainers with moderate technical knowledge who need to securely distribute apps and updates to their community. This is especially a concern in countries where the official app store is blocked. Organizations like Amnesty International for example still need to enable people in those countries to securely receive their apps and updates.&lt;/p&gt;
+
+&lt;p&gt;The person maintaining the repository might use any operating system and in some cases might not even have a laptop/desktop computer available. They might be targeted by advanced attackers that can intercept and insert arbitrary traffic, but do not have the ability to compromise large service providers such as Amazon.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, this work might also be used by the following groups:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;service providers (who want own distribution and update mechanism for their apps)&lt;/li&gt;
+&lt;li&gt;individual software developers (who want to distribute beta releases for e.g. user-testing)&lt;/li&gt;
+&lt;li&gt;everybody else who needs full control of the entire distribution and update process&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;implementation-options&#34;&gt;Implementation Options&lt;/h3&gt;
+
+&lt;p&gt;There are roughly four different ways, the app store curation tool could be implemented. Each has their own pro and cons as well as different implications for the usability.&lt;/p&gt;
+
+&lt;h4 id=&#34;command-line-interface&#34;&gt;Command-line interface&lt;/h4&gt;
+
+&lt;p&gt;The current app repository tools are already used via the command-line, but they require some setup and several non-intuitive commands to be executed. The goal here would be to reduce the number of required commands as much as possible and make them easy to understand and remember. This would be similar to how Letsencrypt’s Certbot simplified SSL certificate management.&lt;/p&gt;
+
+&lt;p&gt;Pros&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;least amount of work building directly on existing tools&lt;/li&gt;
+&lt;li&gt;signing key could be created and stored on local device&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;too difficult to use for people with no prior command-line experience&lt;/li&gt;
+&lt;li&gt;off-putting and not inviting for potential non-expert curators&lt;/li&gt;
+&lt;li&gt;adds little benefit to existing solution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;cross-platform-desktop-application&#34;&gt;Cross-Platform Desktop Application&lt;/h4&gt;
+
+&lt;p&gt;A graphical user interface (GUI) could be added to the existing tools to make them easier to use. Existing UI toolkits such as Qt, Gtk or Tcl/Tk could be used for this.&lt;/p&gt;
+
+&lt;p&gt;Pros&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;can make use of existing python tools&lt;/li&gt;
+&lt;li&gt;signing key could be created and stored on local device&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;requires a desktop computer and installation procedure (possibly of dependencies as well)&lt;/li&gt;
+&lt;li&gt;need to maintain and support install packages for Windows and MacOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;android-app&#34;&gt;Android App&lt;/h4&gt;
+
+&lt;p&gt;The free software &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid app&lt;/a&gt; already includes repository functionality used for direct app swapping. This could be modified to publish repositories to remote servers and extended by curation functionality. Alternatively, a new app could be developed that is dedicated to repository curation and could contrary to F-Droid even be distributed via Google Play.&lt;/p&gt;
+
+&lt;p&gt;Pros&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Simple installation&lt;/li&gt;
+&lt;li&gt;No desktop computer required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Needs reimplementation of existing Python code in Java&lt;/li&gt;
+&lt;li&gt;Signing key stored on potentially less secure mobile device&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;web-app&#34;&gt;Web App&lt;/h4&gt;
+
+&lt;p&gt;The user interface for repository curation could be implemented as a web application that is accessed through a web browser. Low-risk curators could use a hosted instance for maximum simplicity while others could also access the interface through a local (built-in) web-server. Powerful web frameworks such as Flask or Django might be a good choice for that job.&lt;/p&gt;
+
+&lt;p&gt;Pros&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Very easy to use from every device&lt;/li&gt;
+&lt;li&gt;Does not need installation (lower usage barrier)&lt;/li&gt;
+&lt;li&gt;Can make use of existing python tools&lt;/li&gt;
+&lt;li&gt;Makes multi-curator feature potentially easier to implement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In hosted mode: signing keys need to be stored permanently on a web server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;security-considerations&#34;&gt;Security Considerations&lt;/h3&gt;
+
+&lt;h4 id=&#34;repository-attacks&#34;&gt;Repository Attacks&lt;/h4&gt;
+
+&lt;p&gt;The technology used for app distribution needs to ensure the integrity and authenticity of apps provided in the repository. It can not prevent malicious apps from being &lt;em&gt;intentionally&lt;/em&gt; distributed, but can offer a security scanner to reduce the risk of unintentional distribution. An attack is considered successful when the content provided by the curator of the repository can be altered so that the changes propagate to users’ devices.&lt;/p&gt;
+
+&lt;p&gt;Malicious apps might compromise the targeted application or the entire phones (root exploit). There are two defenses against unintentional distribution of malicious apps:&lt;/p&gt;
+
+&lt;ol type=&#34;1&#34;&gt;
+  &lt;li&gt;
+    app package signatures: clients trust the provided app signature on first installation (TOFU) and refuse updates with a different signature.
+  &lt;/li&gt;
+  &lt;li&gt;
+    repository signature: clients check signature when repository is installed and with every update. They warn and refuse operations with the repository when the signature is invalid.
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first defense is out of scope for this work, because app packages are signed when the app is built so that they are already signed when added to the repository. The repository curation should still not allow to publish an update that carries a different signature.&lt;/p&gt;
+
+&lt;p&gt;The second defense needs to be provided automatically by the curation tools. A repository signing key needs to be created and securely stored. If this key is compromised, an attacker can modify app metadata and can inject modified apps for specific or all users when they install them for the first time. Malicious updates of already installed apps are prevented by above package signature.&lt;/p&gt;
+
+&lt;p&gt;If the repository key is created and stored automatically by a service (see implementation option 4), the curator needs to trust the service and the hosting provider. Both need to be out of reach of attackers from the curators’ threat-model. For example, if the Guardian Project provides a repository service hosted in Amazon’s Cloud, this service should be out of reach of most attackers that have neither the ability to compromise the Guardian Project, nor Amazon. Advanced nation-state adversaries could compromise both and thus the repository. Recipients of apps need to trust their distributors/curators and their ability to keep their own system secure.&lt;/p&gt;
+
+&lt;p&gt;However, we can generally not protect against attackers who has the ability to directly compromise the users’ devices. All that can be done is to prevent malicious applications from being installed &lt;em&gt;via the repository&lt;/em&gt; (without knowledge of the curator). If the attacker can compromise users’ devices through other means, this defense does not matter anymore.&lt;/p&gt;
+
+&lt;h4 id=&#34;root-and-unknown-sources&#34;&gt;Root and Unknown Sources&lt;/h4&gt;
+
+&lt;p&gt;In order to get content from the provided repository onto a generic device, the user needs to install F-Droid which requires allowing the installation of apps from unknown sources. This can put the user at risk, because it makes installing malicious application very easy. Alternatively, super user privileges (root) can be used to install F-Droid’s system extension effectively trusting all apps installed via F-Droid. However, the security risks associated with super user privileges are even more severe as they can lead to compromise of the entire device.&lt;/p&gt;
+
+&lt;h4 id=&#34;lack-of-updates&#34;&gt;Lack of Updates&lt;/h4&gt;
+
+&lt;p&gt;If a repository is the user’s sole source for an application, any delay in providing updates might put the user at risk of an adversary exploiting a vulnerability in that application that would have otherwise been fixed by the missing update.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-we-will-do&#34;&gt;What We Will Do&lt;/h3&gt;
+
+&lt;p&gt;The main goal of the curation tools is to make creating and maintaining repositories as easy as possible for our target audience.&lt;/p&gt;
+
+&lt;p&gt;This rules out the command line and the desktop application, since today’s user experience expectations are no longer being fulfilled by these technologies. While a desktop application comes closer, the need for an installation procedure and for maintaining it for different operating systems makes it too difficult and error-prone compared to the two other remaining options.&lt;/p&gt;
+
+&lt;p&gt;Implementing the curation tools within an Android application has its merits. It comes with an easy installation procedure, provides a familiar state-of-the-art user interface and allows apps to be added directly from the curators’ device. However, some existing functionality would need to be reimplemented in Java and maintained along-side the existing Python codebase. Also the curator needs to provide an external storage location for the repository which can be a barrier for many users and needs its own documentation.&lt;/p&gt;
+
+&lt;p&gt;The easiest and most flexible solution is a web-application based on the existing Python tools. More advanced curators can use it on a local desktop computer with a built-in web-server just like a desktop application, only that the UI is in the browser. This usage scenario comes with the same pros and cons like the desktop application. The repository signing key for example is stored locally under the curator’s control.&lt;/p&gt;
+
+&lt;p&gt;But it allows for other usage scenarios as well. If installed on a trusted web-server as a service, the curation tools can also be used by curators with little technical knowledge. The curators don’t need to install anything and can use them from any device. They can even switch devices without a data migration. However, they would need to give up control over the signing key.&lt;/p&gt;
+
+&lt;p&gt;If time permits, the app store creator can be turned into a full repository service that allows user registrations and several repositories per user. A trusted organization such as the Guardian Project could host this as a service and provide it to an activist community. Software freedom would allow other organizations to host their own repository services as well. You can imagine the activist collective Riseup for example not only hosting its own repository of recommended apps, but also allowing its users to create and curate their own repositories.&lt;/p&gt;
+
+&lt;p&gt;This becomes even more interesting when people fill their repositories not only with apps, but with all sorts of files such as books, music and photos.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building the most private app store</title>
+      <link>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</link>
+      <pubDate>Thu, 02 Jun 2016 11:08:52 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</guid>
+      <description>&lt;p&gt;&lt;em&gt;App stores can work well without any tracking at all&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor-150x150.jpg&#34; alt=&#34;whichdoor&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13337&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Attackers are increasingly seeing app stores as a prime &lt;a href=&#34;https://guardianproject.info/2015/02/24/phishing-for-developers/&#34; target=&#34;_blank&#34;&gt;attack&lt;/a&gt; vector, whether it is aimed at the masses like &lt;a href=&#34;http://researchcenter.paloaltonetworks.com/2015/09/more-details-on-the-xcodeghost-malware-and-affected-ios-apps/&#34;&gt;XCodeGhost&lt;/a&gt; or very targeted like in FBI vs Apple. When we install software from an app store, we are placing a lot of trust in a lot of different parties involved in getting the source code from the original developer delivered to our device in a useful form. Most people are entirely unaware of how much trust they are putting into this system, which they are entrusting with their personal data. Even for people who do understand the technical details involved, figuring out whether the people and the system itself is trustworthy is difficult to do.&lt;/p&gt;
+
+&lt;p&gt;We are building an app store that requires the bare minimum of trust: only the software developers themselves and the code they produce. We consider the app store operators and servers a threat. Building an ecosystem that enables automated, effective auditing lets the computers verify to make trust decisions easier. Effective external auditing requires an ecosystem that cannot deliver targeted content to just the auditing system, while feeding users something else (aka “binary transparency”).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Most app stores track as much as possible&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The vast majority of apps stores track their users actions in detail. Some is necessary when using the business model of the app store operator taking a percentage of sales, but none of the tracking is inherent to running an app store. For example, payment verification can be handled in the app itself like shareware. A software delivery system that tracks its users makes it simple to hide malware delivery since it can target any auditing system. Most app stores know a lot about their users:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;account name&lt;/li&gt;
+&lt;li&gt;identity&lt;/li&gt;
+&lt;li&gt;payment methods&lt;/li&gt;
+&lt;li&gt;everything you search for in the app store&lt;/li&gt;
+&lt;li&gt;everything you look at in the app store&lt;/li&gt;
+&lt;li&gt;everything you download, install, uninstall&lt;/li&gt;
+&lt;li&gt;which apps you actually run&lt;/li&gt;
+&lt;li&gt;where you are, based on IP, declared preference, etc.&lt;/li&gt;
+&lt;li&gt;your preferred language&lt;/li&gt;
+&lt;li&gt;and more…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apps stores need to know very little in order to function: how to give you the files you request. That means indexes, descriptions, icons, apps, and install/delete requests (for “push” install/delete). Given that information, the client can do everything needed to provide a full app store user experience. For this work, we chose to build upon &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, a community-run Android app store that distributes verified Free Software. The community has had an interest in privacy all along, and has always worked to avoid tracking. The security architecture is based on models proven by &lt;a href=&#34;https://wiki.debian.org/SecureApt&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/docs/tuf-spec.txt&#34; target=&#34;_blank&#34;&gt;The Update Framework&lt;/a&gt; , and others:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS connections by default&lt;/li&gt;
+&lt;li&gt;pinned TLS certificate built into the client app&lt;/li&gt;
+&lt;li&gt;updates verified based on the signature on the app itself&lt;/li&gt;
+&lt;li&gt;file integrity protected by signed metadata&lt;/li&gt;
+&lt;li&gt;signed metadata includes hashes of the app and its signing key&lt;/li&gt;
+&lt;li&gt;signed metadata generated on a separate machine, which can be fully offline&lt;/li&gt;
+&lt;li&gt;public key for verifying metadata signatures built into F-Droid client app&lt;/li&gt;
+&lt;li&gt;signed metadata includes timestamp and expiry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While the current setup is already a solid platform, we are implementing a number of improvements. The signed metadata will include list of official mirrors, then the client chooses mirrors based on availability and freshness based on local criteria like whether Tor is in use, closest on the internet, etc. We are also moving the standard HTTP “etag” cache check from the server to the client so it cannot be abused to track users.&lt;/p&gt;
+
+&lt;p&gt;In order to defend against an attacker that holds the signing keys for the app repository, there must be a trustworthy source of information to compare against. Reproducible builds means that anyone with the same source code will produce the exact same binary. When paired with an auditing system, it is easy to catch malware inserted in the build process, rather than the source code, like XCodeGhost. Reproducible builds also makes it possible to have all builds of a release binary have the exact same hash. Then any app repository can build apps only from source code, and have a source of verification data from any other app repository building the same app. Building software from source has become cheap enough that many companies like gitlab.com and Travis CI are offering free, automated build services in the cloud. Since the whole F-Droid toolset is free software and designed to be easy to setup, the barriers to setting up automatic auditing are quite low. People in separate areas of the world with different risk profiles can run verification servers to provide more trustworthy information.&lt;/p&gt;
+
+&lt;p&gt;Another key aspect of the F-Droid project is to provide the complete toolset needed to run an app store. This enables a more decentralized ecosystem. Therefore, one key goal is to lower the risks of running the services, so that more people can run their own app stores. If the app store does not track its users, then that removes the hassle of protecting personal data from any attacker. These services can be run without fear of responding to secret orders for personal information. It also means that the server setup is a lot simpler because it does not need dynamic content. The app store serve only needs to serve files (e.g. indexes, apps, etc.). The app repository is generated on a secure machine, or even a fully offline machine, and posted to the server. The main server is purely a mirror of the offline machine where the signed repository is generated. Mirrors just shuffle bits from place to place, they are no longer an attack vector.&lt;/p&gt;
+
+&lt;p&gt;Putting all these pieces together provides a system where users need only audit the source code in order to verify a trustworthy app delivery. The file pipeline provides redundantly secure data transmission, the apps can be reproducibly from source code, the app repositories can be automatically audited. Of course, this system relies not only on the power of cryptography, but also the power of transparency. Debian provides a great example of the power of transparency: Debian gives a thousand volunteers root access to every Debian install (by virtue of their ability to upload signed packages that get installed as root). Yet this system has been proven over the past 20+ years to provide solid security. Ultimately we hope that this will de-emphasize the signing key as the sole protection against abuse. If malware has a decent change of being spotted, it makes it much less likely to be used since malware authors either rigorously defend their exploits, or use well known exploits that are not difficult to automatically detect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future Work&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One attack vector that is not well covered is malware that installable by everyone, that then uses data on the local device to target specific users. That would be a way to target individuals using an app store that does not track its users. We are starting to implement automated dynamic analysis of every app using tools like &lt;a href=&#34;https://labs.mwrinfosecurity.com/tools/drozer&#34; target=&#34;_blank&#34;&gt;Drozer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We are also working towards making as many apps as possible build reproducibly. Some of our quick checks show that a large number of the apps in f-droid.org already will build reproducibly, given the right build environment. We are working on making the process of setting up that build environment as automated as possible.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid “verification server” has been prototyped, and it will be further developed with the aim of making it dead simple to run in common cloud services.&lt;/p&gt;
+
+&lt;p&gt;We already have the infrastructure in place to do verified double-signing, where the developer first signs the release bulid, then once f-droid.org reproduces that build, it adds its signature. Then Android would enforce that both signatures need to be present in order for it to be a valid update.&lt;/p&gt;
+
+&lt;p&gt;As the full localization support is built out, the language that a user is using will not be reported to the server. While speaking Spanish in Spain does not provide much information, speaking Quechua in Uzbekistan can narrow it down to a single user. Instead of dividing the index metadata by language, it will instead be grouped by app. We will then group apps so that it is difficult to tell which app in the group is the one people are interested in. For example, if one very popular app is only grouped with apps that are rarely downloaded, then it is an easy assumption that someone getting info about that block of apps is most likely looking for that popular app.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First working test of IOCipher for Obj-C</title>
+      <link>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</link>
+      <pubDate>Mon, 26 Jan 2015 04:32:29 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Every so often, we revisit our core libraries in the process of improving our existing apps, and creating new ones. IOCipher has become a standard part of our apps since it provides a really easy way to include encrypted file storage in Android apps. And we are now working on spreading it to iOS as well, headed up by Chris Ballinger, with the first preliminary tests of &lt;a href=&#34;https://github.com/ChatSecure/IOCipher-ObjC&#34; target=&#34;_blank&#34;&gt;IOCipher for Obj-C&lt;/a&gt;. Testing and contributions are most welcome! Find us in our &lt;a href=&#34;https://guardianproject.github.io/info/contact/&#34; target=&#34;_blank&#34;&gt;chat room or mailing list&lt;/a&gt; for questions, or just post a comment below! Since the iOS version is based on the exact same core library, libsqlfs, the container files they produce will also be fully compatible with each other.&lt;/p&gt;
+
+&lt;p&gt;Now that iOS 8 has full disk encryption by default and a &lt;a href=&#34;https://www.blackbagtech.com/blog/2014/09/24/ios-8-and-its-impact-on-investigations&#34; title=&#34;iOS 8 and its Impact on Investigations&#34; target=&#34;_blank&#34;&gt;host of other security improvements&lt;/a&gt;, you might be wondering why you would bother with app-specific encryption. The problem with full disk encryption is that the disk is only locked when your iPhone is fully turned off. Using IOCipher adds protection for sensitive data that helps in a few different scenarios.&lt;/p&gt;
+
+&lt;p&gt;First, full disk encryption does not protect the data at all if malware is able to get root on the device. That malware will be free to read all files on the device. Second, for people who have not set up a strong passphrase on their iOS device, using app-specific encrypted storage make it harder to access that app’s data on devices with no passcode set, especially if any additional passphrase is stored in the keychain and disallowed from backup, or if it’s just stored in your own memory.&lt;/p&gt;
+
+&lt;p&gt;Third is for added protetion from forensic acquisition systems, which often work using root exploits in order to read the entire filesystem without unlocking the screen&lt;a href=&#34;https://www.elcomsoft.com/news/591.html&#34; target=&#34;_blank&#34;&gt;[1]&lt;/a&gt;&lt;a href=&#34;https://www.elcomsoft.com/news/586.html&#34; target=&#34;_blank&#34;&gt;[2]&lt;/a&gt;&lt;a href=&#34;http://www.htcia.org/2013/12/iphone-forensics-what-you-need-to-know/&#34; target=&#34;_blank&#34;&gt;[3]&lt;/a&gt;. By having an app-specific encrypted file container that is not mounted like a filesystem, then even root cannot directly access the files in the container. Even root needs to get the key in order to unlock the IOCipher container, whether it is in use or not, and getting that key means either a key logger, which means planning ahead, or reading they key from memory if the container is unlocked, which is a more elaborate and targeted attack that full disk acquisition after rooting.&lt;/p&gt;
+
+&lt;p&gt;Now consider that there is a large market 0days, i.e. unpublished exploits, and companies like &lt;a href=&#34;https://netzpolitik.org/2014/gamma-finfisher-hacked-40-gb-of-internal-documents-and-source-code-of-government-malware-published/&#34; target=&#34;_blank&#34;&gt;VUPEN, FinFisher&lt;/a&gt;, and &lt;a href=&#34;https://citizenlab.org/2014/06/backdoor-hacking-teams-tradecraft-android-implant/&#34; target=&#34;_blank&#34;&gt;Hacking Team&lt;/a&gt; making it easy to purchase them, even providing guarantees that one of their exploits will work within 30 days, it seems quite likely that customers of such companies have access to secret root exploits to even iOS 8. While there are ethical and lawful reasons to use software like this, many governments are also using them for &lt;a href=&#34;https://www.eff.org/deeplinks/2012/02/spy-tech-companies-their-authoritarian-customers-part-i-finfisher-and-amesys&#34; target=&#34;_blank&#34;&gt;illegal&lt;/a&gt; &lt;a href=&#34;http://www.economist.com/blogs/pomegranate/2014/07/internet-monitoring-gulf&#34; target=&#34;_blank&#34;&gt;and&lt;/a&gt; &lt;a href=&#34;http://www.theguardian.com/technology/2014/sep/16/wikileaks-finfisher-files-malware-surveillance&#34; target=&#34;_blank&#34;&gt;unethical&lt;/a&gt; &lt;a href=&#34;https://citizenlab.org/2013/03/you-only-click-twice-finfishers-global-proliferation-2/&#34; target=&#34;_blank&#34;&gt;things&lt;/a&gt;. Since we believe that everyone has a right to privacy, to speak freely, and to peaceably protest, it is important to provide protection to people who are unfairly targeted.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/open-source/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/skitch.png&#34; alt=&#34;SQLCipher&#34; width=&#34;64&#34; height=&#34;72&#34; class=&#34;alignleft size-full wp-image-3613&#34; /&gt;&lt;/a&gt;There is also another key advantage of the IOCipher approach when it comes to mobile devices. IOCipher is ultimately based on SQLite transactions in &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34;&gt;SQLCipher&lt;/a&gt;, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite’s transactions prevent the whole file system from being corrupted. This is important in mobile operating systems like Android and iOS since any app or process can be killed at any moment without warning. That means that the worst that can happen to an IOCipher volume is a single write command does not get written. The whole file system will not be corrupted if the process is killed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Coming Soon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When IOCipher is used in conjunction with our &lt;a href=&#34;https://github.com/guardianproject/CacheWord&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt; library, it is possible for an app to provide protection even against the &lt;a href=&#34;https://xkcd.com/538/&#34; target=&#34;_blank&#34;&gt;$5 wrench attack&lt;/a&gt;. CacheWord generates a strong passphrase and manages feeding it to IOCipher and SQLCipher. The user provides their own password for encrypting that strong passphrase. That CacheWord file is tiny, and can be rapidly deleted. Once it is gone, the actual passphrase that unlocks the IOCipher encryption is gone, the user’s passphrase will not unlock IOCipher directly. This is something we are working to add in all of our apps, and to also hook it up to panic button triggers. We would be quite happy to see you beat us to it by adding this feature to your app!&lt;/p&gt;
+
+&lt;p&gt;IOCipher with a hardware security module (HSM) aka smartcard would be really nice, since it would provide some measure of added protection without the user setting an app-specific passphrase. HSMs provide write-only private key storage locked by pin code, so even if some was able to get the encrypted file and the pincode, they would not be able to retrieve the key to unlock the encrypted file. The only way to unlock the file would be with the physical device itself, or by finding the key backup, if that existed. This is possible now using an external &lt;a href=&#34;http://www.smartcard-hsm.com/features.html&#34; target=&#34;_blank&#34;&gt;microSD&lt;/a&gt; &lt;a href=&#34;http://www.go-trust.com/nist-adds-go-trusts-sdencrypter-microsd-hsm-to-the-in-process-fips-140-2-module-validation-list/&#34; target=&#34;_blank&#34;&gt;HSM&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sharing your location privately</title>
+      <link>https://guardianproject.github.io/info/2015/01/23/sharing-your-location-privately/</link>
+      <pubDate>Fri, 23 Jan 2015 15:00:10 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/23/sharing-your-location-privately/</guid>
+      <description>&lt;div id=&#34;attachment_12774&#34; style=&#34;width: 298px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12774&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location-576x1024.png&#34; alt=&#34;Facebook location sharing embeds the location in every single message, providing a detailed log to the recipient, Facebook, and anyone Facebook shares that data with&#34; width=&#34;288&#34; height=&#34;512&#34; class=&#34;size-large wp-image-12774&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location.png 576w, https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location-169x300.png 169w&#34; sizes=&#34;(max-width: 288px) 100vw, 288px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12774&#34; class=&#34;wp-caption-text&#34;&gt;
+    Facebook location sharing embeds the location in every single message, providing a detailed log to the recipient, Facebook, and anyone Facebook shares that data with
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One handy feature that many smartphones give us is the ability to easily share our exact position with other people. You can see this feature in a lot of apps. Google Maps lets you click “Share” and send a URL via any method you have available. In Facebook Messenger, you can click a button and the people on the other side of the chat will receive a little embedded map showing the received location. Of course, the question we always ask is: how can we do this in a privacy-preserving way? And the follow up question: what kinds of information are apps leaking, storing, using, etc? Location is especially valuable and sensitive metadata, especially when there is a lot of it, because it can be used to derive so much information about a person. Most people do not want to publicly post their phone number or home address on the internet, yet are unwittingly giving away far more detailed information by using the various location-based services that are available. There is a lot of specific location information that people do not want to publicize that they visit: a cancer specialist, an abortion clinic, a criminal court, a mistress’ house, or any location information to an abusive spouse. For a great illustration of the power of location metadata, you can watch &lt;a href=&#34;http://www.zeit.de/datenschutz/malte-spitz-data-retention&#34; target=&#34;_blank&#34;&gt;an animation of German politician Malte Spitz’s life, based on his telephone metadata that his telecom had stored&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Google, Facebook, and so many others make money by collecting as much data on their users as possible, then selling access to that data to their customers. So both those companies have incentives to make sure that you will always share your location information with them as well. The question is: are they treating this information as carefully as you would? In China, the indigenous services are much more popular than most foreign alternatives. The Chinese companies are good at making products that are popular with Chinese users, and since they collaborate with the government censorship and tracking, it is easier for them to do business in China. This combination often means that Chinese companies put security and privacy at a very low priority, even though they could comply with the Chinese law while improving their security. A good example of this is the fact that none of the major map providers in China (Baidu, Amap, or QQ) provide even an optional HTTPS interface. They only have unencrypted communications, which allows lots of people easy access to snooping, including anyone who is on the same wifi network as you are.&lt;/p&gt;
+
+&lt;p&gt;The tools for tracking people via location data are getting better, cheaper, and more available. One funny example is &lt;a href=&#34;https://iknowwhereyourcatlives.com/&#34; target=&#34;_blank&#34;&gt;I Know Where Your Cat Lives&lt;/a&gt;, which shows the locations of cat pictures found on the public internet via the geo location included in the EXIF image data.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12793&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://iknowwhereyourcatlives.com&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12793&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives-300x188.jpg&#34; alt=&#34;I know where your cat lives!&#34; width=&#34;300&#34; height=&#34;188&#34; class=&#34;size-medium wp-image-12793&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives-300x188.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives.jpg 768w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12793&#34; class=&#34;wp-caption-text&#34;&gt;
+    I know where your cat lives!
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Location and Panic&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One use that we are particularly interested in is sending location to trusted contacts when a panic button is pressed. When thinking about panic button features, privacy must be a central concern. When someone triggers their panic button, it is clearly a sensitive situation. That means that leaking more location information could exacerabate the situation. Since sending location is a useful and popular feature, it is important to consider the whole picture of where that location information might go. To start with, the panic message needs to be sent using a method that will reliably reach its intended destination. Unfortunately, that often means using insecure communications like SMS, or an app that is fully tapped by the same government that is detaining the user, like WeChat. Part of this T2 Panic research and development effort is focused on how to make a complete, secure panic solution. So we will also focus on making ChatSecure and other secure communications an available channel for sending panic messages.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://panicbutton.io&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/activate1-150x150.jpg&#34; alt=&#34;activate1&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-12805&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/activate1-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/01/activate1-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/01/activate1-230x230.jpg 230w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;The next step is to break down the entire path of where that location information might be intercepted. The first place is on the sending device itself. The panic message will stored with the sent messages with most communications apps, and that can recovered by whoever is detaining the user. Even if the device is encrypted, it is very likely the user can be compelled to unlock the device. So the panic message should be designed with that in mind.&lt;/p&gt;
+
+&lt;p&gt;So if we consider a fully anonymous method of communication, like ChatSecure’s “Secret Identity”, then protecting the location information becomes important even if all of the messages and their recipients are recovered from the sending device. The full “Secret Identity” procedure of creating an account per person you want to chat with, and only using that single account to communicate with that other person. It has been outlined by many people, including Laura Poitras when describing how she communicates with Edward Snowden. In this case, even if someone recovers the recipient address, all they will have is an anonymously created account with no other links to other accounts. Then location URL then becomes a way to deanonymize the recipient. First, if the URL takes the recipient to an unencrypted connection, then that it is easy to track. Even with an encrypted connection, if the server providing the map service is providing information to the government, then the encrypted connection will not help. Making this connection over Tor will also help since the map service will not be able to see the IP address of the device where the user clicked on this URL. Now consider a location URL using Google Maps, or any similar service where users frequently login. If the original panic message was sent using such a URL, and the recipient was a regular user of a service that used logins, then that login information would deanonymize the recipient if they viewed the location URL in a browser where they were also logged in with their normal Google account.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User Stories&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This can perhaps be better illustrated using some quick user stories:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A journalist and a source set up Secret Identities in ChatSecure devoted to each other when they met up in person. Each have panic buttons set up to contact the other in case of emergency. The journalist uses &lt;a href=&#34;https://openstreetmap.org&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;http&lt;strong&gt;s&lt;/strong&gt;://openstreetmap.org&lt;/code&gt;&lt;/a&gt; to generate a shortlink that points to the chosen meeting location, then sends it to the source using the Secret Identity, &lt;a href=&#34;http://osm.org/go/0ju_SMlBn&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;http://osm.org/go/0ju_SMlBn&#34;&gt;http://osm.org/go/0ju_SMlBn&lt;/a&gt;&lt;/code&gt;&lt;/a&gt;. The source clicks the link, and chooses to open the link in Firefox. Therefore, the website is shown using an unencrypted, direct connection, which is easily observed. Even though the recipient has HTTPS Everywhere set up in his browser to force HTTPS for openstreetmap.org, the osm.org shortlink does not currently have working HTTPS so it is an HTTP link. This shortlink is now a unique ID that links the journalist and source’s real IP address. If the source was using a cellular internet connection, then this will also link the IP address to the devices IMEI unique ID. The IMEI is then quite easy to link to a real identity information.&lt;/li&gt;
+&lt;li&gt;A circle of activists all set each other up with a panic button app on burner Android phones. They only use these burner phones to communicate with each other. They prepare in advance to discard all the phones in case someone triggers the panic. One activitist gets detained by the secret police and triggers the panic. The secret police get the panic message and all the other phone numbers from the detainee’s phone, but the activists are no longer using those phones so they cannot be tracked by them. The activists manually copy the Google Maps shortlink &lt;a href=&#34;https://goo.gl/maps/Cji0V&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;https://goo.gl/maps/Cji0V&#34;&gt;https://goo.gl/maps/Cji0V&lt;/a&gt;&lt;/code&gt;&lt;/a&gt; to their computer to find out where the detainee is. They type the map link into Internet Explorer, making sure to type HTTPS, and then again confirm that the webpage is still using an HTTPS link. What they did not see is that the shortlink first redirected to a HTTP link &lt;a href=&#34;http://maps.google.com/?q=28.118860,98.008069&amp;hl=en&amp;gl=us&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;http://maps.google.com/?q=28.118860,98.008069&amp;amp;hl=en&amp;amp;gl=us&#34;&gt;http://maps.google.com/?q=28.118860,98.008069&amp;amp;hl=en&amp;amp;gl=us&lt;/a&gt;&lt;/code&gt;&lt;/a&gt;, which leaked the location in plain text. Since this URL describes a very specific point, the secret police use this as a data point to search for the IP address of all devices that have accessed that URL. Those IP addresses divulge the locations of all the activists who viewed the map URL, and provide the secret police a method for tracking them all.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I did not cover other more common use cases here because there are so many leaks that the protections presented are moot. All is not lost, there is still a lot that you can do to improve things. First off, we recommend using map apps that can work fully offline. For Android, &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.osmand&#34; target=&#34;_blank&#34;&gt;Osmand&lt;/a&gt; is the best one out there, it uses OpenStreetMap data which can be freely downloaded. It is also important to encourage developers to improve the privacy of their apps. Since we are software developers, we file bug reports and make pull requests to nag location-related projects to improve their security. Here are some recent examples of what we have contributed:&lt;/p&gt;
+
+&lt;p&gt;OpenStreetMap&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Issue #799: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/799&#34; target=&#34;_blank&#34;&gt;Implement &lt;code&gt;geo:&lt;/code&gt; URLs for sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Issue #870: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/870&#34; target=&#34;_blank&#34;&gt;share makes HTTP url even when connecting via HTTPS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Issue #862: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/862&#34; target=&#34;_blank&#34;&gt;support osm.org in HTTPS certificate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Osmand&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pull #1033: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1033&#34; target=&#34;_blank&#34;&gt;modernize location sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pull #1043: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1043&#34; target=&#34;_blank&#34;&gt;add support for a proxy and use more HTTPS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pull #1045: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1045&#34; target=&#34;_blank&#34;&gt;update URL parsing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will be following up with further posts on this topic with more detail, including research into what is possible to derive from location data, technical details of issues, and possible solutions and work that can be done to improve things.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Improving trust and flexibility in interactions between Android apps</title>
+      <link>https://guardianproject.github.io/info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/</link>
+      <pubDate>Tue, 21 Jan 2014 13:51:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/</guid>
+      <description>&lt;div id=&#34;attachment_12240&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12240&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents-300x61.png&#34; alt=&#34;Activity1 sending an Intent that either Activity2 or Activity3 can handle.&#34; width=&#34;300&#34; height=&#34;61&#34; class=&#34;size-medium wp-image-12240&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents-300x61.png 300w, https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents.png 600w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12240&#34; class=&#34;wp-caption-text&#34;&gt;
+    &lt;code&gt;Activity1&lt;/code&gt; sending an &lt;code&gt;Intent&lt;/code&gt; that either &lt;code&gt;Activity2&lt;/code&gt; or &lt;code&gt;Activity3&lt;/code&gt; can handle.
+  &lt;/p&gt;
+&lt;/div&gt;Android provides a flexible system of messaging between apps in the form of 
+
+`&lt;a href=&#34;https://developer.android.com/guide/components/intents-filters.html&#34; target=&#34;_blank&#34;&gt;Intent&lt;/a&gt;`s. It also provides the framework for reusing large chunks of apps based on the `&lt;a href=&#34;https://developer.android.com/reference/android/app/Activity.html&#34; target=&#34;_blank&#34;&gt;Activity&lt;/a&gt;` class. `Intent`s are the messages that make the requests, and `Activity`s are the basic chunk of functionality in an app, including its interface. This combination allows apps to reuse large chunks of functionality while keeping the user experience seamless and fluent. For example, an app can send an Intent to request a camera `Activity` to prompt the user to take a picture, and that process can feel integrated into the original app that made the request. Another common use of this paradigm is choosing account information from the contacts database (aka the _People_ app). When a user is composing an new email, they will want to select who the message gets sent to. Android provides both the contacts database, and a nice overlay screen for finding and selecting the person to send to. This combination is an `Activity` provided by Android. The message that the email program sends in order to trigger that `Activity` is an `Intent`.
+
+As usual, one of the downsides of flexibility is increased security risk. This is compounded in the Android system by rules that will automatically export an Activity to receive Intents from any app, &lt;a href=&#34;https://www.eecs.berkeley.edu/~emc/papers/spsm4027-kantola.pdf&#34; title=&#34;Reducing Attack Surfaces for Intra-Application Communication in Android&#34; target=&#34;_blank&#34;&gt;when certain conditions are met&lt;/a&gt;. If an `Activity` is exported for any app to call, &lt;a href=&#34;https://www.eecs.berkeley.edu/~emc/papers/mobi168-chin.pdf&#34; title=&#34;Analyzing Inter-Application Communication in Android&#34; target=&#34;_blank&#34;&gt;it is possible for apps to send malicious &lt;code&gt;Intent&lt;/code&gt;s&lt;/a&gt; to that `Activity`. Many `Intents` are meant to be public and others are exported as a side effect. Either way, at the very least, it is necessary to &lt;a href=&#34;http://blog.palominolabs.com/2013/05/13/android-security/&#34; title=&#34;Intent Spoofing on Android&#34; target=&#34;_blank&#34;&gt;sanitize the input&lt;/a&gt; that an `Activity` receives. On the other side of the issue, if an app is trusting another app to provide a sensitive service for it, then malware can pose as the trusted app and receive sensitive data from the trusting app. &lt;a href=&#34;http://dwaterson.com/2013/06/24/data-harvesting-by-malicious-android-apps/&#34; target=&#34;_blank&#34;&gt;An app does not need to request any permissions in order to set itself up as a receiver of &lt;code&gt;Intent&lt;/code&gt;s&lt;/a&gt;.
+
+&lt;div id=&#34;attachment_12117&#34; style=&#34;width: 361px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://www.eecs.berkeley.edu/~emc/papers/spsm4027-kantola.pdf&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12117&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/01/activity-service-hijacking.png&#34; alt=&#34;Activity/Service hijacking: watch out for the little devil in the system&#34; width=&#34;351&#34; height=&#34;153&#34; class=&#34;size-full wp-image-12117&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/01/activity-service-hijacking.png 351w, https://guardianproject.info/wp-content/uploads/2014/01/activity-service-hijacking-300x130.png 300w&#34; sizes=&#34;(max-width: 351px) 100vw, 351px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12117&#34; class=&#34;wp-caption-text&#34;&gt;
+    Activity/Service hijacking: watch out for the little devil in the system
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Android, of course, does provide some added protections for cases like this. For very sensitive situations, an &lt;code&gt;Activity&lt;/code&gt; can be setup to only receive &lt;code&gt;Intent&lt;/code&gt;s from apps that meet certain criteria. &lt;a href=&#34;https://www.isecpartners.com/media/11991/isec_securing_android_apps.pdf&#34; target=&#34;_blank&#34;&gt;Android permissions can restrict other apps&lt;/a&gt; from sending &lt;code&gt;Intent&lt;/code&gt;s to any given exported &lt;code&gt;Activity&lt;/code&gt;. If a separate app wants to send an &lt;code&gt;Intent&lt;/code&gt; to an &lt;code&gt;Activity&lt;/code&gt; that has be set with a permission, then that app must include that permission in its manifest, thereby publishing that it is using that permission. This provides a good way publish an API for getting permission, but leaving it relatively open for other apps to use. Other kinds of controls can be based on two aspects of an app that the Android system enforces to remain the same: &lt;a href=&#34;http://android-developers.blogspot.com/2011/06/things-that-cannot-change.html&#34; target=&#34;_blank&#34;&gt;the package name and the signing key&lt;/a&gt;. If either of those change, then Android considers it a different app altogether. The strictest control is handled by the “protection level”, which can be set to only allow either the system or apps signed by the same key to send &lt;code&gt;Intent&lt;/code&gt;s to a given &lt;code&gt;Activity&lt;/code&gt;. These security tools are useful in many situations, but leave lots of privacy-oriented use cases uncovered.&lt;/p&gt;
+
+&lt;p&gt;There are some situations that need more flexibility without opening things up entirely. The first simple example is provided by our app &lt;a href=&#34;https://guardianproject.info/apps/pixelknot/&#34; target=&#34;_blank&#34;&gt;Pixelknot&lt;/a&gt;: it needs to send pictures through services that will not mess up the hidden data in the images. It has a trusted list of apps it will send to, based on apps that have proven to pass the images through unchanged. When the user goes to share the image from Pixelknot to an cloud storage app, the user will be prompted to choose from a list of installed apps that match the whitelist in Pixelknot. We could have implemented a permission and asked lots of app providers to implement it, but it seems a mammoth task to get lots of large companies like Dropbox and Google to include our specific permission.&lt;/p&gt;
+
+&lt;p&gt;There are other situations that require even tighter restrictions that are available. The first example here comes from our OpenPGP app for Android. &lt;a href=&#34;https://guardianproject.info/code/gnupg/&#34; target=&#34;_blank&#34;&gt;Gnu Privacy Guard (GPG)&lt;/a&gt; provides cryptographic services to any app that requests it. When the app sends data to GPG to be encrypted, it needs to be sure that the data is actually going to GPG and not to some malware. For very sensitive situations, the Android-provided package name and signing key might not be enough to ensure that the correct app is receiving the unencrypted data. Many Android devices are still unpatched to protect against &lt;a href=&#34;https://threatpost.com/second-android-master-key-attack-surfaces/101297&#34; target=&#34;_blank&#34;&gt;master key bugs&lt;/a&gt;, and for people using Android in China, Iran, etc. where the Play Store is not allowed, they don’t get the exploit scanning provided by Google. Telecoms around the world have proved to be &lt;a href=&#34;https://arstechnica.com/gadgets/2012/12/the-checkered-slow-history-of-android-handset-updates/&#34; target=&#34;_blank&#34;&gt;bad at updating the software&lt;/a&gt; for the devices that they sell, &lt;a href=&#34;https://arstechnica.com/security/2013/04/wireless-carriers-deceptive-and-unfair&#34; target=&#34;_blank&#34;&gt;leaving many security problems unfixed&lt;/a&gt;. Alternative Android app stores are a very popular way to get apps. So far, the ones that we have seen provide minimal security and no malware scanning. &lt;a href=&#34;http://www.telecoms.com/57581/china-crucial-to-android/&#34; target=&#34;_blank&#34;&gt;In China&lt;/a&gt;, &lt;a href=&#34;http://www.insidemobileapps.com/2011/09/02/china-chinese-smartphone-ios-android-market/&#34; target=&#34;_blank&#34;&gt;Android is very popular&lt;/a&gt;, so this represents a lot of Android users.&lt;/p&gt;
+
+&lt;p&gt;Another potential use case revolves around a media reporting app that relies on other apps to provide images and video as part of regular reports. This could be something like a citizen journalist editing app or a human rights reporting app. The Guardian Project develops a handful of apps designed to create media in these situations: &lt;a href=&#34;https://guardianproject.info/apps/obscuracam/&#34; target=&#34;_blank&#34;&gt;ObscuraCam&lt;/a&gt;, InformaCam, and an new secure camera app in the works that we are contributing to. We want InformaCam to work as a provider of verifiable media to any app. It generates a package of data that includes a cryptographic signature so that its authenticity can be verified. That means that the apps that transport the InformaCam data do not need to be trusted in order to guarantee the integrity of the uploaded InformaCam data. Therefore it does not make sense in this case for InformaCam to grant itself permissions to access other apps’ secured &lt;code&gt;Activity&lt;/code&gt;s. It would add to the maintenance load of the app without furthering the goals of the InformaCam project. Luckily there are other ways to address that need.&lt;/p&gt;
+
+&lt;p&gt;The inverse of this situation is not true. The reporting app that gathers media and sends it to trusted destinations has higher requirements for validating the data it receives via &lt;code&gt;Intent&lt;/code&gt;s. If verifiable media is required, then this reporter app will want to only accept incoming media from InformaCam. Well-known human rights activists are often the target of custom malware designed to get information from their phones. For this example, a malware version of InformaCam could be designed to track all of the media that the user is sending to the human rights reporting app. To prevent this, the reporter app will want to only accept data from a list of trusted apps. When the user tries to feed media from the malware app to the reporting app, it would be rejected, alerting the user that something is amiss. If an reporting app wants to receive data only from InformaCam, it needs to have some checks setup to enforce that. The easiest way for the reporting app to implement those checks would be to add an Android permission to the receiving &lt;code&gt;Activity&lt;/code&gt;. But that requires the sending app, in the example above that is InformaCam, to implement the reporting app’s permission. Using permissions works for tailored interactions. InformaCam aims to bring tighter secure to all relevant interactions, so we need a different approach. While InformaCam could include some specific permissions, the aim is to have a single method that supports all the desired interactions. Having a single method here means less code to audit, less complexity, and fewer places for security bugs.&lt;/p&gt;
+
+&lt;p&gt;We have started auditing the security of communication via &lt;code&gt;Intent&lt;/code&gt;s, while also working on various ideas to address the issues laid out so far. This will include laying out best-practices and defining gaps in the Android architecture. We plan on building the techniques that we find useful into reusable libraries to make it easy for others to also have more flexible and trusted interactions. When are the standard checks not enough? If the user has a malware version of an app that exploits master key bugs, then the signature on the app will be valid. If a check is based only on a package name, malware could use any given package name. Android enforces that only one app can be installed with a given package name, but if there are multiple apps with the same package name, Android will not prevent you from installing the malware version.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_12120&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;http://www.pregnancyandbaby.com/the-hatch-blog/articles/935057/classic-vanilla-tofu-ice-pops-for-babies-from-ice-pop-joy&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12120&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/01/IcePopJoy-ClassicVanillaTofu-300x300.jpg&#34; alt=&#34;TOFU/POP: delicious vegan treat and clever software interaction!&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-medium wp-image-12120&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/01/IcePopJoy-ClassicVanillaTofu-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/01/IcePopJoy-ClassicVanillaTofu-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/01/IcePopJoy-ClassicVanillaTofu.jpg 450w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p id=&#34;caption-attachment-12120&#34; class=&#34;wp-caption-text&#34;&gt;
+    TOFU/POP: delicious vegan treat and clever software interaction!
+  &lt;/p&gt;
+&lt;/div&gt;The strictest possible checks can be based on the hash of the whole APK, while tracking the signing key of a given APK is also often useful. These two data points are the most reliable ways to verify a given app. They can be tracked in two different ways: pinning and trust-on-first-use (TOFU/POP). Pinning means that a verified hash or signing key for the apps that need to be trusted is included in the app that must trust them. Then the trusting app can verify what it is sending or receiving&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Intent&lt;/code&gt;s from, the installed app is then compared to the pre-stored pinned value. This kind of pinning allows for checks like the &lt;code&gt;Signature&lt;/code&gt; permission level but based on a key that the app developer can select and include in the app. The built-in &lt;code&gt;Signature&lt;/code&gt; permissions are fixed on the signing key of the currently running app.&lt;/p&gt;
+
+&lt;p&gt;TOFU/POP means Trust-On-First-Use/Persistence Of Pseudonym. In this model, popularized by SSH, the user marks a given hash or signing key as trusted the first time they use the app, without extended checks about that apps validity. That mark then describes a “pseudonym” for that app, since there is no verification process, and that pseudonym is remembered for comparing in future interactions. One big advantage of TOFU/POP is that the user has control over which apps to trust, and that trust relationship is created at the moment the user takes an action to start using the app that needs to be trusted. That makes it much easier to manage than using Android permissions, which must be managed by the app’s developer. A disadvantage is that the initial trust is basically a guess, and that leaves open a method to get malware in there. The problem of installing good software, and avoiding malware, is outside of the scope of securing inter-app communication. Secure app installation is best handled by the process that is actually installing the software, like the Google Play Store or &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; does.&lt;/p&gt;
+
+&lt;p&gt;To build on the InformaCam example, in order to setup a trusted data flow between InformaCam and the reporting app, custom checks must be implemented on both the sender and the receiver. For the sender, InformaCam, it should be able to send to any app, but it should then remember the app that it is configured to send to and make sure its really only sending to that app. It would then use TOFU/POP with the hash as the data point. For the receiver, the reporting app, it should only accept incoming data from apps that it trusts. The receiver then includes a pin for the signing key, or if the app is being deployed to unupdated devices the pin can be based on the hash to work around master key exploits. From there on out, the receiving app checks against the stored app hashes or signing keys. For less security-sensitive situations, the received can rely on TOFU/POP on the first time that an app sends media.&lt;/p&gt;
+
+&lt;p&gt;There are various versions of these ideas floating around in various apps, and we have some in the works. We are working now to hammer out which of these ideas are the most useful, then we will be focusing our development efforts there. We would love to hear about any related effort or libraries that are out there. And we are also interested to hear about entirely different approaches than what has been outlined here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own app store with F-Droid</title>
+      <link>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</link>
+      <pubDate>Tue, 05 Nov 2013 11:55:43 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</guid>
+      <description>
+
+&lt;p&gt;(_This blog post as now been cooked into an &lt;a href=&#34;https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo&#34; target=&#34;_blank&#34;&gt;updated HOWTO&lt;/a&gt;_)&lt;/p&gt;
+
+&lt;p&gt;The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are &lt;a href=&#34;http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links&#34; target=&#34;_blank&#34;&gt;actively tapping&lt;/a&gt; into &lt;a href=&#34;http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html&#34; target=&#34;_blank&#34;&gt;the raw data streams&lt;/a&gt; of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/your-own-app-store.png&#34; alt=&#34;your-own-app-store&#34; width=&#34;300&#34; height=&#34;203&#34; class=&#34;alignright size-full wp-image-11896&#34; /&gt; &lt;a href=&#34;https://f-droid.org&#34; title=&#34;F-Droid Home Page&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; is a wonderful, free app store for Android. It is modeled after the &lt;a href=&#34;http://www.debian.org&#34; title=&#34;Debian home page&#34; target=&#34;_blank&#34;&gt;Debian GNU/Linux&lt;/a&gt; distro. It has its own package repositories (repos) and build servers for all the apps that are part of the official OS. Like Debian and Ubuntu, you can also setup your own repos for anyone to use. Any free software can be added to the official F-Droid repos, where they are built and signed by the F-Droid server. This can be annoying because it means that your apps in F-Droid are signed by a different key than your apps in the Google Play Store. If you host your own F-Droid repo, then people can use F-Droid to install your own builds signed by your own signing key.&lt;/p&gt;
+
+&lt;p&gt;This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the &lt;code&gt;fdroidserver&lt;/code&gt; tools and a webserver. For the webserver, here we use &lt;em&gt;nginx&lt;/em&gt; for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: &lt;tt&gt;F50E ADDD 2234 F563&lt;/tt&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install fdroidserver nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the case of this HOWTO, we’re going to setup a “&lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository&#34; target=&#34;_blank&#34;&gt;Simple Binary Repository&lt;/a&gt;” to host our official APKs. The repo will be set up in the recommended &lt;code&gt;fdroid/&lt;/code&gt; subdirectory. This gives the &lt;code&gt;fdroid&lt;/code&gt; tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let’s give our normal user control over this subdirectory in the web root so that we don’t need to run the F-Droid tools as root (with &lt;em&gt;nginx&lt;/em&gt;, the webroot is &lt;code&gt;/usr/share/nginx/www&lt;/code&gt;, it is different for other webservers):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mkdir /usr/share/nginx/www/fdroid
+sudo chown -R $USER /usr/share/nginx/www/fdroid
+cd /usr/share/nginx/www/fdroid
+fdroid init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now put your APK files into &lt;code&gt;/usr/share/nginx/www/fdroid/repo&lt;/code&gt; and you are ready to run the commands to build the repo (if &lt;code&gt;fdroid init&lt;/code&gt; cannot find your Android SDK in &lt;code&gt;/opt/android-sdk&lt;/code&gt; or &lt;code&gt;$ANDROID_HOME&lt;/code&gt;, it will prompt you for the path):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /usr/share/nginx/www/fdroid
+cp /path/to/*.apk /usr/share/nginx/www/fdroid/repo/
+fdroid update -c
+fdroid update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png&#34; alt=&#34;fdroidheader3&#34; width=&#34;300&#34; height=&#34;75&#34; class=&#34;alignleft size-medium wp-image-11906&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png 720w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Voila! Now you have a working F-Droid Repo! Add it to an F-Droid client on your Android device to test it out. That is done in the &lt;strong&gt;Manage Repos&lt;/strong&gt; screen available from the menu. Your repo URL will be the hostname or IP address of your machine with &lt;code&gt;/fdroid/repo/&lt;/code&gt; added to the end of it, i.e. &lt;code&gt;https://mysecureserver.com/fdroid/repo/&lt;/code&gt; or &lt;code&gt;http://192.168.2.53/fdroid/repo/&lt;/code&gt;. You can temporarily uncheck the official repos to easily see what F-Droid found in your new repo.&lt;/p&gt;
+
+&lt;h2 id=&#34;customization&#34;&gt;Customization&lt;/h2&gt;
+
+&lt;p&gt;You can also customize your repo by editing the config file. Be sure to use a programming text editor, like &lt;code&gt;editor /usr/share/nginx/www/fdroid/config.py&lt;/code&gt;. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;repo_url = &amp;quot;https://guardianproject.info/fdroid/repo&amp;quot;
+repo_name = &amp;quot;My Local Repo&amp;quot;
+repo_icon = &amp;quot;GP_Logo_hires.png&amp;quot;
+repo_description = &amp;quot;&amp;quot;&amp;quot;
+This is a local test repository of Hans-Christoph Steiner &amp;lt;&amp;amp;#x68;a&amp;amp;#x6e;s@&amp;amp;#x67;ua&amp;amp;#x72;d&amp;amp;#x69;&amp;amp;#x61;n&amp;amp;#x70;ro&amp;amp;#x6a;e&amp;amp;#x63;&amp;amp;#x74;.&amp;amp;#x69;nf&amp;amp;#x6f;&amp;gt;.  It is a repository of Guardian Project apps.
+&amp;quot;&amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To put your icon into your repo, choose a PNG image to put in your repo. The PNG goes in &lt;code&gt;/usr/share/nginx/www/fdroid/&lt;/code&gt;, the file can be named whatever you want (by default its &lt;code&gt;fdroid-icon.png&lt;/code&gt;). If you change the name from the default, be sure to update &lt;code&gt;repo_icon&lt;/code&gt; and &lt;code&gt;archive_icon&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;more-security&#34;&gt;More Security&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png&#34; alt=&#34;apg&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1029&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/02/apg.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Now that you have a working repo, its time to improve the security. Generating a repo in place is very easy, that is why this HOWTO started there, but it is not as secure as it should be if your repo is going to be your main distribution point. When generating the repo in place, make sure that &lt;code&gt;config.py&lt;/code&gt; is not accessible via the web, since it contains passwords. If the file permissions are correct (e.g. &lt;code&gt;chmod 0600 config.py&lt;/code&gt;), then &lt;code&gt;config.py&lt;/code&gt; will not be readable by the webserver. But the signing keys will still be that public server. To improve this situation, generate the repo on a non-public machine like your laptop, keeping &lt;code&gt;config.py&lt;/code&gt; and the keystore only on that machine, then use &lt;code&gt;fdroid server update&lt;/code&gt; to publish the changes to your repo on a separate server. You just need to set &lt;code&gt;serverwebroot&lt;/code&gt; in &lt;code&gt;config.py&lt;/code&gt; properly, then &lt;code&gt;fdroid server update&lt;/code&gt; will do the publishing via rsync over ssh. So both computers will have to have ssh and rsync installed and setup.&lt;/p&gt;
+
+&lt;p&gt;You can also use your own existing signing key rather than the one generated by &lt;code&gt;fdroid init&lt;/code&gt;, just edit &lt;code&gt;repo_keyalias&lt;/code&gt;, &lt;code&gt;keystore&lt;/code&gt;, &lt;code&gt;keystorepass&lt;/code&gt;, &lt;code&gt;keypass&lt;/code&gt;, and &lt;code&gt;keydname&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we like Tor and its Hidden Services for providing privacy, we also want to setup an F-Droid repository that is accessible over a Tor Hidden Service aka onion address. This will be covered in a future HOWTO.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement</title>
+      <link>https://guardianproject.github.io/info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/</link>
+      <pubDate>Tue, 16 Jul 2013 00:52:31 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/</guid>
+      <description>&lt;p&gt;&lt;em&gt;The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at &lt;strong&gt;least seven&lt;/strong&gt;, if not more, very important security features that any app claiming to provide secure messaging must implement as soon as possible, to truly safeguard a user’s communication content, metadata and identity.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: The names “Gibberbot” and “ChatSecure” are used interchangeabley below, as we are in the midst of an app rebrand. Apologies!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 13px; line-height: 19px;&#34;&gt;There has been a great deal of activity recently around new apps and projects working towards the goal of end-to-end secure mobile messaging. This is both prompted by the overwhelming popularity of closed-source, insecure apps like WhatsApp, Viber, Line and WeChat, and by the recent revelations around government-sponsored surveillance in portions of the world that like to think of themselves as “free”.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pennwic.wordpress.com/2012/09/18/new-workshop-series-tools-not-toys/&#34;&gt;&lt;img alt=&#34;Too Many Apps&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/Too-Many-Apps.jpg&#34; width=&#34;360&#34; height=&#34;400&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 13px; line-height: 19px;&#34;&gt;Whether it be the effort by the &lt;a href=&#34;https://plus.google.com/+CyanogenMod/posts/23vfN2qdZTu&#34;&gt;CyanogenMOD team to build in a secure push messaging&lt;/a&gt;, the arrival of new apps like &lt;a href=&#34;http://gryphn.co/&#34;&gt;Gryphn&lt;/a&gt;, &lt;a href=&#34;https://www.mywickr.com&#34;&gt;Wickr&lt;/a&gt;, &lt;a href=&#34;http://threema.ch/&#34;&gt;Threema&lt;/a&gt; and &lt;a href=&#34;https://www.surespot.me&#34;&gt;SureSpot&lt;/a&gt;, or the very succesful crowdsourced funding of &lt;a href=&#34;https://heml.is/&#34;&gt;Heml.is&lt;/a&gt;, there is no question that there is both user and developer interest in this topic. I would also be remiss not to mention the continuing excellent work by Moxie and the &lt;a href=&#34;https://whispersystems.org/&#34;&gt;Open Whisper Systems&lt;/a&gt; team on SMS-based secure messaging, Ge0rg and the &lt;a href=&#34;http;//yaxim.org&#34;&gt;Yaxim&lt;/a&gt; app, our iOS sister project &lt;a href=&#34;http://chatsecure.org&#34;&gt;ChatSecure&lt;/a&gt;, and of course, &lt;a href=&#34;https://silentcircle.com/&#34;&gt;Silent Circle&lt;/a&gt; (&lt;a href=&#34;http://issilentcircleopensourceyet.com/&#34;&gt;are they open-source yet or what?&lt;/a&gt;).&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Protecting Content, Metadata and Identity&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At the Guardian Project, we have been working on open-source, standards-based, secure messaging &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;for a few years now&lt;/a&gt;, and are simultaneously both excited and concerned about all of this activity. We are seriously thrilled that so many talented developers are finally interested in empowering every day mobile users with powerful tools to keep their communications private. We are amazed at the creativity and quality of output seen so far, as well as the diverse approaches to solving this complex problem. Most of these apps are innovating way beyond the basic concepts of secure messaging established by systems like OpenPGP and OTR encryption, and actually thinking deeply about what it means to be secure in a mobile context. However, we also think that, in many cases, the security being implemented may not be going far enough. At the least, we feel that a new bar needs to be set, that is nost just “more secure than WhatsApp”. We need to establish norms to help the user better understand and parse through their options.&lt;/p&gt;
+
+&lt;p&gt;In this context, the word “secure” should be taken to mean, that the contents of a message or conversation between one or more parties, should only be able to be viewed by those parties. This means that the application or service should ensure that message content, be it plain text or rich media, is both protected on the device and over the network, from extraction, interception, and decryption. In addition, “secure” should also extend to protect from network traffic surveillance, the fact that a conversation between one or more parties is even happening in the first place. Finally, as much as possible, the user should be able to control their identity within the messaging system, such that personal, real-world information (phone number, email, geolocation) is not exposed without their approval.&lt;/p&gt;
+
+&lt;p&gt;This three-fold approach to mobile security (Content, Metadata, Identity) is a work in progress, but does capture our basic sentiment and approach to secure mobile messaging. From here, I would like to step one level down, and talk about the set of features in our next release of &lt;a href=&#34;https://github.com/guardianproject/Gibberbot/tree/v12-alpha&#34;&gt;Gibberbot&lt;/a&gt;, currently in alpha, that we feel keep our solution to mobile messaging at the head of the pack.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Full Local Data Encryption&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Many apps feel their job in protecting messages is done once it gets to the device. In the face of Android app malware that can vacuum up data from a device and forensic extraction software and hardware, this is obviously not the case. Full disk encryption only protects when a device is locked or powered off, and besides, most users do not enable it. It is up to apps themselves to provide full encryption of all data – account configuration, sensitive settings values, messages, logs – anything that might expose a user’s information to other apps on the system or to a extraction software must be protected. Yes, this also means your user will need to enter a password every time they use your app, but it is possible to make that process less painful.&lt;/p&gt;
+
+&lt;p&gt;&lt;a style=&#34;margin: 3px;&#34; href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533.png&#34;&gt;&lt;img class=&#34;wp-image-11455 alignnone&#34; alt=&#34;device-2013-07-12-053533&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533.png&#34; width=&#34;259&#34; height=&#34;461&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533-576x1024.png 576w&#34; sizes=&#34;(max-width: 259px) 100vw, 259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have been working on two developer libraries, &lt;a href=&#34;https://guardianproject.github.io/info/code/sqlcipher&#34;&gt;SQLCipher&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;IOCipher&lt;/a&gt;, which provide a simple means to enable database and file encryption in any app. More recently, we have added the &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34;&gt;CacheWord&lt;/a&gt; library to that mix, to help safely manage the locking and unlocking of these data stores. Apps like Gryphn have already implemented all three of these libraries, and so will the next version of Gibberbot.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Certificate Pinning&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.thoughtcrime.org/&#34;&gt;Moxie&lt;/a&gt; says it best in his post titled &lt;a href=&#34;http://www.thoughtcrime.org/blog/authenticity-is-broken-in-ssl-but-your-app-ha/&#34;&gt;Your app shouldn’t suffer SSL’s problems&lt;/a&gt;: “If you have a mobile app that makes SSL connections to a service you control, there is really no reason to be validating your service’s certificate using CA signatures.” The &lt;a href=&#34;https://github.com/moxie0/AndroidPinning&#34;&gt;Android Pinning library&lt;/a&gt; makes it quite simple to support this important feature in any app. For Gibberbot, we are pinning certificates of the most common known public XMPP services, such as Google (talk.google.com), Facebook, Jabber.org, Jabber.ccc.de, DuckDuckGo and few more. Beyond that, we offer manual verification (see #3 feature below for more on that). In summary, there is no reason anymore to trust the default CA’s for a messaging app.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong style=&#34;font-size: 13px; line-height: 19px;&#34;&gt;3. TOFU/POP aka “Manual Certificate Verification”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://noncombatant.org/&#34;&gt;Chris Palmer&lt;/a&gt;, formerly of the Electronic Frontier Foundation and iSec Partners and now of Google, gave a great talk a few years ago entitled &lt;a href=&#34;https://docs.google.com/presentation/d/1bieNRy4TU04PKhQ1i_J_kPZ_Tc2E6efNVbvJ295orBs/present#slide=id.i0&#34;&gt;“It’s Time to Fix HTTPS”&lt;/a&gt;. In it, he introduced, or perhaps just popularized, the phrase “Trust on First Use, Persistence of Pseudonym”, that is more happily expressed as TOFU/POP! What this means in user form is that when you connect to a new server for the first time over an SSL connection, instead of the SSL Certificate being verified by a built-in set of trusted root authorities (banks, corporations, governments), the certificate is presented to the user, in a human readable format, to be reviewed, accepted or declined. There are a number of useful pieces of information the user can look at to determine the validity – fingerprints, date generated, and so on. If you can safely verify it once, then you will only be notified or asked to verify again if the server’s certificate changes. At that point the user can be told “This site’s certificate changed, and it doesn’t look the same as it was yesterday. Maybe you should ask the admin or help system if it is still safe to use!”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054024.png&#34;&gt;&lt;img alt=&#34;device-2013-07-12-054024&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054024.png&#34; width=&#34;259&#34; height=&#34;461&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The implementation of TOFU/POP that we use in Gibberbot is the &lt;a href=&#34;https://github.com/ge0rg/MemorizingTrustManager/wiki&#34;&gt;Memorizing Trust Manager&lt;/a&gt; library, originally developed for the &lt;a href=&#34;http://yaxim.org/&#34;&gt;Yaxim messaging app&lt;/a&gt;. It works very well, and again, is extremely simple to implement. Through the combination of features #2 and #3 we have removed the threat posed by the failure of the Root Certificate Authority system, and significantly reduced the success rate of Man-in-the-Middle attacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Proxy Support, ideally Tor&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;With all the talk of metadata recently, it should be clear how important traffic surveillance is. Knowing who is using what app when, or being able to see when two users connect peer-to-peer through a service is immensely valuable information. If it is possible to map a user’s social graph via your app based on analysis of packets coming in and out of your service, then you have failed in providing security to your users. Additionally, we have begun to see a new wave of Internet filtering around the world, as countries begin to block access to popular messaging app downloads and centralized servers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-11460&#34; alt=&#34;device-2013-07-12-054331&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331.png&#34; width=&#34;259&#34; height=&#34;461&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331-576x1024.png 576w&#34; sizes=&#34;(max-width: 259px) 100vw, 259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This makes it critical that any messaging app a user will depend on to protect their messages, also works to protect their network of contacts (social graph), and ensures they will have access to the service no matter where they travel or live in the world. In order to achieve this, direct support for proxy servers should be built in to every secure messaging app. At a bare minimum HTTP proxies should be support, and ideally, HTTPS and SOCKS as well. Once you have support for those, you can easily tie into Orbot on Android, by setting the proxy to “localhost” and the appropriate port. If you want to avoid Tor Exit Node attacks or surveillance, you should then provide a Tor Hidden Service .ONION address for your servers, something that the &lt;a href=&#34;https://twitter.com/jabbercccde/status/107850540842627072&#34;&gt;CCC’s Jabber server has provided since 2011&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We have blogged in the past about &lt;a href=&#34;https://guardianproject.info/2012/06/13/auditing-twitter-with-orbot/&#34;&gt;Twitter’s support for proxying on Android&lt;/a&gt; and our OnionKit library, now named &lt;a href=&#34;https://guardianproject.info/code/netcipher/&#34;&gt;NetCipher&lt;/a&gt;. Gibberbot has supported proxying from nearly the beginning of its existence, and in v12 we are using the &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/sample/src/sample/onionkit/OnionKitSampleActivity.java#L96&#34;&gt;OrbotHelper class&lt;/a&gt; to add an automatic check if Orbot is installed and running, if a user selects to use it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Verifiable Message Encryption&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;While we expect most nextgen secure messaing apps will support some form of public key encryption, OTR ideally and OpenPGP alternatively, that is not really the end of the message encryption problem. With OpenPGP, we know that most users of the software participate in key signing parties on a regular basis. The same is true for users of desktop OTR encryption in apps like Pidgin. People do not verify keys as often as they should. Since most messaging apps support in-band key exchange, it makes performing a MITM attack at the messaging layer quite trivial, if the SSL transport layer encryption is somehow intercepted.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-11479&#34; alt=&#34;device-2013-07-16-003940&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940.png&#34; width=&#34;259&#34; height=&#34;461&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940-576x1024.png 576w&#34; sizes=&#34;(max-width: 259px) 100vw, 259px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-11480&#34; alt=&#34;device-2013-07-16-004035&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035.png&#34; width=&#34;259&#34; height=&#34;461&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035-576x1024.png 576w&#34; sizes=&#34;(max-width: 259px) 100vw, 259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What is needed are a variety of features, prods, pokes and motivational interventions to ensure that two people who are using an app to exchange encrypted messages know how fun and easy it can be to verify their keys. With Gibberbot, we were one of the first apps to support the display and scanning of OTR fingerprints as QR Codes. We will go beyond that in future releases with NFC support, as well. We also support shared secret and &lt;a href=&#34;https://en.wikipedia.org/wiki/Socialist_millionaire&#34;&gt;Socialist Millionaire Protocol&lt;/a&gt;-based verification, which in short means, if you and your friend have a real world secret or question and answer ready, you can easily verify your cryptographic fingerprints without ever having to look at a long string of alphanumeric characters.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6. Key Management&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This feature comes under the “a great problem to have” category. Once a user really commits to using their app, they will begin building up a network of verified contacts (if you have implemented #5 properly), and generally come to regard your app as a type of secure identity management tool. In fact, they may have created a whole unique identity for themselves that only exists within the confines of your apps, and its encrypted local storage (if you have implemented #1 above). At this point, you need to figure out a means for a user to backup this identity, and generally import and export the data in a variety of ways. If you are using OTR or OpenPGP, then the user may want to share existing keyrings to and from other apps, most likely on their desktop or laptop machines. All in all, the user needs to be empowered to have control of their identity, to move it between devices, to back it up in case a device is wiped or lost, and to keep total control of that information (i.e. not have it backed up automatically to a cloud).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/keysync.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-11466&#34; alt=&#34;keysync&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/keysync.jpg&#34; width=&#34;758&#34; height=&#34;548&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/07/keysync.jpg 758w, https://guardianproject.info/wp-content/uploads/2013/07/keysync-300x216.jpg 300w&#34; sizes=&#34;(max-width: 758px) 100vw, 758px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In our case, we have been working for quite a while on a desktop tool called &lt;a href=&#34;https://github.com/guardianproject/otrfileconverter&#34;&gt;OTR File Converter&lt;/a&gt;, which is built upon more fundamental research into the many ways that &lt;a href=&#34;https://github.com/guardianproject/otrfileconverter/blob/master/README.txt&#34;&gt;different OTR-enabled apps store their public and private keys&lt;/a&gt;. As of Gibberbot v12 alpha 3 (now called “ChatSecure” btw!), we now have working support for &lt;a href=&#34;https://lists.mayfirst.org/pipermail/guardian-dev/2013-April/001537.html&#34;&gt;importing an OTR key ring from the desktop&lt;/a&gt;, in a manner that is secure and fairly simple. Our next stop is to add export from the client, and then automated sync between desktop and mobile on an ongoing basis. Beyond this capability, we also plan to expand the ability to manage keys within the Gibberbot app itself, so that a user can manually revoke, regenerate and update or remove trust of other users’ keys.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;7. Panic as a feature!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, we keep coming across this idea of a “Panic Button” being an important feature for addressing security issues in a mobile environment. A few years ago, we developed an app called &lt;a href=&#34;https://github.com/guardianproject/InTheClear/&#34;&gt;In The Clear&lt;/a&gt; which attempted to provide data wipe and distress beacon functionality across your entire device, be it Android, Nokia or Blackberry. We quickly realized that there were many, many different definitions of what a “Panic Button” should do, and that one app may not be able to encompass all of these needs. Since then, we have thought more about “Panic!” as a feature for an app, and how each app we develop should incorporate the capability to assist users when they feel the data that the app holds may be at risk of being compromised or exposed.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-11461&#34; alt=&#34;device-2013-07-12-054429&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429.png&#34; width=&#34;259&#34; height=&#34;461&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429-576x1024.png 576w&#34; sizes=&#34;(max-width: 259px) 100vw, 259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In Gibberbot v12, we have implemented Panic as a quick access sidedrawer button. The action can trigger a configurable set of actions, ranging from simply logging out, to deleting all configured accounts, to uninstall the app itself. In the future, we would like to also consider supporting a “turtle shell” type feature where the app can hide itself on your device as an encrypted anonymous blob, until you are ready for it to come back out again. Additionally, supporting false passwords at app unlock that trigger account data wipe or the display of false data is also something we think would be useful to support.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What Are You Prepared To Do?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We know the deep feeling of adrenaline and satisfaction you get when &lt;del&gt;code&lt;/del&gt; ship software that can truly have an impact on a human’s basic freedoms. We are moved when we receive an email from a user in a part of the world where speech and expression is limited and filtered, and they tell us how important our software is to them, and how they do not know what they would without us. These emotions, both from within and shared by others, make it that more important to ensure any development of secure messaging tools is approached in a serious and diligent manner. Checking feature boxes is not enough. Using HTTPS is not enough. Even supporting basic OTR and PGP is no longer enough. We must provide deep and broad security both on the network and on the device, at all times.&lt;/p&gt;
+
+&lt;p&gt;If you are not prepared to go the extra mile with your app’s security capabilities, then perhaps you are in the wrong line of work.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Proposal for Secure Connection Notification on Android</title>
+      <link>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</link>
+      <pubDate>Thu, 15 Nov 2012 10:07:49 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</guid>
+      <description>&lt;p&gt;A major problem of mobile applications being increasingly used over web-based applications, is that there is no standard established for notifying the user of the state of security on the network connection. With a web browser, the evolution of the “lock” icon when an &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Secure&#34;&gt;HTTPS connection&lt;/a&gt; is made, has been one that evolved originally out of Netscape’s first implementation, to an adhoc, defact industry-standard way of letting the user know if their connection is secure. Beyond just a binary on/off, the lock icon is also the entry point into viewing more information about the digital security tokens, keys and certificates that are powering the connection – who authorized them, who requested them, and so on. More recently, with browsers such as Chrome, there has been the user of color schemes (Green is good, Red is bad), verified domain display and other indicators to help ensure the user knows when to trust their connection, and when to be wary.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2952&#34; title=&#34;Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail-300x182.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;182&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail-300x182.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail.png 429w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; &lt;em&gt;Firefox’s HTTPS certificate display&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;While many people claim that HTTPS/TLS/SSL are fundamentally broken, they are still an essential piece of basic frontline security on the web. In addition, when making a connection through a proxy network like Tor or a free VPN service, utilizing TLS/SSL is critical in making sure you network is not being intercepted along the way. The notification icon and related certificate viewing, is a critical component for the user, and one that is entirely missing in the mobile application space. The Android API does not provide a standardized method to share this information with the user, and the implementation on iOS is unclear, as well. Even worse, the proper implementation of a strong HTTP/S connection that properly handles verification of certificates, and provides an interactive option for users to accept or decline is entirely missing for the majority of mobile apps.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, we have added a Secure Connection Notification feature into our new &lt;a href=&#34;https://github.com/guardianproject/OnionKit&#34;&gt;OnionKit for Android&lt;/a&gt; library. Build upon our previous work on &lt;a href=&#34;https://github.com/guardianproject/cacert&#34;&gt;implementing custom Root CA Certificate stores for Android&lt;/a&gt;, this library not only provides a clear way to enable HTTP and SOCKS proxying for your network requests (to enable use with our app, &lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot: Tor for Android&lt;/a&gt;), but it also includes a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/library/src/info/guardianproject/onionkit/trust/StrongTrustManager.java&#34;&gt;StrongTrustManager&lt;/a&gt; and a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/library/src/info/guardianproject/onionkit/trust/StrongHttpsClient.java&#34;&gt;StrongHTTPSClient&lt;/a&gt; implementation, that works to defend against man-in-the-middle attacks, and other means to intercept a TLS or SSL connection between a mobile app and a remote server. Part of the defense, is providing a clear indicator to the user when a secure connection is in use.&lt;/p&gt;
+
+&lt;p&gt;We have provided a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/sample/src/sample/onionkit/OnionKitSampleActivity.java&#34;&gt;sample Android app&lt;/a&gt; to demonstrate how simple it is to enable this capability. The screenshots below are from that app.&lt;/p&gt;
+
+&lt;p&gt;In this first screenshot, the app has connected to &lt;a href=&#34;https://check.torproject.org&#34;&gt;https://check.torproject.org&lt;/a&gt; and you can see in the Notification bar a “key” icon indicating there is a secure connection active.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-2947 alignnone&#34; title=&#34;noTor&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor-254x300.png&#34; alt=&#34;&#34; width=&#34;254&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor-254x300.png 254w, https://guardianproject.info/wp-content/uploads/2012/11/noTor.png 800w&#34; sizes=&#34;(max-width: 254px) 100vw, 254px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When you drag the notification bar down, you can see a more complete view of the Secure Connection Notification (SCN) message, which indicates the connection is Active and shows a summary of the secure certificate information. In a recent update to the OnionKit SCN code, it also allows for the application to include its name and icon in this notification.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2948&#34; title=&#34;device-2012-11-08-204130&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130-300x139.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;139&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130-300x139.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130.png 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, you can tap on the SCN notification and bring up a larger pop-over view of the certificate information. We intend to develop this view further, to allow for better manual management of trust – meaning you may have the option to accept/decline or disable trust of this certificate or the certificate authority that provides it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2949&#34; title=&#34;device-2012-11-08-203216&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216-300x222.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;222&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216-300x222.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216.png 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Beyond “Active” messages, the notification system will also warn or block connections that are deemed risky, invalid or otherwise unverifiable. You can use OnionKit in concert with the &lt;a href=&#34;https://github.com/ge0rg/MemorizingTrustManager&#34;&gt;MemorizingTrustManager&lt;/a&gt; to manually override this verification process, if your application is expected to often connect to servers with unverifiable certificates. Finally, using our &lt;a href=&#34;https://github.com/guardianproject/cacert&#34;&gt;CACert project&lt;/a&gt;, you can generate custom Root CA stores for use with OnionKit, that utilize your own certificate authorities, or a custom rolled set.&lt;/p&gt;
+
+&lt;p&gt;Our goal is not to overwhelm the user, but instead to provide them a simple notification so they can understand which applications have their best interests in mind, and which do not. It is amazing how many popular mobile apps transmit personal information using HTTP completely in plain text, in the clear, allowing any number of parties along the network path between the device and server to passively vacuum up this data. Users generally are not aware or do not care about this issue. It is up to the mobile application developer, to adopt an approach like our Secure Connection Notification, or to directly utilize our OnionKit library itself.&lt;/p&gt;
+
+&lt;p&gt;Finally, we would like to see Android and other mobile operating systems, adopt a system such as this device-wide, such that it becomes as standard as the desktop web browser HTTPS lock.&lt;/p&gt;
+
+&lt;p&gt;If you are a developer, please check out OnionKit for Android today, and let us know what you think: &lt;a href=&#34;https://github.com/guardianproject/OnionKit/&#34;&gt;https://github.com/guardianproject/OnionKit/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

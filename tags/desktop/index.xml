@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desktop on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/desktop/</link>
+    <description>Recent content in Desktop on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 Nov 2013 12:50:23 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Your own private dropbox with free software</title>
+      <link>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</link>
+      <pubDate>Tue, 12 Nov 2013 12:50:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</guid>
+      <description>&lt;p&gt;There are lots of file storage and sharing software packages out there that make it easy for a group of people to share files. Dropbox is perhaps the most well known of the group, it provides an easy way for a group of people to share files. The downside of Dropbox is that it is not a private service, just like any cloud-based service. Dropbox has total access to your files that you store there. That means its likely that the NSA and its collaborators do too.&lt;/p&gt;
+
+&lt;p&gt;Dropbox also knows where the computers are that are accessing their service because they can see the IP address of the incoming connections. To help with this, it is possible to use use Dropbox over Tor, thankfully they have provided proxy settings.&lt;/p&gt;
+
+&lt;p&gt;For our shared files, we use &lt;a href=&#34;http://sparkleshare.org/&#34; target=&#34;_blank&#34;&gt;SparkleShare&lt;/a&gt;. It provides an experience very similar to Dropbox: you have a SparkleShare folder that is synced up with the service, and in turn any other users who are also linked up to it. Once its setup, it is as easy to use as Dropbox, but setting it up takes a bit more work than Dropbox. It builds upon two software packages well known for security and reliability: &lt;code&gt;git&lt;/code&gt; and &lt;code&gt;ssh&lt;/code&gt;, and works with Tor Hidden Services. It runs on Windows, Mac OS X, and GNU/Linux, and there is an &lt;a href=&#34;https://github.com/NewProggie/SparkleShare-Android&#34; target=&#34;_blank&#34;&gt;Android client&lt;/a&gt; in the works.&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png&#34; alt=&#34;sparkleshare-onion&#34; width=&#34;312&#34; height=&#34;342&#34; class=&#34;alignright size-full wp-image-11936&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png 312w, https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion-273x300.png 273w&#34; sizes=&#34;(max-width: 312px) 100vw, 312px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use any git service as the server for SparkleShare, including github, bitbucket, &lt;a href=&#34;https://gitorious.org/&#34; target=&#34;_blank&#34;&gt;gitorious&lt;/a&gt;, etc. But these have the same issues as putting your files on Dropbox: that service has complete access to your files. For extra protection, SparkleShare &lt;a href=&#34;https://github.com/hbons/SparkleShare/wiki/Client-Side-Encryption&#34; target=&#34;_blank&#34;&gt;can encrypt the files on the client-side&lt;/a&gt;, have encrypted shared folders with SparkleShare, so that the server does not have access to the files. For the last piece of setting up a private SparkleShare, you need a computer that you can &lt;code&gt;ssh&lt;/code&gt; to, and has &lt;code&gt;git&lt;/code&gt; and Tor on it. This computer could even be an old Android device running &lt;a href=&#34;https://guardianproject.info/code/lildebi/&#34; target=&#34;_blank&#34;&gt;Lil’ Debi&lt;/a&gt;, it only needs enough disk space for your SparkleShare files and a steady network connection. Running it on your own computer means it can use a Tor Hidden Service, and that all of the metadata related to who is editing what files remains private.&lt;/p&gt;
+
+&lt;p&gt;To start, setup a Tor Hidden Service to the sshd port. You can read all about that process in the &lt;a href=&#34;https://www.torproject.org/docs/tor-hidden-service.html&#34; target=&#34;_blank&#34;&gt;Tor instructions&lt;/a&gt;, but basically, you need to add something like this to the &lt;code&gt;torrc&lt;/code&gt; configuration file:&lt;/p&gt;
+
+&lt;pre&gt;HiddenServiceDir /var/lib/tor/ssh_hidden_service/
+HiddenServicePort 22 127.0.0.1:22
+&lt;/pre&gt;
+
+&lt;p&gt;Then restart tor, and it will generate two files in &lt;code&gt;/var/lib/tor/ssh_hidden_service/&lt;/code&gt;, open the file called &lt;code&gt;hostname&lt;/code&gt; to see your new .onion address. We’re going to use &lt;code&gt;fakefakefakefake.onion&lt;/code&gt; as our made-up one for this HOWTO. That is the address you will use in SparkleShare as the server address.&lt;/p&gt;
+
+&lt;p&gt;Next &lt;code&gt;ssh&lt;/code&gt; needs to be setup to use Tor to access the .onion address of the Tor Hidden Service. To do that we need the wonderful Netcat tool (&lt;code&gt;nc&lt;/code&gt;). On Debian/Ubuntu, run &lt;code&gt;sudo apt-get install netcat-openbsd&lt;/code&gt; to get it, its included with Mac OS X by default. Now edit your SSH config file, its usually in &lt;code&gt;~/.ssh/config&lt;/code&gt;, and add this section:&lt;/p&gt;
+
+&lt;pre&gt;Host *.onion
+     Compression yes
+     ProxyCommand nc -X 5 -x 127.0.0.1:9050 %h %p
+&lt;/pre&gt;
+
+&lt;p&gt;For Windows, you need to use &lt;code&gt;connect&lt;/code&gt; proxy, which is thankfully included in SparkleShare. You can optionally use &lt;code&gt;connect&lt;/code&gt; instead of Netcat/&lt;code&gt;nc&lt;/code&gt; on Mac OS X (&lt;code&gt;fink install connect&lt;/code&gt; or &lt;code&gt;brew install connect&lt;/code&gt;) and GNU/Linux (e.g. &lt;code&gt;apt-get install connect-proxy&lt;/code&gt; or &lt;code&gt;yum install connect-proxy&lt;/code&gt;). Instead of the snippet above, use this snippet in &lt;code&gt;~/.ssh/config&lt;/code&gt; to use &lt;code&gt;connect&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;Host *.onion
+     Compression yes
+     ProxyCommand connect -5 -S 127.0.0.1:9050 %h %p
+&lt;/pre&gt;
+
+&lt;p&gt;Now its time to set up the git repo on the server that will be the conduit for sharing files between the different users. Basically, all you need to do is create a new folder, then make it a “bare” git repo (you can read &lt;a href=&#34;http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server&#34; target=&#34;_blank&#34;&gt;all about it in the git book&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;ssh g&amp;#x69;t&amp;#x40;&amp;#x66;a&amp;#x6b;e&amp;#x66;&amp;#x61;k&amp;#x65;f&amp;#x61;&amp;#x6b;e&amp;#x66;a&amp;#x6b;&amp;#x65;.&amp;#x6f;n&amp;#x69;&amp;#x6f;n
+mkdir /home/git/MyPrivateShare
+cd /home/git/MyPrivateShare
+git init --bare
+&lt;/pre&gt;
+
+&lt;p&gt;For sshing to the git, we set up a single account called &lt;code&gt;git&lt;/code&gt;, then to grant access, we add the SSH key (SparkleShare calls this the &lt;em&gt;Client ID&lt;/em&gt;) to the &lt;code&gt;git&lt;/code&gt; account’s &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Now everything should be ready to start adding clients! In SparkleShare, go to Add Hosted Project…, choose On my own server, then enter your username and .onion address (&lt;em&gt;ssh:&amp;#x2f;&amp;#x2f;&amp;#x67;&amp;#x69;t@fak&amp;#x65;&amp;#x66;&amp;#x61;&amp;#x6b;efake&amp;#x66;&amp;#x61;&amp;#x6b;&amp;#x65;.onio&amp;#x6e;&lt;/em&gt;) in &lt;strong&gt;Address&lt;/strong&gt; and the path to the git repo (&lt;em&gt;/home/git/MyPrivateShare&lt;/em&gt;) in &lt;strong&gt;Remote Path&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png&#34; alt=&#34;SparkleShare Setup&#34; width=&#34;686&#34; height=&#34;427&#34; class=&#34;alignnone size-full wp-image-11945&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png 686w, https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup-300x186.png 300w&#34; sizes=&#34;(max-width: 686px) 100vw, 686px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the client will download the entire git repository from the server, and you’ll then have a working shared dropbox! If there are a lot of files in it, then the first sync can take a long time before any files show up. This is because git first downloads the entire history first, then it checks out the files. After that initial setup, then the new files show up quite quickly.&lt;/p&gt;
+
+&lt;p&gt;So this SparkleShare setup keeps your files on computers that you control, it prevents information and metadata from being leaked to the network while people are using this SparkleShare setup. When using Client Side Encryption, even less data is leaked. The server cannot access the content of the files at all since they are encrypted. The the server in this case would only be able to see the network traffic, and which ssh key was used to access the server. If everyone accessing this setup used the same user account (i.e. &lt;code&gt;git&lt;/code&gt;) and ssh key, then the server would not even know which user is making the changes. This is about as private as you could hope for in a shared dropbox folder.&lt;/p&gt;
+
+&lt;p&gt;One last nice feature of this setup is that git server does not need a domain name, static IP or even a public IP, it just needs a working internet connection. As long as it can connect to Tor, then the Hidden Service will work. So if this private dropbox is for extra sensitive stuff, it could be stashed anywhere it can get power and wifi.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

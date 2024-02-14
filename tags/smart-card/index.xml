@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Smart Card on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/smart-card/</link>
+    <description>Recent content in Smart Card on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Dec 2017 05:43:34 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/smart-card/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a Signing Server</title>
+      <link>https://guardianproject.github.io/info/2017/12/18/building-a-signing-server/</link>
+      <pubDate>Mon, 18 Dec 2017 05:43:34 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/12/18/building-a-signing-server/</guid>
+      <description>
+
+&lt;p&gt;The Android APK signing model sets the expectation that the signing key will be the same for the entire lifetime of the app. That can be seen in the recommended lifetype of an Android signing key: &lt;a href=&#34;https://developer.android.com/studio/publish/app-signing.html#considerations&#34;&gt;20+ years&lt;/a&gt;. On top of that, it is difficult to &lt;a href=&#34;https://guardianproject.info/2015/12/29/how-to-migrate-your-android-apps-signing-key/&#34;&gt;migrate an app to a new key&lt;/a&gt;. Since the signing key is an essential part to preventing APKs from impersonating another, Android signing keys must be kept safe for the entire life of the app.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid repo signing keys follow a very similar model: the signing key is the essential way to safely identify an F-Droid repo. So the same considerations apply to F-Droid repo signing keys as to APK signing keys. This also provides some really useful benefits. Since the integrity of the repo index file and the APKs are guaranteed by the repo signature, the files can be delivered via whatever method is most convenient, and their integrity will be automatically verified by the F-Droid client app, the &lt;em&gt;f-droid.org&lt;/em&gt; deploy process, and Repomaker.&lt;/p&gt;
+
+&lt;p&gt;This means the security burden is shifted from the online, public webserver to a private signing machine. Just keeping that machine out of the public eye goes a long way towards improving security. There are a number of additional measures that can be taken to further improve the security of the signing process. Here are some approaches, starting with the easiest and least security, and going on to more secure setups that require more work to setup and run. Signing is not an resource intensive process, so any machine will work, even a 10 year old, basic laptop. We recommend using a minimal &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; install, and rebuilding the machine from scratch.&lt;/p&gt;
+
+&lt;h3 id=&#34;automated-signing-server-with-with-hsm&#34;&gt;Automated Signing Server with with HSM&lt;/h3&gt;
+
+&lt;p&gt;For a fully automated signing setup, the machine running the signing needs to be online and running. Ideally this machine would have no remote access, at the very least remote access should be very carefully controlled and monitored. A laptop makes it easy to work with even when remote access is disabled, since it provides a built-in keyboard and monitor. If remote access is required, then any basic PC will work fine. Using a Hardware Security Module (HSM) to store the keys prevents them from being stolen if the server is broken into. An attacker could only run the signing process on that server.&lt;/p&gt;
+
+&lt;p&gt;Ideally, this machine would only be accessible via Tor. That hides the physical location of the server, and hides the traffic from network. This makes it much harder attackers to find the actual machine to attack.&lt;/p&gt;
+
+&lt;p&gt;For the HSM, we recommend using &lt;a href=&#34;https://www.nitrokey.com/&#34;&gt;Nitrokey&lt;/a&gt; hardware, since they are free software/hardware, and provide a wide range of options. Use a separate machine to put the signing keys on HSM. A good HSM will keep an audit trail of how many signatures have been made, so that information could be used to create an automatic auditing process to raise alarms if too many signatures have been made. That could mean that this server was breached and used to sign unauthorized packages.&lt;/p&gt;
+
+&lt;p&gt;Other possibility it to use a setup like &lt;a href=&#34;https://pagure.io/sigul&#34;&gt;Fedora&lt;/a&gt;‘s &lt;a href=&#34;http://www.devops-blog.net/koji/gpg-signing-rpms-with-sigul-signing-server-koji-integration&#34;&gt;Sigul&lt;/a&gt; that involves three machines.&lt;/p&gt;
+
+&lt;h3 id=&#34;basic-laptop-dedicated-to-signing&#34;&gt;Basic laptop dedicated to signing&lt;/h3&gt;
+
+&lt;p&gt;Start with a laptop that can be wiped clean and rebuilt from scratch. What is most important is that only the essential software is installed on it, and nothing else. Do not include any browser at all, for example, since that is the most common vector of attack. No remote access setup (e.g. SSH or VNC) should be installed or configured. To sign apps and repos, someone would take out this laptop, connect it to the network, and run the signing process. The signed results can then be published via the network connection. When the signing is complete, the machine can be turned off and disconnected and kept in a safe place.&lt;/p&gt;
+
+&lt;p&gt;This could be made quite automatic with some custom scripts. The person running the process would only need to take out the machine, connect it, turn it on, wait until the process completes, then put it all away again.&lt;/p&gt;
+
+&lt;h3 id=&#34;fully-offline-signing-laptop-with-usb-thumb-drives&#34;&gt;Fully offline signing laptop with USB thumb drives&lt;/h3&gt;
+
+&lt;p&gt;_&lt;strong&gt;update&lt;/strong&gt;: apt-offline has a &lt;a href=&#34;https://bugs.debian.org/871656&#34;&gt;security bug&lt;/a&gt; so it was removed from Debian/buster. It is no longer recommended! Instead, use the Debian &amp;ldquo;&lt;a href=&#34;https://www.debian.org/doc/manuals/apt-offline&#34;&gt;apt offline&lt;/a&gt;&amp;rdquo; setup._&lt;/p&gt;
+
+&lt;p&gt;This process is based on the same basic, stripped down laptop as the previous example. But this time, the networking should be entirely disabled before the install process. For example, it is easy in many laptops to physically remove the WiFi card. Therefore, it makes sense to use a laptop that does not include an ethernet jack, which are usually not possible to remove. Otherwise, blacklisting all kernel modules related to neworking can suffice. Since this machine is fully offline, the extra work of using an HSM is not as important, but it can’t hurt to include it.&lt;/p&gt;
+
+&lt;p&gt;Download the full &amp;ldquo;CD&amp;rdquo; or &amp;ldquo;DVD&amp;rdquo; image of Debian to run the install. Be sure to &lt;a href=&#34;https://www.debian.org/CD/verify&#34;&gt;verify&lt;/a&gt; the GPG signatures and the SHA-256 hashes. One essential utility is &lt;em&gt;apt-offline&lt;/em&gt;, which automates the process of downloading Debian packages, verifying their signatures, and copying them over to an offline machine.&lt;/p&gt;
+
+&lt;p&gt;To be extra careful, all of the software used should be verified. Chromebooks are nice, cheap laptops that run Linux natively. They also use Coreboot for the BIOS.&lt;/p&gt;
+
+&lt;p&gt;&lt;li id=&#34;buy-a-computer-off-the-shelf-with-cash-avoid-having-it-shipped-especially-across-borders&#34;&gt;
+  Buy a computer off the shelf with cash, avoid having it shipped, especially across borders
+&lt;/li&gt;
+&lt;li id=&#34;buy-a-debian-supported-chromebook-with-removeable-wifi-hardware-and-needs-no-binary-blobs&#34;&gt;
+  Buy a Debian-supported &lt;a href=&#34;https://www.chromium.org/chromium-os/developer-information-for-chrome-os-devices/acer-c720-chromebook&#34;&gt;Chromebook&lt;/a&gt; with removeable WiFi hardware, and needs no binary blobs
+&lt;/li&gt;
+&lt;li id=&#34;install-a-reproducibly-built-coreboot-binary&#34;&gt;
+  Install a reproducibly built coreboot binary
+&lt;/li&gt;
+&lt;li id=&#34;install-from-a-reproducibly-built-debian-image-wiping-out-chrome-os-entirely&#34;&gt;
+  Install from a reproducibly built Debian image, wiping out Chrome OS entirely
+&lt;/li&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-physical-environment&#34;&gt;The Physical Environment&lt;/h2&gt;
+
+&lt;p&gt;The last thing to consider is the physical location where signatures happen, and where essential equipment is stored. The signing environment must be physically secure. Otherwise, there is no way to prevent laptops or HSMs from being lost or used to sign inappropriate content. For the offline machines, keeping them in a locked room is a good start. For an online machine, forcing all network traffic and remote access over Tor hides the physical location of the machine from network observers.&lt;/p&gt;
+
+&lt;p&gt;For high risk signing keys, using multiple layers of defense is important:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Restricted physical access to HSMs or smart cards&lt;/li&gt;
+&lt;li&gt;Security cameras&lt;/li&gt;
+&lt;li&gt;Onsite security guards&lt;/li&gt;
+&lt;li&gt;Visitor logging&lt;/li&gt;
+&lt;li&gt;A tools-resistant server safe for online code-signing servers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The signing server should be physically separate from the rest of the infrastructure. And the logs, machine, and network should be periodically audited.&lt;/p&gt;
+
+&lt;h2 id=&#34;difficult-decisions&#34;&gt;Difficult decisions&lt;/h2&gt;
+
+&lt;p&gt;Ideally all of these practices would be put into place, but each of these security measures comes at a cost of difficulty, expense, and complexity. They can also delay the process of getting regular updates out. So there are risks of implementing too strict security policies, much like the risks of not implementing enough.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

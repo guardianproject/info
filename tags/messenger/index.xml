@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Messenger on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/messenger/</link>
+    <description>Recent content in Messenger on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 16 May 2012 17:28:03 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/messenger/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&lt;!--:en--&gt;Bye, bye, BBM! Facebook Allows Verifiable Encrypted Mobile Messaging for Android and iOS; Mobile Revenue Threatened?&lt;!--:--&gt;</title>
+      <link>https://guardianproject.github.io/info/2012/05/16/en-bye-bye-bbm-facebook-allows-verifiable-encrypted-mobile-messaging-for-android-and-ios-mobile-revenue-threatened/</link>
+      <pubDate>Wed, 16 May 2012 17:28:03 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/16/en-bye-bye-bbm-facebook-allows-verifiable-encrypted-mobile-messaging-for-android-and-ios-mobile-revenue-threatened/</guid>
+      <description>&lt;p&gt;&lt;!--:en--&gt;Yes, yes, we are trying to get in on all of the Facebook pre-IPO buzz. Fortunately, the headline is true – through&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developers.facebook.com/docs/chat/&#34;&gt;Facebook’s support for open-standards messaging&lt;/a&gt;, our secure mobile messaging app, &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;Gibberbot for Android&lt;/a&gt;, can be used to communicate securely with any other friend on Facebook who is ALSO using a secure messaging app. Whether it is &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;Gibberbot&lt;/a&gt;, &lt;a href=&#34;http://chrisballinger.info/apps/chatsecure/&#34;&gt;ChatSecure for iOS&lt;/a&gt;, Adium (Mac), Pidgin (Windows/Linux), or one of the many secure messaging apps that support the &lt;a href=&#34;http://www.cypherpunks.ca/otr/&#34;&gt;Off-the-Record encryption capability&lt;/a&gt;, Facebook allows encrypted messaging between mobile and desktops alike.&lt;/p&gt;
+
+&lt;p&gt;This means that as opposed to the default Facebook Messenger apps that transmit and store their messages in plaintext, no one but you and the person you are messaging can read the contents of the communication. This goes far beyond the really unsafe designs of group messaging products like &lt;a href=&#34;https://en.wikipedia.org/wiki/WhatsApp#Security_concerns&#34;&gt;WhatsApp&lt;/a&gt;, which have &lt;a href=&#34;https://en.wikipedia.org/wiki/WhatsApp#Security_concerns&#34;&gt;pretty much no security at all&lt;/a&gt;, and are easily hijacked and monitored.&lt;/p&gt;
+
+&lt;p&gt;You can even use Gibberbot over the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;, to access Facebook messaging in places where it might be blocked or monitored, like your school, work, or your local authoritarian surveillance state.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/gibberface.jpg&#34;&gt;&lt;img class=&#34;wp-image-2170 alignnone&#34; title=&#34;gibberface&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/gibberface.jpg&#34; alt=&#34;&#34; width=&#34;600&#34; height=&#34;337&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/gibberface.jpg 1000w, https://guardianproject.info/wp-content/uploads/2012/05/gibberface-300x168.jpg 300w&#34; sizes=&#34;(max-width: 600px) 100vw, 600px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, it is very interesting to note, that while they allow it, they do *detect* that you are using encryption, and tag it as such in the web-based messaging interface (which does NOT support encryption). Only time will tell if this is simply a feature for tidying up the user interface (else you see a bunch of cypher text gobblyegook), or some sort of retro-future surveillance of who is using Facebook in non mainstream ways. After all, if Facebook cannot index my chats for keywords to advertise against, do they really want me using up their server computing time?&lt;/p&gt;
+
+&lt;p&gt;Below is a screenshot of &lt;a href=&#34;http://chrisballinger.info/apps/chatsecure/&#34;&gt;ChatSecure&lt;/a&gt;, the first open-source secure messenger for iOS devices. We are excited to be partnering this project to ensure full interoperability with Gibberbot.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/screenshot.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-2179&#34; title=&#34;screenshot&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/screenshot.png&#34; alt=&#34;&#34; width=&#34;473&#34; height=&#34;540&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/screenshot.png 473w, https://guardianproject.info/wp-content/uploads/2012/05/screenshot-262x300.png 262w&#34; sizes=&#34;(max-width: 473px) 100vw, 473px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Learn more about the entire Guardian Project suite of &lt;a href=&#34;https://guardianproject.github.io/info/apps&#34;&gt;open-source secure mobile apps&lt;/a&gt;.&lt;!--:--&gt;&lt;/p&gt;
+
+&lt;!--:pt--&gt;
+
+&lt;!--:--&gt;
+
+&lt;!--:es--&gt;
+
+&lt;!--:--&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

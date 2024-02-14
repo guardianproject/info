@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Privacy on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/privacy/</link>
+    <description>Recent content in Privacy on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 08 Jun 2017 10:58:53 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/categories/privacy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tracking usage without tracking people</title>
+      <link>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</link>
+      <pubDate>Thu, 08 Jun 2017 10:58:53 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</guid>
+      <description>&lt;p&gt;One thing that has become very clear over the past years is that there is a lot of value in data about people. Of course, the most well known examples these days are advertising and spy agencies, but tracking data is useful for many more things. For example, when trying to build software that is intuitive and easy to use, having real data about how people are using the software can make a massive difference when developers and designers are working on improving their software. Even in the case of advertisers, they mostly do not care exactly who you are, they want to know what you are interested in so that they can more effectively promote things to you.&lt;/p&gt;
+
+&lt;p&gt;From the beginning Guardian Project has focused on privacy, and worked to practice what we preach in our own software. For example, we have entirely disabled Apache web logs on our website for the past couple of years, so that we would not even have access to that rich data. We felt that we could not even store that data without fear of violating people’s privacy, let alone working with it.&lt;/p&gt;
+
+&lt;p&gt;Things have changed in the past few years, and there are now a number of well tested techniques for tracking how people are using software without actually tracking who they are. It is now possible to keep some usage data while feeling safe that no one who might get that data could use it to identify individuals. One good example of this is the &lt;a href=&#34;https://metrics.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor Project’s tracking data&lt;/a&gt;. They provide a wide variety of tracking data to follow how Tor is being used, and how well the Tor network is operating.&lt;/p&gt;
+
+&lt;p&gt;So we believe that it is now possible to responsibly track usage without violating anyone’s privacy. One piece of work along these lines is the new &lt;a href=&#34;https://github.com/cleaninsights/cleaninsights-android-sdk&#34; target=&#34;_blank&#34;&gt;Clean Insights Android SDK&lt;/a&gt;. Nathan is leading the development of that effort. And this blog post announces another new development that we are starting: tracking usage data from F-Droid app repositories.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry-300x133.png&#34; alt=&#34;tracking by country&#34; width=&#34;300&#34; height=&#34;133&#34; class=&#34;aligncenter size-medium wp-image-13632&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry-300x133.png 300w, https://guardianproject.info/wp-content/uploads/2017/06/bycountry.png 747w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To start with, the Apache web logs for this site will be configured to store, but only information that is not fine-grained enough to identify people:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only the date is stored, not the time or time zone&lt;/li&gt;
+&lt;li&gt;Referer, IP Addresses, User Agent are never stored&lt;/li&gt;
+&lt;li&gt;country is stored by looking up the IP Address in the &lt;em&gt;geoip&lt;/em&gt; database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Normally, a log entries look like:&lt;/p&gt;
+
+&lt;pre&gt;189.4.73.81 testy.at.or.at - [08/Jun/2017:13:55:46 +0200] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;F-Droid&#34;
+119.29.81.134 199.119.112.126 - [08/Jun/2017:14:46:48 -0400] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;http://testy.at.or.at/fdroid/repo/index-v1.jar&#34; &#34;Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)&#34;
+&lt;/pre&gt;
+
+&lt;p&gt;This stripped version looks like:&lt;/p&gt;
+
+&lt;pre&gt;0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;-&#34; AT
+0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;-&#34; ZH
+&lt;/pre&gt;
+
+&lt;p&gt;Since the raw data is processed by the webserver, the extra information will be discarded and never written to disk. Only the sanitized usage tracking information is ever stored. This is based on Tor Project’s &lt;a href=&#34;https://gitweb.torproject.org/webstats.git/tree/src/sanitize.py&#34; target=&#34;_blank&#34;&gt;web tracking&lt;/a&gt;. It is possible to do this with &lt;em&gt;Apache&lt;/em&gt;, &lt;em&gt;lighttpd&lt;/em&gt;, &lt;em&gt;nginx&lt;/em&gt;, and probably other webservers. For &lt;em&gt;Apache&lt;/em&gt;, &lt;a href=&#34;https://github.com/maxmind/geoip-api-mod_geoip2/blob/master/INSTALL.md#configuration&#34;&gt;&lt;i&gt;mod_geoip&lt;/i&gt;&lt;/a&gt; needs to be installed, then only a single line is needed to configure this private logging mode:&lt;/p&gt;
+
+&lt;pre&gt;LogFormat &#34;0.0.0.0 - %u %{[%d/%b/%Y:00:00:00 %z]}t \&#34;%r\&#34; %&gt;s %b \&#34;%{Referer}i\&#34; \&#34;-\&#34; %{GEOIP_COUNTRY_CODE}e&#34; privacy+geo
+CustomLog ${APACHE_LOG_DIR}/access.log privacy+geo
+&lt;/pre&gt;
+
+&lt;p&gt;Now, we hope that we can work towards providing value from tracking data, without violating anyone’s privacy. Indeed, we are still prioritizing privacy over any value derived from tracking data. So anyone else who also wants to go follow this route needs to be fully aware that any tracking must be very carefully done, since it can easily result in inadvertent leaks. Do not take this as a stamp of approval on any tracking activity!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orfox 1.2: An Overdue Update to Our Privacy-Focused Browser!</title>
+      <link>https://guardianproject.github.io/info/2016/09/25/orfox-1.2-an-overdue-update-to-our-privacy-focused-browser/</link>
+      <pubDate>Sun, 25 Sep 2016 00:43:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/09/25/orfox-1.2-an-overdue-update-to-our-privacy-focused-browser/</guid>
+      <description>&lt;div class=&#34;markdown-body&#34;&gt;
+  &lt;p&gt;
+    Primarily this release is the first in a long while after improving our ability to stay up-to-date with core Tor Browser development. In addition, as Mozilla adds more and more features to the core Firefox, we must review them for any issues related to increased permission request, access to data, and privacy and network leaks. This is a slow, tedious job, so thank you for your patience. We expect to have more frequent, regular releases moving forward.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;markdown-body&#34;&gt;
+  &lt;p&gt;
+    Orfox specific highlights include:
+  &lt;/p&gt;
+  
+  &lt;ul&gt;
+    &lt;li&gt;
+      improved integration with Orbot
+    &lt;/li&gt;
+    &lt;li&gt;
+      removal of more unnecessary Android permissions / features (chromecast, account access)
+    &lt;/li&gt;
+    &lt;li&gt;
+      new icon and branding!
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;p&gt;
+    A big thanks to &lt;a href=&#34;https://github.com/amoghbl1&#34;&gt;Amogh Pradeep&lt;/a&gt;, Orfox lead developer and GSoC student extraordinaire, along with the entire Tor Browser and Mozilla Firefox teams, for their tireless work, building this great open-source web browser ecosystem.
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    Updates to the core Tor Browser releases that Orfox is based on can be reviewed here:&lt;br /&gt; &lt;a href=&#34;https://blog.torproject.org/blog/tor-browser-65a3-hardened-released&#34;&gt;https://blog.torproject.org/blog/tor-browser-65a3-hardened-released&lt;/a&gt;&lt;br /&gt; &lt;a href=&#34;https://blog.torproject.org/blog/tor-browser-605-released&#34;&gt;https://blog.torproject.org/blog/tor-browser-605-released&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class=&#34;release-downloads-header&#34;&gt;
+  &lt;strong&gt;Downloads&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;ul class=&#34;release-downloads&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&#34;&gt;Install from Google Play&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    APK: &lt;a href=&#34;https://github.com/guardianproject/Orfox/releases/download/Fennec-45.4.0esr%2FTorBrowser-6.5-1%2FOrfox-1.2/Orfox-1.2-TorBrowser-6.5-Fennec45.4.0.apk&#34; rel=&#34;nofollow&#34;&gt;&lt;small class=&#34;text-gray float-right&#34;&gt;33.6 MB &lt;/small&gt;&lt;strong&gt;Orfox-1.2-TorBrowser-6.5-Fennec45.4.0.apk&lt;/strong&gt;&lt;/a&gt; (&lt;a href=&#34;https://github.com/guardianproject/Orfox/releases/download/Fennec-45.4.0esr%2FTorBrowser-6.5-1%2FOrfox-1.2/Orfox-1.2-TorBrowser-6.5-Fennec45.4.0.apk&#34;&gt;gpg sig&lt;/a&gt;)
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;Guardian Project F-Droid Repo&lt;/a&gt; (update coming soon!)
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Source Code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/Orfox/commits/Fennec-45.4.0esr/TorBrowser-6.5-1/Orfox-1.2&#34;&gt;Orfox build repo&lt;/a&gt;:&lt;/li&gt;
+&lt;li&gt;Orfox’s &lt;a href=&#34;https://github.com/guardianproject/orfox&#34;&gt;Tor Browser repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;a href=&#34;https://labs.riseup.net/code/issues/8143&#34; target=&#34;_blank&#34;&gt;HTTPS to get security updates&lt;/a&gt; improves this situation a lot, but by measuring the size of data transfers, it is still possible to &lt;a href=&#34;http://www0.cs.ucl.ac.uk/staff/G.Danezis/papers/TLSanon.pdf&#34; target=&#34;_blank&#34;&gt;track which files are being downloaded&lt;/a&gt;. A Tor Onion Service provides end-to-end encryption like the HTTPS connection. It also mixes up the traffic with lots of other traffic, so its not easy to see what traffic goes together. That makes it a lot harder for a network observer to tell when a security update is being downloaded. Additionally, using a Tor Onion Service forces the traffic over Tor, so that the Debian mirror server cannot see which server is requesting the updates. That helps prevent targeted attacks.&lt;/p&gt;
+
+&lt;p&gt;There are other benefits as well, besides just for the person running the high security server in this example, especially if all of the traffic is coming over Tor. When updates are delivered over Tor, then that means the Debian mirror operators have less to worry about because they are handling less metadata that might have privacy concerns. It means that when law enforcement requests logs from the mirror operators, the mirror operators can more easily hand over anything they have since the mirror operator knows that there is not private information in the logs. Reducing the legal risks and privacy concerns makes it easier to run mirrors, and that helps internet services work better.&lt;/p&gt;
+
+&lt;p&gt;One disadvantage of this approach as it now stands is that your server will get updates from the same mirror every time. There is only a single Tor Onion Service for the main archive. An alternate approach using the combination of Tor and &lt;a href=&#34;http://httpredir.debian.org/&#34;&gt;http://httpredir.debian.org/&lt;/a&gt; as the package source means that your server will get updates from a different mirror each time Tor changes its exit node (I believe that’s every 10 minutes or so).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How can you set up your Debian machine to get updates over Tor?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg&#34; alt=&#34;debian and tor&#34; width=&#34;300&#34; height=&#34;173&#34; class=&#34;alignright size-medium wp-image-13395&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-768x444.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Right now, the best way to set up a Debian machine to force traffic over Tor is to use &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy&#34; target=&#34;_blank&#34;&gt;transparent proxying&lt;/a&gt; via &lt;em&gt;iptables&lt;/em&gt; rules. If you have that setup, then you can add the onion addresses as Debian apt sources as if they are any other HTTP Debian mirror. Another option is to install &lt;em&gt;apt-transport-tor&lt;/em&gt; like TAILS does, then you can use &lt;a href=&#34;http://people.skolelinux.org/pere/blog/Always_download_Debian_packages_using_Tor___the_simple_recipe.html&#34; target=&#34;_blank&#34;&gt;special syntax to add the Tor Onion Services&lt;/a&gt;. And another way is to install an HTTP proxy like &lt;em&gt;privoxy&lt;/em&gt; and enable apt HTTP proxy support as &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;I described before&lt;/a&gt;. The &lt;em&gt;apt-transport-tor&lt;/em&gt; and &lt;em&gt;privoxy&lt;/em&gt; approaches both have the downside of having to trust an added piece of software, whereas the transparent proxy technique uses what is already present in the Linux kernel. I’ve been using the &lt;em&gt;privoxy&lt;/em&gt; method since that is what I got working in 2014 and it has been working reliably on multiple servers since then. Also, I need &lt;em&gt;privoxy&lt;/em&gt; installed for another application anyway.&lt;/p&gt;
+
+&lt;p&gt;Here’s how to set up the apt sources to get packages and updates via Tor Onion Services without delaying security updates. First, remove &lt;em&gt;/etc/apt/sources.list&lt;/em&gt; and &lt;em&gt;/etc/apt/sources.list.d/*.list&lt;/em&gt; to start with a clean slate. Next add &lt;em&gt;/etc/apt/sources.list.d/00.vwakviie2ienjx6t.onion.list&lt;/em&gt; to get the main Debian repositories:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://vwakviie2ienjx6t.onion/debian/ jessie main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie main
+
+# aka volatile
+deb http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+
+deb http://vwakviie2ienjx6t.onion/debian jessie-backports main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-backports main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next add the new Tor Onion Service for the security update repository at &lt;em&gt;/etc/apt/sources.list.d/00.sgvtcaew4bxjd7ln.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://sgvtcaew4bxjd7ln.onion/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then last, include the normal HTTP security.debian.org archive to ensure that your server gets the latest security updates, even if the &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Onion Service mirror&lt;/a&gt; is behind or there is some other issue related to Tor. This goes in &lt;em&gt;/etc/apt/sources.list.d/99.security.debian.org.list&lt;/em&gt; to ensure that it is always the last repository that is tried, and apt loads files from /etc/apt/source.list.d/ in alphabetical order, so it’ll always try to get the security updates from the Onion Service before falling back to the HTTP source as a last resort.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://security.debian.org/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also run an unofficial mirror of the security updates on &lt;a href=&#34;http://dju2peblv7upfz3q.onion/debian&#34;&gt;http://dju2peblv7upfz3q.onion/debian&lt;/a&gt; if you want to add another backup, i.e. &lt;em&gt;/etc/apt/sources.list.d/00.dju2peblv7upfz3q.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Copperhead, Guardian Project and F-Droid Partner to Build Open, Verifiably Secure Mobile Ecosystem</title>
+      <link>https://guardianproject.github.io/info/2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/</link>
+      <pubDate>Mon, 28 Mar 2016 13:42:36 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/</guid>
+      <description>&lt;p&gt;Three open-source projects haved joined together to announce a new partnership to create an open, verifiably secure mobile ecosystem of software, services and hardware. Led by the work of the Toronto-based &lt;a href=&#34;https://copperhead.co/android/&#34;&gt;CopperheadOS&lt;/a&gt; team on securing the core Android OS, &lt;a href=&#34;https://guardianproject.info&#34;&gt;Guardian Project&lt;/a&gt; and &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; have joined in to partner on envisioning and developing a full mobile ecosystem. The goal is to create a solution that can be verifiably trusted from the operating system,  through the network and network services, all the way up to the app stores and apps themselves. Through a future planned crowdfunded and commercial offering, the partnership will provide affordable off-the-shelf solutions, including device hardware and self-hosted app and update distribution servers, for any individual and organizations looking for complete mobile stacks they can trust.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 30 March 2016: Copperhead has announced their &lt;a href=&#34;https://copperhead.co/blog/2016/03/29/crowdfunding-partnership-announced&#34;&gt;crowdfunding plans here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://copperhead.co/android/&#34;&gt;CopperheadOS&lt;/a&gt; is a hardened open-source Android based on AOSP, that is available for download and installation on many Nexus devices. The Guardian Project develops popular free and open-source privacy-enhancing apps like Orbot (Tor for Android), ChatSecure, and ObscuraCam, and software libraries like NetCipher, SQLCipher and PanicKit, for developers who want to enable similar features in their own apps. F-Droid is an installable catalogue of free and open source Android software, that is built into CopperheadOS, as the default app store. It enables decentralized and verifiably secure app distribution by any individual or organization.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://copperhead.co/android/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone wp-image-13280 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/copperheados-1024x520.jpg&#34; alt=&#34;copperheados&#34; width=&#34;780&#34; height=&#34;396&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/copperheados-1024x520.jpg 1024w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados-300x152.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados-768x390.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados.jpg 1311w&#34; sizes=&#34;(max-width: 780px) 100vw, 780px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466.jpg&#34;&gt;&lt;img class=&#34;alignleft wp-image-13310 size-medium&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-224x300.jpg&#34; alt=&#34;IMG_0466&#34; width=&#34;224&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-224x300.jpg 224w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-768x1028.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-765x1024.jpg 765w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466.jpg 1446w&#34; sizes=&#34;(max-width: 224px) 100vw, 224px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;“I have been a happy CopperheadOS user since the first moment I installed it”, says Nathan Freitas, Founder and Director of Guardian Project, ” even with running it on a two-generation old, very inexpensive Nexus 5 device. I know I will always have the latest security updates immediately, and that everything on my device is under my control.”&lt;/p&gt;
+
+&lt;p&gt;“My Copperhead Nexus is the go-to device in my bag, ” says Freitas, “when I am handling sensitive information, find myself on a network I don’t trust, or am otherwise wary about my communication being tracked, intercepted or tampered with.”&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Hans-Christoph Steiner who leads the Guardian Project’s developer platform says “Copperhead with F-Droid and Orbot provides all of the benefits of a smartphone, without the security and privacy downsides introduced by the major vendors, carriers and closed app stores. By building in F-Droid, Copperhead guarantees its users have direct access to the best free and open software, built directly from source-code in a trusthworthy, verifiable way”. Mr. Steiner presented on his work with F-Droid and building &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;“private, unblockable app stores”&lt;/a&gt; at &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;FOSDEM 2016&lt;/a&gt; in January.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone wp-image-13306 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-1024x572.jpg&#34; alt=&#34;handsatfosdem&#34; width=&#34;945&#34; height=&#34;528&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-1024x572.jpg 1024w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-300x168.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-768x429.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-360x200.jpg 360w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem.jpg 1274w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+_Learn more about &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34;&gt;F-Droid&lt;/a&gt; from this &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34;&gt;FOSDEM 2016 talk&lt;/a&gt; (watch the &lt;a href=&#34;http://video.fosdem.org/2016/h1309/f-droid-building-the-private-unblockable-app-store.mp4&#34; target=&#34;_blank&#34;&gt;video here&lt;/a&gt;)_&lt;/p&gt;
+
+&lt;p&gt;Collectively, this partnership creates a global team of information security researchers, forensic analysts, software developers, designers and engaged users, looking to move the state of the art forward for open, verifiably secure and privacy-enhancing mobile technology. The groups hope to expand the effort to include other mobile OS teams, application developers and even hardware developers interested in having the same kind of impact on the privacy and security of mobile computing.&lt;/p&gt;
+
+&lt;p&gt;James Donaldson of Copperhead says “It’s important for Android users to have a privacy minded viable alternative to closed-source solutions when contemplating mobile security. Teaming up with great partners like F-Droid and Guardian Project allows us to offer our users both security and a great experience with all of the core features they need.”&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info&#34;&gt;Guardian Project&lt;/a&gt; is an open-source effort based in New York, with a global community of contributors and partners. &lt;a href=&#34;https://copperhead.co&#34;&gt;Copperhead&lt;/a&gt; is an information security firm located in Toronto, Canada, specializing in protecting data and devices from unauthorized access. &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; is a non-profit volunteer project, and is operated by F-Droid Limited, a non-profit organisation registered in England (no. 8420676).&lt;/p&gt;
+
+&lt;p&gt;Contact:&lt;/p&gt;
+
+&lt;p&gt;Nathan Freitas / +1 718 569 7272&lt;br /&gt;
+&lt;a href=&#34;&amp;amp;#x6d;&amp;amp;#x61;ilt&amp;amp;#x6f;&amp;amp;#x3a;&amp;amp;#x6e;ath&amp;amp;#x61;&amp;amp;#x6e;&amp;amp;#x40;gua&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;anp&amp;amp;#x72;&amp;amp;#x6f;&amp;amp;#x6a;ect&amp;amp;#x2e;&amp;amp;#x69;&amp;amp;#x6e;fo&#34;&gt;nathan@&amp;#x67;&amp;#x75;&amp;#x61;&amp;#x72;&amp;#x64;&amp;#x69;&amp;#x61;nproject&amp;#x2e;&amp;#x69;&amp;#x6e;&amp;#x66;&amp;#x6f;&lt;/a&gt; (XMPP-OTR, OpenPGP: &lt;a href=&#34;https://pgp.mit.edu/pks/lookup?search=0xA801183E69B37AA9&amp;op=index&#34; target=&#34;_blank&#34;&gt;0x69B37AA9&lt;/a&gt;  / &lt;a href=&#34;https://keybase.io/n8fr8&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://keybase.io/n8fr8&#34;&gt;https://keybase.io/n8fr8&lt;/a&gt;&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;James Donaldson / Copperhead&lt;br /&gt;
+&lt;a href=&#34;mailto:media@&amp;amp;#x63;&amp;amp;#x6f;&amp;amp;#x70;&amp;amp;#x70;&amp;amp;#x65;&amp;amp;#x72;&amp;amp;#x68;&amp;amp;#x65;&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x2e;&amp;amp;#x63;o&#34;&gt;m&amp;#x65;di&amp;#x61;@&amp;#x63;&amp;#x6f;p&amp;#x70;er&amp;#x68;ea&amp;#x64;.&amp;#x63;o&lt;/a&gt; (OpenPGP: &lt;a href=&#34;https://pgp.mit.edu/pks/lookup?search=0xDC1DEA5E&amp;amp;op=index&#34;&gt;0xDC1DEA5E&lt;/a&gt;&lt;a href=&#34;https://pgp.mit.edu/pks/lookup?op=get&amp;amp;search=0x2621AB13DC1DEA5E&#34;&gt; &lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orfox: Aspiring to bring Tor Browser to Android</title>
+      <link>https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/</link>
+      <pubDate>Tue, 30 Jun 2015 15:32:16 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update 24 September, 2015: Orfox BETA is now on Google Play: &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;In the summer of 2014 (&lt;a href=&#34;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&#34;&gt;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&lt;/a&gt;{.external}), we announced that the results of work by Amogh Pradeep (&lt;a href=&#34;https://github.com/amoghbl1&#34;&gt;https://github.com/amoghbl1&lt;/a&gt;{.external}), our 2014 Google Summer of Code student, has proven we could build Firefox for Android with some of the settings and configurations from the Tor Browser desktop software. We called this app Orfox, in homage to Orbot and our current Orweb browser. This was a good first step, but we were doing the build on Mozilla’s Firefox code repository, and then retrofitting pieces from Tor Browser’s code, which wasn’t the right way to do things, honestly.&lt;/p&gt;
+
+&lt;p&gt;This summer (2015!), with fantastic continued effort by Amogh, we have switched to building the Orfox mobile app directly from the Tor Browser code repository, successfully working through any mobile OS incompatibilities in the security hardening patches added by the Tor Browser team. We also had the additional task of reviewing the Android application code in Firefox, that is not part of Tor Browser, in order to modify and patch it to work inline with the &lt;a href=&#34;https://www.torproject.org/projects/torbrowser/design/&#34;&gt;Tor Browser requirements and design document&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As of today, we have a stable alpha release ready for testing, and are rapidly moving towards a public beta in a few weeks. Our plan is to actively encourage users to move from Orweb to Orfox, and stop active development of Orweb, even removing to from the Google Play Store. If users really want to continue using a WebView-based solution and do not need all of the capabilities that Orfox/Tor Browser provides, they can use Lightning Browser (&lt;a href=&#34;https://github.com/anthonycr/Lightning-Browser&#34;&gt;https://github.com/anthonycr/Lightning-Browser&lt;/a&gt;{.external}), a lightweight, open-source app that offers automatic Orbot (SOCKS) proxying on start-up.&lt;/p&gt;
+
+&lt;p&gt;Below you will find screenshots and our current set of &lt;a href=&#34;https://dev.guardianproject.info/projects/orfox-private-browser/wiki/Orfox_vs_Tor_Browser_FAQ&#34;&gt;Orfox Frequently Asked Questions&lt;/a&gt; from the &lt;a href=&#34;https://dev.guardianproject.info/projects/orfox-private-browser/wiki&#34;&gt;project wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can access the current Orfox release by installing the &lt;a href=&#34;https://f-droid.org/&#34;&gt;F-Droid app&lt;/a&gt; and subscribing to our F-Droid Alpha Channel at by clicking on the following link on your phone: &lt;a href=&#34;https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo&#34;&gt;https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo&lt;br /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div id=&#39;gallery-11&#39; class=&#39;gallery galleryid-12999 gallery-columns-3 gallery-size-medium&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13003&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13003&#39;&gt;
+      Recognized as Tor Browser
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13005&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13005&#39;&gt;
+      A match made by onions!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13000&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13000&#39;&gt;
+      Bookmark support!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13001&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13001&#39;&gt;
+      Easy access to onion sites!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13002&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13002&#39;&gt;
+      Tabs!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13004&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13004&#39;&gt;
+      Tor-relevant default sites
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Where can I find all the relevant Orfox project pieces?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Orfox project tracker roadmap is here: &lt;a href=&#34;https://dev.guardianproject.info/projects/orfox-private-browser/roadmap&#34;&gt;https://dev.guardianproject.info/projects/orfox-private-browser/roadmap&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;li&gt;The Orfox branch of the Tor Browser repository is here: &lt;a href=&#34;https://github.com/guardianproject/tor-browser&#34;&gt;https://github.com/guardianproject/tor-browser&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;li&gt;The Orfox build project is here: &lt;a href=&#34;https://github.com/guardianproject/orfoxfennec&#34;&gt;https://github.com/guardianproject/orfoxfennec&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;li&gt;The primary Tor Browser repository is here: &lt;a href=&#34;https://gitweb.torproject.org/tor-browser.git/&#34;&gt;https://gitweb.torproject.org/tor-browser.git/&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;li&gt;Automated debug builds of Orfox alpha are available via F-Droid here (install F-Droid on your phone, then copy/paste or open the link to add the repo): &lt;a href=&#34;https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo&#34;&gt;https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How is Orfox different than Tor Browser for desktop?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Orfox is built from the same source code as Tor Browser (which is built upon Firefox), but with a few minor modifications to the privacy enhancing features to make them compatible with Firefox for Android and the Android operating system. In as many ways as possible, we will adhere to the design goals of Tor Browser (&lt;a href=&#34;https://www.torproject.org/projects/torbrowser/design/&#34;&gt;https://www.torproject.org/projects/torbrowser/design/&lt;/a&gt;{.external}), by supporting as much of their actual code as possible, and extending their work into the additional AF-Droid appndroid components of Firefox for Android.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The Orfox code repository is at &lt;a href=&#34;https://github.com/guardianproject/tor-browser&#34;&gt;https://github.com/guardianproject/tor-browser&lt;/a&gt;{.external} and the Tor Browser repository is here:&lt;a href=&#34;https://gitweb.torproject.org/tor-browser.git/&#34;&gt;https://gitweb.torproject.org/tor-browser.git/&lt;/a&gt;{.external}. The Orfox repository is a fork of the Tor Browser repository with the necessary modification and Android-specific code as patches on top of the Tor Browser work. We will keep our repository in sync with updates and release of Tor Browser.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox is built from the Tor Browser repo based on ESR38 (&lt;a href=&#34;https://dev.guardianproject.info/issues/5146&#34;&gt;https://dev.guardianproject.info/issues/5146&lt;/a&gt;{.external}&lt;a href=&#34;https://dev.guardianproject.info/news/221&#34;&gt;https://dev.guardianproject.info/news/221&lt;/a&gt;{.external}) and has only two modified patches that were not relevant or necessary for Android&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox does not currently include the mobile versions of HTTPS Everywhere, No Script and the Tor Browser Button, but these we will be added shortly, now that we have discovered how to properly support automatic installation of extensions on Android (&lt;a href=&#34;https://dev.guardianproject.info/issues/5360&#34;&gt;https://dev.guardianproject.info/issues/5360&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox includes a “Request Mobile Site” option that allows you to change the user-agent from the standard Tor Browser agent to a modified Android specific one: “Mozilla/5.0 (Android; Mobile; rv:31.0) Gecko/20100101 Firefox/31.0”. (&lt;a href=&#34;https://dev.guardianproject.info/issues/5404&#34;&gt;https://dev.guardianproject.info/issues/5404&lt;/a&gt;{.external}). This is useful for being able to see the mobile version of a website, but does reduce the amount your browser blends in with other browsers.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox currently allows for users to bookmark sites, and may have additional data written to disk beyond what the core gecko browser component does. We are still auditing all disk write code, and determining how to appropriately disable or harden it. (&lt;a href=&#34;https://dev.guardianproject.info/issues/5437&#34;&gt;https://dev.guardianproject.info/issues/5437&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox cannot yet be built deterministically, but based on work with the FDroid project, we are aiming for this to be possible in the next year (&lt;a href=&#34;https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise&#34;&gt;https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise&lt;/a&gt;{.external} &lt;a href=&#34;https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds&#34;&gt;https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How is Orfox different than Firefox for Android?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Beyond the core Tor Browser components, Orfox also must ensure all Android-specific code is properly routed through the Tor proxy, and otherwise hardened to protect against data and privacy leaks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Orfox adds patches at the Android Java code layer to enable proxying of all Java network HTTP communications through the local Orbot HTTP proxy (HTTP localhost:8118 for now, but moving to SOCKS). (&lt;a href=&#34;https://dev.guardianproject.info/issues/5235&#34;&gt;https://dev.guardianproject.info/issues/5235&lt;/a&gt;{.external} &lt;a href=&#34;https://dev.guardianproject.info/issues/5317&#34;&gt;https://dev.guardianproject.info/issues/5317&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox removes the Android permissions for Contacts, Camera, Microphone, Location and NFC (&lt;a href=&#34;https://dev.guardianproject.info/issues/3822&#34;&gt;https://dev.guardianproject.info/issues/3822&lt;/a&gt;{.external}) since the capability of using these features are not in line with the spirit of Tor Browser&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox removes features like WebRTC and support for interaction with Chromecasts or Roku devices, since this type of communication is not compatibility with proxying communication through a TCP-based network like Tor (&lt;a href=&#34;https://dev.guardianproject.info/issues/5358&#34;&gt;https://dev.guardianproject.info/issues/5358&lt;/a&gt;{.external} &lt;a href=&#34;https://dev.guardianproject.info/issues/5357&#34;&gt;https://dev.guardianproject.info/issues/5357&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How is Orfox different than Orweb?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Orweb is our current default browser for Orbot/Tor mobile users (&lt;a href=&#34;https://guardianproject.info/apps/orweb&#34;&gt;https://guardianproject.info/apps/orweb&lt;/a&gt;{.external}) that has been downloaded over 2 million times. It is VERY VERY SIMPLE, as it only has one tab, no bookmark capability, and an extremely minimal user experience.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orweb is built upon the bundled WebView (Webkit) browser component inside of the Android operating system. This has proven to be problematic because we cannot control the version of that component, and cannot upgrade it directly when bugs are found. In addition, Google has made it very difficult to effectively control the network proxy settings of all aspects of this component, making it difficult to guarantee that traffic will not leak on all devices and OS versions.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orweb also only provides a very limited amount of capability of Tor Browser, primarily related to reducing browser fingerprinting, minimizing disk writes, and cookie and history management. It trys to mimic some of the settings of Tor Browser, but doesn’t actually use any of the actual code written for Tor Browser security hardening.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orweb does have an advantage which is that it less than 2MB while Orfox is in the 25-30MB range. This is primarily because Orweb relies on many components built into Android, so it does not need to bundle them. Orfox contains the full stack of code necessary for a complete browser, and thus is more secure and dependable, but also larger. The Mozilla Mobile team is working on reducing the size of their binaries, and the Orfox team is focused on this, as well, since we are disabling some of the components that have contributed the browser bloat.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2015 is the Year of Bore-Sec</title>
+      <link>https://guardianproject.github.io/info/2015/01/02/2015-is-the-year-of-bore-sec/</link>
+      <pubDate>Fri, 02 Jan 2015 12:35:41 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/02/2015-is-the-year-of-bore-sec/</guid>
+      <description>&lt;p&gt;Over the last few months, the Guardian Project team has been thinking about how to approach the next five years of our work. An idea of “security so easy and seamless, that it is boring” came to the surface through some discussions. This led us to look for inspiration in important inventions and innovations of the past, that provide safety and security to all on a day-to-day basis, without the users of these technologies hardly thinking about them. This is no longer about James Bond super-spy technologies, it is about having as little impact on your day-to-day use of mobile technology while still providing the maximum protection to your data and communications, as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Here then, as inspiration and our guiding lights, is our list of safety inventions of the past that we aim to be “Boring Like….”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.esurance.com/seat-belt-history/&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12756&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/Old-seatbelt-image.jpg&#34; alt=&#34;Old-seatbelt-image&#34; width=&#34;959&#34; height=&#34;380&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/Old-seatbelt-image.jpg 959w, https://guardianproject.info/wp-content/uploads/2015/01/Old-seatbelt-image-300x119.jpg 300w&#34; sizes=&#34;(max-width: 959px) 100vw, 959px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Boring Like &lt;a href=&#34;http://blog.esurance.com/seat-belt-history/&#34;&gt;Seat Belts&lt;/a&gt; (buckle up!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Pasteurization&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12757&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939.jpg&#34; alt=&#34;StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory,_1939&#34; width=&#34;1000&#34; height=&#34;722&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939.jpg 1000w, https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939-300x217.jpg 300w&#34; sizes=&#34;(max-width: 1000px) 100vw, 1000px&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; Boring Like &lt;a href=&#34;https://en.wikipedia.org/wiki/Pasteurization&#34;&gt;Pasteurized Milk&lt;/a&gt; (though of course, we do respect your raw dairy folks out there…)&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/versagate3.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12758&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/versagate3.jpg&#34; alt=&#34;versagate3&#34; width=&#34;640&#34; height=&#34;427&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/versagate3.jpg 640w, https://guardianproject.info/wp-content/uploads/2015/01/versagate3-300x200.jpg 300w&#34; sizes=&#34;(max-width: 640px) 100vw, 640px&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; Boring Like &lt;a href=&#34;https://www.google.com/search?q=baby+gates&amp;amp;source=lnms&amp;amp;tbm=isch&amp;amp;sa=X&amp;amp;ei=htKmVJm_GZPmgwSNn4HYBg&amp;amp;ved=0CAkQ_AUoAg&amp;amp;biw=1701&amp;amp;bih=839&#34;&gt;Baby Gates&lt;/a&gt; (kids and dogs hate ’em, but they are a necessary fun killer for any household)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/smokealarm.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12759&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/smokealarm.jpg&#34; alt=&#34;smokealarm&#34; width=&#34;410&#34; height=&#34;602&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/smokealarm.jpg 410w, https://guardianproject.info/wp-content/uploads/2015/01/smokealarm-204x300.jpg 204w&#34; sizes=&#34;(max-width: 410px) 100vw, 410px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://thesmokedetector.umwblogs.org/antecedents-the-evolution/&#34;&gt;Smoke Detectors&lt;/a&gt; (though our friends at &lt;a href=&#34;http://getbirdi.com/&#34;&gt;Birdi&lt;/a&gt; are aiming to make them exciting again…)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mentalfloss.com/article/54410/surprising-origins-child-proof-lids&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12760&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/childlids.jpg&#34; alt=&#34;childlids&#34; width=&#34;640&#34; height=&#34;430&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/childlids.jpg 640w, https://guardianproject.info/wp-content/uploads/2015/01/childlids-300x202.jpg 300w&#34; sizes=&#34;(max-width: 640px) 100vw, 640px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://mentalfloss.com/article/54410/surprising-origins-child-proof-lids&#34;&gt;Childproof Lids&lt;/a&gt; (again, for the parents out there, a literal life saver)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.toyota-global.com/innovation/safety_technology/safety_technology/technology_file/active/&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12761&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/sft_08_01.jpg&#34; alt=&#34;sft_08_01&#34; width=&#34;340&#34; height=&#34;220&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/sft_08_01.jpg 340w, https://guardianproject.info/wp-content/uploads/2015/01/sft_08_01-300x194.jpg 300w&#34; sizes=&#34;(max-width: 340px) 100vw, 340px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://www.toyota-global.com/innovation/safety_technology/safety_technology/technology_file/active/&#34;&gt;Anti-Lock Brakes&lt;/a&gt; (the modern automobile is one of the best examples of bore-sec!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/bg_SurgeProtectorBuyingGuide_hero_image.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12762&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/bg_SurgeProtectorBuyingGuide_hero_image.jpg&#34; alt=&#34;bg_SurgeProtectorBuyingGuide_hero_image&#34; width=&#34;650&#34; height=&#34;294&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/bg_SurgeProtectorBuyingGuide_hero_image.jpg 650w, https://guardianproject.info/wp-content/uploads/2015/01/bg_SurgeProtectorBuyingGuide_hero_image-300x136.jpg 300w&#34; sizes=&#34;(max-width: 650px) 100vw, 650px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://www.lowes.com/cd_Surge+Protector+Buying+Guide_754129873_Learn&#34;&gt;Surge Protectors&lt;/a&gt; (wouldn’t you rather lose your $2 power strip then your $1000 computer?)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://msdh.ms.gov/msdhsite/_static/30,5314,77,333.html&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12763&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/RestaurantInspectionGradeA.jpg&#34; alt=&#34;RestaurantInspectionGradeA&#34; width=&#34;568&#34; height=&#34;727&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/RestaurantInspectionGradeA.jpg 568w, https://guardianproject.info/wp-content/uploads/2015/01/RestaurantInspectionGradeA-234x300.jpg 234w&#34; sizes=&#34;(max-width: 568px) 100vw, 568px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://msdh.ms.gov/msdhsite/_static/30,5314,77,333.html&#34;&gt;Restaurant Inspections&lt;/a&gt; (peace of mind from a single letter rating when you go out to eat…)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://americandogblog.wordpress.com/tag/dog-life-vest/&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12764&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/dougie_2008_in_his_outwardhound_dog_life_jacket.jpg&#34; alt=&#34;dougie_2008_in_his_outwardhound_dog_life_jacket&#34; width=&#34;360&#34; height=&#34;269&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/dougie_2008_in_his_outwardhound_dog_life_jacket.jpg 360w, https://guardianproject.info/wp-content/uploads/2015/01/dougie_2008_in_his_outwardhound_dog_life_jacket-300x224.jpg 300w&#34; sizes=&#34;(max-width: 360px) 100vw, 360px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;https://americandogblog.wordpress.com/tag/dog-life-vest/&#34;&gt;Life Vests&lt;/a&gt; (even dogs love ’em!)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Have some ideas of other great “Bore-Sec” tech? Add them in the comments!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;With our work on critical security and privacy enhancements for mobile devices and apps, we aim to bore. The best security is the kind you don’t have to worry about, until you need it (and then you won’t know how you ever lived without it…)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Here’s to breaking new “Bore-Sec” ground in 2015! Happy New Year!&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recent news on Orweb flaws</title>
+      <link>https://guardianproject.github.io/info/2014/06/30/recent-news-on-orweb-flaws/</link>
+      <pubDate>Mon, 30 Jun 2014 12:43:51 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/06/30/recent-news-on-orweb-flaws/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;August 2014: New browser development news here, including Orfox, our Firefox-based browser solution: &lt;a href=&#34;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&#34;&gt;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;On Saturday, a new post was relased by Xordern entitled &lt;a href=&#34;http://xordern.net/ip-leakage-of-mobile-tor-browsers.html&#34;&gt;IP Leakage of Mobile Tor Browsers&lt;/a&gt;. As the title says, the post documents flaws in mobile browser apps, such as &lt;a href=&#34;https://guardianproject.github.io/info/apps/orweb&#34;&gt;Orweb&lt;/a&gt; and &lt;a href=&#34;https://mike.tig.as/onionbrowser/&#34;&gt;Onion Browser&lt;/a&gt;, both which automatically route communication traffic over Tor. While we appreciate the care the author has taken, he does make the mistake of using the term “security” to lump together the need for total anonymity up with the needs of anti-censorship, anti-surveillance, circumvention and local device privacy. We do understand the seriousness of this bug, but at the same time, it is not an issue encountered regularly in the wild.&lt;/p&gt;
+
+&lt;p&gt;Here are thoughts on the three specific issues covered:&lt;/p&gt;
+
+&lt;p&gt;1) HTML5 Multimedia: This is a &lt;a href=&#34;https://guardianproject.info/2013/08/21/orweb-security-advisory-possible-ip-leakage-with-html5-videoaudio/&#34;&gt;known issue&lt;/a&gt; which is not present on 100% of Android devices, but is definitely something to be concerned about, if you access sites with HTML5 media player content on them. To us, it is a bug in Android, and not in Orweb, since all of the appropriate APIs are called when the browser is configured to proxy. However, it is a problem, and our solution remains to either use transparent proxying feature of Orbot, or to use the Firefix Privacy configuration we provide here: &lt;a href=&#34;https://guardianproject.info/apps/firefoxprivacy&#34;&gt;https://guardianproject.info/apps/firefoxprivacy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2) Downloads leak: This is a new issue and one we are trying to reproduce on our end. If our proxied download indeed is not working, we will issue a fix shortly. Again, using Firefox configured in the manner we prescribe, the downloads would be proxied properly.&lt;/p&gt;
+
+&lt;p&gt;3) Unique Headers: The inclusion of a unique HTTP header issue in this list is confusing, because it has nothing to do with IP leakage. We have never claimed that a mobile browser can be 100% anonymous, and defending against full fingerprinting of browsers based on headers is something beyond what we are attempting to do at this point.&lt;/p&gt;
+
+&lt;p&gt;At this point, we still recommend &lt;a href=&#34;https://guardianproject.github.io/info/apps/orweb&#34;&gt;Orweb&lt;/a&gt; for most people who want a very simple solution for a browser that is proxied through Tor. This will defeat mass traffic surveillance, network censorship, filtering by your mobile operator, work or school, and more. Orweb also keeps little data cached on the local system, and so protects against physical inspection and analysis of your device, to retrieve your browser history. HOWEVER if you do seem to visit sites that have HTML5 media players in the them, then we recommend you do not use Orweb, and again, that you use &lt;a href=&#34;https://guardianproject.info/apps/firefoxprivacy&#34;&gt;Firefox with our Privacy-Enhanced Configuration&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you are truly worried about IP leakage, then you MUST root your phone, and use Orbot’s Transparent Proxying feature. This provides the best defense against leaking of your real IP. Even further, if you require even more assurance than that, you should follow Mike Perry’s &lt;a href=&#34;https://blog.torproject.org/blog/mission-impossible-hardening-android-security-and-privacy&#34;&gt;Android Hardening Guide&lt;/a&gt;, which uses AFWall firewall in combination with Orbot, to block traffic to apps, and even stops Google Play from updating apps without your permission.&lt;/p&gt;
+
+&lt;p&gt;Finally, the best news is that we are making great progress in a fully privacy-by-default version of Firefox, under the project named “Orfox”. This is being done in partnership with the Tor Project, as a &lt;a href=&#34;https://www.google-melange.com/gsoc/proposal/public/google/gsoc2014/amoghbl1/5629499534213120&#34;&gt;Google Summer of Code&lt;/a&gt; effort, along with the Orweb team. We aim to use as much of the same code that Tor Browser does to harden Firefox in our browser, and are getting close to an alpha release. If you are interested in a testing the first prototype build, which address the HTML5 and Download leak issues, you can find it here: &lt;a href=&#34;https://guardianproject.info/releases/FennecForTor_GSoC_prototype.apk&#34;&gt;https://guardianproject.info/releases/FennecForTor_GSoC_prototype.apk&lt;/a&gt; and track the project here: &lt;a href=&#34;https://github.com/guardianproject/orfox&#34;&gt;https://github.com/guardianproject/orfox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Eric Schmidt Awards Guardian Project a “New Digital Age” Grant</title>
+      <link>https://guardianproject.github.io/info/2014/03/10/eric-schmidt-awards-guardian-project-a-new-digital-age-grant/</link>
+      <pubDate>Mon, 10 Mar 2014 12:22:34 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/03/10/eric-schmidt-awards-guardian-project-a-new-digital-age-grant/</guid>
+      <description>&lt;p&gt;An interesting turn of events (which we are very grateful for!)&lt;/p&gt;
+
+&lt;p&gt;*&lt;strong&gt;*&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;FOR IMMEDIATE RELEASE&lt;br /&gt;
+Diana Del Olmo, &lt;a href=&#34;mailto&amp;amp;#x3a;d&amp;amp;#x69;a&amp;amp;#x6e;a&amp;amp;#x40;g&amp;amp;#x75;a&amp;amp;#x72;d&amp;amp;#x69;a&amp;amp;#x6e;p&amp;amp;#x72;o&amp;amp;#x6a;e&amp;amp;#x63;t&amp;amp;#x2e;i&amp;amp;#x6e;f&amp;amp;#x6f;&#34;&gt;&amp;#x64;ia&amp;#x6e;&amp;#x61;@g&amp;#x75;&amp;#x61;rd&amp;#x69;&amp;#x61;np&amp;#x72;&amp;#x6f;je&amp;#x63;&amp;#x74;.i&amp;#x6e;&amp;#x66;o&lt;/a&gt;&lt;br /&gt;
+Nathan Freitas (in Austin / SXSW) +1.718.569.7272&lt;br /&gt;
+&lt;a href=&#34;m&amp;amp;#x61;i&amp;amp;#x6c;&amp;amp;#x74;o&amp;amp;#x3a;n&amp;amp;#x61;&amp;amp;#x74;h&amp;amp;#x61;n&amp;amp;#x40;&amp;amp;#x67;u&amp;amp;#x61;r&amp;amp;#x64;&amp;amp;#x69;a&amp;amp;#x6e;p&amp;amp;#x72;&amp;amp;#x6f;j&amp;amp;#x65;c&amp;amp;#x74;&amp;amp;#x2e;i&amp;amp;#x6e;f&amp;amp;#x6f;&#34;&gt;nat&amp;#x68;&amp;#x61;&amp;#x6e;@gua&amp;#x72;&amp;#x64;&amp;#x69;anpr&amp;#x6f;&amp;#x6a;&amp;#x65;ct.&amp;#x69;&amp;#x6e;&amp;#x66;o&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Get press kit and more at: &lt;a href=&#34;https://guardianproject.info/press&#34;&gt;https://guardianproject.info/press&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Permalink:&lt;br /&gt;
+&lt;a href=&#34;https://docs.google.com/document/d/1kI6dV6nPSd1z3MkxSTMRT8P9DcFQ9uOiNFcUlGTjjXA/edit?usp=sharing&#34;&gt;https://docs.google.com/document/d/1kI6dV6nPSd1z3MkxSTMRT8P9DcFQ9uOiNFcUlGTjjXA/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GOOGLE EXECUTIVE CHAIRMAN ERIC SCHMIDT AWARDS GUARDIAN PROJECT A “NEW DIGITAL AGE” GRANT&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project is amongst the 10 chosen grantee organizations to be awarded a $100,000 digital age grant due to its extensive work creating open source software to help citizens overcome government-sponsored censorship.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b.jpg&#34;&gt;&lt;img class=&#34;size-full wp-image-12288 alignnone&#34; alt=&#34;eric-schmidt-portr_2546680b&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b.jpg&#34; width=&#34;620&#34; height=&#34;387&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b.jpg 620w, https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b-300x187.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b-100x62.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b-150x93.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b-200x124.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b-450x280.jpg 450w, https://guardianproject.info/wp-content/uploads/2014/03/eric-schmidt-portr_2546680b-600x374.jpg 600w&#34; sizes=&#34;(max-width: 620px) 100vw, 620px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;em&gt;&lt;a href=&#34;http://www.telegraph.co.uk/technology/internet/10018193/The-New-Digital-Age-by-Eric-Schmidt-and-Jared-Cohen-review.html&#34;&gt;image courtesy of the telegraph.co.ok&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;NEW YORK, NY (March 10, 2014)—Ten non-profits in the U.S. and abroad&lt;br /&gt;
+have been named recipients of New Digital Age Grants, funded through a&lt;br /&gt;
+$1 million donation by Google executive chairman Eric Schmidt. The&lt;br /&gt;
+Guardian Project is one of two New York City-based groups receiving an&lt;br /&gt;
+award.&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;The New Digital Age Grants were established to highlight organizations&lt;br /&gt;
+that use technology to counter the global challenges Schmidt and&lt;br /&gt;
+Google Ideas Director Jared Cohen write about in their book THE NEW&lt;br /&gt;
+DIGITAL AGE, including government-sponsored censorship, disaster&lt;br /&gt;
+relief and crime fighting. The book was released in paperback on March 4.&lt;/p&gt;
+
+&lt;p&gt;“The recipients chosen for the New Digital Age Grants are doing some&lt;br /&gt;
+very innovative and unique work, and I’m proud to offer them this&lt;br /&gt;
+encouragement,” said Schmidt. “Five billion people will encounter the&lt;br /&gt;
+Internet for the first time in the next decade. With this surge in the&lt;br /&gt;
+use of technology around the world—much of which we in the West take&lt;br /&gt;
+for granted—I felt it was important to encourage organizations that&lt;br /&gt;
+are using it to solve some of our most pressing problems.”&lt;/p&gt;
+
+&lt;p&gt;Guardian Project founder, Nathan Freitas, created the project based on&lt;br /&gt;
+his first-hand experience working with Tibetan human rights and&lt;br /&gt;
+independence activists for over ten years. Today, March 10th, is the&lt;br /&gt;
+55th anniversary of the Tibetan Uprising Day against Chinese&lt;br /&gt;
+occupation. “I have seen first hand the toll that online censorship,&lt;br /&gt;
+mobile surveillance and digital persecution can take on a culture,&lt;br /&gt;
+people and movement,” said Freitas. “I am elated to know Mr. Schmidt&lt;br /&gt;
+supports our effort to fight back against these unjust global trends&lt;br /&gt;
+through the development of free, open-source mobile security&lt;br /&gt;
+capabilities.”&lt;/p&gt;
+
+&lt;p&gt;Many of the NDA grantees, such as Aspiration, Citizen Lab and OTI,&lt;br /&gt;
+already work with the Guardian Project on defending digital rights,&lt;br /&gt;
+training high-risk user groups and doing core research and development&lt;br /&gt;
+of anti-censorship and surveillance defense tools and training.&lt;/p&gt;
+
+&lt;p&gt;The New Digital Age Grants are being funded through a private donation&lt;br /&gt;
+by Eric and Wendy Schmidt.&lt;/p&gt;
+
+&lt;p&gt;About the Guardian Project&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project is a global collective of software developers&lt;br /&gt;
+(hackers!), designers, advocates, activists and trainers who develop&lt;br /&gt;
+open source mobile security software and operating system&lt;br /&gt;
+enhancements. They also create customized mobile devices to help&lt;br /&gt;
+individuals communicate more freely and protect themselves from&lt;br /&gt;
+intrusion and monitoring. The effort specifically focuses on users who&lt;br /&gt;
+live or work in high-risk situations, and who often face constant&lt;br /&gt;
+surveillance and intrusion attempts into their mobile devices and&lt;br /&gt;
+communication streams.&lt;/p&gt;
+
+&lt;p&gt;Since it was founded in 2009, the Guardian Project has developed more&lt;br /&gt;
+than a dozen mobile apps for Android and iOS with over two million&lt;br /&gt;
+downloads and hundreds of thousands of active users. In the last five&lt;br /&gt;
+years the Guardian Project has partnered with prominent open source&lt;br /&gt;
+software projects, activists groups, NGOs, commercial partners and&lt;br /&gt;
+news organizations to support their mobile security software&lt;br /&gt;
+capabilities. This work has been made possible with funding from&lt;br /&gt;
+Google, UC Berkeley with the MacArthur Foundation, Avaaz, Internews,&lt;br /&gt;
+Open Technology Fund, WITNESS, the Knight Foundation, Benetech, and&lt;br /&gt;
+Free Press Unlimited. Through work on partner projects like The Tor&lt;br /&gt;
+Project, Commotion mesh and StoryMaker, we have received indirect&lt;br /&gt;
+funding from both the US State Department through the Bureau of&lt;br /&gt;
+Democracy, Human Rights and Labor Internet Freedom program, and the&lt;br /&gt;
+Dutch Ministry of Foreign Affairs through HIVOS.&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project is very grateful for this personal donation and&lt;br /&gt;
+is happy to have its work recognized by Mr Schmidt. This grant will&lt;br /&gt;
+allow us to continue our work on ensuring users around the world have&lt;br /&gt;
+access to secure, open and trustworthy mobile messaging services. We&lt;br /&gt;
+will continue to improve reliability and security of ChatSecure for&lt;br /&gt;
+Android and iOS and integrate the OStel voice and video calling&lt;br /&gt;
+services into the app for a complete secure communications solution.&lt;br /&gt;
+We will support the work of the new I.M.AWESOME (Instant Messaging&lt;br /&gt;
+Always Secure Messaging) Coalition focused on open-standards,&lt;br /&gt;
+decentralized secure mobile messaging, and voice and video&lt;br /&gt;
+communications. Last, but not least, we will improve device testing,&lt;br /&gt;
+support and outreach to global human rights defenders, activists and&lt;br /&gt;
+journalists, bringing the technology that the Guardian Project has&lt;br /&gt;
+developed to the people that need it most.&lt;/p&gt;
+
+&lt;p&gt;About the NDA Recipients&lt;/p&gt;
+
+&lt;p&gt;Aspiration in San Francisco, CA, provides deep mentorship to build&lt;br /&gt;
+tech capacity supporting Africa, Asia and beyond. Their NDA grant will&lt;br /&gt;
+grow their capacity-building programs for the Global South, increasing&lt;br /&gt;
+technical capacity to meet local challenges.&lt;/p&gt;
+
+&lt;p&gt;C4ADS, a nonprofit research team in Washington, DC, is at the cutting&lt;br /&gt;
+edge of unmasking Somali pirate networks, Russian arms-smuggling&lt;br /&gt;
+rings, and other illicit actors entirely through public records. Their&lt;br /&gt;
+data-driven approach and reliance on public documents has enormous&lt;br /&gt;
+potential impact, and the grant will help with their next big project.&lt;/p&gt;
+
+&lt;p&gt;The Citizen Integration Center in Monterrey, Mexico has developed an&lt;br /&gt;
+innovative public safety broadcast and tipline system on social media.&lt;br /&gt;
+Users help their neighbors—and the city—by posting incidents and&lt;br /&gt;
+receiving alerts when violence is occurring in their communities. The&lt;br /&gt;
+grant will help them broaden their reach.&lt;/p&gt;
+
+&lt;p&gt;The Citizen Lab at the Munk School of Global Affairs at the University&lt;br /&gt;
+of Toronto, Canada, is a leading interdisciplinary laboratory&lt;br /&gt;
+researching and exposing censorship and surveillance. The grant will&lt;br /&gt;
+support their technical reconnaissance and analysis, which uniquely&lt;br /&gt;
+combines experts and techniques from computer science and the social&lt;br /&gt;
+sciences.&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project, based in New York City, develops open-source&lt;br /&gt;
+secure communication tools for mobile devices. ChatSecure and OSTel,&lt;br /&gt;
+their open standards-based encrypted messaging, voice and video&lt;br /&gt;
+communication services, which are both built on open standards, have&lt;br /&gt;
+earned the trust of tens of thousands of users in&lt;br /&gt;
+repressively-censored environments, and the grant will advance their&lt;br /&gt;
+technical development.&lt;/p&gt;
+
+&lt;p&gt;The Igarapé Institute in Rio de Janeiro, Brazil, focuses on violence&lt;br /&gt;
+prevention and reduction through technology. Their nonprofit work on&lt;br /&gt;
+anti-crime projects combines the thoughtfulness of a think tank with&lt;br /&gt;
+the innovative experimentation of a technology design shop. The grant&lt;br /&gt;
+will support their research and development work.&lt;/p&gt;
+
+&lt;p&gt;KoBo Toolbox in Cambridge, MA, allows fieldworkers in far-flung&lt;br /&gt;
+conflict and disaster zones to easily gather information without&lt;br /&gt;
+active Internet connections. The grant will help them revamp their&lt;br /&gt;
+platform to make it easier and faster to deploy.&lt;/p&gt;
+
+&lt;p&gt;The New Media Advocacy Project in New York, NY, is nonprofit&lt;br /&gt;
+organization developing mobile tools to map violence and&lt;br /&gt;
+disappearances in challenging environments. The grant will allow them&lt;br /&gt;
+to refine their novel, interactive, video-based interfaces.&lt;/p&gt;
+
+&lt;p&gt;The Open Technology Institute at the New America Foundation in&lt;br /&gt;
+Washington, DC, advances open architectures and open-source&lt;br /&gt;
+innovations for a free and open Internet. The grant will assist their&lt;br /&gt;
+work with the Measurement Lab project to objectively measure and&lt;br /&gt;
+report Internet interference from repressive governments.&lt;/p&gt;
+
+&lt;p&gt;Portland State University in Portland, OR, is leading ground-breaking&lt;br /&gt;
+research on network traffic obfuscation techniques, which improve&lt;br /&gt;
+Internet accessibility for residents of repressively-censored&lt;br /&gt;
+environments. The grant will support the research of Professor Tom&lt;br /&gt;
+Shrimpton and his lab, who—with partners at the University of&lt;br /&gt;
+Wisconsin and beyond—continue to push the boundaries with new&lt;br /&gt;
+techniques like Format Transforming Encryption.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Issues when distributing software</title>
+      <link>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</link>
+      <pubDate>Thu, 31 Oct 2013 15:51:19 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</guid>
+      <description>&lt;p&gt;There is currently a &lt;a href=&#34;http://lists.debian.org/debian-security/2013/10/msg00027.html&#34; target=&#34;_blank&#34;&gt;discussion underway on the Debian-security list&lt;/a&gt; about adding TLS and Tor functionality to the official repositories (repos) of Debian packages that is highlighting how we need to update how we think about the risks when distributing software. Mostly, we are used to thinking about making sure that the software that the user is installing is the same exact software that has been posted for distribution. This is generally handled by signing the software package, then verifying that signature on the user’s machine. This is how it works on Mac OS X, Windows, Debian, etc. etc.&lt;/p&gt;
+
+&lt;p&gt;But the authenticity of a software package is not the only issue that needs to be addressed, especially these days where many companies and governments around the world are trying to track everything that anyone is doing on the internet. In order to understand why Tor and TLS would be useful here, it good to break down the various concerns (or threats if you prefer):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity &lt;em&gt;(software can be modified while being downloaded)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;package availability &lt;em&gt;(software security updates can be individually blocked)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;repo availability &lt;em&gt;(internet services can be blocked by governments and companies)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;who’s downloading what package &lt;em&gt;(currently visible to anyone who can see the network traffic, including open wifi, etc.)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Most people distributing software are used to thinking about #1 verifying packages when thinking about the security of software distribution. #2, #3, and #4 are also important, and currently not well addressed. This is where TLS and Tor come in. Both can help prevent Man-In-The-Middle manipulations as well as reduce the amount of information that is leaked to the network. Tor can also help with #3. Since Tor is difficult to block, it is often uses to circumvent censorship. In this case a software repo could be blocked entirely, and Tor could help with gaining access to it. The Update Framework has &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/README.md&#34; title=&#34;TUF: The Update Framework -  Security&#34; target=&#34;_blank&#34;&gt;a good overview of the possible attacks&lt;/a&gt; against software repos.&lt;/p&gt;
+
+&lt;p&gt;So having software repos available with both TLS and Tor available as options is a very good idea. As far as I have seen, there are not any Debian repos available via a Tor Hidden Service. There are a number of official mirrors that already support TLS/HTTPS. You can find them using &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; title=&#34;the script in a gist paste&#34; target=&#34;_blank&#34;&gt;this script:&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#!/usr/bin/python
+
+import urllib2
+import re
+import ssl
+import sys
+
+# # find generic mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/mirror/list&#39;)
+https = []
+for line in mirrors.readlines():
+    m = re.match(&#39;.*&amp;lt;td valign=&amp;quot;top&amp;quot;&amp;gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            https.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+# print &#39;HTTPS apt repos:&#39;
+#for url in https:
+#    print url
+
+
+# # find security mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/mirror/list-full&#39;)
+securitys = []
+for line in mirrors.readlines():
+    m = re.match(&#39;.*&amp;lt;/tt&amp;gt;&amp;lt;br&amp;gt;Security updates over HTTP: &amp;lt;tt&amp;gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*/debian-security/&amp;lt;/a&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            securitys.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+# print &#39;HTTPS security repos:&#39;
+# for url in securitys:
+#     print url
+
+
+# now find the backports mirrors
+mirrors = urllib2.urlopen(&#39;http://backports-master.debian.org/Mirrors/&#39;)
+backports = []
+for line in mirrors.readlines():
+#&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://be.mirror.eurid.eu/debian-backports/&amp;quot;&amp;gt;/debian-backports/&amp;lt;/a&amp;gt;
+    m = re.match(&#39;.*&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*/debian-backports/&amp;lt;/a&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            backports.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+#print &#39;HTTPS backports repos:&#39;
+#for url in backports:
+#    print url
+
+
+# now find the CD image mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/CD/http-ftp/&#39;)
+cds = []
+for line in mirrors.readlines():
+# &amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http://mirror.easyspeedy.com/debian-cd/&amp;quot;&amp;gt;HTTP&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    m = re.match(&#39;.*&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(:.*)&amp;quot;&amp;gt;HTTP&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            cds.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+print &#39;HTTPS CD image repos:&#39;
+for url in cds:
+    print url
+
+
+# now write everything to a file
+f = open(&#39;/tmp/https-debian-archives.txt&#39;, &#39;w&#39;)
+
+f.write(&#39;HTTPS apt repos\n&#39;)
+f.write(&#39;---------------\n&#39;)
+for url in https:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS security repos\n&#39;)
+f.write(&#39;---------------\n&#39;)
+for url in securitys:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS backports repos\n&#39;)
+f.write(&#39;--------------------\n&#39;)
+for url in backports:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS CD image repos\n&#39;)
+f.write(&#39;--------------------\n&#39;)
+for url in cds:
+    f.write(url + &#39;\n&#39;)
+
+
+f.close()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/proxy/</link>
+    <description>Recent content in Proxy on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tor Project: Orfox Paved the Way for Tor Browser on Android </title>
+      <link>https://guardianproject.github.io/info/2019/09/03/tor-project-orfox-paved-the-way-for-tor-browser-on-android/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/09/03/tor-project-orfox-paved-the-way-for-tor-browser-on-android/</guid>
+      <description>&lt;p&gt;Last month, we tagged the &lt;a href=&#34;https://github.com/guardianproject/Orfox/releases/tag/Orfox-Final-RIP-v16&#34;&gt;final release of Orfox&lt;/a&gt;, an important milestone for us in our work on Tor. Today, we pushed this final build out to all the Orfox users on Google Play, which forces them to upgrade to the official Tor Browser for Android..&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;orfoxrip.png&#34; alt=&#34;Orfox RIP app image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Our goal was never to become the primary developer or maintainer of the &amp;ldquo;best&amp;rdquo; tor-enabled web browser app on Android. Instead, we chose to act as a catalyst to get the Tor Project and the Tor Browser development team themselves to take on Android development, and upstream our work into the primary codebase. This has happened, and it is a great news for everyone. The work for developing and updating Tor Browser on the desktop and Android are now coordinated and synchronized, and end-users benefit from more frequent updates and improvements.&lt;/p&gt;
+
+&lt;p&gt;Most importantly, the &lt;a href=&#34;https://github.com/amoghbl1&#34;&gt;Amazing Amogh&lt;/a&gt; can focus on his PhD studies, and not on continuing the heroic task of trying to merge Firefox releases, Tor Browser patches, and Android proxy setting code for four different HTTP network libraries! Thanks, Amogh!&lt;/p&gt;
+
+&lt;p&gt;From the &lt;a href=&#34;https://blog.torproject.org/orfox-paved-way-tor-browser-android&#34;&gt;Tor Project&amp;rsquo;s blog&lt;/a&gt; announcing the last release of Orfox:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Mobile browsing has increasingly become the primary way many people go online. In 2014, Tor Browser was used by millions of people on their desktop computers, but there was not yet a way to use Tor on a mobile device. We have long recognized the need for protecting people&amp;rsquo;s rights to privacy and freedom online, including on mobile devices, but as a small nonprofit organization, we were not yet ready to meet that demand. That&amp;rsquo;s when our friends at Guardian Project began exploring the possibility of providing Tor Browser on Android themselves. Their answer was Orfox.&lt;/p&gt;
+
+&lt;p&gt;Orfox was first released 23 September 2015. Over the next three years, Orfox continously improved and became a popular way for people to browse the internet with more privacy than standard browsers, and Orfox was crucial for helping people circumvent censorship and access blocked sites and critical resources. It was installed over 14 million times, and maintained over 1 million active users.&lt;/p&gt;
+
+&lt;p&gt;In late 2017, we began working on our own Tor Browser for Android. Because of Orfox&amp;rsquo;s success, the development path for us was clearer and more in reach. We were able to build upon Guardian Project&amp;rsquo;s work and bring a browser with the full protections of Tor Browser to Android. We released the alpha version of Tor Browser for Android in September 2018 and launched the stable version this May. After nearly a year since we released the alpha version of Tor Browser on Android, the time for sunsetting Orfox has come.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you have Orfox, you will see the upgrade and prompt to install Tor Browser for Android soon. Otherwise, you can just &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.torbrowser&amp;amp;hl=en_US&#34;&gt;go directly to install and get it now!&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NetCipher update: global, SOCKS, and TLSv1.2</title>
+      <link>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/netcipher&#34;&gt;NetCipher&lt;/a&gt; has been relatively quiet in recent years, because it kept
+on working, doing it was doing. Now, we have had some recent
+discoveries about the guts of Android that mean NetCipher is a lot easier
+to use on recent Android versions.  On top of that, TLSv1.2 now reigns
+supreme and is basically everywhere, so it is time to turn TLSv1.0 and
+TLSv1.1 entirely off.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-single-method-to-enable-proxying-for-the-whole-app&#34;&gt;A single method to enable proxying for the whole app&lt;/h2&gt;
+
+&lt;p&gt;As of Android 8.0 (26 aka Oreo), it is now possible to set a
+&lt;code&gt;URLStreamHandlerFactory&lt;/code&gt;, which creates &lt;code&gt;URLConnection&lt;/code&gt; instances
+with custom configurations.  If an app is using the built-in
+&lt;code&gt;HttpURLConnection&lt;/code&gt; API for its networking, it is now possible to
+enable global proxying with a single method call when the app starts:
+&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useGlobalProxy--&#34;&gt;&lt;code&gt;NetCipher.useGlobalProxy()&lt;/code&gt;&lt;/a&gt;.
+Then the actual proxy configuration can be set dynamically, using
+things like
+&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useTor--&#34;&gt;&lt;code&gt;NetCipher.useTor()&lt;/code&gt;&lt;/a&gt;
+or
+&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#clearProxy--&#34;&gt;&lt;code&gt;NetCipher.clearProxy()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;URL.setURLStreamHandlerFactory()&lt;/code&gt; method is a little odd because it cannot be unset or changed after it has been set.  NetCipher handles this by letting the app configure the proxy settings separately, so they can be disabled even though the custom &lt;code&gt;URLStreamHandlerFactory&lt;/code&gt; is still active.  Also, it is possible to use &lt;code&gt;URL.setURLStreamHandlerFactory&lt;/code&gt; on Android 7.x also, but it leaks DNS, so it is not recommended for privacy proxies.  It would still be useful as a failsafe for apps that use &lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#getHttpURLConnection-java.lang.String-&#34;&gt;&lt;code&gt;NetCipher.getHttpURLConnection()&lt;/code&gt;&lt;/a&gt;, in case there are any calls to &lt;code&gt;URL.openConnection()&lt;/code&gt; added with the right proxy setup.  At the very least, the content will be proxied on Android 7.x, even if it leaks DNS.&lt;/p&gt;
+
+&lt;h2 id=&#34;native-socks-support&#34;&gt;Native SOCKS Support&lt;/h2&gt;
+
+&lt;p&gt;In Android 7.0 (24 aka Nougat), Google switched over to OpenJDK, which brought working SOCKS support to Android.  SOCKS is the best protocol for effective proxying, and it is the protocol that Tor itself has always natively supported.  Orbot has always provided a separaete HTTP Proxy to support Android, but that has always proven brittle, and was often the source of problems.  Since Android 7.0 and above natively support SOCKS, calling &lt;code&gt;NetCipher.useTor()&lt;/code&gt; will now default to using SOCKS if the device is running Android 7.0 or higher.&lt;/p&gt;
+
+&lt;h2 id=&#34;bye-bye-tlsv1-0-and-tlsv1-1&#34;&gt;Bye bye TLSv1.0 and TLSv1.1&lt;/h2&gt;
+
+&lt;p&gt;Transport Layer Security (TLS) is the protocol that powers most of the internet these days.  It gives HTTPS the S for &amp;ldquo;Secure&amp;rdquo;. After many years of slow updates and an increasing number of vulnerabilities, there is finally critical mass to stop using the old, broken versions.  TLS version 1.2 is not seriously vulnerable and is supported basically everywhere.  TLSv1.2 was finalized in 2008, so this is very far from the bleeding edge.  TLSv1.2 is supported all the way back to &lt;a href=&#34;https://developer.android.com/reference/javax/net/ssl/SSLSocket#protocols&#34;&gt;Android 4.1&lt;/a&gt;.  TLSv1.0 and TLSv1.1 are due to be officially deprecated by the IETF, the standards body that actually creates the TLS standard.  The major browser vendors have all promised to drop them in 2020.&lt;/p&gt;
+
+&lt;p&gt;One way to enforce TLSv1.2 support would be to configure the server-side to stop supporting TLSv1.0 and TLSv1.1, like is recommend with SSLv2 and SSLv3.  Using NetCipher to do this on the client side
+means that old app versions and devices of F-Droid and old devices will continue to work.
+Also, doing it client-side means that all TLS connections will gain this protection regardless of which server the client is connecting to.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;NetCipher&lt;/em&gt; approach means apps will never use TLS older than v1.2 since they will refuse to connect unless TLSv1.2 is available.  The server-side can then safely support TLSv1.0 and TLSv1.1, so older clients and Android devices will still be able to connect, even if they do not support TLSv1.2.  It is win-win
+for everyone.&lt;/p&gt;
+
+&lt;p&gt;The one case that will fail entirely is connections to servers that do not support TLSv1.2.  If a webserver does not support TLSv1.2, it is really too old to be used safely anyway.  Even the oldest supported Red Hat Enterprise Linux release (6) supports TLSv1.2, and that was released in 2010.&lt;/p&gt;
+
+&lt;h2 id=&#34;webview-proxying&#34;&gt;&lt;code&gt;WebView&lt;/code&gt; Proxying!&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.android.com/reference/android/webkit/WebView&#34;&gt;&lt;code&gt;WebView&lt;/code&gt;&lt;/a&gt; provides an easy way to show a webpage or build a web app.  If you want that page to always go over Tor, that is difficult since &lt;code&gt;WebView&lt;/code&gt; has no API to configure proxying.  NetCipher has a long running collection of hacks that span the Android versions to get proxying working in &lt;code&gt;WebView&lt;/code&gt;.  We have revived those, modernized them, and added a full test suite to confirm whether the proxying is leaking.  The good news is that proxying is working pretty well on all but Android 5.x (21 and 22), where it totally fails.&lt;/p&gt;
+
+&lt;p&gt;Another new Android API we discovered is &lt;a href=&#34;https://developer.android.com/reference/android/webkit/WebViewClient.html#shouldInterceptRequest(android.webkit.WebView,%20android.webkit.WebResourceRequest)&#34;&gt;&lt;code&gt;WebViewClient.shouldInterceptRequest()&lt;/code&gt;&lt;/a&gt;.  This is an official API for manipulating HTTP requests in &lt;code&gt;WebView&lt;/code&gt;.  It is an an easy place to insert custom &lt;code&gt;HttpURLConnection&lt;/code&gt; instances, like NetCipher needs to configure proxy support and stronger TLS.  Using this API means eliminating Java reflection hacks.  But it has a large caveat: it only works for &lt;em&gt;GET&lt;/em&gt; requests.  Since the request body is not accessible via this API, it is not possible to implement &lt;em&gt;POST&lt;/em&gt; or &lt;em&gt;PUT&lt;/em&gt; requests.  One nice approach for the best of both works is to handle &lt;em&gt;GET&lt;/em&gt; with &lt;code&gt;WebViewClient.shouldInterceptRequest()&lt;/code&gt;, then &lt;em&gt;POST&lt;/em&gt; and &lt;em&gt;PUT&lt;/em&gt; could then be implemented separately using the reflection methods in NetCipher WebView.&lt;/p&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests!&lt;/h2&gt;
+
+&lt;p&gt;This release also brings with it an extensive, new test suite.  These let us confirm that things are working on all the supporting Android versions, while also serving as simple example cases.  For example, the tests now confirm which Android releases support &lt;code&gt;WebView&lt;/code&gt; proxying, based on Cure53&amp;rsquo;s very useful &lt;a href=&#34;https://github.com/cure53/HTTPLeaks&#34;&gt;HTTPLeaks&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Only Way to Visit Strongbox on a Phone</title>
+      <link>https://guardianproject.github.io/info/2013/05/16/the-only-way-to-visit-strongbox-on-a-phone/</link>
+      <pubDate>Thu, 16 May 2013 17:43:06 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/05/16/the-only-way-to-visit-strongbox-on-a-phone/</guid>
+      <description>&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;em&gt;The New Yorker&lt;/em&gt; magazine just launched &lt;a href=&#34;http://www.newyorker.com/online/blogs/closeread/2013/05/introducing-strongbox-anonymous-document-sharing-tool.html&#34;&gt;Strongbox&lt;/a&gt;, a whistleblower submission system that’s hosted on a hidden website. There’s only one way to access the hidden site on a phone or tablet, and that’s with our &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.browser&amp;hl=en&#34;&gt;Orweb app&lt;/a&gt;. Here’s a simple breakdown of how to do securely and anonymously blow the whistle, explained in an interactive tutorial:
+&lt;/p&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/howto/strongbox&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;size-medium wp-image-3719  aligncenter&#34; alt=&#34;galaxy19&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/galaxy19-199x300.png&#34; width=&#34;199&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/galaxy19-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/05/galaxy19.png 400w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;em&gt;Visit &lt;a title=&#34;strongbox tutorial&#34; href=&#34;https://guardianproject.info/howto/strongbox&#34; target=&#34;_blank&#34;&gt;guardianproject.info/howto/strongbox&lt;/a&gt; for an interactive tutorial on using Strongbox on your phone.&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  The website exists as a hidden site on what is widely known as the darknet, since you are going there hidden or “in the dark.” Instead of a .com, .org, or .info address (like &lt;a href=&#34;https://guardianproject.info/&#34; target=&#34;_blank&#34;&gt;guardianproject.info&lt;/a&gt;) the sites like Strongbox show up with a .onion. And like you need a web browser to go to a .com web address, you need a darknet browser to go to a .onion darknet address. On a mobile, we make the most secure and anonymous darknet &amp; web browser, Orweb. And if you want to get to strongbox on your phone, we’re the only way to do it.
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  To browse, you’ll need our &lt;a title=&#34;orweb&#34; href=&#34;https://guardianproject.info/apps/orweb&#34; target=&#34;_blank&#34;&gt;Orweb&lt;/a&gt; app. It’s currently only available for Android and you can &lt;a title=&#34;Orweb anonymous browser&#34; href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.browser &#34; target=&#34;_blank&#34;&gt;get it here&lt;/a&gt;. If you have another type of phone or tablet, unfortunately you’ll have to use a computer.
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  For Orweb to be anonymous and give you access to the darknet .onion addresses, you’ll need to enable onion routing with our &lt;a title=&#34;orbot&#34; href=&#34;https://guardianproject.info/apps/orbot&#34; target=&#34;_blank&#34;&gt;Orbot&lt;/a&gt; plugin. This plugin gives Orweb and other compatible apps (like our &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&#34;&gt;Gibberbot secure chat&lt;/a&gt;  for Facebook, Google, &amp; Jabber) the ability to send web traffic through the darknet, thus avoiding tracking as well as blocking. You can &lt;a title=&#34;Orbot on Android&#34; href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android  &#34; target=&#34;_blank&#34;&gt;download Orbot here&lt;/a&gt;. It’s the official app of the &lt;a href=&#34;https://TorProject.org&#34;&gt;Tor Project&lt;/a&gt;, which develops the onion routing protocol, on Android.
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  Once both are installed, you just need to go to this hidden site: &lt;a title=&#34;Strongbox Onion Site&#34; href=&#34;http://tnysbtbxsf356hiy.onion/&#34; target=&#34;_blank&#34;&gt;http://tnysbtbxsf356hiy.onion&lt;/a&gt; . Make sure that you’re using the Orweb browser and that Orbot is running. From there, you can easily submit messages to The New Yorker. Unfortunately you can’t yet submit files to them through the phone just yet.
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  Overall, this is an exciting step in the right direction. With an increase in tracking and crackdown on political dissidents and whistleblowers around the world, there need to be safe and trusted ways of sharing information that has the potential of saving lives and making the world a better place. &lt;a title=&#34;the new yorker magazine&#34; href=&#34;http://www.newyorker.com/&#34; target=&#34;_blank&#34;&gt;The New Yorker&lt;/a&gt; is one of the most trusted journalistic outfits in the world and it will be interesting to follow how they understand and vet information that comes in from anonymous sources. It will be a lesson for the entire privacy community.
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;http://instagram.com/p/PihUXCmJzW/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;size-medium wp-image-3730 aligncenter&#34; title=&#34;On the Internet, algorithms can infer you&#39;re a dog.&#34; alt=&#34;Dog Algorithm&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-300x300.jpg&#34; width=&#34;300&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2013/05/Dog-Algorithm.jpg 612w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  At the same time, it’s not yet a trusted technology. While the code is accessible and &lt;a href=&#34;http://deaddrop.github.io/&#34;&gt;open source&lt;/a&gt; it is unclear whether it’s a full version of the DeadDrop code that it came from or a fork of it. It also hasn’t been audited yet. Already, we’re seeing issues popping up on &lt;a href=&#34;https://github.com/deaddrop/deaddrop/issues&#34;&gt;the code&lt;/a&gt;. Hopefully it will be fully vetted as a solution and stand up to the ambitious and crucial claims that it is able “to provide you with a greater degree of anonymity and security than afforded by conventional e-mail.”
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  In the months before January, I worked a few seats down from Aaron Swartz in the ThoughtWorks offices. Since those shocking days, it’s been inspiring to continue to see his legacy. I spoke with him a bunch of times about using technology to introduce truly disruptive techniques for empowering people whose rights were otherwise being trampled. At the time, we were working on &lt;a href=&#34;http://markbelinsky.com/crowdring/&#34;&gt;Crowdring&lt;/a&gt;, an intiative from &lt;a href=&#34;http://www.therules.org/&#34;&gt;/The Rules&lt;/a&gt;. And we spoke about the power of leveraging telephony to give voice so widely, and the trade off of handing over personally identifiable information. He recognized the need for constantly evolving and shifting tactics and was expert at integrating that into both strategy and code. It’s an honor to continue to work with him now, and with the rest of the open source community as we all contribute code and ideas to make the world better.
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  Having just won the Knight News Challenge for our &lt;a href=&#34;https://guardianproject.info/2013/01/27/informacam-wins-knight-news-challenge/&#34;&gt;Informacam project&lt;/a&gt;, we’re excited at the growing interest from the world of journalism in making sure that sources are kept truly secure and anonymous in the digital age. We’re working to build our whole &lt;a href=&#34;https://play.google.com/store/apps/dev?id=6502754515281796553&#34;&gt;suite of tools&lt;/a&gt; to make it easier and better to do so. If you want to reach out to us, anonymously or otherwise, to &lt;a title=&#34;Guardian Contact&#34; href=&#34;https://guardianproject.info/contact/ &#34;&gt;let us know how we can help&lt;/a&gt;, you can use Orbot and Tor to do so over any of these methods. We look forward to it!
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>
+
+&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here at Guardian, security is always our #1 priority. We owe that to our users who rely on us to keep them safe in places like Syria or Iran. But the time we spend on encryption is wasted if users don’t like using our tools, or can’t figure out how they work. We want to make security apps that are enjoyable and easy to use everyday, and don’t take a PHD to understand.&lt;/p&gt;
+
+&lt;p&gt;Activists in Iran and Syria know firsthand how important technologies like Tor and VPNs are for staying safe online. Our friends and neighbors might not be living under a repressive dictatorship, but that doesn’t mean they couldn’t use a little digital security in their lives. Maybe your nephew wants to get past the block on Facebook at school, or your co-worker wants to watch March Madness at work (make sure she gets that decoy spreadsheet ready). Maybe your friend just wants to send his wife a few…private messages, and he’d rather not have them stored by Google or Verizon. These people might not be pros, but they’re curious and happy to poke around their technology. With a little fun and interactive guidance, they can be well on their way to becoming a power user. Everyone starts somewhere!&lt;/p&gt;
+
+&lt;p&gt;We want to make life safer and easier for at-risk activists and everyday people alike. That’s why we make accessible and straightforward guides to help you quickly and easily get past censors, internet police, or the office IT department.&lt;/p&gt;
+
+&lt;h1 id=&#34;gibberbot-tutorial&#34;&gt;&lt;strong&gt;Gibberbot Tutorial&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Our newest tutorial is for our secure chat app, &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&amp;feature=search_result&#34; target=&#34;_blank&#34;&gt;Gibberbot&lt;/a&gt;. With your Android phone in one hand and the &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;Gibberbot Tutorial&lt;/a&gt; in the other, you can be chatting securely on Google or Facebook chat in minutes! But Google and Facebook can’t even tell what you’re talking about. It’s also more convenient to have all of your chat apps rolled into one so that it doesn’t matter where your friends message you, it still goes to the same place. Gibberbot works even if someone is trying to monitor or block your phone’s communications. If you know another language and would like to contribute, &lt;a title=&#34;Gibberbot Tutorial Transifex Translations&#34; href=&#34;https://www.transifex.com/projects/p/gibberbot-tutorial/&#34; target=&#34;_blank&#34;&gt;we’d love your help translating the tutorial (we’ve got English and Tibetan covered)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_3291&#34; style=&#34;width: 251px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-3291&#34; class=&#34; wp-image-3291&#34; alt=&#34;galaxy5&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/02/galaxy5.png&#34; width=&#34;241&#34; height=&#34;361&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-3291&#34; class=&#34;wp-caption-text&#34;&gt;
+    So you want to chat securely?
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;p&gt;
+     
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;h1&gt;
+    &lt;strong&gt;Orbot Tutorial&lt;/strong&gt;
+  &lt;/h1&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    With our Android app Orbot, browsing the web securely and safely through Tor has been a piece of cake for a while now. But we just created &lt;a title=&#34;How to Orbot Tutorial&#34; href=&#34;https://guardianproject.info/howto/browsefreely&#34; target=&#34;_blank&#34;&gt;an interactive tutorial to get you started&lt;/a&gt; and show how easy it is circumvent censorship, even if the Google Play Store is blocking direct access to our app.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    The tools themselves are getting smarter too. A new tool from &lt;a title=&#34;Tor Project&#34; href=&#34;https://www.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor&lt;/a&gt;, called &lt;a title=&#34;Tor Project Obfsproxy&#34; href=&#34;http://www.torproject.org/projects/obfsproxy.html.en&#34; target=&#34;_blank&#34;&gt;Pluggable Transports&lt;/a&gt;, hides your Tor traffic to look like regular Internet traffic, making it even easier for Tor users to stay ahead of surveillance and censorship. To use this new tool with Orbot, just follow the instructions on &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/04/How-to-browse-freely-on-your-phone-if-your-internet-is-blocked.pdf&#34; target=&#34;_blank&#34;&gt;our new one-page guide&lt;/a&gt; (and &lt;a title=&#34;How to browse freely on your phone if your internet is blocked - Farsi&#34; href=&#34;https://guardianproject.info/wp-content/uploads/2013/04/How-to-browse-freely-on-your-phone-if-your-internet-is-blocked-Farsi.pdf&#34; target=&#34;_blank&#34;&gt;in Farsi&lt;/a&gt;) and you’re all set! For a more in-depth guide to using Orbot, watch our &lt;a href=&#34;https://www.youtube.com/watch?v=Dcf5sh99ze0&#34;&gt;video tutorial&lt;/a&gt; (now in English and Arabic).
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_3585&#34; style=&#34;width: 250px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+    &lt;a href=&#34;https://guardianproject.info/howto/browsefreely&#34; target=&#34;_blank&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-3585&#34; class=&#34; wp-image-3585&#34; alt=&#34;orbot galaxy s3&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/04/galaxy15.png&#34; width=&#34;240&#34; height=&#34;361&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/04/galaxy15.png 400w, https://guardianproject.info/wp-content/uploads/2013/04/galaxy15-199x300.png 199w&#34; sizes=&#34;(max-width: 240px) 100vw, 240px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p id=&amp;quot;caption-attachment-3585&amp;quot; class=&amp;quot;wp-caption-text&amp;quot;&amp;gt;
+  So you want to escape censorship?
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;p&gt;
+      As we continue to grow our team and create new tools, we need your feedback!  Please tell us what we can do to go from security awareness training to a full-on security awareness party. Feel free to leave a comment on this post or tell us how we can make things easier through our &lt;a href=&#34;https://guardianproject.info/contact/&#34;&gt;contact page&lt;/a&gt;. You can also let us know about any upcoming parties that we should be attending.
+    &lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
+  &amp;lt;i&amp;gt;This post is partially a response to Bruce Schneier’s recent piece: &amp;lt;a title=&amp;quot;Schneier Security Awareness Training&amp;quot; href=&amp;quot;https://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&amp;quot;&amp;gt;Security Awareness Training&amp;lt;/a&amp;gt;&amp;lt;/i&amp;gt;.
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Proxy Settings Add-on for Firefox Mobile</title>
+      <link>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</link>
+      <pubDate>Mon, 08 Nov 2010 03:43:24 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</guid>
+      <description>&lt;p&gt;The latest beta of &lt;a href=&#34;https://www.mozilla.com/en-US/mobile/&#34;&gt;Firefox 4 on Android&lt;/a&gt; is proving to be very usable, stable and an increasingly viable alternative to the built-in webkit browser. However, it is unfortunately lacking the ability to manually configure proxy settings through any sort of standard user interface. This is a common problem for Android, which also lacks the ability to set browser or system wide proxy settings. This has caused real issues for us with getting &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; (aka “Tor on Android”) to work for un-rooted Android devices, because for routing through Tor to work, you must be able to set the HTTP or SOCKS proxy settings. Why this &lt;a href=&#34;https://code.google.com/p/android/issues/detail?id=1273&#34;&gt;very basic feature&lt;/a&gt; keeps getting missed or ignored is a mystery to us.&lt;/p&gt;
+
+&lt;p&gt;To solve this problem, we at the Guardian Project have created a very simple &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/?browse=featured&#34;&gt;Firefox add-on&lt;/a&gt; which exposes the proxy settings through a simple, graphical options menu. This means any user can easily set the HTTP and SOCKS proxy settings for Firefox, enabling access to web browsing on networks which require a proxy to access the we. This also means, that users can connect Firefox to Orbot on Android 2.x devices and &lt;a href=&#34;https://torproject.org&#34;&gt;browse the web using the Tor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/11/fennecoptions.png&#34;&gt;&lt;img class=&#34;size-full wp-image-579 alignnone&#34; title=&#34;fennecoptions&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/11/fennecoptions.png&#34; alt=&#34;&#34; width=&#34;792&#34; height=&#34;499&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/11/fennecoptions.png 792w, https://guardianproject.info/wp-content/uploads/2010/11/fennecoptions-300x189.png 300w&#34; sizes=&#34;(max-width: 792px) 100vw, 792px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;However, it must be stressed that this not a full port of the &lt;a href=&#34;http://www.torproject.org/torbutton/index.html.en&#34;&gt;TorButton add-on&lt;/a&gt;, and does not provide for strong anonymity.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We are working on porting TorButton to Firefox mobile, so stay tuned for that release. In addition, while there are &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/search/?q=proxy&amp;amp;cat=all&amp;amp;lver=any&amp;amp;pid=1&amp;amp;sort=&amp;amp;pp=20&amp;amp;lup=&amp;amp;advanced=&#34;&gt;many, many Proxy add-ons for Firefox&lt;/a&gt; on the desktop, none have been ported to mobile. We hope this small release will encourage one or more of them to port those add-ons to a mobile version. For now though, if you are eager to play and really need to access the web via a proxy, you can find the “ProxyMob” add-on at the following URL. Just navigate to this address from your Firefox mobile browser, and it will handle the add-on installation process:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tinyurl.com/proxymob&#34;&gt;http://tinyurl.com/proxymob&lt;/a&gt;&lt;br /&gt;
+aka: &lt;a href=&#34;https://guardianproject.info/downloads/proxymob-addon-0.0.5.xpi&#34;&gt;https://guardianproject.info/downloads/proxymob-addon-0.0.5.xpi&lt;/a&gt; (&lt;a href=&#34;https://guardianproject.info/downloads/proxymob-addon-0.0.5.xpi.asc&#34;&gt;gpg sig&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;As with all of our work, this is open-source, and we encourage you to contribute to and improve upon what we’ve done via our Github project: &lt;a href=&#34;https://github.com/guardianproject/ProxyMob&#34;&gt;https://github.com/guardianproject/ProxyMob&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot Update: New Setup Wizard at Startup</title>
+      <link>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</link>
+      <pubDate>Thu, 29 Jul 2010 17:17:08 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</guid>
+      <description>&lt;p&gt;We’ve been working away at the 0.0.9 release of &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; over the last few months, and have put a decent amount of effort into usability. Specifically, we hoped to better communicate to users what it means to run Tor on your Android phone. In addition, we wanted to clearly lay out how the various configuration options help to improve your mobile web anonymity and ability to circumvent web filters and tracking by your mobile service provider.&lt;/p&gt;
+
+&lt;p&gt;The screenshots below are what you see the first time you install and run Orbot, and also whenever you open the “Help” menu. One important thing to point out is that Orbot can run with or without root, and our setup UI responds to having the capability or not accordingly.&lt;/p&gt;
+
+&lt;p&gt;Ultimately our goal is to provide a useful bootstrap experience for novice and advanced users alike. We welcome your feedback.&lt;/p&gt;
+
+&lt;div id=&#39;gallery-3&#39; class=&#39;gallery galleryid-488 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-489&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-489&#39;&gt;
+      permissions… we actually will only be asking for INTERNET – so don’t mind the “phone status” permission
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-490&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-490&#39;&gt;
+      Your basic install screen
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-491&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-491&#39;&gt;
+      A friendly welcome
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-492&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-492&#39;&gt;
+      About Orbot!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-493&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-493&#39;&gt;
+      we ask nicely to get root permissions, if possible
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-495&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-495&#39;&gt;
+      if the user doesn’t have root, we make sure they understand the implications
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-496&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-496&#39;&gt;
+      Offer direct downloads of Orbot/Tor enabled apps
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-497&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-497&#39;&gt;
+      (Root only) choose whether to “Torify All” or choose app by app
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-498&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-498&#39;&gt;
+      (Root only) Select to send all network traffic through Tor
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-499&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-499&#39;&gt;
+      (Root only) Select which apps you want to route through Tor
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-500&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-500&#39;&gt;
+      This is the final step
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-501&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-501&#39;&gt;
+      We’ve got root!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

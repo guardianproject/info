@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asterisk on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/asterisk/</link>
+    <description>Recent content in Asterisk on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 26 May 2010 05:53:54 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/asterisk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To: Setup a Private VOIP Phone System for Android</title>
+      <link>https://guardianproject.github.io/info/2010/05/26/how-to-setup-a-private-voip-phone-system-for-android/</link>
+      <pubDate>Wed, 26 May 2010 05:53:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/05/26/how-to-setup-a-private-voip-phone-system-for-android/</guid>
+      <description>&lt;div&gt;
+  &lt;div&gt;
+    &lt;strong&gt;MAY 2011: Learn more about our new efforts on the Open Secure Telephony Network at &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;https://guardianproject.info/wiki/OSTN&lt;/a&gt; – we currently recommend the &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;CSipSimple&lt;/a&gt; Android app instead of SIPDroid, for secure voice calls.&lt;/strong&gt;
+  &lt;/div&gt;
+  
+
+&lt;p&gt;&lt;div&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    Near the very top of Guardian’s open-source application suite &lt;a href=&#34;https://guardianproject.info/apps/&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;wish l&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;ist&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; is something that might seem like a no-brainer for a secure mobile device: voice. When we take into account network performance and audio fidelity requirements, as well as the International nature of Guardian’s target users (everything from average citizens to multi-national journalists or humanitarian organizations), the prospect of a truly real-time secure VOIP solution starts to reveal itself as quite the challenge. Fortunately, a number of efforts have been underway for some time on the Android platform. &lt;strong&gt;The following is an introduction to one such effort, and this post provides a very easy step-by-step how to enable your very own private mobile phone system.&lt;/strong&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall.png&#34;&gt;&lt;img class=&#34;alignleft size-full wp-image-337&#34; title=&#34;sipdroidcall&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall.png&#34; alt=&#34;&#34; width=&#34;145&#34; height=&#34;241&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://code.google.com/p/sipdroid/&#34;&gt;Sipdroid&lt;/a&gt;&lt;/span&gt; is an open-source SIP client that adds native SIP/VOIP to Android’s default dialer / contacts applications. You can find Sipdroid in the Android Market or alternatively can &lt;a href=&#34;https://code.google.com/p/sipdroid/downloads/list&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;download it here&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;. SIP (&lt;a href=&#34;https://en.wikipedia.org/wiki/Session_Initiation_Protocol&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;Session Initiation Protocol&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;) is the Internet standard for real-time voice and video communications. It’s a fundamental building block for many popular consumer VOIP products that you may have used – &lt;a href=&#34;https://www.youtube.com/watch?v=1XU06zbDBBA&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;Vonage&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; or &lt;a href=&#34;http://www.magicjack.com/&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;MagicJack&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; are two examples. Once installed and configured properly, sipdroid allows you to make &amp;amp; receive calls over Wifi and 3G / EDGE data connections – which is a really powerful thing! A similar solution from &lt;a href=&#34;https://my.gizmo5.com/&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;Gizmo5&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; allowed many Android users to completely untangle themselves from mobile minutes and rely on a purely VOIP solution. Alas, new Gizmo signups were suspended after Google announced their &lt;a href=&#34;http://googlevoiceblog.blogspot.com/2009/11/google-welcomes-gizmo5.html&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;acquisition&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; – but we should all be excited to see what they can cook up as part of the official &lt;a href=&#34;https://www.google.com/voice&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;Google Voice&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; team.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    While it’s expected that SIP providers will become more &lt;a href=&#34;https://code.google.com/p/sipdroid/wiki/NewStandbyTechnique&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;interoperable&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;, the simplest and most powerful solution currently available to get sipdroid running involves registering to the virtual PBX service from &lt;a href=&#34;https://www1.pbxes.com/index_e.php&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;PBXes.com&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;. For the uninitiated, a PBX (Private Branch Exchange) is what establishes and manages the connections between the telephony products of a private organization (telephones, fax machines, etc.) – each of which is labeled with an ‘extension’. It also is the system through which these extensions are able to access the public telephone network (&lt;a href=&#34;https://en.wikipedia.org/wiki/PSTN&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;PSTN&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;). Since the 1990s, traditional PBX solutions – usually out of reach for small businesses or individuals due to cost and complexity – have evolved to IP-based and virtual or hosted PBXes, which greatly simplify the processes of building and scaling telephony services. PBXes.com is one such ‘virtual PBX.’ Once a PBXes account is established, the account owner can create multiple extensions beneath it and easily dial between those extensions. You get 5 extensions for a free account, more for paid &lt;a href=&#34;https://www1.pbxes.com/iptel_virtual-pbx.html&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;account types&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;Why is this solution so interesting?&lt;/strong&gt; If you have a relatively small group of colleagues (NGO, humanitarian workers, activists, journalists, etc.), it allows you to easily establish a private internal phone system that can be used over a data connection in lieu of the regular phone system. In our experience, the call quality is also quite good. &lt;span&gt;And while the following step-by-step guide will lead you through the process of setting up this simple solution, first a word of caution: t&lt;span&gt;his is &lt;strong&gt;&lt;span&gt;not&lt;span&gt; a secure solution yet&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;. It is a first step, however, down that road. To achieve a more secure solution, we need to enable more features, include tunneling and encrypting traffic through a Virtual Private Network (VPN) as well as integrating to a privately maintained &lt;a href=&#34;http://www.techsteward.com/blog/dirk/?p=735&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;A&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;sterisk&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; phone server running with custom security settings. &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;&lt;span&gt;We are also investigating solutions that uses a public key exchange model, such as Philip Zimmermann’s &lt;a id=&#34;s_.7&#34; title=&#34;ZFone&#34; href=&#34;http://zfoneproject.com/&#34;&gt;ZFone&lt;/a&gt;, such as the new &lt;/span&gt;&lt;a href=&#34;http://whispersys.com/&#34;&gt;RedPhone app just announced by WhisperSystems&lt;/a&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;&lt;span&gt;&lt;span&gt;1.&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt; &lt;strong&gt;&lt;span&gt;&lt;span&gt;Configure &lt;span&gt;&lt;span&gt;extensions to &lt;span&gt;&lt;span&gt;a&lt;span&gt;&lt;span&gt; PBXes.com account&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;If you don’t already have a PBXes.com account, head over to &lt;a href=&#34;http://www.pbxes.com&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;a href=&#34;http://www.pbxes.com&#34;&gt;http://www.pbxes.com&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span&gt;&lt;span&gt; and fill out the straightfo&lt;span&gt;&lt;span&gt;rward account registration form for a free account.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/welcome.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-333&#34; title=&#34;welcome&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/welcome-300x172.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;172&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/welcome-300x172.png 300w, https://guardianproject.info/wp-content/uploads/2010/05/welcome.png 615w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;Next, select ‘Extensions’ from the left-hand navigation menu, &lt;span&gt;&lt;span&gt;then&lt;span&gt;&lt;span&gt; choose ‘SIP’ under ‘Add an Extension.’ &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt; &lt;span&gt;Last, configure your new extension with a few critical elements. Make sure you fill out the following fields, at a minimum:&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addSIPExtension.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-334&#34; title=&#34;addSIPExtension&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addSIPExtension-300x171.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;171&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addSIPExtension-300x171.png 300w, https://guardianproject.info/wp-content/uploads/2010/05/addSIPExtension.png 619w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ul&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span&gt;&lt;span&gt;Extension number (e.g. 100, 101, 402, etc.)&lt;/span&gt;&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span&gt;&lt;span&gt;Display name (e.g. johndoe-100)&lt;/span&gt;&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span&gt;&lt;span&gt;Password&lt;/span&gt;&lt;/span&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;p&gt;
+      &lt;span&gt;&lt;span&gt;After clicking ‘Submit,’ go ahead and repeat the process for as many extensions as  you’d like to set up. Each of these will be specific for a unique Android device. Don’t forget to APPLY your changes when finished by clicking the bright red bar – this ensures your changes take effect.&lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;Configure extensions on sipdroid&lt;/strong&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    If you don’t already have sipdroid, you can find the latest version &lt;a href=&#34;https://code.google.com/p/sipdroid/downloads/list&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;here&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;, or point your barcode scanner to the following QR code:
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;a href=&#34;http://chart.apis.google.com/chart?cht=qr&amp;chs=170x170&amp;chl=http%3A%2F%2Fwww.androidzoom.com%2Fweb%2Findice%2FqrLink%3FappCode%3Dmaf%26dwnId%3D231933&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-335&#34; title=&#34;dp82z4m_35fd9f9hgz_b&#34; src=&#34;https://chart.apis.google.com/chart?cht=qr&amp;chs=170x170&amp;chl=http%3A%2F%2Fwww.androidzoom.com%2Fweb%2Findice%2FqrLink%3FappCode%3Dmaf%26dwnId%3D231933&#34; alt=&#34;&#34; width=&#34;170&#34; height=&#34;170&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;p&gt;
+      Within the Account Settings section of sipdroid, set up one of your extensions from step 1:
+    &lt;/p&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    · Authorization Username and Password
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    · Server: pbxes.com
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    · Port: 5060
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    · Protocol: TCP
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroid_account.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-336&#34; title=&#34;sipdroid_account&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroid_account.png&#34; alt=&#34;&#34; width=&#34;144&#34; height=&#34;240&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;You should see a green dot appear in your notifications tray on successful registration like so:&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidoptions.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-338&#34; title=&#34;sipdroidoptions&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidoptions.png&#34; alt=&#34;&#34; width=&#34;145&#34; height=&#34;241&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;3.&lt;/strong&gt; &lt;strong&gt;Trial Run – dial between extensions&lt;/strong&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    Once you’ve set up a number of extensions within your PBX, you can easily dial between them. Simply input their extension number (e.g. 100).
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall.png&#34;&gt;&lt;img title=&#34;sipdroidcall&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall.png&#34; alt=&#34;&#34; width=&#34;145&#34; height=&#34;241&#34; /&gt;&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;&lt;span&gt;&lt;span&gt;4.&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt; &lt;strong&gt;&lt;span&gt;&lt;span&gt;(Optional) &lt;span&gt;&lt;span&gt;Configure VPN&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;As mentioned above, the solution so far isn’t a secure one. A first step in the right direction is connecting to &lt;span&gt;&lt;span&gt;PBXes&lt;span&gt;&lt;span&gt;’ &lt;span&gt;&lt;span&gt;PPTP VPN. For those quicker on their feet, configuration instructions can be found &lt;a href=&#34;http://mona-lilly.de/wiki/index.php/VPN&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;here&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span&gt;&lt;span&gt;. If you’d prefer to stick with us, follow these steps:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;&lt;em&gt;4a.&lt;/em&gt; &lt;span&gt;&lt;span&gt;On&lt;span&gt;&lt;span&gt; your Android phone, access the ‘VPN settings’ section of Wireless &amp;amp; network settings.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;em&gt;4b. &lt;/em&gt;Select ‘Add VPN,’ then ‘Add PPTP VPN’
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addvpn.png&#34;&gt;&lt;img class=&#34;alignleft size-full wp-image-340&#34; title=&#34;addvpn&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addvpn.png&#34; alt=&#34;&#34; width=&#34;144&#34; height=&#34;240&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addvpntype.png&#34;&gt;&lt;img class=&#34;alignleft size-full wp-image-341&#34; title=&#34;addvpntype&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addvpntype.png&#34; alt=&#34;&#34; width=&#34;144&#34; height=&#34;240&#34; /&gt;&lt;/a&gt;&lt;br /&gt; &lt;br style=&#34;clear: both;&#34; /&gt;&lt;br /&gt; &lt;span&gt;&lt;span&gt;&lt;em&gt;4c.&lt;/em&gt; &lt;span&gt;&lt;span&gt;On&lt;span&gt;&lt;span&gt; your Android phone, access the ‘VPN settings’ section of Wireless &amp;amp; network settings.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ul&gt;
+    &lt;li&gt;
+      VPN Name – your choice
+    &lt;/li&gt;
+    &lt;li&gt;
+      VPN server – www#.pbxes.com [for # see URL line after logging into PBXes on your browser]
+    &lt;/li&gt;
+    &lt;li&gt;
+      Enable encryption – We haven’t had success with enabling encryption on PBXes yet. This might be due to a sipdroid &lt;a href=&#34;https://code.google.com/p/sipdroid/issues/detail?id=370&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;issue&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; or it might not. If you have success on Android 2.0 / Éclair please let us know in the comments! &lt;span&gt;&lt;span&gt; Nathan reported issues with encryption using PBXes PPTP VPN as well.  -Derek Halliday 5/12/10 4:33 PM &lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      DNS search domain – leave empty
+    &lt;/li&gt;
+    &lt;li&gt;
+      Username – &lt;account name&gt;-&lt;extension no.&gt; (e.g. guardianproj-401)
+    &lt;/li&gt;
+    &lt;li&gt;
+      Password – &lt;extension password&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/add_pptp_vpn.png&#34;&gt;&lt;img class=&#34;size-full wp-image-342 alignnone&#34; title=&#34;add_pptp_vpn&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/add_pptp_vpn.png&#34; alt=&#34;&#34; width=&#34;144&#34; height=&#34;240&#34; /&gt;&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span style=&#34;color: #000000;&#34;&gt;&lt;span&gt;&lt;strong&gt;That’s it! &lt;/strong&gt;&lt;span&gt;If you come across any issues or have any questions along the way, please let us know in the “Comments” below and we’ll do our best to help you out or clarify. And if you’re itching for more, here are a couple next steps. We’re not presenting a deep tutorial on these (yet), so we’d love to hear from you if you have pursued either – or even better – if you’ve used sipdroid and/or PBXes in any other creative ways!&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ol&gt;
+    &lt;li&gt;
+      &lt;span&gt;&lt;span&gt;Hook your PBXes account into an external DID / VOIP number to dial out to standard phone. Think of it as the equivalent of ‘Skype Out’ for sipdroid. You can use a service such as CallCentric (&lt;a href=&#34;http://www.callcentric.com/&#34;&gt;http://www.callcentric.com/&lt;/a&gt;) for this. &lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span&gt;&lt;span&gt;You can also integrate desktop VOIP programs or other mobile device client into the same PBXes accounts. Here’s a great list of &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_SIP_software#Free_and.2For_open_source_software&#34;&gt;free, open-source SIP clients&lt;/a&gt;&lt;span&gt;. We personally like &lt;/span&gt;&lt;a href=&#34;http://icanblink.com/&#34;&gt;Blink for Mac OS&lt;/a&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span&gt;&lt;span&gt;If you have a privately maintained &lt;a id=&#34;zdnk&#34; title=&#34;Asterisk&#34; href=&#34;https://en.wikipedia.org/wiki/Asterisk_(PBX)&#34;&gt;Asterisk&lt;/a&gt; or other SIP compatible-server, you can use this same approach with that box, and integrate with your own VPN server. We will be covering this in more detail with a future post, as this is a more secure solution that using a provide such as PBXes.&lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

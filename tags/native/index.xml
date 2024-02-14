@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Native on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/native/</link>
+    <description>Recent content in Native on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Mar 2012 13:00:30 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/native/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adventures in Porting: GnuPG 2.1.x to Android!</title>
+      <link>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</link>
+      <pubDate>Thu, 15 Mar 2012 13:00:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</guid>
+      <description>&lt;p&gt;PGP started with Phil Zimmerman’s Pretty Good Privacy, which is now turned into an open IETF standard known as OpenPGP. These days, the reference OpenPGP platform seems to be &lt;a href=&#34;http://gnupg.org/&#34;&gt;GnuPG&lt;/a&gt;: its used by Debian and all its derivatives in the OS itself for verifying packages and more. It is also at the core of all Debian development work, allowing the very diffuse body of Debian, Ubuntu, etc developers to communicate and share work effectively while maintaining a high level of security. It is also used for email encryption in Thunderbird + Enigmail, Apple Mail + GPGMail, GNOME Evolution, KDE KMail, Microsoft Outlook + Gpg4win.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_1651&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/Encryption.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-1651&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/Encryption-150x150.jpg&#34; alt=&#34;lots of one and zeros&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-thumbnail wp-image-1651&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-1651&#34; class=&#34;wp-caption-text&#34;&gt;
+    Yes, encryption means lots of ones and zeros that you can&#39;t read!
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After actively using GnuPG for a few years, I thought it would be a good idea and not too difficult to port it to Android. I dove in and started with the code from git since I was hoping to involve the GnuPG developers. I had recently seen that they were stopping development on the 1.4.x branch, so the 2.1.x branch seemed like the logical choice to give us a reasonably complete OpenPGP implementation. Now I am happy to say we have it working on Android, with a couple of loose ends to tie up in order to get everything working.&lt;/p&gt;
+
+&lt;p&gt;One thing I do have to say is that GnuPG has evolved into a large and elaborate project that not only covers OpenPGP, but also PGP/MIME and things that have nothing to do with PGP like AES symmetric encryption and S/MIME email cryptography. That means it know is made up of many moving parts. It uses many libraries: libassuan, libgpg-error, libksba, npth, openldap, pinentry, and more if you want. It is also made up of a handful of programs to handle different aspects: &lt;code&gt;gpg&lt;/code&gt; is the command line interface, &lt;code&gt;gpg-agent&lt;/code&gt; seems to be the central key handler and task broker, &lt;code&gt;dirmngr&lt;/code&gt; manages connections with directories like OpenPGP keyservers, &lt;code&gt;pinentry&lt;/code&gt; handles getting passphrases from the user, etc.&lt;/p&gt;
+
+&lt;p&gt;The complexity does not stop there for our purposes: we need a Java API so we can make an Android app. So next up we built the &lt;a href=&#34;http://www.gnupg.org/related_software/gpgme/&#34; target=&#34;_blank&#34;&gt;GPGME&lt;/a&gt; (Gnu Privacy Guard Made Easy) library to provide a C/C++ API which is then wrapped in &lt;a href=&#34;https://github.com/smartrevolution/gnupg-for-java&#34; target=&#34;_blank&#34;&gt;gpgme-for-java&lt;/a&gt;, a JNI library to make the GPGME functions available in Java. And just to heap on the layers, we are making a GUI on top of all that so that when you use it, you have no idea that all these little pieces that I have just described are even there at all.&lt;/p&gt;
+
+&lt;p&gt;You can follow our progress on this work on our &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; target=&#34;_blank&#34;&gt;PSST wiki: &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34;&gt;https://guardianproject.info/wiki/PSST&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;_(coming soon: sketching a mobile UI for OpenPGP, follow our notes here: &lt;a href=&#34;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&#34;&gt;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&lt;/a&gt;&lt;/a&gt;)_&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

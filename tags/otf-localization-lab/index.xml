@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Otf Localization Lab on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/otf-localization-lab/</link>
+    <description>Recent content in Otf Localization Lab on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 09 Dec 2015 17:20:15 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/otf-localization-lab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Good translations are essential to usability</title>
+      <link>https://guardianproject.github.io/info/2015/12/09/good-translations-are-essential-to-usability/</link>
+      <pubDate>Wed, 09 Dec 2015 17:20:15 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/12/09/good-translations-are-essential-to-usability/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-230x300.jpg&#34; alt=&#34;Rosetta Stone&#34; width=&#34;230&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-13155&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-230x300.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-786x1024.jpg 786w, https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone.jpg 1164w&#34; sizes=&#34;(max-width: 230px) 100vw, 230px&#34; /&gt;&lt;/a&gt;All too often, translation of an app are treated as an afterthought. It is not something that the app developers see, since they create the software in languages that work best for them. So the software looks complete to the developers. But for anyone using the software in a different language, translation is essential in order for the app to be useful. If you can’t understand the words that you see in the app’s interface, it is going to be difficult or impossible to use that app.&lt;/p&gt;
+
+&lt;p&gt;The part of this question that is still open is how best to manage translating software. From the point of view of the app’s developer, it is not possible to check all of the translations since no one speaks &lt;a href=&#34;https://www.transifex.com/otf/orbot/&#34; target=&#34;_blank&#34;&gt;that many languages&lt;/a&gt; fluently. Many of our apps are translated into 30 or more languages, represented by both pictograms and more than 10 alphabets. No one could read all of those writing systems, let alone understand all the words written in them. So inevitably, developers must trust many other people to do accurate translations, and to not slip in false or misleading information.&lt;/p&gt;
+
+&lt;p&gt;We receive substantial translations from random internet users who come along and contribute their time into translating our apps. We aim to make that process as easy as possible by posting clean source files to Transifex, the web service we currently use. We also work a lot with the &lt;a href=&#34;https://www.transifex.com/otf&#34; target=&#34;_blank&#34;&gt;OTF Translation Hub&lt;/a&gt;, which organizes the chaos of all those apps and contributors into regular events and completed translations. Organized community contributions work very well for building up baseline translations and keeping polished translations updated when the software changes. It is both a valuable and cost-effective resource, and I think its a model that can be emulated for other collections of software.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, for certain target languages like Tibetan or Belarusian, community contributions are rare. We get lots of contributions for many languages, like French, German, and Spanish, but other languages, like Arabic, Chinese, Persian, and Burmese get very few contributions from volunteers. Also, in order to get completed, polished translations, it is necessary to pay translators so they can devote a solid, concentrated chunk of time on making sure the whole translation works. This person can then spend time thinking about the finer points which can have a large impact on the user experience: the tone and feeling of the language, whether it is funny, serious, cute, matter of fact, etc.&lt;/p&gt;
+
+&lt;p&gt;So really, in order to deliver software that is translated into many languages, opening up the source files to get as many contributions as possible will get a lot of work done. But cultivating relationships with translators to oversee the whole process is essential in order to have the translations match the quality of the software.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Censorship Circumvention on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/censorship-circumvention/</link>
+    <description>Recent content in Censorship Circumvention on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/censorship-circumvention/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>
+
+&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all
+sorts of issues. That&amp;rsquo;s why we took special interest in
+&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a
+JavaScript library for decentralized content delivery in web-browsers and
+markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient
+primarily in the context of static websites.  While it should work with dynamic
+websites too, that was out of focus for us.&lt;/p&gt;
+
+&lt;p&gt;Under the hood LibResilient uses &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API&#34;&gt;Web
+Workers&lt;/a&gt;.
+Technically it&amp;rsquo;s a piece of JavaScript that websites can install into the
+browsers of their visitors.  I like to compare it to cookies, except that it&amp;rsquo;s
+not just data but actually a program for manipulating your network request. The
+main purpose of Web Workers is to enable web apps to optimize their network
+connections. Web Workers are pretty low-level API.&lt;/p&gt;
+
+&lt;p&gt;LibResilient delivers implementations for common use-cases on top of Web
+Workers in the form of plug-ins.  We&amp;rsquo;ve looked at the 3 most basic of those
+plug-ins.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;fetch plugin&lt;/em&gt; - routes network requests directly to the web-server as if
+LibResilient wasn&amp;rsquo;t present.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;cache plugin&lt;/em&gt; - stores HTML, JavaScript, images and other files inside
+the browsers local storage&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;alt-fetch plugin&lt;/em&gt; - allows to configure a list of website mirrors and tries
+to fetch files from there&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These enable us to keep a website online and even update it if the main
+web-server running that site has an outage.  It&amp;rsquo;s key that visitors must have
+managed to load the website at least once before.  Only than can LibResilient
+work it&amp;rsquo;s magic and install itself and the list of site mirrors into the users
+browser.  This solution doesn&amp;rsquo;t work for first time visitors, during the period
+of an outage.&lt;/p&gt;
+
+&lt;p&gt;Of course this requires to run website mirrors. Static websites really shine in
+this regard, because they are very easy to mirror and static web-space is quite
+inexpensive these days.&lt;/p&gt;
+
+&lt;p&gt;We also looked into using IPFS Gateways as mirrors.  To accomplish this we had
+to first add and pin websites to IPFS.  Next we had to publish the pinned copy
+of the site to IPNS.  Then we could use the IPNS-key-fingerprint to use every
+public IPFS gateway as mirror.  However, public gateways tend to require quite
+long to answer requests, which is bad for LibResilient because it uses
+relatively short timeouts to fail-over between mirrors.  So to get some sense
+of reliability, paid IPFS gateways guaranteed to pin your website are a more
+stable choice.&lt;/p&gt;
+
+&lt;h1 id=&#34;publishing-libresilient-to-ipfs&#34;&gt;Publishing LibResilient to IPFS&lt;/h1&gt;
+
+&lt;p&gt;This is a for publishing a static LibResilient enabled website to IPFS.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;requirements&lt;/h2&gt;
+
+&lt;p&gt;You will need VPS, or some other kind of tiny but always online server to make
+your data available on IPFS. This guide assumes that your server is running some
+flavor of GNU/Linux. It also assumes that you are familiar with the concept of
+static websites and that your site is already hosted on the internet.&lt;/p&gt;
+
+&lt;p&gt;Mind that IPFS can be very slow, if you run into timeouts don&amp;rsquo;t give up. Just
+wait a few minutes and give it a few more retries, it will work eventually.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-ipfs&#34;&gt;Install IPFS&lt;/h2&gt;
+
+&lt;p&gt;This short snipped will install &lt;code&gt;kubo&lt;/code&gt; the official IPFS binary build on your
+server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://dist.ipfs.tech/kubo/v0.18.1/kubo_v0.18.1_linux-amd64.tar.gz
+echo &amp;quot;15d42b47b8529edda3e8e2d6fe6c14958d939c4efd07dea02e204743e05216f3 kubo_v0.18.1_linux-amd64.tar.gz&amp;quot; \
+    | sha256sum --check
+tar -xzf kubo_v0.18.1_linux-amd64.tar.gz
+mv kubo/ipfs /usr/local/bin/ipfs
+rm -rf kubo kubo_v0.18.1_linux-amd64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setup kubo daemon to always run in background as systemd service. (Note: this
+is tested for Debian and might require different steps on other GNU/Linux
+distributions.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adduser ipfs --gecos &#39;&#39; --disabled-password
+su ipfs -c &#39;/usr/local/bin/ipfs init --profile server&#39;
+
+cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/ipfs-daemon.service
+[Unit]
+Description=IPFS Daemon
+
+[Service]
+Restart=always
+User=ipfs
+group=ipfs
+WorkingDirectory=/home/ipfs
+ExecStart=/usr/local/bin/ipfs daemon
+
+[Install]
+WantedBy=default.target
+EOF
+
+systemctl enable ipfs-daemon.service
+systemctl start ipfs-daemon.service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tip: If you&amp;rsquo;re behind a firewall or NAT make sure to open ports 4001/tcp and
+4001/udp so IPFS can connect to the internet.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-site-to-ipfs&#34;&gt;Publish site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Next we&amp;rsquo;ll publish the website to IPFS. You&amp;rsquo;ll need to copy your static website
+to the IPFS server. For this guide we&amp;rsquo;ll assume there&amp;rsquo;s a copy of your website
+at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The last line of the output of this command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;added QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck website
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy the CID and pin it. Pinning means that your IPFS daemon will never
+automatically delete these files to free up memeory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs pin add QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s time to make make it available via IPNS. So we need to generate an
+IPNS key. This key will serve as address for accessing the website using IPFS.
+It also serves as key for publishing updates to your website.&lt;/p&gt;
+
+&lt;p&gt;NOTE: all commands in this section are to be executed by &lt;code&gt;ipfs&lt;/code&gt; user.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key gen --type=rsa --size=2048 example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is how you can list your keys:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key list -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the relevant output should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;k2k4r8ls72x686fmm2s0px4plejbHkhOm9uuzrxwedsaag1w72ene5rw     example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The hash of the key, on the left side is going to be the IPNS name of your
+website. It&amp;rsquo;s a fixed name that doesn&amp;rsquo;t change even when you update your site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs name publish --key=example-site QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When your IPFS node is working and could connect to some peers, your site
+should now be accessible using IPNS. Although publishing may take several
+minutes. There are so-called &lt;a href=&#34;https://ipfs.github.io/public-gateway-checker/&#34;&gt;public
+gateways&lt;/a&gt; which allow users to
+access IPFS and IPNS content using http. E.g.:
+&lt;a href=&#34;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&#34;&gt;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also use &lt;code&gt;ipfs&lt;/code&gt; to check if the files got ingested correctly. E.g.:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs ls /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw
+ipfs cat /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;update-libresilient-config-to-include-ipns-link&#34;&gt;Update LibResilient config to include IPNS link&lt;/h3&gt;
+
+&lt;p&gt;Now that your site is available on IPNS you can finally add it to your
+LibResilient &lt;code&gt;config.json&lt;/code&gt;. You can actually add as many gateways as you&amp;rsquo;d
+like with LibResilient&amp;rsquo;s &lt;code&gt;alt-fetch&lt;/code&gt; plugin. Here&amp;rsquo;s a simple example where we
+added two gateways:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;plugins&amp;quot;: [{
+    &amp;quot;name&amp;quot;: &amp;quot;fetch&amp;quot;
+  }, {
+    &amp;quot;name&amp;quot;: &amp;quot;alt-fetch&amp;quot;,
+    &amp;quot;endpoints&amp;quot;: [
+      &amp;quot;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+      &amp;quot;https://ipfs.io/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+    ]
+  }],
+  &amp;quot;loggedComponents&amp;quot;: [&amp;quot;service-worker&amp;quot;, &amp;quot;fetch&amp;quot;, &amp;quot;alt-fetch&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;NOTE: We have to use IPNS, because as you can see we need write the IPFS
+address to a file which itself is part of the website. With IPNS updating the
+site also won&amp;rsquo;t require changing &lt;code&gt;config.json&lt;/code&gt; for every update.&lt;/p&gt;
+
+&lt;p&gt;When you&amp;rsquo;ve made your pick of IPFS gateways and added them to your
+&lt;code&gt;config.json&lt;/code&gt; you can publish it to your web-server.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-updated-site-to-ipfs&#34;&gt;Publish updated site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Now you also need to publish the change to IPFS. Again start by copying the
+site to your IPFS server. We again assume the updated copy of your static
+website is located at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next we can unpin the old version of the website. (Tip: you can list pinned
+files and directories with: &lt;code&gt;ipfs pin ls&lt;/code&gt; pinned directories will be marked as
+&lt;code&gt;recursive&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs unpin QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then we can add the updated site to IPFS and publish it to IPNS again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+ipfs name publish --key=example-site QmcoZrn004DGdRvuZWf1pdcpMQXuXghjCUy7ve5Og45dNU 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can repeat this step whenever you want to publish an updated version of
+your static website.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Announcement: AnyNews 1.0: Censorship-Resistant News and Media Distribution</title>
+      <link>https://guardianproject.github.io/info/2021/11/29/announcement-anynews-1.0-censorship-resistant-news-and-media-distribution/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/11/29/announcement-anynews-1.0-censorship-resistant-news-and-media-distribution/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;For content publishers, AnyNews is a news distribution suite focused on service to censorship-prone geographies, easily integrated into existing content sources.  AnyNews is open-source and easily branded (or customized, if desired) without extensive effort or expense.  AnyNews integrates technologies to counter a range of censorship regimes and is designed to accommodate new technologies more easily and quickly as they arise. Tools are provided to support a range of publishing options for environments that suffer from connectivity or performance problems. Service engagements are possible when custom software is required.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./anynews_homescreen_cubanet.jpg&#34; alt=&#34;AnyNews Home Screen&#34; width=&#34;380px&#34; height=&#34;800px&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;product-concept&#34;&gt;Product Concept&lt;/h2&gt;
+
+&lt;p&gt;Content providers of all types are confronted with a diversity of censorship and network-disruption regimes around the world, with widely-varying political and social forces involved, and manifesting a bewildering array of content access issues to users.  Further, within a given community, independent individuals are impacted by political and social forces in different ways.  In such an environment, it has been a difficult technical struggle to stand up censorship resilient services that provide an easy, understandable user experience while also satisfying the heavy security and privacy demands of the most heavily-impacted users.  New thinking is required to avoid the nightmare scenario of costly and slow application development focused on the most challenging technical demands while, in doing so, alienating many others who give up in frustration and put themselves at risk.&lt;/p&gt;
+
+&lt;p&gt;AnyNews is an open source software project that incorporates a variety of censorship-resistant technologies to mitigate these threats and does so in a way that is responsive to a wider range of use cases.&lt;/p&gt;
+
+&lt;h2 id=&#34;core-capability&#34;&gt;Core Capability&lt;/h2&gt;
+
+&lt;p&gt;AnyNews is designed for information publication - a one-way, source-to-user interaction - using news feed technologies. The published content can be text, media (imagery, audio, video) or a combination.  Information is typically organized by reverse chronology and/or defined categories.  Most common publication formats are already integrated.  The AnyNews Web Client updates its content regularly without user interaction. Changes to your edition of the AnyNews application occur automatically and immediately upon publication without requiring a special user interaction.&lt;/p&gt;
+
+&lt;p&gt;The AnyNews Web Client is a &amp;ldquo;news reader&amp;rdquo; type application pre-configured to read a single feed, or a defined set (typically, as offered by a single publisher, with a single publisher&amp;rsquo;s branding). The user experience is clear and straight-forward but offers full-integrated media play and features like saving and sharing.  Internationalization of the application is easily accommodated.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./anynews_media_playlist.jpg&#34; alt=&#34;AnyNews Media Playlist Screen&#34; width=&#34;380px&#34; height=&#34;800px&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;supported-content-formats&#34;&gt;Supported Content Formats&lt;/h2&gt;
+
+&lt;p&gt;AnyNews has built-in support for &lt;a href=&#34;https://validator.w3.org/feed/docs/rss1.html&#34;&gt;RSS 1.0&lt;/a&gt;, &lt;a href=&#34;https://cyber.harvard.edu/rss/rss.html&#34;&gt;RSS 2.0&lt;/a&gt;, and &lt;a href=&#34;https://www.tutorialspoint.com/rss/what-is-atom.htm&#34;&gt;ATOM 1.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Publishers with customized versions of these formats, RDF, NewsML, JSON, XML or later versions of ATOM (such as OData.org&amp;rsquo;s &lt;a href=&#34;https://www.odata.org/documentation/odata-version-3-0/atom-format/&#34;&gt;version&lt;/a&gt;) can be supported via a service engagement in one of two ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Modification of our deployment/mirroring tools to convert the published format to one of our supported formats (fastest, cheapest approach)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Modify the AnyNews Web Client to support the custom format (slower, costlier approach better suited to engagements where the Web Client itself is almost being customized)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;circumvention-in-the-anynews-web-client&#34;&gt;Circumvention in the AnyNews Web Client&lt;/h2&gt;
+
+&lt;p&gt;The AnyNews Web Client is built using Progressive Web App (PWA) technology.  While on the one hand accessing the AnyNews Web Client feels like accessing a web page in the browser, the AnyNews Web Client is saved to the device’s home screen on first use and, henceforth, acts like a native application.  With this approach, users don&amp;rsquo;t visit their vendor&amp;rsquo;s app store (which might censor your app or be otherwise unaccessible in their country). AnyNews Web Client technology also allows automatic update of the app without app store access or (in the case of Apple/iOS) app store approval.&lt;/p&gt;
+
+&lt;p&gt;Within the AnyNews Web Client itself, censorship or surveillance can be mitigated with optional CDN mirroring.  The Web Client is initially configured to retrieve from one or more mirror sites, each user selecting a mirror randomly on initial startup and then re-trying from the set in random-round-robin style if/when the initial mirror fails.  These hosts can be on different CDN providers and/or in different geographies.  The actual set of mirroring hosts can be changed over time and automatically updated to the AnyNews Web Client.  For some content providers, it is also useful to host the AnyNews Web Client itself on a CDN mirror as well.&lt;/p&gt;
+
+&lt;h2 id=&#34;serving-marginalized-communities&#34;&gt;Serving Marginalized Communities&lt;/h2&gt;
+
+&lt;p&gt;AnyNews provides tools to pre-process news content for delivery to community-centered hubs at the very edge of the network in places where Internet connectivity for individuals is poor, non-existent or expensive, or under circumstances of natural disaster that make individual connection to the network impossible. These tools can be used to re-publish content to a laptop, tablet or IoT device as small as a Raspberry Pi powered by solar panels and with a highly-intermittent Internet connection.&lt;/p&gt;
+
+&lt;h2 id=&#34;native-application-wrappers&#34;&gt;Native Application &amp;ldquo;Wrappers&amp;rdquo;&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s possible to produce versions of the AnyNews Web Client &lt;em&gt;wrapped&lt;/em&gt; in a native (iOS, Android) application layer for delivery to users via the App Stores.  While the App Stores are sometimes subject to censorship, most users are more familiar with this model for acquiring applications and may have a greater sense of trust in applications delivered in that way.&lt;/p&gt;
+
+&lt;p&gt;On Google’s Android, two additional circumvention technologies can be integrated in the native application:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Integration with Tor via Guardian Project’s &lt;em&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&#34;&gt;Orbot&lt;/a&gt;, Tor for Android&lt;/em&gt;. The AnyNews Android app checks for the presence of Orbot on the user’s device and automatically configures itself to run using Orbot when present.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Integration with Clostra&amp;rsquo;s &lt;em&gt;&lt;a href=&#34;https://www.clostra.com/newnode-mesh-network&#34;&gt;NewNode technology&lt;/a&gt;&lt;/em&gt;.  NewNode is automatically activated at start-up if Orbot is not present on the device.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As we are working through some operating system limitations, our AnyNews native app for iOS does not offer circumvention technologies beyond the mirroring capabilities in the PWA.&lt;/p&gt;
+
+&lt;p&gt;Our tools for building the native app wrappers are not ready for public consumption at this point, so native wrappers are an optional part of Anynews and available via service engagement.&lt;/p&gt;
+
+&lt;h2 id=&#34;repository&#34;&gt;Repository&lt;/h2&gt;
+
+&lt;p&gt;The AnyNews repositories are &lt;a href=&#34;https://gitlab.com/guardianproject/anynews&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;issue-trackers&#34;&gt;Issue Trackers&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/guardianproject/anynews/anynews-web-client/-/issues&#34;&gt;AnyNews Web Client Issue Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/guardianproject/anynews/AnyNews-Republisher/-/issues&#34;&gt;AnyNews Republisher Issue Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;AnyNews is released under &lt;a href=&#34;https://www.gnu.org/licenses/gpl-3.0.txt&#34;&gt;GNU Public License v3.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;service-engagement-opportunities&#34;&gt;Service Engagement Opportunities&lt;/h2&gt;
+
+&lt;p&gt;AnyNews is open source.  We’ve documented the steps you’ll need to make AnyNews work with your content and simplify deployment. If you&amp;rsquo;d prefer help in developing your AnyNews strategy, we can assist.  Engagement types:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Assistance with Open Source&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Branding-only Engagement&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deployment Strategy Engagement&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Customization Engagement (customized Web Clients or news source customizations)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Native App &amp;ldquo;Wrappers&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Long-term Deployment Support&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;p&gt;Guardian Project thanks the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;Open Technology Fund&lt;/a&gt;, via it&amp;rsquo;s &lt;a href=&#34;https://www.opentech.fund/labs/engineering-lab/&#34;&gt;Engineering Lab&lt;/a&gt;, for funding the improvements in AnyNews that led to this release.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

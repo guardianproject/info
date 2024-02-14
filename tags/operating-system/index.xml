@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operating System on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/operating-system/</link>
+    <description>Recent content in Operating System on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 28 Mar 2016 13:42:36 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/operating-system/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Copperhead, Guardian Project and F-Droid Partner to Build Open, Verifiably Secure Mobile Ecosystem</title>
+      <link>https://guardianproject.github.io/info/2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/</link>
+      <pubDate>Mon, 28 Mar 2016 13:42:36 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/</guid>
+      <description>&lt;p&gt;Three open-source projects haved joined together to announce a new partnership to create an open, verifiably secure mobile ecosystem of software, services and hardware. Led by the work of the Toronto-based &lt;a href=&#34;https://copperhead.co/android/&#34;&gt;CopperheadOS&lt;/a&gt; team on securing the core Android OS, &lt;a href=&#34;https://guardianproject.info&#34;&gt;Guardian Project&lt;/a&gt; and &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; have joined in to partner on envisioning and developing a full mobile ecosystem. The goal is to create a solution that can be verifiably trusted from the operating system,  through the network and network services, all the way up to the app stores and apps themselves. Through a future planned crowdfunded and commercial offering, the partnership will provide affordable off-the-shelf solutions, including device hardware and self-hosted app and update distribution servers, for any individual and organizations looking for complete mobile stacks they can trust.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 30 March 2016: Copperhead has announced their &lt;a href=&#34;https://copperhead.co/blog/2016/03/29/crowdfunding-partnership-announced&#34;&gt;crowdfunding plans here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://copperhead.co/android/&#34;&gt;CopperheadOS&lt;/a&gt; is a hardened open-source Android based on AOSP, that is available for download and installation on many Nexus devices. The Guardian Project develops popular free and open-source privacy-enhancing apps like Orbot (Tor for Android), ChatSecure, and ObscuraCam, and software libraries like NetCipher, SQLCipher and PanicKit, for developers who want to enable similar features in their own apps. F-Droid is an installable catalogue of free and open source Android software, that is built into CopperheadOS, as the default app store. It enables decentralized and verifiably secure app distribution by any individual or organization.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://copperhead.co/android/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone wp-image-13280 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/copperheados-1024x520.jpg&#34; alt=&#34;copperheados&#34; width=&#34;780&#34; height=&#34;396&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/copperheados-1024x520.jpg 1024w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados-300x152.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados-768x390.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados.jpg 1311w&#34; sizes=&#34;(max-width: 780px) 100vw, 780px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466.jpg&#34;&gt;&lt;img class=&#34;alignleft wp-image-13310 size-medium&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-224x300.jpg&#34; alt=&#34;IMG_0466&#34; width=&#34;224&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-224x300.jpg 224w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-768x1028.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-765x1024.jpg 765w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466.jpg 1446w&#34; sizes=&#34;(max-width: 224px) 100vw, 224px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;“I have been a happy CopperheadOS user since the first moment I installed it”, says Nathan Freitas, Founder and Director of Guardian Project, ” even with running it on a two-generation old, very inexpensive Nexus 5 device. I know I will always have the latest security updates immediately, and that everything on my device is under my control.”&lt;/p&gt;
+
+&lt;p&gt;“My Copperhead Nexus is the go-to device in my bag, ” says Freitas, “when I am handling sensitive information, find myself on a network I don’t trust, or am otherwise wary about my communication being tracked, intercepted or tampered with.”&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Hans-Christoph Steiner who leads the Guardian Project’s developer platform says “Copperhead with F-Droid and Orbot provides all of the benefits of a smartphone, without the security and privacy downsides introduced by the major vendors, carriers and closed app stores. By building in F-Droid, Copperhead guarantees its users have direct access to the best free and open software, built directly from source-code in a trusthworthy, verifiable way”. Mr. Steiner presented on his work with F-Droid and building &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;“private, unblockable app stores”&lt;/a&gt; at &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;FOSDEM 2016&lt;/a&gt; in January.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone wp-image-13306 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-1024x572.jpg&#34; alt=&#34;handsatfosdem&#34; width=&#34;945&#34; height=&#34;528&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-1024x572.jpg 1024w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-300x168.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-768x429.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-360x200.jpg 360w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem.jpg 1274w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+_Learn more about &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34;&gt;F-Droid&lt;/a&gt; from this &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34;&gt;FOSDEM 2016 talk&lt;/a&gt; (watch the &lt;a href=&#34;http://video.fosdem.org/2016/h1309/f-droid-building-the-private-unblockable-app-store.mp4&#34; target=&#34;_blank&#34;&gt;video here&lt;/a&gt;)_&lt;/p&gt;
+
+&lt;p&gt;Collectively, this partnership creates a global team of information security researchers, forensic analysts, software developers, designers and engaged users, looking to move the state of the art forward for open, verifiably secure and privacy-enhancing mobile technology. The groups hope to expand the effort to include other mobile OS teams, application developers and even hardware developers interested in having the same kind of impact on the privacy and security of mobile computing.&lt;/p&gt;
+
+&lt;p&gt;James Donaldson of Copperhead says “It’s important for Android users to have a privacy minded viable alternative to closed-source solutions when contemplating mobile security. Teaming up with great partners like F-Droid and Guardian Project allows us to offer our users both security and a great experience with all of the core features they need.”&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info&#34;&gt;Guardian Project&lt;/a&gt; is an open-source effort based in New York, with a global community of contributors and partners. &lt;a href=&#34;https://copperhead.co&#34;&gt;Copperhead&lt;/a&gt; is an information security firm located in Toronto, Canada, specializing in protecting data and devices from unauthorized access. &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; is a non-profit volunteer project, and is operated by F-Droid Limited, a non-profit organisation registered in England (no. 8420676).&lt;/p&gt;
+
+&lt;p&gt;Contact:&lt;/p&gt;
+
+&lt;p&gt;Nathan Freitas / +1 718 569 7272&lt;br /&gt;
+&lt;a href=&#34;&amp;amp;#x6d;&amp;amp;#x61;ilt&amp;amp;#x6f;&amp;amp;#x3a;&amp;amp;#x6e;ath&amp;amp;#x61;&amp;amp;#x6e;&amp;amp;#x40;gua&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;anp&amp;amp;#x72;&amp;amp;#x6f;&amp;amp;#x6a;ect&amp;amp;#x2e;&amp;amp;#x69;&amp;amp;#x6e;fo&#34;&gt;nathan@&amp;#x67;&amp;#x75;&amp;#x61;&amp;#x72;&amp;#x64;&amp;#x69;&amp;#x61;nproject&amp;#x2e;&amp;#x69;&amp;#x6e;&amp;#x66;&amp;#x6f;&lt;/a&gt; (XMPP-OTR, OpenPGP: &lt;a href=&#34;https://pgp.mit.edu/pks/lookup?search=0xA801183E69B37AA9&amp;op=index&#34; target=&#34;_blank&#34;&gt;0x69B37AA9&lt;/a&gt;  / &lt;a href=&#34;https://keybase.io/n8fr8&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://keybase.io/n8fr8&#34;&gt;https://keybase.io/n8fr8&lt;/a&gt;&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;James Donaldson / Copperhead&lt;br /&gt;
+&lt;a href=&#34;mailto:media@&amp;amp;#x63;&amp;amp;#x6f;&amp;amp;#x70;&amp;amp;#x70;&amp;amp;#x65;&amp;amp;#x72;&amp;amp;#x68;&amp;amp;#x65;&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x2e;&amp;amp;#x63;o&#34;&gt;m&amp;#x65;di&amp;#x61;@&amp;#x63;&amp;#x6f;p&amp;#x70;er&amp;#x68;ea&amp;#x64;.&amp;#x63;o&lt;/a&gt; (OpenPGP: &lt;a href=&#34;https://pgp.mit.edu/pks/lookup?search=0xDC1DEA5E&amp;amp;op=index&#34;&gt;0xDC1DEA5E&lt;/a&gt;&lt;a href=&#34;https://pgp.mit.edu/pks/lookup?op=get&amp;amp;search=0x2621AB13DC1DEA5E&#34;&gt; &lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

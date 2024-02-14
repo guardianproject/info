@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Freebird Workshop on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/freebird/</link>
+    <description>Recent content in Freebird Workshop on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Apr 2012 21:59:05 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/freebird/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

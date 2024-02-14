@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Advisory on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/advisory/</link>
+    <description>Recent content in Advisory on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Mar 2017 09:53:22 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/categories/advisory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ProofMode critiques and progress</title>
+      <link>https://guardianproject.github.io/info/2017/03/30/proofmode-critiques-and-progress/</link>
+      <pubDate>Thu, 30 Mar 2017 09:53:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/03/30/proofmode-critiques-and-progress/</guid>
+      <description>&lt;p&gt;Bruce Schneier was kind enough to &lt;a href=&#34;https://www.schneier.com/blog/archives/2017/03/proof_mode_for_.html?utm_source=dlvr.it&amp;amp;utm_medium=twitter&#34;&gt;post about our work on ProofMode&lt;/a&gt; to his &lt;a href=&#34;https://www.schneier.com&#34;&gt;blog&lt;/a&gt;. A decent set of comments ensued, which we have considered, measured and weighed. We posted the response below on the post, and now also here. We also received an excellent set of &lt;a href=&#34;http://www.lieberbiber.de/2017/03/07/the-guardian-projects-proof-mode-app-for-activists-doesnt-work/&#34;&gt;feedback from the Lieberbiber blog&lt;/a&gt;. Below are responses to the various concerns raised, and links to work completed or in progress.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;At a high level, securely dating files, digital notarization, easy capture of sensor metadata, among other things, are not solved problems. For every day activists around the world, who may only have a cheap smartphone as their only computing device, they have no easy way to do any of these things. Even for high-level war crimes investigators, they are often using consumer point and shoot digital cameras, and documenting everything on paper.&lt;/p&gt;
+
+&lt;p&gt;ProofMode is a simplified version of a much more complex and thorough system and app that we have built, called CameraV. In that model, we use a built-in custom camera, encrypted internal storage and much more complex set of metadata to generate the evidence and proof. We also capture baseline images from the sensor, and require those to be shared with the key, so that we can later match evidence photos from the sensor itself. You can read more about some of this here:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.github.io/informacam-guide/en/InformacamGuide.html&#34; rel=&#34;nofollow&#34;&gt;&lt;a href=&#34;https://guardianproject.github.io/informacam-guide/en/InformacamGuide.html&#34;&gt;https://guardianproject.github.io/informacam-guide/en/InformacamGuide.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We loved CameraV, but it was too complicated. Many frontline activists looking for a means to timestamp, sign, and otherwise add extra verifiable metadata to photos and videos they were capturing, found CameraV to be too complicated and burdensome. They helped us to design ProofMode, to strip it down to its bare essentials. In this case, we are working within pre-existing communities, with a shared set of pre-existing trust. What the activists are looking for is richer metadata, in easy to parse formats, that has timestamping, and some kind of cryptographic verification around it.&lt;/p&gt;
+
+&lt;p&gt;We know our approach is not bulletproof, and that smart people like this who comment on this blog can fool it six ways from Sunday. This ProofMode release was versioned “0.0.x” for a reason. We are not saying it is finished by any means, clearly. We are actively developing it, and have a roadmap that will address most of not all of the major concerns pointed out here, while ALSO keeping it simple, streamlined, focused and easy to use.&lt;/p&gt;
+
+&lt;p&gt;For example, we have implemented the Google SafetyNet API (&lt;a href=&#34;https://koz.io/inside-safetynet/&#34;&gt;https://koz.io/inside-safetynet/&lt;/a&gt;) for automatically signing the hashes of the media, checking that the app is running on an actual Android device that wasn’t tampered with, and verifying the hash of the APK app itself matches our officially released version. Google’s servers produced a signed blob of data that gets appending to our proof data, and that can be verified later on a desktop or server. This one feature counteracts most of the “hey I can just fake this by hand with GPG” comments:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/proofmode/issues/15&#34; rel=&#34;nofollow&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/proofmode/issues/15&#34;&gt;https://github.com/guardianproject/proofmode/issues/15&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We are integrating supporting for OpenTimestamps and other blockchain based notary systems like Stampery: &lt;a href=&#34;https://github.com/guardianproject/proofmode/issues/8&#34; rel=&#34;nofollow&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/proofmode/issues/8&#34;&gt;https://github.com/guardianproject/proofmode/issues/8&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+For now, the app makes it very easy to send out a tweet, SMS or even a Signal message of the media’s hash, as a way to notarize it to various kinds of end points. We are working with human rights organizations to setup Signal-based notaries for their own internal logging.&lt;/p&gt;
+
+&lt;p&gt;The analysis on the &lt;a href=&#34;http://www.lieberbiber.de/&#34; rel=&#34;nofollow&#34;&gt;&lt;a href=&#34;http://www.lieberbiber.de&#34;&gt;http://www.lieberbiber.de&lt;/a&gt;&lt;/a&gt; site is a good one, and also brings up the method by which we monitor for the presence of new photos and videos. We’ve had some comments about directly launching and monitoring the camera, which are helpful, but since we want to run in the background, that won’t really work:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/proofmode/issues/7&#34; rel=&#34;nofollow&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/proofmode/issues/7&#34;&gt;https://github.com/guardianproject/proofmode/issues/7&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The real progress there is moving to a new method Android provides for monitoring media, and away from just watching it at the file system. This has been implemented for newer Android devices:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/proofmode/commit/0ea9c9d73d7e55de612c89c466ef87da3524b6f1&#34; rel=&#34;nofollow&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/proofmode/commit/0ea9c9d73d7e55de612c89c466ef87da3524b6f1&#34;&gt;https://github.com/guardianproject/proofmode/commit/0ea9c9d73d7e55de612c89c466ef87da3524b6f1&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We are also looking at how we generate and store the keys we generate in the app. We agree that we did the minimal amount of work necessary to store and secure the key, just relying on the Android app sandboxing for now. We never intended this key to be used for encryption or longterm identity. Our thinking was more focused on integrity through digital signatures, with a bit of lightweight, transient identity added on.&lt;/p&gt;
+
+&lt;p&gt;That said, we will be moving the key and credentials into the Android Keystore, which is the most secure key management solution possible on Android today.&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/proofmode/issues/16&#34; rel=&#34;nofollow&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/proofmode/issues/16&#34;&gt;https://github.com/guardianproject/proofmode/issues/16&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All in all, it has just been a few weeks, and have already released multiple updates, that address most of the concerns that been raised. Work continues, and we hope that in no time, we’ll have an HSM-backed, yubikey-powered, blockchain-enabled, double ratchet encrypted and PQCrypto-resistent service, that will *still* be easy to use, under 3 MB and run on $100 Android phones.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2015 is the Year of Bore-Sec</title>
+      <link>https://guardianproject.github.io/info/2015/01/02/2015-is-the-year-of-bore-sec/</link>
+      <pubDate>Fri, 02 Jan 2015 12:35:41 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/02/2015-is-the-year-of-bore-sec/</guid>
+      <description>&lt;p&gt;Over the last few months, the Guardian Project team has been thinking about how to approach the next five years of our work. An idea of “security so easy and seamless, that it is boring” came to the surface through some discussions. This led us to look for inspiration in important inventions and innovations of the past, that provide safety and security to all on a day-to-day basis, without the users of these technologies hardly thinking about them. This is no longer about James Bond super-spy technologies, it is about having as little impact on your day-to-day use of mobile technology while still providing the maximum protection to your data and communications, as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Here then, as inspiration and our guiding lights, is our list of safety inventions of the past that we aim to be “Boring Like….”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.esurance.com/seat-belt-history/&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12756&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/Old-seatbelt-image.jpg&#34; alt=&#34;Old-seatbelt-image&#34; width=&#34;959&#34; height=&#34;380&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/Old-seatbelt-image.jpg 959w, https://guardianproject.info/wp-content/uploads/2015/01/Old-seatbelt-image-300x119.jpg 300w&#34; sizes=&#34;(max-width: 959px) 100vw, 959px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Boring Like &lt;a href=&#34;http://blog.esurance.com/seat-belt-history/&#34;&gt;Seat Belts&lt;/a&gt; (buckle up!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Pasteurization&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12757&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939.jpg&#34; alt=&#34;StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory,_1939&#34; width=&#34;1000&#34; height=&#34;722&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939.jpg 1000w, https://guardianproject.info/wp-content/uploads/2015/01/StateLibQld_1_212036_Cream_pasteurising_and_cooling_coils_at_Murgon_Butter_Factory_1939-300x217.jpg 300w&#34; sizes=&#34;(max-width: 1000px) 100vw, 1000px&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; Boring Like &lt;a href=&#34;https://en.wikipedia.org/wiki/Pasteurization&#34;&gt;Pasteurized Milk&lt;/a&gt; (though of course, we do respect your raw dairy folks out there…)&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/versagate3.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12758&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/versagate3.jpg&#34; alt=&#34;versagate3&#34; width=&#34;640&#34; height=&#34;427&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/versagate3.jpg 640w, https://guardianproject.info/wp-content/uploads/2015/01/versagate3-300x200.jpg 300w&#34; sizes=&#34;(max-width: 640px) 100vw, 640px&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; Boring Like &lt;a href=&#34;https://www.google.com/search?q=baby+gates&amp;amp;source=lnms&amp;amp;tbm=isch&amp;amp;sa=X&amp;amp;ei=htKmVJm_GZPmgwSNn4HYBg&amp;amp;ved=0CAkQ_AUoAg&amp;amp;biw=1701&amp;amp;bih=839&#34;&gt;Baby Gates&lt;/a&gt; (kids and dogs hate ’em, but they are a necessary fun killer for any household)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/smokealarm.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12759&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/smokealarm.jpg&#34; alt=&#34;smokealarm&#34; width=&#34;410&#34; height=&#34;602&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/smokealarm.jpg 410w, https://guardianproject.info/wp-content/uploads/2015/01/smokealarm-204x300.jpg 204w&#34; sizes=&#34;(max-width: 410px) 100vw, 410px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://thesmokedetector.umwblogs.org/antecedents-the-evolution/&#34;&gt;Smoke Detectors&lt;/a&gt; (though our friends at &lt;a href=&#34;http://getbirdi.com/&#34;&gt;Birdi&lt;/a&gt; are aiming to make them exciting again…)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mentalfloss.com/article/54410/surprising-origins-child-proof-lids&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12760&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/childlids.jpg&#34; alt=&#34;childlids&#34; width=&#34;640&#34; height=&#34;430&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/childlids.jpg 640w, https://guardianproject.info/wp-content/uploads/2015/01/childlids-300x202.jpg 300w&#34; sizes=&#34;(max-width: 640px) 100vw, 640px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://mentalfloss.com/article/54410/surprising-origins-child-proof-lids&#34;&gt;Childproof Lids&lt;/a&gt; (again, for the parents out there, a literal life saver)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.toyota-global.com/innovation/safety_technology/safety_technology/technology_file/active/&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12761&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/sft_08_01.jpg&#34; alt=&#34;sft_08_01&#34; width=&#34;340&#34; height=&#34;220&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/sft_08_01.jpg 340w, https://guardianproject.info/wp-content/uploads/2015/01/sft_08_01-300x194.jpg 300w&#34; sizes=&#34;(max-width: 340px) 100vw, 340px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://www.toyota-global.com/innovation/safety_technology/safety_technology/technology_file/active/&#34;&gt;Anti-Lock Brakes&lt;/a&gt; (the modern automobile is one of the best examples of bore-sec!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/bg_SurgeProtectorBuyingGuide_hero_image.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12762&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/bg_SurgeProtectorBuyingGuide_hero_image.jpg&#34; alt=&#34;bg_SurgeProtectorBuyingGuide_hero_image&#34; width=&#34;650&#34; height=&#34;294&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/bg_SurgeProtectorBuyingGuide_hero_image.jpg 650w, https://guardianproject.info/wp-content/uploads/2015/01/bg_SurgeProtectorBuyingGuide_hero_image-300x136.jpg 300w&#34; sizes=&#34;(max-width: 650px) 100vw, 650px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://www.lowes.com/cd_Surge+Protector+Buying+Guide_754129873_Learn&#34;&gt;Surge Protectors&lt;/a&gt; (wouldn’t you rather lose your $2 power strip then your $1000 computer?)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://msdh.ms.gov/msdhsite/_static/30,5314,77,333.html&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12763&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/RestaurantInspectionGradeA.jpg&#34; alt=&#34;RestaurantInspectionGradeA&#34; width=&#34;568&#34; height=&#34;727&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/RestaurantInspectionGradeA.jpg 568w, https://guardianproject.info/wp-content/uploads/2015/01/RestaurantInspectionGradeA-234x300.jpg 234w&#34; sizes=&#34;(max-width: 568px) 100vw, 568px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;http://msdh.ms.gov/msdhsite/_static/30,5314,77,333.html&#34;&gt;Restaurant Inspections&lt;/a&gt; (peace of mind from a single letter rating when you go out to eat…)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://americandogblog.wordpress.com/tag/dog-life-vest/&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-12764&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/dougie_2008_in_his_outwardhound_dog_life_jacket.jpg&#34; alt=&#34;dougie_2008_in_his_outwardhound_dog_life_jacket&#34; width=&#34;360&#34; height=&#34;269&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/dougie_2008_in_his_outwardhound_dog_life_jacket.jpg 360w, https://guardianproject.info/wp-content/uploads/2015/01/dougie_2008_in_his_outwardhound_dog_life_jacket-300x224.jpg 300w&#34; sizes=&#34;(max-width: 360px) 100vw, 360px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+Boring Like &lt;a href=&#34;https://americandogblog.wordpress.com/tag/dog-life-vest/&#34;&gt;Life Vests&lt;/a&gt; (even dogs love ’em!)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Have some ideas of other great “Bore-Sec” tech? Add them in the comments!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;With our work on critical security and privacy enhancements for mobile devices and apps, we aim to bore. The best security is the kind you don’t have to worry about, until you need it (and then you won’t know how you ever lived without it…)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Here’s to breaking new “Bore-Sec” ground in 2015! Happy New Year!&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ChatSecure v12 Provides Comprehensive Mobile Security and a Whole New Look</title>
+      <link>https://guardianproject.github.io/info/2013/10/24/chatsecure-v12-provides-comprehensive-mobile-security-and-a-whole-new-look/</link>
+      <pubDate>Thu, 24 Oct 2013 01:50:13 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/10/24/chatsecure-v12-provides-comprehensive-mobile-security-and-a-whole-new-look/</guid>
+      <description>&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;strong&gt;ChatSecure v12 Provides Comprehensive Mobile Security and a Whole New Look&lt;/strong&gt;&lt;strong&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;span style=&#34;font-size: 13px;&#34;&gt;The Guardian Project’s award-winning open-source app “Gibberbot” for Android, has been rebranded to “ChatSecure” for its version 12 release, unifying the branding with the iPhone and iPad apps, while offering major updates in security from the device through the network.&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;em&gt;&lt;strong&gt;Download on &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&#34;&gt;Google Play&lt;/a&gt; or &lt;a href=&#34;https://guardianproject.info/releases/chatsecure-latest.apk&#34;&gt;Direct Download&lt;/a&gt; now.&lt;/strong&gt;&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;span style=&#34;font-size: 13px;&#34;&gt;October 20, New York, NY – The Guardian Project, a New York-based open-source mobile security incubator, has launched version 12 of its well-regarded secure messaging app for Android, rebranding it to “ChatSecure” to unify branding with existing open-source iPhone and iPad apps. The new upgrade brings an entirely new fluid user interface, and unprecedented security features for users looking to protect their message content (what they are saying) and their metadata (who, why and where) from malicious adversaries and apps, hostile network operators, and dragnet surveillance. It is completely open-source, utilizes interoperable protocols, and has undergone third-party security audits and code reviews.&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/store_new.png&#34; width=&#34;614&#34; height=&#34;300&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  “We believe you should not have to compromise on choice and usability, to have reliable, strong security”, said Guardian Project founder, Nathan Freitas. “Some companies want to limit you to their closed, proprietary services that are centrally hosted and easily blocked or monitored. We see that as fragile and unsustainable, and ultimately, hostile and unfriendly to users, who want choice, freedom and the ability to easily and safely communicate with their friends and family around the world”.
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  ChatSecure is compatible with thousands of instant messaging service providers around the world, including Google, Facebook, DuckDuckGo and Jabber.org. It also works with open-source server software, such as Prosody, enabling service providers, enterprise and other organizations to host their own servers. ChatSecure users also can communicate securely with anyone using a compatible app on Windows, Mac OS or Linux, such as Pidgin, Adium or Jitsi. The app also supports peer-to-peer wifi chat using Bonjour and Tor, allowing for secure messaging to happen even in places where there is no access to the internet or the internet is blocked. It also includes a quick access “Panic” feature to uninstall the app and wipe all local data.
+&lt;/p&gt;
+
+&lt;div id=&#39;gallery-9&#39; class=&#39;gallery galleryid-11821 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013158/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013158-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013343/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013343-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013623/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013623-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013652/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013652-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-014752/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-014752-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-014836/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-014836-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  The software ensures the most secure network channels are utilized, by enforcing Certificate Pinning, Perfect-Forward Secrecy and communicating via the Tor network. All conversations held through ChatSecure can be encrypted using an open-standards end-to-end encryption protocol known as “Off the Record Messaging”, pioneered and hardened over the last decade by security researchers. All account data, messages and contacts stored on the device are encrypted and password protected using strong encryption provided by SQLCipher database software, ensuring no leakage of personal data if the device is lost, stolen or compromised.
+&lt;/p&gt;
+
+&lt;p&gt;Learn more and download at &lt;a href=&#34;https://guardianproject.info/apps/chatsecure/&#34;&gt;https://guardianproject.info/apps/chatsecure/&lt;/a&gt; or on Google Play. Learn more about the versions for iPhone and iPad at &lt;a href=&#34;https://chatsecure.org&#34;&gt;https://chatsecure.org&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orweb Security Advisory: Possible IP leakage with HTML5 video/audio</title>
+      <link>https://guardianproject.github.io/info/2013/08/21/orweb-security-advisory-possible-ip-leakage-with-html5-video/audio/</link>
+      <pubDate>Wed, 21 Aug 2013 16:15:36 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/08/21/orweb-security-advisory-possible-ip-leakage-with-html5-video/audio/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://guardianproject.github.io/info/apps/orweb&#34;&gt;Orweb browser app&lt;/a&gt; is vulnerable to &lt;a href=&#34;https://dev.guardianproject.info/issues/1754&#34;&gt;leak the actual IP of the device&lt;/a&gt; it is on, if it loads a page with HTML5 video or audio tags on them, and those tags are set to auto-start or display a poster frame. On some versions of Android, the video and audio player start/load events happen without the user requesting anything, and the request to the URL for the media src or through image poster is made outside of the proxy settings.&lt;/p&gt;
+
+&lt;p&gt;The Android WebView component upon which Orweb is built, does not &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/libonionkit/src/info/guardianproject/onionkit/web/WebkitProxy.java&#34;&gt;pass on the proxy settings&lt;/a&gt; for the web page to embedded media players it displays. Additionally, even though the &lt;a href=&#34;http://developer.android.com/reference/android/webkit/WebSettings.PluginState.html&#34;&gt;proper API calls are made&lt;/a&gt; to turn off all plugins, apparently HTML5 video and audio players not considered plugins, and there is no way to disable them at an API level.&lt;/p&gt;
+
+&lt;p&gt;We are currently working to determine which versions of Android these issues occur on. We have a fix implemented that filters all video and audio tag instances out of retrieved content, and on newer versions of Android, that requires a user gesture/tap before media players are loaded.&lt;/p&gt;
+
+&lt;p&gt;We expect to have a fix out in the next 24 to 48 hours. In the meantime, if you are using Orweb with the goal of strong anonymity, and not just circumvention or proxying, we advise you to avoid all sites that may include HTML5 video or audio content embedded in the pages, or to just stop using the app all together. Alternatively, you can use &lt;a href=&#34;https://www.mozilla.org/en-US/mobile/&#34;&gt;Firefox for Android&lt;/a&gt; with the &lt;a href=&#34;https://guardianproject.info/apps/proxymob-firefox-add-on/&#34;&gt;Proxy Mobile&lt;/a&gt; add-on (load this XPI within Firefox: &lt;a href=&#34;https://guardianproject.info/releases/proxymob-latest.xpi&#34;&gt;https://guardianproject.info/releases/proxymob-latest.xpi&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This does NOT affect users who use the root mode with transparent proxying, as that handles proxying the entire traffic of the entire device or a particular app.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

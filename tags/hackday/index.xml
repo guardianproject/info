@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackday on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/hackday/</link>
+    <description>Recent content in Hackday on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Sep 2010 02:00:07 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/hackday/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Open Video Conference: Panel and Hackday</title>
+      <link>https://guardianproject.github.io/info/2010/09/30/open-video-conference-panel-and-hackday/</link>
+      <pubDate>Thu, 30 Sep 2010 02:00:07 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/09/30/open-video-conference-panel-and-hackday/</guid>
+      <description>&lt;p&gt;Nathan Freitas will be on a panel at the 2nd annual &lt;a href=&#34;http://www.openvideoconference.org/&#34;&gt;Open Video Conference&lt;/a&gt; in New York this Friday and Saturday. He will be on the panel entitled “Cameras Everywhere” led by our partners at &lt;a href=&#34;https://www.witness.org&#34;&gt;Witness&lt;/a&gt;, on Saturday at 3pm.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Cameras Everywhere: Human Rights and Web Video – (&lt;em&gt;2:45 PM – 3:30 PM&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;: Once upon a time, video cameras were rare. Now they are ubiquitous—as are the opportunities to share, use, and re-use video. What are the limits and possibilities of an ethics of openness when it comes to human rights footage?&lt;/p&gt;
+
+&lt;p&gt;Videos (particularly mobile and online video) make it possible to document and publicize human rights struggles – from monks marching for freedom in Rangoon and Lhasa, and the election protestors in Tehran, to individual voices speaking out against injustice on YouTube and other online spaces. But despite the growing circulation of images of human rights violations, of victims and survivors, there is limited discussion of crucial safety, consent and ethical concerns – particularly for people who are filmed.&lt;/p&gt;
+
+&lt;p&gt;Issues around consent, representation and re-victimization and retaliation have emerged even more clearly in an open and networked online environment, as have concerns about intentionality and authenticity. Video is being reworked, remixed and recirculated by many more people. New possibilities for action by a global citizenry have arisen, but these carry with them substantial challenges, opportunities and dangers.&lt;/p&gt;
+
+&lt;p&gt;Presenters:&lt;br /&gt;
+Sam Gregory — WITNESS&lt;br /&gt;
+Gabriella Coleman — NYU&lt;br /&gt;
+Nathan Freitas — The Guardian Project&lt;br /&gt;
+Steve Grove – News and Politics, YouTube&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Following the panel, there will be an open workshop, to continue the discussion and brainstorm new approaches and tools to address the issues raised. This feedback will be gathered and fed into the &lt;a href=&#34;http://www.openvideoconference.org/hacklabs/&#34;&gt;OVC Hackday&lt;/a&gt;, held at &lt;a href=&#34;http://itp.nyu.edu&#34;&gt;NYU ITP&lt;/a&gt; on Sunday. Team Guardian will join in with whoever shows up at the hackday, take the ideas from the previous day, and build prototyped mobile video solutions in response to them.&lt;/p&gt;
+
+&lt;p&gt;You can get more information and register for the hackday here: &lt;a href=&#34;http://www.openvideoconference.org/hacklabs/&#34;&gt;http://www.openvideoconference.org/hacklabs/&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;OVC hack labs: Sunday, October 3&lt;/p&gt;
+
+&lt;p&gt;Join us at NYU’s Interactive Telecommunications Program for an all-day open space gathering for innovators of all stripes. Meet and collaborate with conference attendees, HTML5 developers, transmedia storytelling experts, and more. Among the planned activities:&lt;/p&gt;
+
+&lt;p&gt;Make interactive HTML5 video using WebMadeMovies technology like popcorn.js&lt;br /&gt;
+Map out a transmedia strategy for your content&lt;br /&gt;
+Build a custom HTML5 player for your site&lt;br /&gt;
+Create robust video sites using the free+open source Kaltura CE 2.0 self-hosted software stack&lt;br /&gt;
+or just grab a room and hack on your project!&lt;/p&gt;
+
+&lt;p&gt;OVC hack labs are free and open to the public.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

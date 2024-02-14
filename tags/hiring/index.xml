@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hiring on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/hiring/</link>
+    <description>Recent content in Hiring on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 Nov 2010 18:59:10 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/hiring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Seeking Slightly Paranoid Android Developers for Hire and Internships</title>
+      <link>https://guardianproject.github.io/info/2010/11/10/seeking-slightly-paranoid-android-developers-for-hire-and-internships/</link>
+      <pubDate>Wed, 10 Nov 2010 18:59:10 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/11/10/seeking-slightly-paranoid-android-developers-for-hire-and-internships/</guid>
+      <description>&lt;p&gt;The Guardian Project is kicking off a three month project focused on finishing up our secure chat app, codenamed &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;Gibber&lt;/a&gt; but also known as “OtRChat”. We are looking for developers of all levels to join us in this work. We have already implemented the primary  &lt;a href=&#34;http://www.cypherpunks.ca/otr/&#34;&gt;“Off the Record” messaging&lt;/a&gt; functionality, and achieved interoperability with desktop clients such as Pidgin and AdiumX. From here, there is work to be done on implementing some unique features, cleaning up the user experience, and ensuring that the implementation is as secure as possible, providing all the necessary features for verifying and managing secure identities and sessions.&lt;/p&gt;
+
+&lt;p&gt;We have a few contract positions available, but are also looking for interns and students interested in getting real-world production development under their belt. &lt;em&gt;All in all, you should be keenly interested in work that strives to find the right balance of usability and security on mobile devices.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are interested, please &lt;a href=&#34;https://guardianproject.github.io/info/contact/join/&#34;&gt;get in touch with us&lt;/a&gt;, and we will go from there. We are looking for individuals or small teams. For the paid positions, we would expect you have at least one Android app released in public on the Android Market, and would prefer you have experience with open-source projects, as well. There is much more work to do beyond this specific app, but this is a good place to start. Work can be done anywhere, anytime, assuming your are familiar with the tools and culture of open-source+agile development.&lt;/p&gt;
+
+&lt;p&gt;Below are some screenshots of the work so far. You can learn more and check out the source on the &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;Gibber app page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/account.jpg&#34; title=&#34;account&#34;&gt;&lt;img class=&#34;alignleft&#34; title=&#34;account&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/account-150x150.jpg&#34; alt=&#34;account&#34; width=&#34;150&#34; height=&#34;150&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dt style=&#34;font-style: italic;&#34;&gt;
+&lt;/dt&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dt style=&#34;font-style: italic;&#34;&gt;
+&lt;/dt&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dt style=&#34;font-style: italic;&#34;&gt;
+&lt;/dt&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dt style=&#34;display: inline !important;&#34;&gt;
+  &lt;em&gt;&lt;a title=&#34;contacts&#34; href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/contacts.jpg&#34;&gt;&lt;img class=&#34;alignleft&#34; title=&#34;contacts&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/contacts-150x150.jpg&#34; alt=&#34;contacts&#34; width=&#34;150&#34; height=&#34;150&#34; /&gt;&lt;/a&gt;&lt;/em&gt;
+&lt;/dt&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;dt style=&#34;display: inline !important;&#34;&gt;
+  &lt;em&gt;&lt;a title=&#34;secured&#34; href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/secured.jpg&#34;&gt;&lt;img class=&#34;alignleft&#34; title=&#34;secured&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/secured-150x150.jpg&#34; alt=&#34;secured&#34; width=&#34;150&#34; height=&#34;150&#34; /&gt;&lt;/a&gt;&lt;/em&gt;
+&lt;/dt&gt;&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p style=&#34;font-style: italic;&#34;&gt;
+  &lt;em&gt; &lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

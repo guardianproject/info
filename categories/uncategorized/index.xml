@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uncategorized on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/uncategorized/</link>
+    <description>Recent content in Uncategorized on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 May 2017 05:07:17 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New research report on the challenges developers face</title>
+      <link>https://guardianproject.github.io/info/2017/05/15/new-research-report-on-the-challenges-developers-face/</link>
+      <pubDate>Mon, 15 May 2017 05:07:17 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/05/15/new-research-report-on-the-challenges-developers-face/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-13792&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png&#34; alt=&#34;&#34; width=&#34;845&#34; height=&#34;375&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png 845w, https://guardianproject.info/wp-content/uploads/2017/06/tccw-300x133.png 300w, https://guardianproject.info/wp-content/uploads/2017/06/tccw-768x341.png 768w&#34; sizes=&#34;(max-width: 845px) 100vw, 845px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project has been working with the &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;F-Droid&lt;/a&gt; community to make it a secure, streamlined, and verifiable app distribution channel for high-risk environments. While doing this we have started to become more aware of the challenges and risks facing software developers who build software in closed and closing spaces around the world.&lt;/p&gt;
+
+&lt;p&gt;There are a wealth of resources available on how to support and collaborate with high-risk users. Surprisingly, we could not find any guidance on how to support and collaborate with developers where the internet is heavily monitored and/or filtered, let alone developers who might be at risk because of the software they develop.&lt;/p&gt;
+
+&lt;p&gt;This report explores some key challenges that developers in closed and closing spaces face when collaborating with international groups who support Human Rights and freedom (IHRFG). These groups include privacy and security software projects, civil society focused donors, and non-governmental organizations (NGOs).&lt;/p&gt;
+
+&lt;p&gt;IHRFG can benefit greatly from collaborations with local developers. IHRFGs who are trying to design or localize software for a specific region often have difficulty&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;understanding the types of technologies that are needed to address the problems IHRDGs are trying to solve,&lt;/li&gt;
+&lt;li&gt;addressing the local economic, social, infrastructural, and/or legal challenges that software of its type often faces in the local context,&lt;/li&gt;
+&lt;li&gt;identifying the interaction and design patterns that will drive initial adoption,&lt;/li&gt;
+&lt;li&gt;evaluating the quality of the translations of software into the local language,&lt;/li&gt;
+&lt;li&gt;finding local individuals for focus groups, and testing, and&lt;/li&gt;
+&lt;li&gt;conducting testing and troubleshooting to identify and address issues caused by the speed, availability, and/or censoring of local fixed or mobile networks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Local developers, on the other hand, are often more than able to accomplish these tasks.&lt;/p&gt;
+
+&lt;p&gt;Beyond identifying these challenges this report provides guidance on how to take these challenges into account when IHRFGs collaborate with local developers. To do this the report also contains a set of developer user-personas. These personas can be used by IHRFGs as an aid when they are designing collaborating with local developers.&lt;/p&gt;
+
+&lt;p&gt;We hope that the results of this research will help international privacy and security focused software projects and NGOs better understand and respond to the unique needs of different international developer communities so that their collaborations with these developers will be safer, more strategic, and sustainable.&lt;/p&gt;
+
+&lt;h2 id=&#34;research-methodology&#34;&gt;Research Methodology&lt;/h2&gt;
+
+&lt;p&gt;This report is the result of two interconnected streams of research. The initial themes were identified in a series of in-depth interviews. These themes were further explored in an online “developer challenges survey.” The challenges and user personas found in this report were refined from the combined results of these research efforts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Interviews&lt;/strong&gt;: interviews with 14 developers, technologists, and digital defenders from 11 different countries where the internet is heavily monitored and filtered as well as 5 interviews with IHRFGs who work in similar regions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Surveys&lt;/strong&gt;: an &lt;a href=&#34;https://challenges.tech/&#34;&gt;online developer survey&lt;/a&gt; in Chinese, Spanish, Farsi, Russian, French, and English that received 118 responses from developers in 28 countries around the world.&lt;/p&gt;
+
+&lt;h2 id=&#34;user-personas&#34;&gt;User Personas&lt;/h2&gt;
+
+&lt;p&gt;The user personas created for this report were developed to allow readers to think more concretely about the motivations and challenges that were identified during this project. In an effort to combat the inclusion of possible implicit biases the author might hold based upon the nationality, race, or gender of the personas the nationality, names, genders, and photos used for all the personas were generated at random.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/seamustuohy/user_profile_randomizer&#34;&gt;source code of the &lt;strong&gt;User Profile Randomizer&lt;/strong&gt;&lt;/a&gt; is available and permissively licensed under the &lt;a href=&#34;https://github.com/seamustuohy/user_profile_randomizer/blob/master/LICENSE&#34;&gt;GNU Lesser General Public License v3.0&lt;/a&gt;. It randomizes the gender pronoun, name (chosen from a random language family), and photo on a set of markdown based user personas.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-full-report&#34;&gt;The Full Report&lt;/h3&gt;
+
+&lt;p&gt;Download the full report, including developer profiles, here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/Technological-Collaboration-in-a-Closing-World-1.pdf&#34;&gt;Technological Collaboration in a Closing World.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>F-Droid User Testing, Round 2</title>
+      <link>https://guardianproject.github.io/info/2017/05/01/f-droid-user-testing-round-2/</link>
+      <pubDate>Mon, 01 May 2017 04:51:24 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/05/01/f-droid-user-testing-round-2/</guid>
+      <description>
+
+&lt;p&gt;#&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/null14.png&#34; width=&#34;624&#34; height=&#34;164&#34; alt=&#34;&#34; title=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;by Hailey Still and Carrie Winfrey&lt;/p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_0&#34;&gt;****&lt;/h1&gt;
+
+&lt;p&gt;Here we outline the User Testing process and plan for the &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; app store for Android. The key aims of F-Droid are to provide users with a) a comprehensive catalogue of open-source apps, as well as b) provide users with the the ability to transfer any app from their phone to someone in close physical proximity. With this User Test, we are hoping to gain insights into where the product design is successful and what aspects need to be further improved. Main goals are obtaining a baseline user performance and identifying potential design concerns regarding ease of use. An additional goal is to promote F-Droid as an alternative to the Google Play app store.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;The usability test objectives are to determine usability problem areas within the user interface and content areas. Key focus points include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;App navigation: failure to locate functions, excessive clicks to complete a task or failure to complete task&lt;/li&gt;
+&lt;li&gt;Presentation errors: selection errors due to labeling ambiguities&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The usability test also aims to gain a deeper understanding of our users, what needs they are hoping to meet by using F-Droid, and a basic user-satisfaction level. Our participants for this round of testing will represent a range of ages, backgrounds and technological literacy levels. All tests will be performed with guidance and support of a test facilitator.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;methodology&#34;&gt;Methodology&lt;/h2&gt;
+
+&lt;p&gt;Users will be tested with the assistance of screen and audio recordings, which are to be analyzed post-test. A pre-test questionnaire will record basic demographic data and a post-test survey will gather insight on overall usability experience. The test will include a standard task completion portion as well as a desirability card sorting (to capture qualitative data on user experience).&lt;/p&gt;
+
+&lt;p&gt;Participants will be asked to fill out a demographic and background information survey. The facilitator will explain that the amount of time taken to complete the task will be measured and that they should remain focused on the task. The participant will read the task description, ask any questions they may have and begin the task. Measurement begins when the participant begins the task.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Participants will be encouraged to think aloud. The facilitator will minimally assist the participants during task completion. The facilitator will observe and enter user behavior, comments, and actions.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;After all task scenarios are attempted, the participant will complete the post-test desirability card activity and survey. This activity will comprise of asking participants to choose 5 cards they feel reflect their overall experience and elaborate on their choices. &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Usability Tasks:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The tasks were randomly administered, with the exception of the “Last Task” which was always administered last.&lt;/p&gt;
+
+&lt;p&gt;TASK A. Search for an app that you would like to download. Install the app you have selected.&lt;/p&gt;
+
+&lt;p&gt;TASK B. There is an app that needs to be updated. Find the app and install the update.&lt;/p&gt;
+
+&lt;p&gt;TASK C. Find a game app that looks interesting to you. Install the app.&lt;/p&gt;
+
+&lt;p&gt;TASK D. Search for a crossword puzzle app within the games category.&lt;/p&gt;
+
+&lt;p&gt;TASK E. If you had no internet, how would you download an app?&lt;/p&gt;
+
+&lt;p&gt;TASK F. Your friend emails you a link to a collection of their favorite apps. Open gmail and click on the link they have sent you. Add the collection of apps that your friend emailed to you to F-Droid. Locate an app called Habitica from the collection you just downloaded.&lt;/p&gt;
+
+&lt;p&gt;LAST TASK. Add the collection of apps displayed on the computer to F-Droid.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Desirability Cards:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/null15.png&#34; width=&#34;624&#34; height=&#34;213&#34; alt=&#34;&#34; title=&#34;&#34; /&gt; &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Metrics&lt;/p&gt;
+
+&lt;p&gt;Tests hosted in two locations, Vienna, Austria and Lubbock, Texas. These charts represent the combined metrics for all tests at both locations.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Level of Difficulty:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The participants were asked to rate the level of difficulty per task as they completed them.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/null16.png&#34; width=&#34;624&#34; height=&#34;457&#34; alt=&#34;&#34; title=&#34;&#34; /&gt; &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Average Critical Error Rate:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Critical errors are reported as errors that result in failure to complete the task. Participants may or may not be aware that the task goal is incorrect or incomplete. Independent completion of the task is the goal. Help from the test facilitator or others is to be marked as a critical error. &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/null17.png&#34; width=&#34;624&#34; height=&#34;420&#34; alt=&#34;&#34; title=&#34;&#34; /&gt; &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Average Non-critical Error Rate:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Non-critical errors are errors that the participant recovers from alone and are not such that the participant can no longer complete the task. They can include errors such as excessive steps taken to complete a task or initially using an incorrect function but recovering from that incorrect step. &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Non-critical errors do not include exploratory behavior. Exploratory behavior includes errors that are&lt;/p&gt;
+
+&lt;p&gt;off task from the main task attempting to be completed.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/null18.png&#34; width=&#34;624&#34; height=&#34;440&#34; alt=&#34;&#34; title=&#34;&#34; /&gt; &lt;/p&gt; &lt;/p&gt; &lt;/p&gt; &lt;/p&gt; &lt;/p&gt; &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Desirability Toolkit Responses&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Vienna:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/null19.png&#34; width=&#34;624&#34; height=&#34;194&#34; alt=&#34;&#34; title=&#34;&#34; /&gt; &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Lubbock:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/null20.png&#34; width=&#34;624&#34; height=&#34;160&#34; alt=&#34;&#34; title=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;detailed-testing-reports&#34;&gt;Detailed Testing Reports&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1Y7AV3N8cmqm7yMPFuK6_qbyO86IXYoAJuTuhwCHmnK4/?ts=5905d383#heading=h.sz9pxldla478&#34; target=&#34;_blank&#34;&gt;Detailed Report from Vienna&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1Wavy1Kce7WAmrM277e6QV6ziTvM05uMCsvGSdzi-Uzg&#34; target=&#34;_blank&#34;&gt;Detailed Report from Lubbock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/forms/d/1wbAoganpj9KpE00qQj0uOAPETkV9xodV4ubA2UZxbn8/#responses&#34; target=&#34;_blank&#34;&gt;Demographic Survey Results&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.google.com/forms/d/1jflue3U1mV-ht55gfkdHPYvOjVernCmdbUdXn26DikU#responses&#34; target=&#34;_blank&#34;&gt;Follow-up Survey Results&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

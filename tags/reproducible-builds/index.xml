@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reproducible Builds on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/reproducible-builds/</link>
+    <description>Recent content in Reproducible Builds on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Mar 2017 10:03:30 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/reproducible-builds/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Build Android apps with Debian: apt install android-sdk</title>
+      <link>https://guardianproject.github.io/info/2017/03/13/build-android-apps-with-debian-apt-install-android-sdk/</link>
+      <pubDate>Mon, 13 Mar 2017 10:03:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/03/13/build-android-apps-with-debian-apt-install-android-sdk/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12920&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/04/debian-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/04/debian-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/04/debian-230x230.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg 600w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+In Debian stretch, the upcoming new release, it is now possible to build Android apps using only packages from Debian. This will provide all of the tools needed to build an Android app targeting the “platform” &lt;tt&gt;android-23&lt;/tt&gt; using the SDK &lt;tt&gt;build-tools&lt;/tt&gt; 24.0.0. Those two are the only versions of “platform” and “build-tools” currently in Debian, but it is possible to use the Google binaries by installing them into &lt;tt&gt;/usr/lib/android-sdk&lt;/tt&gt;.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t cover yet all of the libraries that are used in the app, like the Android Support libraries, or all of the other myriad libraries that are usually fetched from jCenter or Maven Central. One big question for us is whether and how libraries should be included in Debian. All the Java libraries in Debian can be used in an Android app, but including something like Android Support in Debian would be strange since they are only useful in an Android app, never for a Debian app.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Building apps with these packages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are the steps for building Android apps using Debian’s Android SDK on Stretch.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;sudo apt install android-sdk android-sdk-platform-23&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export ANDROID_HOME=/usr/lib/android-sdk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In &lt;em&gt;build.gradle&lt;/em&gt;, set &lt;em&gt;compileSdkVersion&lt;/em&gt; to 23 and &lt;em&gt;buildToolsVersion&lt;/em&gt; to 24.0.0&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;gradle assembleDebug&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The Gradle Android Plugin is also packaged. Using the Debian package instead of the one from online Maven repositories requires a little configuration before running Gradle. In the &lt;em&gt;buildscript&lt;/em&gt; block:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add &lt;tt&gt;maven { url &amp;lsquo;file:///usr/share/maven-repo&amp;rsquo; }&lt;/tt&gt; to repositories&lt;/li&gt;
+&lt;li&gt;use &lt;tt&gt;compile &amp;lsquo;com.android.tools.build:gradle:debian&amp;rsquo;&lt;/tt&gt; to load the plugin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently there is only the target platform of API Level 23 packaged, so only apps targeted at &lt;em&gt;android-23&lt;/em&gt; can be built with only Debian packages. We will add more API platform packages via backports. Only &lt;em&gt;build-tools&lt;/em&gt; 24.0.0 is available, so in order to use the SDK, build scripts need to be modified. Beware that the Lint in this version of Gradle Android Plugin is still problematic, so running the :lint tasks might not work. They can be turned off with &lt;tt&gt;lintOptions.abortOnError&lt;/tt&gt; in &lt;em&gt;build.gradle&lt;/em&gt;. Google binaries can be combined with the Debian packages, for example to use a different version of the platform or build-tools.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why include the Android SDK in Debian?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;While Android developers could develop and ship apps right now using these Debian packages, this is not very flexible since only &lt;tt&gt;build-tools-24.0.0&lt;/tt&gt; and &lt;tt&gt;android-23&lt;/tt&gt; platform are available. Currently, we are not aiming to cover the most common use cases. Those are pretty well covered by Google’s binaries (except for the proprietary license on the Google binaries), and are probably the most work for the Debian Android Tools Team to cover. We are first working on use cases that are poorly covered by the Google binaries, for example, like where only specific parts of the whole SDK are used. Here are some we have in mind:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;tools for security researchers, forensics, reverse engineering, etc. which can then be included in live CDs and distros like Kali Linux&lt;/li&gt;
+&lt;li&gt;a hardened APK signing server using &lt;em&gt;apksigner&lt;/em&gt; that uses a standard, audited, public configuration of all reproducibly built packages&lt;/li&gt;
+&lt;li&gt;Replicant is a 100% free software Android distribution, so of course &lt;a href=&#34;http://blog.replicant.us/2017/02/replicant-6-0-development-updates/&#34; target=&#34;_blank&#34;&gt;they want to have a 100% free software SDK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;high security apps need a build environment that matches their level of security, the Debian Android Tools packages are &lt;a href=&#34;https://reproducible-builds.org&#34; target=&#34;_blank&#34;&gt;reproducibly built&lt;/a&gt; only from publicly available sources&lt;/li&gt;
+&lt;li&gt;dead simple install with strong trust path with mirrors all over the world&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the long run, the &lt;a href=&#34;https://wiki.debian.org/AndroidTools&#34; target=&#34;_blank&#34;&gt;Debian Android Tools Team&lt;/a&gt; aims to cover more use cases well, and also building the Android NDK. This all will happen more quickly if we have more contributors! Android is the most popular mobile OS, and can be 100% free software like Debian. Debian and its derivatives are one of the most popular platforms for Android development.&lt;/p&gt;
+
+&lt;p&gt;Last but not least, we want feedback on how this should all work. For example, we need ideas for how to nicely integrate Debian’s Java libraries into the Android &lt;em&gt;gradle&lt;/em&gt; workflow. And ideally, the Android Support libraries would also be reproducibly built and packaged somewhere that enforces only free software.&lt;/p&gt;
+
+&lt;p&gt;For anyone interested in tools for working with Android apps and APKs, including for reverse engineering, inspection, auditing, etc. there are quite a few tools included now in Debian:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;apt install android-sdk androguard apktool diffoscope dummydroid enjarify gplaycli libsmali-java libscout repo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Building the most private app store</title>
+      <link>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</link>
+      <pubDate>Thu, 02 Jun 2016 11:08:52 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</guid>
+      <description>&lt;p&gt;&lt;em&gt;App stores can work well without any tracking at all&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor-150x150.jpg&#34; alt=&#34;whichdoor&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13337&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Attackers are increasingly seeing app stores as a prime &lt;a href=&#34;https://guardianproject.info/2015/02/24/phishing-for-developers/&#34; target=&#34;_blank&#34;&gt;attack&lt;/a&gt; vector, whether it is aimed at the masses like &lt;a href=&#34;http://researchcenter.paloaltonetworks.com/2015/09/more-details-on-the-xcodeghost-malware-and-affected-ios-apps/&#34;&gt;XCodeGhost&lt;/a&gt; or very targeted like in FBI vs Apple. When we install software from an app store, we are placing a lot of trust in a lot of different parties involved in getting the source code from the original developer delivered to our device in a useful form. Most people are entirely unaware of how much trust they are putting into this system, which they are entrusting with their personal data. Even for people who do understand the technical details involved, figuring out whether the people and the system itself is trustworthy is difficult to do.&lt;/p&gt;
+
+&lt;p&gt;We are building an app store that requires the bare minimum of trust: only the software developers themselves and the code they produce. We consider the app store operators and servers a threat. Building an ecosystem that enables automated, effective auditing lets the computers verify to make trust decisions easier. Effective external auditing requires an ecosystem that cannot deliver targeted content to just the auditing system, while feeding users something else (aka “binary transparency”).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Most app stores track as much as possible&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The vast majority of apps stores track their users actions in detail. Some is necessary when using the business model of the app store operator taking a percentage of sales, but none of the tracking is inherent to running an app store. For example, payment verification can be handled in the app itself like shareware. A software delivery system that tracks its users makes it simple to hide malware delivery since it can target any auditing system. Most app stores know a lot about their users:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;account name&lt;/li&gt;
+&lt;li&gt;identity&lt;/li&gt;
+&lt;li&gt;payment methods&lt;/li&gt;
+&lt;li&gt;everything you search for in the app store&lt;/li&gt;
+&lt;li&gt;everything you look at in the app store&lt;/li&gt;
+&lt;li&gt;everything you download, install, uninstall&lt;/li&gt;
+&lt;li&gt;which apps you actually run&lt;/li&gt;
+&lt;li&gt;where you are, based on IP, declared preference, etc.&lt;/li&gt;
+&lt;li&gt;your preferred language&lt;/li&gt;
+&lt;li&gt;and more…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apps stores need to know very little in order to function: how to give you the files you request. That means indexes, descriptions, icons, apps, and install/delete requests (for “push” install/delete). Given that information, the client can do everything needed to provide a full app store user experience. For this work, we chose to build upon &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, a community-run Android app store that distributes verified Free Software. The community has had an interest in privacy all along, and has always worked to avoid tracking. The security architecture is based on models proven by &lt;a href=&#34;https://wiki.debian.org/SecureApt&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/docs/tuf-spec.txt&#34; target=&#34;_blank&#34;&gt;The Update Framework&lt;/a&gt; , and others:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS connections by default&lt;/li&gt;
+&lt;li&gt;pinned TLS certificate built into the client app&lt;/li&gt;
+&lt;li&gt;updates verified based on the signature on the app itself&lt;/li&gt;
+&lt;li&gt;file integrity protected by signed metadata&lt;/li&gt;
+&lt;li&gt;signed metadata includes hashes of the app and its signing key&lt;/li&gt;
+&lt;li&gt;signed metadata generated on a separate machine, which can be fully offline&lt;/li&gt;
+&lt;li&gt;public key for verifying metadata signatures built into F-Droid client app&lt;/li&gt;
+&lt;li&gt;signed metadata includes timestamp and expiry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While the current setup is already a solid platform, we are implementing a number of improvements. The signed metadata will include list of official mirrors, then the client chooses mirrors based on availability and freshness based on local criteria like whether Tor is in use, closest on the internet, etc. We are also moving the standard HTTP “etag” cache check from the server to the client so it cannot be abused to track users.&lt;/p&gt;
+
+&lt;p&gt;In order to defend against an attacker that holds the signing keys for the app repository, there must be a trustworthy source of information to compare against. Reproducible builds means that anyone with the same source code will produce the exact same binary. When paired with an auditing system, it is easy to catch malware inserted in the build process, rather than the source code, like XCodeGhost. Reproducible builds also makes it possible to have all builds of a release binary have the exact same hash. Then any app repository can build apps only from source code, and have a source of verification data from any other app repository building the same app. Building software from source has become cheap enough that many companies like gitlab.com and Travis CI are offering free, automated build services in the cloud. Since the whole F-Droid toolset is free software and designed to be easy to setup, the barriers to setting up automatic auditing are quite low. People in separate areas of the world with different risk profiles can run verification servers to provide more trustworthy information.&lt;/p&gt;
+
+&lt;p&gt;Another key aspect of the F-Droid project is to provide the complete toolset needed to run an app store. This enables a more decentralized ecosystem. Therefore, one key goal is to lower the risks of running the services, so that more people can run their own app stores. If the app store does not track its users, then that removes the hassle of protecting personal data from any attacker. These services can be run without fear of responding to secret orders for personal information. It also means that the server setup is a lot simpler because it does not need dynamic content. The app store serve only needs to serve files (e.g. indexes, apps, etc.). The app repository is generated on a secure machine, or even a fully offline machine, and posted to the server. The main server is purely a mirror of the offline machine where the signed repository is generated. Mirrors just shuffle bits from place to place, they are no longer an attack vector.&lt;/p&gt;
+
+&lt;p&gt;Putting all these pieces together provides a system where users need only audit the source code in order to verify a trustworthy app delivery. The file pipeline provides redundantly secure data transmission, the apps can be reproducibly from source code, the app repositories can be automatically audited. Of course, this system relies not only on the power of cryptography, but also the power of transparency. Debian provides a great example of the power of transparency: Debian gives a thousand volunteers root access to every Debian install (by virtue of their ability to upload signed packages that get installed as root). Yet this system has been proven over the past 20+ years to provide solid security. Ultimately we hope that this will de-emphasize the signing key as the sole protection against abuse. If malware has a decent change of being spotted, it makes it much less likely to be used since malware authors either rigorously defend their exploits, or use well known exploits that are not difficult to automatically detect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future Work&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One attack vector that is not well covered is malware that installable by everyone, that then uses data on the local device to target specific users. That would be a way to target individuals using an app store that does not track its users. We are starting to implement automated dynamic analysis of every app using tools like &lt;a href=&#34;https://labs.mwrinfosecurity.com/tools/drozer&#34; target=&#34;_blank&#34;&gt;Drozer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We are also working towards making as many apps as possible build reproducibly. Some of our quick checks show that a large number of the apps in f-droid.org already will build reproducibly, given the right build environment. We are working on making the process of setting up that build environment as automated as possible.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid “verification server” has been prototyped, and it will be further developed with the aim of making it dead simple to run in common cloud services.&lt;/p&gt;
+
+&lt;p&gt;We already have the infrastructure in place to do verified double-signing, where the developer first signs the release bulid, then once f-droid.org reproduces that build, it adds its signature. Then Android would enforce that both signatures need to be present in order for it to be a valid update.&lt;/p&gt;
+
+&lt;p&gt;As the full localization support is built out, the language that a user is using will not be reported to the server. While speaking Spanish in Spain does not provide much information, speaking Quechua in Uzbekistan can narrow it down to a single user. Instead of dividing the index metadata by language, it will instead be grouped by app. We will then group apps so that it is difficult to tell which app in the group is the one people are interested in. For example, if one very popular app is only grouped with apps that are rarely downloaded, then it is an easy assumption that someone getting info about that block of apps is most likely looking for that popular app.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First Reproducible Builds Summit</title>
+      <link>https://guardianproject.github.io/info/2015/12/09/first-reproducible-builds-summit/</link>
+      <pubDate>Wed, 09 Dec 2015 05:02:48 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/12/09/first-reproducible-builds-summit/</guid>
+      <description>&lt;p&gt;I was just in Athens for the “&lt;a href=&#34;https://reproducible-builds.org/events/athens2015/&#34;&gt;Reproducible Builds Summit&lt;/a&gt;“, an &lt;a href=&#34;https://aspirationtech.org/&#34; target=&#34;_blank&#34;&gt;Aspiration&lt;/a&gt;-run meeting focused on the issues of getting all software builds to be reproducible. This means that anyone starting with the same source code can build the &lt;em&gt;exact&lt;/em&gt; same binary, bit-for-bit. At first glance, it sounds like this horrible, arcane detail, which it is really. But it provides tons on real benefits that can save lots of time. And in terms of programming, it can actually be quite fun, like doing a puzzle or sudoku, since there is a very clear point where you have “won”.&lt;/p&gt;
+
+&lt;p&gt;Here are some examples of real benefits:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;makes it easy to ensure no malware was inserted into software during the build process (e.g. the &lt;a href=&#34;https://en.wikipedia.org/wiki/XcodeGhost&#34; target=&#34;_blank&#34;&gt;XCodeGhost&lt;/a&gt; malware we just saw)&lt;/li&gt;
+&lt;li&gt;provides a QA tool to make sure that changes in the source code of a project produce only the expected results&lt;/li&gt;
+&lt;li&gt;allows F-Droid to use the developer’s APK signature while still verifying that apps build from 100% free software&lt;/li&gt;
+&lt;li&gt;make it possible to optimize and profile build processes while guaranteeing the results are exactly the same&lt;/li&gt;
+&lt;li&gt;for large projects, it can greatly speed up the build process (think rebuilding Gmail)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Represented there was: &lt;a href=&#34;http://https//www.debian.org&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, Google, &lt;a href=&#34;https://www.freebsd.org/&#34; target=&#34;_blank&#34;&gt;FreeBSD&lt;/a&gt;, &lt;a href=&#34;https://getfedora.org/&#34; target=&#34;_blank&#34;&gt;Fedora&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;,&lt;br /&gt;
+&lt;a href=&#34;http://brew.sh/&#34; target=&#34;_blank&#34;&gt;Homebrew&lt;/a&gt;, &lt;a href=&#34;https://www.macports.org/&#34; target=&#34;_blank&#34;&gt;MacPorts&lt;/a&gt;, &lt;a href=&#34;https://www.netbsd.org/&#34; target=&#34;_blank&#34;&gt;NetBSD&lt;/a&gt;, &lt;a href=&#34;https://www.archlinux.org/&#34; target=&#34;_blank&#34;&gt;Arch Linux&lt;/a&gt;, &lt;a href=&#34;https://www.coreboot.org/&#34; target=&#34;_blank&#34;&gt;Coreboot&lt;/a&gt;, &lt;a href=&#34;https://openwrt.org/&#34; target=&#34;_blank&#34;&gt;OpenWRT&lt;/a&gt;, and a bunch of other&lt;br /&gt;
+projects like an automotive Linux distro called &lt;a href=&#34;https://wiki.baserock.org/&#34; target=&#34;_blank&#34;&gt;Baserock&lt;/a&gt;, the &lt;a href=&#34;https://www.gnu.org/software/guix/&#34; target=&#34;_blank&#34;&gt;Guix&lt;/a&gt; package manager, a Linux distro called &lt;a href=&#34;https://nixos.org/&#34; target=&#34;_blank&#34;&gt;NixOS&lt;/a&gt;, &lt;a href=&#34;https://www.haskell.org/&#34; target=&#34;_blank&#34;&gt;Haskell&lt;/a&gt; hackers, etc.&lt;/p&gt;
+
+&lt;p&gt;The organizers are already planning a second meeting, probably in April in Western Europe, and are looking to get more projects involved. Lots of people were talking about how it would be great to get some Android ROM developers involved. So if you are a contributor to CyanogenMod, Copperhead, &lt;a href=&#34;https://omnirom.org/&#34; target=&#34;_blank&#34;&gt;OmniROM&lt;/a&gt;, &lt;a href=&#34;http://www.replicant.us/&#34; target=&#34;_blank&#34;&gt;Replicant&lt;/a&gt;, Blackphone, etc. and would be interested in attending, please let us know!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CipherKit reproducible builds</title>
+      <link>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</link>
+      <pubDate>Mon, 21 Sep 2015 10:54:05 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the &lt;em&gt;exact&lt;/em&gt; same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).&lt;/p&gt;
+
+&lt;p&gt;Our core CipherKit libraries are the more sensitive areas, so that’s where we’ve started. We generally work on Debian and Ubuntu and recommend that platform, but we recognized that OSX is a popular platform for Android developers also. So this process will work on OSX too, using your favorite package manager (e.g. Fink, MacPorts, or Homebrew).&lt;/p&gt;
+
+&lt;p&gt;Then you will end up with &lt;code&gt;IOCipher-v0.3.zip&lt;/code&gt;, which includes the .jar and .so files. If your setup is close enough to our release build setup, the contents of that ZIP file will be the same as the official release. Right now, it is difficult to get the exact same binary file (e.g. the same sha256 sum) because of the timestamps in the .zip and varitions caused by using different versions of Java, and Android SDK and NDK. To check the contents of your build versus the official release:&lt;/p&gt;
+
+&lt;pre&gt;sudo apt-get install faketime unzip wget meld
+cd /tmp
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip.sig
+gpg --verify IOCipher-v0.3.zip.sig
+git clone https://github.com/guardianproject/IOCipher
+cd IOCipher
+git checkout v0.3
+./make-release-build
+./compare-to-official-release IOCipher-v0.3.zip /tmp/IOCipher-v0.3.zip
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;what-is-happening-here&#34;&gt;What is happening here?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;meld&lt;/em&gt; (&lt;em&gt;FileMerge&lt;/em&gt; on OSX) will show a listing of all files listed, and which ones are different. You can see that the contents of the &lt;em&gt;.class&lt;/em&gt; files and &lt;em&gt;.so&lt;/em&gt; files all match, but there will be inevitable differences in some of the metadata. Native builds are much more sensitive to changes in the toolchain. The Java &lt;em&gt;.class&lt;/em&gt; files are usually reproducible even when using different versions of Java and the Android SDK. Native builds are almost never reproducible if the NDK version is at all different. Sometimes even the host platform where the NDK is running (e.g. Ubuntu vs OSX, or 64-bit vs 32-bit) will cause differences in the final binaries.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_13105&#34; style=&#34;width: 883px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13105&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png&#34; alt=&#34;The NDK version and build platform are listed in the manifest.&#34; width=&#34;873&#34; height=&#34;591&#34; class=&#34;size-full wp-image-13105&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld-300x203.png 300w&#34; sizes=&#34;(max-width: 873px) 100vw, 873px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13105&#34; class=&#34;wp-caption-text&#34;&gt;
+    The NDK version and build platform are listed in the manifest.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_13104&#34; style=&#34;width: 883px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13104&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png&#34; alt=&#34;The Java .class files are exactly the same, but the native .so files are not.&#34; width=&#34;873&#34; height=&#34;591&#34; class=&#34;size-full wp-image-13104&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld-300x203.png 300w&#34; sizes=&#34;(max-width: 873px) 100vw, 873px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13104&#34; class=&#34;wp-caption-text&#34;&gt;
+    The Java .class files are exactly the same, but the native .so files are not.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png&#34; alt=&#34;faketime&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13098&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png 1024w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Timestamps are a very common issue when trying to reproduce a build. The release build process uses &lt;a href=&#34;https://github.com/wolfcw/libfaketime&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;faketime&lt;/code&gt;&lt;/a&gt; to provide consistent timestamps, which are picked from the git commit. &lt;code&gt;faketime&lt;/code&gt; freezes the clock entirely for native builds, so any timestamps from that process will always be exactly the same. Unfortunately, some parts of the &lt;code&gt;ant&lt;/code&gt; Java build rely on the clock moving forward, so freezing clock makes the build freeze forever. Instead, &lt;code&gt;faketime&lt;/code&gt; sets the clock using the time from the git commit, then moves time forward at 5% of the normal speed. That makes it much more likely that the timestamps will be the same, but usually what seems to happen is that the timestamps are 2 seconds off, which is the time resolution of the ZIP format. A better solution is needed here for JARs, they are easiest to verify using a sha256 sum. JAR signatures mostly seem not worth the pain they introduce. APKs signatures do not sign the whole APK, only the contents, so the varying timestamps do not matter when verifying using a APK signature. Another example of a difference: if comparing a debug build to a release build, then &lt;code&gt;BuildConfig.class&lt;/code&gt; will be difference because of the debug stuff. The sort order of the metadata in the jar MANIFEST.MF might also be different.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-end-goal&#34;&gt;The end goal&lt;/h3&gt;
+
+&lt;p&gt;Reproducing builds is an arcane process, for sure. It is a means to an end. The goal is to get to the point where well known binaries, published in places like MavenCentral or jCenter, can easily be verified by anyone who cares to try. Or people could even set up &lt;a href=&#34;https://f-droid.org/wiki/page/Verification_Server&#34; target=&#34;_blank&#34;&gt;servers that automatically try&lt;/a&gt; to reproduce any JAR used in a project.&lt;/p&gt;
+
+&lt;p&gt;Then people can verify those JARs in a fully decentralized manner, and publish certifications in their preferred format (GPG signatures, SHA256 sums for gradle-witness, etc). Then we can feel safe getting the release from anywhere on the internet, no matter the level of security or malware infestation.&lt;/p&gt;
+
+&lt;p&gt;Towards that goal, we have been getting our libraries all nicely packaged up and submitted to jCenter (the default gradle repository for Android). Here are the relevant bits to include in your build.gradle:&lt;/p&gt;
+
+&lt;pre&gt;compile &#39;info.guardianproject.cacheword:cachewordlib:0.1&#39;
+compile &#39;info.guardianproject.iocipher:IOCipher:0.3&#39;
+compile &#39;info.guardianproject.netcipher:netcipher:1.2&#39;
+compile &#39;info.guardianproject.trustedintents:trustedintents:0.0&#39;
+
+compile &#39;net.freehaven.tor.control:jtorctl:0.2&#39;
+&lt;/pre&gt;
+
+&lt;p&gt;SQLCipher-for-Android is coming soon:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&#34;&gt;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+I hope to also get them up on MavenCentral as well, since that one is also quite common on Android, and is a community run resource versus Bintray’s jCenter, which is purely a for-profit company.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CipherKit reproducible builds</title>
+      <link>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</link>
+      <pubDate>Mon, 21 Sep 2015 10:54:05 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the &lt;em&gt;exact&lt;/em&gt; same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).&lt;/p&gt;
+
+&lt;p&gt;Our core CipherKit libraries are the more sensitive areas, so that’s where we’ve started. We generally work on Debian and Ubuntu and recommend that platform, but we recognized that OSX is a popular platform for Android developers also. So this process will work on OSX too, using your favorite package manager (e.g. Fink, MacPorts, or Homebrew).&lt;/p&gt;
+
+&lt;p&gt;Then you will end up with &lt;code&gt;IOCipher-v0.3.zip&lt;/code&gt;, which includes the .jar and .so files. If your setup is close enough to our release build setup, the contents of that ZIP file will be the same as the official release. Right now, it is difficult to get the exact same binary file (e.g. the same sha256 sum) because of the timestamps in the .zip and varitions caused by using different versions of Java, and Android SDK and NDK. To check the contents of your build versus the official release:&lt;/p&gt;
+
+&lt;pre&gt;sudo apt-get install faketime unzip wget meld
+cd /tmp
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip.sig
+gpg --verify IOCipher-v0.3.zip.sig
+git clone https://github.com/guardianproject/IOCipher
+cd IOCipher
+git checkout v0.3
+./make-release-build
+./compare-to-official-release IOCipher-v0.3.zip /tmp/IOCipher-v0.3.zip
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;what-is-happening-here&#34;&gt;What is happening here?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;meld&lt;/em&gt; (&lt;em&gt;FileMerge&lt;/em&gt; on OSX) will show a listing of all files listed, and which ones are different. You can see that the contents of the &lt;em&gt;.class&lt;/em&gt; files and &lt;em&gt;.so&lt;/em&gt; files all match, but there will be inevitable differences in some of the metadata. Native builds are much more sensitive to changes in the toolchain. The Java &lt;em&gt;.class&lt;/em&gt; files are usually reproducible even when using different versions of Java and the Android SDK. Native builds are almost never reproducible if the NDK version is at all different. Sometimes even the host platform where the NDK is running (e.g. Ubuntu vs OSX, or 64-bit vs 32-bit) will cause differences in the final binaries.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_13105&#34; style=&#34;width: 883px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13105&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png&#34; alt=&#34;The NDK version and build platform are listed in the manifest.&#34; width=&#34;873&#34; height=&#34;591&#34; class=&#34;size-full wp-image-13105&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld-300x203.png 300w&#34; sizes=&#34;(max-width: 873px) 100vw, 873px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13105&#34; class=&#34;wp-caption-text&#34;&gt;
+    The NDK version and build platform are listed in the manifest.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_13104&#34; style=&#34;width: 883px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13104&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png&#34; alt=&#34;The Java .class files are exactly the same, but the native .so files are not.&#34; width=&#34;873&#34; height=&#34;591&#34; class=&#34;size-full wp-image-13104&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld-300x203.png 300w&#34; sizes=&#34;(max-width: 873px) 100vw, 873px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13104&#34; class=&#34;wp-caption-text&#34;&gt;
+    The Java .class files are exactly the same, but the native .so files are not.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png&#34; alt=&#34;faketime&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13098&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png 1024w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Timestamps are a very common issue when trying to reproduce a build. The release build process uses &lt;a href=&#34;https://github.com/wolfcw/libfaketime&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;faketime&lt;/code&gt;&lt;/a&gt; to provide consistent timestamps, which are picked from the git commit. &lt;code&gt;faketime&lt;/code&gt; freezes the clock entirely for native builds, so any timestamps from that process will always be exactly the same. Unfortunately, some parts of the &lt;code&gt;ant&lt;/code&gt; Java build rely on the clock moving forward, so freezing clock makes the build freeze forever. Instead, &lt;code&gt;faketime&lt;/code&gt; sets the clock using the time from the git commit, then moves time forward at 5% of the normal speed. That makes it much more likely that the timestamps will be the same, but usually what seems to happen is that the timestamps are 2 seconds off, which is the time resolution of the ZIP format. A better solution is needed here for JARs, they are easiest to verify using a sha256 sum. JAR signatures mostly seem not worth the pain they introduce. APKs signatures do not sign the whole APK, only the contents, so the varying timestamps do not matter when verifying using a APK signature. Another example of a difference: if comparing a debug build to a release build, then &lt;code&gt;BuildConfig.class&lt;/code&gt; will be difference because of the debug stuff. The sort order of the metadata in the jar MANIFEST.MF might also be different.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-end-goal&#34;&gt;The end goal&lt;/h3&gt;
+
+&lt;p&gt;Reproducing builds is an arcane process, for sure. It is a means to an end. The goal is to get to the point where well known binaries, published in places like MavenCentral or jCenter, can easily be verified by anyone who cares to try. Or people could even set up &lt;a href=&#34;https://f-droid.org/wiki/page/Verification_Server&#34; target=&#34;_blank&#34;&gt;servers that automatically try&lt;/a&gt; to reproduce any JAR used in a project.&lt;/p&gt;
+
+&lt;p&gt;Then people can verify those JARs in a fully decentralized manner, and publish certifications in their preferred format (GPG signatures, SHA256 sums for gradle-witness, etc). Then we can feel safe getting the release from anywhere on the internet, no matter the level of security or malware infestation.&lt;/p&gt;
+
+&lt;p&gt;Towards that goal, we have been getting our libraries all nicely packaged up and submitted to jCenter (the default gradle repository for Android). Here are the relevant bits to include in your build.gradle:&lt;/p&gt;
+
+&lt;pre&gt;compile &#39;info.guardianproject.cacheword:cachewordlib:0.1&#39;
+compile &#39;info.guardianproject.iocipher:IOCipher:0.3&#39;
+compile &#39;info.guardianproject.netcipher:netcipher:1.2&#39;
+compile &#39;info.guardianproject.trustedintents:trustedintents:0.0&#39;
+
+compile &#39;net.freehaven.tor.control:jtorctl:0.2&#39;
+&lt;/pre&gt;
+
+&lt;p&gt;SQLCipher-for-Android is coming soon:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&#34;&gt;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+I hope to also get them up on MavenCentral as well, since that one is also quite common on Android, and is a community run resource versus Bintray’s jCenter, which is purely a for-profit company.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Complete, reproducible app distribution achieved!</title>
+      <link>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</link>
+      <pubDate>Wed, 11 Feb 2015 14:51:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</guid>
+      <description>&lt;p&gt;With &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, we have been working towards getting a complete app distribution channel that is able to reproducibly build each Android app from source. while this may sound like a mundane detail, it does provide lots of tangible benefits. First, it means that anyone can verify that the app that they are using is 100% built from the source code, with nothing else added. That verifies that the app is indeed 100% free, open source software.&lt;/p&gt;
+
+&lt;p&gt;It also verifies that there have not been any malicious bits of code added into the app during the build process. As has been &lt;a href=&#34;https://www.youtube.com/watch?v=5pAen7beYNc&#34; target=&#34;_blank&#34;&gt;demonstrated&lt;/a&gt; in the &lt;a href=&#34;http://events.ccc.de/congress/2014/Fahrplan/events/6240.html&#34; target=&#34;_blank&#34;&gt;31c3 Reproducible Builds talk&lt;/a&gt;, just flipping a single bit is enough to create a usable exploit in an app.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid project is leading the way with its system for publishing verified builds. We know have our first full example, building upon our previous work with making &lt;a href=&#34;https://guardianproject.info/2014/06/09/our-first-deterministic-build-lil-debi-0-4-7/&#34; target=&#34;_blank&#34;&gt;Lil’ Debi build reproducibly&lt;/a&gt;. We started with our simple little utility app &lt;a href=&#34;https://github.com/guardianproject/checkey&#34; target=&#34;_blank&#34;&gt;Checkey&lt;/a&gt; since it has few moving parts (first get one working, then the rest).&lt;/p&gt;
+
+&lt;p style=&#34;float: left&#34; &gt;
+  &lt;a href=&#34;https://guardianproject.info/releases/Checkey-0.1.1.apk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png&#34; alt=&#34;Checkey&#34; width=&#34;128&#34; height=&#34;128&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;float: left; text-align: center; line-height: 128px; font-size: 1000%&#34; &gt;
+  =
+&lt;/p&gt;
+
+&lt;p style=&#34;float: left&#34; &gt;
+  &lt;a href=&#34;https://f-droid.org/repo/info.guardianproject.checkey_101.apk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png&#34; alt=&#34;Checkey&#34; width=&#34;128&#34; height=&#34;128&#34; style=&#34;float: right&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;clear: both;&#34;&gt;
+  &lt;p&gt;
+    When you download Checkey from f-droid.org, you will get an APK that was signed using the official Guardian Project offline signing key that was built by f-droid.org. No, we did not give them a copy of our key, instead, the fdroid publish process now looks for the Binaries: tag in the build recipe. If it sees that, it downloads that APK, then builds the app from source, then checks to make sure that they match using a simple diff of the APK contents and by checking that the signature on the official APK also validates on the APK that f-droid.org built.
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;p&gt;
+    Now that we have our little Checkey working, we can work towards getting all of our apps verifying in the same way, eliminating a whole field of exploits that we have to worry about. You can follow the progress of this work on the F-Droid wiki &lt;a href=&#34;https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds&#34; target=&#34;_blank&#34;&gt;Reproducible Builds&lt;/a&gt; page, and learn about a future application of it on the &lt;a href=&#34;https://f-droid.org/wiki/page/Verification_Server&#34; target=&#34;_blank&#34;&gt;Verification Server&lt;/a&gt; page.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    The next two apps that are in the reproducible pipeline are &lt;a href=&#34;https://leap.se/&#34; target=&#34;_blank&#34;&gt;LEAP&lt;/a&gt;‘s &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/tree/master/metadata/se.leap.bitmaskclient.txt&#34; target=&#34;_blank&#34;&gt;Bitmask&lt;/a&gt; and our &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/info.guardianproject.locationprivacy.txt&#34; target=&#34;_blank&#34;&gt;LocationPrivacy&lt;/a&gt;.
+  &lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Our first deterministic build: Lil’ Debi 0.4.7</title>
+      <link>https://guardianproject.github.io/info/2014/06/09/our-first-deterministic-build-lil-debi-0.4.7/</link>
+      <pubDate>Mon, 09 Jun 2014 16:41:34 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/06/09/our-first-deterministic-build-lil-debi-0.4.7/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://abyss.uoregon.edu/~js/ast123/lectures/lec05.html&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/06/determinism.gif&#34; alt=&#34;determinism&#34; width=&#34;206&#34; height=&#34;138&#34; class=&#34;alignright size-thumbnail wp-image-12493&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We just released Lil’ Debi 0.4.7 into the &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.lildebi&#34; target=&#34;_blank&#34;&gt;Play Store&lt;/a&gt; and &lt;a href=&#34;https://f-droid.org/repository/browse/?fdid=info.guardianproject.lildebi&#34; target=&#34;_blank&#34;&gt;f-droid.org&lt;/a&gt;. It is not really different than the 0.4.6 release except in has a new, important property: the APK contents can be reproduced on other machines to the extent that the APK signature can be swapped between the official build and builds that other people have made from source, and this will still be installable. This is known as a “deterministic build” or “reproducible build”: the build process is deterministic, meaning it runs the same way each time, and that results in an APK that is reproducible by others using only the source code. There are some limitations to this, like it has to be built using similar versions of the OpenJDK 1.7 and other build tools, for example. But this process should work on any recent version of Debian or Ubuntu. Please try the process yourself, and let us know if you can verify or not:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/lildebi/wiki/Deterministic-Builds&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/lildebi/wiki/Deterministic-Builds&#34;&gt;https://github.com/guardianproject/lildebi/wiki/Deterministic-Builds&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The ultimate goal here is to make a process that reproduces the APK exactly, bit-for-bit, so that the anyone who runs the process will end up with an APK that has the exact same hash sum. As far as I can tell, the only thing that needs to be fixed in Lil’ Debi’s process is the timestamps in the ZIP format that is the APK container.&lt;/p&gt;
+
+&lt;p&gt;There are a number of other parallel efforts. The Tor Project has written a lot about &lt;a href=&#34;https://blog.torproject.org/category/tags/deterministic-builds&#34; target=&#34;_blank&#34;&gt;their process for reproducible builds for the Tor Browser Bundle&lt;/a&gt;. Debian has made some progress in &lt;a href=&#34;https://wiki.debian.org/ReproducibleBuilds&#34; target=&#34;_blank&#34;&gt;fixing the package builders to make the process deterministic&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/apache/</link>
+    <description>Recent content in Apache on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/apache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>
+
+&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;
+
+&lt;p&gt;As the IETF standard for ECH completes, our key objectives are to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Upstream DEfO code&lt;/li&gt;
+&lt;li&gt;Integrate ECH into more clients and servers&lt;/li&gt;
+&lt;li&gt;Gain and document operational experience&lt;/li&gt;
+&lt;li&gt;Submit key code for red team audits&lt;/li&gt;
+&lt;li&gt;Publish open-source ECH provisioning tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The key challenges we expect to face in meeting those objectives are: firstly, dealing with the OpenSSL and other upstream code bases (e.g. nginx, Apache HTTP Server) - satisfying upstream developers when dealing with complex code changes, as are involved here, has proven to be quite time and effort consuming. Secondly, it is a challenge to arrange the trials we have envisaged for DEfO-2 but doing so should help to demonstrate that web sites can easily and safely enable ECH without putting themselves at risk of interoperability failures or adverse attention from censors and without further centralising the web. Lastly, there are some remaining technical challenges not addressed in DEfO-1 (proprietary TLS ClientHello extension handling, interactions between TLS Hello Retry Request and ECH, and privacy analyses of split-mode ECH deployments) that we plan to address in DEfO-2.&lt;/p&gt;
+
+&lt;p&gt;The key challenges we aim to mitigate for users is the ease with which user activity can be tracked and blocked based on clear text SNI. Secondarily, our focus on web-server integrations and provisioning mechanisms for ECH addresses Internet centralisation (which itself poses potential risks for censorship) by ensuring this technology can be easily deployed without having to depend on entities such as global-scale CDNs.&lt;/p&gt;
+
+&lt;p&gt;The primary gaps addressed by DEfO are: the privacy-leak that is clear text SNI in TLS and secondly that nobody else has been developing an ECH implementation for OpenSSL, which is one of the most widely used TLS stacks, particularly for web servers. That situation has not changed since DEfO-1 started. Arguably filling that gap has become more pressing as some browsers now ship with ECH support.&lt;/p&gt;
+
+&lt;p&gt;ECH is designed to contribute to the safety of users by removing one the the main remaining aspects of the web that allows network observers to easily monitor and censor web traffic based on either client DNS queries (browsers typically only use ECH when DoH has been used) and the Server Name Indication (SNI) in the TLS handshake, which is encrypted via ECH. The eventual goal is that use of ECH becomes near ubiquitous, and that goal is very achievable for web sites that make use of a CDN. DEfO however also has a focus on ECH support in various web servers and proxies (Apache, nginx, lighttpd, HAProxy) so that users of deployments that don’t use a commercial CDN can also benefit from ECH. The result of using ECH should be that neither the DNS query nor the TLS exchange leak the name of the web server with which the browser is establishing contact, thus taking away a still-easy opportunity for monitoring and censorship.&lt;/p&gt;
+
+&lt;p&gt;Censors however, especially at the nation-state level, might choose to block all uses of ECH, which is something that is to be expected. The main mitigation for that envisaged is that browsers, even while not using ECH, will emit “fake” (or GREASEd) ECH values, thus increasing the costs if a censor decides to block all use of ECH. The extent to which GREASEing will be an effective mitigation for blocking all ECH will essentially
+end up as a political/commercial decision for censors, browser makers, and web sites, but what we can say is that for now at least, browser makers and the larger CDNs do seem committed to making use of ECH. So we can have some hope that even the most capable censors might have to think hard before blocking all ECH. In DEfO-2 we are also planning some significant-scale trials that, if successful, should go a long way towards helping other significant web sites overcome fears related to enabling ECH. Overcoming a fear that one’s web site may be blocked if one deploys ECH will be a valuable result of DEfO-2 should our trials come to fruition as we hope.&lt;/p&gt;
+
+&lt;p&gt;We do see a number of usability issues for those deploying web servers that need to be addressed, and that we plan to address in DEfO-2. Our approach is to aim for the same level of usability for web server administrators as has been achieved by &lt;a href=&#34;https://certbot.eff.org/&#34;&gt;&lt;em&gt;certbot&lt;/em&gt;&lt;/a&gt; as it interacts with Let&amp;rsquo;s Encrypt or other CAs. Making it easy to enable ECH, especially for &amp;ldquo;smaller&amp;rdquo; web properties is high priority for DEfO.&lt;/p&gt;
+
+&lt;p&gt;The outcome for which we hope is the upstreaming of ECH into important code bases, and to have demonstrated that one can deploy ECH easily at either small or large scale. The impact we expect is that we continue to significantly contribute to the use of ECH becoming near ubiquitous.&lt;/p&gt;
+
+&lt;h2 id=&#34;timeliness&#34;&gt;Timeliness&lt;/h2&gt;
+
+&lt;p&gt;The time is now ripe for DEfO-2:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello&#34;&gt;Firefox&lt;/a&gt; now supports ECH by default.&lt;/li&gt;
+&lt;li&gt;Chrome supports ECH in &lt;a href=&#34;https://groups.google.com/a/chromium.org/g/blink-dev/c/KrPqrd-pO2M/m/_8Lfd5xcAwAJ&#34;&gt;10% of stable releases&lt;/a&gt; as of August 2023.&lt;/li&gt;
+&lt;li&gt;Brave now also supports ECH, &lt;a href=&#34;https://github.com/brave/brave-browser/issues/1851#issuecomment-1763176335&#34;&gt;behind the same flags&lt;/a&gt; as Chromium&lt;/li&gt;
+&lt;li&gt;These browser developments, plus the server code developed by DEfO-1, now enable us to plan real-world experiments&lt;/li&gt;
+&lt;li&gt;Cloudflare has &lt;a href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/ech/&#34;&gt;beta support&lt;/a&gt; for enabling ECH.&lt;/li&gt;
+&lt;li&gt;During the run-time of DEfO-2 we expect to be in a position to run trials with significant players that could significantly assist with the goal of making use of ECH common for large web sites.&lt;/li&gt;
+&lt;li&gt;The DEfO-2 project timeline should also cover the finalisation of the IETF specification for ECH, significant progress on ancillary specifications (e.g. for provisioning) and provide sufficient time for upstreaming of DEfO code&lt;/li&gt;
+&lt;li&gt;DEfO-2 benefits from the same team as DEfO-1 – Tolerant Networks and the Guardian Project having co-operated successfully on DEfO-1 are looking forward to continuing that collaboration and to extending the team for DEfO-2&lt;/li&gt;
+&lt;li&gt;HPKE, a core part of ECH, but with broader applicability, is now RFC9180 and the OpenSSL maintainers merged our DEfO code for HPKE in November 2022.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;our-development-projects&#34;&gt;Our development projects&lt;/h2&gt;
+
+&lt;p&gt;The DEfO project implemented Encrypted ClientHello (ECH) support for OpenSSL and Conscrypt, carried out interoperability testing of those implementations, and also used those libraries to ECH-enable various web servers and clients. We deployed services using these web servers and the DNS infrastructure required to support automated key upated for the HTTPS RRs associated with those services. Here we provide a short overview of that work in order to help with larger scale experiments and with further development of the ECH specification.&lt;/p&gt;
+
+&lt;h3 id=&#34;libraries&#34;&gt;Libraries&lt;/h3&gt;
+
+&lt;p&gt;As part of the DEfO project, we ECH-enabled two important TLS libraries:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.conscrypt.org/&#34;&gt;Conscrypt&lt;/a&gt; is a Java Security Provide (a library) that provides a Java &amp;ldquo;wrapper&amp;rdquo; for the C++ language boringssl library. Conscrypt is commonly used as the TLS provider for applications running on Android devices and is thus an attractive target to allow many clients to be ECH-enabled. (We do not target browser clients in DEfO as work on ECH-enabling those is being done by browser-makers.) The authors of boringssl (Google) have added ECH support to a version of their code, and we used that to enhance Conscrypt to call the new borinssl APIs required to use ECH and to provide mechanisms for applications to default to, or signal use of, ECH.&lt;/li&gt;
+&lt;li&gt;OpenSSL is a long-lived library providing cryptographic and TLS services that is used by many applications, including many web servers and hence is an attractive target for ECH-enabling, especially for server-side functionality. Our ECH-enabled fork of OpenSSL is here.&lt;/li&gt;
+&lt;li&gt;We have and will continue to work with the developers of other TLS libraries (e.g. wolfSSL) to assist in ECH-enabling their code, mostly via interoperability testing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;clients&#34;&gt;Clients&lt;/h3&gt;
+
+&lt;p&gt;We ECH-enabled implemented the following TLS client applications:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OpenSSL &lt;code&gt;s_client&lt;/code&gt; - this client application comes as part of the OpenSSL build but is commonly used for testing and as an extremely simple scriptable TLS client.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;curl&lt;/em&gt; is a widely-used command line web client that can use OpenSSL for TLS support, so we &lt;a href=&#34;https://github.com/sftcd/curl/blob/ECH-experimental/docs/ECH.md&#34;&gt;ECH-enabled that&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;F-Droid is an Android client application that provides an installable catalogue of FOSS applications and that uses Conscrypt. We made an ECH-enabled build called &lt;a href=&#34;https://f-droid.org/packages/ie.defo.ech_apps/&#34;&gt;DEfO ECH Apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;servers&#34;&gt;Servers&lt;/h3&gt;
+
+&lt;p&gt;We ECH-enabled implemented the following web servers:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Apache HTTP Server is one of the two most commonly used web servers today, you can try our &lt;a href=&#34;https://github.com/sftcd/httpd&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;nginx&lt;/em&gt; is the other web server in the &amp;ldquo;top two.&amp;rdquo;, you can try our &lt;a href=&#34;https://github.com/sftcd/nginx&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;lighttpd is a web server that is commonly used on smaller devices such as home routers, you can try our &lt;a href=&#34;https://github.com/sftcd/lighttpd1.4&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;HAProxy is widely used as an HTTP ingress proxy and so is a good target for exploring ECH split-mode, you can try our &lt;a href=&#34;https://github.com/sftcd/haproxy&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;OpenSSL &lt;code&gt;s_server&lt;/code&gt; - this example server application is part of the OpenSSL build and is commonly used for testing and experimentation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;test-tools&#34;&gt;Test tools&lt;/h3&gt;
+
+&lt;p&gt;Amongst the test tooling we developed are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Comprehensive OpenSSL make test targets for HPKE and ECH.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/defo-project/EchInteropTest&#34;&gt;ECHInteropTest&lt;/a&gt; is a Java client for interoperability testing on Android.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sftcd/echdnsfuzz&#34;&gt;&lt;em&gt;echdnsfuzz&lt;/em&gt;&lt;/a&gt; is a catalogue of &amp;ldquo;interesting&amp;rdquo; ECHConfigList values that could cause issues for clients combined with a service to randomly select one of those for publication in the public DNS every 30 minutes. This is a useful part of fuzz-testing an ECH-enabled client application.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;issues-arising&#34;&gt;Issues Arising&lt;/h2&gt;
+
+&lt;p&gt;We saw the following issues that could benefit from further work to ease deployment of ECH:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For HAProxy, since DEfO-1 we have achieved support for HelloRetryRequest in ECH split-mode but have further work to do on ECH key rotation.&lt;/li&gt;
+&lt;li&gt;There can sometimes be a lack of clarity as to which software component should be responsible for choosing to attempt real (i.e. non-GREASEd) ECH, and hence to be responsible for the additional DNS queries required to acquire an ECHConfig. For libraries like OpenSSL and boringssl it clearly only makes sense for that decision (and hence any new DNS handling code) to be outside the library. For a browser, it as clearly makes sense for that code to be in the browser application layer. With &amp;ldquo;middleware&amp;rdquo; though, such as OkHTTP or Conscrypt it can be hard to know which is the correct decision.&lt;/li&gt;
+&lt;li&gt;The new DNS code required for handling HTTPS RRs is not too complex but the full generality of SVCB is extremely complex. Adding such complexity (and associated caching) is a major change for clients like curl that have to date only had to have a very simple model for DNS - essentially only querying A/AAAA and having almost trivial caching in the application itself.&lt;/li&gt;
+&lt;li&gt;The client implementation of ECH is relatively complex in that it &amp;ldquo;touches&amp;rdquo; the TLS state machine in many ways, and hence requires changes in a lot of places. As well as increasing the cost of implementing this also increases the costs associated with testing and upstreaming.&lt;/li&gt;
+&lt;li&gt;Achieving the same level of usability as &lt;code&gt;certbot&lt;/code&gt; for web server administrators may be challenging, but is an important goal to make it easy for web server administrators to be able to easily deploy ECH.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;ECH is demonstrably implementable and can be deployed. We don&amp;rsquo;t yet know if new issues will become apparent as larger-scale experiments are carried out, but we should find out during the run-time of DEfO-2.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Implementing TLS Encrypted Client Hello</title>
+      <link>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</guid>
+      <description>
+
+&lt;p&gt;As part of the &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project, we have been working on
+accelerating the development &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html&#34;&gt;Encrypted Client Hello
+(ECH)&lt;/a&gt; as
+standardized by the IETF.  ECH is the next step in improving Transport Layer
+Security (TLS).  TLS is one of the basic building blocks of the internet, it is
+what puts the S in HTTPS.  The ECH standard is nearing completion.  That is
+exciting because ECH can encrypt the last plaintext TLS metadata that it is
+possible to encrypt.  So ECH will bring some real improvements in privacy and
+censorship resistance.&lt;/p&gt;
+
+&lt;p&gt;ECH is built on top of TLSv1.3 and &lt;a href=&#34;https://blog.cloudflare.com/handshake-encryption-endgame-an-ech-update/&#34;&gt;completes unfinished
+work&lt;/a&gt;
+from the TLSv1.3 effort, now that private DNS is a thing. ECH is now in draft-13
+and there are many implementations that are interoperating. ECH is working for
+&lt;a href=&#34;https://github.com/sftcd/openssl&#34;&gt;OpenSSL&lt;/a&gt;, &lt;a href=&#34;https://bugs.chromium.org/p/boringssl/issues/detail?id=275&#34;&gt;BoringSSL&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/nginx&#34;&gt;nginx&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/httpd&#34;&gt;Apache HTTPD&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/lighttpd1.4&#34;&gt;lighttpd&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/sftcd/haproxy/commits/ECH-experimental&#34;&gt;HAProxy&lt;/a&gt;, &lt;a href=&#34;https://github.com/guardianproject/conscrypt/tree/2.6.alpha1638179154.job1828169525&#34;&gt;Conscrypt&lt;/a&gt;, &lt;a href=&#34;https://github.com/niallor/curl&#34;&gt;curl&lt;/a&gt;, and more. There is work underway in &lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=1725938&#34;&gt;Firefox&lt;/a&gt;
+and &lt;a href=&#34;https://bugs.chromium.org/p/chromium/issues/detail?id=1091403&#34;&gt;Chromium&lt;/a&gt;. It has been sketched out for &lt;a href=&#34;https://github.com/square/okhttp/issues/6539&#34;&gt;OkHTTP&lt;/a&gt;. Draft versions of ESNI
+and ECH have been deployed in Firefox releases and some production web services.&lt;/p&gt;
+
+&lt;p&gt;The main downside of ECH is that it is
+&lt;a href=&#34;https://defo.ie/report.html#issuesarising&#34;&gt;complex&lt;/a&gt;, and most of that is
+unavoidable.  Large scale websites have complicated server-side setups, and ECH
+has to work in those setups.  That is where ECH&amp;rsquo;s complexity comes from.  &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-dnsop-svcb-https-07.html&#34;&gt;DNS
+SVCB and HTTPS RR
+Types&lt;/a&gt; is a
+related standard to encapsulate the complexity of large scale websites a single
+DNS lookup.  It adds additional complexity since it might include the TCP port
+number for the service, while TLS implementations mostly assume that the port
+number is known before doing a DNS lookup.&lt;/p&gt;
+
+&lt;p&gt;ECH was formerly known as Encrypted SNI (ESNI), which it replaces.  So do not
+expect updates to ESNI unless ECH proves too complicated for implementers. ECH
+is more complex to implement in the TLS library than ESNI.  Once it is
+implemented in the TLS library, then implementing the next level of managing the
+keys and hostnames is quite similar between ESNI and ECH.  The rest of this post
+will be diving into details about that complexity and what it takes to implement
+ECH.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;do-not-stick-out.jpg&#34; alt=&#34;Do Not Stick Out&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;do-not-stick-out&#34;&gt;Do Not Stick Out&lt;/h2&gt;
+
+&lt;p&gt;ECH implementers must also work to ensure that their implementation does not
+create packets that look &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html#name-do-not-stick-out&#34;&gt;look
+different&lt;/a&gt;
+than other implementations.  How ECH is implemented will affect
+fingerprintability.  Right now, BoringSSL, OpenSSL, and Firefox all put the ECH
+extension in different places, so it is easy for a network observer to tell
+which of them is serving as the client in a TLS session.  Ideally, all
+implementations would create network packages that look identical to the network
+observer.  To get an idea of this problem in the real world, see &lt;a href=&#34;https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues/40014&#34;&gt;this detailed
+technical
+discussion&lt;/a&gt;
+of metadata ordering in DTLS as used in WebRTC.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-the-keys&#34;&gt;Getting the keys&lt;/h2&gt;
+
+&lt;p&gt;ECH encrypts the first stage of the negotiation between the client and server,
+the &lt;em&gt;ClientHello&lt;/em&gt; packet using a new type of key and related configuration.
+This is known as an &amp;ldquo;ECH Config&amp;rdquo;.  This negotiation is what sets up the
+encrypted TLS connection, so to encrypt the negotiation, so the keys can not be
+derived from the certificates and negotiation itself.  ECH also needs new
+methods distributing this ECH Config.  HTTPS/SVCB therefore includes ECH Config Lists,
+and DNS is the recommended way to get ECH Config Lists.  Other distribution
+methods are also possible, and ECH implementation should provide a method to
+directly supply ECH Config Lists.&lt;/p&gt;
+
+&lt;p&gt;When using ECH in conjunction with HTTPS/SVCB, the DNS needs to be handled differently
+than the common, decades old practices that most TLS stacks are built on.  The
+ECH Config List must match the IP address so that multi-CDN setups still work.
+That ensures the server gets the ECH Config that matches its ECH private keys,
+not the one for a separate server.  If the A/AAAA lookup is done separately from
+the HTTPS/SVCB lookup, they might not match since the results could come from
+different caches, etc.  It is not yet clear where the right place to handle that
+DNS is, but it is clear that clients that implement HTTPS/SVCB and ECH will need to
+consider that DNS will touch different parts of the stack.&lt;/p&gt;
+
+&lt;p&gt;Which part of the stack will handle the HTTPS/SVCB look up depends on whether
+the code is acting as a library or more as the client itself.  For example,
+libraries like OkHTTP or Conscrypt can both act as a TLS library, providing the
+blocks for implementing TLS in an app.  They can also act as the TLS client
+itself, the app just needs to open the hostname and port to get a connection.
+This is especially true for OkHTTP, which can also handle DNS itself with its
+own DNS-over-HTTPS implementation.  Most apps will expect to just open a URL and
+have it work without providing anything else.  In the case of HTTP libraries
+like OkHTTP or Volley, Conscrypt becomes the provider of TLS functions rather
+than the client.  OkHTTP&amp;rsquo;s default setup will probably want to treat Conscrypt
+like the client and do zero config.  But there are use cases where apps want to
+handle DNS in OkHTTP, in that case Conscrypt is a library.  Another way this
+could be broken down would be to have Conscrypt only be the TLS library, then
+leave the DNS to the HTTP stacks.  Then each HTTP library would have to have
+their own ECH and HTTPS/SVCB handling (In Android, that would mean
+&lt;tt&gt;HttpURLConnection&lt;/tt&gt;, OkHTTP, Volley, Apache HTTP Client, etc).  Python
+provides another example with HTTP libraries like &lt;a href=&#34;https://github.com/psf/requests/issues/5972&#34;&gt;Requests&lt;/a&gt; working in
+combination with the core &lt;a href=&#34;https://bugs.python.org/issue45567&#34;&gt;&lt;tt&gt;ssl&lt;/tt&gt;&lt;/a&gt; module.&lt;/p&gt;
+
+&lt;p&gt;One thing that is clear here: whichever piece initiates the HTTPS/SVCB DNS query
+should also handle the ECH Config, and setting up the lower levels.  On top of
+this, ECH has GREASE and &amp;ldquo;Retry Configs&amp;rdquo;.  GREASE is a key part of ensuring that
+ECH connections do not stick out.  GREASE makes the network observer see TLS
+packets that look the same as connections that successfully used an ECH Config
+to encrypt.  Retry Configs are sent by the server if it cannot decrypt what the
+client sent.  Whichever piece of the code handles the ECH Config List should
+then also handle GREASE and the Retry Configs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.cloudflare.com/encrypted-client-hello/&#34;&gt;&lt;img src=&#34;tls-ech-negotiation.png&#34; alt=&#34;TLS ECH Negotiation&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;outer-and-inner-clienthello&#34;&gt;Outer and Inner &lt;em&gt;ClientHello&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;This post began by saying that ECH was complex.  Most of that complexity stems
+from the concept of &lt;em&gt;ClientHelloOuter&lt;/em&gt; and &lt;em&gt;ClientHelloInner&lt;/em&gt;.  They are sort of
+parallel versions of the TLS &lt;em&gt;ClientHello&lt;/em&gt;, with &lt;em&gt;ClientHelloOuter&lt;/em&gt; being
+plaintext and &lt;em&gt;ClientHelloInner&lt;/em&gt; being encrypted.  Many of the same bits of
+metadata can be set in either &lt;em&gt;ClientHelloOuter&lt;/em&gt; or &lt;em&gt;ClientHelloInner&lt;/em&gt;, or even
+in both.  And the outer and inner values can be different.  For example, the
+outer plaintext SNI could be set to a generic domain name, while the inner could
+be set to a different domain name that the client wants to protect.  Whenever
+the client needs to manage what is set in &amp;ldquo;inner&amp;rdquo;, &amp;ldquo;outer&amp;rdquo;, etc., then extra
+complexity is exposed all the way up to the app using the ECH client.  Also, so
+many possible configuration options also means so many ways that the negotiation
+might fail.&lt;/p&gt;
+
+&lt;p&gt;BoringSSL&amp;rsquo;s &lt;code&gt;SSL_set1_ech_config_list()&lt;/code&gt; provides a good example of this complexity:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a supported ECHConfig is found, &lt;tt&gt;ssl&lt;/tt&gt; will encrypt the true
+ClientHello parameters. If the server cannot decrypt it, e.g. due to a key
+mismatch, ECH has a recovery flow. &lt;tt&gt;ssl&lt;/tt&gt; will handshake using the
+cleartext parameters, including a public name in the ECHConfig. If using
+&lt;tt&gt;SSL_CTX_set_custom_verify&lt;/tt&gt;, callers should use
+&lt;tt&gt;SSL_get0_ech_name_override&lt;/tt&gt; to verify the certificate with the public
+name. If using the built-in verifier, the &lt;tt&gt;X509_STORE_CTX&lt;/tt&gt; will be
+configured automatically.&lt;/p&gt;
+
+&lt;p&gt;If no other errors are found in this handshake, it will fail with
+&lt;tt&gt;SSL_R_ECH_REJECTED&lt;/tt&gt;. Since it didn&amp;rsquo;t use the true parameters, the
+connection cannot be used for application data. Instead, callers should handle
+this error by calling &lt;tt&gt;SSL_get0_ech_retry_configs&lt;/tt&gt; and retrying the
+connection with updated ECH parameters. If the retry also fails with
+&lt;tt&gt;SSL_R_ECH_REJECTED&lt;/tt&gt;, the caller should report a connection failure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;a-walk-through-which-pieces-needs-to-do-what&#34;&gt;A walk through which pieces needs to do what&lt;/h2&gt;
+
+&lt;p&gt;Let us return to the Python example to go through the pieces needed to implement
+ECH there.  Starting at the lowest level, the Python &lt;tt&gt;ssl&lt;/tt&gt; is built on
+top of OpenSSL, so the new ECH functions in OpenSSL need to be included and
+exposed in &lt;tt&gt;ssl&lt;/tt&gt;&amp;rsquo;s API.  Unlike with a plain TLSv1.3 connection,
+&lt;tt&gt;ssl&lt;/tt&gt; would not set up an ECH connection without additional configuration
+as long as &lt;tt&gt;ssl&lt;/tt&gt; does not include the additional DNS requirements needed
+to fetch the ECH Config.  The DNS could instead be implemented in the HTTP
+library.  Requests is built on top of urllib3, so urllib3 could implement
+HTTPS/SVCB handling.  Then Requests would automatically get ECH connections.
+Since it can be necessary to handle the ECH Config outside of DNS, urllib3 and
+Requests could provide methods for the app to submit the ECH Config.  This would
+mean overriding any HTTPS/SVCB handling in Requests and urllib3.&lt;/p&gt;
+
+&lt;p&gt;Based on this outline, these are the pieces that need to be implemented:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS/SVCB DNS queries for getting ECH Config Lists, IP, and other config.&lt;/li&gt;
+&lt;li&gt;A way to provide ECH Config Lists as bytes directly to the &lt;tt&gt;ssl&lt;/tt&gt; module.&lt;/li&gt;
+&lt;li&gt;A method to ensure encrypted DNS is used so all metadata is encrypted.&lt;/li&gt;
+&lt;li&gt;A method to enable and disable GREASE, ideally with GREASE default on.&lt;/li&gt;
+&lt;li&gt;A callback that gets called whenever ECH negotiation fails and the server
+offers a &amp;ldquo;Retry Config&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Potentially also controls of what to send in the &lt;em&gt;ClientHelloOuter&lt;/em&gt; versus the
+&lt;em&gt;ClientHelloInner&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From the point of view of the client implementation, there is a big difference
+between TLS before and after ECH.  This new complexity may look scary but this
+is a clear path to providing strong privacy protections with TLS that can be as
+widely deployed as TLSv1.3 is now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking usage without tracking people</title>
+      <link>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</link>
+      <pubDate>Thu, 08 Jun 2017 10:58:53 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</guid>
+      <description>&lt;p&gt;One thing that has become very clear over the past years is that there is a lot of value in data about people. Of course, the most well known examples these days are advertising and spy agencies, but tracking data is useful for many more things. For example, when trying to build software that is intuitive and easy to use, having real data about how people are using the software can make a massive difference when developers and designers are working on improving their software. Even in the case of advertisers, they mostly do not care exactly who you are, they want to know what you are interested in so that they can more effectively promote things to you.&lt;/p&gt;
+
+&lt;p&gt;From the beginning Guardian Project has focused on privacy, and worked to practice what we preach in our own software. For example, we have entirely disabled Apache web logs on our website for the past couple of years, so that we would not even have access to that rich data. We felt that we could not even store that data without fear of violating people’s privacy, let alone working with it.&lt;/p&gt;
+
+&lt;p&gt;Things have changed in the past few years, and there are now a number of well tested techniques for tracking how people are using software without actually tracking who they are. It is now possible to keep some usage data while feeling safe that no one who might get that data could use it to identify individuals. One good example of this is the &lt;a href=&#34;https://metrics.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor Project’s tracking data&lt;/a&gt;. They provide a wide variety of tracking data to follow how Tor is being used, and how well the Tor network is operating.&lt;/p&gt;
+
+&lt;p&gt;So we believe that it is now possible to responsibly track usage without violating anyone’s privacy. One piece of work along these lines is the new &lt;a href=&#34;https://github.com/cleaninsights/cleaninsights-android-sdk&#34; target=&#34;_blank&#34;&gt;Clean Insights Android SDK&lt;/a&gt;. Nathan is leading the development of that effort. And this blog post announces another new development that we are starting: tracking usage data from F-Droid app repositories.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry-300x133.png&#34; alt=&#34;tracking by country&#34; width=&#34;300&#34; height=&#34;133&#34; class=&#34;aligncenter size-medium wp-image-13632&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry-300x133.png 300w, https://guardianproject.info/wp-content/uploads/2017/06/bycountry.png 747w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To start with, the Apache web logs for this site will be configured to store, but only information that is not fine-grained enough to identify people:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only the date is stored, not the time or time zone&lt;/li&gt;
+&lt;li&gt;Referer, IP Addresses, User Agent are never stored&lt;/li&gt;
+&lt;li&gt;country is stored by looking up the IP Address in the &lt;em&gt;geoip&lt;/em&gt; database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Normally, a log entries look like:&lt;/p&gt;
+
+&lt;pre&gt;189.4.73.81 testy.at.or.at - [08/Jun/2017:13:55:46 +0200] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;F-Droid&#34;
+119.29.81.134 199.119.112.126 - [08/Jun/2017:14:46:48 -0400] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;http://testy.at.or.at/fdroid/repo/index-v1.jar&#34; &#34;Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)&#34;
+&lt;/pre&gt;
+
+&lt;p&gt;This stripped version looks like:&lt;/p&gt;
+
+&lt;pre&gt;0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;-&#34; AT
+0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;-&#34; ZH
+&lt;/pre&gt;
+
+&lt;p&gt;Since the raw data is processed by the webserver, the extra information will be discarded and never written to disk. Only the sanitized usage tracking information is ever stored. This is based on Tor Project’s &lt;a href=&#34;https://gitweb.torproject.org/webstats.git/tree/src/sanitize.py&#34; target=&#34;_blank&#34;&gt;web tracking&lt;/a&gt;. It is possible to do this with &lt;em&gt;Apache&lt;/em&gt;, &lt;em&gt;lighttpd&lt;/em&gt;, &lt;em&gt;nginx&lt;/em&gt;, and probably other webservers. For &lt;em&gt;Apache&lt;/em&gt;, &lt;a href=&#34;https://github.com/maxmind/geoip-api-mod_geoip2/blob/master/INSTALL.md#configuration&#34;&gt;&lt;i&gt;mod_geoip&lt;/i&gt;&lt;/a&gt; needs to be installed, then only a single line is needed to configure this private logging mode:&lt;/p&gt;
+
+&lt;pre&gt;LogFormat &#34;0.0.0.0 - %u %{[%d/%b/%Y:00:00:00 %z]}t \&#34;%r\&#34; %&gt;s %b \&#34;%{Referer}i\&#34; \&#34;-\&#34; %{GEOIP_COUNTRY_CODE}e&#34; privacy+geo
+CustomLog ${APACHE_LOG_DIR}/access.log privacy+geo
+&lt;/pre&gt;
+
+&lt;p&gt;Now, we hope that we can work towards providing value from tracking data, without violating anyone’s privacy. Indeed, we are still prioritizing privacy over any value derived from tracking data. So anyone else who also wants to go follow this route needs to be fully aware that any tracking must be very carefully done, since it can easily result in inadvertent leaks. Do not take this as a stamp of approval on any tracking activity!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tweaking HTTPS for Better Security</title>
+      <link>https://guardianproject.github.io/info/2014/02/12/tweaking-https-for-better-security/</link>
+      <pubDate>Wed, 12 Feb 2014 19:14:59 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/02/12/tweaking-https-for-better-security/</guid>
+      <description>&lt;p&gt;The HTTPS protocol is based on TLS and SSL, which are standard ways to negotiate encrypted connections. There is a lot of complexity in the protocols and lots of config options, but luckily most of the config options can be ignored since the defaults are fine. But there are some things worth tweaking to ensure that as many connections as possible are using reliable encryption ciphers while providing &lt;a href=&#34;https://en.wikipedia.org/wiki/Forward_secrecy&#34;&gt;forward secrecy&lt;/a&gt;. A connection with forward secrecy provides protection to past transactions even if the server’s HTTPS private key/certificate is stolen or compromised. This protects your users from large scale network observers that can store all traffic for later decryption, like governments, ISPs, telecoms, etc. From the server operator’s point of view, it means less risk of leaking users’ data, since even if the server is compromised, past network traffic will probably not be able to be encrypted.&lt;/p&gt;
+
+&lt;p&gt;In my situation, I was using our development site, &lt;a href=&#34;https://dev.guardianproject.info&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.guardianproject.info&#34;&gt;https://dev.guardianproject.info&lt;/a&gt;&lt;/a&gt;, as my test bed, it is Apache 2.2 and openssl 1.0.1 running on Ubuntu/precise 12.04 Long-Term Support, so that means that some of the options are more limited since this is an older release. On Debian, Ubuntu and other Debian-derivatives, you’ll only need to edit &lt;code&gt;/etc/apache2/mods-available/ssl.conf&lt;/code&gt;. There are more paranoid resources &lt;a href=&#34;https://community.qualys.com/blogs/securitylabs/2013/08/05/configuring-apache-nginx-and-openssl-for-forward-secrecy&#34; target=&#34;_blank&#34;&gt;for perfectly configuring your TLS&lt;/a&gt;, but we’re not ready to drop support for old browsers that only support SSLv3, and not TLS at all. So I went with this line to enable SSLv3 and TLSv1.0 and newer:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+SSLProtocol all -SSLv2&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;With TLS connections, the client and the server each present a list of encryption ciphers that represent the ciphers they each support in order of preference. This enables the client and server to choose a cipher that both support. Normally, the client’s list takes precedence over the server’s, but with many browsers that can be changed. Unfortunately it seems that Microsoft Internet Explorer (IE) ignores this and always uses the client’s preference first. Here’s how to make Apache request that the server preferences are preferred:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+SSLHonorCipherOrder on&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Next up is tweaking the server’s preference list to put ciphers that enable forward secrecy first (don’t worry if you don’t understand the next stuff about my rationale, my aim is to walk thru the process). This is done in most web servers using openssl-style cipher lists. I started out with &lt;a href=&#34;https://wiki.mozilla.org/Security/Server_Side_TLS&#34; target=&#34;_blank&#34;&gt;what Mozilla recommends&lt;/a&gt;, then pared down the list to remove AES-256 ciphers, since AES-128 is widely regarded to be faster, quite strong, and perhaps &lt;a href=&#34;https://wiki.mozilla.org/Security/Server_Side_TLS#Prioritization_logic&#34; target=&#34;_blank&#34;&gt;more resistant to timing attacks than AES-256&lt;/a&gt;. I also chose to remove RC4-based ciphers, since &lt;a href=&#34;https://wiki.mozilla.org/Security/Server_Side_TLS#RC4_weaknesses&#34; target=&#34;_blank&#34;&gt;RC4 might already be broken&lt;/a&gt;, and will only get worse with time. RC4 has historically been used to mitigate the “BEAST” attack, but that is &lt;a href=&#34;https://community.qualys.com/blogs/securitylabs/2013/09/10/is-beast-still-a-threat&#34; target=&#34;_blank&#34;&gt;mostly happening in the clients now&lt;/a&gt;. So with that I ended up with this cipher list (should be all one line in your config file):&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+SSLCipherSuite &amp;quot;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-CAMELLIA128-SHA:AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:CAMELLIA128-SHA:DES-CBC3-SHA&amp;quot;&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing to make sure is that all of these ciphers are supported on your system. You can get the list of supported ciphers from &lt;code&gt;openssl ciphers&lt;/code&gt;. I used this command line to get them in a nice, alphabetized list:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+openssl ciphers | sed &#39;s,:,\n,g&#39; | sort&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly, we want to set the &lt;a href=&#34;https://www.owasp.org/index.php/HTTP_Strict_Transport_Security&#34; target=&#34;_blank&#34;&gt;HSTS&lt;/a&gt; header to tell the browser to always use HTTPS. To enforce this, a header is added to the collection of HTTP headers delivered when connecting to the HTTPS site. This header tells the client browser to always connect to the current domain using HTTPS. It includes an expiration date (aka &lt;code&gt;max-age&lt;/code&gt;) after which, the client browser will again allow HTTP connections to that domain. The server might then again redirect the HTTP connection to HTTPS, and again the client will get the HSTS header, and use only HTTPS until the expiration date comes again. To include this header in your Apache server, add this line:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+Header add Strict-Transport-Security &amp;quot;max-age=15768000;includeSubDomains&amp;quot;&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you can check the results of your work with Qualys’ handy SSL Test. You can see the result of my efforts here: &lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html?d=dev.guardianproject.info&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html?d=dev.guardianproject.info&#34;&gt;https://www.ssllabs.com/ssltest/analyze.html?d=dev.guardianproject.info&lt;/a&gt;&lt;/a&gt;. &lt;strong&gt;A-&lt;/strong&gt; is not bad. I tried for a good long while to get IE to use FS (Forward Secrecy) ciphers, but failed. IE does not respect the server-side cipher preferences. My guess is that the only way to get IE to use FS ciphers is to make a custom cipher list that does not include anything but FS ciphers and serve that only to IE. I know it is possible to do because &lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html?d=bitbucket.com&amp;s=131.103.20.172&#34; target=&#34;_blank&#34;&gt;bitbucket.com got an &lt;strong&gt;A+&lt;/strong&gt; for doing it&lt;/a&gt;. For a quick way to check out the cipher lists and HSTS header, look at &lt;a href=&#34;https://github.com/iSECPartners/sslyze&#34; target=&#34;_blank&#34;&gt;iSEC Partner’s sslyze&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is only a quick overview of the process to outline the general concepts. To find out more I recommend reading the source articles for this post, including specific directions for nginx and lighttpd:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla’s &lt;a href=&#34;https://wiki.mozilla.org/Security/Server_Side_TLS&#34; target=&#34;_blank&#34;&gt;Server-side TLS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Qualys’ &lt;a href=&#34;https://community.qualys.com/blogs/securitylabs/2013/08/05/configuring-apache-nginx-and-openssl-for-forward-secrecy&#34; target=&#34;_blank&#34;&gt;Configuring Apache, Nginx, and OpenSSL for Forward Secrecy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Qualys’ &lt;a href=&#34;https://community.qualys.com/blogs/securitylabs/2013/09/10/is-beast-still-a-threat&#34; target=&#34;_blank&#34;&gt;Is BEAST Still a Threat?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.owasp.org/index.php/HTTP_Strict_Transport_Security&#34; target=&#34;_blank&#34;&gt;HTTP Strict Transport Security&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Secure Storage on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/secure-storage/</link>
+    <description>Recent content in Secure Storage on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 Feb 2013 14:45:28 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/secure-storage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IOCipher beta: easy encrypted file storage for your Android app</title>
+      <link>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</link>
+      <pubDate>Thu, 07 Feb 2013 14:45:28 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</guid>
+      <description>&lt;p&gt;At long last, we are proud to announce the &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;first beta release of IOCipher&lt;/a&gt;, an easy framework for providing virtual encrypted disks for Android apps.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;does not require root or any special permissions at all&lt;/li&gt;
+&lt;li&gt;the API is a drop-in replacement for the standard java.io.File API, so if you have ever worked with files in Java, you already know how to use IOCipher&lt;/li&gt;
+&lt;li&gt;works easiest in an app that stores all files in IOCipher, but using standard java.io with IOCipher is possible&lt;/li&gt;
+&lt;li&gt;supports android-7 v2.1 and above&lt;/li&gt;
+&lt;li&gt;licensed under the LGPL v3+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can download it here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;https://guardianproject.info/code/iocipher/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adding IOCipher to our InformaCam and NoteCipher apps is already in the&lt;br /&gt;
+works. There is already one app in the Play Store built with IOCipher: &lt;a title=&#34;Gryphn Secure Messaging in the Play Store&#34; href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Messaging&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve recently done some heavy testing and bug fixing and this is ready for beta status. That means for many applications, it should be stable with reasonable performance. But its not done yet, and there are some known edge cases documented in our bug tracker which we aim to address in the next beta release:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/iocipher/issues&#34;&gt;https://dev.guardianproject.info/projects/iocipher/issues&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some additional notes on usage:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;single thread/sequential access is the preferred way of using IOCipher&lt;/li&gt;
+&lt;li&gt;multi-threaded access possible, but potentially unstable under very high load&lt;/li&gt;
+&lt;li&gt;VFS now has beginTransaction and completeTransaction to optimize performance&lt;/li&gt;
+&lt;li&gt;parts of java.io not currently supported: vectored I/O, memory-mapped files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;featured photo &lt;a href=&#34;http://www.flickr.com/photos/pong/288491653/&#34;&gt;“Safe” from Pong on Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

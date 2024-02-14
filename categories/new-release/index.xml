@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>New Release on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/new-release/</link>
+    <description>Recent content in New Release on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Jul 2018 14:28:23 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/categories/new-release/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Our “Wind” project is a Mozilla-NSF challenge finalist!</title>
+      <link>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</link>
+      <pubDate>Fri, 20 Jul 2018 14:28:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</guid>
+      <description>&lt;p&gt;For the last few years, we’ve been working on the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind network concept&lt;/a&gt;, as a nearby, local, off-grid companion, or alternative, to the Web. This year, we decided to participate in the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation Challenge&lt;/a&gt;, sponsored by Mozilla and the National Science Foundation. Today, it was announced that we are a finalist in, as they put it, &lt;a href=&#34;https://blog.mozilla.org/blog/2018/07/19/a-science-fair-with-1-6-million-in-prizes/&#34;&gt;“A Science Fair with $1.6 Million in Prizes”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Watch the video below to learn more about Wind, or jump right over to the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind project page&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/fGuiy3rlOVQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;_&lt;br /&gt;
+When disaster strikes, connectivity becomes difficult. Information can save your life, guiding you to safety and services. Networks today are fragile and easy overloaded. There has not been enough investment in the many other possible nets, that may be better suited for situations where connections to the global internet are not available or affordable. The potential in radios, sensors and processing available in the cheapest of smartphones and routers are not fully utilized or realized._&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot v16: a whole new look, and easier to use!</title>
+      <link>https://guardianproject.github.io/info/2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/</link>
+      <pubDate>Fri, 05 Jan 2018 13:14:17 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot: Tor for Android&lt;/a&gt; has a new release (&lt;a href=&#34;https://gitweb.torproject.org/orbot.git/tag/?h=16.0.0-RC-2&#34;&gt;tag&lt;/a&gt; and &lt;a href=&#34;https://gitweb.torproject.org/orbot.git/diff/CHANGELOG?h=16.0.0-RC-1-CHANGELOG&amp;amp;id=5542e8e192fcff24284179e7fdb31cf877f79efd&#34;&gt;changelog&lt;/a&gt;), with a major update to the user experience and interface. This is the 16th major release of Orbot, since it was launched in late 2009.&lt;/p&gt;
+
+&lt;p&gt;The main screen of the app now looks quite different, with all the major features and functions exposed for easy access. We have also added a new onboarding setup wizard for first time users, that assists with configuring connections to the Tor network for users in places where Tor itself is blocked. This release also continues to support users looking to use Orbot to unblock specific apps, that may not be available on their network or country. From the main screen, users can activate Orbot’s built-in VPN feature, and easily choose which specific apps they want to be routed over the Tor network. You can also refresh your Tor identity, rebuilding all circuit connections through the network, using the circular reload icon in the expanded notification provided by Orbot.&lt;/p&gt;
+
+&lt;p&gt;The update is rolling out on &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&#34;&gt;Google Play&lt;/a&gt;, and will also be available on &lt;a href=&#34;https://guardianproject.info/fdroid/&#34;&gt;Guardian Project’s F-Droid Repo&lt;/a&gt; soon. You can also find &lt;a href=&#34;https://github.com/n8fr8/orbot/releases&#34;&gt;Android APKs on Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;THANKS TO: pgerber, syphyr, Khsed4, BjarniRunar, Unpublished, igortoliveira, goapunk, SpotComms, AkshatAgrawal05, dixidroid, arrase and others for the bug reports and fixes on the Orbot app. Thanks to &lt;a href=&#34;https://twitter.com/wwwiretap&#34;&gt;Sina&lt;/a&gt; with Team Cymru for the extra infrastructure provided to help users in places where Tor itself is blocked. Also, &lt;a href=&#34;https://twitter.com/mrphs&#34;&gt;Nima&lt;/a&gt; for the guidance, support and motivation to get this release out sooner rather than later!&lt;/p&gt;
+
+&lt;div id=&#39;gallery-13&#39; class=&#39;gallery galleryid-13934 gallery-columns-3 gallery-size-medium&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#39;clear: both&#39; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;/** v16.0.0 RC 1 / 5 Jan 2018 / 309c42be916d866a28adacb0a4f92d692cbd6009 **/&lt;/p&gt;
+
+&lt;p&gt;7e9890e tweak default bridge behavior based on locale&lt;br /&gt;
+fec853c updates to notification for Android O / SDK26&lt;br /&gt;
+b161043 Merge pull request #106 from Unpublished/fix_binary_search&lt;br /&gt;
+ab472d5 Merge branch ‘syphyr-master’&lt;br /&gt;
+4fc3e7e Merge branch ‘master’ of &lt;a href=&#34;https://github.com/syphyr/orbot&#34;&gt;https://github.com/syphyr/orbot&lt;/a&gt; into syphyr-master&lt;br /&gt;
+792ee2b Merge branch ‘BjarniRunar-master’&lt;br /&gt;
+0d4a735 Merge branch ‘master’ of &lt;a href=&#34;https://github.com/BjarniRunar/orbot&#34;&gt;https://github.com/BjarniRunar/orbot&lt;/a&gt; into BjarniRunar-master&lt;br /&gt;
+c7b1441 add comment about app updates URL&lt;br /&gt;
+d21ff80 update strings and code for switching Locale in app&lt;br /&gt;
+5c5790c fix binary search&lt;br /&gt;
+38b0063 update build to &lt;sup&gt;16000005&lt;/sup&gt;&amp;frasl;&lt;sub&gt;6&lt;/sub&gt; for 16.0.0-BETA-2&lt;br /&gt;
+7da26a3 update strings from transifex&lt;br /&gt;
+ce714fa use the proper localized start/end params&lt;br /&gt;
+38cc29c externalize more strings&lt;br /&gt;
+8bcc9a4 update gitignore&lt;br /&gt;
+6e3b6ba add onboarding strings localizatoin&lt;br /&gt;
+154e373 ensure appupdater check starts up&lt;br /&gt;
+703f8a1 move update back to older (reduce version code)&lt;br /&gt;
+b556518 move update back to older version&lt;br /&gt;
+680d108 update json for testing&lt;br /&gt;
+e4f6348 test updating json&lt;br /&gt;
+dafcdd7 enable AppUpdater notificatoins through Github&lt;br /&gt;
+3b5a361 update handling of vpn enabled and app onclick&lt;br /&gt;
+e21474c updates to layout and strings for bridge wizard&lt;br /&gt;
+2a9691c make sure the back arrow works&lt;br /&gt;
+244231c remove activity no longer used&lt;br /&gt;
+0284130 remove out activity no longer used&lt;br /&gt;
+e487f34 update strings&lt;br /&gt;
+8fd0bd0 update tor-android to 0.3.19b (updated geoip databases)&lt;br /&gt;
+ad51bed update transifex configuration&lt;br /&gt;
+a08c707 update app store descriptions&lt;br /&gt;
+2ced17a update build SDK targets to 26&lt;br /&gt;
+5c22de2 manifest updates: remove superuser, enable chromebooks&lt;br /&gt;
+b4aa9d8 more improvements for bridge wizard&lt;br /&gt;
+df37b8c add bridge wizard testing code&lt;br /&gt;
+14ce4f6 big update for new onboarding, bridge wizard&lt;br /&gt;
+2ceacf6 move bridges to raw resources&lt;br /&gt;
+938a740 improve vpn app enable view on main activity&lt;br /&gt;
+ba358a4 add new orfox and settings icon&lt;br /&gt;
+5bd5a56 VPN should be off by default&lt;br /&gt;
+e464044 connection might be null&lt;br /&gt;
+51216a4 Add new preference: pref_open_proxy_on_all_interfaces&lt;br /&gt;
+21b4521 Update version strings in help-&amp;gt;about&lt;br /&gt;
+5500b50 update spuport library version&lt;br /&gt;
+546310a improve notifications, add refresh/newnym button&lt;br /&gt;
+877406f tweak layout&lt;br /&gt;
+b68132b fix title for tor app section&lt;br /&gt;
+7210223 fix handling of intents&lt;br /&gt;
+47e10e7 fix issues with bridge selection UI&lt;br /&gt;
+e6bd23a more UI updates and small improvements&lt;br /&gt;
+d9bd32a more UI updates&lt;br /&gt;
+7303a33 work on the new UI update&lt;br /&gt;
+6a19bf6 update UI tweaks for next release&lt;br /&gt;
+3741434 don’t show app selection each time you turn VPN on/off&lt;br /&gt;
+4df2fcf move “other” installer back to tor resource installer&lt;br /&gt;
+f3f9162 don’t delete installed binaries&lt;br /&gt;
+6493d8d Merge pull request #104 from igortoliveira/remove-java-file&lt;br /&gt;
+fc4d6aa improve app loading time for VPN app dialog&lt;br /&gt;
+fbeff25 Remove leftover Java file&lt;br /&gt;
+544ea7b update build to use tor version constant from tor-android-binary&lt;br /&gt;
+977167b ZMerge branch ‘master’ of github.com:n8fr8/orbot&lt;br /&gt;
+b07d4fe removed unused submodules, moved to gradle tor-android&lt;br /&gt;
+d392ecd remove unneeded external dirs for making tor&lt;br /&gt;
+3d729fc switch to using tor-android binary in TorService&lt;br /&gt;
+6f364de use the new tor-android gradle dependency &lt;a href=&#34;https://github.com/n8fr8/tor-android&#34;&gt;https://github.com/n8fr8/tor-android&lt;/a&gt;&lt;br /&gt;
+c7f834b moving binary files, use tor-android gradle&lt;br /&gt;
+3b5e27e removing external depends, moving to tor-android gradle&lt;br /&gt;
+898f64a Merge pull request #99 from goapunk/update-BUILD-instructions&lt;br /&gt;
+e14d647 update BUILD&lt;br /&gt;
+fce5bde add autopoint to dependencies&lt;br /&gt;
+72c7e04 Merge pull request #97 from SpotComms/padding&lt;br /&gt;
+8cf412a Merge pull request #98 from goapunk/add-lzma-zstd-as-dependency&lt;br /&gt;
+c1dfc29 Update BUILD instructions&lt;br /&gt;
+9ca36e1 Add lzma and zstd&lt;br /&gt;
+6e4b700 Expose *ConnectionPadding&lt;br /&gt;
+71e3464 Merge pull request #94 from Unpublished/fix88&lt;br /&gt;
+cbffc1d remove some transproxy left overs&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Haven: Building the Most Secure Baby Monitor Ever?</title>
+      <link>https://guardianproject.github.io/info/2017/12/22/haven-building-the-most-secure-baby-monitor-ever/</link>
+      <pubDate>Fri, 22 Dec 2017 09:07:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/12/22/haven-building-the-most-secure-baby-monitor-ever/</guid>
+      <description>&lt;p&gt;About eight months ago, friends at the &lt;a href=&#34;https://freedom.press/&#34;&gt;Freedom of the Press Foundation&lt;/a&gt; reached out to us, to see if we were interested in prototyping an idea they had been batting around. They knew that from projects like &lt;a href=&#34;https://guardianproject.info/apps/camerav&#34;&gt;CameraV&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/2017/02/24/combating-fake-news-with-a-smartphone-proof-mode/&#34;&gt;ProofMode&lt;/a&gt;, that we knew how to tap into the sensors on smartphones to do interesting things. They also knew we could connect devices together using encrypted messaging and onion routing, through our work on &lt;a href=&#34;https://chatsecure.org&#34;&gt;ChatSecure&lt;/a&gt; and Tor (&lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot!&lt;/a&gt;). They also knew of our deep interest in bringing ideas to life that can solve real problems faced by people out on the front lines (both at home and abroad), who often are more in danger from physical threats, than digital. They had a concept that would bring all of these things together, and just wanted to see if it was even possible. We were game, and well, here we are today, announcing a real working public beta, and a new open-source project, that we are extremely excited about.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IT’S NOT JUST A PHONE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At some point soon, we should stop calling the smartphones that over two billion people carry with them everyday and everywhere, phones at all. These devices have powerful processors with multiple cores, at gigahertz speeds, and gigabytes of RAM and storage. They have at least two cameras, now often three, arrays of microphones to capture sound near and far, and high definition, hyper sensitive touch screens for controlling them. They contain multiple radios and signal processors, that allow you to make crystal clear calls to someone on the other side of the planet, live stream 4K video, and download a game all at once. Most importantly, for the work we are announcing today, they contain an amazing variety of sensors, that can measure gravity, motion, air pressure, ambient light, temperature, and your precise location on the planet. I don’t think Alexander Graham Bell ever imagined a telephone doing all of these things. Once you step back from thinking of these devices as phones, and instead as powerful general purpose portable computing platforms, a world of possibilities and potential uses opens up wide. Even better, many people have an old second-hand, last generation device lying around, ready to be transformed into a computing platform much more powerful than a Raspberry Pi or some generic Internet of Shoddy (!) Things platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A SAFE ROOM IN YOUR POCKET&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This re-imagining of a smartphone as something more, is what inspired the development of &lt;a href=&#34;https://guardianproject.github.io/haven/&#34;&gt;Haven&lt;/a&gt;, a new open-source project and mobile app we are announcing today, built in partnership with Freedom of the Press Foundation. The concept of &lt;a href=&#34;https://guardianproject.github.io/haven/&#34;&gt;Haven&lt;/a&gt;, as imagined by Micah F. Lee and Edward Snowden, is based on the notion that any smartphone could be turned into a personal, portable security device, to watch for unexpected intrusions into physical spaces.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/Fr0wEsISRUw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;They call it a “safe room” in your pocket, or way to defeat “evil maid” attacks, that lets you know when you’ve been targeted by a “black bag” operation. I also like to think that through Haven, we have unexpectedly created the most powerful, secure and private baby monitor system ever. By tapping into the sensors and processing power on these devices with custom software, a system could feel the vibrations of someone walking, detect the shine of a flashlight, hear the sound of a door opening (or a child crying), or see someone entering into the view of a camera. All of these “intruder alerts” are recorded on the device, so that the victim can have evidence of their unwanted guest. Even better, they can receive real-time secure and private notifications, with images and sound, as it happens, and take appropriate actions.&lt;/p&gt;
+
+&lt;p&gt;**YOU ARE THE WATCHER&lt;br /&gt;
+**&lt;/p&gt;
+
+&lt;p&gt;An important design goal of Haven, is to not require the user to share data with any third-party, or to have centralized infrastructure. It was clear that some might see Haven as a surveillance device (or “self” sous-veillance), which, regardless of who is in control of it, can be problematic and a vulnerability. Thus, it was a fundamental tenet to not require people to give up privacy, in order to gain security. The person we aim to help must have complete control of the system, the sensors and the captured data and media. In addition, the device must not simply record a stream of video, audio and sensors, hoover-ing up all things. Only when configurable sensor thresholds are crossed, is any data recorded permanently in the log. All of the processing and analysis of the sensor data happens locally on the device, and is only stored locally, and not in a cloud. The device itself can be protected by a strong password and disk encryption, to stop intruders from meddling or accessing any data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SIGNAL’D AND ONION’D&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If the intruders chooses to destroy or make off with a Haven device, thats fine. The every act of vandalism and theft is detected in progress, and the owner of the device is notified in real-time. All photos and audio can be sent remotely via notifications, ensuring the evidence is safe. Haven does currently support optional plaintext SMS notifications. This does leak some data to the mobile operator or anyone who can access your text messages, that you are using Haven.&lt;/p&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.github.io/haven/docs/preso/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img class=&#34;aligncenter wp-image-13927 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11-1024x576.jpg&#34; alt=&#34;&#34; width=&#34;945&#34; height=&#34;532&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11-1024x576.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11-300x169.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11-768x432.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11.jpg 1500w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;&lt;/a&gt;&lt;em&gt;Click to view our &lt;a href=&#34;https://guardianproject.github.io/haven/docs/preso/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online presentation on Haven&lt;/a&gt;&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;We provided SMS support because we wanted Haven to be used in parts of the world where mobile internet access isn’t available, is too expensive, or is heavily censored. The notification message sent over SMS provide minimal information to an attacker. Better than SMS, however, is the integrated support for sending fully end-to-end encrypted notifications, with photo and audio attachments, over Signal. This method allows you to use a device without a SIM card, or in airplane mode, since Signal utilizes the internet for communication, not the mobile operator network. Haven also includes support for Tor’s Onion Services, through integration with Orbot, the Tor app for Android. This allows you to activate a web service on your device, and make it accessible via a “.onion” address, which you can access from any Tor-enabled browser, like Tor Browser, Orfox or Onion Browser. This provides a surveillance-free, end-to-end encrypted channel between you and your device, through which you can access all data stored in Haven, past and present.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;INTERNET OF SHODDY THINGS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point, you might be saying to yourself “Wait, did these paranoid privacy hackers just building a surveillance camera? Are they trying to sell me on some kind of IoT crap?”. While we didn’t set out to try to address the insane amount of vulnerabilities, insecurities, and fundamental flaws that most most commercial home security devices have, we do admit that our work on Haven crosses over into that problem space. We knew that journalists, activists and others were not interested in setting up cameras and microphones watching themselves &lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt;, streaming to the cloud, as a solution to their threat. We also knew, as discussed before, that linking any solution to a centralized cloud service that asked you to trust them, also didn’t make sense.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-13929&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07-1024x576.jpg&#34; alt=&#34;&#34; width=&#34;945&#34; height=&#34;532&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07-1024x576.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07-300x169.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07-768x432.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07.jpg 1500w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What we’ve built then could be seen as a competitor to commercial solutions, except for a few key points. First, it is freely licensed, and open-source, enabling anyone to audit it, improve it, remix it, and use as they see fit. It runs on any hardware that can support the Android operating system back to version 4.1. This includes not just smartphones, but also tablets, Raspberry Pi’s, TV set top boxes and sticks, and the emerging Android Things platform. This makes it portable, battery powered, and able to run on devices that are readily available for very little money, anywhere in the world. It takes advantage of many more sensors than a typical home security product, and can easily be expanded to support more. Most importantly, all network communications can be encrypted using other open-source gold standards such as Signal and Tor. You can receive notifications from and access in real-time your Haven device anywhere in the world, completely privately, without any third-party even knowing you are doing so. This addresses the primary threat of remote network intruders, device botnets, and legal actions, as well. The goal is for someone to be able to use Haven, without anyone knowing they are.&lt;/p&gt;
+
+&lt;p&gt;With these innovations, we have set the bar for what a personal security device should be, and do. We know that many people this holiday season will be setting up new cameras around the house, on their front door, in their car… pretty much everywhere, and letting a third-party tap into all of that content. We think that Haven shows a better way, that provides just as much, if not more, peace of mind.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;THE ROAD AHEAD AND YOU!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Today, we are announcing our public beta, and beginning to promote the open-source project. Haven was originally built upon our previous work with CameraV and ProofMode, as well as a project called SecurIt from developer Marco Ziccardi (&lt;a href=&#34;https://github.com/mziccard&#34;&gt;https://github.com/mziccard&lt;/a&gt;), which is how we went from an idea to a pretty cool app in about eight months. The team at Guardian Project, has been doing the bulk of the work up to this point, but as with all of our projects, we look to expand our contributions to the community. If you are interested in this project, for your own use, as an activist, or as a developer, designer or hardware hacker, we need your help. Here’s a quick set of things to do to join:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Check out the &lt;a href=&#34;https://github.com/guardianproject/haven/issues&#34;&gt;Github issues&lt;/a&gt; and the &lt;a href=&#34;https://github.com/guardianproject/haven/projects&#34;&gt;Prototype Project board,&lt;/a&gt; pick some things to work on or provide feedback on&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Come talk with us at the Guardian Project through our points of contact: &lt;a href=&#34;https://guardianproject.info/contact&#34;&gt;https://guardianproject.info/contact&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Test Haven out on your hardware and let us know if you find any issues (see &lt;a href=&#34;http://havenapp.org&#34;&gt;havenapp.org&lt;/a&gt; for links)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Share your user stories, personas, threats and more, to ensure we are keeping your needs in mind&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Donate (Bitcoin accepted!) to support our ongoing efforts: &lt;a href=&#34;https://freedom.press/donate-support-haven-open-source-project/&#34;&gt;https://freedom.press/donate-support-haven-open-source-project/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks for reading this far, and being interested in our ongoing work, to ensure people are empowered by mobile technology, and not endangered by it. Happy Holidays, and remember: keep watch, stay safe!&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>No more “Root” features in Orbot… use Orfox &amp; VPN instead!</title>
+      <link>https://guardianproject.github.io/info/2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/</link>
+      <pubDate>Fri, 27 Oct 2017 13:02:02 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/</guid>
+      <description>&lt;p&gt;Since I first announced the available of Orbot: Tor for Android about &lt;a href=&#34;https://nathan.freitas.net/2009/10/22/orbot-proxy/&#34;&gt;8 years ago&lt;/a&gt; (wow!), myself and others have been working on various methods in which to make the capabilities of Tor available through the operating system. This post is to announce that as of the next, imminent release, &lt;a href=&#34;https://github.com/n8fr8/orbot/releases/tag/15.5.0-RC-1-multi-SDK16&#34;&gt;Orbot v15.5,&lt;/a&gt; we will no longer be supporting the Root-required “Transproxy” method. This is due to many reasons.&lt;/p&gt;
+
+&lt;p&gt;First, it turns out that allowing applications to get “root” access on your device seems like a good idea, it can also be seen as huge security hole. I am on the fence myself, but considering that the ability to access root features hasn’t been standardized as part of Android, which 8 years ago I hoped it would, it means there are a whole variety of ways that this capability is managed and safeguarded (or not, in most cases). At this point in time, given the sophistication we are seeing mobile malware and rootkits, it seems like a capability that we did not want to focus time and energy on promoting.&lt;/p&gt;
+
+&lt;p&gt;Second, for those who do want to use root features, and know what they are doing, there are a bunch of other apps that do that job better than Orbot did. I admit, we let our code in that area degrade a bit, as the dev team themselves moved away from phones with root features. So, instead, if you really want to do cool things with iptables rules, you can use AFWall+, available on &lt;a href=&#34;https://f-droid.org/packages/dev.ukanth.ufirewall/&#34;&gt;F-Droid&lt;/a&gt; and &lt;a href=&#34;https://play.google.com/store/apps/details?id=dev.ukanth.ufirewall&#34;&gt;Google Play&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone &#34; src=&#34;https://raw.githubusercontent.com/ukanth/afwall/0502e6f17ceda08069720ff2f260902690e65e9b/screenshots/Main_2.0.png&#34; width=&#34;240&#34; height=&#34;384&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to make AFWall+ work with Orbot, you can follow Mike Perry’s excellent &lt;a href=&#34;https://blog.torproject.org/mission-impossible-hardening-android-security-and-privacy&#34;&gt;“Mission Impossible Android”&lt;/a&gt; guide in which he provides “DroidWall Scripts” necessary to enable automatic Tor routing on boot. You can also check out the sadly no longer maintained, but useful, &lt;a href=&#34;https://orwall.org/&#34;&gt;Orwall app&lt;/a&gt; which was meant to take on all the root features of Orbot.&lt;/p&gt;
+
+&lt;p&gt;Third, we really, really think it is a bad idea to just send all of the traffic of your device through the Tor network. While it sounds like a great idea in theory, much like many “magical” Tor router kickstarter projects, it turns out that unless you can be assured an app is using TLS properly, then there is a chance that bad things could happen to your traffic as it exits the Tor network. Rather than promote some kind of auto-magical “enable Tor for my whole device”, we want to focus on ways to enable specific apps to go through Tor, in a way we can ensure is as safe as possible.&lt;/p&gt;
+
+&lt;p&gt;For instance, we now have an excellent browser app, &lt;a href=&#34;https://guardianproject.info/apps/orfox&#34;&gt;Orfox&lt;/a&gt;, that is based on Tor Browser, and works perfectly with Orbot. If you just want to access the web and onion services, like the &lt;a href=&#34;https://open.nytimes.com/https-open-nytimes-com-the-new-york-times-as-a-tor-onion-service-e0d0b67b7482&#34;&gt;new New York Times onion&lt;/a&gt; at &lt;a href=&#34;https://www.nytimes3xbfgragh.onion/&#34;&gt;https://www.nytimes3xbfgragh.onion/&lt;/a&gt;, then just use &lt;a href=&#34;https://guardianproject.info/apps/orfox&#34;&gt;Orfox&lt;/a&gt;. There is no need for any fancy rooting or transproxying. There are also many others that supporting routing through Orbot directly, such as Conversations.im, Facebook for Android, DuckDuckGo, F-Droid, OpenArchive and many more to come! If you are interested in enabling your app to work with Orbot, check out our &lt;a href=&#34;https://github.com/guardianproject/netcipher&#34;&gt;NetCipher SDK&lt;/a&gt;, which makes it easy to do just that.&lt;/p&gt;
+
+&lt;p&gt;Fourth, Orbot has for some time supported use of Android’s VPN features as a way to tunnel traffic through Tor. You just open the left-side menu, and tap “Apps VPN Mode” or tap on “Apps…” on the main screen. Choose the apps you want to run through Tor, press the back button, and then the VPN will start up, rerouting outbound traffic back through the local Tor port. This method is 100% support by Android, and requires no vulnerabilities or exploits of your device to gain root access.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-13829&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3-169x300.png&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3.png 1080w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-13830&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2-169x300.png&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2.png 1080w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-13831&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1-169x300.png&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1.png 1080w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;br /&gt;
+Orbot Apps VPN view, home screen with Apps… button, and VPN sidebar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I know that even with all of these justifications, some users will be disappointed with the fact we have removed root features from Orbot. Perhaps that will motivate some to reignite development of Orwall, or maybe help us make the VPN features in Orbot work even better. Another route is to support the &lt;a href=&#34;https://blog.torproject.org/mission-impossible-hardening-android-security-and-privacy&#34;&gt;Tor’s Android phone prototype&lt;/a&gt; or perhaps integrate Tor “root” features directly into a community Android OS project like Copperhead or Legacy. We would be happy to see all of these happen.&lt;/p&gt;
+
+&lt;p&gt;For us, though, removing root means we can focus on making Orbot more streamlined, more stable, and more compatible with Android, for our 2 million+ active users, who are mostly focused on finding an easy solution for unblocking sites and apps, and allowing them to communicate and browse freely without fear of reprisal.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Combating “Fake News” With a Smartphone “Proof Mode”</title>
+      <link>https://guardianproject.github.io/info/2017/02/24/combating-fake-news-with-a-smartphone-proof-mode/</link>
+      <pubDate>Fri, 24 Feb 2017 02:10:47 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/02/24/combating-fake-news-with-a-smartphone-proof-mode/</guid>
+      <description>&lt;p&gt;We have been working for many years with our partners at &lt;a href=&#34;https://witness.org&#34;&gt;WITNESS&lt;/a&gt;, a leading human rights media training and advocacy organization, to figure out how best to turn smartphone cameras into tools of empowerment for activists. While it is often enough to use the visual pixels you capture to create awareness or pressure on an issue, sometimes you want those pixels to actually be treated as evidence. This means, you want people to trust what they see, to know it hasn’t been tampered with, and to believe that it came from the time, place and person you say it came from.&lt;/p&gt;
+
+&lt;p&gt;Enter, &lt;a href=&#34;https://github.com/guardianproject/proofmode&#34;&gt;&lt;strong&gt;ProofMode&lt;/strong&gt;&lt;/a&gt;, a light, minimal “reboot” of our more heavyweight, verified media app, &lt;a href=&#34;https://guardianproject.info/apps/camerav&#34;&gt;CameraV&lt;/a&gt;. Our aim was to create a lightweight (&amp;lt; 3MB!), almost invisible utility (minimal battery impact!), that you can run all of the time on your phone (no annoying notifications or popups), that automatically adds extra digital proof data to all photos and videos you take. This data can then be easily shared, when you really need it, through a “Share Proof” share action, to anyone you choose over email or a messaging app, or uploaded to a cloud service or reporting platform.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-173908.jpg&#34;&gt;&lt;img class=&#34;size-medium wp-image-13520 alignleft&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-173908-169x300.jpg&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-173908-169x300.jpg 169w, https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-173908.jpg 540w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174004.jpg&#34;&gt;&lt;img class=&#34;size-medium wp-image-13521 alignleft&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174004-169x300.jpg&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174004-169x300.jpg 169w, https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174004.jpg 540w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174056.jpg&#34;&gt;&lt;img class=&#34;size-medium wp-image-13522 alignnone&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174056-169x300.jpg&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174056-169x300.jpg 169w, https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174056.jpg 540w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;On the technical front, what the app is doing is automatically generating an OpenPGP key for this installed instance of the app itself, and using that to automatically sign all photos and videos at time of capture. A sha256 hash is also generated, and combined with a snapshot of all available device sensor data, such as GPS location, wifi and mobile networks, altitude,  device language, hardware type, and more. This is also signed, and stored with the media. All of this happens with no noticeable impact on battery life or performance, every time the user takes a photo or video. We have been running it for months on fairly old, low end phones, and you just forget it is happening.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174146.jpg&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-13542&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174146-169x300.jpg&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174146-169x300.jpg 169w, https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174146.jpg 540w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;   &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174156.jpg&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-13544&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174156-169x300.jpg&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174156-169x300.jpg 169w, https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170222-174156.jpg 540w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;While we are very proud of the work we did with the CameraV and InformaCam projects, the end results was a complex application and novel data format that required a great deal of investment by any user or community that wished to adopt it.&lt;/em&gt; Furthermore, CameraV is an app that you have to decide and remember to use, in a moment of crisis. With ProofMode, we both wanted to simplify the adoption of the tool, and make it nearly invisible to the end-user, while making it the adoption of the tool by organizations painless through simple formats like CSV and known formats like PGP signatures.&lt;/p&gt;
+
+&lt;p&gt;The source and direct APK downloads are available on Github: &lt;a href=&#34;https://github.com/guardianproject/proofmode&#34;&gt;https://github.com/guardianproject/proofmode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The beta release is also available today for Android phones on &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.witness.proofmode&#34;&gt;Google Play&lt;/a&gt;. We hope to have an iPhone version in beta in the next few months.&lt;/p&gt;
+
+&lt;p&gt;We have also published a sample batch proof data set on Github here: &lt;a href=&#34;https://github.com/guardianproject/proofmode/tree/master/samples/sample-proof-1&#34;&gt;https://github.com/guardianproject/proofmode/tree/master/samples/sample-proof-1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Our design goals included the following:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run all of the time in the background without noticeable battery, storage or network impact&lt;/li&gt;
+&lt;li&gt;Provide a no-setup-required, automatic new user experience that works without requiring training&lt;/li&gt;
+&lt;li&gt;Use strong cryptography for strong identity and verification features, but not encryption&lt;/li&gt;
+&lt;li&gt;Produce “proof” sensor data formats that can be easily parse, imported by existing tools (CSV)&lt;/li&gt;
+&lt;li&gt;Do not modify the original media files; all proof metadata storied in separate file&lt;/li&gt;
+&lt;li&gt;Support chain of custody needs through automatic creation of sha256 hashes and PGP signatures&lt;/li&gt;
+&lt;li&gt;Do not require a persistent identity or account generation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also were able to take advantage of the new Android “Quick Settings” developer API, to add a ProofMode toggle button right along side other system functions like Wifi, Location, Bluetooth and more. This fulfills a vision that WITNESS has had for a while in mainstreaming the concept of our prototype into mainstream adoption, giving every citizen journalist a quick mode to activate when their moment arrives.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170223-220633.png&#34;&gt;&lt;img class=&#34;alignnone wp-image-13532 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170223-220633-576x1024.png&#34; width=&#34;576&#34; height=&#34;1024&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170223-220633-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170223-220633-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170223-220633-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2017/02/Screenshot_20170223-220633.png 1080w&#34; sizes=&#34;(max-width: 576px) 100vw, 576px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;You can read a bit more in the project &lt;a href=&#34;https://github.com/guardianproject/proofmode/blob/master/README.md&#34;&gt;README&lt;/a&gt; on the workflow we imagine being used for all of this. What we hope is that the ProofMode app is simple and low impact enough that potential users will install and forget that it is there. It will go along doing its business quietly without fuss, until the user realizes they have taken a photo or video that might have some value as digital evidence. Then, using the SHARE PROOF action, they can send their proof dataset off to an organization, journalist, lawyer, or other advocate that would be able to verify the chain of custody and integrity of the files and proof using off the shelf OpenPGP and CSV visualization tools. While we have a bit more work to do making the verification and visualization process easier, we already have many partners at human rights organizations and in newsrooms who are skilled and capable of working with this kind of data today.&lt;/p&gt;
+
+&lt;p&gt;If you’d like to learn more about the &lt;a href=&#34;https://guardianproject.info/apps/camerav&#34;&gt;CameraV&lt;/a&gt; app and our collaboration with &lt;a href=&#34;https://witness.org&#34;&gt;WITNESS&lt;/a&gt; and &lt;a href=&#34;https://www.facebook.com/ColetivoPapoReto/&#34;&gt;Coletivo Papo Reto&lt;/a&gt; video activist group in Brazil, please watch this video below from the &lt;a href=&#34;http://www.aljazeera.com/programmes/rebelgeeks/2015/12/bigger-brother-151216102151145.html&#34;&gt;Al Jazeera “Rebel Geeks” documentary&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/ssbezlRkxt8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OpenArchive: Free &amp; Secure Mobile Media Sharing #DWebSummit</title>
+      <link>https://guardianproject.github.io/info/2016/06/07/openarchive-free-secure-mobile-media-sharing-#dwebsummit/</link>
+      <pubDate>Tue, 07 Jun 2016 15:37:03 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/06/07/openarchive-free-secure-mobile-media-sharing-#dwebsummit/</guid>
+      <description>&lt;p&gt;I am excited to share another new “mini app” effort we have joined up with, as part of work we are doing to create simple, focused tools that solve a single issue. We also are aiming to builds apps that are 1 to 3MB in size, and work on Android phones back to version 2.3, in order to maximize accessibility for a global audience.  &lt;a href=&#34;https://open-archive.net&#34;&gt;&lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt;&lt;/a&gt; is one of these efforts. It is a project led by &lt;a href=&#34;https://www.aaronswartzday.org/openarchive/&#34;&gt;Natalie Cadranel&lt;/a&gt;, who received a &lt;a href=&#34;https://www.knightfoundation.org/grants/201448513/&#34;&gt;Knight Foundation prototype grant in 2014&lt;/a&gt;. The initial work was done by our partners at &lt;a href=&#34;https://www.scal.io/&#34;&gt;Scal.io&lt;/a&gt;, and continued now by the core Guardian Project team. The app is now in &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.opendasharchive.openarchive.release&#34;&gt;stable beta&lt;/a&gt; and ready for &lt;a href=&#34;https://github.com/OpenArchive/openarchive/issues&#34;&gt;wider testing&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  Here is a brief description from the site at &lt;a href=&#34;https://open-archive.net&#34;&gt;open-archive.net&lt;/a&gt;:
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;div&gt;
+  &lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt; is a free, &lt;span class=&#34;il&#34;&gt;open&lt;/span&gt;-source mobile application, currently for Android, dedicated to maintaining the privacy, provenance, and preservation of your media. It enables you to add metadata and Creative Commons licensing to your audiovisual media and then send it to the Internet &lt;span class=&#34;il&#34;&gt;Archive&lt;/span&gt; over Tor; offering more agency over your media, while protecting civil liberties, and increasing interoperability for those who want to find and reuse/remix it in the future.
+&lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&#39;gallery-12&#39; class=&#39;gallery galleryid-13356 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-105614.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-105614-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160805.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160805-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160818.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160818-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160829.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160829-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160837.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160837-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160912.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160912-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For now, we aim for the app to be the easiest and most secure way to publish photos, video and audio to the Internet &lt;span class=&#34;il&#34;&gt;Archive from your Android device, be it a phone, tablet and soon a Chromebook. It will even login and upload &lt;/span&gt;over the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt; if you have &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; installed.&lt;/p&gt;
+
+&lt;p&gt;We see this as a first step towards a more distributed, decentralized way of managing and sharing your personal media, and publishing it and synchronizing it to different places and people, in different ways. This includes distributing media through nearby non-Internet networks such &lt;a href=&#34;https://github.com/n8fr8/talks/blob/master/wind_update_2015/Wind%20Update%20-%20October%202015.pdf&#34;&gt;Wind&lt;/a&gt;, becoming a a &lt;a href=&#34;http://librarybox.us&#34;&gt;LibraryBox&lt;/a&gt; node, publishing through &lt;a href=&#34;https://onionshare.org/&#34;&gt;OnionShare&lt;/a&gt;, notarizing hrough &lt;a href=&#34;https://stamp.io&#34;&gt;Stamp.io&lt;/a&gt;‘s Blockchain-based API, and intergalactic sharing via &lt;a href=&#34;https://ipfs.io/&#34;&gt;IPFS&lt;/a&gt;. This vision is why we are excited about the &lt;a href=&#34;http://www.decentralizedweb.net/&#34;&gt;#DWebSummit&lt;/a&gt; going on this week, and future gatherings related to building less centralized online ecosystems.&lt;/p&gt;
+
+&lt;div&gt;
+   The &lt;a href=&#34;https://www.aaronswartzday.org/openarchive/&#34;&gt;benefits of this work are manyfold&lt;/a&gt;, one of which is that if anyone needs a freely licensed video of &lt;a href=&#34;https://archive.org/details/robot-fish-----------------r6v6&#34;&gt;cute kids watching robot fish swim&lt;/a&gt;, you can now have easy access to one:
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div class=&#34;arve-wrapper&#34; data-mode=&#34;normal&#34; data-provider=&#34;archiveorg&#34; id=&#34;arve-robot-fish-----------------r6v6&#34; style=&#34;max-width:945px;&#34; itemscope itemtype=&#34;http://schema.org/VideoObject&#34;&gt;
+    &lt;div class=&#34;arve-embed-container&#34; style=&#34;padding-bottom:56.250000%&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  As all of this work is open-source and freely licensed, all help is welcome with testing, feedback, design, code, and if you love it, then sharing with others and spreading the word:
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Github: &lt;a href=&#34;https://github.com/OpenArchive/openarchive&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; data-saferedirecturl=&#34;https://www.google.com/url?hl=en&amp;q=https://github.com/OpenArchive/openarchive&amp;source=gmail&amp;ust=1465411952609000&amp;usg=AFQjCNEz3C4AlQlkbvaltKWanhjosLQdhg&#34;&gt;&lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&lt;wbr /&gt;&lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt;/&lt;span class=&#34;il&#34;&gt;openarchive&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Signed release APKs: &lt;a href=&#34;https://github.com/OpenArchive/openarchive/releases/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; data-saferedirecturl=&#34;https://www.google.com/url?hl=en&amp;q=https://github.com/OpenArchive/openarchive/releases/tag/0.0.9-APK-release&amp;source=gmail&amp;ust=1465411952609000&amp;usg=AFQjCNFTspI29-f7KT4gNUbNogeo4n_zEQ&#34;&gt;&lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&lt;wbr /&gt;&lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt;/&lt;span class=&#34;il&#34;&gt;openarchive&lt;/span&gt;/&lt;wbr /&gt;releases/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Play: &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.opendasharchive.openarchive.release&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; data-saferedirecturl=&#34;https://www.google.com/url?hl=en&amp;q=https://play.google.com/store/apps/details?id%3Dnet.opendasharchive.openarchive.release&amp;source=gmail&amp;ust=1465411952609000&amp;usg=AFQjCNHw6u_fEXblnlZa-G30124MAbfPRw&#34;&gt;&lt;a href=&#34;https://play.google.com/store/&#34;&gt;https://play.google.com/store/&lt;/a&gt;&lt;wbr /&gt;apps/details?id=net.&lt;wbr /&gt;opendasharchive.&lt;span class=&#34;il&#34;&gt;openarchive&lt;/span&gt;.&lt;wbr /&gt;release&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/open_archive&#34;&gt;@open_archive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Copperhead, Guardian Project and F-Droid Partner to Build Open, Verifiably Secure Mobile Ecosystem</title>
+      <link>https://guardianproject.github.io/info/2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/</link>
+      <pubDate>Mon, 28 Mar 2016 13:42:36 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/</guid>
+      <description>&lt;p&gt;Three open-source projects haved joined together to announce a new partnership to create an open, verifiably secure mobile ecosystem of software, services and hardware. Led by the work of the Toronto-based &lt;a href=&#34;https://copperhead.co/android/&#34;&gt;CopperheadOS&lt;/a&gt; team on securing the core Android OS, &lt;a href=&#34;https://guardianproject.info&#34;&gt;Guardian Project&lt;/a&gt; and &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; have joined in to partner on envisioning and developing a full mobile ecosystem. The goal is to create a solution that can be verifiably trusted from the operating system,  through the network and network services, all the way up to the app stores and apps themselves. Through a future planned crowdfunded and commercial offering, the partnership will provide affordable off-the-shelf solutions, including device hardware and self-hosted app and update distribution servers, for any individual and organizations looking for complete mobile stacks they can trust.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update 30 March 2016: Copperhead has announced their &lt;a href=&#34;https://copperhead.co/blog/2016/03/29/crowdfunding-partnership-announced&#34;&gt;crowdfunding plans here&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://copperhead.co/android/&#34;&gt;CopperheadOS&lt;/a&gt; is a hardened open-source Android based on AOSP, that is available for download and installation on many Nexus devices. The Guardian Project develops popular free and open-source privacy-enhancing apps like Orbot (Tor for Android), ChatSecure, and ObscuraCam, and software libraries like NetCipher, SQLCipher and PanicKit, for developers who want to enable similar features in their own apps. F-Droid is an installable catalogue of free and open source Android software, that is built into CopperheadOS, as the default app store. It enables decentralized and verifiably secure app distribution by any individual or organization.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://copperhead.co/android/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone wp-image-13280 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/copperheados-1024x520.jpg&#34; alt=&#34;copperheados&#34; width=&#34;780&#34; height=&#34;396&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/copperheados-1024x520.jpg 1024w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados-300x152.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados-768x390.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/copperheados.jpg 1311w&#34; sizes=&#34;(max-width: 780px) 100vw, 780px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466.jpg&#34;&gt;&lt;img class=&#34;alignleft wp-image-13310 size-medium&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-224x300.jpg&#34; alt=&#34;IMG_0466&#34; width=&#34;224&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-224x300.jpg 224w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-768x1028.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466-765x1024.jpg 765w, https://guardianproject.info/wp-content/uploads/2016/03/IMG_0466.jpg 1446w&#34; sizes=&#34;(max-width: 224px) 100vw, 224px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;“I have been a happy CopperheadOS user since the first moment I installed it”, says Nathan Freitas, Founder and Director of Guardian Project, ” even with running it on a two-generation old, very inexpensive Nexus 5 device. I know I will always have the latest security updates immediately, and that everything on my device is under my control.”&lt;/p&gt;
+
+&lt;p&gt;“My Copperhead Nexus is the go-to device in my bag, ” says Freitas, “when I am handling sensitive information, find myself on a network I don’t trust, or am otherwise wary about my communication being tracked, intercepted or tampered with.”&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Hans-Christoph Steiner who leads the Guardian Project’s developer platform says “Copperhead with F-Droid and Orbot provides all of the benefits of a smartphone, without the security and privacy downsides introduced by the major vendors, carriers and closed app stores. By building in F-Droid, Copperhead guarantees its users have direct access to the best free and open software, built directly from source-code in a trusthworthy, verifiable way”. Mr. Steiner presented on his work with F-Droid and building &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;“private, unblockable app stores”&lt;/a&gt; at &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;FOSDEM 2016&lt;/a&gt; in January.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;alignnone wp-image-13306 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-1024x572.jpg&#34; alt=&#34;handsatfosdem&#34; width=&#34;945&#34; height=&#34;528&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-1024x572.jpg 1024w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-300x168.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-768x429.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem-360x200.jpg 360w, https://guardianproject.info/wp-content/uploads/2016/03/handsatfosdem.jpg 1274w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+_Learn more about &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34;&gt;F-Droid&lt;/a&gt; from this &lt;a href=&#34;https://fosdem.org/2016/schedule/event/fdroidappstore/&#34;&gt;FOSDEM 2016 talk&lt;/a&gt; (watch the &lt;a href=&#34;http://video.fosdem.org/2016/h1309/f-droid-building-the-private-unblockable-app-store.mp4&#34; target=&#34;_blank&#34;&gt;video here&lt;/a&gt;)_&lt;/p&gt;
+
+&lt;p&gt;Collectively, this partnership creates a global team of information security researchers, forensic analysts, software developers, designers and engaged users, looking to move the state of the art forward for open, verifiably secure and privacy-enhancing mobile technology. The groups hope to expand the effort to include other mobile OS teams, application developers and even hardware developers interested in having the same kind of impact on the privacy and security of mobile computing.&lt;/p&gt;
+
+&lt;p&gt;James Donaldson of Copperhead says “It’s important for Android users to have a privacy minded viable alternative to closed-source solutions when contemplating mobile security. Teaming up with great partners like F-Droid and Guardian Project allows us to offer our users both security and a great experience with all of the core features they need.”&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info&#34;&gt;Guardian Project&lt;/a&gt; is an open-source effort based in New York, with a global community of contributors and partners. &lt;a href=&#34;https://copperhead.co&#34;&gt;Copperhead&lt;/a&gt; is an information security firm located in Toronto, Canada, specializing in protecting data and devices from unauthorized access. &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; is a non-profit volunteer project, and is operated by F-Droid Limited, a non-profit organisation registered in England (no. 8420676).&lt;/p&gt;
+
+&lt;p&gt;Contact:&lt;/p&gt;
+
+&lt;p&gt;Nathan Freitas / +1 718 569 7272&lt;br /&gt;
+&lt;a href=&#34;&amp;amp;#x6d;&amp;amp;#x61;ilt&amp;amp;#x6f;&amp;amp;#x3a;&amp;amp;#x6e;ath&amp;amp;#x61;&amp;amp;#x6e;&amp;amp;#x40;gua&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;anp&amp;amp;#x72;&amp;amp;#x6f;&amp;amp;#x6a;ect&amp;amp;#x2e;&amp;amp;#x69;&amp;amp;#x6e;fo&#34;&gt;nathan@&amp;#x67;&amp;#x75;&amp;#x61;&amp;#x72;&amp;#x64;&amp;#x69;&amp;#x61;nproject&amp;#x2e;&amp;#x69;&amp;#x6e;&amp;#x66;&amp;#x6f;&lt;/a&gt; (XMPP-OTR, OpenPGP: &lt;a href=&#34;https://pgp.mit.edu/pks/lookup?search=0xA801183E69B37AA9&amp;op=index&#34; target=&#34;_blank&#34;&gt;0x69B37AA9&lt;/a&gt;  / &lt;a href=&#34;https://keybase.io/n8fr8&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://keybase.io/n8fr8&#34;&gt;https://keybase.io/n8fr8&lt;/a&gt;&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;James Donaldson / Copperhead&lt;br /&gt;
+&lt;a href=&#34;mailto:media@&amp;amp;#x63;&amp;amp;#x6f;&amp;amp;#x70;&amp;amp;#x70;&amp;amp;#x65;&amp;amp;#x72;&amp;amp;#x68;&amp;amp;#x65;&amp;amp;#x61;&amp;amp;#x64;&amp;amp;#x2e;&amp;amp;#x63;o&#34;&gt;m&amp;#x65;di&amp;#x61;@&amp;#x63;&amp;#x6f;p&amp;#x70;er&amp;#x68;ea&amp;#x64;.&amp;#x63;o&lt;/a&gt; (OpenPGP: &lt;a href=&#34;https://pgp.mit.edu/pks/lookup?search=0xDC1DEA5E&amp;amp;op=index&#34;&gt;0xDC1DEA5E&lt;/a&gt;&lt;a href=&#34;https://pgp.mit.edu/pks/lookup?op=get&amp;amp;search=0x2621AB13DC1DEA5E&#34;&gt; &lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ChatSecure for Android v14 is FINALLY here!</title>
+      <link>https://guardianproject.github.io/info/2014/09/10/chatsecure-for-android-v14-is-finally-here/</link>
+      <pubDate>Wed, 10 Sep 2014 08:35:39 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/09/10/chatsecure-for-android-v14-is-finally-here/</guid>
+      <description>&lt;p&gt;I am so happy to announce that &lt;strong&gt;ChatSecure for Android v14 IS FINALLY HERE!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;BUT This is our first “release candidate” of v14 for public use, and while we love it dearly, you may want to wait for 14.0.1 for us to work out any hiccups.&lt;/p&gt;
+
+&lt;p&gt;The update should be out on Google Play shortly, and FDroid in the next few days. Otherwise, you can always download the APK direct from us:&lt;/p&gt;
+
+&lt;pre style=&#34;color: #000000;&#34;&gt;APK: &lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v14.0.0.apk&#34;&gt;https://guardianproject.info/releases/ChatSecure-v14.0.0.apk&lt;/a&gt;
+Sig: &lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v14.0.0.apk.asc&#34;&gt;https://guardianproject.info/releases/ChatSecure-v14.0.0.apk.asc
+
+&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/09/chatsecurev14.png&#34;&gt;&lt;img class=&#34;margin:6px; alignleft wp-image-12622 size-medium&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/chatsecurev14-168x300.png&#34; alt=&#34;chatsecurev14&#34; width=&#34;168&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/chatsecurev14-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2014/09/chatsecurev14-450x800.png 450w, https://guardianproject.info/wp-content/uploads/2014/09/chatsecurev14.png 540w&#34; sizes=&#34;(max-width: 168px) 100vw, 168px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v14.0.0.apk.asc&#34;&gt;
+&lt;/a&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Major UI update for fun and enjoyment!&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Easy to add and verify new contacts with QR codes&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Improved encrypted file sharing!&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Updated SSL/TLS settings and secure code libraries&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;20% reduction in size!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;PLEASE CONTACT US with any upgrade problems!&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Source tag: &lt;a href=&#34;https://github.com/guardianproject/ChatSecureAndroid/releases/tag/14.0.0&#34;&gt;https://github.com/guardianproject/ChatSecureAndroid/releases/tag/14.0.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Full changelog for all the v13/v14 work is here: &lt;a href=&#34;https://github.com/guardianproject/ChatSecureAndroid/blob/master/CHANGELOG&#34;&gt;https://github.com/guardianproject/ChatSecureAndroid/blob/master/CHANGELOG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ChatSecure 13.2: Important Beta!</title>
+      <link>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</link>
+      <pubDate>Tue, 05 Aug 2014 11:35:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</guid>
+      <description>&lt;p&gt;Today is the first public beta of ChatSecure v13.2, an important update of the user interface, networking code, and overall stability. We’ve spent the last six months tracking down crashes, memory leaks and performance issues, and have reached a stable, functional point which we want to share for public use. Reliability and simplicity our the goals, as we move towards v14 in the next few months.&lt;/p&gt;
+
+&lt;p&gt;This beta also features a new account setup wizard that we are eager for feedback on. Our goal is to enable new users to have a much simpler experience in setting up ChatSecure to connect to existing or create new accounts. We have also provided a “one-click burner” option to quickly create throwaway accounts, that require Tor and OTR encryption always, for chatting with a single contact or even just a single conversation.&lt;/p&gt;
+
+&lt;div id=&#39;gallery-10&#39; class=&#39;gallery galleryid-12577 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122247.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122247-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122226.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122226-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122048.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122048-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122039.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122039-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121908.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121908-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/sidebar.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/sidebar-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121532.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121532-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#39;clear: both&#39; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We have also removed some features (for now), with the goal of focus on stripping down the experience, and then building it back up again. For example, there is now ONE contact list, that merges all contacts from all accounts together. It can be easily searched, and you don’t have to worry about which account is active – you just selected the person you want to communicate with, and we know which account they are associated with.&lt;/p&gt;
+
+&lt;p&gt;We have also removed the ability to manually set presence and status (for now), while we re-think how they should work in a mobile context a bit more. The vast majority of our users do not change either value anyhow, but we do know that smartly managing online vs away, especially if you are logged in from multiple locations to the same account, is important. Expect an update here shortly, and we’d love to have your feedback and fresh ideas on mobile presence.&lt;/p&gt;
+
+&lt;p&gt;You can currently access the beta directly via APK download (below),  through our &lt;a href=&#34;https://guardianproject.info/2014/06/06/automatic-private-distribution-of-our-test-builds/&#34;&gt;F-Droid Test Build “Nightlies” Repo&lt;/a&gt;, or through our &lt;a href=&#34;https://plus.google.com/communities/108480576214602821006&#34;&gt;Google+ Community Beta Access&lt;/a&gt;. We will roll out to our release repos and Google Play public once we get through our initial feedback on the beta.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Download ChatSecure v13.2 Beta 1 Now&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignleft size-full wp-image-12579&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/chatsecure-latest-qr.png&#34; alt=&#34;chatsecure-latest-qr&#34; width=&#34;123&#34; height=&#34;123&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/08/chatsecure-latest-qr.png 123w, https://guardianproject.info/wp-content/uploads/2014/08/chatsecure-latest-qr-100x100.png 100w&#34; sizes=&#34;(max-width: 123px) 100vw, 123px&#34; /&gt;&lt;br /&gt;
+APK: &lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v13.2.0-BETA-1.apk&#34;&gt;https://guardianproject.info/releases/ChatSecure-v13.2.0-BETA-1.apk&lt;br /&gt;
+&lt;/a&gt;&lt;br /&gt;
+PGP Sig: &lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v13.2.0-alpha-10.apk.asc&#34;&gt;https://guardianproject.info/releases/ChatSecure-v13.2.0-alpha-10.apk.asc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;The source is tagged here: &lt;a href=&#34;https://github.com/guardianproject/ChatSecureAndroid/releases/tag/13.2.0-beta-1&#34;&gt;https://github.com/guardianproject/ChatSecureAndroid/releases/tag/13.2.0-beta-1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The release includes fixes from our completed &lt;a href=&#34;https://dev.guardianproject.info/projects/gibberbot/issues?utf8=%E2%9C%93&amp;amp;set_filter=1&amp;amp;f%5B%5D=fixed_version_id&amp;amp;op%5Bfixed_version_id%5D=%3D&amp;amp;v%5Bfixed_version_id%5D%5B%5D=102&amp;amp;f%5B%5D=&amp;amp;c%5B%5D=tracker&amp;amp;c%5B%5D=status&amp;amp;c%5B%5D=priority&amp;amp;c%5B%5D=subject&amp;amp;c%5B%5D=assigned_to&amp;amp;c%5B%5D=updated_on&amp;amp;c%5B%5D=due_date&amp;amp;group_by=&#34;&gt;v13 milestone&lt;/a&gt;, and our &lt;a href=&#34;https://dev.guardianproject.info/versions/121&#34;&gt;v14 milestone “Armadillo’s Agram”&lt;/a&gt;, which you can view on our project tracker (&lt;a href=&#34;https://dev.guardianproject.info/projects/gibberbot/&#34;&gt;https://dev.guardianproject.info/projects/gibberbot/&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turn Your Device Into an App Store</title>
+      <link>https://guardianproject.github.io/info/2013/11/18/turn-your-device-into-an-app-store/</link>
+      <pubDate>Mon, 18 Nov 2013 16:27:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/18/turn-your-device-into-an-app-store/</guid>
+      <description>&lt;p&gt;As we’ve touched upon in &lt;a href=&#34;https://guardianproject.info/2013/11/05/setting-up-your-own-app-store-with-f-droid/&#34;&gt;previous blog posts &lt;/a&gt; the Google Play model of application distribution has some disadvantages. Google does not make the Play store universally available, instead limiting availability to a subset of countries. Using the Play store to install apps necessitates both sharing personal information with Google and enabling Google to remotely remove apps from your device (colloquially referred to as &lt;a href=&#34;http://www.engadget.com/2008/10/16/google-implemented-an-android-kill-switch-those-rascals/&#34;&gt;having a ‘kill switch’&lt;/a&gt;). Using the Play store also requires a functional data connection (wifi or otherwise) to allow apps to be downloaded. Often there is a need to quickly bootstrap users during training sessions in countries with unreliable/restricted data connectivity, or in extreme cases, &lt;a href=&#34;http://www.nytimes.com/2011/01/29/technology/internet/29cutoff.html?_r=0&#34;&gt;no internet connectivity at all&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org/&#34;&gt;F-Droid&lt;/a&gt; addresses many of these concerns, but still requires a functional data connection in order to access the repository housing applications available for install. Wouldn’t it be great if there was an easy way for users to share applications amongst themselves, in absence of a reliable data connection? Today we would like to announce initial steps the Guardian Project is taking to enable this exact functionality. We’ve been working on a prototype application capable of building F-Droid repositories &lt;strong&gt;on-device&lt;/strong&gt;, allowing users to share apps they already have installed to other users through F-Droid. In this way savvy users can quickly and securely share applications they already know and trust with friends and family without requiring a central market/repository or a reliable internet connection.&lt;/p&gt;
+
+&lt;p&gt;To start, we’ve built a stand-alone prototype application we call “_&lt;strong&gt;Kerplapp&lt;/strong&gt;_” (as in &lt;em&gt;Kerplop for Apps)&lt;/em&gt;. Using Kerplapp an established user can select applications already installed on their phone that they wish to make available to other users. Using the selected applications Kerplapp builds a &lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository&#34;&gt;simple binary F-Droid repostiory&lt;/a&gt; on the user’s device. The local on-device repository is then made available over a WiFi connection to other users on the local area network. Kerplapp will even display a QR code with the information required to add the local Kerplapp repo as a source repository for an F-Droid client running on another device. We hope to eventually merge our work back into the official F-droid Android client, but while we work out the kinks the Kerplapp application operates side-by-side with the F-Droid client app.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_11966&#34; style=&#34;width: 190px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-11966&#34; class=&#34;size-medium wp-image-11966&#34; alt=&#34;Sharing access to a Kerplapp repo with a QR code.&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48-180x300.png&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48-614x1024.png 614w, https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48.png 768w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-11966&#34; class=&#34;wp-caption-text&#34;&gt;
+    Sharing access to a Kerplapp repo with a QR code.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Building on top of F-Droid has a number of advantages. First, we can directly benefit from the tremendous effort and success of the F-Droid project! We’ve been actively contributing improvements &lt;a href=&#34;https://gitorious.org/f-droid/fdroidclient/merge_requests/39&#34;&gt;back to both the F-droid client&lt;/a&gt; and &lt;a href=&#34;https://gitorious.org/f-droid/fdroidserver/merge_requests/127&#34;&gt;the F-droid server&lt;/a&gt;, making it easier for everyone to set up new F-Droid repos and share connection details. Secondly, by using a binary F-Droid repository we can ensure that when users share apps between each other that the apps will continue to receive updates through other channels. That is, if I share an app with you through Kerplapp you will be able to install updates to the app from other F-Droid binary repos and other Kerplapp users – wherever the app and its updates are available with the same APK signature. The F-Droid client will do the hard work of determining what updates are available and compatible with your device&lt;/p&gt;
+
+&lt;p&gt;There’s a lot of work left to be done! One of our short term goals include enabling Bonjour support so that the F-Droid client can find repositories on the local network without requiring them to be added manually. We’re interested in supporting device to device app transfer over a number of channels, starting with HTTPS and eventually adding support for bluetooth and NFC. Building on the success of ChatSecure we’re actively working on supporting F-Droid app transfer over &lt;a href=&#34;https://dev.guardianproject.info/projects/gibberbot/wiki/OTRDATA_Specifications&#34;&gt;OTR-Data&lt;/a&gt;, the ChatSecure proposal for in-band OTR encrypted file transfers. With F-Droid as an OTR-DATA endpoint we can support peer to peer app transfer over a trusted, authenticated, and encrypted channel. We’re also exploring how we can use the OTR keys your contacts already trust to &lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Signing&#34;&gt;sign the F-Droid repository metadata index&lt;/a&gt;, providing greater trust in the accuracy of the metadata provided by peer to peer repositories.&lt;/p&gt;
+
+&lt;p&gt;If you’re curious you can &lt;a href=&#34;https://dev.guardianproject.info/projects/bazaar&#34;&gt;follow Kerplapp’s development on our project tracker.&lt;/a&gt; We’re also looking for adventurous users &lt;a href=&#34;https://guardianproject.info/builds/Kerplapp/&#34;&gt;to install the Kerplapp prototype application&lt;/a&gt; to provide feedback and testing.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ChatSecure v12 Provides Comprehensive Mobile Security and a Whole New Look</title>
+      <link>https://guardianproject.github.io/info/2013/10/24/chatsecure-v12-provides-comprehensive-mobile-security-and-a-whole-new-look/</link>
+      <pubDate>Thu, 24 Oct 2013 01:50:13 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/10/24/chatsecure-v12-provides-comprehensive-mobile-security-and-a-whole-new-look/</guid>
+      <description>&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;strong&gt;ChatSecure v12 Provides Comprehensive Mobile Security and a Whole New Look&lt;/strong&gt;&lt;strong&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;span style=&#34;font-size: 13px;&#34;&gt;The Guardian Project’s award-winning open-source app “Gibberbot” for Android, has been rebranded to “ChatSecure” for its version 12 release, unifying the branding with the iPhone and iPad apps, while offering major updates in security from the device through the network.&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;em&gt;&lt;strong&gt;Download on &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&#34;&gt;Google Play&lt;/a&gt; or &lt;a href=&#34;https://guardianproject.info/releases/chatsecure-latest.apk&#34;&gt;Direct Download&lt;/a&gt; now.&lt;/strong&gt;&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;span style=&#34;font-size: 13px;&#34;&gt;October 20, New York, NY – The Guardian Project, a New York-based open-source mobile security incubator, has launched version 12 of its well-regarded secure messaging app for Android, rebranding it to “ChatSecure” to unify branding with existing open-source iPhone and iPad apps. The new upgrade brings an entirely new fluid user interface, and unprecedented security features for users looking to protect their message content (what they are saying) and their metadata (who, why and where) from malicious adversaries and apps, hostile network operators, and dragnet surveillance. It is completely open-source, utilizes interoperable protocols, and has undergone third-party security audits and code reviews.&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  &lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/store_new.png&#34; width=&#34;614&#34; height=&#34;300&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  “We believe you should not have to compromise on choice and usability, to have reliable, strong security”, said Guardian Project founder, Nathan Freitas. “Some companies want to limit you to their closed, proprietary services that are centrally hosted and easily blocked or monitored. We see that as fragile and unsustainable, and ultimately, hostile and unfriendly to users, who want choice, freedom and the ability to easily and safely communicate with their friends and family around the world”.
+&lt;/p&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  ChatSecure is compatible with thousands of instant messaging service providers around the world, including Google, Facebook, DuckDuckGo and Jabber.org. It also works with open-source server software, such as Prosody, enabling service providers, enterprise and other organizations to host their own servers. ChatSecure users also can communicate securely with anyone using a compatible app on Windows, Mac OS or Linux, such as Pidgin, Adium or Jitsi. The app also supports peer-to-peer wifi chat using Bonjour and Tor, allowing for secure messaging to happen even in places where there is no access to the internet or the internet is blocked. It also includes a quick access “Panic” feature to uninstall the app and wipe all local data.
+&lt;/p&gt;
+
+&lt;div id=&#39;gallery-9&#39; class=&#39;gallery galleryid-11821 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013158/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013158-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013343/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013343-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013623/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013623-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-013652/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-013652-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-014752/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-014752-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/2013/10/24/chatsecure-v12-provides-comprehensive-security-and-a-whole-new-look/device-2013-10-24-014836/&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/10/device-2013-10-24-014836-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p dir=&#34;ltr&#34;&gt;
+  The software ensures the most secure network channels are utilized, by enforcing Certificate Pinning, Perfect-Forward Secrecy and communicating via the Tor network. All conversations held through ChatSecure can be encrypted using an open-standards end-to-end encryption protocol known as “Off the Record Messaging”, pioneered and hardened over the last decade by security researchers. All account data, messages and contacts stored on the device are encrypted and password protected using strong encryption provided by SQLCipher database software, ensuring no leakage of personal data if the device is lost, stolen or compromised.
+&lt;/p&gt;
+
+&lt;p&gt;Learn more and download at &lt;a href=&#34;https://guardianproject.info/apps/chatsecure/&#34;&gt;https://guardianproject.info/apps/chatsecure/&lt;/a&gt; or on Google Play. Learn more about the versions for iPhone and iPad at &lt;a href=&#34;https://chatsecure.org&#34;&gt;https://chatsecure.org&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gibberbot’s “ChatSecure” MakeOver: Almost Done!</title>
+      <link>https://guardianproject.github.io/info/2013/09/20/gibberbots-chatsecure-makeover-almost-done/</link>
+      <pubDate>Fri, 20 Sep 2013 17:19:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/09/20/gibberbots-chatsecure-makeover-almost-done/</guid>
+      <description>&lt;p&gt;In a previous post with the mouthful of a title &lt;a href=&#34;https://guardianproject.info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/&#34;&gt;“Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement”&lt;/a&gt;, I spoke about all of the necessary security features a modern mobile messaging app should have. These include encrypted local storage, end-to-end verifiable encryption over the network, certificate pinning for server connections and a variety of other features. I am VERY happy to report that the latest v12 beta release of the project formerly known as Gibberbot, now called ChatSecure, has all of the features described in that post implemented. From a feature perspective, it is the most security mobile messaging app ever. We also hope that in reality, in practice, it also is, as we have spent a great deal of effort on security code audits, penetration testing, and responding to the outcomes of those effort, to further harden our app.&lt;/p&gt;
+
+&lt;p&gt;NOW, moving on to a more lighthearted, but equally important topic – MAKEOVERS! Well, in truth, it is countless hours of study trying to understand how we could make our app not only secure, but also beautiful, efficient and fun. On top of that, countless more hours actually implementing it, debugging it across Android operating systems from 2.3 to 4.3, and making sure it works as well on a Nexus 7 tablet as it does a bargain basement ZTE device.&lt;/p&gt;
+
+&lt;p&gt;Much of this effort was spent on features like themeing, emoji/emoticon support, swipe navigation and improved color schemes for various states of encryption. This may seem frivolous to some, especially while they are “real” problems out there like backdoored basebands and weakened random number generators. However, while we continue to do all we can to ensure our apps are fortresses, we also must make sure they are comfortable fortresses, as we hope and expect our users to spend many hours a day inside of them. If you eyes will be staring at something for that long, don’t you want smooth fonts, and cohesive color schemes? If you are going to be navigating between chats and buddies a hundred times a day, wouldn’t you expect us to make that as seamless an move as possible? Yes, yes, and so we did!&lt;/p&gt;
+
+&lt;p&gt;In the end, we designed our software around people who have little patience or spare time, and every right to be that way – activists, human rights defenders, journalists – people on the front lines in conflict zones and change in their society around the world. Usability for them means they have more time to be in the real world, while still having our apps maximize the precious time they have to communicate digitally, and of course, ensure that the walls of our digital fortress around them are as high and hard as can be.&lt;/p&gt;
+
+&lt;p&gt;You can get your hands on this fully functional beta right here on HockeyApp: &lt;a href=&#34;https://rink.hockeyapp.net/apps/2fa3b9252319e47367f1f125bb3adcd1/&#34;&gt;https://rink.hockeyapp.net/apps/2fa3b9252319e47367f1f125bb3adcd1/&lt;/a&gt; or directly from our site – &lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v12.4.0-beta4-release.apk&#34;&gt;ChatSecure APK&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v12.4.0-beta4-release.apk.asc&#34;&gt;signature ASC&lt;/a&gt;.&lt;br /&gt;
+&lt;strong&gt;WARNING: The current beta does not supporting importing your existing account configurations, and you will need to setup the accounts again.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div id=&#39;gallery-8&#39; class=&#39;gallery galleryid-11695 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/account-list-light.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/account-list-light-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/account-list-dark.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/account-list-dark-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/account-create-new.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/account-create-new-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-light-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-dark.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/contact-grid-sidebar-dark-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/contact-profile-dark.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/contact-profile-dark-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/chat-dark-emoji.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/chat-dark-emoji-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/chat-light-sticker.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/chat-light-sticker-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/chat-profile-overlay.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/chat-profile-overlay-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/chat-with-sharebar.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/chat-with-sharebar-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-notifications.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/otr-file-xfer-notifications-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/chat-with-wallpaper.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/chat-with-wallpaper-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/chat-MUC-join.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/chat-MUC-join-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2013/09/chat-muc-beer.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/09/chat-muc-beer-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#39;clear: both&#39; /&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Our Newest App: PixelKnot</title>
+      <link>https://guardianproject.github.io/info/2013/07/18/our-newest-app-pixelknot/</link>
+      <pubDate>Thu, 18 Jul 2013 13:14:49 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/18/our-newest-app-pixelknot/</guid>
+      <description>&lt;p&gt;Have you ever hidden in plain sight? Worn camouflage in the woods or an invisibility cloak in a narrow crooked alley? It’s really hard to do properly. We’re hoping that all changes with PixelKnot.&lt;/p&gt;
+
+&lt;p&gt;PixelKnot is an app for hiding secret messages in pictures.  Sort of like invisible ink on the back of a painting, updated to the present.  The ancient art known as steganography, now updated for the 21st century and requiring a more rigorous set of safety standards.&lt;/p&gt;
+
+&lt;p&gt;The idea is to let anyone, anywhere share a secret with a friend. To most people, all they see is a picture. But to the right person, they know that someone has left them a message in that picture using PixelKnot. And they can find the message by opening that same picture in PixelKnot. Some people will even add a password to add another layer of protection to make sure that the message only ends up with the right person. And even if the message is detected, it’s also encrypted, making it that much harder to decode.&lt;/p&gt;
+
+&lt;p&gt;While hiding in plain sight using the app is easy, the app itself isn’t.  To define it, we’ve established the Guardian Project steganography standard. The approach of using steganography has some known limitations, but to be secure and reliable, for us the steganographed image must:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Have the original image appear, to the trained human eye, unedited.&lt;/li&gt;
+&lt;li&gt;Have the bytes of the image appear, to a trained analyst, undistorted so much so as to arouse suspicion.&lt;/li&gt;
+&lt;li&gt;Have the complete message be recoverable no matter how it is transmitted.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As recent media stories have shown, large scale analysis is becoming a reality with increasing speed. Our standard seeks to ensure that our pictures, and the messages inside, can’t be plucked out like a needle in a haystack.  Another issue is that a lot of social media sites shrink and distort images that users upload.  This breaks our cipher since it’s technically a different image than what the User uploaded.  We’re fixing it so that it’s not a problem.  Already it works across Flickr, Tumblr and Google+,  with Facebook in the pipeline.&lt;/p&gt;
+
+&lt;p&gt;To build the steganography into the app, we used the &lt;a title=&#34;f5 steganography&#34; href=&#34;https://code.google.com/p/f5-steganography/&#34; target=&#34;_blank&#34;&gt;F5 algorithm&lt;/a&gt;, which is resistant to visual and statistical attacks. Yet it still offers a large steganographic capacity, by using matrix encoding to improve the efficiency of embedding. F5 uses permutative straddling to uniformly spread out the changes over the whole steganogram, which helps us maintain the standards mentioned above that keep the messages from being detected.&lt;/p&gt;
+
+&lt;p&gt;How safe is safe, you might be wondering? We’ve been running tests on images created by PixelKnot using &lt;a title=&#34;Stegdetect&#34; href=&#34;http://www.outguess.org/detection.php&#34; target=&#34;_blank&#34;&gt;Stegdetect&lt;/a&gt;, an automated tool for detecting steganographic content in images. It’s capable of detecting several different steganographic methods to embed hidden information in JPEG images. We trimmed it down to target f5 specifically. The results have been promising, though not 100%.&lt;/p&gt;
+
+&lt;p&gt;One goal we had while building the app was to transform the user experience of security and to see how easy and fun we could make the sharing of hidden messages.  The app starts by deciphering an image if there is text hidden inside already. If not,  it chooses enciphering, asking whether to take a photo or use one from a gallery. Why add unnecessary prompts asking users what they want to do, when there’s only one thing to do? A user can only move forward through the flow of the experience. In this way, we’re trying to increase security through a guided experience. If done properly and transparently, giving the user less options for navigation mean less ways to fail.&lt;/p&gt;
+
+&lt;p&gt;Is hiding messages in pictures the best way to spread secrets so that only the right person hears it? We don’t know.  At times in history, it’s been the only option, like between kings. At other times, it’s merely been used for fun, like scavenger hunts. For PixelKnot, we wanted to make something that could work in both scenarios o. But it’s up to users to decide.&lt;/p&gt;
+
+&lt;p&gt;We hope to share stories of people using PixelKnot in fun new ways.  If you have a idea or experience, please share it with us. We’d also like to add more features to PixelKnot that make strides both in security and in design, so your feedback is important– what would you most like to see? Until then, happy knotting!&lt;/p&gt;
+
+&lt;p&gt;Learn more about the app on &lt;a href=&#34;https://guardianproject.info/apps/pixelknot/&#34; title=&#34;pixelknot&#34;&gt;our site&lt;/a&gt;, or get it directly &lt;a title=&#34;Pixelknot on Google Play&#34; href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.pixelknot&#34; target=&#34;_blank&#34;&gt;from Google Play&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GnuPG for Android progress: we have an command line app!</title>
+      <link>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</link>
+      <pubDate>Thu, 09 May 2013 10:48:52 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png&#34; alt=&#34;GnuPG for Android&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-3680&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/05/icon-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/05/icon.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+This alpha release of our command-line developer tool brings GnuPG to Android for the first time!&lt;/p&gt;
+
+&lt;p&gt;GNU Privacy Guard Command-Line (gpgcli) gives you command line access to the entire &lt;a href=&#34;http://gnupg.org&#34; title=&#34;Gnu Privacy Guard home page&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; suite of encryption software. GPG is GNU’s tool for end-to-end secure communication and encrypted data storage. This trusted protocol is the free software alternative to PGP. GnuPG 2.1 is the new modularized version of GnuPG that now supports OpenPGP and S/MIME.&lt;/p&gt;
+
+&lt;p&gt;You can get it from the Play Store:&lt;br /&gt;
+&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Or download the &lt;code&gt;.apk&lt;/code&gt; from our nightly builds:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/builds/GnuPrivacyGuard/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/builds/GnuPrivacyGuard/&#34;&gt;https://guardianproject.info/builds/GnuPrivacyGuard/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;Before using gpgcli, be sure to launch the app and let it finish its installation process. Once it has completed, then you’re ready to use it. The easiest way to get started with gpgcli is to install &lt;a href=&#34;https://play.google.com/store/apps/details?id=jackpal.androidterm&#34; title=&#34;download Android Terminal emulator from the Google Play Store&#34;  target=&#34;_blank&#34;&gt;Android Terminal Emulator&lt;/a&gt;. gpgcli will automatically configure Android Terminal Emulator as long as you have the _Allow PATH extensions&amp;lt;/em settings enabled.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TRUSTED SECURITY: This technology already seamlessly integrates into Linux on Debian, Ubuntu, Fedora, Mac OSX (GPGtools), Windows (gpg4win)&lt;/li&gt;
+&lt;li&gt;PUBLIC KEY ENCRYPTION: Full interoperable replacement of the proprietary Pretty Good Privacy (PGP) standard that uses a serial combination of hashing, data compression, symmetric-key cryptography and finally public-key cryptography; each step uses one of several supported algorithms.&lt;/li&gt;
+&lt;li&gt;BROAD ALGORITHM LANDSCAPE: Supports 3DES, AES, Blowfish, CAST5, DSA, ElGamal, MD5, RSA, RIPDE-MD-160, SHA-1, TIGER, and Twofish.&lt;/li&gt;
+&lt;li&gt;VERIFIABLE INTEGRITY AND AUTHENTICITY: Digital signatures create a trusted trail of ownership.&lt;/li&gt;
+&lt;li&gt;CONFIRMED SECURITY: Italian Police, the FBI, and British police have been unable to crack its security and have resorted to demanding private keys. It’s been likened as “the closest you’re likely to get to military-grade encryption” by cryptographer Bruce Schneier.&lt;/li&gt;
+&lt;li&gt;HELP SYSTEM: A quick help tool is built in.&lt;/li&gt;
+&lt;li&gt;KEYSERVER SUPPORT: Integrated support for HKP and LDAP keyservers (keys.gnupg.net).&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;OPEN STANDARD COMPLIANT: Full OpenPGP implementation. Learn more about standards &lt;a href=&#34;http://tools.ietf.org/html/rfc2440&#34; target=&#34;_blank&#34;&gt;RFC2440&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://tools.ietf.org/html/rfc4880&#34; target=&#34;_blank&#34;&gt;RFC4880&lt;/a&gt; &lt;/ul&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;please-report-bugs&#34;&gt;Please Report Bugs&lt;/h2&gt;
+
+&lt;p&gt;This is an early release of a big project, so there will inevitable be bugs. Help us improve this software by filing bug reports about any problem that you encounter. Feature requests are also welcome!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/gpgandroid/issues&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/gpgandroid/issues&#34;&gt;https://dev.guardianproject.info/projects/gpgandroid/issues&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;coming-soon&#34;&gt;Coming Soon&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SECURITY FOR APPS: We have an API in the works so that developers can&lt;br /&gt;
+easily embed this into any app to give it state of the art security features.&lt;/li&gt;
+&lt;li&gt;GUI: We’re building a graphical user interface for easy key management.&lt;/li&gt;
+&lt;li&gt;STAY UP TO DATE: Sign up for our low-traffic &lt;a href=&#34;https://lists.mayfirst.org/mailman/listinfo/guardian-dev&#34; title=&#34;subscribe to the guardian-dev mailing list&#34; target=&#34;_blank&#34;&gt;Guardian-Dev&lt;/a&gt; mailing list to&lt;br /&gt;
+be notified when the API and GUI are released:&lt;br /&gt;
+&lt;a href=&#34;https://lists.mayfirst.org/mailman/listinfo/guardian-dev&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://lists.mayfirst.org/mailman/listinfo/guardian-dev&#34;&gt;https://lists.mayfirst.org/mailman/listinfo/guardian-dev&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Find us in IRC, we want feedback!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;irc://irc.freenode.net/guardianproject&#34;&gt;#guardianproject on freenode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;irc://irc.oftc.net/guardianproject&#34;&gt;#guardianproject on oftc&lt;/a&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;.&lt;/li&gt; &lt;/ul&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gibberbot v11 is not just secure, its also simple, snappy and super fun!</title>
+      <link>https://guardianproject.github.io/info/2013/03/08/gibberbot-v11-is-not-just-secure-its-also-simple-snappy-and-super-fun/</link>
+      <pubDate>Fri, 08 Mar 2013 12:54:50 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/03/08/gibberbot-v11-is-not-just-secure-its-also-simple-snappy-and-super-fun/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Gibberbot v11 is now final as of RC3 release: &lt;a href=&#34;https://github.com/guardianproject/Gibberbot/tree/0.0.11-RC3&#34;&gt;https://github.com/guardianproject/Gibberbot/tree/0.0.11-RC3&lt;/a&gt;. From here, the only changes to v11 we will be making will be critical bug fixes. We are now focused on our v12 release, which you can track here: &lt;a href=&#34;https://dev.guardianproject.info/versions/39&#34;&gt;https://dev.guardianproject.info/versions/39&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_&lt;strong&gt;Please promote our new Gibberbot how-to interactive tutorial available here: &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34;&gt;https://guardianproject.info/howto/chatsecurely/&lt;/a&gt;&lt;/a&gt;&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;p&gt;If you have been tracking our efforts here for the last few years, you will know that Gibberbot, our secure instant messaging app, started out as a big old mess of an app called “ORChat” as and then “OTRChat” and then “Gibber” (or “Jibber”?), and then finally settled down into the name and app it is known as now. Really it was a proof of concept, showing that you could indeed use the &lt;a href=&#34;https://github.com/gpolitis/otr4j&#34;&gt;OTR4J library&lt;/a&gt; built for desktops app, on Android.&lt;/p&gt;
+
+&lt;p&gt;Gibberbot was the first Android app, and perhaps real mobile app, that supported end-to-end encrypted chat using open standards like OTR and XMPP. In the early days, we were just so excited this was possible, and that we could also send the chat connections over Tor, that we didn’t think too much about how easy or fun it was to use the app itself. We were focused on our magic tricks, and not how it was to live and use the app on a daily basis.&lt;/p&gt;
+
+&lt;p&gt;A few months ago, we realized that on Google Play, we had a lot of reviews that basically said “This is a great idea, but it doesn’t work for me”, or “I like these guys, but the app is kinda buggy”, and even “This app gives my device crazy flash seizures”. All of these reviews were true, and we swallowed the hard medicine, that if we didn’t spend more time focusing on how the core features of being a mobile instant messaging chat client worked, that nobody would care about how secure the app was, because there would be no one using it.&lt;/p&gt;
+
+&lt;p&gt;We set about then not only continuing our focus on improving the core security and technical core of Gibberbot, but also focusing on a user interface update. We completed “stage 1” of that update, with another major round of effort planned for v12.&lt;/p&gt;
+
+&lt;p&gt;Here a few new features and improvements along those lines, that were completed for v11:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;&lt;strong&gt;Simplify setup of Google Gmail and Google Domain accounts…. DONE!&lt;/strong&gt; We now support the built-in authentication system on your Android phone, so if you phone is already setup with a Google account, we can tap right into that. No extra password entry needed, no need to enter anthing really. Just choose “Google Account” from the account type list.&lt;/span&gt;&lt;/span&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Streamline Orbot integration to make Tor user easier… DONE! &lt;/strong&gt;Using the new &lt;a href=&#34;https://guardianproject.github.io/info/code/onionkit&#34;&gt;OnionKit library&lt;/a&gt;, Gibberbot can now tell if Orbot is installed and running, and if not, prompt the user to either install it, or ask if they want to start up and connect to the Tor network.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Make it easy for services using SSL certs not signed by the Root CA cartel to be easily verified and accepted by the user… DONE!&lt;/strong&gt; Increasingly, it has become less and less valuable to have the TLS or SSL certificate you use with your website or XMPP server to be signed by a Root Certificate Authority, because as many point out, the SSL is broken, as long as trust this strange collection of hundreds of organizations we have no reason to really trust. Previously, Gibberbot would not handle non-Root CA certs very well, so you would just have to turn off verification. Now thanks to the concept of TOFU-POP (Trust on First Use, Persistence of Psuedonym) and the excellent &lt;a href=&#34;https://github.com/ge0rg/MemorizingTrustManager/wiki&#34;&gt;MemorizingTrustManager&lt;/a&gt; library, user’s can now decided in an on-demand and interactive manner, whether or not they want to trust the TLS connection they are using. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ensure Gibberbot only runs and signs in when the user wants it to… DONE! &lt;/strong&gt;Previously, Gibberbot was a bit too aggresive about trying to stay connecting to your account, and starting up on device boot. Many users want to conserve battery, and some do not like apps that run without them asking them to first (imagine that?!). We have put Gibberbot now at the user’s beck and call, such that there are preferences to control starting on boot, and when you SIGN OUT, it really means do not every login again, until I login.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improve the user interface to make app that is clean, fast, modern and customizable… DONE! &lt;/strong&gt;Not only have we continued to focus on a clean, simple user interface that uses the latest interface conventions and guidelines from Google, we also wanted to start adding some fun user personalization options. One size does not fit all, and just because our app is secure, does not mean it has to be boring. As you can see below, Gibberbot now supports light and dark themes, as well as user configured app wallpaper.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am happy to say, that will all of these improvements, we are much happier users, and are receiving much better reviews on Google Play, such as:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“Easy to set up and pretty stable and easy to use.” “Fixed on jelly bean and does exactly what it should do” and the best… “Perfect (but no ICQ Support*)” &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em id=&#34;__mceDel&#34;&gt;*We may add ICQ support, just so we can be extra perfect for that one user who wants it! 🙂&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;All in all, we hope you agree, and that our new found focus on usability can push us from 100,000+ downloads to over 500,000+ in the coming months. We have big ideas for the future of secure mobile messaging, and making Gibberbot the best it can be is a huge part of that plan.&lt;/p&gt;
+
+&lt;p&gt;As always you can find the Gibberbot download (and &lt;a href=&#34;https://guardianproject.github.io/info/apps&#34;&gt;all of our apps&lt;/a&gt;) in a variety of places:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;Through our direct APK download: &lt;a href=&#34;https://guardianproject.info/releases/gibberbot-latest.apk&#34;&gt;https://guardianproject.info/releases/gibberbot-latest.apk&lt;/a&gt; (and &lt;a href=&#34;https://guardianproject.info/releases/gibberbot-latest.apk.asc&#34;&gt;gpg sig&lt;/a&gt;)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;on &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&#34;&gt;Google Play&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;or through our &lt;a href=&#34;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository/&#34;&gt;F-Droid Repo&lt;/a&gt;, which you can &lt;a href=&#34;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository/&#34;&gt;learn how to use here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can also scan this QR code, which links to the direct APK download above:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/03/gibberbotqr.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-3373&#34; alt=&#34;gibberbotqr&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/03/gibberbotqr.png&#34; width=&#34;123&#34; height=&#34;123&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://lh4.ggpht.com/TAtK2o9v79g1dVsAuii2XWQcdN1JdZgnRPAT0inGrQjDKkPLO_zLWLHlGdm6xxki6w&#34; width=&#34;288&#34; height=&#34;512&#34; /&gt;  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-021839.jpg&#34;&gt;&lt;img alt=&#34;device-2013-02-20-021839&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-021839.jpg&#34; width=&#34;288&#34; height=&#34;512&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://lh4.ggpht.com/ShD1S-pNv-1nUdK4e4C4d-GBNz4A1Vr7bS6_-uYMm2zjOZ2T88HL_Iogsn71ePBVmTWk&#34; width=&#34;288&#34; height=&#34;512&#34; /&gt;   &lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://lh4.ggpht.com/cLhiajC5VIk8SZ4iDq08PKAmhiZQMze62avh0h2JNArZFRHKR4LJgWdS0tfALe1uFeHg&#34; width=&#34;288&#34; height=&#34;512&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-3375&#34; alt=&#34;device-2013-02-20-025148&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148.png&#34; width=&#34;538&#34; height=&#34;302&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148.png 1280w, https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148-300x168.png 300w, https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148-1024x576.png 1024w&#34; sizes=&#34;(max-width: 538px) 100vw, 538px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher beta: easy encrypted file storage for your Android app</title>
+      <link>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</link>
+      <pubDate>Thu, 07 Feb 2013 14:45:28 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</guid>
+      <description>&lt;p&gt;At long last, we are proud to announce the &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;first beta release of IOCipher&lt;/a&gt;, an easy framework for providing virtual encrypted disks for Android apps.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;does not require root or any special permissions at all&lt;/li&gt;
+&lt;li&gt;the API is a drop-in replacement for the standard java.io.File API, so if you have ever worked with files in Java, you already know how to use IOCipher&lt;/li&gt;
+&lt;li&gt;works easiest in an app that stores all files in IOCipher, but using standard java.io with IOCipher is possible&lt;/li&gt;
+&lt;li&gt;supports android-7 v2.1 and above&lt;/li&gt;
+&lt;li&gt;licensed under the LGPL v3+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can download it here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;https://guardianproject.info/code/iocipher/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adding IOCipher to our InformaCam and NoteCipher apps is already in the&lt;br /&gt;
+works. There is already one app in the Play Store built with IOCipher: &lt;a title=&#34;Gryphn Secure Messaging in the Play Store&#34; href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Messaging&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve recently done some heavy testing and bug fixing and this is ready for beta status. That means for many applications, it should be stable with reasonable performance. But its not done yet, and there are some known edge cases documented in our bug tracker which we aim to address in the next beta release:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/iocipher/issues&#34;&gt;https://dev.guardianproject.info/projects/iocipher/issues&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some additional notes on usage:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;single thread/sequential access is the preferred way of using IOCipher&lt;/li&gt;
+&lt;li&gt;multi-threaded access possible, but potentially unstable under very high load&lt;/li&gt;
+&lt;li&gt;VFS now has beginTransaction and completeTransaction to optimize performance&lt;/li&gt;
+&lt;li&gt;parts of java.io not currently supported: vectored I/O, memory-mapped files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;featured photo &lt;a href=&#34;http://www.flickr.com/photos/pong/288491653/&#34;&gt;“Safe” from Pong on Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot v11 is out!</title>
+      <link>https://guardianproject.github.io/info/2012/10/26/orbot-v11-is-out/</link>
+      <pubDate>Fri, 26 Oct 2012 06:37:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/10/26/orbot-v11-is-out/</guid>
+      <description>&lt;p&gt;After previous fits and starts, we’ve stabilized Orbot v11 now with the RC6 release. Our core testers and public users via the Google Play distribution are back to happy and stable states of being.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/10/orbotv11.png&#34;&gt;&lt;img class=&#34;alignleft  wp-image-2910&#34; style=&#34;margin-left: 3px; margin-right: 3px;&#34; title=&#34;orbotv11&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/orbotv11-168x300.png&#34; alt=&#34;&#34; width=&#34;131&#34; height=&#34;234&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/orbotv11-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2012/10/orbotv11-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2012/10/orbotv11.png 720w&#34; sizes=&#34;(max-width: 131px) 100vw, 131px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The latest version can be found:&lt;/p&gt;
+
+&lt;p&gt;1) In Google Play:&lt;br /&gt;
+&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&#34;&gt;https://play.google.com/store/apps/details?id=org.torproject.android&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2) In our F-Droid repo:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository/&#34;&gt;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;3) Our via direct APK here:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-0.2.3.23-rc-1.0.11-RC6.apk&#34;&gt;https://guardianproject.info/releases/Orbot-release-0.2.3.23-rc-1.0.11-RC6.apk&lt;/a&gt;&lt;br /&gt;
+(.asc)&lt;/p&gt;
+
+&lt;p&gt;As always you can file bugs on &lt;a href=&#34;https://trac.torproject.org&#34;&gt;trac.torproject.org&lt;/a&gt; or the guardian&lt;br /&gt;
+tracker: &lt;a href=&#34;https://dev.guardianproject.info/projects/orbot/issues/new&#34;&gt;https://dev.guardianproject.info/projects/orbot/issues/new&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A few things I learned during this latest Orbot effort:&lt;/p&gt;
+
+&lt;p&gt;– 0.2.4.&lt;em&gt;-alpha is not stable yet on Android, causing a variety of to-be-debugged issues. Based on that, we rolled back to 0.2.3.23-RC&lt;br /&gt;
+for this release. We may still do a final/stable v11 release once Tor 0.2.3.&lt;/em&gt; is declared stable.&lt;/p&gt;
+
+&lt;p&gt;– Android has a “Strict Mode” feature that can sometimes cause halts, exits at various points based on certain types of undesirable behaviour, like accessing the network on a main thread. The new up/down data stats inadvertently accessed the localhost Tor control port on the main thread. Most devices just have it set to log a warning to the debug output, but on a few devices it made things go boom.&lt;/p&gt;
+
+&lt;p&gt;– We needed to rewrite our iptables rules quite a bit to use a separate user defined chain “ORBOT” with a jump point in OUTPUT chain. This allows us to easily flush all ORBOT rules. We realized this was necessary because as some devices switch between 3G and wifi connections, iptables rules are reapplied automatically causing multiple instances of the same rule. Only a flush can clear all of instances of these out easily. Second, we can’t do a global iptables –flush because it not only removes some rules set by other apps, it also appears to knock out internet connectivity/routing completely on some newer devices, based on some required default rules that are in place.&lt;/p&gt;
+
+&lt;p&gt;– With the increasing bountiful diversity of Android devices, firmwares and operating system versions, it continues to be a burden to solve all issues for all people. However, most of the issues are related to our “root” and transproxy features, and not the core Orbot app features or bundled Tor binary. We are eager to move to a&lt;br /&gt;
+user-defined/soft VPN model to support transparent proxying in the v12 release, and move away from utilizing root in any manner.&lt;/p&gt;
+
+&lt;p&gt;That’s all for now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Our new F-Droid App Repository (out of date!)</title>
+      <link>https://guardianproject.github.io/info/2012/03/15/our-new-f-droid-app-repository-out-of-date/</link>
+      <pubDate>Thu, 15 Mar 2012 01:27:43 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/15/our-new-f-droid-app-repository-out-of-date/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: this blog post has been changed to reference our new FDroid repository at &lt;a href=&#34;https://guardianproject.info/fdroid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;https://guardianproject.info/fdroid&lt;/a&gt;&lt;/a&gt;. If you are still using the old one originally described here which has the URL &lt;a href=&#34;https://guardianproject.info/repo&#34;&gt;https://guardianproject.info/repo&lt;/a&gt;, you should switch to the new repo as soon as possible!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For all of you out there looking for a safe way to find and download apps outside of the Play Store (aka Android Market) or random, sketchy third-party app stores and file sharing sites, then your wait is over:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;a href=&#34;http://f-droid.org&#34;&gt;FDroid Repository&lt;/a&gt; is an easily-installable catalogue of FOSS applications for the Android platform. The server contains the details of multiple versions of each application, and the Android client makes it easy to browse, install them onto your device, and keep track of updates.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In other words, F-Droid is like an app store for open-source. More importantly, there is not just one “store”. Anyone can deploy their own repositories of apps, or Repos, much like the way the Debian repo model works.&lt;/p&gt;
+
+&lt;p&gt;We’ve now begun creating our own hosted F-Droid compliant repo where we can easily provide the latest greatest versions of all our apps. As we update the apps, F-Droid should notify you and allow you to update quickly and without hassle.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Quick Steps for using F-Droid with Guardian Project Repo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1) Install the F-Droid Client app. You can get it here: &lt;a href=&#34;https://f-droid.org/FDroid.apk&#34;&gt;https://f-droid.org/FDroid.apk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2) Run the app and go to Menu &amp;gt; Manage Repos&lt;/p&gt;
+
+&lt;p&gt;3) Turn on the “Guardian Project Official Releases” repo&lt;/p&gt;
+
+&lt;p&gt;3) &lt;del datetime=&#34;2015-02-24T16:10:07+00:00&#34;&gt;Enter: &lt;a href=&#34;https://guardianproject.info/repo/&#34;&gt;https://guardianproject.info/repo/&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;4) Optionally, disable the default repo if you just want GP apps&lt;/p&gt;
+
+&lt;p&gt;5) Return to the main screen, and Menu &amp;gt; Update&lt;/p&gt;
+
+&lt;p&gt;&lt;del datetime=&#34;2015-02-24T16:10:07+00:00&#34;&gt;6) Verify the repo fingerprint by clicking on the repo to see the repo details view. The fingerprint you see there should match this: &lt;code&gt;59050C8155DCA377F23D5A15B77D3713400CDBD8B42FBFBE0E3F38096E68CECE&lt;/code&gt;. &lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;From here you will see the “Available” tab for apps you don’t have the “Installed” tab for apps you have the latest version of, and the “Updates” tab for apps you have, but that are not up to date.&lt;/p&gt;
+
+&lt;p&gt;You can open each app by browsing and selecting them, and then via Menu options, choose to install them, or access their websites, source code links, or issue tracking pages.&lt;/p&gt;
+
+&lt;div id=&#39;gallery-6&#39; class=&#39;gallery galleryid-1632 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/03/cats.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/cats-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110254.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110254-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110305.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110305-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110320.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110320-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110341.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110341-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110351.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110351-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110404.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110404-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110434.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/device-2012-03-15-110434-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#39;clear: both&#39; /&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SQLCipher for Android v1 FINAL!</title>
+      <link>https://guardianproject.github.io/info/2011/11/29/sqlcipher-for-android-v1-final/</link>
+      <pubDate>Tue, 29 Nov 2011 18:17:47 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/11/29/sqlcipher-for-android-v1-final/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Team GP along with the good folks at &lt;a href=&#34;http://zetetic.net/&#34;&gt;Zetetic&lt;/a&gt;, are happy to announce that we have reached &lt;em&gt;&lt;strong&gt;FINAL&lt;/strong&gt;&lt;/em&gt; on our first release (“v1” 0.0.6 build) of &lt;a href=&#34;https://guardianproject.info/code/sqlcipher/&#34;&gt;SQLCipher for Android&lt;/a&gt;. This means we consider this a production release, ready for shipping with your apps to provide for reliable, open-source, secure application data encryption.&lt;/p&gt;
+
+&lt;p&gt;If you need a refresher, here is what the cross-platform, open-source &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34;&gt;SQLCipher&lt;/a&gt; provides:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;SQLCipher is an &lt;a href=&#34;http://sqlite.org/&#34;&gt;SQLite&lt;/a&gt; extension that provides transparent 256-bit AES encryption of database files. Pages are encrypted before being written to disk and are decrypted when read back. Due to the small footprint and great performance it’s ideal for protecting embedded application databases and is well suited for mobile development.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Blazing fast performance with as little as 5-15% overhead for encryption on many operations&lt;/li&gt;
+&lt;li&gt;100% of data in the database file is encrypted&lt;/li&gt;
+&lt;li&gt;Uses good security practices (CBC mode, key derivation)&lt;/li&gt;
+&lt;li&gt;Zero-configuration and application level cryptography&lt;/li&gt;
+&lt;li&gt;Broad platform support: works with C/C++, Obj-C, QT, Win32/.NET, Java, Python, Ruby, etc on Windows, Linux, iPhone/iOS…&lt;/li&gt;
+&lt;li&gt;Algorithms provided by the peer reviewed &lt;a href=&#34;http://openssl.org/&#34;&gt;OpenSSL&lt;/a&gt; crypto library.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In addition to our work porting the core codebase, the work done on Android also provides near exact API compatibility with the default &lt;a href=&#34;http://developer.android.com/reference/android/database/package-summary.html&#34;&gt;Android Database API&lt;/a&gt;. This means that developers can drop in SQLCipher, and add data encryption to their application, with very little changes to their existing codebase.&lt;/p&gt;
+
+&lt;p&gt;Finally, while full disk encryption is offered newer Android devices from Motorola, and those running Android 3.x Honeycomb or 4.x Ice Cream Sandwich, that only provides encryption of the entire internal or external storage, which must be unlocked and decrypted when the device is booted. The SQLCipher model ensures only a limited amount of data from your app is accessible at anytime, and allows the user or the app to lock itself down, whether or not the device itself is locked or encryption.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Download the Software Development Kit here for integration with your Android apps: &lt;a href=&#34;https://github.com/downloads/guardianproject/android-database-sqlcipher/SQLCipherForAndroid-SDK-0.0.6-FINAL.zip&#34;&gt;https://github.com/downloads/guardianproject/android-database-sqlcipher/SQLCipherForAndroid-SDK-0.0.6-FINAL.zip&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can see all the &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/issues?sort=updated&amp;amp;direction=desc&amp;amp;state=closed&amp;amp;page=1&#34;&gt;closed issues addressed&lt;/a&gt; in this release.&lt;/p&gt;
+
+&lt;p&gt;If you want to build from source, you will need the Android NDK, as well as the SDK. Pull the repo, and run ‘make all’ with the included &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/blob/master/Makefile&#34;&gt;SQLCipher Makefile&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our partners at &lt;a href=&#34;http://zetetic.net/&#34;&gt;Zetetic&lt;/a&gt; have published a &lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34;&gt;step-by-step application integration tutorial&lt;/a&gt;.&lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34;&gt;&lt;br /&gt;
+&lt;/a&gt; &lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-1345&#34; title=&#34;eclipse-class-libraries&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries-300x214.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;214&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries-300x214.png 300w, https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries.png 754w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34;&gt;&lt;br /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also get started by working with our &lt;a href=&#34;https://github.com/guardianproject/notepadbot&#34;&gt;sample ‘NoteCipher’ project available on Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you happen to encounter them, &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/issues/new&#34;&gt;please report any unexpected behaviours&lt;/a&gt;, bugs, typos or other abnormalities, as soon as you can. We know there are still some &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/issues?sort=updated&amp;amp;direction=desc&amp;amp;state=open&#34;&gt;outstanding issues&lt;/a&gt; faced in some cases, but we did not consider them blockers.&lt;/p&gt;
+
+&lt;p&gt;SQLCipher for Android Home: &lt;a href=&#34;https://guardianproject.info/code/sqlcipher/&#34;&gt;https://guardianproject.info/code/sqlcipher/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Announcing ObscuraCam v1 – Enhance Your Visual Privacy!</title>
+      <link>https://guardianproject.github.io/info/2011/06/23/announcing-obscuracam-v1-enhance-your-visual-privacy/</link>
+      <pubDate>Thu, 23 Jun 2011 21:28:20 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/06/23/announcing-obscuracam-v1-enhance-your-visual-privacy/</guid>
+      <description>
+
+&lt;p&gt;We’re very happy to announce the beta release of &lt;a href=&#34;https://guardianproject.info/apps/securecam/&#34;&gt;ObscuraCam&lt;/a&gt; for Android. This is the first release from the SecureSmartCam project, a partnership with &lt;a href=&#34;https://www.witness.org/&#34;&gt;WITNESS&lt;/a&gt;, a leading human rights video advocacy and training organization. This is the result of an &lt;a href=&#34;https://github.com/guardianproject/SecureSmartCam/tree/obscurav1&#34;&gt;open-source development cycle&lt;/a&gt;, comprised of multiple sprints (and branches), that took place over the last five months. This “v1” release is just the first step towards the complete vision of the project.&lt;/p&gt;
+
+&lt;p&gt;The goal of the SecureSmartCam project to to design and develop a new type of smartphone camera app that makes it simple for the user to respect the visual privacy, anonymity and consent of the subjects they photograph or record, while also enhancing their own ability to control the personally identifiable data stored inside that photo or video. Also, we think an app that allows you to pixelize your friends, disguise their faces and otherwise defend their privacy just a little bit, is a lot of fun and helps raise awareness about an important issue. In this first release we have focused on ‘obscura’ by optimizing the workflow of identity obfuscation in still images. Future releases will look at ‘informa,’ the process of properly gaining and recording informed consent from subjects, while also moving to video.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2011/06/teamdinner.jpg&#34;&gt;&lt;img class=&#34;size-full wp-image-1199 alignnone&#34; title=&#34;teamdinner&#34; alt=&#34;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/06/teamdinner.jpg&#34; width=&#34;450&#34; height=&#34;337&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2011/06/teamdinner.jpg 640w, https://guardianproject.info/wp-content/uploads/2011/06/teamdinner-300x225.jpg 300w&#34; sizes=&#34;(max-width: 450px) 100vw, 450px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;quick-download-links&#34;&gt;Quick Download Links&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://market.android.com/details?id=org.witness.sscphase1&amp;amp;feature=search_result&#34;&gt;&lt;img class=&#34;alignleft&#34; style=&#34;margin: 3px;&#34; title=&#34;obscura_market_qr&#34; alt=&#34;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/06/obscura_market_qr.jpg&#34; width=&#34;130&#34; height=&#34;130&#34; /&gt;&lt;/a&gt;For those of you who just want to get to it, head over to the &lt;a href=&#34;https://market.android.com/details?id=org.witness.sscphase1&amp;amp;feature=search_result&#34;&gt;Android Market&lt;/a&gt; to grab the latest version of the app. You can also scan the QR code to the left, and it will take you in that direction.&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2011/06/obscura_market_qr.jpg&#34;&gt;&lt;br /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For those without access to the Android Market, you can get the ObscuraCam.APK file from our &lt;a href=&#34;https://guardianproject.info/builds/Obscura/&#34;&gt;public builds folder&lt;/a&gt;. The official signed release binary is also available &lt;a href=&#34;https://guardianproject.info/downloads/ObscuraCam-1.0.4.2-20110624.apk&#34;&gt;here&lt;/a&gt;. For these options, be sure to check back for updates, because the app will not auto-update itself.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-cameras-everywhere-initiative&#34;&gt;The “Cameras Everywhere” Initiative&lt;/h4&gt;
+
+&lt;p&gt;In January, WITNESS launched their &lt;a href=&#34;https://blog.witness.org/2011/01/cameraseverywhere/&#34;&gt;Cameras Everywhere&lt;/a&gt; initiative, in which they ask:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;As more and more people film people speaking out and taking a stand against human rights crises, how can we protect victims and witnesses and ensure informed consent as much as possible?&lt;/em&gt; &lt;em&gt;As more and more footage circulates from human rights crises around the world, how does powerful footage reach audiences in comprehensible ways that move people to action?&lt;/em&gt; &lt;em&gt;And how do we know how to trust that footage?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;…&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_Critical issues to address in this realm include safety and security in the use of video; ethical questions raised by the widespread capacity to shoot and circulate human rights video; challenges around the authenticity of video and the preservation of evidence; and the need for effective documentation around the use of video in advocacy.&lt;br /&gt;
+_&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Through our collaboration, WITNESS has decided to move beyond just awareness, training and advocacy, and instead help design a next generation of Camera app software that is not just intended to share and capture more, but is meant to allow its operator to stop, think and be empowered to control the media they are capturing.&lt;/p&gt;
+
+&lt;h4 id=&#34;a-primer-on-visual-privacy-and-anonymity&#34;&gt;A Primer on Visual Privacy and Anonymity&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Visual_privacy&#34;&gt;Visual Privacy&lt;/a&gt; is the relationship between collection and dissemination of visual information, the public expectation of privacy, and the legal issues surrounding them. It relates particularly to the increasing presence of large-scale still- and video-camera networks in everyday life. This not only includes those surveillance-oriented networks under the control of corporations and governments, but also applies to the vast new network of citizen-controlled media capture devices such as smartphones and handheld cameras that has created a peer-to-peer, social-networking based surveillance. At the same time that these networks have exploded in size, face detection and recognition technologies have also improved considerably while policy regarding the privacy and fair use of such systems and content, as well as the rights of those imaged by such networks, are topics that are not resolved. What results is a situation in which massive amounts of media are being captured every day with little to no protection of individual rights to privacy or anonymity – something that is especially detrimental to human rights efforts.&lt;/p&gt;
+
+&lt;p&gt;As Sam Gregory of WITNESS &lt;a href=&#34;https://blog.witness.org/2011/02/human-rights-video-privacy-and-visual-anonymity-in-the-facebook-age/&#34;&gt;points out&lt;/a&gt;, most contemporary discussions around anonymous communication on the Internet focus on the data protection side – for instance options for data encryption or censorship circumvention. In the case of media content, a largely unaddressed question arises: what about the rights to anonymity and privacy for those people who appear, intentionally or not, in visual recordings? Visual privacy and anonymity may sound like a contradiction in terms, but people often wish to speak out and to ‘be seen’ while at the same time concealing their face and identifying surroundings. As human rights documentation and organizing increasingly involves media capture, how are people enabled to make purposeful choices about when they speak out and what degrees of anonymity they hold onto for themselves? Conversely, people caught in the background of a video or still may be unaware that they are even being filmed in that moment and have no option to protect themselves – particularly true in mass protest settings where the wave of group solidarity may overwhelm any sense of personal privacy. For those speaking out from marginalized positions, personal safety is a very real risk.&lt;/p&gt;
+
+&lt;p&gt;Some examples where visual privacy and anonymity is being diluted in the name of features or security:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&#34;http://www.timesonline.co.uk/tol/news/uk/article6913273.ece&#34;&gt;persecution&lt;/a&gt; later faced by bystanders and people who stepped in to film or assist Neda Agha-Soltan as she lay dying during the 2009 Iranian election protests.&lt;/li&gt;
+&lt;li&gt;Facebook’s &lt;a href=&#34;http://blog.facebook.com/blog.php?post=467145887130&#34;&gt;opt-out feature&lt;/a&gt; for auto-detection and tagging of faces&lt;/li&gt;
+&lt;li&gt;British Columbia’s privacy watchdog &lt;a href=&#34;http://www.metronews.ca/vancouver/local/article/897762--province-s-privacy-watchdog-oks-facial-recognition-to-identify-rioters&#34;&gt;OKs the use of facial recognition technology&lt;/a&gt; to identify rioters from video and still images of Vancouver’s 2011 hockey riots.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.viewdle.com/products/mobile/index.html&#34;&gt;Viewdle’s Social Camera&lt;/a&gt; automatically tags your friends in photos based on the social networking profile pictures they have published&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While some of these examples might seem harmless, or even a useful feature for law enforcement, the main issue is that the subjects of these photos and videos are never asked if they wish to participate in them, not to mention whether they want their photo published online in the first place. The permanence of media on the Web means that any uploaded content can be poured over again and again to identify individuals – either by old-fashioned investigative techniques, but crowd-sourcing, or by face detection /recognition software.&lt;/p&gt;
+
+&lt;h4 id=&#34;how-obscuracam-helps&#34;&gt;How ObscuraCam Helps&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2011/06/01_home.png&#34;&gt;&lt;img class=&#34;alignleft&#34; style=&#34;margin: 3px;&#34; title=&#34;01_home&#34; alt=&#34;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/06/01_home-180x300.png&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;Part of the problem currently surrounding visual privacy and anonymity is the fact that many of the tools and applications that people use on an everyday basis do not have features built in to protect privacy. As a result, everyone with a smartphone, tablet or laptop – not to mention an actual video camera! – captures raw, unedited content that exposes the identities of participants and bystanders present at sensitive events or activities.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/securecam/&#34;&gt;ObscuraCam&lt;/a&gt; is a mobile application for Android that makes it easy for anyone to protect the identity of individuals or groups represented in their photos by building obfuscation and redaction directly into the app. It can be used on photos taken directly from the app itself, or on any photo that your mobile device has access to, including local memory card images or linked Picasa albums. By moving a usually cumbersome post-production process into the daily workflow of those capturing sensitive images, it’s our hope that visual privacy will be respected when it really matters.&lt;/p&gt;
+
+&lt;h4 id=&#34;using-obscuracam&#34;&gt;Using ObscuraCam&lt;/h4&gt;
+
+&lt;p&gt;ObscuraCam features a simple, touch-based user interface for easy manipulation and redaction of images, as well as an automated removal of identifying metadata stored in the photo itself. The following steps walk through the process of capturing and sharing an obscured photo using ObscuraCam.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;From the application home page, choose to either capture a new image or choose an existing image from your existing collections. These options just launch your standard Camera and Gallery application. When the photo is imported, identifying EXIF metadata stored in the file itself, such as GPS location, camera make and model or timestamp, will be removed.&lt;/li&gt;
+&lt;li&gt;After you capture or open an image with ObscuraCam, it is automatically scanned to detect faces. Any faces detected are marked as tagged regions in an image, and the user is able to create as many additional tagged regions as they wish – either via the menu or by long-pressing the desired region. By default, tagged regions are set to be obscured via pixelation.&lt;/li&gt;
+&lt;li&gt;Once a tagged region has been created, the user can interact with that region by simply touching it to bring up a contextual menu.&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2011/06/02_autodetect.png&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-1171&#34; title=&#34;02_autodetect&#34; alt=&#34;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/06/02_autodetect-300x180.png&#34; width=&#34;300&#34; height=&#34;180&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2011/06/02_autodetect-300x180.png 300w, https://guardianproject.info/wp-content/uploads/2011/06/02_autodetect.png 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Options available from the contextual tagging menu include:
+
+&lt;ul&gt;
+&lt;li&gt;Edit – select to scale and move tagged regions&lt;/li&gt;
+&lt;li&gt;Redact – select to fully redact tagged region and replace with black space&lt;/li&gt;
+&lt;li&gt;Pixelate – select to selectively obfuscate identities of persons or situations&lt;/li&gt;
+&lt;li&gt;bgPixelate – select to easily obfuscate everything BUT the tagged region&lt;/li&gt;
+&lt;li&gt;Mask – select to pin a set of ‘groucho marks’ glasses on the tagged region – not only a bit of fun, but useful for quickly defeating facial recognition schemes.&lt;/li&gt;
+&lt;li&gt;Delete – delete the current tagged region&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Once you’re done selecting and obfuscating tagged regions, you can use the options from the main application menu to see a preview of the finished image, save it to your local memory, or share the picture with any application on your handset that is configured to accept images. This includes applications like Facebook, Twitter, or the default Messaging app. &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2011/06/09_processed.png&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-1172&#34; title=&#34;09_processed&#34; alt=&#34;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/06/09_processed-180x300.png&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2011/06/09_processed-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2011/06/09_processed.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;share-with-us-and-save-your-face&#34;&gt;Share With Us and “Save Your Face”!&lt;/h4&gt;
+
+&lt;p&gt;As impediments of visual privacy continue to expand, help us get the word out that we can take back control over our online identities with ObscuraCam! We’ve set up a &lt;a href=&#34;https://www.facebook.com/pages/ObscuraCam-Saving-Your-Social-Face/110765659013081&#34;&gt;Facebook Page&lt;/a&gt; where you can share your creations with us, and with eachother!&lt;/p&gt;
+
+&lt;h4 id=&#34;source-code-issue-reporting&#34;&gt;Source Code &amp;amp; Issue Reporting&lt;/h4&gt;
+
+&lt;p&gt;We’re big fans of open source and living in public. As consistent with all our projects, source code for the SecureSmartCam project, along with the ObscuraCam release, is available online at &lt;a href=&#34;https://github.com/guardianproject/SecureSmartCam&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We also use GitHub to manage our development milestones and active bugs / issues. If you encounter any bugs or issues when testing out this beta build, please report them directly to us in the comments below or by filing directly on the &lt;a href=&#34;https://github.com/guardianproject/SecureSmartCam/issues&#34;&gt;Issues&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot 1.0.5.2 now available</title>
+      <link>https://guardianproject.github.io/info/2011/05/17/orbot-1.0.5.2-now-available/</link>
+      <pubDate>Tue, 17 May 2011 19:43:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/05/17/orbot-1.0.5.2-now-available/</guid>
+      <description>&lt;p&gt;Our flagship app, &lt;a href=&#34;https://guardianproject.github.io/info/apps/orbot&#34;&gt;Orbot: Tor on Android&lt;/a&gt;, has been updated to version 1.0.5.2. It is available in the &lt;a href=&#34;https://market.android.com/details?id=org.torproject.android&amp;amp;feature=search_result&#34;&gt;Android Market&lt;/a&gt;, or through direct download from the &lt;a href=&#34;https://www.torproject.org/docs/android.html.en&#34;&gt;Tor Project’s website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This release fixes a number of long standing bigs, includes the latest and greatest release of Tor itself, cleans up the user interface a bit, and adds some new advanced options (you can specify your exit node country!). It also fixes an issue with our “Tor Everything” capability, that allowed some Android system network traffic to leak and bypass the Tor routing. Finally, it provides for compatibility for &lt;a href=&#34;https://code.google.com/p/cyanogenmod/issues/detail?id=1120&#34;&gt;CyanogenMOD 7&lt;/a&gt;, as well as Android Gingerbread and Honeycomb.&lt;/p&gt;
+
+&lt;p&gt;Enjoy and stay safe out there!&lt;/p&gt;
+
+&lt;p&gt;CHANGELOG&lt;/p&gt;
+
+&lt;p&gt;1.0.5.1/.2&lt;br /&gt;
+– small updates to layout of main screen to fit smaller screens&lt;br /&gt;
+– fixed preference setting of EntryNode torrc value&lt;/p&gt;
+
+&lt;p&gt;1.0.5&lt;br /&gt;
+– added exit node and “StrictExitNode” preference&lt;br /&gt;
+– fixed tor binary installation issue related to max resource size and compression&lt;br /&gt;
+– updated “start on boot” code to test for proper launch event&lt;br /&gt;
+– updated to Tor 0.2.2.25-alpha binary&lt;br /&gt;
+– moved back to single notification bar id to avoid double entries&lt;br /&gt;
+– cleaned up progress dialog and alert handling to avoid leaky windows&lt;br /&gt;
+– Merged __sporkbomb’s patch for how transproxy all works; now does “everything but Tor”&lt;br /&gt;
+– Added new toolbar notifications and alerts for displaying notifications and Tor messages&lt;br /&gt;
+– Removed unused Socks client code from android.net package&lt;br /&gt;
+– Updated wizard to show link to Gibberbot (formerly OTRchat) chat app&lt;br /&gt;
+– Bundled iptables 1.4.7 for ARM instead of relying on installed version&lt;br /&gt;
+– Fixed various issues related to iptables, transproxying for CyanogenMod7/Android 2.3.*&lt;br /&gt;
+– Changed how settings changed are processed through the control port (batched instead of one by one)&lt;br /&gt;
+– Stopped app by app flushing of iptables rules, in favor of complete flush of ‘nat’ and ‘filter’ type&lt;br /&gt;
+– removed useless log screen (logs can be viewed/retrieved using ‘alogcat’ 3rd party app)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Announcing: SQLCipher for Android, Developer Preview r1</title>
+      <link>https://guardianproject.github.io/info/2011/05/09/announcing-sqlcipher-for-android-developer-preview-r1/</link>
+      <pubDate>Mon, 09 May 2011 22:45:09 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/05/09/announcing-sqlcipher-for-android-developer-preview-r1/</guid>
+      <description>
+
+&lt;p&gt;After some major breakthroughs during last week’s development sprint, we’re extremely excited to announce &lt;a href=&#34;https://guardianproject.info/code/sqlcipher/&#34;&gt;SQLCipher for Android&lt;/a&gt;, Developer Preview r1. SQLCipher is an &lt;a href=&#34;http://sqlite.org/&#34;&gt;SQLite&lt;/a&gt; extension that provides transparent 256-bit AES encryption of database files. To date, it has been open-sourced, sponsored and maintained by &lt;a href=&#34;http://zetetic.net/&#34;&gt;Zetetic LLC&lt;/a&gt;, and we are glad to be able to extend their efforts to a new mobile platform. In the mobile space, SQLCipher has enjoyed widespread use in Apple’s &lt;a href=&#34;https://www.zetetic.net/sqlcipher/documentation/ios.html&#34;&gt;iOS&lt;/a&gt;, as well as &lt;a href=&#34;http://www.qtcentre.org/wiki/index.php?title=Building_QSQLITE_driver_with_AES-256_encryption_support&#34;&gt;Nokia / QT&lt;/a&gt; for quite some time. Given that Android &lt;a href=&#34;http://developer.android.com/guide/topics/data/data-storage.html#db&#34;&gt;by default&lt;/a&gt; provides integrated support for SQLite databases, our goal was to create an almost identical API for SQLCipher, so that developers of all skill level could use it, without a steep learning curve.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher.png&#34;&gt;&lt;img title=&#34;logo-sqlcipher&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-300x31.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;31&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If you are impatient, you can just get right to the SDK download here:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/downloads/guardianproject/android-database-sqlcipher/SQLCipherForAndroid-alpha-sdk-0.0.2.zip&#34;&gt;SQLCipher for Android, Developer Preview r1 (0.0.2)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In an environment where mobile data privacy is increasingly &lt;a href=&#34;http://www.reuters.com/article/2011/05/08/us-privacy-congress-idUSTRE7471SA20110508&#34;&gt;in the headlines&lt;/a&gt;, this project will make it easier than ever for mobile developers to properly secure their local application data, and in turn better protect the privacy of their users. The data stored by Android apps protected by this type of encryption will be less vulnerable to access by malicious apps, protected in case of device loss or theft, and highly resistant to &lt;a href=&#34;http://www.cellebrite.com/&#34;&gt;mobile data forensics tools&lt;/a&gt; that are increasingly used to mass copy a mobile device during &lt;a href=&#34;http://www.thenewspaper.com/news/34/3458.asp&#34;&gt;routine traffic stops&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, while the core SQLCipher database is &lt;a href=&#34;http://zetetic.net/index&#34;&gt;vetted and market-ready&lt;/a&gt;, the Android support libraries in this release are still very much alpha quality, hence the Developer Preview label. &lt;strong&gt;&lt;em&gt;This R1 release should not be integrated into critical or production software&lt;/em&gt;.&lt;/strong&gt; Our goal is to give Android developers early access to the technology, so they can provide feedback on our approach, and help us deliver the right offering for securing mobile data. We expect to release a market-ready version this summer, and will be &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/commits/master&#34;&gt;publicly iterating through the codebase&lt;/a&gt; until then.&lt;/p&gt;
+
+&lt;h4 id=&#34;an-illustrative-terminal-listing&#34;&gt;An Illustrative Terminal Listing&lt;/h4&gt;
+
+&lt;p&gt;A typical SQLite database in unencrypted, and visually parseable even as encoded text. The following example shows the difference between hexdumps of a standard SQLite db and one implementing SQLCipher.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;~ sjlombardo$ hexdump -C sqlite.db&lt;br /&gt;
+00000000 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00 |SQLite format 3.|&lt;br /&gt;
+…&lt;br /&gt;
+000003c0 65 74 32 74 32 03 43 52 45 41 54 45 20 54 41 42 |et2t2.CREATE TAB|&lt;br /&gt;
+000003d0 4c 45 20 74 32 28 61 2c 62 29 24 01 06 17 11 11 |LE t2(a,b)$…..|&lt;br /&gt;
+…&lt;br /&gt;
+000007e0 20 74 68 65 20 73 68 6f 77 15 01 03 01 2f 01 6f | the show…./.o|&lt;br /&gt;
+000007f0 6e 65 20 66 6f 72 20 74 68 65 20 6d 6f 6e 65 79 |ne for the money|&lt;/p&gt;
+
+&lt;p&gt;~ $ sqlite3 sqlcipher.db&lt;br /&gt;
+sqlite&amp;gt; PRAGMA KEY=’test123′;&lt;br /&gt;
+sqlite&amp;gt; CREATE TABLE t1(a,b);&lt;br /&gt;
+sqlite&amp;gt; INSERT INTO t1(a,b) VALUES (‘one for the money’, ‘two for the show’);&lt;br /&gt;
+sqlite&amp;gt; .quit&lt;/p&gt;
+
+&lt;p&gt;~ $ hexdump -C sqlite.db&lt;br /&gt;
+00000000 84 d1 36 18 eb b5 82 90 c4 70 0d ee 43 cb 61 87 |.?6.?..?p.?C?a.|&lt;br /&gt;
+00000010 91 42 3c cd 55 24 ab c6 c4 1d c6 67 b4 e3 96 bb |.B&lt;!--?U$???.?g??.?| ... 00000be0  dc 77 5c 6c de c6 d3 be  43 49 48 3e f3 02 94 a9  |?w\l??ӾCIH--&gt;?..?|&lt;/p&gt;
+
+&lt;p&gt;00000bf0 8e 99 ee 28 23 43 ab a4 97 cd 63 42 8a 8e 7c c6 |..?(#C??.?cB..|?|&lt;/p&gt;
+
+&lt;p&gt;~ $ sqlite3 sqlcipher.db&lt;br /&gt;
+sqlite&amp;gt; SELECT * FROM t1;&lt;br /&gt;
+Error: file is encrypted or is not a database&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(example courtesy of &lt;a href=&#34;https://www.zetetic.net/sqlcipher/design&#34;&gt;SQLCipher&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h4 id=&#34;details-for-developers&#34;&gt;Details for Developers&lt;/h4&gt;
+
+&lt;p&gt;We’ve packaged up a very simple SDK for any Android developer to add SQLCipher into their app with the following three steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Add a single sqlcipher.jar and a few .so’s to the application libs directory&lt;br /&gt;
+ ****&lt;/li&gt;
+&lt;li&gt;Update the import path from &lt;em&gt;android.database.sqlite.*&lt;/em&gt; to &lt;em&gt;info.guardianproject.database.sqlite.*&lt;/em&gt; in any source files that reference it. The original android.database.Cursor can still be used unchanged.&lt;/li&gt;
+&lt;li&gt;Init the database in onCreate() and pass a variable argument to the open database method with a password*:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;SQLiteDatabase.loadLibs(this); //first init the db libraries with the context&lt;/li&gt;
+&lt;li&gt;SQLiteOpenHelper.getWritableDatabase(“thisismysecret”):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;*&lt;strong&gt;Note:&lt;/strong&gt; we are working on some dialog builder helper methods for password and PIN input, password caching, and other features that we would like to standardize across all applications that use SQLCipher.&lt;/p&gt;
+
+&lt;h4 id=&#34;compatibility&#34;&gt;Compatibility&lt;/h4&gt;
+
+&lt;p&gt;The Developer Preview implements SQLCipher v1, is compatible with Android 2.2 &amp;amp; 2.3, and works only within one process (you can’t pass a Cursor from a remote Service to an Activity).&lt;/p&gt;
+
+&lt;h4 id=&#34;notepad-sqlcipher-notepadbot&#34;&gt;Notepad + SQLCipher = Notepadbot&lt;/h4&gt;
+
+&lt;p&gt;Notepadbot is a sample application pulled from the standard Android samples code and updated to use SQLCipher. You can browse the source &lt;a href=&#34;https://github.com/guardianproject/notepadbot&#34;&gt;here&lt;/a&gt; and download the apk &lt;a href=&#34;https://github.com/guardianproject/notepadbot/Notepadbot-0.0.1c-dev.apk/qr_code&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;img class=&#34;alignnone&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/05/prompt.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;&lt;img class=&#34;alignnone&#34; title=&#34;successful authentication&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/05/notes.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h4 id=&#34;final-notes&#34;&gt;Final Notes&lt;/h4&gt;
+
+&lt;p&gt;It’s important to note that this project is not intended to be a distinct, long-term fork of SQLCipher. We’ve been working closely with the SQLCipher team at &lt;a href=&#34;http://zetetic.net/&#34;&gt;Zetetic&lt;/a&gt; and fully intent to closely maintain the project as SQLCipher evolves, re-integrating changes in upcoming releases such as &lt;a href=&#34;https://github.com/sjlombardo/sqlcipher/tree/v2beta&#34;&gt;SQLCipher v2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Android support libraries are licensed under &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/blob/master/LICENSE&#34;&gt;Apache 2.0&lt;/a&gt;, in line with the Android OS code on which they are based. The SQLCipher code itself is licensed under a &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/blob/master/SQLCIPHER_LICENSE&#34;&gt;BSD-style license from Zetetic LLC.&lt;/a&gt; Finally, the original SQLite code itself is in the &lt;a href=&#34;http://www.sqlite.org/copyright.html&#34;&gt;public domain&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Downloads and Source&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SQLCipher for Android project source repo is here: &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher&#34;&gt;https://github.com/guardianproject/android-database-sqlcipher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Current SDK distro for developers, with the jar’s, .so’s and a quick sample can be found here: &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/downloads&#34;&gt;https://github.com/guardianproject/android-database-sqlcipher/downloads&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Proxy Mobile Add-on 0.0.7 for Firefox on Android</title>
+      <link>https://guardianproject.github.io/info/2011/03/04/proxy-mobile-add-on-0.0.7-for-firefox-on-android/</link>
+      <pubDate>Fri, 04 Mar 2011 00:01:24 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/03/04/proxy-mobile-add-on-0.0.7-for-firefox-on-android/</guid>
+      <description>&lt;p&gt;We’ve updated our &lt;a href=&#34;https://addons.mozilla.org/en-US/mobile/addon/proxy-mobile/&#34;&gt;Proxy Mobile&lt;/a&gt; add-on for &lt;a href=&#34;https://www.mozilla.com/en-US/mobile/&#34;&gt;Firefox on Android&lt;/a&gt; that allows user to configure their proxy settings. We first released this &lt;a href=&#34;https://guardianproject.info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/&#34;&gt;back in November of last year&lt;/a&gt;, and have done our best to keep up with all the various beta updates of the browser. There are no features in this release, just a few small changes to make sure everything is running smoothly out there.&lt;/p&gt;
+
+&lt;p&gt;To install the add-on, just search for “Proxy” from the add-on search menu within the Firefox settings screen. You can also point your Firefox mobile browser to this link: &lt;a href=&#34;https://guardianproject.info/downloads/proxymob-addon-0.0.7.xpi&#34;&gt;https://guardianproject.info/downloads/proxymob-addon-0.0.7.xpi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are a developer interested in writing mobile browser add-ons, please check out &lt;a href=&#34;https://github.com/guardianproject/proxymob&#34;&gt;our source code&lt;/a&gt;, and let us know if you’d like to pitch to add even more awesome privacy-enhancing features!&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

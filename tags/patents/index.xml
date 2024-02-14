@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patents on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/patents/</link>
+    <description>Recent content in Patents on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/patents/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>We Support the Open COVID Pledge</title>
+      <link>https://guardianproject.github.io/info/2020/04/09/we-support-the-open-covid-pledge/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/04/09/we-support-the-open-covid-pledge/</guid>
+      <description>&lt;p&gt;Please join this &lt;a href=&#34;https://opencovidpledge.org&#34;&gt;Open COVID Pledge&lt;/a&gt; by
+committing to freely share technology for all work that aims to end
+the Coronavirus Disease 2019 (COVID-19) pandemic.&lt;/p&gt;
+
+&lt;p&gt;We believe that free software licenses like the GNU GPL and the Apache
+License already provide these key benefits.  We are making this
+statement to make it clear that all of our code is available for any
+effort to end the COVID Pandemic.&lt;/p&gt;
+
+&lt;p&gt;We grant to every person and entity that wishes to accept it, a
+non-exclusive, royalty-free, worldwide, fully paid-up license to fully
+use, practice and exploit all our patent and copyright rights, for the
+sole purpose of ending the COVID-19 pandemic and minimising the impact
+of the disease, including diagnosis, prevention, containment, and
+treatment.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

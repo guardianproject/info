@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openkeychain on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/openkeychain/</link>
+    <description>Recent content in Openkeychain on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Jul 2010 11:00:25 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/openkeychain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To: Lockdown Your Mobile E-Mail</title>
+      <link>https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/</link>
+      <pubDate>Fri, 09 Jul 2010 11:00:25 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update 2015-04-27&lt;/strong&gt;: _We now recommend &lt;a href=&#34;http://www.openkeychain.org/&#34; target=&#34;_blank&#34;&gt;OpenKeychain&lt;/a&gt; over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and &lt;a href=&#34;http://www.openkeychain.org/&#34; target=&#34;_blank&#34;&gt;OpenKeychain&lt;/a&gt;, then go into OpenKeychain and start the config there._&lt;/p&gt;
+
+&lt;p&gt;Over the past few years it’s become &lt;a href=&#34;https://www.youtube.com/watch?v=Gm8NdNy4wOM&#34;&gt;increasingly popular&lt;/a&gt; to sound the call that ‘&lt;a href=&#34;http://www.pcmag.com/article2/0,2817,2343209,00.asp&#34; title=&#34;dead&#34;&gt;email is dead&lt;/a&gt;{#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate. I expect to be scooting around on my &lt;a href=&#34;https://en.wikipedia.org/wiki/Hoverboard&#34;&gt;hoverboard&lt;/a&gt; by the time email goes the way of the dinosaur.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, many of the protocols involved in sending and receiving e-mail are not considered secure – in the sense that they are vulnerable to eavesdropping. Simple Mail Transport Protocol (SMTP) – the Internet standard for e-mail transmission across IP networks  most commonly used by client applications for sending messages to a mail server for relaying – is typically implemented without any type of transport encryption. Internet Message Access Protocol (IMAP) and Post Office Protocol (POP) suffer from the same eavesdropping issues as SMTP when implemented without transport encryption. Even when SMTP is implemented with transport encryption it does not, by default, require the authentication of e-mail message senders. As a result, mail servers cannot be sure that the senders of messages are really who they claim to be. And even though POP and IMAP require users to authenticate, messages are sent and delivered using SMTP.&lt;/p&gt;
+
+&lt;p&gt;The result is a situation where the &lt;em&gt;recipient&lt;/em&gt; of an e-mail message can be positively identified but the &lt;em&gt;sender&lt;/em&gt; cannot. Along with the eavesdropping concerns mentioned at the top of the paragraph, this is an alarming state of affairs. Imagine if the same were true of snail mail – there would be rioting in the streets! Fortunately there has been a lot of great work done to combat these fears – the main issue being that the problem itself is  still one  that is often ignored or not fully understood by the layperson. As secure solutions for mobile platforms gain momentum, we’re hoping to change things.&lt;/p&gt;
+
+&lt;p&gt;Enter &lt;a href=&#34;https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP&#34;&gt;OpenPGP&lt;/a&gt;, an IETF standard for encryption and decryption of data. The version of OpenPGP that exists today is the evolution of PGP, which was created in 1991 as a means for secure BBSs communication and message storage (it ironically also stands for “Pretty Good Privacy”). Why do you need PGP? In the words of its inventory, Phil Zimmerman: “&lt;a href=&#34;http://www.spectacle.org/795/byzim.html&#34;&gt;It empowers people to take their privacy into their own hands&lt;/a&gt;.” How it works is a whole other story – one too complex for the purposes of this posting – but we’ll do our  best to scrape the surface quickly. Disclaimer: The following is meant solely as an introduction. There are many people out there who are experts in these topics, and we welcome any and all comments – especially if we misstate or misrepresent anything!&lt;/p&gt;
+
+&lt;p&gt;PGP uses a serial combination of hashing, data compression, symmetric-key cryptography, and, finally, public-key cryptography. From the user’s perspective, it creates two &lt;a href=&#34;https://en.wikipedia.org/wiki/Cryptographic_key&#34;&gt;cryptographic keys&lt;/a&gt; to encrypt and decrypt data. The first of these two is called the &lt;a href=&#34;https://en.wikipedia.org/wiki/Public-key&#34;&gt;Public Key&lt;/a&gt; – which can be freely shared with anyone the user wishes and is used by others to encrypt data so that it can be decrypted by &lt;strong&gt;only the intended recipient&lt;/strong&gt;. The second key is the Private Key, which should be kept as private and safe as possible. It is used to decrypt data that has been encrypted using a specific Public Key. As long as the Private Key is kept secret, only the owner is  able to decrypt data that has been encrypted with a Public Key. One problem with older methods of encryption was the relative ease with which codes could be broken. With increasingly powerful computers that are able to crack codes via pure ‘brute force,’ encoding methods must be incredibly complex to stand up. To combat this, PGP uses a key that is astronomically large,  meaning that the security of PGP encryption lies entirely with the key as opposed to keeping the method for key generation a secret. In fact, the methods that PGP encryption uses are known and widely documented. In addition, the size of keys can be increased whenever necessary to stay one step ahead of technological advances. And for the time being, each of the algorithms in current use by PGP is not known to have cryptanalytic weaknesses.&lt;/p&gt;
+
+&lt;p&gt;So how secure does this make your information? Italian Police, the &lt;a href=&#34;http://www.pcworld.com/article/110841/pgp_encryption_proves_powerful.html&#34;&gt;FBI&lt;/a&gt;, and &lt;a href=&#34;http://www.theregister.co.uk/2007/11/14/ripa_encryption_key_notice/&#34;&gt;British police&lt;/a&gt; have been unable to crack its security and have resorted to demanding private keys. It’s been likened as “the closest you’re likely to get to military-grade encryption” by cryptographer &lt;a href=&#34;https://en.wikipedia.org/wiki/Bruce_Schneier&#34;&gt;Bruce Schneier&lt;/a&gt;. Short answer: pretty darn good, as long as you guard your private key wisely.&lt;/p&gt;
+
+&lt;p&gt;You’ve probably guessed by now that the reason for this posting is to show you how to effectively use OpenPGP to secure your mobile email. And while we would’ve loved to just jump right into the tutorial, there are a few more things you should know first. &lt;a href=&#34;https://code.google.com/p/android-privacy-guard/&#34; title=&#34;Android Privacy Guard&#34;&gt;Android Privacy Guard&lt;/a&gt;{#udlg} (or APG for short), is a first step at bringing &lt;a href=&#34;https://en.wikipedia.org/wiki/Pretty_Good_Privacy&#34; title=&#34;PGP&#34;&gt;OpenPGP&lt;/a&gt;{#qtjc} to the Android platform, letting you manage OpenPGP keys directly from your Android phone – and use them to encrypt, sign and decrypt emails and files. &lt;a href=&#34;http://groups.google.com/group/k-9-mail/browse_thread/thread/921051bc0a61ed0b/d6085b925805ebf2?lnk=raot&#34;&gt;Very recently&lt;/a&gt; the teams behind APG and the popular, open-source Android email client &lt;a href=&#34;https://code.google.com/p/k9mail/&#34;&gt;K-9 Mail&lt;/a&gt; have joined forces in a limited edition &lt;a href=&#34;https://en.wikipedia.org/wiki/Marvel_Team-Up&#34;&gt;team-up&lt;/a&gt; to create a beta version of K-9 that plays nice with APG quite seamlessly. We’ve been using it as our default email solution at Guardian for weeks now and want to share it with you!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Currently APG only supports importing and deleting keys – not generating them – so you’ve got to use a desktop implementation of OpenPGP (such as &lt;a href=&#34;http://www.gnupg.org/&#34; title=&#34;GNU Privacy Guard&#34;&gt;GNU Privacy Guard&lt;/a&gt;{#vrm_}) to actually generate your keypair if you don’t already have one. A number of front-end applications and libraries are available to perform this task. If you already have a keypair set up, you should skip the first step.&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;strong&gt;1. Download and Install GnuPG Generate an OpenPGP keypair&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  Install GnuPG  &lt;a href=&#34;http://www.gnupg.org/download.html&#34;&gt;here&lt;/a&gt;. There are binaries available for &lt;a href=&#34;http://www.gnupg.org/download/supported_systems.en.html&#34;&gt;whatever OS flavor&lt;/a&gt; you prefer, and since they do a great job of making documentation and &lt;a href=&#34;http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html&#34;&gt;How-To Guides&lt;/a&gt; available, we’ll skip the part where we reinvent the wheel.
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;strong&gt;2. Generate and export your keypair&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  Follow the instructions &lt;a href=&#34;http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.1&#34;&gt;here&lt;/a&gt; to create a new keypair. &lt;a href=&#34;http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.2&#34;&gt;Export&lt;/a&gt; your public and private keys (re-direct from stdout to a file) and stick that file on your Android device’s SD card. Usually it’s best to create a new folder /APG to keep things organized, especially if your SD card is a mess like ours 🙂
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;strong&gt;3. Download APG and import your keys&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;strong&gt; &lt;/strong&gt;If you don’t already have it, download Android Privacy Guard from its repository &lt;a href=&#34;https://code.google.com/p/android-privacy-guard/downloads/list&#34;&gt;here&lt;/a&gt; or point your barcode scanner to the QR code below. You can also find it on the Market if you prefer.
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;span style=&#34;line-height: 1px; font-size: 13.2px;&#34;&gt; &lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px; text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png&#34;&gt;&lt;img class=&#34;size-full wp-image-385 aligncenter&#34; title=&#34;qrcode_apg&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png&#34; alt=&#34;&#34; width=&#34;120&#34; height=&#34;120&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png 120w, https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg-64x64.png 64w&#34; sizes=&#34;(max-width: 120px) 100vw, 120px&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  Fire up APG and select ‘Manage Public Keys’ from the menu:
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px; text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-390 aligncenter&#34; title=&#34;apg_menu&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px; text-align: center;&#34;&gt;
+  &lt;p style=&#34;padding-left: 30px;&#34;&gt;
+    From the ‘Manage Public Keys’ screen, select ‘Import Keys’:
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;p style=&#34;padding-left: 30px; text-align: center;&#34;&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-391 aligncenter&#34; title=&#34;apg_manage_public_keys_blur&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+    &lt;p style=&#34;padding-left: 30px;&#34;&gt;
+      From the popup dialog, select the public key that you’ve transferred to your SD card. It’s helpful to use a file browser program like Astro File Manager if you don’t already have it installed:
+    &lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p style=&amp;quot;padding-left: 30px; text-align: center;&amp;quot;&amp;gt;
+  &amp;lt;span style=&amp;quot;line-height: 8px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png&amp;quot;&amp;gt;&amp;lt;img class=&amp;quot;size-medium wp-image-392 aligncenter&amp;quot; title=&amp;quot;apg_import_keys_blur&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;180&amp;quot; height=&amp;quot;300&amp;quot; srcset=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png 480w&amp;quot; sizes=&amp;quot;(max-width: 180px) 100vw, 180px&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+
+&amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    Once your public key(s) are successfully imported, return to the main APG menu, select ‘Manage Secret Keys’ and repeat the steps above for your Private Key.
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    &amp;lt;strong&amp;gt;4. Download and Configure K-9 Mail&amp;lt;/strong&amp;gt;
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    Download the latest version of K-9 mail featuring APG integration. You can find it on the Downloads page &amp;lt;a href=&amp;quot;https://code.google.com/p/k9mail/downloads/list&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt; or, again, point your barcode scanner to the QR Code below. Whatever floats your boat.
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px; text-align: center;&amp;quot;&amp;gt;
+    &amp;lt;img class=&amp;quot;aligncenter&amp;quot; src=&amp;quot;https://chart.apis.google.com/chart?chs=150x150&amp;amp;cht=qr&amp;amp;chl=http://k9mail.googlecode.com/files/k9-apg-2900-beta.apk&amp;amp;chld=L|1&amp;amp;choe=UTF-8&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;125&amp;quot; height=&amp;quot;125&amp;quot; /&amp;gt;
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    Set up your email account by entering your email address and password, then give it a name.
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    &amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png&amp;quot;&amp;gt;&amp;lt;img class=&amp;quot;aligncenter size-medium wp-image-451&amp;quot; title=&amp;quot;k9_setup&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;168&amp;quot; height=&amp;quot;300&amp;quot; srcset=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png 480w&amp;quot; sizes=&amp;quot;(max-width: 168px) 100vw, 168px&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    &amp;lt;p style=&amp;quot;padding-left: 30px; text-align: center;&amp;quot;&amp;gt;
+      &amp;lt;img class=&amp;quot;aligncenter&amp;quot; title=&amp;quot;k9_almost_done&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done-168x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;168&amp;quot; height=&amp;quot;300&amp;quot; /&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      For more popular accounts such as gmail, Yahoo!, etc., K-9 will automatically detect the correct configuration. For more complex accounts such as Exchange, please check out the K-9 wiki page &amp;lt;a href=&amp;quot;https://code.google.com/p/k9mail/w/list&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;.
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;strong&amp;gt;5. Send and Receive Encrypted Email!&amp;lt;/strong&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      Thanks to the integration effort by the teams at APG and K-9, actually using secure mobile email becomes easy. The compose screen features a prominent checkbox and button that allow you to sign and encrypt your outbound messages, respectively.
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png&amp;quot;&amp;gt;&amp;lt;img class=&amp;quot;aligncenter size-medium wp-image-453&amp;quot; title=&amp;quot;k9_compose&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;168&amp;quot; height=&amp;quot;300&amp;quot; srcset=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png 480w&amp;quot; sizes=&amp;quot;(max-width: 168px) 100vw, 168px&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      Decrypting messages with your private key is even easier and is literally a 1-touch experience:
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done.png&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png&amp;quot;&amp;gt;&amp;lt;img class=&amp;quot;aligncenter size-medium wp-image-455&amp;quot; title=&amp;quot;k9_view_decrypt&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;180&amp;quot; height=&amp;quot;300&amp;quot; srcset=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-90x150.png 90w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png 480w&amp;quot; sizes=&amp;quot;(max-width: 180px) 100vw, 180px&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;strong&amp;gt;Enjoy! &amp;lt;/strong&amp;gt;As always, please post all questions, concerns, and jokes (only good ones please) in the Comments section. We’re very excited about the powerful combination that these two apps bring and we’d love to hear from you!
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      If you find any issues with APG, please report them &amp;lt;a href=&amp;quot;https://code.google.com/p/android-privacy-guard/issues/list&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;:
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;span style=&amp;quot;line-height: 13px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;line-height: 16px;&amp;quot;&amp;gt;Likewise, report issues with K-9 &amp;lt;a href=&amp;quot;https://code.google.com/p/k9mail/issues/list&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;. &amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

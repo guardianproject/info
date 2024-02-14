@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Defcon2018 on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/defcon2018/</link>
+    <description>Recent content in Defcon2018 on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Aug 2018 16:56:00 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/defcon2018/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IOCipher is the antidote to “Man-in-the-Disk” attack</title>
+      <link>https://guardianproject.github.io/info/2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/</link>
+      <pubDate>Fri, 17 Aug 2018 16:56:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/</guid>
+      <description>&lt;p&gt;Recently, at DEFCON 2018, researchers at Check Point &lt;a href=&#34;https://blog.checkpoint.com/2018/08/12/man-in-the-disk-a-new-attack-surface-for-android-apps/&#34;&gt;announced a new kind of attack&lt;/a&gt; made possible by the way many Android apps are implemented. In summary, developers use the shared external storage space in an unsafe manner, by not taking into consideration that other apps also have read and write access to the same space. A malicious app can modify data used by another app, as a vector for compromising that app, causing it to be compromised or crash.&lt;/p&gt;
+
+&lt;p&gt;While Google does provide &lt;a href=&#34;https://developer.android.com/training/articles/security-tips&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;guidelines&lt;/a&gt; on safe external storage use, most developers ignore them. Here is what they say:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;“Perform input validation when handling data from external storage”&lt;/li&gt;
+&lt;li&gt;“Do not store executables or class files on External Storage”&lt;/li&gt;
+&lt;li&gt;“External Storage files should be signed and cryptographically verified prior to dynamic loading”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is most likely due to lack of time or knowledge…. and, that is where our &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;IOCipher encrypted virtual filesystem library for Android&lt;/a&gt; comes in!&lt;/p&gt;
+
+&lt;p&gt;IOCipher provides a virtual encrypted disk for Android apps without requiring the device to be rooted. It uses a clone of the standard &lt;code&gt;java.io&lt;/code&gt; API for working with files, so developers already know how to use it. Only password handling, and opening the virtual disk are what stand between the developer and working encrypted file storage. It is based on and &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SQLCipher&lt;/a&gt;, and designed to work with &lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CacheWord&lt;/a&gt; for handling the keys and passwords.&lt;/p&gt;
+
+&lt;p&gt;Regarding the three guidelines from Google, by storing downloaded data into an IOCipher virtual volume, you both benefit from the use of external storage, while ensuring, thanks to cryptography, that your data or executable code has not been read or modified by another application. If a malicious application tries to access or modify the encrypted volume, it will be detected and not able to load, without causing a crash in the application.&lt;/p&gt;
+
+&lt;p&gt;You can find IOCipher on Github today (and likely get it implemented in your app today, as well!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34;&gt;https://github.com/guardianproject/IOCipher&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

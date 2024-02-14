@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Viento on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/viento/</link>
+    <description>Recent content in Viento on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 26 Sep 2018 10:54:38 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/viento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wind is a Mozilla &amp; National Science Foundation Grand Prize Winner</title>
+      <link>https://guardianproject.github.io/info/2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/</link>
+      <pubDate>Wed, 26 Sep 2018 10:54:38 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/</guid>
+      <description>&lt;p&gt;On August 14th, members of the Guardian Project team traveled to Mountain View to compete in the final round of the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation for a Networked Society (WINS) Challenge&lt;/a&gt;. We learned in July that our &lt;a href=&#34;https://guardianproject.info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/&#34;&gt;Wind  project was a finalist&lt;/a&gt;, and we now had the opportunity to compete for one of the grand prizes, in a TED-meets-SharkTank style event, at Mozilla HQ.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wind&#34;&gt;Wind&lt;/a&gt; is a network designed for opportunistic communication and sharing of local knowledge that provides off-grid services for everyday people, using the mobile devices they already have. In the Wind network, Chime is the hyperlink, but one that exists in time and space, discoverable through beacon broadcasts and human-to-human sharing. All of this is powered by free and open-source software, running on readily available consumer hardware, and can be deployed at little to no cost, in a very short amount of time.&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/fGuiy3rlOVQ&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p style=&#34;font-size:23px&#34;&gt;
+  Yesterday, on the Mozilla blog, the &lt;a href=&#34;https://blog.mozilla.org/blog/2018/09/25/1-6-million-to-connect-unconnected-americans-our-nsf-wins-competition-grand-prize-winners/&#34;&gt;winners were announced.&lt;/a&gt; We are honored to be one of them, claiming the 4th Grand Prize.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;p class=&#34;has-background has-pale-cyan-blue-background-color&#34;&gt;
+  You can watch our 5 minute power presentation below, or jump to the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;project page&lt;/a&gt; or &lt;a href=&#34;https://github.com/guardianproject/wind&#34;&gt;github repo&lt;/a&gt; for more detail. We have also published our entire &lt;a href=&#34;https://github.com/guardianproject/wind/blob/master/Mozilla%20NSF%20Off-Grid%20Challenge_%20Wind.pdf&#34;&gt;Wind Concept Proposal Submission paper.&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/FOWrappjLsY&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;We are so grateful to be associated not only with the challenge itself, but with all the other impressive finalists and winners. Our work on Wind took quite a different approach than the others, and thus fills some niches and gaps not addressed by the other systems. We believe there are numerous opportunities for collaboration, and looking forward to helping fulfill the complete vision set forth by the WINS challenges.&lt;/p&gt;
+
+&lt;p&gt;We will use the funding to continue development work on our &lt;a href=&#34;https://github.com/sabzo/ayanda&#34;&gt;Ayanda&lt;/a&gt; and &lt;a href=&#34;https://github.com/guardianproject/chimeapp&#34;&gt;Chime&lt;/a&gt; apps, protocols and libraries. We will also support partners like F-Droid, OpenArchive, LibraryBox to help promote adoption. We will travel and work in the field, finding communities in need both in the U.S., and abroad, who can benefit from a Wind deployment. Lastly, we’ll reach out to colleagues in the humanitarian response communities, to gain feedback and build awareness about our suite of tools and capabilities.&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-13904&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5.jpg 1275w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-1024x1024.jpg 1024w&#34; sizes=&#34;(max-width: 1275px) 100vw, 1275px&#34; /&gt; &lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Some thanks are definitely in order for members of the Guardian Project team and community. Hans’ leadership and collaboration with the &lt;a href=&#34;https://f-droid.org/&#34;&gt;F-Droid.org team&lt;/a&gt; over the last few years, provided innovative and fully functional foundation for the “Off Grid App Store”. In particular, his work implementing USB sharing with F-Droid (see the video above for that in action), enabled a true sneakernet mode, that was a key part of our demo.&lt;br /&gt;
+&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-14002&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1.jpg 1920w, https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1-300x182.jpg 300w, https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1-768x466.jpg 768w, https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1-1024x622.jpg 1024w&#34; sizes=&#34;(max-width: 1920px) 100vw, 1920px&#34; /&gt; &lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://okthanks.com/&#34;&gt;Okthanks&lt;/a&gt;, our design team, created amazing &lt;a href=&#34;https://okthanks.com/blog/peronas-latin-america&#34;&gt;user-centered foundations, personas and methods&lt;/a&gt; as our guide, and that helped our video presentations turn out great. Rosa and Fabiola ensured we stayed true to communities in Latin America who could benefit from this effort. Fabiola also was a fantastic presenter in front of the judges (again, to the video!). Early on, David conceived of a geocaching based concept that led to the Chime protocol, and which we plan to keep exploring. &lt;a href=&#34;http://sabelo.io/about/&#34;&gt;Sabelo&lt;/a&gt; pushed forward our work on our nearby communications with his &lt;a href=&#34;https://github.com/sabzo/ayanda&#34;&gt;Ayanda software library&lt;/a&gt;. Natalie and the &lt;a href=&#34;https://open-archive.org/&#34;&gt;OpenArchive&lt;/a&gt; team let us prototype support for nearby media publishing. Jason and his &lt;a href=&#34;http://librarybox.us/&#34;&gt;LibraryBoxen&lt;/a&gt; provided some early inspiration for how an off-grid system can be useful in everyday life.&lt;/p&gt;
+
+&lt;p&gt;Again, our sincere thanks to Mozilla and the National Science Foundation for this wonderful opportunity and financial support. Here’s to a more Windy future for the unconnected world ahead.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

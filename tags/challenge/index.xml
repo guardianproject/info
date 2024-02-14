@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Challenge on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/challenge/</link>
+    <description>Recent content in Challenge on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 02 Mar 2011 20:39:18 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/challenge/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Addressing a “Privacy Challenge” with Guardian</title>
+      <link>https://guardianproject.github.io/info/2011/03/02/addressing-a-privacy-challenge-with-guardian/</link>
+      <pubDate>Wed, 02 Mar 2011 20:39:18 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/03/02/addressing-a-privacy-challenge-with-guardian/</guid>
+      <description>&lt;p&gt;Organized by the &lt;a href=&#34;http://aclunc.org/&#34;&gt;ACLU&lt;/a&gt;, &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor Project&lt;/a&gt;, and &lt;a href=&#34;http://privacybydesign.ca/&#34;&gt;PrivacyByDesign.c&lt;/a&gt;a, the &lt;a href=&#34;http://www.develop4privacy.org/&#34;&gt;“Develop for Privacy Challenge”&lt;/a&gt; is an interesting new software development challenge that was announced last month. Developers (teams or individuals) have until May 31st to come up with apps which address this goal:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Develop apps for smartphones or other mobile devices that educate users about mobile privacy and give them the ability to claim or demand greater control of their own personal information.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We don’t plan to compete in this contest ourselves, as we would rather support and encourage other developers to take a shot at it. Along those lines, we would really like to see developers use some of the &lt;a href=&#34;https://guardianproject.info/apps&#34;&gt;apps we have built&lt;/a&gt;, and &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;code we have released&lt;/a&gt;, as part of their solutions. We have been putting together a large number of “lego” building blocks over the last year, just waiting for someone to come and put them together in a revolutionary way. Here is a breakdown of some of our more useful components:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.torproject.org/images/THS-4.png&#34;&gt;&lt;img class=&#34;alignleft&#34; style=&#34;margin-left: 3px; margin-right: 3px;&#34; src=&#34;https://www.torproject.org/images/THS-4.png&#34; alt=&#34;&#34; width=&#34;162&#34; height=&#34;111&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;ORbot -More than just Circumvention&lt;/a&gt;: beyond just being a great way to connect to Tor on Android, Orbot also supports &lt;a href=&#34;https://www.torproject.org/docs/hidden-services.html.en&#34;&gt;Tor Hidden Services&lt;/a&gt;. This means you can run local servers on your Android device, and access them via a .onion hostname from any other device or computer on the Tor network. We have been looking at building all sorts of cool anonymous peer-to-peer apps using this capability, but haven’t found the time yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/code/orlib/&#34;&gt;ORlib – Privacy-powered HTTP and Sockets:&lt;/a&gt; This an Android Library for use by any application that wishes to route its network traffic through the Tor network. If your app uses this library, and Orbot is installed and activated on the device, it will automatically handle routing your connections, DNS requests and traffic through the Tor network. By building this into your device, it means your users do not need to have a rooted device in order to have their network traffic anonymized and otherwise protected from filtering and surveillence.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/proxymob-firefox-add-on/&#34;&gt;ProxyMob&lt;/a&gt;: We have the beginnings of a Firefox for Android add-on that allows user to control the proxy settings for their browser. However, this add-on needs to fully evolve into a mobile version of &lt;a href=&#34;https://www.torproject.org/torbutton/&#34;&gt;TorButton&lt;/a&gt;. This alone would be a great project to tackle, discovering what unique challenges their are to anonymizing mobile web access, such as constant geolocation tracking!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/guardianproject/SecureSmartCam/raw/master/doc/comps/Still/11_blur.jpg&#34;&gt;&lt;img class=&#34;alignright&#34; style=&#34;margin-left: 3px; margin-right: 3px;&#34; src=&#34;https://github.com/guardianproject/SecureSmartCam/raw/master/doc/comps/Still/11_blur.jpg&#34; alt=&#34;&#34; width=&#34;173&#34; height=&#34;288&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/securecam/&#34;&gt;SecureSmartCam&lt;/a&gt;: Visual privacy is an emerging area of research and development, specifically with the growing problem/benefit of cameras being everywhere, in our pockets, on our streets, at all times. We are partnering with &lt;a href=&#34;https://www.witness.org&#34;&gt;Witness.org&lt;/a&gt; to build camera software that is capable of protecting identities, securing sensitive metadata stored in photos, and empowering the documenter and subjects of photos, video and audio recordings to maintain more control of media that they have consented to be a part of. With all that in mind, we need some serious media hackers who are interested in thing liks OpenCV, GStreamer, EXIF and more to contribute to this project, and to come up with some new brilliant secure cam apps of their own.&lt;/p&gt;
+
+&lt;p&gt;We have a number of other ongoing projects that you can find on our &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;Github site&lt;/a&gt;, including encrypted SQL databases and file system tools, and our secure instant messaging app, &lt;a href=&#34;https://guardianproject.info/apps/gibber&#34;&gt;Gibberbot&lt;/a&gt;. All in all, there is a quite a bit of work on which any interest in improving mobile privacy can build upon. We would be very happy to provide support via &lt;a href=&#34;https://guardianproject.info/contact/&#34;&gt;email or IRC&lt;/a&gt; to any dev interested in working with us, as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Good luck, and &lt;a href=&#34;http://www.develop4privacy.org/&#34;&gt;game on&lt;/a&gt;!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;**&lt;a href=&#34;http://www.develop4privacy.org/&#34;&gt;http://www.develop4privacy.org/&lt;/a&gt;&lt;br /&gt;
+**&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

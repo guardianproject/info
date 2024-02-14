@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Password Management on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/password-management/</link>
+    <description>Recent content in Password Management on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 Sep 2014 21:39:54 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/password-management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CipherKit updates: IOCipher and CacheWord</title>
+      <link>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</link>
+      <pubDate>Fri, 26 Sep 2014 21:39:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</guid>
+      <description>
+
+&lt;p&gt;We’ve been on a big kick recently, updating the newest members of our CipherKit family of frameworks: &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;IOCipher&lt;/a&gt; and &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt;. There also are is a little news about the original CipherKit framework: &lt;a href=&#34;https://www.zetetic.net/sqlcipher/open-source&#34; title=&#34;SQLCipher for Android&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;iocipher-v0-2&#34;&gt;IOCipher v0.2&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;IOCipher is a library for storing files in an encrypted virtual disk. It’s API is the exact same as &lt;code&gt;java.io&lt;/code&gt; for working with files, and it does not need root access. That makes it the sibling of SQLCipher-for-Android, both are native Android APIs that wrap the SQLCipher database.&lt;/p&gt;
+
+&lt;p&gt;This round of work focused on making IOCipher more reliable and secure, and easy to integrate with CacheWord. It can now handle files up to 4GB in size, the same as FAT filesystems, and it has much improved performance, especially under concurrent load. There is now also an &lt;code&gt;unmount()&lt;/code&gt; method to lock the database and wipe the key from memory. The central &lt;code&gt;VirtualFileSystem&lt;/code&gt; class is now a singleton, since you can only have a single virtual disk open at a time. Lastly, the IOCipher release now includes binaries for &lt;code&gt;armeabi&lt;/code&gt;, &lt;code&gt;armeabi-v7a&lt;/code&gt;, and &lt;code&gt;x86&lt;/code&gt;. IOCipher v0.2 was built against SQLCipher-for-Android v3.1.0, and that is the minimum recommended version to use.&lt;/p&gt;
+
+&lt;p&gt;Find downloads, example projects, test suites, and more on &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;the IOCipher page&lt;/a&gt;. Follow the development on the &lt;a href=&#34;https://dev.guardianproject.info/projects/iocipher&#34; target=&#34;_blank&#34;&gt;IOCipher project page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;cacheword-v0-1&#34;&gt;CacheWord v0.1&lt;/h2&gt;
+
+&lt;p&gt;Once you are using SQLCipher and IOCipher, then you’ll definitely need to do some password management, and password caching too, since no one wants to type their password again every time they come to an app. That is where CacheWord comes in: it is a library for managing passwords, and it is designed easily feed directly into SQLCipher and IOCipher, or really anything that needs secure password caching.&lt;/p&gt;
+
+&lt;p&gt;Most of this update was about making CacheWord ready to deploy. That means fixing bugs and drastically simplifying it’s dependencies. CacheWord now can be used as a plain jar file or an Android Library Project, and it only depends on &lt;code&gt;android-support-v4.jar&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Part of the process of simplifying CacheWord also involved stripping down the API to only want CacheWord should really handle. The standard API is all in the CacheWordHandler class. So that means that your app has to handle any Notification, and pass it to CacheWord if you want CacheWordService to run in the foreground.&lt;/p&gt;
+
+&lt;p&gt;CacheWord also now dynamically chooses how many iterations of the key derivation function based on the CPU type. That means that new, fast devices, the derived key will be a lot stronger, while on slow, old devices, it won’t take a minute to unlock your app.&lt;/p&gt;
+
+&lt;p&gt;Find downloads, example projects, and more on &lt;a href=&#34;https://guardianproject.github.io/info/code/cacheword&#34;&gt;the CacheWord page&lt;/a&gt;. Follow the development on the &lt;a href=&#34;https://dev.guardianproject.info/projects/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord project page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;sqlcipher&#34;&gt;SQLCipher&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/skitch.png&#34; alt=&#34;SQLCipher&#34; width=&#34;64&#34; height=&#34;72&#34; class=&#34;alignright size-full wp-image-3613&#34; /&gt;&lt;/a&gt;The upcoming release of SQLCipher-for-Android also has been simplified. It will no longer depend on commons-codec.jar or guava-r09.jar (thanks to Jeff Campbell for submitting those commits!), remove ~8000 methods for those who fear running into the 65k method limit of the classes.dex file. We’ve been working on making the build process be reproducible, so that anyone can verify that the official releases are built only from the source in the git repo, and nothing else has been added. We’re also working on moving the password format conversion code out of CacheWord and into SQLCipher, where it belongs.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Circumvention on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/circumvention/</link>
+    <description>Recent content in Circumvention on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/circumvention/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>
+
+&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all
+sorts of issues. That&amp;rsquo;s why we took special interest in
+&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a
+JavaScript library for decentralized content delivery in web-browsers and
+markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient
+primarily in the context of static websites.  While it should work with dynamic
+websites too, that was out of focus for us.&lt;/p&gt;
+
+&lt;p&gt;Under the hood LibResilient uses &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API&#34;&gt;Web
+Workers&lt;/a&gt;.
+Technically it&amp;rsquo;s a piece of JavaScript that websites can install into the
+browsers of their visitors.  I like to compare it to cookies, except that it&amp;rsquo;s
+not just data but actually a program for manipulating your network request. The
+main purpose of Web Workers is to enable web apps to optimize their network
+connections. Web Workers are pretty low-level API.&lt;/p&gt;
+
+&lt;p&gt;LibResilient delivers implementations for common use-cases on top of Web
+Workers in the form of plug-ins.  We&amp;rsquo;ve looked at the 3 most basic of those
+plug-ins.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;fetch plugin&lt;/em&gt; - routes network requests directly to the web-server as if
+LibResilient wasn&amp;rsquo;t present.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;cache plugin&lt;/em&gt; - stores HTML, JavaScript, images and other files inside
+the browsers local storage&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;alt-fetch plugin&lt;/em&gt; - allows to configure a list of website mirrors and tries
+to fetch files from there&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These enable us to keep a website online and even update it if the main
+web-server running that site has an outage.  It&amp;rsquo;s key that visitors must have
+managed to load the website at least once before.  Only than can LibResilient
+work it&amp;rsquo;s magic and install itself and the list of site mirrors into the users
+browser.  This solution doesn&amp;rsquo;t work for first time visitors, during the period
+of an outage.&lt;/p&gt;
+
+&lt;p&gt;Of course this requires to run website mirrors. Static websites really shine in
+this regard, because they are very easy to mirror and static web-space is quite
+inexpensive these days.&lt;/p&gt;
+
+&lt;p&gt;We also looked into using IPFS Gateways as mirrors.  To accomplish this we had
+to first add and pin websites to IPFS.  Next we had to publish the pinned copy
+of the site to IPNS.  Then we could use the IPNS-key-fingerprint to use every
+public IPFS gateway as mirror.  However, public gateways tend to require quite
+long to answer requests, which is bad for LibResilient because it uses
+relatively short timeouts to fail-over between mirrors.  So to get some sense
+of reliability, paid IPFS gateways guaranteed to pin your website are a more
+stable choice.&lt;/p&gt;
+
+&lt;h1 id=&#34;publishing-libresilient-to-ipfs&#34;&gt;Publishing LibResilient to IPFS&lt;/h1&gt;
+
+&lt;p&gt;This is a for publishing a static LibResilient enabled website to IPFS.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;requirements&lt;/h2&gt;
+
+&lt;p&gt;You will need VPS, or some other kind of tiny but always online server to make
+your data available on IPFS. This guide assumes that your server is running some
+flavor of GNU/Linux. It also assumes that you are familiar with the concept of
+static websites and that your site is already hosted on the internet.&lt;/p&gt;
+
+&lt;p&gt;Mind that IPFS can be very slow, if you run into timeouts don&amp;rsquo;t give up. Just
+wait a few minutes and give it a few more retries, it will work eventually.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-ipfs&#34;&gt;Install IPFS&lt;/h2&gt;
+
+&lt;p&gt;This short snipped will install &lt;code&gt;kubo&lt;/code&gt; the official IPFS binary build on your
+server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://dist.ipfs.tech/kubo/v0.18.1/kubo_v0.18.1_linux-amd64.tar.gz
+echo &amp;quot;15d42b47b8529edda3e8e2d6fe6c14958d939c4efd07dea02e204743e05216f3 kubo_v0.18.1_linux-amd64.tar.gz&amp;quot; \
+    | sha256sum --check
+tar -xzf kubo_v0.18.1_linux-amd64.tar.gz
+mv kubo/ipfs /usr/local/bin/ipfs
+rm -rf kubo kubo_v0.18.1_linux-amd64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setup kubo daemon to always run in background as systemd service. (Note: this
+is tested for Debian and might require different steps on other GNU/Linux
+distributions.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adduser ipfs --gecos &#39;&#39; --disabled-password
+su ipfs -c &#39;/usr/local/bin/ipfs init --profile server&#39;
+
+cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/ipfs-daemon.service
+[Unit]
+Description=IPFS Daemon
+
+[Service]
+Restart=always
+User=ipfs
+group=ipfs
+WorkingDirectory=/home/ipfs
+ExecStart=/usr/local/bin/ipfs daemon
+
+[Install]
+WantedBy=default.target
+EOF
+
+systemctl enable ipfs-daemon.service
+systemctl start ipfs-daemon.service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tip: If you&amp;rsquo;re behind a firewall or NAT make sure to open ports 4001/tcp and
+4001/udp so IPFS can connect to the internet.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-site-to-ipfs&#34;&gt;Publish site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Next we&amp;rsquo;ll publish the website to IPFS. You&amp;rsquo;ll need to copy your static website
+to the IPFS server. For this guide we&amp;rsquo;ll assume there&amp;rsquo;s a copy of your website
+at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The last line of the output of this command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;added QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck website
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy the CID and pin it. Pinning means that your IPFS daemon will never
+automatically delete these files to free up memeory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs pin add QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s time to make make it available via IPNS. So we need to generate an
+IPNS key. This key will serve as address for accessing the website using IPFS.
+It also serves as key for publishing updates to your website.&lt;/p&gt;
+
+&lt;p&gt;NOTE: all commands in this section are to be executed by &lt;code&gt;ipfs&lt;/code&gt; user.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key gen --type=rsa --size=2048 example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is how you can list your keys:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key list -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the relevant output should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;k2k4r8ls72x686fmm2s0px4plejbHkhOm9uuzrxwedsaag1w72ene5rw     example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The hash of the key, on the left side is going to be the IPNS name of your
+website. It&amp;rsquo;s a fixed name that doesn&amp;rsquo;t change even when you update your site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs name publish --key=example-site QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When your IPFS node is working and could connect to some peers, your site
+should now be accessible using IPNS. Although publishing may take several
+minutes. There are so-called &lt;a href=&#34;https://ipfs.github.io/public-gateway-checker/&#34;&gt;public
+gateways&lt;/a&gt; which allow users to
+access IPFS and IPNS content using http. E.g.:
+&lt;a href=&#34;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&#34;&gt;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also use &lt;code&gt;ipfs&lt;/code&gt; to check if the files got ingested correctly. E.g.:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs ls /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw
+ipfs cat /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;update-libresilient-config-to-include-ipns-link&#34;&gt;Update LibResilient config to include IPNS link&lt;/h3&gt;
+
+&lt;p&gt;Now that your site is available on IPNS you can finally add it to your
+LibResilient &lt;code&gt;config.json&lt;/code&gt;. You can actually add as many gateways as you&amp;rsquo;d
+like with LibResilient&amp;rsquo;s &lt;code&gt;alt-fetch&lt;/code&gt; plugin. Here&amp;rsquo;s a simple example where we
+added two gateways:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;plugins&amp;quot;: [{
+    &amp;quot;name&amp;quot;: &amp;quot;fetch&amp;quot;
+  }, {
+    &amp;quot;name&amp;quot;: &amp;quot;alt-fetch&amp;quot;,
+    &amp;quot;endpoints&amp;quot;: [
+      &amp;quot;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+      &amp;quot;https://ipfs.io/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+    ]
+  }],
+  &amp;quot;loggedComponents&amp;quot;: [&amp;quot;service-worker&amp;quot;, &amp;quot;fetch&amp;quot;, &amp;quot;alt-fetch&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;NOTE: We have to use IPNS, because as you can see we need write the IPFS
+address to a file which itself is part of the website. With IPNS updating the
+site also won&amp;rsquo;t require changing &lt;code&gt;config.json&lt;/code&gt; for every update.&lt;/p&gt;
+
+&lt;p&gt;When you&amp;rsquo;ve made your pick of IPFS gateways and added them to your
+&lt;code&gt;config.json&lt;/code&gt; you can publish it to your web-server.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-updated-site-to-ipfs&#34;&gt;Publish updated site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Now you also need to publish the change to IPFS. Again start by copying the
+site to your IPFS server. We again assume the updated copy of your static
+website is located at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next we can unpin the old version of the website. (Tip: you can list pinned
+files and directories with: &lt;code&gt;ipfs pin ls&lt;/code&gt; pinned directories will be marked as
+&lt;code&gt;recursive&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs unpin QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then we can add the updated site to IPFS and publish it to IPNS again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+ipfs name publish --key=example-site QmcoZrn004DGdRvuZWf1pdcpMQXuXghjCUy7ve5Og45dNU 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can repeat this step whenever you want to publish an updated version of
+your static website.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Steps towards trusted VPNs</title>
+      <link>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</guid>
+      <description>
+
+&lt;p&gt;VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&amp;rsquo;s server.  That is how VPNs &amp;ldquo;unblock&amp;rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04&#34;&gt;adblocker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To answer the question about whether they are a useful privacy tool, let&amp;rsquo;s start with the history of where VPNs came from.  VPN stands for Virtual Private Network.  They were developed by large companies with multiple offices and travelling employees.  The goal was to link together all of these offices so that internal data could be freely shared between them without that data going over the internet as easily readable unencrypted plain text.  Then travelling employees could also safely access the internal data via any internet connection.  The key piece of this picture is that the users, employees in this case, already had to trust their VPN provider.  The VPN provider was the company they worked for, and the data they were handling belonged to the company.  So there was no attempt to hide user information from the VPN provider.  Indeed quite the opposite: companies linked the VPN access to each employee&amp;rsquo;s &amp;ldquo;single sign-on&amp;rdquo; account.  Built into the design of VPNs is full trust of the VPN provider, with the aim of keeping the data private from the internet. This setup was also by design, since many large companies wanted to ensure their employees work laptops were still going through the corporate firewall, where the company could block certain sites (e.g. malware, porn), then also &lt;a href=&#34;https://www.fortinet.com/resources/cyberglossary/data-exfiltration&#34;&gt;monitor employees&lt;/a&gt; internet activity to ensure they are not exposing files that the company does not want to be public.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Virtual_Private_Network_overview.svg&#34;&gt;&lt;img src=&#34;Virtual_Private_Network_overview.svg.png&#34; alt=&#34;Virtual Private Network overview&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This does not paint a good picture for a tool to protect privacy.  But there is hope!  It is possible to use a VPN to improve your privacy if you pay attention to some key details.  For VPN services to provide privacy, you have to put a lot of trust in the people who are operating the service.  The VPN provider can see &lt;strong&gt;all&lt;/strong&gt; of your traffic that goes over the VPN, and they have a strong link to your user account with them.  The privacy advantage of a VPN is that the destination sites cannot see which IP address your device is coming from, they will see the VPN provider&amp;rsquo;s IP address.  And your ISP will see you are using a VPN, but not which sites you visit.  With HTTPS, TLS, and end-to-end encryption being widespread, any encrypted content will be protected from the VPN provider also.  But the VPN provider can still see where you are connecting from, which sites and services you are using, what time of day, and even potentially correlate traffic to link activities of their users.  In other words, the VPN operator sees lots of metadata about you, so much so that they could paint a quite detailed portrait of your personal life if they ever did let their data be analyzed.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-build-a-privacy-respecting-vpn-service&#34;&gt;How to build a privacy-respecting VPN service&lt;/h2&gt;
+
+&lt;p&gt;There are good signals that VPN services can send to show that they are tackling the real issues.  For example, shipping free software clients, maintaining a &lt;a href=&#34;https://www.eff.org/deeplinks/2016/05/canary-watch-one-year-later&#34;&gt;warrant canary&lt;/a&gt;, posting a clear privacy policy describing the logging policy, and publishing the unredacted results of third party audits.  If the VPN operator is doing the right thing, then VPNs can provide a relatively private way to access the internet.  With a consistent track record of transparency, they can build up a trusted reputation for protecting privacy.  Unfortunately, we cannot rest there since a VPN provider can change their setup quite easily, whether willingly or under duress.  Maintaining consistent, regular, and transparent communications is therefore essential.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Calyx Institute&amp;rsquo;s &lt;a href=&#34;https://calyxinstitute.org/legal/privacy-policy&#34;&gt;Privacy Policy&lt;/a&gt;
+and &lt;a href=&#34;https://calyxinstitute.org/about/financials-and-annual-reports&#34;&gt;Financials and Annual Reports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mozilla&amp;rsquo;s &lt;a href=&#34;https://www.mozilla.org/en-US/privacy/principles/&#34;&gt;Data Privacy Principles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mullvad&amp;rsquo;s &lt;a href=&#34;https://mullvad.net/help/swedish-legislation/&#34;&gt;Swedish legislation relevant to us as a VPN provider&lt;/a&gt; and &lt;a href=&#34;https://mullvad.net/help/no-logging-data-policy/&#34;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of that, the &lt;a href=&#34;https://vpnalyzer.org/&#34;&gt;VPNalyzer&lt;/a&gt; project is working to make monitoring VPN services a lot easier and possible to crowdsource.  This gives a third party perspective from some respected organizations.&lt;/p&gt;
+
+&lt;h3 id=&#34;know-as-little-as-possible-about-your-users&#34;&gt;Know as little as possible about your users&lt;/h3&gt;
+
+&lt;p&gt;Many VPN providers require an account and payment information.  This is usually personally identifiable information, like name, credit card information, email address, phone number, billing address, etc.  The most private services have &lt;a href=&#34;https://f-droid.org/2022/02/28/no-user-accounts-by-design.html&#34;&gt;no user accounts by design&lt;/a&gt;.  Calyx, Lavabit, and Riseup VPNs do not require any account or payment at all, so they do not have that information to give out or leak.  Providers that accept payment need a way to tie payment to service, that is usually done using accounts tied to email addresses or phone numbers.  Personal details are not required to make accounts and payments work.  Mullvad uses a randomly generated account number only, there is no link to other identifiers unless you provide them.  Additionally, Mullvad is one of the few VPN vendors that accepts cash payments.  Many technically minded implementers laugh at the idea of processing envelopes of cash, but it is an effective, real world solution to minimizing personal data that software methods struggle to match.&lt;/p&gt;
+
+&lt;h3 id=&#34;keep-as-little-information-as-possible&#34;&gt;Keep as little information as possible&lt;/h3&gt;
+
+&lt;p&gt;The VPN servers unavoidably see lots of information about what users are doing.  The default with most servers is to keep logs of that data. The longer this data is kept, the greater the risk it will be used to identify users and their activities. It does not help that standard practice for running servers is to keep logs for a long time.  Many service providers keep those logs for years.&lt;/p&gt;
+
+&lt;p&gt;VPN providers must be clear about what logs they are keeping, and how long they are stored.  Even better, they will provide information about how they do store the data that they do keep.  For example, if the servers do not use full disk encryption, then it would be straightforward to recover the deleted logs.  That is much harder on systems using full disk encryption.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&#34;https://cure53.de/audit-report_ivpn.pdf&#34;&gt;2019 audit&lt;/a&gt; of &lt;a href=&#34;https://www.ivpn.net/blog/independent-security-audit-concluded&#34;&gt;IVPN&lt;/a&gt; showed that, at that time, the auditors confirmed that IVPN performed no &amp;ldquo;statistical logging of customer-traffic&amp;rdquo;, &amp;ldquo;logging of traffic, IP addresses or DNS requests&amp;rdquo; on the servers that the auditors were given access to.&lt;/li&gt;
+&lt;li&gt;Mullvad says, &amp;ldquo;we never store any activity logs of any kind.&amp;rdquo; in their &lt;a href=&#34;https://mullvad.net/en/help/no-logging-data-policy/&#34;&gt;no logging data policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;proven-track-record-of-resisting-unjust-legal-intrusion&#34;&gt;Proven track record of resisting unjust legal intrusion&lt;/h3&gt;
+
+&lt;p&gt;There are many legal ways for authorities to get private data, this is an essential part of a functioning justice system.  But these powers are sadly abused in basically every country in the world, it is only a question of degrees.  A VPN provider needs to represent its users legal interests, and push back on legal orders when there is the possibility they are unjust.  Calyx Institute&amp;rsquo;s Nick Merrill provides the shining example in this regard.  With the ACLU, he fought a &lt;a href=&#34;https://en.wikipedia.org/wiki/Doe_v._Ashcroft&#34;&gt;legal case&lt;/a&gt; for over a decade to prevent unjust intrusion for his users.  Ladar Levison shut down his email company &lt;a href=&#34;https://en.wikipedia.org/wiki/Lavabit&#34;&gt;Lavabit&lt;/a&gt; rather than allow the US Government to monitor Edward Snowden&amp;rsquo;s email account.&lt;/p&gt;
+
+&lt;p&gt;There are other ways to ensure that the legal processes are not abused.  These include warrant canaries and disclosure when data had to be turned over via legal procedures.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla&amp;rsquo;s &lt;a href=&#34;https://www.mozilla.org/en-US/about/policy/transparency/&#34;&gt;Transparency&lt;/a&gt; policy&lt;/li&gt;
+&lt;li&gt;ProtonVPN&amp;rsquo;s &lt;a href=&#34;https://protonvpn.com/blog/transparency-report/&#34;&gt;Transparency Report &amp;amp; Warrant Canary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Riseup&amp;rsquo;s &lt;a href=&#34;https://riseup.net/canary&#34;&gt;Canary Statement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publish-as-much-as-possible-as-free-open-source-software&#34;&gt;Publish as much as possible as free open source software&lt;/h3&gt;
+
+&lt;p&gt;F-Droid works to build &lt;a href=&#34;https://f-droid.org/2022/05/24/buildserver-overhaul-sponsored-by-calyx-institute.html&#34;&gt;services&lt;/a&gt; where free software, &lt;a href=&#34;https://f-droid.org/2022/07/22/maven-central.html&#34;&gt;code&lt;/a&gt; &lt;a href=&#34;https://f-droid.org/2022/09/30/free-software-and-inspection-are-key-to-software-we-can-trust.html&#34;&gt;inspection&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org/2023/01/15/towards-a-reproducible-fdroid.html&#34;&gt;reproducible builds&lt;/a&gt; provide a method to ensure that the software we deliver is trustworthy.  VPN vendors recognize how important trust is, so the good ones work to get their apps into f-droid.org.  The F-Droid community provides the best screening for ensuring Android apps are truly free software.  On top of that, F-Droid flags apps for &lt;a href=&#34;https://f-droid.org/docs/Anti-Features/&#34;&gt;Anti-Features&lt;/a&gt;, which are things that users may not like, but might accept.  Here are VPN clients that do maintain their free software clients in f-droid.org:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/se.leap.bitmaskclient/&#34;&gt;Bitmask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.calyxinstitute.vpn/&#34;&gt;Calyx VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/nl.eduvpn.app/&#34;&gt;eduVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/net.ivpn.client/&#34;&gt;IVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.lavabit.pahoehoe/&#34;&gt;Lavabit Encrypted Proxy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/net.mullvad.mullvadvpn/&#34;&gt;Mullvad VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.outline.android.client/&#34;&gt;Outline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/ch.protonvpn.android/&#34;&gt;ProtonVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/one.librem.tunnel/&#34;&gt;Purism Librem Tunnel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/se.leap.riseupvpn/&#34;&gt;Riseup VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.tailscale.ipn/&#34;&gt;Tailscale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.wireguard.android/&#34;&gt;WireGuard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;use-external-auditors-to-confirm-source-code-and-operations&#34;&gt;Use external auditors to confirm source code and operations&lt;/h3&gt;
+
+&lt;p&gt;External auditors are important because they can bring fresh eyes on the source code, and good auditors are experts at finding issues in source code and server setups.  And responsible organizations will publish the full, unredacted audit report once they have fixed the issues.  Even if a VPN app is included in F-Droid, there are key aspects of the service that cannot be independently verified.  For this, we must rely on the people who run the service to do the right thing.  Audits can demonstrate that they were doing the right thing at the point of time of the audit.  Here are some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IVPN&amp;rsquo;s &lt;a href=&#34;https://cure53.de/audit-report_ivpn.pdf&#34;&gt;2019 audit of IVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mozilla VPN had their app source code &lt;a href=&#34;https://blog.mozilla.org/security/files/2021/08/FVP-02-report.final_.pdf&#34;&gt;audited&lt;/a&gt; in 2021 and fixed the issues that were found.&lt;/li&gt;
+&lt;li&gt;Mullvad&amp;rsquo;s &lt;a href=&#34;https://cure53.de/pentest-report_mullvad_2020_v2.pdf&#34;&gt;Pentest-Report Mullvad Apps, Clients &amp;amp; API 05.2020&lt;/a&gt;, &lt;a href=&#34;https://cure53.de/pentest-report_mullvad_v2.pdf&#34;&gt;Pentest-Report Mullvad VPN Clients 09.2018&lt;/a&gt;, and &lt;a href=&#34;https://mullvad.net/en/blog/2021/1/20/no-pii-or-privacy-leaks-found-cure53s-infrastructure-audit/&#34;&gt;2020 Infrastructure Audit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Outline&amp;rsquo;s &lt;a href=&#34;https://s3.amazonaws.com/outline-vpn/static_downloads/ros-report.pdf&#34;&gt;2017 Pentratration Test Report&lt;/a&gt; and &lt;a href=&#34;https://s3.amazonaws.com/outline-vpn/static_downloads/cure53-report.pdf&#34;&gt;Pentest &amp;amp; Audit Report Jigsaw Outline 09.-12.2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Proton VPN open sourced their client apps and had them &lt;a href=&#34;https://www.zdnet.com/article/protonvpn-apps-handed-to-open-source-community-in-transparency-security-push/&#34;&gt;audited&lt;/a&gt; in 2019.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publicly-verifiable-binaries-via-reproducible-builds&#34;&gt;Publicly verifiable binaries via reproducible builds&lt;/h3&gt;
+
+&lt;p&gt;Source code is the easiest place to conduct an audit of software, but it is the binary files that actually run on your device.  Auditing binaries rarely happens since it is so much more time intensive.  And yet, there are ways to change how software works without changing the source code. This can be done by injecting changes into the process that converts the source code into the executable binary.  &lt;a href=&#34;https://reproducible-builds.org/&#34;&gt;Reproducible Builds&lt;/a&gt; is the indisputable method for proving that a given binary was generated by given source code.&lt;/p&gt;
+
+&lt;p&gt;There are some generic VPN clients in Debian that are built reproducibly, but there are no Android or iOS VPN apps or  branded desktop client apps that meet this standard yet.  We recommend that VPN providers work with &lt;a href=&#34;https://wiki.debian.org/ReproducibleBuilds&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;f-droid.org/docs/Reproducible_Builds&#34;&gt;F-Droid&lt;/a&gt;, the &lt;a href=&#34;https://reproducible-builds.org/&#34;&gt;Reproducible Builds&lt;/a&gt; group, or any other relevant &lt;a href=&#34;https://reproducible-builds.org/who/projects/&#34;&gt;project&lt;/a&gt; to achieve this key step.&lt;/p&gt;
+
+&lt;h3 id=&#34;apple-ios&#34;&gt;Apple iOS&lt;/h3&gt;
+
+&lt;p&gt;This post focuses on Android because iOS has a number of issues that make using VPNs for privacy less effective.  For example, VPNs on iOS will &lt;a href=&#34;https://www.bleepingcomputer.com/news/security/unpatched-ios-bug-blocks-vpns-from-encrypting-all-traffic/&#34;&gt;leak IP addresses&lt;/a&gt;.  Apple knows about this issue, yet still has &lt;a href=&#34;https://www.theregister.com/2022/08/19/apple_ios_vpn/&#34;&gt;not fixed&lt;/a&gt; it after a couple years.  On top of that, it is not possible to have reproducible builds on iOS because the actual executable binaries are encrypted by Apple&amp;rsquo;s proprietary Digital Restrictions Management (DRM), so only Apple could ever reproducibly build something.  If you are running Apple iOS, you are stuck trusting Apple to do the right thing, since they operate a relatively opaque, proprietary, strictly walled garden.&lt;/p&gt;
+
+&lt;h2 id=&#34;run-your-own-vpn&#34;&gt;Run your own VPN&lt;/h2&gt;
+
+&lt;p&gt;The VPN security model means you have to put a ton of trust in the operator.  Questions of trust get much easier when you are talking about yourself or own organization.  There are many projects that aim to make it as easy as possible to run your own VPN service.  The good ones are all free software and have been audited, both the client source code and the server side setup.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://amnezia.org&#34;&gt;Amnezia&lt;/a&gt; is a free service to create a personal VPN on your server.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://leap.se/&#34;&gt;LEAP VPN&lt;/a&gt; is a &amp;ldquo;white label&amp;rdquo; VPN setup used to build Bitmask, CalyxVPN, RiseupVPN and more.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getoutline.org/&#34;&gt;Outline&lt;/a&gt; &amp;ldquo;makes it easy to create a VPN server, giving anyone access to the free and open internet.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://we-pn.com/&#34;&gt;WEPN&lt;/a&gt; is a free software kit to become your own VPN provider, designed around a small hardware device.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are also generic VPN client apps based on standard protocols:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/nl.eduvpn.app/&#34;&gt;eduVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/de.blinkt.openvpn/&#34;&gt;OpenVPN for Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/en/packages/com.github.shadowsocks/&#34;&gt;Shadowsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.strongswan.android/&#34;&gt;strongSwan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.WireGuard.android/&#34;&gt;WireGuard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;comparing-vpns-to-tor-and-masque&#34;&gt;Comparing VPNs to Tor and MASQUE&lt;/h2&gt;
+
+&lt;p&gt;If it is privacy that you seek, then there are other tools to review.  Tor is a longstanding community project that aims to make privacy proxies without compromise. Tor works similarly to VPN in that it is tunneling traffic to shared servers, the big difference is that your traffic is tunneled through three relays (in comparison to single hop VPNs). Each individual Tor relay cannot see the enough to put together a picture of who is doing what. At most, a relay can see what is done, but not who.  Or that someone is accessing Tor, but not their destination.  &lt;a href=&#34;https://guardianproject.info/apps/org.torproject.android/&#34;&gt;Orbot&lt;/a&gt; provides a VPN mode, but this is still full Tor protection, since it is just using the device&amp;rsquo;s VPN user experience to provide access to the Tor network.  &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor Browser&lt;/a&gt; then adds whole other layers of privacy protection that can only be implemented in the internet-enabled app.  This includes things like reducing metadata leaks in the HTTPS connection or web APIs, or isolating websites from each other within the browser, so they cannot read data about other sites the user has visited.&lt;/p&gt;
+
+&lt;p&gt;A new approach that is somewhere in between a VPN and Tor are multi-hop &lt;a href=&#34;https://guardianproject.info/2020/02/25/masque-review/&#34;&gt;MASQUE&lt;/a&gt; relays.  MASQUE is a new protocol that is similar to VPN and proxy protocols.  MASQUE is built on HTTP/3 aka QUIC, so it does not stick out as much as VPN or WireGuard traffic.  It also allows for multi-hop configurations.  MASQUE is only newly deployed, so there is not the two decades of experience working to minimize metadata leaks in the processes for relaying traffic.&lt;/p&gt;
+
+&lt;p&gt;Apple iCloud Private Relay is a &lt;a href=&#34;https://blog.cloudflare.com/icloud-private-relay/&#34;&gt;two hop deployment&lt;/a&gt; on MASQUE, which means that the Apple side can see that the user is sending traffic, and the Cloudflare side can see the destination, but not the user.  That does provide a real privacy improvement over a single hop system.  Unfortunately, Apple iCloud Private Relay fails most of the other tests laid out in this post.  Plus given the history of NSA programs like PRISM, and the willingness for US companies like Apple and Google to &lt;a href=&#34;https://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data&#34;&gt;take part&lt;/a&gt;, this setup is not clear protection from NSA and Five Eyes surveillance and targeting.  It would be relatively straightforward for those kinds of agencies to correlate the data from the Apple and Cloudflare side if they have access to the metadata from both sides.&lt;/p&gt;
+
+&lt;p&gt;If privacy is your primary concern, then it is worth investing time into tools like Tor.  If you have limited time and are mostly concerned about mass surveillance, then a good VPN is worth considering for some added privacy protection.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Serving Websites Privately Over Tor Onion Services (From Your Laptop!)</title>
+      <link>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</guid>
+      <description>
+
+&lt;p&gt;In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – &lt;a href=&#34;https://community.torproject.org/onion-services/&#34;&gt;Onion Services&lt;/a&gt;. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout. But to do so, one needs to know how to set up an Onion Service.&lt;/p&gt;
+
+&lt;p&gt;While the following instructions are specific to a Mac, with minor differences this can be applied to other devices and systems.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-1-download-and-set-up-the-tor-service&#34;&gt;Step 1 → Download and Set Up the Tor Service&lt;/h2&gt;
+
+&lt;p&gt;While there are multiple ways to download and set up tor, the simplest is to follow the instructions at &lt;a href=&#34;https://torproject.org/download/&#34;&gt;https://torproject.org/download/&lt;/a&gt; that goes along with the operating system you are using.&lt;/p&gt;
+
+&lt;p&gt;For further information, you can follow the Tor installation guide: &lt;a href=&#34;https://community.torproject.org/onion-services/setup/install/&#34;&gt;https://community.torproject.org/onion-services/setup/install/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have successfully downloaded tor, to check if tor is running you can either open the browser and establish connection or use commands to check its success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/opt/homebrew/bin/brew services start tor
+/opt/homebrew/bin/brew services stop tor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Please note, in this step you are running the tor service on your machine to host the onion server. In later steps, we will be using the Tor Browser app to view the site remotely.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-2-download-and-set-up-a-web-server-optional-during-development-but-required-for-production&#34;&gt;Step 2 → Download and Set Up a Web Server (Optional during Development, but required for Production)&lt;/h2&gt;
+
+&lt;p&gt;In order to set up a website or some content for a client to access, we need to set up a local web server. A web server is the computer software and underlying hardware that communicates with a web browser using HTTP to distribute web pages to the client who requested it, with local web server examples including Apache and Nginx. The reason for this is that when it comes to the finished product, you can copy the fields into the apache web directory and that would be your web server&lt;/p&gt;
+
+&lt;p&gt;However, for websites that we are building on npm, as npm has its own built in web server for development, it has its own local host web server ready. Hence, we can just point our hidden service web server at that, for testing and development. Once we arrive at production, we will use the apache or another web server to host our local service.&lt;/p&gt;
+
+&lt;p&gt;To install these web servers on MacOS can be difficult, so specifically for this operating system, it is best to install (or update) the homebrew package, which will then allow you to run the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/opt/homebrew/bin/brew install apache
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have having trouble choosing a local web server or downloading it, a useful guidance tool is: &lt;a href=&#34;https://www.javatpoint.com/how-to-install-apache-on-mac&#34;&gt;https://www.javatpoint.com/how-to-install-apache-on-mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The default location where web servers run is on &lt;a href=&#34;https://localhost:80&#34;&gt;https://localhost:80&lt;/a&gt;. Hence, once you have downloaded the web server software, to check if it is working, open your browser and go to &lt;a href=&#34;https://localhost:80&#34;&gt;https://localhost:80&lt;/a&gt;. If you have successfully downloaded the web server software, you will be notified of this success.&lt;/p&gt;
+
+&lt;p&gt;For further steps, or multiple uses you may need to start or stop the web server software which can be done using the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apachectl start
+sudo apachectl stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-3-modify-your-tor-configuration-file&#34;&gt;Step 3 → Modify your Tor Configuration File&lt;/h2&gt;
+
+&lt;p&gt;In order to create the onion service link, you must mody the the tor configuration file (torrc) by adding the following lines and save the changes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServiceDir /var/lib/tor/my_website/
+HiddenServicePort 80 127.0.0.1:80
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The HiddenServiceDir line is to inform tor of where to save the onion v3 service link, hence you must modify this line to point to a file whose permissions include both readable and writable.
+The HiddenServicePort line is informing Tor of the port people visiting your Onion Service will be using, which is currently set as localhost.&lt;/p&gt;
+
+&lt;p&gt;While the torrc file is saved in different places depending on the operating system being used, for MacOS, the file can be found at this filepath:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /Library/”Application Support”/TorBrowser-Data/Tor/ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-4-create-the-hidden-service-folder-optional&#34;&gt;Step 4 → Create the Hidden Service Folder (Optional)&lt;/h2&gt;
+
+&lt;p&gt;While this step is not necessary, doing this reduces the chance of problems later on.&lt;/p&gt;
+
+&lt;p&gt;Once you have modified your tor configuration file, you should create the HiddenServiceDir directory where Tor will create the hostname file, which will contain your new onion v3 service address. For MacOS, this file should be created in the tor folder which can be found with this file path:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServiceDir /opt/homebrew/etc/tor/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The folder should be given the permissions to allow tor to read and write to it, which can be done by calling:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;filename chmod 700 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-5-restart-tor-and-check-for-the-onion-service-link&#34;&gt;Step 5 → Restart Tor and Check for the Onion Service Link&lt;/h2&gt;
+
+&lt;p&gt;Once you have restarted Tor, it should have created the file hostname with the new onion v3 service in the directory which you pointed it to with the HiddenServiceDir line in your torrc.
+If it has not, potential areas to check for faults are:
+- The HiddenServiceDir directory’s file permissions
+- If Tor was properly restarted
+- The torrc file modifications and if there are any incorrect file paths or mistakes
+- The log files which you can find using &lt;a href=&#34;https://support.torproject.org/#Logs&#34;&gt;https://support.torproject.org/#Logs&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;step-6-test-your-onion-service&#34;&gt;Step 6 → Test Your Onion Service&lt;/h2&gt;
+
+&lt;p&gt;If you have successfully acquired your onion service link, you can then run it on Tor and it should direct you to the page which has been initially configured on apache (the same page we saw at localhost:80). If not, potential problems could include:
+- Your web server software is no longer running and needs to be started
+- The page is found at a different port
+- One important thing to remember is that once you have gotten your onion address, a new one will not be generated, this is your permanent link whose content can be manipulated.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-7-build-the-file-web-page-being-used&#34;&gt;Step 7 → Build the File/Web Page Being Used&lt;/h2&gt;
+
+&lt;p&gt;Once your onion service link is up and running, it is now time to display on it the html files you intend to share. To do so, if the files are a Node app or a progressive web app, and not a static html page or website, it is important to build the code first by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm run build 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A potential problem could be that when you run a web service, especially a Node app or a progessive web app, it renders links for the domain it thinks it is at, not the one you intend it to be at. For a typical static website it wouldn&amp;rsquo;t matter because it is a static set of pages; however, when using a live node application, it&amp;rsquo;s helpful to know what the public address is.&lt;/p&gt;
+
+&lt;p&gt;To fix this problem, to your code you should add the following line which points directly to your new onion service address, like the example here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public:’2xx7phs7hw5fduqulcrthkmfaesxbsy5om5xpkpsn4y54mnbj4b6ekd.onion’
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-8-run-the-file-and-test-your-onion-service&#34;&gt;Step 8 → Run the File and Test your Onion Service&lt;/h2&gt;
+
+&lt;p&gt;1- For this step, there are two potential methods depending on the type of content you intend to display on your Onion Service. For html documents or simple websites, the simplest method to run the file is to copy it into the folder which localhost:80 (or whichever port you are using) is connected to. For MacOS, the folder can be found at:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/Library/WebServer/Documents
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To copy, the command to run is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo cp /path/from /path/to
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once that is done, simply restart your Tor browser, head to your new onion service address and your html file can be found there.&lt;/p&gt;
+
+&lt;p&gt;2- To run a Node app or progress website, first the file needs to be running on your local server. To do so, one tip is to specify the port you intend to run it on, especially other ports that are running other websites or html content. For that, run the following command (changing it to point to the port you are using):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm run service – –port 4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To connect to this npm web server on port 4000 instead of apache, we need to modify the onion service configuration in the torrc:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServicePort 80 127.0.0.1:4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;accessing-the-onion-site&#34;&gt;Accessing the Onion site&lt;/h2&gt;
+
+&lt;p&gt;Once the website is running on localhost at the port you have specified, restart your Tor service. Then, navigate to your new onion service address where your website is now live for all the people you have shared your secure link with. You can use any Tor-enabled browser, such as &lt;a href=&#34;https://www.torproject.org/download/&#34;&gt;Tor Browser for Desktops&lt;/a&gt;, &lt;a href=&#34;https://www.torproject.org/download/&#34;&gt;Tor Browser for Android&lt;/a&gt;, or &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser for iOS&lt;/a&gt; devices. You can also use a Tor-enabled vpn like &lt;a href=&#34;https://orbot.app&#34;&gt;Orbot for Android and iOS&lt;/a&gt;, to allow any browser, like Chrome or Brave, to access an onion address.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring possibilities of Pluggable Transports on Android</title>
+      <link>https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/</link>
+      <pubDate>Tue, 16 Apr 2019 15:00:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.pluggabletransports.info&#34;&gt;Pluggable Transports&lt;/a&gt; (PT) give software developers the means
+to establishing reliable connections in &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspection&#34;&gt;DPI-filtered&lt;/a&gt; network scenarios.
+A variety of techniques are supported, all available by implementing just one
+standard.  We looked into how this can be put to work in Android Apps.
+Hence we crafted 3 fully functional
+&lt;a href=&#34;https://gitlab.com/uniqx/anynews-android#anynews-pt&#34;&gt;PT-enabled&lt;/a&gt;
+&lt;a href=&#34;https://gitlab.com/uniqx/fdroidclient-pt#f-droid-pt&#34;&gt;prototype&lt;/a&gt;
+&lt;a href=&#34;https://gitlab.com/uniqx/apps-android-wikipedia-pt#wikipedia-android-pt&#34;&gt;Apps&lt;/a&gt;
+based on well known open source projects.&lt;/p&gt;
+
+&lt;p&gt;All our prototypes rely on &lt;a href=&#34;https://github.com/Yawning/obfs4&#34;&gt;obfs4&lt;/a&gt; which is a stable
+PT implementation widely deployed by Tor.  Guardian Project published
+a library called &lt;a href=&#34;https://github.com/guardianproject/AndroidPluggableTransports&#34;&gt;AndroidPluggableTransports&lt;/a&gt; for giving Android
+developers access easy access to PT.  Since we could not find any easily
+accessible sample code, we created a &lt;a href=&#34;https://gitlab.com/uniqx/pt-obfs4proxy-minimal-demo&#34;&gt;minimal demo project&lt;/a&gt;,
+illustrating a minimal setup for sending a HTTP-request through a OBFS4
+connection.&lt;/p&gt;
+
+&lt;p&gt;Conceptually, a PT establishes point to point connections between a PT client
+and a PT server.  PT servers are also known as &amp;ldquo;bridges&amp;rdquo;.  Most app back-ends,
+on the other hand, consist of multiple services and third party APIs.  We&amp;rsquo;re
+using SOCKS5 for multiplexing several connections over a single PT connection.
+A nice benefit to this approach is that client side integration looks similar
+to integrating Tor.&lt;/p&gt;
+
+&lt;p&gt;Every PT bridge generates an individual set of parameters. These are required
+for establishing connections to that bridge. In the context of Tor, these
+parameters are often referred to as a &amp;ldquo;bridge line&amp;rdquo;, which also implies a
+quasi-standardized formatting of these parameters.&lt;/p&gt;
+
+&lt;p&gt;Starting a PT connection involves several layers of proxying.  This diagram
+should give you an idea of what&amp;rsquo;s really going on when we start a PT
+connection:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;apt-setup-socks5.png&#34; alt=&#34;Schematic overview of establishing a PT connection used&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For many organizations it is not an option to run open proxies on the Internet
+because the bandwidth bills would be too large, or the security risks too high.
+This means we need to refine our SOCKS5 based approach a bit.  An obvious
+solution is to restrict usage of a PT bridge for one specific app.  This can
+be achieved simply by whitelisting outgoing connections on a bridge&amp;rsquo;s
+SOCKS5 server.  Some SOCKS5 servers have built-in support for this, so we&amp;rsquo;re
+covered.  We published the deployment script we&amp;rsquo;re using to set up our &lt;a href=&#34;https://gitlab.com/uniqx/pt-socks5-over-obfs4proxy&#34;&gt;SOCKS5-enabled bridges&lt;/a&gt; in our prototype environment.&lt;/p&gt;
+
+&lt;p&gt;While SOCKS5 support is widespread these days, some apps might still need to
+rely on HTTP-proxying.  That&amp;rsquo;s why we also included an embedded HTTP-proxy in
+our prototype Apps.  This proxy is configured to transparently send requests
+through the SOCK5 connection, which in turn runs through a PT connection.&lt;/p&gt;
+
+&lt;p&gt;All that required from the app developer&amp;rsquo;s perspective is to configure APT
+(and our soon-to-be upstreamed proxy helper library) with a bridge line,
+then configure all network connections to use a either a SOCKS5 or HTTP proxy.&lt;/p&gt;
+
+&lt;p&gt;We also looked into ways for distributing parameters for
+&lt;a href=&#34;https://github.com/guardianproject/AndroidPluggableTransports/pull/15&#34;&gt;PT connections&lt;/a&gt;. We started out by supporting bridge-lines as
+used in Tor browser and Orbot. Copy and pasting these is not very convenient
+and probably looks arcane to most users. So we came up with the idea of
+sharing bridge connection parameters as URLs.  HTTP(S) URLs are clickable in
+most Android Apps which makes sharing a lot easier.  Apps can subscribe to
+URL patterns.  This way it&amp;rsquo;s possible to intercept clicks on PT bridge
+parameters and configure PT settings accordingly. While these URLs still
+look somewhat arcane, they hopefully enable an improved user experience.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example of a bridge-line and how it looks like the in all URL formats:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Bridge obfs4 104.224.78.19:443 FD9DAEE45A2FDF70D462914A75ADE99A29957920 cert=LSOd9qOffpIFM4az+ueou7sY0eQRAsI/joW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA iat-mode=0
+bridge://obfs4@104.224.78.19:443/FD9DAEE45A2FDF70D462914A75ADE99A29957920?cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;amp;iat-mode=0
+http://bridge.onion/FD9DAEE45A2FDF70D462914A75ADE99A29957920?transport=obfs4&amp;amp;ip=104.224.78.19&amp;amp;port=443&amp;amp;cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;amp;iat-mode=0
+https://bridges.torproject.org/FD9DAEE45A2FDF70D462914A75ADE99A29957920?transport=obfs4&amp;amp;ip=104.224.78.19&amp;amp;port=443&amp;amp;cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;amp;iat-mode=0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There&amp;rsquo;s still some room for refining this. Tor Browser, for example, will
+happily accept but fail using our experimental SOCKS5 bridges.  Meanwhile our
+prototype apps will accept but fail to connect to Tor bridges.  So it would
+make sense to explore what metadata apps need to decide whether they are
+capable of connecting to a specific bridge or not.&lt;/p&gt;
+
+&lt;p&gt;An important missing puzzle piece in this regard also is to make sure DNS
+queries can not get filtered.  &lt;a href=&#34;https://en.wikipedia.org/wiki/DNS_over_HTTPS&#34;&gt;DNS-over-HTTPS (DoH)&lt;/a&gt; could be
+a suiteable mitigation. Further down the road, it certainly would make sense
+to look into sending DNS requests over pluggable transports too.&lt;/p&gt;
+
+&lt;p&gt;Many Android apps use &lt;code&gt;WebView&lt;/code&gt; for transparently embedding web content.
+Sadly, proxy support of &lt;code&gt;WebView&lt;/code&gt; is not very developer friendly.  We are
+shipping a well-tested helper library with &lt;a href=&#34;https://gitlab.com/guardianproject/NetCipher/#webview&#34;&gt;NetCipher&lt;/a&gt; to
+ease this pain.&lt;/p&gt;
+
+&lt;p&gt;We also explored an alternative approach to control the networking of
+Android&amp;rsquo;s &lt;code&gt;WebView&lt;/code&gt;. It&amp;rsquo;s possible to replace all network requests
+a &lt;code&gt;WebView&lt;/code&gt; sends by overriding &lt;code&gt;WebViewClient.shouldInterceptRequest()&lt;/code&gt;.
+This technique will work well for read-only (HTTP GET) connections.  Sending
+data (HTTP POST and PUT) is not feasible though. There is no interface,
+either exposed or hidden, in Android&amp;rsquo;s API which would allow us to retrieve
+a HTTP request&amp;rsquo;s body.&lt;/p&gt;
+
+&lt;p&gt;Finally here&amp;rsquo;s a list of alternative scenarios we came up with for using PT
+on Android.  They are not as generic as the approach we chose to implement in
+the prototype Apps.  In some situations these might be easier to implement,
+perform better or simply convey how PT can be put to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;apt-setup-scenarios.png&#34; alt=&#34;Schematic overview of establishing a PT connection used&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot v16: a whole new look, and easier to use!</title>
+      <link>https://guardianproject.github.io/info/2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/</link>
+      <pubDate>Fri, 05 Jan 2018 13:14:17 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot: Tor for Android&lt;/a&gt; has a new release (&lt;a href=&#34;https://gitweb.torproject.org/orbot.git/tag/?h=16.0.0-RC-2&#34;&gt;tag&lt;/a&gt; and &lt;a href=&#34;https://gitweb.torproject.org/orbot.git/diff/CHANGELOG?h=16.0.0-RC-1-CHANGELOG&amp;amp;id=5542e8e192fcff24284179e7fdb31cf877f79efd&#34;&gt;changelog&lt;/a&gt;), with a major update to the user experience and interface. This is the 16th major release of Orbot, since it was launched in late 2009.&lt;/p&gt;
+
+&lt;p&gt;The main screen of the app now looks quite different, with all the major features and functions exposed for easy access. We have also added a new onboarding setup wizard for first time users, that assists with configuring connections to the Tor network for users in places where Tor itself is blocked. This release also continues to support users looking to use Orbot to unblock specific apps, that may not be available on their network or country. From the main screen, users can activate Orbot’s built-in VPN feature, and easily choose which specific apps they want to be routed over the Tor network. You can also refresh your Tor identity, rebuilding all circuit connections through the network, using the circular reload icon in the expanded notification provided by Orbot.&lt;/p&gt;
+
+&lt;p&gt;The update is rolling out on &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&#34;&gt;Google Play&lt;/a&gt;, and will also be available on &lt;a href=&#34;https://guardianproject.info/fdroid/&#34;&gt;Guardian Project’s F-Droid Repo&lt;/a&gt; soon. You can also find &lt;a href=&#34;https://github.com/n8fr8/orbot/releases&#34;&gt;Android APKs on Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;THANKS TO: pgerber, syphyr, Khsed4, BjarniRunar, Unpublished, igortoliveira, goapunk, SpotComms, AkshatAgrawal05, dixidroid, arrase and others for the bug reports and fixes on the Orbot app. Thanks to &lt;a href=&#34;https://twitter.com/wwwiretap&#34;&gt;Sina&lt;/a&gt; with Team Cymru for the extra infrastructure provided to help users in places where Tor itself is blocked. Also, &lt;a href=&#34;https://twitter.com/mrphs&#34;&gt;Nima&lt;/a&gt; for the guidance, support and motivation to get this release out sooner rather than later!&lt;/p&gt;
+
+&lt;div id=&#39;gallery-13&#39; class=&#39;gallery galleryid-13934 gallery-columns-3 gallery-size-medium&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122015.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122035.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122111.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122301.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2018/01/device-2018-01-05-122344.png 1440w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#39;clear: both&#39; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;/** v16.0.0 RC 1 / 5 Jan 2018 / 309c42be916d866a28adacb0a4f92d692cbd6009 **/&lt;/p&gt;
+
+&lt;p&gt;7e9890e tweak default bridge behavior based on locale&lt;br /&gt;
+fec853c updates to notification for Android O / SDK26&lt;br /&gt;
+b161043 Merge pull request #106 from Unpublished/fix_binary_search&lt;br /&gt;
+ab472d5 Merge branch ‘syphyr-master’&lt;br /&gt;
+4fc3e7e Merge branch ‘master’ of &lt;a href=&#34;https://github.com/syphyr/orbot&#34;&gt;https://github.com/syphyr/orbot&lt;/a&gt; into syphyr-master&lt;br /&gt;
+792ee2b Merge branch ‘BjarniRunar-master’&lt;br /&gt;
+0d4a735 Merge branch ‘master’ of &lt;a href=&#34;https://github.com/BjarniRunar/orbot&#34;&gt;https://github.com/BjarniRunar/orbot&lt;/a&gt; into BjarniRunar-master&lt;br /&gt;
+c7b1441 add comment about app updates URL&lt;br /&gt;
+d21ff80 update strings and code for switching Locale in app&lt;br /&gt;
+5c5790c fix binary search&lt;br /&gt;
+38b0063 update build to &lt;sup&gt;16000005&lt;/sup&gt;&amp;frasl;&lt;sub&gt;6&lt;/sub&gt; for 16.0.0-BETA-2&lt;br /&gt;
+7da26a3 update strings from transifex&lt;br /&gt;
+ce714fa use the proper localized start/end params&lt;br /&gt;
+38cc29c externalize more strings&lt;br /&gt;
+8bcc9a4 update gitignore&lt;br /&gt;
+6e3b6ba add onboarding strings localizatoin&lt;br /&gt;
+154e373 ensure appupdater check starts up&lt;br /&gt;
+703f8a1 move update back to older (reduce version code)&lt;br /&gt;
+b556518 move update back to older version&lt;br /&gt;
+680d108 update json for testing&lt;br /&gt;
+e4f6348 test updating json&lt;br /&gt;
+dafcdd7 enable AppUpdater notificatoins through Github&lt;br /&gt;
+3b5a361 update handling of vpn enabled and app onclick&lt;br /&gt;
+e21474c updates to layout and strings for bridge wizard&lt;br /&gt;
+2a9691c make sure the back arrow works&lt;br /&gt;
+244231c remove activity no longer used&lt;br /&gt;
+0284130 remove out activity no longer used&lt;br /&gt;
+e487f34 update strings&lt;br /&gt;
+8fd0bd0 update tor-android to 0.3.19b (updated geoip databases)&lt;br /&gt;
+ad51bed update transifex configuration&lt;br /&gt;
+a08c707 update app store descriptions&lt;br /&gt;
+2ced17a update build SDK targets to 26&lt;br /&gt;
+5c22de2 manifest updates: remove superuser, enable chromebooks&lt;br /&gt;
+b4aa9d8 more improvements for bridge wizard&lt;br /&gt;
+df37b8c add bridge wizard testing code&lt;br /&gt;
+14ce4f6 big update for new onboarding, bridge wizard&lt;br /&gt;
+2ceacf6 move bridges to raw resources&lt;br /&gt;
+938a740 improve vpn app enable view on main activity&lt;br /&gt;
+ba358a4 add new orfox and settings icon&lt;br /&gt;
+5bd5a56 VPN should be off by default&lt;br /&gt;
+e464044 connection might be null&lt;br /&gt;
+51216a4 Add new preference: pref_open_proxy_on_all_interfaces&lt;br /&gt;
+21b4521 Update version strings in help-&amp;gt;about&lt;br /&gt;
+5500b50 update spuport library version&lt;br /&gt;
+546310a improve notifications, add refresh/newnym button&lt;br /&gt;
+877406f tweak layout&lt;br /&gt;
+b68132b fix title for tor app section&lt;br /&gt;
+7210223 fix handling of intents&lt;br /&gt;
+47e10e7 fix issues with bridge selection UI&lt;br /&gt;
+e6bd23a more UI updates and small improvements&lt;br /&gt;
+d9bd32a more UI updates&lt;br /&gt;
+7303a33 work on the new UI update&lt;br /&gt;
+6a19bf6 update UI tweaks for next release&lt;br /&gt;
+3741434 don’t show app selection each time you turn VPN on/off&lt;br /&gt;
+4df2fcf move “other” installer back to tor resource installer&lt;br /&gt;
+f3f9162 don’t delete installed binaries&lt;br /&gt;
+6493d8d Merge pull request #104 from igortoliveira/remove-java-file&lt;br /&gt;
+fc4d6aa improve app loading time for VPN app dialog&lt;br /&gt;
+fbeff25 Remove leftover Java file&lt;br /&gt;
+544ea7b update build to use tor version constant from tor-android-binary&lt;br /&gt;
+977167b ZMerge branch ‘master’ of github.com:n8fr8/orbot&lt;br /&gt;
+b07d4fe removed unused submodules, moved to gradle tor-android&lt;br /&gt;
+d392ecd remove unneeded external dirs for making tor&lt;br /&gt;
+3d729fc switch to using tor-android binary in TorService&lt;br /&gt;
+6f364de use the new tor-android gradle dependency &lt;a href=&#34;https://github.com/n8fr8/tor-android&#34;&gt;https://github.com/n8fr8/tor-android&lt;/a&gt;&lt;br /&gt;
+c7f834b moving binary files, use tor-android gradle&lt;br /&gt;
+3b5e27e removing external depends, moving to tor-android gradle&lt;br /&gt;
+898f64a Merge pull request #99 from goapunk/update-BUILD-instructions&lt;br /&gt;
+e14d647 update BUILD&lt;br /&gt;
+fce5bde add autopoint to dependencies&lt;br /&gt;
+72c7e04 Merge pull request #97 from SpotComms/padding&lt;br /&gt;
+8cf412a Merge pull request #98 from goapunk/add-lzma-zstd-as-dependency&lt;br /&gt;
+c1dfc29 Update BUILD instructions&lt;br /&gt;
+9ca36e1 Add lzma and zstd&lt;br /&gt;
+6e4b700 Expose *ConnectionPadding&lt;br /&gt;
+71e3464 Merge pull request #94 from Unpublished/fix88&lt;br /&gt;
+cbffc1d remove some transproxy left overs&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>
+
+&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here at Guardian, security is always our #1 priority. We owe that to our users who rely on us to keep them safe in places like Syria or Iran. But the time we spend on encryption is wasted if users don’t like using our tools, or can’t figure out how they work. We want to make security apps that are enjoyable and easy to use everyday, and don’t take a PHD to understand.&lt;/p&gt;
+
+&lt;p&gt;Activists in Iran and Syria know firsthand how important technologies like Tor and VPNs are for staying safe online. Our friends and neighbors might not be living under a repressive dictatorship, but that doesn’t mean they couldn’t use a little digital security in their lives. Maybe your nephew wants to get past the block on Facebook at school, or your co-worker wants to watch March Madness at work (make sure she gets that decoy spreadsheet ready). Maybe your friend just wants to send his wife a few…private messages, and he’d rather not have them stored by Google or Verizon. These people might not be pros, but they’re curious and happy to poke around their technology. With a little fun and interactive guidance, they can be well on their way to becoming a power user. Everyone starts somewhere!&lt;/p&gt;
+
+&lt;p&gt;We want to make life safer and easier for at-risk activists and everyday people alike. That’s why we make accessible and straightforward guides to help you quickly and easily get past censors, internet police, or the office IT department.&lt;/p&gt;
+
+&lt;h1 id=&#34;gibberbot-tutorial&#34;&gt;&lt;strong&gt;Gibberbot Tutorial&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Our newest tutorial is for our secure chat app, &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&amp;feature=search_result&#34; target=&#34;_blank&#34;&gt;Gibberbot&lt;/a&gt;. With your Android phone in one hand and the &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;Gibberbot Tutorial&lt;/a&gt; in the other, you can be chatting securely on Google or Facebook chat in minutes! But Google and Facebook can’t even tell what you’re talking about. It’s also more convenient to have all of your chat apps rolled into one so that it doesn’t matter where your friends message you, it still goes to the same place. Gibberbot works even if someone is trying to monitor or block your phone’s communications. If you know another language and would like to contribute, &lt;a title=&#34;Gibberbot Tutorial Transifex Translations&#34; href=&#34;https://www.transifex.com/projects/p/gibberbot-tutorial/&#34; target=&#34;_blank&#34;&gt;we’d love your help translating the tutorial (we’ve got English and Tibetan covered)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_3291&#34; style=&#34;width: 251px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-3291&#34; class=&#34; wp-image-3291&#34; alt=&#34;galaxy5&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/02/galaxy5.png&#34; width=&#34;241&#34; height=&#34;361&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-3291&#34; class=&#34;wp-caption-text&#34;&gt;
+    So you want to chat securely?
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;p&gt;
+     
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;h1&gt;
+    &lt;strong&gt;Orbot Tutorial&lt;/strong&gt;
+  &lt;/h1&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    With our Android app Orbot, browsing the web securely and safely through Tor has been a piece of cake for a while now. But we just created &lt;a title=&#34;How to Orbot Tutorial&#34; href=&#34;https://guardianproject.info/howto/browsefreely&#34; target=&#34;_blank&#34;&gt;an interactive tutorial to get you started&lt;/a&gt; and show how easy it is circumvent censorship, even if the Google Play Store is blocking direct access to our app.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    The tools themselves are getting smarter too. A new tool from &lt;a title=&#34;Tor Project&#34; href=&#34;https://www.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor&lt;/a&gt;, called &lt;a title=&#34;Tor Project Obfsproxy&#34; href=&#34;http://www.torproject.org/projects/obfsproxy.html.en&#34; target=&#34;_blank&#34;&gt;Pluggable Transports&lt;/a&gt;, hides your Tor traffic to look like regular Internet traffic, making it even easier for Tor users to stay ahead of surveillance and censorship. To use this new tool with Orbot, just follow the instructions on &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/04/How-to-browse-freely-on-your-phone-if-your-internet-is-blocked.pdf&#34; target=&#34;_blank&#34;&gt;our new one-page guide&lt;/a&gt; (and &lt;a title=&#34;How to browse freely on your phone if your internet is blocked - Farsi&#34; href=&#34;https://guardianproject.info/wp-content/uploads/2013/04/How-to-browse-freely-on-your-phone-if-your-internet-is-blocked-Farsi.pdf&#34; target=&#34;_blank&#34;&gt;in Farsi&lt;/a&gt;) and you’re all set! For a more in-depth guide to using Orbot, watch our &lt;a href=&#34;https://www.youtube.com/watch?v=Dcf5sh99ze0&#34;&gt;video tutorial&lt;/a&gt; (now in English and Arabic).
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_3585&#34; style=&#34;width: 250px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+    &lt;a href=&#34;https://guardianproject.info/howto/browsefreely&#34; target=&#34;_blank&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-3585&#34; class=&#34; wp-image-3585&#34; alt=&#34;orbot galaxy s3&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/04/galaxy15.png&#34; width=&#34;240&#34; height=&#34;361&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/04/galaxy15.png 400w, https://guardianproject.info/wp-content/uploads/2013/04/galaxy15-199x300.png 199w&#34; sizes=&#34;(max-width: 240px) 100vw, 240px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p id=&amp;quot;caption-attachment-3585&amp;quot; class=&amp;quot;wp-caption-text&amp;quot;&amp;gt;
+  So you want to escape censorship?
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;p&gt;
+      As we continue to grow our team and create new tools, we need your feedback!  Please tell us what we can do to go from security awareness training to a full-on security awareness party. Feel free to leave a comment on this post or tell us how we can make things easier through our &lt;a href=&#34;https://guardianproject.info/contact/&#34;&gt;contact page&lt;/a&gt;. You can also let us know about any upcoming parties that we should be attending.
+    &lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
+  &amp;lt;i&amp;gt;This post is partially a response to Bruce Schneier’s recent piece: &amp;lt;a title=&amp;quot;Schneier Security Awareness Training&amp;quot; href=&amp;quot;https://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&amp;quot;&amp;gt;Security Awareness Training&amp;lt;/a&amp;gt;&amp;lt;/i&amp;gt;.
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

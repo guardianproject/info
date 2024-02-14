@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faketime on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/faketime/</link>
+    <description>Recent content in Faketime on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Sep 2015 10:54:05 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/faketime/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CipherKit reproducible builds</title>
+      <link>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</link>
+      <pubDate>Mon, 21 Sep 2015 10:54:05 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the &lt;em&gt;exact&lt;/em&gt; same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).&lt;/p&gt;
+
+&lt;p&gt;Our core CipherKit libraries are the more sensitive areas, so that’s where we’ve started. We generally work on Debian and Ubuntu and recommend that platform, but we recognized that OSX is a popular platform for Android developers also. So this process will work on OSX too, using your favorite package manager (e.g. Fink, MacPorts, or Homebrew).&lt;/p&gt;
+
+&lt;p&gt;Then you will end up with &lt;code&gt;IOCipher-v0.3.zip&lt;/code&gt;, which includes the .jar and .so files. If your setup is close enough to our release build setup, the contents of that ZIP file will be the same as the official release. Right now, it is difficult to get the exact same binary file (e.g. the same sha256 sum) because of the timestamps in the .zip and varitions caused by using different versions of Java, and Android SDK and NDK. To check the contents of your build versus the official release:&lt;/p&gt;
+
+&lt;pre&gt;sudo apt-get install faketime unzip wget meld
+cd /tmp
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip.sig
+gpg --verify IOCipher-v0.3.zip.sig
+git clone https://github.com/guardianproject/IOCipher
+cd IOCipher
+git checkout v0.3
+./make-release-build
+./compare-to-official-release IOCipher-v0.3.zip /tmp/IOCipher-v0.3.zip
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;what-is-happening-here&#34;&gt;What is happening here?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;meld&lt;/em&gt; (&lt;em&gt;FileMerge&lt;/em&gt; on OSX) will show a listing of all files listed, and which ones are different. You can see that the contents of the &lt;em&gt;.class&lt;/em&gt; files and &lt;em&gt;.so&lt;/em&gt; files all match, but there will be inevitable differences in some of the metadata. Native builds are much more sensitive to changes in the toolchain. The Java &lt;em&gt;.class&lt;/em&gt; files are usually reproducible even when using different versions of Java and the Android SDK. Native builds are almost never reproducible if the NDK version is at all different. Sometimes even the host platform where the NDK is running (e.g. Ubuntu vs OSX, or 64-bit vs 32-bit) will cause differences in the final binaries.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_13105&#34; style=&#34;width: 883px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13105&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png&#34; alt=&#34;The NDK version and build platform are listed in the manifest.&#34; width=&#34;873&#34; height=&#34;591&#34; class=&#34;size-full wp-image-13105&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld-300x203.png 300w&#34; sizes=&#34;(max-width: 873px) 100vw, 873px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13105&#34; class=&#34;wp-caption-text&#34;&gt;
+    The NDK version and build platform are listed in the manifest.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_13104&#34; style=&#34;width: 883px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13104&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png&#34; alt=&#34;The Java .class files are exactly the same, but the native .so files are not.&#34; width=&#34;873&#34; height=&#34;591&#34; class=&#34;size-full wp-image-13104&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld-300x203.png 300w&#34; sizes=&#34;(max-width: 873px) 100vw, 873px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13104&#34; class=&#34;wp-caption-text&#34;&gt;
+    The Java .class files are exactly the same, but the native .so files are not.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png&#34; alt=&#34;faketime&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13098&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png 1024w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Timestamps are a very common issue when trying to reproduce a build. The release build process uses &lt;a href=&#34;https://github.com/wolfcw/libfaketime&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;faketime&lt;/code&gt;&lt;/a&gt; to provide consistent timestamps, which are picked from the git commit. &lt;code&gt;faketime&lt;/code&gt; freezes the clock entirely for native builds, so any timestamps from that process will always be exactly the same. Unfortunately, some parts of the &lt;code&gt;ant&lt;/code&gt; Java build rely on the clock moving forward, so freezing clock makes the build freeze forever. Instead, &lt;code&gt;faketime&lt;/code&gt; sets the clock using the time from the git commit, then moves time forward at 5% of the normal speed. That makes it much more likely that the timestamps will be the same, but usually what seems to happen is that the timestamps are 2 seconds off, which is the time resolution of the ZIP format. A better solution is needed here for JARs, they are easiest to verify using a sha256 sum. JAR signatures mostly seem not worth the pain they introduce. APKs signatures do not sign the whole APK, only the contents, so the varying timestamps do not matter when verifying using a APK signature. Another example of a difference: if comparing a debug build to a release build, then &lt;code&gt;BuildConfig.class&lt;/code&gt; will be difference because of the debug stuff. The sort order of the metadata in the jar MANIFEST.MF might also be different.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-end-goal&#34;&gt;The end goal&lt;/h3&gt;
+
+&lt;p&gt;Reproducing builds is an arcane process, for sure. It is a means to an end. The goal is to get to the point where well known binaries, published in places like MavenCentral or jCenter, can easily be verified by anyone who cares to try. Or people could even set up &lt;a href=&#34;https://f-droid.org/wiki/page/Verification_Server&#34; target=&#34;_blank&#34;&gt;servers that automatically try&lt;/a&gt; to reproduce any JAR used in a project.&lt;/p&gt;
+
+&lt;p&gt;Then people can verify those JARs in a fully decentralized manner, and publish certifications in their preferred format (GPG signatures, SHA256 sums for gradle-witness, etc). Then we can feel safe getting the release from anywhere on the internet, no matter the level of security or malware infestation.&lt;/p&gt;
+
+&lt;p&gt;Towards that goal, we have been getting our libraries all nicely packaged up and submitted to jCenter (the default gradle repository for Android). Here are the relevant bits to include in your build.gradle:&lt;/p&gt;
+
+&lt;pre&gt;compile &#39;info.guardianproject.cacheword:cachewordlib:0.1&#39;
+compile &#39;info.guardianproject.iocipher:IOCipher:0.3&#39;
+compile &#39;info.guardianproject.netcipher:netcipher:1.2&#39;
+compile &#39;info.guardianproject.trustedintents:trustedintents:0.0&#39;
+
+compile &#39;net.freehaven.tor.control:jtorctl:0.2&#39;
+&lt;/pre&gt;
+
+&lt;p&gt;SQLCipher-for-Android is coming soon:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&#34;&gt;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+I hope to also get them up on MavenCentral as well, since that one is also quite common on Android, and is a community run resource versus Bintray’s jCenter, which is purely a for-profit company.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

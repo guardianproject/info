@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Masque on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/masque/</link>
+    <description>Recent content in Masque on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/masque/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Steps towards trusted VPNs</title>
+      <link>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</guid>
+      <description>
+
+&lt;p&gt;VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&amp;rsquo;s server.  That is how VPNs &amp;ldquo;unblock&amp;rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04&#34;&gt;adblocker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To answer the question about whether they are a useful privacy tool, let&amp;rsquo;s start with the history of where VPNs came from.  VPN stands for Virtual Private Network.  They were developed by large companies with multiple offices and travelling employees.  The goal was to link together all of these offices so that internal data could be freely shared between them without that data going over the internet as easily readable unencrypted plain text.  Then travelling employees could also safely access the internal data via any internet connection.  The key piece of this picture is that the users, employees in this case, already had to trust their VPN provider.  The VPN provider was the company they worked for, and the data they were handling belonged to the company.  So there was no attempt to hide user information from the VPN provider.  Indeed quite the opposite: companies linked the VPN access to each employee&amp;rsquo;s &amp;ldquo;single sign-on&amp;rdquo; account.  Built into the design of VPNs is full trust of the VPN provider, with the aim of keeping the data private from the internet. This setup was also by design, since many large companies wanted to ensure their employees work laptops were still going through the corporate firewall, where the company could block certain sites (e.g. malware, porn), then also &lt;a href=&#34;https://www.fortinet.com/resources/cyberglossary/data-exfiltration&#34;&gt;monitor employees&lt;/a&gt; internet activity to ensure they are not exposing files that the company does not want to be public.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Virtual_Private_Network_overview.svg&#34;&gt;&lt;img src=&#34;Virtual_Private_Network_overview.svg.png&#34; alt=&#34;Virtual Private Network overview&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This does not paint a good picture for a tool to protect privacy.  But there is hope!  It is possible to use a VPN to improve your privacy if you pay attention to some key details.  For VPN services to provide privacy, you have to put a lot of trust in the people who are operating the service.  The VPN provider can see &lt;strong&gt;all&lt;/strong&gt; of your traffic that goes over the VPN, and they have a strong link to your user account with them.  The privacy advantage of a VPN is that the destination sites cannot see which IP address your device is coming from, they will see the VPN provider&amp;rsquo;s IP address.  And your ISP will see you are using a VPN, but not which sites you visit.  With HTTPS, TLS, and end-to-end encryption being widespread, any encrypted content will be protected from the VPN provider also.  But the VPN provider can still see where you are connecting from, which sites and services you are using, what time of day, and even potentially correlate traffic to link activities of their users.  In other words, the VPN operator sees lots of metadata about you, so much so that they could paint a quite detailed portrait of your personal life if they ever did let their data be analyzed.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-build-a-privacy-respecting-vpn-service&#34;&gt;How to build a privacy-respecting VPN service&lt;/h2&gt;
+
+&lt;p&gt;There are good signals that VPN services can send to show that they are tackling the real issues.  For example, shipping free software clients, maintaining a &lt;a href=&#34;https://www.eff.org/deeplinks/2016/05/canary-watch-one-year-later&#34;&gt;warrant canary&lt;/a&gt;, posting a clear privacy policy describing the logging policy, and publishing the unredacted results of third party audits.  If the VPN operator is doing the right thing, then VPNs can provide a relatively private way to access the internet.  With a consistent track record of transparency, they can build up a trusted reputation for protecting privacy.  Unfortunately, we cannot rest there since a VPN provider can change their setup quite easily, whether willingly or under duress.  Maintaining consistent, regular, and transparent communications is therefore essential.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Calyx Institute&amp;rsquo;s &lt;a href=&#34;https://calyxinstitute.org/legal/privacy-policy&#34;&gt;Privacy Policy&lt;/a&gt;
+and &lt;a href=&#34;https://calyxinstitute.org/about/financials-and-annual-reports&#34;&gt;Financials and Annual Reports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mozilla&amp;rsquo;s &lt;a href=&#34;https://www.mozilla.org/en-US/privacy/principles/&#34;&gt;Data Privacy Principles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mullvad&amp;rsquo;s &lt;a href=&#34;https://mullvad.net/help/swedish-legislation/&#34;&gt;Swedish legislation relevant to us as a VPN provider&lt;/a&gt; and &lt;a href=&#34;https://mullvad.net/help/no-logging-data-policy/&#34;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of that, the &lt;a href=&#34;https://vpnalyzer.org/&#34;&gt;VPNalyzer&lt;/a&gt; project is working to make monitoring VPN services a lot easier and possible to crowdsource.  This gives a third party perspective from some respected organizations.&lt;/p&gt;
+
+&lt;h3 id=&#34;know-as-little-as-possible-about-your-users&#34;&gt;Know as little as possible about your users&lt;/h3&gt;
+
+&lt;p&gt;Many VPN providers require an account and payment information.  This is usually personally identifiable information, like name, credit card information, email address, phone number, billing address, etc.  The most private services have &lt;a href=&#34;https://f-droid.org/2022/02/28/no-user-accounts-by-design.html&#34;&gt;no user accounts by design&lt;/a&gt;.  Calyx, Lavabit, and Riseup VPNs do not require any account or payment at all, so they do not have that information to give out or leak.  Providers that accept payment need a way to tie payment to service, that is usually done using accounts tied to email addresses or phone numbers.  Personal details are not required to make accounts and payments work.  Mullvad uses a randomly generated account number only, there is no link to other identifiers unless you provide them.  Additionally, Mullvad is one of the few VPN vendors that accepts cash payments.  Many technically minded implementers laugh at the idea of processing envelopes of cash, but it is an effective, real world solution to minimizing personal data that software methods struggle to match.&lt;/p&gt;
+
+&lt;h3 id=&#34;keep-as-little-information-as-possible&#34;&gt;Keep as little information as possible&lt;/h3&gt;
+
+&lt;p&gt;The VPN servers unavoidably see lots of information about what users are doing.  The default with most servers is to keep logs of that data. The longer this data is kept, the greater the risk it will be used to identify users and their activities. It does not help that standard practice for running servers is to keep logs for a long time.  Many service providers keep those logs for years.&lt;/p&gt;
+
+&lt;p&gt;VPN providers must be clear about what logs they are keeping, and how long they are stored.  Even better, they will provide information about how they do store the data that they do keep.  For example, if the servers do not use full disk encryption, then it would be straightforward to recover the deleted logs.  That is much harder on systems using full disk encryption.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&#34;https://cure53.de/audit-report_ivpn.pdf&#34;&gt;2019 audit&lt;/a&gt; of &lt;a href=&#34;https://www.ivpn.net/blog/independent-security-audit-concluded&#34;&gt;IVPN&lt;/a&gt; showed that, at that time, the auditors confirmed that IVPN performed no &amp;ldquo;statistical logging of customer-traffic&amp;rdquo;, &amp;ldquo;logging of traffic, IP addresses or DNS requests&amp;rdquo; on the servers that the auditors were given access to.&lt;/li&gt;
+&lt;li&gt;Mullvad says, &amp;ldquo;we never store any activity logs of any kind.&amp;rdquo; in their &lt;a href=&#34;https://mullvad.net/en/help/no-logging-data-policy/&#34;&gt;no logging data policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;proven-track-record-of-resisting-unjust-legal-intrusion&#34;&gt;Proven track record of resisting unjust legal intrusion&lt;/h3&gt;
+
+&lt;p&gt;There are many legal ways for authorities to get private data, this is an essential part of a functioning justice system.  But these powers are sadly abused in basically every country in the world, it is only a question of degrees.  A VPN provider needs to represent its users legal interests, and push back on legal orders when there is the possibility they are unjust.  Calyx Institute&amp;rsquo;s Nick Merrill provides the shining example in this regard.  With the ACLU, he fought a &lt;a href=&#34;https://en.wikipedia.org/wiki/Doe_v._Ashcroft&#34;&gt;legal case&lt;/a&gt; for over a decade to prevent unjust intrusion for his users.  Ladar Levison shut down his email company &lt;a href=&#34;https://en.wikipedia.org/wiki/Lavabit&#34;&gt;Lavabit&lt;/a&gt; rather than allow the US Government to monitor Edward Snowden&amp;rsquo;s email account.&lt;/p&gt;
+
+&lt;p&gt;There are other ways to ensure that the legal processes are not abused.  These include warrant canaries and disclosure when data had to be turned over via legal procedures.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla&amp;rsquo;s &lt;a href=&#34;https://www.mozilla.org/en-US/about/policy/transparency/&#34;&gt;Transparency&lt;/a&gt; policy&lt;/li&gt;
+&lt;li&gt;ProtonVPN&amp;rsquo;s &lt;a href=&#34;https://protonvpn.com/blog/transparency-report/&#34;&gt;Transparency Report &amp;amp; Warrant Canary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Riseup&amp;rsquo;s &lt;a href=&#34;https://riseup.net/canary&#34;&gt;Canary Statement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publish-as-much-as-possible-as-free-open-source-software&#34;&gt;Publish as much as possible as free open source software&lt;/h3&gt;
+
+&lt;p&gt;F-Droid works to build &lt;a href=&#34;https://f-droid.org/2022/05/24/buildserver-overhaul-sponsored-by-calyx-institute.html&#34;&gt;services&lt;/a&gt; where free software, &lt;a href=&#34;https://f-droid.org/2022/07/22/maven-central.html&#34;&gt;code&lt;/a&gt; &lt;a href=&#34;https://f-droid.org/2022/09/30/free-software-and-inspection-are-key-to-software-we-can-trust.html&#34;&gt;inspection&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org/2023/01/15/towards-a-reproducible-fdroid.html&#34;&gt;reproducible builds&lt;/a&gt; provide a method to ensure that the software we deliver is trustworthy.  VPN vendors recognize how important trust is, so the good ones work to get their apps into f-droid.org.  The F-Droid community provides the best screening for ensuring Android apps are truly free software.  On top of that, F-Droid flags apps for &lt;a href=&#34;https://f-droid.org/docs/Anti-Features/&#34;&gt;Anti-Features&lt;/a&gt;, which are things that users may not like, but might accept.  Here are VPN clients that do maintain their free software clients in f-droid.org:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/se.leap.bitmaskclient/&#34;&gt;Bitmask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.calyxinstitute.vpn/&#34;&gt;Calyx VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/nl.eduvpn.app/&#34;&gt;eduVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/net.ivpn.client/&#34;&gt;IVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.lavabit.pahoehoe/&#34;&gt;Lavabit Encrypted Proxy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/net.mullvad.mullvadvpn/&#34;&gt;Mullvad VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.outline.android.client/&#34;&gt;Outline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/ch.protonvpn.android/&#34;&gt;ProtonVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/one.librem.tunnel/&#34;&gt;Purism Librem Tunnel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/se.leap.riseupvpn/&#34;&gt;Riseup VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.tailscale.ipn/&#34;&gt;Tailscale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.wireguard.android/&#34;&gt;WireGuard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;use-external-auditors-to-confirm-source-code-and-operations&#34;&gt;Use external auditors to confirm source code and operations&lt;/h3&gt;
+
+&lt;p&gt;External auditors are important because they can bring fresh eyes on the source code, and good auditors are experts at finding issues in source code and server setups.  And responsible organizations will publish the full, unredacted audit report once they have fixed the issues.  Even if a VPN app is included in F-Droid, there are key aspects of the service that cannot be independently verified.  For this, we must rely on the people who run the service to do the right thing.  Audits can demonstrate that they were doing the right thing at the point of time of the audit.  Here are some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IVPN&amp;rsquo;s &lt;a href=&#34;https://cure53.de/audit-report_ivpn.pdf&#34;&gt;2019 audit of IVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mozilla VPN had their app source code &lt;a href=&#34;https://blog.mozilla.org/security/files/2021/08/FVP-02-report.final_.pdf&#34;&gt;audited&lt;/a&gt; in 2021 and fixed the issues that were found.&lt;/li&gt;
+&lt;li&gt;Mullvad&amp;rsquo;s &lt;a href=&#34;https://cure53.de/pentest-report_mullvad_2020_v2.pdf&#34;&gt;Pentest-Report Mullvad Apps, Clients &amp;amp; API 05.2020&lt;/a&gt;, &lt;a href=&#34;https://cure53.de/pentest-report_mullvad_v2.pdf&#34;&gt;Pentest-Report Mullvad VPN Clients 09.2018&lt;/a&gt;, and &lt;a href=&#34;https://mullvad.net/en/blog/2021/1/20/no-pii-or-privacy-leaks-found-cure53s-infrastructure-audit/&#34;&gt;2020 Infrastructure Audit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Outline&amp;rsquo;s &lt;a href=&#34;https://s3.amazonaws.com/outline-vpn/static_downloads/ros-report.pdf&#34;&gt;2017 Pentratration Test Report&lt;/a&gt; and &lt;a href=&#34;https://s3.amazonaws.com/outline-vpn/static_downloads/cure53-report.pdf&#34;&gt;Pentest &amp;amp; Audit Report Jigsaw Outline 09.-12.2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Proton VPN open sourced their client apps and had them &lt;a href=&#34;https://www.zdnet.com/article/protonvpn-apps-handed-to-open-source-community-in-transparency-security-push/&#34;&gt;audited&lt;/a&gt; in 2019.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publicly-verifiable-binaries-via-reproducible-builds&#34;&gt;Publicly verifiable binaries via reproducible builds&lt;/h3&gt;
+
+&lt;p&gt;Source code is the easiest place to conduct an audit of software, but it is the binary files that actually run on your device.  Auditing binaries rarely happens since it is so much more time intensive.  And yet, there are ways to change how software works without changing the source code. This can be done by injecting changes into the process that converts the source code into the executable binary.  &lt;a href=&#34;https://reproducible-builds.org/&#34;&gt;Reproducible Builds&lt;/a&gt; is the indisputable method for proving that a given binary was generated by given source code.&lt;/p&gt;
+
+&lt;p&gt;There are some generic VPN clients in Debian that are built reproducibly, but there are no Android or iOS VPN apps or  branded desktop client apps that meet this standard yet.  We recommend that VPN providers work with &lt;a href=&#34;https://wiki.debian.org/ReproducibleBuilds&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;f-droid.org/docs/Reproducible_Builds&#34;&gt;F-Droid&lt;/a&gt;, the &lt;a href=&#34;https://reproducible-builds.org/&#34;&gt;Reproducible Builds&lt;/a&gt; group, or any other relevant &lt;a href=&#34;https://reproducible-builds.org/who/projects/&#34;&gt;project&lt;/a&gt; to achieve this key step.&lt;/p&gt;
+
+&lt;h3 id=&#34;apple-ios&#34;&gt;Apple iOS&lt;/h3&gt;
+
+&lt;p&gt;This post focuses on Android because iOS has a number of issues that make using VPNs for privacy less effective.  For example, VPNs on iOS will &lt;a href=&#34;https://www.bleepingcomputer.com/news/security/unpatched-ios-bug-blocks-vpns-from-encrypting-all-traffic/&#34;&gt;leak IP addresses&lt;/a&gt;.  Apple knows about this issue, yet still has &lt;a href=&#34;https://www.theregister.com/2022/08/19/apple_ios_vpn/&#34;&gt;not fixed&lt;/a&gt; it after a couple years.  On top of that, it is not possible to have reproducible builds on iOS because the actual executable binaries are encrypted by Apple&amp;rsquo;s proprietary Digital Restrictions Management (DRM), so only Apple could ever reproducibly build something.  If you are running Apple iOS, you are stuck trusting Apple to do the right thing, since they operate a relatively opaque, proprietary, strictly walled garden.&lt;/p&gt;
+
+&lt;h2 id=&#34;run-your-own-vpn&#34;&gt;Run your own VPN&lt;/h2&gt;
+
+&lt;p&gt;The VPN security model means you have to put a ton of trust in the operator.  Questions of trust get much easier when you are talking about yourself or own organization.  There are many projects that aim to make it as easy as possible to run your own VPN service.  The good ones are all free software and have been audited, both the client source code and the server side setup.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://amnezia.org&#34;&gt;Amnezia&lt;/a&gt; is a free service to create a personal VPN on your server.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://leap.se/&#34;&gt;LEAP VPN&lt;/a&gt; is a &amp;ldquo;white label&amp;rdquo; VPN setup used to build Bitmask, CalyxVPN, RiseupVPN and more.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getoutline.org/&#34;&gt;Outline&lt;/a&gt; &amp;ldquo;makes it easy to create a VPN server, giving anyone access to the free and open internet.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://we-pn.com/&#34;&gt;WEPN&lt;/a&gt; is a free software kit to become your own VPN provider, designed around a small hardware device.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are also generic VPN client apps based on standard protocols:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/nl.eduvpn.app/&#34;&gt;eduVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/de.blinkt.openvpn/&#34;&gt;OpenVPN for Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/en/packages/com.github.shadowsocks/&#34;&gt;Shadowsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.strongswan.android/&#34;&gt;strongSwan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.WireGuard.android/&#34;&gt;WireGuard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;comparing-vpns-to-tor-and-masque&#34;&gt;Comparing VPNs to Tor and MASQUE&lt;/h2&gt;
+
+&lt;p&gt;If it is privacy that you seek, then there are other tools to review.  Tor is a longstanding community project that aims to make privacy proxies without compromise. Tor works similarly to VPN in that it is tunneling traffic to shared servers, the big difference is that your traffic is tunneled through three relays (in comparison to single hop VPNs). Each individual Tor relay cannot see the enough to put together a picture of who is doing what. At most, a relay can see what is done, but not who.  Or that someone is accessing Tor, but not their destination.  &lt;a href=&#34;https://guardianproject.info/apps/org.torproject.android/&#34;&gt;Orbot&lt;/a&gt; provides a VPN mode, but this is still full Tor protection, since it is just using the device&amp;rsquo;s VPN user experience to provide access to the Tor network.  &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor Browser&lt;/a&gt; then adds whole other layers of privacy protection that can only be implemented in the internet-enabled app.  This includes things like reducing metadata leaks in the HTTPS connection or web APIs, or isolating websites from each other within the browser, so they cannot read data about other sites the user has visited.&lt;/p&gt;
+
+&lt;p&gt;A new approach that is somewhere in between a VPN and Tor are multi-hop &lt;a href=&#34;https://guardianproject.info/2020/02/25/masque-review/&#34;&gt;MASQUE&lt;/a&gt; relays.  MASQUE is a new protocol that is similar to VPN and proxy protocols.  MASQUE is built on HTTP/3 aka QUIC, so it does not stick out as much as VPN or WireGuard traffic.  It also allows for multi-hop configurations.  MASQUE is only newly deployed, so there is not the two decades of experience working to minimize metadata leaks in the processes for relaying traffic.&lt;/p&gt;
+
+&lt;p&gt;Apple iCloud Private Relay is a &lt;a href=&#34;https://blog.cloudflare.com/icloud-private-relay/&#34;&gt;two hop deployment&lt;/a&gt; on MASQUE, which means that the Apple side can see that the user is sending traffic, and the Cloudflare side can see the destination, but not the user.  That does provide a real privacy improvement over a single hop system.  Unfortunately, Apple iCloud Private Relay fails most of the other tests laid out in this post.  Plus given the history of NSA programs like PRISM, and the willingness for US companies like Apple and Google to &lt;a href=&#34;https://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data&#34;&gt;take part&lt;/a&gt;, this setup is not clear protection from NSA and Five Eyes surveillance and targeting.  It would be relatively straightforward for those kinds of agencies to correlate the data from the Apple and Cloudflare side if they have access to the metadata from both sides.&lt;/p&gt;
+
+&lt;p&gt;If privacy is your primary concern, then it is worth investing time into tools like Tor.  If you have limited time and are mostly concerned about mass surveillance, then a good VPN is worth considering for some added privacy protection.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IETF114 Hackathon Report: Sunday July 24, 2022</title>
+      <link>https://guardianproject.github.io/info/2022/07/24/ietf114-hackathon-report-sunday-july-24-2022/</link>
+      <pubDate>Sun, 24 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/07/24/ietf114-hackathon-report-sunday-july-24-2022/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This post begins a daily blog, live from the 114th meeting of the &lt;a href=&#34;https://www.ietf.org/how/meetings/114/&#34;&gt;Internet Engineering Task Force&lt;/a&gt; in Philadelpha Pennsylvania USA, July 23-29, 2022 (in-person meetings having restarted in March 2022 after the COVID pandemic abated). We&amp;rsquo;re focusing on standards activities of importance to the Internet Freedom community.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.ietf.org/how/runningcode/hackathons/114-hackathon/&#34;&gt;Hackathon&lt;/a&gt; event kicks off each IETF event, with projects that run the gamut from early implementations of just-emerging specifications to full multi-vendor interoperability testing of nearly-mature protocols. At this event, I sat in on the &lt;a href=&#34;https://datatracker.ietf.org/wg/masque/about/&#34;&gt;MASQUE&lt;/a&gt; team&amp;rsquo;s effort to commence work on the new &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ietf-masque-connect-ip/&#34;&gt;CONNECT-IP&lt;/a&gt; specification. With the recent completion of two key specifications -  &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ietf-masque-connect-udp/&#34;&gt;CONNECT-UDP&lt;/a&gt; and &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ietf-masque-h3-datagram/&#34;&gt;H3 Datagrams&lt;/a&gt; - MASQUE has become IETF&amp;rsquo;s solution for proxying all types of network traffic over QUIC and HTTP/3, including VPN and other privacy-focused scenarios. CONNECT-IP will complete the trio.  But this initial effort didn&amp;rsquo;t go well.  Google and Ericcson (co-authors on the spec) had brought teams who, indeed, implemented the key protocol elements of CONNECT-IP live and in-the-moment but were both stymied setting up testbeds that could deliver raw IP packets for routing by this new code. Wait, you might say, aren&amp;rsquo;t these network engineers?  True, but it was mostly the practicalities that got in the way - only laptops as test machines, working from the open source &lt;a href=&#34;https://github.com/google/quiche&#34;&gt;QUICHE&lt;/a&gt; repository on a machine that also hosts an environment for building production code, even deciding what sort of packets could be used for testing and where to route them. These are the frustrations of a first-ever effort.&lt;/p&gt;
+
+&lt;p&gt;Other teams had much better luck even if they are not specifically focused on privacy.  Fourteen vendors worked together on the first interoperabiltiy test of &lt;em&gt;Low Loss Low Latency Scalable Throughput&lt;/em&gt;, &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tsvwg-l4s-arch-12.html&#34;&gt;L4S&lt;/a&gt;, an ambitious effort that was ultimately successful (that is, both at functioning at all and producing excellent results). Another team working on the Drone Remote ID Protocol &lt;a href=&#34;https://datatracker.ietf.org/wg/drip/about/&#34;&gt;DRIP&lt;/a&gt; were also successful - despite the lack of hackable drones or access to the key server software this protocol will eventually have to interoperate with &amp;ndash; and produced the first working demonstration of DRIP&amp;rsquo;s session registration protocol (which, it happens, involves almost all aspects of the proposed standard).  These two projects will surely be the hits of the upcoming Hackdemo Happy Hour!&lt;/p&gt;
+
+&lt;p&gt;With the Hackathon complete, IETF turns to the serious business of creating new specifications.  This week&amp;rsquo;s meeting will see working sessions on &lt;a href=&#34;https://datatracker.ietf.org/group/ohai/about/&#34;&gt;Oblivious HTTP Application Intermediation&lt;/a&gt;, &lt;a href=&#34;https://datatracker.ietf.org/wg/privacypass/about/&#34;&gt;Privacy Pass&lt;/a&gt;, &lt;a href=&#34;https://datatracker.ietf.org/wg/mls/charter/&#34;&gt;Messaging Layer Security&lt;/a&gt; and &lt;a href=&#34;https://datatracker.ietf.org/wg/ppm/about/&#34;&gt;Privacy Preserving Measurement&lt;/a&gt; in addition to emerging ideas from the Internet Research Task Force&amp;rsquo;s &lt;a href=&#34;https://datatracker.ietf.org/doc/charter-irtf-pearg/&#34;&gt;Privacy Enhancements and Assessments Research Group&lt;/a&gt;.  And MASQUE, where we&amp;rsquo;ll have some explaining to do about our Hackathon gaff.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MASQUE Review</title>
+      <link>https://guardianproject.github.io/info/2020/02/25/masque-review/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/02/25/masque-review/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://datatracker.ietf.org/wg/masque/about/&#34;&gt;MASQUE&lt;/a&gt; is set of related IETF drafts for specifying flexible proxying built into a standard webserver.  It is meant to be deployed on a server that is serving public websites, then this connection can be reused for proxying generic connections.  It is very much a work in progress, so any of this can change.  It is currently built on top of the QUIC+HTTP/3 and HTTP/2+TLS+TCP protocols.  The website and proxy packets look the same, and all connections to the webserver will be shared and reused, regardless of whether its a web page request or proxy traffic.  Each new proxy/website request will reuse any existing connection, providing a key reduction in metadata that makes all the packets blend together from the point of view of the network observer.  For example, to prevent the network observer from corrolating requests to proxy with the outbound request to the destination, a client could first connect to the website, then some time later, connect to the proxy.&lt;/p&gt;
+
+&lt;p&gt;QUIC is an Internet protocol on the verge of being standardized by the IETF, initially developed by Google.  Approximately 50% of traffic from Chrome browsers to Google sites currently use QUIC, so it already has some large scale adoption.  MASQUE is very similar to Meek and Encrypted &lt;em&gt;ClientHello&lt;/em&gt; (aka ECH or Encrypted SNI) domain fronting in how it functions, and all of them &amp;ldquo;hide in plain site&amp;rdquo; by making circumvention traffic look the same as traffic that censors are unwilling to block.  Like ESNI, MASQUE could be totally blocked in countries that deem QUIC too large a risk, e.g. China already blocks Google, so blocking the QUIC protocol right now would have very low cost to them.  So it must be rolled out and gain broad adoption before it can be an effective circumvention tool.&lt;/p&gt;
+
+&lt;p&gt;One use case is individuals enabling MASQUE on their personal websites, or organizations on their websites.  Another use case is to provide travelling employees with VPN access even with local networks are blocking VPNs based on the protocols (e.g. DPI to identify OpenVPN or Wireguard traffic).  Hosting providers and CDNs are not likely to to deploy MASQUE behind their main TLS certificate, as they are not willing to take the risk of getting blocked, just like with domain fronting.  MASQUE/QUIC does not change the domain fronting formula, instead, it just provides a different mechanism to leverage.&lt;/p&gt;
+
+&lt;p&gt;One key feature of MASQUE is a means of requiring authentication to the proxy before it gives any information back at all, including even if it exists.  It does this with a custom authentication method where the replies are defined only as &lt;code&gt;200 OK&lt;/code&gt; for successful authentication or &lt;code&gt;404 Not Found&lt;/code&gt; for everything else.  This is an idea that could also be used in Pluggable Transports in general.&lt;/p&gt;
+
+&lt;h2 id=&#34;relation-to-pluggable-transports&#34;&gt;Relation to Pluggable Transports&lt;/h2&gt;
+
+&lt;p&gt;The MASQUE Obsfuscation and HTTP Transport Authentication pieces of MASQUE are directly relevant to Pluggable Transports (PT), and could be included as part of the suite of standards for implementing complete PT solutions.  The non-discoverable authentication method is useful for any PT that already requires some kind of key and is served via an public network socket.   Standardizing the proxy setup and configuration makes sense to do both for MASQUE as much as PT.  Right now, there are a wide variety of proxy configurations for PT with circumvention and VPN service providers.&lt;/p&gt;
+
+&lt;h2 id=&#34;masque-as-onion-routing-and-tor-components&#34;&gt;MASQUE as Onion Routing and Tor Components&lt;/h2&gt;
+
+&lt;p&gt;There are also some efforts to expand the scope of MASQUE into a Tor replacement based on QUIC and HTTP CONNECT proxies.  This is a nice idea, but it should not distract from the core MASQUE pieces which will provide real value now.  This area of work is now represented by three drafts: HTTP Transport Authentication, MASQUE Obfuscation, and MASQUE.  Without a drastically expanded scope, MASQUE cannot replace Tor.  It can provide one key but small building block: the base mechanism for onion routing based on HTTP CONNECT and QUIC.  This could potentially allow Tor middle relay services to be implemented with a standard webserver like nginx with only a small custom plugin.  This would not change the requirement for all of the various Tor network management services.&lt;/p&gt;
+
+&lt;h2 id=&#34;sources&#34;&gt;Sources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-quic-tls-27&#34;&gt;https://tools.ietf.org/html/draft-ietf-quic-tls-27&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lists.torproject.org/pipermail/tor-dev/2018-March/013026.html&#34;&gt;https://lists.torproject.org/pipermail/tor-dev/2018-March/013026.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque-obfuscation.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque-obfuscation.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-httpbis-transport-auth.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-httpbis-transport-auth.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mailarchive.ietf.org/arch/msg/masque/Cxh1phx6vFgn19jyANmt2YwLDqQ/&#34;&gt;https://mailarchive.ietf.org/arch/msg/masque/Cxh1phx6vFgn19jyANmt2YwLDqQ/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://datatracker.ietf.org/meeting/104/materials/slides-104-secdispatch-the-masque-protocol-draft-schinazi-masque-00&#34;&gt;https://datatracker.ietf.org/meeting/104/materials/slides-104-secdispatch-the-masque-protocol-draft-schinazi-masque-00&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/&#34;&gt;https://guardianproject.info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

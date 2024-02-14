@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quic on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/quic/</link>
+    <description>Recent content in Quic on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/quic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MASQUE Review</title>
+      <link>https://guardianproject.github.io/info/2020/02/25/masque-review/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/02/25/masque-review/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://datatracker.ietf.org/wg/masque/about/&#34;&gt;MASQUE&lt;/a&gt; is set of related IETF drafts for specifying flexible proxying built into a standard webserver.  It is meant to be deployed on a server that is serving public websites, then this connection can be reused for proxying generic connections.  It is very much a work in progress, so any of this can change.  It is currently built on top of the QUIC+HTTP/3 and HTTP/2+TLS+TCP protocols.  The website and proxy packets look the same, and all connections to the webserver will be shared and reused, regardless of whether its a web page request or proxy traffic.  Each new proxy/website request will reuse any existing connection, providing a key reduction in metadata that makes all the packets blend together from the point of view of the network observer.  For example, to prevent the network observer from corrolating requests to proxy with the outbound request to the destination, a client could first connect to the website, then some time later, connect to the proxy.&lt;/p&gt;
+
+&lt;p&gt;QUIC is an Internet protocol on the verge of being standardized by the IETF, initially developed by Google.  Approximately 50% of traffic from Chrome browsers to Google sites currently use QUIC, so it already has some large scale adoption.  MASQUE is very similar to Meek and Encrypted &lt;em&gt;ClientHello&lt;/em&gt; (aka ECH or Encrypted SNI) domain fronting in how it functions, and all of them &amp;ldquo;hide in plain site&amp;rdquo; by making circumvention traffic look the same as traffic that censors are unwilling to block.  Like ESNI, MASQUE could be totally blocked in countries that deem QUIC too large a risk, e.g. China already blocks Google, so blocking the QUIC protocol right now would have very low cost to them.  So it must be rolled out and gain broad adoption before it can be an effective circumvention tool.&lt;/p&gt;
+
+&lt;p&gt;One use case is individuals enabling MASQUE on their personal websites, or organizations on their websites.  Another use case is to provide travelling employees with VPN access even with local networks are blocking VPNs based on the protocols (e.g. DPI to identify OpenVPN or Wireguard traffic).  Hosting providers and CDNs are not likely to to deploy MASQUE behind their main TLS certificate, as they are not willing to take the risk of getting blocked, just like with domain fronting.  MASQUE/QUIC does not change the domain fronting formula, instead, it just provides a different mechanism to leverage.&lt;/p&gt;
+
+&lt;p&gt;One key feature of MASQUE is a means of requiring authentication to the proxy before it gives any information back at all, including even if it exists.  It does this with a custom authentication method where the replies are defined only as &lt;code&gt;200 OK&lt;/code&gt; for successful authentication or &lt;code&gt;404 Not Found&lt;/code&gt; for everything else.  This is an idea that could also be used in Pluggable Transports in general.&lt;/p&gt;
+
+&lt;h2 id=&#34;relation-to-pluggable-transports&#34;&gt;Relation to Pluggable Transports&lt;/h2&gt;
+
+&lt;p&gt;The MASQUE Obsfuscation and HTTP Transport Authentication pieces of MASQUE are directly relevant to Pluggable Transports (PT), and could be included as part of the suite of standards for implementing complete PT solutions.  The non-discoverable authentication method is useful for any PT that already requires some kind of key and is served via an public network socket.   Standardizing the proxy setup and configuration makes sense to do both for MASQUE as much as PT.  Right now, there are a wide variety of proxy configurations for PT with circumvention and VPN service providers.&lt;/p&gt;
+
+&lt;h2 id=&#34;masque-as-onion-routing-and-tor-components&#34;&gt;MASQUE as Onion Routing and Tor Components&lt;/h2&gt;
+
+&lt;p&gt;There are also some efforts to expand the scope of MASQUE into a Tor replacement based on QUIC and HTTP CONNECT proxies.  This is a nice idea, but it should not distract from the core MASQUE pieces which will provide real value now.  This area of work is now represented by three drafts: HTTP Transport Authentication, MASQUE Obfuscation, and MASQUE.  Without a drastically expanded scope, MASQUE cannot replace Tor.  It can provide one key but small building block: the base mechanism for onion routing based on HTTP CONNECT and QUIC.  This could potentially allow Tor middle relay services to be implemented with a standard webserver like nginx with only a small custom plugin.  This would not change the requirement for all of the various Tor network management services.&lt;/p&gt;
+
+&lt;h2 id=&#34;sources&#34;&gt;Sources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-quic-tls-27&#34;&gt;https://tools.ietf.org/html/draft-ietf-quic-tls-27&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lists.torproject.org/pipermail/tor-dev/2018-March/013026.html&#34;&gt;https://lists.torproject.org/pipermail/tor-dev/2018-March/013026.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque-obfuscation.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque-obfuscation.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-httpbis-transport-auth.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-httpbis-transport-auth.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mailarchive.ietf.org/arch/msg/masque/Cxh1phx6vFgn19jyANmt2YwLDqQ/&#34;&gt;https://mailarchive.ietf.org/arch/msg/masque/Cxh1phx6vFgn19jyANmt2YwLDqQ/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://datatracker.ietf.org/meeting/104/materials/slides-104-secdispatch-the-masque-protocol-draft-schinazi-masque-00&#34;&gt;https://datatracker.ietf.org/meeting/104/materials/slides-104-secdispatch-the-masque-protocol-draft-schinazi-masque-00&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/&#34;&gt;https://guardianproject.info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

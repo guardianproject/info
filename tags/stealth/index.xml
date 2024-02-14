@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stealth on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/stealth/</link>
+    <description>Recent content in Stealth on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 May 2015 09:25:10 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/stealth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hiding Apps in Plain Sight</title>
+      <link>https://guardianproject.github.io/info/2015/05/07/hiding-apps-in-plain-sight/</link>
+      <pubDate>Thu, 07 May 2015 09:25:10 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/05/07/hiding-apps-in-plain-sight/</guid>
+      <description>&lt;p&gt;Beyond just thinking about encryption of data over the wire, or at rest on your mobile device, we also consider physical access to your mobile device, as one of the possible things we need to defend against. Some of our apps, such as Courier, our secure news reader, include a Panic feature, enabling a user to quickly delete data or remove the app, if they fear their device will be taken from them, whether by a friend, family member, criminal or an authority figure. Most recently, with our work on CameraV, our &lt;a href=&#34;https://guardianproject.github.io/informacam-guide/en/InformacamGuide.html&#34;&gt;secure evidence camera app&lt;/a&gt;, we have implemented a few more features that help hide the app and its data, in order to block an unintended person from seeing the photos and videos captured by it.&lt;/p&gt;
+
+&lt;p&gt;First, it should be said that the app utilizes &lt;a href=&#34;https://guardianproject.info/code/iocipher&#34;&gt;IOCipher&lt;/a&gt;, &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34;&gt;CacheWord&lt;/a&gt; and the &lt;a href=&#34;https://github.com/n8fr8/CameraCipher&#34;&gt;CameraCipher Library&lt;/a&gt; to store all media files it captures in an encrypted format, managed with a well-implemented service that handles key generation and life-cycle properly. This means that no photos and videos show in the device’s built-in gallery or photos app, and no pixels are ever written in plain-text to any storage space, internal or external. This helps a great deal in hiding that they exist, since often physical inspection of a device often starts with looking through any of the default apps, like messaging, gallery, contacts apps, and so on. &lt;a href=&#34;https://guardianproject.info/apps/chatsecure/&#34;&gt;ChatSecure&lt;/a&gt; also does this, be keeping your contacts, messages and media out of the shared, unencrypted default location.&lt;/p&gt;
+
+&lt;p&gt;As of this week, we have had three new features to CameraV that all fall under what could be called “Stealth Mode” (though this has also been called “Boss Mode” since the days of MS-DOS when games included a quick button to change to something that looked like a spreadsheet for when your boss walked by). We took our inspiration from a few other apps, like Amnesty International’s &lt;a href=&#34;https://panicbutton.io/&#34;&gt;Panic Button&lt;/a&gt; which hides itself as a calculator, ChainFire’s &lt;a href=&#34;https://play.google.com/store/apps/details?id=eu.chainfire.supersu&amp;amp;hl=en&#34;&gt;SuperSU&lt;/a&gt;, which allows users to &lt;a href=&#34;http://www.chainfire.eu/articles/133/_TUT_Supporting_multiple_icons_in_your_app/&#34;&gt;switch the app icon&lt;/a&gt; between a few options, &lt;a href=&#34;https://guardianproject.info/apps/courier/&#34;&gt;Courier&lt;/a&gt;, which blocks users and other apps from taking screenshots of the news it is display, and &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt;, which actively removes itself from the “Recent Apps” listing provided by Android. All of these features combined dramatically reduce the visual footprint that an app leaves on the device, reducing the chance that someone will discover it, even if they are looking for it.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12938&#34; style=&#34;width: 179px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-24-36.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12938&#34; class=&#34;wp-image-12938 size-medium&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-24-36-169x300.png&#34; alt=&#34;CameraV settings for stealth mode&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-24-36-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-24-36-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-24-36.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12938&#34; class=&#34;wp-caption-text&#34;&gt;
+    CameraV settings for stealth mode
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_12939&#34; style=&#34;width: 179px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12939&#34; class=&#34;wp-image-12939 size-medium&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-169x300.png&#34; alt=&#34;CameraV marinading as CV Settings&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-14-25-44.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12939&#34; class=&#34;wp-caption-text&#34;&gt;
+    CameraV masquerading as “CV Settings”
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_12940&#34; style=&#34;width: 179px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-11-02-46.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12940&#34; class=&#34;wp-image-12940 size-medium&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-11-02-46-169x300.png&#34; alt=&#34;CameraV blocking screenshots in recent apps&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-11-02-46-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-11-02-46-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/05/Screenshot_2015-05-06-11-02-46.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12940&#34; class=&#34;wp-caption-text&#34;&gt;
+    CameraV blocking screenshots in recent apps
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br style=&#34;clear:both;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;CameraV (you can get &lt;a href=&#34;https://rink.hockeyapp.net/apps/dafbc649fcf585d7867866d5375b6495&#34;&gt;beta access here&lt;/a&gt; and find the &lt;a href=&#34;https://github.com/guardianproject/InformaApp&#34;&gt;source here&lt;/a&gt;), incorporates all of these as options for the user to activate. You can switch the default icon and app name to a more generic settings icon and “CV Settings” app name. We plan to enhance that feature to allow the user to define the icon and name, making the app able to act like a chameleon and blend in more completely. The app can be set to now allow screenshots to be taken of it, which also causes a black screen to show up in the recent apps list, stopping a casual inspection from identifying it as a photos-type app. It can also be set to not show up in the recent apps list at all, which is a more complete solution to that problem. The last piece, again taken from the aforementioned PanicButton app, is to, when the stealth icon is activated, to change the default home screen of the app to something innocuous like a calculator, so that even when the app is opened, it does not reveal its true nature. It is even possible to completely hide the app in the launcher, until a system event like a phone call to a specific number or a certain wifi network is connected, to make the app reveal itself again.&lt;/p&gt;
+
+&lt;p&gt;You can learn how to dynamically switch your app’s icon on the &lt;a href=&#34;http://www.chainfire.eu/articles/133/_TUT_Supporting_multiple_icons_in_your_app/&#34;&gt;Chainfire blog&lt;/a&gt; and see the code in action on the &lt;a href=&#34;https://github.com/guardianproject/InformaApp/commit/98d8c545c1901d03d9d238204bb45d502a623e59#diff-7ab4bf3d594a968a90e0250af33fcb9bR399&#34;&gt;CameraV repo here&lt;/a&gt;. To block screenshots of your app, you can set the &lt;a href=&#34;https://github.com/guardianproject/InformaApp/commit/4c153ebd8d0a6e99660a9391e99c7dd6658a0efc#diff-f9e0f2937f7b2e3f755c53e7ec2e3909R64&#34;&gt;FLAG_SECURE feature in any Activity&lt;/a&gt;. To complete &lt;a href=&#34;https://github.com/guardianproject/InformaApp/blob/master/app/AndroidManifest.xml#L87&#34;&gt;stop your app from showing up in the recent app list&lt;/a&gt;, just set &lt;a href=&#34;https://github.com/guardianproject/InformaApp/blob/master/app/AndroidManifest.xml#L87&#34;&gt;‘&lt;span class=&#34;pl-e&#34;&gt;android&lt;/span&gt;&lt;span class=&#34;pl-e&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;pl-e&#34;&gt;excludeFromRecents&lt;/span&gt;=&lt;/a&gt;&lt;span class=&#34;pl-s&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/InformaApp/blob/master/app/AndroidManifest.xml#L87&#34;&gt;&lt;span class=&#34;pl-pds&#34;&gt;“&lt;/span&gt;true&lt;/a&gt;&lt;span class=&#34;pl-pds&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/InformaApp/blob/master/app/AndroidManifest.xml#L87&#34;&gt;“‘&lt;/a&gt; in the Activity entry in the manifest. &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;These are just some of the initial ideas and techniques we have gathered and implemented. We plan to provide this set of capabilities in all of the apps we offer, and hope to spread them as standard features that any app that contains sensitive data or is meant for use by people in high-risk situations, should offer. I would love to hear your thoughts on other techniques that could be used, see code snippets you might have to achieve those, or discuss how and when this whole concept may or may not be effective.&lt;/p&gt;
+
+&lt;p&gt;For now, stay safe out there, and that goes for your data and apps, too!&lt;/p&gt;
+
+&lt;p&gt;_&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Tanzania_0607_cropped_Nevit.jpg#/media/File:Tanzania_0607_cropped_Nevit.jpg&#34;&gt;“Tanzania 0607 cropped Nevit”&lt;/a&gt; by Nevit Dilmen (talk) – Own work. Licensed under CC BY-SA 3.0 via Wikimedia Commons_&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

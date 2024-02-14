@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Im on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/im/</link>
+    <description>Recent content in Im on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 May 2010 16:32:01 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/im/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Beem&#43;Orbot: Mobile Instant Messaging over Tor</title>
+      <link>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</link>
+      <pubDate>Mon, 10 May 2010 16:32:01 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</guid>
+      <description>&lt;p&gt;It is no secret that we are big fans of open-source here at Guardian. In fact, it is &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;what we are made of&lt;/a&gt;. Guardian is not just a single app or just one phone, it is a vision for a more private and secure future for personal mobile telecommunications. As part of our work, we are constantly on the lookout other similar, like-minded projects that are developing open-source communications tools for the Android OS which we can make to work with our underlying security platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.beem-project.com/&#34;&gt;BEEM – Android XMPP&lt;/a&gt; happens to be one of these. You can find BEEM in the Android Market or you can &lt;a href=&#34;http://www.beem-project.com/news/11&#34;&gt;download it here&lt;/a&gt;. The goal of BEEM is to provide a full featured and easy to use Jabber client on Android. Jabber is another name for XMPP, the &lt;a href=&#34;https://en.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol&#34;&gt;Extensible Messaging and Presence Protocol&lt;/a&gt;, which is another name for Instant Messaging and Status Updates. XMPP is the open-protocol that grew out of the AIM vs. Yahoo vs. MSN vs. ICQ protocol wars of a few years ago. It is now managed by a &lt;a href=&#34;http://xmpp.org/&#34;&gt;standards foundation&lt;/a&gt;, and is supported by an amazing number of &lt;a href=&#34;http://xmpp.org/software/clients.shtml&#34;&gt;client&lt;/a&gt; and &lt;a href=&#34;http://xmpp.org/software/servers.shtml&#34;&gt;server&lt;/a&gt; apps.&lt;/p&gt;
+
+&lt;p&gt;Beem, available as source code and in the Android Market, is a great looking, highly functional IM application that supports a number of advanced options including SSL/TLS support and SOCKS Proxying. These two features make it ideal for use with running over the &lt;a href=&#34;https://www.torproject.org&#34;&gt;Tor anonymity network&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.github.io/info/apps/orbot&#34;&gt;Orbot&lt;/a&gt;. By combining Beem with Orbot, mobile instant messaging can be more private (even anonymous if one chooses), usable without fear of eavesdropping by network operators, and made accessible in places where filtering technologies blocks access to popular instant messaging services.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) Connect to the Tor network using the Orbot app&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First, if you do not have Orbot installed, first &lt;a href=&#34;https://www.torproject.org/docs/android.html&#34;&gt;download it from the Tor Project&lt;/a&gt; or scan the barcode below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; src=&#34;https://www.torproject.org/img/android/orbot-qr-code-latest.png&#34; alt=&#34;&#34; width=&#34;123&#34; height=&#34;123&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Orbot app contains an HTTP and SOCKS proxy server which allows any Android app to proxy its network traffic through Tor. By installing and activating Orbot (tap on the big power button!), this proxy server is activated and runs in the background as long as you are connected to the Tor network.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-295&#34; title=&#34;torboot&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/torboot.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-294&#34; title=&#34;toron&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/toron.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) Configure your XMPP-compatible account using Beem settings&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you don’t have BEEM installed, you can &lt;a href=&#34;http://www.beem-project.com/news/11&#34;&gt;download it here&lt;/a&gt; or scan the barcode below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; src=&#34;https://dev.beem-project.com/screenshot_rc1/qr-code.png&#34; alt=&#34;&#34; width=&#34;100&#34; height=&#34;100&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use any XMPP service, but we recommend one that supports TLS or SSL security. You can use your Gmail / Google Talk account or you can find a list of public services here: &lt;a href=&#34;http://xmpp.org/services/&#34;&gt;http://xmpp.org/services/&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-293&#34; title=&#34;beemsettings&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/beemsettings.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-292&#34; title=&#34;beemusername&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/beemusername.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) Check the SSL/TLS option in the Advanced Menu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You must enable this option to protect your password and chat communications when they exit the Tor network. You can learn more about &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/TheOnionRouter/TorFAQ#CanexitnodeseavesdroponcommunicationsIsntthatbad&#34;&gt;exit node eavesdropping on the TorFAQ&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-291&#34; title=&#34;advsetings&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/advsetings.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/tls.png&#34;&gt;&lt;img title=&#34;tls&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/tls-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) Enable the SOCKS Proxy Setting in the Proxy Menu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The “Use a proxy server” should be checked, the Protocol set to “SOCKS5”. The Server is “localhost” and the Port is “9050”. You must use the SOCKS5 protocol, as it ensures that domain name resolution is also routed through Tor, stopping from someone snooping on which chat service you are using.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-289&#34; title=&#34;proxyon&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/proxyon.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-288&#34; title=&#34;socks5&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/socks5.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png)[&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png)[&lt;/a&gt;&lt;img class=&#34;alignnone size-medium wp-image-287&#34; title=&#34;localhost&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/localhost.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost.png)[&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/localhost.png)[&lt;/a&gt;&lt;img class=&#34;alignnone size-medium wp-image-286&#34; title=&#34;port&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/port.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port.png&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/port.png&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5) Connect to the XMPP Service&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If Orbot is connected, and you have configured the proxy settings correctly, you should be able to connect and see your contacts or buddy list. From here, you can use Beem as you normally would (&lt;a href=&#34;http://www.beem-project.com/documents/4&#34;&gt;download user documentation here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; &lt;em&gt;To ensure Beem is routing through Tor, you should deactivate Orbot, and then try connecting to your XMPP service with Beem again. This SHOULD fail, else you haven’t setup the proxying correctly.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-285&#34; title=&#34;coonnecting&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/coonnecting.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-284&#34; title=&#34;friends&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/friends.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6) Chat away!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;At this point, you should be happily chatting away with your buddies. It is important to note that this solution &lt;/span&gt;DOES NOT provide end-to-end encryption&lt;span style=&#34;font-weight: normal;&#34;&gt;, so once your chat reaches the server, it is not secure, both because the service provide can view it if they choose, and the other members of your chat may not be secured themselves.&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We do plan to implement and end-to-end extension to Beem using the &lt;a href=&#34;http://www.cypherpunks.ca/otr/&#34;&gt;Pidgin+Off The Record&lt;/a&gt; approach that has provided effective on desktop systems. If anyone wishes to contribute development cycles to this effort, please let us know!&lt;/p&gt;
+
+&lt;p&gt;If you find issues with Beem, please report them: &lt;a href=&#34;http://www.beem-project.com/projects/beem/issues/new&#34;&gt;http://www.beem-project.com/projects/beem/issues/new&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you find issues with Orbot, please report them: &lt;a href=&#34;https://trac.torproject.org/projects/tor/newticket&#34;&gt;https://trac.torproject.org/projects/tor/newticket&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

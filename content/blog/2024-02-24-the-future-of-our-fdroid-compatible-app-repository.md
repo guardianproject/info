@@ -25,8 +25,8 @@ Guardian Project remains committed to producing free software.  But for some of 
 
 What kinds of exceptions does Guardian Project make?  We still work to avoid as many kinds of tracking as possible.  And the code that we create is free software.  The exceptions are all related to proprietary libraries getting built into some of our apps:
 
-* ProofMode uses SafetyNet to provide extra assurances about the provenance of media files generated on an Android device.
-* Circulo and Haven use proprietary Google libraries to assist with accurately finding location.
+* ProofMode uses a number of Google Play Services libraries, such as Play Integrity (SafetyNyet), FusionLocationProvider, and others, to provide extra assurances about the provenance of media files generated on an Android device.
+* Circulo and Haven use proprietary Google libraries to assist with accurately finding location and to display maps.
 * Save (aka OpenArchive) needs to integrate with widespread proprietary services like Dropbox or Google Drive. When it is useful, we produce free software versions of our apps and get them included on [f-droid.org](https://f-droid.org/packages/net.opendasharchive.openarchive.release/).
 * There is work underway to get Tor Browser [included](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/27539#note_2989340) in f-droid.org.  One key blocker has been a proprietary binary library that the build system is [including](https://gitlab.com/guardianproject/fdroid-metadata/-/issues/3) anyway, even though it should be disabled in the build.
 * Getting Orbot into f-droid.org is on our roadmap, it is already free software and otherwise compliant.  We welcome help maintaining the [build metadata](https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.torproject.android.yml) in _fdroiddata_.

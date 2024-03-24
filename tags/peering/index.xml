@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peering on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/peering/</link>
+    <description>Recent content in Peering on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 04 May 2012 17:34:30 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/peering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cross-Domain calling, or “toll-free long distance VoIP”</title>
+      <link>https://guardianproject.github.io/info/2012/05/04/cross-domain-calling-or-toll-free-long-distance-voip/</link>
+      <pubDate>Fri, 04 May 2012 17:34:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/04/cross-domain-calling-or-toll-free-long-distance-voip/</guid>
+      <description>&lt;p&gt;In a standard &lt;a href=&#34;https://guardianproject.info/wiki/OSTN_Compliance_Specification&#34;&gt;OSTN configuration&lt;/a&gt;, the Fully Qualified Domain Name (&lt;a href=&#34;https://en.wikipedia.org/wiki/FQDN&#34;&gt;FQDN&lt;/a&gt;) of the server running Freeswitch is a core dependency to operate the service. For example, the domain ostel.me was first configured as a DNS record, a server was bootstrapped with ostel.me as the local hostname and a &lt;a href=&#34;https://github.com/lazzarello/chef-twelvetone&#34;&gt;Freeswitch cookbook&lt;/a&gt; was run using the Chef automation system. Because the domain was configured both in DNS and locally, the cookbook has enough information to automatically build an operational OSTN node.&lt;/p&gt;
+
+&lt;p&gt;Once the node is operational, accounts are provisioned on the node and users install the OSTel Android application on their mobile handsets. Users may place secure calls to other users within the domain ostel.me.&lt;/p&gt;
+
+&lt;p&gt;This week I reached a milestone. I placed a call from a user at ostel.me to a user on a second private debugging domain. Both domains were configured as an OSTN node and two handsets were registered, one on each node. This kind of cross domain calling is something that is rare in the VoIP world when compared to other communications protocols on the Internet, for example email and XMPP. This is due in part to the complexity of the SIP protocol. I’m &lt;a href=&#34;https://guardianproject.info/wiki/The_challenges_with_secure_cross-domain_calling&#34;&gt;documenting the extended details&lt;/a&gt; on the wiki.&lt;/p&gt;
+
+&lt;p&gt;I configured both servers to register to each other, establishing a two way link between them. This is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Voice_peering&#34;&gt;VoIP peering&lt;/a&gt;. The more nodes in the network, the more peering relationships must exist. For example, this picture illustrates the relationships between a fully interconnected network with four nodes, named A, B, C and D.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_2082&#34; style=&#34;width: 287px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/full_mesh_network.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2082&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/full_mesh_network-277x300.png&#34; alt=&#34;Four Node Peering Network&#34; width=&#34;277&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-2082&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/full_mesh_network-277x300.png 277w, https://guardianproject.info/wp-content/uploads/2012/05/full_mesh_network.png 400w&#34; sizes=&#34;(max-width: 277px) 100vw, 277px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2082&#34; class=&#34;wp-caption-text&#34;&gt;
+    Four Node Peering Network
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The implementation of this kind of peering network differs for each application. Once the peering configuration is completed by the operator of each node, they must also enable cross domain calling in the Freeswitch dialplan. In Freeswitch, the peers create a “gateway” to route calls to a non-local domain. When a non-local call is placed, Freeswitch will attempt to find a gateway to that domain. If it exists, it will route the call to the other server, which will in turn ring the handset belonging to the registered username.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_2110&#34; style=&#34;width: 610px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/sip-peering-situation.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2110&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/sip-peering-situation.png&#34; alt=&#34;Protocol flow between two domains&#34; width=&#34;600&#34; height=&#34;188&#34; class=&#34;size-full wp-image-2110&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/sip-peering-situation.png 600w, https://guardianproject.info/wp-content/uploads/2012/05/sip-peering-situation-300x94.png 300w&#34; sizes=&#34;(max-width: 600px) 100vw, 600px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2110&#34; class=&#34;wp-caption-text&#34;&gt;
+    Cross Domain SIP Call
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The user interface to place this type of call in the OSTel app is experimental due to our security requirements. In my test, the non-local domain was debug.ostel.me. To place a call from &amp;#x62;o&amp;#x62;@o&amp;#x73;t&amp;#x65;l.&amp;#x6d;e to alice@debug&amp;#x2e;&amp;#x6f;&amp;#x73;&amp;#x74;&amp;#x65;&amp;#x6c;&amp;#x2e;&amp;#x6d;&amp;#x65; I had to type a fully qualified &lt;a href=&#34;https://en.wikipedia.org/wiki/Uniform_resource_identifier&#34;&gt;SIP URI&lt;/a&gt; into the OSTel dialer interface. It looks like &lt;code&gt;sip:&amp;amp;#x61;l&amp;amp;#x69;ce&amp;amp;#x40;de&amp;amp;#x62;u&amp;amp;#x67;&amp;amp;#x2e;o&amp;amp;#x73;te&amp;amp;#x6c;.&amp;amp;#x6d;&amp;amp;#x65;;transport=tls&lt;/code&gt;. The transport=tls attribute is due to the secure SIP requirement. Without that, the app will try and connect to debug.ostel.me over the insecure SIP port, which is not open on an OSTN node.&lt;/p&gt;
+
+&lt;p&gt;This test proved that cross domain SIP calling is possible but as I’ve shown above, there are significant hurdles on both the user and operator side. Some of these hurdles may be overcome by using a &lt;a href=&#34;http://www.opensips.org/&#34;&gt;SIP application other than Freeswitch&lt;/a&gt;, some may be solved on the client side, &lt;a href=&#34;http://www.e164.org/&#34;&gt;others with DNS&lt;/a&gt;. It’s great to have a secure voice service with a network of trusted peers. I’m looking forward to future research and development to remove the hurdles to create these peering agreements. Eventually we’ll all have the ability to call our friends email addresses.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,10 +1,20 @@
-#First Time Using Calyx Review
+---
+title: First Time Using CalyxOS Review
+author: H. Still
+tags:
+  - Android
+  - CalyxOS
+  - F-Droid
+  - microG
+  - Mobifree
+  - usability
+---
 
 “But how are you planning on using the phone?” he asked me. I paused, a bit confused. “As a replacement for my iPhone. I want to do everything with this phone that I can do with my iPhone, and use it as I normally would.” He took a beat to respond, “Wow, alright. Well let's give it a shot.”
 
-I would describe myself as tech-curious, but the reality is I am not your typical Calyx user. In fact, I didn´t know Calyx existed until recently. I am not a software developer, I can´t write code and until recently, I never worked in tech. But none-the-less I found myself needing a replacement for my iPhone and asked HC if they could help me out. 
+I would describe myself as tech-curious, but the reality is I am not your typical CalyxOS user. In fact, I didn´t know CalyxOS existed until recently. I am not a software developer, I can´t write code and until recently, I never worked in tech. But none-the-less I found myself needing a replacement for my iPhone and asked HC if they could help me out. 
 
-And in no time my refurbished Google Pixel a4 phone had arrived, loaded and ready to go with CalyxOS. So here is my very unprofessional review of how it went.
+And in no time my refurbished Google Pixel 4a phone had arrived, loaded and ready to go with CalyxOS. So here is my very unprofessional review of how it went.
 
 I walked into the Calyx setup process with no expectations. Well, actually I take that back. I expected it to be similar to my 20-something years of iOS experience that I was used to. I expected there to be some sort of introduction and for some sort of apps to be pre-loaded into the phone. I of course knew that the apps and home screen from my old iPhone wouldn´t magically appear on my Google Pixel, and that I would need to manually download them if I wanted to keep using them on my new device. So I was prepared for that, but otherwise, I walked in blind.
 
@@ -13,7 +23,7 @@ The introduction and set up process went incredibly smoothly. It was a very simi
 
 Date and time set up no problem. It accurately identified my general location and the recommended time-zone was correct.
 
-On to location services there were two options, one was automatically enabled, the other I needed to make a choice. If my memory serves, I don´t think I had this choice when setting up my iPhones in the past. I choose to allow apps to use my location that have asked my permission and kept going. I set up my pin and two fingerprints. This was all very similar to my older iOS phones. Then I encountered the microG instructions. 
+On to location services there were two options, one was automatically enabled, the other I needed to make a choice. If my memory serves, I don´t think I had this choice when setting up my iPhones in the past. I choose to allow apps to use my location that have asked my permission and kept going. I set up my pin and two fingerprints. This was all very similar to my older iOS phones. Then I encountered the [microG](https://microg.org/) instructions. 
 
 **What is MicroG?**
 The microG explanation was helpful since I had no idea what microG does. For the uninitiated, it acts like an open source replacement for Google Play services and related software. But it only includes the “useful parts” and most interestingly, it does not have any advertising or location tracking, a bonus if you ask me. 

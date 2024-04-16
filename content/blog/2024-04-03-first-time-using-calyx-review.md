@@ -48,7 +48,7 @@ A note about the Aurora Store. I saw the little Google Drive logo on the shoppin
 F-Droid I knew as an app store from my previous work and I also recognized Tor Browser, Orbot and OnionShare. I kind of assumed those three were connected because all the logos were purple and there was an onion theme going on which I associated with Tor. So we can say in this case, the branding worked!
 
 **A wrinkle in the time-space continuum**
-My only issue with the entire experience was that my location was around 600 kilometers off from my actual real-time location. No matter what app I used, Organic Maps, Google Maps, or SatStat, all said I was in some industrial area in a city 600 kilometers away from my house. In fact, they were so consistent that I thought, maybe it is a wrinkle in the time-space continuum and I really am in two places at once! All jokes aside, I reached out to the very helpful Calyx development team and they are helping me solve the [issue](https://gitlab.com/CalyxOS/calyxos/-/issues/2258)
+My only issue with the entire experience was that my location was around 600 kilometers off from my actual real-time location. No matter what app I used, Organic Maps, Google Maps, or SatStat, all said I was in some industrial area in a city 600 kilometers away from my house. In fact, they were so consistent that I thought, maybe it is a wrinkle in the time-space continuum and I really am in two places at once! All jokes aside, I reached out to the very helpful Calyx development team and they are helping me solve the [issue](https://gitlab.com/CalyxOS/calyxos/-/issues/2257)
 
 Who knows, at the end of the day it might be the hardware, since no one else has reported this bizarre issue and my phone was refurbished to begin with.
 

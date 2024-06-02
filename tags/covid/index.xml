@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Covid on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/covid/</link>
+    <description>Recent content in Covid on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/covid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Promise and Hazards of COVID Contact Tracing Apps</title>
+      <link>https://guardianproject.github.io/info/2020/04/09/the-promise-and-hazards-of-covid-contact-tracing-apps/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/04/09/the-promise-and-hazards-of-covid-contact-tracing-apps/</guid>
+      <description>&lt;p&gt;There has been increasing interest in the possibilities of tracking
+people who are infected with Coronavirus using all of the various
+methods that smart phones provide.  There is good reason: &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Contact_tracing&#34;&gt;contact
+tracing&lt;/a&gt;&amp;rdquo; has been a
+pillar of public health efforts for decades.  It is an effective means
+to curtail the spread of infectious disease.  At the same time,
+governments, companies, and organizations are acting fast to offer
+services to help end this current pandemic.  The problem is that many
+of these are taking advantage of these times to introduce more
+tracking of people, more data collection, and more control over
+people.  We must not let contact tracing be used to reduce privacy
+and increase unnecessary data collection.&lt;/p&gt;
+
+&lt;p&gt;Privacy International has been collecting examples of
+&lt;a href=&#34;https://privacyinternational.org/examples/tracking-global-response-covid-19&#34;&gt;new data and tracking that are being introduced&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then there this is the specific issue of contact tracing apps that are
+being introduced around the world.  These apps can be made in a way to
+fully respect privacy, and to build trust with its users.  Unfortunately the majority of the ones introduced are failing to live up to this promise.  Singapore&amp;rsquo;s TraceTogether was the first to rise to prominence, it is proprietary software with obfuscated operations. (&lt;em&gt;update: the source for a &lt;a href=&#34;https://github.com/opentrace-community&#34;&gt;reference implementation&lt;/a&gt; has since been released, but TraceTogether is still proprietary&lt;/em&gt;)   A &lt;a href=&#34;https://medium.com/@zerotypic/reversing-tracetogether-initial-analysis-edc940e86aa8&#34;&gt;some&lt;/a&gt; &lt;a href=&#34;https://splira.com/2020-03-28/&#34;&gt;audits&lt;/a&gt; pointed to failings, including potentially sending location data to a third-party analytics service.  There are now many of these apps, and based on &lt;a href=&#34;https://forensic.defensive-lab.agency/covid/&#34;&gt;this analysis&lt;/a&gt;, most of them are sending data to third party tracking companies.&lt;/p&gt;
+
+&lt;p&gt;On top of that, these audits took much more effort because the apps
+were not open source.  There have been many pledges of making these
+apps open source, but the only one that we have found that is actually
+open source is &lt;a href=&#34;https://privatekit.mit.edu/&#34;&gt;Private Kit&lt;/a&gt;.  &lt;a href=&#34;https://fsfe.org/news/2020/news-20200402-02.en.html&#34;&gt;Free, open
+source software is essential&lt;/a&gt;
+for software that needs to be widely
+trusted.  This is only key design element, the CCC has laid out a
+complete list of &lt;a href=&#34;https://www.ccc.de/en/updates/2020/contact-tracing-requirements&#34;&gt;requirements for creating trustworthy contact
+tracing apps&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We stand ready to help any of these efforts achieve real privacy and
+build public confidence.  People must trust these apps for them to be
+effective.  Transparency is essential to building trust.  They must be
+secure so they do not leak personal data.  And they must be usable by
+the vast majority of the population.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>We Support the Open COVID Pledge</title>
+      <link>https://guardianproject.github.io/info/2020/04/09/we-support-the-open-covid-pledge/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/04/09/we-support-the-open-covid-pledge/</guid>
+      <description>&lt;p&gt;Please join this &lt;a href=&#34;https://opencovidpledge.org&#34;&gt;Open COVID Pledge&lt;/a&gt; by
+committing to freely share technology for all work that aims to end
+the Coronavirus Disease 2019 (COVID-19) pandemic.&lt;/p&gt;
+
+&lt;p&gt;We believe that free software licenses like the GNU GPL and the Apache
+License already provide these key benefits.  We are making this
+statement to make it clear that all of our code is available for any
+effort to end the COVID Pandemic.&lt;/p&gt;
+
+&lt;p&gt;We grant to every person and entity that wishes to accept it, a
+non-exclusive, royalty-free, worldwide, fully paid-up license to fully
+use, practice and exploit all our patent and copyright rights, for the
+sole purpose of ending the COVID-19 pandemic and minimising the impact
+of the disease, including diagnosis, prevention, containment, and
+treatment.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

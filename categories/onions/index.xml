@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Onions on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/onions/</link>
+    <description>Recent content in Onions on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 29 Aug 2022 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/categories/onions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Serving Websites Privately Over Tor Onion Services (From Your Laptop!)</title>
+      <link>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</guid>
+      <description>
+
+&lt;p&gt;In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – &lt;a href=&#34;https://community.torproject.org/onion-services/&#34;&gt;Onion Services&lt;/a&gt;. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout. But to do so, one needs to know how to set up an Onion Service.&lt;/p&gt;
+
+&lt;p&gt;While the following instructions are specific to a Mac, with minor differences this can be applied to other devices and systems.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-1-download-and-set-up-the-tor-service&#34;&gt;Step 1 → Download and Set Up the Tor Service&lt;/h2&gt;
+
+&lt;p&gt;While there are multiple ways to download and set up tor, the simplest is to follow the instructions at &lt;a href=&#34;https://torproject.org/download/&#34;&gt;https://torproject.org/download/&lt;/a&gt; that goes along with the operating system you are using.&lt;/p&gt;
+
+&lt;p&gt;For further information, you can follow the Tor installation guide: &lt;a href=&#34;https://community.torproject.org/onion-services/setup/install/&#34;&gt;https://community.torproject.org/onion-services/setup/install/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have successfully downloaded tor, to check if tor is running you can either open the browser and establish connection or use commands to check its success:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/opt/homebrew/bin/brew services start tor
+/opt/homebrew/bin/brew services stop tor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Please note, in this step you are running the tor service on your machine to host the onion server. In later steps, we will be using the Tor Browser app to view the site remotely.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-2-download-and-set-up-a-web-server-optional-during-development-but-required-for-production&#34;&gt;Step 2 → Download and Set Up a Web Server (Optional during Development, but required for Production)&lt;/h2&gt;
+
+&lt;p&gt;In order to set up a website or some content for a client to access, we need to set up a local web server. A web server is the computer software and underlying hardware that communicates with a web browser using HTTP to distribute web pages to the client who requested it, with local web server examples including Apache and Nginx. The reason for this is that when it comes to the finished product, you can copy the fields into the apache web directory and that would be your web server&lt;/p&gt;
+
+&lt;p&gt;However, for websites that we are building on npm, as npm has its own built in web server for development, it has its own local host web server ready. Hence, we can just point our hidden service web server at that, for testing and development. Once we arrive at production, we will use the apache or another web server to host our local service.&lt;/p&gt;
+
+&lt;p&gt;To install these web servers on MacOS can be difficult, so specifically for this operating system, it is best to install (or update) the homebrew package, which will then allow you to run the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/opt/homebrew/bin/brew install apache
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you have having trouble choosing a local web server or downloading it, a useful guidance tool is: &lt;a href=&#34;https://www.javatpoint.com/how-to-install-apache-on-mac&#34;&gt;https://www.javatpoint.com/how-to-install-apache-on-mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The default location where web servers run is on &lt;a href=&#34;https://localhost:80&#34;&gt;https://localhost:80&lt;/a&gt;. Hence, once you have downloaded the web server software, to check if it is working, open your browser and go to &lt;a href=&#34;https://localhost:80&#34;&gt;https://localhost:80&lt;/a&gt;. If you have successfully downloaded the web server software, you will be notified of this success.&lt;/p&gt;
+
+&lt;p&gt;For further steps, or multiple uses you may need to start or stop the web server software which can be done using the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apachectl start
+sudo apachectl stop
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-3-modify-your-tor-configuration-file&#34;&gt;Step 3 → Modify your Tor Configuration File&lt;/h2&gt;
+
+&lt;p&gt;In order to create the onion service link, you must mody the the tor configuration file (torrc) by adding the following lines and save the changes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServiceDir /var/lib/tor/my_website/
+HiddenServicePort 80 127.0.0.1:80
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The HiddenServiceDir line is to inform tor of where to save the onion v3 service link, hence you must modify this line to point to a file whose permissions include both readable and writable.
+The HiddenServicePort line is informing Tor of the port people visiting your Onion Service will be using, which is currently set as localhost.&lt;/p&gt;
+
+&lt;p&gt;While the torrc file is saved in different places depending on the operating system being used, for MacOS, the file can be found at this filepath:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; /Library/”Application Support”/TorBrowser-Data/Tor/ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-4-create-the-hidden-service-folder-optional&#34;&gt;Step 4 → Create the Hidden Service Folder (Optional)&lt;/h2&gt;
+
+&lt;p&gt;While this step is not necessary, doing this reduces the chance of problems later on.&lt;/p&gt;
+
+&lt;p&gt;Once you have modified your tor configuration file, you should create the HiddenServiceDir directory where Tor will create the hostname file, which will contain your new onion v3 service address. For MacOS, this file should be created in the tor folder which can be found with this file path:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServiceDir /opt/homebrew/etc/tor/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The folder should be given the permissions to allow tor to read and write to it, which can be done by calling:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;filename chmod 700 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-5-restart-tor-and-check-for-the-onion-service-link&#34;&gt;Step 5 → Restart Tor and Check for the Onion Service Link&lt;/h2&gt;
+
+&lt;p&gt;Once you have restarted Tor, it should have created the file hostname with the new onion v3 service in the directory which you pointed it to with the HiddenServiceDir line in your torrc.
+If it has not, potential areas to check for faults are:
+- The HiddenServiceDir directory’s file permissions
+- If Tor was properly restarted
+- The torrc file modifications and if there are any incorrect file paths or mistakes
+- The log files which you can find using &lt;a href=&#34;https://support.torproject.org/#Logs&#34;&gt;https://support.torproject.org/#Logs&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;step-6-test-your-onion-service&#34;&gt;Step 6 → Test Your Onion Service&lt;/h2&gt;
+
+&lt;p&gt;If you have successfully acquired your onion service link, you can then run it on Tor and it should direct you to the page which has been initially configured on apache (the same page we saw at localhost:80). If not, potential problems could include:
+- Your web server software is no longer running and needs to be started
+- The page is found at a different port
+- One important thing to remember is that once you have gotten your onion address, a new one will not be generated, this is your permanent link whose content can be manipulated.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-7-build-the-file-web-page-being-used&#34;&gt;Step 7 → Build the File/Web Page Being Used&lt;/h2&gt;
+
+&lt;p&gt;Once your onion service link is up and running, it is now time to display on it the html files you intend to share. To do so, if the files are a Node app or a progressive web app, and not a static html page or website, it is important to build the code first by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm run build 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A potential problem could be that when you run a web service, especially a Node app or a progessive web app, it renders links for the domain it thinks it is at, not the one you intend it to be at. For a typical static website it wouldn&amp;rsquo;t matter because it is a static set of pages; however, when using a live node application, it&amp;rsquo;s helpful to know what the public address is.&lt;/p&gt;
+
+&lt;p&gt;To fix this problem, to your code you should add the following line which points directly to your new onion service address, like the example here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public:’2xx7phs7hw5fduqulcrthkmfaesxbsy5om5xpkpsn4y54mnbj4b6ekd.onion’
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;step-8-run-the-file-and-test-your-onion-service&#34;&gt;Step 8 → Run the File and Test your Onion Service&lt;/h2&gt;
+
+&lt;p&gt;1- For this step, there are two potential methods depending on the type of content you intend to display on your Onion Service. For html documents or simple websites, the simplest method to run the file is to copy it into the folder which localhost:80 (or whichever port you are using) is connected to. For MacOS, the folder can be found at:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/Library/WebServer/Documents
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To copy, the command to run is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo cp /path/from /path/to
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once that is done, simply restart your Tor browser, head to your new onion service address and your html file can be found there.&lt;/p&gt;
+
+&lt;p&gt;2- To run a Node app or progress website, first the file needs to be running on your local server. To do so, one tip is to specify the port you intend to run it on, especially other ports that are running other websites or html content. For that, run the following command (changing it to point to the port you are using):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm run service – –port 4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To connect to this npm web server on port 4000 instead of apache, we need to modify the onion service configuration in the torrc:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;HiddenServicePort 80 127.0.0.1:4000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;accessing-the-onion-site&#34;&gt;Accessing the Onion site&lt;/h2&gt;
+
+&lt;p&gt;Once the website is running on localhost at the port you have specified, restart your Tor service. Then, navigate to your new onion service address where your website is now live for all the people you have shared your secure link with. You can use any Tor-enabled browser, such as &lt;a href=&#34;https://www.torproject.org/download/&#34;&gt;Tor Browser for Desktops&lt;/a&gt;, &lt;a href=&#34;https://www.torproject.org/download/&#34;&gt;Tor Browser for Android&lt;/a&gt;, or &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser for iOS&lt;/a&gt; devices. You can also use a Tor-enabled vpn like &lt;a href=&#34;https://orbot.app&#34;&gt;Orbot for Android and iOS&lt;/a&gt;, to allow any browser, like Chrome or Brave, to access an onion address.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

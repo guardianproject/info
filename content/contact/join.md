@@ -36,6 +36,7 @@ Interested? [Learn how to contact us here](https://guardianproject.info/contact
 
 ### Current open positions
 
+* [Seeking part-time Grant Administrator](../../2024/08/05/seeking-part-time-grant-administrator/)
 * [Seeking Android/Python contractors for mobile/free software/privacy work](../android-python-contractor/)
 
 &nbsp;

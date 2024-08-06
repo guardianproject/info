@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jarsigner on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/jarsigner/</link>
+    <description>Recent content in Jarsigner on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Mar 2014 16:54:39 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/jarsigner/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Security in a thumb drive: the promise and pain of hardware security modules, take one!</title>
+      <link>https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/</link>
+      <pubDate>Fri, 28 Mar 2014 16:54:39 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg&#34; alt=&#34;security in a thumb drive&#34; width=&#34;219&#34; height=&#34;119&#34; class=&#34;alignleft size-full wp-image-12311&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg 219w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-100x54.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-150x81.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-200x108.jpg 200w&#34; sizes=&#34;(max-width: 219px) 100vw, 219px&#34; /&gt;&lt;/a&gt;Hardware Security Modules (aka Smartcards, chipcards, etc) provide a secure way to store and use cryptographic keys, while actually making the whole process a bit easier. In theory, one USB thumb drive like thing could manage all of the crypto keys you use in a way that makes them much harder to steal. That is the promise. The reality is that the world of Hardware Security Modules (HSMs) is a massive, scary minefield of endless technical gotchas, byzantine standards (PKCS#11!), technobabble, and incompatibilities. Before I dive too much into ranting about the days of my life wasted trying to find a clear path through this minefield, I’m going to tell you about one path I did find through to solve a key piece of the puzzle: Android and Java package signing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg&#34; alt=&#34;ACS ACR38-T-IBS&#34; width=&#34;320&#34; height=&#34;248&#34; class=&#34;alignright size-full wp-image-12313&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg 320w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-300x232.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-100x77.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-150x116.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-200x155.jpg 200w&#34; sizes=&#34;(max-width: 320px) 100vw, 320px&#34; /&gt;&lt;/a&gt;For this round, I am covering the &lt;a href=&#34;http://www.aventra.fi/English/products_MyEID_E.html&#34; target=&#34;_blank&#34;&gt;Aventra MyEID PKI Card&lt;/a&gt;. I bought a SIM-sized version to fit into an &lt;a href=&#34;http://www.smartcardfocus.com/ilp/id~99/ACR38T_IBS/p/readers.shtml&#34; target=&#34;_blank&#34;&gt;ACS ACR38T-IBS-R&lt;/a&gt; smartcard reader (it is apparently no longer made, and the &lt;a href=&#34;http://acs.com.hk/en/products/1/acr38t-d1-plug-in-sim-sized-card-reader/&#34; target=&#34;_blank&#34;&gt;ACT38T-D1&lt;/a&gt; is meant to replace it). Why such specificity you may ask? Because you have to be sure that your smartcard will work with your reader, and that your reader will have a working driver for you system, and that your smartcard will have a working PKCS#11 driver so that software can talk to the smartcard. Thankfully there is the &lt;a href=&#34;https://github.com/OpenSC/OpenSC/wiki&#34; target=&#34;_blank&#34;&gt;OpenSC&lt;/a&gt; project to cover the PKCS#11 part, it implements the PKCS#11 communications standard for many smartcards. On my Ubuntu/precise system, I had to install an extra driver, &lt;code&gt;libacr38u&lt;/code&gt;, to get the ACR38T reader to show up on my system.&lt;/p&gt;
+
+&lt;p&gt;So let’s start there and get this thing to show up! First we need some packages. The OpenSC packages are out-of-date in a lot of releases, you need version 0.13.0-4 or newer, so you have to add our PPA (Personal Package Archive) to get current versions, which include a &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742089&#34; target=&#34;_blank&#34;&gt;specific fix for the Aventra MyEID&lt;/a&gt;: (fingerprint: &lt;code&gt;F50E ADDD 2234 F563&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install opensc libacr38u libacsccid1 pcsc-tools usbutils
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;First thing, I use &lt;code&gt;lsusb&lt;/code&gt; in the terminal to see what USB devices the Linux kernel sees, and thankfully it sees my reader:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ lsusb
+Bus 005 Device 013: ID 072f:9000 Advanced Card Systems, Ltd ACR38 AC1038-based Smart Card Reader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, its time to try &lt;code&gt;pcsc_scan&lt;/code&gt; to see if the system can see the smartcard installed in the reader. If everything is installed and in order, then &lt;code&gt;pcsc_scan&lt;/code&gt; will report this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pcsc_scan 
+PC/SC device scanner
+V 1.4.18 (c) 2001-2011, Ludovic Rousseau &amp;lt;&amp;amp;#x6c;u&amp;amp;#x64;ov&amp;amp;#x69;c.&amp;amp;#x72;o&amp;amp;#x75;&amp;amp;#x73;s&amp;amp;#x65;au&amp;amp;#x40;f&amp;amp;#x72;&amp;amp;#x65;e&amp;amp;#x2e;fr&amp;gt;
+Compiled with PC/SC lite version: 1.7.4
+Using reader plug&#39;n play mechanism
+Scanning present readers...
+0: ACS ACR38U 00 00
+
+Thu Mar 27 14:38:36 2014
+Reader 0: ACS ACR38U 00 00
+  Card state: Card inserted, 
+  ATR: 3B F5 18 00 00 81 31 FE 45 4D 79 45 49 44 9A
+[snip]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If &lt;code&gt;pcsc_scan&lt;/code&gt; cannot see the card, then things will not work. Try re-seating the smardcard in the reader, make sure you have all the right packages installed, and if you can see the reader in &lt;code&gt;lsusb&lt;/code&gt;. If your smartcard or reader cannot be read, then &lt;code&gt;pcsc_scan&lt;/code&gt; will report something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pcsc_scan 
+PC/SC device scanner
+V 1.4.18 (c) 2001-2011, Ludovic Rousseau &amp;lt;&amp;amp;#x6c;&amp;amp;#x75;&amp;amp;#x64;&amp;amp;#x6f;&amp;amp;#x76;&amp;amp;#x69;c.rousse&amp;amp;#x61;&amp;amp;#x75;&amp;amp;#x40;&amp;amp;#x66;&amp;amp;#x72;&amp;amp;#x65;e.fr&amp;gt;
+Compiled with PC/SC lite version: 1.7.4
+Using reader plug&#39;n play mechanism
+Scanning present readers...
+Waiting for the first reader...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Moving right along… now &lt;code&gt;pcscd&lt;/code&gt; can see the smartcard, so we can start playing with using the OpenSC tools. These are needed to setup the card, put PINs on it for access control, and upload keys and certificates to it. The last annoying little preparation tasks are finding where &lt;code&gt;opensc-pkcs11.so&lt;/code&gt; is installed and the “slot” for the signing key in the card. These will go into a config file which &lt;code&gt;keytool&lt;/code&gt; and &lt;code&gt;jarsigner&lt;/code&gt; need. To get this info on Debian/Ubuntu/etc, run these:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ dpkg -S opensc-pkcs11.so
+opensc: /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so \
+&amp;gt;     --list-slots
+Available slots:
+Slot 0 (0xffffffffffffffff): Virtual hotplug slot
+  (empty)
+Slot 1 (0x1): ACS ACR38U 00 00
+  token label        : MyEID (signing)
+  token manufacturer : Aventra Ltd.
+  token model        : PKCS#15
+  token flags        : rng, login required, PIN initialized, token initialized
+  hardware version   : 0.0
+  firmware version   : 0.0
+  serial num         : 0106004065952228
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is the info needed to put into a &lt;code&gt;opensc-java.cfg&lt;/code&gt;, which &lt;code&gt;keytool&lt;/code&gt; and &lt;code&gt;jarsigner&lt;/code&gt; &lt;a href=&#34;http://docs.oracle.com/javase/7/docs/technotes/guides/security/p11guide.html&#34; target=&#34;_blank&#34;&gt;need in order to talk&lt;/a&gt; to the Aventra HSM. The name, library, and slot fields are essential, and the description is helpful. Here is how the &lt;code&gt;opensc-java.cfg&lt;/code&gt; using the above information looks:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;name = OpenSC
+description = SunPKCS11 w/ OpenSC Smart card Framework
+library = /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+slot = 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now everything should be ready for initializing the HSM, generating a new key, and uploading that key to the HSM. This process generates the key and certificate, puts them into files, then uploads them to the HSM. That means you should only run this process on a trusted machine, certainly with some kind of disk encryption, and preferably on a machine that is not connected to a network, running an OS that has never been connected to the internet. A live CD is one good example, I recommend &lt;a href=&#34;https://tails.boum.org/download/index.en.html#index4h1&#34; target=&#34;_blank&#34;&gt;Tails on a USB thumb drive&lt;/a&gt; running with the &lt;a href=&#34;https://tails.boum.org/doc/first_steps/persistence/index.en.html&#34; target=&#34;_blank&#34;&gt;secure persistent store&lt;/a&gt; on it (we have been working here and there on making a TAILS-based distro specifically for managing keys, we call it &lt;a href=&#34;https://dev.guardianproject.info/projects/psst/wiki/CleanRoom&#34; target=&#34;_blank&#34;&gt;CleanRoom&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12321&#34; style=&#34;width: 560px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cstick2.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12321&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cstick2-1024x805.jpg&#34; alt=&#34;HSM plugged into a laptop&#34; width=&#34;550&#34; height=&#34;432&#34; class=&#34;size-large wp-image-12321&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cstick2-1024x805.jpg 1024w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-300x235.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-100x78.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-150x117.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-200x157.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-450x353.jpg 450w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-600x471.jpg 600w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-900x707.jpg 900w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2.jpg 1600w&#34; sizes=&#34;(max-width: 550px) 100vw, 550px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12321&#34; class=&#34;wp-caption-text&#34;&gt;
+    HSM plugged into a laptop
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;First off, the HSM needs to be initialized, then set up with a signing PIN and a “Security Officer” PIN (which means basically an “admin” or “root” PIN). The signing PIN is the one you will use for signing APKs, the “Security Officer PIN” (SO-PIN) is used for modifying the HSM setup, like uploading new keys, etc. Because there are so many steps in the process, I’ve written up scripts to run thru all of the steps. If you want to see the details, &lt;a href=&#34;https://github.com/guardianproject/smartcard-apk-signing/blob/master/Aventra_MyEID_Setup/setup.sh&#34; target=&#34;_blank&#34;&gt;read&lt;/a&gt; &lt;a href=&#34;https://github.com/guardianproject/smartcard-apk-signing/blob/master/openssl-gen/gen.sh&#34; target=&#34;_blank&#34;&gt;the&lt;/a&gt; &lt;a href=&#34;https://github.com/guardianproject/smartcard-apk-signing/blob/master/Aventra_MyEID_Setup/finalize.sh&#34; target=&#34;_blank&#34;&gt;scripts&lt;/a&gt;. The next step is to generate the key using &lt;code&gt;openssl&lt;/code&gt; and upload it to the HSM. Then the HSM needs to be “finalized”, which means the PINs are activated, and keys cannot be uploaded. Don’t worry, as long as you have the SO-PIN, you can erase the HSM and re-initialize it. But be careful! Many HSMs will permanently self-destruct if you enter in the wrong PIN too many times, some will do that after only three wrong PINs! As long as you have not finalized the HSM, any PIN will work, so play around a lot with it before finalizing it. Run the init and key upload procedure a few times, try signing an APK, etc. Take note: the script will generate a random password for the secret files, then echo that password when it completes, so make sure no one can see your screen when you generate the real key. Alright, here goes!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;code $ git clone https://github.com/guardianproject/smartcard-apk-signing
+code $ cd smartcard-apk-signing/Aventra_MyEID_Setup
+Aventra_MyEID_Setup $ ./setup.sh 
+Edit pkcs15-init-options-file-pins to put in the PINs you want to set:
+Aventra_MyEID_Setup $ emacs pkcs15-init-options-file-pins
+Aventra_MyEID_Setup $ ./setup.sh 
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+About to erase card.
+PIN [Security Officer PIN] required.
+Please enter PIN [Security Officer PIN]: 
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+About to create PKCS #15 meta structure.
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+Found MyEID
+About to generate key.
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+Found MyEID
+About to generate key.
+next generate a key with ./gen.sh then ./finalize.sh
+Aventra_MyEID_Setup $ cd ../openssl-gen/
+openssl-gen $ ./gen.sh 
+Usage: ./gen.sh &amp;quot;CertDName&amp;quot; [4096]
+  for example:
+  &amp;quot;/C=US/ST=New York/O=Guardian Project &amp;amp;#x54;e&amp;amp;#x73;&amp;amp;#x74;/&amp;amp;#x43;N=&amp;amp;#x74;es&amp;amp;#x74;.&amp;amp;#x67;&amp;amp;#x75;a&amp;amp;#x72;di&amp;amp;#x61;np&amp;amp;#x72;o&amp;amp;#x6a;&amp;amp;#x65;c&amp;amp;#x74;&amp;amp;#x2e;i&amp;amp;#x6e;fo&amp;amp;#x2f;em&amp;amp;#x61;i&amp;amp;#x6c;&amp;amp;#x41;d&amp;amp;#x64;re&amp;amp;#x73;s=&amp;amp;#x74;e&amp;amp;#x73;&amp;amp;#x74;@&amp;amp;#x67;&amp;amp;#x75;a&amp;amp;#x72;di&amp;amp;#x61;np&amp;amp;#x72;o&amp;amp;#x6a;&amp;amp;#x65;c&amp;amp;#x74;.i&amp;amp;#x6e;fo&amp;quot;
+openssl-gen $ ./gen.sh &amp;quot;/C=US/ST=New York/O=Guardian Project Te&amp;amp;#x73;t&amp;amp;#x2f;C&amp;amp;#x4e;=&amp;amp;#x74;e&amp;amp;#x73;t&amp;amp;#x2e;g&amp;amp;#x75;ardi&amp;amp;#x61;n&amp;amp;#x70;r&amp;amp;#x6f;j&amp;amp;#x65;c&amp;amp;#x74;.&amp;amp;#x69;n&amp;amp;#x66;o/em&amp;amp;#x61;i&amp;amp;#x6c;A&amp;amp;#x64;d&amp;amp;#x72;e&amp;amp;#x73;s&amp;amp;#x3d;t&amp;amp;#x65;st&amp;amp;#x40;g&amp;amp;#x75;a&amp;amp;#x72;d&amp;amp;#x69;a&amp;amp;#x6e;p&amp;amp;#x72;o&amp;amp;#x6a;e&amp;amp;#x63;t.&amp;amp;#x69;n&amp;amp;#x66;o&amp;quot;
+Generating key, be patient...
+2048 semi-random bytes loaded
+Generating RSA private key, 2048 bit long modulus
+.......................................+++
+..................................................+++
+e is 65537 (0x10001)
+Signature ok
+subject=/C=US/ST=New York/O=Guardian Project Test/&amp;amp;#x43;&amp;amp;#x4e;&amp;amp;#x3d;&amp;amp;#x74;&amp;amp;#x65;st.gu&amp;amp;#x61;&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;&amp;amp;#x61;nproj&amp;amp;#x65;&amp;amp;#x63;&amp;amp;#x74;&amp;amp;#x2e;&amp;amp;#x69;nfo/e&amp;amp;#x6d;&amp;amp;#x61;&amp;amp;#x69;&amp;amp;#x6c;&amp;amp;#x41;ddres&amp;amp;#x73;&amp;amp;#x3d;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x73;t@gua&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;&amp;amp;#x61;&amp;amp;#x6e;proje&amp;amp;#x63;&amp;amp;#x74;&amp;amp;#x2e;&amp;amp;#x69;&amp;amp;#x6e;fo
+Getting Private key
+writing RSA key
+Your HSM will prompt you for &#39;Security Officer&#39; aka admin PIN, wait for it!
+Enter destination keystore password:  
+Entry for alias 1 successfully imported.
+Import command completed:  1 entries successfully imported, 0 entries failed or cancelled
+[Storing keystore]
+Key fingerprints for reference:
+MD5 Fingerprint=90:24:68:F3:F3:22:7D:13:8C:81:11:C3:A4:B6:9A:2F
+SHA1 Fingerprint=3D:9D:01:C9:28:BD:1F:F4:10:80:FC:02:95:51:39:F4:7D:E7:A9:B1
+SHA256 Fingerprint=C6:3A:ED:1A:C7:9D:37:C7:B0:47:44:72:AC:6E:FA:6C:3A:B2:B1:1A:76:7A:4F:42:CF:36:0F:A5:49:6E:3C:50
+The public files are: certificate.pem publickey.pem request.pem
+The secret files are: secretkey.pem certificate.p12 certificate.jkr
+The passphrase for the secret files is: fTQ*he-[:y+69RS+W&amp;amp;+!*0O5i%n
+openssl-gen $ cd ../Aventra_MyEID_Setup/
+Aventra_MyEID_Setup $ ./finalize.sh 
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+Found MyEID
+About to delete object(s).
+Your HSM is ready for use! Put the secret key files someplace encrypted and safe!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now your HSM should be ready for use for signing. You can try it out with &lt;code&gt;keytool&lt;/code&gt; to see what is on it, using the signing PIN not the Security Officer PIN:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;smartcard-apk-signing $ /usr/bin/keytool -v \
+&amp;gt;     -providerClass sun.security.pkcs11.SunPKCS11 \
+&amp;gt;     -providerArg opensc-java.cfg \
+&amp;gt;     -providerName SunPKCS11-OpenSC -keystore NONE -storetype PKCS11 \
+&amp;gt;     -list
+Enter keystore password:  
+
+Keystore type: PKCS11
+Keystore provider: SunPKCS11-OpenSC
+
+Your keystore contains 1 entry
+
+Alias name: 1
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: &amp;amp;#x45;&amp;amp;#x4d;&amp;amp;#x41;&amp;amp;#x49;&amp;amp;#x4c;&amp;amp;#x41;&amp;amp;#x44;&amp;amp;#x44;RESS=test@g&amp;amp;#x75;&amp;amp;#x61;&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;&amp;amp;#x61;&amp;amp;#x6e;&amp;amp;#x70;&amp;amp;#x72;oject.info, CN=test.guardianproject.info, O=Guardian Project Test, ST=New York, C=US
+Issuer: E&amp;amp;#x4d;A&amp;amp;#x49;LA&amp;amp;#x44;D&amp;amp;#x52;ES&amp;amp;#x53;=&amp;amp;#x74;e&amp;amp;#x73;&amp;amp;#x74;@&amp;amp;#x67;u&amp;amp;#x61;rd&amp;amp;#x69;a&amp;amp;#x6e;pr&amp;amp;#x6f;j&amp;amp;#x65;ct&amp;amp;#x2e;i&amp;amp;#x6e;f&amp;amp;#x6f;, CN=test.guardianproject.info, O=Guardian Project Test, ST=New York, C=US
+Serial number: aa6887be1ec84bde
+Valid from: Fri Mar 28 16:41:26 EDT 2014 until: Mon Aug 12 16:41:26 EDT 2041
+Certificate fingerprints:
+	 MD5:  90:24:68:F3:F3:22:7D:13:8C:81:11:C3:A4:B6:9A:2F
+	 SHA1: 3D:9D:01:C9:28:BD:1F:F4:10:80:FC:02:95:51:39:F4:7D:E7:A9:B1
+	 SHA256: C6:3A:ED:1A:C7:9D:37:C7:B0:47:44:72:AC:6E:FA:6C:3A:B2:B1:1A:76:7A:4F:42:CF:36:0F:A5:49:6E:3C:50
+	 Signature algorithm name: SHA1withRSA
+	 Version: 1
+
+
+*******************************************
+*******************************************
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And let’s try signing an actual APK using the &lt;a href=&#34;https://developer.android.com/tools/publishing/app-signing.html&#34; target=&#34;_blank&#34;&gt;arguments that Google recommends&lt;/a&gt;, again, using the signing PIN:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;smartcard-apk-signing $ /usr/bin/jarsigner -verbose \
+&amp;gt;     -providerClass sun.security.pkcs11.SunPKCS11 \
+&amp;gt;     -providerArg opensc-java.cfg -providerName SunPKCS11-OpenSC \
+&amp;gt;     -keystore NONE -storetype PKCS11 \
+&amp;gt;     -sigalg SHA1withRSA -digestalg SHA1 \
+&amp;gt;     bin/LilDebi-release-unsigned.apk 1
+Enter Passphrase for keystore: 
+   adding: META-INF/1.SF
+   adding: META-INF/1.RSA
+  signing: assets/busybox
+  signing: assets/complete-debian-setup.sh
+  signing: assets/configure-downloaded-image.sh
+  signing: assets/create-debian-setup.sh
+  signing: assets/debian-archive-keyring.gpg
+  signing: assets/debootstrap.tar.bz2
+  signing: assets/e2fsck.static
+  signing: assets/gpgv
+  signing: assets/lildebi-common
+[snip]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we have a working, but elaborate, process for setting up a Hardware Security Module for signing APKs. Once the HSM is setup, using it should be quite straightforward. Next steps are to work out as many kinks in this process as possible so this will be the default way to sign APKs. That means things like figuring out how &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742831&#34; target=&#34;_blank&#34;&gt;Java can be pre-configured to use OpenSC in the Debian package&lt;/a&gt;, as well as including all &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742089&#34; target=&#34;_blank&#34;&gt;relevant fixes&lt;/a&gt; in the &lt;code&gt;pcscd&lt;/code&gt; and &lt;code&gt;opensc&lt;/code&gt; packages. Then the ultimate is to add support for using HSMs in Android’s generated build files like the &lt;code&gt;build.xml&lt;/code&gt; for &lt;code&gt;ant&lt;/code&gt; that is generated by &lt;code&gt;android update project&lt;/code&gt;. Then people could just plug in the HSM and run &lt;code&gt;ant release&lt;/code&gt; and have a signed APK!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Strong Cryptography on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/strong-cryptography/</link>
+    <description>Recent content in Strong Cryptography on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Nov 2012 10:07:49 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/strong-cryptography/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Proposal for Secure Connection Notification on Android</title>
+      <link>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</link>
+      <pubDate>Thu, 15 Nov 2012 10:07:49 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</guid>
+      <description>&lt;p&gt;A major problem of mobile applications being increasingly used over web-based applications, is that there is no standard established for notifying the user of the state of security on the network connection. With a web browser, the evolution of the “lock” icon when an &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Secure&#34;&gt;HTTPS connection&lt;/a&gt; is made, has been one that evolved originally out of Netscape’s first implementation, to an adhoc, defact industry-standard way of letting the user know if their connection is secure. Beyond just a binary on/off, the lock icon is also the entry point into viewing more information about the digital security tokens, keys and certificates that are powering the connection – who authorized them, who requested them, and so on. More recently, with browsers such as Chrome, there has been the user of color schemes (Green is good, Red is bad), verified domain display and other indicators to help ensure the user knows when to trust their connection, and when to be wary.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2952&#34; title=&#34;Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail-300x182.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;182&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail-300x182.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail.png 429w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; &lt;em&gt;Firefox’s HTTPS certificate display&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;While many people claim that HTTPS/TLS/SSL are fundamentally broken, they are still an essential piece of basic frontline security on the web. In addition, when making a connection through a proxy network like Tor or a free VPN service, utilizing TLS/SSL is critical in making sure you network is not being intercepted along the way. The notification icon and related certificate viewing, is a critical component for the user, and one that is entirely missing in the mobile application space. The Android API does not provide a standardized method to share this information with the user, and the implementation on iOS is unclear, as well. Even worse, the proper implementation of a strong HTTP/S connection that properly handles verification of certificates, and provides an interactive option for users to accept or decline is entirely missing for the majority of mobile apps.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, we have added a Secure Connection Notification feature into our new &lt;a href=&#34;https://github.com/guardianproject/OnionKit&#34;&gt;OnionKit for Android&lt;/a&gt; library. Build upon our previous work on &lt;a href=&#34;https://github.com/guardianproject/cacert&#34;&gt;implementing custom Root CA Certificate stores for Android&lt;/a&gt;, this library not only provides a clear way to enable HTTP and SOCKS proxying for your network requests (to enable use with our app, &lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot: Tor for Android&lt;/a&gt;), but it also includes a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/library/src/info/guardianproject/onionkit/trust/StrongTrustManager.java&#34;&gt;StrongTrustManager&lt;/a&gt; and a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/library/src/info/guardianproject/onionkit/trust/StrongHttpsClient.java&#34;&gt;StrongHTTPSClient&lt;/a&gt; implementation, that works to defend against man-in-the-middle attacks, and other means to intercept a TLS or SSL connection between a mobile app and a remote server. Part of the defense, is providing a clear indicator to the user when a secure connection is in use.&lt;/p&gt;
+
+&lt;p&gt;We have provided a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/sample/src/sample/onionkit/OnionKitSampleActivity.java&#34;&gt;sample Android app&lt;/a&gt; to demonstrate how simple it is to enable this capability. The screenshots below are from that app.&lt;/p&gt;
+
+&lt;p&gt;In this first screenshot, the app has connected to &lt;a href=&#34;https://check.torproject.org&#34;&gt;https://check.torproject.org&lt;/a&gt; and you can see in the Notification bar a “key” icon indicating there is a secure connection active.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-2947 alignnone&#34; title=&#34;noTor&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor-254x300.png&#34; alt=&#34;&#34; width=&#34;254&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor-254x300.png 254w, https://guardianproject.info/wp-content/uploads/2012/11/noTor.png 800w&#34; sizes=&#34;(max-width: 254px) 100vw, 254px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When you drag the notification bar down, you can see a more complete view of the Secure Connection Notification (SCN) message, which indicates the connection is Active and shows a summary of the secure certificate information. In a recent update to the OnionKit SCN code, it also allows for the application to include its name and icon in this notification.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2948&#34; title=&#34;device-2012-11-08-204130&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130-300x139.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;139&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130-300x139.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130.png 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, you can tap on the SCN notification and bring up a larger pop-over view of the certificate information. We intend to develop this view further, to allow for better manual management of trust – meaning you may have the option to accept/decline or disable trust of this certificate or the certificate authority that provides it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2949&#34; title=&#34;device-2012-11-08-203216&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216-300x222.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;222&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216-300x222.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216.png 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Beyond “Active” messages, the notification system will also warn or block connections that are deemed risky, invalid or otherwise unverifiable. You can use OnionKit in concert with the &lt;a href=&#34;https://github.com/ge0rg/MemorizingTrustManager&#34;&gt;MemorizingTrustManager&lt;/a&gt; to manually override this verification process, if your application is expected to often connect to servers with unverifiable certificates. Finally, using our &lt;a href=&#34;https://github.com/guardianproject/cacert&#34;&gt;CACert project&lt;/a&gt;, you can generate custom Root CA stores for use with OnionKit, that utilize your own certificate authorities, or a custom rolled set.&lt;/p&gt;
+
+&lt;p&gt;Our goal is not to overwhelm the user, but instead to provide them a simple notification so they can understand which applications have their best interests in mind, and which do not. It is amazing how many popular mobile apps transmit personal information using HTTP completely in plain text, in the clear, allowing any number of parties along the network path between the device and server to passively vacuum up this data. Users generally are not aware or do not care about this issue. It is up to the mobile application developer, to adopt an approach like our Secure Connection Notification, or to directly utilize our OnionKit library itself.&lt;/p&gt;
+
+&lt;p&gt;Finally, we would like to see Android and other mobile operating systems, adopt a system such as this device-wide, such that it becomes as standard as the desktop web browser HTTPS lock.&lt;/p&gt;
+
+&lt;p&gt;If you are a developer, please check out OnionKit for Android today, and let us know what you think: &lt;a href=&#34;https://github.com/guardianproject/OnionKit/&#34;&gt;https://github.com/guardianproject/OnionKit/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

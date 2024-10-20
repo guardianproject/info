@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quic Proxying on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/quic-proxying/</link>
+    <description>Recent content in Quic Proxying on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/quic-proxying/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IETF112 - Meeting Update (November 2021)</title>
+      <link>https://guardianproject.github.io/info/2021/11/24/ietf112-meeting-update-november-2021/</link>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/11/24/ietf112-meeting-update-november-2021/</guid>
+      <description>
+
+&lt;p&gt;The 112th meeting of the Internet Engineering Task Force (IETF) took place November 8-12, 2021 - as a virtual event for the sixth time in succession due to the COVID-19 pandemic. Here’s a summary of the work I found important to the Internet Freedom community.&lt;/p&gt;
+
+&lt;h2 id=&#34;privacy-preserving-measurement&#34;&gt;Privacy Preserving Measurement&lt;/h2&gt;
+
+&lt;p&gt;While we often (rightly) focus on unwanted surveillance of targeted individuals by nation-states and other bad actors, the Internet’s surveillance economy presents a major threat to personal privacy and freedom for all users of the Internet, as Mozilla so aptly describes on &lt;a href=&#34;https://wiki.mozilla.org/State_Of_The_Internet/Surveillance_Economy&#34;&gt;this wiki page&lt;/a&gt;. Since IETF significantly boosted its focus on privacy at IETF105 (July 2019, where privacy was the &lt;a href=&#34;https://datatracker.ietf.org/meeting/105/materials/slides-105-ietf-sesse-privacy-modern-concerns-steven-m-bellovin-00&#34;&gt;plenary topic&lt;/a&gt;), participants at both research and engineering levels have begun to address this problem - initially with research studies and statements of requirements, and then with proposals.  Later we’ll discuss proposals that try to offer more anonymity in the way users access the Internet. But new at this conference was a Birds of a Feather session formed around the idea of &lt;a href=&#34;https://datatracker.ietf.org/doc/bofreq-privacy-preserving-measurement/&#34;&gt;Privacy Preserving Measurement&lt;/a&gt; (PPM) and led by Mozilla’s Eric Rescorla who has collected significant thoughts and technical ideas &lt;a href=&#34;https://educatedguesswork.org/tags/privacy%20preserving%20measurement/&#34;&gt;here&lt;/a&gt;.  This thinking would insert a layer of protection between end users and the data collection infrastructure in a way that would significantly impact the bad (for privacy) practices of current-term measurement tools - over-collection, under-protection and deep-interlinking.  An architecture for PPM was proposed and, as there was significant interest from IETF attendees, a Working Group is being established to undertake the technical effort.  There is a future work effort here to understand how this work overlaps or dove-tails with &lt;a href=&#34;https://cleaninsights.org&#34;&gt;CleanInsights&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;oh-hi-oblivious-http-application-intermediation&#34;&gt;Oh, Hi! (Oblivious HTTP Application Intermediation)&lt;/h2&gt;
+
+&lt;p&gt;Representative of over-collection, under-protection and deep-interlinking is the common practice of linking together sequences of interactions within or across services.  Particularly pernicious are interactions with the DNS (the centralized monitor that can easily catalog all the sites a user visits when name resolution is requested) but the problem generalizes to other core services as well as simple browsing.  While services like Tor work to make the practice of linkage difficult, this approach shares a fingerprint with bots and attackers, inducing providers to, at minimum, make the anonymous user experience difficult.  &lt;a href=&#34;https://datatracker.ietf.org/wg/ohai/about/&#34;&gt;Oblivious HTTP Application Intermediation&lt;/a&gt; (OHAI) is a new Working Group addressing the problem of request linking in a manner that reduces the negative experience for users while keeping the bots at bay.   The Working Group’s initial focus will not be safe browsing, however.  It will instead focus on generalizing the earlier work on DNS over HTTPS (&lt;a href=&#34;https://tools.ietf.org/id/draft-ietf-doh-dns-over-https-10.html&#34;&gt;DoH&lt;/a&gt;) and an earlier &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-pauly-dprive-oblivious-doh/&#34;&gt;proposal&lt;/a&gt; specific to DNS.&lt;/p&gt;
+
+&lt;h2 id=&#34;ip-address-privacy&#34;&gt;IP Address Privacy&lt;/h2&gt;
+
+&lt;p&gt;The network addressing mechanism used by the Internet Protocol was among the most innovative concepts of the early Internet.  But the Internet’s pioneers did not anticipate that, over time, the IP address would become an enforcement mechanism for censors and state prosecutors as well as the most attractive tracking token for the surveillance economy.  IETF has &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ip-address-privacy-considerations/&#34;&gt;begun an investigation&lt;/a&gt; into this problem.  The &lt;a href=&#34;https://www.broadband-forum.org&#34;&gt;Broadband Forum&lt;/a&gt; - whose manufacturers provide the majority of WiFi access points to the Internet - has undertaken its own study, to be published in 2022.  Both studies catalog the abuses themselves and the technically-sound and unsound ways in which the IP address is currently put to use in managing networks.  Separately, CDN provider Cloudflare has been researching &lt;a href=&#34;https://blog.cloudflare.com/addressing-agility/&#34;&gt;Addressing Agility&lt;/a&gt; (decoupling IP addresses from DNS domain names, at Internet scale, on the server side).  This latter effort points the way to at least one approach for curbing IP address abuse, though no concrete proposals have yet been brought to IETF.&lt;/p&gt;
+
+&lt;h2 id=&#34;masque-multiplexed-application-substrate-over-quic-encryption&#34;&gt;MASQUE (Multiplexed Application Substrate over QUIC Encryption)&lt;/h2&gt;
+
+&lt;p&gt;QUIC (&lt;a href=&#34;https://datatracker.ietf.org/wg/quic/about/&#34;&gt;the protocol&lt;/a&gt;) and MASQUE (a &lt;a href=&#34;https://datatracker.ietf.org/wg/masque/documents/&#34;&gt;set of activities&lt;/a&gt; to formalize the legitimate ways in which network traffic can be proxied using QUIC’s enhanced performance, security and privacy) are now mainstay IETF activities.  Of importance at IETF112, this question: Do QUIC and MASQUE, taken together, represent a mechanism that creates an overlay atop the heritage Internet?  And if so, what does that (or will that) mean?  An oversimplified pessimistic view is that these tools can be used to eliminate the (public) Internet in favor of an oligopoly of private networks that will, among themselves, define the rules for how they interconnect and how users connect to them.  An oversimplified optimistic view is that the same tools can be used to prevent such an oligopoly and enhance the public Internet (in fact, University of California Berkeley-affiliated researchers presented some work promoting &lt;a href=&#34;https://ccronline.sigcomm.org/2021/revitalizing-the-public-internet-by-making-it-extensible/&#34;&gt;a similar plan&lt;/a&gt;).  Is this where the &lt;em&gt;long Internet&lt;/em&gt; battle is going to be fought?&lt;/p&gt;
+
+&lt;h2 id=&#34;closing-thoughts&#34;&gt;Closing Thoughts&lt;/h2&gt;
+
+&lt;p&gt;I’m ten conferences into my participation at IETF, and there are certainly patterns forming. Focusing solely on Internet Freedom, one can fairly ask if the kinds of solutions we see proposed at IETF are the right ones.  Is IETF the right forum for making decisions about planet-wide human freedom of communication and interaction? Or is IETF too compromised by its constituent organizations?  Or, rather, does that make IETF the perfect place to address the key technical questions in our increasingly-technical world?  The only certainty would seem to be that participation in this forum is the best way to understand how the situation is evolving and what avenues are available to have a voice in that evolution.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

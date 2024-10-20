@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/research/</link>
+    <description>Recent content in Research on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#34;Features&#34; for Finding Trackers</title>
+      <link>https://guardianproject.github.io/info/2020/04/28/features-for-finding-trackers/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/04/28/features-for-finding-trackers/</guid>
+      <description>
+
+&lt;p&gt;One key component of the Tracking the Trackers project is building a
+machine learning (ML) tool to aide humans to find tracking in Android
+apps. One of the most important pieces of developing a machine
+learning tool is figuring out which &amp;ldquo;features&amp;rdquo; should be fed to the
+machine learning algorithms. In this context, features are
+constrained data sets derived from the whole data set. In our case,
+the whole data set is terabytes of APKs. This post is an outline of
+the features that we are focusing on in this current project.&lt;/p&gt;
+
+&lt;h1 id=&#34;confirmed-features&#34;&gt;Confirmed Features&lt;/h1&gt;
+
+&lt;p&gt;These are features that we will definitely used, and already have good
+tooling to do the &lt;a href=&#34;https://en.wikipedia.org/wiki/Feature_extraction&#34;&gt;feature
+extraction&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;permissions&#34;&gt;Permissions&lt;/h2&gt;
+
+&lt;p&gt;Android apps must request
+&lt;a href=&#34;https://developer.android.com/guide/topics/permissions/overview&#34;&gt;permissions&lt;/a&gt;
+from the Android OS to access sensitive user data as well as certain
+system features. This can naturally give big hints towards tracking
+attempts. Basically an app which does not request any permissions will
+have a much harder time of tracking its users, while an app aimed
+towards tracking will require a myriad of permissions depending on the
+properties it desires to track (e.g. location, contacts, phone IDs,
+Bluetooth IDs, WiFi IDs, camera/microphone-access, call-logs and many
+more)&lt;/p&gt;
+
+&lt;h2 id=&#34;tracking-libraries-and-sdks&#34;&gt;Tracking Libraries and SDKs&lt;/h2&gt;
+
+&lt;p&gt;Code re-use plays a big role in any software project, why write your
+own tracking functionality when someone else has already implemented a
+whole library geared towards tracking users. This functionality is
+provided by different SDKs, which are pre-configured bundles of
+functionality which in turn (for this use case) are provided by
+tracking companies. The app developer often has to choose the desired
+functionality. While importing a tracking library is no guarantee for
+tracking activities it is certainly a red flag. We compare the
+libraries imported by the app with a list of known tracking libraries.&lt;/p&gt;
+
+&lt;h2 id=&#34;domain-names&#34;&gt;Domain Names&lt;/h2&gt;
+
+&lt;p&gt;Developers leave URLs in form of strings in the code to allow exchange
+of information with the world outside of the app. This can be used to
+transfer information about the user which in turn can be used for
+tracking. The domains often contain a hint about the purpose behind
+the data transfer (e.g. &lt;code&gt;https://www.google-analytics.com&lt;/code&gt;). Domain names
+are data sinks for collecting data, which gives us a clear point to
+focus on analyzing since collecting tracking data does not matter if
+it never leaves the local device, while domain names are the point in
+the code where data leaves the device and is sent to be collected and
+analyzed on a remote server. Combined with other features like
+permissions and seeing tracking libraries being imported a human
+reviewer could get a pretty good idea of what type of information
+could be sent. This human &amp;ldquo;gut feeling&amp;rdquo; of recognizing fishy
+combinations of features is something a neural network can often learn
+to approximate by being trained on a sufficient amount of training
+data. Domain names known to be relevant to tracking are collected and
+maintaned by &lt;a href=&#34;https://exodus-privacy.eu.org/en/&#34;&gt;Exodus Privacy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;new-experimental-features&#34;&gt;New Experimental Features&lt;/h1&gt;
+
+&lt;p&gt;These are features that show a lot of promise, but there is not
+existing tooling to easily work with them.  We are working to make it
+easier, and will cover that work in future posts.&lt;/p&gt;
+
+&lt;h2 id=&#34;api-key-id&#34;&gt;API Key ID&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/Exodus-Privacy/etip/issues/62&#34;&gt;&lt;em&gt;API Key ID&lt;/em&gt;&lt;/a&gt;
+is a string that identifies bit of authentication data for enabling
+access to an online service. Many online services require an &lt;em&gt;API Key&lt;/em&gt;
+even if a library or SDK is not required to access it. Even when the
+SDK is detected, the presence of an &lt;em&gt;API Key&lt;/em&gt; shows that the tracking
+function is actually enabled. For example, the Google Firebase SDK
+includes lots of functionality, not only tracking, each of which must
+be enabled with an &lt;em&gt;API Key&lt;/em&gt;. So the presence of Firebase is not
+enough to confirm tracking. A &lt;a href=&#34;https://en.epicenter.works/content/analysis-of-the-stopp-corona-app-improvements-through-expert-report&#34;&gt;current
+example&lt;/a&gt;
+of exactly this is the Austrian Red Cross&amp;rsquo; &lt;em&gt;Stopp Corona&lt;/em&gt; app to track
+the spread of covid-19 in Austria.&lt;/p&gt;
+
+&lt;h2 id=&#34;natural-language-processing-nlp&#34;&gt;Natural Language Processing (NLP)&lt;/h2&gt;
+
+&lt;p&gt;As mentioned under the section on domain names, domain names can
+already give a clear hint at intent. However since this property is
+well known, URLs might be obfuscated to hide this information. This
+domain name obfuscation is a well known technique in the world of
+malware, there is some evidence of use by tracking companies. In this
+case, a language model might learn that any URL that looks like random
+letters and numbers might be a sign to consider increasing the
+probability of classifying this app as tracking slightly, depending on
+other features like requested permissions, and imported tracking
+libraries.&lt;/p&gt;
+
+&lt;h2 id=&#34;broadcast-receivers&#34;&gt;Broadcast Receivers&lt;/h2&gt;
+
+&lt;p&gt;Android provides a system for data to be broadcast to all apps on a
+device, this is known as a &lt;a href=&#34;https://developer.android.com/guide/components/broadcasts&#34;&gt;&lt;em&gt;Broadcast
+Receiver&lt;/em&gt;&lt;/a&gt;.
+A wide range of data is available via this mechanism, both from the
+Android system as well as apps.  The Android OS broadcasts detailed
+information about the &lt;a href=&#34;https://developer.android.com/training/monitoring-device-state/battery-monitoring&#34;&gt;battery level, health, and charging
+status&lt;/a&gt;,
+including details of &lt;a href=&#34;https://developer.android.com/reference/android/os/BatteryManager#BATTERY_PLUGGED_AC&#34;&gt;how its
+charging&lt;/a&gt;.
+Many music apps will broadcast detailed information about the song
+being played, while also &lt;a href=&#34;https://gitlab.com/trackingthetrackers/wiki/-/issues/5&#34;&gt;collecting those
+events&lt;/a&gt; from
+the system and other apps.  The full extent of this activity is not
+well described, both what data is broadcasted, what apps are doing
+with it, and which apps are collecting.  As a feature, &lt;em&gt;Broadcast
+Receivers&lt;/em&gt; have a lot of promise since they fit the patterns of useful
+features for machine learning: small, globally unique, and easy to
+extract.&lt;/p&gt;
+
+&lt;h1 id=&#34;feature-extraction-process&#34;&gt;Feature Extraction Process&lt;/h1&gt;
+
+&lt;p&gt;We are using tabular data to feed to the machine learning processes,
+so the process of extracting and pre-processing different features for
+classification includes similar steps for every feature. The number of
+features that can reasonably be processed this way is limited to
+probably tens of thousands of features, or perhaps even hundreds of
+thousands. Therefore we have collections of the top-&lt;em&gt;n&lt;/em&gt; features where
+&lt;em&gt;n&lt;/em&gt; is in the range of thousands: For example, the top thousand
+tracking libraries, or all built-in permissions. This way we extract
+the features out of the binary APK file, and source code when
+available, and loop over our collections of known features. If the
+feature was found in the APK/source the tabular data will be a 1, else
+a 0.&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was supported by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/thema/NGIZeroPET.html&#34;&gt;NGI Zero PET&lt;/a&gt; fund.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking the Trackers: using machine learning to aid ethical decisions</title>
+      <link>https://guardianproject.github.io/info/2020/01/16/tracking-the-trackers-using-machine-learning-to-aid-ethical-decisions/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/01/16/tracking-the-trackers-using-machine-learning-to-aid-ethical-decisions/</guid>
+      <description>
+
+&lt;p&gt;F-Droid is a free software community app store that has been working since 2010 to make all forms of tracking and advertising visible to users. It has become the trusted name for privacy in Android, and app developers who sell based on privacy make the extra effort to get their apps included in the F-Droid.org collection. These include &lt;a href=&#34;https://f-droid.org/packages/com.nextcloud.client&#34;&gt;Nextcloud&lt;/a&gt;, Tor Browser, &lt;a href=&#34;https://f-droid.org/packages/de.thecode.android.tazreader&#34;&gt;TAZ.de&lt;/a&gt;, and &lt;a href=&#34;https://f-droid.org/packages/de.tutao.tutanota&#34;&gt;Tutanota&lt;/a&gt;.  Auditing apps for tracking is labor intensive and error prone, yet ever more in demand. F-Droid already has tools to aide contributors in this process, visible in the &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/merge_requests&#34;&gt;app submission&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/fdroid/rfp/issues&#34;&gt;Request For Packaging (RFP)&lt;/a&gt; issue trackers.  We also have functional prototypes of using machine learning to drastically speed up this process by augmenting humans, rather than replacing them.&lt;/p&gt;
+
+&lt;p&gt;Since the prime motivation of the F-Droid community is ethical software distribution, algorithms will never replace humans in making ethical decisions. We have also explored using machine learning to detect tracking in a more generic way, without manually compiled lists of tracking libraries. With this funding, we will improve the F-Droid tools, and make them generally available for any use case needing to reliably detect trackers in Android apps. This builds upon our &lt;a href=&#34;https://f-droid.org/en/2017/12/14/new-collaborations-on-exposing-tracking.html&#34;&gt;collaboration&lt;/a&gt; with &lt;a href=&#34;https://exodus-privacy.eu.org/&#34;&gt;Exodus Privacy&lt;/a&gt; and &lt;a href=&#34;https://github.com/reddr/LibScout&#34;&gt;LibScout&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This project comes out of some proof of concept work that &lt;a href=&#34;https://www.lo-res.org/~aaron/&#34;&gt;Aaron Kaplan&lt;/a&gt; and Hans-Christoph Steiner did, working with students in the Vienna Economics University&amp;rsquo;s (WU) &lt;a href=&#34;https://www.wu.ac.at/en/infobiz/teaching/sbwl-data-science&#34;&gt;Data Science Lab&lt;/a&gt;.  We focused on using machine learning with Android apps, first to detect malware, then second to detect tracking libraries.  It is of course ultimately an outgrowth of the F-Droid community&amp;rsquo;s efforts, and Guardian Project&amp;rsquo;s funded efforts for building systems without any tracking at all.  And special thanks to F-Droid founder &lt;a href=&#34;https://en.wikipedia.org/wiki/Ciaran_Gultnieks&#34;&gt;Ciaran Gultnieks&lt;/a&gt; for setting the ethical tone that inspired us all, back in &lt;a href=&#34;https://f-droid.org/2010/09/30/no-free-beer.html&#34;&gt;2010&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;funding&#34;&gt;Funding&lt;/h2&gt;
+
+&lt;p&gt;This current 44,500€ project is funded by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/PET/&#34;&gt;Privacy &amp;amp; Trust Enhancing Technologies (PET) Fund&lt;/a&gt;.  F-Droid has received large, dedicated, computing resources from the &lt;a href=&#34;https://cfarm.tetaneutral.net/machines/list/&#34;&gt;GCC Compile Farm&lt;/a&gt;, as well as some shared resources from Aaron Kaplan.  The budget will be used entirely to pay for people&amp;rsquo;s time for the research, development, and integration work:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Software development to get the existing LibScout and Exodus Privacy tools to be fully integrated into the F-Droid stack.&lt;/li&gt;
+&lt;li&gt;Machine learning research and development.&lt;/li&gt;
+&lt;li&gt;Community management, to coordinate with F-Droid contributors, app developers, tool developers, academic researchers, etc. as well to promote these tools&lt;/li&gt;
+&lt;li&gt;Finalize and package up all the useful parts of this project, which also means getting them included in Debian&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;related-efforts&#34;&gt;Related Efforts&lt;/h2&gt;
+
+&lt;p&gt;The general approach that we are taking here has been proven in the context of web pages. The Brave Browser includes &lt;a href=&#34;https://arxiv.org/pdf/1805.09155&#34;&gt;machine learning techniques&lt;/a&gt; for blocking ads and trackers in webpages.  It is a very similar idea to what we propose, but that example is embedded into a browser and only applies to web sites.&lt;/p&gt;
+
+&lt;p&gt;Exodus Privacy has manually compiled an extensive list of tracking libraries and domains for receiving user data.  It then uses this to scan app from Google Play.  Those results are then reported on their website.  Exodus Privacy would directly benefit from this work, since they could use the tools we will create.&lt;/p&gt;
+
+&lt;p&gt;Ghostery uses AI techniques to dynamically block ads in web pages. (&lt;a href=&#34;https://www.wired.com/story/ghostery-deploys-ai-in-fight-against-ad-trackers/&#34;&gt;https://www.wired.com/story/ghostery-deploys-ai-in-fight-against-ad-trackers/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;F-Droid has its own &lt;code&gt;fdroid scanner&lt;/code&gt; for doing checks based on manually prepared regular expressions.  This was combined with Exodus Privacy into F-Droid&amp;rsquo;s &lt;a href=&#34;https://gitlab.com/fdroid/rfp/issues&#34;&gt;issuebot&lt;/a&gt; which automatically scans apps that users request to be added to F-Droid.&lt;/p&gt;
+
+&lt;p&gt;LibScout uses machine learning to detect which versions of which libraries are included in an Android app (APK).  Using the list of libraries from Exodus Privacy, we worked with the LibScout author to create a functional prototype of a tracking library detector.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.sec.cs.tu-bs.de/pubs/2014-ndss.pdf&#34;&gt;Drebin&lt;/a&gt; clearly demonstrated that machine learning can be used to automatically classify Android apps based on certain aspects of their behavior. Their aim was to find malware.  Working with CERT.at and the WU Data Science Lab, we reproduced the results of the Drebin paper.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-challenges&#34;&gt;The challenges&lt;/h2&gt;
+
+&lt;p&gt;The biggest promise of this project is also the biggest technical challenge: finding a way to take datasets about what includes tracking libraries (e.g. F-Droid manual review, LibScout, Exodus Privacy), and turning that into a more general machine learning approach.  We will have to explore a wide range of possible features to include in the machine learning that are distinct from the tracking libraries themselves.  This general approach will provide tracking detection with more automation and less maintenance work of rerunning the machine learning on updated datasets as new tracking libraries are put into use.&lt;/p&gt;
+
+&lt;p&gt;The technical methods for determining whether an app includes trackers are well known and described.  They currently require knowledge of Android development.  Machine learning has been proven to be able to reliably spot trackers in apps, this project will turn working prototypes into production software, integrate it into F-Droid community-driven processes, and make these new tools easily available for anyone else to apply to their specific use cases. Given an Android apps downloaded from anywhere, these new tools will be able to mark which ones have any kind of tracking in them, with a very high degree of certainty.  With the portion of the project that involves applying LibScout, at this point, the idea has been proven with prototypes.  Applying it is a straightforward matter of bringing a proven prototype to production.&lt;/p&gt;
+
+&lt;p&gt;Organizations relying on proprietary apps that must follow strict data protection requirements, like banks under the GDPR, can use these tools to ensure that apps they rely on do not contain illegal tracking, and to ensure that such tracking is not added in future releases.&lt;/p&gt;
+
+&lt;p&gt;These techniques are also applicable to other platforms, like Progressive Web Apps and Apple iOS.  Bootstrapping another platform would require a marked training set of apps to feed to the machine learning.  F-Droid already provides this set, and Android is the most popular OS in the world, making Android the ideal platform to start this work.&lt;/p&gt;
+
+&lt;h2 id=&#34;humans-at-the-core&#34;&gt;Humans at the core&lt;/h2&gt;
+
+&lt;p&gt;F-Droid is a community run free software project very much in the same spirit as Debian.  The community has always aimed to provide 100% verified free software, built from source.  From the beginning, there was also an interest in other ethical considerations as well, these are expressed via F-Droid&amp;rsquo;s &amp;ldquo;Anti-Features&amp;rdquo;.  These are things tagged with Tracking (contains tracking), Ads (includes advertising), and NonFreeNet (requires a non-free network service).  The process of ensuring that the apps are 100% free software as well as tagging apps with the required Anti-Features is a manual process that many people contribute to, that is aided by quite a bit of automation.  This project fits directly into this existing ecosystem.  It will both quickly provide improvements in contributors&amp;rsquo; workflow based on the existing prototype, as well as experiments towards drastically improving the whole workflow of anyone working to track trackers.&lt;/p&gt;
+
+&lt;p&gt;F-Droid fits into the whole Android app ecosytem in a very specific role.   It is the one source that only distributes free software, and has built a well deserved reputation for not compromising on the ethics that guide the community.  This has led it to become the standard &amp;ldquo;clean set&amp;rdquo; in all manner of research into Android malware and tracking.  Many academic papers covering Android malware cite f-droid.org as the source of ground truth.&lt;/p&gt;
+
+&lt;p&gt;In closing, it is important to highlight that it is essential to keep humans always at the center of of these tools.  We are building tooling to augment humans, not replace them. Since the prime motivation of the F-Droid community is to build ethical software distribution, algorithms will never replace humans in making decisions based on ethics.  The tools can automate the technical details, so that contributors do not need to understand them in order to meaningfully help with the process.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

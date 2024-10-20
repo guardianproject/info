@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Droid on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/droid/</link>
+    <description>Recent content in Droid on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 11 Apr 2010 14:11:11 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/droid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ultimate Droid and Orbot</title>
+      <link>https://guardianproject.github.io/info/2010/04/11/ultimate-droid-and-orbot/</link>
+      <pubDate>Sun, 11 Apr 2010 14:11:11 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/04/11/ultimate-droid-and-orbot/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html&#34;&gt;InsecureSystem blog&lt;/a&gt; has a nice write-up on how to get Orbot running on your Droid:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I’ve always been a supporter of net privacy and Tor in particular, and a friend of mine got me interested in &lt;a href=&#34;https://guardianproject.info/&#34;&gt;the guardian project&lt;/a&gt;, so I grabbed the beta version of &lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot&lt;/a&gt; just to try it out.. sweet, tor from my phone.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately the Smoked Glass Rom I was using didn’t support the Iptables modules necessary for the transparent proxy method orbot used for tunnelling apps through privoxy/tor. So, I was forced to try out some other Roms and their respective kernels.. okay, forced is a bad way to put it, it was a lot of fun.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html&#34;&gt;Read on…&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; title=&#34;orbot on droid&#34; src=&#34;https://1.bp.blogspot.com/_zYnlWpU7s_s/S7aqyLdAgeI/AAAAAAAAAEU/sT9KAH3F7eI/s320/CAP2010033110221.jpg&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;320&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

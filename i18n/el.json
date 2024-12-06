@@ -110,5 +110,9 @@
   {
     "id": "words",
     "translation": "λέξεις"
+  },
+  {
+    "id": "edit",
+    "translation": "Επεξεργασία"
   }
 ]

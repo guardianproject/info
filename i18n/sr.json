@@ -1,0 +1,206 @@
+[
+  {
+    "id": "apps",
+    "translation": "Апл"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Претходни пост"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "Ваша имејл адреса"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "Ваш вебсајт"
+  },
+  {
+    "id": "comments",
+    "translation": "коментари"
+  },
+  {
+    "id": "moreComment",
+    "translation": "коментари"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Можете користити Markdown синтаксу"
+  },
+  {
+    "id": "show",
+    "translation": "Прикажи"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "на GitLab-у"
+  },
+  {
+    "id": "yourName",
+    "translation": "Ваше име"
+  },
+  {
+    "id": "webSite",
+    "translation": "вебсајт"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "на GitHub-у"
+  },
+  {
+    "id": "noComment",
+    "translation": "Нема коментара"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Блог постови"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2. јануар 2006. 15:04:05"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Старији постови"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Објављено {{ .Count }}"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Други језици: "
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Последњи пут модификовано {{ .Count }})"
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "readMore",
+    "translation": "Прочитајте више"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Новији постови"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> покреће &nbsp;•&nbsp; Тема од <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> адаптирана за <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Види такође"
+  },
+  {
+    "id": "about",
+    "translation": "о"
+  },
+  {
+    "id": "code",
+    "translation": "код"
+  },
+  {
+    "id": "team",
+    "translation": "Тим"
+  },
+  {
+    "id": "archive",
+    "translation": "архив"
+  },
+  {
+    "id": "contact",
+    "translation": "контакт"
+  },
+  {
+    "id": "words",
+    "translation": "речи"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Пребаци навигацију"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Језик"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Претрага"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Затвори"
+  },
+  {
+    "id": "oneComment",
+    "translation": "коментар"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Архивирање апликације"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Упутства"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Следећи пост"
+  },
+  {
+    "id": "readTime",
+    "translation": "минуте"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Опа, ова страница не постоји. Идите даље. (404 грешка)"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Претражи {{ .Site.Title }}"
+  },
+  {
+    "id": "press",
+    "translation": "Штампа"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2. јануар 2006"
+  },
+  {
+    "id": "translation",
+    "translation": "Превод"
+  },
+  {
+    "id": "edit",
+    "translation": "Уреди"
+  },
+  {
+    "id": "metadata",
+    "translation": "метаподаци"
+  },
+  {
+    "id": "description",
+    "translation": "опис"
+  },
+  {
+    "id": "Blog",
+    "translation": "Блог"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Преведи на"
+  },
+  {
+    "id": "editOn",
+    "translation": "Уреди на"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "изворни код"
+  }
+]

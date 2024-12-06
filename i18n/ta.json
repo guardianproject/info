@@ -1,0 +1,258 @@
+[
+  {
+    "id": "about",
+    "translation": "பற்றி"
+  },
+  {
+    "id": "apps",
+    "translation": "பயன்பாடுகள்"
+  },
+  {
+    "id": "code",
+    "translation": "குறியீடு"
+  },
+  {
+    "id": "archive",
+    "translation": "காப்பகம்"
+  },
+  {
+    "id": "contact",
+    "translation": "தொடர்பு"
+  },
+  {
+    "id": "team",
+    "translation": "அணி"
+  },
+  {
+    "id": "press",
+    "translation": "அழுத்தவும்"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "காப்பகப்படுத்தப்பட்ட பயன்பாடுகள்"
+  },
+  {
+    "id": "tutorials",
+    "translation": "பயிற்சிகள்"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "சனவரி 2, 2006"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "சனவரி 2, 2006 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "இடுகையிடப்பட்டது {{ .Count }}"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(கடைசியாக {{ .Count }} இல் மாற்றப்பட்டது)"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "பிற மொழிகள்: "
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": "அருவடிக்கு "
+  },
+  {
+    "id": "readMore",
+    "translation": "மேலும் வாசிக்க"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "பழைய இடுகைகள்"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "புதிய பதிவுகள்"
+  },
+  {
+    "id": "previousPost",
+    "translation": "முந்தைய இடுகை"
+  },
+  {
+    "id": "nextPost",
+    "translation": "அடுத்த இடுகை"
+  },
+  {
+    "id": "readTime",
+    "translation": "நிமிடங்கள்"
+  },
+  {
+    "id": "words",
+    "translation": "சொற்கள்"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "அச்சச்சோ, இந்த பக்கம் இல்லை. சேர்ந்து செல்லுங்கள். (404 பிழை)"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\"> அ்யூகோ வி {{ .Hugo.Version }} </a> ஆற்றல் &amp; nbsp; &amp; bull; &amp; nbsp; கருப்பொருள் "
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "வழிசெலுத்தலை மாற்றவும்"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "மொழி"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "தேடல்"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "{{ .Site.Title }} ஐத் தேடுங்கள்"
+  },
+  {
+    "id": "noComment",
+    "translation": "கருத்து இல்லை"
+  },
+  {
+    "id": "oneComment",
+    "translation": "கருத்து"
+  },
+  {
+    "id": "moreComment",
+    "translation": "கருத்துகள்"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "நீங்கள் மார்க் பேரூர் தொடரியல் பயன்படுத்தலாம்"
+  },
+  {
+    "id": "yourName",
+    "translation": "உங்கள் பெயர்"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "உங்கள் மின்னஞ்சல் முகவரி"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "உங்கள் வலைத்தளம்"
+  },
+  {
+    "id": "show",
+    "translation": "காட்டு"
+  },
+  {
+    "id": "comments",
+    "translation": "கருத்துகள்"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "மேலும் காண்க"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "வலைப்பதிவு இடுகைகள்"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "கிட்அப்பில்"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "கிட்லாப்பில்"
+  },
+  {
+    "id": "webSite",
+    "translation": "வலைத்தளம்"
+  },
+  {
+    "id": "translation",
+    "translation": "மொழிபெயர்ப்பு"
+  },
+  {
+    "id": "translateOn",
+    "translation": "மொழிபெயர்க்கவும்"
+  },
+  {
+    "id": "edit",
+    "translation": "தொகு"
+  },
+  {
+    "id": "editOn",
+    "translation": "திருத்து"
+  },
+  {
+    "id": "metadata",
+    "translation": "மேனிலை தரவு"
+  },
+  {
+    "id": "description",
+    "translation": "விவரம்"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "மூலக் குறியீடு"
+  },
+  {
+    "id": "Blog",
+    "translation": "வலைப்பதிவு"
+  },
+  {
+    "id": "Export Information",
+    "translation": "ஏற்றுமதி செய்தி"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "எங்களுடன் நீங்கள் எவ்வாறு பணியாற்ற முடியும்"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "கார்டியன் திட்டம் பற்றி"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "கூட்டாளர்கள் மற்றும் பொருள்"
+  },
+  {
+    "id": "Press",
+    "translation": "அழுத்தவும்"
+  },
+  {
+    "id": "Services",
+    "translation": "சேவைகள்"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "கையொப்பமிடும் விசைகள்"
+  },
+  {
+    "id": "Team",
+    "translation": "அணி"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "பாதுகாப்பு நீங்கள் நம்பலாம்"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "காப்பகப்படுத்தப்பட்ட பயன்பாடுகள்"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "நேரடி அரட்டை"
+  },
+  {
+    "id": "Contact",
+    "translation": "தொடர்பு"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "வேலைகள் மற்றும் இன்டர்ன்சிப்"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "மூடு"
+  }
+]

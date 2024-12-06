@@ -36,6 +36,7 @@ Interested? [Learn how to contact us here](https://guardianproject.info/contact
 
 ### Current open positions
 
+* [Seeking Ruby contractors for work on Jekyll, Fastlane, and F-Droid](../../2024/12/06/ruby-jekyll-contractor/)
 * [Seeking Android/Python contractors for mobile/free software/privacy work](../android-python-contractor/)
 
 &nbsp;

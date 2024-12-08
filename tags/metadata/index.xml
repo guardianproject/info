@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Metadata on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/metadata/</link>
+    <description>Recent content in Metadata on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/metadata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>
+
+&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;
+
+&lt;p&gt;As the IETF standard for ECH completes, our key objectives are to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Upstream DEfO code&lt;/li&gt;
+&lt;li&gt;Integrate ECH into more clients and servers&lt;/li&gt;
+&lt;li&gt;Gain and document operational experience&lt;/li&gt;
+&lt;li&gt;Submit key code for red team audits&lt;/li&gt;
+&lt;li&gt;Publish open-source ECH provisioning tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The key challenges we expect to face in meeting those objectives are: firstly, dealing with the OpenSSL and other upstream code bases (e.g. nginx, Apache HTTP Server) - satisfying upstream developers when dealing with complex code changes, as are involved here, has proven to be quite time and effort consuming. Secondly, it is a challenge to arrange the trials we have envisaged for DEfO-2 but doing so should help to demonstrate that web sites can easily and safely enable ECH without putting themselves at risk of interoperability failures or adverse attention from censors and without further centralising the web. Lastly, there are some remaining technical challenges not addressed in DEfO-1 (proprietary TLS ClientHello extension handling, interactions between TLS Hello Retry Request and ECH, and privacy analyses of split-mode ECH deployments) that we plan to address in DEfO-2.&lt;/p&gt;
+
+&lt;p&gt;The key challenges we aim to mitigate for users is the ease with which user activity can be tracked and blocked based on clear text SNI. Secondarily, our focus on web-server integrations and provisioning mechanisms for ECH addresses Internet centralisation (which itself poses potential risks for censorship) by ensuring this technology can be easily deployed without having to depend on entities such as global-scale CDNs.&lt;/p&gt;
+
+&lt;p&gt;The primary gaps addressed by DEfO are: the privacy-leak that is clear text SNI in TLS and secondly that nobody else has been developing an ECH implementation for OpenSSL, which is one of the most widely used TLS stacks, particularly for web servers. That situation has not changed since DEfO-1 started. Arguably filling that gap has become more pressing as some browsers now ship with ECH support.&lt;/p&gt;
+
+&lt;p&gt;ECH is designed to contribute to the safety of users by removing one the the main remaining aspects of the web that allows network observers to easily monitor and censor web traffic based on either client DNS queries (browsers typically only use ECH when DoH has been used) and the Server Name Indication (SNI) in the TLS handshake, which is encrypted via ECH. The eventual goal is that use of ECH becomes near ubiquitous, and that goal is very achievable for web sites that make use of a CDN. DEfO however also has a focus on ECH support in various web servers and proxies (Apache, nginx, lighttpd, HAProxy) so that users of deployments that don’t use a commercial CDN can also benefit from ECH. The result of using ECH should be that neither the DNS query nor the TLS exchange leak the name of the web server with which the browser is establishing contact, thus taking away a still-easy opportunity for monitoring and censorship.&lt;/p&gt;
+
+&lt;p&gt;Censors however, especially at the nation-state level, might choose to block all uses of ECH, which is something that is to be expected. The main mitigation for that envisaged is that browsers, even while not using ECH, will emit “fake” (or GREASEd) ECH values, thus increasing the costs if a censor decides to block all use of ECH. The extent to which GREASEing will be an effective mitigation for blocking all ECH will essentially
+end up as a political/commercial decision for censors, browser makers, and web sites, but what we can say is that for now at least, browser makers and the larger CDNs do seem committed to making use of ECH. So we can have some hope that even the most capable censors might have to think hard before blocking all ECH. In DEfO-2 we are also planning some significant-scale trials that, if successful, should go a long way towards helping other significant web sites overcome fears related to enabling ECH. Overcoming a fear that one’s web site may be blocked if one deploys ECH will be a valuable result of DEfO-2 should our trials come to fruition as we hope.&lt;/p&gt;
+
+&lt;p&gt;We do see a number of usability issues for those deploying web servers that need to be addressed, and that we plan to address in DEfO-2. Our approach is to aim for the same level of usability for web server administrators as has been achieved by &lt;a href=&#34;https://certbot.eff.org/&#34;&gt;&lt;em&gt;certbot&lt;/em&gt;&lt;/a&gt; as it interacts with Let&amp;rsquo;s Encrypt or other CAs. Making it easy to enable ECH, especially for &amp;ldquo;smaller&amp;rdquo; web properties is high priority for DEfO.&lt;/p&gt;
+
+&lt;p&gt;The outcome for which we hope is the upstreaming of ECH into important code bases, and to have demonstrated that one can deploy ECH easily at either small or large scale. The impact we expect is that we continue to significantly contribute to the use of ECH becoming near ubiquitous.&lt;/p&gt;
+
+&lt;h2 id=&#34;timeliness&#34;&gt;Timeliness&lt;/h2&gt;
+
+&lt;p&gt;The time is now ripe for DEfO-2:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello&#34;&gt;Firefox&lt;/a&gt; now supports ECH by default.&lt;/li&gt;
+&lt;li&gt;Chrome supports ECH in &lt;a href=&#34;https://groups.google.com/a/chromium.org/g/blink-dev/c/KrPqrd-pO2M/m/_8Lfd5xcAwAJ&#34;&gt;10% of stable releases&lt;/a&gt; as of August 2023.&lt;/li&gt;
+&lt;li&gt;Brave now also supports ECH, &lt;a href=&#34;https://github.com/brave/brave-browser/issues/1851#issuecomment-1763176335&#34;&gt;behind the same flags&lt;/a&gt; as Chromium&lt;/li&gt;
+&lt;li&gt;These browser developments, plus the server code developed by DEfO-1, now enable us to plan real-world experiments&lt;/li&gt;
+&lt;li&gt;Cloudflare has &lt;a href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/ech/&#34;&gt;beta support&lt;/a&gt; for enabling ECH.&lt;/li&gt;
+&lt;li&gt;During the run-time of DEfO-2 we expect to be in a position to run trials with significant players that could significantly assist with the goal of making use of ECH common for large web sites.&lt;/li&gt;
+&lt;li&gt;The DEfO-2 project timeline should also cover the finalisation of the IETF specification for ECH, significant progress on ancillary specifications (e.g. for provisioning) and provide sufficient time for upstreaming of DEfO code&lt;/li&gt;
+&lt;li&gt;DEfO-2 benefits from the same team as DEfO-1 – Tolerant Networks and the Guardian Project having co-operated successfully on DEfO-1 are looking forward to continuing that collaboration and to extending the team for DEfO-2&lt;/li&gt;
+&lt;li&gt;HPKE, a core part of ECH, but with broader applicability, is now RFC9180 and the OpenSSL maintainers merged our DEfO code for HPKE in November 2022.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;our-development-projects&#34;&gt;Our development projects&lt;/h2&gt;
+
+&lt;p&gt;The DEfO project implemented Encrypted ClientHello (ECH) support for OpenSSL and Conscrypt, carried out interoperability testing of those implementations, and also used those libraries to ECH-enable various web servers and clients. We deployed services using these web servers and the DNS infrastructure required to support automated key upated for the HTTPS RRs associated with those services. Here we provide a short overview of that work in order to help with larger scale experiments and with further development of the ECH specification.&lt;/p&gt;
+
+&lt;h3 id=&#34;libraries&#34;&gt;Libraries&lt;/h3&gt;
+
+&lt;p&gt;As part of the DEfO project, we ECH-enabled two important TLS libraries:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.conscrypt.org/&#34;&gt;Conscrypt&lt;/a&gt; is a Java Security Provide (a library) that provides a Java &amp;ldquo;wrapper&amp;rdquo; for the C++ language boringssl library. Conscrypt is commonly used as the TLS provider for applications running on Android devices and is thus an attractive target to allow many clients to be ECH-enabled. (We do not target browser clients in DEfO as work on ECH-enabling those is being done by browser-makers.) The authors of boringssl (Google) have added ECH support to a version of their code, and we used that to enhance Conscrypt to call the new borinssl APIs required to use ECH and to provide mechanisms for applications to default to, or signal use of, ECH.&lt;/li&gt;
+&lt;li&gt;OpenSSL is a long-lived library providing cryptographic and TLS services that is used by many applications, including many web servers and hence is an attractive target for ECH-enabling, especially for server-side functionality. Our ECH-enabled fork of OpenSSL is here.&lt;/li&gt;
+&lt;li&gt;We have and will continue to work with the developers of other TLS libraries (e.g. wolfSSL) to assist in ECH-enabling their code, mostly via interoperability testing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;clients&#34;&gt;Clients&lt;/h3&gt;
+
+&lt;p&gt;We ECH-enabled implemented the following TLS client applications:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OpenSSL &lt;code&gt;s_client&lt;/code&gt; - this client application comes as part of the OpenSSL build but is commonly used for testing and as an extremely simple scriptable TLS client.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;curl&lt;/em&gt; is a widely-used command line web client that can use OpenSSL for TLS support, so we &lt;a href=&#34;https://github.com/sftcd/curl/blob/ECH-experimental/docs/ECH.md&#34;&gt;ECH-enabled that&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;F-Droid is an Android client application that provides an installable catalogue of FOSS applications and that uses Conscrypt. We made an ECH-enabled build called &lt;a href=&#34;https://f-droid.org/packages/ie.defo.ech_apps/&#34;&gt;DEfO ECH Apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;servers&#34;&gt;Servers&lt;/h3&gt;
+
+&lt;p&gt;We ECH-enabled implemented the following web servers:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Apache HTTP Server is one of the two most commonly used web servers today, you can try our &lt;a href=&#34;https://github.com/sftcd/httpd&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;nginx&lt;/em&gt; is the other web server in the &amp;ldquo;top two.&amp;rdquo;, you can try our &lt;a href=&#34;https://github.com/sftcd/nginx&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;lighttpd is a web server that is commonly used on smaller devices such as home routers, you can try our &lt;a href=&#34;https://github.com/sftcd/lighttpd1.4&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;HAProxy is widely used as an HTTP ingress proxy and so is a good target for exploring ECH split-mode, you can try our &lt;a href=&#34;https://github.com/sftcd/haproxy&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;OpenSSL &lt;code&gt;s_server&lt;/code&gt; - this example server application is part of the OpenSSL build and is commonly used for testing and experimentation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;test-tools&#34;&gt;Test tools&lt;/h3&gt;
+
+&lt;p&gt;Amongst the test tooling we developed are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Comprehensive OpenSSL make test targets for HPKE and ECH.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/defo-project/EchInteropTest&#34;&gt;ECHInteropTest&lt;/a&gt; is a Java client for interoperability testing on Android.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sftcd/echdnsfuzz&#34;&gt;&lt;em&gt;echdnsfuzz&lt;/em&gt;&lt;/a&gt; is a catalogue of &amp;ldquo;interesting&amp;rdquo; ECHConfigList values that could cause issues for clients combined with a service to randomly select one of those for publication in the public DNS every 30 minutes. This is a useful part of fuzz-testing an ECH-enabled client application.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;issues-arising&#34;&gt;Issues Arising&lt;/h2&gt;
+
+&lt;p&gt;We saw the following issues that could benefit from further work to ease deployment of ECH:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For HAProxy, since DEfO-1 we have achieved support for HelloRetryRequest in ECH split-mode but have further work to do on ECH key rotation.&lt;/li&gt;
+&lt;li&gt;There can sometimes be a lack of clarity as to which software component should be responsible for choosing to attempt real (i.e. non-GREASEd) ECH, and hence to be responsible for the additional DNS queries required to acquire an ECHConfig. For libraries like OpenSSL and boringssl it clearly only makes sense for that decision (and hence any new DNS handling code) to be outside the library. For a browser, it as clearly makes sense for that code to be in the browser application layer. With &amp;ldquo;middleware&amp;rdquo; though, such as OkHTTP or Conscrypt it can be hard to know which is the correct decision.&lt;/li&gt;
+&lt;li&gt;The new DNS code required for handling HTTPS RRs is not too complex but the full generality of SVCB is extremely complex. Adding such complexity (and associated caching) is a major change for clients like curl that have to date only had to have a very simple model for DNS - essentially only querying A/AAAA and having almost trivial caching in the application itself.&lt;/li&gt;
+&lt;li&gt;The client implementation of ECH is relatively complex in that it &amp;ldquo;touches&amp;rdquo; the TLS state machine in many ways, and hence requires changes in a lot of places. As well as increasing the cost of implementing this also increases the costs associated with testing and upstreaming.&lt;/li&gt;
+&lt;li&gt;Achieving the same level of usability as &lt;code&gt;certbot&lt;/code&gt; for web server administrators may be challenging, but is an important goal to make it easy for web server administrators to be able to easily deploy ECH.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;ECH is demonstrably implementable and can be deployed. We don&amp;rsquo;t yet know if new issues will become apparent as larger-scale experiments are carried out, but we should find out during the run-time of DEfO-2.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scanning apps, off the record</title>
+      <link>https://guardianproject.github.io/info/2022/09/28/scanning-apps-off-the-record/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/09/28/scanning-apps-off-the-record/</guid>
+      <description>
+
+&lt;p&gt;Smart phones have brought us so many wonderful capabilities.  They let people around the world access vast realms of information.  They let app developers solve problems large and small in a way most relevent to their local context.  They are personal computers for the world.  They also have given surveillance capitalism an unprecedented reach into everyone&amp;rsquo;s lives. Repressive governments use them in ways that the East German Stasi secret police could only have dreamed of.  And as promising as artificial intelligence is, it is also threatening humanity.  People around the world are pushing back.  This public interest work requires technical inspection of apps.  There are organizations highlighting algorithmic transparency and calling out surveillance capitalism.  Journalists are linking apps into key stories about the misdeeds of powerful companies.  Activists are exposing the hidden machinations of their governments.  All of these people require technical skills to see what a given app is going.&lt;/p&gt;
+
+&lt;p&gt;It turns out that a lot of the technical bits required to do these kinds of investigations can be automated.  When combined with good user experience design, many of the barriers to entry can be removed.  This allows more people to get involved, and for many of these problems to be crowdsourced even.  This is the central focus of our project Tracking the Trackers.  We have just completed the third round of work to bring the initial automation to a more accessible user experience.&lt;/p&gt;
+
+&lt;p&gt;We have discussed these workflows with a number of organizations doing this kind of work to learn about their processes, and how they might be improved.  And we want to hear from more.  There is a lot of potential to pool limited resources to build up a shared, free software resource that is greater than the sum of its parts.  And there are many complementary projects:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;EFF&amp;rsquo;s &lt;a href=&#34;https://github.com/EFForg/apkeep&#34;&gt;apktool&lt;/a&gt; - tool for downloading Android apps from various sources&lt;/li&gt;
+&lt;li&gt;F-Droid &lt;a href=&#34;https://f-droid.org/2020/12/21/announcing-issuebot.html&#34;&gt;&lt;em&gt;issuebot&lt;/em&gt;&lt;/a&gt; - automatically review apps via GitLab issues and merge requests&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://about.gitlab.com/topics/ci-cd/&#34;&gt;GitLab CI&lt;/a&gt; - server-less processing tied to issue trackers and merge requests&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git.app-check.org/app-check&#34;&gt;MobilSicher AppCheck&lt;/a&gt; - dynamic analysis for finding personal data leaks in apps&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pts-project.org/&#34;&gt;PiRouge&lt;/a&gt; - mobile forensic and network traffic analysis platform&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://beta.pithus.org/about/&#34;&gt;Pithus&lt;/a&gt; - mobile threat intelligence platform for activists, journalists, NGOs, researchers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;putting-it-all-together&#34;&gt;Putting it all together&lt;/h2&gt;
+
+&lt;p&gt;We have developed a stack to integrate as many tools that are relevant into a single, productive user experience.  Detailed inspection of apps is a process that must be tracked, so the focus is on issue trackers and merge requests.  Each app is tracked as an issue.  A person opens up a new issue, adding what they know about the app, including links to it in an app store, the Application ID, links to any source code, etc.  Then &lt;em&gt;issuebot&lt;/em&gt; kicks in and downloads the app and any source code it can find.  Once successful, it will launch various analysis processed on what it downloaded.  Those results are then compiled into a report which is posted to the issue tracker for the human reviewers.  The bot leaves its mark using a GitLab label called &lt;code&gt;fdroid-bot&lt;/code&gt;.  If someone found more files to download and would like &lt;em&gt;issuebot&lt;/em&gt; to run again, they just remove the &lt;code&gt;fdroid-bot&lt;/code&gt; label and &lt;em&gt;issuebot&lt;/em&gt; will try the whole process again.&lt;/p&gt;
+
+&lt;p&gt;It runs a number of different scans and processes to check:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Inspect apps from F-Droid, Google Play, APKPure, Huawei App Gallery, and GitHub Releases.&lt;/li&gt;
+&lt;li&gt;Get the source code&lt;/li&gt;
+&lt;li&gt;Build the app from source&lt;/li&gt;
+&lt;li&gt;Find the license of the source code&lt;/li&gt;
+&lt;li&gt;Extract info about libraries, classes, domain names, URLs, permissions, services, etc.&lt;/li&gt;
+&lt;li&gt;Apply signature collections&lt;/li&gt;
+&lt;li&gt;What kinds of &lt;a href=&#34;https://f-droid.org/docs/Anti-Features&#34;&gt;Anti-Features&lt;/a&gt; an app has, e.g. tracking, ads, non-free dependencies, known vulnerabilities, etc.&lt;/li&gt;
+&lt;li&gt;Whether all the dependencies are also free software&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using this process, the F-Droid community reviews all apps for &lt;a href=&#34;https://f-droid.org/docs/Anti-Features/&#34;&gt;Anti-Features&lt;/a&gt; before accepting them into the &lt;f-droid.org&gt; collection.  For some years now, F-Droid have reviewed new apps and updates via merge requests with &lt;em&gt;issuebot&lt;/em&gt;.  It automatically checks issues on the &lt;a href=&#34;https://gitlab.com/fdroid/rfp/-/issues&#34;&gt;Requests for Packaging&lt;/a&gt; tracker, this is the starting point of the process of adding new apps to the collection.  The collection is then maintained via merge requests on the &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/-/merge_requests&#34;&gt;&lt;em&gt;fdroiddata&lt;/em&gt;&lt;/a&gt; project.  There are hundreds of reviews there to browse through, an some &lt;a href=&#34;https://gitlab.com/fdroid/rfp/-/issues/2224#note_1118052837&#34;&gt;scans&lt;/a&gt; that are more interesting.&lt;/p&gt;
+
+&lt;p&gt;We believe this same workflow fits well to many processes for inspecting apps.  GitLab provides the core workflow that fits how many researchers and organizations are already doing this work:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Detailed inspection happens over time, over multiple work sessions.&lt;/li&gt;
+&lt;li&gt;Multiple people are involved in the process.&lt;/li&gt;
+&lt;li&gt;Work can happen asynchronously across time zones and organizations.&lt;/li&gt;
+&lt;li&gt;Public GitLab also opens up crowdsourcing opportunities&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We have setup a instance of this setup for public interest organizations and investigators to use.  This is called the &amp;ldquo;Off The Record&amp;rdquo; tracker.  Access is available on request, send an email to &lt;a href=&#34;mailto:support@guardianproject.info&#34;&gt;support@guardianproject.info&lt;/a&gt; to make the request.  Additionally, the whole stack is free software.  Organizations are free to run it as they need to, with any privacy requirements that might need.  That also makes it cheap to host this software, so that it can be affordably provided as a service to people working in the public interest.  It can be &lt;a href=&#34;https://gitlab.com/fdroid/issuebot#installing-into-a-gitlab-project&#34;&gt;self-hosted&lt;/a&gt; with any GitLab &amp;ldquo;Community Edition&amp;rdquo; instance with CI/CD Runners, and also runs on the gratis &lt;a href=&#34;https://gitlab.com/&#34;&gt;https://gitlab.com/&lt;/a&gt; hosting.    It does touch some proprietary services, but only via public APIs so that the functionality is included in the stack.&lt;/p&gt;
+
+&lt;p&gt;One new development is the creation a standard pattern for managing profiles for collections of signatures to detect Anti-Features in Android apps.  F-Droid &lt;a href=&#34;https://gitlab.com/fdroid/suss&#34;&gt;SUSS&lt;/a&gt; (Suspicious or Unwanted Software Signatures) is the first live project, with F-Droid&amp;rsquo;s &lt;code&gt;scanner&lt;/code&gt; tool using it. Before this round of work began, there were multiple silos where related activities were happening.  F-Droid scans for non-free software, Mobil Sicher detects when apps transmit personal data, Exodus Privacy find for tracking software, and IzzySoft looks for Anti-Features of all kinds.  We hope that standardizing data formats and workflows will make contribution and shared maintenance easier, as well as making it easy for organizations to maintain their own collections of signatures they want to detect.  YARA serves as template for this effort. It began at one malware company, and is now used by a &lt;a href=&#34;https://virustotal.github.io/yara/#who-s-using-yara&#34;&gt;wide variety&lt;/a&gt; of organizations. YARA has become the standard tool for writing malware signatures for desktop platforms.  Unfortunately, it is &lt;a href=&#34;https://github.com/VirusTotal/yara/issues/1145&#34;&gt;not well structured&lt;/a&gt; to work for scanning Android apps or source code, but it can serve as a inspiration and model.&lt;/p&gt;
+
+&lt;h2 id=&#34;appendix&#34;&gt;Appendix&lt;/h2&gt;
+
+&lt;h3 id=&#34;a-know-the-local-laws-on-software-inspection&#34;&gt;A) Know the local laws on software inspection.&lt;/h3&gt;
+
+&lt;p&gt;In many places, just the act of inspecting software can get you in trouble with local governments or companies.  This could be anything from &lt;a href=&#34;https://www.vidstromlabs.com/blog/the-legal-boundaries-of-reverse-engineering-in-the-eu/&#34;&gt;unclear laws&lt;/a&gt; &lt;a href=&#34;https://www.eff.org/issues/coders/reverse-engineering-faq&#34;&gt;regarding&lt;/a&gt; &lt;a href=&#34;https://www.twobirds.com/en/insights/2020/germany/vertraglicher-ausschluss-von-reverse-engineering&#34;&gt;reverse engineering&lt;/a&gt; to overreach from law enforcement.  Running the inspection in private means the app reviewers are much less exposed unwarranted or unjust interference.  Anyone doing software inspection should familiarize themselves with local laws and regulation that affect it.&lt;/p&gt;
+
+&lt;p&gt;The biggest challenges that remain for making software inspection commonplace are around how organizations and governments apply this software.  Any organization that wants to start working on auditing software in the public interest will need:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Legal guidelines for getting any required permissions before downloading apps to review.&lt;/li&gt;
+&lt;li&gt;A home organization for this repository that has a public mission aligned with these goals.&lt;/li&gt;
+&lt;li&gt;Legal representation to handle any issues that arise, and to push back against illegitimate requests.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;b-what-no-ios&#34;&gt;B) What, no iOS?&lt;/h3&gt;
+
+&lt;p&gt;We recognize that it is also important to inspect iOS apps.  Compared to Android, the Apple mobile ecosystem is smaller and much more closed and restrictive.  Therefore, it is much more more difficult to inspect.  The application executable binary in the &lt;code&gt;.ipa&lt;/code&gt; file is &lt;a href=&#34;https://stackoverflow.com/questions/5784169/does-apple-modify-ios-application-executables-on-apps-submitted-to-the-app-store/5784332#5784332&#34;&gt;encrypted&lt;/a&gt; which prevents examination of the binary.  The only way to get the actual &lt;code&gt;.app&lt;/code&gt; files is to have a jailbroken iOS device, then manually install them on the device.    Only then can they be extracted and inspected.&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was funded by NLnet as &lt;a href=&#34;https://nlnet.nl/project/EthicalApps/&#34;&gt;The Search for Ethical Apps&lt;/a&gt; under the umbrella of &lt;a href=&#34;https://guardianproject.info/2022/09/01/the-search-for-ethical-apps-lets-start-with-governments/&#34;&gt;Guardian Project&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://guardianproject.info/tags/tracking-the-trackers/&#34;&gt;Tracking the Trackers&lt;/a&gt; effort.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Search for Ethical Apps: Let&#39;s start with governments</title>
+      <link>https://guardianproject.github.io/info/2022/09/01/the-search-for-ethical-apps-lets-start-with-governments/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/09/01/the-search-for-ethical-apps-lets-start-with-governments/</guid>
+      <description>
+
+&lt;p&gt;Governments across the world are moving services to mobile apps.  The vast majority of these apps are only available in the Google Play store or in the Apple App store.  Installing apps from these services requires users to agree to their terms of service.  This means governments require their citizens to sign opaque and privacy invading contracts with foreign Big Tech in order to use digital services.  This feeds ever more into Big Tech data control, filtering, and information bubbles.  There are some exceptions here, like China has multiple app stores that are popular.  Chinese Big Tech also require restrictive terms of service agreements.  Additionally, many of apps are developed by the same firms that are tied into the surveillance capitalism ecosystem.  So they include features that track the end users. The governments are not demanding data transparency, and these firms have not been delivering it.&lt;/p&gt;
+
+&lt;p&gt;In Austria, there is a clear example: the &lt;a href=&#34;https://www.a-trust.at/en/Handy-Signatur/&#34;&gt;&lt;em&gt;Handy Signatur&lt;/em&gt;&lt;/a&gt; app.  Public health insurance providers require this app for people to access their accounts online. Since COVID-19 countermeasures forced schools into online-mode, many public schools have been requiring education apps for students, parents and teachers to connect with and interact with the school. People with the that app can also sign petitions and download vaccination certificates those without have to do much more work.&lt;/p&gt;
+
+&lt;p&gt;Mobile phone users want to know about what apps are doing with their personal data. Citizens around the world gaining consciousness about these issues.  In order to build public pressure, a critical mass must be aware of these problems. To learn, they must first discover how widespread and entrenched this problem is.  We received funding from &lt;a href=&#34;https://nlnet.nl/project/EthicalApps/&#34;&gt;NLnet&lt;/a&gt; to work on this key area.  This project integrates existing tools and builds a &amp;ldquo;software kit&amp;rdquo; to make it easy to generate data about the apps governments require.  This data will be simple to index so that it citizens and search it and discover the terms their governments are requiring them to take to access e-government services.&lt;/p&gt;
+
+&lt;p&gt;Journalists are just starting to report on this large and growing problem.  One of the few stories in the European media came recently in the Dutch media: &amp;ldquo;&lt;a href=&#34;https://fd.nl/economie-politiek/1383007/overheid-dwingt-burger-in-de-richting-van-google-en-apple&#34;&gt;&lt;em&gt;Overheid dwingt burger in de richting van Google en Apple&lt;/em&gt;&lt;/a&gt;&amp;rdquo; (The authorities force citizens towards Google and Apple).  On top of transparency, governments should also ensure that the apps they make and use are available without privacy concerns or corporate control, and that they are not feeding data to companies that control search algorithms and limit user autonomy.&lt;/p&gt;
+
+&lt;p&gt;This first step is to make a repository with the apps related to government services.  This then provides a template for others to do the same in other countries.  Next steps are include pushing organizations and companies to do the same, for example school and banking apps; getting more country repositories and perhaps an EU repository; an helping governments, organizations, and companies set up good distribution options.  Governments should also list F-Droid as an option for getting the apps whenever they mention Google Play and Apple App Store.  And when governments go &lt;a href=&#34;https://f-droid.org/packages/de.bwl.lfdi.app/&#34;&gt;all&lt;/a&gt; &lt;a href=&#34;https://www.baden-wuerttemberg.datenschutz.de/lfdi-bw-app-f-droid/&#34;&gt;the way&lt;/a&gt;, they should be lauded. 🎉&lt;/p&gt;
+
+&lt;p&gt;We work partners to make this come to life:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;F-Droid provides all the tools for securely publishing and managing app repositories.  F-Droid&amp;rsquo;s community app &lt;a href=&#34;https://gitlab.com/fdroid/rfp/-/issues&#34;&gt;review&lt;/a&gt; &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/-/merge_requests&#34;&gt;process&lt;/a&gt; gives us a template to build upon for reviewing all apps in an open way.  F-Droid provides another option that does not lock anyone into any service. There are no terms of service, or even &lt;a href=&#34;https://f-droid.org/2022/02/28/no-user-accounts-by-design.html&#34;&gt;user accounts&lt;/a&gt; to sign up for.  And F-Droid provides a decentralized app distribution ecosystem where anyone can publish their own apps via their own repositories.  If the app is free software, it can be included in the main &lt;a href=&#34;https://f-droid.org&#34;&gt;f-droid.org&lt;/a&gt; repository.  Millions of users have installed F-Droid themselves, and companies like Fairphone have shipped devices with F-Droid pre-installed.  Anyone can freely install F-Droid on any Android device.  So F-Droid provides app distribution without being locked into any service, unlike Google Play.&lt;/li&gt;
+&lt;li&gt;ITUJ&amp;rsquo;s &lt;a href=&#34;https://mobilsicher.de/&#34;&gt;mobilsicher&lt;/a&gt; project will provide the user facing service for Germany. Their new repository will serve both as an app distribution provider, and as an example of how other organizations can do the same.  Their impressive &lt;a href=&#34;https://git.app-check.org/app-check&#34;&gt;app-check&lt;/a&gt; review &lt;a href=&#34;https://appcheck.mobilsicher.de/&#34;&gt;platform&lt;/a&gt; is a complete stack for human reviewers to do dynamic analysis, and the database they have built up will be integrated into the review process.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://exodus-privacy.eu.org/&#34;&gt;Exodus Privacy&lt;/a&gt; focuses on tracking embedded in Android apps.  It works based on users requesting apps be reviewed.  It is an important source for this project since it is narrowly focused on detecting and reporting tracking in any Android app.&lt;/li&gt;
+&lt;li&gt;EFF created and maintains &lt;a href=&#34;https://github.com/EFForg/apkeep&#34;&gt;&lt;em&gt;apkeep&lt;/em&gt;&lt;/a&gt;, the essential tool for getting the actual app files to inspect when the source code is not available.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://beta.pithus.org/about/&#34;&gt;Pithus&lt;/a&gt; is a mobile threat intelligence platform for activists, journalists, NGOs, researchers that is a entirely open platform supported and maintained by the community.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/techlore/plexus&#34;&gt;Techlore Plexus&lt;/a&gt; is a catalog of Android apps that have been reviewed in terms of compatibility with Google-free devices.  For example, they list whether an app requires Google Play Services to run.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, this is not the complete solution for &lt;a href=&#34;https://www.ethicsinapps.eu/&#34;&gt;ethical apps&lt;/a&gt;.  This is a stepping stone towards the end goal of &amp;ldquo;&lt;a href=&#34;https://publiccode.eu/&#34;&gt;Public&lt;/a&gt; &lt;a href=&#34;https://www.eff.org/deeplinks/2017/10/public-money-public-code-show-your-support-free-software-europe&#34;&gt;Money&lt;/a&gt;, &lt;a href=&#34;https://publiccode.asia/&#34;&gt;Public&lt;/a&gt; &lt;a href=&#34;https://blog.okfn.org/2017/09/20/public-money-public-code/&#34;&gt;Code&lt;/a&gt;&amp;rdquo;.  This project will push governments down that road by outlining easier steps to take as they move towards free software: making apps available for public audit, allowing users to install apps without agreeing to any terms of service, etc.  It enables users of free platforms like CalyxOS, LineageOS, Murena, etc. to get access to public services via their mobile devices.  It gives users with Google Play devices the option to disable Google Play, because they can get the apps they need via F-Droid.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-shape-of-the-work&#34;&gt;The shape of the work&lt;/h2&gt;
+
+&lt;p&gt;Here is the general idea of what this project will do, as outlined in the funding propsal:&lt;/p&gt;
+
+&lt;h3 id=&#34;1-low-maintenance-repositories&#34;&gt;1. Low maintenance repositories&lt;/h3&gt;
+
+&lt;p&gt;Launch an F-Droid app repository for a pre-curated set of apps that includes direct download links.  Ongoing software maintenance is covered since it will be integrated into F-Droid&amp;rsquo;s core offering.  App updates, verification, and hosting for the Austria repository are all covered indefinitely by existing Guardian Project/F-Droid efforts.   Once complete, other launches will require only a website and a launch campaign.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Integrate APK download tools like EFF&amp;rsquo;s &lt;em&gt;apkeep&lt;/em&gt;, &lt;em&gt;gplaycli&lt;/em&gt;, etc. into &lt;em&gt;issuebot&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Build existing automation scripts into user tools&lt;/li&gt;
+&lt;li&gt;Link repo publishing with &lt;em&gt;issuebot&lt;/em&gt; posts in GitLab project&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-ongoing-review&#34;&gt;2. Ongoing Review&lt;/h4&gt;
+
+&lt;p&gt;Build a public facing app review site based on existing F-Droid methods and software.  This would clearly show the technical factors that go into the review process.  Chosen contributors can submit and review apps there, the public can watch.  This needs some software development and a GitLab instance (could be free hosting on gitlab.com).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Integrate review tools from collaborators&lt;/li&gt;
+&lt;li&gt;Sync tracking lib data with Exodus Privacy&amp;rsquo;s public database&lt;/li&gt;
+&lt;li&gt;Create canonical F-Droid database of proprietary libraries&lt;/li&gt;
+&lt;li&gt;Build out data publishing system, so all extracted data is navigable by scripts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-community-review&#34;&gt;3. Community Review&lt;/h4&gt;
+
+&lt;p&gt;Expand software tooling to allow submission and review to more contributors.  Stage 2 should be running smoothly before opening it up to the public. On top of software development, this needs staff or committed volunteer time spent on managing the community.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;user research on how people think about data extracted from apps&lt;/li&gt;
+&lt;li&gt;UX design for &lt;em&gt;issuebot&lt;/em&gt; to represent extracted data in GitLab tracker posts&lt;/li&gt;
+&lt;li&gt;document tools so community manager can effectively curate user interactions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-launch-for-new-organization&#34;&gt;4. Launch for new Organization&lt;/h4&gt;
+
+&lt;p&gt;Launch a campaign for other countries and perhaps EU-wide in partnership with civil society organizations and governments.  This could happen after any of the previous stages, e.g. we could help one government setup a &amp;ldquo;pre-curated&amp;rdquo; website and another organization with a &amp;ldquo;community review&amp;rdquo; setup.&lt;/p&gt;
+
+&lt;h3 id=&#34;total-budget-48-000&#34;&gt;Total Budget: 48,000€&lt;/h3&gt;
+
+&lt;p&gt;(&lt;em&gt;We&amp;rsquo;re a little late in publishing this post, the project runs from April through September 2022&lt;/em&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Debian over HTTPS</title>
+      <link>https://guardianproject.github.io/info/2021/12/08/debian-over-https/</link>
+      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/12/08/debian-over-https/</guid>
+      <description>
+
+&lt;p&gt;Debian&amp;rsquo;s package manager &lt;a href=&#34;https://wiki.debian.org/SecureApt&#34;&gt;&lt;em&gt;apt&lt;/em&gt;&lt;/a&gt; has a
+time-tested method of securely providing packages from the network built on
+OpenPGP signatures.  Even though this signing method works well for verifying
+the indexes and package files, there are new threats that have become relevant
+as man-in-the-middle attacks and data mining become ever easier.  Since 2013,
+&lt;em&gt;apt&lt;/em&gt; developers have supported encrypted transport methods HTTPS and Tor Onion
+Service.  We have been &lt;a href=&#34;https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;recommending&lt;/a&gt; &lt;a href=&#34;https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/&#34;&gt;their&lt;/a&gt; &lt;a href=&#34;https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;use&lt;/a&gt; since &lt;a href=&#34;https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/&#34;&gt;2013&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Most major mirrors already support HTTPS, and now &lt;a href=&#34;https://security.debian.org&#34;&gt;https://security.debian.org&lt;/a&gt;
+has finally joined the party.  That means it is possible to use HTTPS on all of
+the official repositories.  On top of that, many Debian Developers are working
+on making &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=992692&#34;&gt;HTTPS the
+default&lt;/a&gt; for new
+installs.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-threats&#34;&gt;The threats&lt;/h2&gt;
+
+&lt;p&gt;Now is a good time to reiterate the areas of concern:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Package authenticity (software can be modified while being downloaded).&lt;/li&gt;
+&lt;li&gt;Repository availability (whole sites or specific URL paths can be selectively
+blocked by the network).&lt;/li&gt;
+&lt;li&gt;Package availability (software security updates can be individually blocked).&lt;/li&gt;
+&lt;li&gt;Who is downloading what package (currently visible to anyone who can see the
+network traffic, including open wifi, etc.).&lt;/li&gt;
+&lt;li&gt;Vulnerabilities in &lt;em&gt;apt&lt;/em&gt; or its signature validation (&lt;em&gt;apt&lt;/em&gt; can be
+exploited, authenticity checks can be bypassed).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The current &lt;em&gt;apt&lt;/em&gt; model with HTTP covers #1 well, but only covers #2 and #3 with
+a one week window (the &lt;code&gt;Valid-Until&lt;/code&gt; header sets the expiration date on the repo
+metadata).  That gives attackers a short-term window where blocking and replay
+attacks remain effective.  The And it does not cover #4 or #5 at all.&lt;/p&gt;
+
+&lt;p&gt;Using HTTPS adds a weak backup security layer for #1.  HTTPS makes it much more
+difficult for certain files from a mirror to be selectively blocked or replayed,
+as well as making related errors louder and earlier (e.g. #2 and #3).  Tracking
+package downloads needs only simple passive listening with HTTP, but with HTTPS,
+the attacker must build full indexes of package sizes, then parse the size from
+TLS streams.  So HTTPS helps a little with #4.  Lastly,
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1829&#34;&gt;there&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1358&#34;&gt;have&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3587&#34;&gt;been&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3462&#34;&gt;bugs&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1252&#34;&gt;in&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0501&#34;&gt;&lt;em&gt;apt&lt;/em&gt;&amp;rsquo;s&lt;/a&gt; GPG
+verification.  With HTTP, any network can inject exploits into &lt;em&gt;apt&lt;/em&gt;&amp;rsquo;s
+downloads.  HTTPS helps with #5 by providing a backup layer of encryption,
+albeit weaker.&lt;/p&gt;
+
+&lt;p&gt;It is of course important to point out that HTTPS itself has flaws, and it is
+not the best option out there, especially for protecting anonymity.  HTTPS is
+quite easy to use for &lt;em&gt;apt&lt;/em&gt; repositories, so there is hardly any trade-off to
+using it.  That is why it is the focus of this post.  If protecting privacy is
+important to you, you should use the &lt;a href=&#34;https://onion.debian.org&#34;&gt;Tor Onion Service
+repositories&lt;/a&gt;, especially if #4 and #5 concern you.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-risks-of-adding-https&#34;&gt;The risks of adding HTTPS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The only security critique of using HTTPS for repositories that still makes
+sense is that there might be vulnerabilities in the code that handles HTTPS,
+since its a lot more complicated that HTTP.  In &lt;em&gt;apt&lt;/em&gt;, HTTPS requires GnuTLS,
+which is currently linked in by default.  In order to fully protect against
+exploits related to the HTTPS code, the machine would need to use a custom build
+of &lt;em&gt;apt&lt;/em&gt; with GnuTLS support not included.  It is possible to limit exposure of
+the HTTPS implementation by setting &lt;code&gt;Acquire::AllowTLS false&lt;/code&gt;.  This kind of
+attack seems to be theoretical as of the time of writing, whereas there are at
+least 6 CVEs related to exploiting the GPG verification.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using HTTPS makes using caching proxies much harder to setup.  Caching proxies
+can reduce the leakage of metadata about which machine is getting which package,
+so using direct HTTPS connections would therefore increase the leakage of that
+kind of metadata.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;things-that-can-be-improved&#34;&gt;Things that can be improved&lt;/h2&gt;
+
+&lt;p&gt;There are some additional bits of metadata that can be protected when using
+HTTPS, thereby further improving the privacy protections in &lt;em&gt;apt&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;With &lt;a href=&#34;https://www.gnutls.org/manual/gnutls.html#On-Record-Padding&#34;&gt;TLSv1.3 Record
+Padding&lt;/a&gt;, TLS
+streams &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1001335&#34;&gt;can be
+padded&lt;/a&gt;, which
+would obscure the size of the packages being downloaded from network
+observers.&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Pipelining downloads through a reused HTTPS connection makes it even more
+difficult for the network observer to track packages by size.&lt;/del&gt; Update
+2021-12-09: It turns out that &lt;em&gt;apt&lt;/em&gt; is
+&lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1001335#10&#34;&gt;already&lt;/a&gt;
+&lt;a href=&#34;https://salsa.debian.org/apt-team/apt/commit/895417ef99bb1371d8970da1afe87c6d64382f67&#34;&gt;pipelining&lt;/a&gt;
+requests by default, so that can be crossed off the list of things to be
+improved.&lt;/li&gt;
+&lt;li&gt;The Server Name Indication (SNI) field in TLS will leak the domain name in
+plaintext.  The upcoming TLS Encrypted Client Hello standard will encrypt that.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The SNI field issue does not exist when using Tor Onion Services.  Package
+sizes would still be visible to network observers when using Onion Services, so
+TLS padding and pipelining would help there also.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Implementing TLS Encrypted Client Hello</title>
+      <link>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</guid>
+      <description>
+
+&lt;p&gt;As part of the &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project, we have been working on
+accelerating the development &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html&#34;&gt;Encrypted Client Hello
+(ECH)&lt;/a&gt; as
+standardized by the IETF.  ECH is the next step in improving Transport Layer
+Security (TLS).  TLS is one of the basic building blocks of the internet, it is
+what puts the S in HTTPS.  The ECH standard is nearing completion.  That is
+exciting because ECH can encrypt the last plaintext TLS metadata that it is
+possible to encrypt.  So ECH will bring some real improvements in privacy and
+censorship resistance.&lt;/p&gt;
+
+&lt;p&gt;ECH is built on top of TLSv1.3 and &lt;a href=&#34;https://blog.cloudflare.com/handshake-encryption-endgame-an-ech-update/&#34;&gt;completes unfinished
+work&lt;/a&gt;
+from the TLSv1.3 effort, now that private DNS is a thing. ECH is now in draft-13
+and there are many implementations that are interoperating. ECH is working for
+&lt;a href=&#34;https://github.com/sftcd/openssl&#34;&gt;OpenSSL&lt;/a&gt;, &lt;a href=&#34;https://bugs.chromium.org/p/boringssl/issues/detail?id=275&#34;&gt;BoringSSL&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/nginx&#34;&gt;nginx&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/httpd&#34;&gt;Apache HTTPD&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/lighttpd1.4&#34;&gt;lighttpd&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/sftcd/haproxy/commits/ECH-experimental&#34;&gt;HAProxy&lt;/a&gt;, &lt;a href=&#34;https://github.com/guardianproject/conscrypt/tree/2.6.alpha1638179154.job1828169525&#34;&gt;Conscrypt&lt;/a&gt;, &lt;a href=&#34;https://github.com/niallor/curl&#34;&gt;curl&lt;/a&gt;, and more. There is work underway in &lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=1725938&#34;&gt;Firefox&lt;/a&gt;
+and &lt;a href=&#34;https://bugs.chromium.org/p/chromium/issues/detail?id=1091403&#34;&gt;Chromium&lt;/a&gt;. It has been sketched out for &lt;a href=&#34;https://github.com/square/okhttp/issues/6539&#34;&gt;OkHTTP&lt;/a&gt;. Draft versions of ESNI
+and ECH have been deployed in Firefox releases and some production web services.&lt;/p&gt;
+
+&lt;p&gt;The main downside of ECH is that it is
+&lt;a href=&#34;https://defo.ie/report.html#issuesarising&#34;&gt;complex&lt;/a&gt;, and most of that is
+unavoidable.  Large scale websites have complicated server-side setups, and ECH
+has to work in those setups.  That is where ECH&amp;rsquo;s complexity comes from.  &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-dnsop-svcb-https-07.html&#34;&gt;DNS
+SVCB and HTTPS RR
+Types&lt;/a&gt; is a
+related standard to encapsulate the complexity of large scale websites a single
+DNS lookup.  It adds additional complexity since it might include the TCP port
+number for the service, while TLS implementations mostly assume that the port
+number is known before doing a DNS lookup.&lt;/p&gt;
+
+&lt;p&gt;ECH was formerly known as Encrypted SNI (ESNI), which it replaces.  So do not
+expect updates to ESNI unless ECH proves too complicated for implementers. ECH
+is more complex to implement in the TLS library than ESNI.  Once it is
+implemented in the TLS library, then implementing the next level of managing the
+keys and hostnames is quite similar between ESNI and ECH.  The rest of this post
+will be diving into details about that complexity and what it takes to implement
+ECH.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;do-not-stick-out.jpg&#34; alt=&#34;Do Not Stick Out&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;do-not-stick-out&#34;&gt;Do Not Stick Out&lt;/h2&gt;
+
+&lt;p&gt;ECH implementers must also work to ensure that their implementation does not
+create packets that look &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html#name-do-not-stick-out&#34;&gt;look
+different&lt;/a&gt;
+than other implementations.  How ECH is implemented will affect
+fingerprintability.  Right now, BoringSSL, OpenSSL, and Firefox all put the ECH
+extension in different places, so it is easy for a network observer to tell
+which of them is serving as the client in a TLS session.  Ideally, all
+implementations would create network packages that look identical to the network
+observer.  To get an idea of this problem in the real world, see &lt;a href=&#34;https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues/40014&#34;&gt;this detailed
+technical
+discussion&lt;/a&gt;
+of metadata ordering in DTLS as used in WebRTC.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-the-keys&#34;&gt;Getting the keys&lt;/h2&gt;
+
+&lt;p&gt;ECH encrypts the first stage of the negotiation between the client and server,
+the &lt;em&gt;ClientHello&lt;/em&gt; packet using a new type of key and related configuration.
+This is known as an &amp;ldquo;ECH Config&amp;rdquo;.  This negotiation is what sets up the
+encrypted TLS connection, so to encrypt the negotiation, so the keys can not be
+derived from the certificates and negotiation itself.  ECH also needs new
+methods distributing this ECH Config.  HTTPS/SVCB therefore includes ECH Config Lists,
+and DNS is the recommended way to get ECH Config Lists.  Other distribution
+methods are also possible, and ECH implementation should provide a method to
+directly supply ECH Config Lists.&lt;/p&gt;
+
+&lt;p&gt;When using ECH in conjunction with HTTPS/SVCB, the DNS needs to be handled differently
+than the common, decades old practices that most TLS stacks are built on.  The
+ECH Config List must match the IP address so that multi-CDN setups still work.
+That ensures the server gets the ECH Config that matches its ECH private keys,
+not the one for a separate server.  If the A/AAAA lookup is done separately from
+the HTTPS/SVCB lookup, they might not match since the results could come from
+different caches, etc.  It is not yet clear where the right place to handle that
+DNS is, but it is clear that clients that implement HTTPS/SVCB and ECH will need to
+consider that DNS will touch different parts of the stack.&lt;/p&gt;
+
+&lt;p&gt;Which part of the stack will handle the HTTPS/SVCB look up depends on whether
+the code is acting as a library or more as the client itself.  For example,
+libraries like OkHTTP or Conscrypt can both act as a TLS library, providing the
+blocks for implementing TLS in an app.  They can also act as the TLS client
+itself, the app just needs to open the hostname and port to get a connection.
+This is especially true for OkHTTP, which can also handle DNS itself with its
+own DNS-over-HTTPS implementation.  Most apps will expect to just open a URL and
+have it work without providing anything else.  In the case of HTTP libraries
+like OkHTTP or Volley, Conscrypt becomes the provider of TLS functions rather
+than the client.  OkHTTP&amp;rsquo;s default setup will probably want to treat Conscrypt
+like the client and do zero config.  But there are use cases where apps want to
+handle DNS in OkHTTP, in that case Conscrypt is a library.  Another way this
+could be broken down would be to have Conscrypt only be the TLS library, then
+leave the DNS to the HTTP stacks.  Then each HTTP library would have to have
+their own ECH and HTTPS/SVCB handling (In Android, that would mean
+&lt;tt&gt;HttpURLConnection&lt;/tt&gt;, OkHTTP, Volley, Apache HTTP Client, etc).  Python
+provides another example with HTTP libraries like &lt;a href=&#34;https://github.com/psf/requests/issues/5972&#34;&gt;Requests&lt;/a&gt; working in
+combination with the core &lt;a href=&#34;https://bugs.python.org/issue45567&#34;&gt;&lt;tt&gt;ssl&lt;/tt&gt;&lt;/a&gt; module.&lt;/p&gt;
+
+&lt;p&gt;One thing that is clear here: whichever piece initiates the HTTPS/SVCB DNS query
+should also handle the ECH Config, and setting up the lower levels.  On top of
+this, ECH has GREASE and &amp;ldquo;Retry Configs&amp;rdquo;.  GREASE is a key part of ensuring that
+ECH connections do not stick out.  GREASE makes the network observer see TLS
+packets that look the same as connections that successfully used an ECH Config
+to encrypt.  Retry Configs are sent by the server if it cannot decrypt what the
+client sent.  Whichever piece of the code handles the ECH Config List should
+then also handle GREASE and the Retry Configs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.cloudflare.com/encrypted-client-hello/&#34;&gt;&lt;img src=&#34;tls-ech-negotiation.png&#34; alt=&#34;TLS ECH Negotiation&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;outer-and-inner-clienthello&#34;&gt;Outer and Inner &lt;em&gt;ClientHello&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;This post began by saying that ECH was complex.  Most of that complexity stems
+from the concept of &lt;em&gt;ClientHelloOuter&lt;/em&gt; and &lt;em&gt;ClientHelloInner&lt;/em&gt;.  They are sort of
+parallel versions of the TLS &lt;em&gt;ClientHello&lt;/em&gt;, with &lt;em&gt;ClientHelloOuter&lt;/em&gt; being
+plaintext and &lt;em&gt;ClientHelloInner&lt;/em&gt; being encrypted.  Many of the same bits of
+metadata can be set in either &lt;em&gt;ClientHelloOuter&lt;/em&gt; or &lt;em&gt;ClientHelloInner&lt;/em&gt;, or even
+in both.  And the outer and inner values can be different.  For example, the
+outer plaintext SNI could be set to a generic domain name, while the inner could
+be set to a different domain name that the client wants to protect.  Whenever
+the client needs to manage what is set in &amp;ldquo;inner&amp;rdquo;, &amp;ldquo;outer&amp;rdquo;, etc., then extra
+complexity is exposed all the way up to the app using the ECH client.  Also, so
+many possible configuration options also means so many ways that the negotiation
+might fail.&lt;/p&gt;
+
+&lt;p&gt;BoringSSL&amp;rsquo;s &lt;code&gt;SSL_set1_ech_config_list()&lt;/code&gt; provides a good example of this complexity:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a supported ECHConfig is found, &lt;tt&gt;ssl&lt;/tt&gt; will encrypt the true
+ClientHello parameters. If the server cannot decrypt it, e.g. due to a key
+mismatch, ECH has a recovery flow. &lt;tt&gt;ssl&lt;/tt&gt; will handshake using the
+cleartext parameters, including a public name in the ECHConfig. If using
+&lt;tt&gt;SSL_CTX_set_custom_verify&lt;/tt&gt;, callers should use
+&lt;tt&gt;SSL_get0_ech_name_override&lt;/tt&gt; to verify the certificate with the public
+name. If using the built-in verifier, the &lt;tt&gt;X509_STORE_CTX&lt;/tt&gt; will be
+configured automatically.&lt;/p&gt;
+
+&lt;p&gt;If no other errors are found in this handshake, it will fail with
+&lt;tt&gt;SSL_R_ECH_REJECTED&lt;/tt&gt;. Since it didn&amp;rsquo;t use the true parameters, the
+connection cannot be used for application data. Instead, callers should handle
+this error by calling &lt;tt&gt;SSL_get0_ech_retry_configs&lt;/tt&gt; and retrying the
+connection with updated ECH parameters. If the retry also fails with
+&lt;tt&gt;SSL_R_ECH_REJECTED&lt;/tt&gt;, the caller should report a connection failure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;a-walk-through-which-pieces-needs-to-do-what&#34;&gt;A walk through which pieces needs to do what&lt;/h2&gt;
+
+&lt;p&gt;Let us return to the Python example to go through the pieces needed to implement
+ECH there.  Starting at the lowest level, the Python &lt;tt&gt;ssl&lt;/tt&gt; is built on
+top of OpenSSL, so the new ECH functions in OpenSSL need to be included and
+exposed in &lt;tt&gt;ssl&lt;/tt&gt;&amp;rsquo;s API.  Unlike with a plain TLSv1.3 connection,
+&lt;tt&gt;ssl&lt;/tt&gt; would not set up an ECH connection without additional configuration
+as long as &lt;tt&gt;ssl&lt;/tt&gt; does not include the additional DNS requirements needed
+to fetch the ECH Config.  The DNS could instead be implemented in the HTTP
+library.  Requests is built on top of urllib3, so urllib3 could implement
+HTTPS/SVCB handling.  Then Requests would automatically get ECH connections.
+Since it can be necessary to handle the ECH Config outside of DNS, urllib3 and
+Requests could provide methods for the app to submit the ECH Config.  This would
+mean overriding any HTTPS/SVCB handling in Requests and urllib3.&lt;/p&gt;
+
+&lt;p&gt;Based on this outline, these are the pieces that need to be implemented:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS/SVCB DNS queries for getting ECH Config Lists, IP, and other config.&lt;/li&gt;
+&lt;li&gt;A way to provide ECH Config Lists as bytes directly to the &lt;tt&gt;ssl&lt;/tt&gt; module.&lt;/li&gt;
+&lt;li&gt;A method to ensure encrypted DNS is used so all metadata is encrypted.&lt;/li&gt;
+&lt;li&gt;A method to enable and disable GREASE, ideally with GREASE default on.&lt;/li&gt;
+&lt;li&gt;A callback that gets called whenever ECH negotiation fails and the server
+offers a &amp;ldquo;Retry Config&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Potentially also controls of what to send in the &lt;em&gt;ClientHelloOuter&lt;/em&gt; versus the
+&lt;em&gt;ClientHelloInner&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From the point of view of the client implementation, there is a big difference
+between TLS before and after ECH.  This new complexity may look scary but this
+is a clear path to providing strong privacy protections with TLS that can be as
+widely deployed as TLSv1.3 is now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New insights into clean analytics</title>
+      <link>https://guardianproject.github.io/info/2021/03/02/new-insights-into-clean-analytics/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/03/02/new-insights-into-clean-analytics/</guid>
+      <description>
+
+&lt;p&gt;There is a giant problem with the &amp;ldquo;collect it all&amp;rdquo; status quo that pervades on the Internet, this has been clear for a long time.  Tracking people has become so &lt;a href=&#34;https://www.ghostery.com/study/&#34;&gt;widespread&lt;/a&gt; that &lt;a href=&#34;https://noyb.eu&#34;&gt;organizations&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org&#34;&gt;communities&lt;/a&gt;, &lt;a href=&#34;https://exodus-privacy.eu.org&#34;&gt;projects&lt;/a&gt; and &lt;a href=&#34;https://privacylab.yale.edu/&#34;&gt;university&lt;/a&gt; &lt;a href=&#34;https://privacylab.at&#34;&gt;labs&lt;/a&gt; have sprung up dedicated to detecting and publicizing their presence.  Data and analytics are clearly useful for software creators and funders, but they also easily lead to harming people&amp;rsquo;s privacy and well-being.  The past year of work on Clean Insights has clarified our goals to make analytics possible without injuring the very people we aim to serve.  Clean Insights takes the world of data analytics and turns it on its head.   The Clean Insights approach starts with thinking about the data, then choosing only the data that is clearly safe to use.  A user&amp;rsquo;s location, complete device description, or other identifying information is dangerous to gather.  A simple count of how many times a feature was used, or a webpage was visited, can be gathered without links to people.&lt;/p&gt;
+
+&lt;p&gt;There are some widely known efforts for preserving privacy when doing analytics.  The most famous is perhaps &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Differential_privacy&#34;&gt;differential privacy&lt;/a&gt;&amp;rdquo;, which is used by the US Census Bureau and Apple.  This approach has certain assumptions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Personally Identifiable Information (PII) is collected and stored.&lt;/li&gt;
+&lt;li&gt;A legal compliance team reviews the legal ramifications of storing PII.&lt;/li&gt;
+&lt;li&gt;A security team defends the stored data.&lt;/li&gt;
+&lt;li&gt;Administrative staff handles compliance with data regulations.&lt;/li&gt;
+&lt;li&gt;A PR team to do outreach when PII is leaked or spilled.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These assumptions are only possible for large, well-funded organizations to fulfill.  Apple already has extensive staff around the world to handle all this.  A dissident newspaper from a small country does not.  Metrics are nonetheless valuable for this dissident newspaper, and for so many other small- and medium-sized organizations.  So Clean Insights starts with different core assumptions that are much more broadly applicable:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;As little data as possible is stored to reduce the security and leakage risks.&lt;/li&gt;
+&lt;li&gt;The stored data does not reveal identities if made public.&lt;/li&gt;
+&lt;li&gt;Legal review is reduced as much as possible.&lt;/li&gt;
+&lt;li&gt;No expensive computing resources required.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/understanding-differential-privacy-matters-digital-rights/&#34;&gt;&lt;img src=&#34;local-vs-global.png&#34; alt=&#34;Clean Insights vs differential privacy&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;starting-out-with-clean-insights&#34;&gt;Starting out with Clean Insights&lt;/h2&gt;
+
+&lt;p&gt;In order to make the Clean Insights approach work, it must start with &lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-design/-/blob/master/docs/Clean%20Insights%20-%20%20Feb%202020.pdf&#34;&gt;thinking about the data&lt;/a&gt;.  When setting up metrics and analytics, there is a natural temptation to want to have all the information.  We recommend starting with a very small set of safe measurements as a way to avoid temptation, which might lead the project into hazardous ground.  For web server logs, start by eliminating the PII at the source: use a privacy log configuration for &lt;a href=&#34;https://guardianproject.info/2017/06/08/tracking-usage-without-tracking-people/&#34;&gt;Apache&lt;/a&gt; or &lt;a href=&#34;https://f-droid.org/2019/04/15/privacy-preserving-analytics.html&#34;&gt;NGINX&lt;/a&gt;. Or use a &lt;a href=&#34;https://gitweb.torproject.org/webstats.git/tree/src/sanitize.py&#34;&gt;sanitizing script&lt;/a&gt;.  For other scenarios, do a quick review and see what kinds of counts can be easily and safely gathered and start with those.  These are not always easy questions to answer.  What kind of data is available?  What can that data actually tell us?  What are the risks of gathering and storing that data?  One of the safest types of useful data is simple counts of events.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How many times did an image fail to download?&lt;/li&gt;
+&lt;li&gt;How many conversations do users have open?&lt;/li&gt;
+&lt;li&gt;How many notifications are swiped away without being viewed?&lt;/li&gt;
+&lt;li&gt;How long did users wait for Tor to be available?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The existing analytics tools skirt this step, instead making it easy to gather as much as possible.  They can then rapidly display all sorts of pretty graphs and charts derived from the data.  That points to another key problem with the status quo in metrics: the emphasis on what it easy to represent.  When there is a big pile of &amp;ldquo;collect it all&amp;rdquo; data, there are many views that analytics packages instantly provide.  This is often in conflict with what is actually valuable.  These instant graphs oversimplify things, making it easy to forget that good metrics come from first thinking in depth about the problems that can be solved by metrics.  The old adage is &lt;a href=&#34;https://en.wikipedia.org/wiki/Garbage_in,_garbage_out&#34;&gt;garbage in, garbage out&lt;/a&gt;.  Data about campaigns that is easy to graph may end up leading the effort astray if the valuable metrics are hidden behind lots of pretty charts that distract.&lt;/p&gt;
+
+&lt;p&gt;One recent example of gathering less data is GitHub: they recently &amp;ldquo;&lt;a href=&#34;GitHub got rid of cookie consent screen https://www.theregister.com/2020/12/17/github_will_no_longer_present/&#34;&gt;removed all non-essential cookies&lt;/a&gt;&amp;rdquo;.  Their analytics did not need the extra data those cookies provided.  On top of that, using such tracking methods now requires an &lt;a href=&#34;https://www.smashingmagazine.com/2021/03/state-gdpr-2021-cookie-consent-designers-developers/&#34;&gt;extensive and complicated&lt;/a&gt; design process.&lt;/p&gt;
+
+&lt;h2 id=&#34;stored-data-needs-maintenance&#34;&gt;Stored data needs maintenance&lt;/h2&gt;
+
+&lt;p&gt;Large collections of PII are valuable to others besides the software designers.  Databases are routinely stolen.  Tracking is also very useful to attackers to find their targets.  PII is also key for building a social graph,  which can be used to uncover networks of dissidents.  Or sometimes it is just vandalism, and the private data is simply dumped onto the open internet.&lt;/p&gt;
+
+&lt;p&gt;Then there are data regulations like the EU&amp;rsquo;s GDPR.  They require that services turn over all the user&amp;rsquo;s personal data when they request it.  Users can also request that their data be deleted.  Implementing such a system is a chunk of work.  First, figure out up front what data is being either deliberately or inadvertently collected. Then compare that to which data is actually technically required.  From that perspective, it is possible to eliminate the need for a complicated system managing user data by ensuring that PII is not gathered at all.  That can also eliminate unwanted surprises down the line. If you find out after years of running a service that you have been collecting personal data, and users make requests, you might suddenly have a pile of work tracking down all that data and assembling it for delivery to the user.  A bug in that system could then leak data to the wrong user, which can lead to large fines from regulators.&lt;/p&gt;
+
+&lt;h2 id=&#34;measure-responsibly&#34;&gt;Measure responsibly&lt;/h2&gt;
+
+&lt;p&gt;Even with all these methods to do metrics more responsibly, the question remains: does it need to be measured?  There are working projects that have achieved widespread adoption and usage without tracking users.  Debian and F-Droid have risen while not really gathering many metrics at all.  It is not always a simple question: so many important problems require grant funding to solve.  Yet many funders require extensive metrics.  Digital privacy tools have been largely funded by governments, from Tor to Signal.   Governments should measure and evaluate the projects they are funding.  Governments should also be open about the data they have.  The well-established methods governments use to track projects require lots of data, including PII.  This is a catch-22 when working on software privacy, where the goal is to make it impossible to gather PII.  Government-funded agencies like &lt;a href=&#34;https://opentech.fund&#34;&gt;OTF&lt;/a&gt; funded so many key privacy tools. They put a lot of work into running government-funded grants without requirements to track their users.  This meant pushing back against the US Federal Government&amp;rsquo;s widespread policies about measurement and evaluation.  Using metrics based on safe data sources means projects can provide useful analytics and strong privacy at the same time.  Even when considering that usability and user research are &lt;a href=&#34;https://guardianproject.github.io/info/2021/02/18/usability-the-wonderful-powerful-idea-that-betrayed-us/&#34;&gt;central&lt;/a&gt; to driving the big tracking companies&amp;rsquo; ever expanding data collection, we believe that usability and user research can still be done responsibly.  It is possible to use data to inform UX Design without tracking people at all.  As these techniques are widely adopted, they will also help designers focus on what is most important, thereby delivering better digital experiences for users.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking usage without tracking people</title>
+      <link>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</link>
+      <pubDate>Thu, 08 Jun 2017 10:58:53 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</guid>
+      <description>&lt;p&gt;One thing that has become very clear over the past years is that there is a lot of value in data about people. Of course, the most well known examples these days are advertising and spy agencies, but tracking data is useful for many more things. For example, when trying to build software that is intuitive and easy to use, having real data about how people are using the software can make a massive difference when developers and designers are working on improving their software. Even in the case of advertisers, they mostly do not care exactly who you are, they want to know what you are interested in so that they can more effectively promote things to you.&lt;/p&gt;
+
+&lt;p&gt;From the beginning Guardian Project has focused on privacy, and worked to practice what we preach in our own software. For example, we have entirely disabled Apache web logs on our website for the past couple of years, so that we would not even have access to that rich data. We felt that we could not even store that data without fear of violating people’s privacy, let alone working with it.&lt;/p&gt;
+
+&lt;p&gt;Things have changed in the past few years, and there are now a number of well tested techniques for tracking how people are using software without actually tracking who they are. It is now possible to keep some usage data while feeling safe that no one who might get that data could use it to identify individuals. One good example of this is the &lt;a href=&#34;https://metrics.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor Project’s tracking data&lt;/a&gt;. They provide a wide variety of tracking data to follow how Tor is being used, and how well the Tor network is operating.&lt;/p&gt;
+
+&lt;p&gt;So we believe that it is now possible to responsibly track usage without violating anyone’s privacy. One piece of work along these lines is the new &lt;a href=&#34;https://github.com/cleaninsights/cleaninsights-android-sdk&#34; target=&#34;_blank&#34;&gt;Clean Insights Android SDK&lt;/a&gt;. Nathan is leading the development of that effort. And this blog post announces another new development that we are starting: tracking usage data from F-Droid app repositories.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry-300x133.png&#34; alt=&#34;tracking by country&#34; width=&#34;300&#34; height=&#34;133&#34; class=&#34;aligncenter size-medium wp-image-13632&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry-300x133.png 300w, https://guardianproject.info/wp-content/uploads/2017/06/bycountry.png 747w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To start with, the Apache web logs for this site will be configured to store, but only information that is not fine-grained enough to identify people:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only the date is stored, not the time or time zone&lt;/li&gt;
+&lt;li&gt;Referer, IP Addresses, User Agent are never stored&lt;/li&gt;
+&lt;li&gt;country is stored by looking up the IP Address in the &lt;em&gt;geoip&lt;/em&gt; database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Normally, a log entries look like:&lt;/p&gt;
+
+&lt;pre&gt;189.4.73.81 testy.at.or.at - [08/Jun/2017:13:55:46 +0200] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;F-Droid&#34;
+119.29.81.134 199.119.112.126 - [08/Jun/2017:14:46:48 -0400] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;http://testy.at.or.at/fdroid/repo/index-v1.jar&#34; &#34;Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)&#34;
+&lt;/pre&gt;
+
+&lt;p&gt;This stripped version looks like:&lt;/p&gt;
+
+&lt;pre&gt;0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;-&#34; AT
+0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;-&#34; ZH
+&lt;/pre&gt;
+
+&lt;p&gt;Since the raw data is processed by the webserver, the extra information will be discarded and never written to disk. Only the sanitized usage tracking information is ever stored. This is based on Tor Project’s &lt;a href=&#34;https://gitweb.torproject.org/webstats.git/tree/src/sanitize.py&#34; target=&#34;_blank&#34;&gt;web tracking&lt;/a&gt;. It is possible to do this with &lt;em&gt;Apache&lt;/em&gt;, &lt;em&gt;lighttpd&lt;/em&gt;, &lt;em&gt;nginx&lt;/em&gt;, and probably other webservers. For &lt;em&gt;Apache&lt;/em&gt;, &lt;a href=&#34;https://github.com/maxmind/geoip-api-mod_geoip2/blob/master/INSTALL.md#configuration&#34;&gt;&lt;i&gt;mod_geoip&lt;/i&gt;&lt;/a&gt; needs to be installed, then only a single line is needed to configure this private logging mode:&lt;/p&gt;
+
+&lt;pre&gt;LogFormat &#34;0.0.0.0 - %u %{[%d/%b/%Y:00:00:00 %z]}t \&#34;%r\&#34; %&gt;s %b \&#34;%{Referer}i\&#34; \&#34;-\&#34; %{GEOIP_COUNTRY_CODE}e&#34; privacy+geo
+CustomLog ${APACHE_LOG_DIR}/access.log privacy+geo
+&lt;/pre&gt;
+
+&lt;p&gt;Now, we hope that we can work towards providing value from tracking data, without violating anyone’s privacy. Indeed, we are still prioritizing privacy over any value derived from tracking data. So anyone else who also wants to go follow this route needs to be fully aware that any tracking must be very carefully done, since it can easily result in inadvertent leaks. Do not take this as a stamp of approval on any tracking activity!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;a href=&#34;https://labs.riseup.net/code/issues/8143&#34; target=&#34;_blank&#34;&gt;HTTPS to get security updates&lt;/a&gt; improves this situation a lot, but by measuring the size of data transfers, it is still possible to &lt;a href=&#34;http://www0.cs.ucl.ac.uk/staff/G.Danezis/papers/TLSanon.pdf&#34; target=&#34;_blank&#34;&gt;track which files are being downloaded&lt;/a&gt;. A Tor Onion Service provides end-to-end encryption like the HTTPS connection. It also mixes up the traffic with lots of other traffic, so its not easy to see what traffic goes together. That makes it a lot harder for a network observer to tell when a security update is being downloaded. Additionally, using a Tor Onion Service forces the traffic over Tor, so that the Debian mirror server cannot see which server is requesting the updates. That helps prevent targeted attacks.&lt;/p&gt;
+
+&lt;p&gt;There are other benefits as well, besides just for the person running the high security server in this example, especially if all of the traffic is coming over Tor. When updates are delivered over Tor, then that means the Debian mirror operators have less to worry about because they are handling less metadata that might have privacy concerns. It means that when law enforcement requests logs from the mirror operators, the mirror operators can more easily hand over anything they have since the mirror operator knows that there is not private information in the logs. Reducing the legal risks and privacy concerns makes it easier to run mirrors, and that helps internet services work better.&lt;/p&gt;
+
+&lt;p&gt;One disadvantage of this approach as it now stands is that your server will get updates from the same mirror every time. There is only a single Tor Onion Service for the main archive. An alternate approach using the combination of Tor and &lt;a href=&#34;http://httpredir.debian.org/&#34;&gt;http://httpredir.debian.org/&lt;/a&gt; as the package source means that your server will get updates from a different mirror each time Tor changes its exit node (I believe that’s every 10 minutes or so).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How can you set up your Debian machine to get updates over Tor?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg&#34; alt=&#34;debian and tor&#34; width=&#34;300&#34; height=&#34;173&#34; class=&#34;alignright size-medium wp-image-13395&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-768x444.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Right now, the best way to set up a Debian machine to force traffic over Tor is to use &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy&#34; target=&#34;_blank&#34;&gt;transparent proxying&lt;/a&gt; via &lt;em&gt;iptables&lt;/em&gt; rules. If you have that setup, then you can add the onion addresses as Debian apt sources as if they are any other HTTP Debian mirror. Another option is to install &lt;em&gt;apt-transport-tor&lt;/em&gt; like TAILS does, then you can use &lt;a href=&#34;http://people.skolelinux.org/pere/blog/Always_download_Debian_packages_using_Tor___the_simple_recipe.html&#34; target=&#34;_blank&#34;&gt;special syntax to add the Tor Onion Services&lt;/a&gt;. And another way is to install an HTTP proxy like &lt;em&gt;privoxy&lt;/em&gt; and enable apt HTTP proxy support as &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;I described before&lt;/a&gt;. The &lt;em&gt;apt-transport-tor&lt;/em&gt; and &lt;em&gt;privoxy&lt;/em&gt; approaches both have the downside of having to trust an added piece of software, whereas the transparent proxy technique uses what is already present in the Linux kernel. I’ve been using the &lt;em&gt;privoxy&lt;/em&gt; method since that is what I got working in 2014 and it has been working reliably on multiple servers since then. Also, I need &lt;em&gt;privoxy&lt;/em&gt; installed for another application anyway.&lt;/p&gt;
+
+&lt;p&gt;Here’s how to set up the apt sources to get packages and updates via Tor Onion Services without delaying security updates. First, remove &lt;em&gt;/etc/apt/sources.list&lt;/em&gt; and &lt;em&gt;/etc/apt/sources.list.d/*.list&lt;/em&gt; to start with a clean slate. Next add &lt;em&gt;/etc/apt/sources.list.d/00.vwakviie2ienjx6t.onion.list&lt;/em&gt; to get the main Debian repositories:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://vwakviie2ienjx6t.onion/debian/ jessie main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie main
+
+# aka volatile
+deb http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+
+deb http://vwakviie2ienjx6t.onion/debian jessie-backports main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-backports main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next add the new Tor Onion Service for the security update repository at &lt;em&gt;/etc/apt/sources.list.d/00.sgvtcaew4bxjd7ln.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://sgvtcaew4bxjd7ln.onion/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then last, include the normal HTTP security.debian.org archive to ensure that your server gets the latest security updates, even if the &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Onion Service mirror&lt;/a&gt; is behind or there is some other issue related to Tor. This goes in &lt;em&gt;/etc/apt/sources.list.d/99.security.debian.org.list&lt;/em&gt; to ensure that it is always the last repository that is tried, and apt loads files from /etc/apt/source.list.d/ in alphabetical order, so it’ll always try to get the security updates from the Onion Service before falling back to the HTTP source as a last resort.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://security.debian.org/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also run an unofficial mirror of the security updates on &lt;a href=&#34;http://dju2peblv7upfz3q.onion/debian&#34;&gt;http://dju2peblv7upfz3q.onion/debian&lt;/a&gt; if you want to add another backup, i.e. &lt;em&gt;/etc/apt/sources.list.d/00.dju2peblv7upfz3q.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Experimental app to improve privacy in location sharing</title>
+      <link>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</link>
+      <pubDate>Thu, 29 Jan 2015 07:36:58 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png&#34; alt=&#34;ic_launcher-web&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-12835&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-230x230.png 230w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png 512w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;As part of the T2 Panic effort, I’ve recently been diving deep into the issues of sharing location. It is unfortunately looking really bad, with many services, including Google, frequently sharing location as plain text over the network. I’ve started to write up some of the issues &lt;a href=&#34;https://guardianproject.github.io/info/tag/panic&#34;&gt;on this blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As part of this, I’ve put together an experimental Android app that aims to act as a privacy filter for all ways of sharing location. Mostly, that means it accepts all sorts of URLs from location services, and tries to parse the location from the URL, then rewrites it into a &lt;a href=&#34;http://geouri.org&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;geo:&lt;/code&gt; URI&lt;/a&gt;, which is the standard way to share location in Android (and hopefully soon all others). As of ChatSecure v14.1.0, these &lt;code&gt;geo:&lt;/code&gt; URLs are also clickable.&lt;/p&gt;
+
+&lt;p&gt;Many URLs are not parsable, like &lt;code&gt;http://goo.gl/maps/Cji0V&lt;/code&gt;. LocationPrivacy then goes online and to try to fetch the location. This should happen over Tor, but it does not yet. You have been warned! Otherwise, it changes the URL to &lt;code&gt;HTTPS&lt;/code&gt; on services that support it.&lt;/p&gt;
+
+&lt;p&gt;You can get LocationPrivacy from all the usual channels, including on FDroid in the Guardian Project repo:&lt;br /&gt;
+&lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;https://f-droid.org&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/fdroid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;https://guardianproject.info/fdroid&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Or from Google Play:&lt;br /&gt;
+&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Source code:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/LocationPrivacy&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/LocationPrivacy&#34;&gt;https://github.com/guardianproject/LocationPrivacy&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Report issues here:&lt;br /&gt;
+&lt;a href=&#34;https://dev.guardianproject.info/projects/panic/issues&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/panic/issues&#34;&gt;https://dev.guardianproject.info/projects/panic/issues&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Please do not rely on this app for strong privacy, it is still very much a new, beta app.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sharing your location privately</title>
+      <link>https://guardianproject.github.io/info/2015/01/23/sharing-your-location-privately/</link>
+      <pubDate>Fri, 23 Jan 2015 15:00:10 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/23/sharing-your-location-privately/</guid>
+      <description>&lt;div id=&#34;attachment_12774&#34; style=&#34;width: 298px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12774&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location-576x1024.png&#34; alt=&#34;Facebook location sharing embeds the location in every single message, providing a detailed log to the recipient, Facebook, and anyone Facebook shares that data with&#34; width=&#34;288&#34; height=&#34;512&#34; class=&#34;size-large wp-image-12774&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location.png 576w, https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location-169x300.png 169w&#34; sizes=&#34;(max-width: 288px) 100vw, 288px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12774&#34; class=&#34;wp-caption-text&#34;&gt;
+    Facebook location sharing embeds the location in every single message, providing a detailed log to the recipient, Facebook, and anyone Facebook shares that data with
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One handy feature that many smartphones give us is the ability to easily share our exact position with other people. You can see this feature in a lot of apps. Google Maps lets you click “Share” and send a URL via any method you have available. In Facebook Messenger, you can click a button and the people on the other side of the chat will receive a little embedded map showing the received location. Of course, the question we always ask is: how can we do this in a privacy-preserving way? And the follow up question: what kinds of information are apps leaking, storing, using, etc? Location is especially valuable and sensitive metadata, especially when there is a lot of it, because it can be used to derive so much information about a person. Most people do not want to publicly post their phone number or home address on the internet, yet are unwittingly giving away far more detailed information by using the various location-based services that are available. There is a lot of specific location information that people do not want to publicize that they visit: a cancer specialist, an abortion clinic, a criminal court, a mistress’ house, or any location information to an abusive spouse. For a great illustration of the power of location metadata, you can watch &lt;a href=&#34;http://www.zeit.de/datenschutz/malte-spitz-data-retention&#34; target=&#34;_blank&#34;&gt;an animation of German politician Malte Spitz’s life, based on his telephone metadata that his telecom had stored&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Google, Facebook, and so many others make money by collecting as much data on their users as possible, then selling access to that data to their customers. So both those companies have incentives to make sure that you will always share your location information with them as well. The question is: are they treating this information as carefully as you would? In China, the indigenous services are much more popular than most foreign alternatives. The Chinese companies are good at making products that are popular with Chinese users, and since they collaborate with the government censorship and tracking, it is easier for them to do business in China. This combination often means that Chinese companies put security and privacy at a very low priority, even though they could comply with the Chinese law while improving their security. A good example of this is the fact that none of the major map providers in China (Baidu, Amap, or QQ) provide even an optional HTTPS interface. They only have unencrypted communications, which allows lots of people easy access to snooping, including anyone who is on the same wifi network as you are.&lt;/p&gt;
+
+&lt;p&gt;The tools for tracking people via location data are getting better, cheaper, and more available. One funny example is &lt;a href=&#34;https://iknowwhereyourcatlives.com/&#34; target=&#34;_blank&#34;&gt;I Know Where Your Cat Lives&lt;/a&gt;, which shows the locations of cat pictures found on the public internet via the geo location included in the EXIF image data.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12793&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://iknowwhereyourcatlives.com&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12793&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives-300x188.jpg&#34; alt=&#34;I know where your cat lives!&#34; width=&#34;300&#34; height=&#34;188&#34; class=&#34;size-medium wp-image-12793&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives-300x188.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives.jpg 768w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12793&#34; class=&#34;wp-caption-text&#34;&gt;
+    I know where your cat lives!
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Location and Panic&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One use that we are particularly interested in is sending location to trusted contacts when a panic button is pressed. When thinking about panic button features, privacy must be a central concern. When someone triggers their panic button, it is clearly a sensitive situation. That means that leaking more location information could exacerabate the situation. Since sending location is a useful and popular feature, it is important to consider the whole picture of where that location information might go. To start with, the panic message needs to be sent using a method that will reliably reach its intended destination. Unfortunately, that often means using insecure communications like SMS, or an app that is fully tapped by the same government that is detaining the user, like WeChat. Part of this T2 Panic research and development effort is focused on how to make a complete, secure panic solution. So we will also focus on making ChatSecure and other secure communications an available channel for sending panic messages.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://panicbutton.io&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/activate1-150x150.jpg&#34; alt=&#34;activate1&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-12805&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/activate1-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/01/activate1-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/01/activate1-230x230.jpg 230w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;The next step is to break down the entire path of where that location information might be intercepted. The first place is on the sending device itself. The panic message will stored with the sent messages with most communications apps, and that can recovered by whoever is detaining the user. Even if the device is encrypted, it is very likely the user can be compelled to unlock the device. So the panic message should be designed with that in mind.&lt;/p&gt;
+
+&lt;p&gt;So if we consider a fully anonymous method of communication, like ChatSecure’s “Secret Identity”, then protecting the location information becomes important even if all of the messages and their recipients are recovered from the sending device. The full “Secret Identity” procedure of creating an account per person you want to chat with, and only using that single account to communicate with that other person. It has been outlined by many people, including Laura Poitras when describing how she communicates with Edward Snowden. In this case, even if someone recovers the recipient address, all they will have is an anonymously created account with no other links to other accounts. Then location URL then becomes a way to deanonymize the recipient. First, if the URL takes the recipient to an unencrypted connection, then that it is easy to track. Even with an encrypted connection, if the server providing the map service is providing information to the government, then the encrypted connection will not help. Making this connection over Tor will also help since the map service will not be able to see the IP address of the device where the user clicked on this URL. Now consider a location URL using Google Maps, or any similar service where users frequently login. If the original panic message was sent using such a URL, and the recipient was a regular user of a service that used logins, then that login information would deanonymize the recipient if they viewed the location URL in a browser where they were also logged in with their normal Google account.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User Stories&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This can perhaps be better illustrated using some quick user stories:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A journalist and a source set up Secret Identities in ChatSecure devoted to each other when they met up in person. Each have panic buttons set up to contact the other in case of emergency. The journalist uses &lt;a href=&#34;https://openstreetmap.org&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;http&lt;strong&gt;s&lt;/strong&gt;://openstreetmap.org&lt;/code&gt;&lt;/a&gt; to generate a shortlink that points to the chosen meeting location, then sends it to the source using the Secret Identity, &lt;a href=&#34;http://osm.org/go/0ju_SMlBn&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;http://osm.org/go/0ju_SMlBn&#34;&gt;http://osm.org/go/0ju_SMlBn&lt;/a&gt;&lt;/code&gt;&lt;/a&gt;. The source clicks the link, and chooses to open the link in Firefox. Therefore, the website is shown using an unencrypted, direct connection, which is easily observed. Even though the recipient has HTTPS Everywhere set up in his browser to force HTTPS for openstreetmap.org, the osm.org shortlink does not currently have working HTTPS so it is an HTTP link. This shortlink is now a unique ID that links the journalist and source’s real IP address. If the source was using a cellular internet connection, then this will also link the IP address to the devices IMEI unique ID. The IMEI is then quite easy to link to a real identity information.&lt;/li&gt;
+&lt;li&gt;A circle of activists all set each other up with a panic button app on burner Android phones. They only use these burner phones to communicate with each other. They prepare in advance to discard all the phones in case someone triggers the panic. One activitist gets detained by the secret police and triggers the panic. The secret police get the panic message and all the other phone numbers from the detainee’s phone, but the activists are no longer using those phones so they cannot be tracked by them. The activists manually copy the Google Maps shortlink &lt;a href=&#34;https://goo.gl/maps/Cji0V&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;https://goo.gl/maps/Cji0V&#34;&gt;https://goo.gl/maps/Cji0V&lt;/a&gt;&lt;/code&gt;&lt;/a&gt; to their computer to find out where the detainee is. They type the map link into Internet Explorer, making sure to type HTTPS, and then again confirm that the webpage is still using an HTTPS link. What they did not see is that the shortlink first redirected to a HTTP link &lt;a href=&#34;http://maps.google.com/?q=28.118860,98.008069&amp;hl=en&amp;gl=us&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;http://maps.google.com/?q=28.118860,98.008069&amp;amp;hl=en&amp;amp;gl=us&#34;&gt;http://maps.google.com/?q=28.118860,98.008069&amp;amp;hl=en&amp;amp;gl=us&lt;/a&gt;&lt;/code&gt;&lt;/a&gt;, which leaked the location in plain text. Since this URL describes a very specific point, the secret police use this as a data point to search for the IP address of all devices that have accessed that URL. Those IP addresses divulge the locations of all the activists who viewed the map URL, and provide the secret police a method for tracking them all.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I did not cover other more common use cases here because there are so many leaks that the protections presented are moot. All is not lost, there is still a lot that you can do to improve things. First off, we recommend using map apps that can work fully offline. For Android, &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.osmand&#34; target=&#34;_blank&#34;&gt;Osmand&lt;/a&gt; is the best one out there, it uses OpenStreetMap data which can be freely downloaded. It is also important to encourage developers to improve the privacy of their apps. Since we are software developers, we file bug reports and make pull requests to nag location-related projects to improve their security. Here are some recent examples of what we have contributed:&lt;/p&gt;
+
+&lt;p&gt;OpenStreetMap&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Issue #799: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/799&#34; target=&#34;_blank&#34;&gt;Implement &lt;code&gt;geo:&lt;/code&gt; URLs for sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Issue #870: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/870&#34; target=&#34;_blank&#34;&gt;share makes HTTP url even when connecting via HTTPS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Issue #862: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/862&#34; target=&#34;_blank&#34;&gt;support osm.org in HTTPS certificate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Osmand&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pull #1033: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1033&#34; target=&#34;_blank&#34;&gt;modernize location sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pull #1043: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1043&#34; target=&#34;_blank&#34;&gt;add support for a proxy and use more HTTPS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pull #1045: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1045&#34; target=&#34;_blank&#34;&gt;update URL parsing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will be following up with further posts on this topic with more detail, including research into what is possible to derive from location data, technical details of issues, and possible solutions and work that can be done to improve things.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Weather Report On Security</title>
+      <link>https://guardianproject.github.io/info/2013/06/14/a-weather-report-on-security/</link>
+      <pubDate>Fri, 14 Jun 2013 13:22:28 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/06/14/a-weather-report-on-security/</guid>
+      <description>&lt;p&gt;How’s the weather outside? Sunny with a chance of IP blocking.&lt;/p&gt;
+
+&lt;p&gt;We recently launched a new initiative we’re calling: &lt;a href=&#34;https://guardianproject.info/code/weatherrepo/&#34; title=&#34;The Weather Repo&#34;&gt;The Weather Repo&lt;/a&gt;. The goal of the project is for organizations to have a more accurate method of understanding whether the apps they’re using are “safe”. It’s hard to know whether apps that claim to be secure really are. Have they been vetted by a third party? Are there existing case studies? Has a threat analysis been performed?&lt;/p&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;http://weatherrepo.com&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;aligncenter size-medium wp-image-4240&#34; alt=&#34;weatherrepo1&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/06/weatherrepo1-300x300.png&#34; width=&#34;300&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/06/weatherrepo1-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/06/weatherrepo1-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/06/weatherrepo1.png 512w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;We’ve been developing an app store recommendation engine for circumvention tools. One that is backed by better, more open metadata; and interfacing with better, more open repositories. The “better, more open metadata” endeavor is now being pursued by a coalition led by the &lt;a title=&#34;open integrity initiative&#34; href=&#34;https://openintegrity.org/&#34; target=&#34;_blank&#34;&gt;Open Integrity Initiative&lt;/a&gt;. As founding members of the group supporting this initiative, we’ve been working closely to develop tools based on the research and metadata frameworks that they’re contributing. Metadata will be culled from other sources to supplement this approach and allow for a comprehensive scan of the entire app ecosystem.&lt;/p&gt;
+
+&lt;p&gt;The success of the project mainly lays in the fact that the crucial groundwork has been laid for our goal of helping organizations make sense of whether the tools they’re using are “safe” or not. We’ve created an API allowing any organization to take our lessons as well as information and apply it. The growing number of efforts in the security and privacy space, as well as our own goal of a publicly facing “app bazaar” are not possible without groundwork such as this and we’re proud to have been able to produce it.&lt;/p&gt;
+
+&lt;p&gt;Our finished API is now documented at &lt;a href=&#34;http://weatherrepo.com/api/&#34;&gt;http://weatherrepo.com/api&lt;/a&gt; . We put up a blog to post about the project and updates of news and events, available at &lt;a href=&#34;http://weatherrepo.com/report&#34;&gt;http://blog.weatherrepo.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We’re extremely interested in the concept of human unit testing and want to make sure that our apps, and the greater set of tools that are out there helping the world, are both usable and that users have the digital literacy to understand how they’re being protected by them and how not. Now that our API is finished, we’re seeding our database with content according to our original set of research questions. And we’re asking for YOUR help. Please go to &lt;a href=&#34;http://weatherrepo.com/report&#34;&gt;http://weatherrepo.com/report&lt;/a&gt; and add details about the tools that you use and/or make. Let’s populate this database together and make the world a more obviously and honestly secure place!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Carrier Grade, Verizon and the NSA</title>
+      <link>https://guardianproject.github.io/info/2013/06/12/carrier-grade-verizon-and-the-nsa/</link>
+      <pubDate>Wed, 12 Jun 2013 06:38:46 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/06/12/carrier-grade-verizon-and-the-nsa/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-4188 alignleft&#34; alt=&#34;PHONE_BOLT&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT-268x300.png&#34; width=&#34;268&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT-268x300.png 268w, https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT.png 514w&#34; sizes=&#34;(max-width: 268px) 100vw, 268px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Last week Glenn Greenwald at The Guardian broke the news that &lt;a href=&#34;http://www.guardian.co.uk/world/2013/jun/06/nsa-phone-records-verizon-court-order&#34;&gt;Verizon has been providing the NSA with metadata&lt;/a&gt; about all of the calls over a subsidiary’s network. This subsidiary is called &lt;a href=&#34;http://investing.businessweek.com/research/stocks/private/snapshot.asp?privcapId=4259068&#34;&gt;Verizon Business Network Services&lt;/a&gt;. It is a privately held company that “owns, operates, monitors, and maintains data and Internet networks in North America, Europe, Asia, Latin America, Australia, Japan, and Africa. The company provides converged communication solutions, such as local and long-distance voice, messaging, and Internet access services.” It is likely this company owns equipment that holds caller detail records for millions of customers. The order used &lt;a href=&#34;http://www.aclu.org/free-speech-national-security-technology-and-liberty/reform-patriot-act-section-215&#34;&gt;section 215 of The Patriot Act&lt;/a&gt;, which allows the FBI to order any person or entity to turn over “any tangible things,” so long as the FBI “specif[ies]” that the order is “for an authorized investigation &amp;hellip; to protect against international terrorism or clandestine intelligence activities.” The “tangible things” could have been the physical servers or hard disks that store the logged details.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/&#34;&gt;The Guardian Project&lt;/a&gt; operates a voice service called &lt;a href=&#34;https://ostel.co/&#34;&gt;ostel.co&lt;/a&gt;. This service offers secure calling and only logs metadata required for the service to operate, &lt;a href=&#34;https://ostel.co/privacy&#34;&gt;no more, no less&lt;/a&gt;. We’ve redefined what carrier grade means. Our service offers the same reliability and quality as global carriers. It goes further by including security and privacy as core features. This is something Verizon does not offer you. Ostel.co runs a full stack composed of open source software, which gives you the choice to install and operate your own service.&lt;/p&gt;
+
+&lt;p&gt;Metadata is information about information. Every call you make over a carrier’s network can carry metadata about your account ID, your caller ID, the duration of the call, the time it was placed and the caller ID of the person you called, even the location of your cellular radio. Information about your calls can be as important as the calls themselves. In many cases they are more important than the content of the calls since they don’t fall under laws requiring a warrant to intercept. Indexing and searching all customers metadata is much faster than tapping and listening in on the same customer’s calls.&lt;/p&gt;
+
+&lt;p&gt;Jane Mayer at The New Yorker gives a good example of &lt;a href=&#34;http://www.newyorker.com/online/blogs/newsdesk/2013/06/verizon-nsa-metadata-surveillance-problem.html?mbid=gnep&#34;&gt;what a service provider can learn from your metadata&lt;/a&gt;. “Personal phone calls can also reveal sensitive medical information: “You can see a call to a gynecologist, and then a call to an oncologist, and then a call to close family members.”” Metadata from one source can also be &lt;a href=&#34;http://www.technologyreview.com/view/515811/correlation-is-main-concern-over-data-verizon-gives-nsa/&#34;&gt;correlated with metadata from other sources&lt;/a&gt;, like web searches and credit card purchases. Tom Simonite at the MIT Technology Review writes that Facebook “uses obfuscated versions of its members’ phone numbers and e-mail addresses to connect its data with information that data-broker Datalogix gathers from loyalty card schemes, with the result that it is now possible for companies to connect a person’s activity on Facebook, and the ads they see, with what they buy in physical stores.”&lt;/p&gt;
+
+&lt;p&gt;Carriers operate servers that record metadata through a common software practice called logging. Each request your computer software makes to an online service can optionally log all the metadata the application can get its hands on. It is the carrier’s responsibility to define their logging policy, like what is recorded and how long it is retained. This information rarely leaves the privacy of the carrier’s internal operational documents so don’t expect to get many clear answers from them.&lt;/p&gt;
+
+&lt;p&gt;While the NSA debacle proves that global telecommunications carriers log everything and keep it around for a very long time, what if you don’t want this information about your behavior logged? Unfortunately, no carrier offers any kind of “opt out” process at this low of a level. To be fair, this information has many purposes. Caller detail records are required to bill customers on per-minute calling plans. It’s unreasonable to expect a carrier to flat out disable logging, though carriers never state that they share your logs with law enforcement without probable cause of a crime. But that is exactly what Verizon did.&lt;/p&gt;
+
+&lt;p&gt;In addition to &lt;a href=&#34;https://ostel.co&#34;&gt;ostel.co&lt;/a&gt;, there are two other independent carriers that put your privacy first. &lt;a href=&#34;https://www.whispersystems.org/&#34;&gt;Whisper Systems operates a proprietary secure voice service&lt;/a&gt; with an open source client called RedPhone. It integrates nicely with Android mobile devices, though it requires a SIM card with a phone number in select countries to sign up for an account. With a little luck in the wrong hands a phone number could disclose more information about you than your social security number. WhisperSys doesn’t publish their logging policy online.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://silentcircle.com/&#34;&gt;Silent Circle offers secure voice service&lt;/a&gt; for iPhone and Android. They are a subscription service and all client and server software is proprietary. They publish &lt;a href=&#34;https://silentcircle.com/web/privacy/&#34;&gt;an exceptionally detailed logging policy on their website&lt;/a&gt;, which includes how many law enforcement requests for information they have received twice a year.&lt;/p&gt;
+
+&lt;p&gt;Ostel.co does not log personal call details to disk, and we can’t disclose information we don’t have. IP addresses, user IDs and referrers are common points of metadata that are used to find patterns about user behavior. When the ostel.co server software requires this information to be stored, it is stored only in memory. When the system is rebooted or shut down, the information is gone forever.&lt;/p&gt;
+
+&lt;p&gt;Our service is under active development. It is currently in public beta status and new features like custom aliases, third party authentication services and federated calling are on the roadmap. The beta service will always be free.&lt;/p&gt;
+
+&lt;p&gt;For the curious, what follows is a detailed description of the logging implementation of ostel.co.&lt;/p&gt;
+
+&lt;p&gt;Caller Details Records are recorded with no identifying information. Attributes stored to disk include timestamp, duration, call state and bandwidth consumed. These pieces of metadata allow us to report on usage without identifying each user. When a monthly report is generated, the metadata is deleted.&lt;/p&gt;
+
+&lt;p&gt;The SIP server logs IP addresses of online users. This is a requirement for the SIP protocol to locate each end of the call. The contact information is logged to RAM, including the username, source IP address and source port of the registered client application. When the server is shut down or restarted, this information is erased.&lt;/p&gt;
+
+&lt;p&gt;The SIP server only logs debugging information to disk, which does not include any of the SIP information.&lt;/p&gt;
+
+&lt;p&gt;Audio data is passed through the server to work around limitations in two-way audio connectivity for common home networks. After a ZRTP key agreement, this audio is encrypted. The server cannot decrypt a call between two users, nor does the server control any of the parameters of the call. This makes calls over ostel.co function in a peer-to-peer mode similar to Skype’s “supernode” feature but without any backdoors.&lt;/p&gt;
+
+&lt;p&gt;No IP addresses are logged for any web requests. This is a simple configuration change for the reverse proxy and required a patch to the core source code of the application server framework.&lt;/p&gt;
+
+&lt;p&gt;The server stores each user’s email address, SIP username, encrypted password and account management data like when the user profile was created/updated and password reset information if the user chooses to use that feature.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing InformaCam</title>
+      <link>https://guardianproject.github.io/info/2012/01/20/introducing-informacam/</link>
+      <pubDate>Fri, 20 Jan 2012 13:58:26 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/01/20/introducing-informacam/</guid>
+      <description>
+
+&lt;p&gt;These are interesting times, if you go by Times Magazine as an indicator. The magazine’s person of the year for 2011 was The Protester, preceded in 2010 by Facebook founder Mark Zuckerberg. Both entities partners with equal stake in freely sharing the digital content that shows the world what’s going on in it, at any time, from behind any pair of eyes.&lt;img class=&#34;alignright size-medium wp-image-1471&#34; alt=&#34;The Protester: Person of the Year&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/poy_cover-225x300.jpg&#34; width=&#34;225&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/poy_cover-225x300.jpg 225w, https://guardianproject.info/wp-content/uploads/2012/01/poy_cover.jpg 474w&#34; sizes=&#34;(max-width: 225px) 100vw, 225px&#34; /&gt; Also casting in their lot with the others is Time Magazine’s 2006 person of the year, You: the You that puts the “you” in “user-generated content;” the You whose miasma of bits, bytes, and the powerful images they express are becoming increasingly problematic. Problematic and exciting. As governments, police forces, and other power players here and abroad crack down on voices of dissent, it is only You, The Protester, armed not with a press pass, but with a smartphone and a Twitter account, who brings the rest of the world its news. You do it mainly without either the support or permission of those in power, and this makes you a very important person in the world.&lt;/p&gt;
+
+&lt;p&gt;The smartphone’s role in the defense of human rights has thus become ever-more clear. How can we make it clearer? Our latest project, InformaCam, tackles this issue head-on. In collaboration with &lt;a href=&#34;https://www.witness.org/&#34; target=&#34;_blank&#34;&gt;Witness.ORG&lt;/a&gt; and the &lt;a href=&#34;www.ibanet.org/&#34; target=&#34;_blank&#34;&gt;International Bar Association&lt;/a&gt;, we’re building a powerful tool to create iron-clad digital images and video that could, should the occasion arise, be used in courts of law to bring justice. This is no small feat– with this project we are helping create the first evidentiary standards for digital media in the social networking age. So, &lt;a href=&#34;http://www.economist.com/node/21542748&#34; target=&#34;_blank&#34;&gt;there’s been a lot of excitement&lt;/a&gt; these past few weeks about InformaCam, as well as a lot of mystery. It’s time to give the project a proper unveiling.&lt;/p&gt;
+
+&lt;p&gt;InformaCam is a plugin for ObscuraCam that allows the user, without much intervention on their own part, to inflate image and video with extra points of data, or metadata. The metadata includes information like the user’s current GPS coordinates, altitude, compass bearing, light meter readings, the signatures of neighboring devices, cell towers, and wifi networks; and serves to shed light on the exact circumstances and contexts under which the digital image was taken. Some users will already be familiar with ObscuraCam, which allows for capturing and digitally manipulating media. With InformaCam included, the app starts to behave almost like Adobe Photoshop or GIMP, supporting non-destructive, layer-based edits to media. This means that a version of an image can be created with any sensitive image data and metadata preserved and encrypted to trusted entities, along with a redacted version that has its metadata stripped which can be easily shared to Facebook, Twitter, Flickr, or any public service the user wishes to use.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-informacam-works&#34;&gt;How InformaCam Works&lt;/h2&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignleft size-full wp-image-1459&#34; alt=&#34;InformaCam (1)&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM.png&#34; width=&#34;205&#34; height=&#34;341&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM.png 205w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM-180x300.png 180w&#34; sizes=&#34;(max-width: 205px) 100vw, 205px&#34; /&gt; The workflow is similar to that of ObscuraCam, but with a few key differences. Notice that on start-up, the app triggers the on-board sensors. (Notifications in the top right corner clearly indicate the GPS and Bluetooth modules have been turned on.) This allows the app to register sensory and atmospheric data throughout the session. These “bundles” of data contain the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Current timestamp&lt;/li&gt;
+&lt;li&gt;Device’s identification&lt;/li&gt;
+&lt;li&gt;User’s public (PGP) key&lt;/li&gt;
+&lt;li&gt;Image Regions created in the image/video&lt;/li&gt;
+&lt;li&gt;Current latitude &amp;amp; longitude&lt;/li&gt;
+&lt;li&gt;Current cell ID (if available)&lt;/li&gt;
+&lt;li&gt;Altitude&lt;/li&gt;
+&lt;li&gt;Compass bearing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whether the user is taking a picture, or editing an existing piece of media, the app registers the goings-on, and signs each bundle of data with the user’s private key. This mean that all actions taken on a piece of media (from capture to editing) are attributed to the user.&lt;/p&gt;
+
+&lt;p&gt;As with ObscuraCam, the user can perform image filtering and obfuscation on image regions. InformaCam also adds the “Identify” filter, which prompts the user for the subject’s name (or pseudonym) and to fill in whether or not the subject has given his or her consent to be filmed. This checklist of subject permissions can be further developed to match the needs of any organization to provide further protection to the people in front of the camera. Notice again the sensor notifications: the context surrounding each edit to the image is recorded and will be inserted into the media as metadata once the media is saved.&lt;/p&gt;
+
+&lt;p&gt;When the user saves the image or video, a dialog appears prompting her to choose one or more “trusted destinations.” This could be an organization, a news outlet, or any friend whose PGP key is known to you. A copy of the unredacted, data-rich image will be created and encrypted to those parties. At the same time, a redacted and data-stripped version is made available to share with anyone, anywhere.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td width=&#34;201&#34;&gt;
+      &lt;img class=&#34;alignnone size-full wp-image-1461&#34; alt=&#34;InformaCam (2)&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM.png&#34; width=&#34;201&#34; height=&#34;332&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM.png 201w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM-181x300.png 181w&#34; sizes=&#34;(max-width: 201px) 100vw, 201px&#34; /&gt;
+    &lt;/td&gt;
+    
+    &lt;td width=&#34;197&#34;&gt;
+      &lt;img class=&#34;alignnone size-full wp-image-1462&#34; alt=&#34;InformaCam (3)&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM.png&#34; width=&#34;197&#34; height=&#34;330&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM.png 197w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM-179x300.png 179w&#34; sizes=&#34;(max-width: 197px) 100vw, 197px&#34; /&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;i&gt;Using the InformaCam “Identify” filter.&lt;/i&gt;
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      &lt;i&gt;Select a Trusted Destination for your encrypted media.&lt;/i&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;the-informa-metadata-schematic&#34;&gt;The Informa Metadata Schematic&lt;/h2&gt;
+
+&lt;p&gt;The metadata is organized in four categories: intent, consent, geneaology, and data. Here’s a rundown of what these categories mean.&lt;/p&gt;
+
+&lt;h3 id=&#34;intent&#34;&gt;Intent&lt;/h3&gt;
+
+&lt;p&gt;This expresses information about the media’s creator, and the rules governing how this particular media object can be shared, and to whom.&lt;/p&gt;
+
+&lt;h3 id=&#34;consent&#34;&gt;Consent&lt;/h3&gt;
+
+&lt;p&gt;This bucket of information regards the subjects contained in the image. Each subject is identified (by a name or pseudonym selected by the user) along with their stated preferences regarding treatment of their likeness. For example, if Bobby insists that he wants his face to be fully redacted (rather than blurred) this preference should be registered in metadata.&lt;/p&gt;
+
+&lt;h3 id=&#34;genealogy&#34;&gt;Genealogy&lt;/h3&gt;
+
+&lt;p&gt;This information regards chain-of-custody, and represents how the media was acquired, and if a particular image or video is a duplicate of another.&lt;/p&gt;
+
+&lt;h3 id=&#34;data&#34;&gt;Data&lt;/h3&gt;
+
+&lt;p&gt;This category includes all standard metadata (timestamp, acquired sensory data, location and movement data) that have been collected during the lifetime of the image, from the moment it was opened to the instant it was saved.&lt;/p&gt;
+
+&lt;p&gt;A sample metadata bundle for an image taken with InformaCam looks like this in JSON notation:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;br /&amp;gt;
+{&amp;lt;br /&amp;gt;
+&amp;quot;data&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;device&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;bluetoothInformation&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;selfOrNeighbor&amp;quot;:-1,&amp;lt;br /&amp;gt;
+&amp;quot;deviceBTAddress&amp;quot;:&amp;quot;00:25:36:79:EC:6C&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;deviceBTName&amp;quot;:&amp;quot;nexxxie&amp;quot;&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;imei&amp;quot;:&amp;quot;363289131048142&amp;quot;&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;sourceType&amp;quot;:101,&amp;lt;br /&amp;gt;
+&amp;quot;imageRegions&amp;quot;:[&amp;lt;br /&amp;gt;
+{&amp;lt;br /&amp;gt;
+&amp;quot;regionDimensions&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;height&amp;quot;:256,&amp;lt;br /&amp;gt;
+&amp;quot;width&amp;quot;:256.00006103515625&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;regionCoordinates&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;left&amp;quot;:527.705078125,&amp;lt;br /&amp;gt;
+&amp;quot;top&amp;quot;:196.15255737304688&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;obfuscationType&amp;quot;:&amp;quot;Identify&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;location&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;locationType&amp;quot;:11,&amp;lt;br /&amp;gt;
+&amp;quot;locationData&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;gpsCoords&amp;quot;:&amp;quot;[40.7085011,-73.9668647]&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;cellId&amp;quot;:&amp;quot;36789325&amp;quot;&amp;lt;br /&amp;gt;
+}&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;captureTimestamp&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;timestamp&amp;quot;:1326216508313,&amp;lt;br /&amp;gt;
+&amp;quot;timestampType&amp;quot;:7&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;subject&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;consentGiven&amp;quot;:&amp;quot;general_consent&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;informedConsentGiven&amp;quot;:true,&amp;lt;br /&amp;gt;
+&amp;quot;subjectName&amp;quot;:&amp;quot;Harlo!&amp;quot;&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;unredactedRegion&amp;quot;:&amp;quot;I@4070cf30&amp;quot;&amp;lt;br /&amp;gt;
+}&amp;lt;br /&amp;gt;
+],&amp;lt;br /&amp;gt;
+&amp;quot;imageHash&amp;quot;:&amp;quot;f18e7510faaad0d942db68b5c75f219a&amp;quot;,&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;geneaology&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;dateAcquired&amp;quot;:0,&amp;lt;br /&amp;gt;
+&amp;quot;localMediaPath&amp;quot;:&amp;quot;\/mnt\/sdcard\/DCIM\/Camera\/1326216520426.jpg&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;dateCreated&amp;quot;:1326216527629&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;intent&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;owner&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;ownershipType&amp;quot;:25,&amp;lt;br /&amp;gt;
+&amp;quot;ownerKey&amp;quot;:&amp;quot;MY-IDENTITY-IS-HERE&amp;quot;&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;securityLevel&amp;quot;:1,&amp;lt;br /&amp;gt;
+&amp;quot;intendedDestination&amp;quot;:&amp;quot;[\&amp;quot;&amp;amp;#x68;ar&amp;amp;#x6c;&amp;amp;#x6f;.h&amp;amp;#x6f;&amp;amp;#x6c;me&amp;amp;#x73;@g&amp;amp;#x6d;&amp;amp;#x61;il&amp;amp;#x2e;&amp;amp;#x63;om\&amp;quot;]&amp;quot;&amp;lt;br /&amp;gt;
+}&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;your-help&#34;&gt;Your Help&lt;/h2&gt;
+
+&lt;p&gt;InformaCam is a work-in-process, and we’d love help from the community in fleshing out our metadata specification, especially in adding new items to the consent checklist. Feel free to contact us with any suggestions/comments, or just leave some helpful tips in the comments below.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iphone on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/iphone/</link>
+    <description>Recent content in Iphone on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Jul 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/iphone/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Achieve Onion Layers of Security with the Triad of Apple-tizing Apps!</title>
+      <link>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Our summer intern Alfred just graduated high-school and is preparing to attend a major university to focus on a technical degree. He has a personal interest in privacy and security, and is working with us on a variety of projects this summer as part of a broad, crash-course in all things Guardian Project!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Last week, I worked with three different apps for the iPhone that, when they work together, allow for a secure and private mobile internet experience. Since they all build on the Tor Network, they also offer an untraceable way to share and download media. My task was to test the user experience in these apps and see how they interact with each other and to make sure that they’re working in the intended ways following a test plan.&lt;/p&gt;
+
+&lt;p&gt;The first app Orbot, which acts as a secure vpn is the core of the security. It makes it very difficult to track the user when browsing. The first thing you want to do before you start browsing is to open the Orbot app and complete the setup with the vpn configuration.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image5.jpg&#34; alt=&#34;orbot ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once set up you could press start to use the default vpn or if you’d need more security you would click the ‘Choose how to Connect’ option below that and it’ll take you to a page where you can connect to an even more secure network because Orbot provides you with a network proxy. Choosing other options provides you with even more proxies making your ip or your browsing harder to detect or track.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image2.jpg&#34; alt=&#34;orbot ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that you’ve activated the Orbot vpn you can access the Onion Browser where you can freely browse as if you were using your regular browsing app like Chrome or Safari but now with even more security and privacy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;onionbrowser.png&#34; alt=&#34;onion browser app&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, I continued my testing with the Onion Share mobile app. This app allows you to freely and securely share media using a secure “.onion” download link, that can be opened by anyone with Onion Browser or Tor Browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image3.png&#34; alt=&#34;onionshare for ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see in the interface you can choose to send photos, files, or even whole folders to share media in. OnionShare then creates a link that can only be accessed through using any Tor-enabled web browser, such as Onion Browser or Tor Browser. You can then download the files and view them as normal.&lt;/p&gt;
+
+&lt;p&gt;This is the screen you’re greeted with when launching Tor Browser on the desktop. As you can see the interface resembles that of a normal browser. When connected to the Tor now, you’re able to open up links from OnionShare which can’t be opened anywhere else.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image1.png&#34; alt=&#34;tor browser on desktop&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is what the OnionShare screen on the desktop looks like using the Tor Browser. From here you can select to download the files and view them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image4.png&#34; alt=&#34;tor browser on desktop&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I think it&amp;rsquo;s interesting and very helpful how the usage of the combination of these apps not only provides you a secure browsing experience but also allows you to share different forms of media while also making it incredibly difficult to trace and track.&lt;/p&gt;
+
+&lt;p&gt;You can download the Orbot+Onion Browser+OnionShare for iOS QA Test Plan that was used to guide this work here: &lt;a href=&#34;https://github.com/guardianproject/orbot-apple/blob/main/testing/OrbotOnionBrowserOnionShareiOS-TestPlan-July2023.xlsx&#34;&gt;Download Test Plan&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Onions on Apples: A New Release of Onion Browser for iOS</title>
+      <link>https://guardianproject.github.io/info/2019/10/08/onions-on-apples-a-new-release-of-onion-browser-for-ios/</link>
+      <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/10/08/onions-on-apples-a-new-release-of-onion-browser-for-ios/</guid>
+      <description>&lt;p&gt;During 2019, Guardian Project has been working with developer Mike Tigas to make improvements to his Tor-enabled web browser for iOS, &lt;a href=&#34;https://onionbrowser.com/&#34;&gt;Onion Browser&lt;/a&gt;.  Here we re-cap the major improvements currently - and soon-to-be - available.&lt;/p&gt;
+
+&lt;p&gt;Mike developed Onion Browser on his own, in close collaboration with the Tor Project.  Though we’ve worked with Mike in the recent-past, this 2019 project &amp;ndash; funded by the Open Technology Fund &amp;ndash; gave us significantly more bandwidth to address the challenges of running Tor on iOS, especially alongside a full web-browsing feature set.&lt;/p&gt;
+
+&lt;p&gt;In Onion Browser, our Tor connectivity runs in the same process as the browser itself.  Tor Browser for Android uses a similar model, though the general purpose Orbot app for Android is separate from the applications using its services (apps configure Orbot as a proxy, in the same manner as SOCKS).  This latter model is not available on iOS and, it turns out, iOS puts some additional restrictions on apps like ours as well.  These have, over time, created some thorny problems for Onion Browser.&lt;/p&gt;
+
+&lt;p&gt;The newest release of Onion Browser upgraded to Tor version 0.4.0.5 which greatly improves reliability when the app comes back from background. The application was updated with modern versions of all the incorporated 3rd-party libraries.  This includes an upgrade to the underlying Endless browser-core.  The often-requested ability to &amp;ldquo;open the app in its last state&amp;rdquo; feature was added as well as a mechanism to hide the browser’s content when switching between applications.  Advanced users of the app had reported issues configuring bridges in previous releases and these have been fixed.  It’s now possible to report a bug or rate the app from within the application.&lt;/p&gt;
+
+&lt;p&gt;With our new work, an important network traffic leakage discovered in earlier releases have been mitigated.  Web browsers generally utilize the services of the Online Certificate Status Protocol (OCSP) to determine if a website’s security certificate is still valid. Status checks on iOS are provided by a system library that can’t use the Tor service, so these service calls leak.  A mechanism has been found to prevent leakage in a large number of circumstances, but not completely.&lt;/p&gt;
+
+&lt;p&gt;We’re now completing our second big development push which will feature an upgraded and simplified on-boarding experience as well as improvements to the organization of application settings.  We’ve also upgraded the experience of setting per-website security parameters (which can be either one-time-only or “sticky”).  The leakage corrections we implemented will also allow us to implement the ability to download and save files in non-HTML content formats, or share such files with other applications. Additionally, we implemented an improved technique to limit Javascript “re-insertion” attacks in WebRTC pages. We expect this release to happen during October or early November.&lt;/p&gt;
+
+&lt;p&gt;Onion Browser’s medium- and long-term maintenance are a volunteer effort.  If you wish to support this project into the future, please visit Mike Tigas’s Patreon page.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Acrobits Groundwire – OSTN supports iPhone</title>
+      <link>https://guardianproject.github.io/info/2012/03/21/acrobits-groundwire-ostn-supports-iphone/</link>
+      <pubDate>Wed, 21 Mar 2012 09:09:21 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/21/acrobits-groundwire-ostn-supports-iphone/</guid>
+      <description>&lt;p&gt;The Guardian Project develops open source software primarily for the Android platform &lt;a href=&#34;https://guardianproject.info/home/use-cases/&#34;&gt;but we strive for security by design to be a part of all platforms&lt;/a&gt;. With &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN&lt;/a&gt;, there are two major components. The the first is the server, which operates as the primary user directory and call switch. The other is the client, which is the program you interact with to send and receive calls.&lt;/p&gt;
+
+&lt;p&gt;While the Apple App Store &lt;a href=&#34;http://michelf.com/weblog/2011/gpl-ios-app-store/&#34;&gt;forbids distribution of GPL licensed software from their service&lt;/a&gt;, the underlying protocols used by OSTN are open, so even iPhone developers may implement them in a proprietary client application without breaking any intellectual property laws.&lt;/p&gt;
+
+&lt;p&gt;And Acrobits software, an iOS dev shop in Prague, Czech Republic did just that. The result is an excellent OSTN compilant app for iPhone called &lt;a href=&#34;http://www.acrobits.cz/11/acrobits-groundwire-for-iphone&#34;&gt;Groundwire&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.acrobits.cz/userfiles/images/groundwire_icon.png&#34; alt=&#34;Groundwire logo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Groundwire is not cheap when compared to competing apps for Android or desktop computers. They distribute it as a &lt;a href=&#34;https://en.wikipedia.org/wiki/Crippleware&#34;&gt;feature-limited&lt;/a&gt; app for $9.99. Unfortunately, one of the limited features is required to bring the app up to &lt;a href=&#34;https://guardianproject.info/wiki/OSTN_Compliance_Specification&#34;&gt;OSTN spec&lt;/a&gt;, namely ZRTP support. ZRTP is the key exchange protocol to securely authenticate two caller’s identities during a call. To enable this feature, the user must pay a $24.99 fee as an “in-app purchase.” This purchase is only required to enable &lt;strong&gt;outgoing&lt;/strong&gt; ZRTP calls. If you don’t have a need for this, you must only pay the $9.99 purchase price to get up and running.&lt;/p&gt;
+
+&lt;p&gt;The good news is that Groundwire is an excellent app. I’m testing it on an original iPhone with firmware 3.1.3. It supports push notifications to receive incoming calls even when the iPhone is asleep or Groundwire is in the background. This feature depends on Acrobits secure push servers, and a full security audit has not yet been performed to determine if this creates a risk.&lt;/p&gt;
+
+&lt;p&gt;I expect Groundwire to be a very popular client for OSTel, due to the high number of iPhones in the field. If you’d like to sign up for our alpha tested, named OSTel.me, &lt;a href=&#34;https://ostel.me/&#34;&gt;fill out the form&lt;/a&gt; and we’ll be in touch soon thereafter. You can also checkout another OSTN-compliant service at Tanstagi: &lt;a href=&#34;https://tanstagi.net/&#34;&gt;https://tanstagi.net/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

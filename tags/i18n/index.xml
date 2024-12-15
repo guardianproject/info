@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>I18n on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/i18n/</link>
+    <description>Recent content in I18n on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/i18n/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving Crowdsourced Translation of Long Form Text</title>
+      <link>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</guid>
+      <description>
+
+&lt;p&gt;We are happy to announce the start of work on another step in
+improving crowdsourced localization, funded by the ISC Project.  This
+is the second part of our ongoing &amp;ldquo;Linguine&amp;rdquo; collaboration to move
+crowdsourced translation to privacy-respecting free software.&lt;/p&gt;
+
+&lt;p&gt;Crowdsourced translation has proven enormously successful getting apps
+and website software translated into many languages.  Using tools like
+Weblate or Transifex, developers can quite easily incorporate
+translated app strings into their mobile apps and websites.  Any kinds
+of text that is easily broken down into phrases and sentences will fit
+easily into the crowdsourced workflow.  Localization Lab enables a
+wide range of volunteers to contribute to the most important projects
+in a wide array of languages.&lt;/p&gt;
+
+&lt;p&gt;For long form text, from blogs to documentation, large technical
+hurdles prevent the same fluid workflow.  One clear example: Tor
+Browser is available in 25 languages, but the documentation is still
+largely just in English.  The standard workflow is to first complete
+the English version, then submit that to translators, then wait for a
+complete translation.  For the regular, small changes that come with
+maintaining documentation, that workflow makes the update cycle heavy
+and slow.&lt;/p&gt;
+
+&lt;p&gt;Few webmasters can review translations. Tools like Weblate establish a
+review process, then developers need only to run an automatic import
+to get approved translations from trusted translators.&lt;/p&gt;
+
+&lt;p&gt;The ideal workflow starts with the traditional method of translating
+in one complete unit, but now, that work can easily be shared by
+multiple contributors.  Whenever the original documents are updated,
+those translations can then be maintained via the crowdsourcing.  Even
+for organizations which directly cover their own translation needs,
+like a blogger who writes in both English and Tibetan, the workflow
+provided by tools like Weblate makes managing many small changes to
+documents drastically easier.&lt;/p&gt;
+
+&lt;p&gt;While blog posts generally do not need frequent updates, a smooth path
+to crowdsourced translations means, given the same effort, a larger
+audience can be reached since the information will be available in
+more languages.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-we-are-doing-this&#34;&gt;How we are doing this&lt;/h2&gt;
+
+&lt;p&gt;There are already many key building blocks in place:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Weblate and Transifex already have basic support for directly translating long form text&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;po4a&lt;/em&gt; provides good format conversion between &lt;em&gt;Markdown&lt;/em&gt; and other text formats&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Markdown&lt;/em&gt; is a widely adopted mark-up format for documentation and blog posts&lt;/li&gt;
+&lt;li&gt;Weblate already supports validating &lt;em&gt;Markdown&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;po4a&lt;/em&gt; integration with Jekyll&lt;/li&gt;
+&lt;li&gt;Static Site Generators like Jekyll and Hugo have existing methods of supporting localization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What needs doing is fixing lots of little issues here and there to
+complete the whole workflow.  For example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Code blocks are quite common in technical documentation, and they often contain texts that should not be translated, e.g. the words from a programming language.  &lt;em&gt;po4a&lt;/em&gt; can be made to automatically recognize these blocks, and mark them as &amp;ldquo;do not translate&amp;rdquo; using standard tags, which Weblate communicates to translators.&lt;/li&gt;
+&lt;li&gt;Most translators do not have strong technical skills, so specialized syntax like &lt;em&gt;Markdown&lt;/em&gt; or configuration examples need to be validated to ensure that the translator did not inadvertently break something with a typo.  There are existing methods and tools for validating a wide variety of markup, code, and configuration formats.  These will be integrated into the translation review process to ensure that translations will not break the website layout or generation.&lt;/li&gt;
+&lt;li&gt;When using translation sites that do not have good support for long form text, &lt;em&gt;po4a&lt;/em&gt; can be integrated via &amp;ldquo;plugins&amp;rdquo; to static site generators like Jekyll or Hugo.&lt;/li&gt;
+&lt;li&gt;Not all workflows allow for transparent integration, for example, Hugo to Weblate.  In these cases, there needs to be some “glue” tools to make it work.  We will produce and distribute tools for gluing together some common setups to work smoothly with Weblate and/or Transifex.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since this project is about getting lots of pieces to integrate nicely, all the code generated will be included in all the relevant projects.  That is also where we will be looking for feedback, so file issues with &lt;a href=&#34;https://github.com/WeblateOrg/weblate/issues/&#34;&gt;Weblate&lt;/a&gt;, &lt;a href=&#34;https://gitlab.com/fdroid/fdroid-website/issues&#34;&gt;&lt;em&gt;f-droid.org&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;https://gitlab.com/guardianproject/info/issues&#34;&gt;&lt;em&gt;guardianproject.info&lt;/em&gt;&lt;/a&gt;, etc. and we will track them there!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Good translations are essential to usability</title>
+      <link>https://guardianproject.github.io/info/2015/12/09/good-translations-are-essential-to-usability/</link>
+      <pubDate>Wed, 09 Dec 2015 17:20:15 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/12/09/good-translations-are-essential-to-usability/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-230x300.jpg&#34; alt=&#34;Rosetta Stone&#34; width=&#34;230&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-13155&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-230x300.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-786x1024.jpg 786w, https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone.jpg 1164w&#34; sizes=&#34;(max-width: 230px) 100vw, 230px&#34; /&gt;&lt;/a&gt;All too often, translation of an app are treated as an afterthought. It is not something that the app developers see, since they create the software in languages that work best for them. So the software looks complete to the developers. But for anyone using the software in a different language, translation is essential in order for the app to be useful. If you can’t understand the words that you see in the app’s interface, it is going to be difficult or impossible to use that app.&lt;/p&gt;
+
+&lt;p&gt;The part of this question that is still open is how best to manage translating software. From the point of view of the app’s developer, it is not possible to check all of the translations since no one speaks &lt;a href=&#34;https://www.transifex.com/otf/orbot/&#34; target=&#34;_blank&#34;&gt;that many languages&lt;/a&gt; fluently. Many of our apps are translated into 30 or more languages, represented by both pictograms and more than 10 alphabets. No one could read all of those writing systems, let alone understand all the words written in them. So inevitably, developers must trust many other people to do accurate translations, and to not slip in false or misleading information.&lt;/p&gt;
+
+&lt;p&gt;We receive substantial translations from random internet users who come along and contribute their time into translating our apps. We aim to make that process as easy as possible by posting clean source files to Transifex, the web service we currently use. We also work a lot with the &lt;a href=&#34;https://www.transifex.com/otf&#34; target=&#34;_blank&#34;&gt;OTF Translation Hub&lt;/a&gt;, which organizes the chaos of all those apps and contributors into regular events and completed translations. Organized community contributions work very well for building up baseline translations and keeping polished translations updated when the software changes. It is both a valuable and cost-effective resource, and I think its a model that can be emulated for other collections of software.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, for certain target languages like Tibetan or Belarusian, community contributions are rare. We get lots of contributions for many languages, like French, German, and Spanish, but other languages, like Arabic, Chinese, Persian, and Burmese get very few contributions from volunteers. Also, in order to get completed, polished translations, it is necessary to pay translators so they can devote a solid, concentrated chunk of time on making sure the whole translation works. This person can then spend time thinking about the finer points which can have a large impact on the user experience: the tone and feeling of the language, whether it is funny, serious, cute, matter of fact, etc.&lt;/p&gt;
+
+&lt;p&gt;So really, in order to deliver software that is translated into many languages, opening up the source files to get as many contributions as possible will get a lot of work done. But cultivating relationships with translators to oversee the whole process is essential in order to have the translations match the quality of the software.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

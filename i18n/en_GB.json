@@ -1,0 +1,42 @@
+[
+  {
+    "id": "tutorials",
+    "translation": "Tutorials"
+  },
+  {
+    "id": "apps",
+    "translation": "apps"
+  },
+  {
+    "id": "team",
+    "translation": "Team"
+  },
+  {
+    "id": "code",
+    "translation": "code"
+  },
+  {
+    "id": "contact",
+    "translation": "contact"
+  },
+  {
+    "id": "about",
+    "translation": "about"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2nd January 2006"
+  },
+  {
+    "id": "press",
+    "translation": "Press"
+  },
+  {
+    "id": "archive",
+    "translation": "archive"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Archived Apps"
+  }
+]

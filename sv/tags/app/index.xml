@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/sv/tags/app/</link>
+    <description>Recent content in App on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 17 Dec 2024 06:26:42 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/sv/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ripple: respond when panicking</title>
+      <link>https://guardianproject.github.io/info/sv/apps/info.guardianproject.ripple/</link>
+      <pubDate>Tue, 17 Dec 2024 06:26:42 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/sv/apps/info.guardianproject.ripple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ProofMode: Verified Witnessing</title>
+      <link>https://guardianproject.github.io/info/sv/apps/org.witness.proofmode/</link>
+      <pubDate>Tue, 13 Feb 2024 21:16:25 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/sv/apps/org.witness.proofmode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Orbot: Proxy with Tor</title>
+      <link>https://guardianproject.github.io/info/sv/apps/org.torproject.android/</link>
+      <pubDate>Tue, 13 Feb 2024 21:16:21 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/sv/apps/org.torproject.android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PixelKnot: Hidden Messages</title>
+      <link>https://guardianproject.github.io/info/sv/apps/info.guardianproject.pixelknot/</link>
+      <pubDate>Wed, 08 Nov 2023 06:45:10 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/sv/apps/info.guardianproject.pixelknot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ObscuraCam: The Privacy Camera</title>
+      <link>https://guardianproject.github.io/info/sv/apps/org.witness.sscphase1/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/sv/apps/org.witness.sscphase1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Orfox</title>
+      <link>https://guardianproject.github.io/info/sv/apps/info.guardianproject.orfox/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/sv/apps/info.guardianproject.orfox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/sv/apps/info.guardianproject.checkey/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/sv/apps/info.guardianproject.checkey/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

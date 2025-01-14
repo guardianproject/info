@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pets2015 on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/pets2015/</link>
+    <description>Recent content in Pets2015 on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 30 Jun 2015 15:32:16 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/pets2015/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Orfox: Aspiring to bring Tor Browser to Android</title>
+      <link>https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/</link>
+      <pubDate>Tue, 30 Jun 2015 15:32:16 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update 24 September, 2015: Orfox BETA is now on Google Play: &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;In the summer of 2014 (&lt;a href=&#34;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&#34;&gt;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&lt;/a&gt;{.external}), we announced that the results of work by Amogh Pradeep (&lt;a href=&#34;https://github.com/amoghbl1&#34;&gt;https://github.com/amoghbl1&lt;/a&gt;{.external}), our 2014 Google Summer of Code student, has proven we could build Firefox for Android with some of the settings and configurations from the Tor Browser desktop software. We called this app Orfox, in homage to Orbot and our current Orweb browser. This was a good first step, but we were doing the build on Mozilla’s Firefox code repository, and then retrofitting pieces from Tor Browser’s code, which wasn’t the right way to do things, honestly.&lt;/p&gt;
+
+&lt;p&gt;This summer (2015!), with fantastic continued effort by Amogh, we have switched to building the Orfox mobile app directly from the Tor Browser code repository, successfully working through any mobile OS incompatibilities in the security hardening patches added by the Tor Browser team. We also had the additional task of reviewing the Android application code in Firefox, that is not part of Tor Browser, in order to modify and patch it to work inline with the &lt;a href=&#34;https://www.torproject.org/projects/torbrowser/design/&#34;&gt;Tor Browser requirements and design document&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As of today, we have a stable alpha release ready for testing, and are rapidly moving towards a public beta in a few weeks. Our plan is to actively encourage users to move from Orweb to Orfox, and stop active development of Orweb, even removing to from the Google Play Store. If users really want to continue using a WebView-based solution and do not need all of the capabilities that Orfox/Tor Browser provides, they can use Lightning Browser (&lt;a href=&#34;https://github.com/anthonycr/Lightning-Browser&#34;&gt;https://github.com/anthonycr/Lightning-Browser&lt;/a&gt;{.external}), a lightweight, open-source app that offers automatic Orbot (SOCKS) proxying on start-up.&lt;/p&gt;
+
+&lt;p&gt;Below you will find screenshots and our current set of &lt;a href=&#34;https://dev.guardianproject.info/projects/orfox-private-browser/wiki/Orfox_vs_Tor_Browser_FAQ&#34;&gt;Orfox Frequently Asked Questions&lt;/a&gt; from the &lt;a href=&#34;https://dev.guardianproject.info/projects/orfox-private-browser/wiki&#34;&gt;project wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can access the current Orfox release by installing the &lt;a href=&#34;https://f-droid.org/&#34;&gt;F-Droid app&lt;/a&gt; and subscribing to our F-Droid Alpha Channel at by clicking on the following link on your phone: &lt;a href=&#34;https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo&#34;&gt;https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo&lt;br /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div id=&#39;gallery-11&#39; class=&#39;gallery galleryid-12999 gallery-columns-3 gallery-size-medium&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13003&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13003&#39;&gt;
+      Recognized as Tor Browser
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13005&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13005&#39;&gt;
+      A match made by onions!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13000&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13000&#39;&gt;
+      Bookmark support!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13001&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13001&#39;&gt;
+      Easy access to onion sites!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13002&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13002&#39;&gt;
+      Tabs!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png&#39;&gt;&lt;img width=&#34;169&#34; height=&#34;300&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png&#34; class=&#34;attachment-medium size-medium&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-11-13004&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png 720w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-11-13004&#39;&gt;
+      Tor-relevant default sites
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Where can I find all the relevant Orfox project pieces?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Orfox project tracker roadmap is here: &lt;a href=&#34;https://dev.guardianproject.info/projects/orfox-private-browser/roadmap&#34;&gt;https://dev.guardianproject.info/projects/orfox-private-browser/roadmap&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;li&gt;The Orfox branch of the Tor Browser repository is here: &lt;a href=&#34;https://github.com/guardianproject/tor-browser&#34;&gt;https://github.com/guardianproject/tor-browser&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;li&gt;The Orfox build project is here: &lt;a href=&#34;https://github.com/guardianproject/orfoxfennec&#34;&gt;https://github.com/guardianproject/orfoxfennec&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;li&gt;The primary Tor Browser repository is here: &lt;a href=&#34;https://gitweb.torproject.org/tor-browser.git/&#34;&gt;https://gitweb.torproject.org/tor-browser.git/&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;li&gt;Automated debug builds of Orfox alpha are available via F-Droid here (install F-Droid on your phone, then copy/paste or open the link to add the repo): &lt;a href=&#34;https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo&#34;&gt;https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo&lt;/a&gt;{.external}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How is Orfox different than Tor Browser for desktop?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Orfox is built from the same source code as Tor Browser (which is built upon Firefox), but with a few minor modifications to the privacy enhancing features to make them compatible with Firefox for Android and the Android operating system. In as many ways as possible, we will adhere to the design goals of Tor Browser (&lt;a href=&#34;https://www.torproject.org/projects/torbrowser/design/&#34;&gt;https://www.torproject.org/projects/torbrowser/design/&lt;/a&gt;{.external}), by supporting as much of their actual code as possible, and extending their work into the additional AF-Droid appndroid components of Firefox for Android.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The Orfox code repository is at &lt;a href=&#34;https://github.com/guardianproject/tor-browser&#34;&gt;https://github.com/guardianproject/tor-browser&lt;/a&gt;{.external} and the Tor Browser repository is here:&lt;a href=&#34;https://gitweb.torproject.org/tor-browser.git/&#34;&gt;https://gitweb.torproject.org/tor-browser.git/&lt;/a&gt;{.external}. The Orfox repository is a fork of the Tor Browser repository with the necessary modification and Android-specific code as patches on top of the Tor Browser work. We will keep our repository in sync with updates and release of Tor Browser.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox is built from the Tor Browser repo based on ESR38 (&lt;a href=&#34;https://dev.guardianproject.info/issues/5146&#34;&gt;https://dev.guardianproject.info/issues/5146&lt;/a&gt;{.external}&lt;a href=&#34;https://dev.guardianproject.info/news/221&#34;&gt;https://dev.guardianproject.info/news/221&lt;/a&gt;{.external}) and has only two modified patches that were not relevant or necessary for Android&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox does not currently include the mobile versions of HTTPS Everywhere, No Script and the Tor Browser Button, but these we will be added shortly, now that we have discovered how to properly support automatic installation of extensions on Android (&lt;a href=&#34;https://dev.guardianproject.info/issues/5360&#34;&gt;https://dev.guardianproject.info/issues/5360&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox includes a “Request Mobile Site” option that allows you to change the user-agent from the standard Tor Browser agent to a modified Android specific one: “Mozilla/5.0 (Android; Mobile; rv:31.0) Gecko/20100101 Firefox/31.0”. (&lt;a href=&#34;https://dev.guardianproject.info/issues/5404&#34;&gt;https://dev.guardianproject.info/issues/5404&lt;/a&gt;{.external}). This is useful for being able to see the mobile version of a website, but does reduce the amount your browser blends in with other browsers.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox currently allows for users to bookmark sites, and may have additional data written to disk beyond what the core gecko browser component does. We are still auditing all disk write code, and determining how to appropriately disable or harden it. (&lt;a href=&#34;https://dev.guardianproject.info/issues/5437&#34;&gt;https://dev.guardianproject.info/issues/5437&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox cannot yet be built deterministically, but based on work with the FDroid project, we are aiming for this to be possible in the next year (&lt;a href=&#34;https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise&#34;&gt;https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise&lt;/a&gt;{.external} &lt;a href=&#34;https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds&#34;&gt;https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How is Orfox different than Firefox for Android?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Beyond the core Tor Browser components, Orfox also must ensure all Android-specific code is properly routed through the Tor proxy, and otherwise hardened to protect against data and privacy leaks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Orfox adds patches at the Android Java code layer to enable proxying of all Java network HTTP communications through the local Orbot HTTP proxy (HTTP localhost:8118 for now, but moving to SOCKS). (&lt;a href=&#34;https://dev.guardianproject.info/issues/5235&#34;&gt;https://dev.guardianproject.info/issues/5235&lt;/a&gt;{.external} &lt;a href=&#34;https://dev.guardianproject.info/issues/5317&#34;&gt;https://dev.guardianproject.info/issues/5317&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox removes the Android permissions for Contacts, Camera, Microphone, Location and NFC (&lt;a href=&#34;https://dev.guardianproject.info/issues/3822&#34;&gt;https://dev.guardianproject.info/issues/3822&lt;/a&gt;{.external}) since the capability of using these features are not in line with the spirit of Tor Browser&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orfox removes features like WebRTC and support for interaction with Chromecasts or Roku devices, since this type of communication is not compatibility with proxying communication through a TCP-based network like Tor (&lt;a href=&#34;https://dev.guardianproject.info/issues/5358&#34;&gt;https://dev.guardianproject.info/issues/5358&lt;/a&gt;{.external} &lt;a href=&#34;https://dev.guardianproject.info/issues/5357&#34;&gt;https://dev.guardianproject.info/issues/5357&lt;/a&gt;{.external})&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How is Orfox different than Orweb?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Orweb is our current default browser for Orbot/Tor mobile users (&lt;a href=&#34;https://guardianproject.info/apps/orweb&#34;&gt;https://guardianproject.info/apps/orweb&lt;/a&gt;{.external}) that has been downloaded over 2 million times. It is VERY VERY SIMPLE, as it only has one tab, no bookmark capability, and an extremely minimal user experience.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orweb is built upon the bundled WebView (Webkit) browser component inside of the Android operating system. This has proven to be problematic because we cannot control the version of that component, and cannot upgrade it directly when bugs are found. In addition, Google has made it very difficult to effectively control the network proxy settings of all aspects of this component, making it difficult to guarantee that traffic will not leak on all devices and OS versions.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orweb also only provides a very limited amount of capability of Tor Browser, primarily related to reducing browser fingerprinting, minimizing disk writes, and cookie and history management. It trys to mimic some of the settings of Tor Browser, but doesn’t actually use any of the actual code written for Tor Browser security hardening.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Orweb does have an advantage which is that it less than 2MB while Orfox is in the 25-30MB range. This is primarily because Orweb relies on many components built into Android, so it does not need to bundle them. Orfox contains the full stack of code necessary for a complete browser, and thus is more secure and dependable, but also larger. The Mozilla Mobile team is working on reducing the size of their binaries, and the Orfox team is focused on this, as well, since we are disabling some of the components that have contributed the browser bloat.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

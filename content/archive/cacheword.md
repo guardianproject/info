@@ -6,7 +6,7 @@ author: Hans-Christoph Steiner
 guid: https://guardianproject.info/?page_id=12672
 menu:
   main:
-    parent: code
+    parent: archive
 ---
 
 {{< source-code name="CacheWord" >}}

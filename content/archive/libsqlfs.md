@@ -4,7 +4,7 @@ author: eighthave
 date: 2011-10-27
 menu:
   main:
-    parent: code
+    parent: archive
 ---
 
 {{< source-code name="libsqlfs" skipjavadoc="true" >}}

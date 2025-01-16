@@ -23,6 +23,10 @@ RedirectPermanent /feed /blog/index.xml
 RedirectMatch permanent "^/packages/(.*)" "/apps/$1"
 RedirectPermanent /packages/ /apps/
 
+# redirect archived stuff
+RedirectPermanent /code/cacheword /archive/cacheword
+RedirectPermanent /code/libsqlfs /archive/libsqlfs
+
 
 <IfModule mod_rewrite.c>
     RewriteEngine On

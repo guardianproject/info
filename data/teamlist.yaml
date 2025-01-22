@@ -1,3 +1,5 @@
+---
+
 current:
   - name: Nathan Freitas (n8fr8)
     title: Founder and Director
@@ -10,7 +12,6 @@ current:
 
   - name: _hc
     title: Hacker & Researcher
-    description: Developer on Guardian developer tool suite
     gpg: EE6620C7136B0D2C456C0A4DE9E28DEA00AA5556
     github: eighthave
     gitlab: eighthave

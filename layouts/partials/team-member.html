@@ -10,6 +10,11 @@
       <i class="fa fa-github"></i>
     </a>
     {{ end }}
+    {{ if .mastodon }}
+    <a href="{{ .mastodon }}" target="_blank" title="{{ .name }} on Mastodon">
+      <i class="fa fa-mastodon"></i>
+    </a>
+    {{ end }}
     {{ if .twitter }}
     <a href="https://twitter.com/{{ .twitter }}" target="_blank" title="{{ .name }} on Twitter">
       <i class="fa fa-twitter"></i>

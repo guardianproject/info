@@ -14,7 +14,7 @@ tags:
 
 With 2024 now behind us, we wanted to take a moment to reflect on the growth and achievements we accomplished as a community last year, and celebrate the incredible support we received from the FOSS community throughout the journey.
 
-This year has been a milestone for us, with significant strides in decentralizing app distribution, expanding the F-Droid ecosystem, and solidifying our infrastructure. All of these advancements were made possible thanks to donations, grants, our volunteers and regular contributors. So thank you again to everyone who helped make 2024 another great year for F-Droid. Now let´s take a closer look at what we accomplished.
+This year has been a milestone for us, with significant strides in decentralizing app distribution, expanding the F-Droid ecosystem, and solidifying our infrastructure. All of these advancements were made possible thanks to donations, grants, our volunteers and regular contributors. So thank you again to everyone who helped make 2024 another great year for F-Droid. Now let's take a closer look at what we accomplished.
 
 ## A Review of Key Accomplishments in 2024
 
@@ -55,7 +55,7 @@ Key Contributions in 2024:
 * User research to understand app developer distribution workflows, compensation models, index preferences and APK metadata.
 * Built on existing Fastlane tooling to further automate the app package and upload the process to F-Droid.
 * Repomaker feature development made the repo creation and distribution process easier for non-tech users, non-profit and humanitarian organizations.
-* Created a central registry of all DAPPER compatible repos and API for app stores like Murena´s App Lounge( [https://doc.e.foundation/app-lounge-main](https://doc.e.foundation/app-lounge-main)) to pull in compatible repos and further decentralize app distribution process.
+* Created a central registry of all DAPPER compatible repos and API for app stores like Murena's [App Lounge](https://doc.e.foundation/app-lounge-main) to pull in compatible repos and further decentralize app distribution process.
 
 In 2025, we continue to contribute to the Mobifree project, getting our tools, apps and software ready for pilot testing this spring. From there, we will continue to improve the software based on user-testing feedback, ultimately making the tools available for the general public to use and enjoy.
 

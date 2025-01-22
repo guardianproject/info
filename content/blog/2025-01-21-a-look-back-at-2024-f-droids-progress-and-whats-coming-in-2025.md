@@ -26,17 +26,17 @@ In 2024 we completed the following infrastructure upgrades:
 
 * Broke out and overhauled core client logic around publishing and consuming repositories.
 
-* Made client logic into [libraries]([https://f-droid.org/2023/05/02/three-client-libraries.html](https://f-droid.org/2023/05/02/three-client-libraries.html)) to make it easy to embed repositories in any app that needs it.
+* Made client logic into [libraries](https://f-droid.org/2023/05/02/three-client-libraries.html) to make it easy to embed repositories in any app that needs it.
 
 * Added support for mirroring repositories onto both IPFS and Filecoin.
 
 * Added support in F-Droid client to use mirrors and repositories hosted on IPFS and Filecoin.
 
-* Improved F-Droid client “[white labeling](https://f-droid.org/docs/Whitelabel_Builds/)”.
+* Improved F-Droid client “[whitelabel builds](https://f-droid.org/docs/Whitelabel_Builds/)”.
 
 * Enhanced F-Droid client’s existing “nearby” and “app swap” capabilities.
 
-* Updated F-Droid’s RepoMaker tool (for easy “point and click” curation and publishing of app repos) and add support for IPFS publishing.
+* Updated F-Droid’s Repomaker tool (for easy “point and click” curation and publishing of app repos) and add support for IPFS publishing.
 
 * Supported iOS apps and progressive web apps (PWA) as packages that can be shipped via repositories.
 
@@ -48,7 +48,7 @@ Another key project we [started](https://f-droid.org/2024/05/24/mobifree.html) i
 
 [Mobifree](https://mobifree.org/) is an initiative that aims to provide a free, open-source, and decentralized alternative to traditional mobile app stores. It focuses on the freedom of choice, privacy, and user empowerment. Our contributions to this project will help strengthen the ties between F-Droid and other decentralized app distribution systems, ensuring that we remain a key player in the future of open-source mobile software.
 
-Do you have your own project ideas for Mobifree?  You can apply for up to 50,000€ from [nlnet NGI mobifree](https://nlnet.nl/mobifree/).  We can help you apply, just reach out via the regular F-Droid channels.
+Do you have your own project ideas for Mobifree?  You can apply for up to 50,000€ from [NLnet NGI Mobifree](https://nlnet.nl/mobifree/).  We can help you apply, just reach out via the [regular F-Droid channels](https://f-droid.org/about/#contact).
 
 Key Contributions in 2024:
 
@@ -68,7 +68,7 @@ Here are some statistics that highlight the community’s impact this year:
 * App Updates: Over 7205 app updates were made, keeping the app catalog fresh and secure.
 * New Apps Added: We welcomed over 402 new apps to the F-Droid repository, further expanding the variety of open-source apps available to users.
 * Archived Apps: 939 Apps were successfully archived.
-* Packages per Hour: Approximately 2-3 packages were created every hour, without interruption. Between updated and new apps, F-Droid built apps over 7600 times. Since most modern apps are split per device architecture, this  means that each app version required multiple packages to be built, sometimes up to 4 packages for each app version. This increases the real number of builds by 2.5-3%. Putting it all together, that would equal between 2-3 packages created per hour, without interruption in 2024.
+* Packages per Hour: Approximately 2-3 packages were created every hour, without interruption. Between updated and new apps, F-Droid built apps over 7600 times. Since most modern apps are split per device architecture, this  means that each app version required multiple packages to be built, sometimes up to 4 packages for each app version. This increases the real number of builds by 2.5-3x. Putting it all together, that would equal between 2-3 packages created per hour, without interruption in 2024.
 
 These numbers are a reflection of the dedication and passion of the F-Droid community. We are immensely grateful for each and every contributor who made these achievements possible.
 
@@ -90,4 +90,4 @@ As we continue to grow and evolve, we are committed to our mission of decentrali
 
 Thank you for being part of the F-Droid journey!
 
-We look forward to an exciting year ahead, and we invite you to continue supporting F-Droid through contributions, donations, and spreading the word about our mission. Let’s make 2025 another year of progress for the open-source community!
+We look forward to an exciting year ahead, and we invite you to continue supporting F-Droid through [contributions](https://f-droid.org/contribute/), [donations](https://f-droid.org/donate/), and [spreading the word](https://floss.social/@fdroidorg) about our mission. Let’s make 2025 another year of progress for the open-source community!

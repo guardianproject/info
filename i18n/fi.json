@@ -10,5 +10,45 @@
   {
     "id": "gcseLabelShort",
     "translation": "Hae"
+  },
+  {
+    "id": "code",
+    "translation": "koodi"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2. tammikuuta 2006 15:04:05"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2. tammikuuta 2006"
+  },
+  {
+    "id": "team",
+    "translation": "Joukkue"
+  },
+  {
+    "id": "press",
+    "translation": "Paina"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Arkistoidut sovellukset"
+  },
+  {
+    "id": "contact",
+    "translation": "ota yhteyttä"
+  },
+  {
+    "id": "apps",
+    "translation": "sovellukset"
+  },
+  {
+    "id": "archive",
+    "translation": "arkisto"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Opetusohjelmat"
   }
 ]

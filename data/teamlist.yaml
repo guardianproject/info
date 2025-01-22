@@ -62,6 +62,11 @@ current:
     gitlab: bitmold
     matrix: "@lexithesponge:matrix.org"
 
+  - name: nk
+    title: Grant Admin
+    gitlab: nzambi1
+    matrix: "@nzambik:matrix.org"
+
 emeritus:
   - name: noneck
     twitter: noneck

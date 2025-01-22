@@ -5,7 +5,6 @@ current:
     gpg: BBE20FD6DA48A3DD4CC7DF41A801183E69B37AA9
     github: n8fr8
     gitlab: n8fr8
-    twitter: n8fr8
     matrix: "@n8fr8:matrix.org"
 
   - name: _hc
@@ -14,7 +13,6 @@ current:
     gpg: EE6620C7136B0D2C456C0A4DE9E28DEA00AA5556
     github: eighthave
     gitlab: eighthave
-    twitter: hansstatus
     matrix: "@eighthave:matrix.org"
 
   - name: abelxluck
@@ -92,7 +90,6 @@ emeritus:
     description: Storymaker Developer
     github: vitriolix
     gitlab: vitriolix
-    twitter: vitriolix
 
   - name: miron
     title: Futurist, computer geek, & entrepreneur

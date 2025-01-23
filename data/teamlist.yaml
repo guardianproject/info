@@ -68,6 +68,11 @@ current:
     gitlab: nzambi1
     matrix: "@nzambik:matrix.org"
 
+  - name: HStill
+    title: Project Manager, Research and UX
+    gitlab: HStill
+    matrix: @hstill:matrix.org
+
 emeritus:
   - name: noneck
     description: open government and civic technology

@@ -71,7 +71,12 @@ current:
   - name: HStill
     title: Project Manager, Research and UX
     gitlab: HStill
-    matrix: @hstill:matrix.org
+    matrix: "@hstill:matrix.org"
+
+  - name: paulali
+    title: Developer
+    gitlab: pmmayero
+    matrix: "@paulali:matrix.org"
 
 emeritus:
   - name: noneck

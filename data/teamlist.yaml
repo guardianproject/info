@@ -74,6 +74,7 @@ current:
     matrix: "@hstill:matrix.org"
 
   - name: paulali
+    title: Developer
     gitlab: pmmayero
     matrix: "@paulali:matrix.org"
 

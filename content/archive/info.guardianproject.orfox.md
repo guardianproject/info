@@ -16,9 +16,9 @@ tags:
   - MPL-2.0
   - orfox
 aliases:
-  - apps/orfox
+  - archive/orfox
 menu:
   main:
-    parent: apps
+    parent: archive
 ---
 

@@ -1,5 +1,5 @@
 baseURL: "http://localhost:1313/"
-title: ""
+title: "Guardian Project"
 
 DefaultContentLanguage: "en"
 Paginate: 20 # this is set low for demonstrating with dummy content. Set to a higher number
@@ -55,6 +55,7 @@ languages:
 Params:
   since: 2009
   logo: Guardian_Project_LogoMark_Full_Color.svg
+  wordlogo: Guardian_Project_Horizontal_Logo_Full_Color.svg
   rss: true
   favicon: Guardian_Project_LogoMark_Full_Color.svg
   description: "People, Apps and Code You Can Trust"
@@ -69,6 +70,7 @@ Params:
   featured_image: "gpnewlogo2025.png"
   recent_posts_number: 2
   mainSections: ["posts"]
+  homeTitle: " "
 
 # disable all the external Javascript, etc services from theme
   selfHosted: true

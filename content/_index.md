@@ -9,7 +9,7 @@ guid: https://guardianproject.info/?page_id=8
 
 ![logo](Wordmark/Guardian_Project_Horizontal_Logo_Full_Color@2x.png)
 
-## **We are a global team who builds and designs [easy to use secure apps](apps), open-source [software libraries](code), and [customized solutions](contact) that can be used around the world by any person or organization looking to protect their communications and data from unjust intrusion, interception and monitoring.**
+## **We are a global team who builds and designs easy to use secure apps, open-source software libraries, and customized solutions that can be used around the world by any person or organization looking to protect their communications and data from unjust intrusion, interception and monitoring.**
 
 [![GP Team](gpteam.jpg)](/story/)
 

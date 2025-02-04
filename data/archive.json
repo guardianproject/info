@@ -2,21 +2,28 @@
   "apps": [
     {
       "added": 1376870400000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
       "categories": [
         "Security",
         "Guardian Project"
       ],
-      "description": "<p>Android 4+ allows you to disable certificates from the system Settings and root isn't required, so try that first if you want to manually mess with the certificates. The app won't work with Android 4+ anyway.</p><p>An app to manage security certificates on your phone also containing a version of the Android CACert keystore derived from Mozilla. If a certificate has recently become untrusted you can either install an update to this app or you can backup and remove certificates by yourself.</p><p>Requires root: Yes, it writes to the system partition. You will need a device that has the \u2018grep\u2019 command on it (via busybox: present on most custom ROMs). If the \u2018save\u2019 doesn\u2019t work, then you will need to make your /system partition read-write by using a file explorer like https://f-droid.org/packages/com.ghostsq.commander or via a command in https://f-droid.org/packages/jackpal.androidterm.</p>",
+      "description": "Android 4+ allows you to disable certificates from the system Settings and\nroot isn't required, so try that first if you want to manually mess with the\ncertificates.\nThe app won't work with Android 4+ anyway.\n\nAn app to manage security certificates on your phone also containing a version\nof the Android CACert keystore derived from Mozilla.\nIf a certificate has recently become untrusted you can either install an update\nto this app or you can backup and remove certificates by yourself.\n\nRequires root: Yes, it writes to the system partition.\nYou will need a device that has the \u2018grep\u2019 command on it (via busybox:\npresent on most custom ROMs).\nIf the \u2018save\u2019 doesn\u2019t work, then you will need to make your /system partition\nread-write by using a file explorer like https://f-droid.org/packages/com.ghostsq.commander or via\na command in https://f-droid.org/packages/jackpal.androidterm.",
       "icon": "info.guardianproject.cacert.4.png",
       "issueTracker": "https://github.com/guardianproject/cacert/issues",
       "lastUpdated": 1383177600000,
-      "liberapayID": "33617",
+      "liberapay": "GuardianProject",
       "license": "GPL-3.0-only",
-      "name": "CACertMan",
+      "localized": {
+        "en-US": {
+          "name": "CACertMan"
+        }
+      },
+      "openCollective": "GuardianProject",
       "packageName": "info.guardianproject.cacert",
       "sourceCode": "https://github.com/guardianproject/cacert",
       "suggestedVersionCode": "4",
@@ -25,150 +32,33 @@
     },
     {
       "added": 1386720000000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
       "categories": [
         "Guardian Project",
         "Development"
       ],
-      "icon": "org.witness.informacam.app.206.png",
+      "icon": "org.witness.informacam.app.35.png",
       "issueTracker": "https://dev.guardianproject.info/projects/informacam/issues",
-      "lastUpdated": 1446508800000,
-      "liberapayID": "33617",
+      "lastUpdated": 1386720000000,
+      "liberapay": "GuardianProject",
       "license": "GPL-3.0-or-later",
-      "localized": {
-        "af": {
-          "summary": "Die maklikste manier om verifieerbare foto's en video bewys te vang, veilig en p"
-        },
-        "ar": {
-          "summary": "\u0623\u0633\u0647\u0644 \u0637\u0631\u064a\u0642\u0629 \u0644\u0627\u0644\u062a\u0642\u0627\u0637 \u0635\u0648\u0631\u0629 \u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u062a\u062d\u0642\u0642 \u0648\u0625\u062b\u0628\u0627\u062a \u0627\u0644\u0641\u064a\u062f\u064a\u0648\u060c \u0628\u0634\u0643\u0644 \u0622\u0645\u0646 \u0648\u0627\u0644\u0642\u0637\u0627\u0639 \u0627\u0644\u062e\u0627\u0635"
-        },
-        "bg": {
-          "summary": "\u041d\u0430\u0439-\u043b\u0435\u0441\u043d\u0438\u044f\u0442 \u043d\u0430\u0447\u0438\u043d \u0434\u0430 \u0443\u043b\u043e\u0432\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u043c\u0438 \u0444\u043e\u0442\u043e & \u0432\u0438\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u0441\u0442\u0432\u043e, \u0441\u0438\u0433\u0443\u0440\u043d\u043e \u0438 \u0447\u0430\u0441\u0442\u043d"
-        },
-        "ca": {
-          "summary": "La forma m\u00e9s f\u00e0cil de capturar la foto verificable i prova de v\u00eddeo, de forma se"
-        },
-        "cs": {
-          "summary": "Nejjednodu\u0161\u0161\u00ed zp\u016fsob, jak zachytit ov\u011b\u0159iteln\u00e9 Foto a video d\u016fkaz, bezpe\u010dn\u011b a sou"
-        },
-        "da": {
-          "summary": "Den nemmeste m\u00e5de at fange verificerbare Foto & Video bevis, sikkert & privat"
-        },
-        "de": {
-          "summary": "Der einfachste Weg, nachpr\u00fcfbare Foto & Video Beweis zu erfassen, sicher & priva"
-        },
-        "el": {
-          "summary": "\u039f \u03b5\u03c5\u03ba\u03bf\u03bb\u03cc\u03c4\u03b5\u03c1\u03bf\u03c2 \u03c4\u03c1\u03cc\u03c0\u03bf\u03c2 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c3\u03c5\u03bb\u03bb\u03ac\u03b2\u03b5\u03b9 \u03b5\u03c0\u03b1\u03bb\u03b7\u03b8\u03b5\u03cd\u03c3\u03b9\u03bc\u03b1 \u03c6\u03c9\u03c4\u03bf\u03b3\u03c1\u03b1\u03c6\u03af\u03b1 & \u03b2\u03af\u03bd\u03c4\u03b5\u03bf \u03b1\u03c0\u03cc\u03b4\u03b5\u03b9\u03be\u03b7, "
-        },
-        "en-US": {
-          "description": "CameraV is the easiest way to capture and share verifiable photos and video proof on a smartphone or tablet, all the while keeping it entirely secure and private.\n\nCameraV is easy to learn and simple to use (and insanely secure & powerful under the covers...). All photos and videos you take are password-protected and 100% encrypted on your device. You can also add private notes and tags to any photo or video, and choose who you share them with. CameraV also privately stores data from your device sensors and provides built-in tools to see and share it. Finally, it has a built-in secure camera that is simple, streamlined and even supports selfies.\n\nCameraV was developed in partnership with WITNESS, an international human rights video advocacy group, and with the support of the Knight News Foundation. It is built upon the open-source InformaCam platform.\n\n* READ THE USER GUIDE: https://guardianproject.github.io/informacam-guide/en/InformacamGuide.html\n\nCameraV was developed for use by activists, journalists, advocates and others, working in very difficult and high-risk situations, to capture and gather visual evidence and proof of abuse and rights violations. It can also be used in your daily life to capture any moment, and keep them safe and private. You can also use it for documenting your own evidence, after accidents, for real estate needs, or any where you need \"proof\".\n\n* OPEN-SOURCE AND FREE: https://github.com/guardianproject/InformaApp\n* JOIN THE COMMUNITY: https://talk.developersquare.net/c/developers-corner/smart-cameras\n\nCameraV is also known as Camera V or InformaCam.",
-          "summary": "The easiest way to capture verifiable photo & video proof, securely & privately"
-        },
-        "es": {
-          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
-        },
-        "es-ES": {
-          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
-        },
-        "es-US": {
-          "summary": "La forma m\u00e1s f\u00e1cil de capturar la foto verificable y prueba de v\u00eddeo, de forma s"
-        },
-        "et": {
-          "summary": "Lihtsaim viis j\u00e4\u00e4dvustada kontrollitav foto & video t\u00f5end, turvaliselt ja privaa"
-        },
-        "fi": {
-          "summary": "Helpoin tapa tallentaa todennettavissa kuvan & video todisteita, turvallisesti j"
-        },
-        "fr": {
-          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
-        },
-        "fr-CA": {
-          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
-        },
-        "fr-FR": {
-          "summary": "La meilleure fa\u00e7on de capturer photo v\u00e9rifiables et la preuve vid\u00e9o, en toute s\u00e9"
-        },
-        "hi": {
-          "summary": "\u0938\u092c\u0938\u0947 \u0906\u0938\u093e\u0928 \u0924\u0930\u0940\u0915\u093e \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0930\u0942\u092a \u0938\u0947 \u0914\u0930 \u0928\u093f\u091c\u0940 \u0924\u094c\u0930 \u092a\u0930, \u0928\u093f\u0930\u0940\u0915\u094d\u0937\u0923 \u092b\u094b\u091f\u094b \u0914\u0930 \u0935\u0940\u0921\u093f\u092f\u094b \u0938\u092c\u0942\u0924 \u0915\u092c\u094d"
-        },
-        "hr": {
-          "summary": "Najlak\u0161i na\u010din za hvatanje provjerljive Foto i video dokaz, sigurno i privatno"
-        },
-        "hu": {
-          "summary": "A legegyszer\u0171bb m\u00f3dja annak, hogy elfog ellen\u0151rizhet\u0151 fot\u00f3 \u00e9s vide\u00f3 bizony\u00edt\u00e9k, "
-        },
-        "id": {
-          "summary": "Cara termudah untuk menangkap diverifikasi foto & bukti video, aman & pribadi"
-        },
-        "it": {
-          "summary": "Il modo pi\u00f9 semplice per scattare foto verificabile & prova video, in modo sicur"
-        },
-        "ja": {
-          "summary": "\u5b89\u5168\u00b7\u975e\u516c\u958b\u3001\u691c\u8a3c\u5199\u771f\uff06\u30d3\u30c7\u30aa\u8a3c\u62e0\u3092\u30ad\u30e3\u30d7\u30c1\u30e3\u3059\u308b\u6700\u3082\u7c21\u5358\u306a\u65b9\u6cd5"
-        },
-        "ko": {
-          "summary": "\uac00\uc7a5 \uc26c\uc6b4 \ubc29\ubc95\uc740 \uc548\uc804 \ubc0f \uac1c\uc778, \uac80\uc99d \uc0ac\uc9c4 \ubc0f \ube44\ub514\uc624 \uc99d\uac70\ub97c \ucea1\ucc98"
-        },
-        "lt": {
-          "summary": "Papras\u010diausias b\u016bdas u\u017efiksuoti patikrinam\u0105 nuotrauk\u0105 ir video \u012frodym\u0105, saugiai "
-        },
-        "lv": {
-          "summary": "Viegl\u0101kais veids, lai att\u0113lotu p\u0101rbaud\u0101mu foto un video pier\u0101d\u012bjumus, dro\u0161i un p"
-        },
-        "nl": {
-          "summary": "De eenvoudigste manier om verifieerbare foto & video bewijs vastleggen, veilig e"
-        },
-        "no": {
-          "summary": "Den enkleste m\u00e5ten \u00e5 fange etterpr\u00f8vbar foto og video bevis, sikkert og privat"
-        },
-        "pl": {
-          "summary": "Najprostszym sposobem, aby uchwyci\u0107 zweryfikowania zdj\u0119cie i dow\u00f3d wideo, bezpie"
-        },
-        "pt-BR": {
-          "summary": "A maneira mais f\u00e1cil de capturar foto verific\u00e1vel e prova de v\u00eddeo, de forma seg"
-        },
-        "pt-PT": {
-          "summary": "A maneira mais f\u00e1cil de capturar foto verific\u00e1vel e prova de v\u00eddeo, de forma seg"
-        },
-        "ru": {
-          "summary": "\u0421\u0430\u043c\u044b\u0439 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0441\u043f\u043e\u0441\u043e\u0431, \u0447\u0442\u043e\u0431\u044b \u0437\u0430\u0445\u0432\u0430\u0442\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u043c\u043e\u0435 \u0444\u043e\u0442\u043e & \u0432\u0438\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u0430, \u043d"
-        },
-        "sk": {
-          "summary": "Najjednoduch\u0161\u00ed sp\u00f4sob, ako zachyti\u0165 overite\u013en\u00e9 Foto a video d\u00f4kaz, bezpe\u010dne a s\u00fa"
-        },
-        "sl": {
-          "summary": "Najla\u017eji na\u010din za zajemanje preverljive Foto in video dokaz, varno in zasebni"
-        },
-        "sv": {
-          "summary": "Det enklaste s\u00e4ttet att f\u00e5nga verifierbara foto & video bevis, s\u00e4kert och privat"
-        },
-        "sw": {
-          "summary": "Njia rahisi kukamata lithibitishwe picha na video ushahidi, salama & faragha"
-        },
-        "th": {
-          "summary": "\u0e27\u0e34\u0e18\u0e35\u0e17\u0e35\u0e48\u0e07\u0e48\u0e32\u0e22\u0e17\u0e35\u0e48\u0e2a\u0e38\u0e14\u0e17\u0e35\u0e48\u0e08\u0e30\u0e08\u0e31\u0e1a\u0e20\u0e32\u0e1e\u0e2b\u0e25\u0e31\u0e01\u0e10\u0e32\u0e19\u0e17\u0e35\u0e48\u0e15\u0e23\u0e27\u0e08\u0e2a\u0e2d\u0e1a\u0e44\u0e14\u0e49\u0e41\u0e25\u0e30\u0e27\u0e34\u0e14\u0e35\u0e42\u0e2d\u0e44\u0e14\u0e49\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e1b\u0e25\u0e2d\u0e14\u0e20\u0e31\u0e22\u0e41\u0e25\u0e30\u0e40\u0e2d\u0e01\u0e0a\u0e19"
-        },
-        "tr": {
-          "summary": "en kolay yolu g\u00fcvenli & \u00f6zel, do\u011frulanabilir foto\u011fraf & video kan\u0131t yakalamak i\u00e7"
-        },
-        "uk": {
-          "summary": "\u041d\u0430\u0439\u043f\u0440\u043e\u0441\u0442\u0456\u0448\u0438\u0439 \u0441\u043f\u043e\u0441\u0456\u0431, \u0449\u043e\u0431 \u0437\u0430\u0445\u043e\u043f\u0438\u0442\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u043c\u043e\u0435 \u0444\u043e\u0442\u043e & \u0432\u0456\u0434\u0435\u043e \u0434\u043e\u043a\u0430\u0437\u0438, \u043d\u0430\u0434\u0456\u0439\u043d\u043e \u0456 \u0432 \u043f"
-        },
-        "vi": {
-          "summary": "C\u00e1ch d\u1ec5 d\u00e0ng nh\u1ea5t \u0111\u1ec3 ch\u1ee5p \u1ea3nh c\u00f3 th\u1ec3 ki\u1ec3m ch\u1ee9ng v\u00e0 b\u1eb1ng ch\u1ee9ng video, an to\u00e0n & t"
-        }
-      },
-      "name": "CameraV",
+      "name": "CameraV: Secure Visual Proof",
+      "openCollective": "GuardianProject",
       "packageName": "org.witness.informacam.app",
       "sourceCode": "https://github.com/guardianproject/CameraV",
-      "suggestedVersionCode": "206",
+      "suggestedVersionCode": "35",
       "webSite": "https://guardianproject.info/apps/camerav/"
     },
     {
       "added": 1363651200000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": " https://guardianproject.info",
@@ -177,146 +67,26 @@
         "Guardian Project"
       ],
       "icon": "info.guardianproject.otr.app.im.1423001.png",
-      "issueTracker": "https://dev.guardianproject.info/projects/gibberbot",
+      "issueTracker": "https://dev.guardianproject.info/projects/gibberbot/issues",
       "lastUpdated": 1480636800000,
-      "license": "Apache2",
+      "liberapay": "GuardianProject",
+      "license": "Apache-2.0",
       "localized": {
-        "af": {
-          "summary": "Waarlik vry en private messaging wat jy kan vertrou"
-        },
-        "am": {
-          "summary": "\u12a5\u1293\u1295\u1270 \u12a5\u121d\u1290\u1275 \u1218\u1323\u120d \u12a5\u1295\u127d\u120b\u1208\u1295 \u1260\u12a5\u12cd\u1290\u1275 \u1290\u133b \u12a5\u1293 \u12e8\u130d\u120d \u1218\u120d\u12d5\u12ad\u1275"
-        },
-        "ar": {
-          "summary": "\u0627\u0644\u0631\u0633\u0627\u0626\u0644 \u062d\u0631\u0629 \u062d\u0642\u0627 \u0648\u0627\u0644\u062e\u0627\u0635\u0629 \u0627\u0644\u062a\u064a \u064a\u0645\u0643\u0646\u0643 \u0627\u0644\u0648\u062b\u0648\u0642 \u0628\u0647\u0627"
-        },
-        "bg": {
-          "summary": "\u0418\u0441\u0442\u0438\u043d\u0441\u043a\u0438 \u0441\u0432\u043e\u0431\u043e\u0434\u043d\u0430 \u0438 \u043b\u0438\u0447\u043d\u0438 \u0441\u044a\u043e\u0431\u0449\u0435\u043d\u0438\u044f, \u0447\u0435 \u043c\u043e\u0436\u0435\u0442\u0435 \u0434\u0430 \u0441\u0435 \u0434\u043e\u0432\u0435\u0440\u0438\u0442\u0435"
-        },
-        "ca": {
-          "summary": "Missatgeria veritablement lliure i privada que pot confiar"
-        },
-        "cs": {
-          "summary": "Skute\u010dn\u011b zdarma a soukrom\u00e9 zas\u00edl\u00e1n\u00ed zpr\u00e1v, kter\u00e9 m\u016f\u017eete d\u016fv\u011b\u0159ovat"
-        },
-        "da": {
-          "summary": "Virkelig fri og private beskeder, som du kan stole p\u00e5"
-        },
-        "de": {
-          "summary": "Wirklich frei und Private Nachrichten, denen Sie vertrauen k\u00f6nnen"
-        },
-        "el": {
-          "summary": "\u03a0\u03c1\u03b1\u03b3\u03bc\u03b1\u03c4\u03b9\u03ba\u03ac \u03b5\u03bb\u03b5\u03cd\u03b8\u03b5\u03c1\u03b7 \u03ba\u03b1\u03b9 \u03b9\u03b4\u03b9\u03c9\u03c4\u03b9\u03ba\u03ce\u03bd \u03bc\u03b7\u03bd\u03c5\u03bc\u03ac\u03c4\u03c9\u03bd \u03c0\u03bf\u03c5 \u03bc\u03c0\u03bf\u03c1\u03b5\u03af\u03c4\u03b5 \u03bd\u03b1 \u03b5\u03bc\u03c0\u03b9\u03c3\u03c4\u03b5\u03c5\u03c4\u03b5\u03af\u03c4\u03b5"
-        },
         "en-US": {
-          "description": "Thanks for being a part of the ChatSecure Android community. We are not actively developing this app anymore, but will continue to fix any critical bugs. ChatSecure for iOS and iPhone WILL CONTINUE ACTIVE DEVELOPMENT!\n\nWe are excited to share some great active apps that continue our mission of privacy and security...\n\nZom is built by the ChatSecure team, and makes it quick & easy for users to connect without a phone number, central servers or requiring any personal data. Zom is also available for iPhones and iPads.\n\nLearn more at https://zom.im\n\nConversations is the best modern open-source, standards-compliant mobile XMPP client. It is lightweight and supports the OMEMO advanced encryption protocol. Great for advanced users.\n\nLearn more at https://conversations.im\n\n****\nChatSecure is a free and open source messaging app that features OTR encryption over XMPP. You can connect to your existing accounts on Google, create new accounts on public XMPP servers (including via Tor), or even connect to your own server for extra security.\n\nUnlike other apps that keep you stuck in their walled garden, ChatSecure is fully interoperable with other clients that support OTR and XMPP, such as Xabber, Adium, Jitsi, Zom, Pidgin, and more.\n\n\u2605Strong Cryptography\u2605\n\nChatSecure only uses well-known open source cryptographic libraries to keep your conversations private. Other apps may make claims about \"military grade\" security but, without publicly auditable source code and verifiable end-to-end encryption, you cannot be truly safe.\n\n* XMPP with TLS certificate pinning.\n* OTR for verifiable end-to-end encryption and forward secrecy.\n* Tor to help bypass restrictive firewalls.\n* SQLCipher to locally encrypt conversation logs.\n\n\u2605 Free and Open Source \u2605\n\nWe believe in the power of free and open source software. The full source code to the iOS and Android apps is available on GitHub.\n\nWant to get involved? Feel free to send us a pull request, request a feature or report a bug!\nhttps://github.com/guardianproject/chatsecureandroid\n\n\u2605 WE SPEAK YOUR LANGUAGE: ChatSecure is available for friends who speak: \u0627\u0644\u0639\u0631\u0628\u064a\u0629, \u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438, catal\u00e0, \u010ce\u0161tina, dansk, Deutsch, \u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac, English, espa\u00f1ol, eesti, euskara, \u0641\u0627\u0631\u0633\u06cc, suomi, fran\u00e7ais, galego, hrvatski, magyar, \u05e2\u05d1\u05e8\u05d9\u05ea, \u00edslenska, italiano, \u65e5\u672c\u8a9e, \ud55c\uad6d\uc5b4, \u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0446\u0438, Bahasa Melayu, Nederlands, norsk, polski, portugu\u00eas, \u0420\u0443\u0441\u0441\u043a\u0438\u0439, sloven\u010dina, sloven\u0161\u010dina, \u0441\u0440\u043f\u0441\u043a\u0438, svenska, T\u00fcrk\u00e7e, \u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430, Tagalog, Ti\u1ebfng Vi\u1ec7t, \u4e2d\u6587(\u7b80\u4f53), \u4e2d\u6587(\u53f0\u7063)\nDon\u2019t see your language? Join us and help translate the app:\nhttps://www.transifex.com/projects/p/chatsecureandroid",
-          "summary": "Truly free and private messaging that you can trust"
-        },
-        "es": {
-          "summary": "Mensajer\u00eda verdaderamente libre y privada que puede confiar"
-        },
-        "es-ES": {
-          "summary": "Mensajer\u00eda verdaderamente libre y privada que puede confiar"
-        },
-        "es-US": {
-          "summary": "Mensajer\u00eda verdaderamente libre y privada que puede confiar"
-        },
-        "et": {
-          "summary": "T\u00f5esti tasuta ja Privaats\u00f5numid et saab usaldada"
-        },
-        "fi": {
-          "summary": "Todella vapaa ja yksityisviestit, johon voit luottaa"
-        },
-        "fr": {
-          "summary": "Messagerie v\u00e9ritablement libre et priv\u00e9e que vous pouvez faire confiance"
-        },
-        "fr-CA": {
-          "summary": "Messagerie v\u00e9ritablement libre et priv\u00e9e que vous pouvez faire confiance"
-        },
-        "fr-FR": {
-          "summary": "Messagerie v\u00e9ritablement libre et priv\u00e9e que vous pouvez faire confiance"
-        },
-        "hi": {
-          "summary": "\u0906\u092a \u0935\u093f\u0936\u094d\u0935\u093e\u0938 \u0915\u0930 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902 \u0915\u093f \u0935\u093e\u0938\u094d\u0924\u0935 \u092e\u0947\u0902 \u0938\u094d\u0935\u0924\u0902\u0924\u094d\u0930 \u0914\u0930 \u0928\u093f\u091c\u0940 \u0938\u0902\u0926\u0947\u0936 \u092d\u0947\u091c\u0928\u0947"
-        },
-        "hr": {
-          "summary": "Istinski slobodan i privatnih poruka koje mo\u017eete vjerovati"
-        },
-        "hu": {
-          "summary": "Val\u00f3ban szabad \u00e9s priv\u00e1t \u00fczenetek, hogy b\u00edzhatnak"
-        },
-        "id": {
-          "summary": "Pesan yang benar-benar gratis dan pribadi yang dapat Anda percaya"
-        },
-        "it": {
-          "summary": "Messaggistica veramente libero e privato che si pu\u00f2 fidare"
-        },
-        "ja": {
-          "summary": "\u3042\u306a\u305f\u304c\u4fe1\u983c\u3067\u304d\u308b\u771f\u306e\u81ea\u7531\u3068\u30d7\u30e9\u30a4\u30d9\u30fc\u30c8\u30e1\u30c3\u30bb\u30fc\u30b8\u30f3\u30b0"
-        },
-        "ko": {
-          "summary": "\ub2f9\uc2e0\uc774 \ubbff\uc744 \uc218\uc788\ub294 \uc9c4\uc815\ud55c \uc790\uc720\uc640 \ube44\uacf5\uac1c \uba54\uc2dc\uc9c0"
-        },
-        "lt": {
-          "summary": "Tikrai laisva ir priva\u010dios \u017einut\u0117s, kad galite pasitik\u0117ti"
-        },
-        "lv": {
-          "summary": "Patiesi br\u012bva un priv\u0101tu zi\u0146apmai\u0146u, ka j\u016bs varat uztic\u0113ties"
-        },
-        "nl": {
-          "summary": "Echt vrij en priv\u00e9berichten die je kunt vertrouwen"
-        },
-        "no": {
-          "summary": "Helt gratis og private beskjeder som du kan stole p\u00e5"
-        },
-        "pl": {
-          "summary": "Prawdziwie wolne i prywatne wiadomo\u015bci, kt\u00f3rej mo\u017cesz zaufa\u0107"
-        },
-        "pt-BR": {
-          "summary": "Mensagens verdadeiramente livre e privado que voc\u00ea pode confiar"
-        },
-        "pt-PT": {
-          "summary": "Mensagens verdadeiramente livre e privado que voc\u00ea pode confiar"
-        },
-        "ro": {
-          "summary": "Mesaje cu adev\u0103rat liber \u0219i privat, pe care le pute\u021bi avea \u00eencredere"
-        },
-        "ru": {
-          "summary": "\u041f\u043e\u0438\u0441\u0442\u0438\u043d\u0435 \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u0430\u044f \u0447\u0430\u0441\u0442\u043d\u0430\u044f \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0434\u043e\u0432\u0435\u0440\u044f\u0442\u044c"
-        },
-        "sk": {
-          "summary": "Skuto\u010dne zadarmo a s\u00fakromn\u00e9 \u200b\u200bzasielanie spr\u00e1v, ktor\u00e9 m\u00f4\u017eete d\u00f4verova\u0165"
-        },
-        "sl": {
-          "summary": "Resni\u010dno svobodna in zasebnih sporo\u010dil, ki mu lahko zaupate"
-        },
-        "sv": {
-          "summary": "Verkligt fri och privata meddelanden som du kan lita p\u00e5"
-        },
-        "sw": {
-          "summary": "Ujumbe wa kweli bure na binafsi kwamba unaweza kutegemea"
-        },
-        "th": {
-          "summary": "\u0e2d\u0e34\u0e2a\u0e23\u0e30\u0e2d\u0e22\u0e48\u0e32\u0e07\u0e41\u0e17\u0e49\u0e08\u0e23\u0e34\u0e07\u0e41\u0e25\u0e30\u0e40\u0e2d\u0e01\u0e0a\u0e19\u0e01\u0e32\u0e23\u0e2a\u0e48\u0e07\u0e02\u0e49\u0e2d\u0e04\u0e27\u0e32\u0e21\u0e17\u0e35\u0e48\u0e04\u0e38\u0e13\u0e2a\u0e32\u0e21\u0e32\u0e23\u0e16\u0e44\u0e27\u0e49\u0e27\u0e32\u0e07\u0e43\u0e08"
-        },
-        "tr": {
-          "summary": "G\u00fcvenebilece\u011finiz ger\u00e7ekten \u00f6zg\u00fcr ve \u00f6zel mesajla\u015fma"
-        },
-        "uk": {
-          "summary": "\u0412\u043e\u0456\u0441\u0442\u0438\u043d\u0443 \u0431\u0435\u0437\u043a\u043e\u0448\u0442\u043e\u0432\u043d\u0430 \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u0430 \u043f\u043e\u0432\u0456\u0434\u043e\u043c\u043b\u0435\u043d\u044c, \u044f\u043a\u0456 \u0432\u0438 \u043c\u043e\u0436\u0435\u0442\u0435 \u0434\u043e\u0432\u0456\u0440\u044f\u0442\u0438"
-        },
-        "vi": {
-          "summary": "Tin nh\u1eafn th\u1eadt s\u1ef1 t\u1ef1 do v\u00e0 ri\u00eang t\u01b0 m\u00e0 b\u1ea1n c\u00f3 th\u1ec3 tin t\u01b0\u1edfng"
+          "name": "ChatSecure"
         }
       },
-      "name": "ChatSecure",
+      "openCollective": "GuardianProject",
       "packageName": "info.guardianproject.otr.app.im",
-      "sourceCode": "https://github.com/guardianproject/chatsecure",
+      "sourceCode": "https://github.com/guardianproject/ChatSecureAndroid",
       "suggestedVersionCode": "1423001",
       "webSite": "https://dev.guardianproject.info/projects/gibberbot"
     },
     {
       "added": 1386892800000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": " https://guardianproject.info",
@@ -325,12 +95,17 @@
         "Security",
         "Guardian Project"
       ],
-      "description": "<p>This is a plugin for <a href=\"fdroid.app:info.guardianproject.otr.app.im\">ChatSecure</a>. It does not have any function on its own.  For Your Ears Only... completely private, end-to-end encryption voice message recording, sending, receiving and playback.</p><p> * For use with <a href=\"fdroid.app:info.guardianproject.otr.app.im\">ChatSecure</a>'s encrypted \"Off-the-record\" data stream  * Works over Tor - the ONLY Onion-routed voice messaging system, for total anonymity</p>",
+      "description": "This is a plugin for [[info.guardianproject.otr.app.im]]. It does not have any\nfunction on its own.  For Your Ears Only... completely private, end-to-end\nencryption voice message recording, sending, receiving and playback.\n\n* For use with [[info.guardianproject.otr.app.im]]'s encrypted \"Off-the-record\" data stream\n* Works over Tor - the ONLY Onion-routed voice messaging system, for total anonymity",
       "icon": "info.guardianproject.soundrecorder.2.png",
       "issueTracker": "https://dev.guardianproject.info/projects/chatsecure/issues",
       "lastUpdated": 1386892800000,
+      "liberapay": "GuardianProject",
       "license": "SIL Open Font License, MIT License and the CC 3.0 License [CC-By with attribution requirement waived]",
-      "name": "ChatSecureVoicePlugin",
+      "localized": {
+        "en-US": {
+          "name": "ChatSecureVoicePlugin"
+        }
+      },
       "packageName": "info.guardianproject.soundrecorder",
       "sourceCode": "https://github.com/guardianproject/ChatSecureVoicePlugin",
       "suggestedVersionCode": "2",
@@ -339,254 +114,116 @@
     },
     {
       "added": 1400025600000,
+      "allowedAPKSigningKeys": [
+        "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
       "categories": [
         "Reading",
         "Guardian Project"
       ],
-      "icon": "info.guardianproject.courier.15.png",
-      "lastUpdated": 1403740800000,
-      "liberapayID": "33617",
+      "icon": "info.guardianproject.courier.14.png",
+      "lastUpdated": 1400025600000,
+      "liberapay": "GuardianProject",
       "license": "GPL-3.0-only",
       "localized": {
-        "af": {
-          "summary": "Lees w\u00eareldwyd. Deel plaaslik.'N veilige News Reader met Orbot Tor ondersteuning"
-        },
-        "am": {
-          "summary": "\u1260\u12d3\u1208\u121d \u12a0\u1240\u134d \u12a0\u1295\u1265\u1265. \u1260\u12a0\u12ab\u1263\u1262\u12cd \u12eb\u130b\u1229.Orbot \u12e8\u1276\u122d \u12f5\u130b\u134d \u130b\u122d \u12a0\u1235\u1270\u121b\u121b\u129d \u12dc\u1293 \u12a0\u1295\u1263\u1262."
-        },
-        "ar": {
-          "summary": "\u0642\u0631\u0627\u0621\u0629 \u0639\u0644\u0649 \u0627\u0644\u0635\u0639\u064a\u062f \u0627\u0644\u0639\u0627\u0644\u0645\u064a. \u062a\u0628\u0627\u062f\u0644 \u0645\u062d\u0644\u064a\u0627.A \u0627\u0644\u0622\u0645\u0646\u0629 \u0642\u0627\u0631\u0626 \u0627\u0644\u0623\u062e\u0628\u0627\u0631 \u0628\u062f\u0639\u0645 Orbot \u062a\u0648\u0631."
-        },
-        "bg": {
-          "summary": "\u041f\u0440\u043e\u0447\u0435\u0442\u0435\u0442\u0435 \u0432 \u0441\u0432\u0435\u0442\u043e\u0432\u0435\u043d \u043c\u0430\u0449\u0430\u0431. \u0421\u043f\u043e\u0434\u0435\u043b\u0435\u0442\u0435 \u043b\u043e\u043a\u0430\u043b\u043d\u043e.\u0421\u0438\u0433\u0443\u0440\u043d\u0430 News Reader \u0441 \u043f\u043e\u0434\u043a\u0440\u0435\u043f\u0430\u0442\u0430 O"
-        },
-        "ca": {
-          "summary": "Llegir A nivell mundial. Comparteix localment.Un Secure lector de not\u00edcies amb e"
-        },
-        "cs": {
-          "summary": "P\u0159e\u010dt\u011bte si v celosv\u011btov\u00e9m m\u011b\u0159\u00edtku. Pod\u011blte se m\u00edstn\u011b.Secure News Reader s podpo"
-        },
-        "de": {
-          "summary": "Lesen Weltweit. Teilen Sie vor Ort.Ein sicheres News Reader mit Orbot Tor Unters"
-        },
-        "el": {
-          "summary": "\u0394\u03b9\u03b1\u03b2\u03ac\u03c3\u03c4\u03b5 \u03cc\u03bb\u03bf \u03c4\u03bf\u03bd \u03ba\u03cc\u03c3\u03bc\u03bf. \u039c\u03bf\u03b9\u03c1\u03b1\u03c3\u03c4\u03b5\u03af\u03c4\u03b5 \u03c4\u03bf\u03c0\u03b9\u03ba\u03ac.\u039c\u03b9\u03b1 \u03b1\u03c3\u03c6\u03b1\u03bb\u03ae\u03c2 News Reader \u03bc\u03b5 \u03c5\u03c0\u03bf\u03c3\u03c4\u03ae\u03c1\u03b9\u03be\u03b7"
-        },
         "en-US": {
-          "description": "Courier is a mobile RSS news reader with enhanced security features, offline reading and sharing capability.  We've designed it to be fast and light on slow networks and secure in case your network is monitored.\n\nFEATURES:\n\u2605 SECURE: Courier works with Orbot, Tor for Android (https://play.google.com/store/apps/details?id=org.torproject.android) to defend against network surveillance and protect your privacy\n\u2605 ENCRYPTED: Courier encrypts your stored news - and personal information - to protect your privacy\n\u2605 PANIC: Courier's configurable \"panic\" action will remove your news, your personal data and optionally the app itself with one swipe\n\u2605 SAFE: Courier securely caches your password with a configurable timeout. You can configure for repeated password entry failures to trigger data (and app!) deletion.  And you can set a special \"kill password\".  \n\u2605 AUTOMATIC: Courier quietly synchronizes your feeds in the background (manual mode available, too!)\n\u2605 CONTENT SHARE: secure, off-network, sharing of news articles with other users of Courier via Bluetooth (unsecure share available, too!)\n\u2605 PEER-TO-PEER APP SHARING: Get your friends set up with Courier by sharing the app over a common WiFi network or hotspot.\n\u2605 LIGHTWEIGHT: configure Courier to minimize network data use on low-speed networks or sync only on wi-fi\n\u2605 FAVORITES: mark articles as easily-retrieved favorites\n\u2605 PRE-CONFIGURED: Courier ships with desirable international news feeds, and it's easy to add your own\n\u2605 LANGUAGES: English, Chinese (\u4e2d\u570b\u7684), Tibetan (\u0f56\u0f7c\u0f51\u0f0b\u0f61\u0f72\u0f42), Ukrainian (\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0438\u0439), Russian (\u0440\u0443\u0441\u0441\u043a\u0438\u0439)\n\u2605 AD-FREE: Courier is an ad-free, open-source application\n\nABOUT US:\nGuardian Project is a group of developers, designers and technologists that make secure mobile apps and open-source code for a better tomorrow.\n\n\u2605 OUR WEBSITE: https://guardianproject.info\n\u2605 ON TWITTER: https://twitter.com/guardianproject\n\u2605 OPEN-SOURCE: Courier is free software. Take a look at our source code, or join the community to make it better: https://github.com/guardianproject/securereader\n\u2605 MESSAGE US: Are we missing your favorite feature? Found an annoying bug? We\u2019d love to hear from you! Send us an email: support@guardianproject.info\n\n***Disclaimer***\nThe Guardian Project makes apps that are designed to protect your security and anonymity. The protocols that we use are widely regarded as the state of the art in security technology. While we are constantly upgrading our software to combat the latest threats and eliminate bugs, no technology is 100% foolproof. For maximum security and anonymity users must utilize best practices to keep themselves safe. You can find a good introductory guide to these topics at https://securityinabox.org",
-          "icon": "icon.png",
-          "phoneScreenshots": [
-            "-hGFHySYerrx3B7M1VXujPfwjQPYj4uW4el1t5Gq8G9mdg24_god8VzHqFzun4M_8Q.png",
-            "75HfzKrxBIDd6AZGF5NVsAhta968jvDWBpg-kkk_TR0BiNJNC5O8GVbU4AkboMUR7Q.png",
-            "8V0ydye1VMcy_TMnUyT2JGkVcRIs2kusvPk1OqBfx4FbJspTzJU_KO8VZmKVuawg2Q4U.png",
-            "9Ab_06GV8xzxRqhBsznXLGWDj7lVl5bN3I4QcVgAkMM89SF5-PoaiQqxQqDQb0ayNCs.png",
-            "NTYksHqjvK_4Q4gdRWNvNphXxMEMERKwKeiylqZiAaENNwC1XH_aAjwn8znebQ-nB_Q.png",
-            "NmIocjV46fmo7V1v_D0pv0u4_o1FrdqXURvdBsIshQlV52fzGy82nIGTbMamuIa4-uNL.png",
-            "RlKF96lts4milhul1St2_FjrqCsVW5swoATWFuzLapI0Q59-1wlMotlgD4OmRiNcBg.png",
-            "qr46aFfobCNvdtFtKUTpXpllz55FWdLilIEc13copcVbX1jfJBvBhUsqiJlHUkbjZM1Q.png"
-          ],
-          "summary": "Read Globally. Share Locally.A Secure News Reader with Orbot Tor support."
-        },
-        "es": {
-          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
-        },
-        "es-ES": {
-          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
-        },
-        "es-US": {
-          "summary": "Leer A nivel mundial. Comparte localmente.Un Secure lector de noticias con el ap"
-        },
-        "et": {
-          "summary": "Loe terve maailma. Jaga Kohati.Secure News Reader Orbot Tor toetust."
-        },
-        "fi": {
-          "summary": "Lue maailmanlaajuisesti. Jaa Paikallisesti.Turvallinen News Reader Orbot Tor tue"
-        },
-        "fr": {
-          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
-        },
-        "fr-CA": {
-          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
-        },
-        "fr-FR": {
-          "summary": "Lire l'\u00e9chelle mondiale. Partagez localement.Une s\u00e9curis\u00e9 Nouvelles Reader avec "
-        },
-        "hi": {
-          "summary": "\u0935\u093f\u0936\u094d\u0935 \u0938\u094d\u0924\u0930 \u092a\u0930 \u092a\u0922\u093c\u0947\u0902\u0964 \u0938\u094d\u0925\u093e\u0928\u0940\u092f \u0930\u0942\u092a \u0938\u0947 \u0938\u093e\u091d\u093e \u0915\u0930\u0947\u0902\u0964Orbot \u091f\u094b \u0938\u092e\u0930\u094d\u0925\u0928 \u0915\u0947 \u0938\u093e\u0925 \u090f\u0915 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924"
-        },
-        "hr": {
-          "summary": "Pro\u010ditajte globalno. Podijelite na lokalnoj razini.Sigurna \u010dita\u010d vijesti sa Orbo"
-        },
-        "hu": {
-          "summary": "Olvassa el vil\u00e1gszerte. Ossza helyben.A Secure News Reader Orbot Tor t\u00e1mogat\u00e1st."
-        },
-        "id": {
-          "summary": "Baca global. Bagi Lokal.Secure News Reader dengan dukungan Orbot Tor."
-        },
-        "it": {
-          "summary": "Leggi globale. Condividi localmente.A Secure News Reader con il supporto Orbot T"
-        },
-        "ja": {
-          "summary": "\u30b0\u30ed\u30fc\u30d0\u30eb\u3092\u304a\u8aad\u307f\u304f\u3060\u3055\u3044\u3002\u30ed\u30fc\u30ab\u30eb\u5171\u6709\u3002Orbot\u306eTor\u3092\u30b5\u30dd\u30fc\u30c8\u3059\u308b\u30bb\u30ad\u30e5\u30a2\u306a\u30cb\u30e5\u30fc\u30b9\u30ea\u30fc\u30c0\u30fc\u3002"
-        },
-        "ko": {
-          "summary": "\uc138\uacc4\uc801\uc73c\ub85c \uc77d\uae30. \ub85c\uceec \uacf5\uc720 \ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.Orbot \ud1a0\ub974 \uc9c0\uc6d0 \ubcf4\uc548 \ub274\uc2a4 \ub9ac\ub354."
-        },
-        "lt": {
-          "summary": "Skaityti visame pasaulyje. Dalytis vietoje.Saugus Naujienos skaitytuvas Orbot To"
-        },
-        "lv": {
-          "summary": "Las\u012bt glob\u0101li. Dal\u012bties Lok\u0101li.Dro\u0161a News Reader ar Orbot Tor atbalstu."
-        },
-        "nl": {
-          "summary": "Lees Wereldwijd. Deel Lokaal.Een Secure News Reader met Orbot Tor ondersteuning."
-        },
-        "no": {
-          "summary": "Les globalt. Del lokalt.Et sikkert News Reader med Orbot Tor st\u00f8tte."
-        },
-        "pl": {
-          "summary": "Czytaj na ca\u0142ym \u015bwiecie. Podziel Lokalnie.Bezpieczne News Reader z obs\u0142ug\u0105 Orbot"
-        },
-        "pt-BR": {
-          "summary": "Leia globais. Compartilhe localmente.Um seguro News Reader com o apoio Orbot Tor"
-        },
-        "pt-PT": {
-          "summary": "Leia globais. Compartilhe localmente.Um seguro News Reader com o apoio Orbot Tor"
-        },
-        "ro": {
-          "summary": "Cite\u0219te toat\u0103 lumea. \u00cemparte local.Un Secure News Reader cu suport Orbot Tor."
-        },
-        "ru": {
-          "summary": "\u0427\u0438\u0442\u0430\u0439\u0442\u0435 \u0432 \u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u043e\u043c \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0435. \u041f\u043e\u0434\u0435\u043b\u0438\u0442\u0435\u0441\u044c \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u043e.\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u044b\u0439 \u0434\u043b\u044f \u0447\u0442\u0435\u043d\u0438\u044f \u043d\u043e\u0432\u043e\u0441\u0442\u0435"
-        },
-        "sk": {
-          "summary": "Pre\u010d\u00edtajte si v celosvetovom meradle. Pode\u013ete sa lok\u00e1lne.Secure News Reader s po"
-        },
-        "sl": {
-          "summary": "Preberite svetu. Delite Lokalno.Secure News Reader s Orbot Tor podporo."
-        },
-        "sv": {
-          "summary": "L\u00e4s globalt. Dela Lokalt.En s\u00e4ker nyhetsl\u00e4sare med Orbot Tor st\u00f6d."
-        },
-        "sw": {
-          "summary": "Kusoma Kimataifa. Ndani ya nchi kushiriki.Salama Habari Msomaji na Orbot Tor msa"
-        },
-        "th": {
-          "summary": "\u0e2d\u0e48\u0e32\u0e19\u0e17\u0e31\u0e48\u0e27\u0e42\u0e25\u0e01 \u0e41\u0e1a\u0e48\u0e07\u0e1b\u0e31\u0e19\u0e43\u0e19\u0e1e\u0e37\u0e49\u0e19\u0e17\u0e35\u0e48\u0e2d\u0e48\u0e32\u0e19\u0e02\u0e48\u0e32\u0e27\u0e01\u0e32\u0e23\u0e23\u0e31\u0e01\u0e29\u0e32\u0e04\u0e27\u0e32\u0e21\u0e1b\u0e25\u0e2d\u0e14\u0e20\u0e31\u0e22\u0e14\u0e49\u0e27\u0e22\u0e01\u0e32\u0e23\u0e2a\u0e19\u0e31\u0e1a\u0e2a\u0e19\u0e38\u0e19 Orbot Tor"
-        },
-        "tr": {
-          "summary": "D\u00fcnyaya okuyun. Yerel payla\u015f\u0131n.Orbot Tor deste\u011fi ile G\u00fcvenli News Reader."
-        },
-        "uk": {
-          "summary": "\u0427\u0438\u0442\u0430\u0439\u0442\u0435 \u0432 \u0433\u043b\u043e\u0431\u0430\u043b\u044c\u043d\u043e\u043c\u0443 \u043c\u0430\u0441\u0448\u0442\u0430\u0431\u0456. \u041f\u043e\u0434\u0456\u043b\u0456\u0442\u044c\u0441\u044f \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u043e.\u0411\u0435\u0437\u043f\u0435\u0447\u043d\u0438\u0439 \u0434\u043b\u044f \u0447\u0438\u0442\u0430\u043d\u043d\u044f \u043d\u043e\u0432\u0438\u043d "
-        },
-        "vi": {
-          "summary": "\u0110\u1ecdc to\u00e0n c\u1ea7u. Chia s\u1ebb t\u1ea1i \u0111\u1ecba ph\u01b0\u01a1ng.M\u1ed9t Tin t\u1ee9c B\u1ea3o m\u1eadt Reader v\u1edbi h\u1ed7 tr\u1ee3 Orbot"
+          "name": "Courier"
         }
       },
-      "name": "Courier",
+      "openCollective": "GuardianProject",
       "packageName": "info.guardianproject.courier",
       "sourceCode": "https://github.com/guardianproject/securereader",
-      "suggestedVersionCode": "15",
-      "suggestedVersionName": "0.1.9",
+      "suggestedVersionCode": "14",
       "translation": "https://www.transifex.com/otf/securereader/",
       "webSite": "https://dev.guardianproject.info/projects/secure-reader"
     },
     {
-      "added": 1413417600000,
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
-      "categories": [
-        "Guardian Project",
-        "Connectivity"
-      ],
-      "changelog": "https://github.com/n8fr8/gilgamesh/blob/HEAD/CHANGELOG",
-      "description": "<p>Use Bluetooth to chat with others in the same area, even if Internet access is down or restricted.</p>",
-      "icon": "info.guardianproject.gilga.12.png",
-      "issueTracker": "https://github.com/n8fr8/gilgamesh/issues",
-      "lastUpdated": 1413417600000,
-      "liberapayID": "33617",
-      "license": "GPL-3.0-only",
-      "localized": {
-        "en-US": {
-          "summary": "Local chat via Bluetooth\n"
-        },
-        "zh-CN": {
-          "summary": "\u901a\u8fc7\u84dd\u7259\u8fdb\u884c\u672c\u5730\u804a\u5929\n"
-        }
-      },
-      "name": "Gilga",
-      "packageName": "info.guardianproject.gilga",
-      "sourceCode": "https://github.com/n8fr8/gilgamesh",
-      "suggestedVersionCode": "12"
-    },
-    {
       "added": 1367971200000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": "https://guardianproject.info",
       "categories": [
+        "Development",
         "Guardian Project",
         "Security"
       ],
-      "description": "<p>GnuPrivacyGuard extends the gpgcli command line tool to bring an integrated privacy engine to your Android. It gives you command line access to the entire GnuPG suite of encryption software. It also serves as the test bed for complete Android integration for all of GnuPG's crypto services, including OpenPGP, symmetric encryption, and more.</p><p>GPG is GNU\u2019s tool for end-to-end secure communication and encrypted data storage. This trusted protocol is the free software alternative to PGP. This app is built upon GnuPG 2.1, the new modularized version of GnuPG that now supports S/MIME.</p><p>GPG aims to provide an integrated experience, so clicking on PGP files should \"just work\". You can also share files to GPG to encrypt them. GPG will also respond when you click on a PGP fingerprint URL (one that starts with openpgp4fpr:).</p><p>Before using GPG, be sure to launch the app and let it finish its installation process. Once it has completed, then you're ready to use it. The easiest way to get started with GPG is to install https://f-droid.org/packages/jackpal.androidterm/. GPG will automatically configure Android Terminal Emulator as long as you have the \"Allow PATH extensions\" settings enabled.</p><p>Status: Unmaintained, use https://f-droid.org/packages/org.sufficientlysecure.keychain/</p>",
-      "icon": "info.guardianproject.gpg.5.png",
+      "description": "GnuPrivacyGuard extends the gpgcli command line tool to bring an integrated\nprivacy engine to your Android. It gives you command line access to the entire\nGnuPG suite of encryption software. It also serves as the test bed for\ncomplete Android integration for all of GnuPG's crypto services, including\nOpenPGP, symmetric encryption, and more.\n\nGPG is GNU\u2019s tool for end-to-end secure communication and encrypted data\nstorage. This trusted protocol is the free software alternative to PGP. This\napp is built upon GnuPG 2.1, the new modularized version of GnuPG that now\nsupports S/MIME.\n\nGPG aims to provide an integrated experience, so clicking on PGP files should\n\"just work\". You can also share files to GPG to encrypt them. GPG will also\nrespond when you click on a PGP fingerprint URL (one that starts with\nopenpgp4fpr:).\n\nBefore using GPG, be sure to launch the app and let it finish its installation\nprocess. Once it has completed, then you're ready to use it. The easiest way\nto get started with GPG is to install https://f-droid.org/packages/jackpal.androidterm. GPG will\nautomatically configure Android Terminal Emulator as long as you have the\n\"Allow PATH extensions\" settings enabled.\n\nStatus: Unmaintained, use https://f-droid.org/packages/org.sufficientlysecure.keychain/",
+      "icon": "info.guardianproject.gpg.4.png",
       "issueTracker": "https://dev.guardianproject.info/projects/gpgandroid/issues",
-      "lastUpdated": 1396828800000,
-      "license": "GPL-3.0-only",
-      "name": "GnuPrivacyGuard",
+      "lastUpdated": 1394582400000,
+      "license": "GPL-3.0-or-later",
+      "localized": {
+        "en-US": {
+          "name": "GnuPrivacyGuard"
+        }
+      },
       "packageName": "info.guardianproject.gpg",
       "sourceCode": "https://github.com/guardianproject/gnupg-for-android",
-      "suggestedVersionCode": "3020",
-      "suggestedVersionName": "0.3.2",
+      "suggestedVersionCode": "4",
       "summary": "GnuPG via gpgcli",
       "webSite": "https://guardianproject.info/code/gnupg"
     },
     {
       "added": 1360108800000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
       "categories": [
-        "Guardian Project",
-        "Development"
+        "Development",
+        "Guardian Project"
       ],
-      "description": "<p>Lil' Debi builds up a whole Debian chroot on your phone entirely using debootstrap. You choose the release, mirror, and size of the disk image, and away it goes. It could take up to an hour on a slow device.</p><p>Then it has a simple chroot manager that fscks your disk, mounts/unmounts things, starts/stops sshd if you have it installed, etc. You can also then use \u2018apt-get\u2019 to install any package that is released for ARM processors. This includes things like a complete real shell, Tor, TraceRouteTCP, iwconfig/ipconfig, and other security and crypto tools. Works well with https://f-droid.org/packages/jackpal.androidterm \u2014just run `/debian/shell` to get a Debian shell.</p><p>The aim of Lil\u2019 Debi is to provide a transparent and tightly integrated Debian install on your Android device. It mounts all of your Android partitions in Debian space, so you see a fusion of both systems. It's even possible to have Lil\u2019 Debi launch the normal Debian init start-up scripts when it starts, so that all you need to do is apt-get install and any servers you install will just work.</p><p>Lil' Debi works with as few modifications to the Android system as possible. Currently, it only adds a /bin symlink, and a /debian mount directory. It does not touch /system at all.</p><p>Requires root: Yes, because it needs to run debootstrap, create dirs in /, mount/umount, etc.</p>",
+      "description": "Lil' Debi builds up a whole Debian chroot on your phone entirely using\ndebootstrap. You choose the release, mirror, and size of the disk image, and\naway it goes. It could take up to an hour on a slow device.\n\nThen it has a simple chroot manager that fscks your disk, mounts/unmounts\nthings, starts/stops sshd if you have it installed, etc. You can also then use\n\u2018apt-get\u2019 to install any package that is released for ARM processors. This\nincludes things like a complete real shell, Tor, TraceRouteTCP,\niwconfig/ipconfig, and other security and crypto tools. Works well with\nhttps://f-droid.org/packages/jackpal.androidterm \u2014just run `/debian/shell` to get a Debian shell.\n\nThe aim of Lil\u2019 Debi is to provide a transparent and tightly integrated Debian\ninstall on your Android device. It mounts all of your Android partitions in\nDebian space, so you see a fusion of both systems. It's even possible to have\nLil\u2019 Debi launch the normal Debian init start-up scripts when it starts, so that\nall you need to do is apt-get install and any servers you install will just\nwork.\n\nLil' Debi works with as few modifications to the Android system as possible.\nCurrently, it only adds a /bin symlink, and a /debian mount directory. It does\nnot touch /system at all.\n\nRequires root: Yes, because it needs to run debootstrap, create dirs in /,\nmount/umount, etc.",
       "icon": "info.guardianproject.lildebi.5400.png",
       "issueTracker": "https://github.com/guardianproject/lildebi/issues",
       "lastUpdated": 1422230400000,
-      "liberapayID": "33617",
+      "liberapay": "GuardianProject",
       "license": "GPL-3.0-or-later",
-      "name": "Lil' Debi",
+      "localized": {
+        "en-US": {
+          "name": "Lil' Debi"
+        }
+      },
+      "openCollective": "GuardianProject",
       "packageName": "info.guardianproject.lildebi",
       "sourceCode": "https://github.com/guardianproject/lildebi",
       "suggestedVersionCode": "5400",
-      "suggestedVersionName": "0.5.4",
       "summary": "Run Debian on your phone",
       "webSite": "https://github.com/guardianproject/lildebi/wiki"
     },
     {
       "added": 1358294400000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
       "categories": [
-        "Guardian Project",
         "Writing",
-        "Security"
+        "Security",
+        "Guardian Project"
       ],
-      "description": "<p>Simple app for taking notes that encrypts everything behind a password.</p><p>Status: Unmaintained.</p>",
+      "description": "Simple app for taking notes that encrypts everything behind a password.\n\nStatus: Unmaintained.",
       "icon": "info.guardianproject.notepadbot.12.png",
       "issueTracker": "https://github.com/guardianproject/notecipher/issues",
       "lastUpdated": 1394409600000,
-      "liberapayID": "33617",
+      "liberapay": "GuardianProject",
       "license": "Apache-2.0",
-      "name": "NoteCipher",
+      "localized": {
+        "en-US": {
+          "name": "NoteCipher"
+        }
+      },
+      "openCollective": "GuardianProject",
       "packageName": "info.guardianproject.notepadbot",
       "sourceCode": "https://github.com/guardianproject/notecipher",
       "suggestedVersionCode": "12",
@@ -595,27 +232,29 @@
     },
     {
       "added": 1350864000000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": "https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
       "categories": [
         "Internet",
         "Security",
         "Guardian Project"
       ],
-      "description": "<p>Orweb is a companion browser to https://f-droid.org/packages/org.torproject.android/, the port of Tor to Android.</p><p>Orbot anonymizes internet traffic by routing it through many different stages and you must have that enabled first, though root isn't needed. Orweb disables certain other browser features that could be used to identify you.</p><p>Please note that Orweb is superseded by Tor Browser.  Orweb is no longer maintained at all.</p>",
+      "description": "Orweb is a companion browser to\nhttps://f-droid.org/packages/org.torproject.android/, the port of\nTor to Android.\n\nOrbot anonymizes internet traffic by routing it through many different stages\nand you must have that enabled first, though root isn't needed. Orweb disables\ncertain other browser features that could be used to identify you.\n\nPlease note that Orweb is superseded by Tor Browser.  Orweb is no\nlonger maintained at all.",
       "icon": "info.guardianproject.browser.7010.png",
       "issueTracker": "https://dev.guardianproject.info/projects/orweb/issues?set_filter=1",
       "lastUpdated": 1448496000000,
-      "liberapayID": "33617",
+      "liberapay": "GuardianProject",
       "license": "GPL-2.0-only",
       "localized": {
         "en-US": {
-          "featureGraphic": "featureGraphic.png"
+          "name": "Orweb"
         }
       },
-      "name": "Orweb",
+      "openCollective": "GuardianProject",
       "packageName": "info.guardianproject.browser",
       "sourceCode": "https://github.com/guardianproject/orweb",
       "suggestedVersionCode": "7010",
@@ -625,22 +264,29 @@
     },
     {
       "added": 1385942400000,
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
+      ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
       "authorWebSite": " https://guardianproject.info",
-      "bitcoin": "1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk",
       "categories": [
         "Multimedia",
         "Security",
         "Guardian Project"
       ],
-      "description": "<p>Plugin for https://f-droid.org/packages/info.guardianproject.otr.app.im/ to support for core emoji input and display.  Based on \"Phantom Open Emoji\" project.</p>",
+      "description": "Plugin for https://f-droid.org/packages/info.guardianproject.otr.app.im/ to support for core emoji input\nand display.  Based on \"Phantom Open Emoji\" project.\n",
       "icon": "info.guardianproject.chatsecure.emoji.core.1.png",
       "issueTracker": "https://dev.guardianproject.info/projects/chatsecure/issues",
       "lastUpdated": 1385942400000,
-      "liberapayID": "33617",
+      "liberapay": "GuardianProject",
       "license": "MIT",
-      "name": "StickerPack",
+      "localized": {
+        "en-US": {
+          "name": "StickerPack"
+        }
+      },
+      "openCollective": "GuardianProject",
       "packageName": "info.guardianproject.chatsecure.emoji.core",
       "sourceCode": "https://github.com/guardianproject/ChatSecureVoicePlugin",
       "suggestedVersionCode": "1",
@@ -649,9 +295,8 @@
     },
     {
       "added": 1383177600000,
-      "antiFeatures": [
-        "DisabledAlgorithm",
-        "KnownVuln"
+      "allowedAPKSigningKeys": [
+        "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b"
       ],
       "authorEmail": "support@guardianproject.info",
       "authorName": "Guardian Project",
@@ -661,16 +306,20 @@
         "Multimedia",
         "Guardian Project"
       ],
-      "description": "<p>Creating great stories is now easier than ever with StoryMaker. Our unique templates, overlays, and lessons guide you through the entire creative process. StoryMaker lets you edit your content right on your mobile, making it even easier to finish your story. Once you've finished, StoryMaker lets you publish your story to all of your favorite platforms. \u2605 AUDIO PHOTO &amp; VIDEO \u2605 Whether it\u2019s a photo series, an audio story, or a video package, StoryMaker walks you through what you need to know in order to be successful. \u2605 TEMPLATES \u2605 Our story templates offer suggested narrative arcs, and potential questions to give you structure, but leave you enough room to tell the story you want. \u2605 LEARN \u2605 Designed by a group of trainers with years of experience working in the field, StoryMaker is the tool you need to tell the stories you're passionate about, while staying safe. StoryMaker has access to a 55 lesson course in Journalism, Security, Photo, Audio, and Video production. So when you\u2019re ready to dive deep and learn everything you can, we have the lessons to get you started. \u2605 OVERLAYS \u2605 Everyone recognizes an interview or a location shot when they see them on the news, but with StoryMaker\u2019s innovative overlays it\u2019s easy to recreate the shot you want when it matters the most, at the point of production. \u2605 EDIT \u2605 StoryMaker lets you rearrange and trim your clips to tweak them to perfection, it even makes it easy to record your own narration to go with your story. \u2605 SHARE \u2605 When your story is ready you can share it across all of your favorite platforms straight from StoryMaker. \u2605 SECURITY \u2605 StoryMaker takes security seriously. Our integration with Orbot allows for supported platforms to be accessed via Tor. StoryMaker relies upon Orbot, for defending against network surveillance and enabling circumvention on hostile networks. \u2605 EXPERIENCE \u2605 StoryMaker is successful because our creative team is filled with trainers with years of experience. People who have been in the field, and know how to break complex ideas down into easy to follow instructions. \u2605 MULTILINGUAL \u2605 StoryMaker supports English, Arabic, Croation/Bosnian, and Serbian languages. With experimental translations in French, Spanish, Persian, German, Macedonian and Korean. If you find issues, or would like to participate in our localization effort, please visit our wiki for more instructions: http://storymaker.cc/wiki/index.php?title=Translation</p>",
+      "description": "Creating great stories is now easier than ever with StoryMaker. Our unique templates, overlays, and lessons guide you through the entire creative process. StoryMaker lets you edit your content right on your mobile, making it even easier to finish your story. Once you've finished, StoryMaker lets you publish your story to all of your favorite platforms.\n* AUDIO PHOTO & VIDEO *\nWhether it\u2019s a photo series, an audio story, or a video package, StoryMaker walks you through what you need to know in order to be successful.\n* TEMPLATES *\nOur story templates offer suggested narrative arcs, and potential questions to give you structure, but leave you enough room to tell the story you want.\n* LEARN *\nDesigned by a group of trainers with years of experience working in the field, StoryMaker is the tool you need to tell the stories you're passionate about, while staying safe. StoryMaker has access to a 55 lesson course in Journalism, Security, Photo, Audio, and Video production. So when you\u2019re ready to dive deep and learn everything you can, we have the lessons to get you started.\n* OVERLAYS *\nEveryone recognizes an interview or a location shot when they see them on the news, but with StoryMaker\u2019s innovative overlays it\u2019s easy to recreate the shot you want when it matters the most, at the point of production.\n* EDIT *\nStoryMaker lets you rearrange and trim your clips to tweak them to perfection, it even makes it easy to record your own narration to go with your story.\n* SHARE *\nWhen your story is ready you can share it across all of your favorite platforms straight from StoryMaker.\n* SECURITY *\nStoryMaker takes security seriously. Our integration with Orbot allows for supported platforms to be accessed via Tor. StoryMaker relies upon Orbot, for defending against network surveillance and enabling circumvention on hostile networks.\n* EXPERIENCE *\nStoryMaker is successful because our creative team is filled with trainers with years of experience. People who have been in the field, and know how to break complex ideas down into easy to follow instructions.\n* MULTILINGUAL *\nStoryMaker supports English, Arabic, Croation/Bosnian, and Serbian languages. With experimental translations in French, Spanish, Persian, German, Macedonian and Korean.\nIf you find issues, or would like to participate in our localization effort,\nplease visit our wiki for more instructions:\nhttp://storymaker.cc/wiki/index.php?title=Translation",
       "icon": "info.guardianproject.mrapp.118.png",
       "issueTracker": "https://dev.guardianproject.info/projects/storymaker/issues",
       "lastUpdated": 1405728000000,
-      "license": "Unknown",
-      "name": "StoryMaker",
+      "license": "GPL-2.0-or-later",
+      "localized": {
+        "en-US": {
+          "name": "StoryMaker"
+        }
+      },
       "packageName": "info.guardianproject.mrapp",
       "sourceCode": "https://github.com/guardianproject/storymaker",
       "suggestedVersionCode": "118",
-      "summary": "produce professional-grade videos with your Android phone",
+      "summary": "produce professional-grade videos with your phone",
       "webSite": "https://storymaker.cc/"
     }
   ],
@@ -911,58 +560,6 @@
     ],
     "info.guardianproject.courier": [
       {
-        "added": 1403740800000,
-        "apkName": "Courier-0.1.9.apk",
-        "hash": "bf6566da1f90831887f5bf5605f8d816b1f7f694969459dec599b8bc01a827d3",
-        "hashType": "sha256",
-        "minSdkVersion": 9,
-        "nativecode": [
-          "armeabi",
-          "x86"
-        ],
-        "packageName": "info.guardianproject.courier",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 16484753,
-        "targetSdkVersion": 15,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ]
-        ],
-        "versionCode": 15,
-        "versionName": "0.1.9"
-      },
-      {
         "added": 1400025600000,
         "apkName": "Courier-0.1.8.apk",
         "hash": "e013db095e8da843fae5ac44be6152e51377ee717e5c8a7b6d913d7720566b5a",
@@ -1015,132 +612,7 @@
         "versionName": "0.1.8"
       }
     ],
-    "info.guardianproject.gilga": [
-      {
-        "added": 1413417600000,
-        "apkName": "info.guardianproject.gilga_12.apk",
-        "hash": "35fe692018fab84cef714d53eb415396cfc726db8691acaec5e768c51b10e6dc",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "packageName": "info.guardianproject.gilga",
-        "sig": "6de574cd61a684bda38ba8e895dece7c",
-        "signer": "a8c44573cb5f69cb3e57d5d301e950a0d9c67a5e996df2105610cef91effdb93",
-        "size": 67581,
-        "targetSdkVersion": 20,
-        "uses-permission": [
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.CHANGE_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ]
-        ],
-        "versionCode": 12,
-        "versionName": "0.0.12"
-      }
-    ],
     "info.guardianproject.gpg": [
-      {
-        "added": 1396828800000,
-        "apkName": "GnuPrivacyGuard-release-0.3.1.apk",
-        "hash": "53119c4b237563487e134c66403e77d9f93dcad9c05962751d00f7cc7257cc13",
-        "hashType": "sha256",
-        "minSdkVersion": 14,
-        "nativecode": [
-          "armeabi-v7a"
-        ],
-        "packageName": "info.guardianproject.gpg",
-        "sig": "a0eeebb161f946e3516945fae8a92a3e",
-        "signer": "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b",
-        "size": 10248614,
-        "targetSdkVersion": 19,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.SYSTEM_ALERT_WINDOW",
-            null
-          ],
-          [
-            "android.permission.RECEIVE_BOOT_COMPLETED",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "android.permission.READ_CONTACTS",
-            null
-          ],
-          [
-            "android.permission.WRITE_CONTACTS",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.MANAGE_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.AUTHENTICATE_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.READ_SYNC_SETTINGS",
-            null
-          ],
-          [
-            "android.permission.WRITE_SYNC_SETTINGS",
-            null
-          ],
-          [
-            "jackpal.androidterm.permission.APPEND_TO_PATH",
-            null
-          ]
-        ],
-        "versionCode": 5,
-        "versionName": "0.3.1"
-      },
       {
         "added": 1394582400000,
         "apkName": "GnuPrivacyGuard-release-0.3.apk",
@@ -1897,42 +1369,6 @@
         "versionName": "0.4.2"
       },
       {
-        "added": 1365465600000,
-        "apkName": "LilDebi-release-0.4.1.apk",
-        "hash": "b256a196b6c979d37e50c7f647ab12c9caaa9c3e33a01049e3ade0ea8db9fdbb",
-        "hashType": "sha256",
-        "minSdkVersion": 7,
-        "packageName": "info.guardianproject.lildebi",
-        "sig": "a0eeebb161f946e3516945fae8a92a3e",
-        "signer": "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b",
-        "size": 1903079,
-        "targetSdkVersion": 17,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ]
-        ],
-        "versionCode": 6,
-        "versionName": "0.4.1"
-      },
-      {
         "added": 1360108800000,
         "apkName": "LilDebi-release-0.3.apk",
         "hash": "7676405fddebb8404b4395e4e22011300d3288e95037a80fbf6acf0436f28f2f",
@@ -1972,10 +1408,6 @@
     "info.guardianproject.mrapp": [
       {
         "added": 1405728000000,
-        "antiFeatures": [
-          "DisabledAlgorithm",
-          "KnownVuln"
-        ],
         "apkName": "StoryMaker-v0.0.10-b118-BETA.apk",
         "hash": "b90d1d2816fd959d315b0d0c9e896aeacd30d770d77cc3929848f6d68b4d9da7",
         "hashType": "sha256",
@@ -5174,90 +4606,6 @@
         "versionName": "13.0.1"
       },
       {
-        "added": 1382572800000,
-        "apkName": "ChatSecure-v12.7.1-RC5.apk",
-        "hash": "8660446e109d42742af19691aaee20165cdff636238b61ca367aee863bb3695f",
-        "hashType": "sha256",
-        "minSdkVersion": 9,
-        "nativecode": [
-          "armeabi",
-          "x86"
-        ],
-        "packageName": "info.guardianproject.otr.app.im",
-        "sig": "a0eeebb161f946e3516945fae8a92a3e",
-        "signer": "d71620711b04dfa13216116fbc8a9f3e3409846b16ff2bacf43e1c5ef5a3ed6b",
-        "size": 11838912,
-        "targetSdkVersion": 18,
-        "uses-permission": [
-          [
-            "info.guardianproject.otr.app.providers.imps.permission.READ_ONLY",
-            null
-          ],
-          [
-            "info.guardianproject.otr.app.providers.imps.permission.WRITE_ONLY",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_MULTICAST_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.RECEIVE_BOOT_COMPLETED",
-            null
-          ],
-          [
-            "info.guardianproject.otr.app.im.permission.IM_SERVICE",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.MANAGE_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "com.google.android.googleapps.permission.GOOGLE_AUTH",
-            null
-          ]
-        ],
-        "versionCode": 92,
-        "versionName": "12.7.1"
-      },
-      {
         "added": 1382227200000,
         "apkName": "ChatSecure-v12.6.5-RC4.apk",
         "hash": "0f5ed4cbde47fc502cc202465e2da2fd7bd37b85d9146b5c04d59e12ef785d74",
@@ -6679,394 +6027,6 @@
       }
     ],
     "org.witness.informacam.app": [
-      {
-        "added": 1446508800000,
-        "apkName": "CameraVApp-release-0.2.6.apk",
-        "hash": "508f453e26c8c83dba858b53b21d909d549fe5646d01eb198c96c22d8e521e7c",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "armeabi",
-          "armeabi-v7a",
-          "x86"
-        ],
-        "packageName": "org.witness.informacam.app",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 24123646,
-        "targetSdkVersion": 21,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.READ_PHONE_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECORD_AUDIO",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.KILL_BACKGROUND_PROCESSES",
-            null
-          ],
-          [
-            "android.permission.GET_TOP_ACTIVITY_INFO",
-            null
-          ]
-        ],
-        "versionCode": 206,
-        "versionName": "0.2.6"
-      },
-      {
-        "added": 1443744000000,
-        "apkName": "CameraV-release-0.2.4.apk",
-        "hash": "a10eefaed5a12c353525b07e655f6959fe1eb06cd5c549be56afaca6db0c6ce0",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "armeabi",
-          "armeabi-v7a",
-          "x86"
-        ],
-        "packageName": "org.witness.informacam.app",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 24062229,
-        "targetSdkVersion": 21,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.READ_PHONE_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECORD_AUDIO",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.GET_TASKS",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.KILL_BACKGROUND_PROCESSES",
-            null
-          ]
-        ],
-        "versionCode": 204,
-        "versionName": "0.2.4"
-      },
-      {
-        "added": 1442361600000,
-        "apkName": "CameraVApp-release-0.2.2.apk",
-        "hash": "8b17cbe2a5cb777b49f5ef67a390f9d9d68765c90213ac64f3ca0456860dc9b7",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "armeabi",
-          "armeabi-v7a",
-          "x86"
-        ],
-        "packageName": "org.witness.informacam.app",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 24283932,
-        "targetSdkVersion": 21,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.READ_PHONE_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECORD_AUDIO",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.GET_TASKS",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.KILL_BACKGROUND_PROCESSES",
-            null
-          ]
-        ],
-        "versionCode": 202,
-        "versionName": "0.2.2"
-      },
-      {
-        "added": 1438041600000,
-        "apkName": "CameraV-release-0.2.1.apk",
-        "hash": "89808dc92a93a0b793d9d1da3cdbb615a761ff7479bc499558eddaa680a850dc",
-        "hashType": "sha256",
-        "minSdkVersion": 16,
-        "nativecode": [
-          "armeabi",
-          "armeabi-v7a",
-          "x86"
-        ],
-        "packageName": "org.witness.informacam.app",
-        "sig": "d70ac6a02b53ebdd1354ea7af7b9ceee",
-        "signer": "f006a20481c71a690de02e385ab0c9fa4ac1245240f68102682703ba0656867a",
-        "size": 23052881,
-        "targetSdkVersion": 19,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.WRITE_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.READ_PHONE_STATE",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH",
-            null
-          ],
-          [
-            "android.permission.BLUETOOTH_ADMIN",
-            null
-          ],
-          [
-            "android.permission.CAMERA",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECORD_AUDIO",
-            null
-          ],
-          [
-            "android.permission.READ_EXTERNAL_STORAGE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.CHANGE_WIFI_STATE",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.GET_TASKS",
-            null
-          ],
-          [
-            "android.permission.GET_ACCOUNTS",
-            null
-          ],
-          [
-            "android.permission.USE_CREDENTIALS",
-            null
-          ],
-          [
-            "android.permission.VIBRATE",
-            null
-          ],
-          [
-            "android.permission.KILL_BACKGROUND_PROCESSES",
-            null
-          ]
-        ],
-        "versionCode": 201,
-        "versionName": "0.2.1"
-      },
       {
         "added": 1386720000000,
         "apkName": "InformaCam-beta-0.1.35.apk",

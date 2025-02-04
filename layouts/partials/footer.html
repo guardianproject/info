@@ -17,11 +17,7 @@
           {{ end }}
           {{ if .Site.Params.rss }}
           <li>
-            {{ if .RSSLink }}
-            <a href="{{ .RSSLink }}" title="RSS">
-            {{ else }}
-            <a href="{{ .Site.RSSLink }}" title="RSS">
-            {{ end }}
+            <a href="/index.xml" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -115,16 +111,6 @@
 	  {{ if .Params.packageName }}
 	  {{ i18n "translateOn" }} <a href="https://hosted.weblate.org/projects/guardianproject/{{ index (split .Params.title ":") 0 }}-metadata"><i class="fa fa-weblate"></i> Weblate</a><br/>
 	  {{ i18n "edit" }} <a href="https://gitlab.com/guardianproject/fdroid-metadata/edit/master/metadata/{{ .Params.packageName }}.yml"><i class="fa fa-gitlab"></i> {{ i18n "metadata" }}</a>
-	  {{ end }}
-	  {{ if .Params.sourceCode }}
-	  <a href="{{ .Params.sourceCode }}/edit/master/metadata/en-US/full_description.txt">
-	    {{ if (hasPrefix .Params.sourceCode "https://github.com/") }}
-	    <i class="fa fa-github"></i> {{ i18n "description" }}</a>
-	    {{ else }}
-	    <i class="fa fa-gitlab"></i> {{ i18n "description" }}</a>
-            {{ end }}
-	  {{ else }}
-	  {{ i18n "editOn" }} <a href="https://gitlab.com/guardianproject/info/edit/master/content/{{ .File.Path }}"><i class="fa fa-gitlab"></i> GitLab</a>
 	  {{ end }}
 	</p>
       </div>

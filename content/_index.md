@@ -11,7 +11,7 @@ guid: https://guardianproject.info/?page_id=8
 
 ## **We are a global team who builds and designs [easy to use secure apps](apps), open-source [software libraries](code), and [customized solutions](contact) that can be used around the world by any person or organization looking to protect their communications and data from unjust intrusion, interception and monitoring.**
 
-[![GP Team](gpteam.jpg)](/story)
+[![GP Team](gpteam.jpg)](/story/)
 
 Whether you are an average person looking to affirm your rights or an activist, journalist or humanitarian organization looking to safeguard your work in this age of perilous global communication, [we can help](/contact) address the threats you face.
 

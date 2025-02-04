@@ -27,7 +27,7 @@ width:200px;margin:10px;float:left
 </div>
 <div style="clear:both;">
 <a href="https://letsconvene.im"><img src="projects/convene.jpg" class="caseimage"/></a>
-<a href="https://letsconvene.im">Convene</a> is a Matrix-based chat platform that supports secure and private communication and sharing. It was co-designed with human rights partners at <a href="https://rightsactionlab.org">Rights Action Lab</a>.
+<a href="https://letsconvene.im">Convene</a> is a Matrix-based chat platform that supports secure and private communication and sharing. It was co-designed with human rights advocates and digital security trainers at <a href="https://rightsactionlab.org">Rights Action Lab</a>.
 </div>
 
 <div style="clear:both;">
@@ -44,6 +44,6 @@ width:200px;margin:10px;float:left
 
 <a href="https://cleaninsights.org"><img src="projects/cleaninsights.jpg" class="caseimage"/></a>
 
-[Clean Insights](https://cleaninsights.org) gives developers a way to plug into a secure, private measurement platform. It is focused on assisting in answering key questions about app usage patterns, and not on enabling invasive surveillance of all user habits. It has been adopted by leading privacy-focused companies, such as <a href="https://mailvelope.com">Mailvelope</a>.
+<a href="https://cleaninsights.org">Clean Insights</a> gives product teams and developers a way to plug into a secure, private measurement platform. It is focused on assisting in answering key questions about app usage patterns, and not on enabling invasive surveillance of all user habits. It has been adopted by leading privacy-focused companies, such as <a href="https://mailvelope.com">Mailvelope</a>.
 </div>
 <div style="clear:both;"></div>

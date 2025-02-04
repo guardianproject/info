@@ -11,13 +11,13 @@ menu:
 ---
 We offer services for-hire for a variety of work related to our mission, projects and code-base.
 
-We have deployed fully secure service infrastructures for mobile devices, from client to server, using open protocols and standards, such as XMPP+OMEMO and SIP+ZRTP. We utilize and promote the adoption of public, transparent collaborative development processes, built on Git (Gitlab, Github), Continuous Integration (Travis, Gitlab-CI), test driven development practices, and public communications channels like mailing lists and secure group messaging.
+We have deployed fully secure service infrastructures for mobile devices, from client to server, using open protocols and standards, such as the [Matrix Protocol](https://letsconvene.im). We utilize and promote the adoption of public, transparent collaborative development processes, built on Git (Gitlab, Github), Continuous Integration (Travis, Gitlab-CI), test driven development practices, and public communications channels like mailing lists and secure group messaging.
 
 We build software with modularity in mind, utilizing Gradle (Android), CocoaPods (iOS), NPM and other systems, to build upon, or create if needed, reusable, testable, reproducible code libraries. Finally, we offer usability testing, quality assurance, and release acceptance processes, to ensure we are effectively delivering upon the desired enhancements and product roadmap.
 
 ## Engagement Team
 
-Our team is made of product leads, software developers, user experience designers, and user advocates who have been working in mobile application and platform development for over twenty years. For the past nine years, as Guardian Project, we have focused equally on developing our own technology, while fostering deep partnerships with human rights and activists organizations in need of our services. This includes engaging deeply with partners’ staff to uplift their knowledge and skill set to be able to support their technical programs long term. We have also worked to incubate mobile support for keyprivacy technologies such as Tor, GnuPG, OTR, SQLCipher and Debian, where interest in emerging platforms directly within the communities themselves was nascent.
+Our team is made of product leads, software developers, user experience designers, and user advocates who have been working in mobile application and platform development for over twenty years. For the past nine years, as Guardian Project, we have focused equally on developing our own technology, while fostering deep partnerships with human rights and activists organizations in need of our services. This includes engaging deeply with partners’ staff to uplift their knowledge and skill set to be able to support their technical programs long term. We have also worked to incubate mobile support for key privacy technologies such as Tor, GnuPG, OTR, SQLCipher and Debian, where interest in emerging platforms directly within the communities themselves was nascent.
 
   * Engagement Manager: Works with client to define needs, scope, milestones and schedule  
     Solution Architect: Works with all parties to design the solution specification and specific tickets
@@ -35,7 +35,7 @@ Assist the application’s development team to define (architect) how applicatio
 
 **Integration of Secure Messaging features into mobile app**
 
-Integrate secure messaging and notification features into a mobile app, using Signal protocol through OMEMO, XMPP open protocol messaging, and XMPP Cloud Notify (ChatSecure Push). Implement system for adding and communicating with contacts through a pseudonymous identity, not tied to real names, phone number or email. Optionally implement communication through censorship and surveillance resistant transports such as Tor or Pluggable Transports.
+Integrate secure messaging and notification features into a mobile app, using the [Matrix Protocol and Platform](https://matrix.org). Implement system for adding and communicating with contacts through a pseudonymous identity, not tied to real names, phone number or email. Optionally implement communication through censorship and surveillance resistant transports such as Tor or Pluggable Transports.
 
 **Integration of PanicKit into an Android mobile app**
 
@@ -45,9 +45,9 @@ Assist the application’s development team in handling “panic” signals from
 
 The task here is to define a special configuration of security and operational software to be delivered on a specific type of Android device likely based on Copperhead (or other secure OS) such that all team members have a unified base experience and secure environment.  These devices would all be “backed” by a unique (predefined) custom F-Droid software distribution that would, in daily operation, keep the on-board software up to date.
 
-**Set up a secure and private XMPP communication endpoint for an organization or project team**
+**Set up a secure and private communication endpoint for an organization or project team**
 
-The task here is to set up a secure, XMPP Infrastructure, Ansible-scripted for maintenance and upgrade, with minimal logging, for production use by the organization or team.  The configuration would be production tested, scalable and distributable (to multiple geographics, IP ranges, or domains) depending on organization size and needs.
+The task here is to set up a secure infrastructure, Ansible-scripted for maintenance and upgrade, with minimal logging, for production use by the organization or team.  The configuration would be production tested, scalable and distributable (to multiple geographics, IP ranges, or domains) depending on organization size and needs.
 
 **Establish a Pluggable Transport service for a defined user group on behalf of a single organization**
 

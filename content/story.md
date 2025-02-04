@@ -11,7 +11,7 @@ menu:
 
 ## The Story of Guardian Project
 
-The **Guardian Project** is an open-source initiative dedicated to developing secure, privacy-enhancing mobile applications and tools. Launched in **2009**, the project was born out of a need to protect digital communications in an era of increasing surveillance, censorship, and cyber threats. Over the years, it has provided essential tools for activists, journalists, and everyday users who value privacy and security.
+**Guardian Project** is an open-source initiative dedicated to developing secure, privacy-enhancing mobile applications and tools. Launched in **2009**, the project was born out of a need to protect digital communications in an era of increasing surveillance, censorship, and cyber threats. Over the years, it has provided essential tools for activists, journalists, and everyday users who value privacy and security.
 
 ---
 
@@ -19,13 +19,13 @@ The **Guardian Project** is an open-source initiative dedicated to developing se
 
 In the late 2000s, smartphones were becoming widely adopted, but security and privacy were largely overlooked. At the same time, governments and corporations were ramping up surveillance, putting sensitive communications at risk. A group of technologists and digital rights advocates, saw the urgent need to create accessible, open-source mobile security tools.
 
-The **Guardian Project** was founded with the goal of providing **secure, user-friendly privacy apps for Android devices**, enabling people worldwide to communicate and browse the internet without fear of surveillance or censorship. Now we have expanded that work to all platforms of computing and communication - iPhone, desktops, servers, clouds, and even off-grid networks.
+**Guardian Project** was founded with the goal of providing **secure, user-friendly privacy apps for Android devices**, enabling people worldwide to communicate and browse the internet without fear of surveillance or censorship. Now we have expanded that work to all platforms of computing and communication - iPhone, desktops, servers, clouds, and even off-grid networks.
 
 ---
 
 ### Key Innovations and Contributions  
 
-The Guardian Project has developed a suite of tools that focus on secure communications, anonymous browsing, and media protection. Some of their most influential projects include:
+Guardian Project has developed a suite of tools that focus on secure communications, anonymous browsing, and media protection. Some of their most influential projects include:
 
 #### 1. Orbot (2009 - Present)  
 A **Tor proxy for Android**, allowing users to browse the internet anonymously by routing traffic through the Tor network. Orbot remains one of the most widely used Tor-based mobile apps, helping users in restrictive countries bypass censorship.
@@ -46,7 +46,7 @@ A privacy-focused camera app that lets users **blur faces and remove metadata** 
 A secure **VoIP (voice over internet protocol) service**, enabling encrypted phone calls using opepn protocols including the ZRTP encryption protocol.
 
 #### 7. SQLCipher for Android
-The Guardian Project team led the initial port and design of Zetetic's [SQLCipher](https://sqlcipher.net) to the Android platform, an encrypted database layer on top of SQLite. This code has been used by over 6000 apps, including Signal and WeChat. 
+Guardian Project team led the initial port and design of Zetetic's [SQLCipher](https://sqlcipher.net) to the Android platform, an encrypted database layer on top of SQLite. This code has been used by over 6000 apps, including Signal and WeChat. 
 
 #### 8. F-Droid App Store
 Guardian Project has been a longtime supporter of and participant in the work on [F-Droid](https://f-droid.org). F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications, as well as open-source infrastructure for any one to host their own app repository or complete app store.
@@ -67,7 +67,7 @@ Their work has also influenced **larger privacy movements**, inspiring improveme
 
 ### Collaborations and Influence  
 
-The Guardian Project has worked alongside major digital rights organizations, including:
+Guardian Project has worked alongside major digital rights organizations, including:
 
 - **The Tor Project** (on Orbot and censorship circumvention)
 - **Electronic Frontier Foundation (EFF)** (on privacy advocacy)

@@ -23,11 +23,19 @@ width:200px;margin:10px;float:left
 }
 </style>
 <div>
+<a href="https://proofmode.org"><img src="projects/proof-feature.png"/ class="caseimage"/></a><br/>
+<a href="https://proofmode.org">ProofMode</a> - We believe in a future, where every camera will have a “Proof Mode” that can be enabled and every viewer an ability to verify-then-trust what they are seeing.
+</div>
+<div style="clear:both;">
 <a href="https://encirculo.org"><img src="projects/circulo.jpg" class="caseimage"/></a><br/><a href="https://encirculo.org">Círculo</a> helps you stay securely connected to a circle of support. Establish safety and check-in protocols, send alerts, share your location and keep those in your circle informed. We have worked extensively with <a href="https://www.article19.org/regional-office/mexico-and-central-america/">Article 19</a> on this project.
 </div>
 <div style="clear:both;">
 <a href="https://letsconvene.im"><img src="projects/convene.jpg" class="caseimage"/></a>
 <a href="https://letsconvene.im">Convene</a> is a Matrix-based chat platform that supports secure and private communication and sharing. It was co-designed with human rights advocates and digital security trainers at <a href="https://rightsactionlab.org">Rights Action Lab</a>.
+</div>
+<div style="clear:both;">
+<a href="https://likebutter.app"><img src="projects/butterlogo.svg" class="caseimage"/></a>
+<a href="https://likebutter.app">ButterBox</a> is a self-contained microserver, built on the open Raspberry Pi platform, that provides an app store, encrypted chat, maps, file sharing, and more, all available over WiFi, off-the-grid, and battery+solar powered. This project was built in collaboration with the <a href="https://f-droid.org">F-Droid</a> team.
 </div>
 
 <div style="clear:both;">

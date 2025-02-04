@@ -11,7 +11,7 @@ menu:
 
 ## New Branding for 2025
 
-We are excited to be rolling out our new visual branding for Guardian Project, developed with the support of our amazing partners at [Okthanks](https://okthanks.com)
+We are excited to be rolling out our new visual branding for Guardian Project, developed with the support of our amazing partners at [Okthanks](https://okthanks.com) and [InkGiant](https://inkgiant.co).
 
 ![new word logo](/Wordmark/Guardian_Project_Horizontal_Logo_Full_Color@2x.png)
 

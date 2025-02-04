@@ -1,5 +1,5 @@
-baseURL: "http://localhost:1313"
-title: "Guardian Project"
+baseURL: "http://localhost:1313/"
+title: ""
 
 DefaultContentLanguage: "en"
 Paginate: 20 # this is set low for demonstrating with dummy content. Set to a higher number
@@ -20,6 +20,11 @@ sitemap:
   changefreq: "monthly"
   priority: 0.5
   filename: "sitemap.xml"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 menu:
   main:
@@ -46,60 +51,12 @@ menu:
 
 languages:
   en: {weight: 1}
-  af: {weight: 2}
-  am: {weight: 2}
-  ar: {weight: 2}
-  az: {weight: 2}
-  bg: {weight: 2}
-  bo: {weight: 2}
-  ca: {weight: 2}
-  cs: {weight: 2}
-  da: {weight: 2}
-  de: {weight: 2}
-  el: {weight: 2}
-  eo: {weight: 2}
-  es: {weight: 2}
-  et: {weight: 2}
-  eu: {weight: 2}
-  fa: {weight: 2}
-  fi: {weight: 2}
-  fr: {weight: 2}
-  he: {weight: 2}
-  hi: {weight: 2}
-  hr: {weight: 2}
-  hu: {weight: 2}
-  id: {weight: 2}
-  is: {weight: 2}
-  it: {weight: 2}
-  iw: {weight: 2}
-  ja: {weight: 2}
-  ko: {weight: 2}
-  lt: {weight: 2}
-  lv: {weight: 2}
-  mk: {weight: 2}
-  nb: {weight: 2}
-  nl: {weight: 2}
-  pl: {weight: 2}
-  pt: {weight: 2}
-  ro: {weight: 2}
-  ru: {weight: 2}
-  sk: {weight: 2}
-  sl: {weight: 2}
-  sr: {weight: 2}
-  sv: {weight: 2}
-  sw: {weight: 2}
-  th: {weight: 2}
-  tr: {weight: 2}
-  uk: {weight: 2}
-  ur: {weight: 2}
-  vi: {weight: 2}
-  zh: {weight: 2}
 
 Params:
   since: 2009
-  logo: GP_Logo_hires.png
+  logo: Guardian_Project_LogoMark_Full_Color.svg
   rss: true
-  favicon: ""
+  favicon: Guardian_Project_LogoMark_Full_Color.svg
   description: "People, Apps and Code You Can Trust"
   mastodon: "https://social.librem.one/@guardianproject"
   twitter: "guardianproject"
@@ -109,7 +66,7 @@ Params:
   matrix: "#guardianproject:matrix.org"
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   background_color_class: "bg-black"
-  # featured_image: "/images/gohugo-default-sample-hero-image.jpg"
+  featured_image: "gpnewlogo2025.png"
   recent_posts_number: 2
   mainSections: ["posts"]
 

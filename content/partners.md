@@ -13,10 +13,6 @@ menu:
 <!--:en-->
 
 <p style="text-align: left;">
-  If you are an activist or represent an NGO or other organization interested in getting access to Guardian-enabled mobile phones, please <a href="/contact">let us know</a>. We are always interested in finding new partners to work with.
-</p>
-
-<p style="text-align: left;">
   <em>Note: this project receives grants and sub-contracts from organizations (such as the Open Technology Fund) and research projects (such as the Tor Project) that receive funding from the U.S. Government and other governments around the world. None of this funding has modified or shaped our development plans, and we would never, ever put any sort of backdoor or compromised component into our software based on this funding.</em>
 </p>
 

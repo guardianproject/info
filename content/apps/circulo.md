@@ -21,4 +21,5 @@ aliases:
   - apps/haven
 ---
 
+Learn more at [encirculo.org](https://encirculo.org)
 

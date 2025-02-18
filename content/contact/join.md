@@ -33,10 +33,3 @@ We're always on the look-out for energetic, enthusiastic, and capable interns.
 **Responsibilities** - Your work will include testing software, working with NGOs and activist groups to setup and use Guardian software, producing online tutorials and guides, and even social media promotion work.
 
 Interested? [Learn how to contact us here](https://guardianproject.info/contact/) or email &#x6a;&#111;b&#x73;&#x40;gu&#x61;&#114;d&#x69;&#x61;np&#x72;&#111;j&#x65;&#x63;&#116;.&#x69;&#x6e;f&#x6f; with an introduction and resume.
-
-### Current open positions
-
-* [Seeking Ruby contractors for work on Jekyll, Fastlane, and F-Droid](../../2024/12/06/ruby-jekyll-contractor/)
-* [Seeking Android/Python contractors for mobile/free software/privacy work](../android-python-contractor/)
-
-&nbsp;

@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code You Can Trust on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/code/</link>
+    <description>Recent content in Code You Can Trust on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 09 May 2010 00:06:46 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Clean Insights: Privacy Preserving Measurement</title>
+      <link>https://guardianproject.github.io/info/code/cleaninsights/</link>
+      <pubDate>Thu, 09 Dec 2021 11:00:55 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/cleaninsights/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Clean Insights&lt;/strong&gt; gives developers a way to plug into a secure, private measurement platform. It is focused on assisting in answering key questions about app usage patterns, and not on enabling invasive surveillance of all user habits. Our approach provides programmatic levers to pull to cater to specific use cases and privacy needs. It also provides methods for user interactions that are ultimately empowering instead of alienating.&lt;/p&gt;
+
+&lt;p&gt;Clean Insights is available as a lightweight, minimal impact, freely licensed toolkit to include in your mobile app, desktop app, website or back-end service. This code can be integrated into your application or service to measure specific events and interactions that you want to gain more insight on.&lt;/p&gt;
+
+&lt;p&gt;Learn more at &lt;a href=&#34;https://cleaninsights.org&#34;&gt;CleanInsights.org&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Clean Insights: Privacy Preserving Measurement</title>
+      <link>https://guardianproject.github.io/info/code/cleaninsights/</link>
+      <pubDate>Thu, 09 Dec 2021 11:00:55 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/cleaninsights/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Clean Insights&lt;/strong&gt; gives developers a way to plug into a secure, private measurement platform. It is focused on assisting in answering key questions about app usage patterns, and not on enabling invasive surveillance of all user habits. Our approach provides programmatic levers to pull to cater to specific use cases and privacy needs. It also provides methods for user interactions that are ultimately empowering instead of alienating.&lt;/p&gt;
+
+&lt;p&gt;Clean Insights is available as a lightweight, minimal impact, freely licensed toolkit to include in your mobile app, desktop app, website or back-end service. This code can be integrated into your application or service to measure specific events and interactions that you want to gain more insight on.&lt;/p&gt;
+
+&lt;p&gt;Learn more at &lt;a href=&#34;https://cleaninsights.org&#34;&gt;CleanInsights.org&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wind: Off-Grid Services for Everyday People</title>
+      <link>https://guardianproject.github.io/info/code/wind/</link>
+      <pubDate>Wed, 15 Nov 2017 18:11:44 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/wind/</guid>
+      <description>
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://github.com/guardianproject/wind&#34; target=&#34;_blank&#34; title=&#34;Wind on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/wind&#34; target=&#34;_blank&#34; title=&#34;Wind blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;When disaster strikes, connectivity becomes difficult. Information can save your life, guiding you to safety and services. Networks today are fragile and easy overloaded. There has not been enough investment in the many other possible nets, that may be better suited for situations where connections to the global internet are not available or affordable. The potential in radios, sensors and processing available in the cheapest of smartphones and routers are not fully utilized or realized.&lt;/p&gt;
+
+&lt;p&gt;Wind is a network designed for opportunistic communication and sharing of local knowledge. It is built on impermanence, movement, and spontaneity.  Wind is a direct counterpoint to the metaphor of the Web, a system built upon the concept of fixed physical nodes, centralized authorities and permanent links. It is rooted in the mindsets and needs of people and communities who face challenges communicating. Wind is shaped by the movements and density of people in time and space.&lt;/p&gt;
+
+&lt;h2 id=&#34;background-information&#34;&gt;Background Information&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.github.io/info/wind/video/&#34;&gt;Videos about the Team&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.github.io/info/wind/code/&#34;&gt;Simulations, Code, and Design Info&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;source-code-public-works&#34;&gt;Source code &amp;amp; Public Works&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/wind&#34;&gt;Wind Project Primary Repo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/n8fr8/windfarm&#34;&gt;WindFarm Concept and Workshops&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/viento&#34;&gt;Github: Viento Latin America Localization Efforts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&#39;gallery-16&#39; class=&#39;gallery galleryid-13885 gallery-columns-1 gallery-size-large&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon landscape&#39;&gt;
+      &lt;img width=&#34;945&#34; height=&#34;945&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-1024x1024.jpg&#34; class=&#34;attachment-large size-large&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-1.jpg 1275w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon landscape&#39;&gt;
+      &lt;img width=&#34;945&#34; height=&#34;945&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-1024x1024.jpg&#34; class=&#34;attachment-large size-large&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-2.jpg 1275w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon landscape&#39;&gt;
+      &lt;img width=&#34;945&#34; height=&#34;945&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-1024x1024.jpg&#34; class=&#34;attachment-large size-large&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-3.jpg 1275w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon landscape&#39;&gt;
+      &lt;img width=&#34;945&#34; height=&#34;945&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-1024x1024.jpg&#34; class=&#34;attachment-large size-large&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-4.jpg 1275w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon landscape&#39;&gt;
+      &lt;img width=&#34;945&#34; height=&#34;945&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-1024x1024.jpg&#34; class=&#34;attachment-large size-large&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-1024x1024.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5.jpg 1275w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Wind Poster Credits:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Written by Nathan Freitas, Guardian Project&lt;/p&gt;
+
+&lt;p&gt;Editing and graphics by Carrie Winfrey, Okthanks&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;Starlings—“&lt;/span&gt;&lt;a href=&#34;https://www.flickr.com/photos/aaddaamn/5196833268/in/photolist-8Ve8tA-bnhGui-8VYWvL-n6QNW6-quZbvB-kbMjgm-dPLU92-5UrUaL-4Lsy65-b41NaM-3xZDq1-iRTAf4-79knxP-c1aj9Y-ZKS7KG-5ZgEFz-aAVfHW-aASykr-7FpmSM-GQD9rb-ThFKXR-fJrWmx-c4n5pf-aAVfY1-84jiWw-t2zJq8-awFd1o-7e2hk4-98vFR6-7Ftgas-5ZkSbE-buNgx5-d355eo-9vsxzx-3TjpyT-jDmwUz-69zuaC-dbioDU-SJbyqE-r5uAFS-igNVC9-cznfHs-Ctjvvh-pRjFGX-6qxUmM-3ToRYA-atpB9i-ULiew8-dMhLvh-qU8qc4&#34;&gt;&lt;span&gt;A murmuration of starlings&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” by Adam is licensed under CC BY 2.0.&lt;/span&gt; &lt;a href=&#34;https://creativecommons.org/licenses/by/2.0/&#34;&gt;&lt;span&gt;The image is a derivative of the original. &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;Survivor—“&lt;/span&gt;&lt;a href=&#34;https://www.flickr.com/photos/11401580@N03/12024210833/in/photolist-jjxdXT-7Pvvvy-7PvvtQ-qTg64L-pYLEJt-kyDQkz-4FiN3C-7XA986-7GWBYW-7GSFSH-EYcWsg-qD8rZe-6ZANRo-qD6LY2-7ZhJp9-8BrGxG-7XA8Xa-8rmXYp-5bxFWE-9A4JC6-8rbVJJ-7XPzUg-7CdEpg-7ChtS7-7of72j-87zH7W-kq1WDX-8rbVd1-ach6FJ-8QLHQd-qD8r7T-7wCxrF-7512Ws-7XA9kV-qVtAwJ-eKKBXf-hucSca-7PrwEB-7PrwrR-gHXPXR-7GWBWq-9fwLth-7PrwHz-bVsoe7-6zpwL7-9AqNAS-7kzB4h-gHWARA-7PrwG8-7PrwKe&#34;&gt;&lt;span&gt;Wat Pathum Wanaram&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” by Adaptor-Plug is licensed under CC BY-NC 2.0&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;Community Organizer—“&lt;/span&gt;&lt;a href=&#34;https://www.flickr.com/photos/chabadlubavitch/36571284030/in/photolist-XHFoBQ-XsH3xS-qJMexo-Yah2cN-5nrQZQ-5ns88Y-5m5dc2-89ZKZN-5nrCSh-5m6Y8a-5mRrrf-63N762-5myMwP-5mbf99-5myM5Z-5mD2ms-5mQ6bT-5opTZP-5oudCE-5myMkV-XZG52Y-7CPBy3-5mD2DU-5nnPdA-Y461cD-Y2mqzy-X1qQrA-WXjfD5-X3VmVU-Y3LKzu-X3VmwN-Y2mrrU-X6fP1D-X3VnwU-5mD2zf-5myMoz-quC8nx-5myMrR-5mQ5Li-5mQ652-5mUmhu-5mUkYA-5mQ6fg-5mQ5Qx-5mUmo5-7CKq5t-63N75n-5mD2e3-5mUm9q-YoFPpr&#34;&gt;&lt;span&gt;DSC_2318&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” by Chabad Lubavitch is licensed under CC BY 2.0&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;Medical worker—“&lt;/span&gt;&lt;a href=&#34;https://www.flickr.com/photos/leecannon/7168489648/in/photolist-bVsoe7-6zpwL7-9AqNAS-7kzB4h-gHWARA-7PrwG8-7PrwKe-9wsZpY-a5LQun-oYfy4C-gHWPSJ-ozVYaS-pfsVa8-8SQ4KC-8SPMEW-dS6BQY-Des66N-JuBs3u-avt7mZ-qCZPp7-JdjwY3-8QLJ2y-7GSFUn-92Z3YP-h5NuC3-9wpZci-jHGmmK-qpgv79-5rZktF-qCZR5b-pYLFBR-aqqxF1-qCZQaW-qCZP2o-pYLEFx-5mP98E-kyG2C9-5pmwpc-bHguS4-jdYkSF-7Chtef-5SGGe9-pYxYvh-5S8Z2M-bYtuVu-949wzU-7MmMZW-akK9uZ-pYxZPj-SLnrTd&#34;&gt;&lt;span&gt;Me&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” by Lee Cannon is licensed under CC BY-SA 2.0&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;Journalist—“&lt;/span&gt;&lt;a href=&#34;https://www.flickr.com/photos/chabadlubavitch/36787344602/in/photolist-Y3LKU7-X3VmE3-Y39j6j-Y2mtwq-XHFmUm-XHFn51-Y3vyyF-X6fNwc-YiVAxr-XDQL3m-Y7n7rc-Y3vywM-Y2msXu-XHFnby-5mQ6Cv-63Sk4u-5Mtwn4-XUVKh5-Yh9oWM-X3VnuE-63N752-Yah2aJ-Y39iVu-X3VnrU-Y7nj4R-WZsgmZ-WZsghR-X3VmSN-YCWSd4-5mpVHZ-X7PRHw-YAhjsE-XzxMQm-WZsgkg-WZsgg8-WZsgeV-X1qQpw-WZsgoc-Y39iPN-XDQKyf-Y3LLyJ-XDXUeN-XDQKEC-X2zCEz-XZSuty-XZSutU-Y3vyxP-XZSVRs-X2zcp4-X6fNEP&#34;&gt;&lt;span&gt;DSCF52321&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” by Chabad Lubavitch is licensed under CC BY 2.0&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;“&lt;/span&gt;&lt;a href=&#34;https://thenounproject.com/search/?q=beacon&amp;amp;i=757256&#34;&gt;&lt;span&gt;Headlight&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” icon by Identidea, from&lt;/span&gt; &lt;a href=&#34;https://thenounproject.com/&#34;&gt;&lt;span&gt;the Noun Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;“&lt;/span&gt;&lt;a href=&#34;https://thenounproject.com/search/?q=network&amp;amp;i=1334022&#34;&gt;&lt;span&gt;Network&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” icon by UNiCORN, from &lt;/span&gt;&lt;a href=&#34;https://thenounproject.com/&#34;&gt;&lt;span&gt;the Noun Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;“&lt;/span&gt;&lt;a href=&#34;https://thenounproject.com/search/?q=router&amp;amp;i=1406112&#34;&gt;&lt;span&gt;Router&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” icon by Focus, from&lt;/span&gt; &lt;a href=&#34;https://thenounproject.com/&#34;&gt;&lt;span&gt;the Noun Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;“&lt;/span&gt;&lt;a href=&#34;https://thenounproject.com/search/?q=verified&amp;amp;i=1248910&#34;&gt;&lt;span&gt;Verified&lt;/span&gt;&lt;/a&gt;&lt;span&gt;” icon by Bestdesignmarket, from&lt;/span&gt; &lt;a href=&#34;https://thenounproject.com/&#34;&gt;&lt;span&gt;the Noun Project&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PanicKit: system-wide panic responses</title>
+      <link>https://guardianproject.github.io/info/code/panickit/</link>
+      <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/panickit/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png&#34; alt=&#34;round hazard button&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13221&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/p&gt;
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/PanicKit&#34; target=&#34;_blank&#34; title=&#34;PanicKit on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/PanicKit&#34; target=&#34;_blank&#34; title=&#34;PanicKit on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/PanicKit&#34; target=&#34;_blank&#34; title=&#34;PanicKit javadoc&#34;&gt;
+    Javadoc
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/panickit&#34; target=&#34;_blank&#34; title=&#34;PanicKit blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;PanicKit is a collection of tools for creating &amp;ldquo;panic buttons&amp;rdquo; that
+can trigger a system-wide response when the user is in an anxious or
+dangerous situation.  It enables trigger apps and responder apps to
+safely and easily connect to each other. The user engages with the
+trigger app when in a panic situation. The responder apps receive that
+trigger signal, and individually execute the steps that they were
+configured to do. The connections between trigger and responder can be
+strictly enforced based on &lt;em&gt;Application ID&lt;/em&gt; and APK signing
+certificate.  There are two general categories of response:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;default, non-destructive&lt;/li&gt;
+&lt;li&gt;opt-in, destructive&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://guardianproject.github.io/info/css/jquery.fancybox-3.4.0.min.css&#34; /&gt;
+&lt;script src=&#34;https://guardianproject.github.io/info/js/jquery-3.3.1.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://guardianproject.github.io/info/js/jquery.fancybox.min.js&#34;&gt;&lt;/script&gt;
+&lt;div class=&#34;gallery&#34;&gt;
+  
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/code/panickit/01.3.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/code/panickit/01.3.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/code/panickit/02.0.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/code/panickit/02.0.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/code/panickit/screenshot_fdroid_destructive0.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/code/panickit/screenshot_fdroid_destructive0.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/code/panickit/screenshot_fdroid_destructive1.png.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/code/panickit/screenshot_fdroid_destructive1.png.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/code/panickit/screenshot_ripple.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/code/panickit/screenshot_ripple.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  
+&lt;/div&gt;
+
+
+&lt;h1 id=&#34;building-apps-with-panic-support&#34;&gt;Building apps with panic support&lt;/h1&gt;
+
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://projects.invisionapp.com/share/W73E3D6VE#/screens&#34;&gt;PanicButton PanicKit/Zom integration sketch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/FakePanicButton&#34;&gt;FakePanicButton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/FakePanicResponder&#34;&gt;FakePanicResponder&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;real-world-apps&#34;&gt;Real world apps&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/ripple&#34;&gt;Ripple trigger app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/fdroid/fdroidclient/merge_requests/629&#34;&gt;F-Droid&amp;rsquo;s app hiding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SMSSecure/SMSSecure/blob/8b2d61161716dcae33c7ae2fd9540931b632030a/src/org/smssecure/smssecure/PanicResponderActivity.java&#34; target=&#34;_blank&#34;&gt;SMSSecure lock as default response&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/theScrabi/NewPipe/pull/133&#34; target=&#34;_blank&#34;&gt;NewPipe clear search history as default response&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zom/Zom-Android/blob/master/app/src/main/java/org/awesomeapp/messenger/ui/PanicSetupActivity.java&#34; target=&#34;_blank&#34;&gt;Zom with multiple destructive responses and a default lock response&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  The binary jar, source jar, and javadoc jar are all available on
+  jcenter. To include them using gradle, add this line to
+  your &lt;i&gt;build.gradle&lt;/i&gt;:
+&lt;/p&gt;
+&lt;pre style=&#34;text-align: center;&#34;&gt;implementation &amp;#39;info.guardianproject.panic:panic:1.0&amp;#39;&lt;/pre&gt;
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/panic/panic/1.0/panic-1.0.jar&#34;&gt;panic-1.0.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/panic/panic/1.0/panic-1.0.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/panic/panic/1.0/panic-1.0-sources.jar&#34;&gt;panic-1.0-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/panic/panic/1.0/panic-1.0-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/panic/panic/1.0/panic-1.0-javadoc.jar&#34;&gt;panic-1.0-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/panic/panic/1.0/panic-1.0-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;h1 id=&#34;core-concepts&#34;&gt;Core Concepts&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;non-destructive vs destructive responses&lt;/li&gt;
+&lt;li&gt;responders should have a default response&lt;/li&gt;
+&lt;li&gt;default responses should be non-destructive&lt;/li&gt;
+&lt;li&gt;users send the panic with a trigger app&lt;/li&gt;
+&lt;li&gt;responder apps receive the trigger message and do something in response&lt;/li&gt;
+&lt;li&gt;the user must opt in to destructive responses via &amp;ldquo;connecting&amp;rdquo; a trigger and response app&lt;/li&gt;
+&lt;li&gt;the trigger method can include things like a text message, email addresses, phone numbers, etc. which a panic responder app can use to send the message.&lt;/li&gt;
+&lt;li&gt;responder apps should do something without any configuration, but that default response can be limited to trusted trigger apps&lt;/li&gt;
+&lt;li&gt;the trigger app can ignore any given responder&lt;/li&gt;
+&lt;li&gt;a responder app can ignore all triggers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since this is an Android-specific framework, it builds upon core ideas
+to Android OS, like &lt;em&gt;Intent&lt;/em&gt;, &lt;em&gt;Activity&lt;/em&gt;, and &lt;em&gt;Service&lt;/em&gt;. The panic
+trigger message is an &lt;em&gt;Intent&lt;/em&gt; that can be received by &lt;em&gt;Activitys&lt;/em&gt; or
+&lt;em&gt;Services&lt;/em&gt;.  The &lt;em&gt;Service&lt;/em&gt; must be an &lt;em&gt;IntentService&lt;/em&gt; or started with
+&lt;code&gt;startService(Intent)&lt;/code&gt; in order to receive the panic trigger &lt;em&gt;Intent&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;implementing-a-panic-ux&#34;&gt;Implementing a panic UX&lt;/h2&gt;
+
+&lt;p&gt;These are all of the core behaviors that are required by a good PanicKit user experience:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;every panic responder must accept &lt;em&gt;ACTION_TRIGGER&lt;/em&gt; &lt;em&gt;Intents&lt;/em&gt; as the trigger&lt;/li&gt;
+&lt;li&gt;each app has only one &lt;em&gt;Activity&lt;/em&gt; that receives &lt;em&gt;ACTION_TRIGGER&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;each app has only one &lt;em&gt;Activity&lt;/em&gt; that receives &lt;em&gt;ACTION_CONNECT&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;each app has only one &lt;em&gt;Activity&lt;/em&gt; that receives &lt;em&gt;ACTION_DISCONNECT&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;the trigger app sends &lt;em&gt;ACTION_CONNECT&lt;/em&gt;, &lt;em&gt;ACTION_DISCONNECT&lt;/em&gt;, and &lt;em&gt;ACTION_TRIGGER&lt;/em&gt; to the responder&lt;/li&gt;
+&lt;li&gt;the responder app sends &lt;em&gt;ACTION_CONNECT&lt;/em&gt; and &lt;em&gt;ACTION_DISCONNECT&lt;/em&gt; to the trigger&lt;/li&gt;
+&lt;li&gt;only the user can trigger &lt;em&gt;ACTION_CONNECT&lt;/em&gt; to be sent, they should &lt;strong&gt;never&lt;/strong&gt; be automated&lt;/li&gt;
+&lt;li&gt;the &lt;em&gt;Activity&lt;/em&gt; that accepts &lt;em&gt;ACTION_CONNECT&lt;/em&gt; will TOFU-trust the app that sent the &lt;em&gt;Intent&lt;/em&gt; after the user opts in&lt;/li&gt;
+&lt;li&gt;the &lt;em&gt;Activity&lt;/em&gt; that sends &lt;em&gt;ACTION_CONNECT&lt;/em&gt; will TOFU-trust the receiver, if it replies with &lt;em&gt;Activity.RESULT_OK&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ACTION_TRIGGER&lt;/em&gt; will only trigger destructive responses after it has been verified that they came from a trusted sender (either pinned or TOFUed)&lt;/li&gt;
+&lt;li&gt;either trigger or responder can send &lt;em&gt;ACTION_DISCONNECT&lt;/em&gt; at any time&lt;/li&gt;
+&lt;li&gt;receiving &lt;em&gt;ACTION_DISCONNECT&lt;/em&gt; does not result in user interaction, the disconnect is immediate&lt;/li&gt;
+&lt;li&gt;a trigger app can send &lt;em&gt;ACTION_TRIGGER&lt;/em&gt; to zero or more apps&lt;/li&gt;
+&lt;li&gt;a responder app can receive &lt;em&gt;ACTION_TRIGGER&lt;/em&gt; from a single app&lt;/li&gt;
+&lt;li&gt;one user panic button press can send multiple trigger events&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the config screen has two final actions: 1) cancel changes 2) confirm changes&lt;/li&gt;
+&lt;li&gt;when disconnected, clicking confirm creates the connection&lt;/li&gt;
+&lt;li&gt;when disconnected, clicking cancel makes no connection&lt;/li&gt;
+&lt;li&gt;when already connected, clicking confirm will change the settings and keep the connection&lt;/li&gt;
+&lt;li&gt;when already connected, clicking cancel will discard changes to the settings but keep the connection&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;panickit-in-action&#34;&gt;PanicKit in Action&lt;/h2&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/mS1gstS6YS8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;h1 id=&#34;trust-modes&#34;&gt;Trust modes&lt;/h1&gt;
+
+&lt;p&gt;It is possible to require strict checking of panic senders and
+receivers. For example, a panic trigger message might include a
+private message, the location, and a list of trusted contacts. This is
+sensitive information, so the trigger app should only send it to apps
+that the user has allowed to receive it. Also, many panic responses
+include destroying data or sending messages to trusted contacts. These
+actions must require the user to opt-in, granting a specific trigger
+app the privilege to trigger those sensitive responses.&lt;/p&gt;
+
+&lt;p&gt;The enhanced trust relationship between trigger and responder can take two forms:&lt;/p&gt;
+
+&lt;h2 id=&#34;trust-on-first-use-tofu-app&#34;&gt;Trust-On-First-Use (TOFU) App&lt;/h2&gt;
+
+&lt;p&gt;A user goes into the settings of either a panic trigger or receiver,
+and configures which apps to connect to. In this process, the apps
+remember the other apps they are each connected to, and base their
+trusted sending on that initial connection.&lt;/p&gt;
+
+&lt;h2 id=&#34;pinned-trusted-app&#34;&gt;Pinned Trusted App&lt;/h2&gt;
+
+&lt;p&gt;Using trusted pinning methods like APK signing key, a panic trigger
+and panic receiver can automatically configure themselves to connect
+to all installed apps that are signed by a given key. This gives a
+panic setup with zero configuration. For example, &lt;em&gt;Courier Reader&lt;/em&gt; could
+automatically connect to &lt;em&gt;Amnesty Panic Button&lt;/em&gt; based on signing key.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TrustedIntents: flexible trusted interactions between Android apps</title>
+      <link>https://guardianproject.github.io/info/code/trustedintents/</link>
+      <pubDate>Mon, 23 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/trustedintents/</guid>
+      <description>
+
+&lt;p&gt;&lt;img style=&#34;margin: 0 auto;&#34; title=&#34;icon&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/trustedintents-150x150.png&#34; /&gt;&lt;/p&gt;
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/TrustedIntents&#34; target=&#34;_blank&#34; title=&#34;TrustedIntents on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/TrustedIntents&#34; target=&#34;_blank&#34; title=&#34;TrustedIntents on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/trustedintents&#34; target=&#34;_blank&#34; title=&#34;TrustedIntents blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;TrustedIntents is a library for flexible trusted interactions between
+Android apps. It is modeled after Android’s signature protection level
+for permissions. The key difference is that the framework allows the
+trusted signature to be set, rather than requiring to match the
+current app’s signature.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/trustedintents/wiki/Wiki/&#34;&gt;https://dev.guardianproject.info/projects/trustedintents/wiki/Wiki/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/&#34;&gt;https://guardianproject.info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.android.com/guide/topics/manifest/permission-element.html#plevel&#34;&gt;https://developer.android.com/guide/topics/manifest/permission-element.html#plevel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  The binary jar, source jar, and javadoc jar are all available on
+  jcenter. To include them using gradle, add this line to
+  your &lt;i&gt;build.gradle&lt;/i&gt;:
+&lt;/p&gt;
+&lt;pre style=&#34;text-align: center;&#34;&gt;implementation &amp;#39;info.guardianproject.trustedintents:trustedintents:%!s(&amp;lt;nil&amp;gt;)&amp;#39;&lt;/pre&gt;
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29.jar&#34;&gt;trustedintents-%!s(&amp;lt;nil&amp;gt;).jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29-sources.jar&#34;&gt;trustedintents-%!s(&amp;lt;nil&amp;gt;)-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29-javadoc.jar&#34;&gt;trustedintents-%!s(&amp;lt;nil&amp;gt;)-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;This library is licensed under the LGPLv2.1.  We believe this is compatible
+with all reasonable uses, including proprietary software, but let us know if
+it provides difficulties for you.  For more info on how that works with Java,
+see:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.gnu.org/licenses/lgpl-java.en.html&#34;&gt;https://www.gnu.org/licenses/lgpl-java.en.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TrustedIntents: flexible trusted interactions between Android apps</title>
+      <link>https://guardianproject.github.io/info/code/trustedintents/</link>
+      <pubDate>Mon, 23 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/trustedintents/</guid>
+      <description>
+
+&lt;p&gt;&lt;img style=&#34;margin: 0 auto;&#34; title=&#34;icon&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/trustedintents-150x150.png&#34; /&gt;&lt;/p&gt;
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/TrustedIntents&#34; target=&#34;_blank&#34; title=&#34;TrustedIntents on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/TrustedIntents&#34; target=&#34;_blank&#34; title=&#34;TrustedIntents on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/trustedintents&#34; target=&#34;_blank&#34; title=&#34;TrustedIntents blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;TrustedIntents is a library for flexible trusted interactions between
+Android apps. It is modeled after Android’s signature protection level
+for permissions. The key difference is that the framework allows the
+trusted signature to be set, rather than requiring to match the
+current app’s signature.&lt;/p&gt;
+
+&lt;p&gt;For more info:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/trustedintents/wiki/Wiki/&#34;&gt;https://dev.guardianproject.info/projects/trustedintents/wiki/Wiki/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/&#34;&gt;https://guardianproject.info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.android.com/guide/topics/manifest/permission-element.html#plevel&#34;&gt;https://developer.android.com/guide/topics/manifest/permission-element.html#plevel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  The binary jar, source jar, and javadoc jar are all available on
+  jcenter. To include them using gradle, add this line to
+  your &lt;i&gt;build.gradle&lt;/i&gt;:
+&lt;/p&gt;
+&lt;pre style=&#34;text-align: center;&#34;&gt;implementation &amp;#39;info.guardianproject.trustedintents:trustedintents:%!s(&amp;lt;nil&amp;gt;)&amp;#39;&lt;/pre&gt;
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29.jar&#34;&gt;trustedintents-%!s(&amp;lt;nil&amp;gt;).jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29-sources.jar&#34;&gt;trustedintents-%!s(&amp;lt;nil&amp;gt;)-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29-javadoc.jar&#34;&gt;trustedintents-%!s(&amp;lt;nil&amp;gt;)-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/trustedintents/trustedintents/%25!s%28%3cnil%3e%29/trustedintents-%25!s%28%3cnil%3e%29-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;This library is licensed under the LGPLv2.1.  We believe this is compatible
+with all reasonable uses, including proprietary software, but let us know if
+it provides difficulties for you.  For more info on how that works with Java,
+see:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.gnu.org/licenses/lgpl-java.en.html&#34;&gt;https://www.gnu.org/licenses/lgpl-java.en.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NetCipher: Secured Networking</title>
+      <link>https://guardianproject.github.io/info/code/netcipher/</link>
+      <pubDate>Mon, 29 Apr 2013 11:00:55 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/netcipher/</guid>
+      <description>
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/NetCipher&#34; target=&#34;_blank&#34; title=&#34;NetCipher on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/NetCipher&#34; target=&#34;_blank&#34; title=&#34;NetCipher on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/NetCipher&#34; target=&#34;_blank&#34; title=&#34;NetCipher javadoc&#34;&gt;
+    Javadoc
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/netcipher&#34; target=&#34;_blank&#34; title=&#34;NetCipher blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Better TLS and Tor App Integration&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;NetCipher is a library for Android that provides multiple means to
+improve network security in mobile applications. It provides best
+practices TLS settings using the standard Android &lt;tt&gt;HttpURLConnection&lt;/tt&gt; methods, &lt;a
+href=&#34;https://developer.android.com/reference/java/net/HttpURLConnection.html&#34;
+target=&#34;_blank&#34;&gt;&lt;code&gt;HttpURLConnection&lt;/code&gt;&lt;/a&gt;, OkHTTP3, Volley, and &lt;a
+href=&#34;https://hc.apache.org/httpcomponents-client-4.3.x/index.html&#34;
+target=&#34;_blank&#34;&gt;Apache HTTP Client&lt;/a&gt;, provides simple Tor
+integration, makes it easy to configure proxies for HTTP connections
+and &lt;code&gt;WebView&lt;/code&gt; instances.&lt;/p&gt;
+
+&lt;p&gt;More specifically this library provides:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hardening of TLS protocol support and cipher suites, especially on older&lt;br /&gt;
+versions of Android&lt;/li&gt;
+&lt;li&gt;Proxied Connection Support: HTTP and SOCKS proxy connection support for HTTP&lt;br /&gt;
+and HTTPS traffic through specific configuration&lt;/li&gt;
+&lt;li&gt;OrbotHelper: a utility class to support application integration with Orbot&lt;br /&gt;
+(Tor for Android). Check if its installed, automatically start it, etc.&lt;/li&gt;
+&lt;li&gt;Optional, custom certificate store based on the open Debian root CA trust&lt;br /&gt;
+store, which is built with Mozilla&amp;rsquo;s CA collection.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;IT MUST BE NOTED, that you can use this library without using Orbot/Tor, but obviously we think using strong TLS/SSL connections over Tor is just about the best thing in the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&#34;onionkit&#34; href=&#34;https://github.com/guardianproject/NetCipher&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher&#34;&gt;https://github.com/guardianproject/NetCipher&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This library was formerly named OnionKit&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;For examples and more info on using NetCipher, see the &lt;a
+href=&#34;https://github.com/guardianproject/NetCipher#readme&#34;
+target=&#34;_blank&#34;&gt;README&lt;/a&gt; and included sample projects.  Many apps
+include NetCipher, so they can also serve as examples of NetCipher in
+action:&lt;/p&gt;
+
+&lt;h3 id=&#34;sample-projects&#34;&gt;Sample Projects&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-hurl&#34;&gt;Android HttpURLConnection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-httpclient&#34;&gt;Apache HTTP Client&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-chboye&#34;&gt;chboye&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-okhttp3&#34;&gt;OkHTTP3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-volley&#34;&gt;Volley&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-webkit&#34;&gt;WebKit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-webviewclient&#34;&gt;WebViewClient&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;apps&#34;&gt;Apps&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/fdroid/fdroidclient/commit/2c88703588a6192cbf3ffd7ccb8d01b65c693ed3&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  The binary jar, source jar, and javadoc jar are all available on
+  jcenter. To include them using gradle, add this line to
+  your &lt;i&gt;build.gradle&lt;/i&gt;:
+&lt;/p&gt;
+&lt;pre style=&#34;text-align: center;&#34;&gt;implementation &amp;#39;info.guardianproject.netcipher:netcipher:2.2.0-alpha&amp;#39;&lt;/pre&gt;
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha.jar&#34;&gt;netcipher-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha-sources.jar&#34;&gt;netcipher-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gradle-line&#34;&gt;
+
+
+&lt;p&gt;For working with popular HTTP libraries or &lt;tt&gt;android.webkit&lt;/tt&gt;, use
+the specific NetCipher library that matches:&lt;/p&gt;
+&lt;pre&gt;
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-webkit:2.2.0-alpha
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-okhttp3:2.2.0-alpha
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-httpclient:2.2.0-alpha
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-volley:2.2.0-alpha
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-chboye:2.2.0-alpha
+&lt;/pre&gt;
+
+&lt;p&gt;These files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha.jar&#34;&gt;netcipher-webkit-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha-sources.jar&#34;&gt;netcipher-webkit-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-webkit-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha.jar&#34;&gt;netcipher-okhttp3-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha-sources.jar&#34;&gt;netcipher-okhttp3-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-okhttp3-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha.jar&#34;&gt;netcipher-httpclient-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha-sources.jar&#34;&gt;netcipher-httpclient-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-httpclient-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha.jar&#34;&gt;netcipher-volley-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha-sources.jar&#34;&gt;netcipher-volley-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-volley-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha.jar&#34;&gt;netcipher-chboye-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha-sources.jar&#34;&gt;netcipher-chboye-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-chboye-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>NetCipher: Secured Networking</title>
+      <link>https://guardianproject.github.io/info/code/netcipher/</link>
+      <pubDate>Mon, 29 Apr 2013 11:00:55 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/netcipher/</guid>
+      <description>
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/NetCipher&#34; target=&#34;_blank&#34; title=&#34;NetCipher on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/NetCipher&#34; target=&#34;_blank&#34; title=&#34;NetCipher on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/NetCipher&#34; target=&#34;_blank&#34; title=&#34;NetCipher javadoc&#34;&gt;
+    Javadoc
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/netcipher&#34; target=&#34;_blank&#34; title=&#34;NetCipher blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Better TLS and Tor App Integration&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;NetCipher is a library for Android that provides multiple means to
+improve network security in mobile applications. It provides best
+practices TLS settings using the standard Android &lt;tt&gt;HttpURLConnection&lt;/tt&gt; methods, &lt;a
+href=&#34;https://developer.android.com/reference/java/net/HttpURLConnection.html&#34;
+target=&#34;_blank&#34;&gt;&lt;code&gt;HttpURLConnection&lt;/code&gt;&lt;/a&gt;, OkHTTP3, Volley, and &lt;a
+href=&#34;https://hc.apache.org/httpcomponents-client-4.3.x/index.html&#34;
+target=&#34;_blank&#34;&gt;Apache HTTP Client&lt;/a&gt;, provides simple Tor
+integration, makes it easy to configure proxies for HTTP connections
+and &lt;code&gt;WebView&lt;/code&gt; instances.&lt;/p&gt;
+
+&lt;p&gt;More specifically this library provides:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hardening of TLS protocol support and cipher suites, especially on older&lt;br /&gt;
+versions of Android&lt;/li&gt;
+&lt;li&gt;Proxied Connection Support: HTTP and SOCKS proxy connection support for HTTP&lt;br /&gt;
+and HTTPS traffic through specific configuration&lt;/li&gt;
+&lt;li&gt;OrbotHelper: a utility class to support application integration with Orbot&lt;br /&gt;
+(Tor for Android). Check if its installed, automatically start it, etc.&lt;/li&gt;
+&lt;li&gt;Optional, custom certificate store based on the open Debian root CA trust&lt;br /&gt;
+store, which is built with Mozilla&amp;rsquo;s CA collection.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;IT MUST BE NOTED, that you can use this library without using Orbot/Tor, but obviously we think using strong TLS/SSL connections over Tor is just about the best thing in the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;a title=&#34;onionkit&#34; href=&#34;https://github.com/guardianproject/NetCipher&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher&#34;&gt;https://github.com/guardianproject/NetCipher&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This library was formerly named OnionKit&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;For examples and more info on using NetCipher, see the &lt;a
+href=&#34;https://github.com/guardianproject/NetCipher#readme&#34;
+target=&#34;_blank&#34;&gt;README&lt;/a&gt; and included sample projects.  Many apps
+include NetCipher, so they can also serve as examples of NetCipher in
+action:&lt;/p&gt;
+
+&lt;h3 id=&#34;sample-projects&#34;&gt;Sample Projects&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-hurl&#34;&gt;Android HttpURLConnection&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-httpclient&#34;&gt;Apache HTTP Client&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-chboye&#34;&gt;chboye&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-okhttp3&#34;&gt;OkHTTP3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-volley&#34;&gt;Volley&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-webkit&#34;&gt;WebKit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/NetCipher/tree/master/sample-webviewclient&#34;&gt;WebViewClient&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;apps&#34;&gt;Apps&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/fdroid/fdroidclient/commit/2c88703588a6192cbf3ffd7ccb8d01b65c693ed3&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  The binary jar, source jar, and javadoc jar are all available on
+  jcenter. To include them using gradle, add this line to
+  your &lt;i&gt;build.gradle&lt;/i&gt;:
+&lt;/p&gt;
+&lt;pre style=&#34;text-align: center;&#34;&gt;implementation &amp;#39;info.guardianproject.netcipher:netcipher:2.2.0-alpha&amp;#39;&lt;/pre&gt;
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha.jar&#34;&gt;netcipher-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha-sources.jar&#34;&gt;netcipher-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/netcipher/2.2.0-alpha/netcipher-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gradle-line&#34;&gt;
+
+
+&lt;p&gt;For working with popular HTTP libraries or &lt;tt&gt;android.webkit&lt;/tt&gt;, use
+the specific NetCipher library that matches:&lt;/p&gt;
+&lt;pre&gt;
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-webkit:2.2.0-alpha
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-okhttp3:2.2.0-alpha
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-httpclient:2.2.0-alpha
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-volley:2.2.0-alpha
+    implementation &amp;#39;info.guardianproject.netcipher:netcipher-chboye:2.2.0-alpha
+&lt;/pre&gt;
+
+&lt;p&gt;These files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha.jar&#34;&gt;netcipher-webkit-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha-sources.jar&#34;&gt;netcipher-webkit-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-webkit-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-webkit-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha.jar&#34;&gt;netcipher-okhttp3-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha-sources.jar&#34;&gt;netcipher-okhttp3-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-okhttp3-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-okhttp3-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha.jar&#34;&gt;netcipher-httpclient-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha-sources.jar&#34;&gt;netcipher-httpclient-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-httpclient-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-httpclient-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha.jar&#34;&gt;netcipher-volley-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha-sources.jar&#34;&gt;netcipher-volley-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-volley-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-volley-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+  
+  
+  
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha.jar&#34;&gt;netcipher-chboye-2.2.0-alpha.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha-sources.jar&#34;&gt;netcipher-chboye-2.2.0-alpha-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha-javadoc.jar&#34;&gt;netcipher-chboye-2.2.0-alpha-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/netcipher/2.2.0-alpha/netcipher-chboye-2.2.0-alpha-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher: Virtual Encrypted Disks</title>
+      <link>https://guardianproject.github.io/info/code/iocipher/</link>
+      <pubDate>Thu, 04 Oct 2012 00:39:12 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/iocipher/</guid>
+      <description>
+
+&lt;p&gt;&lt;img class=&#34;alignleft size-thumbnail wp-image-3079&#34; alt=&#34;alberti cipher disk&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; width=&#34;150&#34; height=&#34;150&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/p&gt;
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34; title=&#34;IOCipher on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34; title=&#34;IOCipher on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/IOCipher&#34; target=&#34;_blank&#34; title=&#34;IOCipher javadoc&#34;&gt;
+    Javadoc
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/iocipher&#34; target=&#34;_blank&#34; title=&#34;IOCipher blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;IOCipher provides a virtual encrypted disk for Android apps without requiring the device to be rooted. It uses a clone of the standard &lt;code&gt;java.io&lt;/code&gt; API for working with files, so developers already know how to use it. Only password handling, and opening the virtual disk are what stand between the developer and working encrypted file storage. It is based on and &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34;&gt;SQLCipher&lt;/a&gt;, and designed to work with &lt;a href=&#34;https://guardianproject.github.io/info/code/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt; for handling the keys and passwords.&lt;/p&gt;
+
+&lt;p&gt;IOCipher is ultimately based on transactions in SQLite, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite&amp;rsquo;s transactions prevent the whole file system from being corrupted. This is important in Android since an &lt;code&gt;Activity&lt;/code&gt; or &lt;code&gt;Service&lt;/code&gt; can be killed at any moment without warning.&lt;/p&gt;
+
+&lt;p&gt;IOCipher is a cousin to &lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt; since it is also based on SQLCipher and uses the same approach of repurposing an API that developers already know well. It is built on top of &lt;a title=&#34;libsqlfs git repo&#34; href=&#34;https://github.com/guardianproject/libsqlfs&#34; target=&#34;_blank&#34;&gt;libsqlfs&lt;/a&gt;, a filesystem implemented in SQL that exposes a FUSE API.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Secure transparent app-level &lt;strong&gt;virtual encrypted disk&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No root&lt;/strong&gt; required&lt;/li&gt;
+&lt;li&gt;Only &lt;strong&gt;three new methods&lt;/strong&gt; to learn: &lt;code&gt;VirtualFileSystem.get()&lt;/code&gt;, &lt;code&gt;VirtualFileSystem.mount(dbFile, password)&lt;/code&gt;, and &lt;code&gt;VirtualFileSystem.unmount()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Supports Android versions &lt;strong&gt;2.3 and above&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Licensed under the &lt;strong&gt;LGPL v3+&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;adding-iocipher-to-your-app&#34;&gt;Adding IOCipher to your App&lt;/h2&gt;
+
+&lt;p&gt;Here are the things you need to do in your code to make it use IOCipher encrypted storage for all of your app&amp;rsquo;s file storage:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;manage the password using Cacheword or whatever works for you&lt;/li&gt;
+&lt;li&gt;get the VFS singleton using &lt;code&gt;VirtualFileSystem.get()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;on first run, create the container file with a password using &lt;code&gt;VirtualFileSystem.createNewContainer(dbFile, password)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;mount the container file with a password using &lt;code&gt;VirtualFileSystem.mount(dbFile, password)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;replace the relevant &lt;code&gt;java.io&lt;/code&gt; import statements with &lt;code&gt;info.guardianproject.iocipher&lt;/code&gt;, e.g.:
+&lt;pre&gt;import info.guardianproject.iocipher.File;
+import info.guardianproject.iocipher.FileOutputStream;
+import info.guardianproject.iocipher.FileReader;
+import info.guardianproject.iocipher.IOCipherFileChannel;
+import info.guardianproject.iocipher.VirtualFileSystem;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For more detailed examples, see &lt;a href=&#34;https://github.com/guardianproject/IOCipherExample&#34; target=&#34;_blank&#34;&gt;IOCipherExample&lt;/a&gt;, &lt;a href=&#34;https://github.com/guardianproject/IOCipherThreadTest&#34; target=&#34;_blank&#34;&gt;IOCipherThreadTest&lt;/a&gt;, and &lt;a href=&#34;https://github.com/guardianproject/IOCipherTests&#34; target=&#34;_blank&#34;&gt;IOCipherTests&lt;/a&gt;. To start from scratch, follow &lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34; title=&#34;SQLCipher for Android Application Integration&#34; target=&#34;_blank&#34;&gt;the instructions on starting with SQLCipher-for-Android&lt;/a&gt;, then download IOCipher and add it to the &lt;code&gt;libs/&lt;/code&gt; folder of that new project.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  For gradle projects, use one of these lines.  The quickest way to
+  get started is to use the standalone package that includes SQLCipher
+  in it.
+&lt;/p&gt;
+&lt;pre&gt;    implementation &amp;#39;info.guardianproject.iocipher:IOCipherStandalone:0.5@aar&amp;#39;
+&lt;/pre&gt;
+&lt;p&gt;
+  If your project already includes SQLCipher, then use the release
+  that contains only IOCipher.
+  &lt;/p&gt;
+&lt;pre&gt;    implementation &amp;#39;info.guardianproject.iocipher:IOCipher:0.5@aar&amp;#39;
+    implementation &#39;net.zetetic:android-database-sqlcipher:4.2.0@aar&#39;
+&lt;/pre&gt;
+
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/iocipher/IOCipher/0.5/IOCipherStandalone-0.5.aar&#34;&gt;IOCipherStandalone-0.5.aar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/iocipher/IOCipher/0.5/IOCipherStandalone-0.5.aar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/iocipher/IOCipher/0.5/IOCipher-0.5.aar&#34;&gt;IOCipher-0.5.aar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/iocipher/IOCipher/0.5/IOCipher-0.5.aar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;source-code&#34;&gt;Source Code&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;all you need for your project: &lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34;&gt;https://github.com/guardianproject/IOCipher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;optional&#34;&gt;optional:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the test suite: &lt;a href=&#34;https://github.com/guardianproject/IOCipherTests&#34;&gt;https://github.com/guardianproject/IOCipherTests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple example file manager app: &lt;a href=&#34;https://github.com/guardianproject/IOCipherExample&#34;&gt;https://github.com/guardianproject/IOCipherExample&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a very simple test app: &lt;a href=&#34;https://github.com/guardianproject/IOCipherThreadTest&#34;&gt;https://github.com/guardianproject/IOCipherThreadTest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the core: &lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34;&gt;https://github.com/guardianproject/libsqlfs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage-notes&#34;&gt;Usage notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only one active mount per-app is supported&lt;/li&gt;
+&lt;li&gt;single thread/sequential access is the preferred way of using IOCipher&lt;/li&gt;
+&lt;li&gt;multi-threaded access possible (&lt;em&gt;potentially unstable under extremely high write load&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;VFS now has beginTransaction and completeTransaction to optimize performance&lt;/li&gt;
+&lt;li&gt;parts of java.io not currently supported: vectored I/O, memory-mapped files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;reporting-bugs&#34;&gt;Reporting Bugs&lt;/h2&gt;
+
+&lt;p&gt;Please report any bugs or issues that you have with this library! We want to hear from you. Help us improve this software by filing bug reports about any problem that you encounter. Feature requests and patches are also welcome!&lt;/p&gt;
+
+&lt;h2 id=&#34;known-issues&#34;&gt;Known Issues&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;files cannot currently be larger than 4GB (&lt;a href=&#34;https://dev.guardianproject.info/issues/3624&#34; target=&#34;_blank&#34;&gt;#3624&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;no users, groups, or permissions implemented&lt;/li&gt;
+&lt;li&gt;crashes possible under &lt;em&gt;extremely&lt;/em&gt; heavy, concurrent load (&lt;a href=&#34;https://dev.guardianproject.info/issues/522&#34; target=&#34;_blank&#34;&gt;#522&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a title=&#34;existing IOCipher issues&#34; href=&#34;https://dev.guardianproject.info/projects/iocipher/issues&#34; target=&#34;_blank&#34;&gt;View all open issues&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher: Virtual Encrypted Disks</title>
+      <link>https://guardianproject.github.io/info/code/iocipher/</link>
+      <pubDate>Thu, 04 Oct 2012 00:39:12 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/iocipher/</guid>
+      <description>
+
+&lt;p&gt;&lt;img class=&#34;alignleft size-thumbnail wp-image-3079&#34; alt=&#34;alberti cipher disk&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; width=&#34;150&#34; height=&#34;150&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/p&gt;
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34; title=&#34;IOCipher on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34; title=&#34;IOCipher on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/IOCipher&#34; target=&#34;_blank&#34; title=&#34;IOCipher javadoc&#34;&gt;
+    Javadoc
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/iocipher&#34; target=&#34;_blank&#34; title=&#34;IOCipher blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;IOCipher provides a virtual encrypted disk for Android apps without requiring the device to be rooted. It uses a clone of the standard &lt;code&gt;java.io&lt;/code&gt; API for working with files, so developers already know how to use it. Only password handling, and opening the virtual disk are what stand between the developer and working encrypted file storage. It is based on and &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34;&gt;SQLCipher&lt;/a&gt;, and designed to work with &lt;a href=&#34;https://guardianproject.github.io/info/code/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt; for handling the keys and passwords.&lt;/p&gt;
+
+&lt;p&gt;IOCipher is ultimately based on transactions in SQLite, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite&amp;rsquo;s transactions prevent the whole file system from being corrupted. This is important in Android since an &lt;code&gt;Activity&lt;/code&gt; or &lt;code&gt;Service&lt;/code&gt; can be killed at any moment without warning.&lt;/p&gt;
+
+&lt;p&gt;IOCipher is a cousin to &lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt; since it is also based on SQLCipher and uses the same approach of repurposing an API that developers already know well. It is built on top of &lt;a title=&#34;libsqlfs git repo&#34; href=&#34;https://github.com/guardianproject/libsqlfs&#34; target=&#34;_blank&#34;&gt;libsqlfs&lt;/a&gt;, a filesystem implemented in SQL that exposes a FUSE API.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Secure transparent app-level &lt;strong&gt;virtual encrypted disk&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No root&lt;/strong&gt; required&lt;/li&gt;
+&lt;li&gt;Only &lt;strong&gt;three new methods&lt;/strong&gt; to learn: &lt;code&gt;VirtualFileSystem.get()&lt;/code&gt;, &lt;code&gt;VirtualFileSystem.mount(dbFile, password)&lt;/code&gt;, and &lt;code&gt;VirtualFileSystem.unmount()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Supports Android versions &lt;strong&gt;2.3 and above&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Licensed under the &lt;strong&gt;LGPL v3+&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;adding-iocipher-to-your-app&#34;&gt;Adding IOCipher to your App&lt;/h2&gt;
+
+&lt;p&gt;Here are the things you need to do in your code to make it use IOCipher encrypted storage for all of your app&amp;rsquo;s file storage:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;manage the password using Cacheword or whatever works for you&lt;/li&gt;
+&lt;li&gt;get the VFS singleton using &lt;code&gt;VirtualFileSystem.get()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;on first run, create the container file with a password using &lt;code&gt;VirtualFileSystem.createNewContainer(dbFile, password)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;mount the container file with a password using &lt;code&gt;VirtualFileSystem.mount(dbFile, password)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;replace the relevant &lt;code&gt;java.io&lt;/code&gt; import statements with &lt;code&gt;info.guardianproject.iocipher&lt;/code&gt;, e.g.:
+&lt;pre&gt;import info.guardianproject.iocipher.File;
+import info.guardianproject.iocipher.FileOutputStream;
+import info.guardianproject.iocipher.FileReader;
+import info.guardianproject.iocipher.IOCipherFileChannel;
+import info.guardianproject.iocipher.VirtualFileSystem;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For more detailed examples, see &lt;a href=&#34;https://github.com/guardianproject/IOCipherExample&#34; target=&#34;_blank&#34;&gt;IOCipherExample&lt;/a&gt;, &lt;a href=&#34;https://github.com/guardianproject/IOCipherThreadTest&#34; target=&#34;_blank&#34;&gt;IOCipherThreadTest&lt;/a&gt;, and &lt;a href=&#34;https://github.com/guardianproject/IOCipherTests&#34; target=&#34;_blank&#34;&gt;IOCipherTests&lt;/a&gt;. To start from scratch, follow &lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34; title=&#34;SQLCipher for Android Application Integration&#34; target=&#34;_blank&#34;&gt;the instructions on starting with SQLCipher-for-Android&lt;/a&gt;, then download IOCipher and add it to the &lt;code&gt;libs/&lt;/code&gt; folder of that new project.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  For gradle projects, use one of these lines.  The quickest way to
+  get started is to use the standalone package that includes SQLCipher
+  in it.
+&lt;/p&gt;
+&lt;pre&gt;    implementation &amp;#39;info.guardianproject.iocipher:IOCipherStandalone:0.5@aar&amp;#39;
+&lt;/pre&gt;
+&lt;p&gt;
+  If your project already includes SQLCipher, then use the release
+  that contains only IOCipher.
+  &lt;/p&gt;
+&lt;pre&gt;    implementation &amp;#39;info.guardianproject.iocipher:IOCipher:0.5@aar&amp;#39;
+    implementation &#39;net.zetetic:android-database-sqlcipher:4.2.0@aar&#39;
+&lt;/pre&gt;
+
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/iocipher/IOCipher/0.5/IOCipherStandalone-0.5.aar&#34;&gt;IOCipherStandalone-0.5.aar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/iocipher/IOCipher/0.5/IOCipherStandalone-0.5.aar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/iocipher/IOCipher/0.5/IOCipher-0.5.aar&#34;&gt;IOCipher-0.5.aar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/iocipher/IOCipher/0.5/IOCipher-0.5.aar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;source-code&#34;&gt;Source Code&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;all you need for your project: &lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34;&gt;https://github.com/guardianproject/IOCipher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;optional&#34;&gt;optional:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the test suite: &lt;a href=&#34;https://github.com/guardianproject/IOCipherTests&#34;&gt;https://github.com/guardianproject/IOCipherTests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple example file manager app: &lt;a href=&#34;https://github.com/guardianproject/IOCipherExample&#34;&gt;https://github.com/guardianproject/IOCipherExample&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a very simple test app: &lt;a href=&#34;https://github.com/guardianproject/IOCipherThreadTest&#34;&gt;https://github.com/guardianproject/IOCipherThreadTest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the core: &lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34;&gt;https://github.com/guardianproject/libsqlfs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage-notes&#34;&gt;Usage notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only one active mount per-app is supported&lt;/li&gt;
+&lt;li&gt;single thread/sequential access is the preferred way of using IOCipher&lt;/li&gt;
+&lt;li&gt;multi-threaded access possible (&lt;em&gt;potentially unstable under extremely high write load&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;VFS now has beginTransaction and completeTransaction to optimize performance&lt;/li&gt;
+&lt;li&gt;parts of java.io not currently supported: vectored I/O, memory-mapped files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;reporting-bugs&#34;&gt;Reporting Bugs&lt;/h2&gt;
+
+&lt;p&gt;Please report any bugs or issues that you have with this library! We want to hear from you. Help us improve this software by filing bug reports about any problem that you encounter. Feature requests and patches are also welcome!&lt;/p&gt;
+
+&lt;h2 id=&#34;known-issues&#34;&gt;Known Issues&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;files cannot currently be larger than 4GB (&lt;a href=&#34;https://dev.guardianproject.info/issues/3624&#34; target=&#34;_blank&#34;&gt;#3624&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;no users, groups, or permissions implemented&lt;/li&gt;
+&lt;li&gt;crashes possible under &lt;em&gt;extremely&lt;/em&gt; heavy, concurrent load (&lt;a href=&#34;https://dev.guardianproject.info/issues/522&#34; target=&#34;_blank&#34;&gt;#522&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a title=&#34;existing IOCipher issues&#34; href=&#34;https://dev.guardianproject.info/projects/iocipher/issues&#34; target=&#34;_blank&#34;&gt;View all open issues&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SQLCipher: Encrypted Database</title>
+      <link>https://guardianproject.github.io/info/code/sqlcipher/</link>
+      <pubDate>Sat, 19 Feb 2011 08:27:13 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/sqlcipher/</guid>
+      <description>
+
+&lt;p&gt;&lt;img class=&#34;alignnone size-medium wp-image-1329&#34; title=&#34;logo-sqlcipher-android&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;50&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png 300w, https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android.png 522w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;source-code&#34; style=&#34;width: 30%; margin: 0 auto;&#34;&gt;
+  &lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher&#34; target=&#34;_blank&#34; title=&#34;SQLCipher for Android&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/sqlcipher&#34; target=&#34;_blank&#34; title=&#34;SQLCipher blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;&lt;/p&gt;
+
+&lt;p&gt;In an environment where mobile data privacy is increasingly &lt;a href=&#34;https://www.reuters.com/article/2011/05/08/us-privacy-congress-idUSTRE7471SA20110508&#34;&gt;in the headlines&lt;/a&gt;, this project will make it easier than ever for mobile developers to properly secure their local application data, and in turn better protect the privacy of their users. The data stored by Android apps protected by this type of encryption will be less vulnerable to access by malicious apps, protected in case of device loss or theft, and highly resistant to &lt;a href=&#34;https://www.cellebrite.com/&#34;&gt;mobile data forensics tools&lt;/a&gt; that are increasingly used to mass copy a mobile device during &lt;a href=&#34;https://www.thenewspaper.com/news/34/3458.asp&#34;&gt;routine traffic stops&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;SQLCipher is a &lt;a href=&#34;https://sqlite.org/&#34;&gt;SQLite&lt;/a&gt; extension that provides transparent 256-bit AES encryption of database files. To date, it has been open-sourced, sponsored and maintained by &lt;a href=&#34;https://zetetic.net/&#34;&gt;Zetetic LLC&lt;/a&gt;. In the mobile space, SQLCipher has enjoyed widespread use in Apple’s &lt;a href=&#34;https://www.zetetic.net/sqlcipher/documentation/ios.html&#34;&gt;iOS&lt;/a&gt;, as well as &lt;a href=&#34;https://www.qtcentre.org/wiki/index.php?title=Building_QSQLITE_driver_with_AES-256_encryption_support&#34;&gt;Nokia / QT&lt;/a&gt; for quite some time. Given that Android &lt;a href=&#34;https://developer.android.com/guide/topics/data/data-storage.html#db&#34;&gt;by default&lt;/a&gt; provides integrated support for SQLite databases, our goal was to create an almost identical API for SQLCipher, so that developers of all skill level could use it, without a steep learning curve.&lt;/p&gt;
+
+&lt;h2 id=&#34;learn-more-and-download&#34;&gt;Learn More and Download&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34;&gt;SQLCipher for Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;source: &lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher&#34;&gt;https://github.com/sqlcipher/android-database-sqlcipher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;an-illustrative-terminal-listing&#34;&gt;An Illustrative Terminal Listing&lt;/h3&gt;
+
+&lt;p&gt;A typical SQLite database in unencrypted, and visually parseable even as encoded text. The following example shows the difference between hexdumps of a standard SQLite db and one implementing SQLCipher.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;~ sjlombardo$ hexdump -C sqlite.db&lt;br /&gt;
+00000000 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00 |SQLite format 3.|&lt;br /&gt;
+&amp;hellip;&lt;br /&gt;
+000003c0 65 74 32 74 32 03 43 52 45 41 54 45 20 54 41 42 |et2t2.CREATE TAB|&lt;br /&gt;
+000003d0 4c 45 20 74 32 28 61 2c 62 29 24 01 06 17 11 11 |LE t2(a,b)$&amp;hellip;..|&lt;br /&gt;
+&amp;hellip;&lt;br /&gt;
+000007e0 20 74 68 65 20 73 68 6f 77 15 01 03 01 2f 01 6f | the show&amp;hellip;./.o|&lt;br /&gt;
+000007f0 6e 65 20 66 6f 72 20 74 68 65 20 6d 6f 6e 65 79 |ne for the money|&lt;/p&gt;
+
+&lt;p&gt;~ $ sqlite3 sqlcipher.db&lt;br /&gt;
+sqlite&amp;gt; PRAGMA KEY=&amp;lsquo;test123&amp;rsquo;;&lt;br /&gt;
+sqlite&amp;gt; CREATE TABLE t1(a,b);&lt;br /&gt;
+sqlite&amp;gt; INSERT INTO t1(a,b) VALUES (&amp;lsquo;one for the money&amp;rsquo;, &amp;lsquo;two for the show&amp;rsquo;);&lt;br /&gt;
+sqlite&amp;gt; .quit&lt;/p&gt;
+
+&lt;p&gt;~ $ hexdump -C sqlite.db&lt;br /&gt;
+00000000 84 d1 36 18 eb b5 82 90 c4 70 0d ee 43 cb 61 87 |.?6.?..?p.?C?a.|&lt;br /&gt;
+00000010 91 42 3c cd 55 24 ab c6 c4 1d c6 67 b4 e3 96 bb |.B&lt;!--?U$???.?g??.?| ... 00000be0  dc 77 5c 6c de c6 d3 be  43 49 48 3e f3 02 94 a9  |?w\l??ӾCIH--&gt;?..?|&lt;/p&gt;
+
+&lt;p&gt;00000bf0 8e 99 ee 28 23 43 ab a4 97 cd 63 42 8a 8e 7c c6 |..?(#C??.?cB..|?|&lt;/p&gt;
+
+&lt;p&gt;~ $ sqlite3 sqlcipher.db&lt;br /&gt;
+sqlite&amp;gt; SELECT * FROM t1;&lt;br /&gt;
+Error: file is encrypted or is not a database&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(example courtesy of &lt;a href=&#34;https://www.zetetic.net/sqlcipher/design&#34;&gt;SQLCipher&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h4 id=&#34;details-for-developers&#34;&gt;Details for Developers&lt;/h4&gt;
+
+&lt;p&gt;We&amp;rsquo;ve packaged up a very simple SDK for any Android developer to add SQLCipher into their app with the following three steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Add a single sqlcipher.jar and a few .so&amp;rsquo;s to the application libs directory&lt;/li&gt;
+&lt;li&gt;Update the import path from &lt;em&gt;android.database.sqlite.*&lt;/em&gt; to &lt;em&gt;info.guardianproject.database.sqlite.*&lt;/em&gt; in any source files that reference it. The original android.database.Cursor can still be used unchanged.&lt;/li&gt;
+&lt;li&gt;Init the database in onCreate() and pass a variable argument to the open database method with a password*:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;SQLiteDatabase.loadLibs(this); //first init the db libraries with the context&lt;/li&gt;
+&lt;li&gt;SQLiteOpenHelper.getWritableDatabase(“thisismysecret”):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;*&lt;strong&gt;Note:&lt;/strong&gt; we are working on some dialog builder helper methods for password and PIN input, password caching, and other features that we would like to standardize across all applications that use SQLCipher.&lt;/p&gt;
+
+&lt;h4 id=&#34;compatibility&#34;&gt;Compatibility&lt;/h4&gt;
+
+&lt;p&gt;The Developer Preview implements SQLCipher v1, is compatible with Android 2.2 &amp;amp; 2.3, and works only within one process (you can&amp;rsquo;t pass a Cursor from a remote Service to an Activity).&lt;/p&gt;
+
+&lt;h4 id=&#34;notepad-sqlcipher-notepadbot&#34;&gt;Notepad + SQLCipher = Notepadbot&lt;/h4&gt;
+
+&lt;p&gt;Notepadbot is a sample application pulled from the standard Android samples code and updated to use SQLCipher. You can browse the source &lt;a href=&#34;https://github.com/guardianproject/notepadbot&#34;&gt;here&lt;/a&gt; and download the apk &lt;a href=&#34;https://github.com/guardianproject/notepadbot/Notepadbot-0.0.1c-dev.apk/qr_code&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;img class=&#34;alignnone&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/05/prompt.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;&lt;img class=&#34;alignnone&#34; title=&#34;successful authentication&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/05/notes.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h4 id=&#34;final-notes&#34;&gt;Final Notes&lt;/h4&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to note that this project is not intended to be a distinct, long-term fork of SQLCipher. We&amp;rsquo;ve been working closely with the SQLCipher team at &lt;a href=&#34;https://zetetic.net/&#34;&gt;Zetetic&lt;/a&gt; and fully intent to closely maintain the project as SQLCipher evolves, re-integrating changes in upcoming releases such as &lt;a href=&#34;https://github.com/sjlombardo/sqlcipher/tree/v2beta&#34;&gt;SQLCipher v2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Android support libraries are licensed under &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/blob/master/LICENSE&#34;&gt;Apache 2.0&lt;/a&gt;, in line with the Android OS code on which they are based. The SQLCipher code itself is licensed under a &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/blob/master/SQLCIPHER_LICENSE&#34;&gt;BSD-style license from Zetetic LLC.&lt;/a&gt; Finally, the original SQLite code itself is in the &lt;a href=&#34;https://www.sqlite.org/copyright.html&#34;&gt;public domain&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--:--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SQLCipher: Encrypted Database</title>
+      <link>https://guardianproject.github.io/info/code/sqlcipher/</link>
+      <pubDate>Sat, 19 Feb 2011 08:27:13 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/sqlcipher/</guid>
+      <description>
+
+&lt;p&gt;&lt;img class=&#34;alignnone size-medium wp-image-1329&#34; title=&#34;logo-sqlcipher-android&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;50&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android-300x50.png 300w, https://guardianproject.info/wp-content/uploads/2011/02/logo-sqlcipher-android.png 522w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;source-code&#34; style=&#34;width: 30%; margin: 0 auto;&#34;&gt;
+  &lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher&#34; target=&#34;_blank&#34; title=&#34;SQLCipher for Android&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/sqlcipher&#34; target=&#34;_blank&#34; title=&#34;SQLCipher blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;&lt;/p&gt;
+
+&lt;p&gt;In an environment where mobile data privacy is increasingly &lt;a href=&#34;https://www.reuters.com/article/2011/05/08/us-privacy-congress-idUSTRE7471SA20110508&#34;&gt;in the headlines&lt;/a&gt;, this project will make it easier than ever for mobile developers to properly secure their local application data, and in turn better protect the privacy of their users. The data stored by Android apps protected by this type of encryption will be less vulnerable to access by malicious apps, protected in case of device loss or theft, and highly resistant to &lt;a href=&#34;https://www.cellebrite.com/&#34;&gt;mobile data forensics tools&lt;/a&gt; that are increasingly used to mass copy a mobile device during &lt;a href=&#34;https://www.thenewspaper.com/news/34/3458.asp&#34;&gt;routine traffic stops&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;SQLCipher is a &lt;a href=&#34;https://sqlite.org/&#34;&gt;SQLite&lt;/a&gt; extension that provides transparent 256-bit AES encryption of database files. To date, it has been open-sourced, sponsored and maintained by &lt;a href=&#34;https://zetetic.net/&#34;&gt;Zetetic LLC&lt;/a&gt;. In the mobile space, SQLCipher has enjoyed widespread use in Apple’s &lt;a href=&#34;https://www.zetetic.net/sqlcipher/documentation/ios.html&#34;&gt;iOS&lt;/a&gt;, as well as &lt;a href=&#34;https://www.qtcentre.org/wiki/index.php?title=Building_QSQLITE_driver_with_AES-256_encryption_support&#34;&gt;Nokia / QT&lt;/a&gt; for quite some time. Given that Android &lt;a href=&#34;https://developer.android.com/guide/topics/data/data-storage.html#db&#34;&gt;by default&lt;/a&gt; provides integrated support for SQLite databases, our goal was to create an almost identical API for SQLCipher, so that developers of all skill level could use it, without a steep learning curve.&lt;/p&gt;
+
+&lt;h2 id=&#34;learn-more-and-download&#34;&gt;Learn More and Download&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34;&gt;SQLCipher for Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;source: &lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher&#34;&gt;https://github.com/sqlcipher/android-database-sqlcipher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;an-illustrative-terminal-listing&#34;&gt;An Illustrative Terminal Listing&lt;/h3&gt;
+
+&lt;p&gt;A typical SQLite database in unencrypted, and visually parseable even as encoded text. The following example shows the difference between hexdumps of a standard SQLite db and one implementing SQLCipher.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;~ sjlombardo$ hexdump -C sqlite.db&lt;br /&gt;
+00000000 53 51 4c 69 74 65 20 66 6f 72 6d 61 74 20 33 00 |SQLite format 3.|&lt;br /&gt;
+&amp;hellip;&lt;br /&gt;
+000003c0 65 74 32 74 32 03 43 52 45 41 54 45 20 54 41 42 |et2t2.CREATE TAB|&lt;br /&gt;
+000003d0 4c 45 20 74 32 28 61 2c 62 29 24 01 06 17 11 11 |LE t2(a,b)$&amp;hellip;..|&lt;br /&gt;
+&amp;hellip;&lt;br /&gt;
+000007e0 20 74 68 65 20 73 68 6f 77 15 01 03 01 2f 01 6f | the show&amp;hellip;./.o|&lt;br /&gt;
+000007f0 6e 65 20 66 6f 72 20 74 68 65 20 6d 6f 6e 65 79 |ne for the money|&lt;/p&gt;
+
+&lt;p&gt;~ $ sqlite3 sqlcipher.db&lt;br /&gt;
+sqlite&amp;gt; PRAGMA KEY=&amp;lsquo;test123&amp;rsquo;;&lt;br /&gt;
+sqlite&amp;gt; CREATE TABLE t1(a,b);&lt;br /&gt;
+sqlite&amp;gt; INSERT INTO t1(a,b) VALUES (&amp;lsquo;one for the money&amp;rsquo;, &amp;lsquo;two for the show&amp;rsquo;);&lt;br /&gt;
+sqlite&amp;gt; .quit&lt;/p&gt;
+
+&lt;p&gt;~ $ hexdump -C sqlite.db&lt;br /&gt;
+00000000 84 d1 36 18 eb b5 82 90 c4 70 0d ee 43 cb 61 87 |.?6.?..?p.?C?a.|&lt;br /&gt;
+00000010 91 42 3c cd 55 24 ab c6 c4 1d c6 67 b4 e3 96 bb |.B&lt;!--?U$???.?g??.?| ... 00000be0  dc 77 5c 6c de c6 d3 be  43 49 48 3e f3 02 94 a9  |?w\l??ӾCIH--&gt;?..?|&lt;/p&gt;
+
+&lt;p&gt;00000bf0 8e 99 ee 28 23 43 ab a4 97 cd 63 42 8a 8e 7c c6 |..?(#C??.?cB..|?|&lt;/p&gt;
+
+&lt;p&gt;~ $ sqlite3 sqlcipher.db&lt;br /&gt;
+sqlite&amp;gt; SELECT * FROM t1;&lt;br /&gt;
+Error: file is encrypted or is not a database&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(example courtesy of &lt;a href=&#34;https://www.zetetic.net/sqlcipher/design&#34;&gt;SQLCipher&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h4 id=&#34;details-for-developers&#34;&gt;Details for Developers&lt;/h4&gt;
+
+&lt;p&gt;We&amp;rsquo;ve packaged up a very simple SDK for any Android developer to add SQLCipher into their app with the following three steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Add a single sqlcipher.jar and a few .so&amp;rsquo;s to the application libs directory&lt;/li&gt;
+&lt;li&gt;Update the import path from &lt;em&gt;android.database.sqlite.*&lt;/em&gt; to &lt;em&gt;info.guardianproject.database.sqlite.*&lt;/em&gt; in any source files that reference it. The original android.database.Cursor can still be used unchanged.&lt;/li&gt;
+&lt;li&gt;Init the database in onCreate() and pass a variable argument to the open database method with a password*:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;SQLiteDatabase.loadLibs(this); //first init the db libraries with the context&lt;/li&gt;
+&lt;li&gt;SQLiteOpenHelper.getWritableDatabase(“thisismysecret”):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;*&lt;strong&gt;Note:&lt;/strong&gt; we are working on some dialog builder helper methods for password and PIN input, password caching, and other features that we would like to standardize across all applications that use SQLCipher.&lt;/p&gt;
+
+&lt;h4 id=&#34;compatibility&#34;&gt;Compatibility&lt;/h4&gt;
+
+&lt;p&gt;The Developer Preview implements SQLCipher v1, is compatible with Android 2.2 &amp;amp; 2.3, and works only within one process (you can&amp;rsquo;t pass a Cursor from a remote Service to an Activity).&lt;/p&gt;
+
+&lt;h4 id=&#34;notepad-sqlcipher-notepadbot&#34;&gt;Notepad + SQLCipher = Notepadbot&lt;/h4&gt;
+
+&lt;p&gt;Notepadbot is a sample application pulled from the standard Android samples code and updated to use SQLCipher. You can browse the source &lt;a href=&#34;https://github.com/guardianproject/notepadbot&#34;&gt;here&lt;/a&gt; and download the apk &lt;a href=&#34;https://github.com/guardianproject/notepadbot/Notepadbot-0.0.1c-dev.apk/qr_code&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;img class=&#34;alignnone&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/05/prompt.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;&lt;img class=&#34;alignnone&#34; title=&#34;successful authentication&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/05/notes.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h4 id=&#34;final-notes&#34;&gt;Final Notes&lt;/h4&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to note that this project is not intended to be a distinct, long-term fork of SQLCipher. We&amp;rsquo;ve been working closely with the SQLCipher team at &lt;a href=&#34;https://zetetic.net/&#34;&gt;Zetetic&lt;/a&gt; and fully intent to closely maintain the project as SQLCipher evolves, re-integrating changes in upcoming releases such as &lt;a href=&#34;https://github.com/sjlombardo/sqlcipher/tree/v2beta&#34;&gt;SQLCipher v2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Android support libraries are licensed under &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/blob/master/LICENSE&#34;&gt;Apache 2.0&lt;/a&gt;, in line with the Android OS code on which they are based. The SQLCipher code itself is licensed under a &lt;a href=&#34;https://github.com/guardianproject/android-database-sqlcipher/blob/master/SQLCIPHER_LICENSE&#34;&gt;BSD-style license from Zetetic LLC.&lt;/a&gt; Finally, the original SQLite code itself is in the &lt;a href=&#34;https://www.sqlite.org/copyright.html&#34;&gt;public domain&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--:--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TorService: Tor library for Android</title>
+      <link>https://guardianproject.github.io/info/code/tor-android/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/tor-android/</guid>
+      <description>
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/tor-android&#34; target=&#34;_blank&#34; title=&#34;tor-android on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/tor-android&#34; target=&#34;_blank&#34; title=&#34;tor-android on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/tor-android&#34; target=&#34;_blank&#34; title=&#34;tor-android javadoc&#34;&gt;
+    Javadoc
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/tor-android&#34; target=&#34;_blank&#34; title=&#34;tor-android blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;This is native Android &lt;code&gt;TorService&lt;/code&gt; built on the Tor shared library built for
+Android.  It is designed around the Android lifecycle.  The included &lt;em&gt;libtor.so&lt;/em&gt;
+binaries can also be used directly as a tor daemon.  This is used in
+&lt;a href=&#34;https://orbot.app/&#34;&gt;Orbot&lt;/a&gt;,
+&lt;a href=&#34;https://gitlab.com/guardianproject/torservices&#34;&gt;TorServices&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/onionshare/onionshare-android&#34;&gt;OnionShare&lt;/a&gt;, and more.&lt;/p&gt;
+
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Native Android &lt;code&gt;TorService&lt;/code&gt; for running Tor in a background service&lt;/li&gt;
+&lt;li&gt;Designed around modern Android tools like &lt;a href=&#34;https://developer.android.com/topic/libraries/architecture/workmanager/advanced/long-running&#34;&gt;WorkManager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reproducible Build with included Vagrant setup for running them&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;source-code-repository&#34;&gt;Source Code Repository&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;library, helpers, tests, and sample project: &lt;a href=&#34;https://github.com/guardianproject/tor-android&#34;&gt;https://github.com/guardianproject/tor-android&lt;/a&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  The binary jar, source jar, and javadoc jar are all available on
+  jcenter. To include them using gradle, add this line to
+  your &lt;i&gt;build.gradle&lt;/i&gt;:
+&lt;/p&gt;
+&lt;pre style=&#34;text-align: center;&#34;&gt;implementation &amp;#39;info.guardianproject:tor-android:0.4.7.14&amp;#39;&lt;/pre&gt;
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14.jar&#34;&gt;tor-android-0.4.7.14.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14-sources.jar&#34;&gt;tor-android-0.4.7.14-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14-javadoc.jar&#34;&gt;tor-android-0.4.7.14-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>TorService: Tor library for Android</title>
+      <link>https://guardianproject.github.io/info/code/tor-android/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/code/tor-android/</guid>
+      <description>
+
+&lt;div class=&#34;source-code&#34; style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://gitlab.com/guardianproject/tor-android&#34; target=&#34;_blank&#34; title=&#34;tor-android on Gitlab&#34;&gt;
+    &lt;i class=&#34;fa fa-gitlab&#34;&gt;&lt;/i&gt; GitLab
+  &lt;/a&gt;
+  -
+  &lt;a href=&#34;https://github.com/guardianproject/tor-android&#34; target=&#34;_blank&#34; title=&#34;tor-android on Github&#34;&gt;
+    &lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt; GitHub
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/tor-android&#34; target=&#34;_blank&#34; title=&#34;tor-android javadoc&#34;&gt;
+    Javadoc
+  &lt;/a&gt;
+  
+  -
+  &lt;a href=&#34;https://guardianproject.github.io/info/tags/tor-android&#34; target=&#34;_blank&#34; title=&#34;tor-android blog posts&#34;&gt;
+    &lt;i class=&#34;fa fa-rss&#34;&gt;&lt;/i&gt; blog posts
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+
+
+&lt;p&gt;This is native Android &lt;code&gt;TorService&lt;/code&gt; built on the Tor shared library built for
+Android.  It is designed around the Android lifecycle.  The included &lt;em&gt;libtor.so&lt;/em&gt;
+binaries can also be used directly as a tor daemon.  This is used in
+&lt;a href=&#34;https://orbot.app/&#34;&gt;Orbot&lt;/a&gt;,
+&lt;a href=&#34;https://gitlab.com/guardianproject/torservices&#34;&gt;TorServices&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/onionshare/onionshare-android&#34;&gt;OnionShare&lt;/a&gt;, and more.&lt;/p&gt;
+
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Native Android &lt;code&gt;TorService&lt;/code&gt; for running Tor in a background service&lt;/li&gt;
+&lt;li&gt;Designed around modern Android tools like &lt;a href=&#34;https://developer.android.com/topic/libraries/architecture/workmanager/advanced/long-running&#34;&gt;WorkManager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reproducible Build with included Vagrant setup for running them&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;source-code-repository&#34;&gt;Source Code Repository&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;library, helpers, tests, and sample project: &lt;a href=&#34;https://github.com/guardianproject/tor-android&#34;&gt;https://github.com/guardianproject/tor-android&lt;/a&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;downloads&#34;&gt;Downloads&lt;/h2&gt;
+&lt;div class=&#34;gradle-line&#34;&gt;
+&lt;p&gt;
+  The binary jar, source jar, and javadoc jar are all available on
+  jcenter. To include them using gradle, add this line to
+  your &lt;i&gt;build.gradle&lt;/i&gt;:
+&lt;/p&gt;
+&lt;pre style=&#34;text-align: center;&#34;&gt;implementation &amp;#39;info.guardianproject:tor-android:0.4.7.14&amp;#39;&lt;/pre&gt;
+&lt;p&gt;Otherwise, the files can also be downloaded directly from jcenter, including the PGP signatures:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14.jar&#34;&gt;tor-android-0.4.7.14.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14-sources.jar&#34;&gt;tor-android-0.4.7.14-sources.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14-sources.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14-javadoc.jar&#34;&gt;tor-android-0.4.7.14-javadoc.jar&lt;/a&gt; -
+    (&lt;a href=&#34;https://repo1.maven.org/maven2/info/guardianproject/tor-android/0.4.7.14/tor-android-0.4.7.14-javadoc.jar.asc&#34;&gt;&lt;i&gt;PGP signature&lt;/i&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

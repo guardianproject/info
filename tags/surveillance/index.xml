@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Surveillance on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/surveillance/</link>
+    <description>Recent content in Surveillance on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/surveillance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RightsCon Report: Surveillance and Facial Recognition: Protection or Instruments of Control?</title>
+      <link>https://guardianproject.github.io/info/2022/07/20/rightscon-report-surveillance-and-facial-recognition-protection-or-instruments-of-control/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/07/20/rightscon-report-surveillance-and-facial-recognition-protection-or-instruments-of-control/</guid>
+      <description>&lt;p&gt;Safety is one of the foremost questions we seek to answer as we roam about in our everyday lives, taking precautions to reduce the likelihood of all threats. It is the very reasoning behind the use of surveillance technology from civilians to the state government, as it hinders crime through fear of persecution and retribution. However, variables such as the time taken for assistance can limit this objective. In these instances, surveillance is not a means of protection, but rather justice, as facial recognition technology can discern the perpetrator to bring to justice. However, the concern arises: do those with the access to this means of seeking justice utilize it for other purposes?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;rightscon_report_blog.png&#34; alt=&#34;cameras and surveillance image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;RightsCon 2022&lt;/a&gt; offered not just the answer, but further explanation through &lt;a href=&#34;https://www.stopspying.org/events/2022/6/6/rightscon-surveillance-and-the-city-mapping-cameras-with-facial-recognition-capabilities-in-new-york-city&#34;&gt;‘Surveillance and the city: mapping cameras with facial recognition capabilities in New York City’&lt;/a&gt;. NYC was the exemplary location due to its tradition of being a sanctuary to large immigrant communities. So when the NYPD refused to respond favorably to questions regarding how, in which cases, and for what purposes facial recognition is used, Surveillance Technology Oversight Project’s (S.T.O.P.) 2021 Surveillance Census and Amnesty International’s Decode NYC Surveillance initiative answered in its stead. Amnesty and S.T.O.P confirmed that the “map of NYC surveillance cameras strikingly reflects structural racism, segregation, and the oversurveillance and discriminatory policing of BIPOC communities”. Hence, not only is it clear that these technologies are used for means other than justice, it is evident that they are instruments to control minorities and marginalized groups.&lt;/p&gt;
+
+&lt;p&gt;While at first glance this act limits civic space for protest as being able to identify protestors and prosecute as they deem fit, the control seeps deeper. Authorities purposefully display racial biases by invading these populations’ private sanctuary to propagate them as predators who must be watched to keep them at bay, propagating structural inequality to future generations. So even though surveillance offers protection, it can also be used to invade your privacy to be used against you. Compounding this fact with the inaccuracy of facial recognition software, for reasons such as the inability of facial recognition software - testing primarily on white men - to discern between individuals of minority groups, the threat of surveillance’s invasion becomes abundantly clear.&lt;/p&gt;
+
+&lt;p&gt;The United Nations Declaration of Human Rights (UDHR) 1948, Article 12 states that “No one shall be subjected to arbitrary interference with his privacy”. Guardian Project’s intent is to secure the implementation of this declaration by opposing breaches in privacy with services such as &lt;a href=&#34;https://guardianproject.info/apps/obscuracam/&#34;&gt;ObscuraCam&lt;/a&gt; - a secure smart camera that protects privacy by removing all identifying data stored in photos, including the option to pixelate, redact or cover faces to skirt facial recognition. By allowing users to share photos and videos without the fear of data such as their location being shared along with it for misuse, users have the option to secure privacy through novel methods. However, this does not curb the surveillance data and facial recognition from cameras of external parties, only the users’ own photos and videos. And thus, surveillance in itself remains susceptible to exploitation that furthers agendas opposing the public’s welfare. In spite of that, eradication is not the solution as its ability to protect and provide justice remains strong. This renders the question of how surveillance’s purposes can be restricted to those which follow collective society - a question Guardian Project began to answer with &lt;a href=&#34;https://proofmode.org&#34;&gt;ProofMode&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Recognizing the need to collate and retain data for protection purposes, &lt;a href=&#34;https://proofmode.org&#34;&gt;ProofMode&lt;/a&gt; was created to safely store media; ensuring no original files would be tampered with, using cryptography to verify the media and the identities it contains, and offering PGP encryption to protect the content and its metadata. Nonetheless, the aspect of ProofMode that demonstrates how surveillance’s purposes can be restricted to those of protection and justice is the idea it was founded on - capturing data for protection, but encrypting the identities so that the information cannot be used against you, only retrieved and made useful with consent. ProofMode began the conversation into the difference between facial detection and recognition, enforcing the idea that detecting means simply acknowledging a face, and recognition is identifying the person. By opening this discussion, we now can understand that to hinder surveillance from becoming an instrument of control, the identities captured should be protected and encrypted so that only when there is a threat should recognition software be used to solely identify the perpetrator and  ensure the innocent retain their anonymity.&lt;/p&gt;
+
+&lt;p&gt;To further walk this path of opposing the gross misuse of surveillance and facial recognition technology, the next steps should be educating the public on these instruments of control, making them aware of the systems in palace that assist in retaining anonymity, and inviting them to the aforementioned discussion. In conjunction, a goal for Guardian Project should be integrating the publicly available maps of surveillance for ease of access and use into ObscuraCam. These maps offer two distinct functions for users with one common goal that aligns with ObscuraCam’s mission - self-protection; foremost, it protects users from external threats by offering a watchful eye, the original intended goal; secondly, it assists users against the watchful eye by skirting surveillance that can be used against them in acts of defiance such as protests. The third functionality is one that benefits not just individual users, but society at large - advancing knowledge of structural inequality. Increasing awareness of the areas of clustered surveillance escalates knowledge of the presence and level of the structural inequality to amass support against such. With greater awareness, the suveillant’s power diminishes as people have the ability to take back their privacy, rendering the project obsolete until the objective is re-routed inline with the mass. To do so, transparency and awareness through discussion are what we must strive to achieve, ensuring surveillance and facial recognition be used only for protection and not as an instrument of control.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking the Trackers: using machine learning to aid ethical decisions</title>
+      <link>https://guardianproject.github.io/info/2020/01/16/tracking-the-trackers-using-machine-learning-to-aid-ethical-decisions/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/01/16/tracking-the-trackers-using-machine-learning-to-aid-ethical-decisions/</guid>
+      <description>
+
+&lt;p&gt;F-Droid is a free software community app store that has been working since 2010 to make all forms of tracking and advertising visible to users. It has become the trusted name for privacy in Android, and app developers who sell based on privacy make the extra effort to get their apps included in the F-Droid.org collection. These include &lt;a href=&#34;https://f-droid.org/packages/com.nextcloud.client&#34;&gt;Nextcloud&lt;/a&gt;, Tor Browser, &lt;a href=&#34;https://f-droid.org/packages/de.thecode.android.tazreader&#34;&gt;TAZ.de&lt;/a&gt;, and &lt;a href=&#34;https://f-droid.org/packages/de.tutao.tutanota&#34;&gt;Tutanota&lt;/a&gt;.  Auditing apps for tracking is labor intensive and error prone, yet ever more in demand. F-Droid already has tools to aide contributors in this process, visible in the &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/merge_requests&#34;&gt;app submission&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/fdroid/rfp/issues&#34;&gt;Request For Packaging (RFP)&lt;/a&gt; issue trackers.  We also have functional prototypes of using machine learning to drastically speed up this process by augmenting humans, rather than replacing them.&lt;/p&gt;
+
+&lt;p&gt;Since the prime motivation of the F-Droid community is ethical software distribution, algorithms will never replace humans in making ethical decisions. We have also explored using machine learning to detect tracking in a more generic way, without manually compiled lists of tracking libraries. With this funding, we will improve the F-Droid tools, and make them generally available for any use case needing to reliably detect trackers in Android apps. This builds upon our &lt;a href=&#34;https://f-droid.org/en/2017/12/14/new-collaborations-on-exposing-tracking.html&#34;&gt;collaboration&lt;/a&gt; with &lt;a href=&#34;https://exodus-privacy.eu.org/&#34;&gt;Exodus Privacy&lt;/a&gt; and &lt;a href=&#34;https://github.com/reddr/LibScout&#34;&gt;LibScout&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This project comes out of some proof of concept work that &lt;a href=&#34;https://www.lo-res.org/~aaron/&#34;&gt;Aaron Kaplan&lt;/a&gt; and Hans-Christoph Steiner did, working with students in the Vienna Economics University&amp;rsquo;s (WU) &lt;a href=&#34;https://www.wu.ac.at/en/infobiz/teaching/sbwl-data-science&#34;&gt;Data Science Lab&lt;/a&gt;.  We focused on using machine learning with Android apps, first to detect malware, then second to detect tracking libraries.  It is of course ultimately an outgrowth of the F-Droid community&amp;rsquo;s efforts, and Guardian Project&amp;rsquo;s funded efforts for building systems without any tracking at all.  And special thanks to F-Droid founder &lt;a href=&#34;https://en.wikipedia.org/wiki/Ciaran_Gultnieks&#34;&gt;Ciaran Gultnieks&lt;/a&gt; for setting the ethical tone that inspired us all, back in &lt;a href=&#34;https://f-droid.org/2010/09/30/no-free-beer.html&#34;&gt;2010&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;funding&#34;&gt;Funding&lt;/h2&gt;
+
+&lt;p&gt;This current 44,500€ project is funded by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/PET/&#34;&gt;Privacy &amp;amp; Trust Enhancing Technologies (PET) Fund&lt;/a&gt;.  F-Droid has received large, dedicated, computing resources from the &lt;a href=&#34;https://cfarm.tetaneutral.net/machines/list/&#34;&gt;GCC Compile Farm&lt;/a&gt;, as well as some shared resources from Aaron Kaplan.  The budget will be used entirely to pay for people&amp;rsquo;s time for the research, development, and integration work:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Software development to get the existing LibScout and Exodus Privacy tools to be fully integrated into the F-Droid stack.&lt;/li&gt;
+&lt;li&gt;Machine learning research and development.&lt;/li&gt;
+&lt;li&gt;Community management, to coordinate with F-Droid contributors, app developers, tool developers, academic researchers, etc. as well to promote these tools&lt;/li&gt;
+&lt;li&gt;Finalize and package up all the useful parts of this project, which also means getting them included in Debian&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;related-efforts&#34;&gt;Related Efforts&lt;/h2&gt;
+
+&lt;p&gt;The general approach that we are taking here has been proven in the context of web pages. The Brave Browser includes &lt;a href=&#34;https://arxiv.org/pdf/1805.09155&#34;&gt;machine learning techniques&lt;/a&gt; for blocking ads and trackers in webpages.  It is a very similar idea to what we propose, but that example is embedded into a browser and only applies to web sites.&lt;/p&gt;
+
+&lt;p&gt;Exodus Privacy has manually compiled an extensive list of tracking libraries and domains for receiving user data.  It then uses this to scan app from Google Play.  Those results are then reported on their website.  Exodus Privacy would directly benefit from this work, since they could use the tools we will create.&lt;/p&gt;
+
+&lt;p&gt;Ghostery uses AI techniques to dynamically block ads in web pages. (&lt;a href=&#34;https://www.wired.com/story/ghostery-deploys-ai-in-fight-against-ad-trackers/&#34;&gt;https://www.wired.com/story/ghostery-deploys-ai-in-fight-against-ad-trackers/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;F-Droid has its own &lt;code&gt;fdroid scanner&lt;/code&gt; for doing checks based on manually prepared regular expressions.  This was combined with Exodus Privacy into F-Droid&amp;rsquo;s &lt;a href=&#34;https://gitlab.com/fdroid/rfp/issues&#34;&gt;issuebot&lt;/a&gt; which automatically scans apps that users request to be added to F-Droid.&lt;/p&gt;
+
+&lt;p&gt;LibScout uses machine learning to detect which versions of which libraries are included in an Android app (APK).  Using the list of libraries from Exodus Privacy, we worked with the LibScout author to create a functional prototype of a tracking library detector.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.sec.cs.tu-bs.de/pubs/2014-ndss.pdf&#34;&gt;Drebin&lt;/a&gt; clearly demonstrated that machine learning can be used to automatically classify Android apps based on certain aspects of their behavior. Their aim was to find malware.  Working with CERT.at and the WU Data Science Lab, we reproduced the results of the Drebin paper.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-challenges&#34;&gt;The challenges&lt;/h2&gt;
+
+&lt;p&gt;The biggest promise of this project is also the biggest technical challenge: finding a way to take datasets about what includes tracking libraries (e.g. F-Droid manual review, LibScout, Exodus Privacy), and turning that into a more general machine learning approach.  We will have to explore a wide range of possible features to include in the machine learning that are distinct from the tracking libraries themselves.  This general approach will provide tracking detection with more automation and less maintenance work of rerunning the machine learning on updated datasets as new tracking libraries are put into use.&lt;/p&gt;
+
+&lt;p&gt;The technical methods for determining whether an app includes trackers are well known and described.  They currently require knowledge of Android development.  Machine learning has been proven to be able to reliably spot trackers in apps, this project will turn working prototypes into production software, integrate it into F-Droid community-driven processes, and make these new tools easily available for anyone else to apply to their specific use cases. Given an Android apps downloaded from anywhere, these new tools will be able to mark which ones have any kind of tracking in them, with a very high degree of certainty.  With the portion of the project that involves applying LibScout, at this point, the idea has been proven with prototypes.  Applying it is a straightforward matter of bringing a proven prototype to production.&lt;/p&gt;
+
+&lt;p&gt;Organizations relying on proprietary apps that must follow strict data protection requirements, like banks under the GDPR, can use these tools to ensure that apps they rely on do not contain illegal tracking, and to ensure that such tracking is not added in future releases.&lt;/p&gt;
+
+&lt;p&gt;These techniques are also applicable to other platforms, like Progressive Web Apps and Apple iOS.  Bootstrapping another platform would require a marked training set of apps to feed to the machine learning.  F-Droid already provides this set, and Android is the most popular OS in the world, making Android the ideal platform to start this work.&lt;/p&gt;
+
+&lt;h2 id=&#34;humans-at-the-core&#34;&gt;Humans at the core&lt;/h2&gt;
+
+&lt;p&gt;F-Droid is a community run free software project very much in the same spirit as Debian.  The community has always aimed to provide 100% verified free software, built from source.  From the beginning, there was also an interest in other ethical considerations as well, these are expressed via F-Droid&amp;rsquo;s &amp;ldquo;Anti-Features&amp;rdquo;.  These are things tagged with Tracking (contains tracking), Ads (includes advertising), and NonFreeNet (requires a non-free network service).  The process of ensuring that the apps are 100% free software as well as tagging apps with the required Anti-Features is a manual process that many people contribute to, that is aided by quite a bit of automation.  This project fits directly into this existing ecosystem.  It will both quickly provide improvements in contributors&amp;rsquo; workflow based on the existing prototype, as well as experiments towards drastically improving the whole workflow of anyone working to track trackers.&lt;/p&gt;
+
+&lt;p&gt;F-Droid fits into the whole Android app ecosytem in a very specific role.   It is the one source that only distributes free software, and has built a well deserved reputation for not compromising on the ethics that guide the community.  This has led it to become the standard &amp;ldquo;clean set&amp;rdquo; in all manner of research into Android malware and tracking.  Many academic papers covering Android malware cite f-droid.org as the source of ground truth.&lt;/p&gt;
+
+&lt;p&gt;In closing, it is important to highlight that it is essential to keep humans always at the center of of these tools.  We are building tooling to augment humans, not replace them. Since the prime motivation of the F-Droid community is to build ethical software distribution, algorithms will never replace humans in making decisions based on ethics.  The tools can automate the technical details, so that contributors do not need to understand them in order to meaningfully help with the process.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Haven: Building the Most Secure Baby Monitor Ever?</title>
+      <link>https://guardianproject.github.io/info/2017/12/22/haven-building-the-most-secure-baby-monitor-ever/</link>
+      <pubDate>Fri, 22 Dec 2017 09:07:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/12/22/haven-building-the-most-secure-baby-monitor-ever/</guid>
+      <description>&lt;p&gt;About eight months ago, friends at the &lt;a href=&#34;https://freedom.press/&#34;&gt;Freedom of the Press Foundation&lt;/a&gt; reached out to us, to see if we were interested in prototyping an idea they had been batting around. They knew that from projects like &lt;a href=&#34;https://guardianproject.info/apps/camerav&#34;&gt;CameraV&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/2017/02/24/combating-fake-news-with-a-smartphone-proof-mode/&#34;&gt;ProofMode&lt;/a&gt;, that we knew how to tap into the sensors on smartphones to do interesting things. They also knew we could connect devices together using encrypted messaging and onion routing, through our work on &lt;a href=&#34;https://chatsecure.org&#34;&gt;ChatSecure&lt;/a&gt; and Tor (&lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot!&lt;/a&gt;). They also knew of our deep interest in bringing ideas to life that can solve real problems faced by people out on the front lines (both at home and abroad), who often are more in danger from physical threats, than digital. They had a concept that would bring all of these things together, and just wanted to see if it was even possible. We were game, and well, here we are today, announcing a real working public beta, and a new open-source project, that we are extremely excited about.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IT’S NOT JUST A PHONE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At some point soon, we should stop calling the smartphones that over two billion people carry with them everyday and everywhere, phones at all. These devices have powerful processors with multiple cores, at gigahertz speeds, and gigabytes of RAM and storage. They have at least two cameras, now often three, arrays of microphones to capture sound near and far, and high definition, hyper sensitive touch screens for controlling them. They contain multiple radios and signal processors, that allow you to make crystal clear calls to someone on the other side of the planet, live stream 4K video, and download a game all at once. Most importantly, for the work we are announcing today, they contain an amazing variety of sensors, that can measure gravity, motion, air pressure, ambient light, temperature, and your precise location on the planet. I don’t think Alexander Graham Bell ever imagined a telephone doing all of these things. Once you step back from thinking of these devices as phones, and instead as powerful general purpose portable computing platforms, a world of possibilities and potential uses opens up wide. Even better, many people have an old second-hand, last generation device lying around, ready to be transformed into a computing platform much more powerful than a Raspberry Pi or some generic Internet of Shoddy (!) Things platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A SAFE ROOM IN YOUR POCKET&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This re-imagining of a smartphone as something more, is what inspired the development of &lt;a href=&#34;https://guardianproject.github.io/haven/&#34;&gt;Haven&lt;/a&gt;, a new open-source project and mobile app we are announcing today, built in partnership with Freedom of the Press Foundation. The concept of &lt;a href=&#34;https://guardianproject.github.io/haven/&#34;&gt;Haven&lt;/a&gt;, as imagined by Micah F. Lee and Edward Snowden, is based on the notion that any smartphone could be turned into a personal, portable security device, to watch for unexpected intrusions into physical spaces.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/Fr0wEsISRUw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;They call it a “safe room” in your pocket, or way to defeat “evil maid” attacks, that lets you know when you’ve been targeted by a “black bag” operation. I also like to think that through Haven, we have unexpectedly created the most powerful, secure and private baby monitor system ever. By tapping into the sensors and processing power on these devices with custom software, a system could feel the vibrations of someone walking, detect the shine of a flashlight, hear the sound of a door opening (or a child crying), or see someone entering into the view of a camera. All of these “intruder alerts” are recorded on the device, so that the victim can have evidence of their unwanted guest. Even better, they can receive real-time secure and private notifications, with images and sound, as it happens, and take appropriate actions.&lt;/p&gt;
+
+&lt;p&gt;**YOU ARE THE WATCHER&lt;br /&gt;
+**&lt;/p&gt;
+
+&lt;p&gt;An important design goal of Haven, is to not require the user to share data with any third-party, or to have centralized infrastructure. It was clear that some might see Haven as a surveillance device (or “self” sous-veillance), which, regardless of who is in control of it, can be problematic and a vulnerability. Thus, it was a fundamental tenet to not require people to give up privacy, in order to gain security. The person we aim to help must have complete control of the system, the sensors and the captured data and media. In addition, the device must not simply record a stream of video, audio and sensors, hoover-ing up all things. Only when configurable sensor thresholds are crossed, is any data recorded permanently in the log. All of the processing and analysis of the sensor data happens locally on the device, and is only stored locally, and not in a cloud. The device itself can be protected by a strong password and disk encryption, to stop intruders from meddling or accessing any data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SIGNAL’D AND ONION’D&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If the intruders chooses to destroy or make off with a Haven device, thats fine. The every act of vandalism and theft is detected in progress, and the owner of the device is notified in real-time. All photos and audio can be sent remotely via notifications, ensuring the evidence is safe. Haven does currently support optional plaintext SMS notifications. This does leak some data to the mobile operator or anyone who can access your text messages, that you are using Haven.&lt;/p&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.github.io/haven/docs/preso/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img class=&#34;aligncenter wp-image-13927 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11-1024x576.jpg&#34; alt=&#34;&#34; width=&#34;945&#34; height=&#34;532&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11-1024x576.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11-300x169.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11-768x432.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-11.jpg 1500w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;&lt;/a&gt;&lt;em&gt;Click to view our &lt;a href=&#34;https://guardianproject.github.io/haven/docs/preso/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online presentation on Haven&lt;/a&gt;&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;We provided SMS support because we wanted Haven to be used in parts of the world where mobile internet access isn’t available, is too expensive, or is heavily censored. The notification message sent over SMS provide minimal information to an attacker. Better than SMS, however, is the integrated support for sending fully end-to-end encrypted notifications, with photo and audio attachments, over Signal. This method allows you to use a device without a SIM card, or in airplane mode, since Signal utilizes the internet for communication, not the mobile operator network. Haven also includes support for Tor’s Onion Services, through integration with Orbot, the Tor app for Android. This allows you to activate a web service on your device, and make it accessible via a “.onion” address, which you can access from any Tor-enabled browser, like Tor Browser, Orfox or Onion Browser. This provides a surveillance-free, end-to-end encrypted channel between you and your device, through which you can access all data stored in Haven, past and present.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;INTERNET OF SHODDY THINGS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point, you might be saying to yourself “Wait, did these paranoid privacy hackers just building a surveillance camera? Are they trying to sell me on some kind of IoT crap?”. While we didn’t set out to try to address the insane amount of vulnerabilities, insecurities, and fundamental flaws that most most commercial home security devices have, we do admit that our work on Haven crosses over into that problem space. We knew that journalists, activists and others were not interested in setting up cameras and microphones watching themselves &lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt;, streaming to the cloud, as a solution to their threat. We also knew, as discussed before, that linking any solution to a centralized cloud service that asked you to trust them, also didn’t make sense.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-13929&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07-1024x576.jpg&#34; alt=&#34;&#34; width=&#34;945&#34; height=&#34;532&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07-1024x576.jpg 1024w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07-300x169.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07-768x432.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/12/havenpreso-07.jpg 1500w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What we’ve built then could be seen as a competitor to commercial solutions, except for a few key points. First, it is freely licensed, and open-source, enabling anyone to audit it, improve it, remix it, and use as they see fit. It runs on any hardware that can support the Android operating system back to version 4.1. This includes not just smartphones, but also tablets, Raspberry Pi’s, TV set top boxes and sticks, and the emerging Android Things platform. This makes it portable, battery powered, and able to run on devices that are readily available for very little money, anywhere in the world. It takes advantage of many more sensors than a typical home security product, and can easily be expanded to support more. Most importantly, all network communications can be encrypted using other open-source gold standards such as Signal and Tor. You can receive notifications from and access in real-time your Haven device anywhere in the world, completely privately, without any third-party even knowing you are doing so. This addresses the primary threat of remote network intruders, device botnets, and legal actions, as well. The goal is for someone to be able to use Haven, without anyone knowing they are.&lt;/p&gt;
+
+&lt;p&gt;With these innovations, we have set the bar for what a personal security device should be, and do. We know that many people this holiday season will be setting up new cameras around the house, on their front door, in their car… pretty much everywhere, and letting a third-party tap into all of that content. We think that Haven shows a better way, that provides just as much, if not more, peace of mind.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;THE ROAD AHEAD AND YOU!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Today, we are announcing our public beta, and beginning to promote the open-source project. Haven was originally built upon our previous work with CameraV and ProofMode, as well as a project called SecurIt from developer Marco Ziccardi (&lt;a href=&#34;https://github.com/mziccard&#34;&gt;https://github.com/mziccard&lt;/a&gt;), which is how we went from an idea to a pretty cool app in about eight months. The team at Guardian Project, has been doing the bulk of the work up to this point, but as with all of our projects, we look to expand our contributions to the community. If you are interested in this project, for your own use, as an activist, or as a developer, designer or hardware hacker, we need your help. Here’s a quick set of things to do to join:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Check out the &lt;a href=&#34;https://github.com/guardianproject/haven/issues&#34;&gt;Github issues&lt;/a&gt; and the &lt;a href=&#34;https://github.com/guardianproject/haven/projects&#34;&gt;Prototype Project board,&lt;/a&gt; pick some things to work on or provide feedback on&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Come talk with us at the Guardian Project through our points of contact: &lt;a href=&#34;https://guardianproject.info/contact&#34;&gt;https://guardianproject.info/contact&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Test Haven out on your hardware and let us know if you find any issues (see &lt;a href=&#34;http://havenapp.org&#34;&gt;havenapp.org&lt;/a&gt; for links)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Share your user stories, personas, threats and more, to ensure we are keeping your needs in mind&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Donate (Bitcoin accepted!) to support our ongoing efforts: &lt;a href=&#34;https://freedom.press/donate-support-haven-open-source-project/&#34;&gt;https://freedom.press/donate-support-haven-open-source-project/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks for reading this far, and being interested in our ongoing work, to ensure people are empowered by mobile technology, and not endangered by it. Happy Holidays, and remember: keep watch, stay safe!&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot v12 now in beta</title>
+      <link>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</link>
+      <pubDate>Wed, 24 Jul 2013 12:32:45 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</guid>
+      <description>&lt;p&gt;After much too long, we’ve got a new build of Orbot out, and it is… a stable beta! Nothing radically new here, just many small changes to continue to improve the experience of our hundreds of thousands of active users out in the world. There will likely be one or two more “beta” releases to iron out small issues in v12, but for now, this one is good to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/mightyorbot.jpg&#34;&gt;&lt;img alt=&#34;mightyorbot&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/mightyorbot-225x300.jpg&#34; width=&#34;225&#34; height=&#34;300&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; &lt;em&gt;a very might orbot&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The really exciting aspect of this release is that we have ironed out some integration points with other apps, like our own Gibberbot, and third-party apps like DuckDuckGo. These apps can now tell if Orbot is installed, running, and if not, request it to start up. Once Orbot is started, it will return to the calling app, and let them know they can proceed with routing their traffic over Tor. We hope that through use of our &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/libonionkit/src/info/guardianproject/onionkit/ui/OrbotHelper.java&#34;&gt;OrbotHelper utility&lt;/a&gt; (part of the &lt;a href=&#34;https://github.com/guardianproject/OnionKit&#34;&gt;OnionKit/NetCipher library&lt;/a&gt;), many more apps will choose to provide their users with better anonymity and privacy of their network traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;Since we haven’t done a release in awhile, and we have some new build &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;tools, I mostly want to make sure I have not done something terribly &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;wrong in the build process. Please confirm back if you are able to &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;successfully use this release. You can report issues &lt;a href=&#34;https://dev.guardianproject.info/projects/orbot/issues/new&#34;&gt;on our bug tracker&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve switched versioning styles to a simpler major.minor.bugfix “semantic” model, so this is now Orbot 12.0.1.&lt;/p&gt;
+
+&lt;p&gt;Signed 12.0.1 beta release build is here:&lt;br /&gt;
+&lt;a href=&#34;https://rink.hockeyapp.net/apps/92ace552aa5344d1a802decb71525897/&#34;&gt;https://rink.hockeyapp.net/apps/92ace552aa5344d1a802decb71525897/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Direct APK is here: &lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk&#34;&gt;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk&lt;/a&gt; (&lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk.asc&#34;&gt;gpg sig&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;We also have automated “nightly” debug builds from the development branch:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/builds/Orbot/&#34;&gt;https://guardianproject.info/builds/Orbot/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Updates in 12.0.1:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;updated to Tor 0.2.4.15-RC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;flashy screen bug fixed&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;now shows traffic stats in notification area&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;better handling of preference settings changes&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;added superuser permission for Cyanogen&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;better support for “start” Intent, integration with other apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tagged source is here:&lt;br /&gt;
+&lt;a href=&#34;https://gitweb.torproject.org/n8fr8/orbot.git/log/refs/tags/12.0.1&#34;&gt;https://gitweb.torproject.org/n8fr8/orbot.git/log/refs/tags/12.0.1&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

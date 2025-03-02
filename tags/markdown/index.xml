@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/markdown/</link>
+    <description>Recent content in Markdown on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving Crowdsourced Translation of Long Form Text</title>
+      <link>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</guid>
+      <description>
+
+&lt;p&gt;We are happy to announce the start of work on another step in
+improving crowdsourced localization, funded by the ISC Project.  This
+is the second part of our ongoing &amp;ldquo;Linguine&amp;rdquo; collaboration to move
+crowdsourced translation to privacy-respecting free software.&lt;/p&gt;
+
+&lt;p&gt;Crowdsourced translation has proven enormously successful getting apps
+and website software translated into many languages.  Using tools like
+Weblate or Transifex, developers can quite easily incorporate
+translated app strings into their mobile apps and websites.  Any kinds
+of text that is easily broken down into phrases and sentences will fit
+easily into the crowdsourced workflow.  Localization Lab enables a
+wide range of volunteers to contribute to the most important projects
+in a wide array of languages.&lt;/p&gt;
+
+&lt;p&gt;For long form text, from blogs to documentation, large technical
+hurdles prevent the same fluid workflow.  One clear example: Tor
+Browser is available in 25 languages, but the documentation is still
+largely just in English.  The standard workflow is to first complete
+the English version, then submit that to translators, then wait for a
+complete translation.  For the regular, small changes that come with
+maintaining documentation, that workflow makes the update cycle heavy
+and slow.&lt;/p&gt;
+
+&lt;p&gt;Few webmasters can review translations. Tools like Weblate establish a
+review process, then developers need only to run an automatic import
+to get approved translations from trusted translators.&lt;/p&gt;
+
+&lt;p&gt;The ideal workflow starts with the traditional method of translating
+in one complete unit, but now, that work can easily be shared by
+multiple contributors.  Whenever the original documents are updated,
+those translations can then be maintained via the crowdsourcing.  Even
+for organizations which directly cover their own translation needs,
+like a blogger who writes in both English and Tibetan, the workflow
+provided by tools like Weblate makes managing many small changes to
+documents drastically easier.&lt;/p&gt;
+
+&lt;p&gt;While blog posts generally do not need frequent updates, a smooth path
+to crowdsourced translations means, given the same effort, a larger
+audience can be reached since the information will be available in
+more languages.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-we-are-doing-this&#34;&gt;How we are doing this&lt;/h2&gt;
+
+&lt;p&gt;There are already many key building blocks in place:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Weblate and Transifex already have basic support for directly translating long form text&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;po4a&lt;/em&gt; provides good format conversion between &lt;em&gt;Markdown&lt;/em&gt; and other text formats&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Markdown&lt;/em&gt; is a widely adopted mark-up format for documentation and blog posts&lt;/li&gt;
+&lt;li&gt;Weblate already supports validating &lt;em&gt;Markdown&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;po4a&lt;/em&gt; integration with Jekyll&lt;/li&gt;
+&lt;li&gt;Static Site Generators like Jekyll and Hugo have existing methods of supporting localization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What needs doing is fixing lots of little issues here and there to
+complete the whole workflow.  For example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Code blocks are quite common in technical documentation, and they often contain texts that should not be translated, e.g. the words from a programming language.  &lt;em&gt;po4a&lt;/em&gt; can be made to automatically recognize these blocks, and mark them as &amp;ldquo;do not translate&amp;rdquo; using standard tags, which Weblate communicates to translators.&lt;/li&gt;
+&lt;li&gt;Most translators do not have strong technical skills, so specialized syntax like &lt;em&gt;Markdown&lt;/em&gt; or configuration examples need to be validated to ensure that the translator did not inadvertently break something with a typo.  There are existing methods and tools for validating a wide variety of markup, code, and configuration formats.  These will be integrated into the translation review process to ensure that translations will not break the website layout or generation.&lt;/li&gt;
+&lt;li&gt;When using translation sites that do not have good support for long form text, &lt;em&gt;po4a&lt;/em&gt; can be integrated via &amp;ldquo;plugins&amp;rdquo; to static site generators like Jekyll or Hugo.&lt;/li&gt;
+&lt;li&gt;Not all workflows allow for transparent integration, for example, Hugo to Weblate.  In these cases, there needs to be some “glue” tools to make it work.  We will produce and distribute tools for gluing together some common setups to work smoothly with Weblate and/or Transifex.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since this project is about getting lots of pieces to integrate nicely, all the code generated will be included in all the relevant projects.  That is also where we will be looking for feedback, so file issues with &lt;a href=&#34;https://github.com/WeblateOrg/weblate/issues/&#34;&gt;Weblate&lt;/a&gt;, &lt;a href=&#34;https://gitlab.com/fdroid/fdroid-website/issues&#34;&gt;&lt;em&gt;f-droid.org&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;https://gitlab.com/guardianproject/info/issues&#34;&gt;&lt;em&gt;guardianproject.info&lt;/em&gt;&lt;/a&gt;, etc. and we will track them there!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

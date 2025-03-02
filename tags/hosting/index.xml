@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hosting on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/hosting/</link>
+    <description>Recent content in Hosting on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Dec 2013 17:56:18 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/hosting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ostel.co secure VoIP network partners with Open Hosting</title>
+      <link>https://guardianproject.github.io/info/2013/12/03/ostel.co-secure-voip-network-partners-with-open-hosting/</link>
+      <pubDate>Tue, 03 Dec 2013 17:56:18 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/12/03/ostel.co-secure-voip-network-partners-with-open-hosting/</guid>
+      <description>&lt;p&gt;Ostel.co began as a R&amp;amp;D effort sponsored by The Guardian Project. The question: Is a peer-to-peer secure voice and video call network possible to build with open Internet standards and Open Source software? After two years and tens of thousands of users later, the answer is a resounding YES!&lt;/p&gt;
+
+&lt;p&gt;Two of the crucial components of any standards based VoIP service are infrastructure to route calls and a database to locate end users. &lt;a href=&#34;http://openhosting.com/&#34;&gt;Open Hosting’s&lt;/a&gt; service was a perfect fit, so we’ve teamed up for ongoing support of ostel.co. Open Hosting has a high speed, low-latency network in the southern USA, which hosts the backend to route calls over the ostel.co domain. It also has a clearly defined, concise &lt;a href=&#34;http://openhosting.com/about-us/legal/&#34;&gt;Privacy Policy and Terms of Service&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project will continue to support the &lt;a href=&#34;https://dev.guardianproject.info/projects/ostn/wiki&#34;&gt;Open Secure Telephony Network&lt;/a&gt;. This open source project aims to make it as simple as possible for anyone to stand up their own secure VoIP backend with a custom domain. OSTN is a &lt;a href=&#34;https://dev.guardianproject.info/projects/ostel/wiki/Server_Documentation&#34;&gt;best practices guide&lt;/a&gt; to build your own application stack and a federated network of VoIP services. The more operators who host their own domain, the larger the global federated infrastructure becomes, freeing users from carrier control and ensuring call security. There are also ongoing automation projects to bring ease to hosting your own domain. For example, &lt;a href=&#34;https://index.docker.io/u/guardianproject/&#34;&gt;Docker repositories&lt;/a&gt;, &lt;a href=&#34;https://github.com/guardianproject/chef-twelvetone/tree/kamailio&#34;&gt;Chef cookbooks&lt;/a&gt; and even a &lt;a href=&#34;https://dev.guardianproject.info/projects/ostn/wiki/Raspberry_Pi&#34;&gt;guide for the Raspberry Pi&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;If you would like to get started with free calls over &lt;a href=&#34;https://ostel.co&#34;&gt;ostel.co&lt;/a&gt;, register for an account and use any of the supported client applications. If you would like support building your own secure VoIP backend, check out the &lt;a href=&#34;https://dev.guardianproject.info/projects/ostel/wiki&#34;&gt;docs&lt;/a&gt;, hang out in the #guardian project IRC channel and email su&amp;#x70;p&amp;#x6f;r&amp;#x74;@&amp;#x67;u&amp;#x61;r&amp;#x64;i&amp;#x61;npro&amp;#x6a;e&amp;#x63;t&amp;#x2e;i&amp;#x6e;f&amp;#x6f; . We look forward to growing the network!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/rust/</link>
+    <description>Recent content in Rust on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Mar 2023 10:00:00 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Arti, next-gen Tor on mobile</title>
+      <link>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</link>
+      <pubDate>Sat, 04 Mar 2023 10:00:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</guid>
+      <description>&lt;p&gt;For software projects with recurring bugs, efficiency or security issues
+there&amp;rsquo;s a joke making the rounds in the software industry: &amp;ldquo;Let&amp;rsquo;s re-write it
+in &lt;a href=&#34;https://en.wikipedia.org/wiki/Rust_(programming_language)&#34;&gt;Rust&lt;/a&gt;!&amp;rdquo;  It&amp;rsquo;s a
+fairly new low-level programming language with the declared goal to help
+developers avoid entire classes of bugs, security issues and other pitfalls.
+Re-writing software is very time consuming, so it rarely happens, especially
+when just one more fix will keep a project up and running.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://torproject.org&#34;&gt;Tor-Project&lt;/a&gt; was started in 2001 using the &lt;a href=&#34;https://en.wikipedia.org/wiki/C_(programming_language)&#34;&gt;C
+programming lanugage&lt;/a&gt;.
+However a few years ago they set out to actually re-write their project in
+Rust.  That projects codename is &lt;a href=&#34;https://arti.torproject.org/&#34;&gt;Arti&lt;/a&gt; and it
+was &lt;a href=&#34;https://blog.torproject.org/arti_100_released/&#34;&gt;first released&lt;/a&gt; in 2022.
+While Arti is working great, it doesn&amp;rsquo;t have all features of the original Tor
+implementation yet.  However, they are steadily working on getting there.  For
+example, rough &lt;a href=&#34;https://www.pluggabletransports.info/&#34;&gt;Pluggable Transports&lt;/a&gt;
+support was added to Arti in the recent 1.1.0 release.&lt;/p&gt;
+
+&lt;p&gt;We already have early &lt;a href=&#34;https://gitlab.com/guardianproject/arti-mobile-ex/&#34;&gt;test builds of
+Arti&lt;/a&gt; running on both
+Android and iOS.  The integration we came up with is pretty basic, but so far
+it seems to work reliable for accessing the Tor network.  Maintaining code for
+both iOS and Android in the same project will hopefully simplify shipping new
+Arti releases for us, make integrating Tor capabilities into any app simpler.
+To make it useful for the broader mobile developer community, we&amp;rsquo;re also
+investigating whether we can provide easy to use API bindings.  We&amp;rsquo;ve created a &lt;a href=&#34;https://gitlab.com/guardianproject/arti-mobile-ex/-/tree/main/android/sample&#34;&gt;sample
+app&lt;/a&gt;
+on Android to test and illustrate what a minimalistic integration of Arti looks
+like.  It&amp;rsquo;s as simple as adding a few lines of code.&lt;/p&gt;
+
+&lt;p&gt;Support for features like advanced censorship circumvention or onion services is not
+exactly straight forward on mobile operating systems, because they tend to be
+way more locked down than traditional computers.  Currently, we can successfully test
+pluggable transports in &amp;ldquo;managed&amp;rdquo; mode on old versions of Android.  However
+this technique will likely not work on the latest version of Android and never
+worked iOS to begin with.  We have shared our findings with the Arti developer
+team and hope they&amp;rsquo;ll work on getting us to full Pluggable Transports support, integraing
+with our existing &lt;a href=&#34;https://gitlab.com/guardianproject/IPtProxy&#34;&gt;IPtProxy Library&lt;/a&gt; soon.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

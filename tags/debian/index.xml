@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/debian/</link>
+    <description>Recent content in Debian on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 08 Dec 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debian over HTTPS</title>
+      <link>https://guardianproject.github.io/info/2021/12/08/debian-over-https/</link>
+      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/12/08/debian-over-https/</guid>
+      <description>
+
+&lt;p&gt;Debian&amp;rsquo;s package manager &lt;a href=&#34;https://wiki.debian.org/SecureApt&#34;&gt;&lt;em&gt;apt&lt;/em&gt;&lt;/a&gt; has a
+time-tested method of securely providing packages from the network built on
+OpenPGP signatures.  Even though this signing method works well for verifying
+the indexes and package files, there are new threats that have become relevant
+as man-in-the-middle attacks and data mining become ever easier.  Since 2013,
+&lt;em&gt;apt&lt;/em&gt; developers have supported encrypted transport methods HTTPS and Tor Onion
+Service.  We have been &lt;a href=&#34;https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;recommending&lt;/a&gt; &lt;a href=&#34;https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/&#34;&gt;their&lt;/a&gt; &lt;a href=&#34;https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;use&lt;/a&gt; since &lt;a href=&#34;https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/&#34;&gt;2013&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Most major mirrors already support HTTPS, and now &lt;a href=&#34;https://security.debian.org&#34;&gt;https://security.debian.org&lt;/a&gt;
+has finally joined the party.  That means it is possible to use HTTPS on all of
+the official repositories.  On top of that, many Debian Developers are working
+on making &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=992692&#34;&gt;HTTPS the
+default&lt;/a&gt; for new
+installs.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-threats&#34;&gt;The threats&lt;/h2&gt;
+
+&lt;p&gt;Now is a good time to reiterate the areas of concern:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Package authenticity (software can be modified while being downloaded).&lt;/li&gt;
+&lt;li&gt;Repository availability (whole sites or specific URL paths can be selectively
+blocked by the network).&lt;/li&gt;
+&lt;li&gt;Package availability (software security updates can be individually blocked).&lt;/li&gt;
+&lt;li&gt;Who is downloading what package (currently visible to anyone who can see the
+network traffic, including open wifi, etc.).&lt;/li&gt;
+&lt;li&gt;Vulnerabilities in &lt;em&gt;apt&lt;/em&gt; or its signature validation (&lt;em&gt;apt&lt;/em&gt; can be
+exploited, authenticity checks can be bypassed).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The current &lt;em&gt;apt&lt;/em&gt; model with HTTP covers #1 well, but only covers #2 and #3 with
+a one week window (the &lt;code&gt;Valid-Until&lt;/code&gt; header sets the expiration date on the repo
+metadata).  That gives attackers a short-term window where blocking and replay
+attacks remain effective.  The And it does not cover #4 or #5 at all.&lt;/p&gt;
+
+&lt;p&gt;Using HTTPS adds a weak backup security layer for #1.  HTTPS makes it much more
+difficult for certain files from a mirror to be selectively blocked or replayed,
+as well as making related errors louder and earlier (e.g. #2 and #3).  Tracking
+package downloads needs only simple passive listening with HTTP, but with HTTPS,
+the attacker must build full indexes of package sizes, then parse the size from
+TLS streams.  So HTTPS helps a little with #4.  Lastly,
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1829&#34;&gt;there&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1358&#34;&gt;have&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3587&#34;&gt;been&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-3462&#34;&gt;bugs&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1252&#34;&gt;in&lt;/a&gt;
+&lt;a href=&#34;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-0501&#34;&gt;&lt;em&gt;apt&lt;/em&gt;&amp;rsquo;s&lt;/a&gt; GPG
+verification.  With HTTP, any network can inject exploits into &lt;em&gt;apt&lt;/em&gt;&amp;rsquo;s
+downloads.  HTTPS helps with #5 by providing a backup layer of encryption,
+albeit weaker.&lt;/p&gt;
+
+&lt;p&gt;It is of course important to point out that HTTPS itself has flaws, and it is
+not the best option out there, especially for protecting anonymity.  HTTPS is
+quite easy to use for &lt;em&gt;apt&lt;/em&gt; repositories, so there is hardly any trade-off to
+using it.  That is why it is the focus of this post.  If protecting privacy is
+important to you, you should use the &lt;a href=&#34;https://onion.debian.org&#34;&gt;Tor Onion Service
+repositories&lt;/a&gt;, especially if #4 and #5 concern you.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-risks-of-adding-https&#34;&gt;The risks of adding HTTPS&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The only security critique of using HTTPS for repositories that still makes
+sense is that there might be vulnerabilities in the code that handles HTTPS,
+since its a lot more complicated that HTTP.  In &lt;em&gt;apt&lt;/em&gt;, HTTPS requires GnuTLS,
+which is currently linked in by default.  In order to fully protect against
+exploits related to the HTTPS code, the machine would need to use a custom build
+of &lt;em&gt;apt&lt;/em&gt; with GnuTLS support not included.  It is possible to limit exposure of
+the HTTPS implementation by setting &lt;code&gt;Acquire::AllowTLS false&lt;/code&gt;.  This kind of
+attack seems to be theoretical as of the time of writing, whereas there are at
+least 6 CVEs related to exploiting the GPG verification.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Using HTTPS makes using caching proxies much harder to setup.  Caching proxies
+can reduce the leakage of metadata about which machine is getting which package,
+so using direct HTTPS connections would therefore increase the leakage of that
+kind of metadata.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;things-that-can-be-improved&#34;&gt;Things that can be improved&lt;/h2&gt;
+
+&lt;p&gt;There are some additional bits of metadata that can be protected when using
+HTTPS, thereby further improving the privacy protections in &lt;em&gt;apt&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;With &lt;a href=&#34;https://www.gnutls.org/manual/gnutls.html#On-Record-Padding&#34;&gt;TLSv1.3 Record
+Padding&lt;/a&gt;, TLS
+streams &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1001335&#34;&gt;can be
+padded&lt;/a&gt;, which
+would obscure the size of the packages being downloaded from network
+observers.&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Pipelining downloads through a reused HTTPS connection makes it even more
+difficult for the network observer to track packages by size.&lt;/del&gt; Update
+2021-12-09: It turns out that &lt;em&gt;apt&lt;/em&gt; is
+&lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1001335#10&#34;&gt;already&lt;/a&gt;
+&lt;a href=&#34;https://salsa.debian.org/apt-team/apt/commit/895417ef99bb1371d8970da1afe87c6d64382f67&#34;&gt;pipelining&lt;/a&gt;
+requests by default, so that can be crossed off the list of things to be
+improved.&lt;/li&gt;
+&lt;li&gt;The Server Name Indication (SNI) field in TLS will leak the domain name in
+plaintext.  The upcoming TLS Encrypted Client Hello standard will encrypt that.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The SNI field issue does not exist when using Tor Onion Services.  Package
+sizes would still be visible to network observers when using Onion Services, so
+TLS padding and pipelining would help there also.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Free Software Tooling for Android Feature Extraction</title>
+      <link>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</guid>
+      <description>
+
+&lt;p&gt;As part of the Tracking the Trackers project, we are inspecting
+thousands of Android apps to see what kinds of tracking we can find.
+We are looking at both the binary APK files as well as the source
+code.  Source code is of course easy to inspect, since it is already a
+form that is meant to be read and reviewed by people.  Android APK
+binaries are a very different story.  They are first and foremost a
+machine-executable format.  On top of that, many developers
+deliberately obfuscate as much as possible in the APK to resist
+inspection.&lt;/p&gt;
+
+&lt;p&gt;That means inspection requires using tools to look into the binary APK
+format.  There is actually a massive amount of work that goes into
+inspecting APKs because this is required in order to do useful malware
+analysis.  For the most part, these inspection techniques are the
+malware companies&amp;rsquo; &amp;ldquo;special sauce&amp;rdquo;, so they are proprietary and
+generally kept secret.  On top of that, malware companies keep secret
+a lot of the conclusions they about what is useful data to collect,
+and what should be ignored.&lt;/p&gt;
+
+&lt;p&gt;One key piece of the Tracking the Trackers project is to make all of
+research, tooling, and conclusions free, open, and publicly available.
+First and foremost, that means the tools must be free software.  They
+should also be easily installable so the barrier to entry for new
+inspectors is as low as possible.  We focus on getting software as
+part of Debian, since once there, so many people have access to those
+packages since Ubuntu, Kali, and so many other GNU/Linux distros are
+based on Debian.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-available-in-debian-already&#34;&gt;What is available in Debian already&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/2015/04/30/getting-android-tools-into-debian/&#34;&gt;Our
+work&lt;/a&gt;
+with the &lt;a href=&#34;https://wiki.debian.org/AndroidTools&#34;&gt;Debian Android Tools
+Team&lt;/a&gt; and &lt;a href=&#34;https://java.debian.net/&#34;&gt;Debian Java
+Team&lt;/a&gt; over the years means many key tools
+are already included in Debian and its derivatives, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;key Android SDK components like &lt;em&gt;apksigner&lt;/em&gt;, &lt;em&gt;dx&lt;/em&gt; and &lt;em&gt;android.jar&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;apktool&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;dexdump/dexlist&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;enjarify&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;LibScout&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;libsmali&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;procyon&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tools-we-are-using&#34;&gt;Tools we are using&lt;/h2&gt;
+
+&lt;p&gt;One key aspect of our research is that working with terabytes of APKs,
+this is necessary to be able to spot and map out as many trackers as
+possible.  Since feature extraction can be a slow and resource
+intensive process, we needed to use some tools that emphasize speed
+over flexibility.  Even with fast extraction tools, we still have to
+build up tailored processes to speed things up.  Some of these
+straightforward feature extraction processes would take months to run
+on ~3TB of APKs on a 32-thread machine with 144GB of RAM.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/reddr/LibScout&#34;&gt;LibScout&lt;/a&gt; - detect SDKs/libraries with their version in binary APKs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/avast/apkparser&#34;&gt;https://github.com/avast/apkparser&lt;/a&gt; - faster manifest/resources parser&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/avast/apkverifier&#34;&gt;https://github.com/avast/apkverifier&lt;/a&gt; - faster APK signature verifier&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jedisct1/ipgrep&#34;&gt;https://github.com/jedisct1/ipgrep&lt;/a&gt; - ipgrep extracts possibly obfuscated host names and IP addresses from text, resolves host names, and prints them, sorted by ASN.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/stricaud/faup&#34;&gt;https://github.com/stricaud/faup&lt;/a&gt; - Fast URL decoder library&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cryptax/droidlysis&#34;&gt;https://github.com/cryptax/droidlysis&lt;/a&gt; - Quickly analyze APKs for the most essential features: permissions, &lt;code&gt;Activity&lt;/code&gt; and &lt;code&gt;BroadcastReceiver&lt;/code&gt; names, and key method calls.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;apkverifier&lt;/em&gt;, &lt;em&gt;apkparser&lt;/em&gt;, and &lt;em&gt;droidlysis&lt;/em&gt; are generally useful, but
+not yet in Debian.  So we packaged them to make them easily available.
+They are currently in the &lt;a href=&#34;https://ftp-master.debian.org/new.html&#34;&gt;Debian
+NEW&lt;/a&gt; queue, awaiting final
+review before inclusion.&lt;/p&gt;
+
+&lt;p&gt;These tools have been assembled into scripts to run the actual feature
+extract processes, they are maintained in the
+&lt;a href=&#34;https://gitlab.com/trackingthetrackers/extracted-features&#34;&gt;https://gitlab.com/trackingthetrackers/extracted-features&lt;/a&gt; repo.  When
+the actual data generated is small enough and there are not copyright
+conflicts, the data is also included there.  Mostly, the data sets are
+too large and sometimes touch on copyright restrictions, so they are
+unfortunately not publicly available.&lt;/p&gt;
+
+&lt;p&gt;There are lots of other tasks, including managing large APK
+collections, gathering data to generate statistics about the features,
+and downloading publicly available tracker SDK.  Those scripts are
+maintained in &lt;a href=&#34;https://gitlab.com/trackingthetrackers/scripts&#34;&gt;https://gitlab.com/trackingthetrackers/scripts&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;gradle-plugins&#34;&gt;Gradle Plugins&lt;/h3&gt;
+
+&lt;p&gt;When working with source code, then it is possible to do other kinds
+of analysis.  Most Android apps are built with the Gradle tool.  So we
+reviewed a wide range of Gradle plugins, and found these three useful
+in our investigations.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin&#34;&gt;dependency-analysis-android-gradle-plugin&lt;/a&gt; - Produce a report of unused direct dependencies and used transitive dependencies.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jeremylong/DependencyCheck&#34;&gt;OWASP Dependency-Check&lt;/a&gt; - utility that detects publicly disclosed vulnerabilities in application dependencies&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vanniktech/gradle-dependency-graph-generator-plugin/&#34;&gt;gradle-dependency-graph-generator-plugin&lt;/a&gt; - Gradle plugin that lets you visualize your Java library dependencies in a graph.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tools-we-reviewed&#34;&gt;Tools we reviewed&lt;/h2&gt;
+
+&lt;p&gt;We looked at quite a few existing tools, and found many interesting
+and useful ones.  While they all produced useful output, many of these
+were not useful to this project because they were tailored around the
+use case of a person inspecting a small set of apps, so for example,
+they were too slow or did not produce machine readable output suitable
+for working with large APK collections.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/U039b/android_permissions_harvester&#34;&gt;android_permissions_harvester&lt;/a&gt; - for finding which permissions are used based on method calls&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cryptax/droidlysis&#34;&gt;droidlysis&lt;/a&gt; - cryptax&amp;rsquo;s (aXelle&amp;rsquo;s) tool: &amp;ldquo;DroidLysis is a property extractor for Android apps&amp;rdquo;. See also her &lt;a href=&#34;https://cfp.hack.lu/hacklu19/talk/ZZKNSM/&#34;&gt;talk at hacklu 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rednaga/APKiD&#34;&gt;APKiD&lt;/a&gt; - &amp;ldquo;In addition to detecting packers, obfuscators, and other weird stuff, it can also identify if an app was compiled by the standard Android compilers or dexlib&amp;rdquo;&lt;a href=&#34;https://rednaga.io/2016/07/31/detecting_pirated_and_malicious_android_apps_with_apkid/&#34;&gt;[1]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebook/redex&#34;&gt;redex&lt;/a&gt; - &amp;ldquo;taking advantage of Redex allows us to normalise the applications prior to analysis&amp;rdquo;&lt;a href=&#34;https://blog.quarkslab.com/android-application-diffing-analysis-of-modded-version.html&#34;&gt;[1]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kaitai-io/kaitai_struct_formats/blob/master/executable/dex.ksy&#34;&gt;kaitai_struct_formats&lt;/a&gt; - generic binary struct parser tool, useful for directly parsing Android &lt;em&gt;classes.dex&lt;/em&gt; files.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/armijnhemel/binaryanalysis-ng&#34;&gt;binaryanalysis-ng&lt;/a&gt; - a framework for unpacking files recursively and running checks on the unpacked files.  Great for someone who needs to inspect small sets of a wide variety of file types.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/plum-umd/redexer&#34;&gt;redexer&lt;/a&gt; - infer with which parameters the app uses certain permissions (we name this feature RefineDroid)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ytliu/apk-static-xref&#34;&gt;apk-static-xref&lt;/a&gt; - staticallly generate a cross-reference-graph (XRG) of a component (e.g., Service) of Android APK file&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dorneanu/smalisca&#34;&gt;smalisca&lt;/a&gt; - Static Code analysis tool that generates call graphs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was supported by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/thema/NGIZeroPET.html&#34;&gt;NGI Zero PET&lt;/a&gt; fund.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use Onions/HTTPS for software updates</title>
+      <link>https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/</link>
+      <pubDate>Wed, 23 Jan 2019 06:35:40 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/</guid>
+      <description>
+
+&lt;p&gt;There is a new &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2019/msg00010.html&#34; target=&#34;_blank&#34;&gt;vulnerability in Debian’s apt&lt;/a&gt; that allows anything that can Man-in-the-Middle (MITM) your traffic to get root on your Debian/Ubuntu/etc boxes. Using encrypted connections for downloading updates, like HTTPS or Tor Onion Services, reduces this vulnerability to requiring root on the mirror server in order to exploit it. That is a drastic reduction in exposure. We have been pushing for this &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;since 2014&lt;/a&gt;, and &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://ftp.fau.de&#34; target=&#34;_blank&#34;&gt;mirror&lt;/a&gt; &lt;a href=&#34;https://mirrors.kernel.org&#34; target=&#34;_blank&#34;&gt;operators&lt;/a&gt;, and others in the ecosystem have taken some big steps towards making this the standard. This should finally put to rest the idea that plain &lt;a href=&#34;https://whydoesaptnotusehttps.com/&#34; target=&#34;_blank&#34;&gt;HTTP is enough&lt;/a&gt; for software updates with signed metadata.&lt;/p&gt;
+
+&lt;p&gt;To this end, we have always supported &lt;a href=&#34;https://f-droid.org/docs/Security_Model/&#34; target=&#34;_blank&#34;&gt;F-Droid’s practice&lt;/a&gt; of requiring HTTPS connections to f-droid.org and mirrors, even though the signed metadata file is the essential mechanism for providing security.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-encrypted-connections-on-your-server&#34;&gt;Using encrypted connections on your server&lt;/h2&gt;
+
+&lt;p&gt;Over the years, we have been honing our &lt;code&gt;apt&lt;/code&gt; sources setup to use encrypted connections as much as possible, while getting updates as fast as possible. The hard part of this is that the &lt;a href=&#34;http://security.debian.org&#34; target=&#34;_blank&#34;&gt;official Debian security server&lt;/a&gt; only provides HTTP. There are mirrors of that that are available over HTTPS, but they can receive updates hours or days later. The best fix for this would be for Debian to provide an HTTPS connection to &lt;code&gt;security.debian.org&lt;/code&gt;. There are still things in the &lt;code&gt;apt&lt;/code&gt; source configuration that can help. There are three levels we use:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;only Tor Onion Services for all updates, this means always encrypted and over Tor, but can mean that updates are delayed, for example if Tor traffic is blocked.&lt;/li&gt;
+&lt;li&gt;First try Tor Onion, then try HTTPS. This provides a backup connection method in case Tor is not working, for whatever reason, but still could get updates slower than the official security source&lt;/li&gt;
+&lt;li&gt;First try Tor Onion, then try HTTPS, then try HTTP. But HTTP is only enabled for &lt;code&gt;security.debian.org&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You can see an example of the final option by looking at &lt;a href=&#34;https://gitlab.com/fdroid/fdroid-cfarm-bootstrap/commit/24389018a164e110e7204f2b2c62a7b81863cdd4&#34; target=&#34;_blank&#34;&gt;F-Droid’s compile farm server config&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;fixing-your-boxes&#34;&gt;Fixing your boxes&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;@abelxluck&lt;/code&gt; aka &lt;code&gt;@abeluck&lt;/code&gt; put out an &lt;a href=&#34;https://gist.github.com/abeluck/67525909a17403060cd1722b53d57d00&#34; target=&#34;_blank&#34;&gt;Ansible Playbook&lt;/a&gt; to do this update. Here is a quick script for securely updating on Debian/stretch/amd64 based on the &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2019/msg00010.html&#34; target=&#34;_blank&#34;&gt;info published&lt;/a&gt; on the debian-security list:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+#!/bin/sh -ex&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;apt -o Acquire::http::AllowRedirect=false update || true&amp;lt;br /&amp;gt;
+apt -o Acquire::http::AllowRedirect=false upgrade --download-only || true&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cd /var/cache/apt/archives&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;1da507155c7b1ad140739c62fdacceaf5b5ee3765b1a00c3a3527d9d82a8d533  apt-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-transport-https-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;59f3e1c91664fe3b47048794560ebe9c41f1eeccbdd95f7715282f8cbe449060  apt-transport-https-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-transport-https_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;c8c4366d1912ff8223615891397a78b44f313b0a2f15a970a82abe48460490cb  apt-transport-https_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-utils-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;e3e157c291b05b2899a545331c7597ab36ca04e02cd9010562b9985b76af60db  apt-utils-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-utils_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;fb227d1c4615197a6263e7312851ac3601d946221cfd85f20427a15ab9658d15  apt-utils_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;dddf4ff686845b82c6c778a70f1f607d0bb9f8aa43f2fb7983db4ff1a55f5fae  apt_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e libapt-inst2.0-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;0e66db1f74827f06c55ac36cc961e932cd0a9a6efab91b7d1159658bab5f533e  libapt-inst2.0-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e libapt-inst2.0_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;a099c57d20b3e55d224433b7a1ee972f6fdb79911322882d6e6f6a383862a57d  libapt-inst2.0_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg-dev_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;cfb0a03ecd22aba066d97e75d4d00d791c7a3aceb2e5ec4fbee7176389717404  libapt-pkg-dev_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg5.0-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;cdb03ddd57934e773a579a89f32f11567710a39d6ac289e73efb20e8825874d1  libapt-pkg5.0-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg5.0_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;03281e3d1382826d5989c12c77a9b27f5f752b0f6aa28b524a2df193f7296e0b  libapt-pkg5.0_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&lt;/code&gt;``````````````````&lt;code&gt;apt -o Acquire::http::AllowRedirect=false upgrade&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Build Android apps with Debian: apt install android-sdk</title>
+      <link>https://guardianproject.github.io/info/2017/03/13/build-android-apps-with-debian-apt-install-android-sdk/</link>
+      <pubDate>Mon, 13 Mar 2017 10:03:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/03/13/build-android-apps-with-debian-apt-install-android-sdk/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12920&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/04/debian-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/04/debian-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/04/debian-230x230.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg 600w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+In Debian stretch, the upcoming new release, it is now possible to build Android apps using only packages from Debian. This will provide all of the tools needed to build an Android app targeting the “platform” &lt;tt&gt;android-23&lt;/tt&gt; using the SDK &lt;tt&gt;build-tools&lt;/tt&gt; 24.0.0. Those two are the only versions of “platform” and “build-tools” currently in Debian, but it is possible to use the Google binaries by installing them into &lt;tt&gt;/usr/lib/android-sdk&lt;/tt&gt;.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t cover yet all of the libraries that are used in the app, like the Android Support libraries, or all of the other myriad libraries that are usually fetched from jCenter or Maven Central. One big question for us is whether and how libraries should be included in Debian. All the Java libraries in Debian can be used in an Android app, but including something like Android Support in Debian would be strange since they are only useful in an Android app, never for a Debian app.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Building apps with these packages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are the steps for building Android apps using Debian’s Android SDK on Stretch.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;sudo apt install android-sdk android-sdk-platform-23&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;export ANDROID_HOME=/usr/lib/android-sdk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In &lt;em&gt;build.gradle&lt;/em&gt;, set &lt;em&gt;compileSdkVersion&lt;/em&gt; to 23 and &lt;em&gt;buildToolsVersion&lt;/em&gt; to 24.0.0&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;gradle assembleDebug&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The Gradle Android Plugin is also packaged. Using the Debian package instead of the one from online Maven repositories requires a little configuration before running Gradle. In the &lt;em&gt;buildscript&lt;/em&gt; block:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add &lt;tt&gt;maven { url &amp;lsquo;file:///usr/share/maven-repo&amp;rsquo; }&lt;/tt&gt; to repositories&lt;/li&gt;
+&lt;li&gt;use &lt;tt&gt;compile &amp;lsquo;com.android.tools.build:gradle:debian&amp;rsquo;&lt;/tt&gt; to load the plugin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently there is only the target platform of API Level 23 packaged, so only apps targeted at &lt;em&gt;android-23&lt;/em&gt; can be built with only Debian packages. We will add more API platform packages via backports. Only &lt;em&gt;build-tools&lt;/em&gt; 24.0.0 is available, so in order to use the SDK, build scripts need to be modified. Beware that the Lint in this version of Gradle Android Plugin is still problematic, so running the :lint tasks might not work. They can be turned off with &lt;tt&gt;lintOptions.abortOnError&lt;/tt&gt; in &lt;em&gt;build.gradle&lt;/em&gt;. Google binaries can be combined with the Debian packages, for example to use a different version of the platform or build-tools.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why include the Android SDK in Debian?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;While Android developers could develop and ship apps right now using these Debian packages, this is not very flexible since only &lt;tt&gt;build-tools-24.0.0&lt;/tt&gt; and &lt;tt&gt;android-23&lt;/tt&gt; platform are available. Currently, we are not aiming to cover the most common use cases. Those are pretty well covered by Google’s binaries (except for the proprietary license on the Google binaries), and are probably the most work for the Debian Android Tools Team to cover. We are first working on use cases that are poorly covered by the Google binaries, for example, like where only specific parts of the whole SDK are used. Here are some we have in mind:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;tools for security researchers, forensics, reverse engineering, etc. which can then be included in live CDs and distros like Kali Linux&lt;/li&gt;
+&lt;li&gt;a hardened APK signing server using &lt;em&gt;apksigner&lt;/em&gt; that uses a standard, audited, public configuration of all reproducibly built packages&lt;/li&gt;
+&lt;li&gt;Replicant is a 100% free software Android distribution, so of course &lt;a href=&#34;http://blog.replicant.us/2017/02/replicant-6-0-development-updates/&#34; target=&#34;_blank&#34;&gt;they want to have a 100% free software SDK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;high security apps need a build environment that matches their level of security, the Debian Android Tools packages are &lt;a href=&#34;https://reproducible-builds.org&#34; target=&#34;_blank&#34;&gt;reproducibly built&lt;/a&gt; only from publicly available sources&lt;/li&gt;
+&lt;li&gt;dead simple install with strong trust path with mirrors all over the world&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the long run, the &lt;a href=&#34;https://wiki.debian.org/AndroidTools&#34; target=&#34;_blank&#34;&gt;Debian Android Tools Team&lt;/a&gt; aims to cover more use cases well, and also building the Android NDK. This all will happen more quickly if we have more contributors! Android is the most popular mobile OS, and can be 100% free software like Debian. Debian and its derivatives are one of the most popular platforms for Android development.&lt;/p&gt;
+
+&lt;p&gt;Last but not least, we want feedback on how this should all work. For example, we need ideas for how to nicely integrate Debian’s Java libraries into the Android &lt;em&gt;gradle&lt;/em&gt; workflow. And ideally, the Android Support libraries would also be reproducibly built and packaged somewhere that enforces only free software.&lt;/p&gt;
+
+&lt;p&gt;For anyone interested in tools for working with Android apps and APKs, including for reverse engineering, inspection, auditing, etc. there are quite a few tools included now in Debian:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;apt install android-sdk androguard apktool diffoscope dummydroid enjarify gplaycli libsmali-java libscout repo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;a href=&#34;https://labs.riseup.net/code/issues/8143&#34; target=&#34;_blank&#34;&gt;HTTPS to get security updates&lt;/a&gt; improves this situation a lot, but by measuring the size of data transfers, it is still possible to &lt;a href=&#34;http://www0.cs.ucl.ac.uk/staff/G.Danezis/papers/TLSanon.pdf&#34; target=&#34;_blank&#34;&gt;track which files are being downloaded&lt;/a&gt;. A Tor Onion Service provides end-to-end encryption like the HTTPS connection. It also mixes up the traffic with lots of other traffic, so its not easy to see what traffic goes together. That makes it a lot harder for a network observer to tell when a security update is being downloaded. Additionally, using a Tor Onion Service forces the traffic over Tor, so that the Debian mirror server cannot see which server is requesting the updates. That helps prevent targeted attacks.&lt;/p&gt;
+
+&lt;p&gt;There are other benefits as well, besides just for the person running the high security server in this example, especially if all of the traffic is coming over Tor. When updates are delivered over Tor, then that means the Debian mirror operators have less to worry about because they are handling less metadata that might have privacy concerns. It means that when law enforcement requests logs from the mirror operators, the mirror operators can more easily hand over anything they have since the mirror operator knows that there is not private information in the logs. Reducing the legal risks and privacy concerns makes it easier to run mirrors, and that helps internet services work better.&lt;/p&gt;
+
+&lt;p&gt;One disadvantage of this approach as it now stands is that your server will get updates from the same mirror every time. There is only a single Tor Onion Service for the main archive. An alternate approach using the combination of Tor and &lt;a href=&#34;http://httpredir.debian.org/&#34;&gt;http://httpredir.debian.org/&lt;/a&gt; as the package source means that your server will get updates from a different mirror each time Tor changes its exit node (I believe that’s every 10 minutes or so).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How can you set up your Debian machine to get updates over Tor?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg&#34; alt=&#34;debian and tor&#34; width=&#34;300&#34; height=&#34;173&#34; class=&#34;alignright size-medium wp-image-13395&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-768x444.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Right now, the best way to set up a Debian machine to force traffic over Tor is to use &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy&#34; target=&#34;_blank&#34;&gt;transparent proxying&lt;/a&gt; via &lt;em&gt;iptables&lt;/em&gt; rules. If you have that setup, then you can add the onion addresses as Debian apt sources as if they are any other HTTP Debian mirror. Another option is to install &lt;em&gt;apt-transport-tor&lt;/em&gt; like TAILS does, then you can use &lt;a href=&#34;http://people.skolelinux.org/pere/blog/Always_download_Debian_packages_using_Tor___the_simple_recipe.html&#34; target=&#34;_blank&#34;&gt;special syntax to add the Tor Onion Services&lt;/a&gt;. And another way is to install an HTTP proxy like &lt;em&gt;privoxy&lt;/em&gt; and enable apt HTTP proxy support as &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;I described before&lt;/a&gt;. The &lt;em&gt;apt-transport-tor&lt;/em&gt; and &lt;em&gt;privoxy&lt;/em&gt; approaches both have the downside of having to trust an added piece of software, whereas the transparent proxy technique uses what is already present in the Linux kernel. I’ve been using the &lt;em&gt;privoxy&lt;/em&gt; method since that is what I got working in 2014 and it has been working reliably on multiple servers since then. Also, I need &lt;em&gt;privoxy&lt;/em&gt; installed for another application anyway.&lt;/p&gt;
+
+&lt;p&gt;Here’s how to set up the apt sources to get packages and updates via Tor Onion Services without delaying security updates. First, remove &lt;em&gt;/etc/apt/sources.list&lt;/em&gt; and &lt;em&gt;/etc/apt/sources.list.d/*.list&lt;/em&gt; to start with a clean slate. Next add &lt;em&gt;/etc/apt/sources.list.d/00.vwakviie2ienjx6t.onion.list&lt;/em&gt; to get the main Debian repositories:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://vwakviie2ienjx6t.onion/debian/ jessie main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie main
+
+# aka volatile
+deb http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+
+deb http://vwakviie2ienjx6t.onion/debian jessie-backports main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-backports main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next add the new Tor Onion Service for the security update repository at &lt;em&gt;/etc/apt/sources.list.d/00.sgvtcaew4bxjd7ln.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://sgvtcaew4bxjd7ln.onion/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then last, include the normal HTTP security.debian.org archive to ensure that your server gets the latest security updates, even if the &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Onion Service mirror&lt;/a&gt; is behind or there is some other issue related to Tor. This goes in &lt;em&gt;/etc/apt/sources.list.d/99.security.debian.org.list&lt;/em&gt; to ensure that it is always the last repository that is tried, and apt loads files from /etc/apt/source.list.d/ in alphabetical order, so it’ll always try to get the security updates from the Onion Service before falling back to the HTTP source as a last resort.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://security.debian.org/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also run an unofficial mirror of the security updates on &lt;a href=&#34;http://dju2peblv7upfz3q.onion/debian&#34;&gt;http://dju2peblv7upfz3q.onion/debian&lt;/a&gt; if you want to add another backup, i.e. &lt;em&gt;/etc/apt/sources.list.d/00.dju2peblv7upfz3q.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building the most private app store</title>
+      <link>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</link>
+      <pubDate>Thu, 02 Jun 2016 11:08:52 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</guid>
+      <description>&lt;p&gt;&lt;em&gt;App stores can work well without any tracking at all&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor-150x150.jpg&#34; alt=&#34;whichdoor&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13337&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Attackers are increasingly seeing app stores as a prime &lt;a href=&#34;https://guardianproject.info/2015/02/24/phishing-for-developers/&#34; target=&#34;_blank&#34;&gt;attack&lt;/a&gt; vector, whether it is aimed at the masses like &lt;a href=&#34;http://researchcenter.paloaltonetworks.com/2015/09/more-details-on-the-xcodeghost-malware-and-affected-ios-apps/&#34;&gt;XCodeGhost&lt;/a&gt; or very targeted like in FBI vs Apple. When we install software from an app store, we are placing a lot of trust in a lot of different parties involved in getting the source code from the original developer delivered to our device in a useful form. Most people are entirely unaware of how much trust they are putting into this system, which they are entrusting with their personal data. Even for people who do understand the technical details involved, figuring out whether the people and the system itself is trustworthy is difficult to do.&lt;/p&gt;
+
+&lt;p&gt;We are building an app store that requires the bare minimum of trust: only the software developers themselves and the code they produce. We consider the app store operators and servers a threat. Building an ecosystem that enables automated, effective auditing lets the computers verify to make trust decisions easier. Effective external auditing requires an ecosystem that cannot deliver targeted content to just the auditing system, while feeding users something else (aka “binary transparency”).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Most app stores track as much as possible&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The vast majority of apps stores track their users actions in detail. Some is necessary when using the business model of the app store operator taking a percentage of sales, but none of the tracking is inherent to running an app store. For example, payment verification can be handled in the app itself like shareware. A software delivery system that tracks its users makes it simple to hide malware delivery since it can target any auditing system. Most app stores know a lot about their users:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;account name&lt;/li&gt;
+&lt;li&gt;identity&lt;/li&gt;
+&lt;li&gt;payment methods&lt;/li&gt;
+&lt;li&gt;everything you search for in the app store&lt;/li&gt;
+&lt;li&gt;everything you look at in the app store&lt;/li&gt;
+&lt;li&gt;everything you download, install, uninstall&lt;/li&gt;
+&lt;li&gt;which apps you actually run&lt;/li&gt;
+&lt;li&gt;where you are, based on IP, declared preference, etc.&lt;/li&gt;
+&lt;li&gt;your preferred language&lt;/li&gt;
+&lt;li&gt;and more…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apps stores need to know very little in order to function: how to give you the files you request. That means indexes, descriptions, icons, apps, and install/delete requests (for “push” install/delete). Given that information, the client can do everything needed to provide a full app store user experience. For this work, we chose to build upon &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, a community-run Android app store that distributes verified Free Software. The community has had an interest in privacy all along, and has always worked to avoid tracking. The security architecture is based on models proven by &lt;a href=&#34;https://wiki.debian.org/SecureApt&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/docs/tuf-spec.txt&#34; target=&#34;_blank&#34;&gt;The Update Framework&lt;/a&gt; , and others:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS connections by default&lt;/li&gt;
+&lt;li&gt;pinned TLS certificate built into the client app&lt;/li&gt;
+&lt;li&gt;updates verified based on the signature on the app itself&lt;/li&gt;
+&lt;li&gt;file integrity protected by signed metadata&lt;/li&gt;
+&lt;li&gt;signed metadata includes hashes of the app and its signing key&lt;/li&gt;
+&lt;li&gt;signed metadata generated on a separate machine, which can be fully offline&lt;/li&gt;
+&lt;li&gt;public key for verifying metadata signatures built into F-Droid client app&lt;/li&gt;
+&lt;li&gt;signed metadata includes timestamp and expiry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While the current setup is already a solid platform, we are implementing a number of improvements. The signed metadata will include list of official mirrors, then the client chooses mirrors based on availability and freshness based on local criteria like whether Tor is in use, closest on the internet, etc. We are also moving the standard HTTP “etag” cache check from the server to the client so it cannot be abused to track users.&lt;/p&gt;
+
+&lt;p&gt;In order to defend against an attacker that holds the signing keys for the app repository, there must be a trustworthy source of information to compare against. Reproducible builds means that anyone with the same source code will produce the exact same binary. When paired with an auditing system, it is easy to catch malware inserted in the build process, rather than the source code, like XCodeGhost. Reproducible builds also makes it possible to have all builds of a release binary have the exact same hash. Then any app repository can build apps only from source code, and have a source of verification data from any other app repository building the same app. Building software from source has become cheap enough that many companies like gitlab.com and Travis CI are offering free, automated build services in the cloud. Since the whole F-Droid toolset is free software and designed to be easy to setup, the barriers to setting up automatic auditing are quite low. People in separate areas of the world with different risk profiles can run verification servers to provide more trustworthy information.&lt;/p&gt;
+
+&lt;p&gt;Another key aspect of the F-Droid project is to provide the complete toolset needed to run an app store. This enables a more decentralized ecosystem. Therefore, one key goal is to lower the risks of running the services, so that more people can run their own app stores. If the app store does not track its users, then that removes the hassle of protecting personal data from any attacker. These services can be run without fear of responding to secret orders for personal information. It also means that the server setup is a lot simpler because it does not need dynamic content. The app store serve only needs to serve files (e.g. indexes, apps, etc.). The app repository is generated on a secure machine, or even a fully offline machine, and posted to the server. The main server is purely a mirror of the offline machine where the signed repository is generated. Mirrors just shuffle bits from place to place, they are no longer an attack vector.&lt;/p&gt;
+
+&lt;p&gt;Putting all these pieces together provides a system where users need only audit the source code in order to verify a trustworthy app delivery. The file pipeline provides redundantly secure data transmission, the apps can be reproducibly from source code, the app repositories can be automatically audited. Of course, this system relies not only on the power of cryptography, but also the power of transparency. Debian provides a great example of the power of transparency: Debian gives a thousand volunteers root access to every Debian install (by virtue of their ability to upload signed packages that get installed as root). Yet this system has been proven over the past 20+ years to provide solid security. Ultimately we hope that this will de-emphasize the signing key as the sole protection against abuse. If malware has a decent change of being spotted, it makes it much less likely to be used since malware authors either rigorously defend their exploits, or use well known exploits that are not difficult to automatically detect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future Work&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One attack vector that is not well covered is malware that installable by everyone, that then uses data on the local device to target specific users. That would be a way to target individuals using an app store that does not track its users. We are starting to implement automated dynamic analysis of every app using tools like &lt;a href=&#34;https://labs.mwrinfosecurity.com/tools/drozer&#34; target=&#34;_blank&#34;&gt;Drozer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We are also working towards making as many apps as possible build reproducibly. Some of our quick checks show that a large number of the apps in f-droid.org already will build reproducibly, given the right build environment. We are working on making the process of setting up that build environment as automated as possible.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid “verification server” has been prototyped, and it will be further developed with the aim of making it dead simple to run in common cloud services.&lt;/p&gt;
+
+&lt;p&gt;We already have the infrastructure in place to do verified double-signing, where the developer first signs the release bulid, then once f-droid.org reproduces that build, it adds its signature. Then Android would enforce that both signatures need to be present in order for it to be a valid update.&lt;/p&gt;
+
+&lt;p&gt;As the full localization support is built out, the language that a user is using will not be reported to the server. While speaking Spanish in Spain does not provide much information, speaking Quechua in Uzbekistan can narrow it down to a single user. Instead of dividing the index metadata by language, it will instead be grouped by app. We will then group apps so that it is difficult to tell which app in the group is the one people are interested in. For example, if one very popular app is only grouped with apps that are rarely downloaded, then it is an easy assumption that someone getting info about that block of apps is most likely looking for that popular app.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Android tools into Debian</title>
+      <link>https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/</link>
+      <pubDate>Thu, 30 Apr 2015 11:13:26 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg&#34; alt=&#34;debian&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12920&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/04/debian-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/04/debian-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/04/debian-230x230.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg 600w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android-150x150.png&#34; alt=&#34;android&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12919&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/04/android-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/04/android-230x230.png 230w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As part of Debian’s project in Google &lt;a href=&#34;https://wiki.debian.org/SummerOfCode2015&#34; target=&#34;_blank&#34;&gt;Summer of Code&lt;/a&gt;, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the &lt;a href=&#34;https://wiki.debian.org/Teams/JavaPackaging&#34; target=&#34;_blank&#34;&gt;Debian Java Team&lt;/a&gt; team, &lt;a href=&#34;https://&amp;#x71;a&amp;#x2e;d&amp;#x65;b&amp;#x69;a&amp;#x6e;.&amp;#x6f;r&amp;#x67;/dev&amp;#x65;l&amp;#x6f;p&amp;#x65;r&amp;#x2e;p&amp;#x68;p&amp;#x3f;l&amp;#x6f;gin=&amp;#x61;p&amp;#x6f;@&amp;#x67;a&amp;#x6d;b&amp;#x61;r&amp;#x75;.&amp;#x64;e&#34; target=&#34;_blank&#34;&gt;Markus Koschany&lt;/a&gt;. We are going to be working on getting the Android SDK and tools into Debian, as part of the Debian &lt;a href=&#34;https://wiki.debian.org/AndroidTools&#34; target=&#34;_blank&#34;&gt;Android Tools&lt;/a&gt; team, building upon the existing work already included from the Java and &lt;a href=&#34;https://wiki.debian.org/Teams/AndroidTools&#34; target=&#34;_blank&#34;&gt;Android Tools&lt;/a&gt; teams. This project is in conjunction with the Java team since there is overlap between Android and Java tools, like &lt;code&gt;gradle&lt;/code&gt;, &lt;code&gt;maven&lt;/code&gt;, etc. Since this work is in Debian, all of the Debian-derivatives will automatically inherit this work. That includes: Ubuntu, Mint, Elementary, and many more.&lt;/p&gt;
+
+&lt;p&gt;The first question a lot of Android developers are probably asking is: why would we want to put the Android tools into Debian when there is already an official distribution from Google with it’s own update tools? It turns out there are many reasons, mostly centered around making things much easier to use, as well as addressing some key security concerns. For example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;automatic trustworthy downloads, no need to verify hash sums or think about HTTPS&lt;/li&gt;
+&lt;li&gt;eliminate need for insecure wrapper scripts, like &lt;code&gt;./gradlew&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;easy install and update channel that all Debian users already know&lt;/li&gt;
+&lt;li&gt;trivial install for specific tools, like &lt;code&gt;adb&lt;/code&gt;, &lt;code&gt;fastboot&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;li&gt;setting up a Debian/Ubuntu/etc box for Android development is easier when everything is included&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-150x150.jpg&#34; alt=&#34;320px-Trawling_Drawing&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12873&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-230x230.jpg 230w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The most glaring issue from my point of view is the security issues in &lt;code&gt;gradle&lt;/code&gt;. It will happily download and execute code without any kind of verification whatsoever. It inherits this terrible practice from maven, which has been shown to be an &lt;a href=&#34;http://blog.ontoillogical.com/blog/2014/07/28/how-to-take-over-any-java-developer/&#34; target=&#34;_blank&#34;&gt;easy path to exploit anyone using it&lt;/a&gt;. This is especially concerning considering that developers are more and more &lt;a href=&#34;https://guardianproject.info/2015/02/24/phishing-for-developers/&#34; target=&#34;_blank&#34;&gt;being directly targeted&lt;/a&gt;. At least it is more common for &lt;code&gt;gradle&lt;/code&gt; configs to use HTTPS, but it is still quite easy mess up a config and force users to use HTTP instead. Fragile configs are really bad for security. Even if &lt;a href=&#34;https://github.com/WhisperSystems/gradle-witness&#34; target=&#34;_blank&#34;&gt;gradle-witness&lt;/a&gt; is used to pin the hash for the jars used in the project, &lt;code&gt;gradle-wrapper&lt;/code&gt; might still downloading insecure code an executing it immediately, giving attackers potential full user access to that machine. That is because &lt;code&gt;gradle-wrapper&lt;/code&gt; will download versions of &lt;code&gt;gradle&lt;/code&gt; that it needs, and &lt;code&gt;gradle-witness&lt;/code&gt; can not be used to pin the hash of the &lt;code&gt;gradle&lt;/code&gt; files. And the repositories that &lt;code&gt;gradle&lt;/code&gt; uses only provide methods to protect against network-based attacks. If the server that holds the jars is exploited, the attacker can replace the jars and the sum files at the same time. There is &lt;a href=&#34;https://github.com/gradle/gradle/pull/448&#34; target=&#34;_blank&#34;&gt;a pull request open for &lt;code&gt;gradle&lt;/code&gt;&lt;/a&gt; to allow pinning of the &lt;code&gt;gradle&lt;/code&gt; executables themselves, which will help this situation.&lt;/p&gt;
+
+&lt;p&gt;On a different note, many people who are not developers at all want to use tools like &lt;code&gt;adb&lt;/code&gt; and &lt;code&gt;fastboot&lt;/code&gt; to access their Android device, or even root it. Having them in Debian means they are trivial for people to install, vastly easier than trying to figure out how to download and install the Android SDK. What lots of people end up doing instead is downloading random binaries from insecure internet forums and using those. For many devices, it is already possible to use only tools in Debian to root the device. As we get more of the Android tools packaged and updated in Debian, that will become the norm.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Updates when you need them, built upon a stable base&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One common complaint about packages in Debian is that they are old and outdated. It is part of the core mission of Debian/stable to provide an operating system that changes as little as possible. That mission is contrary to what most developers need from their SDKs and sometimes even the development tools. But stability is also important for developers as well. For example, tools like &lt;code&gt;make&lt;/code&gt;, used to build native code using the Android NDK (&lt;code&gt;ndk-build&lt;/code&gt; is a &lt;code&gt;make&lt;/code&gt; script) and even Android itself, has been around a long time and is used in so many projects. That is a tool that almost every developer wants to have very stable.&lt;/p&gt;
+
+&lt;p&gt;For the packages that developers need to have completely up-to-date, like the Android SDK itself, there are many options for distribution. Ubuntu Personal Package Archives (PPA) have proven easy and useful for exactly this kind of thing, and Debian is working on adding support for PPAs. Official repositories for &lt;a href=&#34;http://backports.debian.org/&#34; target=&#34;_blank&#34;&gt;backports&lt;/a&gt; are another avenue for timely updates.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Help us figure this out&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We want lots of feedback on how to do this right! A great example is how to best support the various versions of &lt;code&gt;gradle&lt;/code&gt;. It seems to me that &lt;code&gt;gradle&lt;/code&gt; is starting to stabilize, and it is no longer necessary to track very specific releases of &lt;code&gt;gradle&lt;/code&gt;. For example, &lt;code&gt;gradle&lt;/code&gt; v2.2.1 will work well with projects that were setup with just about any v2.x version. And projects still using 1.x, they mostly seem to work using v1.12. So if this is the case, then this fits into a common pattern with build tools in Debian:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GNU Compiler Collection is packaged as &lt;code&gt;gcc4.8&lt;/code&gt;, &lt;code&gt;gcc4.7&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;li&gt;Apache Maven is packaged as &lt;code&gt;maven&lt;/code&gt; and &lt;code&gt;maven2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;GNU automake is packaged as &lt;code&gt;automake1.14&lt;/code&gt;, &lt;code&gt;automake1.13&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’m currently thinking that the best solution for gradle is like Maven, with the package called &lt;code&gt;gradle&lt;/code&gt; (v2.3) being the most up-to-date in conjunction with specific packages to support older versions, like &lt;code&gt;gradle1&lt;/code&gt; (v1.12). But maybe it makes sense to do something like gcc, with a gcc meta-package to install the currently best supported version, then all versions packaged with name that includes that version, i.e. a gradle meta-package with &lt;code&gt;gradle1&lt;/code&gt;, &lt;code&gt;gradle2&lt;/code&gt;, &lt;code&gt;gradle3&lt;/code&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;Other issues that we will have to grapple with include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;how to package various NDK versions?&lt;/li&gt;
+&lt;li&gt;How do we best work with the upstream Android team?&lt;/li&gt;
+&lt;li&gt;is packaging Android Studio feasible?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also hope to provide an example that any other packaging systems can learn from and build upon. GNU/Linux distros like Arch and Fedora are the obvious ones, but also projects like Homebrew, MacPorts, and Cygwin could also use this work to include Android tools as packages in their system. Indeed, some of the work already included in Debian was derived from &lt;a href=&#34;https://wiki.archlinux.org/index.php/Android#Android_SDK_core_components&#34; target=&#34;_blank&#34;&gt;some Arch packages&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reducing metadata leakage from software updates</title>
+      <link>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</link>
+      <pubDate>Thu, 16 Oct 2014 12:48:04 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: now you can &lt;a href=&#34;https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;do this with Tor Onion Services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.&lt;/p&gt;
+
+&lt;p&gt;That means that potentially private information is leaking. That private information could be which packages you have installed and which versions. That information can help an attacker figure out the best way to break into the target machine. Also, a unique fingerprint can be generated based on which packages a machine has installed, and that could help de-anonymize traffic that goes over Tor or other anonymity tool.&lt;/p&gt;
+
+&lt;p&gt;For people who use &lt;code&gt;apt-get&lt;/code&gt; in Debian, Ubuntu or any related GNU/Linux distro, there is a lot of metadata leaked to the internet when &lt;code&gt;apt-get&lt;/code&gt; contacts Debian repositories using a standard configuration. Mostly, that is because by default, the connections are unencrypted (http, ftp, rsync). The integrity of the package itself is not reason enough to use HTTPS since the GPG signing is much more reliable for that task. Here is how I break it down:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity&lt;br /&gt;
+(&lt;em&gt;software can be modified while being downloaded&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;repo availability&lt;br /&gt;
+( &lt;em&gt;whole sites or specific URL paths can be selectively blocked by governments and companies&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;package availability&lt;br /&gt;
+(&lt;em&gt;software security updates can be individually blocked&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;who’s downloading what package (&lt;em&gt;currently visible to anyone who can see the&lt;br /&gt;
+network traffic, including open wifi, etc.&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The current apt model covers #1 well, but only covers #2 and #3 with a two week window (the expiration date on the repo metadata). And it does not cover #4 at all. Using HTTPS for apt repos is a simple way to improve the security of all 4. It adds a weak backup security layer for #1, it makes it much more difficult for a portion of a large internet mirror to be seletively blocked (e.g. #2 and #3). For example, if you use HTTPS to mirrors.kernel.org, everything has to be blocked to block Debian repos or packages. And pipelining downloads through a reused HTTPS connection makes it very difficult for the network observer to track metadata about packages, #4).&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg&#34; alt=&#34;leakage control&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12701&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-100x100.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-200x200.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg 300w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Luckily, there are some relatively easy steps that greatly reduce the amount of metadata that is leaked: using HTTPS connections to the mirrors and running those connections through Tor. Setting &lt;code&gt;apt-get&lt;/code&gt; to pipeline as many transactions into a given HTTPS session is also useful, but currently only supported for HTTP and not HTTPS. Even though HTTPS/TLS has security weaknesses, it is a lot better than nothing, and can help provide real world protection. The downside is that it is not common for Debian machines to connect to apt mirrors using HTTPS, so that potentially marks the install as a machine worth targeting. There are more and more HTTPS mirrors, and more interest in using them, so I think in time, that will only lessen as a concern. Here are the HTTPS mirrors that I have had good luck with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mirrors.ece.ubc.ca&lt;/li&gt;
+&lt;li&gt;mirrors.kernel.org&lt;/li&gt;
+&lt;li&gt;mirror.cse.unsw.edu.au&lt;/li&gt;
+&lt;li&gt;spout.ussg.indiana.edu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On that note, here is the config that I have been using on a number of Debian-deriv machines, and it has been working well. It requires &lt;code&gt;apt-transport-https&lt;/code&gt;, and &lt;a href=&#34;http://ubuntuguide.org/wiki/Tor#Privoxy&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;privoxy&lt;/code&gt; setup as an HTTP proxy for Tor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;$ cat /etc/apt/apt.conf.d/99force-tor
+# force everything through privoxy HTTP proxy to tor
+Acquire::ftp::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::http::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::https::Proxy &#34;http://127.0.0.1:8118&#34;;
+
+# don&#39;t use SSL, its insecure, only use TLS
+Acquire::https::SslForceVersion &#34;TLSv1&#34;;
+&lt;/pre&gt;
+
+&lt;p&gt;I have found about 10 official Debian mirrors that have reliable HTTPS. Then I have a &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; target=&#34;_blank&#34;&gt;script that finds all of them&lt;/a&gt;, but many have self-signed certs and other issues. A number of the HTTPS mirrors also mirror the “security” archive, but I recommend that the &lt;code&gt;http&lt;/code&gt; URL to the official &lt;code&gt;security.debian.org&lt;/code&gt; repo is still included to make sure that security updates are promptly available.&lt;/p&gt;
+
+&lt;p&gt;I also have a test security repo running that is only available via an .onion address. I hope to encourage people to run official mirrors on a Tor Hidden Service, then HTTPS is not needed. Note that &lt;code&gt;apt-transport-tor&lt;/code&gt; is not required if a tor proxy is setup. To try mine, add it to your &lt;code&gt;sources.list&lt;/code&gt; (and make sure &lt;code&gt;apt-get&lt;/code&gt; is somehow using Tor). The order is important, that determines the priority of where &lt;code&gt;apt-get&lt;/code&gt; will get the package from is all other variables are the same.&lt;/p&gt;
+
+&lt;pre&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ wheezy/updates main
+deb http://security.debian.org/ wheezy/updates main
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Use the official &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Debian Tor Onion Services&lt;/a&gt; now, &lt;tt&gt;dju2peblv7upfz3q.onion&lt;/tt&gt; is deprecated and will be shut down!&lt;/p&gt;
+
+&lt;h3 id=&#34;a-specific-example-tails&#34;&gt;A specific example: TAILS&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png&#34; alt=&#34;Tails&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-12711&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-100x100.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/Tails.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://tails.boum.org/&#34; target=&#34;_blank&#34;&gt;TAILS&lt;/a&gt; is an operating system that aims to be as private and anonymous as possible to enable, and has allowed &lt;a href=&#34;https://freedom.press/blog/2014/04/help-support-little-known-privacy-tool-has-been-critical-journalists-reporting-nsa&#34; target=&#34;_blank&#34;&gt;journalists&lt;/a&gt; like &lt;a href=&#34;https://www.wired.com/2014/10/laura-poitras-crypto-tools-made-snowden-film-possible/&#34; target=&#34;_blank&#34;&gt;Laura Poitras&lt;/a&gt; to work without leaking information despite being targeted by some very skilled and highly resourced organizations. TAILS mostly works as a “live CD”, meaning the whole operating system is downloaded as a single “image” file, then either burned to a CD/DVD, or to a USB thumb drive. Updates work the same way. But TAILS has an optional feature to use the Debian package system to install and persist packages that are not included by default. TAILS does not use the default set of mirrors that a standard Debian install uses, it is set up by default with a range of possible Debian package sources, including the current stable version (called wheezy), the versions in testing, and packages backported to the stable version. That means that when this feature is used, TAILS fetches the metadata for all of those sections of Debian (stable/wheezy, testing, wheezy-backports, unstable).&lt;/p&gt;
+
+&lt;p&gt;Given all of the proven fingerprinting approaches, like using the font list from the browser, I think its a safe assumption that the apt-get metadata will also provide similar fingerprinting opportunities. For basic TAILS use, this is all avoided since updates are done via ISO images. But once a user installs packages via &lt;code&gt;apt-get&lt;/code&gt;, that changes since TAILS then goes out onto the internet to fetch all of the repo metadata. That goes over Tor since TAILS forces all network traffic over Tor, so that helps break the link between the machine downloading the updates and those that can see that machines internet traffic.&lt;/p&gt;
+
+&lt;p&gt;It seems quite likely that the set of mirrors and the order in which they are run will provide a way to identify the system as TAILS. As for identifying individual machines, &lt;code&gt;apt-get&lt;/code&gt; sends a lot of metadata, like language that the system is using, which packages need updates, etc. On top of the set of mirrors used, there is potentially enough metadata there to fingerprint the individual machine.&lt;/p&gt;
+
+&lt;p&gt;One open question is how the &lt;code&gt;apt-get&lt;/code&gt; downloads map to different Tor circuits. If all of the traffic from a given &lt;code&gt;apt-get&lt;/code&gt; session goes over a single Tor circuit, then the exit node, the mirror server, and any network observer that can see the traffic between those two can use that as the fingerprint.&lt;/p&gt;
+
+&lt;p&gt;To expand on this, if TAILS fetched all of its apt sources (wheezy, backports, testing, etc) via HTTPS from the same mirror (e.g. mirrors.kernel.org), then the exit node and network observer could not really distinguish the distro the machine making the connection was running since mirrors.kernel.org hosts many distro mirrors. There are two key parts here: using HTTPS to encrypt the data, and using HTTP pipelining so that network connections are reused for multiple downloads, rather than the default behavior of making a new HTTPS for each individual download. This setup would also prevent the custom pattern of apt sources from being distinguished since it would just show as downloading some series of files, and those files could be packages, package metadata, perl modules, source tarballs, etc.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own app store with F-Droid</title>
+      <link>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</link>
+      <pubDate>Tue, 05 Nov 2013 11:55:43 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</guid>
+      <description>
+
+&lt;p&gt;(_This blog post as now been cooked into an &lt;a href=&#34;https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo&#34; target=&#34;_blank&#34;&gt;updated HOWTO&lt;/a&gt;_)&lt;/p&gt;
+
+&lt;p&gt;The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are &lt;a href=&#34;http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links&#34; target=&#34;_blank&#34;&gt;actively tapping&lt;/a&gt; into &lt;a href=&#34;http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html&#34; target=&#34;_blank&#34;&gt;the raw data streams&lt;/a&gt; of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/your-own-app-store.png&#34; alt=&#34;your-own-app-store&#34; width=&#34;300&#34; height=&#34;203&#34; class=&#34;alignright size-full wp-image-11896&#34; /&gt; &lt;a href=&#34;https://f-droid.org&#34; title=&#34;F-Droid Home Page&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; is a wonderful, free app store for Android. It is modeled after the &lt;a href=&#34;http://www.debian.org&#34; title=&#34;Debian home page&#34; target=&#34;_blank&#34;&gt;Debian GNU/Linux&lt;/a&gt; distro. It has its own package repositories (repos) and build servers for all the apps that are part of the official OS. Like Debian and Ubuntu, you can also setup your own repos for anyone to use. Any free software can be added to the official F-Droid repos, where they are built and signed by the F-Droid server. This can be annoying because it means that your apps in F-Droid are signed by a different key than your apps in the Google Play Store. If you host your own F-Droid repo, then people can use F-Droid to install your own builds signed by your own signing key.&lt;/p&gt;
+
+&lt;p&gt;This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the &lt;code&gt;fdroidserver&lt;/code&gt; tools and a webserver. For the webserver, here we use &lt;em&gt;nginx&lt;/em&gt; for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: &lt;tt&gt;F50E ADDD 2234 F563&lt;/tt&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install fdroidserver nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the case of this HOWTO, we’re going to setup a “&lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository&#34; target=&#34;_blank&#34;&gt;Simple Binary Repository&lt;/a&gt;” to host our official APKs. The repo will be set up in the recommended &lt;code&gt;fdroid/&lt;/code&gt; subdirectory. This gives the &lt;code&gt;fdroid&lt;/code&gt; tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let’s give our normal user control over this subdirectory in the web root so that we don’t need to run the F-Droid tools as root (with &lt;em&gt;nginx&lt;/em&gt;, the webroot is &lt;code&gt;/usr/share/nginx/www&lt;/code&gt;, it is different for other webservers):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mkdir /usr/share/nginx/www/fdroid
+sudo chown -R $USER /usr/share/nginx/www/fdroid
+cd /usr/share/nginx/www/fdroid
+fdroid init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now put your APK files into &lt;code&gt;/usr/share/nginx/www/fdroid/repo&lt;/code&gt; and you are ready to run the commands to build the repo (if &lt;code&gt;fdroid init&lt;/code&gt; cannot find your Android SDK in &lt;code&gt;/opt/android-sdk&lt;/code&gt; or &lt;code&gt;$ANDROID_HOME&lt;/code&gt;, it will prompt you for the path):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /usr/share/nginx/www/fdroid
+cp /path/to/*.apk /usr/share/nginx/www/fdroid/repo/
+fdroid update -c
+fdroid update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png&#34; alt=&#34;fdroidheader3&#34; width=&#34;300&#34; height=&#34;75&#34; class=&#34;alignleft size-medium wp-image-11906&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png 720w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Voila! Now you have a working F-Droid Repo! Add it to an F-Droid client on your Android device to test it out. That is done in the &lt;strong&gt;Manage Repos&lt;/strong&gt; screen available from the menu. Your repo URL will be the hostname or IP address of your machine with &lt;code&gt;/fdroid/repo/&lt;/code&gt; added to the end of it, i.e. &lt;code&gt;https://mysecureserver.com/fdroid/repo/&lt;/code&gt; or &lt;code&gt;http://192.168.2.53/fdroid/repo/&lt;/code&gt;. You can temporarily uncheck the official repos to easily see what F-Droid found in your new repo.&lt;/p&gt;
+
+&lt;h2 id=&#34;customization&#34;&gt;Customization&lt;/h2&gt;
+
+&lt;p&gt;You can also customize your repo by editing the config file. Be sure to use a programming text editor, like &lt;code&gt;editor /usr/share/nginx/www/fdroid/config.py&lt;/code&gt;. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;repo_url = &amp;quot;https://guardianproject.info/fdroid/repo&amp;quot;
+repo_name = &amp;quot;My Local Repo&amp;quot;
+repo_icon = &amp;quot;GP_Logo_hires.png&amp;quot;
+repo_description = &amp;quot;&amp;quot;&amp;quot;
+This is a local test repository of Hans-Christoph Steiner &amp;lt;&amp;amp;#x68;a&amp;amp;#x6e;s@&amp;amp;#x67;ua&amp;amp;#x72;d&amp;amp;#x69;&amp;amp;#x61;n&amp;amp;#x70;ro&amp;amp;#x6a;e&amp;amp;#x63;&amp;amp;#x74;.&amp;amp;#x69;nf&amp;amp;#x6f;&amp;gt;.  It is a repository of Guardian Project apps.
+&amp;quot;&amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To put your icon into your repo, choose a PNG image to put in your repo. The PNG goes in &lt;code&gt;/usr/share/nginx/www/fdroid/&lt;/code&gt;, the file can be named whatever you want (by default its &lt;code&gt;fdroid-icon.png&lt;/code&gt;). If you change the name from the default, be sure to update &lt;code&gt;repo_icon&lt;/code&gt; and &lt;code&gt;archive_icon&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;more-security&#34;&gt;More Security&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png&#34; alt=&#34;apg&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1029&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/02/apg.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Now that you have a working repo, its time to improve the security. Generating a repo in place is very easy, that is why this HOWTO started there, but it is not as secure as it should be if your repo is going to be your main distribution point. When generating the repo in place, make sure that &lt;code&gt;config.py&lt;/code&gt; is not accessible via the web, since it contains passwords. If the file permissions are correct (e.g. &lt;code&gt;chmod 0600 config.py&lt;/code&gt;), then &lt;code&gt;config.py&lt;/code&gt; will not be readable by the webserver. But the signing keys will still be that public server. To improve this situation, generate the repo on a non-public machine like your laptop, keeping &lt;code&gt;config.py&lt;/code&gt; and the keystore only on that machine, then use &lt;code&gt;fdroid server update&lt;/code&gt; to publish the changes to your repo on a separate server. You just need to set &lt;code&gt;serverwebroot&lt;/code&gt; in &lt;code&gt;config.py&lt;/code&gt; properly, then &lt;code&gt;fdroid server update&lt;/code&gt; will do the publishing via rsync over ssh. So both computers will have to have ssh and rsync installed and setup.&lt;/p&gt;
+
+&lt;p&gt;You can also use your own existing signing key rather than the one generated by &lt;code&gt;fdroid init&lt;/code&gt;, just edit &lt;code&gt;repo_keyalias&lt;/code&gt;, &lt;code&gt;keystore&lt;/code&gt;, &lt;code&gt;keystorepass&lt;/code&gt;, &lt;code&gt;keypass&lt;/code&gt;, and &lt;code&gt;keydname&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we like Tor and its Hidden Services for providing privacy, we also want to setup an F-Droid repository that is accessible over a Tor Hidden Service aka onion address. This will be covered in a future HOWTO.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Issues when distributing software</title>
+      <link>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</link>
+      <pubDate>Thu, 31 Oct 2013 15:51:19 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</guid>
+      <description>&lt;p&gt;There is currently a &lt;a href=&#34;http://lists.debian.org/debian-security/2013/10/msg00027.html&#34; target=&#34;_blank&#34;&gt;discussion underway on the Debian-security list&lt;/a&gt; about adding TLS and Tor functionality to the official repositories (repos) of Debian packages that is highlighting how we need to update how we think about the risks when distributing software. Mostly, we are used to thinking about making sure that the software that the user is installing is the same exact software that has been posted for distribution. This is generally handled by signing the software package, then verifying that signature on the user’s machine. This is how it works on Mac OS X, Windows, Debian, etc. etc.&lt;/p&gt;
+
+&lt;p&gt;But the authenticity of a software package is not the only issue that needs to be addressed, especially these days where many companies and governments around the world are trying to track everything that anyone is doing on the internet. In order to understand why Tor and TLS would be useful here, it good to break down the various concerns (or threats if you prefer):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity &lt;em&gt;(software can be modified while being downloaded)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;package availability &lt;em&gt;(software security updates can be individually blocked)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;repo availability &lt;em&gt;(internet services can be blocked by governments and companies)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;who’s downloading what package &lt;em&gt;(currently visible to anyone who can see the network traffic, including open wifi, etc.)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Most people distributing software are used to thinking about #1 verifying packages when thinking about the security of software distribution. #2, #3, and #4 are also important, and currently not well addressed. This is where TLS and Tor come in. Both can help prevent Man-In-The-Middle manipulations as well as reduce the amount of information that is leaked to the network. Tor can also help with #3. Since Tor is difficult to block, it is often uses to circumvent censorship. In this case a software repo could be blocked entirely, and Tor could help with gaining access to it. The Update Framework has &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/README.md&#34; title=&#34;TUF: The Update Framework -  Security&#34; target=&#34;_blank&#34;&gt;a good overview of the possible attacks&lt;/a&gt; against software repos.&lt;/p&gt;
+
+&lt;p&gt;So having software repos available with both TLS and Tor available as options is a very good idea. As far as I have seen, there are not any Debian repos available via a Tor Hidden Service. There are a number of official mirrors that already support TLS/HTTPS. You can find them using &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; title=&#34;the script in a gist paste&#34; target=&#34;_blank&#34;&gt;this script:&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#!/usr/bin/python
+
+import urllib2
+import re
+import ssl
+import sys
+
+# # find generic mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/mirror/list&#39;)
+https = []
+for line in mirrors.readlines():
+    m = re.match(&#39;.*&amp;lt;td valign=&amp;quot;top&amp;quot;&amp;gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            https.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+# print &#39;HTTPS apt repos:&#39;
+#for url in https:
+#    print url
+
+
+# # find security mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/mirror/list-full&#39;)
+securitys = []
+for line in mirrors.readlines():
+    m = re.match(&#39;.*&amp;lt;/tt&amp;gt;&amp;lt;br&amp;gt;Security updates over HTTP: &amp;lt;tt&amp;gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*/debian-security/&amp;lt;/a&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            securitys.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+# print &#39;HTTPS security repos:&#39;
+# for url in securitys:
+#     print url
+
+
+# now find the backports mirrors
+mirrors = urllib2.urlopen(&#39;http://backports-master.debian.org/Mirrors/&#39;)
+backports = []
+for line in mirrors.readlines():
+#&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://be.mirror.eurid.eu/debian-backports/&amp;quot;&amp;gt;/debian-backports/&amp;lt;/a&amp;gt;
+    m = re.match(&#39;.*&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*/debian-backports/&amp;lt;/a&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            backports.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+#print &#39;HTTPS backports repos:&#39;
+#for url in backports:
+#    print url
+
+
+# now find the CD image mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/CD/http-ftp/&#39;)
+cds = []
+for line in mirrors.readlines():
+# &amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http://mirror.easyspeedy.com/debian-cd/&amp;quot;&amp;gt;HTTP&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    m = re.match(&#39;.*&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(:.*)&amp;quot;&amp;gt;HTTP&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            cds.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+print &#39;HTTPS CD image repos:&#39;
+for url in cds:
+    print url
+
+
+# now write everything to a file
+f = open(&#39;/tmp/https-debian-archives.txt&#39;, &#39;w&#39;)
+
+f.write(&#39;HTTPS apt repos\n&#39;)
+f.write(&#39;---------------\n&#39;)
+for url in https:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS security repos\n&#39;)
+f.write(&#39;---------------\n&#39;)
+for url in securitys:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS backports repos\n&#39;)
+f.write(&#39;--------------------\n&#39;)
+for url in backports:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS CD image repos\n&#39;)
+f.write(&#39;--------------------\n&#39;)
+for url in cds:
+    f.write(url + &#39;\n&#39;)
+
+
+f.close()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

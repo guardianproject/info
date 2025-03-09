@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crypto on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/crypto/</link>
+    <description>Recent content in Crypto on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 05 Aug 2014 11:35:54 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ChatSecure 13.2: Important Beta!</title>
+      <link>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</link>
+      <pubDate>Tue, 05 Aug 2014 11:35:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</guid>
+      <description>&lt;p&gt;Today is the first public beta of ChatSecure v13.2, an important update of the user interface, networking code, and overall stability. We’ve spent the last six months tracking down crashes, memory leaks and performance issues, and have reached a stable, functional point which we want to share for public use. Reliability and simplicity our the goals, as we move towards v14 in the next few months.&lt;/p&gt;
+
+&lt;p&gt;This beta also features a new account setup wizard that we are eager for feedback on. Our goal is to enable new users to have a much simpler experience in setting up ChatSecure to connect to existing or create new accounts. We have also provided a “one-click burner” option to quickly create throwaway accounts, that require Tor and OTR encryption always, for chatting with a single contact or even just a single conversation.&lt;/p&gt;
+
+&lt;div id=&#39;gallery-10&#39; class=&#39;gallery galleryid-12577 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122247.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122247-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122226.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122226-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122048.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122048-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122039.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-122039-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121908.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121908-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/sidebar.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/sidebar-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121532.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/device-2014-08-05-121532-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#39;clear: both&#39; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We have also removed some features (for now), with the goal of focus on stripping down the experience, and then building it back up again. For example, there is now ONE contact list, that merges all contacts from all accounts together. It can be easily searched, and you don’t have to worry about which account is active – you just selected the person you want to communicate with, and we know which account they are associated with.&lt;/p&gt;
+
+&lt;p&gt;We have also removed the ability to manually set presence and status (for now), while we re-think how they should work in a mobile context a bit more. The vast majority of our users do not change either value anyhow, but we do know that smartly managing online vs away, especially if you are logged in from multiple locations to the same account, is important. Expect an update here shortly, and we’d love to have your feedback and fresh ideas on mobile presence.&lt;/p&gt;
+
+&lt;p&gt;You can currently access the beta directly via APK download (below),  through our &lt;a href=&#34;https://guardianproject.info/2014/06/06/automatic-private-distribution-of-our-test-builds/&#34;&gt;F-Droid Test Build “Nightlies” Repo&lt;/a&gt;, or through our &lt;a href=&#34;https://plus.google.com/communities/108480576214602821006&#34;&gt;Google+ Community Beta Access&lt;/a&gt;. We will roll out to our release repos and Google Play public once we get through our initial feedback on the beta.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Download ChatSecure v13.2 Beta 1 Now&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignleft size-full wp-image-12579&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/08/chatsecure-latest-qr.png&#34; alt=&#34;chatsecure-latest-qr&#34; width=&#34;123&#34; height=&#34;123&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/08/chatsecure-latest-qr.png 123w, https://guardianproject.info/wp-content/uploads/2014/08/chatsecure-latest-qr-100x100.png 100w&#34; sizes=&#34;(max-width: 123px) 100vw, 123px&#34; /&gt;&lt;br /&gt;
+APK: &lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v13.2.0-BETA-1.apk&#34;&gt;https://guardianproject.info/releases/ChatSecure-v13.2.0-BETA-1.apk&lt;br /&gt;
+&lt;/a&gt;&lt;br /&gt;
+PGP Sig: &lt;a href=&#34;https://guardianproject.info/releases/ChatSecure-v13.2.0-alpha-10.apk.asc&#34;&gt;https://guardianproject.info/releases/ChatSecure-v13.2.0-alpha-10.apk.asc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;The source is tagged here: &lt;a href=&#34;https://github.com/guardianproject/ChatSecureAndroid/releases/tag/13.2.0-beta-1&#34;&gt;https://github.com/guardianproject/ChatSecureAndroid/releases/tag/13.2.0-beta-1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The release includes fixes from our completed &lt;a href=&#34;https://dev.guardianproject.info/projects/gibberbot/issues?utf8=%E2%9C%93&amp;amp;set_filter=1&amp;amp;f%5B%5D=fixed_version_id&amp;amp;op%5Bfixed_version_id%5D=%3D&amp;amp;v%5Bfixed_version_id%5D%5B%5D=102&amp;amp;f%5B%5D=&amp;amp;c%5B%5D=tracker&amp;amp;c%5B%5D=status&amp;amp;c%5B%5D=priority&amp;amp;c%5B%5D=subject&amp;amp;c%5B%5D=assigned_to&amp;amp;c%5B%5D=updated_on&amp;amp;c%5B%5D=due_date&amp;amp;group_by=&#34;&gt;v13 milestone&lt;/a&gt;, and our &lt;a href=&#34;https://dev.guardianproject.info/versions/121&#34;&gt;v14 milestone “Armadillo’s Agram”&lt;/a&gt;, which you can view on our project tracker (&lt;a href=&#34;https://dev.guardianproject.info/projects/gibberbot/&#34;&gt;https://dev.guardianproject.info/projects/gibberbot/&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On Verifying Identity Using Cryptography</title>
+      <link>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</link>
+      <pubDate>Mon, 19 Mar 2012 11:27:51 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity.gif&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity-150x150.gif&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1684&#34; /&gt;&lt;/a&gt;One of the most important uses of cryptography these days is verifying the identity of the other side of a digital conversation. That conversation could be between two people using OTR-encrypted IM, a web browser showing a bank website, a Debian Developer uploading a package to the Debian build server, an ssh client logging into an ssh server, and on and on. In all of these cases, cryptography is used to ensure that the software is indeed receiving replies from the expected entity. This happens by checking the current cryptographic key against one that is known to be correct. That is essential to the whole process. If you see the key for the first time, you have no way of knowing whether that is indeed the key you are expecting because there is no point of reference.&lt;/p&gt;
+
+&lt;p&gt;In order for this validation of identity to work, there needs to be a method of verifying any given key and making it a reference. There are many ideas about how to do this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a trusted list of central certificate authorities like in HTTPS&lt;/li&gt;
+&lt;li&gt;key-signing parties where people validate and sign each other’s keys in person, like used with the OpenPGP Web of Trust&lt;/li&gt;
+&lt;li&gt;“trust on first use” (aka “Persistence of Pseudonym”), where you save the key the first time you see it, and then use that as a reference (this is the way most people use SSH)&lt;/li&gt;
+&lt;li&gt;fingerprint verification, where the two people wanting to communicate cryptographically use another channel to manually check each other’s key fingerprints, like a phone call (this is used a lot in OTR and OpenPGP)&lt;/li&gt;
+&lt;li&gt;the Socialist Millionaires’ Protocol (SMP), which is a combination of user-generated question/answer pairs with a cryptographic technique that lets each side confirm whether the other answered the question correctly without divulging any information (this was recently added to OTR and is implemented in Pidgin, Gibberbot, and maybe a couple other programs)&lt;/li&gt;
+&lt;li&gt;a manually confirmed shared secret like a short password (ZRTP uses this when starting secure phone calls)&lt;/li&gt;
+&lt;li&gt;whitelists of fingerprints of widely used keys (aka &lt;a href=&#34;http://www.imperialviolet.org/2011/05/04/pinning.html&#34; target=&#34;_blank&#34;&gt;public key pinning&lt;/a&gt;) (this was recently added to Chrome in the wake of the HTTPS certificate authority failures)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/fingerprint.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/fingerprint-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1686&#34; /&gt;&lt;/a&gt;Each of these techniques has its advantages and disadvantages, but generally the higher level of verification provided means the more work to do the process. Most people don’t need the high level of verification provided by OpenPGP key signing parties, but maybe if it was fun and much easier to do, then a lot more people would do it. “Trust on first use” is really easy to use and implement, and has been working pretty well for a lot of people who use SSH and OTR. But it has big shortcomings in environments where the state or other central authority that provides the internet infrastructure wants to spy on its users. HTTPS has proven to be quite easy to use, but it has also &lt;a href=&#34;https://www.eff.org/deeplinks/2011/08/iranian-man-middle-attack-against-google&#34; target=&#34;_blank&#34;&gt;proven&lt;/a&gt; to be &lt;a href=&#34;http://www.theregister.co.uk/2011/08/29/fraudulent_google_ssl_certificate/&#34; target=&#34;_blank&#34;&gt;quite&lt;/a&gt; &lt;a href=&#34;https://arstechnica.com//security/news/2011/03/how-the-comodo-certificate-fraud-calls-ca-trust-into-question.ars&#34; title=&#34;How the Comodo certificate fraud calls CA trust into question&#34; target=&#34;_blank&#34;&gt;breakable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Currently, each of these techniques described above is used as the sole means of verification, then the level of verification is represented as “verified” or “not verified”. This is definitely the way that HTTPS and SSH handle it. OTR is a bit different, it has 3 states of verification: “new key”, “unverified key” i.e. trusted on first use, or “verified”, and good OTR chat apps will represent these three states in the UI. Then OpenPGP is perhaps the opposite extreme: it provides both chains of verification signatures via the Web of Trust but also user-set “trust levels” from 0 to 255 for any given key.&lt;/p&gt;
+
+&lt;p&gt;Perhaps an answer is to cryptographically link up these different ways of verification and represent key verification as a continuum. Then when the possibility of linking in “trust on first use” and other techniques was there, people could gradually build up cryptographic trust as they needed it. Starting with “I have seen this key before”, then on to “I have gotten them to verify their OTR key with an SMP question/answer”, then to “I have an OpenPGP trust path to them”, to “I have met them in person and manually verified their key and identity”.&lt;/p&gt;
+
+&lt;p&gt;To go into technical detail as an example, GnuPG supports RSA, DSA, ECDSA, El Gamal, and other key types as subkeys for an OpenPGP key. Those core algorithms core basically all of the most common uses of cryptography, including HTTPS, SSH, OTR, and OpenPGP. The link between an OpenPGP key and its subkeys is perhaps the strongest link for verification that exists, so if a given person includes their OTR key, for example, into their OpenPGP key, that provides a strong cryptographic link between them, and one that is easily publicly sharable via the OpenPGP public keyservers. When two people verify their OTR keys using the SMP question/answer, this verification could then extend to their OpenPGP keys if their OTR keys were subkeys. (&lt;a href=&#34;http://web.monkeysphere.info&#34; target=&#34;_blank&#34;&gt;The Monkeysphere Project&lt;/a&gt; is one such implementation of this idea, using OpenPGP keys for SSH and HTTPS).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/verified.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/verified-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1685&#34; /&gt;&lt;/a&gt;Then the last piece of this puzzle is how to represent all of this complexity to the users. The essential part is to stop representing trust as binary yes/no. A one-dimensional continuum provides a lot more info and is a very commonly understood concept in computers (think progress bars). The hard part of this question is ranking the various techniques in how much progress they provide towards the goal of solid identity verification.&lt;/p&gt;
+
+&lt;p&gt;For this round of the &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; title=&#34;Portable Shared Security Tokens&#34; target=&#34;_blank&#34;&gt;PSST Project&lt;/a&gt;, we have focused on first allowing people to easily move around their OTR identities, then worked on testing out the idea of linking in all identity keys into an OpenPGP key. From what we have seen so far, we believe this is not only feasible but will provide a solid platform for linking together all these verification techniques and identity keys. And on top of that, with diligent attention to user experience and testing, it should be possible to create user interfaces that make navigating all of this a common, daily task for most computer users.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

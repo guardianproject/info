@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Authenticator on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/google-authenticator/</link>
+    <description>Recent content in Google Authenticator on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 24 Feb 2015 04:41:29 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/google-authenticator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Phishing for developers</title>
+      <link>https://guardianproject.github.io/info/2015/02/24/phishing-for-developers/</link>
+      <pubDate>Tue, 24 Feb 2015 04:41:29 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/02/24/phishing-for-developers/</guid>
+      <description>&lt;p&gt;I recently received a very interesting phishing email directed at developers with apps in Google Play. One open question is, how targeted it was: did anyone else get this?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Trawling_Drawing.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing.jpg&#34; alt=&#34;320px-Trawling_Drawing&#34; width=&#34;320&#34; height=&#34;240&#34; class=&#34;alignright size-full wp-image-12873&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing.jpg 320w, https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-300x225.jpg 300w&#34; sizes=&#34;(max-width: 320px) 100vw, 320px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+It turns out that Google has been recently stepping up enforcement of certain terms, so it looks like some people are taking advantage of that. It is a pretty sophisticated or manually targeted phishing email since they got the name of the app, email address, and project name all correct. The one detail that gives it away is that the &lt;code&gt;From:&lt;/code&gt; address uses the fake domain, even though it would have been possible to send the email using the actual Google account in the &lt;code&gt;From:&lt;/code&gt; field. But this likely would have triggered spam and malware detection algorithms. So they took a subtly different approach by using a real Google address in the &lt;code&gt;Reply-To:&lt;/code&gt;. But they were clever enough to use the same sub-domain, &lt;code&gt;gooogle.com.de&lt;/code&gt;, in the From: address as in the phishing link &lt;code&gt;accounts.gooogle.com.de&lt;/code&gt;, following a Google pattern of subdomains. They also included other real Google links for support and as a “follow up” URL.&lt;/p&gt;
+
+&lt;p&gt;When I received this, I didn’t notice the clickable link in the email since I never view HTML email. I forwarded it on to our internal email list where others figured out it was fake. In the HTML version of the email, it has this link from the fake domain &lt;code&gt;accounts.gooogle.com.de&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;p&gt;&lt;b&gt;Your application will be removed&lt;/b&gt; if you do not sign in to the &lt;a
+href=&#34;http://accounts.gooogle.com.de/ServiceLogin?service=androiddeveloper&amp;passive=1209600&amp;continue=https://play.google.com/apps/publish/&amp;followup=https://play.google.com/apps/publish/&amp;type=3days&amp;pkg=org.torproject.android&#34;&gt;Developer
+Console&lt;/a&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;This attacker might have been targeting anyone who would fall for the trick, without really caring what kind of app it was. For any accounts that the attacker got access to, they would be able to change the description text, home page, email address, etc. transparently without raising any particular warning signs. The attacker could place a recommendation in the app descriptions to also install another app, and that app would be the attacker’s malware.&lt;/p&gt;
+
+&lt;p&gt;The attacker could not upload their own updates to an existing app, because Google Play checks uploaded APKs to make sure that the signing keys match the APKs that are already there. The attacker could create a whole new app in that developer’s account, and hope to gain installs since it would be related. Google Play has a standard view to show users apps by the same developer, for example.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Two-factor authentication and beyond&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If a developer fell for this phishing attack, but had the forethought to have set up &lt;a href=&#34;https://support.google.com/accounts/answer/180744&#34; target=&#34;_blank&#34;&gt;Google 2-Step Verification&lt;/a&gt;, then even if the phisher got the username and password, they would be unable to log into that account since they would not have access to the two-factor SMS or &lt;a href=&#34;https://support.google.com/accounts/answer/1066447&#34; target=&#34;_blank&#34;&gt;Google Authenticator&lt;/a&gt; message. All developer accounts on Google Play should be required to use Google 2-Step Verification. Set it up &lt;strong&gt;now&lt;/strong&gt;, if you have not already!&lt;/p&gt;
+
+&lt;p&gt;We also need to consider the kinds of sophisticated attacks from large state actors that are leaking out to the public. Indeed, many of these attacks are also available for any government to &lt;a href=&#34;https://netzpolitik.org/2014/gamma-finfisher-hacked-40-gb-of-internal-documents-and-source-code-of-government-malware-published/&#34; target=&#34;_blank&#34;&gt;purchase from companies like Finfisher&lt;/a&gt;. And it is only a matter of time before these techniques are widespread and easier, following the rule of “attacks never get worse; they only get better”. This phishing website could also contain malicious Javascript that installs malware that can both log all key strokes in search of passwords, as well as search for known secret caches like Java keystores for Android signing keys, and browser cookies that allow the user to skip two-factor authentication, like the &lt;a href=&#34;https://support.google.com/accounts/answer/2544838&#34; target=&#34;_blank&#34;&gt;cookie from Google’s two-step authentication&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;One takeaway here: developers should &lt;strong&gt;never&lt;/strong&gt; keep or use their APK signing keys on a machine that they also use to read email and browse the web.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Full source of the email&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the full source of the original email that I received, for those who might be interested in digging deeper. Another detail you can see there is that the email was not sent using Google infrastructure at all.&lt;/p&gt;
+
+&lt;pre&gt;Return-Path: &lt;n&amp;#x6f;&amp;#x72;e&amp;#x70;&amp;#x6c;y&amp;#x2d;&amp;#x64;e&amp;#x76;&amp;#x65;l&amp;#x6f;&amp;#x70;e&amp;#x72;&amp;#x2d;g&amp;#x6f;&amp;#x6f;g&amp;#x6c;&amp;#x65;p&amp;#x6c;&amp;#x61;y&amp;#x40;&amp;#x67;o&amp;#x6f;&amp;#x6f;gl&amp;#x65;.c&amp;#x6f;m.&amp;#x64;e&gt;
+X-Spam-Checker-Version: SpamAssassin 3.3.2 (2011-06-06) on
+    rodolpho.mayfirst.org
+X-Spam-Level: *
+X-Spam-Status: No, score=1.3 required=5.0 tests=HTML_MESSAGE,RDNS_NONE
+    autolearn=disabled version=3.3.2
+X-Original-To: s&amp;#x75;p&amp;#x70;o&amp;#x72;t&amp;#x40;gu&amp;#x61;r&amp;#x64;i&amp;#x61;n&amp;#x70;ro&amp;#x6a;e&amp;#x63;t&amp;#x2e;i&amp;#x6e;f&amp;#x6f;
+Delivered-To: gphan&amp;#x73;&amp;#x40;&amp;#x72;&amp;#x6f;&amp;#x64;olpho&amp;#x2e;&amp;#x6d;&amp;#x61;&amp;#x79;&amp;#x66;irst.&amp;#x6f;&amp;#x72;&amp;#x67;
+Received: from rodolpho.mayfirst.org (localhost [127.0.0.1])
+    by rodolpho.mayfirst.org (Postfix) with ESMTP id 4CFCD5E3D
+    for &lt;&amp;#x73;&amp;#x75;&amp;#x70;port@&amp;#x67;&amp;#x75;&amp;#x61;&amp;#x72;dian&amp;#x70;&amp;#x72;&amp;#x6f;&amp;#x6a;ect.&amp;#x69;&amp;#x6e;&amp;#x66;&amp;#x6f;&gt;; Fri, 20 Feb 2015 04:30:50 -0500 (EST)
+X-Greylist: delayed 543 seconds by postgrey-1.34 at rodolpho; Fri, 20 Feb 2015
+04:30:49 EST
+Received: from astra1695.startdedicated.com (unknown [85.25.194.40])
+    by rodolpho.mayfirst.org (Postfix) with ESMTP id D74C83CD84
+    for &lt;sup&amp;#x70;&amp;#x6f;&amp;#x72;t@g&amp;#x75;&amp;#x61;&amp;#x72;dia&amp;#x6e;&amp;#x70;&amp;#x72;ojec&amp;#x74;&amp;#x2e;&amp;#x69;nfo&gt;; Fri, 20 Feb 2015 04:30:48 -0500 (EST)
+Received: from gooogle.com.de (astra1695 [85.25.194.40])
+    by astra1695.startdedicated.com (Postfix) with ESMTPA id 209D57C0918
+    for &lt;su&amp;#x70;&amp;#x70;or&amp;#x74;&amp;#x40;gua&amp;#x72;&amp;#x64;ia&amp;#x6e;&amp;#x70;ro&amp;#x6a;&amp;#x65;ct.&amp;#x69;&amp;#x6e;fo&gt;; Fri, 20 Feb 2015 10:21:32 +0100 (CET)
+Date: Fri, 20 Feb 2015 09:21:32 +0000
+To: The Tor Project &lt;&amp;#x73;u&amp;#x70;p&amp;#x6f;rt&amp;#x40;g&amp;#x75;ar&amp;#x64;i&amp;#x61;np&amp;#x72;o&amp;#x6a;e&amp;#x63;&amp;#x74;.&amp;#x69;n&amp;#x66;o&gt;
+From: Google Play Developer Support &lt;n&amp;#x6f;r&amp;#x65;p&amp;#x6c;y&amp;#x2d;de&amp;#x76;e&amp;#x6c;o&amp;#x70;e&amp;#x72;-g&amp;#x6f;o&amp;#x67;l&amp;#x65;p&amp;#x6c;a&amp;#x79;@g&amp;#x6f;o&amp;#x6f;g&amp;#x6c;e&amp;#x2e;co&amp;#x6d;.&amp;#x64;e&gt;
+Reply-To: Google Play Developer Support &lt;norepl&amp;#x79;&amp;#x2d;&amp;#x64;&amp;#x65;&amp;#x76;&amp;#x65;loper-g&amp;#x6f;&amp;#x6f;&amp;#x67;&amp;#x6c;&amp;#x65;&amp;#x70;lay@go&amp;#x6f;&amp;#x67;&amp;#x6c;&amp;#x65;&amp;#x2e;&amp;#x63;om&gt;
+Subject: 7-Day Notification of Google Play Developer Term Violation
+Message-ID: &lt;7f7&amp;#x32;&amp;#x35;&amp;#x34;&amp;#x30;087c&amp;#x38;&amp;#x31;&amp;#x66;fe2e&amp;#x61;&amp;#x64;&amp;#x35;6042&amp;#x35;&amp;#x64;&amp;#x30;d477&amp;#x40;&amp;#x67;&amp;#x6f;oogl&amp;#x65;&amp;#x2e;&amp;#x63;om.d&amp;#x65;&gt;
+X-Priority: 3
+X-Mailer: PHPMailer 5.2.9 (https://github.com/PHPMailer/PHPMailer/)
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+    boundary=&#34;b1_7f72540087c81ffe2ead560425d0d477&#34;
+Content-Transfer-Encoding: 8bit
+X-Virus-Scanned: ClamAV using ClamSMTP
+
+--b1_7f72540087c81ffe2ead560425d0d477
+Content-Type: text/plain; charset=us-ascii
+
+Hello Google Play Developer,
+This is a notification that your application, Orbot: Proxy with Tor, with
+package ID org.torproject.android, is currently in violation of our developer
+terms.
+REASON FOR WARNING: Violation of the spam provisions of the Content Policy.
+Please refer to the spam policy help article for more information.
+Do not use irrelevant, misleading, or excessive keywords in apps descriptions,
+titles, or metadata.
+Please refer to the keyword spam policy help article for more information.
+Your application will be removed if you do not sign in to the Developer
+Console and make modifications to your application&#39;s description to bring it
+into compliance within 7 days of the issuance of this notification.If you have
+additional applications in your catalog, please also review them for
+compliance. Note that any remaining applications found to be in violation will
+be removed from the Google Play Store.
+Please also consult the Policy and Best Practices and the Developer
+Distribution Agreement as you bring your applications into compliance. You can
+also review this Google Play Help Center article for more information on this
+warning.
+All violations are tracked. Serious or repeated violations of any nature will
+result in the termination of your developer account, and investigation and
+possible termination of related Google accounts.
+Regards,
+Google Play Team
+1600 Amphitheatre Parkway
+Mountain View, CA 94043
+
+
+--b1_7f72540087c81ffe2ead560425d0d477
+Content-Type: text/html; charset=us-ascii
+
+&lt;p&gt;Hello Google Play Developer,&lt;/p&gt;
+&lt;p&gt;This is a notification that your application, &lt;b&gt;Orbot: Proxy with Tor&lt;/b&gt;,
+with package ID &lt;b&gt;org.torproject.android&lt;/b&gt;, is currently in violation of
+our developer terms.&lt;br /&gt;
+&lt;b&gt;REASON FOR WARNING&lt;/b&gt;: Violation of the spam provisions of the Content
+Policy. Please refer to the spam policy help article for more information.&lt;/p&gt;
+&lt;p&gt;Do not use irrelevant, misleading, or excessive keywords in apps
+descriptions, titles, or metadata.&lt;br /&gt;
+Please refer to the keyword spam policy help article for more information.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Your application will be removed&lt;/b&gt; if you do not sign in to the &lt;a
+href=&#34;http://accounts.gooogle.com.de/ServiceLogin?service=androiddeveloper&amp;passive=1209600&amp;continue=https://play.google.com/apps/publish/&amp;followup=https://play.google.com/apps/publish/&amp;type=3days&amp;pkg=org.torproject.android&#34;&gt;Developer
+Console&lt;/a&gt; and make modifications to your application&amp;#x27;s description to
+bring it into compliance within &lt;b&gt;7 days&lt;/b&gt; of the issuance of this
+notification.&lt;br&gt;If you have additional applications in your catalog, please
+also review them for compliance. Note that any remaining applications found to
+be in violation will be removed from the Google Play Store.&lt;/p&gt;
+&lt;p&gt;Please also consult the &lt;a
+href=&#34;https://support.google.com/googleplay/android-developer/#topic=2364761&#34;&gt;Policy
+and Best Practices&lt;/a&gt; and the &lt;a
+href=&#34;https://play.google.com/about/developer-distribution-agreement.html&#34;&gt;Developer
+Distribution Agreement&lt;/a&gt; as you bring your applications into compliance. You
+can also review this Google Play Help Center article for more information on
+this warning.&lt;br /&gt;
+All violations are tracked. Serious or repeated violations of any nature will
+result in the termination of your developer account, and investigation and
+possible termination of related Google accounts.&lt;/p&gt;
+&lt;p&gt;Regards,&lt;br&gt;
+Google Play Team&lt;br&gt;
+1600 Amphitheatre Parkway&lt;br&gt;
+Mountain View, CA 94043&lt;/p&gt;
+
+
+
+--b1_7f72540087c81ffe2ead560425d0d477--
+&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

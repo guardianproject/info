@@ -1,0 +1,258 @@
+[
+  {
+    "id": "about",
+    "translation": "sobre"
+  },
+  {
+    "id": "apps",
+    "translation": "apps"
+  },
+  {
+    "id": "code",
+    "translation": "código"
+  },
+  {
+    "id": "archive",
+    "translation": "arquivo"
+  },
+  {
+    "id": "contact",
+    "translation": "contato"
+  },
+  {
+    "id": "team",
+    "translation": "Equipa"
+  },
+  {
+    "id": "press",
+    "translation": "Imprensa"
+  },
+  {
+    "id": "archivedApps",
+    "translation": "Apps arquivadas"
+  },
+  {
+    "id": "tutorials",
+    "translation": "Tutoriais"
+  },
+  {
+    "id": "Services",
+    "translation": "Serviços"
+  },
+  {
+    "id": "words",
+    "translation": "palavras"
+  },
+  {
+    "id": "dateFormat",
+    "translation": "2 de Janeiro de 2006"
+  },
+  {
+    "id": "shortdateFormat",
+    "translation": "2 Jan, 2006 15:04:05"
+  },
+  {
+    "id": "postedOnDate",
+    "translation": "Postado no {{ .Count }}"
+  },
+  {
+    "id": "pageNotFound",
+    "translation": "Opa, esta página não existe. Segue o jogo. (Erro 404)"
+  },
+  {
+    "id": "lastModified",
+    "translation": "(Modificado pela última vez no {{ .Count }})"
+  },
+  {
+    "id": "translationsLabel",
+    "translation": "Outros Idiomas: "
+  },
+  {
+    "id": "translationsSeparator",
+    "translation": ", "
+  },
+  {
+    "id": "readMore",
+    "translation": "Mais Informações"
+  },
+  {
+    "id": "olderPosts",
+    "translation": "Postagens Antigas"
+  },
+  {
+    "id": "newerPosts",
+    "translation": "Novas Postagens"
+  },
+  {
+    "id": "previousPost",
+    "translation": "Postagem Anterior"
+  },
+  {
+    "id": "nextPost",
+    "translation": "Próxima Postagem"
+  },
+  {
+    "id": "readTime",
+    "translation": "minutos"
+  },
+  {
+    "id": "poweredBy",
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> powered &nbsp;•&nbsp; Tema de <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptado para <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+  },
+  {
+    "id": "toggleNavigation",
+    "translation": "Alternar a navegação"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "Idioma"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "Pesquisa"
+  },
+  {
+    "id": "gcseLabelLong",
+    "translation": "Pesquisa {{ .Site.Title }}"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "Fechar"
+  },
+  {
+    "id": "moreComment",
+    "translation": "comentários"
+  },
+  {
+    "id": "useMarkdown",
+    "translation": "Pode usar sintaxe Markdown"
+  },
+  {
+    "id": "yourName",
+    "translation": "O seu nome"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "O seu endereço de e-mail"
+  },
+  {
+    "id": "yourWebsite",
+    "translation": "O seu site web"
+  },
+  {
+    "id": "show",
+    "translation": "Exibir"
+  },
+  {
+    "id": "noComment",
+    "translation": "Nenhum comentário"
+  },
+  {
+    "id": "oneComment",
+    "translation": "comentário"
+  },
+  {
+    "id": "comments",
+    "translation": "comentários"
+  },
+  {
+    "id": "seeAlso",
+    "translation": "Veja também"
+  },
+  {
+    "id": "blogPosts",
+    "translation": "Postagens do Blog"
+  },
+  {
+    "id": "onGitHub",
+    "translation": "no GitHub"
+  },
+  {
+    "id": "onGitLab",
+    "translation": "no GitLab"
+  },
+  {
+    "id": "webSite",
+    "translation": "website"
+  },
+  {
+    "id": "translation",
+    "translation": "Tradução"
+  },
+  {
+    "id": "translateOn",
+    "translation": "Traduza no"
+  },
+  {
+    "id": "edit",
+    "translation": "Editar"
+  },
+  {
+    "id": "sourceCode",
+    "translation": "código fonte"
+  },
+  {
+    "id": "Blog",
+    "translation": "Blog"
+  },
+  {
+    "id": "editOn",
+    "translation": "Editar no"
+  },
+  {
+    "id": "metadata",
+    "translation": "metadata"
+  },
+  {
+    "id": "description",
+    "translation": "descrição"
+  },
+  {
+    "id": "Export Information",
+    "translation": "Exportar a Informação"
+  },
+  {
+    "id": "How You Can Work With Us",
+    "translation": "Como Você Pode nos Ajudar"
+  },
+  {
+    "id": "About Guardian Project",
+    "translation": "Sobre o Projeto Guardian"
+  },
+  {
+    "id": "Partners and Funding",
+    "translation": "Parceiros e Investidores"
+  },
+  {
+    "id": "Press",
+    "translation": "Imprensa"
+  },
+  {
+    "id": "Signing Keys",
+    "translation": "Chaves de Assinatura"
+  },
+  {
+    "id": "Team",
+    "translation": "Equipa"
+  },
+  {
+    "id": "Security You Can Trust",
+    "translation": "A Segurança que Você Pode Confiar"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "Apps arquivadas"
+  },
+  {
+    "id": "Live Chatrooms",
+    "translation": "Salas de Bate-papo em Tempo Real"
+  },
+  {
+    "id": "Contact",
+    "translation": "Contato"
+  },
+  {
+    "id": "Jobs and Internships",
+    "translation": "Trabalhos e Estágios"
+  }
+]

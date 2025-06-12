@@ -108,6 +108,9 @@ for app in apps:
     if app['packageName'] == 'org.article19.circulo':
         # remove Circulo until it has localized description in the fdroid repo
         continue
+    if app['packageName'] in ('org.thoughtcrime.securesms', 'org.mozilla.klar'):
+        # remove apps that are only shipped in the repo, but they are not ours
+        continue
     languages = set()
     if 'localized' in app:
         for language in list(app['localized'].keys()):

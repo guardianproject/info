@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iocipher on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/iocipher/</link>
+    <description>Recent content in Iocipher on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/iocipher/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IOCipher 1.0 community reboot</title>
+      <link>https://guardianproject.github.io/info/2025/02/01/iocipher-1.0-community-reboot/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2025/02/01/iocipher-1.0-community-reboot/</guid>
+      <description>
+
+&lt;h2 id=&#34;iocipher-update-to-version-1-0&#34;&gt;IOCipher update to version 1.0&lt;/h2&gt;
+
+&lt;p&gt;We are thrilled to announce that a community contributor has picked up maintaining a fork of IOCipher and updated to IOCipher 1.0,
+designed to enhance your development experience and empower you to create more secure applications with ease. Here’s what’s new and why it matters to you:&lt;/p&gt;
+
+&lt;h3 id=&#34;1-enhanced-features&#34;&gt;1. Enhanced Features&lt;/h3&gt;
+
+&lt;p&gt;We introduced a few new features. Most notably IOCipher is also available on Desktop Java for Linux and Windows now. (Although not all IOCipher features are fully supported on Windows).
+The latest release even includes some example code for accessing IOCipher VFS using Python.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-dependency-updates&#34;&gt;2. Dependency updates&lt;/h3&gt;
+
+&lt;p&gt;We updated to the newest SQLCipher and OpenSSL.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-bug-fixes-and-stability&#34;&gt;3. Bug Fixes and Stability&lt;/h3&gt;
+
+&lt;p&gt;Now your virtual files can be as large as you want, there is no longer a hard limit at 4 GB.
+We fixed some bugs that testing the JNI code with ASAN has found.&lt;/p&gt;
+
+&lt;h2 id=&#34;iocipher-encrypted-virtual-disk-for-android-and-linux-jvm&#34;&gt;IOCipher: Encrypted Virtual Disk (for Android and Linux JVM)&lt;/h2&gt;
+
+&lt;p&gt;IOCipher is a virtual encrypted disk for apps without requiring the device to be rooted. It uses a clone of the standard java.io API for working with files. Just password handling &amp;amp; opening the virtual disk are what stand between developers and fully encrypted file storage. It is based on libsqlfs and SQLCipher.&lt;/p&gt;
+
+&lt;p&gt;IOCipher is based on transactions in SQLite, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite’s transactions prevent the whole file system from being corrupted. This is important in Android since an Activity or Service can be killed at any moment without warning.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Comes with &lt;strong&gt;all batteries included&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Secure transparent app-level &lt;strong&gt;virtual encrypted disk&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Multi-threaded access&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No root&lt;/strong&gt; required&lt;/li&gt;
+&lt;li&gt;Only &lt;strong&gt;three new methods&lt;/strong&gt; to learn: &lt;code&gt;VirtualFileSystem.get()&lt;/code&gt;, &lt;code&gt;VirtualFileSystem.mount(dbFile, password)&lt;/code&gt;, and &lt;code&gt;VirtualFileSystem.unmount()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Supports Android API 21 and above&lt;/li&gt;
+&lt;li&gt;Supports Java version 8 and above on Desktop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;adding-iocipher-to-your-app&#34;&gt;Adding IOCipher to your App&lt;/h2&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a minimal example for using IOCipher to encrypt all files your app is storing on a phone:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add to your project build.gradle
+&lt;pre&gt;
+allprojects {
+repositories {
+    google()
+    mavenCentral()
+    maven {
+        url &amp;ldquo;&lt;a href=&#34;https://jitpack.io&amp;quot;&#34;&gt;https://jitpack.io&amp;quot;&lt;/a&gt;
+    }
+}
+}
+&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;add to your module build.gradle
+&lt;pre&gt;
+implementation &amp;lsquo;com.github.zoff99:pkgs_guardianprojectIOCipher:1.0.5&amp;rsquo;
+&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;get the VFS singleton using &lt;code&gt;VirtualFileSystem.get()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;on first run, create the container file with a password using &lt;code&gt;VirtualFileSystem.createNewContainer(dbFile, password)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;mount the container file with a password using &lt;code&gt;VirtualFileSystem.mount(dbFile, password)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;replace the relevant &lt;code&gt;java.io&lt;/code&gt; import statements with &lt;code&gt;info.guardianproject.iocipher&lt;/code&gt;
+&lt;pre&gt;
+import info.guardianproject.iocipher.File;
+import info.guardianproject.iocipher.FileOutputStream;
+import info.guardianproject.iocipher.FileReader;
+import info.guardianproject.iocipher.IOCipherFileChannel;
+import info.guardianproject.iocipher.VirtualFileSystem;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For a full Android example project see: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/007_example_android&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/007_example_android&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./android_example_app.png&#34; alt=&#34;Showing the Android IOCipher Example App running on the Android Emulator&#34; height=&#34;400px&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;source-code&#34;&gt;Source Code&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;all you need for your project: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack&#34;&gt;https://github.com/zoff99/iocipher_pack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;optional&#34;&gt;optional:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a simple test app for Android: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/007_example_android&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/007_example_android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple example desktop file manager app: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/004_example_jvm&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/004_example_jvm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple python example for Linux: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/006_example_python&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/006_example_python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple C API example for Linux: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/005_example_c&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/005_example_c&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple C API example for Windows: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/005_example_c_win64&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/005_example_c_win64&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the core: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/002_src_libsqlfs&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/002_src_libsqlfs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage-notes&#34;&gt;Usage notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only one active mount per-app is supported&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher 64-bit builds</title>
+      <link>https://guardianproject.github.io/info/2019/10/07/iocipher-64-bit-builds/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/10/07/iocipher-64-bit-builds/</guid>
+      <description>&lt;p&gt;IOCipher v0.5 includes fulil 64-bit support and works with the latest
+SQLCipher versions.  This means that the minimum supported SDK version
+had to be bumped to &lt;em&gt;android-14&lt;/em&gt;, which is still older than what
+Google Play Services and Android Support libraries require.&lt;/p&gt;
+
+&lt;p&gt;One important thing to note is that newer SQLCipher versions require
+an upgrade procedure since they changed how the data is encrypted.
+Since IOCipher does use a SQLCipher database, and IOCipher virtual
+disks will have to be upgraded.  That can be done by directly using the
+&lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-api/#cipher_migrate&#34;&gt;SQLCipher migration method&lt;/a&gt;
+on your IOCipher database files before opening them again.  It should
+be possible to stick with SQLCipher
+&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/issues/446&#34;&gt;v3.5.9 to avoid this&lt;/a&gt;,
+but this has not been tested.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher is the antidote to “Man-in-the-Disk” attack</title>
+      <link>https://guardianproject.github.io/info/2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/</link>
+      <pubDate>Fri, 17 Aug 2018 16:56:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/</guid>
+      <description>&lt;p&gt;Recently, at DEFCON 2018, researchers at Check Point &lt;a href=&#34;https://blog.checkpoint.com/2018/08/12/man-in-the-disk-a-new-attack-surface-for-android-apps/&#34;&gt;announced a new kind of attack&lt;/a&gt; made possible by the way many Android apps are implemented. In summary, developers use the shared external storage space in an unsafe manner, by not taking into consideration that other apps also have read and write access to the same space. A malicious app can modify data used by another app, as a vector for compromising that app, causing it to be compromised or crash.&lt;/p&gt;
+
+&lt;p&gt;While Google does provide &lt;a href=&#34;https://developer.android.com/training/articles/security-tips&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;guidelines&lt;/a&gt; on safe external storage use, most developers ignore them. Here is what they say:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;“Perform input validation when handling data from external storage”&lt;/li&gt;
+&lt;li&gt;“Do not store executables or class files on External Storage”&lt;/li&gt;
+&lt;li&gt;“External Storage files should be signed and cryptographically verified prior to dynamic loading”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is most likely due to lack of time or knowledge…. and, that is where our &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;IOCipher encrypted virtual filesystem library for Android&lt;/a&gt; comes in!&lt;/p&gt;
+
+&lt;p&gt;IOCipher provides a virtual encrypted disk for Android apps without requiring the device to be rooted. It uses a clone of the standard &lt;code&gt;java.io&lt;/code&gt; API for working with files, so developers already know how to use it. Only password handling, and opening the virtual disk are what stand between the developer and working encrypted file storage. It is based on and &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SQLCipher&lt;/a&gt;, and designed to work with &lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CacheWord&lt;/a&gt; for handling the keys and passwords.&lt;/p&gt;
+
+&lt;p&gt;Regarding the three guidelines from Google, by storing downloaded data into an IOCipher virtual volume, you both benefit from the use of external storage, while ensuring, thanks to cryptography, that your data or executable code has not been read or modified by another application. If a malicious application tries to access or modify the encrypted volume, it will be detected and not able to load, without causing a crash in the application.&lt;/p&gt;
+
+&lt;p&gt;You can find IOCipher on Github today (and likely get it implemented in your app today, as well!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34;&gt;https://github.com/guardianproject/IOCipher&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CipherKit reproducible builds</title>
+      <link>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</link>
+      <pubDate>Mon, 21 Sep 2015 10:54:05 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the &lt;em&gt;exact&lt;/em&gt; same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).&lt;/p&gt;
+
+&lt;p&gt;Our core CipherKit libraries are the more sensitive areas, so that’s where we’ve started. We generally work on Debian and Ubuntu and recommend that platform, but we recognized that OSX is a popular platform for Android developers also. So this process will work on OSX too, using your favorite package manager (e.g. Fink, MacPorts, or Homebrew).&lt;/p&gt;
+
+&lt;p&gt;Then you will end up with &lt;code&gt;IOCipher-v0.3.zip&lt;/code&gt;, which includes the .jar and .so files. If your setup is close enough to our release build setup, the contents of that ZIP file will be the same as the official release. Right now, it is difficult to get the exact same binary file (e.g. the same sha256 sum) because of the timestamps in the .zip and varitions caused by using different versions of Java, and Android SDK and NDK. To check the contents of your build versus the official release:&lt;/p&gt;
+
+&lt;pre&gt;sudo apt-get install faketime unzip wget meld
+cd /tmp
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip.sig
+gpg --verify IOCipher-v0.3.zip.sig
+git clone https://github.com/guardianproject/IOCipher
+cd IOCipher
+git checkout v0.3
+./make-release-build
+./compare-to-official-release IOCipher-v0.3.zip /tmp/IOCipher-v0.3.zip
+&lt;/pre&gt;
+
+&lt;h3 id=&#34;what-is-happening-here&#34;&gt;What is happening here?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;meld&lt;/em&gt; (&lt;em&gt;FileMerge&lt;/em&gt; on OSX) will show a listing of all files listed, and which ones are different. You can see that the contents of the &lt;em&gt;.class&lt;/em&gt; files and &lt;em&gt;.so&lt;/em&gt; files all match, but there will be inevitable differences in some of the metadata. Native builds are much more sensitive to changes in the toolchain. The Java &lt;em&gt;.class&lt;/em&gt; files are usually reproducible even when using different versions of Java and the Android SDK. Native builds are almost never reproducible if the NDK version is at all different. Sometimes even the host platform where the NDK is running (e.g. Ubuntu vs OSX, or 64-bit vs 32-bit) will cause differences in the final binaries.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_13105&#34; style=&#34;width: 883px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13105&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png&#34; alt=&#34;The NDK version and build platform are listed in the manifest.&#34; width=&#34;873&#34; height=&#34;591&#34; class=&#34;size-full wp-image-13105&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld-300x203.png 300w&#34; sizes=&#34;(max-width: 873px) 100vw, 873px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13105&#34; class=&#34;wp-caption-text&#34;&gt;
+    The NDK version and build platform are listed in the manifest.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_13104&#34; style=&#34;width: 883px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13104&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png&#34; alt=&#34;The Java .class files are exactly the same, but the native .so files are not.&#34; width=&#34;873&#34; height=&#34;591&#34; class=&#34;size-full wp-image-13104&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld-300x203.png 300w&#34; sizes=&#34;(max-width: 873px) 100vw, 873px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13104&#34; class=&#34;wp-caption-text&#34;&gt;
+    The Java .class files are exactly the same, but the native .so files are not.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png&#34; alt=&#34;faketime&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13098&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png 1024w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Timestamps are a very common issue when trying to reproduce a build. The release build process uses &lt;a href=&#34;https://github.com/wolfcw/libfaketime&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;faketime&lt;/code&gt;&lt;/a&gt; to provide consistent timestamps, which are picked from the git commit. &lt;code&gt;faketime&lt;/code&gt; freezes the clock entirely for native builds, so any timestamps from that process will always be exactly the same. Unfortunately, some parts of the &lt;code&gt;ant&lt;/code&gt; Java build rely on the clock moving forward, so freezing clock makes the build freeze forever. Instead, &lt;code&gt;faketime&lt;/code&gt; sets the clock using the time from the git commit, then moves time forward at 5% of the normal speed. That makes it much more likely that the timestamps will be the same, but usually what seems to happen is that the timestamps are 2 seconds off, which is the time resolution of the ZIP format. A better solution is needed here for JARs, they are easiest to verify using a sha256 sum. JAR signatures mostly seem not worth the pain they introduce. APKs signatures do not sign the whole APK, only the contents, so the varying timestamps do not matter when verifying using a APK signature. Another example of a difference: if comparing a debug build to a release build, then &lt;code&gt;BuildConfig.class&lt;/code&gt; will be difference because of the debug stuff. The sort order of the metadata in the jar MANIFEST.MF might also be different.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-end-goal&#34;&gt;The end goal&lt;/h3&gt;
+
+&lt;p&gt;Reproducing builds is an arcane process, for sure. It is a means to an end. The goal is to get to the point where well known binaries, published in places like MavenCentral or jCenter, can easily be verified by anyone who cares to try. Or people could even set up &lt;a href=&#34;https://f-droid.org/wiki/page/Verification_Server&#34; target=&#34;_blank&#34;&gt;servers that automatically try&lt;/a&gt; to reproduce any JAR used in a project.&lt;/p&gt;
+
+&lt;p&gt;Then people can verify those JARs in a fully decentralized manner, and publish certifications in their preferred format (GPG signatures, SHA256 sums for gradle-witness, etc). Then we can feel safe getting the release from anywhere on the internet, no matter the level of security or malware infestation.&lt;/p&gt;
+
+&lt;p&gt;Towards that goal, we have been getting our libraries all nicely packaged up and submitted to jCenter (the default gradle repository for Android). Here are the relevant bits to include in your build.gradle:&lt;/p&gt;
+
+&lt;pre&gt;compile &#39;info.guardianproject.cacheword:cachewordlib:0.1&#39;
+compile &#39;info.guardianproject.iocipher:IOCipher:0.3&#39;
+compile &#39;info.guardianproject.netcipher:netcipher:1.2&#39;
+compile &#39;info.guardianproject.trustedintents:trustedintents:0.0&#39;
+
+compile &#39;net.freehaven.tor.control:jtorctl:0.2&#39;
+&lt;/pre&gt;
+
+&lt;p&gt;SQLCipher-for-Android is coming soon:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&#34;&gt;https://github.com/sqlcipher/android-database-sqlcipher/pull/197&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+I hope to also get them up on MavenCentral as well, since that one is also quite common on Android, and is a community run resource versus Bintray’s jCenter, which is purely a for-profit company.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First working test of IOCipher for Obj-C</title>
+      <link>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</link>
+      <pubDate>Mon, 26 Jan 2015 04:32:29 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Every so often, we revisit our core libraries in the process of improving our existing apps, and creating new ones. IOCipher has become a standard part of our apps since it provides a really easy way to include encrypted file storage in Android apps. And we are now working on spreading it to iOS as well, headed up by Chris Ballinger, with the first preliminary tests of &lt;a href=&#34;https://github.com/ChatSecure/IOCipher-ObjC&#34; target=&#34;_blank&#34;&gt;IOCipher for Obj-C&lt;/a&gt;. Testing and contributions are most welcome! Find us in our &lt;a href=&#34;https://guardianproject.github.io/info/contact/&#34; target=&#34;_blank&#34;&gt;chat room or mailing list&lt;/a&gt; for questions, or just post a comment below! Since the iOS version is based on the exact same core library, libsqlfs, the container files they produce will also be fully compatible with each other.&lt;/p&gt;
+
+&lt;p&gt;Now that iOS 8 has full disk encryption by default and a &lt;a href=&#34;https://www.blackbagtech.com/blog/2014/09/24/ios-8-and-its-impact-on-investigations&#34; title=&#34;iOS 8 and its Impact on Investigations&#34; target=&#34;_blank&#34;&gt;host of other security improvements&lt;/a&gt;, you might be wondering why you would bother with app-specific encryption. The problem with full disk encryption is that the disk is only locked when your iPhone is fully turned off. Using IOCipher adds protection for sensitive data that helps in a few different scenarios.&lt;/p&gt;
+
+&lt;p&gt;First, full disk encryption does not protect the data at all if malware is able to get root on the device. That malware will be free to read all files on the device. Second, for people who have not set up a strong passphrase on their iOS device, using app-specific encrypted storage make it harder to access that app’s data on devices with no passcode set, especially if any additional passphrase is stored in the keychain and disallowed from backup, or if it’s just stored in your own memory.&lt;/p&gt;
+
+&lt;p&gt;Third is for added protetion from forensic acquisition systems, which often work using root exploits in order to read the entire filesystem without unlocking the screen&lt;a href=&#34;https://www.elcomsoft.com/news/591.html&#34; target=&#34;_blank&#34;&gt;[1]&lt;/a&gt;&lt;a href=&#34;https://www.elcomsoft.com/news/586.html&#34; target=&#34;_blank&#34;&gt;[2]&lt;/a&gt;&lt;a href=&#34;http://www.htcia.org/2013/12/iphone-forensics-what-you-need-to-know/&#34; target=&#34;_blank&#34;&gt;[3]&lt;/a&gt;. By having an app-specific encrypted file container that is not mounted like a filesystem, then even root cannot directly access the files in the container. Even root needs to get the key in order to unlock the IOCipher container, whether it is in use or not, and getting that key means either a key logger, which means planning ahead, or reading they key from memory if the container is unlocked, which is a more elaborate and targeted attack that full disk acquisition after rooting.&lt;/p&gt;
+
+&lt;p&gt;Now consider that there is a large market 0days, i.e. unpublished exploits, and companies like &lt;a href=&#34;https://netzpolitik.org/2014/gamma-finfisher-hacked-40-gb-of-internal-documents-and-source-code-of-government-malware-published/&#34; target=&#34;_blank&#34;&gt;VUPEN, FinFisher&lt;/a&gt;, and &lt;a href=&#34;https://citizenlab.org/2014/06/backdoor-hacking-teams-tradecraft-android-implant/&#34; target=&#34;_blank&#34;&gt;Hacking Team&lt;/a&gt; making it easy to purchase them, even providing guarantees that one of their exploits will work within 30 days, it seems quite likely that customers of such companies have access to secret root exploits to even iOS 8. While there are ethical and lawful reasons to use software like this, many governments are also using them for &lt;a href=&#34;https://www.eff.org/deeplinks/2012/02/spy-tech-companies-their-authoritarian-customers-part-i-finfisher-and-amesys&#34; target=&#34;_blank&#34;&gt;illegal&lt;/a&gt; &lt;a href=&#34;http://www.economist.com/blogs/pomegranate/2014/07/internet-monitoring-gulf&#34; target=&#34;_blank&#34;&gt;and&lt;/a&gt; &lt;a href=&#34;http://www.theguardian.com/technology/2014/sep/16/wikileaks-finfisher-files-malware-surveillance&#34; target=&#34;_blank&#34;&gt;unethical&lt;/a&gt; &lt;a href=&#34;https://citizenlab.org/2013/03/you-only-click-twice-finfishers-global-proliferation-2/&#34; target=&#34;_blank&#34;&gt;things&lt;/a&gt;. Since we believe that everyone has a right to privacy, to speak freely, and to peaceably protest, it is important to provide protection to people who are unfairly targeted.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/open-source/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/skitch.png&#34; alt=&#34;SQLCipher&#34; width=&#34;64&#34; height=&#34;72&#34; class=&#34;alignleft size-full wp-image-3613&#34; /&gt;&lt;/a&gt;There is also another key advantage of the IOCipher approach when it comes to mobile devices. IOCipher is ultimately based on SQLite transactions in &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34;&gt;SQLCipher&lt;/a&gt;, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite’s transactions prevent the whole file system from being corrupted. This is important in mobile operating systems like Android and iOS since any app or process can be killed at any moment without warning. That means that the worst that can happen to an IOCipher volume is a single write command does not get written. The whole file system will not be corrupted if the process is killed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Coming Soon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When IOCipher is used in conjunction with our &lt;a href=&#34;https://github.com/guardianproject/CacheWord&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt; library, it is possible for an app to provide protection even against the &lt;a href=&#34;https://xkcd.com/538/&#34; target=&#34;_blank&#34;&gt;$5 wrench attack&lt;/a&gt;. CacheWord generates a strong passphrase and manages feeding it to IOCipher and SQLCipher. The user provides their own password for encrypting that strong passphrase. That CacheWord file is tiny, and can be rapidly deleted. Once it is gone, the actual passphrase that unlocks the IOCipher encryption is gone, the user’s passphrase will not unlock IOCipher directly. This is something we are working to add in all of our apps, and to also hook it up to panic button triggers. We would be quite happy to see you beat us to it by adding this feature to your app!&lt;/p&gt;
+
+&lt;p&gt;IOCipher with a hardware security module (HSM) aka smartcard would be really nice, since it would provide some measure of added protection without the user setting an app-specific passphrase. HSMs provide write-only private key storage locked by pin code, so even if some was able to get the encrypted file and the pincode, they would not be able to retrieve the key to unlock the encrypted file. The only way to unlock the file would be with the physical device itself, or by finding the key backup, if that existed. This is possible now using an external &lt;a href=&#34;http://www.smartcard-hsm.com/features.html&#34; target=&#34;_blank&#34;&gt;microSD&lt;/a&gt; &lt;a href=&#34;http://www.go-trust.com/nist-adds-go-trusts-sdencrypter-microsd-hsm-to-the-in-process-fips-140-2-module-validation-list/&#34; target=&#34;_blank&#34;&gt;HSM&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CipherKit updates: IOCipher and CacheWord</title>
+      <link>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</link>
+      <pubDate>Fri, 26 Sep 2014 21:39:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</guid>
+      <description>
+
+&lt;p&gt;We’ve been on a big kick recently, updating the newest members of our CipherKit family of frameworks: &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;IOCipher&lt;/a&gt; and &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt;. There also are is a little news about the original CipherKit framework: &lt;a href=&#34;https://www.zetetic.net/sqlcipher/open-source&#34; title=&#34;SQLCipher for Android&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;iocipher-v0-2&#34;&gt;IOCipher v0.2&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;IOCipher is a library for storing files in an encrypted virtual disk. It’s API is the exact same as &lt;code&gt;java.io&lt;/code&gt; for working with files, and it does not need root access. That makes it the sibling of SQLCipher-for-Android, both are native Android APIs that wrap the SQLCipher database.&lt;/p&gt;
+
+&lt;p&gt;This round of work focused on making IOCipher more reliable and secure, and easy to integrate with CacheWord. It can now handle files up to 4GB in size, the same as FAT filesystems, and it has much improved performance, especially under concurrent load. There is now also an &lt;code&gt;unmount()&lt;/code&gt; method to lock the database and wipe the key from memory. The central &lt;code&gt;VirtualFileSystem&lt;/code&gt; class is now a singleton, since you can only have a single virtual disk open at a time. Lastly, the IOCipher release now includes binaries for &lt;code&gt;armeabi&lt;/code&gt;, &lt;code&gt;armeabi-v7a&lt;/code&gt;, and &lt;code&gt;x86&lt;/code&gt;. IOCipher v0.2 was built against SQLCipher-for-Android v3.1.0, and that is the minimum recommended version to use.&lt;/p&gt;
+
+&lt;p&gt;Find downloads, example projects, test suites, and more on &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;the IOCipher page&lt;/a&gt;. Follow the development on the &lt;a href=&#34;https://dev.guardianproject.info/projects/iocipher&#34; target=&#34;_blank&#34;&gt;IOCipher project page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;cacheword-v0-1&#34;&gt;CacheWord v0.1&lt;/h2&gt;
+
+&lt;p&gt;Once you are using SQLCipher and IOCipher, then you’ll definitely need to do some password management, and password caching too, since no one wants to type their password again every time they come to an app. That is where CacheWord comes in: it is a library for managing passwords, and it is designed easily feed directly into SQLCipher and IOCipher, or really anything that needs secure password caching.&lt;/p&gt;
+
+&lt;p&gt;Most of this update was about making CacheWord ready to deploy. That means fixing bugs and drastically simplifying it’s dependencies. CacheWord now can be used as a plain jar file or an Android Library Project, and it only depends on &lt;code&gt;android-support-v4.jar&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Part of the process of simplifying CacheWord also involved stripping down the API to only want CacheWord should really handle. The standard API is all in the CacheWordHandler class. So that means that your app has to handle any Notification, and pass it to CacheWord if you want CacheWordService to run in the foreground.&lt;/p&gt;
+
+&lt;p&gt;CacheWord also now dynamically chooses how many iterations of the key derivation function based on the CPU type. That means that new, fast devices, the derived key will be a lot stronger, while on slow, old devices, it won’t take a minute to unlock your app.&lt;/p&gt;
+
+&lt;p&gt;Find downloads, example projects, and more on &lt;a href=&#34;https://guardianproject.github.io/info/code/cacheword&#34;&gt;the CacheWord page&lt;/a&gt;. Follow the development on the &lt;a href=&#34;https://dev.guardianproject.info/projects/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord project page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;sqlcipher&#34;&gt;SQLCipher&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/skitch.png&#34; alt=&#34;SQLCipher&#34; width=&#34;64&#34; height=&#34;72&#34; class=&#34;alignright size-full wp-image-3613&#34; /&gt;&lt;/a&gt;The upcoming release of SQLCipher-for-Android also has been simplified. It will no longer depend on commons-codec.jar or guava-r09.jar (thanks to Jeff Campbell for submitting those commits!), remove ~8000 methods for those who fear running into the 65k method limit of the classes.dex file. We’ve been working on making the build process be reproducible, so that anyone can verify that the official releases are built only from the source in the git repo, and nothing else has been added. We’re also working on moving the password format conversion code out of CacheWord and into SQLCipher, where it belongs.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keeping data private means it must be truly deletable!</title>
+      <link>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</link>
+      <pubDate>Fri, 23 Aug 2013 17:36:49 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive-150x150.jpg&#34; alt=&#34;deleting data&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-11598&#34; /&gt;&lt;/a&gt;There are lots of apps these days that promise to keep your data secure, and even some that promise to wipe away private information mere seconds or minutes after it has been received. It is one thing to keep data out of view from people you don’t want seeing it, it is also important to be able to truly delete information. Unfortunately computers make it very difficult to make data truly disappear. When we tell a computer to delete a file, it only deletes the reference to the data. The data itself remains on the disk unchanged. For any UNIX geek out there, you can easily see an example of that by greping a partition (e.g. &lt;code&gt;sudo grep password /dev/sda3&lt;/code&gt;. To solve this problem, there are “secure delete” options. Secure deletion removes the reference like regular deletion, then wipes the data on the disk by overwriting it with random data. That’s much better, but not always good enough. It turns out that its possible to remove the hard disk and read magnetic residue and recover even wiped data.&lt;/p&gt;
+
+&lt;p&gt;Mobile devices only make that problem worse because they almost always rely on flash memory for disk storage. Flash memory has wear-leveling programming built into it, so it is not possible to guarantee that a file will be wiped without overwriting the whole flash disk, then deleting it all and overwriting the whole thing again. Not only is it not practical to delete the whole disk just to remove one file, it also takes a long time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack-300x199.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignleft size-medium wp-image-11600&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack-300x199.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack.jpg 1024w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;So what can we do about this? Use encryption! [&lt;a href=&#34;http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.225.6872&#34; title=&#34;Secure Data Deletion for USB Flash Memory (2011)&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;] If the data is encrypted before its written to either a classic hard drive or flash memory disk, then the actual data is never on the disk itself. If the data is encrypted with a good passphrase, then just “forgetting” the key will make it basically impossible to recover the data. Additionally, encrypted data looks like random data, so it is easy to hide the deleted, encrypted data from the recovery techniques by adding random garbage to the disk. It turns out that with the right architecture, a key can be forgotten quite quickly, much quicker than even the most basic secure deletion.&lt;/p&gt;
+
+&lt;p&gt;This logic is built into our new passphrase library &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34; target=&#34;_blank&#34;&gt;Cacheword&lt;/a&gt;. Cacheword is a library for securely working with and caching passphrases. It plugs right into &lt;a href=&#34;https://guardianproject.info/code/sqlcipher&#34; target=&#34;_blank&#34;&gt;SQLCipher for Android&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/code/iocipher&#34; target=&#34;_blank&#34;&gt;IOCipher&lt;/a&gt;. SQLCipher and IOCipher are both ways for easily storing data using strong AES-256 encryption. Cacheword then handles getting the passphrase from the user. Instead of feeding that passphrase directly to SQLCipher or IOCipher, it creates an encrypted file for storing a strong AES-256 key and that is what is used to lock SQLCipher and IOCipher. The user’s passphrase then just unlocks that encrypted key file.&lt;/p&gt;
+
+&lt;p&gt;The means you can get rapid deletion of data stores of any size by just deleting the key file. The user never sees the actual key so they cannot divulge it. Since the user’s passphrase is not the key for the data but instead the key to the Cacheword key file, the secure deletion can first focus on that key file. The key file is small, so that can happen very quickly. Then even if the data files are recovered, the user does not has the passphrase to the data, its only locked away in the now deleted key file. The key was stored encrypted, so a standard deletion will provide decent protection: it will look like random data on the disk.&lt;/p&gt;
+
+&lt;p&gt;To really ensure the key and the data is gone for good, an app can implement a full wiping procedure. Normal wiping procedures can follow as a background task, making it harder and harder to recover the data, no matter who the adversary is. The full wiping procedure would go something like this (with a rough timeframe for each step):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Cacheword wipes the passphrase from memory (nanoseconds to milliseconds)&lt;/li&gt;
+&lt;li&gt;the Cacheword key file is deleted (milliseconds)&lt;/li&gt;
+&lt;li&gt;write random garbage to disk patterned after the key file to obscure the deleted key file (milliseconds to minutes)&lt;/li&gt;
+&lt;li&gt;delete the SQLCipher/IOCipher data files (seconds to minutes)&lt;/li&gt;
+&lt;li&gt;fill entire memory (RAM) with random garbage (minutes to hours)&lt;/li&gt;
+&lt;li&gt;fill entire disk with random garbage (hours)&lt;/li&gt;
+&lt;li&gt;power off device&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s the overview of the process. But of course, there are always annoying technical details, and I’ll continue on about some of them, for those who like such things.&lt;/p&gt;
+
+&lt;p&gt;To start with, the user’s passphrase will most likely be stored in memory by code outside of Cacheword, SQLCipher, and IOCipher. For example, the Android text entry widget will have the passphrase pass thru it, and inevitably will store that data in memory. It is up to the garbage collection to remove that from memory, and the garbage collection might not zero out the memory before deallocating it. We’re still looking into ideas for how to trigger that, and would love to hear suggestions.&lt;/p&gt;
+
+&lt;p&gt;To truly wipe the data from the disk, there would need to be multiple passes where the entire disk is filled up then the entire disk is deleted. That is rarely practical. So hiding the existence of the encrypted data stores is difficult to do in practice. The encrypted data will remain encrypted with AES-256 using a random, full length key, so it would be basically impossible to crack using publicly known technology and techniques.&lt;/p&gt;
+
+&lt;p&gt;The best bet for preventing the most advanced adversary from getting the deleted data would involve a few cycles of rebooting, filling up the memory and disk with random garbage after doing the procedure outlined above. A more rapid version of that would be to delay filling the disk until after a reboot. That would ensure that the key to the data is thoroughly wiped as quickly as possible before starting in on the much less important and long lasting task of wiping the entire disk to hide the deleted data files.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher beta: easy encrypted file storage for your Android app</title>
+      <link>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</link>
+      <pubDate>Thu, 07 Feb 2013 14:45:28 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</guid>
+      <description>&lt;p&gt;At long last, we are proud to announce the &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;first beta release of IOCipher&lt;/a&gt;, an easy framework for providing virtual encrypted disks for Android apps.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;does not require root or any special permissions at all&lt;/li&gt;
+&lt;li&gt;the API is a drop-in replacement for the standard java.io.File API, so if you have ever worked with files in Java, you already know how to use IOCipher&lt;/li&gt;
+&lt;li&gt;works easiest in an app that stores all files in IOCipher, but using standard java.io with IOCipher is possible&lt;/li&gt;
+&lt;li&gt;supports android-7 v2.1 and above&lt;/li&gt;
+&lt;li&gt;licensed under the LGPL v3+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can download it here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;https://guardianproject.info/code/iocipher/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adding IOCipher to our InformaCam and NoteCipher apps is already in the&lt;br /&gt;
+works. There is already one app in the Play Store built with IOCipher: &lt;a title=&#34;Gryphn Secure Messaging in the Play Store&#34; href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Messaging&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve recently done some heavy testing and bug fixing and this is ready for beta status. That means for many applications, it should be stable with reasonable performance. But its not done yet, and there are some known edge cases documented in our bug tracker which we aim to address in the next beta release:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/iocipher/issues&#34;&gt;https://dev.guardianproject.info/projects/iocipher/issues&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some additional notes on usage:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;single thread/sequential access is the preferred way of using IOCipher&lt;/li&gt;
+&lt;li&gt;multi-threaded access possible, but potentially unstable under very high load&lt;/li&gt;
+&lt;li&gt;VFS now has beginTransaction and completeTransaction to optimize performance&lt;/li&gt;
+&lt;li&gt;parts of java.io not currently supported: vectored I/O, memory-mapped files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;featured photo &lt;a href=&#34;http://www.flickr.com/photos/pong/288491653/&#34;&gt;“Safe” from Pong on Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>report on IOCipher beta dev sprint</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</link>
+      <pubDate>Thu, 31 Jan 2013 19:45:44 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</guid>
+      <description>&lt;p&gt;We are just wrapping up an intensive dev sprint on &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;IOCipher&lt;/a&gt; in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code. Aaron Huttner of &lt;a href=&#34;http://gryphn.co/&#34; target=&#34;_blank&#34;&gt;Gryphn&lt;/a&gt; found IOCipher while developing their &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; title=&#34;Gryphn Secure Text Messaging in the Google Play store&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Text Messaging&lt;/a&gt; and thought it was a remarkable easy way to add encrypted storage of files, and it worked quickly for him, so he included it his app before we had even announced an alpha release (thanks again for the vote of confidence!).&lt;/p&gt;
+
+&lt;p&gt;Aaron worked through a lot of the bugs with us, providing good bug reports and real, working test cases in code. What more could we ask for? We made progress on them slowly but surely. Gryphn then decided they needed IOCipher to work for them ASAP so they could put out a real release. They approached us about funding a development sprint and we thought it was a great idea. This also allowed us to bring in Stephen Lombardo and Nick Parker of &lt;a href=&#34;http://zetetic.net/&#34; target=&#34;_blank&#34;&gt;Zetetic&lt;/a&gt; to apply their &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34;&gt;SQLCipher&lt;/a&gt; and SQLite expertise. Our very own David Oliver put together the deal, and off we went. So we put our heads down and focused everything on getting IOCipher to be a real file system.&lt;/p&gt;
+
+&lt;p&gt;To begin with, we focused on the core of IOCipher, &lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34; target=&#34;_blank&#34;&gt;libsqlfs&lt;/a&gt;, since we could run that on GNU/Linux, greatly speeding up the testing cycle. It started out with about 3 full days of Abel and I running &lt;code&gt;fsx&lt;/code&gt; (File System eXersizer) tests of all shapes and sizes on libsqlfs mounts to try to pin down the crashes. It seemed like we were swimming in mountains of test results that vaguely pointed somewhere. We had some vague leads, but were excited to find that memory-mapped writes were far and away the most common crash. Since IOCipher does not use mapped writes at all, we could safely ignore those crashes for now. Turns out that using libsqlfs as a FUSE mount for our test platform has produced this one red herring.&lt;/p&gt;
+
+&lt;p&gt;One thing we knew all along is that both reads and writes were really slow, so Zetetic started with that. We all had the idea that the block sizes should all be aligned, and that should likely speed things up. This means Java stream readers and writers, writes in our Posix-style JNI layer, and the page size of the SQLite database. Zetetic did some testing and found that using 8k block sizes throughout produces some dramatic speed increases, here are some ballpark figures for doing a 2MB write with no contention:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;~710 seconds: default 256 byte blocks and no buffering, one SQLite transaction per block&lt;/li&gt;
+&lt;li&gt;~65 seconds: wrapping all the 8192 write calls for each 256 byte block in a single SQLite transaction&lt;/li&gt;
+&lt;li&gt;~20 seconds: same as above with the IOCipher FileOutputStream wrapped in a BufferedOutputStream&lt;/li&gt;
+&lt;li&gt;~5 seconds: increase internal IOCipher block size to 4k&lt;/li&gt;
+&lt;li&gt;~10 seconds: 8k sqlfs block size, 8k sqlite page size, and 8k BufferedOutputStream buffer, one SQLite transaction per block&lt;/li&gt;
+&lt;li&gt;~1 second: same as above, all blocks written in a single SQLite transaction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ok, now we had something you could actually use. Pretty slow still, but no longer ridiculous. Through much reading of code and testing, we figured out that there is one spot of the code that assumed it would always be able to read from the database. Under heavy load, this was not possible, especially when you have 9 minute blocking write operations. So the next step was to figure out all of the locking and make sure that was working right. The libsqlfs code from 2006 had the remnants of three separate locking mechanisms in it, SQLite locking, pthread locking, and a delay-retry timeout mechanism. Zetetic dove into updating libsqlfs to replace all that and use all of the modern SQLite tricks like &lt;code&gt;sqlite3_busy_timeout()&lt;/code&gt; to replace the delay-retry logic, &lt;a href=&#34;https://www.sqlite.org/lockingv3.html&#34; target=&#34;_blank&#34;&gt;v3.0 locks&lt;/a&gt; and v3.7 &lt;a href=&#34;https://www.sqlite.org/draft/wal.html&#34; target=&#34;_blank&#34;&gt;Write-Ahead-Logging&lt;/a&gt; which gave libsqlfs a huge improvement in read/write concurrency, and putting libsqlfs and IOCipher reasonable performance in the realm of other encrypted file systems. I’ll let Stephen explain it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;First, we changed the transaction command in begin_transaction to use “begin immediate”. This seeks an immediate reserved lock on the database, but does not exclusively lock it. This reduces unresolvable contention for write locks that would normally occur with deferred transactions, and is less restrictive than an exclusive lock, since it will continue to allow shared locks for reading.&lt;/p&gt;
+
+&lt;p&gt;It is extremely important that we prevent write operations from failing to execute due to busy timeouts, even if another process/thread has the database locked. Even using WAL, it is still possible for a command to be blocked during attempted concurrent write operations. This causes the write operation to fail leading to corruption. While libsqlfs has some “delay()” code that provides rudimentary busy handling, it is only in use for a small number of operations leaving other critical calls unprotected. Therefore, our second change was to register SQLite’s internal busy handler with a relatively high timeout (currently 10 seconds, but open for discussion) via sqlite3_busy_timeout. This provides protection for all operations in libsqlfs, reducing the likelihood that a write operation would fail outright, though it may be delayed.&lt;/p&gt;
+
+&lt;p&gt;Finally, we enabled WAL mode to speed up write operations and further improve concurrency between readers and writers. Note that WAL mode only fsync()s on checkpoint operations, so it may be possible to enable NORMAL synchronous mode with lower overhead than the standard journal mode (we didn’t change this yet).&lt;/p&gt;
+
+&lt;p&gt;With these changes in place, three concurrent fsx processes running in parallel on a single fuse mount produced no errors in a 24hr test run. The tests also shows improved performance on read and writes. In light of these results, we’d like to get your feedback on these changes, and request that you run your own tests in the multi-threaded Android application to see if they resolve the problems that were reported.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This was the final kicker. Who would of thought we could again get performance improvements of an order of magnitude twice in a single dev sprint. Now we have a encrypted filesystem that is stable and with reasonable performance that is really easy to use. And since that means that there is only very short chunks of time where everything is blocked (no more 9 minute writes), the crashes have basically vanished under real world loads. We have run super heavy file system tests over hundreds of thousands of operations without data corruption or crashes. We know that there is the theoretical potential for crashes in certain operations under super heavy load. We aim to address that in upcoming releases. And in conclusion, I’ll quote Aaron since he summarized what we are trying to achieve when we make developer tools:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Between &lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34; target=&#34;_blank&#34;&gt;IOCipher&lt;/a&gt; I don’t think it could get any easier to implement cryptography on Android, hopefully people pick up on this.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So grab the code now from git, if you’re ready to dive in! Or for the more patient, we’re developing tutorials to go along with the beta release that is coming any day now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sometimes the best solution is a library, not an app</title>
+      <link>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</link>
+      <pubDate>Mon, 27 Aug 2012 12:30:15 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel-150x150.png&#34; alt=&#34;&#34; title=&#34;thinking about frameworks&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-2792&#34; /&gt;&lt;/a&gt;Our general approach to software development starts with surveying existing solutions that are available and in use, to see if there is already enough of an ecosystem or whether we need to seed that. When there is already an adundance of tools and apps out there, we work to find the good ones, provide feedback and auditing, and then build apps and tools to fill in any gaps. For example, this was our approach in the Open Secure Telephony Network.&lt;/p&gt;
+
+&lt;p&gt;When there is not an ecosystem around a given problem, then we aim to make it as easy as possible for people writing software to address the issues. In this case, we focus on making developer tools. For example, most of the data on our phones is easily accessible to someone who has physical access to the device, be it the secret police or a thief. IOCipher and SQLCipher-for-Android both provide tools to easily encrypt data, using APIs that are very familiar to anyone doing Android development. We specifically aim to take complex technical challenges and bundle them up into packages that allow developers to add functionality in a matter of hours or days rather than weeks or months.&lt;/p&gt;
+
+&lt;p&gt;With the developer tools that Guardian Project is creating, the impact is not as overt as in other software development since they are largely invisible to the users if we have done our jobs right.&lt;/p&gt;
+
+&lt;p&gt;In order for our developer projects to have a good impact, there are many different aspects that need to be covered. After assessing the current available tools to determine the general approach, the technical approach is chosen. This will influence the development time, the efficiency, and ease of use. As soon as the project is developed to a basic usable state, it is time to get feedback from willing testers to validate the techical approach. After more development and feedback, next comes documentation and beta releases. Once the project gets to a point where the releases and documentation are good enough for most people to figure out what they need, then we start evangelizing the tool and lobby the developers of existing software to adopt the new tool. As part of that, we also offer meetups and workshops for people to see demos, discuss ideas with us, get started, and learn best practices.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some Current Projects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We already have a couple well known developer tools out there, like SQLCipher-for-Android and Orlib. We have many more in development. Here’s a quick overview:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Orlib is an Android library to make it very easy to include Orbot/Tor support in any app. Any app that uses orlib can transparently route all traffic through the Tor network without requiring that the device be rooted. It is a well established project that mostly needs more documentation, developer support, and evangelizing.&lt;/li&gt;
+&lt;li&gt;SQLCipher is a custom version of the SQLite database that provides easy-to-use, flexible and robust encryption. Guardian Project created SQLCipher-for-Android, which mirrors the standard Android database API, so developers already know how to use it, and need only add support for handling the passwords.&lt;/li&gt;
+&lt;li&gt;libsqlfs provides a complete virtual disk on top of a SQLCipher database. The virtual disk is encrypted and contained in a single file, which can be easily moved around, copied, shared, etc. It is a standard FUSE filesytem that can work on Android, GNU/Linux, and Mac OS X. libsqlfs is a pre-existing tool that was abandoned by its authors and has been adopted by the Guardian Project.&lt;/li&gt;
+&lt;li&gt;IOCipher is a cousin to SQLCipher-for-Android: it provides virtual encrypted disks for Android apps without requiring the device to be rooted. It uses the standard Java API for working with files, so developers already know how to use it, and only need to handle the passwords and opening and closing the virtual disks. It is based on libsqlfs and SQLCipher.&lt;/li&gt;
+&lt;li&gt;Gnu Privacy Guard (GnuPG) for Android brings the widespread standard in OpenPGP encryption to Android. GnuPG provides solid encryption for keeping emails and files private, and for verifying that emails and files are who you think they are. GnuPG is built-in to basically every GNU/Linux distro, in GPGTools for Mac OS X and Apple Mail, a plugin for Outlook and Thunderbird, etc. We are working to bring GnuPG to Android to make it the cornerstone of Android encryption like it is elsewhere.&lt;/li&gt;
+&lt;li&gt;ffmpeg is a popular, widespread framework for transcoding and filtering digital videos. It has been essential to our apps ObscuraCam, InformaCam, and Murrow/StoryMaker. We want to now work to make it dead simple for developers to build their own apps on it. We are also extending it to provide a full framework for audio and image redaction, metadata management, and encryption of sensitive parts of the media. This will make it easy for media app developers to build in privacy to their own apps.&lt;/li&gt;
+&lt;li&gt;Portable Shared Security Tokens (PSST) is our project to tackle the issues of digital identity and crypto key management. This is perhaps the most vexing issue facing deployment of secure mobile devices today. Public-key cryptography (HTTPS/SSL, OTR chat, PGP email, etc.) is a proven, powerful way to validate digital identity while keeping the contents private. Their cryptographic keys essentially become their proof of identity, and as such that identity must be portable across computing contexts (mobile devices, desktop environments, etc.). An interoperable standard and associated developer libraries needs to be developed to make possible a portable and secure solution for establishing one’s identity.&lt;/li&gt;
+&lt;li&gt;Always Secure Messaging (“AweSoMe”) is a collaborative effort to build interoperable, open-source, secure messaging applications, that work from mobile to mobile, as well as mobile to web. In particular, the goal is to create an extremely usable and high quality experience, that simultaneously supports one-to-one and one-to-many (group) end-to-end secure messaging communications across multiple platforms.&lt;/li&gt;
+&lt;li&gt;Bazaar provides the last piece of this puzzle: easy, secure and private distribution of software. Debian GNU/Linux has proven that decentralized software stores can work well. Google Play and the Apple App Store both provide excellent examples for how to make it easy to find and distribute apps, but are often blocked or not available in many parts of the world. Bazaar combines all of these ideas to provide a decentralized, peer-to-peer app store that makes it easy to find and distribute apps.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

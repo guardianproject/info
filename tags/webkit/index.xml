@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webkit on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/webkit/</link>
+    <description>Recent content in Webkit on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/webkit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NetCipher update: global, SOCKS, and TLSv1.2</title>
+      <link>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/netcipher&#34;&gt;NetCipher&lt;/a&gt; has been relatively quiet in recent years, because it kept
+on working, doing it was doing. Now, we have had some recent
+discoveries about the guts of Android that mean NetCipher is a lot easier
+to use on recent Android versions.  On top of that, TLSv1.2 now reigns
+supreme and is basically everywhere, so it is time to turn TLSv1.0 and
+TLSv1.1 entirely off.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-single-method-to-enable-proxying-for-the-whole-app&#34;&gt;A single method to enable proxying for the whole app&lt;/h2&gt;
+
+&lt;p&gt;As of Android 8.0 (26 aka Oreo), it is now possible to set a
+&lt;code&gt;URLStreamHandlerFactory&lt;/code&gt;, which creates &lt;code&gt;URLConnection&lt;/code&gt; instances
+with custom configurations.  If an app is using the built-in
+&lt;code&gt;HttpURLConnection&lt;/code&gt; API for its networking, it is now possible to
+enable global proxying with a single method call when the app starts:
+&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useGlobalProxy--&#34;&gt;&lt;code&gt;NetCipher.useGlobalProxy()&lt;/code&gt;&lt;/a&gt;.
+Then the actual proxy configuration can be set dynamically, using
+things like
+&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useTor--&#34;&gt;&lt;code&gt;NetCipher.useTor()&lt;/code&gt;&lt;/a&gt;
+or
+&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#clearProxy--&#34;&gt;&lt;code&gt;NetCipher.clearProxy()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;URL.setURLStreamHandlerFactory()&lt;/code&gt; method is a little odd because it cannot be unset or changed after it has been set.  NetCipher handles this by letting the app configure the proxy settings separately, so they can be disabled even though the custom &lt;code&gt;URLStreamHandlerFactory&lt;/code&gt; is still active.  Also, it is possible to use &lt;code&gt;URL.setURLStreamHandlerFactory&lt;/code&gt; on Android 7.x also, but it leaks DNS, so it is not recommended for privacy proxies.  It would still be useful as a failsafe for apps that use &lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#getHttpURLConnection-java.lang.String-&#34;&gt;&lt;code&gt;NetCipher.getHttpURLConnection()&lt;/code&gt;&lt;/a&gt;, in case there are any calls to &lt;code&gt;URL.openConnection()&lt;/code&gt; added with the right proxy setup.  At the very least, the content will be proxied on Android 7.x, even if it leaks DNS.&lt;/p&gt;
+
+&lt;h2 id=&#34;native-socks-support&#34;&gt;Native SOCKS Support&lt;/h2&gt;
+
+&lt;p&gt;In Android 7.0 (24 aka Nougat), Google switched over to OpenJDK, which brought working SOCKS support to Android.  SOCKS is the best protocol for effective proxying, and it is the protocol that Tor itself has always natively supported.  Orbot has always provided a separaete HTTP Proxy to support Android, but that has always proven brittle, and was often the source of problems.  Since Android 7.0 and above natively support SOCKS, calling &lt;code&gt;NetCipher.useTor()&lt;/code&gt; will now default to using SOCKS if the device is running Android 7.0 or higher.&lt;/p&gt;
+
+&lt;h2 id=&#34;bye-bye-tlsv1-0-and-tlsv1-1&#34;&gt;Bye bye TLSv1.0 and TLSv1.1&lt;/h2&gt;
+
+&lt;p&gt;Transport Layer Security (TLS) is the protocol that powers most of the internet these days.  It gives HTTPS the S for &amp;ldquo;Secure&amp;rdquo;. After many years of slow updates and an increasing number of vulnerabilities, there is finally critical mass to stop using the old, broken versions.  TLS version 1.2 is not seriously vulnerable and is supported basically everywhere.  TLSv1.2 was finalized in 2008, so this is very far from the bleeding edge.  TLSv1.2 is supported all the way back to &lt;a href=&#34;https://developer.android.com/reference/javax/net/ssl/SSLSocket#protocols&#34;&gt;Android 4.1&lt;/a&gt;.  TLSv1.0 and TLSv1.1 are due to be officially deprecated by the IETF, the standards body that actually creates the TLS standard.  The major browser vendors have all promised to drop them in 2020.&lt;/p&gt;
+
+&lt;p&gt;One way to enforce TLSv1.2 support would be to configure the server-side to stop supporting TLSv1.0 and TLSv1.1, like is recommend with SSLv2 and SSLv3.  Using NetCipher to do this on the client side
+means that old app versions and devices of F-Droid and old devices will continue to work.
+Also, doing it client-side means that all TLS connections will gain this protection regardless of which server the client is connecting to.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;NetCipher&lt;/em&gt; approach means apps will never use TLS older than v1.2 since they will refuse to connect unless TLSv1.2 is available.  The server-side can then safely support TLSv1.0 and TLSv1.1, so older clients and Android devices will still be able to connect, even if they do not support TLSv1.2.  It is win-win
+for everyone.&lt;/p&gt;
+
+&lt;p&gt;The one case that will fail entirely is connections to servers that do not support TLSv1.2.  If a webserver does not support TLSv1.2, it is really too old to be used safely anyway.  Even the oldest supported Red Hat Enterprise Linux release (6) supports TLSv1.2, and that was released in 2010.&lt;/p&gt;
+
+&lt;h2 id=&#34;webview-proxying&#34;&gt;&lt;code&gt;WebView&lt;/code&gt; Proxying!&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.android.com/reference/android/webkit/WebView&#34;&gt;&lt;code&gt;WebView&lt;/code&gt;&lt;/a&gt; provides an easy way to show a webpage or build a web app.  If you want that page to always go over Tor, that is difficult since &lt;code&gt;WebView&lt;/code&gt; has no API to configure proxying.  NetCipher has a long running collection of hacks that span the Android versions to get proxying working in &lt;code&gt;WebView&lt;/code&gt;.  We have revived those, modernized them, and added a full test suite to confirm whether the proxying is leaking.  The good news is that proxying is working pretty well on all but Android 5.x (21 and 22), where it totally fails.&lt;/p&gt;
+
+&lt;p&gt;Another new Android API we discovered is &lt;a href=&#34;https://developer.android.com/reference/android/webkit/WebViewClient.html#shouldInterceptRequest(android.webkit.WebView,%20android.webkit.WebResourceRequest)&#34;&gt;&lt;code&gt;WebViewClient.shouldInterceptRequest()&lt;/code&gt;&lt;/a&gt;.  This is an official API for manipulating HTTP requests in &lt;code&gt;WebView&lt;/code&gt;.  It is an an easy place to insert custom &lt;code&gt;HttpURLConnection&lt;/code&gt; instances, like NetCipher needs to configure proxy support and stronger TLS.  Using this API means eliminating Java reflection hacks.  But it has a large caveat: it only works for &lt;em&gt;GET&lt;/em&gt; requests.  Since the request body is not accessible via this API, it is not possible to implement &lt;em&gt;POST&lt;/em&gt; or &lt;em&gt;PUT&lt;/em&gt; requests.  One nice approach for the best of both works is to handle &lt;em&gt;GET&lt;/em&gt; with &lt;code&gt;WebViewClient.shouldInterceptRequest()&lt;/code&gt;, then &lt;em&gt;POST&lt;/em&gt; and &lt;em&gt;PUT&lt;/em&gt; could then be implemented separately using the reflection methods in NetCipher WebView.&lt;/p&gt;
+
+&lt;h2 id=&#34;tests&#34;&gt;Tests!&lt;/h2&gt;
+
+&lt;p&gt;This release also brings with it an extensive, new test suite.  These let us confirm that things are working on all the supporting Android versions, while also serving as simple example cases.  For example, the tests now confirm which Android releases support &lt;code&gt;WebView&lt;/code&gt; proxying, based on Cure53&amp;rsquo;s very useful &lt;a href=&#34;https://github.com/cure53/HTTPLeaks&#34;&gt;HTTPLeaks&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

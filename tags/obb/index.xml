@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Obb on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/obb/</link>
+    <description>Recent content in Obb on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 Feb 2017 10:24:53 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/obb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>F-Droid now supports APK Expansion Files aka OBB</title>
+      <link>https://guardianproject.github.io/info/2017/02/22/f-droid-now-supports-apk-expansion-files-aka-obb/</link>
+      <pubDate>Wed, 22 Feb 2017 10:24:53 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/02/22/f-droid-now-supports-apk-expansion-files-aka-obb/</guid>
+      <description>&lt;p&gt;Many games, mapping, and other apps require a large amount of data to work. The APK file of an Android app is limited to 100MB in size, yet it is common for a single country map file to be well over 100MB. Also, in order to get users running as quickly as possible, they should not have to wait for huge amounts of data to download in order to just start the app for the first time.&lt;/p&gt;
+
+&lt;p&gt;Google created OBB aka “&lt;a href=&#34;https://developer.android.com/google/play/expansion-files.html&#34; target=&#34;_blank&#34;&gt;APK Expansion&lt;/a&gt;” files to provide a flexible means of delivering large amounts of data. This arragement also saves lots of bandwidth since app updates since the APK file and the OBB file can be updated separately. For example, a game’s assets do not need to change often, so they can be shipped as an OBB. Then when the app itself is updated (i.e. the APK), it does not need to include all those assets that are in the OBB file.&lt;/p&gt;
+
+&lt;p&gt;OBB files are used by lots of apps like games and MAPS.ME. F-Droid supports OBB by downloading and installing the OBB before the APK, so that once the APK is installed, the OBB files are already in place and ready to use. F-Droid also provides an &lt;em&gt;Intent&lt;/em&gt; method for apps to fetch the OBB download URLs in case the app itself needs to handle the OBB download/update. That is similar to how it works in Google Play.&lt;/p&gt;
+
+&lt;p&gt;In order to use the OBB support, users need at least F-Droid v0.102, and the repo must use &lt;em&gt;fdroidserver&lt;/em&gt; v0.7.0 or newer. Adding OBB files to a repo is very easy: just copy them to the same folder where the APKs go, i.e. &lt;em&gt;/path/to/fdroid/repo/&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Developer Usage&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the details about using OBB files in apps is that OBB files are not guaranteed to be installed by the app store. That means the app could start, and the expected OBB files will not be there. In that case, the app must download and install the OBB file itself. Google Play recommends using their proprietary &lt;a href=&#34;https://developer.android.com/google/play/licensing/index.html&#34; target=&#34;_blank&#34;&gt;Application Licensing&lt;/a&gt; service for this, F-Droid provides a simple method that is all free software.&lt;/p&gt;
+
+&lt;p&gt;To get the URL for the two possible OBB files, send an &lt;code&gt;Intent&lt;/code&gt; to F-Droid using these &lt;em&gt;Actions&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;org.fdroid.fdroid.action.GET_OBB_MAIN_URL&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;org.fdroid.fdroid.action.GET_OBB_PATCH_URL&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then download that URL using your favorite method, and make sure that the file ultimately ends up in &lt;em&gt;Android/obb/&amp;lt;packageName&amp;gt;&lt;/em&gt; on the device’s External Storage.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

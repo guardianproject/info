@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boringssl on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/boringssl/</link>
+    <description>Recent content in Boringssl on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/boringssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Implementing TLS Encrypted Client Hello</title>
+      <link>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</guid>
+      <description>
+
+&lt;p&gt;As part of the &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project, we have been working on
+accelerating the development &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html&#34;&gt;Encrypted Client Hello
+(ECH)&lt;/a&gt; as
+standardized by the IETF.  ECH is the next step in improving Transport Layer
+Security (TLS).  TLS is one of the basic building blocks of the internet, it is
+what puts the S in HTTPS.  The ECH standard is nearing completion.  That is
+exciting because ECH can encrypt the last plaintext TLS metadata that it is
+possible to encrypt.  So ECH will bring some real improvements in privacy and
+censorship resistance.&lt;/p&gt;
+
+&lt;p&gt;ECH is built on top of TLSv1.3 and &lt;a href=&#34;https://blog.cloudflare.com/handshake-encryption-endgame-an-ech-update/&#34;&gt;completes unfinished
+work&lt;/a&gt;
+from the TLSv1.3 effort, now that private DNS is a thing. ECH is now in draft-13
+and there are many implementations that are interoperating. ECH is working for
+&lt;a href=&#34;https://github.com/sftcd/openssl&#34;&gt;OpenSSL&lt;/a&gt;, &lt;a href=&#34;https://bugs.chromium.org/p/boringssl/issues/detail?id=275&#34;&gt;BoringSSL&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/nginx&#34;&gt;nginx&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/httpd&#34;&gt;Apache HTTPD&lt;/a&gt;, &lt;a href=&#34;https://github.com/sftcd/lighttpd1.4&#34;&gt;lighttpd&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/sftcd/haproxy/commits/ECH-experimental&#34;&gt;HAProxy&lt;/a&gt;, &lt;a href=&#34;https://github.com/guardianproject/conscrypt/tree/2.6.alpha1638179154.job1828169525&#34;&gt;Conscrypt&lt;/a&gt;, &lt;a href=&#34;https://github.com/niallor/curl&#34;&gt;curl&lt;/a&gt;, and more. There is work underway in &lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=1725938&#34;&gt;Firefox&lt;/a&gt;
+and &lt;a href=&#34;https://bugs.chromium.org/p/chromium/issues/detail?id=1091403&#34;&gt;Chromium&lt;/a&gt;. It has been sketched out for &lt;a href=&#34;https://github.com/square/okhttp/issues/6539&#34;&gt;OkHTTP&lt;/a&gt;. Draft versions of ESNI
+and ECH have been deployed in Firefox releases and some production web services.&lt;/p&gt;
+
+&lt;p&gt;The main downside of ECH is that it is
+&lt;a href=&#34;https://defo.ie/report.html#issuesarising&#34;&gt;complex&lt;/a&gt;, and most of that is
+unavoidable.  Large scale websites have complicated server-side setups, and ECH
+has to work in those setups.  That is where ECH&amp;rsquo;s complexity comes from.  &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-dnsop-svcb-https-07.html&#34;&gt;DNS
+SVCB and HTTPS RR
+Types&lt;/a&gt; is a
+related standard to encapsulate the complexity of large scale websites a single
+DNS lookup.  It adds additional complexity since it might include the TCP port
+number for the service, while TLS implementations mostly assume that the port
+number is known before doing a DNS lookup.&lt;/p&gt;
+
+&lt;p&gt;ECH was formerly known as Encrypted SNI (ESNI), which it replaces.  So do not
+expect updates to ESNI unless ECH proves too complicated for implementers. ECH
+is more complex to implement in the TLS library than ESNI.  Once it is
+implemented in the TLS library, then implementing the next level of managing the
+keys and hostnames is quite similar between ESNI and ECH.  The rest of this post
+will be diving into details about that complexity and what it takes to implement
+ECH.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;do-not-stick-out.jpg&#34; alt=&#34;Do Not Stick Out&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;do-not-stick-out&#34;&gt;Do Not Stick Out&lt;/h2&gt;
+
+&lt;p&gt;ECH implementers must also work to ensure that their implementation does not
+create packets that look &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html#name-do-not-stick-out&#34;&gt;look
+different&lt;/a&gt;
+than other implementations.  How ECH is implemented will affect
+fingerprintability.  Right now, BoringSSL, OpenSSL, and Firefox all put the ECH
+extension in different places, so it is easy for a network observer to tell
+which of them is serving as the client in a TLS session.  Ideally, all
+implementations would create network packages that look identical to the network
+observer.  To get an idea of this problem in the real world, see &lt;a href=&#34;https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/issues/40014&#34;&gt;this detailed
+technical
+discussion&lt;/a&gt;
+of metadata ordering in DTLS as used in WebRTC.&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-the-keys&#34;&gt;Getting the keys&lt;/h2&gt;
+
+&lt;p&gt;ECH encrypts the first stage of the negotiation between the client and server,
+the &lt;em&gt;ClientHello&lt;/em&gt; packet using a new type of key and related configuration.
+This is known as an &amp;ldquo;ECH Config&amp;rdquo;.  This negotiation is what sets up the
+encrypted TLS connection, so to encrypt the negotiation, so the keys can not be
+derived from the certificates and negotiation itself.  ECH also needs new
+methods distributing this ECH Config.  HTTPS/SVCB therefore includes ECH Config Lists,
+and DNS is the recommended way to get ECH Config Lists.  Other distribution
+methods are also possible, and ECH implementation should provide a method to
+directly supply ECH Config Lists.&lt;/p&gt;
+
+&lt;p&gt;When using ECH in conjunction with HTTPS/SVCB, the DNS needs to be handled differently
+than the common, decades old practices that most TLS stacks are built on.  The
+ECH Config List must match the IP address so that multi-CDN setups still work.
+That ensures the server gets the ECH Config that matches its ECH private keys,
+not the one for a separate server.  If the A/AAAA lookup is done separately from
+the HTTPS/SVCB lookup, they might not match since the results could come from
+different caches, etc.  It is not yet clear where the right place to handle that
+DNS is, but it is clear that clients that implement HTTPS/SVCB and ECH will need to
+consider that DNS will touch different parts of the stack.&lt;/p&gt;
+
+&lt;p&gt;Which part of the stack will handle the HTTPS/SVCB look up depends on whether
+the code is acting as a library or more as the client itself.  For example,
+libraries like OkHTTP or Conscrypt can both act as a TLS library, providing the
+blocks for implementing TLS in an app.  They can also act as the TLS client
+itself, the app just needs to open the hostname and port to get a connection.
+This is especially true for OkHTTP, which can also handle DNS itself with its
+own DNS-over-HTTPS implementation.  Most apps will expect to just open a URL and
+have it work without providing anything else.  In the case of HTTP libraries
+like OkHTTP or Volley, Conscrypt becomes the provider of TLS functions rather
+than the client.  OkHTTP&amp;rsquo;s default setup will probably want to treat Conscrypt
+like the client and do zero config.  But there are use cases where apps want to
+handle DNS in OkHTTP, in that case Conscrypt is a library.  Another way this
+could be broken down would be to have Conscrypt only be the TLS library, then
+leave the DNS to the HTTP stacks.  Then each HTTP library would have to have
+their own ECH and HTTPS/SVCB handling (In Android, that would mean
+&lt;tt&gt;HttpURLConnection&lt;/tt&gt;, OkHTTP, Volley, Apache HTTP Client, etc).  Python
+provides another example with HTTP libraries like &lt;a href=&#34;https://github.com/psf/requests/issues/5972&#34;&gt;Requests&lt;/a&gt; working in
+combination with the core &lt;a href=&#34;https://bugs.python.org/issue45567&#34;&gt;&lt;tt&gt;ssl&lt;/tt&gt;&lt;/a&gt; module.&lt;/p&gt;
+
+&lt;p&gt;One thing that is clear here: whichever piece initiates the HTTPS/SVCB DNS query
+should also handle the ECH Config, and setting up the lower levels.  On top of
+this, ECH has GREASE and &amp;ldquo;Retry Configs&amp;rdquo;.  GREASE is a key part of ensuring that
+ECH connections do not stick out.  GREASE makes the network observer see TLS
+packets that look the same as connections that successfully used an ECH Config
+to encrypt.  Retry Configs are sent by the server if it cannot decrypt what the
+client sent.  Whichever piece of the code handles the ECH Config List should
+then also handle GREASE and the Retry Configs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.cloudflare.com/encrypted-client-hello/&#34;&gt;&lt;img src=&#34;tls-ech-negotiation.png&#34; alt=&#34;TLS ECH Negotiation&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;outer-and-inner-clienthello&#34;&gt;Outer and Inner &lt;em&gt;ClientHello&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;This post began by saying that ECH was complex.  Most of that complexity stems
+from the concept of &lt;em&gt;ClientHelloOuter&lt;/em&gt; and &lt;em&gt;ClientHelloInner&lt;/em&gt;.  They are sort of
+parallel versions of the TLS &lt;em&gt;ClientHello&lt;/em&gt;, with &lt;em&gt;ClientHelloOuter&lt;/em&gt; being
+plaintext and &lt;em&gt;ClientHelloInner&lt;/em&gt; being encrypted.  Many of the same bits of
+metadata can be set in either &lt;em&gt;ClientHelloOuter&lt;/em&gt; or &lt;em&gt;ClientHelloInner&lt;/em&gt;, or even
+in both.  And the outer and inner values can be different.  For example, the
+outer plaintext SNI could be set to a generic domain name, while the inner could
+be set to a different domain name that the client wants to protect.  Whenever
+the client needs to manage what is set in &amp;ldquo;inner&amp;rdquo;, &amp;ldquo;outer&amp;rdquo;, etc., then extra
+complexity is exposed all the way up to the app using the ECH client.  Also, so
+many possible configuration options also means so many ways that the negotiation
+might fail.&lt;/p&gt;
+
+&lt;p&gt;BoringSSL&amp;rsquo;s &lt;code&gt;SSL_set1_ech_config_list()&lt;/code&gt; provides a good example of this complexity:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a supported ECHConfig is found, &lt;tt&gt;ssl&lt;/tt&gt; will encrypt the true
+ClientHello parameters. If the server cannot decrypt it, e.g. due to a key
+mismatch, ECH has a recovery flow. &lt;tt&gt;ssl&lt;/tt&gt; will handshake using the
+cleartext parameters, including a public name in the ECHConfig. If using
+&lt;tt&gt;SSL_CTX_set_custom_verify&lt;/tt&gt;, callers should use
+&lt;tt&gt;SSL_get0_ech_name_override&lt;/tt&gt; to verify the certificate with the public
+name. If using the built-in verifier, the &lt;tt&gt;X509_STORE_CTX&lt;/tt&gt; will be
+configured automatically.&lt;/p&gt;
+
+&lt;p&gt;If no other errors are found in this handshake, it will fail with
+&lt;tt&gt;SSL_R_ECH_REJECTED&lt;/tt&gt;. Since it didn&amp;rsquo;t use the true parameters, the
+connection cannot be used for application data. Instead, callers should handle
+this error by calling &lt;tt&gt;SSL_get0_ech_retry_configs&lt;/tt&gt; and retrying the
+connection with updated ECH parameters. If the retry also fails with
+&lt;tt&gt;SSL_R_ECH_REJECTED&lt;/tt&gt;, the caller should report a connection failure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;a-walk-through-which-pieces-needs-to-do-what&#34;&gt;A walk through which pieces needs to do what&lt;/h2&gt;
+
+&lt;p&gt;Let us return to the Python example to go through the pieces needed to implement
+ECH there.  Starting at the lowest level, the Python &lt;tt&gt;ssl&lt;/tt&gt; is built on
+top of OpenSSL, so the new ECH functions in OpenSSL need to be included and
+exposed in &lt;tt&gt;ssl&lt;/tt&gt;&amp;rsquo;s API.  Unlike with a plain TLSv1.3 connection,
+&lt;tt&gt;ssl&lt;/tt&gt; would not set up an ECH connection without additional configuration
+as long as &lt;tt&gt;ssl&lt;/tt&gt; does not include the additional DNS requirements needed
+to fetch the ECH Config.  The DNS could instead be implemented in the HTTP
+library.  Requests is built on top of urllib3, so urllib3 could implement
+HTTPS/SVCB handling.  Then Requests would automatically get ECH connections.
+Since it can be necessary to handle the ECH Config outside of DNS, urllib3 and
+Requests could provide methods for the app to submit the ECH Config.  This would
+mean overriding any HTTPS/SVCB handling in Requests and urllib3.&lt;/p&gt;
+
+&lt;p&gt;Based on this outline, these are the pieces that need to be implemented:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS/SVCB DNS queries for getting ECH Config Lists, IP, and other config.&lt;/li&gt;
+&lt;li&gt;A way to provide ECH Config Lists as bytes directly to the &lt;tt&gt;ssl&lt;/tt&gt; module.&lt;/li&gt;
+&lt;li&gt;A method to ensure encrypted DNS is used so all metadata is encrypted.&lt;/li&gt;
+&lt;li&gt;A method to enable and disable GREASE, ideally with GREASE default on.&lt;/li&gt;
+&lt;li&gt;A callback that gets called whenever ECH negotiation fails and the server
+offers a &amp;ldquo;Retry Config&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Potentially also controls of what to send in the &lt;em&gt;ClientHelloOuter&lt;/em&gt; versus the
+&lt;em&gt;ClientHelloInner&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From the point of view of the client implementation, there is a big difference
+between TLS before and after ECH.  This new complexity may look scary but this
+is a clear path to providing strong privacy protections with TLS that can be as
+widely deployed as TLSv1.3 is now.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

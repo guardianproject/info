@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/git/</link>
+    <description>Recent content in Git on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 Nov 2013 14:03:22 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A tag-team git workflow that incorporates auditing</title>
+      <link>https://guardianproject.github.io/info/2013/11/21/a-tag-team-git-workflow-that-incorporates-auditing/</link>
+      <pubDate>Thu, 21 Nov 2013 14:03:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/21/a-tag-team-git-workflow-that-incorporates-auditing/</guid>
+      <description>&lt;p&gt;Git is as wonderful as it is terrible, it is immensly flexible but also far from intuitive. So to make our lives easier, we try to use git as it was originally intended, as a toolkit for building workflows.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_11990&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows#Integration-Manager-Workflow&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-11990&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow-300x121.png&#34; alt=&#34;Integration-Manager Workflow&#34; width=&#34;300&#34; height=&#34;121&#34; class=&#34;size-medium wp-image-11990&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow-300x121.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow.png 500w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p id=&#34;caption-attachment-11990&#34; class=&#34;wp-caption-text&#34;&gt;
+    Integration-Manager Workflow
+  &lt;/p&gt;
+&lt;/div&gt;We use a simple version of the “&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows&#34; target=&#34;_blank&#34;&gt;Integration-Manager Workflow&lt;/a&gt;“. One key difference is that we often have multiple contributors acting as the integration manager. This means that there is always someone else besides the original author reviewing each commit. For example: I make a commit and push it to my public developer’s repo. I ask Abel to review my commit, and if he agrees with it, he then pushes it to the official public “_upstream_” repo (aka “blessed repository”). And since git will tell us if a remote repo is different than our local repo, this process makes it harder for an attacker to slip a commit into our remote repo without us noticing.&lt;/p&gt;
+
+&lt;p&gt;The key to this workflow is that all contributors must fork from the same git repo, and mark that one as the one &lt;em&gt;upstream&lt;/em&gt; repo. We often end up &lt;a href=&#34;http://git-scm.com/book/en/Git-Branching-Rebasing&#34; target=&#34;_blank&#34;&gt;rebasing&lt;/a&gt; things to make sure each commit is based on the most up-to-date code. It also makes for a clean, readable history. That means each contributor’s public repo will be rebased from time to time, so you cannot rely on those repos as something to base your own work off of.&lt;/p&gt;
+
+&lt;p&gt;At the very least, a contributor’s local repo should be set up to talk to two remote repos: the contributor’s own public repo and the &lt;em&gt;upstream&lt;/em&gt; repo. I’ll use github as an example of how to get started in this workflow. Say you want to contribute to &lt;a href=&#34;https://github.com/guardianproject/keysync&#34;&gt;https://github.com/guardianproject/keysync&lt;/a&gt;, start by making a fork via the github.com&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fork.png&#34; alt=&#34;fork&#34; width=&#34;65&#34; height=&#34;19&#34; /&gt; button. Once that is setup, its time to clone it and configure the rest. I’m &lt;strong&gt;eighthave&lt;/strong&gt; on github, so this example will use my public repo. I work with Abel Luck on KeySync, so we’ll add his repo as another contributor repo.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/eighthave/keysync
+cd keysync
+git remote add upstream https://github.com/guardianproject/keysync
+git fetch upstream
+git remote add abeluck https://github.com/abeluck/keysync
+git fetch abeluck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I can see all of the remotes in my local git repo, and work with them as branches:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ git remote  -v
+abeluck https://github.com/abeluck/keysync (fetch)
+abeluck https://github.com/abeluck/keysync (push)
+origin  https://github.com/eighthave/keysync (fetch)
+origin  https://github.com/eighthave/keysync (push)
+upstream        https://github.com/guardianproject/keysync (fetch)
+upstream        https://github.com/guardianproject/keysync (push)
+$ git branch -va
+* master                  1536fcf parse version number from setuptools
+  remotes/abeluck/master  1536fcf parse version number from setuptools
+  remotes/origin/HEAD     -&amp;gt; origin/master
+  remotes/origin/master   1536fcf parse version number from setuptools
+  remotes/upstream/master 1536fcf parse version number from setuptools
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I do some work, and commit it to my local repo, and want to push them for Abel to review. In the meantime Abel has pushed some commits for me to review into his remote repo &lt;code&gt;abeluck&lt;/code&gt;. So I need to fetch his new commits, then rebase my new local commits on top of of his new commits. When its all ready, I push it to my remote repo &lt;code&gt;origin&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+git fetch abeluck
+(review the commits...)
+git rebase abeluck/master
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I’ve reviewed Abel’s new commits and incorporated them into my public repo. Abel is ready to review my new commits, which are rebased on top of his. If he agrees with them, he’ll push them to the official “blessed” repo &lt;code&gt;upstream&lt;/code&gt;. Then his local repo will be in sync with the latest &lt;em&gt;upstream&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+git fetch eighthave
+git merge eighthave/master
+(review the commits...)
+git push upstream master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Review The Commits&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also review the commits before rebasing or merging them into the local master. This is done by switching to the remote branch, which is kind of like a local branch, but not entirely. It works for checking out and viewing just fine though:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout eighthave/master
+(review the commits...)
+git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Undoing A Bad Rebase&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Git doesn’t provide any undo, and it also will let you delete things, not a good situation for learning this stuff. Luckily it does give you the tools for making something like an undo function. I use a tag for this, and I always use the same name for that tag: &lt;code&gt;pre-rebase&lt;/code&gt;. Before starting anything that involves rebasing, I first do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+git tag pre-rebase
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then after the rebase is successfully deleted, I remove that tag:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git tag -d pre-rebase
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Switching Your Master When Things Have Diverged&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It is often the case that in the process of merging and rebasing, the developers’ repos will be in separate branches of the original tree. Once the “integration manager” person has pulled in all the commits, rebased and merged everything, and pushed the approved commits to the upstream repo, the other developers will likely need to reset their repos to resync with the upstream:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git fetch upstream
+git checkout upstream/master
+git branch -D master
+git branch master
+git checkout master
+git push -f origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So &lt;code&gt;git branch -D master&lt;/code&gt; does indeed mean force-delete your master branch. That is required before setting your master branch to a new branch. If you want, you can keep that old branch around by doing &lt;code&gt;git branch myfeaturedevbranch&lt;/code&gt; before doing &lt;code&gt;git branch -D master&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Keeping All The History&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One addition to this process is for each contributor to mark their own tree with a labeled branch before rebasing, and then pushing those branches to the contributor’s public repo. This will then provide a complete history of the process, if that is desired. For example: I push some commits to my public repo, then Abel rebases my commits onto some of his work and pushes to the &lt;em&gt;upstream&lt;/em&gt;. In this case, the history in my public repo will be different than what is in the &lt;em&gt;upstream&lt;/em&gt; repo as well as Abel’s public repo.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Your own private dropbox with free software</title>
+      <link>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</link>
+      <pubDate>Tue, 12 Nov 2013 12:50:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</guid>
+      <description>&lt;p&gt;There are lots of file storage and sharing software packages out there that make it easy for a group of people to share files. Dropbox is perhaps the most well known of the group, it provides an easy way for a group of people to share files. The downside of Dropbox is that it is not a private service, just like any cloud-based service. Dropbox has total access to your files that you store there. That means its likely that the NSA and its collaborators do too.&lt;/p&gt;
+
+&lt;p&gt;Dropbox also knows where the computers are that are accessing their service because they can see the IP address of the incoming connections. To help with this, it is possible to use use Dropbox over Tor, thankfully they have provided proxy settings.&lt;/p&gt;
+
+&lt;p&gt;For our shared files, we use &lt;a href=&#34;http://sparkleshare.org/&#34; target=&#34;_blank&#34;&gt;SparkleShare&lt;/a&gt;. It provides an experience very similar to Dropbox: you have a SparkleShare folder that is synced up with the service, and in turn any other users who are also linked up to it. Once its setup, it is as easy to use as Dropbox, but setting it up takes a bit more work than Dropbox. It builds upon two software packages well known for security and reliability: &lt;code&gt;git&lt;/code&gt; and &lt;code&gt;ssh&lt;/code&gt;, and works with Tor Hidden Services. It runs on Windows, Mac OS X, and GNU/Linux, and there is an &lt;a href=&#34;https://github.com/NewProggie/SparkleShare-Android&#34; target=&#34;_blank&#34;&gt;Android client&lt;/a&gt; in the works.&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png&#34; alt=&#34;sparkleshare-onion&#34; width=&#34;312&#34; height=&#34;342&#34; class=&#34;alignright size-full wp-image-11936&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png 312w, https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion-273x300.png 273w&#34; sizes=&#34;(max-width: 312px) 100vw, 312px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use any git service as the server for SparkleShare, including github, bitbucket, &lt;a href=&#34;https://gitorious.org/&#34; target=&#34;_blank&#34;&gt;gitorious&lt;/a&gt;, etc. But these have the same issues as putting your files on Dropbox: that service has complete access to your files. For extra protection, SparkleShare &lt;a href=&#34;https://github.com/hbons/SparkleShare/wiki/Client-Side-Encryption&#34; target=&#34;_blank&#34;&gt;can encrypt the files on the client-side&lt;/a&gt;, have encrypted shared folders with SparkleShare, so that the server does not have access to the files. For the last piece of setting up a private SparkleShare, you need a computer that you can &lt;code&gt;ssh&lt;/code&gt; to, and has &lt;code&gt;git&lt;/code&gt; and Tor on it. This computer could even be an old Android device running &lt;a href=&#34;https://guardianproject.info/code/lildebi/&#34; target=&#34;_blank&#34;&gt;Lil’ Debi&lt;/a&gt;, it only needs enough disk space for your SparkleShare files and a steady network connection. Running it on your own computer means it can use a Tor Hidden Service, and that all of the metadata related to who is editing what files remains private.&lt;/p&gt;
+
+&lt;p&gt;To start, setup a Tor Hidden Service to the sshd port. You can read all about that process in the &lt;a href=&#34;https://www.torproject.org/docs/tor-hidden-service.html&#34; target=&#34;_blank&#34;&gt;Tor instructions&lt;/a&gt;, but basically, you need to add something like this to the &lt;code&gt;torrc&lt;/code&gt; configuration file:&lt;/p&gt;
+
+&lt;pre&gt;HiddenServiceDir /var/lib/tor/ssh_hidden_service/
+HiddenServicePort 22 127.0.0.1:22
+&lt;/pre&gt;
+
+&lt;p&gt;Then restart tor, and it will generate two files in &lt;code&gt;/var/lib/tor/ssh_hidden_service/&lt;/code&gt;, open the file called &lt;code&gt;hostname&lt;/code&gt; to see your new .onion address. We’re going to use &lt;code&gt;fakefakefakefake.onion&lt;/code&gt; as our made-up one for this HOWTO. That is the address you will use in SparkleShare as the server address.&lt;/p&gt;
+
+&lt;p&gt;Next &lt;code&gt;ssh&lt;/code&gt; needs to be setup to use Tor to access the .onion address of the Tor Hidden Service. To do that we need the wonderful Netcat tool (&lt;code&gt;nc&lt;/code&gt;). On Debian/Ubuntu, run &lt;code&gt;sudo apt-get install netcat-openbsd&lt;/code&gt; to get it, its included with Mac OS X by default. Now edit your SSH config file, its usually in &lt;code&gt;~/.ssh/config&lt;/code&gt;, and add this section:&lt;/p&gt;
+
+&lt;pre&gt;Host *.onion
+     Compression yes
+     ProxyCommand nc -X 5 -x 127.0.0.1:9050 %h %p
+&lt;/pre&gt;
+
+&lt;p&gt;For Windows, you need to use &lt;code&gt;connect&lt;/code&gt; proxy, which is thankfully included in SparkleShare. You can optionally use &lt;code&gt;connect&lt;/code&gt; instead of Netcat/&lt;code&gt;nc&lt;/code&gt; on Mac OS X (&lt;code&gt;fink install connect&lt;/code&gt; or &lt;code&gt;brew install connect&lt;/code&gt;) and GNU/Linux (e.g. &lt;code&gt;apt-get install connect-proxy&lt;/code&gt; or &lt;code&gt;yum install connect-proxy&lt;/code&gt;). Instead of the snippet above, use this snippet in &lt;code&gt;~/.ssh/config&lt;/code&gt; to use &lt;code&gt;connect&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;Host *.onion
+     Compression yes
+     ProxyCommand connect -5 -S 127.0.0.1:9050 %h %p
+&lt;/pre&gt;
+
+&lt;p&gt;Now its time to set up the git repo on the server that will be the conduit for sharing files between the different users. Basically, all you need to do is create a new folder, then make it a “bare” git repo (you can read &lt;a href=&#34;http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server&#34; target=&#34;_blank&#34;&gt;all about it in the git book&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;ssh g&amp;#x69;t&amp;#x40;&amp;#x66;a&amp;#x6b;e&amp;#x66;&amp;#x61;k&amp;#x65;f&amp;#x61;&amp;#x6b;e&amp;#x66;a&amp;#x6b;&amp;#x65;.&amp;#x6f;n&amp;#x69;&amp;#x6f;n
+mkdir /home/git/MyPrivateShare
+cd /home/git/MyPrivateShare
+git init --bare
+&lt;/pre&gt;
+
+&lt;p&gt;For sshing to the git, we set up a single account called &lt;code&gt;git&lt;/code&gt;, then to grant access, we add the SSH key (SparkleShare calls this the &lt;em&gt;Client ID&lt;/em&gt;) to the &lt;code&gt;git&lt;/code&gt; account’s &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Now everything should be ready to start adding clients! In SparkleShare, go to Add Hosted Project…, choose On my own server, then enter your username and .onion address (&lt;em&gt;ssh:&amp;#x2f;&amp;#x2f;&amp;#x67;&amp;#x69;t@fak&amp;#x65;&amp;#x66;&amp;#x61;&amp;#x6b;efake&amp;#x66;&amp;#x61;&amp;#x6b;&amp;#x65;.onio&amp;#x6e;&lt;/em&gt;) in &lt;strong&gt;Address&lt;/strong&gt; and the path to the git repo (&lt;em&gt;/home/git/MyPrivateShare&lt;/em&gt;) in &lt;strong&gt;Remote Path&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png&#34; alt=&#34;SparkleShare Setup&#34; width=&#34;686&#34; height=&#34;427&#34; class=&#34;alignnone size-full wp-image-11945&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png 686w, https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup-300x186.png 300w&#34; sizes=&#34;(max-width: 686px) 100vw, 686px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the client will download the entire git repository from the server, and you’ll then have a working shared dropbox! If there are a lot of files in it, then the first sync can take a long time before any files show up. This is because git first downloads the entire history first, then it checks out the files. After that initial setup, then the new files show up quite quickly.&lt;/p&gt;
+
+&lt;p&gt;So this SparkleShare setup keeps your files on computers that you control, it prevents information and metadata from being leaked to the network while people are using this SparkleShare setup. When using Client Side Encryption, even less data is leaked. The server cannot access the content of the files at all since they are encrypted. The the server in this case would only be able to see the network traffic, and which ssh key was used to access the server. If everyone accessing this setup used the same user account (i.e. &lt;code&gt;git&lt;/code&gt;) and ssh key, then the server would not even know which user is making the changes. This is about as private as you could hope for in a shared dropbox folder.&lt;/p&gt;
+
+&lt;p&gt;One last nice feature of this setup is that git server does not need a domain name, static IP or even a public IP, it just needs a working internet connection. As long as it can connect to Tor, then the Hidden Service will work. So if this private dropbox is for extra sensitive stuff, it could be stashed anywhere it can get power and wifi.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

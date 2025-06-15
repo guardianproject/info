@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teardown on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/teardown/</link>
+    <description>Recent content in Teardown on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 05 Jun 2010 13:38:23 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/teardown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>aPad / iRobot / Moons e7001 Teardown</title>
+      <link>https://guardianproject.github.io/info/2010/06/05/apad-/-irobot-/-moons-e7001-teardown/</link>
+      <pubDate>Sat, 05 Jun 2010 13:38:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/06/05/apad-/-irobot-/-moons-e7001-teardown/</guid>
+      <description>&lt;p&gt;This is the aPad or iRobot Android 7″ tablet device from &lt;a rel=&#34;nofollow&#34; href=&#34;http://www.hiapad.com/&#34;&gt;www.hiapad.com&lt;/a&gt;. I decided to tear mine apart, as the unit I received has a battery issue, and I hoped to see if I could find a bad solder point. In addition, I was curious to see just how hackable or extensible the hardware was. In the end, I was mostly surprised by how much of the thing is put together with tape. I suppose that is what you get for &amp;lt; $200 Android tablet! You can find the &lt;a href=&#34;http://www.hiapad.com/?p=9&amp;amp;lang=en&#34;&gt;full product overview on the Hiapad site&lt;/a&gt;. I have also pasted in the basic specs below.&lt;/p&gt;
+
+&lt;p&gt;See the &lt;a href=&#34;http://slatedroid.com&#34;&gt;Slatedroid forums&lt;/a&gt; for more tear down and custom rom news: &lt;a rel=&#34;nofollow&#34; href=&#34;http://slatedroid.com/index.php?board=18.0&#34;&gt;slatedroid.com/index.php?board=18.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;p.s. – the older, distinguished gentleman in the photos is my father, who at age 75, is still fascinated, engaged, and into hacking with all things digital.&lt;/p&gt;
+
+&lt;p&gt;Summary of hardware specifications for our Rockchip Apad iRobot Android Tablet, Batch 2:&lt;br /&gt;
+CPU: RK2808 Chipset (ARM9 @ 600 MHz + DSP @ 550 MHz dual-core)&lt;br /&gt;
+Operating System: Android 1.5&lt;br /&gt;
+Supported Languages: English, Chinese, others&lt;br /&gt;
+Display: 800×480 7″ LCD&lt;br /&gt;
+Input: Resistive single point touchscreen&lt;br /&gt;
+Sensors: Accelerometer&lt;br /&gt;
+Camera: 3 Megapixel camera&lt;br /&gt;
+Audio input: built-in microphone&lt;br /&gt;
+Audio output: 3.5 mm jack, integrated speakers&lt;br /&gt;
+Networking: 802.11 Wireless b/g&lt;br /&gt;
+Peripheral Support: USB HOST (mouse, keyboard, memory stick, more untested)&lt;br /&gt;
+Battery: 3000 mAH, 2 hours continuous use wifi on, 4 hours reading time wifi off&lt;br /&gt;
+RAM: 128 MB&lt;br /&gt;
+ROM: 2 GB&lt;br /&gt;
+Expansion memory: Transflash (microSD) up to 16 GB&lt;br /&gt;
+Supported video formats: MKV (H.264 HP)/RMVB/MPEG-4/FLV/MPEG-1/MPEG-2 up to 720p&lt;br /&gt;
+Supported audio formats: MP3, WMA. FLAC, AAC, AC3, OGG, WAV&lt;br /&gt;
+Supported picture formats: JPEG, PNG, BMP, GIF&lt;br /&gt;
+The Rockchip Apad is a MID based on the Rockchip electronics RK2808 platform.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

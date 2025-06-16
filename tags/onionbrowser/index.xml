@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Onionbrowser on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/onionbrowser/</link>
+    <description>Recent content in Onionbrowser on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/onionbrowser/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Onion Browser Release 2.6 Tutorial</title>
+      <link>https://guardianproject.github.io/info/2020/06/02/onion-browser-release-2.6-tutorial/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/06/02/onion-browser-release-2.6-tutorial/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial we&amp;rsquo;re going to talk about the best practices to browse the web securely on iOS using &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser&lt;/a&gt; Release 2.6 and the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser for iOS&lt;/a&gt; is a free, open-source web browser app developed originally by &lt;a href=&#34;https://mike.tig.as/&#34;&gt;Mike Tigas&lt;/a&gt;, with Release 2.6 as a collaboration with the Guardian Project. Onion Browser has Tor built-in and uses Tor to protect your web activity.&lt;/p&gt;
+
+&lt;p&gt;You can also watch the &lt;a href=&#34;https://www.youtube.com/playlist?list=PL4-CVUWabKWeHeBpadBLjzlWVa7binXpj&#34;&gt;Onion Browser Video Tutorial&lt;/a&gt; on YouTube.&lt;/p&gt;
+
+&lt;!-- ![](image25.jpg) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image25.jpg&#34;&gt;
+        &lt;img class=&#34;size1&#34; src=&#34;image25.jpg&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;who-is-this-tutorial-designed-for&#34;&gt;Who is this Tutorial designed for?&lt;/h2&gt;
+
+&lt;p&gt;A few questions for you:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Is your internet content being blocked?&lt;/li&gt;
+&lt;li&gt;Are you concerned about your privacy while browsing the web?&lt;/li&gt;
+&lt;li&gt;Do you want to protect your data from aggressive advertisers?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If any of these are true, this tutorial is for you!&lt;/p&gt;
+
+&lt;h2 id=&#34;don-t-have-an-ios-device&#34;&gt;Don&amp;rsquo;t have an iOS device?&lt;/h2&gt;
+
+&lt;!-- ![](image21.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image21.png&#34;&gt;
+        &lt;img class=&#34;size1&#34; src=&#34;image21.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Try Orbot&lt;/a&gt;, the Tor connection for Android devices developed by the Guardian Project. Orbot allows you to route the apps on your phone through Tor.&lt;/p&gt;
+
+&lt;!-- ![](image20.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image20.png&#34;&gt;
+        &lt;img class=&#34;size1&#34; src=&#34;image20.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;You may also try the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor Browser for Android&lt;/a&gt;, the official Tor browser for Android developed by the Tor Project team.&lt;/p&gt;
+
+&lt;h2 id=&#34;first-what-exactly-is-the-tor-network&#34;&gt;First, what exactly is the Tor network?&lt;/h2&gt;
+
+&lt;!-- ![](image11.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image11.png&#34;&gt;
+        &lt;img class=&#34;size1&#34; src=&#34;image11.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The Tor network is a collection of servers, run by volunteers, that allows users to improve their privacy and security on the Internet. Tor&amp;rsquo;s users employ this network by connecting to their favorite services through a series of virtual tunnels rather than making a direct connection, thus allowing both organizations and individuals to share information over public networks without compromising their privacy.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s how Tor works: When you connect to the internet using Tor, a circuit is created. A circuit is a group of 3 different Tor relays located in different parts of the world that work together with encryption to obfuscate your connection to websites and web services, making it hard for third parties to trace the activity back to you.&lt;/p&gt;
+
+&lt;!-- ![](image17.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image17.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image17.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;onion-browser-with-tor-is-an-important-application-for-ios-users&#34;&gt;Onion Browser, with Tor, is an important application for iOS users&lt;/h2&gt;
+
+&lt;p&gt;Why? Because when you use Onion Browser&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;All your browsing is private, since your traffic is encrypted through the Tor network&lt;/li&gt;
+&lt;li&gt;No one can see your activities, save your history, or influence your browsing&lt;/li&gt;
+&lt;li&gt;And there is no trace left behind since tabs don&amp;rsquo;t hang around. They close when you&amp;rsquo;re done, so every search is new&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;how-is-the-onion-browser-different-from-other-browsers-for-ios&#34;&gt;How is the Onion Browser different from other browsers for iOS?&lt;/h2&gt;
+
+&lt;p&gt;Security and privacy require some compromises, and you should be aware that there are some limitations when using the Onion Browser:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Apple requires all web browser apps to use the same core web rendering engine. Due to this limitation, we are unable to compile and include our own web engine, based on Firefox Gecko, as with Tor Browser for desktop and Android&lt;/li&gt;
+&lt;li&gt;Onion Browser only tunnels traffic within the Onion Browser app. If you are using a smartphone be aware that information outside of Onion Browser is not protected&lt;/li&gt;
+&lt;li&gt;Sometimes your bandwidth speeds will be reduced, depending on the relays you are connecting to&lt;/li&gt;
+&lt;li&gt;Websites that flag Tor as suspicious will show a CAPTCHA loop and you won&amp;rsquo;t be able to access them&lt;/li&gt;
+&lt;li&gt;Certain features of many websites may be disabled or work poorly on Onion Browser, especially at the higher security levels&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;onboarding&#34;&gt;Onboarding&lt;/h2&gt;
+
+&lt;p&gt;After &lt;a href=&#34;https://apps.apple.com/us/app/onion-browser/id519296448&#34;&gt;downloading Onion Browser from the App Store&lt;/a&gt;, we&amp;rsquo;ll give you a smooth start to using the app. After the initial loading screen, you&amp;rsquo;ll be invited to connect to Tor before you start browsing. Be advised: Onion Browser always needs to connect to Tor before you browse. There&amp;rsquo;s no operational mode that doesn&amp;rsquo;t use Tor.&lt;/p&gt;
+
+&lt;p&gt;&lt;!-- ![](image24.png) --&gt; &lt;!-- ![](image14.png) --&gt;
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image24.png&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image24.png&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;image14.png&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image14.png&#34;&gt;
+    &lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two options here: connecting directly to Tor, as most users do, or connecting via a special &amp;ldquo;bridge&amp;rdquo;. This latter option requires configuration, and we&amp;rsquo;ll discuss it in a separate section of this tutorial. Select &amp;ldquo;Connect to Tor&amp;rdquo; and the app will let you know when it is ready.&lt;/p&gt;
+
+&lt;!-- ![](image18.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image18.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image18.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Click on &amp;ldquo; Next&amp;rdquo; to set up your security level.&lt;/p&gt;
+
+&lt;!-- ![](image30.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image30.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image30.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;There are three levels of security you can select, according to your needs. For many users, Level 2 is the best choice to start. Click on &amp;ldquo;Learn More&amp;rdquo; to see more details about each option. Tap &amp;ldquo;Start Browsing&amp;rdquo; to begin using Onion Browser.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-onion-browser-home-page&#34;&gt;The Onion Browser Home Page&lt;/h2&gt;
+
+&lt;p&gt;On the home page of Onion Browser you&amp;rsquo;ll see a couple of website suggestions, as well as more information about the app. We&amp;rsquo;d welcome your support for our work. Use the Donate Link to see the ways you can contribute with a donation. You can also subscribe to the Tor Newsletter to get updates about security and privacy on the Internet from the Tor team.&lt;/p&gt;
+
+&lt;!-- ![](image22.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image22.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image22.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;On the home page, in the top navigation bar, you&amp;rsquo;ll see there are two icons you don&amp;rsquo;t find in other browsers, a Shield on the top left side and an Onion on the top right side.&lt;/p&gt;
+
+&lt;p&gt;&lt;!-- ![](image15.jpg) --&gt; &lt;!-- ![](image5.jpg) --&gt;
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image15.jpg&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image15.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;image5.jpg&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image5.jpg&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll discuss these in a bit. The Onion Browser also includes features you&amp;rsquo;ll recognize like Bookmarks, Share, New Tab, Switch Tabs, and Accessing Settings. These are common in other browsers and work in the same manner here.&lt;/p&gt;
+
+&lt;h2 id=&#34;visiting-websites&#34;&gt;Visiting websites&lt;/h2&gt;
+
+&lt;p&gt;When you visit websites, Onion Browser will give you additional information about the security and nature of your connection.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS websites will show a green lock on the right side of the URL bar, tap on it to verify the Certificate Information.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ![](image1.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image1.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image1.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tap on the Shield icon to see your current security level&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ![](image13.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image13.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image13.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tap on the Onion icon to see the Tor circuit you are using, sometimes your current circuit will be too slow or it will not work properly, for those cases use the &amp;ldquo;New Circuit&amp;rdquo; button and you will be automatically connected to a new one.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ![](image7.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image7.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image7.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;On this drop-down menu, you will also find the option to connect to Tor using bridges. Please remember that you should always try to connect to Tor without using bridges and only use them if that fails. We&amp;rsquo;ll talk more about bridges later.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Share icon allows you to send a link to the website you are looking at using other apps in your device. It also allows you to open the link using Safari if the site is not opening properly using Tor. This will be out of the Tor network and is not safe&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ![](image19.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image19.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image19.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The same applies to open images and links with Safari. But you can also open links safely on a new tab, and navigate them the same way you will do it on any other browser&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ![](image12.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image12.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image12.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If your screen times out or you send the browser to the background all your current tabs will disappear when you return to your browser, this is a security feature that can be changed in your settings&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Downloading content is easiest with the Share icon. Display your content (such as a PDF-formatted article) in a tab, then tap the Share icon. Select &amp;lsquo;Save to Files&amp;rsquo;, then on the next screen, choose the desired locations (&amp;ldquo;Downloads&amp;rdquo; folder is shown here). Tap &amp;lsquo;Save&amp;rsquo; and the content will be saved in the Downloads folder for later use or further sharing.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!-- ![](image23.png) --&gt; &lt;!-- ![](image16.png) --&gt;
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image23.png&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image23.png&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;image16.png&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image16.png&#34;&gt;
+    &lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;security-connectivity&#34;&gt;Security &amp;amp; Connectivity&lt;/h2&gt;
+
+&lt;h3 id=&#34;bridges&#34;&gt;Bridges&lt;/h3&gt;
+
+&lt;p&gt;There&amp;rsquo;s a special way to connect to the Tor network, designed for users in the most restrictive geographies or users personally at risk of invasive monitoring. Bridges are like special on-ramps for Tor that are more aggressive about defeating monitoring. That comes at a cost in performance, though. We like to reserve these pathways for most impacted users, so please use them sparingly.&lt;/p&gt;
+
+&lt;p&gt;If you know bad actors are monitoring Tor usage in your geography, you&amp;rsquo;ll want to configure a bridge immediately when you first open Onion Browser. You can do that right from the first onboarding screen, before connecting to Tor&lt;/p&gt;
+
+&lt;!-- ![](image6.jpg) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image6.jpg&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image6.jpg&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Whether you configure your bridge immediately or after you&amp;rsquo;ve been using Onion Browser for a while, you need to be careful how you get your bridge information. You have several options. See the Bridge Configuration settings (accessed during on-boarding as above or by tapping on the Onion icon when viewing a website and then tapping &amp;lsquo;Bridge Configuration&amp;rsquo;).&lt;/p&gt;
+
+&lt;!-- ![](image2.jpg) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image2.jpg&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image2.jpg&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Your first option should be the list of bridges using the so-called Obfs4 technology, a list already built into Onion Browser. Select the &amp;ldquo;Built-in Obfs4&amp;rdquo; option and Onion Browser will instruct Tor to use that selection of bridges as it attempts to connect. Tap &amp;ldquo;connect&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately the bridges on that list can become crowded and connection may fail here, too. If you know a trustworthy person who uses a bridge to connect to Tor, your second option is to have your friend help you by sending you a bridge QRCode your device can scan and automatically configure to use that bridge. Or, less securely, you can copy/paste a bridge identifier that your friend sends you via another service (messaging, for example). To use this option, tap &amp;ldquo;Custom Bridges&amp;rdquo;, and then either scan the provided QRCode or paste your provided bridge into the text area shown, then tap &amp;ldquo;Connect&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!-- ![](image4.jpg) --&gt; &lt;!-- ![](image8.jpg) --&gt;
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image4.jpg&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image4.jpg&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;image8.jpg&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image8.jpg&#34;&gt;
+    &lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;If these options fail, you can get access to a fresh selection of Obfs4 bridges using the service called MOAT to get up-to-date information in real-time. This option works in a way that does not expose itself to suspicion. To use this option, select &amp;ldquo;Built-in Meek/Azure&amp;rdquo; and tap &amp;ldquo;connect&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Last, the Tor Project itself also maintains a list of bridges. For this option, tap &amp;lsquo;Custom Bridges&amp;rsquo;, then &amp;lsquo;Request Bridges from torproject.org&amp;rsquo; and follow the instructions there. You&amp;rsquo;ll get a bridge identifier, and you&amp;rsquo;ll paste it into the text area, same as you would if a friend provided it to you. After pasting, tap &amp;ldquo;connect&amp;rdquo;. Note that this method of contacting the Tor Project to get a bridge identifier is an action that itself might be blocked.&lt;/p&gt;
+
+&lt;p&gt;Again, we want to steer you away from using bridges. The degradation of the user experience can be extreme and please remember that there are people who actually require this capability to get any connection at all. As capacity is limited, we want to give those people the first opportunity.&lt;/p&gt;
+
+&lt;h3 id=&#34;biometric-authentication&#34;&gt;BioMetric Authentication&lt;/h3&gt;
+
+&lt;p&gt;You can place a second level of access security on Onion Browser by using its authentication option. You might prefer this option if you believe you face a physical security threat, if there is a chance your device might get stolen or if your device might be otherwise misused by people you don&amp;rsquo;t trust.&lt;/p&gt;
+
+&lt;p&gt;First, you need to set up your iOS device to require security at login via a 6-digit numeric Passcode, FaceID or TouchID. Use the iOS Settings app. Select and configure the method you prefer. If you&amp;rsquo;ve already done that, there&amp;rsquo;s no need to change. Be aware that all manipulations of our authentication settings here will require you to enter your password.&lt;/p&gt;
+
+&lt;!-- ![](image10.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image10.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image10.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Now tap the Onion Browser settings icon to get to the Settings page. You&amp;rsquo;ll see a selection option for &lt;strong&gt;&amp;ldquo;Lock App with TouchID/FaceID or Device Passcode&amp;rdquo;&lt;/strong&gt;. Select that option to enable it and restart Onion Browser. On your next use, Onion Browser will require your ID (in whatever form you&amp;rsquo;ve requested) before it will start up.&lt;/p&gt;
+
+&lt;h2 id=&#34;useful-tips&#34;&gt;Useful Tips&lt;/h2&gt;
+
+&lt;h3 id=&#34;dark-mode&#34;&gt;Dark Mode&lt;/h3&gt;
+
+&lt;p&gt;The Onion Browser has a built-in Dark Mode that allows it to comply with the system setting for the &amp;ldquo;dark&amp;rdquo; color scheme. To set Dark Mode, visit the iOS Settings application and tap Display &amp;amp; Brightness. Select your appearance here and Onion Browser will comply with this setting.&lt;/p&gt;
+
+&lt;!-- ![](image3.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image3.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image3.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;tab-security-hide-web-pages-when-switching-apps&#34;&gt;Tab Security - Hide Web Pages When Switching Apps&lt;/h3&gt;
+
+&lt;p&gt;Hiding web pages when switching apps is a feature required by people who are in danger of having their device removed from their person by other bad actors. If that happens, the contents of their open tabs can be seen and perhaps screen-shotted by those bad actors and used in prosecution. While hiding web pages sounds great at first, it means you lose your browsing &amp;ldquo;state&amp;rdquo; when switching back to Onion Browser later. Frankly, it is terribly inconvenient for most users. So, there are lesser options, too. From the Onion Browser Settings page, tap &amp;ldquo;Tab Security&amp;rdquo;&lt;/p&gt;
+
+&lt;!-- ![](image29.jpg) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image29.jpg&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image29.jpg&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Then select from:&lt;/p&gt;
+
+&lt;h4 id=&#34;forget-in-background&#34;&gt;Forget in Background&lt;/h4&gt;
+
+&lt;p&gt;Happens when you tap the HOME button, otherwise switch apps, or the display times-out and the login screen is presented.&lt;/p&gt;
+
+&lt;h4 id=&#34;forget-at-shutdown&#34;&gt;Forget at Shutdown&lt;/h4&gt;
+
+&lt;p&gt;Happens only when user actually closes the app or shuts down the device&lt;/p&gt;
+
+&lt;h4 id=&#34;remember-tabs&#34;&gt;Remember Tabs&lt;/h4&gt;
+
+&lt;p&gt;Tabs are NOT hidden; this setting is also called &amp;ldquo;Startup in last state&amp;rdquo; and it&amp;rsquo;s the opposite of &amp;ldquo;remove web pages when switching apps&amp;rdquo; because it means your browsing state is saved between sessions. For many, this is a tremendous time-saver, but users concerned about their device being taken from them should not enable this feature.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;NOTE: Your bookmarks are also an indication of your browsing interests. Creating many bookmarks on the device leaves a certain &amp;ldquo;fingerprint&amp;rdquo; about your browsing intentions in the same way open tabs indicate what&amp;rsquo;s actually being used. See the&lt;/em&gt; Nextcloud Bookmarks &lt;em&gt;feature as a way to resolve this problem.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;onion-browser-as-your-default-system-browser&#34;&gt;Onion Browser As Your Default System Browser&lt;/h3&gt;
+
+&lt;p&gt;There are a lot of ways you can acquire a link to web content and resources. Many applications, when seeing a link, will offer the option to open that link in the web browser. On iOS, Safari is the system browser, registered to open links, and iOS doesn&amp;rsquo;t usually allow other browsers to have that privilege. Safari doesn&amp;rsquo;t use Tor, so it&amp;rsquo;s not safe to open links that way. We can&amp;rsquo;t make Onion Browser the &amp;ldquo;system browser&amp;rdquo;, but there is a way to disable Safari and allow Onion Browser to open your links. Follow these steps:&lt;/p&gt;
+
+&lt;p&gt;Open the iOS Settings app. Tap &amp;ldquo;Screen Time&amp;rdquo; (if it&amp;rsquo;s your first time using this feature, several help screens will follow).&lt;/p&gt;
+
+&lt;!-- ![](image28.png) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image28.png&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image28.png&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Tap &amp;ldquo;Content &amp;amp; Privacy Restrictions&amp;rdquo; to enable it. Tap &amp;ldquo;Allowed Apps&amp;rdquo;. Tap &amp;ldquo;Safari&amp;rdquo; to disable it. This way, Safari won&amp;rsquo;t be opened when links are clicked in any app starting with http:// or https://. OnionBrowser can now open the links safely.&lt;/p&gt;
+
+&lt;h3 id=&#34;nextcloud-bookmarks&#34;&gt;NextCloud Bookmarks&lt;/h3&gt;
+
+&lt;p&gt;Bookmarks make it easy to access frequently-desired content as well as to preserve access to infrequently-visited, but necessary, sites. However, bookmarks can also represent intent or interest and, for those in danger of losing their device to bad actors, this can be an issue.&lt;/p&gt;
+
+&lt;p&gt;If you use NextCloud, you can manage your Onion Browser bookmarks on your other devices and synchronize them with Onion Browser. Here&amp;rsquo;s how:&lt;/p&gt;
+
+&lt;p&gt;&lt;!-- ![](image26.png) --&gt; &lt;!-- ![](image9.png) --&gt;
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image26.png&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image26.png&#34;&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;image9.png&#34;&gt;
+        &lt;img class=&#34;size2&#34; src=&#34;image9.png&#34;&gt;
+    &lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;Tap the Bookmarks icon, then tap &amp;lsquo;Sync with Nextcloud&amp;rsquo;.Enter the link for your Nextcloud server along with your username and password, then tap &amp;lsquo;Sync Bookmarks&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re not a Nextcloud user and this sounds interesting, find more about NextCloud at nextcloud.com.&lt;/p&gt;
+
+&lt;h2 id=&#34;some-failure-modes-and-how-to-recover&#34;&gt;Some Failure Modes and How to Recover&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s talk about ways in which Onion Browser - and the mountain of software and Internet network architecture behind it - can let you down. Yes, it DOES happen. Sometimes your network just doesn&amp;rsquo;t have the performance and responsiveness it requires. Sometimes your network is under heavy surveillance. Sometimes the Tor network is under direct attack by bad actors. Let&amp;rsquo;s look at a few of the failures you might experience and see what you can do to mitigate at least some of the impacts. We regret that this list is not complete.&lt;/p&gt;
+
+&lt;h3 id=&#34;on-start-up&#34;&gt;On Start-up&lt;/h3&gt;
+
+&lt;p&gt;What if I have no network connection of any kind and I don&amp;rsquo;t realize it? What if my network connection is very slow? What if Tor is blocked in my country?&lt;/p&gt;
+
+&lt;p&gt;First, if you know - via friends or trusted information sources - that Tor is blocked in your country, you&amp;rsquo;ll need configure access via a bridge on your very first startup. Please revisit the prior discussion on how to properly configure Tor bridge access. Please remember, bridges tend to degrade the user experience in a number of ways. They&amp;rsquo;re a &amp;ldquo;last resort&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re not connected to a local or wide-area network (and don&amp;rsquo;t realize it) or if your connection is very poor (low-bandwidth), or if Tor is blocked in your country, Onion Browser won&amp;rsquo;t be able to start. Unfortunately, there&amp;rsquo;s no safe way to automatically distinguish between these different conditions. First, try to verify that the device itself has a connection or move to another location &amp;amp; network. Please remember, Tor can be slow to start up - especially on your first use - even under the best circumstances because it has to discover its network of nodes (at least partly) before it can build circuits. This does take a little patience.&lt;/p&gt;
+
+&lt;h3 id=&#34;on-restart&#34;&gt;On Restart&lt;/h3&gt;
+
+&lt;p&gt;What if Tor fails to start or restart properly within Onion Browser (can this happen, for example, when switching tabs)?&lt;/p&gt;
+
+&lt;p&gt;If Tor fails on start/restart, Onion Browser assumes that it&amp;rsquo;s because the Tor nodes available from your location are blocked. Onion Browser will urge you to configure bridges. You won&amp;rsquo;t be able to proceed, though. You actually need to stop Onion Browser (switch to another app, or kill the app by swiping it out of iOS&amp;rsquo; app-cards overview) and then start it again.&lt;/p&gt;
+
+&lt;p&gt;If you experience a lot of this type of failure, you may want to consider the Onion Browser setting that allows you to &amp;ldquo;Remember Tabs&amp;rdquo; (also called &amp;ldquo;start up in last state&amp;rdquo;). That&amp;rsquo;s available using &amp;ldquo;Settings -&amp;gt; Tab Security -&amp;gt; Remember Tabs&amp;rdquo;.&lt;/p&gt;
+
+&lt;h3 id=&#34;after-a-heavy-use-session&#34;&gt;After A Heavy-Use Session&lt;/h3&gt;
+
+&lt;p&gt;There&amp;rsquo;s a lot going on within Onion Browser and sometimes after a lot of use (or maybe due to a lot of tabs open for a long time) Onion Browser will run out of working memory on the device. In this case, iOS will probably kill the app by itself (though you may have to swipe it away from the app-cards overview under certain circumstances). When you start it again, it will be a fresh start.&lt;/p&gt;
+
+&lt;p&gt;This is another good time to remember, if your situation allows it, use the &amp;ldquo;Remember Tabs&amp;rdquo; feature.&lt;/p&gt;
+
+&lt;h3 id=&#34;failures-under-regular-use&#34;&gt;Failures Under Regular Use&lt;/h3&gt;
+
+&lt;p&gt;You may experience using Onion Browser in a normal way, seemingly fine, and then when tapping a link or visiting a new site nothing seems to happen. It&amp;rsquo;s hard to know if the link or site is the problem, or if Onion Browser or Tor is the problem.&lt;/p&gt;
+
+&lt;p&gt;You can check if Tor is still running by creating a new tab and visiting, for example, DuckDuckGo.com. If Tor really has failed, you should leave the app and enter back after a few seconds (that is, switch to another app, then return). That action should restart Tor. If that fails to help, go to iOS&amp;rsquo; app-cards overview, swipe-away Onion Browser and start it again.&lt;/p&gt;
+
+&lt;p&gt;If the new tab opening to DuckDuckGo.com does work, then Tor is still operating and that&amp;rsquo;s a good indicator that the link or website you visited contains some JavaScript Onion Browser thinks is unsafe.&lt;/p&gt;
+
+&lt;p&gt;Onion Browser has a pop-up and ad blocker integrated. These, unfortunately, might interfere with the web page in a way that makes it break. These features cannot be switched off, currently.&lt;/p&gt;
+
+&lt;p&gt;Lastly, failure can happen when the Security Level currently set for the page is denying the website from taking certain actions. Loading media is one such action, though not every time. If you&amp;rsquo;re sure leaking your browsing information to somebody listening on your connection isn&amp;rsquo;t a problem, you might want to lower the security level to &amp;ldquo;Bronze&amp;rdquo;, at least for that site.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-are-these-circuits-you-talk-about&#34;&gt;What Are These &amp;ldquo;Circuits&amp;rdquo; You Talk About?&lt;/h3&gt;
+
+&lt;p&gt;The circuit is the path your communications take through the Tor network (whose nodes exist in many countries in the world). Normally, you don&amp;rsquo;t need to take specific care regarding the circuit, because that&amp;rsquo;s Tor&amp;rsquo;s business. However, depending on the &amp;ldquo;exit node&amp;rdquo; Tor has chosen, you might see a website localized wrongly or a website that mistakes you for a hostile due to your country-of-origin (which Tor has set). In those cases you can request a new circuit. It&amp;rsquo;s easy, right there on the circuit display.&lt;/p&gt;
+
+&lt;!-- ![](image7.jpg) --&gt;
+
+&lt;p class=&#34;ctr&#34;&gt;
+    &lt;a href=&#34;image7.jpg&#34;&gt;
+        &lt;img class=&#34;size3&#34; src=&#34;image7.jpg&#34;&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The circuit display could also hint to the reason of a slow connection. If you&amp;rsquo;re routed around the world, that might be the problem. However, Tor typically tries to avoid these situations automatically and chooses circuits with hops near you.&lt;/p&gt;
+
+&lt;h3 id=&#34;custom-site-settings&#34;&gt;Custom Site Settings&lt;/h3&gt;
+
+&lt;p&gt;Now that we&amp;rsquo;ve introduced &amp;ldquo;Security Levels&amp;rdquo; in the new Onion Browser, there&amp;rsquo;s much less need to store custom settings for individual websites. That&amp;rsquo;s a good thing because these settings are hard to remember once customized. For example, did you remove all restrictions from a website because you were once on a less restricted network? Well, when you&amp;rsquo;re back on your surveilled network, it&amp;rsquo;s hard to remember that you customized just that one site. That can lead to an unplanned exposure.&lt;/p&gt;
+
+&lt;p&gt;We hope you like the new &amp;ldquo;Security Levels&amp;rdquo; mechanism - it&amp;rsquo;s much easier to monitor how much risk you&amp;rsquo;re exposed to using this mechanism. Enjoy it!&lt;/p&gt;
+
+&lt;h2 id=&#34;support&#34;&gt;Support&lt;/h2&gt;
+
+&lt;p&gt;Work on Onion Browser during 2019 and through mid-2020 was funded by the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;Open Technology Fund&lt;/a&gt; and sponsored by the &lt;a href=&#34;https://guardianproject.info/&#34;&gt;Guardian Project&lt;/a&gt;. &lt;a href=&#34;https://github.com/mtigas&#34;&gt;Mike Tigas&lt;/a&gt; was development architect, &lt;a href=&#34;https://github.com/tladesignz&#34;&gt;Benjamin Erhart&lt;/a&gt; was lead developer. &lt;a href=&#34;https://okthanks.com/&#34;&gt;OkThanks&lt;/a&gt; provided user-centered design services.&lt;/p&gt;
+
+&lt;p&gt;To contribute to the long-term maintenance of Onion Browser, please visit the &lt;a href=&#34;https://onionbrowser.com/donate&#34;&gt;donation page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

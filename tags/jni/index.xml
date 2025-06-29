@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jni on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/jni/</link>
+    <description>Recent content in Jni on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/jni/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IOCipher 1.0 community reboot</title>
+      <link>https://guardianproject.github.io/info/2025/02/01/iocipher-1.0-community-reboot/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2025/02/01/iocipher-1.0-community-reboot/</guid>
+      <description>
+
+&lt;h2 id=&#34;iocipher-update-to-version-1-0&#34;&gt;IOCipher update to version 1.0&lt;/h2&gt;
+
+&lt;p&gt;We are thrilled to announce that a community contributor has picked up maintaining a fork of IOCipher and updated to IOCipher 1.0,
+designed to enhance your development experience and empower you to create more secure applications with ease. Here’s what’s new and why it matters to you:&lt;/p&gt;
+
+&lt;h3 id=&#34;1-enhanced-features&#34;&gt;1. Enhanced Features&lt;/h3&gt;
+
+&lt;p&gt;We introduced a few new features. Most notably IOCipher is also available on Desktop Java for Linux and Windows now. (Although not all IOCipher features are fully supported on Windows).
+The latest release even includes some example code for accessing IOCipher VFS using Python.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-dependency-updates&#34;&gt;2. Dependency updates&lt;/h3&gt;
+
+&lt;p&gt;We updated to the newest SQLCipher and OpenSSL.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-bug-fixes-and-stability&#34;&gt;3. Bug Fixes and Stability&lt;/h3&gt;
+
+&lt;p&gt;Now your virtual files can be as large as you want, there is no longer a hard limit at 4 GB.
+We fixed some bugs that testing the JNI code with ASAN has found.&lt;/p&gt;
+
+&lt;h2 id=&#34;iocipher-encrypted-virtual-disk-for-android-and-linux-jvm&#34;&gt;IOCipher: Encrypted Virtual Disk (for Android and Linux JVM)&lt;/h2&gt;
+
+&lt;p&gt;IOCipher is a virtual encrypted disk for apps without requiring the device to be rooted. It uses a clone of the standard java.io API for working with files. Just password handling &amp;amp; opening the virtual disk are what stand between developers and fully encrypted file storage. It is based on libsqlfs and SQLCipher.&lt;/p&gt;
+
+&lt;p&gt;IOCipher is based on transactions in SQLite, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite’s transactions prevent the whole file system from being corrupted. This is important in Android since an Activity or Service can be killed at any moment without warning.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Comes with &lt;strong&gt;all batteries included&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Secure transparent app-level &lt;strong&gt;virtual encrypted disk&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Multi-threaded access&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No root&lt;/strong&gt; required&lt;/li&gt;
+&lt;li&gt;Only &lt;strong&gt;three new methods&lt;/strong&gt; to learn: &lt;code&gt;VirtualFileSystem.get()&lt;/code&gt;, &lt;code&gt;VirtualFileSystem.mount(dbFile, password)&lt;/code&gt;, and &lt;code&gt;VirtualFileSystem.unmount()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Supports Android API 21 and above&lt;/li&gt;
+&lt;li&gt;Supports Java version 8 and above on Desktop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;adding-iocipher-to-your-app&#34;&gt;Adding IOCipher to your App&lt;/h2&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a minimal example for using IOCipher to encrypt all files your app is storing on a phone:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add to your project build.gradle
+&lt;pre&gt;
+allprojects {
+repositories {
+    google()
+    mavenCentral()
+    maven {
+        url &amp;ldquo;&lt;a href=&#34;https://jitpack.io&amp;quot;&#34;&gt;https://jitpack.io&amp;quot;&lt;/a&gt;
+    }
+}
+}
+&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;add to your module build.gradle
+&lt;pre&gt;
+implementation &amp;lsquo;com.github.zoff99:pkgs_guardianprojectIOCipher:1.0.5&amp;rsquo;
+&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;get the VFS singleton using &lt;code&gt;VirtualFileSystem.get()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;on first run, create the container file with a password using &lt;code&gt;VirtualFileSystem.createNewContainer(dbFile, password)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;mount the container file with a password using &lt;code&gt;VirtualFileSystem.mount(dbFile, password)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;replace the relevant &lt;code&gt;java.io&lt;/code&gt; import statements with &lt;code&gt;info.guardianproject.iocipher&lt;/code&gt;
+&lt;pre&gt;
+import info.guardianproject.iocipher.File;
+import info.guardianproject.iocipher.FileOutputStream;
+import info.guardianproject.iocipher.FileReader;
+import info.guardianproject.iocipher.IOCipherFileChannel;
+import info.guardianproject.iocipher.VirtualFileSystem;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
+&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For a full Android example project see: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/007_example_android&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/007_example_android&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./android_example_app.png&#34; alt=&#34;Showing the Android IOCipher Example App running on the Android Emulator&#34; height=&#34;400px&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;source-code&#34;&gt;Source Code&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;all you need for your project: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack&#34;&gt;https://github.com/zoff99/iocipher_pack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;optional&#34;&gt;optional:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a simple test app for Android: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/007_example_android&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/007_example_android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple example desktop file manager app: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/004_example_jvm&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/004_example_jvm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple python example for Linux: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/006_example_python&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/006_example_python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple C API example for Linux: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/005_example_c&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/005_example_c&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;a simple C API example for Windows: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/005_example_c_win64&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/005_example_c_win64&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the core: &lt;a href=&#34;https://github.com/zoff99/iocipher_pack/tree/master/002_src_libsqlfs&#34;&gt;https://github.com/zoff99/iocipher_pack/tree/master/002_src_libsqlfs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;usage-notes&#34;&gt;Usage notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only one active mount per-app is supported&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adventures in Porting: GnuPG 2.1.x to Android!</title>
+      <link>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</link>
+      <pubDate>Thu, 15 Mar 2012 13:00:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</guid>
+      <description>&lt;p&gt;PGP started with Phil Zimmerman’s Pretty Good Privacy, which is now turned into an open IETF standard known as OpenPGP. These days, the reference OpenPGP platform seems to be &lt;a href=&#34;http://gnupg.org/&#34;&gt;GnuPG&lt;/a&gt;: its used by Debian and all its derivatives in the OS itself for verifying packages and more. It is also at the core of all Debian development work, allowing the very diffuse body of Debian, Ubuntu, etc developers to communicate and share work effectively while maintaining a high level of security. It is also used for email encryption in Thunderbird + Enigmail, Apple Mail + GPGMail, GNOME Evolution, KDE KMail, Microsoft Outlook + Gpg4win.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_1651&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/Encryption.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-1651&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/Encryption-150x150.jpg&#34; alt=&#34;lots of one and zeros&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-thumbnail wp-image-1651&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-1651&#34; class=&#34;wp-caption-text&#34;&gt;
+    Yes, encryption means lots of ones and zeros that you can&#39;t read!
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After actively using GnuPG for a few years, I thought it would be a good idea and not too difficult to port it to Android. I dove in and started with the code from git since I was hoping to involve the GnuPG developers. I had recently seen that they were stopping development on the 1.4.x branch, so the 2.1.x branch seemed like the logical choice to give us a reasonably complete OpenPGP implementation. Now I am happy to say we have it working on Android, with a couple of loose ends to tie up in order to get everything working.&lt;/p&gt;
+
+&lt;p&gt;One thing I do have to say is that GnuPG has evolved into a large and elaborate project that not only covers OpenPGP, but also PGP/MIME and things that have nothing to do with PGP like AES symmetric encryption and S/MIME email cryptography. That means it know is made up of many moving parts. It uses many libraries: libassuan, libgpg-error, libksba, npth, openldap, pinentry, and more if you want. It is also made up of a handful of programs to handle different aspects: &lt;code&gt;gpg&lt;/code&gt; is the command line interface, &lt;code&gt;gpg-agent&lt;/code&gt; seems to be the central key handler and task broker, &lt;code&gt;dirmngr&lt;/code&gt; manages connections with directories like OpenPGP keyservers, &lt;code&gt;pinentry&lt;/code&gt; handles getting passphrases from the user, etc.&lt;/p&gt;
+
+&lt;p&gt;The complexity does not stop there for our purposes: we need a Java API so we can make an Android app. So next up we built the &lt;a href=&#34;http://www.gnupg.org/related_software/gpgme/&#34; target=&#34;_blank&#34;&gt;GPGME&lt;/a&gt; (Gnu Privacy Guard Made Easy) library to provide a C/C++ API which is then wrapped in &lt;a href=&#34;https://github.com/smartrevolution/gnupg-for-java&#34; target=&#34;_blank&#34;&gt;gpgme-for-java&lt;/a&gt;, a JNI library to make the GPGME functions available in Java. And just to heap on the layers, we are making a GUI on top of all that so that when you use it, you have no idea that all these little pieces that I have just described are even there at all.&lt;/p&gt;
+
+&lt;p&gt;You can follow our progress on this work on our &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; target=&#34;_blank&#34;&gt;PSST wiki: &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34;&gt;https://guardianproject.info/wiki/PSST&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;_(coming soon: sketching a mobile UI for OpenPGP, follow our notes here: &lt;a href=&#34;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&#34;&gt;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&lt;/a&gt;&lt;/a&gt;)_&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gsoc on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/gsoc/</link>
+    <description>Recent content in Gsoc on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Apr 2015 11:13:26 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Android tools into Debian</title>
+      <link>https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/</link>
+      <pubDate>Thu, 30 Apr 2015 11:13:26 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg&#34; alt=&#34;debian&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12920&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/04/debian-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/04/debian-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/04/debian-230x230.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg 600w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android-150x150.png&#34; alt=&#34;android&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12919&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/04/android-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/04/android-230x230.png 230w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As part of Debian’s project in Google &lt;a href=&#34;https://wiki.debian.org/SummerOfCode2015&#34; target=&#34;_blank&#34;&gt;Summer of Code&lt;/a&gt;, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the &lt;a href=&#34;https://wiki.debian.org/Teams/JavaPackaging&#34; target=&#34;_blank&#34;&gt;Debian Java Team&lt;/a&gt; team, &lt;a href=&#34;https://&amp;#x71;a&amp;#x2e;d&amp;#x65;b&amp;#x69;a&amp;#x6e;.&amp;#x6f;r&amp;#x67;/dev&amp;#x65;l&amp;#x6f;p&amp;#x65;r&amp;#x2e;p&amp;#x68;p&amp;#x3f;l&amp;#x6f;gin=&amp;#x61;p&amp;#x6f;@&amp;#x67;a&amp;#x6d;b&amp;#x61;r&amp;#x75;.&amp;#x64;e&#34; target=&#34;_blank&#34;&gt;Markus Koschany&lt;/a&gt;. We are going to be working on getting the Android SDK and tools into Debian, as part of the Debian &lt;a href=&#34;https://wiki.debian.org/AndroidTools&#34; target=&#34;_blank&#34;&gt;Android Tools&lt;/a&gt; team, building upon the existing work already included from the Java and &lt;a href=&#34;https://wiki.debian.org/Teams/AndroidTools&#34; target=&#34;_blank&#34;&gt;Android Tools&lt;/a&gt; teams. This project is in conjunction with the Java team since there is overlap between Android and Java tools, like &lt;code&gt;gradle&lt;/code&gt;, &lt;code&gt;maven&lt;/code&gt;, etc. Since this work is in Debian, all of the Debian-derivatives will automatically inherit this work. That includes: Ubuntu, Mint, Elementary, and many more.&lt;/p&gt;
+
+&lt;p&gt;The first question a lot of Android developers are probably asking is: why would we want to put the Android tools into Debian when there is already an official distribution from Google with it’s own update tools? It turns out there are many reasons, mostly centered around making things much easier to use, as well as addressing some key security concerns. For example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;automatic trustworthy downloads, no need to verify hash sums or think about HTTPS&lt;/li&gt;
+&lt;li&gt;eliminate need for insecure wrapper scripts, like &lt;code&gt;./gradlew&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;easy install and update channel that all Debian users already know&lt;/li&gt;
+&lt;li&gt;trivial install for specific tools, like &lt;code&gt;adb&lt;/code&gt;, &lt;code&gt;fastboot&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;li&gt;setting up a Debian/Ubuntu/etc box for Android development is easier when everything is included&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-150x150.jpg&#34; alt=&#34;320px-Trawling_Drawing&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12873&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-230x230.jpg 230w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The most glaring issue from my point of view is the security issues in &lt;code&gt;gradle&lt;/code&gt;. It will happily download and execute code without any kind of verification whatsoever. It inherits this terrible practice from maven, which has been shown to be an &lt;a href=&#34;http://blog.ontoillogical.com/blog/2014/07/28/how-to-take-over-any-java-developer/&#34; target=&#34;_blank&#34;&gt;easy path to exploit anyone using it&lt;/a&gt;. This is especially concerning considering that developers are more and more &lt;a href=&#34;https://guardianproject.info/2015/02/24/phishing-for-developers/&#34; target=&#34;_blank&#34;&gt;being directly targeted&lt;/a&gt;. At least it is more common for &lt;code&gt;gradle&lt;/code&gt; configs to use HTTPS, but it is still quite easy mess up a config and force users to use HTTP instead. Fragile configs are really bad for security. Even if &lt;a href=&#34;https://github.com/WhisperSystems/gradle-witness&#34; target=&#34;_blank&#34;&gt;gradle-witness&lt;/a&gt; is used to pin the hash for the jars used in the project, &lt;code&gt;gradle-wrapper&lt;/code&gt; might still downloading insecure code an executing it immediately, giving attackers potential full user access to that machine. That is because &lt;code&gt;gradle-wrapper&lt;/code&gt; will download versions of &lt;code&gt;gradle&lt;/code&gt; that it needs, and &lt;code&gt;gradle-witness&lt;/code&gt; can not be used to pin the hash of the &lt;code&gt;gradle&lt;/code&gt; files. And the repositories that &lt;code&gt;gradle&lt;/code&gt; uses only provide methods to protect against network-based attacks. If the server that holds the jars is exploited, the attacker can replace the jars and the sum files at the same time. There is &lt;a href=&#34;https://github.com/gradle/gradle/pull/448&#34; target=&#34;_blank&#34;&gt;a pull request open for &lt;code&gt;gradle&lt;/code&gt;&lt;/a&gt; to allow pinning of the &lt;code&gt;gradle&lt;/code&gt; executables themselves, which will help this situation.&lt;/p&gt;
+
+&lt;p&gt;On a different note, many people who are not developers at all want to use tools like &lt;code&gt;adb&lt;/code&gt; and &lt;code&gt;fastboot&lt;/code&gt; to access their Android device, or even root it. Having them in Debian means they are trivial for people to install, vastly easier than trying to figure out how to download and install the Android SDK. What lots of people end up doing instead is downloading random binaries from insecure internet forums and using those. For many devices, it is already possible to use only tools in Debian to root the device. As we get more of the Android tools packaged and updated in Debian, that will become the norm.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Updates when you need them, built upon a stable base&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One common complaint about packages in Debian is that they are old and outdated. It is part of the core mission of Debian/stable to provide an operating system that changes as little as possible. That mission is contrary to what most developers need from their SDKs and sometimes even the development tools. But stability is also important for developers as well. For example, tools like &lt;code&gt;make&lt;/code&gt;, used to build native code using the Android NDK (&lt;code&gt;ndk-build&lt;/code&gt; is a &lt;code&gt;make&lt;/code&gt; script) and even Android itself, has been around a long time and is used in so many projects. That is a tool that almost every developer wants to have very stable.&lt;/p&gt;
+
+&lt;p&gt;For the packages that developers need to have completely up-to-date, like the Android SDK itself, there are many options for distribution. Ubuntu Personal Package Archives (PPA) have proven easy and useful for exactly this kind of thing, and Debian is working on adding support for PPAs. Official repositories for &lt;a href=&#34;http://backports.debian.org/&#34; target=&#34;_blank&#34;&gt;backports&lt;/a&gt; are another avenue for timely updates.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Help us figure this out&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We want lots of feedback on how to do this right! A great example is how to best support the various versions of &lt;code&gt;gradle&lt;/code&gt;. It seems to me that &lt;code&gt;gradle&lt;/code&gt; is starting to stabilize, and it is no longer necessary to track very specific releases of &lt;code&gt;gradle&lt;/code&gt;. For example, &lt;code&gt;gradle&lt;/code&gt; v2.2.1 will work well with projects that were setup with just about any v2.x version. And projects still using 1.x, they mostly seem to work using v1.12. So if this is the case, then this fits into a common pattern with build tools in Debian:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GNU Compiler Collection is packaged as &lt;code&gt;gcc4.8&lt;/code&gt;, &lt;code&gt;gcc4.7&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;li&gt;Apache Maven is packaged as &lt;code&gt;maven&lt;/code&gt; and &lt;code&gt;maven2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;GNU automake is packaged as &lt;code&gt;automake1.14&lt;/code&gt;, &lt;code&gt;automake1.13&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’m currently thinking that the best solution for gradle is like Maven, with the package called &lt;code&gt;gradle&lt;/code&gt; (v2.3) being the most up-to-date in conjunction with specific packages to support older versions, like &lt;code&gt;gradle1&lt;/code&gt; (v1.12). But maybe it makes sense to do something like gcc, with a gcc meta-package to install the currently best supported version, then all versions packaged with name that includes that version, i.e. a gradle meta-package with &lt;code&gt;gradle1&lt;/code&gt;, &lt;code&gt;gradle2&lt;/code&gt;, &lt;code&gt;gradle3&lt;/code&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;Other issues that we will have to grapple with include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;how to package various NDK versions?&lt;/li&gt;
+&lt;li&gt;How do we best work with the upstream Android team?&lt;/li&gt;
+&lt;li&gt;is packaging Android Studio feasible?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also hope to provide an example that any other packaging systems can learn from and build upon. GNU/Linux distros like Arch and Fedora are the obvious ones, but also projects like Homebrew, MacPorts, and Cygwin could also use this work to include Android tools as packages in their system. Indeed, some of the work already included in Debian was derived from &lt;a href=&#34;https://wiki.archlinux.org/index.php/Android#Android_SDK_core_components&#34; target=&#34;_blank&#34;&gt;some Arch packages&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

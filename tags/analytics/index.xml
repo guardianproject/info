@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analytics on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/analytics/</link>
+    <description>Recent content in Analytics on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Privacy Preserving Analytics in the Real World: Mailvelope Case Study</title>
+      <link>https://guardianproject.github.io/info/2022/02/28/privacy-preserving-analytics-in-the-real-world-mailvelope-case-study/</link>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/02/28/privacy-preserving-analytics-in-the-real-world-mailvelope-case-study/</guid>
+      <description>
+
+&lt;p&gt;We love &lt;a href=&#34;https://mailvelope.com/&#34;&gt;Mailvelope&lt;/a&gt;. It&amp;rsquo;s a popular browser extension for encrypting email messages. Now, &lt;a href=&#34;https://cleaninsights.org&#34;&gt;Clean Insights&lt;/a&gt; is helping Mailvelope understand which webmail providers are most popular with their users so they can prioritize their development efforts.&lt;/p&gt;
+
+&lt;p&gt;Anyone who has written software knows it takes hard work to craft a great user experience. That&amp;rsquo;s even more challenging in Mailvelope&amp;rsquo;s case. Their browser extension integrates with more than a dozen ever-changing third party webmail interfaces. The Mailvelope team asks itself questions like, &amp;ldquo;Is time better spent improving the GMail integration or the mailbox.org one?&amp;rdquo; The answer often hinges on which providers are most popular among Mailvelope users, information not yet readily available to the Mailvelope team.&lt;/p&gt;
+
+&lt;p&gt;So, Mailvelope asked us to set up the &lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-js-sdk/&#34;&gt;Clean Insights JavaScript SDK&lt;/a&gt; to measure which providers are most popular while respecting users&amp;rsquo; consent and preserving their privacy. In drastic contrast to the web analytics norms, we only collect what we need in order to make important decisions.&lt;/p&gt;
+
+&lt;p&gt;We decided we don&amp;rsquo;t care &lt;em&gt;how many&lt;/em&gt; visits a user makes in a given week. We just care &lt;em&gt;that&lt;/em&gt; a user visited that webmail provider during the week. So that&amp;rsquo;s all we record. We don&amp;rsquo;t record what time of day they visited, how many times, or any information about their identity or who they communicate with. This results in a simple to analyze report from each user like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;During the week of February 27th, a user visited &amp;ldquo;mail.google.com&amp;rdquo; at least once.&lt;/li&gt;
+&lt;li&gt;During the week of February 27th, a user visited &amp;ldquo;*.gmx.net&amp;rdquo; at least once.&lt;/li&gt;
+&lt;li&gt;During the week of March 6th, a user visited &amp;ldquo;*.gmx.net&amp;rdquo; at least once.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By adding up the weekly counts from all users, we&amp;rsquo;ll get a handy list of which providers are popular and be able to see changes in that popularity over time.&lt;/p&gt;
+
+&lt;h2 id=&#34;privacy-and-anonymity&#34;&gt;Privacy and Anonymity&lt;/h2&gt;
+
+&lt;p&gt;In addition to Clean Insights&amp;rsquo; default privacy-preserving features (for example, not storing IP addresses), we configured this measurement campaign to protect Mailvelope users&amp;rsquo; privacy in some special ways.&lt;/p&gt;
+
+&lt;p&gt;Users can use Mailvelope with any webmail provider they like. Some users may be using a personal or corporate mail server at mail.myorganization.com. While knowing how many users used mailbox.org today doesn&amp;rsquo;t implicate any individual, knowing &lt;em&gt;someone&lt;/em&gt; visited mail.your-name-here.com wouldn&amp;rsquo;t be nearly so anonymous. So, we set up Mailvelope to only track visits to the short list of default providers Mailvelope supports. When a user uses Mailvelope with a non-default provider, we record that a user used a non-default provider but record neither &lt;em&gt;who&lt;/em&gt; nor &lt;em&gt;which provider&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can see how we did it by checking out &lt;a href=&#34;https://github.com/mailvelope/mailvelope/pull/788/files&#34;&gt;the code&lt;/a&gt; or reading about it on the Mailvelope blog (link to come).&lt;/p&gt;
+
+&lt;h2 id=&#34;consent&#34;&gt;Consent&lt;/h2&gt;
+
+&lt;p&gt;We chose to seek user consent right away even though our privacy techniques spare us from GDPR&amp;rsquo;s familiar cookie consent requirement.  We’re spared that because among &lt;a href=&#34;https://matomo.org/faq/new-to-piwik/how-do-i-use-matomo-analytics-without-consent-or-cookie-banner/&#34;&gt;other things&lt;/a&gt;, we don’t use a tracking cookie, we don’t capture personal information, and we don’t track users across sites.  And we chose to ask early, right in the “Let’s Start” dialogue, since the next thing we’ll measure with Clean Insights is “What trips up users during onboarding?”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;mailvelope_install_dropdown.png&#34; alt=&#34;mailvelope install consent dropdown&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Being able to withdraw is a critical component of consent, so users can always change their response in a new page we added to Mailvelope&amp;rsquo;s settings menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;mailvelope_analytics_settings.png&#34; alt=&#34;mailvelope analytics settings page&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;You may remember we added consent very early in Mailvelope&amp;rsquo;s user journey. That&amp;rsquo;s because the next order of business for us is to analyze what steps users take in their onboarding journey. Particularly, we&amp;rsquo;re interested to discover whether any steps pose a big enough hurdle to new users that they choose to uninstall. More on that to come!&lt;/p&gt;
+
+&lt;h2 id=&#34;using-clean-insights-in-your-project&#34;&gt;Using Clean Insights in Your Project&lt;/h2&gt;
+
+&lt;p&gt;Every software project is different. Just like Mailvelope, you might have a particular question on your mind and specific aspects of user privacy you want to protect. We&amp;rsquo;d love to help you use &lt;a href=&#34;https://cleaninsights.org&#34;&gt;Clean Insights&lt;/a&gt; to answer those questions without compromising privacy. If that&amp;rsquo;s interesting to you, you can find us at &lt;a href=&#34;mailto:support@guardianproject.info&#34;&gt;support@guardianproject.info&lt;/a&gt; or visit the project website at &lt;a href=&#34;https://cleaninsights.org&#34;&gt;cleaninsights.org&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New insights into clean analytics</title>
+      <link>https://guardianproject.github.io/info/2021/03/02/new-insights-into-clean-analytics/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/03/02/new-insights-into-clean-analytics/</guid>
+      <description>
+
+&lt;p&gt;There is a giant problem with the &amp;ldquo;collect it all&amp;rdquo; status quo that pervades on the Internet, this has been clear for a long time.  Tracking people has become so &lt;a href=&#34;https://www.ghostery.com/study/&#34;&gt;widespread&lt;/a&gt; that &lt;a href=&#34;https://noyb.eu&#34;&gt;organizations&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org&#34;&gt;communities&lt;/a&gt;, &lt;a href=&#34;https://exodus-privacy.eu.org&#34;&gt;projects&lt;/a&gt; and &lt;a href=&#34;https://privacylab.yale.edu/&#34;&gt;university&lt;/a&gt; &lt;a href=&#34;https://privacylab.at&#34;&gt;labs&lt;/a&gt; have sprung up dedicated to detecting and publicizing their presence.  Data and analytics are clearly useful for software creators and funders, but they also easily lead to harming people&amp;rsquo;s privacy and well-being.  The past year of work on Clean Insights has clarified our goals to make analytics possible without injuring the very people we aim to serve.  Clean Insights takes the world of data analytics and turns it on its head.   The Clean Insights approach starts with thinking about the data, then choosing only the data that is clearly safe to use.  A user&amp;rsquo;s location, complete device description, or other identifying information is dangerous to gather.  A simple count of how many times a feature was used, or a webpage was visited, can be gathered without links to people.&lt;/p&gt;
+
+&lt;p&gt;There are some widely known efforts for preserving privacy when doing analytics.  The most famous is perhaps &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Differential_privacy&#34;&gt;differential privacy&lt;/a&gt;&amp;rdquo;, which is used by the US Census Bureau and Apple.  This approach has certain assumptions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Personally Identifiable Information (PII) is collected and stored.&lt;/li&gt;
+&lt;li&gt;A legal compliance team reviews the legal ramifications of storing PII.&lt;/li&gt;
+&lt;li&gt;A security team defends the stored data.&lt;/li&gt;
+&lt;li&gt;Administrative staff handles compliance with data regulations.&lt;/li&gt;
+&lt;li&gt;A PR team to do outreach when PII is leaked or spilled.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These assumptions are only possible for large, well-funded organizations to fulfill.  Apple already has extensive staff around the world to handle all this.  A dissident newspaper from a small country does not.  Metrics are nonetheless valuable for this dissident newspaper, and for so many other small- and medium-sized organizations.  So Clean Insights starts with different core assumptions that are much more broadly applicable:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;As little data as possible is stored to reduce the security and leakage risks.&lt;/li&gt;
+&lt;li&gt;The stored data does not reveal identities if made public.&lt;/li&gt;
+&lt;li&gt;Legal review is reduced as much as possible.&lt;/li&gt;
+&lt;li&gt;No expensive computing resources required.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/understanding-differential-privacy-matters-digital-rights/&#34;&gt;&lt;img src=&#34;local-vs-global.png&#34; alt=&#34;Clean Insights vs differential privacy&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;starting-out-with-clean-insights&#34;&gt;Starting out with Clean Insights&lt;/h2&gt;
+
+&lt;p&gt;In order to make the Clean Insights approach work, it must start with &lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-design/-/blob/master/docs/Clean%20Insights%20-%20%20Feb%202020.pdf&#34;&gt;thinking about the data&lt;/a&gt;.  When setting up metrics and analytics, there is a natural temptation to want to have all the information.  We recommend starting with a very small set of safe measurements as a way to avoid temptation, which might lead the project into hazardous ground.  For web server logs, start by eliminating the PII at the source: use a privacy log configuration for &lt;a href=&#34;https://guardianproject.info/2017/06/08/tracking-usage-without-tracking-people/&#34;&gt;Apache&lt;/a&gt; or &lt;a href=&#34;https://f-droid.org/2019/04/15/privacy-preserving-analytics.html&#34;&gt;NGINX&lt;/a&gt;. Or use a &lt;a href=&#34;https://gitweb.torproject.org/webstats.git/tree/src/sanitize.py&#34;&gt;sanitizing script&lt;/a&gt;.  For other scenarios, do a quick review and see what kinds of counts can be easily and safely gathered and start with those.  These are not always easy questions to answer.  What kind of data is available?  What can that data actually tell us?  What are the risks of gathering and storing that data?  One of the safest types of useful data is simple counts of events.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How many times did an image fail to download?&lt;/li&gt;
+&lt;li&gt;How many conversations do users have open?&lt;/li&gt;
+&lt;li&gt;How many notifications are swiped away without being viewed?&lt;/li&gt;
+&lt;li&gt;How long did users wait for Tor to be available?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The existing analytics tools skirt this step, instead making it easy to gather as much as possible.  They can then rapidly display all sorts of pretty graphs and charts derived from the data.  That points to another key problem with the status quo in metrics: the emphasis on what it easy to represent.  When there is a big pile of &amp;ldquo;collect it all&amp;rdquo; data, there are many views that analytics packages instantly provide.  This is often in conflict with what is actually valuable.  These instant graphs oversimplify things, making it easy to forget that good metrics come from first thinking in depth about the problems that can be solved by metrics.  The old adage is &lt;a href=&#34;https://en.wikipedia.org/wiki/Garbage_in,_garbage_out&#34;&gt;garbage in, garbage out&lt;/a&gt;.  Data about campaigns that is easy to graph may end up leading the effort astray if the valuable metrics are hidden behind lots of pretty charts that distract.&lt;/p&gt;
+
+&lt;p&gt;One recent example of gathering less data is GitHub: they recently &amp;ldquo;&lt;a href=&#34;GitHub got rid of cookie consent screen https://www.theregister.com/2020/12/17/github_will_no_longer_present/&#34;&gt;removed all non-essential cookies&lt;/a&gt;&amp;rdquo;.  Their analytics did not need the extra data those cookies provided.  On top of that, using such tracking methods now requires an &lt;a href=&#34;https://www.smashingmagazine.com/2021/03/state-gdpr-2021-cookie-consent-designers-developers/&#34;&gt;extensive and complicated&lt;/a&gt; design process.&lt;/p&gt;
+
+&lt;h2 id=&#34;stored-data-needs-maintenance&#34;&gt;Stored data needs maintenance&lt;/h2&gt;
+
+&lt;p&gt;Large collections of PII are valuable to others besides the software designers.  Databases are routinely stolen.  Tracking is also very useful to attackers to find their targets.  PII is also key for building a social graph,  which can be used to uncover networks of dissidents.  Or sometimes it is just vandalism, and the private data is simply dumped onto the open internet.&lt;/p&gt;
+
+&lt;p&gt;Then there are data regulations like the EU&amp;rsquo;s GDPR.  They require that services turn over all the user&amp;rsquo;s personal data when they request it.  Users can also request that their data be deleted.  Implementing such a system is a chunk of work.  First, figure out up front what data is being either deliberately or inadvertently collected. Then compare that to which data is actually technically required.  From that perspective, it is possible to eliminate the need for a complicated system managing user data by ensuring that PII is not gathered at all.  That can also eliminate unwanted surprises down the line. If you find out after years of running a service that you have been collecting personal data, and users make requests, you might suddenly have a pile of work tracking down all that data and assembling it for delivery to the user.  A bug in that system could then leak data to the wrong user, which can lead to large fines from regulators.&lt;/p&gt;
+
+&lt;h2 id=&#34;measure-responsibly&#34;&gt;Measure responsibly&lt;/h2&gt;
+
+&lt;p&gt;Even with all these methods to do metrics more responsibly, the question remains: does it need to be measured?  There are working projects that have achieved widespread adoption and usage without tracking users.  Debian and F-Droid have risen while not really gathering many metrics at all.  It is not always a simple question: so many important problems require grant funding to solve.  Yet many funders require extensive metrics.  Digital privacy tools have been largely funded by governments, from Tor to Signal.   Governments should measure and evaluate the projects they are funding.  Governments should also be open about the data they have.  The well-established methods governments use to track projects require lots of data, including PII.  This is a catch-22 when working on software privacy, where the goal is to make it impossible to gather PII.  Government-funded agencies like &lt;a href=&#34;https://opentech.fund&#34;&gt;OTF&lt;/a&gt; funded so many key privacy tools. They put a lot of work into running government-funded grants without requirements to track their users.  This meant pushing back against the US Federal Government&amp;rsquo;s widespread policies about measurement and evaluation.  Using metrics based on safe data sources means projects can provide useful analytics and strong privacy at the same time.  Even when considering that usability and user research are &lt;a href=&#34;https://guardianproject.github.io/info/2021/02/18/usability-the-wonderful-powerful-idea-that-betrayed-us/&#34;&gt;central&lt;/a&gt; to driving the big tracking companies&amp;rsquo; ever expanding data collection, we believe that usability and user research can still be done responsibly.  It is possible to use data to inform UX Design without tracking people at all.  As these techniques are widely adopted, they will also help designers focus on what is most important, thereby delivering better digital experiences for users.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Usability: the wonderful, powerful idea that betrayed us</title>
+      <link>https://guardianproject.github.io/info/2021/02/18/usability-the-wonderful-powerful-idea-that-betrayed-us/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/02/18/usability-the-wonderful-powerful-idea-that-betrayed-us/</guid>
+      <description>
+
+&lt;p&gt;Usability triggered a revolution in computing, taking arcane number crunching machines and making them essential tools in so many human endeavors, even those that have little to do with mathematics.  It turned the traditional design approach on its head.  Initially, experts first built a system then trained users to follow it. User experience design starts with goals, observes how people actually think and act in the relevant context, then designs around those observations, and tests with users to ensure it fits the users&amp;rsquo; understanding.  These ideas were pioneered in the Silicon Valley. This was driven by the unusual confluence of a pioneering spirit and deep engineering skills. That merged with a strong &lt;a href=&#34;https://en.wikipedia.org/wiki/Midpeninsula_Free_University&#34;&gt;counter&lt;/a&gt;-&lt;a href=&#34;https://en.wikipedia.org/wiki/Homebrew_Computer_Club&#34;&gt;culture&lt;/a&gt; looking to &lt;a href=&#34;https://en.wikipedia.org/wiki/People%27s_Computer_Company&#34;&gt;empower&lt;/a&gt; individuals and communities. So much of the best of digital technology has its roots in these ideas.  I feel fortunate to have grown up immersed in these ideas in the Silicon Valley of the 70s and 80s, and still feel that sense of idealism that these ideas can truly make the world a better place.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, &amp;ldquo;making the world a better place&amp;rdquo; has become a catch phrase.  It is now mostly associated with single-minded investors (aka Venture Capitalists) looking to make money as fast as possible. One key piece is inspiring engineers to work non-stop by constantly telling them they are doing something valuable.  Yet another social media doodad monetized by &lt;a href=&#34;https://en.wikipedia.org/wiki/Surveillance_capitalism&#34;&gt;surveillance capitalism&lt;/a&gt; is clearly the opposite of making the world a better place.  On top of that, these now well honed ideas of usability are widely used to &lt;a href=&#34;https://www.vox.com/2018/2/27/17053758/phone-addictive-design-google-apple&#34;&gt;make&lt;/a&gt; &lt;a href=&#34;https://dl.acm.org/doi/10.1145/2254129.2254137&#34;&gt;digital media&lt;/a&gt; technology &lt;a href=&#34;https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0180094&#34;&gt;literally&lt;/a&gt; an &lt;a href=&#34;https://psycnet.apa.org/doiLanding?doi=10.1037%2Fadb0000379&#34;&gt;addictive&lt;/a&gt; &lt;a href=&#34;http://rali.bournemouth.ac.uk/wp-content/uploads/2015/03/raian_ali_et_al_2015_refsq_the_emerging_requirement_for_digital_addiction_labels.pdf&#34;&gt;drug&lt;/a&gt; so that wealthy investors can make money even faster.  The rise of usability parallels the rise of surveillance capitalism.  These two support each other and feed off of each other.  Software must be fluid and easy in order to become addictive.  Even if the task at hand is mundane: just keep clicking,  look at the pretty animations, and keep following the likes!  The Silicon Valley &lt;a href=&#34;https://www.thesocialdilemma.com/&#34;&gt;insiders&lt;/a&gt; &lt;a href=&#34;https://vimeo.com/462049229&#34;&gt;know&lt;/a&gt; how destructive their wares are, &lt;a href=&#34;https://www.businessinsider.de/international/silicon-valley-parents-raising-their-kids-tech-free-red-flag-2018-2/&#34;&gt;they ban their own children from using them&lt;/a&gt; while continuing to sell them to the world.&lt;/p&gt;
+
+&lt;p&gt;Those of us who still truly believe in usability as a potential force of good are left feeling used and abused, wondering what on earth we can now do to stop the monster we helped create.  Tools and design processes can be used for both good and evil.  It is important to note that does not mean technology is neutral. &amp;ldquo;&lt;a href=&#34;https://weaponsofmathdestructionbook.com/&#34;&gt;Algorithms are opinions embedded in code&lt;/a&gt;&amp;rdquo;.  Basically all &lt;a href=&#34;https://medium.com/thoughts-and-reflections/racial-bias-and-gender-bias-examples-in-ai-systems-7211e4c166a1&#34;&gt;technologies&lt;/a&gt; &lt;a href=&#34;https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing&#34;&gt;have&lt;/a&gt; &lt;a href=&#34;https://peopleofcolorintech.com/articles/recognizing-cultural-bias-in-ai/&#34;&gt;a bias&lt;/a&gt;, and the designers of those technologies have power to affect those biases.  When someone designs a knife for use in the kitchen, it looks quite different than a knife designed to attack other humans.  Of course, both can be used to attack people, but its much easier to attack with the switchblade, and a switchblade is a bad kitchen tool.  Using &lt;a href=&#34;https://www.interaction-design.org/courses/gamification-creating-addictive-user-experience&#34;&gt;addictive design&lt;/a&gt;, we have been sold on the idea that a switchblade is an all-purpose tool.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;!-- --&gt;&lt;/th&gt;
+&lt;th&gt;&lt;!-- --&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;paringknife.jpg&#34; alt=&#34;paring knife&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;switchblade.jpg&#34; alt=&#34;switchblade&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Like social media, a hammer is great when you need it, but otherwise should be left in the toolbox.  The &lt;a href=&#34;http://openresearch.ocadu.ca/id/eprint/1743/ - http://openresearch.ocadu.ca/id/eprint/1743/7/Hsu_Cheryl_2017_MDES_SFI_MRP.pdf&#34;&gt;tools&lt;/a&gt; of addictive design have convinced us to constantly carry our hammer around.  It buzzes in our pocket, nagging us to try it out in just about any context.  It uses our innate human desire for social approval to reward us whenever we use the hammer.  Now its use is so widespread, wielding the hammer no longer looks out of context.  There are people hammering while eating, working, walking, talking, and even in the bathroom.&lt;/p&gt;
+
+&lt;h2 id=&#34;meet-usability-s-offspring-surveillance-capitalism&#34;&gt;Meet Usability’s Offspring: Surveillance Capitalism&lt;/h2&gt;
+
+&lt;p&gt;Mobile phones could truly benefit people, but it is nearly impossible to open your phone to do one thing.  Apps and ads immediately compete for your attention and time.  Posting updates to family and friends happens through Facebook.  Search, maps, and many other activities happen through Google. YouTube steers us to watch another video.  Facebook inserts itself into our personal relationships.  All of these are designed to keep you using them more and more, since that is how those companies make money.  These services are built on usability, which causes us to use them more and more.  &lt;strong&gt;Remember, with surveillance capitalism, the users are &lt;a href=&#34;https://quoteinvestigator.com/2017/07/16/product/&#34;&gt;not the customer, they are the product&lt;/a&gt;.&lt;/strong&gt;  So those companies are using usability design to figure out how to keep users &amp;ldquo;engaged&amp;rdquo;, meaning using that platform as much as possible.  That is the design problem they are solving.  &lt;strong&gt;When the user is the customer, that can look very different.&lt;/strong&gt;  WhatsApp became massively popular with a business model of charging a dollar a year, regardless of usage. Their users were also their customers. Now &lt;a href=&#34;https://arstechnica.com/tech-policy/2021/01/whatsapp-users-must-share-their-data-with-facebook-or-stop-using-the-app/&#34;&gt;Facebook&lt;/a&gt; aims to change all that, and WhatsApp users &lt;a href=&#34;https://www.bloomberg.com/news/articles/2021-01-11/why-whatsapp-s-privacy-rules-sparked-moves-to-rivals-quicktake&#34;&gt;do not like it&lt;/a&gt;.  Turns out it is very difficult to compete with free, so responsible business models are at a tremendous disadvantage.  And many WhatsApp users are now &lt;a href=&#34;https://www.nytimes.com/2021/01/13/technology/telegram-signal-apps-big-tech.html&#34;&gt;flooding to Signal&lt;/a&gt;, which is a non-profit foundation working to survive on donations.&lt;/p&gt;
+
+&lt;p&gt;Foundations and governments need to measure and evaluate the projects that they fund, and they are starting to request surveillance capitalism techniques from the projects they fund.  Schools are using web services that use addictive design, ostensibly to help kids learn, but are nonetheless getting kids hooked.   Metrics are central to addictive design, it is based on tracking actual people and what keeps their attention.  A/B testing provides a rapid way to test how to suck people in.  &lt;a href=&#34;https://en.wikipedia.org/wiki/Recommender_system&#34;&gt;Recommender systems&lt;/a&gt; are very effective at getting users to click on the next video or post.  For those kinds of predictions to work, they first need a lot of data about how lots of people respond.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&amp;ldquo;&lt;a href=&#34;http://openresearch.ocadu.ca/id/eprint/1743/7/Hsu_Cheryl_2017_MDES_SFI_MRP.pdf&#34;&gt;how designers shift the burden of responsibility through design&lt;/a&gt;&amp;ldquo;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://openresearch.ocadu.ca/id/eprint/1743/7/Hsu_Cheryl_2017_MDES_SFI_MRP.pdf&#34;&gt;&lt;img src=&#34;shifting-responsibility.png&#34; alt=&#34;how designers shift the burden of responsibility through design&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;data-driven-design-is-dangerous-and-powerful&#34;&gt;Data-driven design is dangerous and powerful&lt;/h2&gt;
+
+&lt;p&gt;Data-driven design can also be used to find the borders of what things they will tolerate beyond things in their interest.  For example, so many software business models involve offering a service without payment, then finding ways to get the users to pay.  This can be with their data or by upselling.  An ethical approach to this kind of business model is to clearly define upfront what types of things require payment.  Unfortunately, a more common approach is to &lt;a href=&#34;https://www.nirandfar.com/want-to-hook-your-users-drive-them-crazy/&#34;&gt;first get users hooked&lt;/a&gt; on the service without paying.  Getting users hooked is offered as a design service, the design equivalent of someone pushing addictive drugs.  Once hooked, when the cost of migrating away from the tool is high, hit users with payment requirements.  Using data-driven design, a service can measure that response in detail.  Tracking all the users provides even better targeting of users based on profiling them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Data-driven design is clearly powerful but it need not lead to harmful practices.&lt;/strong&gt;  Usage data can let small organizations effectively direct resources to the areas of biggest need.  Crash report analytics quickly point out important bugs that otherwise would have taken days or weeks of effort to track down.  Neither of these need data about people to be effective techniques.&lt;/p&gt;
+
+&lt;h2 id=&#34;measure-effectiveness-rather-than-engagement&#34;&gt;Measure effectiveness rather than &amp;ldquo;engagement&amp;rdquo;&lt;/h2&gt;
+
+&lt;p&gt;The best mobile software would be designed to make users spend as little time as possible using it.  This is hard to measure.  Users who find the software difficult to use would also use it as little as possible.  We need to figure out how to measure that difference.  Once we do, we can begin to understand what makes a good design in which people use the tool to efficiently solve a problem, then put the tool away once they are done. I think this is one of the biggest questions we can now work on as part of our work on Clean Insights.  It is clear that learning to measure effectiveness will not be easy.  Creating the discipline of &lt;a href=&#34;https://en.wikipedia.org/wiki/User_experience_design&#34;&gt;user experience design&lt;/a&gt; was also not.  After thinking about human-computer interaction and usability for over 25 years, I watched these ideas go from a nice idea to the dominant paradigm.  &lt;strong&gt;It is clearly possible to reclaim usability by thinking ethically about how data is collected and used.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One key thing that makes user-centered design work so well is the cycle of research, design, implementation and testing.  This is akin to scientific experiments, where there is a hypothesis that is tested.  It can happen so fast because it can be decentralized and pieced out into a wide range of scales. User-focused design starts by trying to solve a problem, and iterates to continually improve.  The goals often change as well, in response to new use cases, business models, technologies, and even product goals.&lt;/p&gt;
+
+&lt;p&gt;So often, the central focus shifts from real needs to keeping users &amp;ldquo;engaged&amp;rdquo;.  Designing for engagement shifts the focus away from the task at hand, and instead is about making people use the software as much as possible.  That distracts from providing solutions that reduce the time the user needs to complete a task.  For example, no one is asking for software to help them send and receive ever more messages.  The goal is effective communication and organization.  If software is really addressing that need, that means users will spend less and less time using that communication tool.  That is in direct conflict with a design process focused on &amp;ldquo;engagement&amp;rdquo;, which pushes for as much eyeball time as possible.   The same design thinking based on psychology used in addictive design can also be used to actively &lt;a href=&#34;https://www.researchgate.net/profile/Aditya-Purohit-4/publication/340903372_Designing_for_Digital_Detox_Making_Social_Media_Less_Addictive_with_Digital_Nudges/links/5ea3740ea6fdccd7945168ae/Designing-for-Digital-Detox-Making-Social-Media-Less-Addictive-with-Digital-Nudges.pdf&#34;&gt;avoid addictive qualities&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As long as a person is being tracked and profiled, there is an inevitable pull towards trying to keep that person &amp;ldquo;engaged&amp;rdquo;.  If the data is instead about actions, not people, then the emphasis is on what the user wants to achieve.  Billions have been spent on learning how to effectively track people, that does not need to be thrown away.  The analytics software can be retooled to focus on usage rather than people.  Responsible collection of usage data is the clear place to start in order to shift from &amp;ldquo;engagement&amp;rdquo; to effectiveness.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Clean Insights: February 2021 Update on Privacy-Preserving Measurement</title>
+      <link>https://guardianproject.github.io/info/2021/02/10/clean-insights-february-2021-update-on-privacy-preserving-measurement/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/02/10/clean-insights-february-2021-update-on-privacy-preserving-measurement/</guid>
+      <description>&lt;p&gt;Greetings, all. I hope this finds you healthy and well, finding ways to enjoy the season (whichever it may be). While everyday still provides new challenges in the life of our team at Guardian Project, we continue to strive to be productive as productive as we can be in our professional and personal lives.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve just posted an updated presentation on &lt;a href=&#34;https://cleaninsights.org&#34;&gt;Clean Insights&lt;/a&gt;, reflecting on the symposium in May, and the work we have done since then. You can see and share it from here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vo6FI-WDLG0&#34;&gt;Watch update on YouTube&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You can also listen to this update on the &lt;a href=&#34;https://guardianproject.info/podcast/2021/clean-insights-update.html&#34;&gt;Guardian Project Podcast&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;https://die.netzarchitekten.com/&#34;&gt;Benjamin Erhart&lt;/a&gt;, our lead developer on Clean Insights, we&amp;rsquo;ve made substantial progress over the last few months on delivering our new software development kits. If you visit our Gitlab project page, you will find design documents and SDKs for Android, iOS, Javascript (both for desktop and web) and soon Python (Thanks, to &lt;a href=&#34;https://irl.xyz&#34;&gt;Iain Learmonth&lt;/a&gt; for this contribution). While this work is ongoing, the code is stable, and we feel it is ready to start getting it into all of your hands, so that you can start asking all the questions we have yet to consider.&lt;br /&gt;
+&lt;a href=&#34;https://gitlab.com/cleaninsights&#34;&gt;Clean Insights on Gitlab&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an example of how easy it is to implement a measurement of a specific event or a visit to certain view in your app:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-android-sdk/-/blob/master/app/src/main/java/org/cleaninsights/example/Main2Activity.java#L48&#34;&gt;Sample code for Android integration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are still relying on Matomo as our backend aggregator, analysis tool and dashboard, and it continues to work well enough for our 1.0 solution. That said, to enhance the privacy of Clean Insight-enabled clients, we&amp;rsquo;ve design and implemented a proxy service, the &lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-matomo-proxy&#34;&gt;Clean Insights Matomo Proxy&lt;/a&gt;. The CIMP reduces the amount of metadata and logging that Matomo can do, since it is only communicate to directly by the no-logging proxy.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-matomo-proxy&#34;&gt;Clean Insights Matomo Proxy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of this software is available for you to implement and deploy on your own. We also have a public testbed and hosted service available at &lt;a href=&#34;https://metrics.cleaninsights.org&#34;&gt;https://metrics.cleaninsights.org&lt;/a&gt; that we can make available for anyone who isn&amp;rsquo;t able to run and maintain their own instance. We can also assist you with considering the insights you want to gain, threat modeling the risks it poses to your users, and implementing the SDK into your software, be it a mobile app, web app, desktop app, back-end service or operating system. Our deisgn partners at Okthanks also have a variety of concepts and soon sample projects and code for implementing effective and ethical Consent UX to achieve the right kind of &amp;ldquo;opt-in&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Please reach out if you have interest in using Clean Insights. We have weekly scrum meetings, email lists and a public discussion room on the Matrix
+network. More info on these on the &lt;a href=&#34;https://cleaninsights.org/dev&#34;&gt;Developer Page&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How can we learn without watching?</title>
+      <link>https://guardianproject.github.io/info/2017/01/30/how-can-we-learn-without-watching/</link>
+      <pubDate>Mon, 30 Jan 2017 14:40:05 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/01/30/how-can-we-learn-without-watching/</guid>
+      <description>&lt;p&gt;What kind of measurement, tracking or analytics do you use, and can you sleep at night with your decision?&lt;/p&gt;
+
+&lt;p&gt;As part of the &lt;a href=&#34;https://berkmankleinassembly.org/&#34;&gt;Berkman-Klein Assembly&lt;/a&gt; program at Harvard, I am working with a team to imagine a next-generation mobile and IoT analytics system that has privacy, confidentiality and anonymity at its core. The hope is we can find ways to learn what our users like and understand how our apps are performing without having to rely on proprietary cloud services, logging liability, network vulnerabilities, and invasive app permissions.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, we want to hear from you, as a developers and users interested in private, free and secure applications and devices, to understand the compromises you are making today. Please answer the questions below, and optionally provide your contact information, so we can get in touch with you for further help developing this new idea.&lt;/p&gt;
+
+&lt;p&gt;(the survey is now closed, thanks!)&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Image By Dave Morice Uploaded by Mkacer at en.wikipedia (Author  Transferred from en.wikipedia by SreeBot) [CC BY-SA 3.0 (&lt;a href=&#34;http://creativecommons.org/licenses/by-sa/3.0)&#34;&gt;http://creativecommons.org/licenses/by-sa/3.0)&lt;/a&gt;], via Wikimedia Commons&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

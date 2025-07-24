@@ -6,6 +6,15 @@ stages:
 
 # Common steps required for each type of build
 # Pin hugo version from buster for guardianproject.info
+#
+# The official Debian docker images ship without ca-certificates. TLS
+# certificates cannot be verified until that is installed. The
+# following includes code that turns off TLS verification, and enables
+# HTTPS, so at least unverified TLS is used for apt-get instead of
+# plain HTTP.  Once ca-certificates is installed, the CA verification
+# is re-enabled by removing that config.  This set up makes the initial
+# `apt-get update` and `apt-get install` look the same as verified TLS
+# to the network observer and hides the metadata.
 .setup: &setup |
   set -x
   set -e
@@ -13,11 +22,14 @@ stages:
   printf 'Acquire::Retries "20";\n' > /etc/apt/apt.conf.d/99acquire-retries
   printf 'APT::Get::Assume-Yes "true";\n' > /etc/apt/apt.conf.d/99assumeyes
   printf 'Package: hugo\nPin: version 0.5*\nPin-Priority: 1000\n' > /etc/apt/preferences.d/hugo
+  find /etc/apt/sources.list* -type f | xargs sed -i s,http:,https:,
+  echo 'Acquire::https::Verify-Peer "false";' > /etc/apt/apt.conf.d/99nocacertificates
   apt-get update
   apt-get install ca-certificates
   printf 'deb https://deb.debian.org/debian/ buster main\n' > /etc/apt/sources.list.d/buster.list
-  sed -i 's,http:,https:,g' $(find /etc/apt/sources.list* -type f)
+  rm /etc/apt/apt.conf.d/99nocacertificates
   apt-get update
+  apt-get dist-upgrade
   apt-get install curl fdroidserver git gpg gpg-wks-client hugo locales make mawk python3 sassc unzip
   grep '^en_US.UTF-8 UTF-8' /etc/locale.gen || echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
   locale-gen

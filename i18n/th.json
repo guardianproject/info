@@ -37,7 +37,7 @@
   },
   {
     "id": "press",
-    "translation": "ผู้สื่อข่าว"
+    "translation": "กด"
   },
   {
     "id": "Security You Can Trust",
@@ -177,7 +177,7 @@
   },
   {
     "id": "pageNotFound",
-    "translation": "อุ๊ย, หน้านี้ไม่มีอยู่. ย้ายไป. (ข้อผิดพลาด 404)"
+    "translation": "อุ๊ป หน้านี้ไม่มีอยู่ ผ่านไปเลย (ข้อผิดพลาด 404)"
   },
   {
     "id": "words",

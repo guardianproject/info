@@ -26,8 +26,8 @@ stages:
   echo 'Acquire::https::Verify-Peer "false";' > /etc/apt/apt.conf.d/99nocacertificates
   apt-get update
   apt-get install ca-certificates
-  printf 'deb https://deb.debian.org/debian/ buster main\n' > /etc/apt/sources.list.d/buster.list
   rm /etc/apt/apt.conf.d/99nocacertificates
+  echo 'deb https://snapshot.debian.org/archive/debian/20240630T000000Z/ buster main' > /etc/apt/sources.list.d/buster.list
   apt-get update
   apt-get dist-upgrade
   apt-get install curl fdroidserver git gpg gpg-wks-client hugo locales make mawk python3 sassc unzip

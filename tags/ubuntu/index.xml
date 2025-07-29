@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 16 Oct 2014 12:48:04 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reducing metadata leakage from software updates</title>
+      <link>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</link>
+      <pubDate>Thu, 16 Oct 2014 12:48:04 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: now you can &lt;a href=&#34;https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;do this with Tor Onion Services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.&lt;/p&gt;
+
+&lt;p&gt;That means that potentially private information is leaking. That private information could be which packages you have installed and which versions. That information can help an attacker figure out the best way to break into the target machine. Also, a unique fingerprint can be generated based on which packages a machine has installed, and that could help de-anonymize traffic that goes over Tor or other anonymity tool.&lt;/p&gt;
+
+&lt;p&gt;For people who use &lt;code&gt;apt-get&lt;/code&gt; in Debian, Ubuntu or any related GNU/Linux distro, there is a lot of metadata leaked to the internet when &lt;code&gt;apt-get&lt;/code&gt; contacts Debian repositories using a standard configuration. Mostly, that is because by default, the connections are unencrypted (http, ftp, rsync). The integrity of the package itself is not reason enough to use HTTPS since the GPG signing is much more reliable for that task. Here is how I break it down:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity&lt;br /&gt;
+(&lt;em&gt;software can be modified while being downloaded&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;repo availability&lt;br /&gt;
+( &lt;em&gt;whole sites or specific URL paths can be selectively blocked by governments and companies&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;package availability&lt;br /&gt;
+(&lt;em&gt;software security updates can be individually blocked&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;who’s downloading what package (&lt;em&gt;currently visible to anyone who can see the&lt;br /&gt;
+network traffic, including open wifi, etc.&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The current apt model covers #1 well, but only covers #2 and #3 with a two week window (the expiration date on the repo metadata). And it does not cover #4 at all. Using HTTPS for apt repos is a simple way to improve the security of all 4. It adds a weak backup security layer for #1, it makes it much more difficult for a portion of a large internet mirror to be seletively blocked (e.g. #2 and #3). For example, if you use HTTPS to mirrors.kernel.org, everything has to be blocked to block Debian repos or packages. And pipelining downloads through a reused HTTPS connection makes it very difficult for the network observer to track metadata about packages, #4).&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg&#34; alt=&#34;leakage control&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12701&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-100x100.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-200x200.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg 300w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Luckily, there are some relatively easy steps that greatly reduce the amount of metadata that is leaked: using HTTPS connections to the mirrors and running those connections through Tor. Setting &lt;code&gt;apt-get&lt;/code&gt; to pipeline as many transactions into a given HTTPS session is also useful, but currently only supported for HTTP and not HTTPS. Even though HTTPS/TLS has security weaknesses, it is a lot better than nothing, and can help provide real world protection. The downside is that it is not common for Debian machines to connect to apt mirrors using HTTPS, so that potentially marks the install as a machine worth targeting. There are more and more HTTPS mirrors, and more interest in using them, so I think in time, that will only lessen as a concern. Here are the HTTPS mirrors that I have had good luck with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mirrors.ece.ubc.ca&lt;/li&gt;
+&lt;li&gt;mirrors.kernel.org&lt;/li&gt;
+&lt;li&gt;mirror.cse.unsw.edu.au&lt;/li&gt;
+&lt;li&gt;spout.ussg.indiana.edu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On that note, here is the config that I have been using on a number of Debian-deriv machines, and it has been working well. It requires &lt;code&gt;apt-transport-https&lt;/code&gt;, and &lt;a href=&#34;http://ubuntuguide.org/wiki/Tor#Privoxy&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;privoxy&lt;/code&gt; setup as an HTTP proxy for Tor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;$ cat /etc/apt/apt.conf.d/99force-tor
+# force everything through privoxy HTTP proxy to tor
+Acquire::ftp::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::http::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::https::Proxy &#34;http://127.0.0.1:8118&#34;;
+
+# don&#39;t use SSL, its insecure, only use TLS
+Acquire::https::SslForceVersion &#34;TLSv1&#34;;
+&lt;/pre&gt;
+
+&lt;p&gt;I have found about 10 official Debian mirrors that have reliable HTTPS. Then I have a &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; target=&#34;_blank&#34;&gt;script that finds all of them&lt;/a&gt;, but many have self-signed certs and other issues. A number of the HTTPS mirrors also mirror the “security” archive, but I recommend that the &lt;code&gt;http&lt;/code&gt; URL to the official &lt;code&gt;security.debian.org&lt;/code&gt; repo is still included to make sure that security updates are promptly available.&lt;/p&gt;
+
+&lt;p&gt;I also have a test security repo running that is only available via an .onion address. I hope to encourage people to run official mirrors on a Tor Hidden Service, then HTTPS is not needed. Note that &lt;code&gt;apt-transport-tor&lt;/code&gt; is not required if a tor proxy is setup. To try mine, add it to your &lt;code&gt;sources.list&lt;/code&gt; (and make sure &lt;code&gt;apt-get&lt;/code&gt; is somehow using Tor). The order is important, that determines the priority of where &lt;code&gt;apt-get&lt;/code&gt; will get the package from is all other variables are the same.&lt;/p&gt;
+
+&lt;pre&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ wheezy/updates main
+deb http://security.debian.org/ wheezy/updates main
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Use the official &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Debian Tor Onion Services&lt;/a&gt; now, &lt;tt&gt;dju2peblv7upfz3q.onion&lt;/tt&gt; is deprecated and will be shut down!&lt;/p&gt;
+
+&lt;h3 id=&#34;a-specific-example-tails&#34;&gt;A specific example: TAILS&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png&#34; alt=&#34;Tails&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-12711&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-100x100.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/Tails.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://tails.boum.org/&#34; target=&#34;_blank&#34;&gt;TAILS&lt;/a&gt; is an operating system that aims to be as private and anonymous as possible to enable, and has allowed &lt;a href=&#34;https://freedom.press/blog/2014/04/help-support-little-known-privacy-tool-has-been-critical-journalists-reporting-nsa&#34; target=&#34;_blank&#34;&gt;journalists&lt;/a&gt; like &lt;a href=&#34;https://www.wired.com/2014/10/laura-poitras-crypto-tools-made-snowden-film-possible/&#34; target=&#34;_blank&#34;&gt;Laura Poitras&lt;/a&gt; to work without leaking information despite being targeted by some very skilled and highly resourced organizations. TAILS mostly works as a “live CD”, meaning the whole operating system is downloaded as a single “image” file, then either burned to a CD/DVD, or to a USB thumb drive. Updates work the same way. But TAILS has an optional feature to use the Debian package system to install and persist packages that are not included by default. TAILS does not use the default set of mirrors that a standard Debian install uses, it is set up by default with a range of possible Debian package sources, including the current stable version (called wheezy), the versions in testing, and packages backported to the stable version. That means that when this feature is used, TAILS fetches the metadata for all of those sections of Debian (stable/wheezy, testing, wheezy-backports, unstable).&lt;/p&gt;
+
+&lt;p&gt;Given all of the proven fingerprinting approaches, like using the font list from the browser, I think its a safe assumption that the apt-get metadata will also provide similar fingerprinting opportunities. For basic TAILS use, this is all avoided since updates are done via ISO images. But once a user installs packages via &lt;code&gt;apt-get&lt;/code&gt;, that changes since TAILS then goes out onto the internet to fetch all of the repo metadata. That goes over Tor since TAILS forces all network traffic over Tor, so that helps break the link between the machine downloading the updates and those that can see that machines internet traffic.&lt;/p&gt;
+
+&lt;p&gt;It seems quite likely that the set of mirrors and the order in which they are run will provide a way to identify the system as TAILS. As for identifying individual machines, &lt;code&gt;apt-get&lt;/code&gt; sends a lot of metadata, like language that the system is using, which packages need updates, etc. On top of the set of mirrors used, there is potentially enough metadata there to fingerprint the individual machine.&lt;/p&gt;
+
+&lt;p&gt;One open question is how the &lt;code&gt;apt-get&lt;/code&gt; downloads map to different Tor circuits. If all of the traffic from a given &lt;code&gt;apt-get&lt;/code&gt; session goes over a single Tor circuit, then the exit node, the mirror server, and any network observer that can see the traffic between those two can use that as the fingerprint.&lt;/p&gt;
+
+&lt;p&gt;To expand on this, if TAILS fetched all of its apt sources (wheezy, backports, testing, etc) via HTTPS from the same mirror (e.g. mirrors.kernel.org), then the exit node and network observer could not really distinguish the distro the machine making the connection was running since mirrors.kernel.org hosts many distro mirrors. There are two key parts here: using HTTPS to encrypt the data, and using HTTP pipelining so that network connections are reused for multiple downloads, rather than the default behavior of making a new HTTPS for each individual download. This setup would also prevent the custom pattern of apt sources from being distinguished since it would just show as downloading some series of files, and those files could be packages, package metadata, perl modules, source tarballs, etc.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own app store with F-Droid</title>
+      <link>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</link>
+      <pubDate>Tue, 05 Nov 2013 11:55:43 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</guid>
+      <description>
+
+&lt;p&gt;(_This blog post as now been cooked into an &lt;a href=&#34;https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo&#34; target=&#34;_blank&#34;&gt;updated HOWTO&lt;/a&gt;_)&lt;/p&gt;
+
+&lt;p&gt;The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are &lt;a href=&#34;http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links&#34; target=&#34;_blank&#34;&gt;actively tapping&lt;/a&gt; into &lt;a href=&#34;http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html&#34; target=&#34;_blank&#34;&gt;the raw data streams&lt;/a&gt; of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/your-own-app-store.png&#34; alt=&#34;your-own-app-store&#34; width=&#34;300&#34; height=&#34;203&#34; class=&#34;alignright size-full wp-image-11896&#34; /&gt; &lt;a href=&#34;https://f-droid.org&#34; title=&#34;F-Droid Home Page&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; is a wonderful, free app store for Android. It is modeled after the &lt;a href=&#34;http://www.debian.org&#34; title=&#34;Debian home page&#34; target=&#34;_blank&#34;&gt;Debian GNU/Linux&lt;/a&gt; distro. It has its own package repositories (repos) and build servers for all the apps that are part of the official OS. Like Debian and Ubuntu, you can also setup your own repos for anyone to use. Any free software can be added to the official F-Droid repos, where they are built and signed by the F-Droid server. This can be annoying because it means that your apps in F-Droid are signed by a different key than your apps in the Google Play Store. If you host your own F-Droid repo, then people can use F-Droid to install your own builds signed by your own signing key.&lt;/p&gt;
+
+&lt;p&gt;This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the &lt;code&gt;fdroidserver&lt;/code&gt; tools and a webserver. For the webserver, here we use &lt;em&gt;nginx&lt;/em&gt; for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: &lt;tt&gt;F50E ADDD 2234 F563&lt;/tt&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install fdroidserver nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the case of this HOWTO, we’re going to setup a “&lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository&#34; target=&#34;_blank&#34;&gt;Simple Binary Repository&lt;/a&gt;” to host our official APKs. The repo will be set up in the recommended &lt;code&gt;fdroid/&lt;/code&gt; subdirectory. This gives the &lt;code&gt;fdroid&lt;/code&gt; tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let’s give our normal user control over this subdirectory in the web root so that we don’t need to run the F-Droid tools as root (with &lt;em&gt;nginx&lt;/em&gt;, the webroot is &lt;code&gt;/usr/share/nginx/www&lt;/code&gt;, it is different for other webservers):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mkdir /usr/share/nginx/www/fdroid
+sudo chown -R $USER /usr/share/nginx/www/fdroid
+cd /usr/share/nginx/www/fdroid
+fdroid init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now put your APK files into &lt;code&gt;/usr/share/nginx/www/fdroid/repo&lt;/code&gt; and you are ready to run the commands to build the repo (if &lt;code&gt;fdroid init&lt;/code&gt; cannot find your Android SDK in &lt;code&gt;/opt/android-sdk&lt;/code&gt; or &lt;code&gt;$ANDROID_HOME&lt;/code&gt;, it will prompt you for the path):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /usr/share/nginx/www/fdroid
+cp /path/to/*.apk /usr/share/nginx/www/fdroid/repo/
+fdroid update -c
+fdroid update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png&#34; alt=&#34;fdroidheader3&#34; width=&#34;300&#34; height=&#34;75&#34; class=&#34;alignleft size-medium wp-image-11906&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png 720w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Voila! Now you have a working F-Droid Repo! Add it to an F-Droid client on your Android device to test it out. That is done in the &lt;strong&gt;Manage Repos&lt;/strong&gt; screen available from the menu. Your repo URL will be the hostname or IP address of your machine with &lt;code&gt;/fdroid/repo/&lt;/code&gt; added to the end of it, i.e. &lt;code&gt;https://mysecureserver.com/fdroid/repo/&lt;/code&gt; or &lt;code&gt;http://192.168.2.53/fdroid/repo/&lt;/code&gt;. You can temporarily uncheck the official repos to easily see what F-Droid found in your new repo.&lt;/p&gt;
+
+&lt;h2 id=&#34;customization&#34;&gt;Customization&lt;/h2&gt;
+
+&lt;p&gt;You can also customize your repo by editing the config file. Be sure to use a programming text editor, like &lt;code&gt;editor /usr/share/nginx/www/fdroid/config.py&lt;/code&gt;. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;repo_url = &amp;quot;https://guardianproject.info/fdroid/repo&amp;quot;
+repo_name = &amp;quot;My Local Repo&amp;quot;
+repo_icon = &amp;quot;GP_Logo_hires.png&amp;quot;
+repo_description = &amp;quot;&amp;quot;&amp;quot;
+This is a local test repository of Hans-Christoph Steiner &amp;lt;&amp;amp;#x68;a&amp;amp;#x6e;s@&amp;amp;#x67;ua&amp;amp;#x72;d&amp;amp;#x69;&amp;amp;#x61;n&amp;amp;#x70;ro&amp;amp;#x6a;e&amp;amp;#x63;&amp;amp;#x74;.&amp;amp;#x69;nf&amp;amp;#x6f;&amp;gt;.  It is a repository of Guardian Project apps.
+&amp;quot;&amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To put your icon into your repo, choose a PNG image to put in your repo. The PNG goes in &lt;code&gt;/usr/share/nginx/www/fdroid/&lt;/code&gt;, the file can be named whatever you want (by default its &lt;code&gt;fdroid-icon.png&lt;/code&gt;). If you change the name from the default, be sure to update &lt;code&gt;repo_icon&lt;/code&gt; and &lt;code&gt;archive_icon&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;more-security&#34;&gt;More Security&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png&#34; alt=&#34;apg&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1029&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/02/apg.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Now that you have a working repo, its time to improve the security. Generating a repo in place is very easy, that is why this HOWTO started there, but it is not as secure as it should be if your repo is going to be your main distribution point. When generating the repo in place, make sure that &lt;code&gt;config.py&lt;/code&gt; is not accessible via the web, since it contains passwords. If the file permissions are correct (e.g. &lt;code&gt;chmod 0600 config.py&lt;/code&gt;), then &lt;code&gt;config.py&lt;/code&gt; will not be readable by the webserver. But the signing keys will still be that public server. To improve this situation, generate the repo on a non-public machine like your laptop, keeping &lt;code&gt;config.py&lt;/code&gt; and the keystore only on that machine, then use &lt;code&gt;fdroid server update&lt;/code&gt; to publish the changes to your repo on a separate server. You just need to set &lt;code&gt;serverwebroot&lt;/code&gt; in &lt;code&gt;config.py&lt;/code&gt; properly, then &lt;code&gt;fdroid server update&lt;/code&gt; will do the publishing via rsync over ssh. So both computers will have to have ssh and rsync installed and setup.&lt;/p&gt;
+
+&lt;p&gt;You can also use your own existing signing key rather than the one generated by &lt;code&gt;fdroid init&lt;/code&gt;, just edit &lt;code&gt;repo_keyalias&lt;/code&gt;, &lt;code&gt;keystore&lt;/code&gt;, &lt;code&gt;keystorepass&lt;/code&gt;, &lt;code&gt;keypass&lt;/code&gt;, and &lt;code&gt;keydname&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we like Tor and its Hidden Services for providing privacy, we also want to setup an F-Droid repository that is accessible over a Tor Hidden Service aka onion address. This will be covered in a future HOWTO.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

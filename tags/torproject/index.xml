@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Torproject on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/torproject/</link>
+    <description>Recent content in Torproject on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Jul 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/torproject/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Achieve Onion Layers of Security with the Triad of Apple-tizing Apps!</title>
+      <link>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Our summer intern Alfred just graduated high-school and is preparing to attend a major university to focus on a technical degree. He has a personal interest in privacy and security, and is working with us on a variety of projects this summer as part of a broad, crash-course in all things Guardian Project!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Last week, I worked with three different apps for the iPhone that, when they work together, allow for a secure and private mobile internet experience. Since they all build on the Tor Network, they also offer an untraceable way to share and download media. My task was to test the user experience in these apps and see how they interact with each other and to make sure that they’re working in the intended ways following a test plan.&lt;/p&gt;
+
+&lt;p&gt;The first app Orbot, which acts as a secure vpn is the core of the security. It makes it very difficult to track the user when browsing. The first thing you want to do before you start browsing is to open the Orbot app and complete the setup with the vpn configuration.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image5.jpg&#34; alt=&#34;orbot ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once set up you could press start to use the default vpn or if you’d need more security you would click the ‘Choose how to Connect’ option below that and it’ll take you to a page where you can connect to an even more secure network because Orbot provides you with a network proxy. Choosing other options provides you with even more proxies making your ip or your browsing harder to detect or track.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image2.jpg&#34; alt=&#34;orbot ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that you’ve activated the Orbot vpn you can access the Onion Browser where you can freely browse as if you were using your regular browsing app like Chrome or Safari but now with even more security and privacy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;onionbrowser.png&#34; alt=&#34;onion browser app&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, I continued my testing with the Onion Share mobile app. This app allows you to freely and securely share media using a secure “.onion” download link, that can be opened by anyone with Onion Browser or Tor Browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image3.png&#34; alt=&#34;onionshare for ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see in the interface you can choose to send photos, files, or even whole folders to share media in. OnionShare then creates a link that can only be accessed through using any Tor-enabled web browser, such as Onion Browser or Tor Browser. You can then download the files and view them as normal.&lt;/p&gt;
+
+&lt;p&gt;This is the screen you’re greeted with when launching Tor Browser on the desktop. As you can see the interface resembles that of a normal browser. When connected to the Tor now, you’re able to open up links from OnionShare which can’t be opened anywhere else.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image1.png&#34; alt=&#34;tor browser on desktop&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is what the OnionShare screen on the desktop looks like using the Tor Browser. From here you can select to download the files and view them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image4.png&#34; alt=&#34;tor browser on desktop&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I think it&amp;rsquo;s interesting and very helpful how the usage of the combination of these apps not only provides you a secure browsing experience but also allows you to share different forms of media while also making it incredibly difficult to trace and track.&lt;/p&gt;
+
+&lt;p&gt;You can download the Orbot+Onion Browser+OnionShare for iOS QA Test Plan that was used to guide this work here: &lt;a href=&#34;https://github.com/guardianproject/orbot-apple/blob/main/testing/OrbotOnionBrowserOnionShareiOS-TestPlan-July2023.xlsx&#34;&gt;Download Test Plan&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Improving Usability of Tor on Smartphones in Latin America</title>
+      <link>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</guid>
+      <description>&lt;p&gt;Between 2022 and 2023 Guardian Project, with support from &lt;a href=&#34;https://okthanks.com&#34;&gt;Okthanks&lt;/a&gt; and the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor Project&lt;/a&gt;, organized and participated in a total of 12 workshops in Ecuador, Mexico and Brazil with the participation of 161 people. The workshops focused both on the broad topic of “Tor for Smartphones”, while also taking deeper dives into specific topics like virtual private networks VPNs) and anonymous web browsing. Through a variety of methods, we gathered feedback from the participants in each of those sessions. We also ran detailed individual tests with volunteers to collect insights related to new features and usability improvements on specific apps.
+Our top takeaways from this process were, as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;gpchiapasworkshop.png&#34; alt=&#34;chiapas workshop photo&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Changing Misconceptions of Performance&lt;/strong&gt; A positive outcome of each workshop was the opportunity to show participants how much has the Tor network speed improved and address misconceptions related to downloading files and watching videos, one of the main reasons why users stopped using Tor in the past.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ease of Onboarding Matters&lt;/strong&gt; When working with at-risk individuals, it’s important for the first experience to be easy and straightforward.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support Flexible Use&lt;/strong&gt; People’s behaviors around using VPNs tend to vary. Many will use it in certain situations. They are not running it all of the time for everything, but only when they need it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consider Physical Security&lt;/strong&gt; One of the high-level threats we identified during the workshops we ran was the existence of physical check-points run by drug cartels in the south of Mexico. People entering or leaving an area are asked either to provide access to their phones for review or leave them at the checkpoint until they leave the area. It is not clear what they are looking for when they get access to a device, but in many cases, people who left their devices at the checkpoint do not return to claim them out of fear. For this reason, we encourage the use of app icon camouflage features on privacy and security focused apps.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Awareness and Education&lt;/strong&gt; The primary reason people in Latin America have been slow to adopt Tor tools is not that they do not work in their context, but due to awareness they exist. They have a hard time understanding what they do and how they work, and have many misconceptions about them. Continued outreach and education about which tools to use when is needed to increase adoption.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;gpusabilitycuecards.png&#34; alt=&#34;usability cue cards&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We are proud to share this 20 page report on our usability focused work on Tor in Latin America&lt;/strong&gt;
+Thank you to everyone who made this work possible, from our partners at Tor Project, our community partners, funders, designers, developers, and other supporters. Without all of you, we would not be able to do this important work to broaden the reach and effectiveness of privacy-enhancing tools in Latin America.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;GuardianProject-TorUsabilityOnSmartphonesLatinAmerica-May2023-v0.0.2.pdf&#34;&gt;Download the full report PDF here.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>
+
+&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here at Guardian, security is always our #1 priority. We owe that to our users who rely on us to keep them safe in places like Syria or Iran. But the time we spend on encryption is wasted if users don’t like using our tools, or can’t figure out how they work. We want to make security apps that are enjoyable and easy to use everyday, and don’t take a PHD to understand.&lt;/p&gt;
+
+&lt;p&gt;Activists in Iran and Syria know firsthand how important technologies like Tor and VPNs are for staying safe online. Our friends and neighbors might not be living under a repressive dictatorship, but that doesn’t mean they couldn’t use a little digital security in their lives. Maybe your nephew wants to get past the block on Facebook at school, or your co-worker wants to watch March Madness at work (make sure she gets that decoy spreadsheet ready). Maybe your friend just wants to send his wife a few…private messages, and he’d rather not have them stored by Google or Verizon. These people might not be pros, but they’re curious and happy to poke around their technology. With a little fun and interactive guidance, they can be well on their way to becoming a power user. Everyone starts somewhere!&lt;/p&gt;
+
+&lt;p&gt;We want to make life safer and easier for at-risk activists and everyday people alike. That’s why we make accessible and straightforward guides to help you quickly and easily get past censors, internet police, or the office IT department.&lt;/p&gt;
+
+&lt;h1 id=&#34;gibberbot-tutorial&#34;&gt;&lt;strong&gt;Gibberbot Tutorial&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Our newest tutorial is for our secure chat app, &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&amp;feature=search_result&#34; target=&#34;_blank&#34;&gt;Gibberbot&lt;/a&gt;. With your Android phone in one hand and the &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;Gibberbot Tutorial&lt;/a&gt; in the other, you can be chatting securely on Google or Facebook chat in minutes! But Google and Facebook can’t even tell what you’re talking about. It’s also more convenient to have all of your chat apps rolled into one so that it doesn’t matter where your friends message you, it still goes to the same place. Gibberbot works even if someone is trying to monitor or block your phone’s communications. If you know another language and would like to contribute, &lt;a title=&#34;Gibberbot Tutorial Transifex Translations&#34; href=&#34;https://www.transifex.com/projects/p/gibberbot-tutorial/&#34; target=&#34;_blank&#34;&gt;we’d love your help translating the tutorial (we’ve got English and Tibetan covered)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_3291&#34; style=&#34;width: 251px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-3291&#34; class=&#34; wp-image-3291&#34; alt=&#34;galaxy5&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/02/galaxy5.png&#34; width=&#34;241&#34; height=&#34;361&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-3291&#34; class=&#34;wp-caption-text&#34;&gt;
+    So you want to chat securely?
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p style=&#34;text-align: center;&#34;&gt;
+  &lt;p&gt;
+     
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;h1&gt;
+    &lt;strong&gt;Orbot Tutorial&lt;/strong&gt;
+  &lt;/h1&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    With our Android app Orbot, browsing the web securely and safely through Tor has been a piece of cake for a while now. But we just created &lt;a title=&#34;How to Orbot Tutorial&#34; href=&#34;https://guardianproject.info/howto/browsefreely&#34; target=&#34;_blank&#34;&gt;an interactive tutorial to get you started&lt;/a&gt; and show how easy it is circumvent censorship, even if the Google Play Store is blocking direct access to our app.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    The tools themselves are getting smarter too. A new tool from &lt;a title=&#34;Tor Project&#34; href=&#34;https://www.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor&lt;/a&gt;, called &lt;a title=&#34;Tor Project Obfsproxy&#34; href=&#34;http://www.torproject.org/projects/obfsproxy.html.en&#34; target=&#34;_blank&#34;&gt;Pluggable Transports&lt;/a&gt;, hides your Tor traffic to look like regular Internet traffic, making it even easier for Tor users to stay ahead of surveillance and censorship. To use this new tool with Orbot, just follow the instructions on &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/04/How-to-browse-freely-on-your-phone-if-your-internet-is-blocked.pdf&#34; target=&#34;_blank&#34;&gt;our new one-page guide&lt;/a&gt; (and &lt;a title=&#34;How to browse freely on your phone if your internet is blocked - Farsi&#34; href=&#34;https://guardianproject.info/wp-content/uploads/2013/04/How-to-browse-freely-on-your-phone-if-your-internet-is-blocked-Farsi.pdf&#34; target=&#34;_blank&#34;&gt;in Farsi&lt;/a&gt;) and you’re all set! For a more in-depth guide to using Orbot, watch our &lt;a href=&#34;https://www.youtube.com/watch?v=Dcf5sh99ze0&#34;&gt;video tutorial&lt;/a&gt; (now in English and Arabic).
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_3585&#34; style=&#34;width: 250px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+    &lt;a href=&#34;https://guardianproject.info/howto/browsefreely&#34; target=&#34;_blank&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-3585&#34; class=&#34; wp-image-3585&#34; alt=&#34;orbot galaxy s3&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/04/galaxy15.png&#34; width=&#34;240&#34; height=&#34;361&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/04/galaxy15.png 400w, https://guardianproject.info/wp-content/uploads/2013/04/galaxy15-199x300.png 199w&#34; sizes=&#34;(max-width: 240px) 100vw, 240px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p id=&amp;quot;caption-attachment-3585&amp;quot; class=&amp;quot;wp-caption-text&amp;quot;&amp;gt;
+  So you want to escape censorship?
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p style=&#34;text-align: center;&#34;&gt;
+    &lt;p&gt;
+      As we continue to grow our team and create new tools, we need your feedback!  Please tell us what we can do to go from security awareness training to a full-on security awareness party. Feel free to leave a comment on this post or tell us how we can make things easier through our &lt;a href=&#34;https://guardianproject.info/contact/&#34;&gt;contact page&lt;/a&gt;. You can also let us know about any upcoming parties that we should be attending.
+    &lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
+  &amp;lt;i&amp;gt;This post is partially a response to Bruce Schneier’s recent piece: &amp;lt;a title=&amp;quot;Schneier Security Awareness Training&amp;quot; href=&amp;quot;https://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&amp;quot;&amp;gt;Security Awareness Training&amp;lt;/a&amp;gt;&amp;lt;/i&amp;gt;.
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Beem&#43;Orbot: Mobile Instant Messaging over Tor</title>
+      <link>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</link>
+      <pubDate>Mon, 10 May 2010 16:32:01 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</guid>
+      <description>&lt;p&gt;It is no secret that we are big fans of open-source here at Guardian. In fact, it is &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;what we are made of&lt;/a&gt;. Guardian is not just a single app or just one phone, it is a vision for a more private and secure future for personal mobile telecommunications. As part of our work, we are constantly on the lookout other similar, like-minded projects that are developing open-source communications tools for the Android OS which we can make to work with our underlying security platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.beem-project.com/&#34;&gt;BEEM – Android XMPP&lt;/a&gt; happens to be one of these. You can find BEEM in the Android Market or you can &lt;a href=&#34;http://www.beem-project.com/news/11&#34;&gt;download it here&lt;/a&gt;. The goal of BEEM is to provide a full featured and easy to use Jabber client on Android. Jabber is another name for XMPP, the &lt;a href=&#34;https://en.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol&#34;&gt;Extensible Messaging and Presence Protocol&lt;/a&gt;, which is another name for Instant Messaging and Status Updates. XMPP is the open-protocol that grew out of the AIM vs. Yahoo vs. MSN vs. ICQ protocol wars of a few years ago. It is now managed by a &lt;a href=&#34;http://xmpp.org/&#34;&gt;standards foundation&lt;/a&gt;, and is supported by an amazing number of &lt;a href=&#34;http://xmpp.org/software/clients.shtml&#34;&gt;client&lt;/a&gt; and &lt;a href=&#34;http://xmpp.org/software/servers.shtml&#34;&gt;server&lt;/a&gt; apps.&lt;/p&gt;
+
+&lt;p&gt;Beem, available as source code and in the Android Market, is a great looking, highly functional IM application that supports a number of advanced options including SSL/TLS support and SOCKS Proxying. These two features make it ideal for use with running over the &lt;a href=&#34;https://www.torproject.org&#34;&gt;Tor anonymity network&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.github.io/info/apps/orbot&#34;&gt;Orbot&lt;/a&gt;. By combining Beem with Orbot, mobile instant messaging can be more private (even anonymous if one chooses), usable without fear of eavesdropping by network operators, and made accessible in places where filtering technologies blocks access to popular instant messaging services.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) Connect to the Tor network using the Orbot app&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First, if you do not have Orbot installed, first &lt;a href=&#34;https://www.torproject.org/docs/android.html&#34;&gt;download it from the Tor Project&lt;/a&gt; or scan the barcode below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; src=&#34;https://www.torproject.org/img/android/orbot-qr-code-latest.png&#34; alt=&#34;&#34; width=&#34;123&#34; height=&#34;123&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Orbot app contains an HTTP and SOCKS proxy server which allows any Android app to proxy its network traffic through Tor. By installing and activating Orbot (tap on the big power button!), this proxy server is activated and runs in the background as long as you are connected to the Tor network.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-295&#34; title=&#34;torboot&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/torboot.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-294&#34; title=&#34;toron&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/toron.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) Configure your XMPP-compatible account using Beem settings&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you don’t have BEEM installed, you can &lt;a href=&#34;http://www.beem-project.com/news/11&#34;&gt;download it here&lt;/a&gt; or scan the barcode below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; src=&#34;https://dev.beem-project.com/screenshot_rc1/qr-code.png&#34; alt=&#34;&#34; width=&#34;100&#34; height=&#34;100&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use any XMPP service, but we recommend one that supports TLS or SSL security. You can use your Gmail / Google Talk account or you can find a list of public services here: &lt;a href=&#34;http://xmpp.org/services/&#34;&gt;http://xmpp.org/services/&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-293&#34; title=&#34;beemsettings&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/beemsettings.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-292&#34; title=&#34;beemusername&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/beemusername.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) Check the SSL/TLS option in the Advanced Menu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You must enable this option to protect your password and chat communications when they exit the Tor network. You can learn more about &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/TheOnionRouter/TorFAQ#CanexitnodeseavesdroponcommunicationsIsntthatbad&#34;&gt;exit node eavesdropping on the TorFAQ&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-291&#34; title=&#34;advsetings&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/advsetings.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/tls.png&#34;&gt;&lt;img title=&#34;tls&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/tls-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) Enable the SOCKS Proxy Setting in the Proxy Menu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The “Use a proxy server” should be checked, the Protocol set to “SOCKS5”. The Server is “localhost” and the Port is “9050”. You must use the SOCKS5 protocol, as it ensures that domain name resolution is also routed through Tor, stopping from someone snooping on which chat service you are using.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-289&#34; title=&#34;proxyon&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/proxyon.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-288&#34; title=&#34;socks5&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/socks5.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png)[&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png)[&lt;/a&gt;&lt;img class=&#34;alignnone size-medium wp-image-287&#34; title=&#34;localhost&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/localhost.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost.png)[&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/localhost.png)[&lt;/a&gt;&lt;img class=&#34;alignnone size-medium wp-image-286&#34; title=&#34;port&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/port.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port.png&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/port.png&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5) Connect to the XMPP Service&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If Orbot is connected, and you have configured the proxy settings correctly, you should be able to connect and see your contacts or buddy list. From here, you can use Beem as you normally would (&lt;a href=&#34;http://www.beem-project.com/documents/4&#34;&gt;download user documentation here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; &lt;em&gt;To ensure Beem is routing through Tor, you should deactivate Orbot, and then try connecting to your XMPP service with Beem again. This SHOULD fail, else you haven’t setup the proxying correctly.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-285&#34; title=&#34;coonnecting&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/coonnecting.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-284&#34; title=&#34;friends&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/friends.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6) Chat away!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;At this point, you should be happily chatting away with your buddies. It is important to note that this solution &lt;/span&gt;DOES NOT provide end-to-end encryption&lt;span style=&#34;font-weight: normal;&#34;&gt;, so once your chat reaches the server, it is not secure, both because the service provide can view it if they choose, and the other members of your chat may not be secured themselves.&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We do plan to implement and end-to-end extension to Beem using the &lt;a href=&#34;http://www.cypherpunks.ca/otr/&#34;&gt;Pidgin+Off The Record&lt;/a&gt; approach that has provided effective on desktop systems. If anyone wishes to contribute development cycles to this effort, please let us know!&lt;/p&gt;
+
+&lt;p&gt;If you find issues with Beem, please report them: &lt;a href=&#34;http://www.beem-project.com/projects/beem/issues/new&#34;&gt;http://www.beem-project.com/projects/beem/issues/new&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you find issues with Orbot, please report them: &lt;a href=&#34;https://trac.torproject.org/projects/tor/newticket&#34;&gt;https://trac.torproject.org/projects/tor/newticket&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

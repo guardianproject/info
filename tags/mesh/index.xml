@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mesh on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/mesh/</link>
+    <description>Recent content in Mesh on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 02 May 2012 15:37:37 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/mesh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mobile mesh in a real world test</title>
+      <link>https://guardianproject.github.io/info/2012/05/02/mobile-mesh-in-a-real-world-test/</link>
+      <pubDate>Wed, 02 May 2012 15:37:37 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/02/mobile-mesh-in-a-real-world-test/</guid>
+      <description>&lt;p&gt;Nathan, Mark, Lee, and I tried some OLSR mesh testing during the May Day protests and marches. We were able to get 4 devices to associate and mesh together, but not without some trials and travails. Two pairs of devices setup two separate BSSIDs, so were on separate networks. We turned them all off, then associated them one at a time, and then they all got onto the same BSSID and olsrd started doing its thing. This made us think that we should just use a hard-coded BSSID in the setup, with a preference to allow standard ad-hoc association to find a BSSID. &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n-300x225.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;alignright size-medium wp-image-2037&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n-300x225.jpg 300w, https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n.jpg 600w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next we tried to use some services. We were going to try running a &lt;a href=&#34;https://crypto.cat/&#34; target=&#34;_blank&#34;&gt;cryptocat&lt;/a&gt; session, but the phone that was running cryptocat via a &lt;a href=&#34;https://github.com/guardianproject/lildebi&#34; target=&#34;_blank&#34;&gt;Lil’ Debi&lt;/a&gt; Debian install was having trouble staying connected to the mesh. Next we tried a serverless direct SIP call using &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34; target=&#34;_blank&#34;&gt;CSIPSimple&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;CSIPSimple uses the Android Java API to determine if the device is online. The current approach to configuring the ad-hoc mode used by Android-Wifi-Tether-based apps including Serval and Barnacle-based apps including OLSR-Mesh-Tether disables the wifi via the Android Java API, then configures ad-hoc mode using command line tools. This means that Android believe that the wifi is off, and when apps query the network status via the normal Android API, Android will tell it what it believes: there is no network connection.&lt;/p&gt;
+
+&lt;p&gt;This works in &lt;a href=&#34;http://www.servalproject.org/&#34; target=&#34;_blank&#34;&gt;Serval&lt;/a&gt; because Serval is a self-contained system with its own SIP client and server, etc. This does not work for situations where we want to provide generic IP service using OLSR mesh on Android phones. I’m going to try to see if I can get the ad-hoc setup to work while making Android believe that the wifi is an and associated with infrastructure-mode network.&lt;/p&gt;
+
+&lt;p&gt;Also, in the process of setting up the mesh while mixing in a crowd and walking with a crowd down the street we realized two key things: 1) the setup process should be tolerant of frequent interruptions, and 2) it should be as easy as possible for people to give the mesh app itself from one phone to another. We’ll be working on #1 as part of our &lt;a href=&#34;https://code.commotionwireless.net/projects&#34; target=&#34;_blank&#34;&gt;Commotion&lt;/a&gt; work and we will focus on making a UI that clearly shows its status and lets the user continue where they left off. We will be working directly on #2 as part of a separate project, so we’ll try to keep everyone informed on our progress with that.&lt;/p&gt;
+
+&lt;p&gt;Another idea we discussed was how to have a “strength meter” for mesh, like the GSM or wifi bars. We talked about taking a tally of how many first hop connections there are, the total connections, and the total willingness of all of the first hop connections.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

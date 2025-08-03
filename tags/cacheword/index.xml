@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cacheword on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/cacheword/</link>
+    <description>Recent content in Cacheword on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 Sep 2014 21:39:54 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/cacheword/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CipherKit updates: IOCipher and CacheWord</title>
+      <link>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</link>
+      <pubDate>Fri, 26 Sep 2014 21:39:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</guid>
+      <description>
+
+&lt;p&gt;We’ve been on a big kick recently, updating the newest members of our CipherKit family of frameworks: &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;IOCipher&lt;/a&gt; and &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt;. There also are is a little news about the original CipherKit framework: &lt;a href=&#34;https://www.zetetic.net/sqlcipher/open-source&#34; title=&#34;SQLCipher for Android&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;iocipher-v0-2&#34;&gt;IOCipher v0.2&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;IOCipher is a library for storing files in an encrypted virtual disk. It’s API is the exact same as &lt;code&gt;java.io&lt;/code&gt; for working with files, and it does not need root access. That makes it the sibling of SQLCipher-for-Android, both are native Android APIs that wrap the SQLCipher database.&lt;/p&gt;
+
+&lt;p&gt;This round of work focused on making IOCipher more reliable and secure, and easy to integrate with CacheWord. It can now handle files up to 4GB in size, the same as FAT filesystems, and it has much improved performance, especially under concurrent load. There is now also an &lt;code&gt;unmount()&lt;/code&gt; method to lock the database and wipe the key from memory. The central &lt;code&gt;VirtualFileSystem&lt;/code&gt; class is now a singleton, since you can only have a single virtual disk open at a time. Lastly, the IOCipher release now includes binaries for &lt;code&gt;armeabi&lt;/code&gt;, &lt;code&gt;armeabi-v7a&lt;/code&gt;, and &lt;code&gt;x86&lt;/code&gt;. IOCipher v0.2 was built against SQLCipher-for-Android v3.1.0, and that is the minimum recommended version to use.&lt;/p&gt;
+
+&lt;p&gt;Find downloads, example projects, test suites, and more on &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;the IOCipher page&lt;/a&gt;. Follow the development on the &lt;a href=&#34;https://dev.guardianproject.info/projects/iocipher&#34; target=&#34;_blank&#34;&gt;IOCipher project page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;cacheword-v0-1&#34;&gt;CacheWord v0.1&lt;/h2&gt;
+
+&lt;p&gt;Once you are using SQLCipher and IOCipher, then you’ll definitely need to do some password management, and password caching too, since no one wants to type their password again every time they come to an app. That is where CacheWord comes in: it is a library for managing passwords, and it is designed easily feed directly into SQLCipher and IOCipher, or really anything that needs secure password caching.&lt;/p&gt;
+
+&lt;p&gt;Most of this update was about making CacheWord ready to deploy. That means fixing bugs and drastically simplifying it’s dependencies. CacheWord now can be used as a plain jar file or an Android Library Project, and it only depends on &lt;code&gt;android-support-v4.jar&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Part of the process of simplifying CacheWord also involved stripping down the API to only want CacheWord should really handle. The standard API is all in the CacheWordHandler class. So that means that your app has to handle any Notification, and pass it to CacheWord if you want CacheWordService to run in the foreground.&lt;/p&gt;
+
+&lt;p&gt;CacheWord also now dynamically chooses how many iterations of the key derivation function based on the CPU type. That means that new, fast devices, the derived key will be a lot stronger, while on slow, old devices, it won’t take a minute to unlock your app.&lt;/p&gt;
+
+&lt;p&gt;Find downloads, example projects, and more on &lt;a href=&#34;https://guardianproject.github.io/info/code/cacheword&#34;&gt;the CacheWord page&lt;/a&gt;. Follow the development on the &lt;a href=&#34;https://dev.guardianproject.info/projects/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord project page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;sqlcipher&#34;&gt;SQLCipher&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/skitch.png&#34; alt=&#34;SQLCipher&#34; width=&#34;64&#34; height=&#34;72&#34; class=&#34;alignright size-full wp-image-3613&#34; /&gt;&lt;/a&gt;The upcoming release of SQLCipher-for-Android also has been simplified. It will no longer depend on commons-codec.jar or guava-r09.jar (thanks to Jeff Campbell for submitting those commits!), remove ~8000 methods for those who fear running into the 65k method limit of the classes.dex file. We’ve been working on making the build process be reproducible, so that anyone can verify that the official releases are built only from the source in the git repo, and nothing else has been added. We’re also working on moving the password format conversion code out of CacheWord and into SQLCipher, where it belongs.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keeping data private means it must be truly deletable!</title>
+      <link>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</link>
+      <pubDate>Fri, 23 Aug 2013 17:36:49 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive-150x150.jpg&#34; alt=&#34;deleting data&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-11598&#34; /&gt;&lt;/a&gt;There are lots of apps these days that promise to keep your data secure, and even some that promise to wipe away private information mere seconds or minutes after it has been received. It is one thing to keep data out of view from people you don’t want seeing it, it is also important to be able to truly delete information. Unfortunately computers make it very difficult to make data truly disappear. When we tell a computer to delete a file, it only deletes the reference to the data. The data itself remains on the disk unchanged. For any UNIX geek out there, you can easily see an example of that by greping a partition (e.g. &lt;code&gt;sudo grep password /dev/sda3&lt;/code&gt;. To solve this problem, there are “secure delete” options. Secure deletion removes the reference like regular deletion, then wipes the data on the disk by overwriting it with random data. That’s much better, but not always good enough. It turns out that its possible to remove the hard disk and read magnetic residue and recover even wiped data.&lt;/p&gt;
+
+&lt;p&gt;Mobile devices only make that problem worse because they almost always rely on flash memory for disk storage. Flash memory has wear-leveling programming built into it, so it is not possible to guarantee that a file will be wiped without overwriting the whole flash disk, then deleting it all and overwriting the whole thing again. Not only is it not practical to delete the whole disk just to remove one file, it also takes a long time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack-300x199.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignleft size-medium wp-image-11600&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack-300x199.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack.jpg 1024w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;So what can we do about this? Use encryption! [&lt;a href=&#34;http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.225.6872&#34; title=&#34;Secure Data Deletion for USB Flash Memory (2011)&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;] If the data is encrypted before its written to either a classic hard drive or flash memory disk, then the actual data is never on the disk itself. If the data is encrypted with a good passphrase, then just “forgetting” the key will make it basically impossible to recover the data. Additionally, encrypted data looks like random data, so it is easy to hide the deleted, encrypted data from the recovery techniques by adding random garbage to the disk. It turns out that with the right architecture, a key can be forgotten quite quickly, much quicker than even the most basic secure deletion.&lt;/p&gt;
+
+&lt;p&gt;This logic is built into our new passphrase library &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34; target=&#34;_blank&#34;&gt;Cacheword&lt;/a&gt;. Cacheword is a library for securely working with and caching passphrases. It plugs right into &lt;a href=&#34;https://guardianproject.info/code/sqlcipher&#34; target=&#34;_blank&#34;&gt;SQLCipher for Android&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/code/iocipher&#34; target=&#34;_blank&#34;&gt;IOCipher&lt;/a&gt;. SQLCipher and IOCipher are both ways for easily storing data using strong AES-256 encryption. Cacheword then handles getting the passphrase from the user. Instead of feeding that passphrase directly to SQLCipher or IOCipher, it creates an encrypted file for storing a strong AES-256 key and that is what is used to lock SQLCipher and IOCipher. The user’s passphrase then just unlocks that encrypted key file.&lt;/p&gt;
+
+&lt;p&gt;The means you can get rapid deletion of data stores of any size by just deleting the key file. The user never sees the actual key so they cannot divulge it. Since the user’s passphrase is not the key for the data but instead the key to the Cacheword key file, the secure deletion can first focus on that key file. The key file is small, so that can happen very quickly. Then even if the data files are recovered, the user does not has the passphrase to the data, its only locked away in the now deleted key file. The key was stored encrypted, so a standard deletion will provide decent protection: it will look like random data on the disk.&lt;/p&gt;
+
+&lt;p&gt;To really ensure the key and the data is gone for good, an app can implement a full wiping procedure. Normal wiping procedures can follow as a background task, making it harder and harder to recover the data, no matter who the adversary is. The full wiping procedure would go something like this (with a rough timeframe for each step):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Cacheword wipes the passphrase from memory (nanoseconds to milliseconds)&lt;/li&gt;
+&lt;li&gt;the Cacheword key file is deleted (milliseconds)&lt;/li&gt;
+&lt;li&gt;write random garbage to disk patterned after the key file to obscure the deleted key file (milliseconds to minutes)&lt;/li&gt;
+&lt;li&gt;delete the SQLCipher/IOCipher data files (seconds to minutes)&lt;/li&gt;
+&lt;li&gt;fill entire memory (RAM) with random garbage (minutes to hours)&lt;/li&gt;
+&lt;li&gt;fill entire disk with random garbage (hours)&lt;/li&gt;
+&lt;li&gt;power off device&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s the overview of the process. But of course, there are always annoying technical details, and I’ll continue on about some of them, for those who like such things.&lt;/p&gt;
+
+&lt;p&gt;To start with, the user’s passphrase will most likely be stored in memory by code outside of Cacheword, SQLCipher, and IOCipher. For example, the Android text entry widget will have the passphrase pass thru it, and inevitably will store that data in memory. It is up to the garbage collection to remove that from memory, and the garbage collection might not zero out the memory before deallocating it. We’re still looking into ideas for how to trigger that, and would love to hear suggestions.&lt;/p&gt;
+
+&lt;p&gt;To truly wipe the data from the disk, there would need to be multiple passes where the entire disk is filled up then the entire disk is deleted. That is rarely practical. So hiding the existence of the encrypted data stores is difficult to do in practice. The encrypted data will remain encrypted with AES-256 using a random, full length key, so it would be basically impossible to crack using publicly known technology and techniques.&lt;/p&gt;
+
+&lt;p&gt;The best bet for preventing the most advanced adversary from getting the deleted data would involve a few cycles of rebooting, filling up the memory and disk with random garbage after doing the procedure outlined above. A more rapid version of that would be to delay filling the disk until after a reboot. That would ensure that the key to the data is thoroughly wiped as quickly as possible before starting in on the much less important and long lasting task of wiping the entire disk to hide the deleted data files.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

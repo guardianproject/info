@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ux on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/ux/</link>
+    <description>Recent content in Ux on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 29 Jul 2010 17:17:08 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/ux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Orbot Update: New Setup Wizard at Startup</title>
+      <link>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</link>
+      <pubDate>Thu, 29 Jul 2010 17:17:08 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</guid>
+      <description>&lt;p&gt;We’ve been working away at the 0.0.9 release of &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; over the last few months, and have put a decent amount of effort into usability. Specifically, we hoped to better communicate to users what it means to run Tor on your Android phone. In addition, we wanted to clearly lay out how the various configuration options help to improve your mobile web anonymity and ability to circumvent web filters and tracking by your mobile service provider.&lt;/p&gt;
+
+&lt;p&gt;The screenshots below are what you see the first time you install and run Orbot, and also whenever you open the “Help” menu. One important thing to point out is that Orbot can run with or without root, and our setup UI responds to having the capability or not accordingly.&lt;/p&gt;
+
+&lt;p&gt;Ultimately our goal is to provide a useful bootstrap experience for novice and advanced users alike. We welcome your feedback.&lt;/p&gt;
+
+&lt;div id=&#39;gallery-3&#39; class=&#39;gallery galleryid-488 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-489&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-489&#39;&gt;
+      permissions… we actually will only be asking for INTERNET – so don’t mind the “phone status” permission
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-490&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-490&#39;&gt;
+      Your basic install screen
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-491&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-491&#39;&gt;
+      A friendly welcome
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-492&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-492&#39;&gt;
+      About Orbot!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-493&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-493&#39;&gt;
+      we ask nicely to get root permissions, if possible
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-495&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-495&#39;&gt;
+      if the user doesn’t have root, we make sure they understand the implications
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-496&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-496&#39;&gt;
+      Offer direct downloads of Orbot/Tor enabled apps
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-497&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-497&#39;&gt;
+      (Root only) choose whether to “Torify All” or choose app by app
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-498&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-498&#39;&gt;
+      (Root only) Select to send all network traffic through Tor
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-499&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-499&#39;&gt;
+      (Root only) Select which apps you want to route through Tor
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-500&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-500&#39;&gt;
+      This is the final step
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-501&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-501&#39;&gt;
+      We’ve got root!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

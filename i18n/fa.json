@@ -50,5 +50,69 @@
   {
     "id": "edit",
     "translation": "ویرایش"
+  },
+  {
+    "id": "show",
+    "translation": "نشان دادن"
+  },
+  {
+    "id": "contact",
+    "translation": "تماس"
+  },
+  {
+    "id": "tutorials",
+    "translation": "آموزش‌ها"
+  },
+  {
+    "id": "readMore",
+    "translation": "خواندن بیش‌تر"
+  },
+  {
+    "id": "readTime",
+    "translation": "دقیقه"
+  },
+  {
+    "id": "words",
+    "translation": "لغات"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "زبان"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "جستجو"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "بستن"
+  },
+  {
+    "id": "noComment",
+    "translation": "بدون نظر"
+  },
+  {
+    "id": "yourName",
+    "translation": "نامتان"
+  },
+  {
+    "id": "translation",
+    "translation": "ترجمه"
+  },
+  {
+    "id": "Blog",
+    "translation": "وبلاگ"
+  },
+  {
+    "id": "Press",
+    "translation": "مطبوعات"
+  },
+  {
+    "id": "Services",
+    "translation": "خدمات"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "کاره‌های آرشیو شده"
   }
 ]

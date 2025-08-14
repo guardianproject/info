@@ -134,5 +134,9 @@
   {
     "id": "Team",
     "translation": "گروه"
+  },
+  {
+    "id": "Contact",
+    "translation": "تماس"
   }
 ]

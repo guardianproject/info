@@ -50,5 +50,93 @@
   {
     "id": "edit",
     "translation": "ویرایش"
+  },
+  {
+    "id": "show",
+    "translation": "نمایش"
+  },
+  {
+    "id": "contact",
+    "translation": "تماس"
+  },
+  {
+    "id": "tutorials",
+    "translation": "خودآموزها"
+  },
+  {
+    "id": "readMore",
+    "translation": "خواندن بیش‌تر"
+  },
+  {
+    "id": "readTime",
+    "translation": "دقیقه"
+  },
+  {
+    "id": "words",
+    "translation": "واژه"
+  },
+  {
+    "id": "languageSwitcherLabel",
+    "translation": "زبان"
+  },
+  {
+    "id": "gcseLabelShort",
+    "translation": "جست‌وجو"
+  },
+  {
+    "id": "gcseClose",
+    "translation": "بستن"
+  },
+  {
+    "id": "noComment",
+    "translation": "بدون نظر"
+  },
+  {
+    "id": "yourName",
+    "translation": "نامتان"
+  },
+  {
+    "id": "translation",
+    "translation": "ترجمه"
+  },
+  {
+    "id": "Blog",
+    "translation": "وبلاگ"
+  },
+  {
+    "id": "Press",
+    "translation": "مطبوعات"
+  },
+  {
+    "id": "Services",
+    "translation": "خدمت‌ها"
+  },
+  {
+    "id": "Archived Apps",
+    "translation": "کاره‌های بایگانی شده"
+  },
+  {
+    "id": "comments",
+    "translation": "نظرها"
+  },
+  {
+    "id": "yourEmail",
+    "translation": "نشانی رایانامه‌تان"
+  },
+  {
+    "id": "webSite",
+    "translation": "پایگاه وب"
+  },
+  {
+    "id": "description",
+    "translation": "شرح"
+  },
+  {
+    "id": "Team",
+    "translation": "گروه"
+  },
+  {
+    "id": "Contact",
+    "translation": "تماس"
   }
 ]

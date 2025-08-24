@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App Reviews on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/app-reviews/</link>
+    <description>Recent content in App Reviews on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 25 Sep 2016 00:43:54 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/categories/app-reviews/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Orfox 1.2: An Overdue Update to Our Privacy-Focused Browser!</title>
+      <link>https://guardianproject.github.io/info/2016/09/25/orfox-1.2-an-overdue-update-to-our-privacy-focused-browser/</link>
+      <pubDate>Sun, 25 Sep 2016 00:43:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/09/25/orfox-1.2-an-overdue-update-to-our-privacy-focused-browser/</guid>
+      <description>&lt;div class=&#34;markdown-body&#34;&gt;
+  &lt;p&gt;
+    Primarily this release is the first in a long while after improving our ability to stay up-to-date with core Tor Browser development. In addition, as Mozilla adds more and more features to the core Firefox, we must review them for any issues related to increased permission request, access to data, and privacy and network leaks. This is a slow, tedious job, so thank you for your patience. We expect to have more frequent, regular releases moving forward.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;markdown-body&#34;&gt;
+  &lt;p&gt;
+    Orfox specific highlights include:
+  &lt;/p&gt;
+  
+  &lt;ul&gt;
+    &lt;li&gt;
+      improved integration with Orbot
+    &lt;/li&gt;
+    &lt;li&gt;
+      removal of more unnecessary Android permissions / features (chromecast, account access)
+    &lt;/li&gt;
+    &lt;li&gt;
+      new icon and branding!
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  
+  &lt;p&gt;
+    A big thanks to &lt;a href=&#34;https://github.com/amoghbl1&#34;&gt;Amogh Pradeep&lt;/a&gt;, Orfox lead developer and GSoC student extraordinaire, along with the entire Tor Browser and Mozilla Firefox teams, for their tireless work, building this great open-source web browser ecosystem.
+  &lt;/p&gt;
+  
+  &lt;p&gt;
+    Updates to the core Tor Browser releases that Orfox is based on can be reviewed here:&lt;br /&gt; &lt;a href=&#34;https://blog.torproject.org/blog/tor-browser-65a3-hardened-released&#34;&gt;https://blog.torproject.org/blog/tor-browser-65a3-hardened-released&lt;/a&gt;&lt;br /&gt; &lt;a href=&#34;https://blog.torproject.org/blog/tor-browser-605-released&#34;&gt;https://blog.torproject.org/blog/tor-browser-605-released&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p class=&#34;release-downloads-header&#34;&gt;
+  &lt;strong&gt;Downloads&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;ul class=&#34;release-downloads&#34;&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&#34;&gt;Install from Google Play&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    APK: &lt;a href=&#34;https://github.com/guardianproject/Orfox/releases/download/Fennec-45.4.0esr%2FTorBrowser-6.5-1%2FOrfox-1.2/Orfox-1.2-TorBrowser-6.5-Fennec45.4.0.apk&#34; rel=&#34;nofollow&#34;&gt;&lt;small class=&#34;text-gray float-right&#34;&gt;33.6 MB &lt;/small&gt;&lt;strong&gt;Orfox-1.2-TorBrowser-6.5-Fennec45.4.0.apk&lt;/strong&gt;&lt;/a&gt; (&lt;a href=&#34;https://github.com/guardianproject/Orfox/releases/download/Fennec-45.4.0esr%2FTorBrowser-6.5-1%2FOrfox-1.2/Orfox-1.2-TorBrowser-6.5-Fennec45.4.0.apk&#34;&gt;gpg sig&lt;/a&gt;)
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;Guardian Project F-Droid Repo&lt;/a&gt; (update coming soon!)
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Source Code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/Orfox/commits/Fennec-45.4.0esr/TorBrowser-6.5-1/Orfox-1.2&#34;&gt;Orfox build repo&lt;/a&gt;:&lt;/li&gt;
+&lt;li&gt;Orfox’s &lt;a href=&#34;https://github.com/guardianproject/orfox&#34;&gt;Tor Browser repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OpenArchive: Free &amp; Secure Mobile Media Sharing #DWebSummit</title>
+      <link>https://guardianproject.github.io/info/2016/06/07/openarchive-free-secure-mobile-media-sharing-#dwebsummit/</link>
+      <pubDate>Tue, 07 Jun 2016 15:37:03 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/06/07/openarchive-free-secure-mobile-media-sharing-#dwebsummit/</guid>
+      <description>&lt;p&gt;I am excited to share another new “mini app” effort we have joined up with, as part of work we are doing to create simple, focused tools that solve a single issue. We also are aiming to builds apps that are 1 to 3MB in size, and work on Android phones back to version 2.3, in order to maximize accessibility for a global audience.  &lt;a href=&#34;https://open-archive.net&#34;&gt;&lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt;&lt;/a&gt; is one of these efforts. It is a project led by &lt;a href=&#34;https://www.aaronswartzday.org/openarchive/&#34;&gt;Natalie Cadranel&lt;/a&gt;, who received a &lt;a href=&#34;https://www.knightfoundation.org/grants/201448513/&#34;&gt;Knight Foundation prototype grant in 2014&lt;/a&gt;. The initial work was done by our partners at &lt;a href=&#34;https://www.scal.io/&#34;&gt;Scal.io&lt;/a&gt;, and continued now by the core Guardian Project team. The app is now in &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.opendasharchive.openarchive.release&#34;&gt;stable beta&lt;/a&gt; and ready for &lt;a href=&#34;https://github.com/OpenArchive/openarchive/issues&#34;&gt;wider testing&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  Here is a brief description from the site at &lt;a href=&#34;https://open-archive.net&#34;&gt;open-archive.net&lt;/a&gt;:
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;div&gt;
+  &lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt; is a free, &lt;span class=&#34;il&#34;&gt;open&lt;/span&gt;-source mobile application, currently for Android, dedicated to maintaining the privacy, provenance, and preservation of your media. It enables you to add metadata and Creative Commons licensing to your audiovisual media and then send it to the Internet &lt;span class=&#34;il&#34;&gt;Archive&lt;/span&gt; over Tor; offering more agency over your media, while protecting civil liberties, and increasing interoperability for those who want to find and reuse/remix it in the future.
+&lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;div id=&#39;gallery-12&#39; class=&#39;gallery galleryid-13356 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-105614.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-105614-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160805.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160805-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160818.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160818-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160829.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160829-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160837.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160837-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160912.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/device-2016-05-26-160912-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For now, we aim for the app to be the easiest and most secure way to publish photos, video and audio to the Internet &lt;span class=&#34;il&#34;&gt;Archive from your Android device, be it a phone, tablet and soon a Chromebook. It will even login and upload &lt;/span&gt;over the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt; if you have &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; installed.&lt;/p&gt;
+
+&lt;p&gt;We see this as a first step towards a more distributed, decentralized way of managing and sharing your personal media, and publishing it and synchronizing it to different places and people, in different ways. This includes distributing media through nearby non-Internet networks such &lt;a href=&#34;https://github.com/n8fr8/talks/blob/master/wind_update_2015/Wind%20Update%20-%20October%202015.pdf&#34;&gt;Wind&lt;/a&gt;, becoming a a &lt;a href=&#34;http://librarybox.us&#34;&gt;LibraryBox&lt;/a&gt; node, publishing through &lt;a href=&#34;https://onionshare.org/&#34;&gt;OnionShare&lt;/a&gt;, notarizing hrough &lt;a href=&#34;https://stamp.io&#34;&gt;Stamp.io&lt;/a&gt;‘s Blockchain-based API, and intergalactic sharing via &lt;a href=&#34;https://ipfs.io/&#34;&gt;IPFS&lt;/a&gt;. This vision is why we are excited about the &lt;a href=&#34;http://www.decentralizedweb.net/&#34;&gt;#DWebSummit&lt;/a&gt; going on this week, and future gatherings related to building less centralized online ecosystems.&lt;/p&gt;
+
+&lt;div&gt;
+   The &lt;a href=&#34;https://www.aaronswartzday.org/openarchive/&#34;&gt;benefits of this work are manyfold&lt;/a&gt;, one of which is that if anyone needs a freely licensed video of &lt;a href=&#34;https://archive.org/details/robot-fish-----------------r6v6&#34;&gt;cute kids watching robot fish swim&lt;/a&gt;, you can now have easy access to one:
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div class=&#34;arve-wrapper&#34; data-mode=&#34;normal&#34; data-provider=&#34;archiveorg&#34; id=&#34;arve-robot-fish-----------------r6v6&#34; style=&#34;max-width:945px;&#34; itemscope itemtype=&#34;http://schema.org/VideoObject&#34;&gt;
+    &lt;div class=&#34;arve-embed-container&#34; style=&#34;padding-bottom:56.250000%&#34;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  As all of this work is open-source and freely licensed, all help is welcome with testing, feedback, design, code, and if you love it, then sharing with others and spreading the word:
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Github: &lt;a href=&#34;https://github.com/OpenArchive/openarchive&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; data-saferedirecturl=&#34;https://www.google.com/url?hl=en&amp;q=https://github.com/OpenArchive/openarchive&amp;source=gmail&amp;ust=1465411952609000&amp;usg=AFQjCNEz3C4AlQlkbvaltKWanhjosLQdhg&#34;&gt;&lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&lt;wbr /&gt;&lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt;/&lt;span class=&#34;il&#34;&gt;openarchive&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Signed release APKs: &lt;a href=&#34;https://github.com/OpenArchive/openarchive/releases/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; data-saferedirecturl=&#34;https://www.google.com/url?hl=en&amp;q=https://github.com/OpenArchive/openarchive/releases/tag/0.0.9-APK-release&amp;source=gmail&amp;ust=1465411952609000&amp;usg=AFQjCNFTspI29-f7KT4gNUbNogeo4n_zEQ&#34;&gt;&lt;a href=&#34;https://github.com/&#34;&gt;https://github.com/&lt;/a&gt;&lt;wbr /&gt;&lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt;/&lt;span class=&#34;il&#34;&gt;openarchive&lt;/span&gt;/&lt;wbr /&gt;releases/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Play: &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.opendasharchive.openarchive.release&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; data-saferedirecturl=&#34;https://www.google.com/url?hl=en&amp;q=https://play.google.com/store/apps/details?id%3Dnet.opendasharchive.openarchive.release&amp;source=gmail&amp;ust=1465411952609000&amp;usg=AFQjCNHw6u_fEXblnlZa-G30124MAbfPRw&#34;&gt;&lt;a href=&#34;https://play.google.com/store/&#34;&gt;https://play.google.com/store/&lt;/a&gt;&lt;wbr /&gt;apps/details?id=net.&lt;wbr /&gt;opendasharchive.&lt;span class=&#34;il&#34;&gt;openarchive&lt;/span&gt;.&lt;wbr /&gt;release&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;https://twitter.com/open_archive&#34;&gt;@open_archive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot v12 now in beta</title>
+      <link>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</link>
+      <pubDate>Wed, 24 Jul 2013 12:32:45 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</guid>
+      <description>&lt;p&gt;After much too long, we’ve got a new build of Orbot out, and it is… a stable beta! Nothing radically new here, just many small changes to continue to improve the experience of our hundreds of thousands of active users out in the world. There will likely be one or two more “beta” releases to iron out small issues in v12, but for now, this one is good to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/mightyorbot.jpg&#34;&gt;&lt;img alt=&#34;mightyorbot&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/mightyorbot-225x300.jpg&#34; width=&#34;225&#34; height=&#34;300&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; &lt;em&gt;a very might orbot&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The really exciting aspect of this release is that we have ironed out some integration points with other apps, like our own Gibberbot, and third-party apps like DuckDuckGo. These apps can now tell if Orbot is installed, running, and if not, request it to start up. Once Orbot is started, it will return to the calling app, and let them know they can proceed with routing their traffic over Tor. We hope that through use of our &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/libonionkit/src/info/guardianproject/onionkit/ui/OrbotHelper.java&#34;&gt;OrbotHelper utility&lt;/a&gt; (part of the &lt;a href=&#34;https://github.com/guardianproject/OnionKit&#34;&gt;OnionKit/NetCipher library&lt;/a&gt;), many more apps will choose to provide their users with better anonymity and privacy of their network traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;Since we haven’t done a release in awhile, and we have some new build &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;tools, I mostly want to make sure I have not done something terribly &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;wrong in the build process. Please confirm back if you are able to &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;successfully use this release. You can report issues &lt;a href=&#34;https://dev.guardianproject.info/projects/orbot/issues/new&#34;&gt;on our bug tracker&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve switched versioning styles to a simpler major.minor.bugfix “semantic” model, so this is now Orbot 12.0.1.&lt;/p&gt;
+
+&lt;p&gt;Signed 12.0.1 beta release build is here:&lt;br /&gt;
+&lt;a href=&#34;https://rink.hockeyapp.net/apps/92ace552aa5344d1a802decb71525897/&#34;&gt;https://rink.hockeyapp.net/apps/92ace552aa5344d1a802decb71525897/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Direct APK is here: &lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk&#34;&gt;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk&lt;/a&gt; (&lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk.asc&#34;&gt;gpg sig&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;We also have automated “nightly” debug builds from the development branch:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/builds/Orbot/&#34;&gt;https://guardianproject.info/builds/Orbot/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Updates in 12.0.1:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;updated to Tor 0.2.4.15-RC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;flashy screen bug fixed&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;now shows traffic stats in notification area&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;better handling of preference settings changes&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;added superuser permission for Cyanogen&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;better support for “start” Intent, integration with other apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tagged source is here:&lt;br /&gt;
+&lt;a href=&#34;https://gitweb.torproject.org/n8fr8/orbot.git/log/refs/tags/12.0.1&#34;&gt;https://gitweb.torproject.org/n8fr8/orbot.git/log/refs/tags/12.0.1&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lower Bounds of The Narrow Bands</title>
+      <link>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</link>
+      <pubDate>Fri, 22 Feb 2013 09:05:48 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</guid>
+      <description>&lt;p&gt;Voice is becoming a standard feature of any messaging app on mobile phones, in various forms using many different protocols. There’s the old guard, whom I will refer to as “Skype”. Some &lt;a href=&#34;https://www.privacyinternational.org/blog/skype-please-act-like-the-responsible-global-citizen-you-claim-to-be&#34;&gt;tough&lt;/a&gt; &lt;a href=&#34;http://www.skypeopenletter.com/&#34;&gt;questions&lt;/a&gt; have been thrown their way by many groups who support a free Internet. There’s Google Voice, which is not really VoIP. Apple is playing around in the hedge maze inside their walled garden with iChat. There’s also Facebook, who is rolling out &lt;a href=&#34;http://techcrunch.com/2013/01/16/facebook-rolls-out-voip-calling-to-u-s-ios-messenger-users/&#34;&gt;voice calling in Canada and the USA&lt;/a&gt; in their Messenger app on iOS.&lt;/p&gt;
+
+&lt;p&gt;None of these offerings address the callers privacy, and few document the details of their calling systems for developers. Surprisingly, none of these global VoIP carriers interoperate with each other. Why? Like most complicated problems, there is a complicated answer. I’m going to focus on codecs, which is a research subject that has been very active in the last few years.&lt;/p&gt;
+
+&lt;p&gt;Our friends at WhisperSystems recently did an &lt;a href=&#34;http://whispersystems.org/blog/client-side-audio-quality/&#34;&gt;in depth writeup&lt;/a&gt; on some challenges they had with the Speex codec when building RedPhone. RedPhone is the client application for one of a small group of secure VoIP carriers that address the challenging privacy issues around VoIP.&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project is also one of these carriers, with a public service called &lt;a href=&#34;https://ostel.me&#34;&gt;OSTel&lt;/a&gt;. We chose to leverage an existing open source client called &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;CSipSimple&lt;/a&gt;. This client has a modular design, which provides a wide selection of codecs. I’m going to focus on one in particular, &lt;a href=&#34;http://codec2.org/&#34;&gt;named Codec2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/02/spectrogram.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/02/spectrogram-300x231.png&#34; alt=&#34;spectrogram&#34; width=&#34;300&#34; height=&#34;231&#34; class=&#34;aligncenter size-medium wp-image-3338&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/02/spectrogram-300x231.png 300w, https://guardianproject.info/wp-content/uploads/2013/02/spectrogram.png 560w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Codec2 addresses a challenge in radio communications that has been around for longer than the Internet. Bandwidth. It might be appropriate to think of your cell phone as a radio to understand this example. When connected to a cellular data connection, the bandwidth is limited by the carrier’s packet switched radio technology. This may be GPRS, EDGE, 3G, 4G(LTE) to name a few lovely acronyms. If your VoIP call uses a codec that exceeds the upper bounds of this bandwidth, you start to hear side effects like dropouts or unintelligible transmission which probably will lead to a dropped call.&lt;/p&gt;
+
+&lt;p&gt;One way to address this problem is to shoot for the bottom. The lower bounds of the bandwidth of cellular data connections start to look a lot like more traditional radio. Shortwave radio, or HAM is the community that’s the closest to the technology behind Codec2. If a codec can be used to transmit &lt;a href=&#34;https://en.wikipedia.org/wiki/AMPRNet&#34;&gt;digitally encoded data&lt;/a&gt; over HAM, that means it is possible to “do VoIP” over a shortwave radio link. This opens up exciting new possibilities for secure voice over narrow bandwidth environments.&lt;/p&gt;
+
+&lt;p&gt;While a small part of the world enjoys plentiful wide band data connections in urban areas, coverage in many rural areas is less common. In this case shooting for the bottom of the bandwidth spectrum helps us keep our calls from dropping and our voices heard.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.csipsimple.plugins.codecs.pack1&amp;amp;feature=more_from_developer#?t=W251bGwsMSwyLDEwMiwiY29tLmNzaXBzaW1wbGUucGx1Z2lucy5jb2RlY3MucGFjazEiXQ..&#34;&gt;CSipSimple Codec Pack&lt;/a&gt; supports secure voice calls using Codec2 with the stable release on the &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.csipsimple&amp;amp;feature=more_from_developer#?t=W251bGwsMSwyLDEwMiwiY29tLmNzaXBzaW1wbGUiXQ..&#34;&gt;Google Play Store&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot Your Twitter!</title>
+      <link>https://guardianproject.github.io/info/2012/05/02/orbot-your-twitter/</link>
+      <pubDate>Wed, 02 May 2012 17:19:27 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/02/orbot-your-twitter/</guid>
+      <description>&lt;p&gt;In some ways, Twitter is the perfect application to run over the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. It works with small bits of data, it is asynchronous, works naturally in a “store and forward” queue model, and in general, has a decent amount of &lt;a href=&#34;https://twitter.com/about/security&#34;&gt;default security built-in&lt;/a&gt; through HTTP/S support and OAuth. Compared to the problem-child of the open web, which often involves large websites, streaming video, flash embeds, and malicious javascript, Twitter is a nearly perfect candidate for use over a secure, anonymous (but sometimes high latency) network. Add to the fact that Twitter is often &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_websites_blocked_in_the_People&#39;s_Republic_of_China&#34;&gt;blocked or monitored in many countries&lt;/a&gt;who do not care for free speech and human rights, and it becomes almost a necessity that you use it with a service like Tor.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;WARNING AND DISCLAIMER: Twitter for Android is proprietary, closed-source software. Details of the implementation of proxy support have not been publicly disclosed or audited by a third-party at this time. In particular, resolution of hostnames via DNS may not be properly routed through Tor (this is a common issue with proxied software). In addition, through other permissions that Twitter for Android may have you on your device, there may be a strong ability to correlate identity between your registered Google Account and your activities on Twitter.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Until recently, in order to run &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&amp;amp;hl=en&#34;&gt;Twitter for Android&lt;/a&gt; through Tor for Android, aka &lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot&lt;/a&gt;, you would need to &lt;a href=&#34;http://shortfuse.org/?page_id=2&#34;&gt;root your device&lt;/a&gt;, or deal with complex proxy settings. However, as of last week, Twitter became &lt;em&gt;one of the first and only major apps (aka 100M+ installs!)&lt;/em&gt; to &lt;a href=&#34;https://twitter.com/#!/moxie/status/195622774348324864&#34;&gt;add direct proxy support into their app&lt;/a&gt;, in a very easy to find and activate way.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;UPDATE June 13, 2012: After a recent audit, we now recommend turning off the “Sync Data” option through Twitter’s Settings menu, under your registered Twitter account. This will stop push notifications from being sent, which are currently not handled by Orbot/Tor.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install and activate Orbot, open Twitter, tap the gear icon on the home screen.&lt;/li&gt;
+&lt;li&gt;Check the “proxy” box, enter ‘localhost’ and ‘8118’.&lt;/li&gt;
+&lt;li&gt;Open your account settings, and disable the “Sync Data” option to stop push notifications which cannot be proxied through Orbot/Tor.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;See the screenshots below for a full walkthrough, and please spread the word to those in need.&lt;/p&gt;
+
+&lt;div id=&#39;gallery-7&#39; class=&#39;gallery galleryid-2041 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-165201.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-165201-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2047&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2047&#39;&gt;
+      Orbot and Twitter now work together easily, thanks to new simple proxy settings feature in Twitter for Android
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164620.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164620-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2042&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2042&#39;&gt;
+      When you setup Orbot, your device does not need root or “superuser” access in order to work with Twitter, or with other apps like Gibberbot (Chat) or ORWeb (safe web access)
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164656.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164656-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2043&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2043&#39;&gt;
+      Orbot by default provides an HTTP proxy server on “localhost” and port 8118
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164743.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164743-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2044&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2044&#39;&gt;
+      In the Twitter app account sign in screen, click the small gear icon to open proxy settings
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164753.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164753-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2045&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2045&#39;&gt;
+      Enable the proxy, set Proxy Host to ‘localhost’ and Proxy Port to ‘8118’
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164807.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-164807-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2046&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2046&#39;&gt;
+      You can also modify Proxy settings in the app via Menu-&gt;Settings
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170011.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170011-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2054&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2054&#39;&gt;
+      You can use the app just the same as before, but now through Tor!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170043.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170043-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2055&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2055&#39;&gt;
+      With searches, you may need to try a few times for them to go through
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170118.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/device-2012-05-02-170118-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-7-2056&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-7-2056&#39;&gt;
+      #OrbotYourTwitter!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Learn more and install apps&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Twitter for Android: &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.twitter.android&amp;amp;hl=en&#34;&gt;Google Play&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Orbot: Tor for Android: &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&amp;amp;&#34;&gt;Google Play&lt;/a&gt; or &lt;a href=&#34;https://www.torproject.org/docs/android.html.en&#34;&gt;direct download via TorProject.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Learn more about &lt;a href=&#34;https://www.torproject.org/about/overview.html.en&#34;&gt;how Tor works&lt;/a&gt; or just watch the video below!&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Don’t Get Burned, Anonymize Your Fire</title>
+      <link>https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/</link>
+      <pubDate>Wed, 16 Nov 2011 22:37:24 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/</guid>
+      <description>&lt;p&gt;Thanks to Jesse Vincent, aka &lt;a href=&#34;https://twitter.com/obra&#34;&gt;@obra&lt;/a&gt; of the &lt;a href=&#34;https://code.google.com/p/k9mail/&#34;&gt;K-9 mail project&lt;/a&gt;, we can say that &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot (Tor on Android)&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/apps/orweb&#34;&gt;Orweb (Privacy Browser)&lt;/a&gt; work just fine on the new &lt;a href=&#34;http://www.amazon.com/Kindle-Fire-Amazon-Tablet/dp/B0051VVOB2&#34;&gt;Amazon Kindle Fire&lt;/a&gt;. This means that while everything you do through Amazon’s store and browser are tracked and accounted for by Team Bezos, you can use our apps to more safely and privately access web content through the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. While we are mostly &lt;a href=&#34;https://guardianproject.info/hardware/&#34;&gt;Nook Color fans&lt;/a&gt; around here, we know that the Kindle Fire is going to be quite popular this Christmas, and are glad to see that mobile privacy now has a toehold on the device from Seattle.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://twitpic.com/7f2bo3&#34;&gt;&lt;img title=&#34;448565907&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/11/448565907-300x224.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;224&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This provides a nice counterpoint to some of the &lt;a href=&#34;http://www.slashgear.com/eff-talks-silk-browser-privacy-with-amazon-19189281/&#34;&gt;earlier privacy concerns about the Amazon Silk browser&lt;/a&gt;, which proxies all your http connections through their data center. In addition, the fact that our &lt;a href=&#34;https://gitweb.torproject.org/orbot.git/blob_plain/HEAD:/BUILD&#34;&gt;very complex apps&lt;/a&gt; work without modification on Amazon’s stripped down flavor of Android, shows that the reports of fragmentation have been greatly exaggerated. From our perspective, the power of Android comes from the compatibility of the underlying platform APIs and Linux-based foundation, and not about having a one size fits all user interface or a single-point of control app marketplace.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2011/11/Kindle-Fire.jpg&#34;&gt;&lt;img class=&#34;size-medium wp-image-1306 alignnone&#34; title=&#34;Kindle-Fire&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/11/Kindle-Fire.jpg&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2011/11/Kindle-Fire.jpg 500w, https://guardianproject.info/wp-content/uploads/2011/11/Kindle-Fire-300x168.jpg 300w&#34; sizes=&#34;(max-width: 500px) 100vw, 500px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Installation Instructions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1) Under the settings section labeled “Device,” there is an option that says “Allow Installation of Applications From Unknown Sources.” Enable this!&lt;/p&gt;
+
+&lt;p&gt;2) Then download these files directly via the Fire’s browser, or side-load them from the desktop using the Android SDK “adb” tool.&lt;/p&gt;
+
+&lt;p&gt;Orbot: &lt;a href=&#34;https://www.torproject.org/dist/android/Orbot-1.0.6-Tor-0.2.3.7-alpha-FINAL.apk&#34;&gt;https://www.torproject.org/dist/android/Orbot-1.0.6-Tor-0.2.3.7-alpha-FINAL.apk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Orweb: &lt;a href=&#34;https://github.com/downloads/guardianproject/Orweb/Orwebv2-20010809-0.2.2.apk&#34;&gt;https://github.com/downloads/guardianproject/Orweb/Orwebv2-20010809-0.2.2.apk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;3) Start Orbot, follow the wizard, and press the power up button to connect to Tor.&lt;/p&gt;
+
+&lt;p&gt;4) Start Orweb to connect to the Tor Check page to verify your connection, then browse away to your (private) heart’s content.&lt;/p&gt;
+
+&lt;p&gt;5) Do a happy dance because your Kindle Fire just got way more l33t and slightly less p0wn3d.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SECURED: T-Mobile myTouch 4G gets Guardian</title>
+      <link>https://guardianproject.github.io/info/2010/11/09/secured-t-mobile-mytouch-4g-gets-guardian/</link>
+      <pubDate>Tue, 09 Nov 2010 23:26:59 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/11/09/secured-t-mobile-mytouch-4g-gets-guardian/</guid>
+      <description>&lt;p&gt;One of the services we provide at the Guardian Project is taking any off the shelf Android phone and setting it up to be generally more secure, privacy minded and updated with a powerful suite of trusted apps. Today we were excited to get our hands on a myTouch 4G, manufactured by HTC and sold by T-Mobile. Really beautiful piece of hardware, and once we got our hands on it, a powerhouse of encrypted, anonymous and circumventing communications.&lt;/p&gt;
+
+&lt;p&gt;Brief list of our current trusted app suite (not all are open-source but they are tested/vetted as best we can otherwise): Orbot (Tor on Android), Firefox with ProxyMob add-on, TextSecure, OtRChat, RedPhone, SipDroid with VPN, DroidTracker, Norton Mobile Security Suite, Android Privacy Guard with K9Mail for GPG, OISafe and OINotes for locally encrypted data collection and more!&lt;/p&gt;
+
+&lt;p&gt;All in all, through our own development work and the larger Android security community, things are really coming together. With hardware like the 4G, it can all be put into a shiny, blazing package.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&#34;display: block; margin-right: auto; margin-left: auto;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/11/wpid-IMG_20101109_174732.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&#34;display: block; margin-right: auto; margin-left: auto;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/11/wpid-IMG_20101109_174618.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To: Lockdown Your Mobile E-Mail</title>
+      <link>https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/</link>
+      <pubDate>Fri, 09 Jul 2010 11:00:25 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update 2015-04-27&lt;/strong&gt;: _We now recommend &lt;a href=&#34;http://www.openkeychain.org/&#34; target=&#34;_blank&#34;&gt;OpenKeychain&lt;/a&gt; over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and &lt;a href=&#34;http://www.openkeychain.org/&#34; target=&#34;_blank&#34;&gt;OpenKeychain&lt;/a&gt;, then go into OpenKeychain and start the config there._&lt;/p&gt;
+
+&lt;p&gt;Over the past few years it’s become &lt;a href=&#34;https://www.youtube.com/watch?v=Gm8NdNy4wOM&#34;&gt;increasingly popular&lt;/a&gt; to sound the call that ‘&lt;a href=&#34;http://www.pcmag.com/article2/0,2817,2343209,00.asp&#34; title=&#34;dead&#34;&gt;email is dead&lt;/a&gt;{#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate. I expect to be scooting around on my &lt;a href=&#34;https://en.wikipedia.org/wiki/Hoverboard&#34;&gt;hoverboard&lt;/a&gt; by the time email goes the way of the dinosaur.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, many of the protocols involved in sending and receiving e-mail are not considered secure – in the sense that they are vulnerable to eavesdropping. Simple Mail Transport Protocol (SMTP) – the Internet standard for e-mail transmission across IP networks  most commonly used by client applications for sending messages to a mail server for relaying – is typically implemented without any type of transport encryption. Internet Message Access Protocol (IMAP) and Post Office Protocol (POP) suffer from the same eavesdropping issues as SMTP when implemented without transport encryption. Even when SMTP is implemented with transport encryption it does not, by default, require the authentication of e-mail message senders. As a result, mail servers cannot be sure that the senders of messages are really who they claim to be. And even though POP and IMAP require users to authenticate, messages are sent and delivered using SMTP.&lt;/p&gt;
+
+&lt;p&gt;The result is a situation where the &lt;em&gt;recipient&lt;/em&gt; of an e-mail message can be positively identified but the &lt;em&gt;sender&lt;/em&gt; cannot. Along with the eavesdropping concerns mentioned at the top of the paragraph, this is an alarming state of affairs. Imagine if the same were true of snail mail – there would be rioting in the streets! Fortunately there has been a lot of great work done to combat these fears – the main issue being that the problem itself is  still one  that is often ignored or not fully understood by the layperson. As secure solutions for mobile platforms gain momentum, we’re hoping to change things.&lt;/p&gt;
+
+&lt;p&gt;Enter &lt;a href=&#34;https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP&#34;&gt;OpenPGP&lt;/a&gt;, an IETF standard for encryption and decryption of data. The version of OpenPGP that exists today is the evolution of PGP, which was created in 1991 as a means for secure BBSs communication and message storage (it ironically also stands for “Pretty Good Privacy”). Why do you need PGP? In the words of its inventory, Phil Zimmerman: “&lt;a href=&#34;http://www.spectacle.org/795/byzim.html&#34;&gt;It empowers people to take their privacy into their own hands&lt;/a&gt;.” How it works is a whole other story – one too complex for the purposes of this posting – but we’ll do our  best to scrape the surface quickly. Disclaimer: The following is meant solely as an introduction. There are many people out there who are experts in these topics, and we welcome any and all comments – especially if we misstate or misrepresent anything!&lt;/p&gt;
+
+&lt;p&gt;PGP uses a serial combination of hashing, data compression, symmetric-key cryptography, and, finally, public-key cryptography. From the user’s perspective, it creates two &lt;a href=&#34;https://en.wikipedia.org/wiki/Cryptographic_key&#34;&gt;cryptographic keys&lt;/a&gt; to encrypt and decrypt data. The first of these two is called the &lt;a href=&#34;https://en.wikipedia.org/wiki/Public-key&#34;&gt;Public Key&lt;/a&gt; – which can be freely shared with anyone the user wishes and is used by others to encrypt data so that it can be decrypted by &lt;strong&gt;only the intended recipient&lt;/strong&gt;. The second key is the Private Key, which should be kept as private and safe as possible. It is used to decrypt data that has been encrypted using a specific Public Key. As long as the Private Key is kept secret, only the owner is  able to decrypt data that has been encrypted with a Public Key. One problem with older methods of encryption was the relative ease with which codes could be broken. With increasingly powerful computers that are able to crack codes via pure ‘brute force,’ encoding methods must be incredibly complex to stand up. To combat this, PGP uses a key that is astronomically large,  meaning that the security of PGP encryption lies entirely with the key as opposed to keeping the method for key generation a secret. In fact, the methods that PGP encryption uses are known and widely documented. In addition, the size of keys can be increased whenever necessary to stay one step ahead of technological advances. And for the time being, each of the algorithms in current use by PGP is not known to have cryptanalytic weaknesses.&lt;/p&gt;
+
+&lt;p&gt;So how secure does this make your information? Italian Police, the &lt;a href=&#34;http://www.pcworld.com/article/110841/pgp_encryption_proves_powerful.html&#34;&gt;FBI&lt;/a&gt;, and &lt;a href=&#34;http://www.theregister.co.uk/2007/11/14/ripa_encryption_key_notice/&#34;&gt;British police&lt;/a&gt; have been unable to crack its security and have resorted to demanding private keys. It’s been likened as “the closest you’re likely to get to military-grade encryption” by cryptographer &lt;a href=&#34;https://en.wikipedia.org/wiki/Bruce_Schneier&#34;&gt;Bruce Schneier&lt;/a&gt;. Short answer: pretty darn good, as long as you guard your private key wisely.&lt;/p&gt;
+
+&lt;p&gt;You’ve probably guessed by now that the reason for this posting is to show you how to effectively use OpenPGP to secure your mobile email. And while we would’ve loved to just jump right into the tutorial, there are a few more things you should know first. &lt;a href=&#34;https://code.google.com/p/android-privacy-guard/&#34; title=&#34;Android Privacy Guard&#34;&gt;Android Privacy Guard&lt;/a&gt;{#udlg} (or APG for short), is a first step at bringing &lt;a href=&#34;https://en.wikipedia.org/wiki/Pretty_Good_Privacy&#34; title=&#34;PGP&#34;&gt;OpenPGP&lt;/a&gt;{#qtjc} to the Android platform, letting you manage OpenPGP keys directly from your Android phone – and use them to encrypt, sign and decrypt emails and files. &lt;a href=&#34;http://groups.google.com/group/k-9-mail/browse_thread/thread/921051bc0a61ed0b/d6085b925805ebf2?lnk=raot&#34;&gt;Very recently&lt;/a&gt; the teams behind APG and the popular, open-source Android email client &lt;a href=&#34;https://code.google.com/p/k9mail/&#34;&gt;K-9 Mail&lt;/a&gt; have joined forces in a limited edition &lt;a href=&#34;https://en.wikipedia.org/wiki/Marvel_Team-Up&#34;&gt;team-up&lt;/a&gt; to create a beta version of K-9 that plays nice with APG quite seamlessly. We’ve been using it as our default email solution at Guardian for weeks now and want to share it with you!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Currently APG only supports importing and deleting keys – not generating them – so you’ve got to use a desktop implementation of OpenPGP (such as &lt;a href=&#34;http://www.gnupg.org/&#34; title=&#34;GNU Privacy Guard&#34;&gt;GNU Privacy Guard&lt;/a&gt;{#vrm_}) to actually generate your keypair if you don’t already have one. A number of front-end applications and libraries are available to perform this task. If you already have a keypair set up, you should skip the first step.&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;strong&gt;1. Download and Install GnuPG Generate an OpenPGP keypair&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  Install GnuPG  &lt;a href=&#34;http://www.gnupg.org/download.html&#34;&gt;here&lt;/a&gt;. There are binaries available for &lt;a href=&#34;http://www.gnupg.org/download/supported_systems.en.html&#34;&gt;whatever OS flavor&lt;/a&gt; you prefer, and since they do a great job of making documentation and &lt;a href=&#34;http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html&#34;&gt;How-To Guides&lt;/a&gt; available, we’ll skip the part where we reinvent the wheel.
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;strong&gt;2. Generate and export your keypair&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  Follow the instructions &lt;a href=&#34;http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.1&#34;&gt;here&lt;/a&gt; to create a new keypair. &lt;a href=&#34;http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.2&#34;&gt;Export&lt;/a&gt; your public and private keys (re-direct from stdout to a file) and stick that file on your Android device’s SD card. Usually it’s best to create a new folder /APG to keep things organized, especially if your SD card is a mess like ours 🙂
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;strong&gt;3. Download APG and import your keys&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;strong&gt; &lt;/strong&gt;If you don’t already have it, download Android Privacy Guard from its repository &lt;a href=&#34;https://code.google.com/p/android-privacy-guard/downloads/list&#34;&gt;here&lt;/a&gt; or point your barcode scanner to the QR code below. You can also find it on the Market if you prefer.
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  &lt;span style=&#34;line-height: 1px; font-size: 13.2px;&#34;&gt; &lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px; text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png&#34;&gt;&lt;img class=&#34;size-full wp-image-385 aligncenter&#34; title=&#34;qrcode_apg&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png&#34; alt=&#34;&#34; width=&#34;120&#34; height=&#34;120&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png 120w, https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg-64x64.png 64w&#34; sizes=&#34;(max-width: 120px) 100vw, 120px&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+  Fire up APG and select ‘Manage Public Keys’ from the menu:
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px; text-align: center;&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-390 aligncenter&#34; title=&#34;apg_menu&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;padding-left: 30px; text-align: center;&#34;&gt;
+  &lt;p style=&#34;padding-left: 30px;&#34;&gt;
+    From the ‘Manage Public Keys’ screen, select ‘Import Keys’:
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;p style=&#34;padding-left: 30px; text-align: center;&#34;&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-391 aligncenter&#34; title=&#34;apg_manage_public_keys_blur&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p style=&#34;padding-left: 30px;&#34;&gt;
+    &lt;p style=&#34;padding-left: 30px;&#34;&gt;
+      From the popup dialog, select the public key that you’ve transferred to your SD card. It’s helpful to use a file browser program like Astro File Manager if you don’t already have it installed:
+    &lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;p style=&amp;quot;padding-left: 30px; text-align: center;&amp;quot;&amp;gt;
+  &amp;lt;span style=&amp;quot;line-height: 8px;&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png&amp;quot;&amp;gt;&amp;lt;img class=&amp;quot;size-medium wp-image-392 aligncenter&amp;quot; title=&amp;quot;apg_import_keys_blur&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;180&amp;quot; height=&amp;quot;300&amp;quot; srcset=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png 480w&amp;quot; sizes=&amp;quot;(max-width: 180px) 100vw, 180px&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/p&amp;gt;
+
+&amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    Once your public key(s) are successfully imported, return to the main APG menu, select ‘Manage Secret Keys’ and repeat the steps above for your Private Key.
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    &amp;lt;strong&amp;gt;4. Download and Configure K-9 Mail&amp;lt;/strong&amp;gt;
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    Download the latest version of K-9 mail featuring APG integration. You can find it on the Downloads page &amp;lt;a href=&amp;quot;https://code.google.com/p/k9mail/downloads/list&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt; or, again, point your barcode scanner to the QR Code below. Whatever floats your boat.
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px; text-align: center;&amp;quot;&amp;gt;
+    &amp;lt;img class=&amp;quot;aligncenter&amp;quot; src=&amp;quot;https://chart.apis.google.com/chart?chs=150x150&amp;amp;cht=qr&amp;amp;chl=http://k9mail.googlecode.com/files/k9-apg-2900-beta.apk&amp;amp;chld=L|1&amp;amp;choe=UTF-8&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;125&amp;quot; height=&amp;quot;125&amp;quot; /&amp;gt;
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    Set up your email account by entering your email address and password, then give it a name.
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    &amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png&amp;quot;&amp;gt;&amp;lt;img class=&amp;quot;aligncenter size-medium wp-image-451&amp;quot; title=&amp;quot;k9_setup&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;168&amp;quot; height=&amp;quot;300&amp;quot; srcset=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png 480w&amp;quot; sizes=&amp;quot;(max-width: 168px) 100vw, 168px&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+  &amp;lt;/p&amp;gt;
+
+  &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+    &amp;lt;p style=&amp;quot;padding-left: 30px; text-align: center;&amp;quot;&amp;gt;
+      &amp;lt;img class=&amp;quot;aligncenter&amp;quot; title=&amp;quot;k9_almost_done&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done-168x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;168&amp;quot; height=&amp;quot;300&amp;quot; /&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      For more popular accounts such as gmail, Yahoo!, etc., K-9 will automatically detect the correct configuration. For more complex accounts such as Exchange, please check out the K-9 wiki page &amp;lt;a href=&amp;quot;https://code.google.com/p/k9mail/w/list&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;.
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;strong&amp;gt;5. Send and Receive Encrypted Email!&amp;lt;/strong&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      Thanks to the integration effort by the teams at APG and K-9, actually using secure mobile email becomes easy. The compose screen features a prominent checkbox and button that allow you to sign and encrypt your outbound messages, respectively.
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png&amp;quot;&amp;gt;&amp;lt;img class=&amp;quot;aligncenter size-medium wp-image-453&amp;quot; title=&amp;quot;k9_compose&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;168&amp;quot; height=&amp;quot;300&amp;quot; srcset=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png 480w&amp;quot; sizes=&amp;quot;(max-width: 168px) 100vw, 168px&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      Decrypting messages with your private key is even easier and is literally a 1-touch experience:
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done.png&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;a href=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png&amp;quot;&amp;gt;&amp;lt;img class=&amp;quot;aligncenter size-medium wp-image-455&amp;quot; title=&amp;quot;k9_view_decrypt&amp;quot; src=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png&amp;quot; alt=&amp;quot;&amp;quot; width=&amp;quot;180&amp;quot; height=&amp;quot;300&amp;quot; srcset=&amp;quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-90x150.png 90w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png 480w&amp;quot; sizes=&amp;quot;(max-width: 180px) 100vw, 180px&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;strong&amp;gt;Enjoy! &amp;lt;/strong&amp;gt;As always, please post all questions, concerns, and jokes (only good ones please) in the Comments section. We’re very excited about the powerful combination that these two apps bring and we’d love to hear from you!
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      If you find any issues with APG, please report them &amp;lt;a href=&amp;quot;https://code.google.com/p/android-privacy-guard/issues/list&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;:
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p style=&amp;quot;padding-left: 30px;&amp;quot;&amp;gt;
+      &amp;lt;span style=&amp;quot;line-height: 13px;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;line-height: 16px;&amp;quot;&amp;gt;Likewise, report issues with K-9 &amp;lt;a href=&amp;quot;https://code.google.com/p/k9mail/issues/list&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;. &amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Beem&#43;Orbot: Mobile Instant Messaging over Tor</title>
+      <link>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</link>
+      <pubDate>Mon, 10 May 2010 16:32:01 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</guid>
+      <description>&lt;p&gt;It is no secret that we are big fans of open-source here at Guardian. In fact, it is &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;what we are made of&lt;/a&gt;. Guardian is not just a single app or just one phone, it is a vision for a more private and secure future for personal mobile telecommunications. As part of our work, we are constantly on the lookout other similar, like-minded projects that are developing open-source communications tools for the Android OS which we can make to work with our underlying security platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.beem-project.com/&#34;&gt;BEEM – Android XMPP&lt;/a&gt; happens to be one of these. You can find BEEM in the Android Market or you can &lt;a href=&#34;http://www.beem-project.com/news/11&#34;&gt;download it here&lt;/a&gt;. The goal of BEEM is to provide a full featured and easy to use Jabber client on Android. Jabber is another name for XMPP, the &lt;a href=&#34;https://en.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol&#34;&gt;Extensible Messaging and Presence Protocol&lt;/a&gt;, which is another name for Instant Messaging and Status Updates. XMPP is the open-protocol that grew out of the AIM vs. Yahoo vs. MSN vs. ICQ protocol wars of a few years ago. It is now managed by a &lt;a href=&#34;http://xmpp.org/&#34;&gt;standards foundation&lt;/a&gt;, and is supported by an amazing number of &lt;a href=&#34;http://xmpp.org/software/clients.shtml&#34;&gt;client&lt;/a&gt; and &lt;a href=&#34;http://xmpp.org/software/servers.shtml&#34;&gt;server&lt;/a&gt; apps.&lt;/p&gt;
+
+&lt;p&gt;Beem, available as source code and in the Android Market, is a great looking, highly functional IM application that supports a number of advanced options including SSL/TLS support and SOCKS Proxying. These two features make it ideal for use with running over the &lt;a href=&#34;https://www.torproject.org&#34;&gt;Tor anonymity network&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.github.io/info/apps/orbot&#34;&gt;Orbot&lt;/a&gt;. By combining Beem with Orbot, mobile instant messaging can be more private (even anonymous if one chooses), usable without fear of eavesdropping by network operators, and made accessible in places where filtering technologies blocks access to popular instant messaging services.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) Connect to the Tor network using the Orbot app&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First, if you do not have Orbot installed, first &lt;a href=&#34;https://www.torproject.org/docs/android.html&#34;&gt;download it from the Tor Project&lt;/a&gt; or scan the barcode below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; src=&#34;https://www.torproject.org/img/android/orbot-qr-code-latest.png&#34; alt=&#34;&#34; width=&#34;123&#34; height=&#34;123&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Orbot app contains an HTTP and SOCKS proxy server which allows any Android app to proxy its network traffic through Tor. By installing and activating Orbot (tap on the big power button!), this proxy server is activated and runs in the background as long as you are connected to the Tor network.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-295&#34; title=&#34;torboot&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/torboot-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/torboot.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-294&#34; title=&#34;toron&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/toron-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/toron.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) Configure your XMPP-compatible account using Beem settings&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you don’t have BEEM installed, you can &lt;a href=&#34;http://www.beem-project.com/news/11&#34;&gt;download it here&lt;/a&gt; or scan the barcode below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; src=&#34;https://dev.beem-project.com/screenshot_rc1/qr-code.png&#34; alt=&#34;&#34; width=&#34;100&#34; height=&#34;100&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use any XMPP service, but we recommend one that supports TLS or SSL security. You can use your Gmail / Google Talk account or you can find a list of public services here: &lt;a href=&#34;http://xmpp.org/services/&#34;&gt;http://xmpp.org/services/&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-293&#34; title=&#34;beemsettings&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemsettings-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/beemsettings.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-292&#34; title=&#34;beemusername&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/beemusername-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/beemusername.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) Check the SSL/TLS option in the Advanced Menu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You must enable this option to protect your password and chat communications when they exit the Tor network. You can learn more about &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/TheOnionRouter/TorFAQ#CanexitnodeseavesdroponcommunicationsIsntthatbad&#34;&gt;exit node eavesdropping on the TorFAQ&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-291&#34; title=&#34;advsetings&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/advsetings-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/advsetings.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/tls.png&#34;&gt;&lt;img title=&#34;tls&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/tls-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) Enable the SOCKS Proxy Setting in the Proxy Menu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The “Use a proxy server” should be checked, the Protocol set to “SOCKS5”. The Server is “localhost” and the Port is “9050”. You must use the SOCKS5 protocol, as it ensures that domain name resolution is also routed through Tor, stopping from someone snooping on which chat service you are using.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-289&#34; title=&#34;proxyon&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/proxyon-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/proxyon.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-288&#34; title=&#34;socks5&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/socks5.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png)[&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/socks5.png)[&lt;/a&gt;&lt;img class=&#34;alignnone size-medium wp-image-287&#34; title=&#34;localhost&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/localhost.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/localhost.png)[&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/localhost.png)[&lt;/a&gt;&lt;img class=&#34;alignnone size-medium wp-image-286&#34; title=&#34;port&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/port.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;](&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/port.png&#34;&gt;https://guardianproject.info/wp-content/uploads/2010/05/port.png&lt;/a&gt;)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5) Connect to the XMPP Service&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If Orbot is connected, and you have configured the proxy settings correctly, you should be able to connect and see your contacts or buddy list. From here, you can use Beem as you normally would (&lt;a href=&#34;http://www.beem-project.com/documents/4&#34;&gt;download user documentation here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; &lt;em&gt;To ensure Beem is routing through Tor, you should deactivate Orbot, and then try connecting to your XMPP service with Beem again. This SHOULD fail, else you haven’t setup the proxying correctly.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-285&#34; title=&#34;coonnecting&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/coonnecting-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/coonnecting.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-284&#34; title=&#34;friends&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends-180x300.png&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/friends-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/05/friends.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6) Chat away!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;font-weight: normal;&#34;&gt;At this point, you should be happily chatting away with your buddies. It is important to note that this solution &lt;/span&gt;DOES NOT provide end-to-end encryption&lt;span style=&#34;font-weight: normal;&#34;&gt;, so once your chat reaches the server, it is not secure, both because the service provide can view it if they choose, and the other members of your chat may not be secured themselves.&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We do plan to implement and end-to-end extension to Beem using the &lt;a href=&#34;http://www.cypherpunks.ca/otr/&#34;&gt;Pidgin+Off The Record&lt;/a&gt; approach that has provided effective on desktop systems. If anyone wishes to contribute development cycles to this effort, please let us know!&lt;/p&gt;
+
+&lt;p&gt;If you find issues with Beem, please report them: &lt;a href=&#34;http://www.beem-project.com/projects/beem/issues/new&#34;&gt;http://www.beem-project.com/projects/beem/issues/new&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you find issues with Orbot, please report them: &lt;a href=&#34;https://trac.torproject.org/projects/tor/newticket&#34;&gt;https://trac.torproject.org/projects/tor/newticket&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ultimate Droid and Orbot</title>
+      <link>https://guardianproject.github.io/info/2010/04/11/ultimate-droid-and-orbot/</link>
+      <pubDate>Sun, 11 Apr 2010 14:11:11 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/04/11/ultimate-droid-and-orbot/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html&#34;&gt;InsecureSystem blog&lt;/a&gt; has a nice write-up on how to get Orbot running on your Droid:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I’ve always been a supporter of net privacy and Tor in particular, and a friend of mine got me interested in &lt;a href=&#34;https://guardianproject.info/&#34;&gt;the guardian project&lt;/a&gt;, so I grabbed the beta version of &lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot&lt;/a&gt; just to try it out.. sweet, tor from my phone.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately the Smoked Glass Rom I was using didn’t support the Iptables modules necessary for the transparent proxy method orbot used for tunnelling apps through privoxy/tor. So, I was forced to try out some other Roms and their respective kernels.. okay, forced is a bad way to put it, it was a lot of fun.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html&#34;&gt;Read on…&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; title=&#34;orbot on droid&#34; src=&#34;https://1.bp.blogspot.com/_zYnlWpU7s_s/S7aqyLdAgeI/AAAAAAAAAEU/sT9KAH3F7eI/s320/CAP2010033110221.jpg&#34; alt=&#34;&#34; width=&#34;180&#34; height=&#34;320&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>One Solution for Push-to-Talk</title>
+      <link>https://guardianproject.github.io/info/2010/02/11/one-solution-for-push-to-talk/</link>
+      <pubDate>Thu, 11 Feb 2010 03:50:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/02/11/one-solution-for-push-to-talk/</guid>
+      <description>&lt;p&gt;As part of rolling out the first-phase of &lt;a href=&#34;http://openideals.com/guardian&#34;&gt;The Guardian Project&lt;/a&gt;, I will be writing short reviews of existing applications for Android-based mobile phones that share our general goals or desired functionality. The goal of Guardian, in short, is to enable safe and secure communication for activists, organizers and advocates working for good around the world through the mobile phones they carry in their pockets.&lt;/p&gt;
+
+&lt;p&gt;The Guardian project has no official relationship with these apps or their creators, but as we work towards developing our own unique software, we want to make sure to shine the spotlight on existing efforts that we admire and which are currently available. We’d also happily collaborate with any of them (or *you* if you are a developer reading this), and have them join our open-source efforts.&lt;/p&gt;
+
+&lt;p&gt;The first application is &lt;a href=&#34;http://hit-mob.com/walkie-talkie-push-to-talk/&#34;&gt;Walkie Talkie Push to Talk&lt;/a&gt;, which is a great alternative take on real-time VOIP or standard phone calls. Physical walkie talkie radios and Nextel-style PTT services have long been a valuable tool for many activists, and this application bring that capability to a global scale. Walkie Talkie can be used over GRPS, EDGE, 3G or Wifi networks, as well – whatever is available at the time.&lt;/p&gt;
+
+&lt;p&gt;Here’s a short description from the developer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Walkie Talkie Push to Talk is a mobile application that allows walkie talkie style voice communications. Simply hold down the “Record &amp;amp; Send” button and speak. Messages can be sent to a group of people. Received messages are automatically played. If program is running, incoming messages arrive as soon as 15 seconds. If program is not visible, it polls in the background every 1 minute (to save battery).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The back-end messaging system used by this application is actual POP or IMAP, in other words email! If you utilize a secure IMAP/S connection with the application, then the voice communications are transmitted securely over the wireless network and Internet. If you use a service like Gmail (which offers secure IMAP access), then your access is hidden within the millions of other users accessing Gmail, as well.&lt;/p&gt;
+
+&lt;p&gt;Not drawing attention to your network traffic is often as important as securing your data. Also, while Gmail isn’t always the ideal service to use if you wish to retain full control of your data, it is much more difficult for an authority to block than a single proxy or a private server.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://hit-mob.com/walkie-talkie-push-to-talk/&#34;&gt;Learn more about Walkie Talkie&lt;/a&gt; and download it from the Android Market today.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

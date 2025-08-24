@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anonymity on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/anonymity/</link>
+    <description>Recent content in Anonymity on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 27 Oct 2017 13:02:02 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/anonymity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>No more “Root” features in Orbot… use Orfox &amp; VPN instead!</title>
+      <link>https://guardianproject.github.io/info/2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/</link>
+      <pubDate>Fri, 27 Oct 2017 13:02:02 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/</guid>
+      <description>&lt;p&gt;Since I first announced the available of Orbot: Tor for Android about &lt;a href=&#34;https://nathan.freitas.net/2009/10/22/orbot-proxy/&#34;&gt;8 years ago&lt;/a&gt; (wow!), myself and others have been working on various methods in which to make the capabilities of Tor available through the operating system. This post is to announce that as of the next, imminent release, &lt;a href=&#34;https://github.com/n8fr8/orbot/releases/tag/15.5.0-RC-1-multi-SDK16&#34;&gt;Orbot v15.5,&lt;/a&gt; we will no longer be supporting the Root-required “Transproxy” method. This is due to many reasons.&lt;/p&gt;
+
+&lt;p&gt;First, it turns out that allowing applications to get “root” access on your device seems like a good idea, it can also be seen as huge security hole. I am on the fence myself, but considering that the ability to access root features hasn’t been standardized as part of Android, which 8 years ago I hoped it would, it means there are a whole variety of ways that this capability is managed and safeguarded (or not, in most cases). At this point in time, given the sophistication we are seeing mobile malware and rootkits, it seems like a capability that we did not want to focus time and energy on promoting.&lt;/p&gt;
+
+&lt;p&gt;Second, for those who do want to use root features, and know what they are doing, there are a bunch of other apps that do that job better than Orbot did. I admit, we let our code in that area degrade a bit, as the dev team themselves moved away from phones with root features. So, instead, if you really want to do cool things with iptables rules, you can use AFWall+, available on &lt;a href=&#34;https://f-droid.org/packages/dev.ukanth.ufirewall/&#34;&gt;F-Droid&lt;/a&gt; and &lt;a href=&#34;https://play.google.com/store/apps/details?id=dev.ukanth.ufirewall&#34;&gt;Google Play&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone &#34; src=&#34;https://raw.githubusercontent.com/ukanth/afwall/0502e6f17ceda08069720ff2f260902690e65e9b/screenshots/Main_2.0.png&#34; width=&#34;240&#34; height=&#34;384&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to make AFWall+ work with Orbot, you can follow Mike Perry’s excellent &lt;a href=&#34;https://blog.torproject.org/mission-impossible-hardening-android-security-and-privacy&#34;&gt;“Mission Impossible Android”&lt;/a&gt; guide in which he provides “DroidWall Scripts” necessary to enable automatic Tor routing on boot. You can also check out the sadly no longer maintained, but useful, &lt;a href=&#34;https://orwall.org/&#34;&gt;Orwall app&lt;/a&gt; which was meant to take on all the root features of Orbot.&lt;/p&gt;
+
+&lt;p&gt;Third, we really, really think it is a bad idea to just send all of the traffic of your device through the Tor network. While it sounds like a great idea in theory, much like many “magical” Tor router kickstarter projects, it turns out that unless you can be assured an app is using TLS properly, then there is a chance that bad things could happen to your traffic as it exits the Tor network. Rather than promote some kind of auto-magical “enable Tor for my whole device”, we want to focus on ways to enable specific apps to go through Tor, in a way we can ensure is as safe as possible.&lt;/p&gt;
+
+&lt;p&gt;For instance, we now have an excellent browser app, &lt;a href=&#34;https://guardianproject.info/apps/orfox&#34;&gt;Orfox&lt;/a&gt;, that is based on Tor Browser, and works perfectly with Orbot. If you just want to access the web and onion services, like the &lt;a href=&#34;https://open.nytimes.com/https-open-nytimes-com-the-new-york-times-as-a-tor-onion-service-e0d0b67b7482&#34;&gt;new New York Times onion&lt;/a&gt; at &lt;a href=&#34;https://www.nytimes3xbfgragh.onion/&#34;&gt;https://www.nytimes3xbfgragh.onion/&lt;/a&gt;, then just use &lt;a href=&#34;https://guardianproject.info/apps/orfox&#34;&gt;Orfox&lt;/a&gt;. There is no need for any fancy rooting or transproxying. There are also many others that supporting routing through Orbot directly, such as Conversations.im, Facebook for Android, DuckDuckGo, F-Droid, OpenArchive and many more to come! If you are interested in enabling your app to work with Orbot, check out our &lt;a href=&#34;https://github.com/guardianproject/netcipher&#34;&gt;NetCipher SDK&lt;/a&gt;, which makes it easy to do just that.&lt;/p&gt;
+
+&lt;p&gt;Fourth, Orbot has for some time supported use of Android’s VPN features as a way to tunnel traffic through Tor. You just open the left-side menu, and tap “Apps VPN Mode” or tap on “Apps…” on the main screen. Choose the apps you want to run through Tor, press the back button, and then the VPN will start up, rerouting outbound traffic back through the local Tor port. This method is 100% support by Android, and requires no vulnerabilities or exploits of your device to gain root access.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-13829&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3-169x300.png&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn3.png 1080w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-13830&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2-169x300.png&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn2.png 1080w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-13831&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1-169x300.png&#34; alt=&#34;&#34; width=&#34;169&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1-768x1365.png 768w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2017/10/orbotvpn1.png 1080w&#34; sizes=&#34;(max-width: 169px) 100vw, 169px&#34; /&gt;&lt;br /&gt;
+Orbot Apps VPN view, home screen with Apps… button, and VPN sidebar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I know that even with all of these justifications, some users will be disappointed with the fact we have removed root features from Orbot. Perhaps that will motivate some to reignite development of Orwall, or maybe help us make the VPN features in Orbot work even better. Another route is to support the &lt;a href=&#34;https://blog.torproject.org/mission-impossible-hardening-android-security-and-privacy&#34;&gt;Tor’s Android phone prototype&lt;/a&gt; or perhaps integrate Tor “root” features directly into a community Android OS project like Copperhead or Legacy. We would be happy to see all of these happen.&lt;/p&gt;
+
+&lt;p&gt;For us, though, removing root means we can focus on making Orbot more streamlined, more stable, and more compatible with Android, for our 2 million+ active users, who are mostly focused on finding an easy solution for unblocking sites and apps, and allowing them to communicate and browse freely without fear of reprisal.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New research report on the challenges developers face</title>
+      <link>https://guardianproject.github.io/info/2017/05/15/new-research-report-on-the-challenges-developers-face/</link>
+      <pubDate>Mon, 15 May 2017 05:07:17 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/05/15/new-research-report-on-the-challenges-developers-face/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-13792&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png&#34; alt=&#34;&#34; width=&#34;845&#34; height=&#34;375&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png 845w, https://guardianproject.info/wp-content/uploads/2017/06/tccw-300x133.png 300w, https://guardianproject.info/wp-content/uploads/2017/06/tccw-768x341.png 768w&#34; sizes=&#34;(max-width: 845px) 100vw, 845px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project has been working with the &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;F-Droid&lt;/a&gt; community to make it a secure, streamlined, and verifiable app distribution channel for high-risk environments. While doing this we have started to become more aware of the challenges and risks facing software developers who build software in closed and closing spaces around the world.&lt;/p&gt;
+
+&lt;p&gt;There are a wealth of resources available on how to support and collaborate with high-risk users. Surprisingly, we could not find any guidance on how to support and collaborate with developers where the internet is heavily monitored and/or filtered, let alone developers who might be at risk because of the software they develop.&lt;/p&gt;
+
+&lt;p&gt;This report explores some key challenges that developers in closed and closing spaces face when collaborating with international groups who support Human Rights and freedom (IHRFG). These groups include privacy and security software projects, civil society focused donors, and non-governmental organizations (NGOs).&lt;/p&gt;
+
+&lt;p&gt;IHRFG can benefit greatly from collaborations with local developers. IHRFGs who are trying to design or localize software for a specific region often have difficulty&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;understanding the types of technologies that are needed to address the problems IHRDGs are trying to solve,&lt;/li&gt;
+&lt;li&gt;addressing the local economic, social, infrastructural, and/or legal challenges that software of its type often faces in the local context,&lt;/li&gt;
+&lt;li&gt;identifying the interaction and design patterns that will drive initial adoption,&lt;/li&gt;
+&lt;li&gt;evaluating the quality of the translations of software into the local language,&lt;/li&gt;
+&lt;li&gt;finding local individuals for focus groups, and testing, and&lt;/li&gt;
+&lt;li&gt;conducting testing and troubleshooting to identify and address issues caused by the speed, availability, and/or censoring of local fixed or mobile networks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Local developers, on the other hand, are often more than able to accomplish these tasks.&lt;/p&gt;
+
+&lt;p&gt;Beyond identifying these challenges this report provides guidance on how to take these challenges into account when IHRFGs collaborate with local developers. To do this the report also contains a set of developer user-personas. These personas can be used by IHRFGs as an aid when they are designing collaborating with local developers.&lt;/p&gt;
+
+&lt;p&gt;We hope that the results of this research will help international privacy and security focused software projects and NGOs better understand and respond to the unique needs of different international developer communities so that their collaborations with these developers will be safer, more strategic, and sustainable.&lt;/p&gt;
+
+&lt;h2 id=&#34;research-methodology&#34;&gt;Research Methodology&lt;/h2&gt;
+
+&lt;p&gt;This report is the result of two interconnected streams of research. The initial themes were identified in a series of in-depth interviews. These themes were further explored in an online “developer challenges survey.” The challenges and user personas found in this report were refined from the combined results of these research efforts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Interviews&lt;/strong&gt;: interviews with 14 developers, technologists, and digital defenders from 11 different countries where the internet is heavily monitored and filtered as well as 5 interviews with IHRFGs who work in similar regions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Surveys&lt;/strong&gt;: an &lt;a href=&#34;https://challenges.tech/&#34;&gt;online developer survey&lt;/a&gt; in Chinese, Spanish, Farsi, Russian, French, and English that received 118 responses from developers in 28 countries around the world.&lt;/p&gt;
+
+&lt;h2 id=&#34;user-personas&#34;&gt;User Personas&lt;/h2&gt;
+
+&lt;p&gt;The user personas created for this report were developed to allow readers to think more concretely about the motivations and challenges that were identified during this project. In an effort to combat the inclusion of possible implicit biases the author might hold based upon the nationality, race, or gender of the personas the nationality, names, genders, and photos used for all the personas were generated at random.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/seamustuohy/user_profile_randomizer&#34;&gt;source code of the &lt;strong&gt;User Profile Randomizer&lt;/strong&gt;&lt;/a&gt; is available and permissively licensed under the &lt;a href=&#34;https://github.com/seamustuohy/user_profile_randomizer/blob/master/LICENSE&#34;&gt;GNU Lesser General Public License v3.0&lt;/a&gt;. It randomizes the gender pronoun, name (chosen from a random language family), and photo on a set of markdown based user personas.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-full-report&#34;&gt;The Full Report&lt;/h3&gt;
+
+&lt;p&gt;Download the full report, including developer profiles, here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/Technological-Collaboration-in-a-Closing-World-1.pdf&#34;&gt;Technological Collaboration in a Closing World.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;a href=&#34;https://labs.riseup.net/code/issues/8143&#34; target=&#34;_blank&#34;&gt;HTTPS to get security updates&lt;/a&gt; improves this situation a lot, but by measuring the size of data transfers, it is still possible to &lt;a href=&#34;http://www0.cs.ucl.ac.uk/staff/G.Danezis/papers/TLSanon.pdf&#34; target=&#34;_blank&#34;&gt;track which files are being downloaded&lt;/a&gt;. A Tor Onion Service provides end-to-end encryption like the HTTPS connection. It also mixes up the traffic with lots of other traffic, so its not easy to see what traffic goes together. That makes it a lot harder for a network observer to tell when a security update is being downloaded. Additionally, using a Tor Onion Service forces the traffic over Tor, so that the Debian mirror server cannot see which server is requesting the updates. That helps prevent targeted attacks.&lt;/p&gt;
+
+&lt;p&gt;There are other benefits as well, besides just for the person running the high security server in this example, especially if all of the traffic is coming over Tor. When updates are delivered over Tor, then that means the Debian mirror operators have less to worry about because they are handling less metadata that might have privacy concerns. It means that when law enforcement requests logs from the mirror operators, the mirror operators can more easily hand over anything they have since the mirror operator knows that there is not private information in the logs. Reducing the legal risks and privacy concerns makes it easier to run mirrors, and that helps internet services work better.&lt;/p&gt;
+
+&lt;p&gt;One disadvantage of this approach as it now stands is that your server will get updates from the same mirror every time. There is only a single Tor Onion Service for the main archive. An alternate approach using the combination of Tor and &lt;a href=&#34;http://httpredir.debian.org/&#34;&gt;http://httpredir.debian.org/&lt;/a&gt; as the package source means that your server will get updates from a different mirror each time Tor changes its exit node (I believe that’s every 10 minutes or so).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How can you set up your Debian machine to get updates over Tor?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg&#34; alt=&#34;debian and tor&#34; width=&#34;300&#34; height=&#34;173&#34; class=&#34;alignright size-medium wp-image-13395&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-768x444.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Right now, the best way to set up a Debian machine to force traffic over Tor is to use &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy&#34; target=&#34;_blank&#34;&gt;transparent proxying&lt;/a&gt; via &lt;em&gt;iptables&lt;/em&gt; rules. If you have that setup, then you can add the onion addresses as Debian apt sources as if they are any other HTTP Debian mirror. Another option is to install &lt;em&gt;apt-transport-tor&lt;/em&gt; like TAILS does, then you can use &lt;a href=&#34;http://people.skolelinux.org/pere/blog/Always_download_Debian_packages_using_Tor___the_simple_recipe.html&#34; target=&#34;_blank&#34;&gt;special syntax to add the Tor Onion Services&lt;/a&gt;. And another way is to install an HTTP proxy like &lt;em&gt;privoxy&lt;/em&gt; and enable apt HTTP proxy support as &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;I described before&lt;/a&gt;. The &lt;em&gt;apt-transport-tor&lt;/em&gt; and &lt;em&gt;privoxy&lt;/em&gt; approaches both have the downside of having to trust an added piece of software, whereas the transparent proxy technique uses what is already present in the Linux kernel. I’ve been using the &lt;em&gt;privoxy&lt;/em&gt; method since that is what I got working in 2014 and it has been working reliably on multiple servers since then. Also, I need &lt;em&gt;privoxy&lt;/em&gt; installed for another application anyway.&lt;/p&gt;
+
+&lt;p&gt;Here’s how to set up the apt sources to get packages and updates via Tor Onion Services without delaying security updates. First, remove &lt;em&gt;/etc/apt/sources.list&lt;/em&gt; and &lt;em&gt;/etc/apt/sources.list.d/*.list&lt;/em&gt; to start with a clean slate. Next add &lt;em&gt;/etc/apt/sources.list.d/00.vwakviie2ienjx6t.onion.list&lt;/em&gt; to get the main Debian repositories:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://vwakviie2ienjx6t.onion/debian/ jessie main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie main
+
+# aka volatile
+deb http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+
+deb http://vwakviie2ienjx6t.onion/debian jessie-backports main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-backports main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next add the new Tor Onion Service for the security update repository at &lt;em&gt;/etc/apt/sources.list.d/00.sgvtcaew4bxjd7ln.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://sgvtcaew4bxjd7ln.onion/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then last, include the normal HTTP security.debian.org archive to ensure that your server gets the latest security updates, even if the &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Onion Service mirror&lt;/a&gt; is behind or there is some other issue related to Tor. This goes in &lt;em&gt;/etc/apt/sources.list.d/99.security.debian.org.list&lt;/em&gt; to ensure that it is always the last repository that is tried, and apt loads files from /etc/apt/source.list.d/ in alphabetical order, so it’ll always try to get the security updates from the Onion Service before falling back to the HTTP source as a last resort.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://security.debian.org/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also run an unofficial mirror of the security updates on &lt;a href=&#34;http://dju2peblv7upfz3q.onion/debian&#34;&gt;http://dju2peblv7upfz3q.onion/debian&lt;/a&gt; if you want to add another backup, i.e. &lt;em&gt;/etc/apt/sources.list.d/00.dju2peblv7upfz3q.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building the most private app store</title>
+      <link>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</link>
+      <pubDate>Thu, 02 Jun 2016 11:08:52 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</guid>
+      <description>&lt;p&gt;&lt;em&gt;App stores can work well without any tracking at all&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor-150x150.jpg&#34; alt=&#34;whichdoor&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13337&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Attackers are increasingly seeing app stores as a prime &lt;a href=&#34;https://guardianproject.info/2015/02/24/phishing-for-developers/&#34; target=&#34;_blank&#34;&gt;attack&lt;/a&gt; vector, whether it is aimed at the masses like &lt;a href=&#34;http://researchcenter.paloaltonetworks.com/2015/09/more-details-on-the-xcodeghost-malware-and-affected-ios-apps/&#34;&gt;XCodeGhost&lt;/a&gt; or very targeted like in FBI vs Apple. When we install software from an app store, we are placing a lot of trust in a lot of different parties involved in getting the source code from the original developer delivered to our device in a useful form. Most people are entirely unaware of how much trust they are putting into this system, which they are entrusting with their personal data. Even for people who do understand the technical details involved, figuring out whether the people and the system itself is trustworthy is difficult to do.&lt;/p&gt;
+
+&lt;p&gt;We are building an app store that requires the bare minimum of trust: only the software developers themselves and the code they produce. We consider the app store operators and servers a threat. Building an ecosystem that enables automated, effective auditing lets the computers verify to make trust decisions easier. Effective external auditing requires an ecosystem that cannot deliver targeted content to just the auditing system, while feeding users something else (aka “binary transparency”).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Most app stores track as much as possible&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The vast majority of apps stores track their users actions in detail. Some is necessary when using the business model of the app store operator taking a percentage of sales, but none of the tracking is inherent to running an app store. For example, payment verification can be handled in the app itself like shareware. A software delivery system that tracks its users makes it simple to hide malware delivery since it can target any auditing system. Most app stores know a lot about their users:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;account name&lt;/li&gt;
+&lt;li&gt;identity&lt;/li&gt;
+&lt;li&gt;payment methods&lt;/li&gt;
+&lt;li&gt;everything you search for in the app store&lt;/li&gt;
+&lt;li&gt;everything you look at in the app store&lt;/li&gt;
+&lt;li&gt;everything you download, install, uninstall&lt;/li&gt;
+&lt;li&gt;which apps you actually run&lt;/li&gt;
+&lt;li&gt;where you are, based on IP, declared preference, etc.&lt;/li&gt;
+&lt;li&gt;your preferred language&lt;/li&gt;
+&lt;li&gt;and more…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apps stores need to know very little in order to function: how to give you the files you request. That means indexes, descriptions, icons, apps, and install/delete requests (for “push” install/delete). Given that information, the client can do everything needed to provide a full app store user experience. For this work, we chose to build upon &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, a community-run Android app store that distributes verified Free Software. The community has had an interest in privacy all along, and has always worked to avoid tracking. The security architecture is based on models proven by &lt;a href=&#34;https://wiki.debian.org/SecureApt&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/docs/tuf-spec.txt&#34; target=&#34;_blank&#34;&gt;The Update Framework&lt;/a&gt; , and others:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS connections by default&lt;/li&gt;
+&lt;li&gt;pinned TLS certificate built into the client app&lt;/li&gt;
+&lt;li&gt;updates verified based on the signature on the app itself&lt;/li&gt;
+&lt;li&gt;file integrity protected by signed metadata&lt;/li&gt;
+&lt;li&gt;signed metadata includes hashes of the app and its signing key&lt;/li&gt;
+&lt;li&gt;signed metadata generated on a separate machine, which can be fully offline&lt;/li&gt;
+&lt;li&gt;public key for verifying metadata signatures built into F-Droid client app&lt;/li&gt;
+&lt;li&gt;signed metadata includes timestamp and expiry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While the current setup is already a solid platform, we are implementing a number of improvements. The signed metadata will include list of official mirrors, then the client chooses mirrors based on availability and freshness based on local criteria like whether Tor is in use, closest on the internet, etc. We are also moving the standard HTTP “etag” cache check from the server to the client so it cannot be abused to track users.&lt;/p&gt;
+
+&lt;p&gt;In order to defend against an attacker that holds the signing keys for the app repository, there must be a trustworthy source of information to compare against. Reproducible builds means that anyone with the same source code will produce the exact same binary. When paired with an auditing system, it is easy to catch malware inserted in the build process, rather than the source code, like XCodeGhost. Reproducible builds also makes it possible to have all builds of a release binary have the exact same hash. Then any app repository can build apps only from source code, and have a source of verification data from any other app repository building the same app. Building software from source has become cheap enough that many companies like gitlab.com and Travis CI are offering free, automated build services in the cloud. Since the whole F-Droid toolset is free software and designed to be easy to setup, the barriers to setting up automatic auditing are quite low. People in separate areas of the world with different risk profiles can run verification servers to provide more trustworthy information.&lt;/p&gt;
+
+&lt;p&gt;Another key aspect of the F-Droid project is to provide the complete toolset needed to run an app store. This enables a more decentralized ecosystem. Therefore, one key goal is to lower the risks of running the services, so that more people can run their own app stores. If the app store does not track its users, then that removes the hassle of protecting personal data from any attacker. These services can be run without fear of responding to secret orders for personal information. It also means that the server setup is a lot simpler because it does not need dynamic content. The app store serve only needs to serve files (e.g. indexes, apps, etc.). The app repository is generated on a secure machine, or even a fully offline machine, and posted to the server. The main server is purely a mirror of the offline machine where the signed repository is generated. Mirrors just shuffle bits from place to place, they are no longer an attack vector.&lt;/p&gt;
+
+&lt;p&gt;Putting all these pieces together provides a system where users need only audit the source code in order to verify a trustworthy app delivery. The file pipeline provides redundantly secure data transmission, the apps can be reproducibly from source code, the app repositories can be automatically audited. Of course, this system relies not only on the power of cryptography, but also the power of transparency. Debian provides a great example of the power of transparency: Debian gives a thousand volunteers root access to every Debian install (by virtue of their ability to upload signed packages that get installed as root). Yet this system has been proven over the past 20+ years to provide solid security. Ultimately we hope that this will de-emphasize the signing key as the sole protection against abuse. If malware has a decent change of being spotted, it makes it much less likely to be used since malware authors either rigorously defend their exploits, or use well known exploits that are not difficult to automatically detect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future Work&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One attack vector that is not well covered is malware that installable by everyone, that then uses data on the local device to target specific users. That would be a way to target individuals using an app store that does not track its users. We are starting to implement automated dynamic analysis of every app using tools like &lt;a href=&#34;https://labs.mwrinfosecurity.com/tools/drozer&#34; target=&#34;_blank&#34;&gt;Drozer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We are also working towards making as many apps as possible build reproducibly. Some of our quick checks show that a large number of the apps in f-droid.org already will build reproducibly, given the right build environment. We are working on making the process of setting up that build environment as automated as possible.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid “verification server” has been prototyped, and it will be further developed with the aim of making it dead simple to run in common cloud services.&lt;/p&gt;
+
+&lt;p&gt;We already have the infrastructure in place to do verified double-signing, where the developer first signs the release bulid, then once f-droid.org reproduces that build, it adds its signature. Then Android would enforce that both signatures need to be present in order for it to be a valid update.&lt;/p&gt;
+
+&lt;p&gt;As the full localization support is built out, the language that a user is using will not be reported to the server. While speaking Spanish in Spain does not provide much information, speaking Quechua in Uzbekistan can narrow it down to a single user. Instead of dividing the index metadata by language, it will instead be grouped by app. We will then group apps so that it is difficult to tell which app in the group is the one people are interested in. For example, if one very popular app is only grouped with apps that are rarely downloaded, then it is an easy assumption that someone getting info about that block of apps is most likely looking for that popular app.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Experimental app to improve privacy in location sharing</title>
+      <link>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</link>
+      <pubDate>Thu, 29 Jan 2015 07:36:58 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png&#34; alt=&#34;ic_launcher-web&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-12835&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-230x230.png 230w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png 512w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;As part of the T2 Panic effort, I’ve recently been diving deep into the issues of sharing location. It is unfortunately looking really bad, with many services, including Google, frequently sharing location as plain text over the network. I’ve started to write up some of the issues &lt;a href=&#34;https://guardianproject.github.io/info/tag/panic&#34;&gt;on this blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As part of this, I’ve put together an experimental Android app that aims to act as a privacy filter for all ways of sharing location. Mostly, that means it accepts all sorts of URLs from location services, and tries to parse the location from the URL, then rewrites it into a &lt;a href=&#34;http://geouri.org&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;geo:&lt;/code&gt; URI&lt;/a&gt;, which is the standard way to share location in Android (and hopefully soon all others). As of ChatSecure v14.1.0, these &lt;code&gt;geo:&lt;/code&gt; URLs are also clickable.&lt;/p&gt;
+
+&lt;p&gt;Many URLs are not parsable, like &lt;code&gt;http://goo.gl/maps/Cji0V&lt;/code&gt;. LocationPrivacy then goes online and to try to fetch the location. This should happen over Tor, but it does not yet. You have been warned! Otherwise, it changes the URL to &lt;code&gt;HTTPS&lt;/code&gt; on services that support it.&lt;/p&gt;
+
+&lt;p&gt;You can get LocationPrivacy from all the usual channels, including on FDroid in the Guardian Project repo:&lt;br /&gt;
+&lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;https://f-droid.org&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/fdroid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;https://guardianproject.info/fdroid&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Or from Google Play:&lt;br /&gt;
+&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Source code:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/LocationPrivacy&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/LocationPrivacy&#34;&gt;https://github.com/guardianproject/LocationPrivacy&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Report issues here:&lt;br /&gt;
+&lt;a href=&#34;https://dev.guardianproject.info/projects/panic/issues&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/panic/issues&#34;&gt;https://dev.guardianproject.info/projects/panic/issues&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Please do not rely on this app for strong privacy, it is still very much a new, beta app.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sharing your location privately</title>
+      <link>https://guardianproject.github.io/info/2015/01/23/sharing-your-location-privately/</link>
+      <pubDate>Fri, 23 Jan 2015 15:00:10 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/23/sharing-your-location-privately/</guid>
+      <description>&lt;div id=&#34;attachment_12774&#34; style=&#34;width: 298px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12774&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location-576x1024.png&#34; alt=&#34;Facebook location sharing embeds the location in every single message, providing a detailed log to the recipient, Facebook, and anyone Facebook shares that data with&#34; width=&#34;288&#34; height=&#34;512&#34; class=&#34;size-large wp-image-12774&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location.png 576w, https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location-169x300.png 169w&#34; sizes=&#34;(max-width: 288px) 100vw, 288px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12774&#34; class=&#34;wp-caption-text&#34;&gt;
+    Facebook location sharing embeds the location in every single message, providing a detailed log to the recipient, Facebook, and anyone Facebook shares that data with
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One handy feature that many smartphones give us is the ability to easily share our exact position with other people. You can see this feature in a lot of apps. Google Maps lets you click “Share” and send a URL via any method you have available. In Facebook Messenger, you can click a button and the people on the other side of the chat will receive a little embedded map showing the received location. Of course, the question we always ask is: how can we do this in a privacy-preserving way? And the follow up question: what kinds of information are apps leaking, storing, using, etc? Location is especially valuable and sensitive metadata, especially when there is a lot of it, because it can be used to derive so much information about a person. Most people do not want to publicly post their phone number or home address on the internet, yet are unwittingly giving away far more detailed information by using the various location-based services that are available. There is a lot of specific location information that people do not want to publicize that they visit: a cancer specialist, an abortion clinic, a criminal court, a mistress’ house, or any location information to an abusive spouse. For a great illustration of the power of location metadata, you can watch &lt;a href=&#34;http://www.zeit.de/datenschutz/malte-spitz-data-retention&#34; target=&#34;_blank&#34;&gt;an animation of German politician Malte Spitz’s life, based on his telephone metadata that his telecom had stored&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Google, Facebook, and so many others make money by collecting as much data on their users as possible, then selling access to that data to their customers. So both those companies have incentives to make sure that you will always share your location information with them as well. The question is: are they treating this information as carefully as you would? In China, the indigenous services are much more popular than most foreign alternatives. The Chinese companies are good at making products that are popular with Chinese users, and since they collaborate with the government censorship and tracking, it is easier for them to do business in China. This combination often means that Chinese companies put security and privacy at a very low priority, even though they could comply with the Chinese law while improving their security. A good example of this is the fact that none of the major map providers in China (Baidu, Amap, or QQ) provide even an optional HTTPS interface. They only have unencrypted communications, which allows lots of people easy access to snooping, including anyone who is on the same wifi network as you are.&lt;/p&gt;
+
+&lt;p&gt;The tools for tracking people via location data are getting better, cheaper, and more available. One funny example is &lt;a href=&#34;https://iknowwhereyourcatlives.com/&#34; target=&#34;_blank&#34;&gt;I Know Where Your Cat Lives&lt;/a&gt;, which shows the locations of cat pictures found on the public internet via the geo location included in the EXIF image data.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12793&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://iknowwhereyourcatlives.com&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12793&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives-300x188.jpg&#34; alt=&#34;I know where your cat lives!&#34; width=&#34;300&#34; height=&#34;188&#34; class=&#34;size-medium wp-image-12793&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives-300x188.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/01/i-know-where-your-cat-lives.jpg 768w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12793&#34; class=&#34;wp-caption-text&#34;&gt;
+    I know where your cat lives!
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Location and Panic&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One use that we are particularly interested in is sending location to trusted contacts when a panic button is pressed. When thinking about panic button features, privacy must be a central concern. When someone triggers their panic button, it is clearly a sensitive situation. That means that leaking more location information could exacerabate the situation. Since sending location is a useful and popular feature, it is important to consider the whole picture of where that location information might go. To start with, the panic message needs to be sent using a method that will reliably reach its intended destination. Unfortunately, that often means using insecure communications like SMS, or an app that is fully tapped by the same government that is detaining the user, like WeChat. Part of this T2 Panic research and development effort is focused on how to make a complete, secure panic solution. So we will also focus on making ChatSecure and other secure communications an available channel for sending panic messages.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://panicbutton.io&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/activate1-150x150.jpg&#34; alt=&#34;activate1&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-12805&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/activate1-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/01/activate1-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/01/activate1-230x230.jpg 230w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;The next step is to break down the entire path of where that location information might be intercepted. The first place is on the sending device itself. The panic message will stored with the sent messages with most communications apps, and that can recovered by whoever is detaining the user. Even if the device is encrypted, it is very likely the user can be compelled to unlock the device. So the panic message should be designed with that in mind.&lt;/p&gt;
+
+&lt;p&gt;So if we consider a fully anonymous method of communication, like ChatSecure’s “Secret Identity”, then protecting the location information becomes important even if all of the messages and their recipients are recovered from the sending device. The full “Secret Identity” procedure of creating an account per person you want to chat with, and only using that single account to communicate with that other person. It has been outlined by many people, including Laura Poitras when describing how she communicates with Edward Snowden. In this case, even if someone recovers the recipient address, all they will have is an anonymously created account with no other links to other accounts. Then location URL then becomes a way to deanonymize the recipient. First, if the URL takes the recipient to an unencrypted connection, then that it is easy to track. Even with an encrypted connection, if the server providing the map service is providing information to the government, then the encrypted connection will not help. Making this connection over Tor will also help since the map service will not be able to see the IP address of the device where the user clicked on this URL. Now consider a location URL using Google Maps, or any similar service where users frequently login. If the original panic message was sent using such a URL, and the recipient was a regular user of a service that used logins, then that login information would deanonymize the recipient if they viewed the location URL in a browser where they were also logged in with their normal Google account.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User Stories&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This can perhaps be better illustrated using some quick user stories:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A journalist and a source set up Secret Identities in ChatSecure devoted to each other when they met up in person. Each have panic buttons set up to contact the other in case of emergency. The journalist uses &lt;a href=&#34;https://openstreetmap.org&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;http&lt;strong&gt;s&lt;/strong&gt;://openstreetmap.org&lt;/code&gt;&lt;/a&gt; to generate a shortlink that points to the chosen meeting location, then sends it to the source using the Secret Identity, &lt;a href=&#34;http://osm.org/go/0ju_SMlBn&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;http://osm.org/go/0ju_SMlBn&#34;&gt;http://osm.org/go/0ju_SMlBn&lt;/a&gt;&lt;/code&gt;&lt;/a&gt;. The source clicks the link, and chooses to open the link in Firefox. Therefore, the website is shown using an unencrypted, direct connection, which is easily observed. Even though the recipient has HTTPS Everywhere set up in his browser to force HTTPS for openstreetmap.org, the osm.org shortlink does not currently have working HTTPS so it is an HTTP link. This shortlink is now a unique ID that links the journalist and source’s real IP address. If the source was using a cellular internet connection, then this will also link the IP address to the devices IMEI unique ID. The IMEI is then quite easy to link to a real identity information.&lt;/li&gt;
+&lt;li&gt;A circle of activists all set each other up with a panic button app on burner Android phones. They only use these burner phones to communicate with each other. They prepare in advance to discard all the phones in case someone triggers the panic. One activitist gets detained by the secret police and triggers the panic. The secret police get the panic message and all the other phone numbers from the detainee’s phone, but the activists are no longer using those phones so they cannot be tracked by them. The activists manually copy the Google Maps shortlink &lt;a href=&#34;https://goo.gl/maps/Cji0V&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;https://goo.gl/maps/Cji0V&#34;&gt;https://goo.gl/maps/Cji0V&lt;/a&gt;&lt;/code&gt;&lt;/a&gt; to their computer to find out where the detainee is. They type the map link into Internet Explorer, making sure to type HTTPS, and then again confirm that the webpage is still using an HTTPS link. What they did not see is that the shortlink first redirected to a HTTP link &lt;a href=&#34;http://maps.google.com/?q=28.118860,98.008069&amp;hl=en&amp;gl=us&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;a href=&#34;http://maps.google.com/?q=28.118860,98.008069&amp;amp;hl=en&amp;amp;gl=us&#34;&gt;http://maps.google.com/?q=28.118860,98.008069&amp;amp;hl=en&amp;amp;gl=us&lt;/a&gt;&lt;/code&gt;&lt;/a&gt;, which leaked the location in plain text. Since this URL describes a very specific point, the secret police use this as a data point to search for the IP address of all devices that have accessed that URL. Those IP addresses divulge the locations of all the activists who viewed the map URL, and provide the secret police a method for tracking them all.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I did not cover other more common use cases here because there are so many leaks that the protections presented are moot. All is not lost, there is still a lot that you can do to improve things. First off, we recommend using map apps that can work fully offline. For Android, &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.osmand&#34; target=&#34;_blank&#34;&gt;Osmand&lt;/a&gt; is the best one out there, it uses OpenStreetMap data which can be freely downloaded. It is also important to encourage developers to improve the privacy of their apps. Since we are software developers, we file bug reports and make pull requests to nag location-related projects to improve their security. Here are some recent examples of what we have contributed:&lt;/p&gt;
+
+&lt;p&gt;OpenStreetMap&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Issue #799: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/799&#34; target=&#34;_blank&#34;&gt;Implement &lt;code&gt;geo:&lt;/code&gt; URLs for sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Issue #870: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/870&#34; target=&#34;_blank&#34;&gt;share makes HTTP url even when connecting via HTTPS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Issue #862: &lt;a href=&#34;https://github.com/openstreetmap/openstreetmap-website/issues/862&#34; target=&#34;_blank&#34;&gt;support osm.org in HTTPS certificate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Osmand&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pull #1033: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1033&#34; target=&#34;_blank&#34;&gt;modernize location sharing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pull #1043: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1043&#34; target=&#34;_blank&#34;&gt;add support for a proxy and use more HTTPS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pull #1045: &lt;a href=&#34;https://github.com/osmandapp/Osmand/pull/1045&#34; target=&#34;_blank&#34;&gt;update URL parsing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will be following up with further posts on this topic with more detail, including research into what is possible to derive from location data, technical details of issues, and possible solutions and work that can be done to improve things.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reducing metadata leakage from software updates</title>
+      <link>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</link>
+      <pubDate>Thu, 16 Oct 2014 12:48:04 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: now you can &lt;a href=&#34;https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;do this with Tor Onion Services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.&lt;/p&gt;
+
+&lt;p&gt;That means that potentially private information is leaking. That private information could be which packages you have installed and which versions. That information can help an attacker figure out the best way to break into the target machine. Also, a unique fingerprint can be generated based on which packages a machine has installed, and that could help de-anonymize traffic that goes over Tor or other anonymity tool.&lt;/p&gt;
+
+&lt;p&gt;For people who use &lt;code&gt;apt-get&lt;/code&gt; in Debian, Ubuntu or any related GNU/Linux distro, there is a lot of metadata leaked to the internet when &lt;code&gt;apt-get&lt;/code&gt; contacts Debian repositories using a standard configuration. Mostly, that is because by default, the connections are unencrypted (http, ftp, rsync). The integrity of the package itself is not reason enough to use HTTPS since the GPG signing is much more reliable for that task. Here is how I break it down:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity&lt;br /&gt;
+(&lt;em&gt;software can be modified while being downloaded&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;repo availability&lt;br /&gt;
+( &lt;em&gt;whole sites or specific URL paths can be selectively blocked by governments and companies&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;package availability&lt;br /&gt;
+(&lt;em&gt;software security updates can be individually blocked&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;who’s downloading what package (&lt;em&gt;currently visible to anyone who can see the&lt;br /&gt;
+network traffic, including open wifi, etc.&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The current apt model covers #1 well, but only covers #2 and #3 with a two week window (the expiration date on the repo metadata). And it does not cover #4 at all. Using HTTPS for apt repos is a simple way to improve the security of all 4. It adds a weak backup security layer for #1, it makes it much more difficult for a portion of a large internet mirror to be seletively blocked (e.g. #2 and #3). For example, if you use HTTPS to mirrors.kernel.org, everything has to be blocked to block Debian repos or packages. And pipelining downloads through a reused HTTPS connection makes it very difficult for the network observer to track metadata about packages, #4).&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg&#34; alt=&#34;leakage control&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12701&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-100x100.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-200x200.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg 300w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Luckily, there are some relatively easy steps that greatly reduce the amount of metadata that is leaked: using HTTPS connections to the mirrors and running those connections through Tor. Setting &lt;code&gt;apt-get&lt;/code&gt; to pipeline as many transactions into a given HTTPS session is also useful, but currently only supported for HTTP and not HTTPS. Even though HTTPS/TLS has security weaknesses, it is a lot better than nothing, and can help provide real world protection. The downside is that it is not common for Debian machines to connect to apt mirrors using HTTPS, so that potentially marks the install as a machine worth targeting. There are more and more HTTPS mirrors, and more interest in using them, so I think in time, that will only lessen as a concern. Here are the HTTPS mirrors that I have had good luck with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mirrors.ece.ubc.ca&lt;/li&gt;
+&lt;li&gt;mirrors.kernel.org&lt;/li&gt;
+&lt;li&gt;mirror.cse.unsw.edu.au&lt;/li&gt;
+&lt;li&gt;spout.ussg.indiana.edu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On that note, here is the config that I have been using on a number of Debian-deriv machines, and it has been working well. It requires &lt;code&gt;apt-transport-https&lt;/code&gt;, and &lt;a href=&#34;http://ubuntuguide.org/wiki/Tor#Privoxy&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;privoxy&lt;/code&gt; setup as an HTTP proxy for Tor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;$ cat /etc/apt/apt.conf.d/99force-tor
+# force everything through privoxy HTTP proxy to tor
+Acquire::ftp::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::http::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::https::Proxy &#34;http://127.0.0.1:8118&#34;;
+
+# don&#39;t use SSL, its insecure, only use TLS
+Acquire::https::SslForceVersion &#34;TLSv1&#34;;
+&lt;/pre&gt;
+
+&lt;p&gt;I have found about 10 official Debian mirrors that have reliable HTTPS. Then I have a &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; target=&#34;_blank&#34;&gt;script that finds all of them&lt;/a&gt;, but many have self-signed certs and other issues. A number of the HTTPS mirrors also mirror the “security” archive, but I recommend that the &lt;code&gt;http&lt;/code&gt; URL to the official &lt;code&gt;security.debian.org&lt;/code&gt; repo is still included to make sure that security updates are promptly available.&lt;/p&gt;
+
+&lt;p&gt;I also have a test security repo running that is only available via an .onion address. I hope to encourage people to run official mirrors on a Tor Hidden Service, then HTTPS is not needed. Note that &lt;code&gt;apt-transport-tor&lt;/code&gt; is not required if a tor proxy is setup. To try mine, add it to your &lt;code&gt;sources.list&lt;/code&gt; (and make sure &lt;code&gt;apt-get&lt;/code&gt; is somehow using Tor). The order is important, that determines the priority of where &lt;code&gt;apt-get&lt;/code&gt; will get the package from is all other variables are the same.&lt;/p&gt;
+
+&lt;pre&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ wheezy/updates main
+deb http://security.debian.org/ wheezy/updates main
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Use the official &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Debian Tor Onion Services&lt;/a&gt; now, &lt;tt&gt;dju2peblv7upfz3q.onion&lt;/tt&gt; is deprecated and will be shut down!&lt;/p&gt;
+
+&lt;h3 id=&#34;a-specific-example-tails&#34;&gt;A specific example: TAILS&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png&#34; alt=&#34;Tails&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-12711&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-100x100.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/Tails.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://tails.boum.org/&#34; target=&#34;_blank&#34;&gt;TAILS&lt;/a&gt; is an operating system that aims to be as private and anonymous as possible to enable, and has allowed &lt;a href=&#34;https://freedom.press/blog/2014/04/help-support-little-known-privacy-tool-has-been-critical-journalists-reporting-nsa&#34; target=&#34;_blank&#34;&gt;journalists&lt;/a&gt; like &lt;a href=&#34;https://www.wired.com/2014/10/laura-poitras-crypto-tools-made-snowden-film-possible/&#34; target=&#34;_blank&#34;&gt;Laura Poitras&lt;/a&gt; to work without leaking information despite being targeted by some very skilled and highly resourced organizations. TAILS mostly works as a “live CD”, meaning the whole operating system is downloaded as a single “image” file, then either burned to a CD/DVD, or to a USB thumb drive. Updates work the same way. But TAILS has an optional feature to use the Debian package system to install and persist packages that are not included by default. TAILS does not use the default set of mirrors that a standard Debian install uses, it is set up by default with a range of possible Debian package sources, including the current stable version (called wheezy), the versions in testing, and packages backported to the stable version. That means that when this feature is used, TAILS fetches the metadata for all of those sections of Debian (stable/wheezy, testing, wheezy-backports, unstable).&lt;/p&gt;
+
+&lt;p&gt;Given all of the proven fingerprinting approaches, like using the font list from the browser, I think its a safe assumption that the apt-get metadata will also provide similar fingerprinting opportunities. For basic TAILS use, this is all avoided since updates are done via ISO images. But once a user installs packages via &lt;code&gt;apt-get&lt;/code&gt;, that changes since TAILS then goes out onto the internet to fetch all of the repo metadata. That goes over Tor since TAILS forces all network traffic over Tor, so that helps break the link between the machine downloading the updates and those that can see that machines internet traffic.&lt;/p&gt;
+
+&lt;p&gt;It seems quite likely that the set of mirrors and the order in which they are run will provide a way to identify the system as TAILS. As for identifying individual machines, &lt;code&gt;apt-get&lt;/code&gt; sends a lot of metadata, like language that the system is using, which packages need updates, etc. On top of the set of mirrors used, there is potentially enough metadata there to fingerprint the individual machine.&lt;/p&gt;
+
+&lt;p&gt;One open question is how the &lt;code&gt;apt-get&lt;/code&gt; downloads map to different Tor circuits. If all of the traffic from a given &lt;code&gt;apt-get&lt;/code&gt; session goes over a single Tor circuit, then the exit node, the mirror server, and any network observer that can see the traffic between those two can use that as the fingerprint.&lt;/p&gt;
+
+&lt;p&gt;To expand on this, if TAILS fetched all of its apt sources (wheezy, backports, testing, etc) via HTTPS from the same mirror (e.g. mirrors.kernel.org), then the exit node and network observer could not really distinguish the distro the machine making the connection was running since mirrors.kernel.org hosts many distro mirrors. There are two key parts here: using HTTPS to encrypt the data, and using HTTP pipelining so that network connections are reused for multiple downloads, rather than the default behavior of making a new HTTPS for each individual download. This setup would also prevent the custom pattern of apt sources from being distinguished since it would just show as downloading some series of files, and those files could be packages, package metadata, perl modules, source tarballs, etc.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Your own private dropbox with free software</title>
+      <link>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</link>
+      <pubDate>Tue, 12 Nov 2013 12:50:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</guid>
+      <description>&lt;p&gt;There are lots of file storage and sharing software packages out there that make it easy for a group of people to share files. Dropbox is perhaps the most well known of the group, it provides an easy way for a group of people to share files. The downside of Dropbox is that it is not a private service, just like any cloud-based service. Dropbox has total access to your files that you store there. That means its likely that the NSA and its collaborators do too.&lt;/p&gt;
+
+&lt;p&gt;Dropbox also knows where the computers are that are accessing their service because they can see the IP address of the incoming connections. To help with this, it is possible to use use Dropbox over Tor, thankfully they have provided proxy settings.&lt;/p&gt;
+
+&lt;p&gt;For our shared files, we use &lt;a href=&#34;http://sparkleshare.org/&#34; target=&#34;_blank&#34;&gt;SparkleShare&lt;/a&gt;. It provides an experience very similar to Dropbox: you have a SparkleShare folder that is synced up with the service, and in turn any other users who are also linked up to it. Once its setup, it is as easy to use as Dropbox, but setting it up takes a bit more work than Dropbox. It builds upon two software packages well known for security and reliability: &lt;code&gt;git&lt;/code&gt; and &lt;code&gt;ssh&lt;/code&gt;, and works with Tor Hidden Services. It runs on Windows, Mac OS X, and GNU/Linux, and there is an &lt;a href=&#34;https://github.com/NewProggie/SparkleShare-Android&#34; target=&#34;_blank&#34;&gt;Android client&lt;/a&gt; in the works.&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png&#34; alt=&#34;sparkleshare-onion&#34; width=&#34;312&#34; height=&#34;342&#34; class=&#34;alignright size-full wp-image-11936&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion.png 312w, https://guardianproject.info/wp-content/uploads/2013/11/sparkleshare-onion-273x300.png 273w&#34; sizes=&#34;(max-width: 312px) 100vw, 312px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use any git service as the server for SparkleShare, including github, bitbucket, &lt;a href=&#34;https://gitorious.org/&#34; target=&#34;_blank&#34;&gt;gitorious&lt;/a&gt;, etc. But these have the same issues as putting your files on Dropbox: that service has complete access to your files. For extra protection, SparkleShare &lt;a href=&#34;https://github.com/hbons/SparkleShare/wiki/Client-Side-Encryption&#34; target=&#34;_blank&#34;&gt;can encrypt the files on the client-side&lt;/a&gt;, have encrypted shared folders with SparkleShare, so that the server does not have access to the files. For the last piece of setting up a private SparkleShare, you need a computer that you can &lt;code&gt;ssh&lt;/code&gt; to, and has &lt;code&gt;git&lt;/code&gt; and Tor on it. This computer could even be an old Android device running &lt;a href=&#34;https://guardianproject.info/code/lildebi/&#34; target=&#34;_blank&#34;&gt;Lil’ Debi&lt;/a&gt;, it only needs enough disk space for your SparkleShare files and a steady network connection. Running it on your own computer means it can use a Tor Hidden Service, and that all of the metadata related to who is editing what files remains private.&lt;/p&gt;
+
+&lt;p&gt;To start, setup a Tor Hidden Service to the sshd port. You can read all about that process in the &lt;a href=&#34;https://www.torproject.org/docs/tor-hidden-service.html&#34; target=&#34;_blank&#34;&gt;Tor instructions&lt;/a&gt;, but basically, you need to add something like this to the &lt;code&gt;torrc&lt;/code&gt; configuration file:&lt;/p&gt;
+
+&lt;pre&gt;HiddenServiceDir /var/lib/tor/ssh_hidden_service/
+HiddenServicePort 22 127.0.0.1:22
+&lt;/pre&gt;
+
+&lt;p&gt;Then restart tor, and it will generate two files in &lt;code&gt;/var/lib/tor/ssh_hidden_service/&lt;/code&gt;, open the file called &lt;code&gt;hostname&lt;/code&gt; to see your new .onion address. We’re going to use &lt;code&gt;fakefakefakefake.onion&lt;/code&gt; as our made-up one for this HOWTO. That is the address you will use in SparkleShare as the server address.&lt;/p&gt;
+
+&lt;p&gt;Next &lt;code&gt;ssh&lt;/code&gt; needs to be setup to use Tor to access the .onion address of the Tor Hidden Service. To do that we need the wonderful Netcat tool (&lt;code&gt;nc&lt;/code&gt;). On Debian/Ubuntu, run &lt;code&gt;sudo apt-get install netcat-openbsd&lt;/code&gt; to get it, its included with Mac OS X by default. Now edit your SSH config file, its usually in &lt;code&gt;~/.ssh/config&lt;/code&gt;, and add this section:&lt;/p&gt;
+
+&lt;pre&gt;Host *.onion
+     Compression yes
+     ProxyCommand nc -X 5 -x 127.0.0.1:9050 %h %p
+&lt;/pre&gt;
+
+&lt;p&gt;For Windows, you need to use &lt;code&gt;connect&lt;/code&gt; proxy, which is thankfully included in SparkleShare. You can optionally use &lt;code&gt;connect&lt;/code&gt; instead of Netcat/&lt;code&gt;nc&lt;/code&gt; on Mac OS X (&lt;code&gt;fink install connect&lt;/code&gt; or &lt;code&gt;brew install connect&lt;/code&gt;) and GNU/Linux (e.g. &lt;code&gt;apt-get install connect-proxy&lt;/code&gt; or &lt;code&gt;yum install connect-proxy&lt;/code&gt;). Instead of the snippet above, use this snippet in &lt;code&gt;~/.ssh/config&lt;/code&gt; to use &lt;code&gt;connect&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;Host *.onion
+     Compression yes
+     ProxyCommand connect -5 -S 127.0.0.1:9050 %h %p
+&lt;/pre&gt;
+
+&lt;p&gt;Now its time to set up the git repo on the server that will be the conduit for sharing files between the different users. Basically, all you need to do is create a new folder, then make it a “bare” git repo (you can read &lt;a href=&#34;http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server&#34; target=&#34;_blank&#34;&gt;all about it in the git book&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;ssh g&amp;#x69;t&amp;#x40;&amp;#x66;a&amp;#x6b;e&amp;#x66;&amp;#x61;k&amp;#x65;f&amp;#x61;&amp;#x6b;e&amp;#x66;a&amp;#x6b;&amp;#x65;.&amp;#x6f;n&amp;#x69;&amp;#x6f;n
+mkdir /home/git/MyPrivateShare
+cd /home/git/MyPrivateShare
+git init --bare
+&lt;/pre&gt;
+
+&lt;p&gt;For sshing to the git, we set up a single account called &lt;code&gt;git&lt;/code&gt;, then to grant access, we add the SSH key (SparkleShare calls this the &lt;em&gt;Client ID&lt;/em&gt;) to the &lt;code&gt;git&lt;/code&gt; account’s &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Now everything should be ready to start adding clients! In SparkleShare, go to Add Hosted Project…, choose On my own server, then enter your username and .onion address (&lt;em&gt;ssh:&amp;#x2f;&amp;#x2f;&amp;#x67;&amp;#x69;t@fak&amp;#x65;&amp;#x66;&amp;#x61;&amp;#x6b;efake&amp;#x66;&amp;#x61;&amp;#x6b;&amp;#x65;.onio&amp;#x6e;&lt;/em&gt;) in &lt;strong&gt;Address&lt;/strong&gt; and the path to the git repo (&lt;em&gt;/home/git/MyPrivateShare&lt;/em&gt;) in &lt;strong&gt;Remote Path&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png&#34; alt=&#34;SparkleShare Setup&#34; width=&#34;686&#34; height=&#34;427&#34; class=&#34;alignnone size-full wp-image-11945&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup.png 686w, https://guardianproject.info/wp-content/uploads/2013/11/Screenshot-SparkleShare-Setup-300x186.png 300w&#34; sizes=&#34;(max-width: 686px) 100vw, 686px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the client will download the entire git repository from the server, and you’ll then have a working shared dropbox! If there are a lot of files in it, then the first sync can take a long time before any files show up. This is because git first downloads the entire history first, then it checks out the files. After that initial setup, then the new files show up quite quickly.&lt;/p&gt;
+
+&lt;p&gt;So this SparkleShare setup keeps your files on computers that you control, it prevents information and metadata from being leaked to the network while people are using this SparkleShare setup. When using Client Side Encryption, even less data is leaked. The server cannot access the content of the files at all since they are encrypted. The the server in this case would only be able to see the network traffic, and which ssh key was used to access the server. If everyone accessing this setup used the same user account (i.e. &lt;code&gt;git&lt;/code&gt;) and ssh key, then the server would not even know which user is making the changes. This is about as private as you could hope for in a shared dropbox folder.&lt;/p&gt;
+
+&lt;p&gt;One last nice feature of this setup is that git server does not need a domain name, static IP or even a public IP, it just needs a working internet connection. As long as it can connect to Tor, then the Hidden Service will work. So if this private dropbox is for extra sensitive stuff, it could be stashed anywhere it can get power and wifi.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Issues when distributing software</title>
+      <link>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</link>
+      <pubDate>Thu, 31 Oct 2013 15:51:19 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</guid>
+      <description>&lt;p&gt;There is currently a &lt;a href=&#34;http://lists.debian.org/debian-security/2013/10/msg00027.html&#34; target=&#34;_blank&#34;&gt;discussion underway on the Debian-security list&lt;/a&gt; about adding TLS and Tor functionality to the official repositories (repos) of Debian packages that is highlighting how we need to update how we think about the risks when distributing software. Mostly, we are used to thinking about making sure that the software that the user is installing is the same exact software that has been posted for distribution. This is generally handled by signing the software package, then verifying that signature on the user’s machine. This is how it works on Mac OS X, Windows, Debian, etc. etc.&lt;/p&gt;
+
+&lt;p&gt;But the authenticity of a software package is not the only issue that needs to be addressed, especially these days where many companies and governments around the world are trying to track everything that anyone is doing on the internet. In order to understand why Tor and TLS would be useful here, it good to break down the various concerns (or threats if you prefer):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity &lt;em&gt;(software can be modified while being downloaded)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;package availability &lt;em&gt;(software security updates can be individually blocked)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;repo availability &lt;em&gt;(internet services can be blocked by governments and companies)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;who’s downloading what package &lt;em&gt;(currently visible to anyone who can see the network traffic, including open wifi, etc.)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Most people distributing software are used to thinking about #1 verifying packages when thinking about the security of software distribution. #2, #3, and #4 are also important, and currently not well addressed. This is where TLS and Tor come in. Both can help prevent Man-In-The-Middle manipulations as well as reduce the amount of information that is leaked to the network. Tor can also help with #3. Since Tor is difficult to block, it is often uses to circumvent censorship. In this case a software repo could be blocked entirely, and Tor could help with gaining access to it. The Update Framework has &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/README.md&#34; title=&#34;TUF: The Update Framework -  Security&#34; target=&#34;_blank&#34;&gt;a good overview of the possible attacks&lt;/a&gt; against software repos.&lt;/p&gt;
+
+&lt;p&gt;So having software repos available with both TLS and Tor available as options is a very good idea. As far as I have seen, there are not any Debian repos available via a Tor Hidden Service. There are a number of official mirrors that already support TLS/HTTPS. You can find them using &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; title=&#34;the script in a gist paste&#34; target=&#34;_blank&#34;&gt;this script:&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#!/usr/bin/python
+
+import urllib2
+import re
+import ssl
+import sys
+
+# # find generic mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/mirror/list&#39;)
+https = []
+for line in mirrors.readlines():
+    m = re.match(&#39;.*&amp;lt;td valign=&amp;quot;top&amp;quot;&amp;gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            https.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+# print &#39;HTTPS apt repos:&#39;
+#for url in https:
+#    print url
+
+
+# # find security mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/mirror/list-full&#39;)
+securitys = []
+for line in mirrors.readlines():
+    m = re.match(&#39;.*&amp;lt;/tt&amp;gt;&amp;lt;br&amp;gt;Security updates over HTTP: &amp;lt;tt&amp;gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*/debian-security/&amp;lt;/a&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            securitys.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+# print &#39;HTTPS security repos:&#39;
+# for url in securitys:
+#     print url
+
+
+# now find the backports mirrors
+mirrors = urllib2.urlopen(&#39;http://backports-master.debian.org/Mirrors/&#39;)
+backports = []
+for line in mirrors.readlines():
+#&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://be.mirror.eurid.eu/debian-backports/&amp;quot;&amp;gt;/debian-backports/&amp;lt;/a&amp;gt;
+    m = re.match(&#39;.*&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*/debian-backports/&amp;lt;/a&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            backports.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+#print &#39;HTTPS backports repos:&#39;
+#for url in backports:
+#    print url
+
+
+# now find the CD image mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/CD/http-ftp/&#39;)
+cds = []
+for line in mirrors.readlines():
+# &amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http://mirror.easyspeedy.com/debian-cd/&amp;quot;&amp;gt;HTTP&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    m = re.match(&#39;.*&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(:.*)&amp;quot;&amp;gt;HTTP&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            cds.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+print &#39;HTTPS CD image repos:&#39;
+for url in cds:
+    print url
+
+
+# now write everything to a file
+f = open(&#39;/tmp/https-debian-archives.txt&#39;, &#39;w&#39;)
+
+f.write(&#39;HTTPS apt repos\n&#39;)
+f.write(&#39;---------------\n&#39;)
+for url in https:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS security repos\n&#39;)
+f.write(&#39;---------------\n&#39;)
+for url in securitys:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS backports repos\n&#39;)
+f.write(&#39;--------------------\n&#39;)
+for url in backports:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS CD image repos\n&#39;)
+f.write(&#39;--------------------\n&#39;)
+for url in cds:
+    f.write(url + &#39;\n&#39;)
+
+
+f.close()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot v12 now in beta</title>
+      <link>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</link>
+      <pubDate>Wed, 24 Jul 2013 12:32:45 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</guid>
+      <description>&lt;p&gt;After much too long, we’ve got a new build of Orbot out, and it is… a stable beta! Nothing radically new here, just many small changes to continue to improve the experience of our hundreds of thousands of active users out in the world. There will likely be one or two more “beta” releases to iron out small issues in v12, but for now, this one is good to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/mightyorbot.jpg&#34;&gt;&lt;img alt=&#34;mightyorbot&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/mightyorbot-225x300.jpg&#34; width=&#34;225&#34; height=&#34;300&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; &lt;em&gt;a very might orbot&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The really exciting aspect of this release is that we have ironed out some integration points with other apps, like our own Gibberbot, and third-party apps like DuckDuckGo. These apps can now tell if Orbot is installed, running, and if not, request it to start up. Once Orbot is started, it will return to the calling app, and let them know they can proceed with routing their traffic over Tor. We hope that through use of our &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/libonionkit/src/info/guardianproject/onionkit/ui/OrbotHelper.java&#34;&gt;OrbotHelper utility&lt;/a&gt; (part of the &lt;a href=&#34;https://github.com/guardianproject/OnionKit&#34;&gt;OnionKit/NetCipher library&lt;/a&gt;), many more apps will choose to provide their users with better anonymity and privacy of their network traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;Since we haven’t done a release in awhile, and we have some new build &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;tools, I mostly want to make sure I have not done something terribly &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;wrong in the build process. Please confirm back if you are able to &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;successfully use this release. You can report issues &lt;a href=&#34;https://dev.guardianproject.info/projects/orbot/issues/new&#34;&gt;on our bug tracker&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve switched versioning styles to a simpler major.minor.bugfix “semantic” model, so this is now Orbot 12.0.1.&lt;/p&gt;
+
+&lt;p&gt;Signed 12.0.1 beta release build is here:&lt;br /&gt;
+&lt;a href=&#34;https://rink.hockeyapp.net/apps/92ace552aa5344d1a802decb71525897/&#34;&gt;https://rink.hockeyapp.net/apps/92ace552aa5344d1a802decb71525897/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Direct APK is here: &lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk&#34;&gt;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk&lt;/a&gt; (&lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk.asc&#34;&gt;gpg sig&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;We also have automated “nightly” debug builds from the development branch:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/builds/Orbot/&#34;&gt;https://guardianproject.info/builds/Orbot/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Updates in 12.0.1:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;updated to Tor 0.2.4.15-RC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;flashy screen bug fixed&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;now shows traffic stats in notification area&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;better handling of preference settings changes&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;added superuser permission for Cyanogen&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;better support for “start” Intent, integration with other apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tagged source is here:&lt;br /&gt;
+&lt;a href=&#34;https://gitweb.torproject.org/n8fr8/orbot.git/log/refs/tags/12.0.1&#34;&gt;https://gitweb.torproject.org/n8fr8/orbot.git/log/refs/tags/12.0.1&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mumble and the Bandwidth – Anonymous CB radio with Mumble and Tor</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</link>
+      <pubDate>Thu, 31 Jan 2013 02:05:50 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-3186&#34; alt=&#34;mumble and the bandwidth&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34; width=&#34;800&#34; height=&#34;478&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg 800w, https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth-300x179.jpg 300w&#34; sizes=&#34;(max-width: 800px) 100vw, 800px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The journey towards anonymous and secure voice communication is a long one. There’s lots of roadblocks to get your voice from point A to point B over the Internet if you need to prevent eavesdropping or censorship. There is the limited bandwidth of mobile data connections. There is the high latency of the TCP protocol. &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#whyweneedtor&#34;&gt;To achieve anonymity via Tor&lt;/a&gt;, there’s even more latency added to each packet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mumble.sourceforge.net/&#34;&gt;Mumble&lt;/a&gt; is a non-standard protocol that was originally designed for realtime voice chat for video games. If you’ve ever played Halo or World of Warcraft, this should sound familiar. If not, think of it as a conference call you don’t have to ring. You simply connect to a Mumble server over the Internet and your voice will transmit to everyone else.&lt;/p&gt;
+
+&lt;p&gt;Mumble clients are available for &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient&amp;amp;feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5tb3JsdW5rLm11bWJsZWNsaWVudCJd&#34;&gt;Android&lt;/a&gt; and &lt;a href=&#34;https://itunes.apple.com/us/app/mumble/id443472808?ls=1&amp;amp;mt=8&#34;&gt;iOS&lt;/a&gt;, as well as a cross-platform desktop client. The server software is also cross-platform. Guardian Project is focusing on the Android client named &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient&amp;amp;feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5tb3JsdW5rLm11bWJsZWNsaWVudCJd&#34;&gt;Plumble&lt;/a&gt; and the official server &lt;a href=&#34;https://packages.debian.org/search?keywords=mumble&amp;amp;searchon=names&amp;amp;section=all&amp;amp;suite=squeeze-backports&#34;&gt;backported to Debian stable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A cool feature of Mumble is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Push-to-talk&#34;&gt;Push To Talk&lt;/a&gt; (PTT) method to speak to the channel. Your voice is only transmitted when you press the PTT button in the user interface. Another lower level feature that’s important for our anonymity goal is TCP support. For any application to run over Tor, it must use the TCP protocol. This rules out most VoIP clients, since they use UDP. Here is a case where Mumble’s non-standard protocol works to our advantage.&lt;/p&gt;
+
+&lt;p&gt;When Tor is running and your Mumble client is configured to use TCP, connecting to your local SOCKS5 proxy offered by Tor allows you to join a Mumble server anonymously. The big problem is as suspected, latency. The traffic passing through the Tor network must make &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#thesolution&#34;&gt;an indeterminate number of proxy hops&lt;/a&gt; to be anonymized successfully. Each hop adds more and more latency. This makes a typical syncronous voice call impossible since there’s no way to determine when one person has stopped talking and when the other can respond without interrupting.&lt;/p&gt;
+
+&lt;p&gt;Latency in human speech transmision has deep psychological impact on a conversation. A &lt;a href=&#34;https://sites.google.com/site/qurihara/top-english/speechjammer&#34;&gt;Japanese research project called SpeechJammer&lt;/a&gt; exploited this part of our senses by inventing a “shut up gun.” When pointed at a person it makes them immediately stop talking. Everyone who has used a cell phone knows the frustration of “echo” where you hear your own voice, slightly delayed. The delay is caused by the network latency of the cellular carrier.&lt;/p&gt;
+
+&lt;p&gt;Another similar example is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Voip&#34;&gt;VoIP&lt;/a&gt; call on a congested network. The side effect of the latency is that one person accidently interrupts the other person because he thinks the other person has finished talking, when in reality the other person’s voice hasn’t yet arrived at the other end. Interruption ensues, no one is happy nor do they know anything new since the transmission was not understood. High latency makes &lt;a href=&#34;https://en.wikipedia.org/wiki/Full-duplex#Full-duplex&#34;&gt;full-duplex communication ineffective&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The contemporary telephone you are acustomed to allows both sides to talk and listen simultaneously. This is called full-duplex. Early radio telephones like walkie talkies, CB radio or aviation radio are half-duplex systems, meaning that for any given transmission, only one side can talk while the other side listens. Running Mumble over Tor takes a full-duplex technology and effectively reduces it to half-duplex. Even though the protocol is full-duplex, when run through a high latency network like Tor, the transmit and receive channels are so far out of sync there is no point in allowng both sides to talk at once. Again, interruption ensues.&lt;/p&gt;
+
+&lt;p&gt;Then it hit me. Radio telephones have been around since the turn of the 20th century, when people figured out a reasonable way to do voice chat without the technology causing accidental interruptions in the conversation. In particular, the use of procedure words, or &lt;a href=&#34;https://en.wikipedia.org/wiki/Procedure_word&#34;&gt;prowords&lt;/a&gt;, are essential for one speaker to acknowledge the transmission of the other (Roger), to signify that one party is finished speaking (Over), or indicate when one party has left the conversation (Out).&lt;/p&gt;
+
+&lt;p&gt;Here in the USA, some prowords evolved into a coloquial language, complete with &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_CB_slang&#34;&gt;slang&lt;/a&gt; thanks to the Citizen Band radio boom of the 1960s and the truck driving culture that used it to communicate while on the road. The 1977 film &lt;a href=&#34;http://www.imdb.com/title/tt0076729/?ref_=sr_1&#34;&gt;Smokey and the Bandit&lt;/a&gt; is more than just a touching love story with world class actors, it is an amazing dramatization of an information culture that resembled pre-Internet &lt;a href=&#34;https://en.wikipedia.org/wiki/Bulletin_board_system&#34;&gt;BBS systems&lt;/a&gt; and current day &lt;a href=&#34;https://en.wikipedia.org/wiki/IRC&#34;&gt;Internet Relay Chat (IRC)&lt;/a&gt; networks around the globe. The truck drivers portrayed in that movie have a mobile, decentralized information sharing network that is anonymous. The users have pseudonyms and a language of their own. Many of them have never met their CB radio friends IRL. They are invisible companions on the lonely road of the US of A.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Old ideas are worth bringing back if they have strong roots. CB and general purpose radio telephones have a long history, unlike the standard the standard of tody, VoIP. Perhaps these features are thought of as obsolete or not cutting-edge enough to model into a digital system. Regardless of the reason, if you are looking for a mobile and open source PTT solution to use on the Internet with anonymity and security, Mumble over Tor is currently the state of the art. All you have to do is throw in some prowords to keep the conversation flowing.&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project is operating a private Mumble server during a testing phase, and we have plans to open this to the public as part of the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN research effort&lt;/a&gt;. When that happens, I will post application-specific tutorials to install and configure the Plumble client. I will also publish a cookbook to build a Mumble server.&lt;/p&gt;
+
+&lt;p&gt;Finally, an example transmission log with some prowords:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Internet&lt;/em&gt;: Guardian Project. I have a ping response from your server, over.&lt;br /&gt;
+&lt;em&gt;GP&lt;/em&gt;: Roger Internet. Ping was sent, over.&lt;br /&gt;
+&lt;em&gt;Internet&lt;/em&gt;: Guardian Project. Build anonymous PTT system with open source software, over.&lt;br /&gt;
+&lt;em&gt;GP&lt;/em&gt;: Internet, build anonymous PTT system with open source software, wilco. Out.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>User scenarios to guide our crypto development</title>
+      <link>https://guardianproject.github.io/info/2012/04/14/user-scenarios-to-guide-our-crypto-development/</link>
+      <pubDate>Sat, 14 Apr 2012 20:16:03 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/04/14/user-scenarios-to-guide-our-crypto-development/</guid>
+      <description>&lt;p&gt;At Guardian Project, we find user-centered development to be essential to producing useful software that addresses real world needs. To drive this, we work with user stories and scenarios as part of the process of developing software. One particular development focus is the &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; title=&#34;Portable Shared Security Token&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Token (PSST)&lt;/a&gt; project, which aims to make it easy to use encryption across both mobile and desktop computers, as well as keep the stores of cryptographic identities (i.e. trusted keys, certificates, etc) in sync between devices.&lt;/p&gt;
+
+&lt;p&gt;This post outlines some initial user scenarios that PSST aims to address. We believe them to be common enough so that our solutions will be readily applicable to real world people now. They are a small subset of all of the types of users that we feel can ultimately benefit from the PSST core research, so these user stories provide a starting place for honing the tools for the needs of actual working organizations. These stories also discuss how the software could be used in these situations. The software as described mostly exists, but not all details are currently implemented or even fully vetted as secure practices.&lt;/p&gt;
+
+&lt;p&gt;We are very eager for feedback, comments, and criticism on any aspect of these scenarios, from whether they are plausible to whether the user interactions described are built upon realistic expectations of actual members of organizations like the ones described here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Small Cabal&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/04/activists-meeting.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/activists-meeting.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;224&#34; class=&#34;alignright size-full wp-image-1799&#34; /&gt;&lt;/a&gt;There is a small group of people that needs to communicate as securely and anonymously as possible. They all meet up in person. They generate keys, and individually sign each person’s key and get that person’s signature on their own key. These are local-only unpublishable signatures. No one uploads their keys to any other server or device. They each generate a revocation certificate and hook it up to their panic button app. Once the panic button is hit, the phone broadcasts the revocation certificate to the pre-determined list of people.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diffuse Activist Organization&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;An activist organization has members spread out all over their country, with concentrations in certain areas, and a handful abroad. They are working in a country that aggressively tracks communications, but encryption is not banned nor aggressively tracked. Since there are many members and they are widely spread, very few of the members have met the whole membership. Many members often meet up in person at various places around the country, and some people also travel to regional and national meet-ups. The central forum for the whole group is on the internet, and there are many big group discussions and announcements that happen on internet forums.&lt;/p&gt;
+
+&lt;p&gt;Each member has a cryptographic key that represents their online identity, which they post to the public keyservers. They generate and store a revocation certificate to upload to the keyservers in case of a compromised key or computer. They do not post any signatures to the key servers so that the social graph information remains private. Whenever they meet another person that they trust, they sign each others’ keys and swap all signature data using direct peer-to-peer communication.&lt;/p&gt;
+
+&lt;p&gt;When interacting with members who they only know on the internet, they check whether they have a cryptographic trust path to each others’ keys, and if not, they establish the first step of trust via OTR by doing key verification via question/answer, shared secret or manual fingerprint validation over a trusted channel, like the phone. When they hit there panic button the post the revocation certificate to the keyserver. Each member’s computer/phone automatically checks the public keyservers for revocations hourly, and marks any revoked key as invalid as soon as it receives a revocation certificate.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Multinational Organization&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/04/orgmtg.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/orgmtg.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;158&#34; class=&#34;alignleft size-full wp-image-1800&#34; /&gt;&lt;/a&gt;An organization has many members in a number of different countries. Some of the governments are supportive of the organization’s goals, while some of the governments are strongly hostile and are actively seeking out local members. Many members work in countries where there is little chance of active tracking and monitoring of their use of encryption, while others work in high risk environments from time to time. Certain local contacts and members work in aggressively monitored countries where use of encryption is a flag for the secret police.&lt;/p&gt;
+
+&lt;p&gt;The public figures of the organization in safe countries have a public trust profile that is freely downloadable. They use the public OpenPGP infrastructure and publicly share all public signatures. These members also have private, unpublishable signatures related to the members in high risk situations. Operatives in high risk situations use only unpublishable local signatures and the whole collection of signatures is stored in an encrypted form. There devices only contact keyservers via anonymized connections like Tor or VPNs.&lt;/p&gt;
+
+&lt;p&gt;When members are signing each other’s keys, the signatures are always sent to the key owner via encrypted email. The signer can then mark the signature as private or public, or their software can be set to always mark all keys as private and unpublishable. When the key owner receives the emailed signature, she can then decide how to manage the signatures: either privately import the signature to their keyring, where it will be stored in an unpublishable format; or publicly import the signature into their keyring and sync it via the public PGP servers. If the signer emailed a private signature to the key owner, then the key management software will automatically make it a private signature.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Improvised movement organized via social software&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Tahrir_Square_during_8_February_2011.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/Tahrir_Square_during_8_February_2011-300x225.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;alignright size-medium wp-image-1791&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/04/Tahrir_Square_during_8_February_2011-300x225.jpg 300w, https://guardianproject.info/wp-content/uploads/2012/04/Tahrir_Square_during_8_February_2011-1024x768.jpg 1024w, https://guardianproject.info/wp-content/uploads/2012/04/Tahrir_Square_during_8_February_2011.jpg 1600w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;People from all over a region join a popular movement to help organize protests, distribute media, spread information, etc. Many join in groups of friends or family, but overall the group is not socially well connected together. The common cause is the central binding of the group. In their communications, they want to avoid keyword filtering and communications tracking, as well as try to hinder infiltration and the injection of misinformation. They need to communicate and exchange media with some level of trust. Since the group wants as many members as possible, the infrastructure must be relatively open and public.&lt;/p&gt;
+
+&lt;p&gt;Users who do not have any shared history will trust each other’s keys on first contact, and rely on the continued validation against the initial mark of trust (known as TOFU/POP or Trust On First Use/Persistence of Pseudonym). Once users build up some context with each other, they can deepen the cryptographic trust by using OTR question/answer or shared secret authentication. Users publicly share their TOFU/POP and OTR marks of trust on public exchanges so that people can build up public trust in their cryptographic identity.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Foreign Journalist, Diplomat, Business Person, etc.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This user is working in a place with active monitoring, tracking and filtering. She has strong links to institutions outside of the country that can help in case of trouble. She has clear outsider status so is able to use encryption and anonymizing software without a large risk of persecution. She wants to keep her communications private in the face of active monitoring.&lt;/p&gt;
+
+&lt;p&gt;Standard public cryptography tools cover most of this situation, but they must be made easier to use, and work on mobile devices. If this user needs encrypted exchanges with locals at high risk of monitoring, local unpublishable signatures can be used in those situations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot Update: New Setup Wizard at Startup</title>
+      <link>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</link>
+      <pubDate>Thu, 29 Jul 2010 17:17:08 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</guid>
+      <description>&lt;p&gt;We’ve been working away at the 0.0.9 release of &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; over the last few months, and have put a decent amount of effort into usability. Specifically, we hoped to better communicate to users what it means to run Tor on your Android phone. In addition, we wanted to clearly lay out how the various configuration options help to improve your mobile web anonymity and ability to circumvent web filters and tracking by your mobile service provider.&lt;/p&gt;
+
+&lt;p&gt;The screenshots below are what you see the first time you install and run Orbot, and also whenever you open the “Help” menu. One important thing to point out is that Orbot can run with or without root, and our setup UI responds to having the capability or not accordingly.&lt;/p&gt;
+
+&lt;p&gt;Ultimately our goal is to provide a useful bootstrap experience for novice and advanced users alike. We welcome your feedback.&lt;/p&gt;
+
+&lt;div id=&#39;gallery-3&#39; class=&#39;gallery galleryid-488 gallery-columns-3 gallery-size-thumbnail&#39;&gt;
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-489&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-1-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-489&#39;&gt;
+      permissions… we actually will only be asking for INTERNET – so don’t mind the “phone status” permission
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-490&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-2-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-490&#39;&gt;
+      Your basic install screen
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-491&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-3-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-491&#39;&gt;
+      A friendly welcome
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-492&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-4-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-492&#39;&gt;
+      About Orbot!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-493&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-5-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-493&#39;&gt;
+      we ask nicely to get root permissions, if possible
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-495&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-7-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-495&#39;&gt;
+      if the user doesn’t have root, we make sure they understand the implications
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-496&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-8-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-496&#39;&gt;
+      Offer direct downloads of Orbot/Tor enabled apps
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-497&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.5-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-497&#39;&gt;
+      (Root only) choose whether to “Torify All” or choose app by app
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-498&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.6-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-498&#39;&gt;
+      (Root only) Select to send all network traffic through Tor
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-499&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.7-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-499&#39;&gt;
+      (Root only) Select which apps you want to route through Tor
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-500&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-9-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-500&#39;&gt;
+      This is the final step
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;dl class=&#39;gallery-item&#39;&gt;
+    &lt;dt class=&#39;gallery-icon portrait&#39;&gt;
+      &lt;a href=&#39;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10.png&#39;&gt;&lt;img width=&#34;150&#34; height=&#34;150&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-150x150.png&#34; class=&#34;attachment-thumbnail size-thumbnail&#34; alt=&#34;&#34; aria-describedby=&#34;gallery-3-501&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/07/orbot-10-64x64.png 64w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;
+    &lt;/dt&gt;
+    
+    &lt;dd class=&#39;wp-caption-text gallery-caption&#39; id=&#39;gallery-3-501&#39;&gt;
+      We’ve got root!
+    &lt;/dd&gt;
+  &lt;/dl&gt;
+  
+  &lt;br style=&#34;clear: both&#34; /&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

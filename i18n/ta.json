@@ -93,7 +93,7 @@
   },
   {
     "id": "poweredBy",
-    "translation": "<a href=\"http://gohugo.io\"> அ்யூகோ வி {{ .Hugo.Version }} </a> ஆற்றல் &amp; nbsp; &amp; bull; &amp; nbsp; கருப்பொருள் "
+    "translation": "<a href=\"http://gohugo.io\">யூகோ ப{{ .Hugo.Version }}</a> இயக்கப்படும் &nbsp;&nbsp;&nbsp; <a href=\"http://deanattali.com/beautiful-jekyll/\">அழகான செகிலின்</a> கருப்பொருள் <a href=\"https://github.com/halogenica/beautifulhugo\">அழகான யூகோ</a> க்கு மாற்றியமைக்கப்பட்டது"
   },
   {
     "id": "toggleNavigation",

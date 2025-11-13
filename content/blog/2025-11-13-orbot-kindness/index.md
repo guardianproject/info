@@ -11,13 +11,13 @@ tags:
   - community
 ---
 
-Today is [World Kindess Day](https://en.wikipedia.org/wiki/World_Kindness_Day). As stated on Wikipedia, "World Kindness Day is to highlight good deeds in the community focusing on the positive power and the common thread of kindness for good which binds us."
+Today is [World Kindness Day](https://en.wikipedia.org/wiki/World_Kindness_Day). As stated on Wikipedia, "World Kindness Day is to highlight good deeds in the community focusing on the positive power and the common thread of kindness for good which binds us."
 
 <a href="https://en.wikipedia.org/wiki/World_Kindness_Day"><img src="worldkindnessday.png" width=200/></a>
 
 Now that world __bind__ is particularly meaningful to use in a technical way - when a remote computer connects to another computer over a network, whether peer-to-peer or a server, one way to state what happens is "binding to their socket port". Especially considering something like the [tor network](https://torproject.org), which is powered by volunteer organizations and inviduals around the world sharing their network resources, there is a great deal of positive, community "good which binds us" going on.
 
-So on this auspicious day of kindness, we wanted to share some new guidance we have put together about __KINDNESS MODE__, a feature for helping others in need, available in our app, [Orbot for Android and iOS](https://orbot.app). Kindess Mode is our name for the underlying technology also known as "Snowflake", which helps people get around extreme forms of network censorship and filtering.
+So on this auspicious day of kindness, we wanted to share some new guidance we have put together about __KINDNESS MODE__, a feature for helping others in need, available in our app, [Orbot for Android and iOS](https://orbot.app). Kindness Mode is our name for the underlying technology also known as "Snowflake", which helps people get around extreme forms of network censorship and filtering.
 
 ## Running a Snowflake Proxy
 
@@ -33,7 +33,7 @@ Running a [Snowflake Proxy](https://snowflake.torproject.org) is one of the easi
 * All of the data passing through your device is encrypted; nothing is visible to you.
 * There will be an impact on your bandwidth, but it is minimal, and you can set limits.
 
-[![Kindess Mode diagram](kindessmode1.jpg)](kindessmodehandout.pdf)
+[![Kindness Mode diagram](kindessmode1.jpg)](kindessmodehandout.pdf)
 
 ## Risks and Considerations
 
@@ -59,7 +59,7 @@ Running a [Snowflake Proxy](https://snowflake.torproject.org) is one of the easi
 
 ## Orbot is Kind!
 
-Now that you have all this important knowledge, you can understand better if you are in a position to be kind, and share your network. [Get Orbot Today](https://orbot.app/downlaod) and see how good it feels each time someone connects through your Kindess Mode Snowflake Proxy!
+Now that you have all this important knowledge, you can understand better if you are in a position to be kind, and share your network. [Get Orbot Today](https://orbot.app/downlaod) and see how good it feels each time someone connects through your Kindness Mode Snowflake Proxy!
 
 [View our Orbot Kindness Mode How-To Guide PDF](kindessmodehandout.pdf)
 

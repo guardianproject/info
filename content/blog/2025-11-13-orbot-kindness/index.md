@@ -15,9 +15,9 @@ Today is [World Kindness Day](https://en.wikipedia.org/wiki/World_Kindness_Day).
 
 <a href="https://en.wikipedia.org/wiki/World_Kindness_Day"><img src="worldkindnessday.png" width=200/></a>
 
-Now that world __bind__ is particularly meaningful to use in a technical way - when a remote computer connects to another computer over a network, whether peer-to-peer or a server, one way to state what happens is "binding to their socket port". Especially considering something like the [tor network](https://torproject.org), which is powered by volunteer organizations and inviduals around the world sharing their network resources, there is a great deal of positive, community "good which binds us" going on.
+Now that word __bind__ is particularly meaningful to use in a technical way - when a remote computer connects to another computer over a network, whether peer-to-peer or a server, one way to state what happens is "binding to their socket port". The decentralized, privacy-focused [tor network](https://torproject.org) is powered by volunteer organizations and inviduals around the world sharing their network resources. On Tor, there is a great deal of positive, community "good which binds us" going on.
 
-So on this auspicious day of kindness, we wanted to share some new guidance we have put together about __KINDNESS MODE__, a feature for helping others in need, available in our app, [Orbot for Android and iOS](https://orbot.app). Kindness Mode is our name for the underlying technology also known as "Snowflake", which helps people get around extreme forms of network censorship and filtering.
+With that in mind on this auspicious day, we have released new guidance about __KINDNESS MODE__, a feature for helping others in need, available in our app, [Orbot for Android and iOS](https://orbot.app). Kindness Mode is our name for the underlying technology also known as "Snowflake", which helps people get around extreme forms of network censorship and filtering.
 
 ## Running a Snowflake Proxy
 

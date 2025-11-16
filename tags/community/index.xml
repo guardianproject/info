@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Community on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/community/</link>
+    <description>Recent content in Community on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 13 Nov 2025 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/community/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kindness Mode: Help People Connect to Tor on World Kindness Day</title>
+      <link>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</link>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</guid>
+      <description>
+
+&lt;p&gt;Today is &lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;World Kindness Day&lt;/a&gt;. As stated on Wikipedia, &amp;ldquo;World Kindness Day is to highlight good deeds in the community focusing on the positive power and the common thread of kindness for good which binds us.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;&lt;img src=&#34;worldkindnessday.png&#34; width=200/&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that word &lt;strong&gt;bind&lt;/strong&gt; is particularly meaningful to use in a technical way - when a remote computer connects to another computer over a network, whether peer-to-peer or a server, one way to state what happens is &amp;ldquo;binding to their socket port&amp;rdquo;. The decentralized, privacy-focused &lt;a href=&#34;https://torproject.org&#34;&gt;tor network&lt;/a&gt; is powered by volunteer organizations and inviduals around the world sharing their network resources. On Tor, there is a great deal of positive, community &amp;ldquo;good which binds us&amp;rdquo; going on.&lt;/p&gt;
+
+&lt;p&gt;With that in mind on this auspicious day, we have released new guidance about &lt;strong&gt;KINDNESS MODE&lt;/strong&gt;, a feature for helping others in need, available in our app, &lt;a href=&#34;https://orbot.app&#34;&gt;Orbot for Android and iOS&lt;/a&gt;. Kindness Mode is our name for the underlying technology also known as &amp;ldquo;Snowflake&amp;rdquo;, which helps people get around extreme forms of network censorship and filtering.&lt;/p&gt;
+
+&lt;h2 id=&#34;running-a-snowflake-proxy&#34;&gt;Running a Snowflake Proxy&lt;/h2&gt;
+
+&lt;p&gt;Running a &lt;a href=&#34;https://snowflake.torproject.org&#34;&gt;Snowflake Proxy&lt;/a&gt; is one of the easiest, safest, and most impactful ways to help people circumvent censorship, especially if you’re in a place with an open and free internet. Your device, through your public IP address, becomes an essential bridge for people where Tor is blocked (in, say, Iran or China) and the entrance to the Tor network. There are many ways you can run a Snowflake Proxy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Orbot’s “Kindness Mode” on iOS and Android: &lt;a href=&#34;https://orbot.app/kindness&#34;&gt;https://orbot.app/kindness&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Snowflake add-on for Firefox, Chrome or Edge: &lt;a href=&#34;https://snowflake.torproject.org&#34;&gt;https://snowflake.torproject.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WEPN home device: &lt;a href=&#34;https://we-pn.com/kindness-faq.html&#34;&gt;https://we-pn.com/kindness-faq.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;key-facts-to-know&#34;&gt;Key Facts to Know&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You are not using Tor yourself, you are simply a bridge for someone else.&lt;/li&gt;
+&lt;li&gt;All of the data passing through your device is encrypted; nothing is visible to you.&lt;/li&gt;
+&lt;li&gt;There will be an impact on your bandwidth, but it is minimal, and you can set limits.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;kindessmodehandout.pdf&#34;&gt;&lt;img src=&#34;kindessmode1.jpg&#34; alt=&#34;Kindness Mode diagram&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;risks-and-considerations&#34;&gt;Risks and Considerations&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Legality&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In most countries, running a Snowflake Proxy is legal. It’s equivalent to making an online “VOIP” call between two points on the internet.&lt;/li&gt;
+&lt;li&gt;In high-censorship networks, this traffic could draw attention, and since your internet is not free and open, it doesn’t make sense to run a Snowflake Proxy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Privacy and IP Visibility&lt;/li&gt;
+&lt;li&gt;The fact that your device was connected to by a remote device on the internet can be seen and logged by your internet service provider.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Your IP address will appear in the central Snowflake “Broker” logs since it is necessary to share your proxy’s existence so others can find it.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the app or browser activity of the person you are helping, YOUR IP address is NOT visible and there is no link to your or your device.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Network and Bandwidth load&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Any data used by the device proxying through your connection will count as data on your service or plan. It is best on wifi or with unlimited plans.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Proxying can slow your connection slightly. However by default only a very limited number of devices can use your proxy at a time.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;how-to-minimize-risks&#34;&gt;How to Minimize Risks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run Snowflake from a trusted, unrestricted, unlimited network.&lt;/li&gt;
+&lt;li&gt;Don’t use it on shared, public, or corporate networks where administrators might block or misinterpret traffic.&lt;/li&gt;
+&lt;li&gt;When you can, set limits to when and how the Snowflake Proxy should be available.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;orbot-is-kind&#34;&gt;Orbot is Kind!&lt;/h2&gt;
+
+&lt;p&gt;Now that you have all this important knowledge, you can understand better if you are in a position to be kind, and share your network. &lt;a href=&#34;https://orbot.app/downlaod&#34;&gt;Get Orbot Today&lt;/a&gt; and see how good it feels each time someone connects through your Kindness Mode Snowflake Proxy!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;kindessmodehandout.pdf&#34;&gt;View our Orbot Kindness Mode How-To Guide PDF&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FIFA2023 Report</title>
+      <link>https://guardianproject.github.io/info/2023/11/03/fifa2023-report/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/11/03/fifa2023-report/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://web.archive.org/web/20231102110707/https://internetfreedom.africa/&#34;&gt;Forum on Internet Freedom in Africa (FIFAfrica)&lt;/a&gt; organized by the &lt;a href=&#34;https://web.archive.org/web/20231102060008/https://cipesa.org/&#34;&gt;Collaboration on International ICT Policy for East and Southern Africa (CIPESA)&lt;/a&gt; took place in September 26-29, 2023 in Dar es Salaam, Tanzania at the Hyatt Regency Hotel.&lt;/p&gt;
+
+&lt;p&gt;The first two days - the &lt;a href=&#34;https://web.archive.org/web/20231103185024/https://whova.com/embedded/event/rWwmoMGALzfjDBkAPdWzA1K4LxMjt38D6BmWiph4wK4%3D/generating/?refer=undefined&amp;amp;day=0&#34;&gt;26th&lt;/a&gt; and &lt;a href=&#34;https://web.archive.org/web/20231103185107/https://whova.com/embedded/event/rWwmoMGALzfjDBkAPdWzA1K4LxMjt38D6BmWiph4wK4%3D/generating/?refer=undefined&amp;amp;day=1&#34;&gt;27th&lt;/a&gt; of September - were invite only. The rest of the days - &lt;a href=&#34;https://web.archive.org/web/20231103185923/https://whova.com/embedded/event/rWwmoMGALzfjDBkAPdWzA1K4LxMjt38D6BmWiph4wK4%3D/generating/?refer=undefined&amp;amp;day=2&#34;&gt;28th&lt;/a&gt; and &lt;a href=&#34;https://web.archive.org/web/20231103190038/https://whova.com/embedded/event/rWwmoMGALzfjDBkAPdWzA1K4LxMjt38D6BmWiph4wK4%3D/generating/?refer=undefined&amp;amp;day=3&#34;&gt;29th&lt;/a&gt; of September - were meant for all the other participating attendees.&lt;/p&gt;
+
+&lt;p&gt;The theme of the event was &amp;ldquo;The Internet Freedom we want for Africa&amp;rdquo; which was highlighted during the &lt;a href=&#34;https://web.archive.org/web/20231103190144/https://whova.com/embedded/session/rWwmoMGALzfjDBkAPdWzA1K4LxMjt38D6BmWiph4wK4%3D/3354886/?widget=primary&#34;&gt;opening ceremony&lt;/a&gt;. It was well organized with a dedicated media and photography team who did a great job in their coverage. Attendees and attending organizations were diverse coming from all over the world. They were not only limited to digital security folks but also there were attendees from academia, law, policy and government.&lt;/p&gt;
+
+&lt;p&gt;Apart from the opening and closing ceremony, the event had multiple tracks (2 to 4) happening at a time. There were booths from where attending organizations would showcase what they were working on. The Guardian Project had one right in the middle of the &lt;a href=&#34;https://web.archive.org/web/20231103190633/https://wearehorizontal.org/index&#34;&gt;Horizontal&lt;/a&gt; and &lt;a href=&#34;https://web.archive.org/web/20210921162650/https://www.a11ylab.com/?lang=EN&#34;&gt;Accessibility Labs&lt;/a&gt; booths. Talk of being in good company :)&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project booth was a hub of activity for the two days. We were showcasing &lt;a href=&#34;https://encirculo.org/en/&#34;&gt;Circulo&lt;/a&gt;, &lt;a href=&#34;https://guardianproject.info/apps/org.witness.proofmode/&#34;&gt;Proofmode&lt;/a&gt;, &lt;a href=&#34;https://likebutter.app/&#34;&gt;Butterbox&lt;/a&gt; and &lt;a href=&#34;https://f-droid.org/en/&#34;&gt;F-Droid&lt;/a&gt;. The interest in what we do and the solutions we provide was so genuine that we ran out of business cards and stickers. Only a few people had heard of us and were super intrigued with our products that they had them installed on their devices to try them out. There was a &lt;a href=&#34;https://web.archive.org/web/20231103194105/https://whova.com/embedded/session/rWwmoMGALzfjDBkAPdWzA1K4LxMjt38D6BmWiph4wK4%3D/3374537/?widget=primary&#34;&gt;cocktail party&lt;/a&gt; at the end of the day which was a good event for further networking with the other attendees.&lt;/p&gt;
+
+&lt;p&gt;Our session, &lt;a href=&#34;https://web.archive.org/web/20231103194507/https://whova.com/embedded/session/rWwmoMGALzfjDBkAPdWzA1K4LxMjt38D6BmWiph4wK4%3D/3354924/?widget=primary&#34;&gt;Resilient Communications ButterBox, Proofmode and Circulo&lt;/a&gt; was slotted on the last day at the very end of the day. We did not have a lot of attendees since most people were making the best of their time networking or were planning to leave. To thank the attendees of our session, Happy made a song about the products we were showcasing. Her performance was cut short as all participants were directed to the &lt;a href=&#34;https://web.archive.org/web/20231103195433/https://whova.com/embedded/session/rWwmoMGALzfjDBkAPdWzA1K4LxMjt38D6BmWiph4wK4%3D/3354927/?widget=primary&#34;&gt;closing ceremony&lt;/a&gt;. It was all festive as they thanked the participants and then launched the &lt;a href=&#34;https://web.archive.org/web/20231019180633/https://internetfreedom.africa/wp-content/uploads/2023/10/SIFA23-Report.pdf&#34;&gt;State of Internet Freedom in Africa Report&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, FIFAfrica 2023 was an awesome event. Lots of connections were made that have turned into friendships. The attendees were friendly and festive. The planning was splendid. We are looking forward to the next one in 2024. Thanks CIPESA.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

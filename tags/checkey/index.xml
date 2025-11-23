@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Checkey on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/checkey/</link>
+    <description>Recent content in Checkey on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 11 Feb 2015 14:51:22 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/checkey/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Complete, reproducible app distribution achieved!</title>
+      <link>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</link>
+      <pubDate>Wed, 11 Feb 2015 14:51:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</guid>
+      <description>&lt;p&gt;With &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, we have been working towards getting a complete app distribution channel that is able to reproducibly build each Android app from source. while this may sound like a mundane detail, it does provide lots of tangible benefits. First, it means that anyone can verify that the app that they are using is 100% built from the source code, with nothing else added. That verifies that the app is indeed 100% free, open source software.&lt;/p&gt;
+
+&lt;p&gt;It also verifies that there have not been any malicious bits of code added into the app during the build process. As has been &lt;a href=&#34;https://www.youtube.com/watch?v=5pAen7beYNc&#34; target=&#34;_blank&#34;&gt;demonstrated&lt;/a&gt; in the &lt;a href=&#34;http://events.ccc.de/congress/2014/Fahrplan/events/6240.html&#34; target=&#34;_blank&#34;&gt;31c3 Reproducible Builds talk&lt;/a&gt;, just flipping a single bit is enough to create a usable exploit in an app.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid project is leading the way with its system for publishing verified builds. We know have our first full example, building upon our previous work with making &lt;a href=&#34;https://guardianproject.info/2014/06/09/our-first-deterministic-build-lil-debi-0-4-7/&#34; target=&#34;_blank&#34;&gt;Lil’ Debi build reproducibly&lt;/a&gt;. We started with our simple little utility app &lt;a href=&#34;https://github.com/guardianproject/checkey&#34; target=&#34;_blank&#34;&gt;Checkey&lt;/a&gt; since it has few moving parts (first get one working, then the rest).&lt;/p&gt;
+
+&lt;p style=&#34;float: left&#34; &gt;
+  &lt;a href=&#34;https://guardianproject.info/releases/Checkey-0.1.1.apk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png&#34; alt=&#34;Checkey&#34; width=&#34;128&#34; height=&#34;128&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;float: left; text-align: center; line-height: 128px; font-size: 1000%&#34; &gt;
+  =
+&lt;/p&gt;
+
+&lt;p style=&#34;float: left&#34; &gt;
+  &lt;a href=&#34;https://f-droid.org/repo/info.guardianproject.checkey_101.apk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png&#34; alt=&#34;Checkey&#34; width=&#34;128&#34; height=&#34;128&#34; style=&#34;float: right&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;clear: both;&#34;&gt;
+  &lt;p&gt;
+    When you download Checkey from f-droid.org, you will get an APK that was signed using the official Guardian Project offline signing key that was built by f-droid.org. No, we did not give them a copy of our key, instead, the fdroid publish process now looks for the Binaries: tag in the build recipe. If it sees that, it downloads that APK, then builds the app from source, then checks to make sure that they match using a simple diff of the APK contents and by checking that the signature on the official APK also validates on the APK that f-droid.org built.
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;p&gt;
+    Now that we have our little Checkey working, we can work towards getting all of our apps verifying in the same way, eliminating a whole field of exploits that we have to worry about. You can follow the progress of this work on the F-Droid wiki &lt;a href=&#34;https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds&#34; target=&#34;_blank&#34;&gt;Reproducible Builds&lt;/a&gt; page, and learn about a future application of it on the &lt;a href=&#34;https://f-droid.org/wiki/page/Verification_Server&#34; target=&#34;_blank&#34;&gt;Verification Server&lt;/a&gt; page.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    The next two apps that are in the reproducible pipeline are &lt;a href=&#34;https://leap.se/&#34; target=&#34;_blank&#34;&gt;LEAP&lt;/a&gt;‘s &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/tree/master/metadata/se.leap.bitmaskclient.txt&#34; target=&#34;_blank&#34;&gt;Bitmask&lt;/a&gt; and our &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/info.guardianproject.locationprivacy.txt&#34; target=&#34;_blank&#34;&gt;LocationPrivacy&lt;/a&gt;.
+  &lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.af/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.af/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ar/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.az/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.az/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.bg/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.bg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ca/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ca/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.cs/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.cs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.da/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.da/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.de/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.de/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.el/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.el/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.eo/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.eo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.es/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.es/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.et/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.et/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.fi/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.fi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.fr/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.fr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.hi/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.hi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.hr/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.hr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.hu/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.hu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.id/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.id/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.it/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ja/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ja/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ko/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ko/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.lt/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.lt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.lv/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.lv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.nl/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.nl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.pl/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.pl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.pt/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.pt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ro/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ru/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ru/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.sk/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.sk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.sl/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.sl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.sv/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.sv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.sw/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.sw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.th/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.th/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.tr/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.tr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.uk/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.uk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ur/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.ur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Checkey: info on local apps</title>
+      <link>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.vi/</link>
+      <pubDate>Wed, 28 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/apps/info.guardianproject.checkey.vi/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

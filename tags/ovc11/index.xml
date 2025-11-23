@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ovc11 on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/ovc11/</link>
+    <description>Recent content in Ovc11 on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 Sep 2011 04:36:11 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/ovc11/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Progress on Mobile Video Privacy Tools</title>
+      <link>https://guardianproject.github.io/info/2011/09/10/progress-on-mobile-video-privacy-tools/</link>
+      <pubDate>Sat, 10 Sep 2011 04:36:11 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/09/10/progress-on-mobile-video-privacy-tools/</guid>
+      <description>&lt;p&gt;&lt;em&gt;If you are  a developer you may just want to skip all the prose below, and just jump over to Github to find our new &lt;a href=&#34;https://github.com/guardianproject/android-ffmpeg&#34;&gt;FFMPEG on Android project&lt;/a&gt;{.vt-p} and build system. You can also check out our &lt;a href=&#34;https://github.com/guardianproject/SSCVideoProto&#34;&gt;SSCVideoProto Project&lt;/a&gt;{.vt-p} to understand how we are using it to redact faces and other identifying areas of HD video right on the Android phone itself. For more context, read on…&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Last October at the Open Video Conference 2010, the idea of a camera application that could be designed to understand the needs and requirements of the human rights community was born. During a &lt;a href=&#34;https://blog.witness.org/2010/10/ovc2010-opensubtitles/&#34;&gt;hackday hosted with WITNESS&lt;/a&gt;{.vt-p}, we proved that is was possible to take a feature like “Face Detection” which is built into the Android operating system, and turn it into a capability that could be used to protect people, by blurring, pixelating or removing faces that unintentionally appeared in a video filmed on a mobile phone. In the last year, through our partnership with &lt;a href=&#34;https://www.witness.org/cameras-everywhere/witness-labs&#34;&gt;WITNESS Labs&lt;/a&gt;, we have built on that concept, designing, developing and releasing apps and source code which move the state of the art in mobile video privacy and anonymity capabilities forward.&lt;/p&gt;
+
+&lt;p&gt;Here is a short video of &lt;a href=&#34;https://blog.witness.org/2010/10/ovc2010-opensubtitles/&#34;&gt;where we were a year ago&lt;/a&gt;{.vt-p}.&lt;/p&gt;
+
+&lt;p&gt;The idea was that using a combination of approaches, we might be able to take the human rights video workflow, and ideas of consent and intent, that &lt;a href=&#34;https://www.witness.org/training&#34;&gt;WITNESS has developed for over twenty years&lt;/a&gt;{.vt-p}, and encode that into best practices and features in a software application. This was the catalyst for the launch of our joint &lt;a href=&#34;https://github.com/guardianproject/securesmartcam/wiki&#34;&gt;Secure Smart Cam Project&lt;/a&gt;{.vt-p}, which just a three months ago resulted in the &lt;a href=&#34;https://guardianproject.info/2011/06/23/announcing-obscuracam-v1-enhance-your-visual-privacy/&#34;&gt;launch of our first public app&lt;/a&gt;{.vt-p}, &lt;a href=&#34;https://guardianproject.info/2011/06/23/announcing-obscuracam-v1-enhance-your-visual-privacy/&#34;&gt;ObscuraCam v1&lt;/a&gt;{.vt-p}. Available in the Android Market, this app allows a user to quickly process a still photo taken on an Android smartphone, empowering them to remove unwanted identifying visual elements (faces, logos, signs, places) and remove unwanted digital metadata attached to the photo (GPS data, camera make and model, timestamps, etc). The app assists the user in this process by using Android’s built-in face detection technology to automatically identify and pixelize faces found in photos.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/2011/06/23/announcing-obscuracam-v1-enhance-your-visual-privacy/&#34;&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/06/02_autodetect.png&#34; width=&#34;560&#34; height=&#34;336&#34; /&gt;&lt;/a&gt;{.vt-p}&lt;/p&gt;
+
+&lt;p&gt;We continue to develop ObscuraCam in order to add new features, filters and privacy-enhancing capabilities. In addition, we exploring the “Informa” mode of this application, which uses the same technologies developed to assist in removing information, and instead uses them to add layers of extra verification, subject consent and intent tracking, and full media encryption. The idea is that in many cases people want to use visual media as evidence, or at least as reliable sources for journalistic use, and the more data that can be securely and safely captured and associated with a mediafile, the better. This is still in the research and design phase, but we expect to have some concepts of this ready for public play in the next few months.&lt;/p&gt;
+
+&lt;p&gt;While ObscuraCam is exciting, it only supports photos at this time. This is a fundamental issue, because WITNESS is a human-rights video organization, and the type of compelling content people are creating on their mobile phones are moving pictures not still. A year out from when the idea was first prototyped, I am happy to say that we have addresses the major challenges necessary to achieve mobile video processing of high-resolution video on the Android phone itself. The prototype last year was faking it in a sense, as it couldn’t actual record anything, and just showed the idea that you could detect faces. Our new &lt;a href=&#34;https://github.com/guardianproject/sscvideoproto&#34;&gt;SSCVideoProto project&lt;/a&gt;{.vt-p}, utilizes the open-source &lt;a href=&#34;https://github.com/guardianproject/android-ffmpeg&#34;&gt;FFMPEG video processing library&lt;/a&gt;{.vt-p}, to redact regions from recorded video files. Below is a short video that demonstrates the current state of the work.&lt;/p&gt;
+
+&lt;p&gt;In summary, this means we can now remove, pixelize or otherwise modify any identifying content in a high-resolution video recorded on a mobile phone, before that video is uploaded to YouTube, Facebook or elsewhere. Faces can be removed, screens blacked out or any other element that shouldn’t be shown, as it would increase some risk to the subjects of the video. Beyond redaction, we can now process any video, using open-source software, on an Android phone, including trimming, splitting, adjusting color, balance, brightness or any other common ffmpeg feature.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks to Shawn, Andrew and Hans for the collective work on getting us to this milestone&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/guardianproject/android-ffmpeg&#34;&gt;FFMPEG on Android project&lt;/a&gt;{.vt-p}&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/SSCVideoProto&#34;&gt;SSCVideoProto Project&lt;/a&gt;{.vt-p}&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

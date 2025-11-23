@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codec on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/codec/</link>
+    <description>Recent content in Codec on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 22 Feb 2013 09:05:48 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/codec/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lower Bounds of The Narrow Bands</title>
+      <link>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</link>
+      <pubDate>Fri, 22 Feb 2013 09:05:48 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</guid>
+      <description>&lt;p&gt;Voice is becoming a standard feature of any messaging app on mobile phones, in various forms using many different protocols. There’s the old guard, whom I will refer to as “Skype”. Some &lt;a href=&#34;https://www.privacyinternational.org/blog/skype-please-act-like-the-responsible-global-citizen-you-claim-to-be&#34;&gt;tough&lt;/a&gt; &lt;a href=&#34;http://www.skypeopenletter.com/&#34;&gt;questions&lt;/a&gt; have been thrown their way by many groups who support a free Internet. There’s Google Voice, which is not really VoIP. Apple is playing around in the hedge maze inside their walled garden with iChat. There’s also Facebook, who is rolling out &lt;a href=&#34;http://techcrunch.com/2013/01/16/facebook-rolls-out-voip-calling-to-u-s-ios-messenger-users/&#34;&gt;voice calling in Canada and the USA&lt;/a&gt; in their Messenger app on iOS.&lt;/p&gt;
+
+&lt;p&gt;None of these offerings address the callers privacy, and few document the details of their calling systems for developers. Surprisingly, none of these global VoIP carriers interoperate with each other. Why? Like most complicated problems, there is a complicated answer. I’m going to focus on codecs, which is a research subject that has been very active in the last few years.&lt;/p&gt;
+
+&lt;p&gt;Our friends at WhisperSystems recently did an &lt;a href=&#34;http://whispersystems.org/blog/client-side-audio-quality/&#34;&gt;in depth writeup&lt;/a&gt; on some challenges they had with the Speex codec when building RedPhone. RedPhone is the client application for one of a small group of secure VoIP carriers that address the challenging privacy issues around VoIP.&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project is also one of these carriers, with a public service called &lt;a href=&#34;https://ostel.me&#34;&gt;OSTel&lt;/a&gt;. We chose to leverage an existing open source client called &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;CSipSimple&lt;/a&gt;. This client has a modular design, which provides a wide selection of codecs. I’m going to focus on one in particular, &lt;a href=&#34;http://codec2.org/&#34;&gt;named Codec2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/02/spectrogram.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/02/spectrogram-300x231.png&#34; alt=&#34;spectrogram&#34; width=&#34;300&#34; height=&#34;231&#34; class=&#34;aligncenter size-medium wp-image-3338&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/02/spectrogram-300x231.png 300w, https://guardianproject.info/wp-content/uploads/2013/02/spectrogram.png 560w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Codec2 addresses a challenge in radio communications that has been around for longer than the Internet. Bandwidth. It might be appropriate to think of your cell phone as a radio to understand this example. When connected to a cellular data connection, the bandwidth is limited by the carrier’s packet switched radio technology. This may be GPRS, EDGE, 3G, 4G(LTE) to name a few lovely acronyms. If your VoIP call uses a codec that exceeds the upper bounds of this bandwidth, you start to hear side effects like dropouts or unintelligible transmission which probably will lead to a dropped call.&lt;/p&gt;
+
+&lt;p&gt;One way to address this problem is to shoot for the bottom. The lower bounds of the bandwidth of cellular data connections start to look a lot like more traditional radio. Shortwave radio, or HAM is the community that’s the closest to the technology behind Codec2. If a codec can be used to transmit &lt;a href=&#34;https://en.wikipedia.org/wiki/AMPRNet&#34;&gt;digitally encoded data&lt;/a&gt; over HAM, that means it is possible to “do VoIP” over a shortwave radio link. This opens up exciting new possibilities for secure voice over narrow bandwidth environments.&lt;/p&gt;
+
+&lt;p&gt;While a small part of the world enjoys plentiful wide band data connections in urban areas, coverage in many rural areas is less common. In this case shooting for the bottom of the bandwidth spectrum helps us keep our calls from dropping and our voices heard.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.csipsimple.plugins.codecs.pack1&amp;amp;feature=more_from_developer#?t=W251bGwsMSwyLDEwMiwiY29tLmNzaXBzaW1wbGUucGx1Z2lucy5jb2RlY3MucGFjazEiXQ..&#34;&gt;CSipSimple Codec Pack&lt;/a&gt; supports secure voice calls using Codec2 with the stable release on the &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.csipsimple&amp;amp;feature=more_from_developer#?t=W251bGwsMSwyLDEwMiwiY29tLmNzaXBzaW1wbGUiXQ..&#34;&gt;Google Play Store&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

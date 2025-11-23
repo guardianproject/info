@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ngi0 Pet on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/ngi0-pet/</link>
+    <description>Recent content in Ngi0 Pet on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/ngi0-pet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Data Sources: API Key Identifiers and BroadcastReceiver Declarations</title>
+      <link>https://guardianproject.github.io/info/2020/12/15/new-data-sources-api-key-identifiers-and-broadcastreceiver-declarations/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/12/15/new-data-sources-api-key-identifiers-and-broadcastreceiver-declarations/</guid>
+      <description>
+
+&lt;p&gt;A central focus of the &lt;a href=&#34;https://gitlab.com/trackingthetrackers/wiki&#34;&gt;Tracking the
+Trackers&lt;/a&gt; project has
+been to find simple ways to detect whether a given Android APK app
+file contains code which tracks the user.  The ideal scenario is a
+simple program that can scan the APK and tell a non-technical user
+whether it contains trackers, but as decades of experience with
+anti-virus and malware scanners have clearly demonstrated, scanners
+will always contain a large degree of approximation and guesswork.
+Tracking the Trackers grew out of experiments in using machine
+learning to detect malware.  This provided the spark to apply this to
+privacy issues.&lt;/p&gt;
+
+&lt;p&gt;The malware research clearly demonstrates that network domain names
+and code signatures are quite reliable techniques for identifying
+malware.  This also applies to tracking, since the majority of
+tracking happens via tracking companies&amp;rsquo; SDKs which send data to
+specific domain names.  The hard part is that code signatures and
+domain names are not easy to reliably extract, and are often easy to
+obfuscate when someone is looking to hide what an app is actually
+doing.  This is common in malware, and we are also starting to see
+obfuscation in the world of tracking.&lt;/p&gt;
+
+&lt;p&gt;Android gives us a break with its
+&lt;a href=&#34;https://developer.android.com/guide/topics/manifest/manifest-intro&#34;&gt;&lt;em&gt;AndroidManifest.xml&lt;/em&gt;&lt;/a&gt;.
+It is a hard requirement for Android apps so it is always there, it
+contains some key declarations that set up how the code is run, and it
+is easy to extract and parse.  So we put extra effort in thinking
+about the data that is contained in the &lt;em&gt;AndroidManifest.xml&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Towards the goal of simple scanners for tracking, we are excited by
+two new data sources that we found in the &lt;em&gt;AndroidManifest.xml&lt;/em&gt; that
+are useful signals for automatically detecting tracking in Android
+apps: API Key Identifiers and &lt;em&gt;BroadcastReceiver&lt;/em&gt; Declarations.&lt;/p&gt;
+
+&lt;h3 id=&#34;api-key-identifiers&#34;&gt;API Key Identifiers&lt;/h3&gt;
+
+&lt;p&gt;Tracking services provide their customers with servers to submit the
+data for processing and analytics.  These are usually part of the
+service&amp;rsquo;s API.  A common pattern for publicly accessible network APIs
+is to require the use of an API Key.  This key grants access to the
+service and provides an unique identifier for the customer so that the
+submitted data goes to the right place.  In order to submit the key to
+the API, the key data must be identified to the server somehow.  That
+is the API Key Identifier.  This is generally something that never
+changes, since changing it could mean locking out all customers.  For
+example, &lt;a href=&#34;https://developers.google.com/android/reference/com/google/android/gms/analytics/Tracker&#34;&gt;Google Firebase
+Analytics&lt;/a&gt;
+has used &lt;code&gt;ga_trackingId&lt;/code&gt; as its API Key Identifier for many years. API
+Key Identifiers are a great way to track trackers.  They are tiny and
+easy to extract.  Most services require them.  The entire set that we
+have found is small enough to fit into a single machine learning
+search space.  And it is quite unlikely that an app would include them
+by accident or without having set up a tracking service.&lt;/p&gt;
+
+&lt;p&gt;We also found &lt;a href=&#34;https://github.com/Exodus-Privacy/etip/issues/62#issuecomment-613964965&#34;&gt;some
+evidence&lt;/a&gt;
+of obfuscated API Key Identifiers, the source has not yet been
+identified.  We found many API Key Identifiers that were not the same
+but matched a pattern.  This pattern looks like it could be encoding
+some information:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;tt&gt;com.APpuz.lHMBA142332.APIKEY&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt&gt;com.BCcyZzWehh.IOfazFfwIH109433.APIKEY&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt&gt;com.CDwo.buYv134822.APIKEY&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt&gt;com.DErSuvPp.bEyhwTQb93737.APIKEY&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt&gt;com.EOoOEpvG.ZuepOuto31966.APIKEY&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt&gt;com.FIKDGlAZIZ.vrlGNzSLEm110206.APIKEY&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt&gt;com.GicPdlXU.iXbdAAkA69030.APIKEY&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;API Key Identifiers are now &lt;a href=&#34;https://github.com/Exodus-Privacy/etip/issues/62&#34;&gt;included as a data
+point&lt;/a&gt; gathered in
+&lt;a href=&#34;https://guardianproject.github.io/info/2020/12/11/%CE%B5xodus-etip-the-canonical-database-for-tracking-trackers/&#34;&gt;Exodus ETIP&lt;/a&gt;.
+If you have some clues about any of this, please &lt;a href=&#34;https://gitlab.com/trackingthetrackers/wiki/-/issues/6&#34;&gt;let us
+know&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;broadcastreceiver-declarations&#34;&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt; Declarations&lt;/h3&gt;
+
+&lt;p&gt;In Android, apps and the
+&lt;a href=&#34;https://developer.android.com/about/versions/11/reference/broadcast-intents-30&#34;&gt;system&lt;/a&gt;
+can publicly broadcast events, and any app can listen for these
+events.  Some of these events contain detailed information, like the
+&lt;a href=&#34;https://gitlab.com/trackingthetrackers/wiki/-/issues/5&#34;&gt;complete metadata&lt;/a&gt;
+about which song is currently playing.  Charging and battery status
+can be used to
+&lt;a href=&#34;https://blog.lukaszolejnik.com/battery-status-readout-as-a-privacy-risk/&#34;&gt;re-identify users&lt;/a&gt;.
+These broadcast events are generic Android &lt;code&gt;Intents&lt;/code&gt; which an app
+registers a receiver by name in order to get the info when it is sent.
+The specific pieces of interest are the
+&lt;em&gt;&lt;a href=&#34;https://developer.android.com/reference/android/content/BroadcastReceiver&#34;&gt;BroadcastReceiver&lt;/a&gt;
+&lt;a href=&#34;https://developer.android.com/reference/android/content/IntentFilter&#34;&gt;IntentFilter&lt;/a&gt;
+&lt;a href=&#34;https://developer.android.com/guide/components/intents-filters#Building&#34;&gt;Action&lt;/a&gt;&lt;/em&gt;
+names.&lt;/p&gt;
+
+&lt;p&gt;Like other bits in the &lt;em&gt;AndroidManifest.xml&lt;/em&gt;, the &lt;em&gt;BroadcastReceiver&lt;/em&gt;
+Declarations are easy to extract.  Unfortunately, &lt;em&gt;BroadcastReceiver&lt;/em&gt;
+Declarations are not nearly has definitive when it comes to marking
+tracking.  They are still worth including, since they are easy to
+extract, and the whole set of unique, extracted names is small enough
+to be used as a search space for the machine learning.&lt;/p&gt;
+
+&lt;p&gt;The scope of how apps can receive data via &lt;em&gt;BroadcastReceivers&lt;/em&gt; was
+also recently
+&lt;a href=&#34;https://developer.android.com/about/versions/oreo/background#broadcasts&#34;&gt;narrowed&lt;/a&gt;
+to a large degree by Google, due to privacy concerns.  The upside is
+that apps cannot receive system-wide broadcasts unless they are
+already running.  The downside is that scanners have to do static code
+analysis, and perhaps even dynamic analysis, in order to see which
+&lt;em&gt;BroadcastReceiver IntentFilter Action&lt;/em&gt; names an app has declared.&lt;/p&gt;
+
+&lt;h2 id=&#34;usage-considerations&#34;&gt;Usage Considerations&lt;/h2&gt;
+
+&lt;p&gt;The possibility of false positives is still there.  For example, if
+someone makes a &amp;ldquo;build flavor&amp;rdquo; that builds without tracker SDKs but
+forgets to exclude the API Key Identifiers, then a simple scanner will
+flag this as tracking, even though it could not be.  The tracker SDK
+is not included, which is the code that gathers and uploads the
+tracking data.  In this example, the developer can easily fix it after
+a scanner flags the app as a tracker, by moving the API key
+configuration out of the &amp;ldquo;build flavor&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;A trickier case to review is when an app includes opt-in tracking.  We
+believe that opt-in tracking and data reporting should not be flagged
+as a tracker, especially when the opt-in user experience makes it
+clear to the user what data is being gathered, and under what
+condition it is being sent.  In that case, the simple scanner will
+flag the app, since it contains the API Key Identifier.&lt;/p&gt;
+
+&lt;p&gt;This is why we think that machine learning is very promising for
+tracking apps that track us.  There are many good signals, but none of
+them definitely mark an app as a tracker.  They must always be
+considered as a group with the whole picture, and given well-labeled
+data, machine learning can do this kind of task quite accurately.&lt;/p&gt;
+
+&lt;h2 id=&#34;join-the-hunt&#34;&gt;Join the Hunt!&lt;/h2&gt;
+
+&lt;p&gt;Finding API Key Identifiers is work that can be done in bite-sized
+pieces, by people in their spare time.  Many if not most tracker SDKs
+require API keys in order to use their service, so start by looking
+through &lt;a href=&#34;https://etip.exodus-privacy.eu.org/trackers/all&#34;&gt;ETIP&lt;/a&gt; for
+entries that are missing &lt;code&gt;Api_key_ids&lt;/code&gt; entries.  Usually, this is
+documented in their SDK developer documentation.  There are also many
+SDKs which set the API Key via a &lt;a href=&#34;https://github.com/Exodus-Privacy/etip/issues/62#issuecomment-598272804&#34;&gt;method
+call&lt;/a&gt;
+rather than a declaration in an XML file.  In that case, the API Key
+Identifier might be found by reading the strings out of the JAR
+file. We also welcome more information about &lt;em&gt;BroadcastReceiver&lt;/em&gt;
+declarations.  We are tracking new data sources and approaches in our
+&lt;a href=&#34;https://gitlab.com/trackingthetrackers/wiki/-/issues&#34;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For any kind of mass scanning to be usable, future work should focus
+on expanding the set of easy to extract features, and finding which of
+those are useful.  Complicated and resource-intensive extractions like
+domain names, code signatures, and source/sink tracing still hold
+promise for delivering high accuracy, but would likely remain only
+useful when scanning individual or small sets of apps.&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was supported by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/thema/NGIZeroPET.html&#34;&gt;NGI Zero PET&lt;/a&gt; fund.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>εxodus ETIP: The Canonical Database for Tracking Trackers</title>
+      <link>https://guardianproject.github.io/info/2020/12/11/%CE%B5xodus-etip-the-canonical-database-for-tracking-trackers/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/12/11/%CE%B5xodus-etip-the-canonical-database-for-tracking-trackers/</guid>
+      <description>
+
+&lt;p&gt;There is a new story to add to the list of horrors of &lt;a href=&#34;https://en.wikipedia.org/wiki/Surveillance_capitalism&#34;&gt;Surveillance Capitalism&lt;/a&gt;: the United States&amp;rsquo; Military is &lt;a href=&#34;https://www.vice.com/en/article/jgqm5x/us-military-location-data-xmode-locate-x&#34;&gt;purchasing tracking and location data&lt;/a&gt; from companies that track many millions of people.  We believe the best solution starts with making people aware of the problem, with tools like &lt;a href=&#34;https://exodus-privacy.eu.org/&#34;&gt;Exodus Privacy&lt;/a&gt;.  Then they must have real options for stepping out of &amp;ldquo;big tech&amp;rdquo;, &lt;a href=&#34;https://www.theguardian.com/technology/2017/nov/28/android-apps-third-party-tracker-google-privacy-security-yale-university&#34;&gt;where tracking dominates&lt;/a&gt;.  &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; provides Android apps that are reviewed for tracking and other &lt;a href=&#34;https://f-droid.org/en/docs/Anti-Features/&#34;&gt;&amp;ldquo;anti-features&amp;rdquo;&lt;/a&gt;, and F-Droid is built into mobile platforms like &lt;a href=&#34;https://calyxos.org/&#34;&gt;CalyxOS&lt;/a&gt; that are free of proprietary, big tech software.&lt;/p&gt;
+
+&lt;p&gt;Right now, the most effective method for automatically analyzing
+Android APK files is to search for well known strings in the extracted
+contents of the APK.  Domain names are one example, like if an app is
+sending data to &lt;code&gt;google-analytics.com&lt;/code&gt; or &lt;code&gt;facebook.com&lt;/code&gt;, then it is
+clear that it is doing some kind of tracking.  These lists of well
+known strings must be created and managed by people, then gathered and
+reviewed.  &lt;a href=&#34;https://exodus-privacy.eu.org/&#34;&gt;Exodus Privacy&lt;/a&gt; created
+their &lt;a href=&#34;https://etip.exodus-privacy.eu.org/&#34;&gt;Exodus Tracker Investigation Platform
+(ETIP)&lt;/a&gt; for exactly this purpose.  &lt;a href=&#34;https://github.com/YalePrivacyLab/tracker-profiles&#34;&gt;Yale Privacy Lab&lt;/a&gt;, &lt;a href=&#34;https://github.com/jawz101/potentialTrackers&#34;&gt;&lt;em&gt;jawz101&lt;/em&gt;&lt;/a&gt;, Guardian Project, F-Droid, and others have centralized their efforts on εxodus ETIP as the canonical database for these strings.&lt;/p&gt;
+
+&lt;h2 id=&#34;searching-the-open-web-for-key-bits-of-info&#34;&gt;Searching the open web for key bits of info&lt;/h2&gt;
+
+&lt;p&gt;Since tracking is mostly done by companies trying to get customers,
+they advertise and document their services on the web.  We spent some
+time searching for that information to see what we could find.  We
+mostly searched using two bits of information: the API Key Identifiers
+that we
+&lt;a href=&#34;https://gitlab.com/trackingthetrackers/extracted-features/-/blob/master/axml-meta-data-run&#34;&gt;extracted&lt;/a&gt;
+and &amp;ldquo;top 10&amp;rdquo; lists of companies that provide tracking and related
+services.  From this, we added over 50 new service profiles to the
+εxodus ETIP database.  We also added upwards of 100 pieces of
+additional information to existing entries like SDK identity strings,
+links to documentation, privacy policies, and information on the
+company&amp;rsquo;s tracking methods.&lt;/p&gt;
+
+&lt;p&gt;From that research, we saved some choice promises from selected tracking companies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Glassbox offers customer experience analytics solutions that
+doesn’t just tell you what a customer is doing. It tells you why.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Target traffic from all sources, including the 50% from the hidden
+web where third-party cookies are blocked, to increase targetable
+inventory.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Collect customer and product data in real time, from anywhere&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;PlaytestCloud will capture the whole gameplay experience, turning
+you into a spectator with super powers.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;We record the players’ screen, their touches and what they have to
+say at all times.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;We curate geospatial ground truth data sets on a global scale&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Take segmentation and analysis from overnight to real-time. Our DMP
+works in-session for perfect match rates even on passerby traffic.&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;crowdsourcing-the-hunt-for-trackers&#34;&gt;Crowdsourcing the hunt for trackers&lt;/h2&gt;
+
+&lt;p&gt;Tracking the trackers is the kind of work that fits in very well with
+crowdsourcing.  Tracking companies are disappearing and renaming
+themselves all the time, in order to avoid too much scrutiny.  But
+they still must reach out to developers in order to find customers.
+That means we can find them.  Join in the search!  Non-technical
+people can also contribute, for example, when you read news about a
+tracking company,
+&lt;a href=&#34;https://etip.exodus-privacy.eu.org/trackers/all&#34;&gt;search&lt;/a&gt; to see if it
+is already in ETIP.  If not, &lt;a href=&#34;https://github.com/Exodus-Privacy/etip/issues&#34;&gt;file an
+issue&lt;/a&gt; to request it is
+added. Android developers with little bits of spare time can add code
+signatures, domain names, and other key technical details to ETIP.  Or
+even &lt;a href=&#34;https://gitlab.com/trackingthetrackers/scripts/-/blob/master/find-ga_trackingId.py&#34;&gt;code up quick scripts&lt;/a&gt;
+with new ideas for detecting tracking.&lt;/p&gt;
+
+&lt;p&gt;There are a number of forums where you can ask for assistance in
+getting started.  Hope to hear from you soon!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://exodus-privacy.eu.org/en/page/contribute/&#34;&gt;Contributing to Exodus Privacy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forum.f-droid.org&#34;&gt;F-Droid Forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/about/#contact&#34;&gt;F-Droid chat rooms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/contact/&#34;&gt;Guardian Project channels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was supported by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/thema/NGIZeroPET.html&#34;&gt;NGI Zero PET&lt;/a&gt; fund.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On the classification of tracking</title>
+      <link>https://guardianproject.github.io/info/2020/05/20/on-the-classification-of-tracking/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/05/20/on-the-classification-of-tracking/</guid>
+      <description>
+
+&lt;p&gt;This position paper tries to outline a framework for defining trackers
+in smart phones and lists mechanisms for identifying them.  It hopes
+to serve as the foundation for the work done in the
+Tracking-the-Trackers project.&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&#34;#section-1-levels-of-unwanted-behaviour&#34;&gt;section 1&lt;/a&gt; we start with
+an abstract analysis of levels of unwanted behaviour in the context of
+tracking.&lt;/p&gt;
+
+&lt;p&gt;Next, in &lt;a href=&#34;#section-2-an-attacker-s-perspective-and-a-taxonomy&#34;&gt;section
+2&lt;/a&gt;, we focus on
+an attacker’s perspective, on anonymity and pseudonymity. This
+foundation allows us to define terms which are needed throughout the
+paper.&lt;/p&gt;
+
+&lt;p&gt;Finally, we list proposed mechanisms for identifying trackers - based
+on the threat model (attacker) as well as the level of acceptable
+tracking.&lt;/p&gt;
+
+&lt;h2 id=&#34;scope&#34;&gt;Scope&lt;/h2&gt;
+
+&lt;p&gt;This document talks about trackers in general on mobile devices
+(smartphones). However, for the purpose of verification, we
+exclusively focus on Android apps. First of all, Android has a &lt;a href=&#34;https://www.idc.com/promo/smartphone-market-share/os&#34;&gt;85%
+global market
+share&lt;/a&gt;, secondly
+Android apps (APKs) are easier to work on.  With iOS apps, monitoring
+trackers (or instrumenting running code) is not as easy as on Android
+based systems.  Therefore, whenever any claims are made, we refer to
+the Android ecosystem. We however believe that very similar behaviours
+exist on iOS based systems.&lt;/p&gt;
+
+&lt;p&gt;Also, this document does not talk about contact tracing (as in
+Covid-19 contact tracing).&lt;/p&gt;
+
+&lt;h2 id=&#34;section-1-levels-of-unwanted-behaviour&#34;&gt;Section 1: Levels of unwanted behaviour&lt;/h2&gt;
+
+&lt;p&gt;The following section tries to categorize tracking respectively
+potential unwanted behaviour in apps by level of severity. This is
+done with a perspective for categories (labels) in a machine learning
+approach.&lt;/p&gt;
+
+&lt;h3 id=&#34;level-0-no-tracking-at-all-no-network-communication&#34;&gt;Level 0: No tracking at all / no network communication&lt;/h3&gt;
+
+&lt;p&gt;The most harmless situation: an app is downloaded or shared in an
+anonymous way (Tor, etc.) and only uses offline features and/or uses
+unlinkable side channels for updates (for example flash cards).  An
+example could be a map application which only displays a map and reads
+a phone’s GPS position to display the user’s location. There is no
+network communication at all and it still offers a useful service to
+its users. Map updates may be installed via flash cards or other
+physical transportation media. The app does not need to request a new
+map interactively from any server.&lt;/p&gt;
+
+&lt;h3 id=&#34;level-1-inadvertent-tracking&#34;&gt;Level 1: Inadvertent tracking&lt;/h3&gt;
+
+&lt;p&gt;This category includes tracking but the service provider and the app
+never intended to actually use the resulting data / meta-data for the
+purpose of tracking individuals.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: to illustrate this category, recall our map app from above. Only
+this time, it does request map (base layer) updates from a map server  every 7
+days. It also checks every day, if the map viewer app is the latest version.
+Based on this information, an attack could theoretically derive weekly IP
+address &amp;ldquo;beacons&amp;rdquo; from some user. Since the update check was not personalized,
+an attack can not be for sure, if an update request is from the same person or
+not.  Hence, a user still has potentially enough anonymity.&lt;/p&gt;
+
+&lt;p&gt;This and the next category probably (to be verified) constitute the majority of
+&amp;ldquo;clean&amp;rdquo; apps.&lt;/p&gt;
+
+&lt;h3 id=&#34;level-2-unintentional-tracking-by-use-of-chatty-libraries&#34;&gt;Level 2: Unintentional tracking by use of chatty libraries&lt;/h3&gt;
+
+&lt;p&gt;This category tracks users already quite heavily. The motive is not to increase
+ad revenue, build up user profiles to sell them nor to pass on the data to an
+aggregator. The unintentional tracking stems more from the fact that the app
+developer(s) used libraries which help them in developing the app and/or which
+are simply useful for the overall user experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: if we revisit our map example, we could imagine that the map app
+now also includes a search functionality. Users can type in the initial letters
+of a street name and for every letter they type, an AJAX HTTP request is sent
+to the map server. In addition, the developers felt that it would be useful to
+receive APM (application performance monitoring) logs as well as crash reports
+as well as a set of libraries to measure which features of an app the users
+actually use the most. These logs are sent periodically to some log collection
+server run by the developers.&lt;/p&gt;
+
+&lt;p&gt;Note that we still do not talk about (Google, Facebook etc) cookies here. We
+only talk about watching what users are typing (including backspace and
+corrections - an attacker can literally watch their thoughts via the global
+click-stream).&lt;/p&gt;
+
+&lt;h3 id=&#34;level-3-ad-revenue-focused-tracking-of-users-and-or-user-behaviour-pseudonymized&#34;&gt;Level 3: Ad-revenue focused tracking of users and/or user behaviour (pseudonymized)&lt;/h3&gt;
+
+&lt;p&gt;With this category, we are entering the area often described as surveillance
+capitalism: users are receiving cookies (if it&amp;rsquo;s a web based app) and or have
+unique IDs embedded in the app and these unique identifies (which are not tied
+to a person in the first place and hence are a &amp;lsquo;nym of the user) are being sent
+for nearly every network interaction. These IDs may (but not necessarily have
+to ) serve as authentication / authorization token ( see OAUTH 1,2, OpenID
+Connect) or may be purely auto-generated and simply serve for tracking actions
+users takes over the course of his day (so that the interest of a user may be
+extracted). These tracking IDs may then be forwarded and sold to aggregators.&lt;/p&gt;
+
+&lt;p&gt;While this may be acceptable to some users, since the techniques use
+pseudonymization, there is an implicit trap hidden in this approach: unique IDs
+are usually long enough so that they are unique globally (for example UUID
+strings). Thus, they can easily be correlated with real PII data and the
+pseudonymization vanishes instantly.&lt;/p&gt;
+
+&lt;h3 id=&#34;level-4-ad-revenue-focused-tracking-of-users-and-or-user-behaviour-linked-to-person&#34;&gt;Level 4: Ad-revenue focused tracking of users and/or user behaviour (linked to person)&lt;/h3&gt;
+
+&lt;p&gt;This category fits most non-open source commercial apps such as FB messenger,
+twitter, etc. (but it can occur as well in open source apps).  The business
+model is to fully understand a user, his/her interests, his/her behaviour,
+location (-&amp;gt; location tracking),  and very important - his/her circle of
+friends (contacts), etc.  The &amp;ldquo;gold&amp;rdquo; in the app gold rush is a users&amp;rsquo; interest
+and intent. In order to serve him/her adds better and faster (in the
+sub-millisecond range). Again, as in the previous category, these tracking IDs
+may then be forwarded and sold to aggregators.&lt;/p&gt;
+
+&lt;p&gt;We assume the vast majority of apps fall into this category.&lt;/p&gt;
+
+&lt;h3 id=&#34;level-5-full-scale-stealthy-tracking-surveilling-the-spouse-kids-state-actors-apt-attacks-general-surveillance-etc&#34;&gt;Level 5: Full scale stealthy tracking (surveilling the spouse, kids, state actors, APT attacks, general surveillance, etc.)&lt;/h3&gt;
+
+&lt;p&gt;This category would fit any technique which tries to secretly monitor as many
+actions on the whole smartphone (or potentially also via the smart phone on
+computers) of a person.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: kids tracking apps. Or hidden apps which check what your
+husband/wife is doing on his/her phone (and forwarding call logs , messages,
+etc.). State actors tracking dissidents, journalists or any chosen target also
+would use these techniques.&lt;/p&gt;
+
+&lt;p&gt;Often these apps can be identified by their extended permissions but not
+necessarily so. Well written apps in this category may be impossible to detect
+without major reverse engineering efforts.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Our work in the Tracking the Trackers project limits itself to Levels 3 and 4.
+We intentionally omit level 5, since this is a cat-and-mouse game with the
+attackers. It is rather trivial to change some behaviour for an attacker while
+our detection mechanism remains open source.&lt;/p&gt;
+
+&lt;h1 id=&#34;section-2-an-attacker-s-perspective-and-a-taxonomy&#34;&gt;Section 2: an attacker’s perspective and a taxonomy&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;There is nothing as practical as a good theory&amp;rdquo;
+ &amp;ndash; Kurt Lewin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This section builds upon the work of &lt;a href=&#34;http://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.31.pdf&#34;&gt;Pfitzmann and
+Hansen&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+who did (to the author&amp;rsquo;s knowledge) the first thorough comparison of
+terminology in literature with respect to the concepts of anonymity,
+linkability, pseudonymity, etc. We believe that their work is a good
+framework for thought. It also hints at some connections to Shannon&amp;rsquo;s
+information theory and probability. However, the paper does not follow
+through on the maths.&lt;/p&gt;
+
+&lt;p&gt;The core insight of their work is that - if you include metadata of
+communication flows over the internet, and if you assume an attacker which can
+observe the whole network (passively)&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, then true anonymity is nearly
+impossible to achieve for any regular app or program.&lt;/p&gt;
+
+&lt;p&gt;In this paper, we first briefly describe Pfitzmann&amp;rsquo;s and Hansens&amp;rsquo; model and
+especially their attacker&amp;rsquo;s model / threat model. We then replicate their
+definitions and add some definitions of our own. The next step is to link their
+definitions to our categories of tracking.&lt;/p&gt;
+
+&lt;p&gt;Equipped with these theoretical tools, we can proceed to define what we
+consider tracking in Android apps and derive feature sets for an ML based
+approach.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-pfitzmann-hansen-threat-model&#34;&gt;The Pfitzmann-Hansen threat model&lt;/h2&gt;
+
+&lt;p&gt;The threat model assumes a classical sender-receiver (source/sink) information
+model where the communication network is usually the internet. They assume an
+attacker to be yet another (possibly all-knowing) passive receiver. If messages
+pass the communication network, attributes (i.e. meta-data&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; such as time +
+time zone when a message was sent, received, the packet size, the protocols
+used etc) may be derived by a receiver. These attributes may become another new
+message.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;sender-receiver-model.png&#34; alt=&#34;sender-receiver-model&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we apply  Pfitzmann&amp;rsquo;s and Hansens&amp;rsquo; model to our levels, we arrive at the following insights:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Level 0&lt;/strong&gt;: the app is quiet → no harm, an all-knowing attacker can see the download of a level 0 app in the very best of cases.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Level 1&lt;/strong&gt;: the passive attack may derive IP addresses (and hence some ideas of a user’s location) and time stamps of when the app was in use. → the passive attacker can already track the user to some extent iff (if and only if) he also has access to the telecom’s IP address assignment database for that particular time window. This is usually only possible for nation state attackers. &lt;strong&gt;→&lt;/strong&gt; out of scope.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Level 2&lt;/strong&gt;: In this scenario, it already depends a lot if the app is sending APMs, crash reports, or other “chatty library” messages. If unencrypted, a passive attacker may - already in this category gain a lot of information on the user.  &lt;strong&gt;→&lt;/strong&gt; we propose to include detection of APMs/crash reporting libraries in future versions of the tracking the trackers project.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Level 3&lt;/strong&gt;: While it is nice to notice that the developers tried to pseudonymise tracking in this category, it does not help the user very much. As long as a passive attacker may detect the pseudonymized IDs in messages flowing to a central server, he wins. He can track the user. Countermeasure: a guaranteed rotation of these unique IDs/tokens every x seconds (at fixed intervals).
+→ we propose to look at this level of tracking in our research in order to identify unique tokens/API keys, unique IDs in apps which are easily detectable in order to guide the F-Droid store developer on how to avoid common pitfalls associated with fixed IDs/API keys etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Level 4&lt;/strong&gt;: for an attacker, this is the gold mine. Here, nearly every action may be passively observed. This is the case, we assume to be the most prevalent one in most apps (proof: just take a random app and look at the tcpdump stream of data it sends every second). We will aim to detect the most common tracking libraries.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Level 5&lt;/strong&gt;: here the attacker basically gains an upgrade from a passive attacker to an active attacker should he wish so. Game over for the user → out of scope for our research.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;We identified a rough categorization of 5 levels of tracking. We reasoned what
+information an attacker may gain at each level and we defined the scope of our
+research.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was supported by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/thema/NGIZeroPET.html&#34;&gt;NGI Zero PET&lt;/a&gt; fund.&lt;/em&gt;)&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;&amp;ldquo;Anonymity, Unlinkability, Undetectability, Unobservability, Pseudonymity, and Identity Management – A Consolidated Proposal for Terminology&amp;rdquo;, 2008, Andreas Pfitzmann (TU Dresden), Marit Hansen (ULD Kiel). &lt;a href=&#34;http://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.31.pdf&#34;&gt;http://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.31.pdf&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;An assumption which is not far fetched - see the Snowden papers.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;Compare with the quote &amp;ldquo;we kill people based on metadata&amp;rdquo; by the former CIA/NSA director Hayden. &lt;a href=&#34;https://abcnews.go.com/blogs/headlines/2014/05/ex-nsa-chief-we-kill-people-based-on-metadata&#34;&gt;https://abcnews.go.com/blogs/headlines/2014/05/ex-nsa-chief-we-kill-people-based-on-metadata&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Free Software Tooling for Android Feature Extraction</title>
+      <link>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</guid>
+      <description>
+
+&lt;p&gt;As part of the Tracking the Trackers project, we are inspecting
+thousands of Android apps to see what kinds of tracking we can find.
+We are looking at both the binary APK files as well as the source
+code.  Source code is of course easy to inspect, since it is already a
+form that is meant to be read and reviewed by people.  Android APK
+binaries are a very different story.  They are first and foremost a
+machine-executable format.  On top of that, many developers
+deliberately obfuscate as much as possible in the APK to resist
+inspection.&lt;/p&gt;
+
+&lt;p&gt;That means inspection requires using tools to look into the binary APK
+format.  There is actually a massive amount of work that goes into
+inspecting APKs because this is required in order to do useful malware
+analysis.  For the most part, these inspection techniques are the
+malware companies&amp;rsquo; &amp;ldquo;special sauce&amp;rdquo;, so they are proprietary and
+generally kept secret.  On top of that, malware companies keep secret
+a lot of the conclusions they about what is useful data to collect,
+and what should be ignored.&lt;/p&gt;
+
+&lt;p&gt;One key piece of the Tracking the Trackers project is to make all of
+research, tooling, and conclusions free, open, and publicly available.
+First and foremost, that means the tools must be free software.  They
+should also be easily installable so the barrier to entry for new
+inspectors is as low as possible.  We focus on getting software as
+part of Debian, since once there, so many people have access to those
+packages since Ubuntu, Kali, and so many other GNU/Linux distros are
+based on Debian.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-available-in-debian-already&#34;&gt;What is available in Debian already&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/2015/04/30/getting-android-tools-into-debian/&#34;&gt;Our
+work&lt;/a&gt;
+with the &lt;a href=&#34;https://wiki.debian.org/AndroidTools&#34;&gt;Debian Android Tools
+Team&lt;/a&gt; and &lt;a href=&#34;https://java.debian.net/&#34;&gt;Debian Java
+Team&lt;/a&gt; over the years means many key tools
+are already included in Debian and its derivatives, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;key Android SDK components like &lt;em&gt;apksigner&lt;/em&gt;, &lt;em&gt;dx&lt;/em&gt; and &lt;em&gt;android.jar&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;apktool&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;dexdump/dexlist&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;enjarify&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;LibScout&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;libsmali&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;procyon&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tools-we-are-using&#34;&gt;Tools we are using&lt;/h2&gt;
+
+&lt;p&gt;One key aspect of our research is that working with terabytes of APKs,
+this is necessary to be able to spot and map out as many trackers as
+possible.  Since feature extraction can be a slow and resource
+intensive process, we needed to use some tools that emphasize speed
+over flexibility.  Even with fast extraction tools, we still have to
+build up tailored processes to speed things up.  Some of these
+straightforward feature extraction processes would take months to run
+on ~3TB of APKs on a 32-thread machine with 144GB of RAM.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/reddr/LibScout&#34;&gt;LibScout&lt;/a&gt; - detect SDKs/libraries with their version in binary APKs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/avast/apkparser&#34;&gt;https://github.com/avast/apkparser&lt;/a&gt; - faster manifest/resources parser&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/avast/apkverifier&#34;&gt;https://github.com/avast/apkverifier&lt;/a&gt; - faster APK signature verifier&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jedisct1/ipgrep&#34;&gt;https://github.com/jedisct1/ipgrep&lt;/a&gt; - ipgrep extracts possibly obfuscated host names and IP addresses from text, resolves host names, and prints them, sorted by ASN.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/stricaud/faup&#34;&gt;https://github.com/stricaud/faup&lt;/a&gt; - Fast URL decoder library&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cryptax/droidlysis&#34;&gt;https://github.com/cryptax/droidlysis&lt;/a&gt; - Quickly analyze APKs for the most essential features: permissions, &lt;code&gt;Activity&lt;/code&gt; and &lt;code&gt;BroadcastReceiver&lt;/code&gt; names, and key method calls.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;apkverifier&lt;/em&gt;, &lt;em&gt;apkparser&lt;/em&gt;, and &lt;em&gt;droidlysis&lt;/em&gt; are generally useful, but
+not yet in Debian.  So we packaged them to make them easily available.
+They are currently in the &lt;a href=&#34;https://ftp-master.debian.org/new.html&#34;&gt;Debian
+NEW&lt;/a&gt; queue, awaiting final
+review before inclusion.&lt;/p&gt;
+
+&lt;p&gt;These tools have been assembled into scripts to run the actual feature
+extract processes, they are maintained in the
+&lt;a href=&#34;https://gitlab.com/trackingthetrackers/extracted-features&#34;&gt;https://gitlab.com/trackingthetrackers/extracted-features&lt;/a&gt; repo.  When
+the actual data generated is small enough and there are not copyright
+conflicts, the data is also included there.  Mostly, the data sets are
+too large and sometimes touch on copyright restrictions, so they are
+unfortunately not publicly available.&lt;/p&gt;
+
+&lt;p&gt;There are lots of other tasks, including managing large APK
+collections, gathering data to generate statistics about the features,
+and downloading publicly available tracker SDK.  Those scripts are
+maintained in &lt;a href=&#34;https://gitlab.com/trackingthetrackers/scripts&#34;&gt;https://gitlab.com/trackingthetrackers/scripts&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;gradle-plugins&#34;&gt;Gradle Plugins&lt;/h3&gt;
+
+&lt;p&gt;When working with source code, then it is possible to do other kinds
+of analysis.  Most Android apps are built with the Gradle tool.  So we
+reviewed a wide range of Gradle plugins, and found these three useful
+in our investigations.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin&#34;&gt;dependency-analysis-android-gradle-plugin&lt;/a&gt; - Produce a report of unused direct dependencies and used transitive dependencies.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jeremylong/DependencyCheck&#34;&gt;OWASP Dependency-Check&lt;/a&gt; - utility that detects publicly disclosed vulnerabilities in application dependencies&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vanniktech/gradle-dependency-graph-generator-plugin/&#34;&gt;gradle-dependency-graph-generator-plugin&lt;/a&gt; - Gradle plugin that lets you visualize your Java library dependencies in a graph.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tools-we-reviewed&#34;&gt;Tools we reviewed&lt;/h2&gt;
+
+&lt;p&gt;We looked at quite a few existing tools, and found many interesting
+and useful ones.  While they all produced useful output, many of these
+were not useful to this project because they were tailored around the
+use case of a person inspecting a small set of apps, so for example,
+they were too slow or did not produce machine readable output suitable
+for working with large APK collections.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/U039b/android_permissions_harvester&#34;&gt;android_permissions_harvester&lt;/a&gt; - for finding which permissions are used based on method calls&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cryptax/droidlysis&#34;&gt;droidlysis&lt;/a&gt; - cryptax&amp;rsquo;s (aXelle&amp;rsquo;s) tool: &amp;ldquo;DroidLysis is a property extractor for Android apps&amp;rdquo;. See also her &lt;a href=&#34;https://cfp.hack.lu/hacklu19/talk/ZZKNSM/&#34;&gt;talk at hacklu 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rednaga/APKiD&#34;&gt;APKiD&lt;/a&gt; - &amp;ldquo;In addition to detecting packers, obfuscators, and other weird stuff, it can also identify if an app was compiled by the standard Android compilers or dexlib&amp;rdquo;&lt;a href=&#34;https://rednaga.io/2016/07/31/detecting_pirated_and_malicious_android_apps_with_apkid/&#34;&gt;[1]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebook/redex&#34;&gt;redex&lt;/a&gt; - &amp;ldquo;taking advantage of Redex allows us to normalise the applications prior to analysis&amp;rdquo;&lt;a href=&#34;https://blog.quarkslab.com/android-application-diffing-analysis-of-modded-version.html&#34;&gt;[1]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kaitai-io/kaitai_struct_formats/blob/master/executable/dex.ksy&#34;&gt;kaitai_struct_formats&lt;/a&gt; - generic binary struct parser tool, useful for directly parsing Android &lt;em&gt;classes.dex&lt;/em&gt; files.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/armijnhemel/binaryanalysis-ng&#34;&gt;binaryanalysis-ng&lt;/a&gt; - a framework for unpacking files recursively and running checks on the unpacked files.  Great for someone who needs to inspect small sets of a wide variety of file types.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/plum-umd/redexer&#34;&gt;redexer&lt;/a&gt; - infer with which parameters the app uses certain permissions (we name this feature RefineDroid)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ytliu/apk-static-xref&#34;&gt;apk-static-xref&lt;/a&gt; - staticallly generate a cross-reference-graph (XRG) of a component (e.g., Service) of Android APK file&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dorneanu/smalisca&#34;&gt;smalisca&lt;/a&gt; - Static Code analysis tool that generates call graphs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was supported by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/thema/NGIZeroPET.html&#34;&gt;NGI Zero PET&lt;/a&gt; fund.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>&#34;Features&#34; for Finding Trackers</title>
+      <link>https://guardianproject.github.io/info/2020/04/28/features-for-finding-trackers/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/04/28/features-for-finding-trackers/</guid>
+      <description>
+
+&lt;p&gt;One key component of the Tracking the Trackers project is building a
+machine learning (ML) tool to aide humans to find tracking in Android
+apps. One of the most important pieces of developing a machine
+learning tool is figuring out which &amp;ldquo;features&amp;rdquo; should be fed to the
+machine learning algorithms. In this context, features are
+constrained data sets derived from the whole data set. In our case,
+the whole data set is terabytes of APKs. This post is an outline of
+the features that we are focusing on in this current project.&lt;/p&gt;
+
+&lt;h1 id=&#34;confirmed-features&#34;&gt;Confirmed Features&lt;/h1&gt;
+
+&lt;p&gt;These are features that we will definitely used, and already have good
+tooling to do the &lt;a href=&#34;https://en.wikipedia.org/wiki/Feature_extraction&#34;&gt;feature
+extraction&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;permissions&#34;&gt;Permissions&lt;/h2&gt;
+
+&lt;p&gt;Android apps must request
+&lt;a href=&#34;https://developer.android.com/guide/topics/permissions/overview&#34;&gt;permissions&lt;/a&gt;
+from the Android OS to access sensitive user data as well as certain
+system features. This can naturally give big hints towards tracking
+attempts. Basically an app which does not request any permissions will
+have a much harder time of tracking its users, while an app aimed
+towards tracking will require a myriad of permissions depending on the
+properties it desires to track (e.g. location, contacts, phone IDs,
+Bluetooth IDs, WiFi IDs, camera/microphone-access, call-logs and many
+more)&lt;/p&gt;
+
+&lt;h2 id=&#34;tracking-libraries-and-sdks&#34;&gt;Tracking Libraries and SDKs&lt;/h2&gt;
+
+&lt;p&gt;Code re-use plays a big role in any software project, why write your
+own tracking functionality when someone else has already implemented a
+whole library geared towards tracking users. This functionality is
+provided by different SDKs, which are pre-configured bundles of
+functionality which in turn (for this use case) are provided by
+tracking companies. The app developer often has to choose the desired
+functionality. While importing a tracking library is no guarantee for
+tracking activities it is certainly a red flag. We compare the
+libraries imported by the app with a list of known tracking libraries.&lt;/p&gt;
+
+&lt;h2 id=&#34;domain-names&#34;&gt;Domain Names&lt;/h2&gt;
+
+&lt;p&gt;Developers leave URLs in form of strings in the code to allow exchange
+of information with the world outside of the app. This can be used to
+transfer information about the user which in turn can be used for
+tracking. The domains often contain a hint about the purpose behind
+the data transfer (e.g. &lt;code&gt;https://www.google-analytics.com&lt;/code&gt;). Domain names
+are data sinks for collecting data, which gives us a clear point to
+focus on analyzing since collecting tracking data does not matter if
+it never leaves the local device, while domain names are the point in
+the code where data leaves the device and is sent to be collected and
+analyzed on a remote server. Combined with other features like
+permissions and seeing tracking libraries being imported a human
+reviewer could get a pretty good idea of what type of information
+could be sent. This human &amp;ldquo;gut feeling&amp;rdquo; of recognizing fishy
+combinations of features is something a neural network can often learn
+to approximate by being trained on a sufficient amount of training
+data. Domain names known to be relevant to tracking are collected and
+maintaned by &lt;a href=&#34;https://exodus-privacy.eu.org/en/&#34;&gt;Exodus Privacy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;new-experimental-features&#34;&gt;New Experimental Features&lt;/h1&gt;
+
+&lt;p&gt;These are features that show a lot of promise, but there is not
+existing tooling to easily work with them.  We are working to make it
+easier, and will cover that work in future posts.&lt;/p&gt;
+
+&lt;h2 id=&#34;api-key-id&#34;&gt;API Key ID&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/Exodus-Privacy/etip/issues/62&#34;&gt;&lt;em&gt;API Key ID&lt;/em&gt;&lt;/a&gt;
+is a string that identifies bit of authentication data for enabling
+access to an online service. Many online services require an &lt;em&gt;API Key&lt;/em&gt;
+even if a library or SDK is not required to access it. Even when the
+SDK is detected, the presence of an &lt;em&gt;API Key&lt;/em&gt; shows that the tracking
+function is actually enabled. For example, the Google Firebase SDK
+includes lots of functionality, not only tracking, each of which must
+be enabled with an &lt;em&gt;API Key&lt;/em&gt;. So the presence of Firebase is not
+enough to confirm tracking. A &lt;a href=&#34;https://en.epicenter.works/content/analysis-of-the-stopp-corona-app-improvements-through-expert-report&#34;&gt;current
+example&lt;/a&gt;
+of exactly this is the Austrian Red Cross&amp;rsquo; &lt;em&gt;Stopp Corona&lt;/em&gt; app to track
+the spread of covid-19 in Austria.&lt;/p&gt;
+
+&lt;h2 id=&#34;natural-language-processing-nlp&#34;&gt;Natural Language Processing (NLP)&lt;/h2&gt;
+
+&lt;p&gt;As mentioned under the section on domain names, domain names can
+already give a clear hint at intent. However since this property is
+well known, URLs might be obfuscated to hide this information. This
+domain name obfuscation is a well known technique in the world of
+malware, there is some evidence of use by tracking companies. In this
+case, a language model might learn that any URL that looks like random
+letters and numbers might be a sign to consider increasing the
+probability of classifying this app as tracking slightly, depending on
+other features like requested permissions, and imported tracking
+libraries.&lt;/p&gt;
+
+&lt;h2 id=&#34;broadcast-receivers&#34;&gt;Broadcast Receivers&lt;/h2&gt;
+
+&lt;p&gt;Android provides a system for data to be broadcast to all apps on a
+device, this is known as a &lt;a href=&#34;https://developer.android.com/guide/components/broadcasts&#34;&gt;&lt;em&gt;Broadcast
+Receiver&lt;/em&gt;&lt;/a&gt;.
+A wide range of data is available via this mechanism, both from the
+Android system as well as apps.  The Android OS broadcasts detailed
+information about the &lt;a href=&#34;https://developer.android.com/training/monitoring-device-state/battery-monitoring&#34;&gt;battery level, health, and charging
+status&lt;/a&gt;,
+including details of &lt;a href=&#34;https://developer.android.com/reference/android/os/BatteryManager#BATTERY_PLUGGED_AC&#34;&gt;how its
+charging&lt;/a&gt;.
+Many music apps will broadcast detailed information about the song
+being played, while also &lt;a href=&#34;https://gitlab.com/trackingthetrackers/wiki/-/issues/5&#34;&gt;collecting those
+events&lt;/a&gt; from
+the system and other apps.  The full extent of this activity is not
+well described, both what data is broadcasted, what apps are doing
+with it, and which apps are collecting.  As a feature, &lt;em&gt;Broadcast
+Receivers&lt;/em&gt; have a lot of promise since they fit the patterns of useful
+features for machine learning: small, globally unique, and easy to
+extract.&lt;/p&gt;
+
+&lt;h1 id=&#34;feature-extraction-process&#34;&gt;Feature Extraction Process&lt;/h1&gt;
+
+&lt;p&gt;We are using tabular data to feed to the machine learning processes,
+so the process of extracting and pre-processing different features for
+classification includes similar steps for every feature. The number of
+features that can reasonably be processed this way is limited to
+probably tens of thousands of features, or perhaps even hundreds of
+thousands. Therefore we have collections of the top-&lt;em&gt;n&lt;/em&gt; features where
+&lt;em&gt;n&lt;/em&gt; is in the range of thousands: For example, the top thousand
+tracking libraries, or all built-in permissions. This way we extract
+the features out of the binary APK file, and source code when
+available, and loop over our collections of known features. If the
+feature was found in the APK/source the tabular data will be a 1, else
+a 0.&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was supported by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/thema/NGIZeroPET.html&#34;&gt;NGI Zero PET&lt;/a&gt; fund.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking the Trackers: using machine learning to aid ethical decisions</title>
+      <link>https://guardianproject.github.io/info/2020/01/16/tracking-the-trackers-using-machine-learning-to-aid-ethical-decisions/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/01/16/tracking-the-trackers-using-machine-learning-to-aid-ethical-decisions/</guid>
+      <description>
+
+&lt;p&gt;F-Droid is a free software community app store that has been working since 2010 to make all forms of tracking and advertising visible to users. It has become the trusted name for privacy in Android, and app developers who sell based on privacy make the extra effort to get their apps included in the F-Droid.org collection. These include &lt;a href=&#34;https://f-droid.org/packages/com.nextcloud.client&#34;&gt;Nextcloud&lt;/a&gt;, Tor Browser, &lt;a href=&#34;https://f-droid.org/packages/de.thecode.android.tazreader&#34;&gt;TAZ.de&lt;/a&gt;, and &lt;a href=&#34;https://f-droid.org/packages/de.tutao.tutanota&#34;&gt;Tutanota&lt;/a&gt;.  Auditing apps for tracking is labor intensive and error prone, yet ever more in demand. F-Droid already has tools to aide contributors in this process, visible in the &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/merge_requests&#34;&gt;app submission&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/fdroid/rfp/issues&#34;&gt;Request For Packaging (RFP)&lt;/a&gt; issue trackers.  We also have functional prototypes of using machine learning to drastically speed up this process by augmenting humans, rather than replacing them.&lt;/p&gt;
+
+&lt;p&gt;Since the prime motivation of the F-Droid community is ethical software distribution, algorithms will never replace humans in making ethical decisions. We have also explored using machine learning to detect tracking in a more generic way, without manually compiled lists of tracking libraries. With this funding, we will improve the F-Droid tools, and make them generally available for any use case needing to reliably detect trackers in Android apps. This builds upon our &lt;a href=&#34;https://f-droid.org/en/2017/12/14/new-collaborations-on-exposing-tracking.html&#34;&gt;collaboration&lt;/a&gt; with &lt;a href=&#34;https://exodus-privacy.eu.org/&#34;&gt;Exodus Privacy&lt;/a&gt; and &lt;a href=&#34;https://github.com/reddr/LibScout&#34;&gt;LibScout&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This project comes out of some proof of concept work that &lt;a href=&#34;https://www.lo-res.org/~aaron/&#34;&gt;Aaron Kaplan&lt;/a&gt; and Hans-Christoph Steiner did, working with students in the Vienna Economics University&amp;rsquo;s (WU) &lt;a href=&#34;https://www.wu.ac.at/en/infobiz/teaching/sbwl-data-science&#34;&gt;Data Science Lab&lt;/a&gt;.  We focused on using machine learning with Android apps, first to detect malware, then second to detect tracking libraries.  It is of course ultimately an outgrowth of the F-Droid community&amp;rsquo;s efforts, and Guardian Project&amp;rsquo;s funded efforts for building systems without any tracking at all.  And special thanks to F-Droid founder &lt;a href=&#34;https://en.wikipedia.org/wiki/Ciaran_Gultnieks&#34;&gt;Ciaran Gultnieks&lt;/a&gt; for setting the ethical tone that inspired us all, back in &lt;a href=&#34;https://f-droid.org/2010/09/30/no-free-beer.html&#34;&gt;2010&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;funding&#34;&gt;Funding&lt;/h2&gt;
+
+&lt;p&gt;This current 44,500€ project is funded by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/PET/&#34;&gt;Privacy &amp;amp; Trust Enhancing Technologies (PET) Fund&lt;/a&gt;.  F-Droid has received large, dedicated, computing resources from the &lt;a href=&#34;https://cfarm.tetaneutral.net/machines/list/&#34;&gt;GCC Compile Farm&lt;/a&gt;, as well as some shared resources from Aaron Kaplan.  The budget will be used entirely to pay for people&amp;rsquo;s time for the research, development, and integration work:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Software development to get the existing LibScout and Exodus Privacy tools to be fully integrated into the F-Droid stack.&lt;/li&gt;
+&lt;li&gt;Machine learning research and development.&lt;/li&gt;
+&lt;li&gt;Community management, to coordinate with F-Droid contributors, app developers, tool developers, academic researchers, etc. as well to promote these tools&lt;/li&gt;
+&lt;li&gt;Finalize and package up all the useful parts of this project, which also means getting them included in Debian&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;related-efforts&#34;&gt;Related Efforts&lt;/h2&gt;
+
+&lt;p&gt;The general approach that we are taking here has been proven in the context of web pages. The Brave Browser includes &lt;a href=&#34;https://arxiv.org/pdf/1805.09155&#34;&gt;machine learning techniques&lt;/a&gt; for blocking ads and trackers in webpages.  It is a very similar idea to what we propose, but that example is embedded into a browser and only applies to web sites.&lt;/p&gt;
+
+&lt;p&gt;Exodus Privacy has manually compiled an extensive list of tracking libraries and domains for receiving user data.  It then uses this to scan app from Google Play.  Those results are then reported on their website.  Exodus Privacy would directly benefit from this work, since they could use the tools we will create.&lt;/p&gt;
+
+&lt;p&gt;Ghostery uses AI techniques to dynamically block ads in web pages. (&lt;a href=&#34;https://www.wired.com/story/ghostery-deploys-ai-in-fight-against-ad-trackers/&#34;&gt;https://www.wired.com/story/ghostery-deploys-ai-in-fight-against-ad-trackers/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;F-Droid has its own &lt;code&gt;fdroid scanner&lt;/code&gt; for doing checks based on manually prepared regular expressions.  This was combined with Exodus Privacy into F-Droid&amp;rsquo;s &lt;a href=&#34;https://gitlab.com/fdroid/rfp/issues&#34;&gt;issuebot&lt;/a&gt; which automatically scans apps that users request to be added to F-Droid.&lt;/p&gt;
+
+&lt;p&gt;LibScout uses machine learning to detect which versions of which libraries are included in an Android app (APK).  Using the list of libraries from Exodus Privacy, we worked with the LibScout author to create a functional prototype of a tracking library detector.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.sec.cs.tu-bs.de/pubs/2014-ndss.pdf&#34;&gt;Drebin&lt;/a&gt; clearly demonstrated that machine learning can be used to automatically classify Android apps based on certain aspects of their behavior. Their aim was to find malware.  Working with CERT.at and the WU Data Science Lab, we reproduced the results of the Drebin paper.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-challenges&#34;&gt;The challenges&lt;/h2&gt;
+
+&lt;p&gt;The biggest promise of this project is also the biggest technical challenge: finding a way to take datasets about what includes tracking libraries (e.g. F-Droid manual review, LibScout, Exodus Privacy), and turning that into a more general machine learning approach.  We will have to explore a wide range of possible features to include in the machine learning that are distinct from the tracking libraries themselves.  This general approach will provide tracking detection with more automation and less maintenance work of rerunning the machine learning on updated datasets as new tracking libraries are put into use.&lt;/p&gt;
+
+&lt;p&gt;The technical methods for determining whether an app includes trackers are well known and described.  They currently require knowledge of Android development.  Machine learning has been proven to be able to reliably spot trackers in apps, this project will turn working prototypes into production software, integrate it into F-Droid community-driven processes, and make these new tools easily available for anyone else to apply to their specific use cases. Given an Android apps downloaded from anywhere, these new tools will be able to mark which ones have any kind of tracking in them, with a very high degree of certainty.  With the portion of the project that involves applying LibScout, at this point, the idea has been proven with prototypes.  Applying it is a straightforward matter of bringing a proven prototype to production.&lt;/p&gt;
+
+&lt;p&gt;Organizations relying on proprietary apps that must follow strict data protection requirements, like banks under the GDPR, can use these tools to ensure that apps they rely on do not contain illegal tracking, and to ensure that such tracking is not added in future releases.&lt;/p&gt;
+
+&lt;p&gt;These techniques are also applicable to other platforms, like Progressive Web Apps and Apple iOS.  Bootstrapping another platform would require a marked training set of apps to feed to the machine learning.  F-Droid already provides this set, and Android is the most popular OS in the world, making Android the ideal platform to start this work.&lt;/p&gt;
+
+&lt;h2 id=&#34;humans-at-the-core&#34;&gt;Humans at the core&lt;/h2&gt;
+
+&lt;p&gt;F-Droid is a community run free software project very much in the same spirit as Debian.  The community has always aimed to provide 100% verified free software, built from source.  From the beginning, there was also an interest in other ethical considerations as well, these are expressed via F-Droid&amp;rsquo;s &amp;ldquo;Anti-Features&amp;rdquo;.  These are things tagged with Tracking (contains tracking), Ads (includes advertising), and NonFreeNet (requires a non-free network service).  The process of ensuring that the apps are 100% free software as well as tagging apps with the required Anti-Features is a manual process that many people contribute to, that is aided by quite a bit of automation.  This project fits directly into this existing ecosystem.  It will both quickly provide improvements in contributors&amp;rsquo; workflow based on the existing prototype, as well as experiments towards drastically improving the whole workflow of anyone working to track trackers.&lt;/p&gt;
+
+&lt;p&gt;F-Droid fits into the whole Android app ecosytem in a very specific role.   It is the one source that only distributes free software, and has built a well deserved reputation for not compromising on the ethics that guide the community.  This has led it to become the standard &amp;ldquo;clean set&amp;rdquo; in all manner of research into Android malware and tracking.  Many academic papers covering Android malware cite f-droid.org as the source of ground truth.&lt;/p&gt;
+
+&lt;p&gt;In closing, it is important to highlight that it is essential to keep humans always at the center of of these tools.  We are building tooling to augment humans, not replace them. Since the prime motivation of the F-Droid community is to build ethical software distribution, algorithms will never replace humans in making decisions based on ethics.  The tools can automate the technical details, so that contributors do not need to understand them in order to meaningfully help with the process.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

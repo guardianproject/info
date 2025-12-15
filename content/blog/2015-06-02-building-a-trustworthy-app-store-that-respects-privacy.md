@@ -22,6 +22,7 @@ tags:
   - pinning
   - privacy
   - security
+  - signing
   - xiaomi
 ---
 One core piece of our approach is thinking about very high risk situations, like Ai Weiwei or Edward Snowden, then making the tools for operating under that pressure as easy to use as possible. That means that we might occasionally come across as a little paranoid. It is important to dive into the depths of what might be possible. That is an essential step in evaluating what the risks and defenses are, and how to prioritize them. Making usable software is not just making things easy, but rather making tools for real world situations that are a simple as possible.

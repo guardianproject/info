@@ -28,7 +28,7 @@ tags:
 </p>
 
 <p style="text-align: left">
-  <span style="color: #000000"><span style="font-family: ArialMT,sans-serif"><span style="font-size: small">If you see me dancing or signing with my phone in my hand, I may not just be having a great time, but also creating an encryption key. Part of the issue with security is that it can often be difficult to implement or an added step in what users want to be an easy and seamless process. What if we can make secure and private communications fun and easy?</span></span></span>
+  <span style="color: #000000"><span style="font-family: ArialMT,sans-serif"><span style="font-size: small">If you see me dancing or singing with my phone in my hand, I may not just be having a great time, but also creating an encryption key. Part of the issue with security is that it can often be difficult to implement or an added step in what users want to be an easy and seamless process. What if we can make secure and private communications fun and easy?</span></span></span>
 </p>
 
 <span style="color: #000000"><span style="font-family: ArialMT,sans-serif"><span style="font-size: small">This past weekend, a bunch of members of the Guardian Project team found ourselves at the <a title="wall-street-journal-data-transparency-weekend-day" href="http://blogs.wsj.com/digits/2012/04/16/the-winners-of-wsjs-data-transparency-weekend/" target="_blank">Wall Street Journal Data Transparency Hackathon</a>. The Journal put this together in order to “invite developers to help build free Web tools that promote data transparency and control.” The tracks were divided into:</span></span></span>

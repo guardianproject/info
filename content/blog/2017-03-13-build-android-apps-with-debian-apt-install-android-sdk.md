@@ -16,6 +16,7 @@ tags:
   - open source
   - reproducible builds
   - security
+  - signing
 ---
 [<img src="https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg" alt="" width="150" height="150" class="alignright size-thumbnail wp-image-12920" srcset="https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/04/debian-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/04/debian-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/04/debian-230x230.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg 600w" sizes="(max-width: 150px) 100vw, 150px" />](https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg)  
 In Debian stretch, the upcoming new release, it is now possible to build Android apps using only packages from Debian. This will provide all of the tools needed to build an Android app targeting the “platform” <tt>android-23</tt> using the SDK <tt>build-tools</tt> 24.0.0. Those two are the only versions of “platform” and “build-tools” currently in Debian, but it is possible to use the Google binaries by installing them into <tt>/usr/lib/android-sdk</tt>.  

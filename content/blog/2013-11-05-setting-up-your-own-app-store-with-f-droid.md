@@ -20,6 +20,7 @@ tags:
   - mobile
   - open source
   - privacy
+  - signing
   - ubuntu
 ---
 (_This blog post as now been cooked into an <a href="https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo" target="_blank">updated HOWTO</a>_)

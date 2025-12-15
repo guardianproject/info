@@ -15,6 +15,7 @@ tags:
   - F-Droid
   - fdroid
   - security
+  - signing
 ---
 We now have an official <a href="https://f-droid.org" target="_blank">FDroid</a> app repository that is available via three separate methods, to guarantee access to a trusted distribution channel throughout the world! To start with, you must have FDroid installed. Right now, I recommend using the latest test release since it has support for Tor and .onion addresses (earlier versions should work for non-onion addresses):
 

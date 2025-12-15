@@ -13,6 +13,7 @@ tags:
   - identity
   - martusvmm
   - security
+  - signing
   - usability
 ---
 Following up on [our research on secure Intent interactions](https://guardianproject.info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/), we are now announcing the first working version of the <a href="https://github.com/guardianproject/TrustedIntents" target="_blank"><em>TrustedIntents</em></a> library for Android. It provides methods for checking any Intent for whether the sending and receiving app matches a specified set of trusted app providers. It does this by “pinning” to the signing certificate of the APKs. The developer includes this “pin” in the app, which includes the signing certificate to trust, then _TrustedIntents_ checks `Intent`s against the configured certificate pins. The library includes pins for the Guardian Project and Tor Project signing certificates. It is also easy to generate the pin using our new utility <a href="https://github.com/guardianproject/checkey" target="_blank">Checkey</a> (available in <a href="https://guardianproject.info/2014/06/30/new-official-guardian-project-app-repo-for-fdroid/" target="_blank">our FDroid repo</a> and in <a href="https://play.google.com/store/apps/details?id=info.guardianproject.checkey" target="_blank">Google Play</a>).

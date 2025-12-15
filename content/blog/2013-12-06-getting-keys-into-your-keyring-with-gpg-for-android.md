@@ -22,6 +22,7 @@ tags:
   - privacy
   - psst
   - security
+  - signing
 ---
 Now that you can have a full <a href="https://www.gnupg.org" target="_blank"><em>GnuPG</em></a> on your Android device with <a href="https://play.google.com/store/apps/details?id=info.guardianproject.gpg" target="_blank"><em>Gnu Privacy Guard</em></a> for Android, the next step is getting keys you need onto your device and included in _Gnu Privacy Guard_. We have tried to make it as easy as possible without compromising privacy, and have implemented a few approaches, while working on others. There are a few ways to get this done right now.
 

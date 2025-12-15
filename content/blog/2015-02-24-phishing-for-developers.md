@@ -14,6 +14,7 @@ tags:
   - Google Authenticator
   - phishing
   - security
+  - signing
   - two-factor authentication
 ---
 I recently received a very interesting phishing email directed at developers with apps in Google Play. One open question is, how targeted it was: did anyone else get this?

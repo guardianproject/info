@@ -16,6 +16,7 @@ tags:
   - fdroid
   - nfc
   - p2p
+  - signing
   - wifi
 ---
 There are many ideas of core architectures for providing digital services, each with their own advantages and disadvantages. I break it down along the lines of central servers, federated servers, and peer-to-peer, serverless systems. 

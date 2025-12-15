@@ -14,6 +14,7 @@ RedirectPermanent /tag	/tags/
 
 # redirect tags for confusing cases
 RedirectPermanent /tags/reproducible-build/ /tags/reproducible-builds/
+RedirectPermanent /tags/smart-card/ /tags/smartcard/
 
 # redirect Wordpress feed to Hugo feed
 RedirectMatch permanent "/feed/.*$" "/blog/index.xml"

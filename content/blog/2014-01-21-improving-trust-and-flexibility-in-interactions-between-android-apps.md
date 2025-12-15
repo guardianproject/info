@@ -16,6 +16,7 @@ tags:
   - mobile
   - obscuracam
   - securesmartcam
+  - signing
 ---
 <div id="attachment_12240" style="width: 310px" class="wp-caption alignright">
   <a href="https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents.png"><img aria-describedby="caption-attachment-12240" src="https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents-300x61.png" alt="Activity1 sending an Intent that either Activity2 or Activity3 can handle." width="300" height="61" class="size-medium wp-image-12240" srcset="https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents-300x61.png 300w, https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents.png 600w" sizes="(max-width: 300px) 100vw, 300px" /></a>

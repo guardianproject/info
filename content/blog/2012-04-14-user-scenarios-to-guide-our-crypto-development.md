@@ -15,6 +15,7 @@ tags:
   - otr
   - privacy
   - psst
+  - signing
   - usability
   - user scenarios
   - user stories

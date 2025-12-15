@@ -17,6 +17,7 @@ tags:
   - encryption
   - privacy
   - security
+  - signing
   - tor
 ---
 There is currently a <a href="http://lists.debian.org/debian-security/2013/10/msg00027.html" target="_blank">discussion underway on the Debian-security list</a> about adding TLS and Tor functionality to the official repositories (repos) of Debian packages that is highlighting how we need to update how we think about the risks when distributing software. Mostly, we are used to thinking about making sure that the software that the user is installing is the same exact software that has been posted for distribution. This is generally handled by signing the software package, then verifying that signature on the user’s machine. This is how it works on Mac OS X, Windows, Debian, etc. etc.

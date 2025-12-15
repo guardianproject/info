@@ -22,6 +22,7 @@ tags:
   - privacy
   - reproducible builds
   - security
+  - signing
   - tor
 ---
 _App stores can work well without any tracking at all_

@@ -21,7 +21,6 @@ tags:
   - rsa
   - security
   - signing
-  - signing key
   - TrustedIntents
 ---
   

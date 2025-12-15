@@ -18,7 +18,6 @@ tags:
   - identity
   - security
   - signing
-  - signing key
   - smartcard
   - tor
 ---

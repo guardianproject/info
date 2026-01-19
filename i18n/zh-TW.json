@@ -122,5 +122,9 @@
   {
     "id": "apps",
     "translation": "應用程式"
+  },
+  {
+    "id": "about",
+    "translation": "關於"
   }
 ]

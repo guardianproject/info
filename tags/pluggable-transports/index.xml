@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pluggable Transports on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/pluggable-transports/</link>
+    <description>Recent content in Pluggable Transports on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Mar 2023 10:00:00 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/pluggable-transports/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Arti, next-gen Tor on mobile</title>
+      <link>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</link>
+      <pubDate>Sat, 04 Mar 2023 10:00:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</guid>
+      <description>&lt;p&gt;For software projects with recurring bugs, efficiency or security issues
+there&amp;rsquo;s a joke making the rounds in the software industry: &amp;ldquo;Let&amp;rsquo;s re-write it
+in &lt;a href=&#34;https://en.wikipedia.org/wiki/Rust_(programming_language)&#34;&gt;Rust&lt;/a&gt;!&amp;rdquo;  It&amp;rsquo;s a
+fairly new low-level programming language with the declared goal to help
+developers avoid entire classes of bugs, security issues and other pitfalls.
+Re-writing software is very time consuming, so it rarely happens, especially
+when just one more fix will keep a project up and running.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://torproject.org&#34;&gt;Tor-Project&lt;/a&gt; was started in 2001 using the &lt;a href=&#34;https://en.wikipedia.org/wiki/C_(programming_language)&#34;&gt;C
+programming lanugage&lt;/a&gt;.
+However a few years ago they set out to actually re-write their project in
+Rust.  That projects codename is &lt;a href=&#34;https://arti.torproject.org/&#34;&gt;Arti&lt;/a&gt; and it
+was &lt;a href=&#34;https://blog.torproject.org/arti_100_released/&#34;&gt;first released&lt;/a&gt; in 2022.
+While Arti is working great, it doesn&amp;rsquo;t have all features of the original Tor
+implementation yet.  However, they are steadily working on getting there.  For
+example, rough &lt;a href=&#34;https://www.pluggabletransports.info/&#34;&gt;Pluggable Transports&lt;/a&gt;
+support was added to Arti in the recent 1.1.0 release.&lt;/p&gt;
+
+&lt;p&gt;We already have early &lt;a href=&#34;https://gitlab.com/guardianproject/arti-mobile-ex/&#34;&gt;test builds of
+Arti&lt;/a&gt; running on both
+Android and iOS.  The integration we came up with is pretty basic, but so far
+it seems to work reliable for accessing the Tor network.  Maintaining code for
+both iOS and Android in the same project will hopefully simplify shipping new
+Arti releases for us, make integrating Tor capabilities into any app simpler.
+To make it useful for the broader mobile developer community, we&amp;rsquo;re also
+investigating whether we can provide easy to use API bindings.  We&amp;rsquo;ve created a &lt;a href=&#34;https://gitlab.com/guardianproject/arti-mobile-ex/-/tree/main/android/sample&#34;&gt;sample
+app&lt;/a&gt;
+on Android to test and illustrate what a minimalistic integration of Arti looks
+like.  It&amp;rsquo;s as simple as adding a few lines of code.&lt;/p&gt;
+
+&lt;p&gt;Support for features like advanced censorship circumvention or onion services is not
+exactly straight forward on mobile operating systems, because they tend to be
+way more locked down than traditional computers.  Currently, we can successfully test
+pluggable transports in &amp;ldquo;managed&amp;rdquo; mode on old versions of Android.  However
+this technique will likely not work on the latest version of Android and never
+worked iOS to begin with.  We have shared our findings with the Arti developer
+team and hope they&amp;rsquo;ll work on getting us to full Pluggable Transports support, integraing
+with our existing &lt;a href=&#34;https://gitlab.com/guardianproject/IPtProxy&#34;&gt;IPtProxy Library&lt;/a&gt; soon.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MASQUE Review</title>
+      <link>https://guardianproject.github.io/info/2020/02/25/masque-review/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/02/25/masque-review/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://datatracker.ietf.org/wg/masque/about/&#34;&gt;MASQUE&lt;/a&gt; is set of related IETF drafts for specifying flexible proxying built into a standard webserver.  It is meant to be deployed on a server that is serving public websites, then this connection can be reused for proxying generic connections.  It is very much a work in progress, so any of this can change.  It is currently built on top of the QUIC+HTTP/3 and HTTP/2+TLS+TCP protocols.  The website and proxy packets look the same, and all connections to the webserver will be shared and reused, regardless of whether its a web page request or proxy traffic.  Each new proxy/website request will reuse any existing connection, providing a key reduction in metadata that makes all the packets blend together from the point of view of the network observer.  For example, to prevent the network observer from corrolating requests to proxy with the outbound request to the destination, a client could first connect to the website, then some time later, connect to the proxy.&lt;/p&gt;
+
+&lt;p&gt;QUIC is an Internet protocol on the verge of being standardized by the IETF, initially developed by Google.  Approximately 50% of traffic from Chrome browsers to Google sites currently use QUIC, so it already has some large scale adoption.  MASQUE is very similar to Meek and Encrypted &lt;em&gt;ClientHello&lt;/em&gt; (aka ECH or Encrypted SNI) domain fronting in how it functions, and all of them &amp;ldquo;hide in plain site&amp;rdquo; by making circumvention traffic look the same as traffic that censors are unwilling to block.  Like ESNI, MASQUE could be totally blocked in countries that deem QUIC too large a risk, e.g. China already blocks Google, so blocking the QUIC protocol right now would have very low cost to them.  So it must be rolled out and gain broad adoption before it can be an effective circumvention tool.&lt;/p&gt;
+
+&lt;p&gt;One use case is individuals enabling MASQUE on their personal websites, or organizations on their websites.  Another use case is to provide travelling employees with VPN access even with local networks are blocking VPNs based on the protocols (e.g. DPI to identify OpenVPN or Wireguard traffic).  Hosting providers and CDNs are not likely to to deploy MASQUE behind their main TLS certificate, as they are not willing to take the risk of getting blocked, just like with domain fronting.  MASQUE/QUIC does not change the domain fronting formula, instead, it just provides a different mechanism to leverage.&lt;/p&gt;
+
+&lt;p&gt;One key feature of MASQUE is a means of requiring authentication to the proxy before it gives any information back at all, including even if it exists.  It does this with a custom authentication method where the replies are defined only as &lt;code&gt;200 OK&lt;/code&gt; for successful authentication or &lt;code&gt;404 Not Found&lt;/code&gt; for everything else.  This is an idea that could also be used in Pluggable Transports in general.&lt;/p&gt;
+
+&lt;h2 id=&#34;relation-to-pluggable-transports&#34;&gt;Relation to Pluggable Transports&lt;/h2&gt;
+
+&lt;p&gt;The MASQUE Obsfuscation and HTTP Transport Authentication pieces of MASQUE are directly relevant to Pluggable Transports (PT), and could be included as part of the suite of standards for implementing complete PT solutions.  The non-discoverable authentication method is useful for any PT that already requires some kind of key and is served via an public network socket.   Standardizing the proxy setup and configuration makes sense to do both for MASQUE as much as PT.  Right now, there are a wide variety of proxy configurations for PT with circumvention and VPN service providers.&lt;/p&gt;
+
+&lt;h2 id=&#34;masque-as-onion-routing-and-tor-components&#34;&gt;MASQUE as Onion Routing and Tor Components&lt;/h2&gt;
+
+&lt;p&gt;There are also some efforts to expand the scope of MASQUE into a Tor replacement based on QUIC and HTTP CONNECT proxies.  This is a nice idea, but it should not distract from the core MASQUE pieces which will provide real value now.  This area of work is now represented by three drafts: HTTP Transport Authentication, MASQUE Obfuscation, and MASQUE.  Without a drastically expanded scope, MASQUE cannot replace Tor.  It can provide one key but small building block: the base mechanism for onion routing based on HTTP CONNECT and QUIC.  This could potentially allow Tor middle relay services to be implemented with a standard webserver like nginx with only a small custom plugin.  This would not change the requirement for all of the various Tor network management services.&lt;/p&gt;
+
+&lt;h2 id=&#34;sources&#34;&gt;Sources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-quic-tls-27&#34;&gt;https://tools.ietf.org/html/draft-ietf-quic-tls-27&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lists.torproject.org/pipermail/tor-dev/2018-March/013026.html&#34;&gt;https://lists.torproject.org/pipermail/tor-dev/2018-March/013026.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque-obfuscation.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque-obfuscation.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://davidschinazi.github.io/masque-drafts/draft-schinazi-httpbis-transport-auth.html&#34;&gt;https://davidschinazi.github.io/masque-drafts/draft-schinazi-httpbis-transport-auth.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mailarchive.ietf.org/arch/msg/masque/Cxh1phx6vFgn19jyANmt2YwLDqQ/&#34;&gt;https://mailarchive.ietf.org/arch/msg/masque/Cxh1phx6vFgn19jyANmt2YwLDqQ/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://datatracker.ietf.org/meeting/104/materials/slides-104-secdispatch-the-masque-protocol-draft-schinazi-masque-00&#34;&gt;https://datatracker.ietf.org/meeting/104/materials/slides-104-secdispatch-the-masque-protocol-draft-schinazi-masque-00&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/&#34;&gt;https://guardianproject.info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring possibilities of Pluggable Transports on Android</title>
+      <link>https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/</link>
+      <pubDate>Tue, 16 Apr 2019 15:00:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.pluggabletransports.info&#34;&gt;Pluggable Transports&lt;/a&gt; (PT) give software developers the means
+to establishing reliable connections in &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspection&#34;&gt;DPI-filtered&lt;/a&gt; network scenarios.
+A variety of techniques are supported, all available by implementing just one
+standard.  We looked into how this can be put to work in Android Apps.
+Hence we crafted 3 fully functional
+&lt;a href=&#34;https://gitlab.com/uniqx/anynews-android#anynews-pt&#34;&gt;PT-enabled&lt;/a&gt;
+&lt;a href=&#34;https://gitlab.com/uniqx/fdroidclient-pt#f-droid-pt&#34;&gt;prototype&lt;/a&gt;
+&lt;a href=&#34;https://gitlab.com/uniqx/apps-android-wikipedia-pt#wikipedia-android-pt&#34;&gt;Apps&lt;/a&gt;
+based on well known open source projects.&lt;/p&gt;
+
+&lt;p&gt;All our prototypes rely on &lt;a href=&#34;https://github.com/Yawning/obfs4&#34;&gt;obfs4&lt;/a&gt; which is a stable
+PT implementation widely deployed by Tor.  Guardian Project published
+a library called &lt;a href=&#34;https://github.com/guardianproject/AndroidPluggableTransports&#34;&gt;AndroidPluggableTransports&lt;/a&gt; for giving Android
+developers access easy access to PT.  Since we could not find any easily
+accessible sample code, we created a &lt;a href=&#34;https://gitlab.com/uniqx/pt-obfs4proxy-minimal-demo&#34;&gt;minimal demo project&lt;/a&gt;,
+illustrating a minimal setup for sending a HTTP-request through a OBFS4
+connection.&lt;/p&gt;
+
+&lt;p&gt;Conceptually, a PT establishes point to point connections between a PT client
+and a PT server.  PT servers are also known as &amp;ldquo;bridges&amp;rdquo;.  Most app back-ends,
+on the other hand, consist of multiple services and third party APIs.  We&amp;rsquo;re
+using SOCKS5 for multiplexing several connections over a single PT connection.
+A nice benefit to this approach is that client side integration looks similar
+to integrating Tor.&lt;/p&gt;
+
+&lt;p&gt;Every PT bridge generates an individual set of parameters. These are required
+for establishing connections to that bridge. In the context of Tor, these
+parameters are often referred to as a &amp;ldquo;bridge line&amp;rdquo;, which also implies a
+quasi-standardized formatting of these parameters.&lt;/p&gt;
+
+&lt;p&gt;Starting a PT connection involves several layers of proxying.  This diagram
+should give you an idea of what&amp;rsquo;s really going on when we start a PT
+connection:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;apt-setup-socks5.png&#34; alt=&#34;Schematic overview of establishing a PT connection used&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For many organizations it is not an option to run open proxies on the Internet
+because the bandwidth bills would be too large, or the security risks too high.
+This means we need to refine our SOCKS5 based approach a bit.  An obvious
+solution is to restrict usage of a PT bridge for one specific app.  This can
+be achieved simply by whitelisting outgoing connections on a bridge&amp;rsquo;s
+SOCKS5 server.  Some SOCKS5 servers have built-in support for this, so we&amp;rsquo;re
+covered.  We published the deployment script we&amp;rsquo;re using to set up our &lt;a href=&#34;https://gitlab.com/uniqx/pt-socks5-over-obfs4proxy&#34;&gt;SOCKS5-enabled bridges&lt;/a&gt; in our prototype environment.&lt;/p&gt;
+
+&lt;p&gt;While SOCKS5 support is widespread these days, some apps might still need to
+rely on HTTP-proxying.  That&amp;rsquo;s why we also included an embedded HTTP-proxy in
+our prototype Apps.  This proxy is configured to transparently send requests
+through the SOCK5 connection, which in turn runs through a PT connection.&lt;/p&gt;
+
+&lt;p&gt;All that required from the app developer&amp;rsquo;s perspective is to configure APT
+(and our soon-to-be upstreamed proxy helper library) with a bridge line,
+then configure all network connections to use a either a SOCKS5 or HTTP proxy.&lt;/p&gt;
+
+&lt;p&gt;We also looked into ways for distributing parameters for
+&lt;a href=&#34;https://github.com/guardianproject/AndroidPluggableTransports/pull/15&#34;&gt;PT connections&lt;/a&gt;. We started out by supporting bridge-lines as
+used in Tor browser and Orbot. Copy and pasting these is not very convenient
+and probably looks arcane to most users. So we came up with the idea of
+sharing bridge connection parameters as URLs.  HTTP(S) URLs are clickable in
+most Android Apps which makes sharing a lot easier.  Apps can subscribe to
+URL patterns.  This way it&amp;rsquo;s possible to intercept clicks on PT bridge
+parameters and configure PT settings accordingly. While these URLs still
+look somewhat arcane, they hopefully enable an improved user experience.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example of a bridge-line and how it looks like the in all URL formats:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Bridge obfs4 104.224.78.19:443 FD9DAEE45A2FDF70D462914A75ADE99A29957920 cert=LSOd9qOffpIFM4az+ueou7sY0eQRAsI/joW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA iat-mode=0
+bridge://obfs4@104.224.78.19:443/FD9DAEE45A2FDF70D462914A75ADE99A29957920?cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;amp;iat-mode=0
+http://bridge.onion/FD9DAEE45A2FDF70D462914A75ADE99A29957920?transport=obfs4&amp;amp;ip=104.224.78.19&amp;amp;port=443&amp;amp;cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;amp;iat-mode=0
+https://bridges.torproject.org/FD9DAEE45A2FDF70D462914A75ADE99A29957920?transport=obfs4&amp;amp;ip=104.224.78.19&amp;amp;port=443&amp;amp;cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;amp;iat-mode=0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There&amp;rsquo;s still some room for refining this. Tor Browser, for example, will
+happily accept but fail using our experimental SOCKS5 bridges.  Meanwhile our
+prototype apps will accept but fail to connect to Tor bridges.  So it would
+make sense to explore what metadata apps need to decide whether they are
+capable of connecting to a specific bridge or not.&lt;/p&gt;
+
+&lt;p&gt;An important missing puzzle piece in this regard also is to make sure DNS
+queries can not get filtered.  &lt;a href=&#34;https://en.wikipedia.org/wiki/DNS_over_HTTPS&#34;&gt;DNS-over-HTTPS (DoH)&lt;/a&gt; could be
+a suiteable mitigation. Further down the road, it certainly would make sense
+to look into sending DNS requests over pluggable transports too.&lt;/p&gt;
+
+&lt;p&gt;Many Android apps use &lt;code&gt;WebView&lt;/code&gt; for transparently embedding web content.
+Sadly, proxy support of &lt;code&gt;WebView&lt;/code&gt; is not very developer friendly.  We are
+shipping a well-tested helper library with &lt;a href=&#34;https://gitlab.com/guardianproject/NetCipher/#webview&#34;&gt;NetCipher&lt;/a&gt; to
+ease this pain.&lt;/p&gt;
+
+&lt;p&gt;We also explored an alternative approach to control the networking of
+Android&amp;rsquo;s &lt;code&gt;WebView&lt;/code&gt;. It&amp;rsquo;s possible to replace all network requests
+a &lt;code&gt;WebView&lt;/code&gt; sends by overriding &lt;code&gt;WebViewClient.shouldInterceptRequest()&lt;/code&gt;.
+This technique will work well for read-only (HTTP GET) connections.  Sending
+data (HTTP POST and PUT) is not feasible though. There is no interface,
+either exposed or hidden, in Android&amp;rsquo;s API which would allow us to retrieve
+a HTTP request&amp;rsquo;s body.&lt;/p&gt;
+
+&lt;p&gt;Finally here&amp;rsquo;s a list of alternative scenarios we came up with for using PT
+on Android.  They are not as generic as the approach we chose to implement in
+the prototype Apps.  In some situations these might be easier to implement,
+perform better or simply convey how PT can be put to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;apt-setup-scenarios.png&#34; alt=&#34;Schematic overview of establishing a PT connection used&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

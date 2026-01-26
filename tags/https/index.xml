@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Https on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/https/</link>
+    <description>Recent content in Https on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 16 Oct 2014 12:48:04 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reducing metadata leakage from software updates</title>
+      <link>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</link>
+      <pubDate>Thu, 16 Oct 2014 12:48:04 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: now you can &lt;a href=&#34;https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;do this with Tor Onion Services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.&lt;/p&gt;
+
+&lt;p&gt;That means that potentially private information is leaking. That private information could be which packages you have installed and which versions. That information can help an attacker figure out the best way to break into the target machine. Also, a unique fingerprint can be generated based on which packages a machine has installed, and that could help de-anonymize traffic that goes over Tor or other anonymity tool.&lt;/p&gt;
+
+&lt;p&gt;For people who use &lt;code&gt;apt-get&lt;/code&gt; in Debian, Ubuntu or any related GNU/Linux distro, there is a lot of metadata leaked to the internet when &lt;code&gt;apt-get&lt;/code&gt; contacts Debian repositories using a standard configuration. Mostly, that is because by default, the connections are unencrypted (http, ftp, rsync). The integrity of the package itself is not reason enough to use HTTPS since the GPG signing is much more reliable for that task. Here is how I break it down:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity&lt;br /&gt;
+(&lt;em&gt;software can be modified while being downloaded&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;repo availability&lt;br /&gt;
+( &lt;em&gt;whole sites or specific URL paths can be selectively blocked by governments and companies&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;package availability&lt;br /&gt;
+(&lt;em&gt;software security updates can be individually blocked&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;who’s downloading what package (&lt;em&gt;currently visible to anyone who can see the&lt;br /&gt;
+network traffic, including open wifi, etc.&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The current apt model covers #1 well, but only covers #2 and #3 with a two week window (the expiration date on the repo metadata). And it does not cover #4 at all. Using HTTPS for apt repos is a simple way to improve the security of all 4. It adds a weak backup security layer for #1, it makes it much more difficult for a portion of a large internet mirror to be seletively blocked (e.g. #2 and #3). For example, if you use HTTPS to mirrors.kernel.org, everything has to be blocked to block Debian repos or packages. And pipelining downloads through a reused HTTPS connection makes it very difficult for the network observer to track metadata about packages, #4).&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg&#34; alt=&#34;leakage control&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12701&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-100x100.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-200x200.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg 300w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Luckily, there are some relatively easy steps that greatly reduce the amount of metadata that is leaked: using HTTPS connections to the mirrors and running those connections through Tor. Setting &lt;code&gt;apt-get&lt;/code&gt; to pipeline as many transactions into a given HTTPS session is also useful, but currently only supported for HTTP and not HTTPS. Even though HTTPS/TLS has security weaknesses, it is a lot better than nothing, and can help provide real world protection. The downside is that it is not common for Debian machines to connect to apt mirrors using HTTPS, so that potentially marks the install as a machine worth targeting. There are more and more HTTPS mirrors, and more interest in using them, so I think in time, that will only lessen as a concern. Here are the HTTPS mirrors that I have had good luck with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mirrors.ece.ubc.ca&lt;/li&gt;
+&lt;li&gt;mirrors.kernel.org&lt;/li&gt;
+&lt;li&gt;mirror.cse.unsw.edu.au&lt;/li&gt;
+&lt;li&gt;spout.ussg.indiana.edu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On that note, here is the config that I have been using on a number of Debian-deriv machines, and it has been working well. It requires &lt;code&gt;apt-transport-https&lt;/code&gt;, and &lt;a href=&#34;http://ubuntuguide.org/wiki/Tor#Privoxy&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;privoxy&lt;/code&gt; setup as an HTTP proxy for Tor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;$ cat /etc/apt/apt.conf.d/99force-tor
+# force everything through privoxy HTTP proxy to tor
+Acquire::ftp::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::http::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::https::Proxy &#34;http://127.0.0.1:8118&#34;;
+
+# don&#39;t use SSL, its insecure, only use TLS
+Acquire::https::SslForceVersion &#34;TLSv1&#34;;
+&lt;/pre&gt;
+
+&lt;p&gt;I have found about 10 official Debian mirrors that have reliable HTTPS. Then I have a &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; target=&#34;_blank&#34;&gt;script that finds all of them&lt;/a&gt;, but many have self-signed certs and other issues. A number of the HTTPS mirrors also mirror the “security” archive, but I recommend that the &lt;code&gt;http&lt;/code&gt; URL to the official &lt;code&gt;security.debian.org&lt;/code&gt; repo is still included to make sure that security updates are promptly available.&lt;/p&gt;
+
+&lt;p&gt;I also have a test security repo running that is only available via an .onion address. I hope to encourage people to run official mirrors on a Tor Hidden Service, then HTTPS is not needed. Note that &lt;code&gt;apt-transport-tor&lt;/code&gt; is not required if a tor proxy is setup. To try mine, add it to your &lt;code&gt;sources.list&lt;/code&gt; (and make sure &lt;code&gt;apt-get&lt;/code&gt; is somehow using Tor). The order is important, that determines the priority of where &lt;code&gt;apt-get&lt;/code&gt; will get the package from is all other variables are the same.&lt;/p&gt;
+
+&lt;pre&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ wheezy/updates main
+deb http://security.debian.org/ wheezy/updates main
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Use the official &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Debian Tor Onion Services&lt;/a&gt; now, &lt;tt&gt;dju2peblv7upfz3q.onion&lt;/tt&gt; is deprecated and will be shut down!&lt;/p&gt;
+
+&lt;h3 id=&#34;a-specific-example-tails&#34;&gt;A specific example: TAILS&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png&#34; alt=&#34;Tails&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-12711&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-100x100.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/Tails.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://tails.boum.org/&#34; target=&#34;_blank&#34;&gt;TAILS&lt;/a&gt; is an operating system that aims to be as private and anonymous as possible to enable, and has allowed &lt;a href=&#34;https://freedom.press/blog/2014/04/help-support-little-known-privacy-tool-has-been-critical-journalists-reporting-nsa&#34; target=&#34;_blank&#34;&gt;journalists&lt;/a&gt; like &lt;a href=&#34;https://www.wired.com/2014/10/laura-poitras-crypto-tools-made-snowden-film-possible/&#34; target=&#34;_blank&#34;&gt;Laura Poitras&lt;/a&gt; to work without leaking information despite being targeted by some very skilled and highly resourced organizations. TAILS mostly works as a “live CD”, meaning the whole operating system is downloaded as a single “image” file, then either burned to a CD/DVD, or to a USB thumb drive. Updates work the same way. But TAILS has an optional feature to use the Debian package system to install and persist packages that are not included by default. TAILS does not use the default set of mirrors that a standard Debian install uses, it is set up by default with a range of possible Debian package sources, including the current stable version (called wheezy), the versions in testing, and packages backported to the stable version. That means that when this feature is used, TAILS fetches the metadata for all of those sections of Debian (stable/wheezy, testing, wheezy-backports, unstable).&lt;/p&gt;
+
+&lt;p&gt;Given all of the proven fingerprinting approaches, like using the font list from the browser, I think its a safe assumption that the apt-get metadata will also provide similar fingerprinting opportunities. For basic TAILS use, this is all avoided since updates are done via ISO images. But once a user installs packages via &lt;code&gt;apt-get&lt;/code&gt;, that changes since TAILS then goes out onto the internet to fetch all of the repo metadata. That goes over Tor since TAILS forces all network traffic over Tor, so that helps break the link between the machine downloading the updates and those that can see that machines internet traffic.&lt;/p&gt;
+
+&lt;p&gt;It seems quite likely that the set of mirrors and the order in which they are run will provide a way to identify the system as TAILS. As for identifying individual machines, &lt;code&gt;apt-get&lt;/code&gt; sends a lot of metadata, like language that the system is using, which packages need updates, etc. On top of the set of mirrors used, there is potentially enough metadata there to fingerprint the individual machine.&lt;/p&gt;
+
+&lt;p&gt;One open question is how the &lt;code&gt;apt-get&lt;/code&gt; downloads map to different Tor circuits. If all of the traffic from a given &lt;code&gt;apt-get&lt;/code&gt; session goes over a single Tor circuit, then the exit node, the mirror server, and any network observer that can see the traffic between those two can use that as the fingerprint.&lt;/p&gt;
+
+&lt;p&gt;To expand on this, if TAILS fetched all of its apt sources (wheezy, backports, testing, etc) via HTTPS from the same mirror (e.g. mirrors.kernel.org), then the exit node and network observer could not really distinguish the distro the machine making the connection was running since mirrors.kernel.org hosts many distro mirrors. There are two key parts here: using HTTPS to encrypt the data, and using HTTP pipelining so that network connections are reused for multiple downloads, rather than the default behavior of making a new HTTPS for each individual download. This setup would also prevent the custom pattern of apt sources from being distinguished since it would just show as downloading some series of files, and those files could be packages, package metadata, perl modules, source tarballs, etc.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tweaking HTTPS for Better Security</title>
+      <link>https://guardianproject.github.io/info/2014/02/12/tweaking-https-for-better-security/</link>
+      <pubDate>Wed, 12 Feb 2014 19:14:59 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/02/12/tweaking-https-for-better-security/</guid>
+      <description>&lt;p&gt;The HTTPS protocol is based on TLS and SSL, which are standard ways to negotiate encrypted connections. There is a lot of complexity in the protocols and lots of config options, but luckily most of the config options can be ignored since the defaults are fine. But there are some things worth tweaking to ensure that as many connections as possible are using reliable encryption ciphers while providing &lt;a href=&#34;https://en.wikipedia.org/wiki/Forward_secrecy&#34;&gt;forward secrecy&lt;/a&gt;. A connection with forward secrecy provides protection to past transactions even if the server’s HTTPS private key/certificate is stolen or compromised. This protects your users from large scale network observers that can store all traffic for later decryption, like governments, ISPs, telecoms, etc. From the server operator’s point of view, it means less risk of leaking users’ data, since even if the server is compromised, past network traffic will probably not be able to be encrypted.&lt;/p&gt;
+
+&lt;p&gt;In my situation, I was using our development site, &lt;a href=&#34;https://dev.guardianproject.info&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.guardianproject.info&#34;&gt;https://dev.guardianproject.info&lt;/a&gt;&lt;/a&gt;, as my test bed, it is Apache 2.2 and openssl 1.0.1 running on Ubuntu/precise 12.04 Long-Term Support, so that means that some of the options are more limited since this is an older release. On Debian, Ubuntu and other Debian-derivatives, you’ll only need to edit &lt;code&gt;/etc/apache2/mods-available/ssl.conf&lt;/code&gt;. There are more paranoid resources &lt;a href=&#34;https://community.qualys.com/blogs/securitylabs/2013/08/05/configuring-apache-nginx-and-openssl-for-forward-secrecy&#34; target=&#34;_blank&#34;&gt;for perfectly configuring your TLS&lt;/a&gt;, but we’re not ready to drop support for old browsers that only support SSLv3, and not TLS at all. So I went with this line to enable SSLv3 and TLSv1.0 and newer:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+SSLProtocol all -SSLv2&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;With TLS connections, the client and the server each present a list of encryption ciphers that represent the ciphers they each support in order of preference. This enables the client and server to choose a cipher that both support. Normally, the client’s list takes precedence over the server’s, but with many browsers that can be changed. Unfortunately it seems that Microsoft Internet Explorer (IE) ignores this and always uses the client’s preference first. Here’s how to make Apache request that the server preferences are preferred:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+SSLHonorCipherOrder on&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Next up is tweaking the server’s preference list to put ciphers that enable forward secrecy first (don’t worry if you don’t understand the next stuff about my rationale, my aim is to walk thru the process). This is done in most web servers using openssl-style cipher lists. I started out with &lt;a href=&#34;https://wiki.mozilla.org/Security/Server_Side_TLS&#34; target=&#34;_blank&#34;&gt;what Mozilla recommends&lt;/a&gt;, then pared down the list to remove AES-256 ciphers, since AES-128 is widely regarded to be faster, quite strong, and perhaps &lt;a href=&#34;https://wiki.mozilla.org/Security/Server_Side_TLS#Prioritization_logic&#34; target=&#34;_blank&#34;&gt;more resistant to timing attacks than AES-256&lt;/a&gt;. I also chose to remove RC4-based ciphers, since &lt;a href=&#34;https://wiki.mozilla.org/Security/Server_Side_TLS#RC4_weaknesses&#34; target=&#34;_blank&#34;&gt;RC4 might already be broken&lt;/a&gt;, and will only get worse with time. RC4 has historically been used to mitigate the “BEAST” attack, but that is &lt;a href=&#34;https://community.qualys.com/blogs/securitylabs/2013/09/10/is-beast-still-a-threat&#34; target=&#34;_blank&#34;&gt;mostly happening in the clients now&lt;/a&gt;. So with that I ended up with this cipher list (should be all one line in your config file):&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+SSLCipherSuite &amp;quot;ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-CAMELLIA128-SHA:AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:CAMELLIA128-SHA:DES-CBC3-SHA&amp;quot;&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing to make sure is that all of these ciphers are supported on your system. You can get the list of supported ciphers from &lt;code&gt;openssl ciphers&lt;/code&gt;. I used this command line to get them in a nice, alphabetized list:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+openssl ciphers | sed &#39;s,:,\n,g&#39; | sort&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly, we want to set the &lt;a href=&#34;https://www.owasp.org/index.php/HTTP_Strict_Transport_Security&#34; target=&#34;_blank&#34;&gt;HSTS&lt;/a&gt; header to tell the browser to always use HTTPS. To enforce this, a header is added to the collection of HTTP headers delivered when connecting to the HTTPS site. This header tells the client browser to always connect to the current domain using HTTPS. It includes an expiration date (aka &lt;code&gt;max-age&lt;/code&gt;) after which, the client browser will again allow HTTP connections to that domain. The server might then again redirect the HTTP connection to HTTPS, and again the client will get the HSTS header, and use only HTTPS until the expiration date comes again. To include this header in your Apache server, add this line:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+Header add Strict-Transport-Security &amp;quot;max-age=15768000;includeSubDomains&amp;quot;&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you can check the results of your work with Qualys’ handy SSL Test. You can see the result of my efforts here: &lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html?d=dev.guardianproject.info&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html?d=dev.guardianproject.info&#34;&gt;https://www.ssllabs.com/ssltest/analyze.html?d=dev.guardianproject.info&lt;/a&gt;&lt;/a&gt;. &lt;strong&gt;A-&lt;/strong&gt; is not bad. I tried for a good long while to get IE to use FS (Forward Secrecy) ciphers, but failed. IE does not respect the server-side cipher preferences. My guess is that the only way to get IE to use FS ciphers is to make a custom cipher list that does not include anything but FS ciphers and serve that only to IE. I know it is possible to do because &lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html?d=bitbucket.com&amp;s=131.103.20.172&#34; target=&#34;_blank&#34;&gt;bitbucket.com got an &lt;strong&gt;A+&lt;/strong&gt; for doing it&lt;/a&gt;. For a quick way to check out the cipher lists and HSTS header, look at &lt;a href=&#34;https://github.com/iSECPartners/sslyze&#34; target=&#34;_blank&#34;&gt;iSEC Partner’s sslyze&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is only a quick overview of the process to outline the general concepts. To find out more I recommend reading the source articles for this post, including specific directions for nginx and lighttpd:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla’s &lt;a href=&#34;https://wiki.mozilla.org/Security/Server_Side_TLS&#34; target=&#34;_blank&#34;&gt;Server-side TLS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Qualys’ &lt;a href=&#34;https://community.qualys.com/blogs/securitylabs/2013/08/05/configuring-apache-nginx-and-openssl-for-forward-secrecy&#34; target=&#34;_blank&#34;&gt;Configuring Apache, Nginx, and OpenSSL for Forward Secrecy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Qualys’ &lt;a href=&#34;https://community.qualys.com/blogs/securitylabs/2013/09/10/is-beast-still-a-threat&#34; target=&#34;_blank&#34;&gt;Is BEAST Still a Threat?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.owasp.org/index.php/HTTP_Strict_Transport_Security&#34; target=&#34;_blank&#34;&gt;HTTP Strict Transport Security&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Proposal for Secure Connection Notification on Android</title>
+      <link>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</link>
+      <pubDate>Thu, 15 Nov 2012 10:07:49 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</guid>
+      <description>&lt;p&gt;A major problem of mobile applications being increasingly used over web-based applications, is that there is no standard established for notifying the user of the state of security on the network connection. With a web browser, the evolution of the “lock” icon when an &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Secure&#34;&gt;HTTPS connection&lt;/a&gt; is made, has been one that evolved originally out of Netscape’s first implementation, to an adhoc, defact industry-standard way of letting the user know if their connection is secure. Beyond just a binary on/off, the lock icon is also the entry point into viewing more information about the digital security tokens, keys and certificates that are powering the connection – who authorized them, who requested them, and so on. More recently, with browsers such as Chrome, there has been the user of color schemes (Green is good, Red is bad), verified domain display and other indicators to help ensure the user knows when to trust their connection, and when to be wary.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2952&#34; title=&#34;Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail-300x182.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;182&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail-300x182.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/Firefox_3_rc1_Extended_Validation_SSL_address_bar_and_certificate_detail.png 429w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; &lt;em&gt;Firefox’s HTTPS certificate display&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;While many people claim that HTTPS/TLS/SSL are fundamentally broken, they are still an essential piece of basic frontline security on the web. In addition, when making a connection through a proxy network like Tor or a free VPN service, utilizing TLS/SSL is critical in making sure you network is not being intercepted along the way. The notification icon and related certificate viewing, is a critical component for the user, and one that is entirely missing in the mobile application space. The Android API does not provide a standardized method to share this information with the user, and the implementation on iOS is unclear, as well. Even worse, the proper implementation of a strong HTTP/S connection that properly handles verification of certificates, and provides an interactive option for users to accept or decline is entirely missing for the majority of mobile apps.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, we have added a Secure Connection Notification feature into our new &lt;a href=&#34;https://github.com/guardianproject/OnionKit&#34;&gt;OnionKit for Android&lt;/a&gt; library. Build upon our previous work on &lt;a href=&#34;https://github.com/guardianproject/cacert&#34;&gt;implementing custom Root CA Certificate stores for Android&lt;/a&gt;, this library not only provides a clear way to enable HTTP and SOCKS proxying for your network requests (to enable use with our app, &lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot: Tor for Android&lt;/a&gt;), but it also includes a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/library/src/info/guardianproject/onionkit/trust/StrongTrustManager.java&#34;&gt;StrongTrustManager&lt;/a&gt; and a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/library/src/info/guardianproject/onionkit/trust/StrongHttpsClient.java&#34;&gt;StrongHTTPSClient&lt;/a&gt; implementation, that works to defend against man-in-the-middle attacks, and other means to intercept a TLS or SSL connection between a mobile app and a remote server. Part of the defense, is providing a clear indicator to the user when a secure connection is in use.&lt;/p&gt;
+
+&lt;p&gt;We have provided a &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/sample/src/sample/onionkit/OnionKitSampleActivity.java&#34;&gt;sample Android app&lt;/a&gt; to demonstrate how simple it is to enable this capability. The screenshots below are from that app.&lt;/p&gt;
+
+&lt;p&gt;In this first screenshot, the app has connected to &lt;a href=&#34;https://check.torproject.org&#34;&gt;https://check.torproject.org&lt;/a&gt; and you can see in the Notification bar a “key” icon indicating there is a secure connection active.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-2947 alignnone&#34; title=&#34;noTor&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor-254x300.png&#34; alt=&#34;&#34; width=&#34;254&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/noTor-254x300.png 254w, https://guardianproject.info/wp-content/uploads/2012/11/noTor.png 800w&#34; sizes=&#34;(max-width: 254px) 100vw, 254px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When you drag the notification bar down, you can see a more complete view of the Secure Connection Notification (SCN) message, which indicates the connection is Active and shows a summary of the secure certificate information. In a recent update to the OnionKit SCN code, it also allows for the application to include its name and icon in this notification.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2948&#34; title=&#34;device-2012-11-08-204130&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130-300x139.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;139&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130-300x139.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-204130.png 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, you can tap on the SCN notification and bring up a larger pop-over view of the certificate information. We intend to develop this view further, to allow for better manual management of trust – meaning you may have the option to accept/decline or disable trust of this certificate or the certificate authority that provides it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-2949&#34; title=&#34;device-2012-11-08-203216&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216-300x222.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;222&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216-300x222.png 300w, https://guardianproject.info/wp-content/uploads/2012/11/device-2012-11-08-203216.png 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Beyond “Active” messages, the notification system will also warn or block connections that are deemed risky, invalid or otherwise unverifiable. You can use OnionKit in concert with the &lt;a href=&#34;https://github.com/ge0rg/MemorizingTrustManager&#34;&gt;MemorizingTrustManager&lt;/a&gt; to manually override this verification process, if your application is expected to often connect to servers with unverifiable certificates. Finally, using our &lt;a href=&#34;https://github.com/guardianproject/cacert&#34;&gt;CACert project&lt;/a&gt;, you can generate custom Root CA stores for use with OnionKit, that utilize your own certificate authorities, or a custom rolled set.&lt;/p&gt;
+
+&lt;p&gt;Our goal is not to overwhelm the user, but instead to provide them a simple notification so they can understand which applications have their best interests in mind, and which do not. It is amazing how many popular mobile apps transmit personal information using HTTP completely in plain text, in the clear, allowing any number of parties along the network path between the device and server to passively vacuum up this data. Users generally are not aware or do not care about this issue. It is up to the mobile application developer, to adopt an approach like our Secure Connection Notification, or to directly utilize our OnionKit library itself.&lt;/p&gt;
+
+&lt;p&gt;Finally, we would like to see Android and other mobile operating systems, adopt a system such as this device-wide, such that it becomes as standard as the desktop web browser HTTPS lock.&lt;/p&gt;
+
+&lt;p&gt;If you are a developer, please check out OnionKit for Android today, and let us know what you think: &lt;a href=&#34;https://github.com/guardianproject/OnionKit/&#34;&gt;https://github.com/guardianproject/OnionKit/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On Verifying Identity Using Cryptography</title>
+      <link>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</link>
+      <pubDate>Mon, 19 Mar 2012 11:27:51 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity.gif&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity-150x150.gif&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1684&#34; /&gt;&lt;/a&gt;One of the most important uses of cryptography these days is verifying the identity of the other side of a digital conversation. That conversation could be between two people using OTR-encrypted IM, a web browser showing a bank website, a Debian Developer uploading a package to the Debian build server, an ssh client logging into an ssh server, and on and on. In all of these cases, cryptography is used to ensure that the software is indeed receiving replies from the expected entity. This happens by checking the current cryptographic key against one that is known to be correct. That is essential to the whole process. If you see the key for the first time, you have no way of knowing whether that is indeed the key you are expecting because there is no point of reference.&lt;/p&gt;
+
+&lt;p&gt;In order for this validation of identity to work, there needs to be a method of verifying any given key and making it a reference. There are many ideas about how to do this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a trusted list of central certificate authorities like in HTTPS&lt;/li&gt;
+&lt;li&gt;key-signing parties where people validate and sign each other’s keys in person, like used with the OpenPGP Web of Trust&lt;/li&gt;
+&lt;li&gt;“trust on first use” (aka “Persistence of Pseudonym”), where you save the key the first time you see it, and then use that as a reference (this is the way most people use SSH)&lt;/li&gt;
+&lt;li&gt;fingerprint verification, where the two people wanting to communicate cryptographically use another channel to manually check each other’s key fingerprints, like a phone call (this is used a lot in OTR and OpenPGP)&lt;/li&gt;
+&lt;li&gt;the Socialist Millionaires’ Protocol (SMP), which is a combination of user-generated question/answer pairs with a cryptographic technique that lets each side confirm whether the other answered the question correctly without divulging any information (this was recently added to OTR and is implemented in Pidgin, Gibberbot, and maybe a couple other programs)&lt;/li&gt;
+&lt;li&gt;a manually confirmed shared secret like a short password (ZRTP uses this when starting secure phone calls)&lt;/li&gt;
+&lt;li&gt;whitelists of fingerprints of widely used keys (aka &lt;a href=&#34;http://www.imperialviolet.org/2011/05/04/pinning.html&#34; target=&#34;_blank&#34;&gt;public key pinning&lt;/a&gt;) (this was recently added to Chrome in the wake of the HTTPS certificate authority failures)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/fingerprint.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/fingerprint-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1686&#34; /&gt;&lt;/a&gt;Each of these techniques has its advantages and disadvantages, but generally the higher level of verification provided means the more work to do the process. Most people don’t need the high level of verification provided by OpenPGP key signing parties, but maybe if it was fun and much easier to do, then a lot more people would do it. “Trust on first use” is really easy to use and implement, and has been working pretty well for a lot of people who use SSH and OTR. But it has big shortcomings in environments where the state or other central authority that provides the internet infrastructure wants to spy on its users. HTTPS has proven to be quite easy to use, but it has also &lt;a href=&#34;https://www.eff.org/deeplinks/2011/08/iranian-man-middle-attack-against-google&#34; target=&#34;_blank&#34;&gt;proven&lt;/a&gt; to be &lt;a href=&#34;http://www.theregister.co.uk/2011/08/29/fraudulent_google_ssl_certificate/&#34; target=&#34;_blank&#34;&gt;quite&lt;/a&gt; &lt;a href=&#34;https://arstechnica.com//security/news/2011/03/how-the-comodo-certificate-fraud-calls-ca-trust-into-question.ars&#34; title=&#34;How the Comodo certificate fraud calls CA trust into question&#34; target=&#34;_blank&#34;&gt;breakable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Currently, each of these techniques described above is used as the sole means of verification, then the level of verification is represented as “verified” or “not verified”. This is definitely the way that HTTPS and SSH handle it. OTR is a bit different, it has 3 states of verification: “new key”, “unverified key” i.e. trusted on first use, or “verified”, and good OTR chat apps will represent these three states in the UI. Then OpenPGP is perhaps the opposite extreme: it provides both chains of verification signatures via the Web of Trust but also user-set “trust levels” from 0 to 255 for any given key.&lt;/p&gt;
+
+&lt;p&gt;Perhaps an answer is to cryptographically link up these different ways of verification and represent key verification as a continuum. Then when the possibility of linking in “trust on first use” and other techniques was there, people could gradually build up cryptographic trust as they needed it. Starting with “I have seen this key before”, then on to “I have gotten them to verify their OTR key with an SMP question/answer”, then to “I have an OpenPGP trust path to them”, to “I have met them in person and manually verified their key and identity”.&lt;/p&gt;
+
+&lt;p&gt;To go into technical detail as an example, GnuPG supports RSA, DSA, ECDSA, El Gamal, and other key types as subkeys for an OpenPGP key. Those core algorithms core basically all of the most common uses of cryptography, including HTTPS, SSH, OTR, and OpenPGP. The link between an OpenPGP key and its subkeys is perhaps the strongest link for verification that exists, so if a given person includes their OTR key, for example, into their OpenPGP key, that provides a strong cryptographic link between them, and one that is easily publicly sharable via the OpenPGP public keyservers. When two people verify their OTR keys using the SMP question/answer, this verification could then extend to their OpenPGP keys if their OTR keys were subkeys. (&lt;a href=&#34;http://web.monkeysphere.info&#34; target=&#34;_blank&#34;&gt;The Monkeysphere Project&lt;/a&gt; is one such implementation of this idea, using OpenPGP keys for SSH and HTTPS).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/verified.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/verified-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1685&#34; /&gt;&lt;/a&gt;Then the last piece of this puzzle is how to represent all of this complexity to the users. The essential part is to stop representing trust as binary yes/no. A one-dimensional continuum provides a lot more info and is a very commonly understood concept in computers (think progress bars). The hard part of this question is ranking the various techniques in how much progress they provide towards the goal of solid identity verification.&lt;/p&gt;
+
+&lt;p&gt;For this round of the &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; title=&#34;Portable Shared Security Tokens&#34; target=&#34;_blank&#34;&gt;PSST Project&lt;/a&gt;, we have focused on first allowing people to easily move around their OTR identities, then worked on testing out the idea of linking in all identity keys into an OpenPGP key. From what we have seen so far, we believe this is not only feasible but will provide a solid platform for linking together all these verification techniques and identity keys. And on top of that, with diligent attention to user experience and testing, it should be possible to create user interfaces that make navigating all of this a common, daily task for most computer users.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

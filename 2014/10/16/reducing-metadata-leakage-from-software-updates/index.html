@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Reducing metadata leakage from software updates - Guardian Project</title>
+  <meta property="og:title" content="Reducing metadata leakage from software updates" />
+  <meta name="twitter:title" content="Reducing metadata leakage from software updates" />
+  <meta name="description" content="Update: now you can do this with Tor Onion Services
+Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.">
+  <meta property="og:description" content="Update: now you can do this with Tor Onion Services
+Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.">
+  <meta name="twitter:description" content="Update: now you can do this with Tor Onion Services
+Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/",
+          "name": "Reducing metadata leakage from software updates"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hans-Christoph Steiner"
+  },
+  "headline": "Reducing metadata leakage from software updates",
+  "description" : "Update: now you can do this with Tor Onion Services
+Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.",
+  "inLanguage" : "en",
+  "wordCount": 1332,
+  "datePublished" : "2014-10-16T12:48:04",
+  "dateModified" : "2014-10-16T12:48:04",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "anonymity, bazaar, debian, distribution, encryption, gnu/linux, howto, https, linux, signing, ssl, tails, tor, ubuntu" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Reducing metadata leakage from software updates" />
+<meta property="og:description" content="Update: now you can do this with Tor Onion Services
+Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Reducing metadata leakage from software updates" />
+  <meta name="twitter:description" content="Update: now you can do this with Tor Onion Services
+Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Reducing metadata leakage from software updates</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on October 16, 2014
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Hans-Christoph Steiner
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p><strong>Update</strong>: now you can <a href="https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/">do this with Tor Onion Services</a></p>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2014/10/leakage.png"><img src="https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png" alt="leakage" width="300" height="199" class="alignright size-medium wp-image-12699" srcset="https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w" sizes="(max-width: 300px) 100vw, 300px" /></a>Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.</p>
+
+<p>That means that potentially private information is leaking. That private information could be which packages you have installed and which versions. That information can help an attacker figure out the best way to break into the target machine. Also, a unique fingerprint can be generated based on which packages a machine has installed, and that could help de-anonymize traffic that goes over Tor or other anonymity tool.</p>
+
+<p>For people who use <code>apt-get</code> in Debian, Ubuntu or any related GNU/Linux distro, there is a lot of metadata leaked to the internet when <code>apt-get</code> contacts Debian repositories using a standard configuration. Mostly, that is because by default, the connections are unencrypted (http, ftp, rsync). The integrity of the package itself is not reason enough to use HTTPS since the GPG signing is much more reliable for that task. Here is how I break it down:</p>
+
+<ol>
+<li>package authenticity<br />
+(<em>software can be modified while being downloaded</em>)</li>
+<li>repo availability<br />
+( <em>whole sites or specific URL paths can be selectively blocked by governments and companies</em>)</li>
+<li>package availability<br />
+(<em>software security updates can be individually blocked</em>)</li>
+<li>who’s downloading what package (<em>currently visible to anyone who can see the<br />
+network traffic, including open wifi, etc.</em>)</li>
+</ol>
+
+<p>The current apt model covers #1 well, but only covers #2 and #3 with a two week window (the expiration date on the repo metadata). And it does not cover #4 at all. Using HTTPS for apt repos is a simple way to improve the security of all 4. It adds a weak backup security layer for #1, it makes it much more difficult for a portion of a large internet mirror to be seletively blocked (e.g. #2 and #3). For example, if you use HTTPS to mirrors.kernel.org, everything has to be blocked to block Debian repos or packages. And pipelining downloads through a reused HTTPS connection makes it very difficult for the network observer to track metadata about packages, #4).<a href="https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg"><img src="https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg" alt="leakage control" width="150" height="150" class="alignright size-thumbnail wp-image-12701" srcset="https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-100x100.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-200x200.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg 300w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+
+<p>Luckily, there are some relatively easy steps that greatly reduce the amount of metadata that is leaked: using HTTPS connections to the mirrors and running those connections through Tor. Setting <code>apt-get</code> to pipeline as many transactions into a given HTTPS session is also useful, but currently only supported for HTTP and not HTTPS. Even though HTTPS/TLS has security weaknesses, it is a lot better than nothing, and can help provide real world protection. The downside is that it is not common for Debian machines to connect to apt mirrors using HTTPS, so that potentially marks the install as a machine worth targeting. There are more and more HTTPS mirrors, and more interest in using them, so I think in time, that will only lessen as a concern. Here are the HTTPS mirrors that I have had good luck with:</p>
+
+<ul>
+<li>mirrors.ece.ubc.ca</li>
+<li>mirrors.kernel.org</li>
+<li>mirror.cse.unsw.edu.au</li>
+<li>spout.ussg.indiana.edu</li>
+</ul>
+
+<p>On that note, here is the config that I have been using on a number of Debian-deriv machines, and it has been working well. It requires <code>apt-transport-https</code>, and <a href="http://ubuntuguide.org/wiki/Tor#Privoxy" target="_blank"><code>privoxy</code> setup as an HTTP proxy for Tor</a>.</p>
+
+<pre>$ cat /etc/apt/apt.conf.d/99force-tor
+# force everything through privoxy HTTP proxy to tor
+Acquire::ftp::Proxy "http://127.0.0.1:8118";
+Acquire::http::Proxy "http://127.0.0.1:8118";
+Acquire::https::Proxy "http://127.0.0.1:8118";
+
+# don't use SSL, its insecure, only use TLS
+Acquire::https::SslForceVersion "TLSv1";
+</pre>
+
+<p>I have found about 10 official Debian mirrors that have reliable HTTPS. Then I have a <a href="https://gist.github.com/eighthave/7285154" target="_blank">script that finds all of them</a>, but many have self-signed certs and other issues. A number of the HTTPS mirrors also mirror the “security” archive, but I recommend that the <code>http</code> URL to the official <code>security.debian.org</code> repo is still included to make sure that security updates are promptly available.</p>
+
+<p>I also have a test security repo running that is only available via an .onion address. I hope to encourage people to run official mirrors on a Tor Hidden Service, then HTTPS is not needed. Note that <code>apt-transport-tor</code> is not required if a tor proxy is setup. To try mine, add it to your <code>sources.list</code> (and make sure <code>apt-get</code> is somehow using Tor). The order is important, that determines the priority of where <code>apt-get</code> will get the package from is all other variables are the same.</p>
+
+<pre>deb http://dju2peblv7upfz3q.onion/debian-security/ wheezy/updates main
+deb http://security.debian.org/ wheezy/updates main
+</pre>
+
+<p><strong>Update</strong>: Use the official <a href="https://onion.debian.org/" target="_blank">Debian Tor Onion Services</a> now, <tt>dju2peblv7upfz3q.onion</tt> is deprecated and will be shut down!</p>
+
+<h3 id="a-specific-example-tails">A specific example: TAILS</h3>
+
+<p><a href="https://tails.boum.org/"><img src="https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png" alt="Tails" width="150" height="150" class="alignleft size-thumbnail wp-image-12711" srcset="https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-100x100.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/Tails.png 256w" sizes="(max-width: 150px) 100vw, 150px" /></a><a href="https://tails.boum.org/" target="_blank">TAILS</a> is an operating system that aims to be as private and anonymous as possible to enable, and has allowed <a href="https://freedom.press/blog/2014/04/help-support-little-known-privacy-tool-has-been-critical-journalists-reporting-nsa" target="_blank">journalists</a> like <a href="https://www.wired.com/2014/10/laura-poitras-crypto-tools-made-snowden-film-possible/" target="_blank">Laura Poitras</a> to work without leaking information despite being targeted by some very skilled and highly resourced organizations. TAILS mostly works as a “live CD”, meaning the whole operating system is downloaded as a single “image” file, then either burned to a CD/DVD, or to a USB thumb drive. Updates work the same way. But TAILS has an optional feature to use the Debian package system to install and persist packages that are not included by default. TAILS does not use the default set of mirrors that a standard Debian install uses, it is set up by default with a range of possible Debian package sources, including the current stable version (called wheezy), the versions in testing, and packages backported to the stable version. That means that when this feature is used, TAILS fetches the metadata for all of those sections of Debian (stable/wheezy, testing, wheezy-backports, unstable).</p>
+
+<p>Given all of the proven fingerprinting approaches, like using the font list from the browser, I think its a safe assumption that the apt-get metadata will also provide similar fingerprinting opportunities. For basic TAILS use, this is all avoided since updates are done via ISO images. But once a user installs packages via <code>apt-get</code>, that changes since TAILS then goes out onto the internet to fetch all of the repo metadata. That goes over Tor since TAILS forces all network traffic over Tor, so that helps break the link between the machine downloading the updates and those that can see that machines internet traffic.</p>
+
+<p>It seems quite likely that the set of mirrors and the order in which they are run will provide a way to identify the system as TAILS. As for identifying individual machines, <code>apt-get</code> sends a lot of metadata, like language that the system is using, which packages need updates, etc. On top of the set of mirrors used, there is potentially enough metadata there to fingerprint the individual machine.</p>
+
+<p>One open question is how the <code>apt-get</code> downloads map to different Tor circuits. If all of the traffic from a given <code>apt-get</code> session goes over a single Tor circuit, then the exit node, the mirror server, and any network observer that can see the traffic between those two can use that as the fingerprint.</p>
+
+<p>To expand on this, if TAILS fetched all of its apt sources (wheezy, backports, testing, etc) via HTTPS from the same mirror (e.g. mirrors.kernel.org), then the exit node and network observer could not really distinguish the distro the machine making the connection was running since mirrors.kernel.org hosts many distro mirrors. There are two key parts here: using HTTPS to encrypt the data, and using HTTP pipelining so that network connections are reused for multiple downloads, rather than the default behavior of making a new HTTPS for each individual download. This setup would also prevent the custom pattern of apt sources from being distinguished since it would just show as downloading some series of files, and those files could be packages, package metadata, perl modules, source tarballs, etc.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/anonymity/">anonymity</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/bazaar/">bazaar</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/debian/">debian</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/distribution/">distribution</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/encryption/">encryption</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/gnu/linux/">gnu/linux</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/howto/">howto</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/https/">https</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/linux/">linux</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/signing/">signing</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/ssl/">ssl</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/tails/">tails</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/tor/">tor</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/ubuntu/">ubuntu</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/" data-toggle="tooltip" data-placement="top" title="CipherKit updates: IOCipher and CacheWord">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2015/01/02/2015-is-the-year-of-bore-sec/" data-toggle="tooltip" data-placement="top" title="2015 is the Year of Bore-Sec">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

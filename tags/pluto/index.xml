@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pluto on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/pluto/</link>
+    <description>Recent content in Pluto on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/pluto/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Distribution in Depth: Mirrors as a Source of Resiliency</title>
+      <link>https://guardianproject.github.io/info/2020/12/07/distribution-in-depth-mirrors-as-a-source-of-resiliency/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/12/07/distribution-in-depth-mirrors-as-a-source-of-resiliency/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;distribution.png&#34; alt=&#34;distribution&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are many ways to get the apps and media, even when the Internet is expensive, slow, blocked, or even completely unavailable.  Censorshop circumvention tools from ShadowSocks to Pluggable Transports can evade blocks.  Sneakernets and &lt;a href=&#34;https://briarproject.org/how-it-works/&#34;&gt;nearby connections&lt;/a&gt; work without any network connection.   Hosting on Content Delivery Networks (CDNs) can make hosting drastically cheaper and faster.  One method that is often overlooked these days is repository mirrors.  Distribution setups that support mirrors give users the flexibility to find a huge array of solutions for problems when things are not just working.  Mirrors on local networks can be much cheaper. Mirrors in specific countries are often not blocked or filtered.  Mirrors can be copied onto portable storage and moved to where the users are.&lt;/p&gt;
+
+&lt;p&gt;Repository mirrors are mostly associated with free software distribution.  Every major GNU/Linux distro, from &lt;a href=&#34;https://www.debian.org/mirror/list&#34;&gt;Debian&lt;/a&gt; to Red Hat, is available via mirrors.  Software collections like Android/Java&amp;rsquo;s &lt;a href=&#34;https://maven.apache.org/guides/mini/guide-mirror-settings.html&#34;&gt;Maven Central&lt;/a&gt; and Python&amp;rsquo;s &lt;a href=&#34;https://pip.pypa.io/en/stable/reference/pip_install/#install-index-url&#34;&gt;PyPI&lt;/a&gt; support mirrors as well.  &lt;a href=&#34;https://f-droid.org/docs/Running_a_Mirror/&#34;&gt;F-Droid&lt;/a&gt;&amp;rsquo;s infrastructure is also based on mirrors.  Free software repositories have proven so valuable, that there generally are mirrors maintained around the world.  Local mirrors of popular free software repositories are available in all continents, and most countries.&lt;/p&gt;
+
+&lt;p&gt;Mirrors also add conceptual complexity to distribution. Users who are used to internet services that work without configuration could easily find discussion of mirrors confusing.  Mirrors also mean that more pieces of infrastructure need to be maintained.  When systems with mirrors are well organized, then this work can be broken into small chunks and widely shared, often even by volunteers, so that the overall system is resilient and maintainable even given limited resources.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:InternetPopulation2011_DeSabbata_Graham_OII.png&#34;&gt;&lt;img src=&#34;InternetPopulation2011_DeSabbata_Graham_OII.png&#34; alt=&#34;Internet Population&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;building-a-repository-mirror-system&#34;&gt;Building a repository mirror system&lt;/h2&gt;
+
+&lt;p&gt;Good mirroring support must disconnect how the data is downloaded from how the data integrity is maintained.  That means data can come from anywhere, and still be properly verified before installing it.  This is usually done with an index of files signed by public key cryptography.  A system built on HTTPS and trusted servers is a bad candidate for mirroring.  This separation of concerns is a key property of distribution systems that allows them to be flexible while still providing fully verified distribution.&lt;/p&gt;
+
+&lt;p&gt;Then, it must be easy for users to configure the mirrors in use.  First and foremost, mirrors should work without the user doing anything.  To ensure flexibility, they must be easy to add and remove, and new mirrors must be easy to find.  Both end users and repository operators should be able to specify mirrors to be used.  Legal requirements must also be heeded: the whole system should not require any service that might be legally questionable in any relevant jurisdiction.  EU users need GDPR-compliant services.  If the aim is to distribute in China, then the system cannot require Google Cloud Services.  Instead, it should also be able to go through cloud services available in China.&lt;/p&gt;
+
+&lt;p&gt;There are many CDN providers around the world.  Many of these are in effect a mirroring service since they are pointed at a website hosted elsewhere, then they just cache the files.  Some of them are so cheap, that files can be hosted there without signing up.  This happens usually via source code repositories like GitHub.  For example, &lt;a href=&#34;https://rawgit.org/&#34;&gt;RawGit&lt;/a&gt; is an automatic, CloudFlare-based CDN for any public repository on GitHub, &lt;a href=&#34;https://gitlab.com&#34;&gt;gitlab.com&lt;/a&gt;, or BitBucket.  These fronting services are so cheap because they are basically only serving cached files.  Each given URL is set to be served from the cache for a long time, up to a year, without checking whether the file has changed.  In order to taken advantage of this kind of CDN setup, the repository must be designed accordingly.  That means each unique file should have a unchanging, unique URL.  There are two techniques for doing that:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;For software, include the version in the filename or path, e.g. &lt;code&gt;org.fdroid.fdroid_1001000.apk&lt;/code&gt; or &lt;code&gt;1.10/F-Droid.apk&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;For media, include the hash of the file in the filename or path, e.g. &lt;code&gt;icon_CQLCGleZNBzDPRNp1ADs121TecVHFmUbe-Au-4qXF08=.png&lt;/code&gt; or &lt;code&gt;CQLCGleZNBzDPRNp1ADs121TecVHFmUbe-Au-4qXF08=/icon.png&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mirrors are like all internet services in that there are always potential &lt;a href=&#34;https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;privacy leaks&lt;/a&gt;.  To protect users&amp;rsquo; privacy, it is important to be conscious of the potential metadata that is visible in the system, and who can get that data.  For example, transport encryption (TLS, HTTPS, etc) should be used even though the signed index provides strong integrity checks in order to reduce metadata leaks.  Even with transport encryption, the oeprators of the mirrors themselves will still see the metadata.  When there are individual files that users can download, the mirror operators could see which user is downloading which file.  Metadata like the description of a movie file or the icon of an app will give away the user&amp;rsquo;s interests.  When possible, this metadata should be grouped to reduce the detail in the metadata.  Icons can be downloaded in random groups of 10.  Text descriptions can be grouped by language or other more neutral grouping.&lt;/p&gt;
+
+&lt;h2 id=&#34;example-f-droid&#34;&gt;Example: F-Droid&lt;/h2&gt;
+
+&lt;p&gt;F-Droid repositories, aka &amp;ldquo;&lt;em&gt;repos&lt;/em&gt;&amp;rdquo;, are collections of packages, mostly Android APK app files, which are organized in a single folder. That folder contains a signed index file which lists the entire contents and related metadata.  This includes descriptive texts, available graphics, etc.  This file structure is not tied to any particular transport method as long as the &lt;em&gt;repo/&lt;/em&gt; folder and index remain intact.  The client keeps the public key of the index signature locally, and uses that to verify the index file.  The index also includes a list of URLs pointing to official mirrors.  By default, repositories are served over HTTPS, but nothing in the repository structure requires that.  This allows F-Droid to use repositories from SD Cards and USB OTG thumb drives using &lt;code&gt;file:///&lt;/code&gt; URLs.  A mirror is then simply defined: a mirror is any available copy of a repository.  The mirror need not even be a complete copy, as long as the index and desired packages are present.&lt;/p&gt;
+
+&lt;p&gt;F-Droid automatically handles much of the process of using the mirrors.  Each &lt;em&gt;repo&lt;/em&gt; can include a list of official mirrors in the index.  The F-Droid Android client will automatically use all of the official mirrors, automatically choosing one when downloading based on which is working.  The mirrors are still completely configurable.  Anyone can create their own mirror, either via the &lt;code&gt;fdroid mirror&lt;/code&gt; command for any &lt;em&gt;repo&lt;/em&gt;, or &lt;a href=&#34;https://f-droid.org/docs/Running_a_Mirror/&#34;&gt;via &lt;em&gt;rsync&lt;/em&gt;&lt;/a&gt; for &lt;em&gt;f-droid.org&lt;/em&gt;.  And F-Droid user can then &lt;a href=&#34;https://f-droid.org/tutorials/add-repo/&#34;&gt;&amp;ldquo;subscribe&amp;rdquo;&lt;/a&gt; to any mirror via the mirror URL.  Users can also disable any mirror from the repo&amp;rsquo;s details screen.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://guardianproject.github.io/info/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;add-mirror.png&#34; alt=&#34;add-mirror.png&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;add-mirror.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;click a link to add a new mirror&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;br /&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;disable-mirrors.png&#34; alt=&#34;disable-mirrors.png&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;disable-mirrors.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;disabling selected mirrors&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://guardianproject.info/fdroid/&#34;&gt;Guardian Project&lt;/a&gt; &lt;em&gt;repo&lt;/em&gt; includes many of these mirroring channels: Mayfirst webserver, Tor Onion Service, Amazon AWS S3, GitHub Pages, GitHub Raw (Fastly), gitlab.com (Google Cloud), GitCDN/RawGit/Cloudflare and of course SD Card and USB OTG drives.  F-Droid &lt;em&gt;repos&lt;/em&gt; are particularly well suited to this kind of mirroring since the files are available via URLs that do not change.  CDNs cache files by URL.  &lt;a href=&#34;https://f-droid.org&#34;&gt;f-droid.org&lt;/a&gt; is mirrored by free software mirror providers around the world, including &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo&#34;&gt;China&lt;/a&gt;, &lt;a href=&#34;https://fdroid.tetaneutral.net/fdroid/repo&#34;&gt;France&lt;/a&gt;, &lt;a href=&#34;https://ftp.fau.de/fdroid/repo&#34;&gt;Germany&lt;/a&gt;, &lt;a href=&#34;https://plug-mirror.rcac.purdue.edu/fdroid/repo&#34;&gt;Indiana&lt;/a&gt;, &lt;a href=&#34;https://fdroid-mirror.calyxinstitute.org/fdroid/repo&#34;&gt;New York&lt;/a&gt;, &lt;a href=&#34;https://ftp.osuosl.org/pub/fdroid/repo&#34;&gt;Oregon&lt;/a&gt;, &lt;a href=&#34;https://mirror.librelabucm.org/fdroid/repo/&#34;&gt;Spain&lt;/a&gt;, &lt;a href=&#34;https://ftp.lysator.liu.se/pub/fdroid/repo&#34;&gt;Sweden&lt;/a&gt;, and &lt;a href=&#34;http://lysator7eknrfl47rlyxvgeamrv7ucefgrrlhk7rouv3sna25asetwid.onion/pub/fdroid/repo&#34;&gt;Tor Onion Service&lt;/a&gt;.  Local mirrors mean faster, more reliable, and cheaper access, especially for people in places like China, where government policy and infrastructure design works to downplay access to foreign networks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/&#34;&gt;Extensive&lt;/a&gt; &lt;a href=&#34;https://f-droid.org/docs/Security_Model/&#34;&gt;work&lt;/a&gt; has gone into making F-Droid the most private &amp;ldquo;app store&amp;rdquo; for mobile devices, including minimizing the potential metadata leaks.  There is a single index file for all the packages, and it includes all the translations.  So all users fetch the exact same index file, so the &lt;em&gt;f-droid.org&lt;/em&gt; and mirror servers cannot infer from the index which language the device is using.  The app icons and screenshsots are downloaded on demand, so that is one metadata leak.  F-Droid requires either HTTPS or Tor Onion Service transport encryption to minimize such leaks.&lt;/p&gt;
+
+&lt;p&gt;F-Droid &lt;em&gt;repos&lt;/em&gt; default to keeping 3 releases per package available. Also, the index is not tied to the mirror, the F-Droid Android client will happily fetch the index from one mirror, and each package from other mirrors.  F-Droid will keep searching all the mirrors for a package until it finds it, so a mirror can be out of date yet still useful. Today&amp;rsquo;s update might only bring a couple new files, even if a mirror is delayed, it will still have all the previous content.  That property ensures that distribution is not an all-or-nothing prospect.  Instead, it can still transparently provide some level of access when there are troubles with the internet.  This makes lots of different kinds of relibility problems look quite similar from the point of view of the F-Droid client app: outages, network troubles, blocks, and even working around expensive data.&lt;/p&gt;
+
+&lt;p&gt;Someone with a Raspberry Pi with an SD Card can be a local mirror server, even if they have irregular access to the internet.  The Raspberry Pi can be easily brought to unmetered WiFi, then synced up with the main &lt;em&gt;repo&lt;/em&gt; using &lt;code&gt;fdroid mirror&lt;/code&gt; or &lt;code&gt;rsync&lt;/code&gt;.  Then when it is brought back to its home, the local users can get apps and updates even if there is no active internet connection in the area.  This also works with &lt;a href=&#34;https://en.wikipedia.org/wiki/USB_On-The-Go&#34;&gt;USB OTG&lt;/a&gt; flash drives.  A whole &lt;em&gt;repo&lt;/em&gt; can be zipped up and broadcasted using a service like the satellite TV &amp;ldquo;&lt;a href=&#34;https://knapsackforhope.org/&#34;&gt;Knapsack for Hope&lt;/a&gt;&amp;rdquo; service, their app already makes it easy to decode the broadcast and write it to USB OTG.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;usb-otg-mirror.png&#34; alt=&#34;usb-otg-mirror.png&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;usb-otg-mirror.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;A f-droid.org mirror available via USB OTG drive.&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;example-ubuntu&#34;&gt;Example: Ubuntu&lt;/h2&gt;
+
+&lt;p&gt;Ubuntu uses a system of mixed mirrors and CDNs &lt;a href=&#34;https://wiki.ubuntu.com/Mirrors#Country_mirror_requirements&#34;&gt;based on standardized domain names&lt;/a&gt;, which includes some level of &lt;a href=&#34;https://wiki.ubuntu.com/DynamicMirrorDecisions&#34;&gt;automatic setup&lt;/a&gt; based on measurement.  The domain name is &lt;code&gt;COUNTRYCODE.archive.ubuntu.com&lt;/code&gt;.  During install, the user chooses the country to set up the device accordingly.  The mirror is then set to use the mirror domain name based on that country, e.g. a device set to Uganda would use &lt;code&gt;ug.archive.ubuntu.com&lt;/code&gt;.  When a country-specific mirrors exists, that domain name points to it.  Ubuntu has over 50 in-country mirrors. Otherwise, any other &lt;code&gt;*.archive.ubuntu.com&lt;/code&gt; domain name points to a mirror running on a major CDN.  This setup allows Ubuntu to change the mirror server-side setup separately from the user&amp;rsquo;s selection on their device.  Additionally, users are then still free to edit the configuration and use any URL that they want, including pointing to local media like CDROMs and thumb drives.  And anyone can &lt;a href=&#34;https://wiki.ubuntu.com/Mirrors&#34;&gt;create their own mirror&lt;/a&gt; without first getting permission.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&#34;select best server&#34; src=&#34;select-best-server.png&#34; width=&#34;100%&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;Select-Ubuntu-Mirror-Archive.png&#34; alt=&#34;Select-Ubuntu-Mirror-Archive&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

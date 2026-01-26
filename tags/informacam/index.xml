@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Informacam on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/informacam/</link>
+    <description>Recent content in Informacam on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 21 Jan 2014 13:51:57 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/informacam/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving trust and flexibility in interactions between Android apps</title>
+      <link>https://guardianproject.github.io/info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/</link>
+      <pubDate>Tue, 21 Jan 2014 13:51:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/</guid>
+      <description>&lt;div id=&#34;attachment_12240&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12240&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents-300x61.png&#34; alt=&#34;Activity1 sending an Intent that either Activity2 or Activity3 can handle.&#34; width=&#34;300&#34; height=&#34;61&#34; class=&#34;size-medium wp-image-12240&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents-300x61.png 300w, https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents.png 600w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12240&#34; class=&#34;wp-caption-text&#34;&gt;
+    &lt;code&gt;Activity1&lt;/code&gt; sending an &lt;code&gt;Intent&lt;/code&gt; that either &lt;code&gt;Activity2&lt;/code&gt; or &lt;code&gt;Activity3&lt;/code&gt; can handle.
+  &lt;/p&gt;
+&lt;/div&gt;Android provides a flexible system of messaging between apps in the form of 
+
+`&lt;a href=&#34;https://developer.android.com/guide/components/intents-filters.html&#34; target=&#34;_blank&#34;&gt;Intent&lt;/a&gt;`s. It also provides the framework for reusing large chunks of apps based on the `&lt;a href=&#34;https://developer.android.com/reference/android/app/Activity.html&#34; target=&#34;_blank&#34;&gt;Activity&lt;/a&gt;` class. `Intent`s are the messages that make the requests, and `Activity`s are the basic chunk of functionality in an app, including its interface. This combination allows apps to reuse large chunks of functionality while keeping the user experience seamless and fluent. For example, an app can send an Intent to request a camera `Activity` to prompt the user to take a picture, and that process can feel integrated into the original app that made the request. Another common use of this paradigm is choosing account information from the contacts database (aka the _People_ app). When a user is composing an new email, they will want to select who the message gets sent to. Android provides both the contacts database, and a nice overlay screen for finding and selecting the person to send to. This combination is an `Activity` provided by Android. The message that the email program sends in order to trigger that `Activity` is an `Intent`.
+
+As usual, one of the downsides of flexibility is increased security risk. This is compounded in the Android system by rules that will automatically export an Activity to receive Intents from any app, &lt;a href=&#34;https://www.eecs.berkeley.edu/~emc/papers/spsm4027-kantola.pdf&#34; title=&#34;Reducing Attack Surfaces for Intra-Application Communication in Android&#34; target=&#34;_blank&#34;&gt;when certain conditions are met&lt;/a&gt;. If an `Activity` is exported for any app to call, &lt;a href=&#34;https://www.eecs.berkeley.edu/~emc/papers/mobi168-chin.pdf&#34; title=&#34;Analyzing Inter-Application Communication in Android&#34; target=&#34;_blank&#34;&gt;it is possible for apps to send malicious &lt;code&gt;Intent&lt;/code&gt;s&lt;/a&gt; to that `Activity`. Many `Intents` are meant to be public and others are exported as a side effect. Either way, at the very least, it is necessary to &lt;a href=&#34;http://blog.palominolabs.com/2013/05/13/android-security/&#34; title=&#34;Intent Spoofing on Android&#34; target=&#34;_blank&#34;&gt;sanitize the input&lt;/a&gt; that an `Activity` receives. On the other side of the issue, if an app is trusting another app to provide a sensitive service for it, then malware can pose as the trusted app and receive sensitive data from the trusting app. &lt;a href=&#34;http://dwaterson.com/2013/06/24/data-harvesting-by-malicious-android-apps/&#34; target=&#34;_blank&#34;&gt;An app does not need to request any permissions in order to set itself up as a receiver of &lt;code&gt;Intent&lt;/code&gt;s&lt;/a&gt;.
+
+&lt;div id=&#34;attachment_12117&#34; style=&#34;width: 361px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://www.eecs.berkeley.edu/~emc/papers/spsm4027-kantola.pdf&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12117&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/01/activity-service-hijacking.png&#34; alt=&#34;Activity/Service hijacking: watch out for the little devil in the system&#34; width=&#34;351&#34; height=&#34;153&#34; class=&#34;size-full wp-image-12117&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/01/activity-service-hijacking.png 351w, https://guardianproject.info/wp-content/uploads/2014/01/activity-service-hijacking-300x130.png 300w&#34; sizes=&#34;(max-width: 351px) 100vw, 351px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12117&#34; class=&#34;wp-caption-text&#34;&gt;
+    Activity/Service hijacking: watch out for the little devil in the system
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Android, of course, does provide some added protections for cases like this. For very sensitive situations, an &lt;code&gt;Activity&lt;/code&gt; can be setup to only receive &lt;code&gt;Intent&lt;/code&gt;s from apps that meet certain criteria. &lt;a href=&#34;https://www.isecpartners.com/media/11991/isec_securing_android_apps.pdf&#34; target=&#34;_blank&#34;&gt;Android permissions can restrict other apps&lt;/a&gt; from sending &lt;code&gt;Intent&lt;/code&gt;s to any given exported &lt;code&gt;Activity&lt;/code&gt;. If a separate app wants to send an &lt;code&gt;Intent&lt;/code&gt; to an &lt;code&gt;Activity&lt;/code&gt; that has be set with a permission, then that app must include that permission in its manifest, thereby publishing that it is using that permission. This provides a good way publish an API for getting permission, but leaving it relatively open for other apps to use. Other kinds of controls can be based on two aspects of an app that the Android system enforces to remain the same: &lt;a href=&#34;http://android-developers.blogspot.com/2011/06/things-that-cannot-change.html&#34; target=&#34;_blank&#34;&gt;the package name and the signing key&lt;/a&gt;. If either of those change, then Android considers it a different app altogether. The strictest control is handled by the “protection level”, which can be set to only allow either the system or apps signed by the same key to send &lt;code&gt;Intent&lt;/code&gt;s to a given &lt;code&gt;Activity&lt;/code&gt;. These security tools are useful in many situations, but leave lots of privacy-oriented use cases uncovered.&lt;/p&gt;
+
+&lt;p&gt;There are some situations that need more flexibility without opening things up entirely. The first simple example is provided by our app &lt;a href=&#34;https://guardianproject.info/apps/pixelknot/&#34; target=&#34;_blank&#34;&gt;Pixelknot&lt;/a&gt;: it needs to send pictures through services that will not mess up the hidden data in the images. It has a trusted list of apps it will send to, based on apps that have proven to pass the images through unchanged. When the user goes to share the image from Pixelknot to an cloud storage app, the user will be prompted to choose from a list of installed apps that match the whitelist in Pixelknot. We could have implemented a permission and asked lots of app providers to implement it, but it seems a mammoth task to get lots of large companies like Dropbox and Google to include our specific permission.&lt;/p&gt;
+
+&lt;p&gt;There are other situations that require even tighter restrictions that are available. The first example here comes from our OpenPGP app for Android. &lt;a href=&#34;https://guardianproject.info/code/gnupg/&#34; target=&#34;_blank&#34;&gt;Gnu Privacy Guard (GPG)&lt;/a&gt; provides cryptographic services to any app that requests it. When the app sends data to GPG to be encrypted, it needs to be sure that the data is actually going to GPG and not to some malware. For very sensitive situations, the Android-provided package name and signing key might not be enough to ensure that the correct app is receiving the unencrypted data. Many Android devices are still unpatched to protect against &lt;a href=&#34;https://threatpost.com/second-android-master-key-attack-surfaces/101297&#34; target=&#34;_blank&#34;&gt;master key bugs&lt;/a&gt;, and for people using Android in China, Iran, etc. where the Play Store is not allowed, they don’t get the exploit scanning provided by Google. Telecoms around the world have proved to be &lt;a href=&#34;https://arstechnica.com/gadgets/2012/12/the-checkered-slow-history-of-android-handset-updates/&#34; target=&#34;_blank&#34;&gt;bad at updating the software&lt;/a&gt; for the devices that they sell, &lt;a href=&#34;https://arstechnica.com/security/2013/04/wireless-carriers-deceptive-and-unfair&#34; target=&#34;_blank&#34;&gt;leaving many security problems unfixed&lt;/a&gt;. Alternative Android app stores are a very popular way to get apps. So far, the ones that we have seen provide minimal security and no malware scanning. &lt;a href=&#34;http://www.telecoms.com/57581/china-crucial-to-android/&#34; target=&#34;_blank&#34;&gt;In China&lt;/a&gt;, &lt;a href=&#34;http://www.insidemobileapps.com/2011/09/02/china-chinese-smartphone-ios-android-market/&#34; target=&#34;_blank&#34;&gt;Android is very popular&lt;/a&gt;, so this represents a lot of Android users.&lt;/p&gt;
+
+&lt;p&gt;Another potential use case revolves around a media reporting app that relies on other apps to provide images and video as part of regular reports. This could be something like a citizen journalist editing app or a human rights reporting app. The Guardian Project develops a handful of apps designed to create media in these situations: &lt;a href=&#34;https://guardianproject.info/apps/obscuracam/&#34; target=&#34;_blank&#34;&gt;ObscuraCam&lt;/a&gt;, InformaCam, and an new secure camera app in the works that we are contributing to. We want InformaCam to work as a provider of verifiable media to any app. It generates a package of data that includes a cryptographic signature so that its authenticity can be verified. That means that the apps that transport the InformaCam data do not need to be trusted in order to guarantee the integrity of the uploaded InformaCam data. Therefore it does not make sense in this case for InformaCam to grant itself permissions to access other apps’ secured &lt;code&gt;Activity&lt;/code&gt;s. It would add to the maintenance load of the app without furthering the goals of the InformaCam project. Luckily there are other ways to address that need.&lt;/p&gt;
+
+&lt;p&gt;The inverse of this situation is not true. The reporting app that gathers media and sends it to trusted destinations has higher requirements for validating the data it receives via &lt;code&gt;Intent&lt;/code&gt;s. If verifiable media is required, then this reporter app will want to only accept incoming media from InformaCam. Well-known human rights activists are often the target of custom malware designed to get information from their phones. For this example, a malware version of InformaCam could be designed to track all of the media that the user is sending to the human rights reporting app. To prevent this, the reporter app will want to only accept data from a list of trusted apps. When the user tries to feed media from the malware app to the reporting app, it would be rejected, alerting the user that something is amiss. If an reporting app wants to receive data only from InformaCam, it needs to have some checks setup to enforce that. The easiest way for the reporting app to implement those checks would be to add an Android permission to the receiving &lt;code&gt;Activity&lt;/code&gt;. But that requires the sending app, in the example above that is InformaCam, to implement the reporting app’s permission. Using permissions works for tailored interactions. InformaCam aims to bring tighter secure to all relevant interactions, so we need a different approach. While InformaCam could include some specific permissions, the aim is to have a single method that supports all the desired interactions. Having a single method here means less code to audit, less complexity, and fewer places for security bugs.&lt;/p&gt;
+
+&lt;p&gt;We have started auditing the security of communication via &lt;code&gt;Intent&lt;/code&gt;s, while also working on various ideas to address the issues laid out so far. This will include laying out best-practices and defining gaps in the Android architecture. We plan on building the techniques that we find useful into reusable libraries to make it easy for others to also have more flexible and trusted interactions. When are the standard checks not enough? If the user has a malware version of an app that exploits master key bugs, then the signature on the app will be valid. If a check is based only on a package name, malware could use any given package name. Android enforces that only one app can be installed with a given package name, but if there are multiple apps with the same package name, Android will not prevent you from installing the malware version.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_12120&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;http://www.pregnancyandbaby.com/the-hatch-blog/articles/935057/classic-vanilla-tofu-ice-pops-for-babies-from-ice-pop-joy&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12120&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/01/IcePopJoy-ClassicVanillaTofu-300x300.jpg&#34; alt=&#34;TOFU/POP: delicious vegan treat and clever software interaction!&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-medium wp-image-12120&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/01/IcePopJoy-ClassicVanillaTofu-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/01/IcePopJoy-ClassicVanillaTofu-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/01/IcePopJoy-ClassicVanillaTofu.jpg 450w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p id=&#34;caption-attachment-12120&#34; class=&#34;wp-caption-text&#34;&gt;
+    TOFU/POP: delicious vegan treat and clever software interaction!
+  &lt;/p&gt;
+&lt;/div&gt;The strictest possible checks can be based on the hash of the whole APK, while tracking the signing key of a given APK is also often useful. These two data points are the most reliable ways to verify a given app. They can be tracked in two different ways: pinning and trust-on-first-use (TOFU/POP). Pinning means that a verified hash or signing key for the apps that need to be trusted is included in the app that must trust them. Then the trusting app can verify what it is sending or receiving&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Intent&lt;/code&gt;s from, the installed app is then compared to the pre-stored pinned value. This kind of pinning allows for checks like the &lt;code&gt;Signature&lt;/code&gt; permission level but based on a key that the app developer can select and include in the app. The built-in &lt;code&gt;Signature&lt;/code&gt; permissions are fixed on the signing key of the currently running app.&lt;/p&gt;
+
+&lt;p&gt;TOFU/POP means Trust-On-First-Use/Persistence Of Pseudonym. In this model, popularized by SSH, the user marks a given hash or signing key as trusted the first time they use the app, without extended checks about that apps validity. That mark then describes a “pseudonym” for that app, since there is no verification process, and that pseudonym is remembered for comparing in future interactions. One big advantage of TOFU/POP is that the user has control over which apps to trust, and that trust relationship is created at the moment the user takes an action to start using the app that needs to be trusted. That makes it much easier to manage than using Android permissions, which must be managed by the app’s developer. A disadvantage is that the initial trust is basically a guess, and that leaves open a method to get malware in there. The problem of installing good software, and avoiding malware, is outside of the scope of securing inter-app communication. Secure app installation is best handled by the process that is actually installing the software, like the Google Play Store or &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; does.&lt;/p&gt;
+
+&lt;p&gt;To build on the InformaCam example, in order to setup a trusted data flow between InformaCam and the reporting app, custom checks must be implemented on both the sender and the receiver. For the sender, InformaCam, it should be able to send to any app, but it should then remember the app that it is configured to send to and make sure its really only sending to that app. It would then use TOFU/POP with the hash as the data point. For the receiver, the reporting app, it should only accept incoming data from apps that it trusts. The receiver then includes a pin for the signing key, or if the app is being deployed to unupdated devices the pin can be based on the hash to work around master key exploits. From there on out, the receiving app checks against the stored app hashes or signing keys. For less security-sensitive situations, the received can rely on TOFU/POP on the first time that an app sends media.&lt;/p&gt;
+
+&lt;p&gt;There are various versions of these ideas floating around in various apps, and we have some in the works. We are working now to hammer out which of these ideas are the most useful, then we will be focusing our development efforts there. We would love to hear about any related effort or libraries that are out there. And we are also interested to hear about entirely different approaches than what has been outlined here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Four Ways InformaCam Powers Mobile Media Verification</title>
+      <link>https://guardianproject.github.io/info/2014/01/06/four-ways-informacam-powers-mobile-media-verification/</link>
+      <pubDate>Mon, 06 Jan 2014 15:14:16 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/01/06/four-ways-informacam-powers-mobile-media-verification/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Note: A big discussion topic of 2013 was about how hard cryptography and security is for average people, journalists and others. With that in mind, we’d like to sub-title this post “Making Mobile Crypto Easy for Eyewitnesses”, as the InformaCam software and process described below includes the full gamut of security and cryptography tools all behind a streamlined, and even attractive application user experience we are quite proud of…. &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the primary goals of the &lt;a href=&#34;https://guardianproject.info/informa&#34;&gt;InformaCam&lt;/a&gt; project (now in &lt;a href=&#34;https://guardianproject.info/informa&#34;&gt;public beta!&lt;/a&gt;) is to create an environment where, when it comes to photos and video captured on smartphones, people and organizations can trust what they see. Faked photos and videos, whether intended to be humorous or malicious, are all too common online, especially in times of crisis. Thus, the software that been developed works to ensure the full, complete original photo or video captured of an event, can safely reach the people who need to see it, without it first being filtered, modified, cropped, trimmed or otherwise manipulated.&lt;/p&gt;
+
+&lt;p&gt;There are four ways this is achieved:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;At point of capture, secure storage and analysis of the media file itself to begin a chain of custody, create a means of verifying media pixel values directly, and defend against tampering by malicious apps.&lt;/li&gt;
+&lt;li&gt;Gather corroborating metadata points using the device’s built-in sensors to establish an environmental context.&lt;/li&gt;
+&lt;li&gt;Use a secure method of transmission to a secure repository to continue chain of custody, and to defend against network surveillance, intrusion and filtering.&lt;/li&gt;
+&lt;li&gt;Provide a means, using open tools, to verify media was not tampered with and to view and analyze corroborating metadata.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let’s dig deeper into each of these links of the verification chain.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong style=&#34;line-height: 1.5em;&#34;&gt;Secure Storage and Analysis&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When InformaCam is activated, it begins to actively monitor the device for any new photos or videos captured by the built-in camera software. InformaCam does not support importing already captured photos or videos. It must actively detect a new photo or video is captured by the active camera software on the device. As soon as it detects a new capture, it begins the following ingest process:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Import the media file into an encrypted storage system, on the device, but only accessible by the InformaCam app. This ensures the file is not modified by any other application on the device.&lt;/li&gt;
+&lt;li&gt;Generate and securely store a cryptographic hash value, or checksum, of the pixels of the media file, either the single photo or collectively for all the frames of the video. Any change to the pixels of the media files (“photoshopping”, removal of frames, editing, or other modifications) would result in a change to the hash value.&lt;/li&gt;
+&lt;li&gt;Delete the source photo or video from its original location on the device’s shared storage, to keep it hidden from plain view in high-risk situations. Since it has been imported to encrypted storage, this version is no longer needed, and not trustworthy, ultimately.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;With this three step process we have, as near as possible to the time and place of capture, ensured we have the media file in a secure storage location, and have generated a unique hash value to verify the file against later.&lt;/p&gt;
+
+&lt;p&gt;The hash value, which is just a short series of hexadecimal characters, can also be immediately shared to a third-party using email, text messaging, Twitter or other public notary system. The sooner it can be in the “public record” the better, to establish that the media file existed in this exact state at this time. This concept of a notary is important, and one we seek to develop more, to ensure the notary is also a trusted, tamper-proof service.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Corroborating Sensor Metadata&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In addition to the media file itself and the cryptographic hash, an enormous amount of additional metadata is also captured during the window of time that InformaCam is activated and monitoring for the digital media creation events. We don’t discuss all of them here, but in short, InformaCam uses &lt;a href=&#34;http://developer.android.com/guide/topics/sensors/sensors_overview.html&#34;&gt;all available network, radio, motion and environmental sensors built into modern smartphones&lt;/a&gt; to gather corroborating data points that can be used to establish credibility. This bundle of metadata is known as J3M, or &lt;a href=&#34;https://dev.guardianproject.info/projects/informacam/wiki/JSON_Mobile_Media_Metadata_(J3M)&#34;&gt;JSON Evidentiary Mobile Media Metadata&lt;/a&gt;, with JSON (Javascript Object Notation) being the technical format it is stored in. When the media file is exported for verification, this data is bundled into the media file itself, and cryptographically signed and encrypted to ensure it cannot be modified or otherwise used by unauthorized third-parties.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Secure Repository Submission&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;line-height: 1.5em;&#34;&gt;When the owner of the device running InformaCam with the media file on it decides to share it with an organization for verification and use, they can send it using InformaCam’s built-in Secure Share mechanism. This enables the media file and embedded metadata to be d&lt;/span&gt;irectly sent to an &lt;a href=&#34;https://github.com/guardianproject/InformaRepo&#34;&gt;InformaCam Repository&lt;/a&gt; over a secure connection. While the connection uses the public internet, it is sent directly between the device and the repository inside of a secure, tamper proof tunnel powered by software known as &lt;a href=&#34;https://torproject.org&#34;&gt;Tor&lt;/a&gt;. This connection is configured using an &lt;a href=&#34;https://dev.guardianproject.info/projects/informacam/wiki/InformaCam_Trusted_Destination_(ICTD)&#34;&gt;InformaCam Trusted Definition configuration file&lt;/a&gt; which contains the necessary network addresses and credentials.&lt;/p&gt;
+
+&lt;p&gt;The secure repository is expected to be run on a Linux server that is properly secured with strong access controls, firewalls, encrypted disk storage, and all other available mechanisms well known for securing desktop or server systems. It should not be placed on the public Internet, but only exposed through the Tor network connection. It should be hosted in a location that can be physically secured by the organization, as much as possible, and that could not be accessed without the organization being aware. This means that third party data centers should not be used, as access to these machines by law enforcement or malicious hackers can be accomplished without notice to the customers.&lt;/p&gt;
+
+&lt;p&gt;However, as long as the media hash value itself is maintained in a secure manner, possibly even printed out and stored in an offline physically secure system, the state of the media file itself can be easily verified using common tools.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong style=&#34;line-height: 1.5em;&#34;&gt;Open Verification and Analysis Tools&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the media and metadata have been received in the secure repository, the organization managing it can used the &lt;a href=&#34;https://guardianproject.info/informa&#34;&gt;InformaCam Analyzer and Dashboard&lt;/a&gt; software to process and verify the media file. All of the steps below are automatically done by the software, but can also be manually done by a competent, trained technician. These are the steps taken:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Export the J3M corroborating metadata from the media file. It will be encrypted to the organization’s public cryptographic key, so it will first need to be decrypted, and also the signature of the data verified against the sender’s public key, which the organization previously obtained. This step is accomplished using the free and open-source &lt;a href=&#34;http://gnupg.org&#34;&gt;GnuPG software tools&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Run the media verification process on the photo or video file. This is accomplished using a tool in the InformaCam Analyzer software, which also includes the free and open-source &lt;a href=&#34;http://www.ffmpeg.org/&#34;&gt;FFMPEG media engine&lt;/a&gt; software. The cryptographic hash function is run again, this time on the server-side on not on the device, and the resulting hash value from the pixel values is displayed. This must match the hash value generated on the device, which should have been shared via private or public notary (SMS, email, Twitter, etc), and is also stored in the J3M metadata obtained in step #1.&lt;/li&gt;
+&lt;li&gt;View the J3M metadata directly or import into the &lt;a href=&#34;https://j3m.info/submission/1110ca88837d710d9c43d49f48afce0b/&#34;&gt;InformaCam Dashboard system&lt;/a&gt; for verification. The metadata will include information such as GPS location, cellular network location, nearby bluetooth and wifi devices, compass headings, altitude, temperature and more. This data can be used to match against the time and place the media claims to be from.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Four Ways, In Summary&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Through the four ways described above, the InformCam system works to capture and safeguard both media and metadata at all points along the way, between the device and the repository. Cryptographic functions and features provide much of the power behind this, but relying on mathematics alone does not tell the whole store. By combining the corroborating metadata and open tools for analysis, we ensure that the context of the photo or video, and the means to verify the entire package are also readily available as part of the verification process.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Singing and Dancing for Encryption</title>
+      <link>https://guardianproject.github.io/info/2012/04/19/singing-and-dancing-for-encryption/</link>
+      <pubDate>Thu, 19 Apr 2012 09:30:48 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/04/19/singing-and-dancing-for-encryption/</guid>
+      <description>&lt;p style=&#34;text-align: center&#34;&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;a href=&#34;https://secure.flickr.com/photos/ksd-photography/4899157618/&#34;&gt;&lt;img class=&#34;aligncenter&#34; src=&#34;https://farm5.staticflickr.com/4099/4899157618_b35f53be23_z.jpg&#34; alt=&#34;【KSD Photography】 Capturing Life&#34; width=&#34;640&#34; height=&#34;343&#34; /&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;text-align: left&#34;&gt;
+  &lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;If you see me dancing or singing with my phone in my hand, I may not just be having a great time, but also creating an encryption key. Part of the issue with security is that it can often be difficult to implement or an added step in what users want to be an easy and seamless process. What if we can make secure and private communications fun and easy?&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;This past weekend, a bunch of members of the Guardian Project team found ourselves at the &lt;a title=&#34;wall-street-journal-data-transparency-weekend-day&#34; href=&#34;http://blogs.wsj.com/digits/2012/04/16/the-winners-of-wsjs-data-transparency-weekend/&#34; target=&#34;_blank&#34;&gt;Wall Street Journal Data Transparency Hackathon&lt;/a&gt;. The Journal put this together in order to “invite developers to help build free Web tools that promote data transparency and control.” The tracks were divided into:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;strong&gt;Scanning:&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt; Enhancing technology that scans the Web to reveal tracking&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;strong&gt;Education:&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt; Helping people see how much information they share&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;strong&gt;Control:&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt; Improving software that helps people control sensitive information&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;Tracks were led by &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a title=&#34;ashkan soltani&#34; href=&#34;http://ashkansoltani.org/&#34; target=&#34;_blank&#34;&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;Ashkan Soltani&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;, an independent researcher and technical adviser to the Journal; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a title=&#34;brian kennish&#34; href=&#34;http://byoogle.com/&#34; target=&#34;_blank&#34;&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;Brian Kennish&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;, a Web developer and founder of Disconnect; and &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a title=&#34;Jacob Appelbaum&#34; href=&#34;https://twitter.com/#!/ioerror&#34; target=&#34;_blank&#34;&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;Jacob Appelbaum&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;, a security researcher at the Tor Project. Our teams went down the path of control, with the goal of making tools that are secure by default.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;We danced our way into winning in the control category by helping the victorious &lt;a title=&#34;cryptocat&#34; href=&#34;https://crypto.cat/about/&#34; target=&#34;_blank&#34;&gt;Cryptocat&lt;/a&gt; team that has a tool for encrypted chat service right from the browser. This fantastic project blew through a number of innovations, porting into a Firefox web app, doing desktop notifications, and improved cryptographic primitives from within the browser. We helped by creating an Android app for the tool that converts dance moves into a random number generator for creating the encryption key. Just start the program, enter the name of the chat, enter your nickname, then DANCE. Starting a secure chat from a phone is now as easy as that. You can try it in your browser via their site &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;https://crypto.cat/&#34;&gt;&lt;span style=&#34;color: #0025e5&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;span style=&#34;text-decoration: underline&#34;&gt;https://crypto.cat/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt; or &lt;a title=&#34;cryptocat android app&#34; href=&#34;https://guardianproject.info/apps/cryptocat/&#34; target=&#34;_blank&#34;&gt;download our new Android app&lt;/a&gt; (either with or without Tor compatibility)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;. And congrats to &lt;a title=&#34;nadim kobeissi&#34; href=&#34;http://nadim.cc/&#34; target=&#34;_blank&#34;&gt;Nadim Kobeissi&lt;/a&gt; for this well deserved win and the team Tobias Pulls, Jacob Appelbaum, &lt;a title=&#34;david huerta&#34; href=&#34;http://davidhuerta.me/&#34; target=&#34;_blank&#34;&gt;David Huerta&lt;/a&gt;, &lt;a title=&#34;joseph bonneau&#34; href=&#34;http://www.jbonneau.com/&#34; target=&#34;_blank&#34;&gt;Joseph Bonneau&lt;/a&gt;  and &lt;a title=&#34;nathan freittas&#34; href=&#34;http://openideals.com/&#34; target=&#34;_blank&#34;&gt;Nathan Freitas&lt;/a&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;div style=&#34;width: 510px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://secure.flickr.com/photos/aspirationtech/7077092229/sizes/m/in/photostream/&#34;&gt;&lt;img src=&#34;https://farm6.staticflickr.com/5071/7077092229_5e3f9ed867.jpg&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;333&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    The Guardian Team &amp; Friends Hacking Away
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;We sang our way into winning in a new category that the judges came up with, “soup cans and string” for &lt;a title=&#34;Open Secure Telephony Network (OSTN) ostel&#34; href=&#34;https://ostel.me&#34; target=&#34;_blank&#34;&gt;Ostel&lt;/a&gt;, our encrypted VOIP solution. Launching an alpha version of our tool in front of some of the worlds leading experts in the security field was a risky move, but thankfully we managed to work out a number of bugs and generally received great feedback and support from the community. Over the weekend, we made progress in our alpha demo, identified additional clients that can receive calls on Mac, PC, Linux, iPhone, &amp;amp; Blackberry and created a new user signup system that allows users to register and immediately be sent an email with a link to their credentials via SSL. To extend the project even further, we have started compiling information on VOIP laws in countries from every continent so that the tool can explicitly be supported on as many platforms, in as many countries and in as many languages as possible. In addition to singing praise, singing (and other voice signatures) might be used in the future for entropy as the random number generator for the encryption key exchange. &lt;a title=&#34;privategsm&#34; href=&#34;http://www.privatewave.com/products-services/private-gsm/product.html&#34; target=&#34;_blank&#34;&gt;PrivateGSM&lt;/a&gt; is already doing this and it would be great to incorporate this feature into Ostel &amp;amp; &lt;a title=&#34;CSipSimple&#34; href=&#34;https://code.google.com/p/csipsimple/&#34; target=&#34;_blank&#34;&gt;CSipSimple&lt;/a&gt; later on. Thanks to Lee Azzarello, Luke Stark, Sean McIntyre and Zach Schwartz for being great members of the Ostel team. &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;div style=&#34;width: 510px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://secure.flickr.com/photos/aspirationtech/6935372190/sizes/m/in/photostream/&#34;&gt;&lt;img src=&#34;https://farm6.staticflickr.com/5327/6935372190_a576a30d16.jpg&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;333&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    Lee accepts the &#34;Soupcan &amp; Strings Award&#34; for Ostel
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Dancing for encryption in Cryptocat, singing for encryption in Ostel. Let us know if you have other ideas for fun ways to generate keys. We’re always looking for inspiring ideas from the community.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;We’re even well on our way to seeing the world through encryption tinted glasses. Progress was made on making innovations in &lt;a title=&#34;informacam&#34; href=&#34;https://guardianproject.info/2012/01/20/introducing-informacam/&#34; target=&#34;_blank&#34;&gt;our Informacam project&lt;/a&gt;. The goal is to be able to snap a picture, but protect the privacy of the people in the frame by blurring their faces and the metadata connected to the event. Whie this can be crucial in a sensitive scenario, it can also be important that a judge or trusted organization can “unblur” the image and so we’re working on a way to encrypt and send those pixels. Bugs were removed, code was written, and soon enough, hopefully we’ll be able to incorporate it into the &lt;a title=&#34;google augmented reality goggles&#34; href=&#34;https://arstechnica.com//gadgets/news/2012/04/google-unveils-project-glass-augmented-reality-glasses.ars&#34; target=&#34;_blank&#34;&gt;new Google Augmented reality goggles&lt;/a&gt;.  &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;table style=&#34;margin: 0px auto&#34;&gt;
+  &lt;tr&gt;
+    &lt;td width=&#34;201&#34;&gt;
+      &lt;img class=&#34;alignnone size-full wp-image-1461&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM.png&#34; alt=&#34;InformaCam (2)&#34; width=&#34;201&#34; height=&#34;332&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM.png 201w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM-181x300.png 181w&#34; sizes=&#34;(max-width: 201px) 100vw, 201px&#34; /&gt;
+    &lt;/td&gt;
+    
+    &lt;td width=&#34;197&#34;&gt;
+      &lt;img class=&#34;alignnone size-full wp-image-1462&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM.png&#34; alt=&#34;InformaCam (3)&#34; width=&#34;197&#34; height=&#34;330&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM.png 197w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM-179x300.png 179w&#34; sizes=&#34;(max-width: 197px) 100vw, 197px&#34; /&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;em&gt;Using the InformaCam “Identify” filter.&lt;/em&gt;
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      &lt;em&gt;Select a Trusted Destination for your encrypted media.&lt;/em&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;span&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;Being head down, singing and dancing encryption with our security glasses on while coding, it was easy to miss the other amazing projects in the room. I highly recommend checking out the other winners as well. They’re doing fantastic and necessary work:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;“Scanning” Track Winner:  &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;http://www.hackerleague.org/hackathons/wsj-data-transparency-code-a-thon/hacks/tosback2&#34;&gt;&lt;span style=&#34;color: #0025e5&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;span style=&#34;text-decoration: underline&#34;&gt;TOSBack2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt; – a living archive of all privacy policies&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;“Education” Track Winner:   &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;http://www.hackerleague.org/hackathons/wsj-data-transparency-code-a-thon/hacks/privacybucket&#34;&gt;&lt;span style=&#34;color: #0025e5&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;span style=&#34;text-decoration: underline&#34;&gt;PrivacyBucket&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt; – a Chrome extension that measures the extent to which individual third-party trackers can discover demographic information about the use&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;Judges’ Choice Winner:   &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;http://www.hackerleague.org/hackathons/wsj-data-transparency-code-a-thon/hacks/site-scoper&#34;&gt;&lt;span style=&#34;color: #0025e5&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;span style=&#34;text-decoration: underline&#34;&gt;Site Scoper&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;“Ready for Primetime” Winner:   &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;http://www.hackerleague.org/hackathons/wsj-data-transparency-code-a-thon/hacks/mobilescope&#34;&gt;&lt;span style=&#34;color: #0025e5&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;span style=&#34;text-decoration: underline&#34;&gt;MobileScope&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;“Zuckerberg/Systrom Memorial Award for Opportunistic Optimism” Winner:   &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;http://www.hackerleague.org/hackathons/wsj-data-transparency-code-a-thon/hacks/pestagram-its-pinterest-for-instagram&#34;&gt;&lt;span style=&#34;color: #0025e5&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;span style=&#34;text-decoration: underline&#34;&gt;Pestagram&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;“Best Listener” Winner:   &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;a href=&#34;http://www.hackerleague.org/hackathons/wsj-data-transparency-code-a-thon/hacks/the-price-of-free&#34;&gt;&lt;span style=&#34;color: #0025e5&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;span style=&#34;text-decoration: underline&#34;&gt;The Price of Free&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt; &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;Thanks to &lt;a title=&#34;julia angwin&#34; href=&#34;http://www.juliaangwin.com/&#34; target=&#34;_blank&#34;&gt;Julia Angwin&lt;/a&gt; and the WSJ team for making this great event and the fantastic &lt;a title=&#34;what they know&#34; href=&#34;http://blogs.wsj.com/wtk/&#34; target=&#34;_blank&#34;&gt;What They Know blog&lt;/a&gt; possible, to &lt;a title=&#34;gunner aspiration&#34; href=&#34;http://aspirationtech.org/blog/gunner&#34; target=&#34;_blank&#34;&gt;Gunner&lt;/a&gt; for being such an inspiring facilitator, to judges Alessandro Acquisti, Sid Stamm, Dan Kaminsky, &lt;a title=&#34;andrew mclaughlin&#34; href=&#34;http://andrewmclaughlin.info/&#34; target=&#34;_blank&#34;&gt;Andrew McLaughlin&lt;/a&gt; and to everyone else who made this possible.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Knight News funding of SecureSmartCam = a #WIN for open-source mobile security</title>
+      <link>https://guardianproject.github.io/info/2012/03/29/knight-news-funding-of-securesmartcam-a-#win-for-open-source-mobile-security/</link>
+      <pubDate>Thu, 29 Mar 2012 12:07:47 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/29/knight-news-funding-of-securesmartcam-a-#win-for-open-source-mobile-security/</guid>
+      <description>&lt;p&gt;Along with our partner &lt;a href=&#34;https://www.witness.org&#34;&gt;WITNESS&lt;/a&gt;, we’ve entered our &lt;a href=&#34;http://newschallenge.tumblr.com/post/19436756887/securesmartcam-protecting-the-privacy-and-data-of&#34;&gt;SecureSmartCam project&lt;/a&gt; into the &lt;a href=&#34;http://newschallenge.tumblr.com/&#34;&gt;Knight News Challenge&lt;/a&gt;, and we need your support to get to the next round.&lt;/p&gt;
+
+&lt;p&gt;Here’s a bit more about the challenge:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The Knight News Challenge, an international media innovation contest, is evolving – and will be offered three times, with three different topics. The first challenge will be centered on networks, and will accept applications Feb. 27 – March 17. The Networks challenge round seeks projects that use the best of existing software and platforms – those already integrated into people’s lives – to find new ways to convey news and information.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Aside from the merits of SecureSmartCam itself, specifically the &lt;a href=&#34;https://guardianproject.github.io/info/apps/ObscuraCam&#34;&gt;ObscuraCam&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.github.io/info/apps/InformaCam&#34;&gt;InformaCam&lt;/a&gt; sub-projects, our research and development over the last two years on this project have extended to support an entire range of completely open-source mobile technology for Android developments, the benefits of which extend far beyond our own project itself. There are already many other organizations, projects, and apps (both commercial and non) that have incorporated our technology into their own solutions, not to mention the hundreds of thousands of users out there who depend on our core apps like &lt;a href=&#34;https://guardianproject.github.io/info/apps/orbot&#34;&gt;Orbot (Tor for Android)&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;Gibberbot (Secure Chat)&lt;/a&gt; to safeguard their day to day communication.&lt;/p&gt;
+
+&lt;p&gt;The work so far was largely funded by a generous private non-governmental donor, and if you look at the list of projects below, we have put that funding to great use. If we receive this funding from Knight (a similarly generous private donor), we will continue our work in this modular, open manner, ensuring that the money will benefit projects and causes far beyond our own personal vision and endeavors.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SecureSmartCam-supported Open-Source Projects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/gnupg-for-android&#34;&gt;GnuPG for Android&lt;/a&gt;: OpenPGP Public/Private Key Infrastructure for Encryption and Verification of Communications and Data&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher&#34;&gt;SQLCipher for Android&lt;/a&gt;: AES-256 Symmetric Encryption Layer for SQLite Mobile Database. &lt;a href=&#34;https://www.zetetic.net/sqlcipher&#34;&gt;SQLCipher&lt;/a&gt; is also available for many other platforms.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/iocipher&#34;&gt;IOCipher for Android&lt;/a&gt; (or any mobile platform): Encrypted filesystem built upon SQLCipher that works for any application without requiring root or custom device modification. This is an extension of our port of &lt;a href=&#34;https://github.com/guardianproject/LUKS&#34;&gt;LUKS for Android&lt;/a&gt;, encrypted disk partition system.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/android-ffmpeg&#34;&gt;FFMPEG for Android&lt;/a&gt; (with Video Redaction Filter): a build system and patches for compiling FFMPEG for Android, with support for custom features to enable video privacy controls&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/asenior/Jpeg-Redaction-Library&#34;&gt;Jpeg Redaction Library&lt;/a&gt;: a generic library for redacting visual and metadata information from JPEG images without needing to decode them. Very important for limited memory mobile devices!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/notepadbot&#34;&gt;NoteCipher for Android&lt;/a&gt;: Simple secure text, photo and video storage app for Android, built upon SQLCipher&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/sscxfer/&#34;&gt;SSCXfer for Android&lt;/a&gt;: Anonymous, Proxied, Secure Video (or any file) Uploader (based on &lt;a href=&#34;http://vidiom.mobi/&#34;&gt;Vidiom&lt;/a&gt; open-source project) over Tor to YouTube, VideoBin.org and other sites. By extension, this project also supports our core work on &lt;a href=&#34;https://guardianproject.github.io/info/apps/orbot&#34;&gt;Orbot, the Tor for Android&lt;/a&gt; application with hundreds of thousands of users worldwide.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the end, the approximately $300,000 of grant support we are seeking, is nothing compared to the millions of dollars in funding poured into closed-source mobile startups, who not only by a large majority fail, but also rarely share the components of their work in a way that moves everyone forward.&lt;/p&gt;
+
+&lt;p&gt;What we need you to do is, go to our &lt;a href=&#34;http://newschallenge.tumblr.com/post/19436756887/securesmartcam-protecting-the-privacy-and-data-of&#34;&gt;SecureSmartCam Proposal on the Knight News Challenge Tumblr&lt;/a&gt;, and “like”, comment, reblog or otherwise show your support for it, in as a public and visible a manner as possible. If you have concerns or questions, please post them to the Tumblr, and our team will reply to you there. This is open-source research after all, and don’t claim to have all the answers, but we do need your support to get there.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing InformaCam</title>
+      <link>https://guardianproject.github.io/info/2012/01/20/introducing-informacam/</link>
+      <pubDate>Fri, 20 Jan 2012 13:58:26 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/01/20/introducing-informacam/</guid>
+      <description>
+
+&lt;p&gt;These are interesting times, if you go by Times Magazine as an indicator. The magazine’s person of the year for 2011 was The Protester, preceded in 2010 by Facebook founder Mark Zuckerberg. Both entities partners with equal stake in freely sharing the digital content that shows the world what’s going on in it, at any time, from behind any pair of eyes.&lt;img class=&#34;alignright size-medium wp-image-1471&#34; alt=&#34;The Protester: Person of the Year&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/poy_cover-225x300.jpg&#34; width=&#34;225&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/poy_cover-225x300.jpg 225w, https://guardianproject.info/wp-content/uploads/2012/01/poy_cover.jpg 474w&#34; sizes=&#34;(max-width: 225px) 100vw, 225px&#34; /&gt; Also casting in their lot with the others is Time Magazine’s 2006 person of the year, You: the You that puts the “you” in “user-generated content;” the You whose miasma of bits, bytes, and the powerful images they express are becoming increasingly problematic. Problematic and exciting. As governments, police forces, and other power players here and abroad crack down on voices of dissent, it is only You, The Protester, armed not with a press pass, but with a smartphone and a Twitter account, who brings the rest of the world its news. You do it mainly without either the support or permission of those in power, and this makes you a very important person in the world.&lt;/p&gt;
+
+&lt;p&gt;The smartphone’s role in the defense of human rights has thus become ever-more clear. How can we make it clearer? Our latest project, InformaCam, tackles this issue head-on. In collaboration with &lt;a href=&#34;https://www.witness.org/&#34; target=&#34;_blank&#34;&gt;Witness.ORG&lt;/a&gt; and the &lt;a href=&#34;www.ibanet.org/&#34; target=&#34;_blank&#34;&gt;International Bar Association&lt;/a&gt;, we’re building a powerful tool to create iron-clad digital images and video that could, should the occasion arise, be used in courts of law to bring justice. This is no small feat– with this project we are helping create the first evidentiary standards for digital media in the social networking age. So, &lt;a href=&#34;http://www.economist.com/node/21542748&#34; target=&#34;_blank&#34;&gt;there’s been a lot of excitement&lt;/a&gt; these past few weeks about InformaCam, as well as a lot of mystery. It’s time to give the project a proper unveiling.&lt;/p&gt;
+
+&lt;p&gt;InformaCam is a plugin for ObscuraCam that allows the user, without much intervention on their own part, to inflate image and video with extra points of data, or metadata. The metadata includes information like the user’s current GPS coordinates, altitude, compass bearing, light meter readings, the signatures of neighboring devices, cell towers, and wifi networks; and serves to shed light on the exact circumstances and contexts under which the digital image was taken. Some users will already be familiar with ObscuraCam, which allows for capturing and digitally manipulating media. With InformaCam included, the app starts to behave almost like Adobe Photoshop or GIMP, supporting non-destructive, layer-based edits to media. This means that a version of an image can be created with any sensitive image data and metadata preserved and encrypted to trusted entities, along with a redacted version that has its metadata stripped which can be easily shared to Facebook, Twitter, Flickr, or any public service the user wishes to use.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-informacam-works&#34;&gt;How InformaCam Works&lt;/h2&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignleft size-full wp-image-1459&#34; alt=&#34;InformaCam (1)&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM.png&#34; width=&#34;205&#34; height=&#34;341&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM.png 205w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.18.27-PM-180x300.png 180w&#34; sizes=&#34;(max-width: 205px) 100vw, 205px&#34; /&gt; The workflow is similar to that of ObscuraCam, but with a few key differences. Notice that on start-up, the app triggers the on-board sensors. (Notifications in the top right corner clearly indicate the GPS and Bluetooth modules have been turned on.) This allows the app to register sensory and atmospheric data throughout the session. These “bundles” of data contain the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Current timestamp&lt;/li&gt;
+&lt;li&gt;Device’s identification&lt;/li&gt;
+&lt;li&gt;User’s public (PGP) key&lt;/li&gt;
+&lt;li&gt;Image Regions created in the image/video&lt;/li&gt;
+&lt;li&gt;Current latitude &amp;amp; longitude&lt;/li&gt;
+&lt;li&gt;Current cell ID (if available)&lt;/li&gt;
+&lt;li&gt;Altitude&lt;/li&gt;
+&lt;li&gt;Compass bearing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whether the user is taking a picture, or editing an existing piece of media, the app registers the goings-on, and signs each bundle of data with the user’s private key. This mean that all actions taken on a piece of media (from capture to editing) are attributed to the user.&lt;/p&gt;
+
+&lt;p&gt;As with ObscuraCam, the user can perform image filtering and obfuscation on image regions. InformaCam also adds the “Identify” filter, which prompts the user for the subject’s name (or pseudonym) and to fill in whether or not the subject has given his or her consent to be filmed. This checklist of subject permissions can be further developed to match the needs of any organization to provide further protection to the people in front of the camera. Notice again the sensor notifications: the context surrounding each edit to the image is recorded and will be inserted into the media as metadata once the media is saved.&lt;/p&gt;
+
+&lt;p&gt;When the user saves the image or video, a dialog appears prompting her to choose one or more “trusted destinations.” This could be an organization, a news outlet, or any friend whose PGP key is known to you. A copy of the unredacted, data-rich image will be created and encrypted to those parties. At the same time, a redacted and data-stripped version is made available to share with anyone, anywhere.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td width=&#34;201&#34;&gt;
+      &lt;img class=&#34;alignnone size-full wp-image-1461&#34; alt=&#34;InformaCam (2)&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM.png&#34; width=&#34;201&#34; height=&#34;332&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM.png 201w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.07-PM-181x300.png 181w&#34; sizes=&#34;(max-width: 201px) 100vw, 201px&#34; /&gt;
+    &lt;/td&gt;
+    
+    &lt;td width=&#34;197&#34;&gt;
+      &lt;img class=&#34;alignnone size-full wp-image-1462&#34; alt=&#34;InformaCam (3)&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM.png&#34; width=&#34;197&#34; height=&#34;330&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM.png 197w, https://guardianproject.info/wp-content/uploads/2012/01/Screen-shot-2012-01-20-at-1.21.21-PM-179x300.png 179w&#34; sizes=&#34;(max-width: 197px) 100vw, 197px&#34; /&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;i&gt;Using the InformaCam “Identify” filter.&lt;/i&gt;
+    &lt;/td&gt;
+    
+    &lt;td&gt;
+      &lt;i&gt;Select a Trusted Destination for your encrypted media.&lt;/i&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;the-informa-metadata-schematic&#34;&gt;The Informa Metadata Schematic&lt;/h2&gt;
+
+&lt;p&gt;The metadata is organized in four categories: intent, consent, geneaology, and data. Here’s a rundown of what these categories mean.&lt;/p&gt;
+
+&lt;h3 id=&#34;intent&#34;&gt;Intent&lt;/h3&gt;
+
+&lt;p&gt;This expresses information about the media’s creator, and the rules governing how this particular media object can be shared, and to whom.&lt;/p&gt;
+
+&lt;h3 id=&#34;consent&#34;&gt;Consent&lt;/h3&gt;
+
+&lt;p&gt;This bucket of information regards the subjects contained in the image. Each subject is identified (by a name or pseudonym selected by the user) along with their stated preferences regarding treatment of their likeness. For example, if Bobby insists that he wants his face to be fully redacted (rather than blurred) this preference should be registered in metadata.&lt;/p&gt;
+
+&lt;h3 id=&#34;genealogy&#34;&gt;Genealogy&lt;/h3&gt;
+
+&lt;p&gt;This information regards chain-of-custody, and represents how the media was acquired, and if a particular image or video is a duplicate of another.&lt;/p&gt;
+
+&lt;h3 id=&#34;data&#34;&gt;Data&lt;/h3&gt;
+
+&lt;p&gt;This category includes all standard metadata (timestamp, acquired sensory data, location and movement data) that have been collected during the lifetime of the image, from the moment it was opened to the instant it was saved.&lt;/p&gt;
+
+&lt;p&gt;A sample metadata bundle for an image taken with InformaCam looks like this in JSON notation:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;br /&amp;gt;
+{&amp;lt;br /&amp;gt;
+&amp;quot;data&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;device&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;bluetoothInformation&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;selfOrNeighbor&amp;quot;:-1,&amp;lt;br /&amp;gt;
+&amp;quot;deviceBTAddress&amp;quot;:&amp;quot;00:25:36:79:EC:6C&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;deviceBTName&amp;quot;:&amp;quot;nexxxie&amp;quot;&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;imei&amp;quot;:&amp;quot;363289131048142&amp;quot;&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;sourceType&amp;quot;:101,&amp;lt;br /&amp;gt;
+&amp;quot;imageRegions&amp;quot;:[&amp;lt;br /&amp;gt;
+{&amp;lt;br /&amp;gt;
+&amp;quot;regionDimensions&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;height&amp;quot;:256,&amp;lt;br /&amp;gt;
+&amp;quot;width&amp;quot;:256.00006103515625&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;regionCoordinates&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;left&amp;quot;:527.705078125,&amp;lt;br /&amp;gt;
+&amp;quot;top&amp;quot;:196.15255737304688&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;obfuscationType&amp;quot;:&amp;quot;Identify&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;location&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;locationType&amp;quot;:11,&amp;lt;br /&amp;gt;
+&amp;quot;locationData&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;gpsCoords&amp;quot;:&amp;quot;[40.7085011,-73.9668647]&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;cellId&amp;quot;:&amp;quot;36789325&amp;quot;&amp;lt;br /&amp;gt;
+}&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;captureTimestamp&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;timestamp&amp;quot;:1326216508313,&amp;lt;br /&amp;gt;
+&amp;quot;timestampType&amp;quot;:7&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;subject&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;consentGiven&amp;quot;:&amp;quot;general_consent&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;informedConsentGiven&amp;quot;:true,&amp;lt;br /&amp;gt;
+&amp;quot;subjectName&amp;quot;:&amp;quot;Harlo!&amp;quot;&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;unredactedRegion&amp;quot;:&amp;quot;I@4070cf30&amp;quot;&amp;lt;br /&amp;gt;
+}&amp;lt;br /&amp;gt;
+],&amp;lt;br /&amp;gt;
+&amp;quot;imageHash&amp;quot;:&amp;quot;f18e7510faaad0d942db68b5c75f219a&amp;quot;,&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;geneaology&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;dateAcquired&amp;quot;:0,&amp;lt;br /&amp;gt;
+&amp;quot;localMediaPath&amp;quot;:&amp;quot;\/mnt\/sdcard\/DCIM\/Camera\/1326216520426.jpg&amp;quot;,&amp;lt;br /&amp;gt;
+&amp;quot;dateCreated&amp;quot;:1326216527629&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;intent&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;owner&amp;quot;:{&amp;lt;br /&amp;gt;
+&amp;quot;ownershipType&amp;quot;:25,&amp;lt;br /&amp;gt;
+&amp;quot;ownerKey&amp;quot;:&amp;quot;MY-IDENTITY-IS-HERE&amp;quot;&amp;lt;br /&amp;gt;
+},&amp;lt;br /&amp;gt;
+&amp;quot;securityLevel&amp;quot;:1,&amp;lt;br /&amp;gt;
+&amp;quot;intendedDestination&amp;quot;:&amp;quot;[\&amp;quot;&amp;amp;#x68;ar&amp;amp;#x6c;&amp;amp;#x6f;.h&amp;amp;#x6f;&amp;amp;#x6c;me&amp;amp;#x73;@g&amp;amp;#x6d;&amp;amp;#x61;il&amp;amp;#x2e;&amp;amp;#x63;om\&amp;quot;]&amp;quot;&amp;lt;br /&amp;gt;
+}&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;your-help&#34;&gt;Your Help&lt;/h2&gt;
+
+&lt;p&gt;InformaCam is a work-in-process, and we’d love help from the community in fleshing out our metadata specification, especially in adding new items to the consent checklist. Feel free to contact us with any suggestions/comments, or just leave some helpful tips in the comments below.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

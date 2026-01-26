@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workflow on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/workflow/</link>
+    <description>Recent content in Workflow on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 Nov 2013 14:03:22 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A tag-team git workflow that incorporates auditing</title>
+      <link>https://guardianproject.github.io/info/2013/11/21/a-tag-team-git-workflow-that-incorporates-auditing/</link>
+      <pubDate>Thu, 21 Nov 2013 14:03:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/21/a-tag-team-git-workflow-that-incorporates-auditing/</guid>
+      <description>&lt;p&gt;Git is as wonderful as it is terrible, it is immensly flexible but also far from intuitive. So to make our lives easier, we try to use git as it was originally intended, as a toolkit for building workflows.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_11990&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows#Integration-Manager-Workflow&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-11990&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow-300x121.png&#34; alt=&#34;Integration-Manager Workflow&#34; width=&#34;300&#34; height=&#34;121&#34; class=&#34;size-medium wp-image-11990&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow-300x121.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow.png 500w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p id=&#34;caption-attachment-11990&#34; class=&#34;wp-caption-text&#34;&gt;
+    Integration-Manager Workflow
+  &lt;/p&gt;
+&lt;/div&gt;We use a simple version of the “&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows&#34; target=&#34;_blank&#34;&gt;Integration-Manager Workflow&lt;/a&gt;“. One key difference is that we often have multiple contributors acting as the integration manager. This means that there is always someone else besides the original author reviewing each commit. For example: I make a commit and push it to my public developer’s repo. I ask Abel to review my commit, and if he agrees with it, he then pushes it to the official public “_upstream_” repo (aka “blessed repository”). And since git will tell us if a remote repo is different than our local repo, this process makes it harder for an attacker to slip a commit into our remote repo without us noticing.&lt;/p&gt;
+
+&lt;p&gt;The key to this workflow is that all contributors must fork from the same git repo, and mark that one as the one &lt;em&gt;upstream&lt;/em&gt; repo. We often end up &lt;a href=&#34;http://git-scm.com/book/en/Git-Branching-Rebasing&#34; target=&#34;_blank&#34;&gt;rebasing&lt;/a&gt; things to make sure each commit is based on the most up-to-date code. It also makes for a clean, readable history. That means each contributor’s public repo will be rebased from time to time, so you cannot rely on those repos as something to base your own work off of.&lt;/p&gt;
+
+&lt;p&gt;At the very least, a contributor’s local repo should be set up to talk to two remote repos: the contributor’s own public repo and the &lt;em&gt;upstream&lt;/em&gt; repo. I’ll use github as an example of how to get started in this workflow. Say you want to contribute to &lt;a href=&#34;https://github.com/guardianproject/keysync&#34;&gt;https://github.com/guardianproject/keysync&lt;/a&gt;, start by making a fork via the github.com&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fork.png&#34; alt=&#34;fork&#34; width=&#34;65&#34; height=&#34;19&#34; /&gt; button. Once that is setup, its time to clone it and configure the rest. I’m &lt;strong&gt;eighthave&lt;/strong&gt; on github, so this example will use my public repo. I work with Abel Luck on KeySync, so we’ll add his repo as another contributor repo.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/eighthave/keysync
+cd keysync
+git remote add upstream https://github.com/guardianproject/keysync
+git fetch upstream
+git remote add abeluck https://github.com/abeluck/keysync
+git fetch abeluck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I can see all of the remotes in my local git repo, and work with them as branches:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ git remote  -v
+abeluck https://github.com/abeluck/keysync (fetch)
+abeluck https://github.com/abeluck/keysync (push)
+origin  https://github.com/eighthave/keysync (fetch)
+origin  https://github.com/eighthave/keysync (push)
+upstream        https://github.com/guardianproject/keysync (fetch)
+upstream        https://github.com/guardianproject/keysync (push)
+$ git branch -va
+* master                  1536fcf parse version number from setuptools
+  remotes/abeluck/master  1536fcf parse version number from setuptools
+  remotes/origin/HEAD     -&amp;gt; origin/master
+  remotes/origin/master   1536fcf parse version number from setuptools
+  remotes/upstream/master 1536fcf parse version number from setuptools
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I do some work, and commit it to my local repo, and want to push them for Abel to review. In the meantime Abel has pushed some commits for me to review into his remote repo &lt;code&gt;abeluck&lt;/code&gt;. So I need to fetch his new commits, then rebase my new local commits on top of of his new commits. When its all ready, I push it to my remote repo &lt;code&gt;origin&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+git fetch abeluck
+(review the commits...)
+git rebase abeluck/master
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I’ve reviewed Abel’s new commits and incorporated them into my public repo. Abel is ready to review my new commits, which are rebased on top of his. If he agrees with them, he’ll push them to the official “blessed” repo &lt;code&gt;upstream&lt;/code&gt;. Then his local repo will be in sync with the latest &lt;em&gt;upstream&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+git fetch eighthave
+git merge eighthave/master
+(review the commits...)
+git push upstream master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Review The Commits&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also review the commits before rebasing or merging them into the local master. This is done by switching to the remote branch, which is kind of like a local branch, but not entirely. It works for checking out and viewing just fine though:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout eighthave/master
+(review the commits...)
+git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Undoing A Bad Rebase&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Git doesn’t provide any undo, and it also will let you delete things, not a good situation for learning this stuff. Luckily it does give you the tools for making something like an undo function. I use a tag for this, and I always use the same name for that tag: &lt;code&gt;pre-rebase&lt;/code&gt;. Before starting anything that involves rebasing, I first do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout master
+git tag pre-rebase
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then after the rebase is successfully deleted, I remove that tag:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git tag -d pre-rebase
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Switching Your Master When Things Have Diverged&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It is often the case that in the process of merging and rebasing, the developers’ repos will be in separate branches of the original tree. Once the “integration manager” person has pulled in all the commits, rebased and merged everything, and pushed the approved commits to the upstream repo, the other developers will likely need to reset their repos to resync with the upstream:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git fetch upstream
+git checkout upstream/master
+git branch -D master
+git branch master
+git checkout master
+git push -f origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So &lt;code&gt;git branch -D master&lt;/code&gt; does indeed mean force-delete your master branch. That is required before setting your master branch to a new branch. If you want, you can keep that old branch around by doing &lt;code&gt;git branch myfeaturedevbranch&lt;/code&gt; before doing &lt;code&gt;git branch -D master&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Keeping All The History&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One addition to this process is for each contributor to mark their own tree with a labeled branch before rebasing, and then pushing those branches to the contributor’s public repo. This will then provide a complete history of the process, if that is desired. For example: I push some commits to my public repo, then Abel rebases my commits onto some of his work and pushes to the &lt;em&gt;upstream&lt;/em&gt;. In this case, the history in my public repo will be different than what is in the &lt;em&gt;upstream&lt;/em&gt; repo as well as Abel’s public repo.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Freeswitch on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/freeswitch/</link>
+    <description>Recent content in Freeswitch on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 May 2012 17:13:39 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/freeswitch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&lt;!--:en--&gt;Build your own Open Secure Telephony Network, some assembly required&lt;!--:--&gt;</title>
+      <link>https://guardianproject.github.io/info/2012/05/17/en-build-your-own-open-secure-telephony-network-some-assembly-required/</link>
+      <pubDate>Thu, 17 May 2012 17:13:39 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/17/en-build-your-own-open-secure-telephony-network-some-assembly-required/</guid>
+      <description>&lt;p&gt;&lt;!--:en--&gt;The Open Secure Telephony Network is a standard that defines how to configure a VoIP softswitch with the capability to have secure two-way VoIP conversations if both parties are using the same server. The system requires both backend and frontend components, which makes OSTN is a little different than some of the other Guardian apps. Unlike Gibberbot, there are few public SIP services that support secure signalling for a mobile app to connect with. Notably&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tanstagi.net&#34;&gt;Tanstagi.net&lt;/a&gt; offers free accounts. But it’s more fun to run your own.&lt;/p&gt;
+
+&lt;p&gt;Ready? Here’s the 12 step program.&lt;/p&gt;
+
+&lt;p&gt;The core server system is what provides user registration and media proxying. The reference application I used is called Freeswitch. It has a plethora of configuration options, so I chose to use a configuration management system called Chef to get everything set correctly.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Bootstrap a Debian server. Right now the only supported platform for an automated installation is Debian 6 “Squeeze”. The adventerous may try to run the cookbook on another platform and do some bug fixing&lt;/li&gt;
+&lt;li&gt;Install sudo, curl and git if you don’t already have them. &lt;code&gt;apt-get install sudo curl git-core&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Get a static IP address. This is crucial! Your users will need a place to register from anywhere in the world&lt;/li&gt;
+&lt;li&gt;Get a domain name. This is also crucial! Your users will prefer to register to a name rather than an IP address&lt;/li&gt;
+&lt;li&gt;Configure a local hostname. This is a dependency for the cookbook to properly configure Freeswitch to serve your custom domain. Unfortunately, this process varies based on OS and has bizarre conventions that make no sense. Just &lt;a href=&#34;http://serverfault.com/questions/331936/setting-the-hostname-fqdn-or-short-name&#34;&gt;follow the instructions&lt;/a&gt; and don’t ask questions. Remember to reboot after changing the hostname&lt;/li&gt;
+&lt;li&gt;Install Chef from the &lt;a href=&#34;http://www.opscode.com/chef/install/&#34;&gt;opscode full stack&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download the &lt;a href=&#34;https://github.com/lazzarello/chef-twelvetone&#34;&gt;freeswitch cookbook&lt;/a&gt; and &lt;a href=&#34;https://github.com/lazzarello/chef-twelvetone/tree/master/cookbooks/freeswitch&#34;&gt;execute it&lt;/a&gt; with chef-solo&lt;/li&gt;
+&lt;li&gt;Walk away and have some coffee or a beer, depending on where the sun is relative to you&lt;/li&gt;
+&lt;li&gt;When the Chef run is finished, Freeswitch will be up and running. Check with &lt;code&gt;netstat -lntp&lt;/code&gt; you should see freeswitch listening on TCP port 5061&lt;/li&gt;
+&lt;li&gt;Create users by running &lt;code&gt;/opt/chef/embedded/bin/ruby /usr/local/freeswitch/scripts/gen_users&lt;/code&gt;. Without arguments, it will print the required parameters. Run it with an offset of 1000 and as many users as you like. Copy the XML files output by the script to &lt;code&gt;/usr/local/freeswitch/conf/directory/default/&lt;/code&gt; The script will also output a file with plaintext passwords so you can provision user handsets. Put this file somewhere safe and encrypted&lt;/li&gt;
+&lt;li&gt;Reload the XML into Freeswitch’s memory. &lt;code&gt;/usr/local/freeswitch/bin/fs_cli -x &amp;quot;reloadxml&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install &lt;a href=&#34;http://nightlies.csipsimple.com/trunk/&#34;&gt;CSipSimple&lt;/a&gt; and configure it to connect to your domain name with the username/password pair&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you make it through these steps, congratulations! You are now a Freeswitch operator. If you’re curious what is behind all of this and why it works, you should read about &lt;a href=&#34;https://en.wikipedia.org/wiki/Session_Initiation_Protocol&#34;&gt;SIP&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/ZRTP&#34;&gt;ZRTP&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Session_Description_Protocol&#34;&gt;SDP&lt;/a&gt;. It’s also worth noting that the Chef cookbook configures the server to act as an SSL &lt;a href=&#34;https://en.wikipedia.org/wiki/Certificate_authority&#34;&gt;Certificate Authority&lt;/a&gt;. This is used for Secure SIP. The current landscape of using commercially signed certificates in Freeswitch is far more complicated than any HTTPS web server you may have worked with.&lt;/p&gt;
+
+&lt;p&gt;If you’d like to get help from me or another Guardian Project hacker, you can create issues &lt;a href=&#34;https://dev.guardianproject.info/projects/ostn&#34;&gt;in our tracker&lt;/a&gt; and message SteeleNivenson on Freenode or OFTC in channel #guardianproject. Oh yeah, and there’s Twitter @leeazzarello.&lt;!--:--&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

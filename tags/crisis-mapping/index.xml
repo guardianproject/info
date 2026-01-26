@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crisis Mapping on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/crisis-mapping/</link>
+    <description>Recent content in Crisis Mapping on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 Mar 2010 19:53:00 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/crisis-mapping/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ushahidi-Linda: “Testimony” &#43; “Protection”</title>
+      <link>https://guardianproject.github.io/info/2010/03/10/ushahidi-linda-testimony-protection/</link>
+      <pubDate>Wed, 10 Mar 2010 19:53:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/03/10/ushahidi-linda-testimony-protection/</guid>
+      <description>&lt;p&gt;Ushahidi-linda (“Testimony” + “Protection” – &lt;em&gt;disclaimer: we don’t speak Swahili so this was a shot in the dark!&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;This is a fork of the &lt;a href=&#34;https://github.com/ushahidi/Ushahidi_Android&#34;&gt;Ushahidi on Android&lt;/a&gt; app, done as a way to prototype the implementation of increased security, anonymity and privacy for users viewing and submitting reports through &lt;a href=&#34;http://ushahidi.com&#34;&gt;Ushahidi&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png&#34;&gt;&lt;img class=&#34;size-full wp-image-199 alignleft&#34; title=&#34;ushahidi_android_splash&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png&#34; alt=&#34;&#34; width=&#34;224&#34; height=&#34;336&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png 320w, https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash-200x300.png 200w&#34; sizes=&#34;(max-width: 224px) 100vw, 224px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ushahidi is a platform that crowdsources crisis information, allowing anyone to submit crisis information through text messaging using a mobile phone, email or web form.&lt;/p&gt;
+
+&lt;p&gt;The network code for the Ushahidi app has been tied into &lt;a href=&#34;https://guardianproject.github.io/info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; (Tor on Android) using a SOCKS5 client. This does NOT require a rooted device to work – both it and Orbot can be run on stock, off the shelf Android devices on any mobile operator that offers at least a GPRS connection. This version of the app will ONLY work if Orbot is activated and connected to the Tor Network. Otherwise, network connections will fail.&lt;/p&gt;
+
+&lt;p&gt;We plan/hope to work with the Ushahidi team to integrate this functionality into the main branch of code, and offer a clear, easy way for users to activate/deactivate use of the anonymity/anti-surveillence features.&lt;/p&gt;
+
+&lt;p&gt;You can access the complete source code for Ushahidi-Linda on Android via our &lt;a href=&#34;https://github.com/guardianproject/Ushahidi_Android&#34;&gt;Git repository&lt;/a&gt; and also &lt;a href=&#34;https://github.com/guardianproject/Ushahidi_Android/downloads&#34;&gt;download test builds&lt;/a&gt; as they are available. &lt;strong&gt;PLEASE NOTE: Until further notice and formal announcements, these builds should be considered ALPHA and are for testing, proof of concept use only.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Specifically you can see how we have provided a new &lt;a href=&#34;https://github.com/guardianproject/Ushahidi_Android/tree/master/src/info/guardianproject/net/&#34;&gt;SocksHTTPClient package&lt;/a&gt; that proxies all GET and POST connections through SOCKS.&lt;/p&gt;
+
+&lt;p&gt;From here, the plan is to implement a security pin on startup, local data encryption for storage of data both in the database and on the sdcard, as well as quick “delete all” features.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Learn more about the Tor Project and how network anonymity works at&lt;/em&gt; &lt;a href=&#34;https://www.torproject.org&#34;&gt;&lt;em&gt;https://www.torproject.org&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

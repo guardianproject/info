@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>How To: Lockdown Your Mobile E-Mail - Guardian Project</title>
+  <meta property="og:title" content="How To: Lockdown Your Mobile E-Mail" />
+  <meta name="twitter:title" content="How To: Lockdown Your Mobile E-Mail" />
+  <meta name="description" content="Update 2015-04-27: _We now recommend OpenKeychain over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and OpenKeychain, then go into OpenKeychain and start the config there._
+Over the past few years it’s become increasingly popular to sound the call that ‘email is dead{#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate.">
+  <meta property="og:description" content="Update 2015-04-27: _We now recommend OpenKeychain over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and OpenKeychain, then go into OpenKeychain and start the config there._
+Over the past few years it’s become increasingly popular to sound the call that ‘email is dead{#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate.">
+  <meta name="twitter:description" content="Update 2015-04-27: _We now recommend OpenKeychain over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/",
+          "name": "How to lockdown your mobile e mail"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Derek"
+  },
+  "headline": "How To: Lockdown Your Mobile E-Mail",
+  "description" : "Update 2015-04-27: _We now recommend OpenKeychain over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and OpenKeychain, then go into OpenKeychain and start the config there._
+Over the past few years it’s become increasingly popular to sound the call that ‘email is dead{#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate.",
+  "inLanguage" : "en",
+  "wordCount": 1654,
+  "datePublished" : "2010-07-09T11:00:25",
+  "dateModified" : "2010-07-09T11:00:25",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, apg, encryption, openkeychain, openpgp, pgp" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="How To: Lockdown Your Mobile E-Mail" />
+<meta property="og:description" content="Update 2015-04-27: _We now recommend OpenKeychain over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and OpenKeychain, then go into OpenKeychain and start the config there._
+Over the past few years it’s become increasingly popular to sound the call that ‘email is dead{#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="How To: Lockdown Your Mobile E-Mail" />
+  <meta name="twitter:description" content="Update 2015-04-27: _We now recommend OpenKeychain over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/wp-content/uploads/2010/07/k9_view_decrypt-64x64.png" 
+         
+         
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="blog-heading">
+		<noscript>
+		  <img src="/wp-content/uploads/2010/07/k9_view_decrypt-64x64.png"/>
+		</noscript>
+                <h1>How To: Lockdown Your Mobile E-Mail</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on July 9, 2010
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Derek
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>How To: Lockdown Your Mobile E-Mail</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on July 9, 2010
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Derek
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><strong>Update 2015-04-27</strong>: _We now recommend <a href="http://www.openkeychain.org/" target="_blank">OpenKeychain</a> over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and <a href="http://www.openkeychain.org/" target="_blank">OpenKeychain</a>, then go into OpenKeychain and start the config there._</p>
+
+<p>Over the past few years it’s become <a href="https://www.youtube.com/watch?v=Gm8NdNy4wOM">increasingly popular</a> to sound the call that ‘<a href="http://www.pcmag.com/article2/0,2817,2343209,00.asp" title="dead">email is dead</a>{#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate. I expect to be scooting around on my <a href="https://en.wikipedia.org/wiki/Hoverboard">hoverboard</a> by the time email goes the way of the dinosaur.</p>
+
+<p>Unfortunately, many of the protocols involved in sending and receiving e-mail are not considered secure – in the sense that they are vulnerable to eavesdropping. Simple Mail Transport Protocol (SMTP) – the Internet standard for e-mail transmission across IP networks  most commonly used by client applications for sending messages to a mail server for relaying – is typically implemented without any type of transport encryption. Internet Message Access Protocol (IMAP) and Post Office Protocol (POP) suffer from the same eavesdropping issues as SMTP when implemented without transport encryption. Even when SMTP is implemented with transport encryption it does not, by default, require the authentication of e-mail message senders. As a result, mail servers cannot be sure that the senders of messages are really who they claim to be. And even though POP and IMAP require users to authenticate, messages are sent and delivered using SMTP.</p>
+
+<p>The result is a situation where the <em>recipient</em> of an e-mail message can be positively identified but the <em>sender</em> cannot. Along with the eavesdropping concerns mentioned at the top of the paragraph, this is an alarming state of affairs. Imagine if the same were true of snail mail – there would be rioting in the streets! Fortunately there has been a lot of great work done to combat these fears – the main issue being that the problem itself is  still one  that is often ignored or not fully understood by the layperson. As secure solutions for mobile platforms gain momentum, we’re hoping to change things.</p>
+
+<p>Enter <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP">OpenPGP</a>, an IETF standard for encryption and decryption of data. The version of OpenPGP that exists today is the evolution of PGP, which was created in 1991 as a means for secure BBSs communication and message storage (it ironically also stands for “Pretty Good Privacy”). Why do you need PGP? In the words of its inventory, Phil Zimmerman: “<a href="http://www.spectacle.org/795/byzim.html">It empowers people to take their privacy into their own hands</a>.” How it works is a whole other story – one too complex for the purposes of this posting – but we’ll do our  best to scrape the surface quickly. Disclaimer: The following is meant solely as an introduction. There are many people out there who are experts in these topics, and we welcome any and all comments – especially if we misstate or misrepresent anything!</p>
+
+<p>PGP uses a serial combination of hashing, data compression, symmetric-key cryptography, and, finally, public-key cryptography. From the user’s perspective, it creates two <a href="https://en.wikipedia.org/wiki/Cryptographic_key">cryptographic keys</a> to encrypt and decrypt data. The first of these two is called the <a href="https://en.wikipedia.org/wiki/Public-key">Public Key</a> – which can be freely shared with anyone the user wishes and is used by others to encrypt data so that it can be decrypted by <strong>only the intended recipient</strong>. The second key is the Private Key, which should be kept as private and safe as possible. It is used to decrypt data that has been encrypted using a specific Public Key. As long as the Private Key is kept secret, only the owner is  able to decrypt data that has been encrypted with a Public Key. One problem with older methods of encryption was the relative ease with which codes could be broken. With increasingly powerful computers that are able to crack codes via pure ‘brute force,’ encoding methods must be incredibly complex to stand up. To combat this, PGP uses a key that is astronomically large,  meaning that the security of PGP encryption lies entirely with the key as opposed to keeping the method for key generation a secret. In fact, the methods that PGP encryption uses are known and widely documented. In addition, the size of keys can be increased whenever necessary to stay one step ahead of technological advances. And for the time being, each of the algorithms in current use by PGP is not known to have cryptanalytic weaknesses.</p>
+
+<p>So how secure does this make your information? Italian Police, the <a href="http://www.pcworld.com/article/110841/pgp_encryption_proves_powerful.html">FBI</a>, and <a href="http://www.theregister.co.uk/2007/11/14/ripa_encryption_key_notice/">British police</a> have been unable to crack its security and have resorted to demanding private keys. It’s been likened as “the closest you’re likely to get to military-grade encryption” by cryptographer <a href="https://en.wikipedia.org/wiki/Bruce_Schneier">Bruce Schneier</a>. Short answer: pretty darn good, as long as you guard your private key wisely.</p>
+
+<p>You’ve probably guessed by now that the reason for this posting is to show you how to effectively use OpenPGP to secure your mobile email. And while we would’ve loved to just jump right into the tutorial, there are a few more things you should know first. <a href="https://code.google.com/p/android-privacy-guard/" title="Android Privacy Guard">Android Privacy Guard</a>{#udlg} (or APG for short), is a first step at bringing <a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" title="PGP">OpenPGP</a>{#qtjc} to the Android platform, letting you manage OpenPGP keys directly from your Android phone – and use them to encrypt, sign and decrypt emails and files. <a href="http://groups.google.com/group/k-9-mail/browse_thread/thread/921051bc0a61ed0b/d6085b925805ebf2?lnk=raot">Very recently</a> the teams behind APG and the popular, open-source Android email client <a href="https://code.google.com/p/k9mail/">K-9 Mail</a> have joined forces in a limited edition <a href="https://en.wikipedia.org/wiki/Marvel_Team-Up">team-up</a> to create a beta version of K-9 that plays nice with APG quite seamlessly. We’ve been using it as our default email solution at Guardian for weeks now and want to share it with you!</p>
+
+<p><strong>Note:</strong> Currently APG only supports importing and deleting keys – not generating them – so you’ve got to use a desktop implementation of OpenPGP (such as <a href="http://www.gnupg.org/" title="GNU Privacy Guard">GNU Privacy Guard</a>{#vrm_}) to actually generate your keypair if you don’t already have one. A number of front-end applications and libraries are available to perform this task. If you already have a keypair set up, you should skip the first step.</p>
+
+<p style="padding-left: 30px;">
+  <strong>1. Download and Install GnuPG Generate an OpenPGP keypair</strong>
+</p>
+
+<p style="padding-left: 30px;">
+  Install GnuPG  <a href="http://www.gnupg.org/download.html">here</a>. There are binaries available for <a href="http://www.gnupg.org/download/supported_systems.en.html">whatever OS flavor</a> you prefer, and since they do a great job of making documentation and <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html">How-To Guides</a> available, we’ll skip the part where we reinvent the wheel.
+</p>
+
+<p style="padding-left: 30px;">
+  <strong>2. Generate and export your keypair</strong>
+</p>
+
+<p style="padding-left: 30px;">
+  Follow the instructions <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.1">here</a> to create a new keypair. <a href="http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html#ss3.2">Export</a> your public and private keys (re-direct from stdout to a file) and stick that file on your Android device’s SD card. Usually it’s best to create a new folder /APG to keep things organized, especially if your SD card is a mess like ours 🙂
+</p>
+
+<p style="padding-left: 30px;">
+  <strong>3. Download APG and import your keys</strong>
+</p>
+
+<p style="padding-left: 30px;">
+  <strong> </strong>If you don’t already have it, download Android Privacy Guard from its repository <a href="https://code.google.com/p/android-privacy-guard/downloads/list">here</a> or point your barcode scanner to the QR code below. You can also find it on the Market if you prefer.
+</p>
+
+<p style="padding-left: 30px;">
+  <span style="line-height: 1px; font-size: 13.2px;"> </span>
+</p>
+
+<p style="padding-left: 30px; text-align: center;">
+  <a href="https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png"><img class="size-full wp-image-385 aligncenter" title="qrcode_apg" src="https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png" alt="" width="120" height="120" srcset="https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg.png 120w, https://guardianproject.info/wp-content/uploads/2010/06/qrcode_apg-64x64.png 64w" sizes="(max-width: 120px) 100vw, 120px" /></a>
+</p>
+
+<p style="padding-left: 30px;">
+  Fire up APG and select ‘Manage Public Keys’ from the menu:
+</p>
+
+<p style="padding-left: 30px; text-align: center;">
+  <a href="https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png"><img class="size-medium wp-image-390 aligncenter" title="apg_menu" src="https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_menu1.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a>
+</p>
+
+<p style="padding-left: 30px; text-align: center;">
+  <p style="padding-left: 30px;">
+    From the ‘Manage Public Keys’ screen, select ‘Import Keys’:
+  </p>
+  
+
+<p><p style="padding-left: 30px; text-align: center;">
+    <a href="https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png"><img class="size-medium wp-image-391 aligncenter" title="apg_manage_public_keys_blur" src="https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png" alt="" width="180" height="300" srcset="https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_manage_public_keys_blur.png 480w" sizes="(max-width: 180px) 100vw, 180px" /></a>
+  </p></p>
+
+<p><p style="padding-left: 30px;">
+    <p style="padding-left: 30px;">
+      From the popup dialog, select the public key that you’ve transferred to your SD card. It’s helpful to use a file browser program like Astro File Manager if you don’t already have it installed:
+    </p></p>
+
+<pre><code>&lt;p style=&quot;padding-left: 30px; text-align: center;&quot;&gt;
+  &lt;span style=&quot;line-height: 8px;&quot;&gt;&lt;a href=&quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-392 aligncenter&quot; title=&quot;apg_import_keys_blur&quot; src=&quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png&quot; alt=&quot;&quot; width=&quot;180&quot; height=&quot;300&quot; srcset=&quot;https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/06/apg_import_keys_blur.png 480w&quot; sizes=&quot;(max-width: 180px) 100vw, 180px&quot; /&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;padding-left: 30px;&quot;&gt;
+  &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+    Once your public key(s) are successfully imported, return to the main APG menu, select ‘Manage Secret Keys’ and repeat the steps above for your Private Key.
+  &lt;/p&gt;
+
+  &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+    &lt;strong&gt;4. Download and Configure K-9 Mail&lt;/strong&gt;
+  &lt;/p&gt;
+
+  &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+    Download the latest version of K-9 mail featuring APG integration. You can find it on the Downloads page &lt;a href=&quot;https://code.google.com/p/k9mail/downloads/list&quot;&gt;here&lt;/a&gt; or, again, point your barcode scanner to the QR Code below. Whatever floats your boat.
+  &lt;/p&gt;
+
+  &lt;p style=&quot;padding-left: 30px; text-align: center;&quot;&gt;
+    &lt;img class=&quot;aligncenter&quot; src=&quot;https://chart.apis.google.com/chart?chs=150x150&amp;cht=qr&amp;chl=http://k9mail.googlecode.com/files/k9-apg-2900-beta.apk&amp;chld=L|1&amp;choe=UTF-8&quot; alt=&quot;&quot; width=&quot;125&quot; height=&quot;125&quot; /&gt;
+  &lt;/p&gt;
+
+  &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+    Set up your email account by entering your email address and password, then give it a name.
+  &lt;/p&gt;
+
+  &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+    &lt;a href=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png&quot;&gt;&lt;img class=&quot;aligncenter size-medium wp-image-451&quot; title=&quot;k9_setup&quot; src=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png&quot; alt=&quot;&quot; width=&quot;168&quot; height=&quot;300&quot; srcset=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_setup1.png 480w&quot; sizes=&quot;(max-width: 168px) 100vw, 168px&quot; /&gt;&lt;/a&gt;
+  &lt;/p&gt;
+
+  &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+    &lt;p style=&quot;padding-left: 30px; text-align: center;&quot;&gt;
+      &lt;img class=&quot;aligncenter&quot; title=&quot;k9_almost_done&quot; src=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done-168x300.png&quot; alt=&quot;&quot; width=&quot;168&quot; height=&quot;300&quot; /&gt;
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      For more popular accounts such as gmail, Yahoo!, etc., K-9 will automatically detect the correct configuration. For more complex accounts such as Exchange, please check out the K-9 wiki page &lt;a href=&quot;https://code.google.com/p/k9mail/w/list&quot;&gt;here&lt;/a&gt;.
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      &lt;strong&gt;5. Send and Receive Encrypted Email!&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      Thanks to the integration effort by the teams at APG and K-9, actually using secure mobile email becomes easy. The compose screen features a prominent checkbox and button that allow you to sign and encrypt your outbound messages, respectively.
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      &lt;a href=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png&quot;&gt;&lt;img class=&quot;aligncenter size-medium wp-image-453&quot; title=&quot;k9_compose&quot; src=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png&quot; alt=&quot;&quot; width=&quot;168&quot; height=&quot;300&quot; srcset=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose-84x150.png 84w, https://guardianproject.info/wp-content/uploads/2010/07/k9_compose.png 480w&quot; sizes=&quot;(max-width: 168px) 100vw, 168px&quot; /&gt;&lt;/a&gt;
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      Decrypting messages with your private key is even easier and is literally a 1-touch experience:
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      &lt;a href=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_almost_done.png&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png&quot;&gt;&lt;img class=&quot;aligncenter size-medium wp-image-455&quot; title=&quot;k9_view_decrypt&quot; src=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png&quot; alt=&quot;&quot; width=&quot;180&quot; height=&quot;300&quot; srcset=&quot;https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt-90x150.png 90w, https://guardianproject.info/wp-content/uploads/2010/07/k9_view_decrypt.png 480w&quot; sizes=&quot;(max-width: 180px) 100vw, 180px&quot; /&gt;&lt;/a&gt;
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      &lt;strong&gt;Enjoy! &lt;/strong&gt;As always, please post all questions, concerns, and jokes (only good ones please) in the Comments section. We’re very excited about the powerful combination that these two apps bring and we’d love to hear from you!
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      If you find any issues with APG, please report them &lt;a href=&quot;https://code.google.com/p/android-privacy-guard/issues/list&quot;&gt;here&lt;/a&gt;:
+    &lt;/p&gt;
+
+    &lt;p style=&quot;padding-left: 30px;&quot;&gt;
+      &lt;span style=&quot;line-height: 13px;&quot;&gt;&lt;span style=&quot;line-height: 16px;&quot;&gt;Likewise, report issues with K-9 &lt;a href=&quot;https://code.google.com/p/k9mail/issues/list&quot;&gt;here&lt;/a&gt;. &lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+</code></pre>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/apg/">apg</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/encryption/">encryption</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/openkeychain/">openkeychain</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/openpgp/">openpgp</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/pgp/">pgp</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2010/06/05/apad-/-irobot-/-moons-e7001-teardown/" data-toggle="tooltip" data-placement="top" title="aPad / iRobot / Moons e7001 Teardown">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2010/07/13/calling-all-guardians-alpha-testers-needed/" data-toggle="tooltip" data-placement="top" title="Calling all Guardians – Alpha Testers Needed!">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

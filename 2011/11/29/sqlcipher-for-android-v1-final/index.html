@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>SQLCipher for Android v1 FINAL! - Guardian Project</title>
+  <meta property="og:title" content="SQLCipher for Android v1 FINAL!" />
+  <meta name="twitter:title" content="SQLCipher for Android v1 FINAL!" />
+  <meta name="description" content="Team GP along with the good folks at Zetetic, are happy to announce that we have reached FINAL on our first release (“v1” 0.0.6 build) of SQLCipher for Android. This means we consider this a production release, ready for shipping with your apps to provide for reliable, open-source, secure application data encryption.
+If you need a refresher, here is what the cross-platform, open-source SQLCipher provides:
+ SQLCipher is an SQLite extension that provides transparent 256-bit AES encryption of database files.">
+  <meta property="og:description" content="Team GP along with the good folks at Zetetic, are happy to announce that we have reached FINAL on our first release (“v1” 0.0.6 build) of SQLCipher for Android. This means we consider this a production release, ready for shipping with your apps to provide for reliable, open-source, secure application data encryption.
+If you need a refresher, here is what the cross-platform, open-source SQLCipher provides:
+ SQLCipher is an SQLite extension that provides transparent 256-bit AES encryption of database files.">
+  <meta name="twitter:description" content="Team GP along with the good folks at Zetetic, are happy to announce that we have reached FINAL on our first release (“v1” 0.0.6 build) of SQLCipher for Android. This means we consider this a …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2011/11/29/sqlcipher-for-android-v1-final/",
+          "name": "Sql cipher for android v1 f i n a l!"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "n8fr8"
+  },
+  "headline": "SQLCipher for Android v1 FINAL!",
+  "description" : "Team GP along with the good folks at Zetetic, are happy to announce that we have reached FINAL on our first release (“v1” 0.0.6 build) of SQLCipher for Android. This means we consider this a production release, ready for shipping with your apps to provide for reliable, open-source, secure application data encryption.
+If you need a refresher, here is what the cross-platform, open-source SQLCipher provides:
+ SQLCipher is an SQLite extension that provides transparent 256-bit AES encryption of database files.",
+  "inLanguage" : "en",
+  "wordCount": 434,
+  "datePublished" : "2011-11-29T18:17:47",
+  "dateModified" : "2011-11-29T18:17:47",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2011/11/29/sqlcipher-for-android-v1-final/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="SQLCipher for Android v1 FINAL!" />
+<meta property="og:description" content="Team GP along with the good folks at Zetetic, are happy to announce that we have reached FINAL on our first release (“v1” 0.0.6 build) of SQLCipher for Android. This means we consider this a production release, ready for shipping with your apps to provide for reliable, open-source, secure application data encryption.
+If you need a refresher, here is what the cross-platform, open-source SQLCipher provides:
+ SQLCipher is an SQLite extension that provides transparent 256-bit AES encryption of database files.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2011/11/29/sqlcipher-for-android-v1-final/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="SQLCipher for Android v1 FINAL!" />
+  <meta name="twitter:description" content="Team GP along with the good folks at Zetetic, are happy to announce that we have reached FINAL on our first release (“v1” 0.0.6 build) of SQLCipher for Android. This means we consider this a …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2011/11/29/sqlcipher-for-android-v1-final/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/wp-content/uploads/2011/11/logo-sqlcipher-android.png" 
+         
+         
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="blog-heading">
+		<noscript>
+		  <img src="/wp-content/uploads/2011/11/logo-sqlcipher-android.png"/>
+		</noscript>
+                <h1>SQLCipher for Android v1 FINAL!</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on November 29, 2011
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;n8fr8
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>SQLCipher for Android v1 FINAL!</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on November 29, 2011
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;n8fr8
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p> </p>
+
+<p>Team GP along with the good folks at <a href="http://zetetic.net/">Zetetic</a>, are happy to announce that we have reached <em><strong>FINAL</strong></em> on our first release (“v1” 0.0.6 build) of <a href="https://guardianproject.info/code/sqlcipher/">SQLCipher for Android</a>. This means we consider this a production release, ready for shipping with your apps to provide for reliable, open-source, secure application data encryption.</p>
+
+<p>If you need a refresher, here is what the cross-platform, open-source <a href="https://www.zetetic.net/sqlcipher/">SQLCipher</a> provides:</p>
+
+<blockquote>
+<p>SQLCipher is an <a href="http://sqlite.org/">SQLite</a> extension that provides transparent 256-bit AES encryption of database files. Pages are encrypted before being written to disk and are decrypted when read back. Due to the small footprint and great performance it’s ideal for protecting embedded application databases and is well suited for mobile development.</p>
+
+<ul>
+<li>Blazing fast performance with as little as 5-15% overhead for encryption on many operations</li>
+<li>100% of data in the database file is encrypted</li>
+<li>Uses good security practices (CBC mode, key derivation)</li>
+<li>Zero-configuration and application level cryptography</li>
+<li>Broad platform support: works with C/C++, Obj-C, QT, Win32/.NET, Java, Python, Ruby, etc on Windows, Linux, iPhone/iOS…</li>
+<li>Algorithms provided by the peer reviewed <a href="http://openssl.org/">OpenSSL</a> crypto library.</li>
+</ul>
+</blockquote>
+
+<p>In addition to our work porting the core codebase, the work done on Android also provides near exact API compatibility with the default <a href="http://developer.android.com/reference/android/database/package-summary.html">Android Database API</a>. This means that developers can drop in SQLCipher, and add data encryption to their application, with very little changes to their existing codebase.</p>
+
+<p>Finally, while full disk encryption is offered newer Android devices from Motorola, and those running Android 3.x Honeycomb or 4.x Ice Cream Sandwich, that only provides encryption of the entire internal or external storage, which must be unlocked and decrypted when the device is booted. The SQLCipher model ensures only a limited amount of data from your app is accessible at anytime, and allows the user or the app to lock itself down, whether or not the device itself is locked or encryption.</p>
+
+<blockquote>
+<p><strong>Download the Software Development Kit here for integration with your Android apps: <a href="https://github.com/downloads/guardianproject/android-database-sqlcipher/SQLCipherForAndroid-SDK-0.0.6-FINAL.zip">https://github.com/downloads/guardianproject/android-database-sqlcipher/SQLCipherForAndroid-SDK-0.0.6-FINAL.zip</a></strong></p>
+</blockquote>
+
+<p>You can see all the <a href="https://github.com/guardianproject/android-database-sqlcipher/issues?sort=updated&amp;direction=desc&amp;state=closed&amp;page=1">closed issues addressed</a> in this release.</p>
+
+<p>If you want to build from source, you will need the Android NDK, as well as the SDK. Pull the repo, and run ‘make all’ with the included <a href="https://github.com/guardianproject/android-database-sqlcipher/blob/master/Makefile">SQLCipher Makefile</a>.</p>
+
+<p>Our partners at <a href="http://zetetic.net/">Zetetic</a> have published a <a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/">step-by-step application integration tutorial</a>.<a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/"><br />
+</a> <a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/"><img class="alignnone size-medium wp-image-1345" title="eclipse-class-libraries" src="https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries-300x214.png" alt="" width="300" height="214" srcset="https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries-300x214.png 300w, https://guardianproject.info/wp-content/uploads/2011/11/eclipse-class-libraries.png 754w" sizes="(max-width: 300px) 100vw, 300px" /></a><a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/"><br />
+</a></p>
+
+<p>You can also get started by working with our <a href="https://github.com/guardianproject/notepadbot">sample ‘NoteCipher’ project available on Github</a>.</p>
+
+<p>If you happen to encounter them, <a href="https://github.com/guardianproject/android-database-sqlcipher/issues/new">please report any unexpected behaviours</a>, bugs, typos or other abnormalities, as soon as you can. We know there are still some <a href="https://github.com/guardianproject/android-database-sqlcipher/issues?sort=updated&amp;direction=desc&amp;state=open">outstanding issues</a> faced in some cases, but we did not consider them blockers.</p>
+
+<p>SQLCipher for Android Home: <a href="https://guardianproject.info/code/sqlcipher/">https://guardianproject.info/code/sqlcipher/</a></p>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/" data-toggle="tooltip" data-placement="top" title="Don’t Get Burned, Anonymize Your Fire">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2011/12/22/thoughts-on-mobile-video-for-activism/" data-toggle="tooltip" data-placement="top" title="Thoughts on Mobile Video for Activism">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

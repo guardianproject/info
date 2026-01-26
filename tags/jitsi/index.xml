@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jitsi on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/jitsi/</link>
+    <description>Recent content in Jitsi on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 22 Jul 2013 15:33:44 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/jitsi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jitsi, ostel.co and ISP censorship</title>
+      <link>https://guardianproject.github.io/info/2013/07/22/jitsi-ostel.co-and-isp-censorship/</link>
+      <pubDate>Mon, 22 Jul 2013 15:33:44 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/22/jitsi-ostel.co-and-isp-censorship/</guid>
+      <description>&lt;p&gt;Earlier last week n8fr8 suspected something changed on the ostel.co server, due to many users emailing support specifically about Jitsi connectivity to ostel.co. The common question was “why did it work a few weeks ago and now it doesn’t anymore?”&lt;/p&gt;
+
+&lt;p&gt;The tl;dr follows, skip to keyword CONCLUSION to hear only the punch line.&lt;/p&gt;
+
+&lt;p&gt;To support n8fr8’s hypothesis, there was a small change to the server but I wan’t convinced it effected anything since all my clients continued to work properly, including Jitsi. Obviously &lt;em&gt;something&lt;/em&gt; had changed but none of us knew what it was. After some testing we discovered the problem was related to insecure connections from Jitsi to UDP port 5060 on ostel.co. Secure connections (on TCP port 5061) continued to work as expected.&lt;/p&gt;
+
+&lt;p&gt;To make matters more confusing, I could register and make calls with two different clients (CSipSimple and Linphone) on the same network (my home ISP, Verizon FiOS) using an insecure connection to ostel.co on UDP port 5060.&lt;/p&gt;
+
+&lt;p&gt;At this point I was like WTF?&lt;/p&gt;
+
+&lt;p&gt;I went back to the server, diffed all the configs, checked server versions, connected with every client I could find that would run on any of my computers. The only change was a Kamailio upgrade from 4.0.1 to 4.0.2. A minor point release. The problem with Jitsi remained. What could the server be doing to this poor client?&lt;/p&gt;
+
+&lt;p&gt;I did a packet trace on the ostel.co server’s public network interface, filtered to dump packets only on UDP port 5060 that match my SIP username. I opened Jitsi and things got interesting. For the curious, here’s the utility and options I used. If you are new to operating a SIP network, ngrep is an excellent tool for debugging.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ngrep -d eth0 -t -p -W byline foo port 5060&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll include an excerpt (I’ve included only the relevant headers for this issue) of the initial request from Jitsi. IP addresses and usernames have been changed to protect the innocent.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;U 2013/07/19 22:17:34.920749 0.0.0.0:5060 -&amp;gt; 66.151.32.200:5060&amp;lt;br /&amp;gt;
+REGISTER sip:ostel.co SIP/2.0.&amp;lt;br /&amp;gt;
+CSeq: 1 REGISTER.&amp;lt;br /&amp;gt;
+From: &amp;quot;foo&amp;quot; &amp;lt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&amp;gt;;tag=1eb3467e.&amp;lt;br /&amp;gt;
+To: &amp;quot;foo&amp;quot; &amp;lt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&amp;gt;.&amp;lt;br /&amp;gt;
+Via: SIP/2.0/UDP 0.0.0.0:49152;branch=z9hG4bK-393535-2269e43afef0b312554eb419a8d0540e.&amp;lt;br /&amp;gt;
+User-Agent: Jitsi2.3.4752Linux.&amp;lt;br /&amp;gt;
+Contact: &amp;quot;foo&amp;quot; &amp;lt;sip:foo@0.0.0.0:49152;transport=udp;registering_acc=ostel_co&amp;gt;;expires=600.&amp;lt;br /&amp;gt;
+.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;U 2013/07/19 22:17:34.921155 66.151.32.200:5060 -&amp;gt; 0.0.0.0:5060&lt;br /&gt;
+SIP/2.0 401 Unauthorized.&lt;br /&gt;
+CSeq: 1 REGISTER.&lt;br /&gt;
+From: “foo” &lt;a href=&#34;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&#34;&gt;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&lt;/a&gt;;tag=1eb3467e.&lt;br /&gt;
+To: “foo” &lt;a href=&#34;sip:foo@&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&#34;&gt;sip:foo@&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&lt;/a&gt;;tag=e01f0de2cdfebbeefc5ff0c8eabbb8b3.2f1f.&lt;br /&gt;
+Via: SIP/2.0/UDP 0.0.0.0:49152;branch=z9hG4bK-393535-2269e43afef0b312554eb419a8d0540e;rport=5060.&lt;br /&gt;
+WWW-Authenticate: Digest realm=”ostel.co”, nonce=”Uen0alHp8z4d6ePDl83RtMwARltAxzQu”, qop=”auth”.&lt;br /&gt;
+Server: kamailio (4.0.2 (x86_64/linux)).&lt;/p&gt;
+
+&lt;p&gt;If you read the response, you’ll see Kamailio sent 401 Unauthorized. This is normal for SIP authentication. A second client request should follow it, which should contain an Authorization header with an md5 and a nonce. When Kamailio receives this request, checks the auth database and sends a 200 OK response, the client is authenticated.&lt;/p&gt;
+
+&lt;p&gt;The SIP dialog looks good but Jitsi continues not to register. The dialog flow is cut off after the 401 Unauthorized response. It’s almost like something has blocked the response to the client.&lt;/p&gt;
+
+&lt;p&gt;Since I could register Linphone using the same account, I did the same trace for that client. Here’s the excerpt.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;U 2013/07/19 22:33:18.372770 0.0.0.0:42680 -&amp;gt; 66.151.32.200:5060&amp;lt;br /&amp;gt;
+REGISTER sip:ostel.co SIP/2.0.&amp;lt;br /&amp;gt;
+Via: SIP/2.0/UDP 0.0.0.0:49153;rport;branch=z9hG4bK359459505.&amp;lt;br /&amp;gt;
+From: &amp;lt;sip:f&amp;amp;#x6f;o&amp;amp;#x40;&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;&amp;amp;#x2e;c&amp;amp;#x6f;&amp;gt;;tag=142131416.&amp;lt;br /&amp;gt;
+To: &amp;lt;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&amp;gt;.&amp;lt;br /&amp;gt;
+CSeq: 3 REGISTER.&amp;lt;br /&amp;gt;
+Contact: &amp;lt;sip:foo@0.0.0.0:49153;line=65da8bffcabe8c4&amp;gt;.&amp;lt;br /&amp;gt;
+User-Agent: LinphoneAndroid/2.1.2-1-g23b7fc0 (eXosip2/3.6.0).&amp;lt;br /&amp;gt;
+.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;U 2013/07/19 22:33:18.373112 66.151.32.200:5060 -&amp;gt; 0.0.0.0:42680&lt;br /&gt;
+SIP/2.0 401 Unauthorized.&lt;br /&gt;
+Via: SIP/2.0/UDP 0.0.0.0:49153;rport=42680;branch=z9hG4bK359459505.&lt;br /&gt;
+From: &lt;a href=&#34;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&#34;&gt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&lt;/a&gt;;tag=142131416.&lt;br /&gt;
+To: &lt;a href=&#34;sip:foo&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;el.c&amp;amp;#x6f;&#34;&gt;sip:foo&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;el.c&amp;amp;#x6f;&lt;/a&gt;;tag=e01f0de2cdfebbeefc5ff0c8eabbb8b3.4065.&lt;br /&gt;
+CSeq: 3 REGISTER.&lt;br /&gt;
+WWW-Authenticate: Digest realm=”ostel.co”, nonce=”Uen4GlHp9u4FwHNY/uE1iQQNCfGHJiob”, qop=”auth”.&lt;br /&gt;
+Server: kamailio (4.0.2 (x86_64/linux)).&lt;/p&gt;
+
+&lt;p&gt;This 401 Unauthorized response was received by the client and the follow up request with the Authorization header was sent with the correct digest. Linphone registered. I made a call. Everything worked fine. Indeed WTF?&lt;/p&gt;
+
+&lt;p&gt;I stared at these traces for a while to get a clue. Look again at the first line of the request from Jitsi. You’ll see a timestamp followed by two IP:port pairs. Notice the port on the first IP is 5060 and the port on the second IP is also 5060. This means that the &lt;strong&gt;source port&lt;/strong&gt; used by Jitsi on my home network is UDP port 5060. In order for a response to come back to Jitsi, it must enter my network on the same port it exited. Now read the top line of the response from Kamailio. Indeed, the server sent the response to UDP port 5060.&lt;/p&gt;
+
+&lt;p&gt;Now look at the same flow for Linphone. There is a very different source port in that dialog. In this case, Kamailio sent the response to UDP port 42680 and Linphone received it. Also notice the IP address used by Kamailio as the destination of the response is the same one in the dialog from Jitsi.&lt;/p&gt;
+
+&lt;p&gt;The question remained, why can’t Jitsi get the same kind of SIP response on UDP port 5060? Why is Jitsi using a single source port for outgoing traffic anyway? That value can be dynamic. I configured Jitsi to use a different port for insecure SIP. It has an advanced configuration for SIP with the key “SIP client port”. I set this to 5062 (5061 is conventionally used for secure SIP traffic so I incremented by 2) and tried to register again.&lt;/p&gt;
+
+&lt;p&gt;SUCCESSSSSSSSSSSS!&lt;/p&gt;
+
+&lt;p&gt;To be thorough, I changed Jitsi’s SIP port again to a 5 digit number I randomly typed on my keyboard without looking.&lt;/p&gt;
+
+&lt;p&gt;SUCCESSSSSSSSSSSS!&lt;/p&gt;
+
+&lt;p&gt;So if Jitsi can register to Kamailio on any port other than UDP port 5060, WTF is going on? I had a suspicion. I tried one more test before I called it. I configured Jitsi to connect on TCP port 5060. It registered successfully. Now I know what’s going on. I have a sad 🙁&lt;/p&gt;
+
+&lt;p&gt;CONCLUSION&lt;/p&gt;
+
+&lt;p&gt;My ISP, Verizon FiOS, has a firewall running somewhere upstream (it could be on the router they provided, I haven’t checked yet) that blocks incoming UDP traffic to port 5060. This probably falls under their TOS section which forbids “running servers” since Verizon provides voice services for an additional fee on top of data service, despite both running over the same fiber connection to my house. It seems like Verizon doesn’t want their data-only customers to get in the way of that sweet cheddar delivery each month in exchange for “phone service”.&lt;/p&gt;
+
+&lt;p&gt;This sucks on two levels.&lt;/p&gt;
+
+&lt;p&gt;LEVEL 1&lt;/p&gt;
+
+&lt;p&gt;Why is my ISP censoring my incoming traffic when I have 5 mbps of incoming bandwidth? I assume the answer is “because they can.” *desolate frowny face*&lt;/p&gt;
+
+&lt;p&gt;LEVEL 2&lt;/p&gt;
+
+&lt;p&gt;Why doesn’t Jitsi use a dynamic source port for SIP requests? I assume the answer is “Jitsi is open source, why don’t I change this and send a patch upstream?”&lt;/p&gt;
+
+&lt;p&gt;Both levels are formidable challenges to overcome. Convincing Verizon to play nice on the Internet feels like a vanity project. I’m writing that off. To make a change to the SIP stack in Jitsi is well within the area of the GP team’s expertise, myself included but it’s not a trivial undertaking. Since this is a default configuration change there is probably a reason upstream devs made this choice so in addition to the programming work there’s the work to convince the developers this would be a change worth a new release.&lt;/p&gt;
+
+&lt;p&gt;Since this is specific to Jitsi, I’m going to follow up with the developers and see if I missed anything. Stay tuned for part two.&lt;/p&gt;
+
+&lt;p&gt;Thanks for listening. Stay safe!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

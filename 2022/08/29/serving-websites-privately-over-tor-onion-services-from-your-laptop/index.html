@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Serving Websites Privately Over Tor Onion Services (From Your Laptop!) - Guardian Project</title>
+  <meta property="og:title" content="Serving Websites Privately Over Tor Onion Services (From Your Laptop!)" />
+  <meta name="twitter:title" content="Serving Websites Privately Over Tor Onion Services (From Your Laptop!)" />
+  <meta name="description" content="In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – Onion Services. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout.">
+  <meta property="og:description" content="In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – Onion Services. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout.">
+  <meta name="twitter:description" content="In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/",
+          "name": "Serving websites privately over tor onion services ( from your laptop!)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Shanzay, Summer Intern"
+  },
+  "headline": "Serving Websites Privately Over Tor Onion Services (From Your Laptop!)",
+  "description" : "In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – Onion Services. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout.",
+  "inLanguage" : "en",
+  "wordCount": 1447,
+  "datePublished" : "0001-01-01T00:00:00",
+  "dateModified" : "2022-08-29T00:00:00",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "privacy, circumvention, censorship, tor" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Serving Websites Privately Over Tor Onion Services (From Your Laptop!)" />
+<meta property="og:description" content="In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – Onion Services. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Serving Websites Privately Over Tor Onion Services (From Your Laptop!)" />
+  <meta name="twitter:description" content="In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Serving Websites Privately Over Tor Onion Services (From Your Laptop!)</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on August 29, 2022
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Shanzay, Summer Intern
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – <a href="https://community.torproject.org/onion-services/">Onion Services</a>. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout. But to do so, one needs to know how to set up an Onion Service.</p>
+
+<p>While the following instructions are specific to a Mac, with minor differences this can be applied to other devices and systems.</p>
+
+<h2 id="step-1-download-and-set-up-the-tor-service">Step 1 → Download and Set Up the Tor Service</h2>
+
+<p>While there are multiple ways to download and set up tor, the simplest is to follow the instructions at <a href="https://torproject.org/download/">https://torproject.org/download/</a> that goes along with the operating system you are using.</p>
+
+<p>For further information, you can follow the Tor installation guide: <a href="https://community.torproject.org/onion-services/setup/install/">https://community.torproject.org/onion-services/setup/install/</a></p>
+
+<p>Once you have successfully downloaded tor, to check if tor is running you can either open the browser and establish connection or use commands to check its success:</p>
+
+<pre><code>/opt/homebrew/bin/brew services start tor
+/opt/homebrew/bin/brew services stop tor
+</code></pre>
+
+<p>Please note, in this step you are running the tor service on your machine to host the onion server. In later steps, we will be using the Tor Browser app to view the site remotely.</p>
+
+<h2 id="step-2-download-and-set-up-a-web-server-optional-during-development-but-required-for-production">Step 2 → Download and Set Up a Web Server (Optional during Development, but required for Production)</h2>
+
+<p>In order to set up a website or some content for a client to access, we need to set up a local web server. A web server is the computer software and underlying hardware that communicates with a web browser using HTTP to distribute web pages to the client who requested it, with local web server examples including Apache and Nginx. The reason for this is that when it comes to the finished product, you can copy the fields into the apache web directory and that would be your web server</p>
+
+<p>However, for websites that we are building on npm, as npm has its own built in web server for development, it has its own local host web server ready. Hence, we can just point our hidden service web server at that, for testing and development. Once we arrive at production, we will use the apache or another web server to host our local service.</p>
+
+<p>To install these web servers on MacOS can be difficult, so specifically for this operating system, it is best to install (or update) the homebrew package, which will then allow you to run the following command:</p>
+
+<pre><code>/opt/homebrew/bin/brew install apache
+</code></pre>
+
+<p>If you have having trouble choosing a local web server or downloading it, a useful guidance tool is: <a href="https://www.javatpoint.com/how-to-install-apache-on-mac">https://www.javatpoint.com/how-to-install-apache-on-mac</a></p>
+
+<p>The default location where web servers run is on <a href="https://localhost:80">https://localhost:80</a>. Hence, once you have downloaded the web server software, to check if it is working, open your browser and go to <a href="https://localhost:80">https://localhost:80</a>. If you have successfully downloaded the web server software, you will be notified of this success.</p>
+
+<p>For further steps, or multiple uses you may need to start or stop the web server software which can be done using the following commands:</p>
+
+<pre><code>sudo apachectl start
+sudo apachectl stop
+</code></pre>
+
+<h2 id="step-3-modify-your-tor-configuration-file">Step 3 → Modify your Tor Configuration File</h2>
+
+<p>In order to create the onion service link, you must mody the the tor configuration file (torrc) by adding the following lines and save the changes:</p>
+
+<pre><code>HiddenServiceDir /var/lib/tor/my_website/
+HiddenServicePort 80 127.0.0.1:80
+</code></pre>
+
+<p>The HiddenServiceDir line is to inform tor of where to save the onion v3 service link, hence you must modify this line to point to a file whose permissions include both readable and writable.
+The HiddenServicePort line is informing Tor of the port people visiting your Onion Service will be using, which is currently set as localhost.</p>
+
+<p>While the torrc file is saved in different places depending on the operating system being used, for MacOS, the file can be found at this filepath:</p>
+
+<pre><code> /Library/”Application Support”/TorBrowser-Data/Tor/ 
+</code></pre>
+
+<h2 id="step-4-create-the-hidden-service-folder-optional">Step 4 → Create the Hidden Service Folder (Optional)</h2>
+
+<p>While this step is not necessary, doing this reduces the chance of problems later on.</p>
+
+<p>Once you have modified your tor configuration file, you should create the HiddenServiceDir directory where Tor will create the hostname file, which will contain your new onion v3 service address. For MacOS, this file should be created in the tor folder which can be found with this file path:</p>
+
+<pre><code>HiddenServiceDir /opt/homebrew/etc/tor/
+</code></pre>
+
+<p>The folder should be given the permissions to allow tor to read and write to it, which can be done by calling:</p>
+
+<pre><code>filename chmod 700 
+</code></pre>
+
+<h2 id="step-5-restart-tor-and-check-for-the-onion-service-link">Step 5 → Restart Tor and Check for the Onion Service Link</h2>
+
+<p>Once you have restarted Tor, it should have created the file hostname with the new onion v3 service in the directory which you pointed it to with the HiddenServiceDir line in your torrc.
+If it has not, potential areas to check for faults are:
+- The HiddenServiceDir directory’s file permissions
+- If Tor was properly restarted
+- The torrc file modifications and if there are any incorrect file paths or mistakes
+- The log files which you can find using <a href="https://support.torproject.org/#Logs">https://support.torproject.org/#Logs</a></p>
+
+<h2 id="step-6-test-your-onion-service">Step 6 → Test Your Onion Service</h2>
+
+<p>If you have successfully acquired your onion service link, you can then run it on Tor and it should direct you to the page which has been initially configured on apache (the same page we saw at localhost:80). If not, potential problems could include:
+- Your web server software is no longer running and needs to be started
+- The page is found at a different port
+- One important thing to remember is that once you have gotten your onion address, a new one will not be generated, this is your permanent link whose content can be manipulated.</p>
+
+<h2 id="step-7-build-the-file-web-page-being-used">Step 7 → Build the File/Web Page Being Used</h2>
+
+<p>Once your onion service link is up and running, it is now time to display on it the html files you intend to share. To do so, if the files are a Node app or a progressive web app, and not a static html page or website, it is important to build the code first by running:</p>
+
+<pre><code>npm run build 
+</code></pre>
+
+<p>A potential problem could be that when you run a web service, especially a Node app or a progessive web app, it renders links for the domain it thinks it is at, not the one you intend it to be at. For a typical static website it wouldn&rsquo;t matter because it is a static set of pages; however, when using a live node application, it&rsquo;s helpful to know what the public address is.</p>
+
+<p>To fix this problem, to your code you should add the following line which points directly to your new onion service address, like the example here:</p>
+
+<pre><code>public:’2xx7phs7hw5fduqulcrthkmfaesxbsy5om5xpkpsn4y54mnbj4b6ekd.onion’
+</code></pre>
+
+<h2 id="step-8-run-the-file-and-test-your-onion-service">Step 8 → Run the File and Test your Onion Service</h2>
+
+<p>1- For this step, there are two potential methods depending on the type of content you intend to display on your Onion Service. For html documents or simple websites, the simplest method to run the file is to copy it into the folder which localhost:80 (or whichever port you are using) is connected to. For MacOS, the folder can be found at:</p>
+
+<pre><code>/Library/WebServer/Documents
+</code></pre>
+
+<p>To copy, the command to run is:</p>
+
+<pre><code>sudo cp /path/from /path/to
+</code></pre>
+
+<p>Once that is done, simply restart your Tor browser, head to your new onion service address and your html file can be found there.</p>
+
+<p>2- To run a Node app or progress website, first the file needs to be running on your local server. To do so, one tip is to specify the port you intend to run it on, especially other ports that are running other websites or html content. For that, run the following command (changing it to point to the port you are using):</p>
+
+<pre><code>npm run service – –port 4000
+</code></pre>
+
+<p>To connect to this npm web server on port 4000 instead of apache, we need to modify the onion service configuration in the torrc:</p>
+
+<pre><code>HiddenServicePort 80 127.0.0.1:4000
+</code></pre>
+
+<h2 id="accessing-the-onion-site">Accessing the Onion site</h2>
+
+<p>Once the website is running on localhost at the port you have specified, restart your Tor service. Then, navigate to your new onion service address where your website is now live for all the people you have shared your secure link with. You can use any Tor-enabled browser, such as <a href="https://www.torproject.org/download/">Tor Browser for Desktops</a>, <a href="https://www.torproject.org/download/">Tor Browser for Android</a>, or <a href="https://onionbrowser.com">Onion Browser for iOS</a> devices. You can also use a Tor-enabled vpn like <a href="https://orbot.app">Orbot for Android and iOS</a>, to allow any browser, like Chrome or Brave, to access an onion address.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/privacy/">privacy</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/circumvention/">circumvention</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/censorship/">censorship</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/tor/">tor</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/" data-toggle="tooltip" data-placement="top" title="DWeb versus Web3: An Intern&#39;s Journey!">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2022/09/01/the-search-for-ethical-apps-lets-start-with-governments/" data-toggle="tooltip" data-placement="top" title="The Search for Ethical Apps: Let&#39;s start with governments">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

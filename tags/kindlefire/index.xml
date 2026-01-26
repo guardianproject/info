@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kindlefire on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/kindlefire/</link>
+    <description>Recent content in Kindlefire on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 16 Nov 2011 22:37:24 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/kindlefire/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Don’t Get Burned, Anonymize Your Fire</title>
+      <link>https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/</link>
+      <pubDate>Wed, 16 Nov 2011 22:37:24 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/</guid>
+      <description>&lt;p&gt;Thanks to Jesse Vincent, aka &lt;a href=&#34;https://twitter.com/obra&#34;&gt;@obra&lt;/a&gt; of the &lt;a href=&#34;https://code.google.com/p/k9mail/&#34;&gt;K-9 mail project&lt;/a&gt;, we can say that &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot (Tor on Android)&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/apps/orweb&#34;&gt;Orweb (Privacy Browser)&lt;/a&gt; work just fine on the new &lt;a href=&#34;http://www.amazon.com/Kindle-Fire-Amazon-Tablet/dp/B0051VVOB2&#34;&gt;Amazon Kindle Fire&lt;/a&gt;. This means that while everything you do through Amazon’s store and browser are tracked and accounted for by Team Bezos, you can use our apps to more safely and privately access web content through the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. While we are mostly &lt;a href=&#34;https://guardianproject.info/hardware/&#34;&gt;Nook Color fans&lt;/a&gt; around here, we know that the Kindle Fire is going to be quite popular this Christmas, and are glad to see that mobile privacy now has a toehold on the device from Seattle.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://twitpic.com/7f2bo3&#34;&gt;&lt;img title=&#34;448565907&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/11/448565907-300x224.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;224&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This provides a nice counterpoint to some of the &lt;a href=&#34;http://www.slashgear.com/eff-talks-silk-browser-privacy-with-amazon-19189281/&#34;&gt;earlier privacy concerns about the Amazon Silk browser&lt;/a&gt;, which proxies all your http connections through their data center. In addition, the fact that our &lt;a href=&#34;https://gitweb.torproject.org/orbot.git/blob_plain/HEAD:/BUILD&#34;&gt;very complex apps&lt;/a&gt; work without modification on Amazon’s stripped down flavor of Android, shows that the reports of fragmentation have been greatly exaggerated. From our perspective, the power of Android comes from the compatibility of the underlying platform APIs and Linux-based foundation, and not about having a one size fits all user interface or a single-point of control app marketplace.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2011/11/Kindle-Fire.jpg&#34;&gt;&lt;img class=&#34;size-medium wp-image-1306 alignnone&#34; title=&#34;Kindle-Fire&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2011/11/Kindle-Fire.jpg&#34; alt=&#34;&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2011/11/Kindle-Fire.jpg 500w, https://guardianproject.info/wp-content/uploads/2011/11/Kindle-Fire-300x168.jpg 300w&#34; sizes=&#34;(max-width: 500px) 100vw, 500px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Installation Instructions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1) Under the settings section labeled “Device,” there is an option that says “Allow Installation of Applications From Unknown Sources.” Enable this!&lt;/p&gt;
+
+&lt;p&gt;2) Then download these files directly via the Fire’s browser, or side-load them from the desktop using the Android SDK “adb” tool.&lt;/p&gt;
+
+&lt;p&gt;Orbot: &lt;a href=&#34;https://www.torproject.org/dist/android/Orbot-1.0.6-Tor-0.2.3.7-alpha-FINAL.apk&#34;&gt;https://www.torproject.org/dist/android/Orbot-1.0.6-Tor-0.2.3.7-alpha-FINAL.apk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Orweb: &lt;a href=&#34;https://github.com/downloads/guardianproject/Orweb/Orwebv2-20010809-0.2.2.apk&#34;&gt;https://github.com/downloads/guardianproject/Orweb/Orwebv2-20010809-0.2.2.apk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;3) Start Orbot, follow the wizard, and press the power up button to connect to Tor.&lt;/p&gt;
+
+&lt;p&gt;4) Start Orweb to connect to the Tor Check page to verify your connection, then browse away to your (private) heart’s content.&lt;/p&gt;
+
+&lt;p&gt;5) Do a happy dance because your Kindle Fire just got way more l33t and slightly less p0wn3d.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

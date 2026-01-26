@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement - Guardian Project</title>
+  <meta property="og:title" content="Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement" />
+  <meta name="twitter:title" content="Modernizing Expectations for the Nouveau Secure Mobile Messaging …" />
+  <meta name="description" content="The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at least seven, if not more, very important security features that any app claiming to provide secure messaging must implement as soon as possible, to truly safeguard a user’s communication content, metadata and identity.
+Note: The names “Gibberbot” and “ChatSecure” are used interchangeabley below, as we are in the midst of an app rebrand.">
+  <meta property="og:description" content="The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at least seven, if not more, very important security features that any app claiming to provide secure messaging must implement as soon as possible, to truly safeguard a user’s communication content, metadata and identity.
+Note: The names “Gibberbot” and “ChatSecure” are used interchangeabley below, as we are in the midst of an app rebrand.">
+  <meta name="twitter:description" content="The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at least seven, if not more, …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/",
+          "name": "Modernizing expectations for the nouveau secure mobile messaging movement"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "n8fr8"
+  },
+  "headline": "Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement",
+  "description" : "The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at least seven, if not more, very important security features that any app claiming to provide secure messaging must implement as soon as possible, to truly safeguard a user’s communication content, metadata and identity.
+Note: The names “Gibberbot” and “ChatSecure” are used interchangeabley below, as we are in the midst of an app rebrand.",
+  "inLanguage" : "en",
+  "wordCount": 2480,
+  "datePublished" : "2013-07-16T00:52:31",
+  "dateModified" : "2013-07-16T00:52:31",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, encryption, mobile, otr, pgp, wechat, whatsapp" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement" />
+<meta property="og:description" content="The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at least seven, if not more, very important security features that any app claiming to provide secure messaging must implement as soon as possible, to truly safeguard a user’s communication content, metadata and identity.
+Note: The names “Gibberbot” and “ChatSecure” are used interchangeabley below, as we are in the midst of an app rebrand.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Modernizing Expectations for the Nouveau Secure Mobile Messaging …" />
+  <meta name="twitter:description" content="The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at least seven, if not more, …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/wp-content/uploads/2013/07/tumblr_lthb6agZVE1qlts9lo1_1280.jpg" 
+         
+         
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="blog-heading">
+		<noscript>
+		  <img src="/wp-content/uploads/2013/07/tumblr_lthb6agZVE1qlts9lo1_1280.jpg"/>
+		</noscript>
+                <h1>Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on July 16, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;n8fr8
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on July 16, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;n8fr8
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><em>The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at <strong>least seven</strong>, if not more, very important security features that any app claiming to provide secure messaging must implement as soon as possible, to truly safeguard a user’s communication content, metadata and identity.</em></p>
+
+<p><em>Note: The names “Gibberbot” and “ChatSecure” are used interchangeabley below, as we are in the midst of an app rebrand. Apologies!</em></p>
+
+<p><span style="font-size: 13px; line-height: 19px;">There has been a great deal of activity recently around new apps and projects working towards the goal of end-to-end secure mobile messaging. This is both prompted by the overwhelming popularity of closed-source, insecure apps like WhatsApp, Viber, Line and WeChat, and by the recent revelations around government-sponsored surveillance in portions of the world that like to think of themselves as “free”.</span></p>
+
+<p><a href="http://pennwic.wordpress.com/2012/09/18/new-workshop-series-tools-not-toys/"><img alt="Too Many Apps" src="https://guardianproject.info/wp-content/uploads/2013/07/Too-Many-Apps.jpg" width="360" height="400" /></a></p>
+
+<p><span style="font-size: 13px; line-height: 19px;">Whether it be the effort by the <a href="https://plus.google.com/+CyanogenMod/posts/23vfN2qdZTu">CyanogenMOD team to build in a secure push messaging</a>, the arrival of new apps like <a href="http://gryphn.co/">Gryphn</a>, <a href="https://www.mywickr.com">Wickr</a>, <a href="http://threema.ch/">Threema</a> and <a href="https://www.surespot.me">SureSpot</a>, or the very succesful crowdsourced funding of <a href="https://heml.is/">Heml.is</a>, there is no question that there is both user and developer interest in this topic. I would also be remiss not to mention the continuing excellent work by Moxie and the <a href="https://whispersystems.org/">Open Whisper Systems</a> team on SMS-based secure messaging, Ge0rg and the <a href="http;//yaxim.org">Yaxim</a> app, our iOS sister project <a href="http://chatsecure.org">ChatSecure</a>, and of course, <a href="https://silentcircle.com/">Silent Circle</a> (<a href="http://issilentcircleopensourceyet.com/">are they open-source yet or what?</a>).</span></p>
+
+<p><strong>Protecting Content, Metadata and Identity</strong></p>
+
+<p>At the Guardian Project, we have been working on open-source, standards-based, secure messaging <a href="/apps/gibber">for a few years now</a>, and are simultaneously both excited and concerned about all of this activity. We are seriously thrilled that so many talented developers are finally interested in empowering every day mobile users with powerful tools to keep their communications private. We are amazed at the creativity and quality of output seen so far, as well as the diverse approaches to solving this complex problem. Most of these apps are innovating way beyond the basic concepts of secure messaging established by systems like OpenPGP and OTR encryption, and actually thinking deeply about what it means to be secure in a mobile context. However, we also think that, in many cases, the security being implemented may not be going far enough. At the least, we feel that a new bar needs to be set, that is nost just “more secure than WhatsApp”. We need to establish norms to help the user better understand and parse through their options.</p>
+
+<p>In this context, the word “secure” should be taken to mean, that the contents of a message or conversation between one or more parties, should only be able to be viewed by those parties. This means that the application or service should ensure that message content, be it plain text or rich media, is both protected on the device and over the network, from extraction, interception, and decryption. In addition, “secure” should also extend to protect from network traffic surveillance, the fact that a conversation between one or more parties is even happening in the first place. Finally, as much as possible, the user should be able to control their identity within the messaging system, such that personal, real-world information (phone number, email, geolocation) is not exposed without their approval.</p>
+
+<p>This three-fold approach to mobile security (Content, Metadata, Identity) is a work in progress, but does capture our basic sentiment and approach to secure mobile messaging. From here, I would like to step one level down, and talk about the set of features in our next release of <a href="https://github.com/guardianproject/Gibberbot/tree/v12-alpha">Gibberbot</a>, currently in alpha, that we feel keep our solution to mobile messaging at the head of the pack.</p>
+
+<p><strong>1. Full Local Data Encryption</strong></p>
+
+<p>Many apps feel their job in protecting messages is done once it gets to the device. In the face of Android app malware that can vacuum up data from a device and forensic extraction software and hardware, this is obviously not the case. Full disk encryption only protects when a device is locked or powered off, and besides, most users do not enable it. It is up to apps themselves to provide full encryption of all data – account configuration, sensitive settings values, messages, logs – anything that might expose a user’s information to other apps on the system or to a extraction software must be protected. Yes, this also means your user will need to enter a password every time they use your app, but it is possible to make that process less painful.</p>
+
+<p><a style="margin: 3px;" href="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533.png"><img class="wp-image-11455 alignnone" alt="device-2013-07-12-053533" src="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533.png" width="259" height="461" srcset="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-053533-576x1024.png 576w" sizes="(max-width: 259px) 100vw, 259px" /></a></p>
+
+<p>We have been working on two developer libraries, <a href="/code/sqlcipher">SQLCipher</a> and <a href="/code/iocipher">IOCipher</a>, which provide a simple means to enable database and file encryption in any app. More recently, we have added the <a href="https://github.com/guardianproject/cacheword">CacheWord</a> library to that mix, to help safely manage the locking and unlocking of these data stores. Apps like Gryphn have already implemented all three of these libraries, and so will the next version of Gibberbot.</p>
+
+<p><strong>2. Certificate Pinning</strong></p>
+
+<p><a href="http://www.thoughtcrime.org/">Moxie</a> says it best in his post titled <a href="http://www.thoughtcrime.org/blog/authenticity-is-broken-in-ssl-but-your-app-ha/">Your app shouldn’t suffer SSL’s problems</a>: “If you have a mobile app that makes SSL connections to a service you control, there is really no reason to be validating your service’s certificate using CA signatures.” The <a href="https://github.com/moxie0/AndroidPinning">Android Pinning library</a> makes it quite simple to support this important feature in any app. For Gibberbot, we are pinning certificates of the most common known public XMPP services, such as Google (talk.google.com), Facebook, Jabber.org, Jabber.ccc.de, DuckDuckGo and few more. Beyond that, we offer manual verification (see #3 feature below for more on that). In summary, there is no reason anymore to trust the default CA’s for a messaging app.</p>
+
+<p><strong style="font-size: 13px; line-height: 19px;">3. TOFU/POP aka “Manual Certificate Verification”</strong></p>
+
+<p><a href="http://noncombatant.org/">Chris Palmer</a>, formerly of the Electronic Frontier Foundation and iSec Partners and now of Google, gave a great talk a few years ago entitled <a href="https://docs.google.com/presentation/d/1bieNRy4TU04PKhQ1i_J_kPZ_Tc2E6efNVbvJ295orBs/present#slide=id.i0">“It’s Time to Fix HTTPS”</a>. In it, he introduced, or perhaps just popularized, the phrase “Trust on First Use, Persistence of Pseudonym”, that is more happily expressed as TOFU/POP! What this means in user form is that when you connect to a new server for the first time over an SSL connection, instead of the SSL Certificate being verified by a built-in set of trusted root authorities (banks, corporations, governments), the certificate is presented to the user, in a human readable format, to be reviewed, accepted or declined. There are a number of useful pieces of information the user can look at to determine the validity – fingerprints, date generated, and so on. If you can safely verify it once, then you will only be notified or asked to verify again if the server’s certificate changes. At that point the user can be told “This site’s certificate changed, and it doesn’t look the same as it was yesterday. Maybe you should ask the admin or help system if it is still safe to use!”.</p>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054024.png"><img alt="device-2013-07-12-054024" src="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054024.png" width="259" height="461" /></a></p>
+
+<p>The implementation of TOFU/POP that we use in Gibberbot is the <a href="https://github.com/ge0rg/MemorizingTrustManager/wiki">Memorizing Trust Manager</a> library, originally developed for the <a href="http://yaxim.org/">Yaxim messaging app</a>. It works very well, and again, is extremely simple to implement. Through the combination of features #2 and #3 we have removed the threat posed by the failure of the Root Certificate Authority system, and significantly reduced the success rate of Man-in-the-Middle attacks.</p>
+
+<p><strong>4. Proxy Support, ideally Tor</strong></p>
+
+<p>With all the talk of metadata recently, it should be clear how important traffic surveillance is. Knowing who is using what app when, or being able to see when two users connect peer-to-peer through a service is immensely valuable information. If it is possible to map a user’s social graph via your app based on analysis of packets coming in and out of your service, then you have failed in providing security to your users. Additionally, we have begun to see a new wave of Internet filtering around the world, as countries begin to block access to popular messaging app downloads and centralized servers.</p>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331.png"><img class="alignnone  wp-image-11460" alt="device-2013-07-12-054331" src="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331.png" width="259" height="461" srcset="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054331-576x1024.png 576w" sizes="(max-width: 259px) 100vw, 259px" /></a></p>
+
+<p>This makes it critical that any messaging app a user will depend on to protect their messages, also works to protect their network of contacts (social graph), and ensures they will have access to the service no matter where they travel or live in the world. In order to achieve this, direct support for proxy servers should be built in to every secure messaging app. At a bare minimum HTTP proxies should be support, and ideally, HTTPS and SOCKS as well. Once you have support for those, you can easily tie into Orbot on Android, by setting the proxy to “localhost” and the appropriate port. If you want to avoid Tor Exit Node attacks or surveillance, you should then provide a Tor Hidden Service .ONION address for your servers, something that the <a href="https://twitter.com/jabbercccde/status/107850540842627072">CCC’s Jabber server has provided since 2011</a>.</p>
+
+<p>We have blogged in the past about <a href="https://guardianproject.info/2012/06/13/auditing-twitter-with-orbot/">Twitter’s support for proxying on Android</a> and our OnionKit library, now named <a href="https://guardianproject.info/code/netcipher/">NetCipher</a>. Gibberbot has supported proxying from nearly the beginning of its existence, and in v12 we are using the <a href="https://github.com/guardianproject/OnionKit/blob/master/sample/src/sample/onionkit/OnionKitSampleActivity.java#L96">OrbotHelper class</a> to add an automatic check if Orbot is installed and running, if a user selects to use it.</p>
+
+<p><strong>5. Verifiable Message Encryption</strong></p>
+
+<p>While we expect most nextgen secure messaing apps will support some form of public key encryption, OTR ideally and OpenPGP alternatively, that is not really the end of the message encryption problem. With OpenPGP, we know that most users of the software participate in key signing parties on a regular basis. The same is true for users of desktop OTR encryption in apps like Pidgin. People do not verify keys as often as they should. Since most messaging apps support in-band key exchange, it makes performing a MITM attack at the messaging layer quite trivial, if the SSL transport layer encryption is somehow intercepted.</p>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940.png"><img class="alignnone  wp-image-11479" alt="device-2013-07-16-003940" src="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940.png" width="259" height="461" srcset="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-003940-576x1024.png 576w" sizes="(max-width: 259px) 100vw, 259px" /></a> <a href="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035.png"><img class="alignnone  wp-image-11480" alt="device-2013-07-16-004035" src="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035.png" width="259" height="461" srcset="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-16-004035-576x1024.png 576w" sizes="(max-width: 259px) 100vw, 259px" /></a></p>
+
+<p>What is needed are a variety of features, prods, pokes and motivational interventions to ensure that two people who are using an app to exchange encrypted messages know how fun and easy it can be to verify their keys. With Gibberbot, we were one of the first apps to support the display and scanning of OTR fingerprints as QR Codes. We will go beyond that in future releases with NFC support, as well. We also support shared secret and <a href="https://en.wikipedia.org/wiki/Socialist_millionaire">Socialist Millionaire Protocol</a>-based verification, which in short means, if you and your friend have a real world secret or question and answer ready, you can easily verify your cryptographic fingerprints without ever having to look at a long string of alphanumeric characters.</p>
+
+<p><strong>6. Key Management</strong></p>
+
+<p>This feature comes under the “a great problem to have” category. Once a user really commits to using their app, they will begin building up a network of verified contacts (if you have implemented #5 properly), and generally come to regard your app as a type of secure identity management tool. In fact, they may have created a whole unique identity for themselves that only exists within the confines of your apps, and its encrypted local storage (if you have implemented #1 above). At this point, you need to figure out a means for a user to backup this identity, and generally import and export the data in a variety of ways. If you are using OTR or OpenPGP, then the user may want to share existing keyrings to and from other apps, most likely on their desktop or laptop machines. All in all, the user needs to be empowered to have control of their identity, to move it between devices, to back it up in case a device is wiped or lost, and to keep total control of that information (i.e. not have it backed up automatically to a cloud).</p>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2013/07/keysync.jpg"><img class="alignnone size-full wp-image-11466" alt="keysync" src="https://guardianproject.info/wp-content/uploads/2013/07/keysync.jpg" width="758" height="548" srcset="https://guardianproject.info/wp-content/uploads/2013/07/keysync.jpg 758w, https://guardianproject.info/wp-content/uploads/2013/07/keysync-300x216.jpg 300w" sizes="(max-width: 758px) 100vw, 758px" /></a></p>
+
+<p>In our case, we have been working for quite a while on a desktop tool called <a href="https://github.com/guardianproject/otrfileconverter">OTR File Converter</a>, which is built upon more fundamental research into the many ways that <a href="https://github.com/guardianproject/otrfileconverter/blob/master/README.txt">different OTR-enabled apps store their public and private keys</a>. As of Gibberbot v12 alpha 3 (now called “ChatSecure” btw!), we now have working support for <a href="https://lists.mayfirst.org/pipermail/guardian-dev/2013-April/001537.html">importing an OTR key ring from the desktop</a>, in a manner that is secure and fairly simple. Our next stop is to add export from the client, and then automated sync between desktop and mobile on an ongoing basis. Beyond this capability, we also plan to expand the ability to manage keys within the Gibberbot app itself, so that a user can manually revoke, regenerate and update or remove trust of other users’ keys.</p>
+
+<p><strong>7. Panic as a feature!</strong></p>
+
+<p>Finally, we keep coming across this idea of a “Panic Button” being an important feature for addressing security issues in a mobile environment. A few years ago, we developed an app called <a href="https://github.com/guardianproject/InTheClear/">In The Clear</a> which attempted to provide data wipe and distress beacon functionality across your entire device, be it Android, Nokia or Blackberry. We quickly realized that there were many, many different definitions of what a “Panic Button” should do, and that one app may not be able to encompass all of these needs. Since then, we have thought more about “Panic!” as a feature for an app, and how each app we develop should incorporate the capability to assist users when they feel the data that the app holds may be at risk of being compromised or exposed.</p>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429.png"><img class="alignnone  wp-image-11461" alt="device-2013-07-12-054429" src="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429.png" width="259" height="461" srcset="https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429.png 720w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429-168x300.png 168w, https://guardianproject.info/wp-content/uploads/2013/07/device-2013-07-12-054429-576x1024.png 576w" sizes="(max-width: 259px) 100vw, 259px" /></a></p>
+
+<p>In Gibberbot v12, we have implemented Panic as a quick access sidedrawer button. The action can trigger a configurable set of actions, ranging from simply logging out, to deleting all configured accounts, to uninstall the app itself. In the future, we would like to also consider supporting a “turtle shell” type feature where the app can hide itself on your device as an encrypted anonymous blob, until you are ready for it to come back out again. Additionally, supporting false passwords at app unlock that trigger account data wipe or the display of false data is also something we think would be useful to support.</p>
+
+<p><strong>What Are You Prepared To Do?</strong></p>
+
+<p>We know the deep feeling of adrenaline and satisfaction you get when <del>code</del> ship software that can truly have an impact on a human’s basic freedoms. We are moved when we receive an email from a user in a part of the world where speech and expression is limited and filtered, and they tell us how important our software is to them, and how they do not know what they would without us. These emotions, both from within and shared by others, make it that more important to ensure any development of secure messaging tools is approached in a serious and diligent manner. Checking feature boxes is not enough. Using HTTPS is not enough. Even supporting basic OTR and PGP is no longer enough. We must provide deep and broad security both on the network and on the device, at all times.</p>
+
+<p>If you are not prepared to go the extra mile with your app’s security capabilities, then perhaps you are in the wrong line of work.</p>
+
+<p> </p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/encryption/">encryption</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/mobile/">mobile</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/otr/">otr</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/pgp/">pgp</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/wechat/">wechat</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/whatsapp/">whatsapp</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2013/07/05/building-securing-and-anonymizing-android-apps/" data-toggle="tooltip" data-placement="top" title="Building, Securing, and Anonymizing Android Apps">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2013/07/18/our-newest-app-pixelknot/" data-toggle="tooltip" data-placement="top" title="Our Newest App: PixelKnot">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

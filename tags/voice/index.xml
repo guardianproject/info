@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Voice on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/voice/</link>
+    <description>Recent content in Voice on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Jun 2013 06:38:46 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/voice/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Carrier Grade, Verizon and the NSA</title>
+      <link>https://guardianproject.github.io/info/2013/06/12/carrier-grade-verizon-and-the-nsa/</link>
+      <pubDate>Wed, 12 Jun 2013 06:38:46 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/06/12/carrier-grade-verizon-and-the-nsa/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-4188 alignleft&#34; alt=&#34;PHONE_BOLT&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT-268x300.png&#34; width=&#34;268&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT-268x300.png 268w, https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT.png 514w&#34; sizes=&#34;(max-width: 268px) 100vw, 268px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Last week Glenn Greenwald at The Guardian broke the news that &lt;a href=&#34;http://www.guardian.co.uk/world/2013/jun/06/nsa-phone-records-verizon-court-order&#34;&gt;Verizon has been providing the NSA with metadata&lt;/a&gt; about all of the calls over a subsidiary’s network. This subsidiary is called &lt;a href=&#34;http://investing.businessweek.com/research/stocks/private/snapshot.asp?privcapId=4259068&#34;&gt;Verizon Business Network Services&lt;/a&gt;. It is a privately held company that “owns, operates, monitors, and maintains data and Internet networks in North America, Europe, Asia, Latin America, Australia, Japan, and Africa. The company provides converged communication solutions, such as local and long-distance voice, messaging, and Internet access services.” It is likely this company owns equipment that holds caller detail records for millions of customers. The order used &lt;a href=&#34;http://www.aclu.org/free-speech-national-security-technology-and-liberty/reform-patriot-act-section-215&#34;&gt;section 215 of The Patriot Act&lt;/a&gt;, which allows the FBI to order any person or entity to turn over “any tangible things,” so long as the FBI “specif[ies]” that the order is “for an authorized investigation &amp;hellip; to protect against international terrorism or clandestine intelligence activities.” The “tangible things” could have been the physical servers or hard disks that store the logged details.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/&#34;&gt;The Guardian Project&lt;/a&gt; operates a voice service called &lt;a href=&#34;https://ostel.co/&#34;&gt;ostel.co&lt;/a&gt;. This service offers secure calling and only logs metadata required for the service to operate, &lt;a href=&#34;https://ostel.co/privacy&#34;&gt;no more, no less&lt;/a&gt;. We’ve redefined what carrier grade means. Our service offers the same reliability and quality as global carriers. It goes further by including security and privacy as core features. This is something Verizon does not offer you. Ostel.co runs a full stack composed of open source software, which gives you the choice to install and operate your own service.&lt;/p&gt;
+
+&lt;p&gt;Metadata is information about information. Every call you make over a carrier’s network can carry metadata about your account ID, your caller ID, the duration of the call, the time it was placed and the caller ID of the person you called, even the location of your cellular radio. Information about your calls can be as important as the calls themselves. In many cases they are more important than the content of the calls since they don’t fall under laws requiring a warrant to intercept. Indexing and searching all customers metadata is much faster than tapping and listening in on the same customer’s calls.&lt;/p&gt;
+
+&lt;p&gt;Jane Mayer at The New Yorker gives a good example of &lt;a href=&#34;http://www.newyorker.com/online/blogs/newsdesk/2013/06/verizon-nsa-metadata-surveillance-problem.html?mbid=gnep&#34;&gt;what a service provider can learn from your metadata&lt;/a&gt;. “Personal phone calls can also reveal sensitive medical information: “You can see a call to a gynecologist, and then a call to an oncologist, and then a call to close family members.”” Metadata from one source can also be &lt;a href=&#34;http://www.technologyreview.com/view/515811/correlation-is-main-concern-over-data-verizon-gives-nsa/&#34;&gt;correlated with metadata from other sources&lt;/a&gt;, like web searches and credit card purchases. Tom Simonite at the MIT Technology Review writes that Facebook “uses obfuscated versions of its members’ phone numbers and e-mail addresses to connect its data with information that data-broker Datalogix gathers from loyalty card schemes, with the result that it is now possible for companies to connect a person’s activity on Facebook, and the ads they see, with what they buy in physical stores.”&lt;/p&gt;
+
+&lt;p&gt;Carriers operate servers that record metadata through a common software practice called logging. Each request your computer software makes to an online service can optionally log all the metadata the application can get its hands on. It is the carrier’s responsibility to define their logging policy, like what is recorded and how long it is retained. This information rarely leaves the privacy of the carrier’s internal operational documents so don’t expect to get many clear answers from them.&lt;/p&gt;
+
+&lt;p&gt;While the NSA debacle proves that global telecommunications carriers log everything and keep it around for a very long time, what if you don’t want this information about your behavior logged? Unfortunately, no carrier offers any kind of “opt out” process at this low of a level. To be fair, this information has many purposes. Caller detail records are required to bill customers on per-minute calling plans. It’s unreasonable to expect a carrier to flat out disable logging, though carriers never state that they share your logs with law enforcement without probable cause of a crime. But that is exactly what Verizon did.&lt;/p&gt;
+
+&lt;p&gt;In addition to &lt;a href=&#34;https://ostel.co&#34;&gt;ostel.co&lt;/a&gt;, there are two other independent carriers that put your privacy first. &lt;a href=&#34;https://www.whispersystems.org/&#34;&gt;Whisper Systems operates a proprietary secure voice service&lt;/a&gt; with an open source client called RedPhone. It integrates nicely with Android mobile devices, though it requires a SIM card with a phone number in select countries to sign up for an account. With a little luck in the wrong hands a phone number could disclose more information about you than your social security number. WhisperSys doesn’t publish their logging policy online.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://silentcircle.com/&#34;&gt;Silent Circle offers secure voice service&lt;/a&gt; for iPhone and Android. They are a subscription service and all client and server software is proprietary. They publish &lt;a href=&#34;https://silentcircle.com/web/privacy/&#34;&gt;an exceptionally detailed logging policy on their website&lt;/a&gt;, which includes how many law enforcement requests for information they have received twice a year.&lt;/p&gt;
+
+&lt;p&gt;Ostel.co does not log personal call details to disk, and we can’t disclose information we don’t have. IP addresses, user IDs and referrers are common points of metadata that are used to find patterns about user behavior. When the ostel.co server software requires this information to be stored, it is stored only in memory. When the system is rebooted or shut down, the information is gone forever.&lt;/p&gt;
+
+&lt;p&gt;Our service is under active development. It is currently in public beta status and new features like custom aliases, third party authentication services and federated calling are on the roadmap. The beta service will always be free.&lt;/p&gt;
+
+&lt;p&gt;For the curious, what follows is a detailed description of the logging implementation of ostel.co.&lt;/p&gt;
+
+&lt;p&gt;Caller Details Records are recorded with no identifying information. Attributes stored to disk include timestamp, duration, call state and bandwidth consumed. These pieces of metadata allow us to report on usage without identifying each user. When a monthly report is generated, the metadata is deleted.&lt;/p&gt;
+
+&lt;p&gt;The SIP server logs IP addresses of online users. This is a requirement for the SIP protocol to locate each end of the call. The contact information is logged to RAM, including the username, source IP address and source port of the registered client application. When the server is shut down or restarted, this information is erased.&lt;/p&gt;
+
+&lt;p&gt;The SIP server only logs debugging information to disk, which does not include any of the SIP information.&lt;/p&gt;
+
+&lt;p&gt;Audio data is passed through the server to work around limitations in two-way audio connectivity for common home networks. After a ZRTP key agreement, this audio is encrypted. The server cannot decrypt a call between two users, nor does the server control any of the parameters of the call. This makes calls over ostel.co function in a peer-to-peer mode similar to Skype’s “supernode” feature but without any backdoors.&lt;/p&gt;
+
+&lt;p&gt;No IP addresses are logged for any web requests. This is a simple configuration change for the reverse proxy and required a patch to the core source code of the application server framework.&lt;/p&gt;
+
+&lt;p&gt;The server stores each user’s email address, SIP username, encrypted password and account management data like when the user profile was created/updated and password reset information if the user chooses to use that feature.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mumble and the Bandwidth – Anonymous CB radio with Mumble and Tor</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</link>
+      <pubDate>Thu, 31 Jan 2013 02:05:50 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-3186&#34; alt=&#34;mumble and the bandwidth&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34; width=&#34;800&#34; height=&#34;478&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg 800w, https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth-300x179.jpg 300w&#34; sizes=&#34;(max-width: 800px) 100vw, 800px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The journey towards anonymous and secure voice communication is a long one. There’s lots of roadblocks to get your voice from point A to point B over the Internet if you need to prevent eavesdropping or censorship. There is the limited bandwidth of mobile data connections. There is the high latency of the TCP protocol. &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#whyweneedtor&#34;&gt;To achieve anonymity via Tor&lt;/a&gt;, there’s even more latency added to each packet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mumble.sourceforge.net/&#34;&gt;Mumble&lt;/a&gt; is a non-standard protocol that was originally designed for realtime voice chat for video games. If you’ve ever played Halo or World of Warcraft, this should sound familiar. If not, think of it as a conference call you don’t have to ring. You simply connect to a Mumble server over the Internet and your voice will transmit to everyone else.&lt;/p&gt;
+
+&lt;p&gt;Mumble clients are available for &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient&amp;amp;feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5tb3JsdW5rLm11bWJsZWNsaWVudCJd&#34;&gt;Android&lt;/a&gt; and &lt;a href=&#34;https://itunes.apple.com/us/app/mumble/id443472808?ls=1&amp;amp;mt=8&#34;&gt;iOS&lt;/a&gt;, as well as a cross-platform desktop client. The server software is also cross-platform. Guardian Project is focusing on the Android client named &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient&amp;amp;feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5tb3JsdW5rLm11bWJsZWNsaWVudCJd&#34;&gt;Plumble&lt;/a&gt; and the official server &lt;a href=&#34;https://packages.debian.org/search?keywords=mumble&amp;amp;searchon=names&amp;amp;section=all&amp;amp;suite=squeeze-backports&#34;&gt;backported to Debian stable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A cool feature of Mumble is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Push-to-talk&#34;&gt;Push To Talk&lt;/a&gt; (PTT) method to speak to the channel. Your voice is only transmitted when you press the PTT button in the user interface. Another lower level feature that’s important for our anonymity goal is TCP support. For any application to run over Tor, it must use the TCP protocol. This rules out most VoIP clients, since they use UDP. Here is a case where Mumble’s non-standard protocol works to our advantage.&lt;/p&gt;
+
+&lt;p&gt;When Tor is running and your Mumble client is configured to use TCP, connecting to your local SOCKS5 proxy offered by Tor allows you to join a Mumble server anonymously. The big problem is as suspected, latency. The traffic passing through the Tor network must make &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#thesolution&#34;&gt;an indeterminate number of proxy hops&lt;/a&gt; to be anonymized successfully. Each hop adds more and more latency. This makes a typical syncronous voice call impossible since there’s no way to determine when one person has stopped talking and when the other can respond without interrupting.&lt;/p&gt;
+
+&lt;p&gt;Latency in human speech transmision has deep psychological impact on a conversation. A &lt;a href=&#34;https://sites.google.com/site/qurihara/top-english/speechjammer&#34;&gt;Japanese research project called SpeechJammer&lt;/a&gt; exploited this part of our senses by inventing a “shut up gun.” When pointed at a person it makes them immediately stop talking. Everyone who has used a cell phone knows the frustration of “echo” where you hear your own voice, slightly delayed. The delay is caused by the network latency of the cellular carrier.&lt;/p&gt;
+
+&lt;p&gt;Another similar example is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Voip&#34;&gt;VoIP&lt;/a&gt; call on a congested network. The side effect of the latency is that one person accidently interrupts the other person because he thinks the other person has finished talking, when in reality the other person’s voice hasn’t yet arrived at the other end. Interruption ensues, no one is happy nor do they know anything new since the transmission was not understood. High latency makes &lt;a href=&#34;https://en.wikipedia.org/wiki/Full-duplex#Full-duplex&#34;&gt;full-duplex communication ineffective&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The contemporary telephone you are acustomed to allows both sides to talk and listen simultaneously. This is called full-duplex. Early radio telephones like walkie talkies, CB radio or aviation radio are half-duplex systems, meaning that for any given transmission, only one side can talk while the other side listens. Running Mumble over Tor takes a full-duplex technology and effectively reduces it to half-duplex. Even though the protocol is full-duplex, when run through a high latency network like Tor, the transmit and receive channels are so far out of sync there is no point in allowng both sides to talk at once. Again, interruption ensues.&lt;/p&gt;
+
+&lt;p&gt;Then it hit me. Radio telephones have been around since the turn of the 20th century, when people figured out a reasonable way to do voice chat without the technology causing accidental interruptions in the conversation. In particular, the use of procedure words, or &lt;a href=&#34;https://en.wikipedia.org/wiki/Procedure_word&#34;&gt;prowords&lt;/a&gt;, are essential for one speaker to acknowledge the transmission of the other (Roger), to signify that one party is finished speaking (Over), or indicate when one party has left the conversation (Out).&lt;/p&gt;
+
+&lt;p&gt;Here in the USA, some prowords evolved into a coloquial language, complete with &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_CB_slang&#34;&gt;slang&lt;/a&gt; thanks to the Citizen Band radio boom of the 1960s and the truck driving culture that used it to communicate while on the road. The 1977 film &lt;a href=&#34;http://www.imdb.com/title/tt0076729/?ref_=sr_1&#34;&gt;Smokey and the Bandit&lt;/a&gt; is more than just a touching love story with world class actors, it is an amazing dramatization of an information culture that resembled pre-Internet &lt;a href=&#34;https://en.wikipedia.org/wiki/Bulletin_board_system&#34;&gt;BBS systems&lt;/a&gt; and current day &lt;a href=&#34;https://en.wikipedia.org/wiki/IRC&#34;&gt;Internet Relay Chat (IRC)&lt;/a&gt; networks around the globe. The truck drivers portrayed in that movie have a mobile, decentralized information sharing network that is anonymous. The users have pseudonyms and a language of their own. Many of them have never met their CB radio friends IRL. They are invisible companions on the lonely road of the US of A.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Old ideas are worth bringing back if they have strong roots. CB and general purpose radio telephones have a long history, unlike the standard the standard of tody, VoIP. Perhaps these features are thought of as obsolete or not cutting-edge enough to model into a digital system. Regardless of the reason, if you are looking for a mobile and open source PTT solution to use on the Internet with anonymity and security, Mumble over Tor is currently the state of the art. All you have to do is throw in some prowords to keep the conversation flowing.&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project is operating a private Mumble server during a testing phase, and we have plans to open this to the public as part of the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN research effort&lt;/a&gt;. When that happens, I will post application-specific tutorials to install and configure the Plumble client. I will also publish a cookbook to build a Mumble server.&lt;/p&gt;
+
+&lt;p&gt;Finally, an example transmission log with some prowords:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Internet&lt;/em&gt;: Guardian Project. I have a ping response from your server, over.&lt;br /&gt;
+&lt;em&gt;GP&lt;/em&gt;: Roger Internet. Ping was sent, over.&lt;br /&gt;
+&lt;em&gt;Internet&lt;/em&gt;: Guardian Project. Build anonymous PTT system with open source software, over.&lt;br /&gt;
+&lt;em&gt;GP&lt;/em&gt;: Internet, build anonymous PTT system with open source software, wilco. Out.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Voice over Tor?</title>
+      <link>https://guardianproject.github.io/info/2012/12/10/voice-over-tor/</link>
+      <pubDate>Mon, 10 Dec 2012 11:00:03 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/12/10/voice-over-tor/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/12/onioncart.jpg&#34;&gt;&lt;img class=&#34; wp-image-2968&#34; title=&#34;onioncart&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/12/onioncart.jpg&#34; alt=&#34;&#34; width=&#34;100%&#34; height=&#34;425&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/12/onioncart.jpg 700w, https://guardianproject.info/wp-content/uploads/2012/12/onioncart-300x182.jpg 300w&#34; sizes=&#34;(max-width: 700px) 100vw, 700px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Voice calls over &lt;a title=&#34;Tor Project&#34; href=&#34;https://www.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor&lt;/a&gt; are supposed to be impossible. It seems this may no longer be the case.&lt;/p&gt;
+
+&lt;p&gt;Without being able to do voice over IP (VOIP) conversations over the Tor network, people are prevented from being able to route  calls outside of censored networks. People ask us if there is any way they can route voice traffic through Tor to avoid blocks. To our surprise, we tested &lt;a title=&#34;skype&#34; href=&#34;http://skype.com/&#34; target=&#34;_blank&#34;&gt;Skype&lt;/a&gt; and found that it can work acceptably over &lt;a title=&#34;Orbot&#34; href=&#34;https://guardianproject.info/apps/orbot/&#34; target=&#34;_blank&#34;&gt;Orbot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are two main reasons that it has been held that VOIP will not practically work over the Tor network.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A technical problem with the transport layer that Tor supports.&lt;/li&gt;
+&lt;li&gt;The network is too slow for the latency demands of a real-time voice conversation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;However, it turns out Skype has some pretty robust signaling capabilities such that it works on a variety of network conditions. Also, in practice the latency is more usable then one would have thought. This is good news for the future of VOIP traffic over the Tor network, and not only over Skype.&lt;/p&gt;
+
+&lt;h1 id=&#34;problem-1-transport-protocol&#34;&gt;&lt;strong&gt;Problem 1: Transport Protocol&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;TCP is the most common transport protocol for the Internet. It guarantees reliable communication and is used for nearly everything you do in an Internet browser. UDP is a more relaxed protocol used for real-time communications because it reduces latency. The cost for this is that UDP is not reliable and will occasionally drop traffic. For this reason, it is useful for real-time applications that benefit from lower latency. While dropping packets is never ideal, in a real-time communications it usually doesn’t significant affect the quality and even then the time it would take to re-transmit lost packets with TCP might preclude the data being relevant to the stream anymore.&lt;/p&gt;
+
+&lt;p&gt;The problem here is that Tor only supports TCP for its transport layer. Meanwhile, VOIP applications use UDP. So they’re not supposed to work over Tor and one of the main difficulties for VOIP users to apply strong anonymity to real-time voice communication.&lt;/p&gt;
+
+&lt;p&gt;Even if you tunneled UDP traffic through Tor it would be encapsulated in TCP and lose any benefits that UDP provides for real-time traffic. The TCP mechanisms attempt to account for lost packets and hold delivery of future packets until a resend is complete.&lt;/p&gt;
+
+&lt;p&gt;If you’re interested in learning more about networking, I would highly recommend &lt;a title=&#34;Computer Networks by Peterson and Davie&#34; href=&#34;http://books.google.com/books/about/Computer_networks.html?id=eftSAAAAMAAJ&#34; target=&#34;_blank&#34;&gt;Computer Networks by Peterson and Davie.&lt;/a&gt; Its takes a practical approach to teaching the technology and avoids strict adherence to the layered model of the Internet. Beyond that, any TCP/IP or Internet technology introductory resource will get you far!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution: &lt;/strong&gt;Here either Tor needs to support UDP or you need a VOIP client that supports TCP. It had been suggested that Skype will fallback to use TCP connections in instances in which the user has UDP traffic blocked. This is not a very uncommon network policy for some Internal networks and reflects Skype’s effort to make their application work in many hostile network conditions (NATs, firewalls, ect.).&lt;/p&gt;
+
+&lt;h1 id=&#34;problem-2-latency&#34;&gt;&lt;strong&gt;Problem 2: Latency&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Second, Tor relays and mixes its traffic across multiple nodes which greatly increases latency. People generally have pretty high performance expectations for latency over a two-way phone conversation. Adding even a couple of  milliseconds of lag between conversations can be very noticeable to the user. It causes jerks and jumps in the conversation, making it hard to communicate. For this reason, it is likely that widespread routing of voice traffic through Tor is unlikely. However, people already cope with quite a bit of latency using VOIP internationally, and there are very real security and censorship demands that would require VOIP over Tor. In many situations latency will be quite usable. Let’s see how it actually feels over Tor.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution: &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The solution here is just accepting the latency. The latency is not ideal but in practice, it is still quite usable. As Tor network performance increases (and one-day supports UDP), real-time communications will begin to have better performance.&lt;/p&gt;
+
+&lt;h1 id=&#34;skype-over-tor&#34;&gt;&lt;strong&gt;Skype over Tor&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;For testing, I used two Nexus One phones running Gingerbread and the latest Skype binary from the Android App Store. Orbot will transparently route traffic through Tor if you use its transproxy features. The transproxy will drop UDP traffic since it can’t be routed through Tor. It is this feature that causes Skype to fallback to TCP and work over Tor.&lt;/p&gt;
+
+&lt;p&gt;First, I looked at normal Skype traffic leaving the phone. It uses some TCP connections to contact Microsoft servers and authenticate your account. Once you start a voice chat you will see lots of UDP traffic as expected. However, if you turn on Orbots transproxy you will see Skype being forced to start up a conversation using only TCP.&lt;/p&gt;
+
+&lt;p&gt;Here is a Wireshark screenshot of failed UDP connections to Microsoft servers. I did this by letting the UDP traffic through, logging it, and then dropping it before it left my test environment. So you can see the UDP connections going one way to a variety of IP addresses:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/12/croppedUDP.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-2976&#34; title=&#34;croppedUDP&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/12/croppedUDP.png&#34; alt=&#34;&#34; width=&#34;100%&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/12/croppedUDP.png 988w, https://guardianproject.info/wp-content/uploads/2012/12/croppedUDP-300x128.png 300w&#34; sizes=&#34;(max-width: 988px) 100vw, 988px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We set one of the phones to route through Tor by turning on the transproxy. Then logged into Skype on each phone and placed a call. Skype worked over Tor! We were having a conversation across two IPs from two different ISPs. The latency wasn’t great, but it was surprisingly usable. I’ve included two-packet captures. One should just look like Tor traffic and is a Skype conversation over Tor. The other is an actual log of the dropped UDP packets (I dropped them at an intermediary device rather than using the Transproxy to capture this). In the UDP log set you’ll see a bunch of UDP traffic originating form a single address (the phone) with no return traffic. They UDP traffic was being immediately dropped after the log.&lt;/p&gt;
+
+&lt;p&gt;It turns out you can have a workable VOIP chat over Tor if you use Skype. The findings are interesting because they are relevant to the general problem of trying to use real-time communication through the Tor network. It may also be useful for VERY specific and limited threat models that involve censorship bypass in which there is little risk in being caught.&lt;/p&gt;
+
+&lt;p&gt;Here’s to hoping for UDP over Tor in the future. Until then, Guardian Project is working on a design for high latency voice communications. The idea is that you could send quick voice messages with the click of a button similar to how you use an old hand-held radio. We’re toying with names like Push to Torlk and Onion Ringer. Stay tuned!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Disclaimer: In my opinion, Skype is not a secure standard for VOIP communication. It uses non-standard closed source encryption and has likely become CALEA compliant upon &lt;a href=&#34;http://www.forbes.com/sites/ericjackson/2012/07/22/its-terrifying-and-sickening-that-microsoft-can-now-listen-in-on-all-my-skype-calls/&#34;&gt;acquisition&lt;/a&gt; by Microsoft. That means that they have infrastructure in place to intercept communications and relay that information to law enforcement agencies around the world. It is unwise to assume that other state and non-state actors would not also have means to access that data.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To: Setup a Private VOIP Phone System for Android</title>
+      <link>https://guardianproject.github.io/info/2010/05/26/how-to-setup-a-private-voip-phone-system-for-android/</link>
+      <pubDate>Wed, 26 May 2010 05:53:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/05/26/how-to-setup-a-private-voip-phone-system-for-android/</guid>
+      <description>&lt;div&gt;
+  &lt;div&gt;
+    &lt;strong&gt;MAY 2011: Learn more about our new efforts on the Open Secure Telephony Network at &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;https://guardianproject.info/wiki/OSTN&lt;/a&gt; – we currently recommend the &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;CSipSimple&lt;/a&gt; Android app instead of SIPDroid, for secure voice calls.&lt;/strong&gt;
+  &lt;/div&gt;
+  
+
+&lt;p&gt;&lt;div&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    Near the very top of Guardian’s open-source application suite &lt;a href=&#34;https://guardianproject.info/apps/&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;wish l&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;ist&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; is something that might seem like a no-brainer for a secure mobile device: voice. When we take into account network performance and audio fidelity requirements, as well as the International nature of Guardian’s target users (everything from average citizens to multi-national journalists or humanitarian organizations), the prospect of a truly real-time secure VOIP solution starts to reveal itself as quite the challenge. Fortunately, a number of efforts have been underway for some time on the Android platform. &lt;strong&gt;The following is an introduction to one such effort, and this post provides a very easy step-by-step how to enable your very own private mobile phone system.&lt;/strong&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall.png&#34;&gt;&lt;img class=&#34;alignleft size-full wp-image-337&#34; title=&#34;sipdroidcall&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall.png&#34; alt=&#34;&#34; width=&#34;145&#34; height=&#34;241&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://code.google.com/p/sipdroid/&#34;&gt;Sipdroid&lt;/a&gt;&lt;/span&gt; is an open-source SIP client that adds native SIP/VOIP to Android’s default dialer / contacts applications. You can find Sipdroid in the Android Market or alternatively can &lt;a href=&#34;https://code.google.com/p/sipdroid/downloads/list&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;download it here&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;. SIP (&lt;a href=&#34;https://en.wikipedia.org/wiki/Session_Initiation_Protocol&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;Session Initiation Protocol&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;) is the Internet standard for real-time voice and video communications. It’s a fundamental building block for many popular consumer VOIP products that you may have used – &lt;a href=&#34;https://www.youtube.com/watch?v=1XU06zbDBBA&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;Vonage&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; or &lt;a href=&#34;http://www.magicjack.com/&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;MagicJack&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; are two examples. Once installed and configured properly, sipdroid allows you to make &amp;amp; receive calls over Wifi and 3G / EDGE data connections – which is a really powerful thing! A similar solution from &lt;a href=&#34;https://my.gizmo5.com/&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;Gizmo5&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; allowed many Android users to completely untangle themselves from mobile minutes and rely on a purely VOIP solution. Alas, new Gizmo signups were suspended after Google announced their &lt;a href=&#34;http://googlevoiceblog.blogspot.com/2009/11/google-welcomes-gizmo5.html&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;acquisition&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; – but we should all be excited to see what they can cook up as part of the official &lt;a href=&#34;https://www.google.com/voice&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;Google Voice&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; team.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    While it’s expected that SIP providers will become more &lt;a href=&#34;https://code.google.com/p/sipdroid/wiki/NewStandbyTechnique&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;interoperable&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;, the simplest and most powerful solution currently available to get sipdroid running involves registering to the virtual PBX service from &lt;a href=&#34;https://www1.pbxes.com/index_e.php&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;PBXes.com&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;. For the uninitiated, a PBX (Private Branch Exchange) is what establishes and manages the connections between the telephony products of a private organization (telephones, fax machines, etc.) – each of which is labeled with an ‘extension’. It also is the system through which these extensions are able to access the public telephone network (&lt;a href=&#34;https://en.wikipedia.org/wiki/PSTN&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;PSTN&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;). Since the 1990s, traditional PBX solutions – usually out of reach for small businesses or individuals due to cost and complexity – have evolved to IP-based and virtual or hosted PBXes, which greatly simplify the processes of building and scaling telephony services. PBXes.com is one such ‘virtual PBX.’ Once a PBXes account is established, the account owner can create multiple extensions beneath it and easily dial between those extensions. You get 5 extensions for a free account, more for paid &lt;a href=&#34;https://www1.pbxes.com/iptel_virtual-pbx.html&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;account types&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;Why is this solution so interesting?&lt;/strong&gt; If you have a relatively small group of colleagues (NGO, humanitarian workers, activists, journalists, etc.), it allows you to easily establish a private internal phone system that can be used over a data connection in lieu of the regular phone system. In our experience, the call quality is also quite good. &lt;span&gt;And while the following step-by-step guide will lead you through the process of setting up this simple solution, first a word of caution: t&lt;span&gt;his is &lt;strong&gt;&lt;span&gt;not&lt;span&gt; a secure solution yet&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;. It is a first step, however, down that road. To achieve a more secure solution, we need to enable more features, include tunneling and encrypting traffic through a Virtual Private Network (VPN) as well as integrating to a privately maintained &lt;a href=&#34;http://www.techsteward.com/blog/dirk/?p=735&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;A&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;sterisk&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; phone server running with custom security settings. &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;&lt;span&gt;We are also investigating solutions that uses a public key exchange model, such as Philip Zimmermann’s &lt;a id=&#34;s_.7&#34; title=&#34;ZFone&#34; href=&#34;http://zfoneproject.com/&#34;&gt;ZFone&lt;/a&gt;, such as the new &lt;/span&gt;&lt;a href=&#34;http://whispersys.com/&#34;&gt;RedPhone app just announced by WhisperSystems&lt;/a&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;&lt;span&gt;&lt;span&gt;1.&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt; &lt;strong&gt;&lt;span&gt;&lt;span&gt;Configure &lt;span&gt;&lt;span&gt;extensions to &lt;span&gt;&lt;span&gt;a&lt;span&gt;&lt;span&gt; PBXes.com account&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;If you don’t already have a PBXes.com account, head over to &lt;a href=&#34;http://www.pbxes.com&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;&lt;a href=&#34;http://www.pbxes.com&#34;&gt;http://www.pbxes.com&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span&gt;&lt;span&gt; and fill out the straightfo&lt;span&gt;&lt;span&gt;rward account registration form for a free account.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/welcome.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-333&#34; title=&#34;welcome&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/welcome-300x172.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;172&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/welcome-300x172.png 300w, https://guardianproject.info/wp-content/uploads/2010/05/welcome.png 615w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;Next, select ‘Extensions’ from the left-hand navigation menu, &lt;span&gt;&lt;span&gt;then&lt;span&gt;&lt;span&gt; choose ‘SIP’ under ‘Add an Extension.’ &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt; &lt;span&gt;Last, configure your new extension with a few critical elements. Make sure you fill out the following fields, at a minimum:&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addSIPExtension.png&#34;&gt;&lt;img class=&#34;alignnone size-medium wp-image-334&#34; title=&#34;addSIPExtension&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addSIPExtension-300x171.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;171&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addSIPExtension-300x171.png 300w, https://guardianproject.info/wp-content/uploads/2010/05/addSIPExtension.png 619w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ul&gt;
+    &lt;li&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;span&gt;&lt;span&gt;Extension number (e.g. 100, 101, 402, etc.)&lt;/span&gt;&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span&gt;&lt;span&gt;Display name (e.g. johndoe-100)&lt;/span&gt;&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;span&gt;&lt;span&gt;Password&lt;/span&gt;&lt;/span&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;p&gt;
+      &lt;span&gt;&lt;span&gt;After clicking ‘Submit,’ go ahead and repeat the process for as many extensions as  you’d like to set up. Each of these will be specific for a unique Android device. Don’t forget to APPLY your changes when finished by clicking the bright red bar – this ensures your changes take effect.&lt;/span&gt;&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;Configure extensions on sipdroid&lt;/strong&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    If you don’t already have sipdroid, you can find the latest version &lt;a href=&#34;https://code.google.com/p/sipdroid/downloads/list&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;here&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;, or point your barcode scanner to the following QR code:
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;a href=&#34;http://chart.apis.google.com/chart?cht=qr&amp;chs=170x170&amp;chl=http%3A%2F%2Fwww.androidzoom.com%2Fweb%2Findice%2FqrLink%3FappCode%3Dmaf%26dwnId%3D231933&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-335&#34; title=&#34;dp82z4m_35fd9f9hgz_b&#34; src=&#34;https://chart.apis.google.com/chart?cht=qr&amp;chs=170x170&amp;chl=http%3A%2F%2Fwww.androidzoom.com%2Fweb%2Findice%2FqrLink%3FappCode%3Dmaf%26dwnId%3D231933&#34; alt=&#34;&#34; width=&#34;170&#34; height=&#34;170&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;p&gt;
+      Within the Account Settings section of sipdroid, set up one of your extensions from step 1:
+    &lt;/p&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    · Authorization Username and Password
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    · Server: pbxes.com
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    · Port: 5060
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    · Protocol: TCP
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroid_account.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-336&#34; title=&#34;sipdroid_account&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroid_account.png&#34; alt=&#34;&#34; width=&#34;144&#34; height=&#34;240&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;You should see a green dot appear in your notifications tray on successful registration like so:&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidoptions.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-338&#34; title=&#34;sipdroidoptions&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidoptions.png&#34; alt=&#34;&#34; width=&#34;145&#34; height=&#34;241&#34; /&gt;&lt;/a&gt;
+  &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;3.&lt;/strong&gt; &lt;strong&gt;Trial Run – dial between extensions&lt;/strong&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    Once you’ve set up a number of extensions within your PBX, you can easily dial between them. Simply input their extension number (e.g. 100).
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall.png&#34;&gt;&lt;img title=&#34;sipdroidcall&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/sipdroidcall.png&#34; alt=&#34;&#34; width=&#34;145&#34; height=&#34;241&#34; /&gt;&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;strong&gt;&lt;span&gt;&lt;span&gt;4.&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt; &lt;strong&gt;&lt;span&gt;&lt;span&gt;(Optional) &lt;span&gt;&lt;span&gt;Configure VPN&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;As mentioned above, the solution so far isn’t a secure one. A first step in the right direction is connecting to &lt;span&gt;&lt;span&gt;PBXes&lt;span&gt;&lt;span&gt;’ &lt;span&gt;&lt;span&gt;PPTP VPN. For those quicker on their feet, configuration instructions can be found &lt;a href=&#34;http://mona-lilly.de/wiki/index.php/VPN&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;&lt;span&gt;&lt;span&gt;here&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span&gt;&lt;span&gt;. If you’d prefer to stick with us, follow these steps:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span&gt;&lt;span&gt;&lt;em&gt;4a.&lt;/em&gt; &lt;span&gt;&lt;span&gt;On&lt;span&gt;&lt;span&gt; your Android phone, access the ‘VPN settings’ section of Wireless &amp;amp; network settings.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;em&gt;4b. &lt;/em&gt;Select ‘Add VPN,’ then ‘Add PPTP VPN’
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addvpn.png&#34;&gt;&lt;img class=&#34;alignleft size-full wp-image-340&#34; title=&#34;addvpn&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addvpn.png&#34; alt=&#34;&#34; width=&#34;144&#34; height=&#34;240&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addvpntype.png&#34;&gt;&lt;img class=&#34;alignleft size-full wp-image-341&#34; title=&#34;addvpntype&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/addvpntype.png&#34; alt=&#34;&#34; width=&#34;144&#34; height=&#34;240&#34; /&gt;&lt;/a&gt;&lt;br /&gt; &lt;br style=&#34;clear: both;&#34; /&gt;&lt;br /&gt; &lt;span&gt;&lt;span&gt;&lt;em&gt;4c.&lt;/em&gt; &lt;span&gt;&lt;span&gt;On&lt;span&gt;&lt;span&gt; your Android phone, access the ‘VPN settings’ section of Wireless &amp;amp; network settings.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ul&gt;
+    &lt;li&gt;
+      VPN Name – your choice
+    &lt;/li&gt;
+    &lt;li&gt;
+      VPN server – www#.pbxes.com [for # see URL line after logging into PBXes on your browser]
+    &lt;/li&gt;
+    &lt;li&gt;
+      Enable encryption – We haven’t had success with enabling encryption on PBXes yet. This might be due to a sipdroid &lt;a href=&#34;https://code.google.com/p/sipdroid/issues/detail?id=370&#34;&gt;&lt;span style=&#34;color: #0000ff;&#34;&gt;&lt;span&gt;issue&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; or it might not. If you have success on Android 2.0 / Éclair please let us know in the comments! &lt;span&gt;&lt;span&gt; Nathan reported issues with encryption using PBXes PPTP VPN as well.  -Derek Halliday 5/12/10 4:33 PM &lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      DNS search domain – leave empty
+    &lt;/li&gt;
+    &lt;li&gt;
+      Username – &lt;account name&gt;-&lt;extension no.&gt; (e.g. guardianproj-401)
+    &lt;/li&gt;
+    &lt;li&gt;
+      Password – &lt;extension password&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/05/add_pptp_vpn.png&#34;&gt;&lt;img class=&#34;size-full wp-image-342 alignnone&#34; title=&#34;add_pptp_vpn&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/add_pptp_vpn.png&#34; alt=&#34;&#34; width=&#34;144&#34; height=&#34;240&#34; /&gt;&lt;/a&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    &lt;span style=&#34;color: #000000;&#34;&gt;&lt;span&gt;&lt;strong&gt;That’s it! &lt;/strong&gt;&lt;span&gt;If you come across any issues or have any questions along the way, please let us know in the “Comments” below and we’ll do our best to help you out or clarify. And if you’re itching for more, here are a couple next steps. We’re not presenting a deep tutorial on these (yet), so we’d love to hear from you if you have pursued either – or even better – if you’ve used sipdroid and/or PBXes in any other creative ways!&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ol&gt;
+    &lt;li&gt;
+      &lt;span&gt;&lt;span&gt;Hook your PBXes account into an external DID / VOIP number to dial out to standard phone. Think of it as the equivalent of ‘Skype Out’ for sipdroid. You can use a service such as CallCentric (&lt;a href=&#34;http://www.callcentric.com/&#34;&gt;http://www.callcentric.com/&lt;/a&gt;) for this. &lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span&gt;&lt;span&gt;You can also integrate desktop VOIP programs or other mobile device client into the same PBXes accounts. Here’s a great list of &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_SIP_software#Free_and.2For_open_source_software&#34;&gt;free, open-source SIP clients&lt;/a&gt;&lt;span&gt;. We personally like &lt;/span&gt;&lt;a href=&#34;http://icanblink.com/&#34;&gt;Blink for Mac OS&lt;/a&gt;&lt;span&gt;.&lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;span&gt;&lt;span&gt;If you have a privately maintained &lt;a id=&#34;zdnk&#34; title=&#34;Asterisk&#34; href=&#34;https://en.wikipedia.org/wiki/Asterisk_(PBX)&#34;&gt;Asterisk&lt;/a&gt; or other SIP compatible-server, you can use this same approach with that box, and integrate with your own VPN server. We will be covering this in more detail with a future post, as this is a more secure solution that using a provide such as PBXes.&lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+     
+  &lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>One Solution for Push-to-Talk</title>
+      <link>https://guardianproject.github.io/info/2010/02/11/one-solution-for-push-to-talk/</link>
+      <pubDate>Thu, 11 Feb 2010 03:50:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/02/11/one-solution-for-push-to-talk/</guid>
+      <description>&lt;p&gt;As part of rolling out the first-phase of &lt;a href=&#34;http://openideals.com/guardian&#34;&gt;The Guardian Project&lt;/a&gt;, I will be writing short reviews of existing applications for Android-based mobile phones that share our general goals or desired functionality. The goal of Guardian, in short, is to enable safe and secure communication for activists, organizers and advocates working for good around the world through the mobile phones they carry in their pockets.&lt;/p&gt;
+
+&lt;p&gt;The Guardian project has no official relationship with these apps or their creators, but as we work towards developing our own unique software, we want to make sure to shine the spotlight on existing efforts that we admire and which are currently available. We’d also happily collaborate with any of them (or *you* if you are a developer reading this), and have them join our open-source efforts.&lt;/p&gt;
+
+&lt;p&gt;The first application is &lt;a href=&#34;http://hit-mob.com/walkie-talkie-push-to-talk/&#34;&gt;Walkie Talkie Push to Talk&lt;/a&gt;, which is a great alternative take on real-time VOIP or standard phone calls. Physical walkie talkie radios and Nextel-style PTT services have long been a valuable tool for many activists, and this application bring that capability to a global scale. Walkie Talkie can be used over GRPS, EDGE, 3G or Wifi networks, as well – whatever is available at the time.&lt;/p&gt;
+
+&lt;p&gt;Here’s a short description from the developer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Walkie Talkie Push to Talk is a mobile application that allows walkie talkie style voice communications. Simply hold down the “Record &amp;amp; Send” button and speak. Messages can be sent to a group of people. Received messages are automatically played. If program is running, incoming messages arrive as soon as 15 seconds. If program is not visible, it polls in the background every 1 minute (to save battery).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The back-end messaging system used by this application is actual POP or IMAP, in other words email! If you utilize a secure IMAP/S connection with the application, then the voice communications are transmitted securely over the wireless network and Internet. If you use a service like Gmail (which offers secure IMAP access), then your access is hidden within the millions of other users accessing Gmail, as well.&lt;/p&gt;
+
+&lt;p&gt;Not drawing attention to your network traffic is often as important as securing your data. Also, while Gmail isn’t always the ideal service to use if you wish to retain full control of your data, it is much more difficult for an authority to block than a single proxy or a private server.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://hit-mob.com/walkie-talkie-push-to-talk/&#34;&gt;Learn more about Walkie Talkie&lt;/a&gt; and download it from the Android Market today.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

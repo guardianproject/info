@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>report on IOCipher beta dev sprint - Guardian Project</title>
+  <meta property="og:title" content="report on IOCipher beta dev sprint" />
+  <meta name="twitter:title" content="report on IOCipher beta dev sprint" />
+  <meta name="description" content="We are just wrapping up an intensive dev sprint on IOCipher in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code.">
+  <meta property="og:description" content="We are just wrapping up an intensive dev sprint on IOCipher in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code.">
+  <meta name="twitter:description" content="We are just wrapping up an intensive dev sprint on IOCipher in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/",
+          "name": "Report on i o cipher beta dev sprint"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hans-Christoph Steiner"
+  },
+  "headline": "report on IOCipher beta dev sprint",
+  "description" : "We are just wrapping up an intensive dev sprint on IOCipher in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code.",
+  "inLanguage" : "en",
+  "wordCount": 1245,
+  "datePublished" : "2013-01-31T19:45:44",
+  "dateModified" : "2013-01-31T19:45:44",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, encryption, iocipher, libsqlfs, open source, psst, sqlcipher" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="report on IOCipher beta dev sprint" />
+<meta property="og:description" content="We are just wrapping up an intensive dev sprint on IOCipher in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="report on IOCipher beta dev sprint" />
+  <meta name="twitter:description" content="We are just wrapping up an intensive dev sprint on IOCipher in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/wp-content/uploads/2012/10/alberti_cipher_disk.jpg" 
+         
+         
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="blog-heading">
+		<noscript>
+		  <img src="/wp-content/uploads/2012/10/alberti_cipher_disk.jpg"/>
+		</noscript>
+                <h1>report on IOCipher beta dev sprint</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on January 31, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Hans-Christoph Steiner
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>report on IOCipher beta dev sprint</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on January 31, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Hans-Christoph Steiner
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>We are just wrapping up an intensive dev sprint on <a href="https://guardianproject.info/code/iocipher/">IOCipher</a> in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code. Aaron Huttner of <a href="http://gryphn.co/" target="_blank">Gryphn</a> found IOCipher while developing their <a href="https://play.google.com/store/apps/details?id=com.Gryphn.mms&hl=en" title="Gryphn Secure Text Messaging in the Google Play store" target="_blank">Gryphn Secure Text Messaging</a> and thought it was a remarkable easy way to add encrypted storage of files, and it worked quickly for him, so he included it his app before we had even announced an alpha release (thanks again for the vote of confidence!).</p>
+
+<p>Aaron worked through a lot of the bugs with us, providing good bug reports and real, working test cases in code. What more could we ask for? We made progress on them slowly but surely. Gryphn then decided they needed IOCipher to work for them ASAP so they could put out a real release. They approached us about funding a development sprint and we thought it was a great idea. This also allowed us to bring in Stephen Lombardo and Nick Parker of <a href="http://zetetic.net/" target="_blank">Zetetic</a> to apply their <a href="https://www.zetetic.net/sqlcipher/" target="_blank">SQLCipher</a> and SQLite expertise. Our very own David Oliver put together the deal, and off we went. So we put our heads down and focused everything on getting IOCipher to be a real file system.</p>
+
+<p>To begin with, we focused on the core of IOCipher, <a href="https://github.com/guardianproject/libsqlfs" target="_blank">libsqlfs</a>, since we could run that on GNU/Linux, greatly speeding up the testing cycle. It started out with about 3 full days of Abel and I running <code>fsx</code> (File System eXersizer) tests of all shapes and sizes on libsqlfs mounts to try to pin down the crashes. It seemed like we were swimming in mountains of test results that vaguely pointed somewhere. We had some vague leads, but were excited to find that memory-mapped writes were far and away the most common crash. Since IOCipher does not use mapped writes at all, we could safely ignore those crashes for now. Turns out that using libsqlfs as a FUSE mount for our test platform has produced this one red herring.</p>
+
+<p>One thing we knew all along is that both reads and writes were really slow, so Zetetic started with that. We all had the idea that the block sizes should all be aligned, and that should likely speed things up. This means Java stream readers and writers, writes in our Posix-style JNI layer, and the page size of the SQLite database. Zetetic did some testing and found that using 8k block sizes throughout produces some dramatic speed increases, here are some ballpark figures for doing a 2MB write with no contention:</p>
+
+<ul>
+<li>~710 seconds: default 256 byte blocks and no buffering, one SQLite transaction per block</li>
+<li>~65 seconds: wrapping all the 8192 write calls for each 256 byte block in a single SQLite transaction</li>
+<li>~20 seconds: same as above with the IOCipher FileOutputStream wrapped in a BufferedOutputStream</li>
+<li>~5 seconds: increase internal IOCipher block size to 4k</li>
+<li>~10 seconds: 8k sqlfs block size, 8k sqlite page size, and 8k BufferedOutputStream buffer, one SQLite transaction per block</li>
+<li>~1 second: same as above, all blocks written in a single SQLite transaction</li>
+</ul>
+
+<p>Ok, now we had something you could actually use. Pretty slow still, but no longer ridiculous. Through much reading of code and testing, we figured out that there is one spot of the code that assumed it would always be able to read from the database. Under heavy load, this was not possible, especially when you have 9 minute blocking write operations. So the next step was to figure out all of the locking and make sure that was working right. The libsqlfs code from 2006 had the remnants of three separate locking mechanisms in it, SQLite locking, pthread locking, and a delay-retry timeout mechanism. Zetetic dove into updating libsqlfs to replace all that and use all of the modern SQLite tricks like <code>sqlite3_busy_timeout()</code> to replace the delay-retry logic, <a href="https://www.sqlite.org/lockingv3.html" target="_blank">v3.0 locks</a> and v3.7 <a href="https://www.sqlite.org/draft/wal.html" target="_blank">Write-Ahead-Logging</a> which gave libsqlfs a huge improvement in read/write concurrency, and putting libsqlfs and IOCipher reasonable performance in the realm of other encrypted file systems. I’ll let Stephen explain it:</p>
+
+<blockquote>
+<p>First, we changed the transaction command in begin_transaction to use “begin immediate”. This seeks an immediate reserved lock on the database, but does not exclusively lock it. This reduces unresolvable contention for write locks that would normally occur with deferred transactions, and is less restrictive than an exclusive lock, since it will continue to allow shared locks for reading.</p>
+
+<p>It is extremely important that we prevent write operations from failing to execute due to busy timeouts, even if another process/thread has the database locked. Even using WAL, it is still possible for a command to be blocked during attempted concurrent write operations. This causes the write operation to fail leading to corruption. While libsqlfs has some “delay()” code that provides rudimentary busy handling, it is only in use for a small number of operations leaving other critical calls unprotected. Therefore, our second change was to register SQLite’s internal busy handler with a relatively high timeout (currently 10 seconds, but open for discussion) via sqlite3_busy_timeout. This provides protection for all operations in libsqlfs, reducing the likelihood that a write operation would fail outright, though it may be delayed.</p>
+
+<p>Finally, we enabled WAL mode to speed up write operations and further improve concurrency between readers and writers. Note that WAL mode only fsync()s on checkpoint operations, so it may be possible to enable NORMAL synchronous mode with lower overhead than the standard journal mode (we didn’t change this yet).</p>
+
+<p>With these changes in place, three concurrent fsx processes running in parallel on a single fuse mount produced no errors in a 24hr test run. The tests also shows improved performance on read and writes. In light of these results, we’d like to get your feedback on these changes, and request that you run your own tests in the multi-threaded Android application to see if they resolve the problems that were reported.</p>
+</blockquote>
+
+<p>This was the final kicker. Who would of thought we could again get performance improvements of an order of magnitude twice in a single dev sprint. Now we have a encrypted filesystem that is stable and with reasonable performance that is really easy to use. And since that means that there is only very short chunks of time where everything is blocked (no more 9 minute writes), the crashes have basically vanished under real world loads. We have run super heavy file system tests over hundreds of thousands of operations without data corruption or crashes. We know that there is the theoretical potential for crashes in certain operations under super heavy load. We aim to address that in upcoming releases. And in conclusion, I’ll quote Aaron since he summarized what we are trying to achieve when we make developer tools:</p>
+
+<blockquote>
+<p>Between <a href="https://www.zetetic.net/sqlcipher/sqlcipher-for-android/" target="_blank">SQLCipher-for-Android</a> and <a href="https://guardianproject.info/code/iocipher/" target="_blank">IOCipher</a> I don’t think it could get any easier to implement cryptography on Android, hopefully people pick up on this.</p>
+</blockquote>
+
+<p>So grab the code now from git, if you’re ready to dive in! Or for the more patient, we’re developing tutorials to go along with the beta release that is coming any day now.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/encryption/">encryption</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/iocipher/">iocipher</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/libsqlfs/">libsqlfs</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/open-source/">open source</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/psst/">psst</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/sqlcipher/">sqlcipher</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/" data-toggle="tooltip" data-placement="top" title="Mumble and the Bandwidth – Anonymous CB radio with Mumble and Tor">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/" data-toggle="tooltip" data-placement="top" title="IOCipher beta: easy encrypted file storage for your Android app">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

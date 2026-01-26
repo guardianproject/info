@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Panickit on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/panickit/</link>
+    <description>Recent content in Panickit on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/panickit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PanicKit 1.0: built-in panic button and full app wipes</title>
+      <link>https://guardianproject.github.io/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/</guid>
+      <description>
+
+&lt;p&gt;Panic Kit is 1.0!  After over three years of use, it is time to call
+this stable and ready for widespread use.&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://guardianproject.github.io/info/css/jquery.fancybox-3.4.0.min.css&#34; /&gt;
+&lt;script src=&#34;https://guardianproject.github.io/info/js/jquery-3.3.1.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://guardianproject.github.io/info/js/jquery.fancybox.min.js&#34;&gt;&lt;/script&gt;
+&lt;div class=&#34;gallery&#34;&gt;
+  
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551039.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551039.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551407.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551407.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive0.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive0.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive1.png.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive1.png.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_ripple.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_ripple.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;built-in-panic-button&#34;&gt;Built-in panic button&lt;/h2&gt;
+
+&lt;p&gt;This round of work includes a new prototype for embedding PanicKit
+directly into Android.  Android 9.0 Pie introduced a new &amp;ldquo;lockdown&amp;rdquo;
+mode which follows some of the patterns laid out by PanicKit.  There
+is an &lt;em&gt;Enter lockdown&lt;/em&gt; button available on the power button menu, so
+it is rapidly available.  This is a great panic trigger button, so we
+made a prototype of a System Settings app that lets users connect the
+full flexibility of PanicKit responses to this &lt;em&gt;Enter lockdown&lt;/em&gt;
+button.  The functionality that Google links to this new button is
+extremely limited, it seems to be a &lt;a href=&#34;https://www.androidpolice.com/2018/03/08/android-p-feature-spotlight-new-lockdown-option-power-menu-turns-off-fingerprint-unlocking-something-called-extended-access/&#34;&gt;one time restriction on how you
+login&lt;/a&gt;.
+The PanicKit responses are in addition to what Google
+included. CalyxOS is
+&lt;a href=&#34;https://gitlab.com/calyxos/calyxos/issues/72&#34;&gt;working&lt;/a&gt; to integrate
+this, look for test releases soon!&lt;/p&gt;
+
+&lt;h2 id=&#34;full-wipes-of-selected-apps&#34;&gt;Full wipes of selected apps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid v1.7-alpha1&lt;/a&gt; has alpha support for
+uninstalling and wiping all data from selected apps in response to a
+panic trigger, including Ripple and F-Droid.  So the whole panic setup
+could be wiped as part of the response.  It is essential to have a
+complete, tested backup before trying this new feature, since it will
+delete all of the data for each app that is uninstalled.&lt;/p&gt;
+
+&lt;p&gt;This requires &lt;a href=&#34;https://f-droid.org/packages/org.fdroid.fdroid.privileged.ota&#34;&gt;F-Droid Privileged
+Extension&lt;/a&gt;
+be installed on the device, in order to uninstall apps without a
+prompt for each app.  Android ROMs like CalyxOS, CopperheadOS,
+Fairphone Open, Replicant, and Lineage-for-microG all include F-Droid
+Privileged Extension.&lt;/p&gt;
+
+&lt;h2 id=&#34;ripple-is-polished-up&#34;&gt;Ripple is polished up&lt;/h2&gt;
+
+&lt;p&gt;Ripple also received some modernization and polish.  Google has
+reinstated the Ripple app in Google Play, so it is again widely
+available.  Ripple was of course available the whole time via F-Droid.
+Google suspended Ripple without explanation, then a long while later
+reinstated it without explanation.&lt;/p&gt;
+
+&lt;p&gt;This work was made possible in part from donations from Handshake Foundation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New Partnership with Circle of 6 mobile safety app</title>
+      <link>https://guardianproject.github.io/info/2017/01/19/new-partnership-with-circle-of-6-mobile-safety-app/</link>
+      <pubDate>Thu, 19 Jan 2017 06:00:34 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/01/19/new-partnership-with-circle-of-6-mobile-safety-app/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Circle of 6 Focuses on Security with Guardian Project Partnership&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;Safety App Will Get End-to-End Encryption and More To Support High-Risk Communities&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;New York, NY:&lt;/strong&gt; &lt;span style=&#34;font-weight: 400;&#34;&gt;Two innovative organizations have partnered to bring increased digital security and privacy capabilities to users interested in improved safety for their mobile devices. Tech 4 Good, the developer of Circle of 6, a highly regarded mobile safety app developed to promote safety and health through networks of trust, has partnered with Guardian Project, a leader in mobile security and privacy technologies. The two organizations will work to upgrade the capabilities of the Circle of 6 app to provide users with secure messaging, private identities and improved physical security of device data.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone wp-image-13488 size-large&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/01/Co6-Screens-1024x921.png&#34; width=&#34;945&#34; height=&#34;850&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/01/Co6-Screens-1024x921.png 1024w, https://guardianproject.info/wp-content/uploads/2017/01/Co6-Screens-300x270.png 300w, https://guardianproject.info/wp-content/uploads/2017/01/Co6-Screens-768x691.png 768w&#34; sizes=&#34;(max-width: 945px) 100vw, 945px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;Circle of 6 is coordinating with a number of organizations interested in expanding the focus of the app beyond general safety and defense against sexual violence, to include other high risk communities. &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;“Circle of 6 is excited to forge this partnership with Guardian Project to bring increased privacy and security to our existing users and to new communities. We’ve received much interest globally in expanding the ways that Circle of 6 and its safety and connectivity features can be used in multiple contexts. This a thrilling step forward.”&lt;/span&gt;&lt;/em&gt; &lt;em&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;– Nancy Schwartzman&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;Guardian Project will integrate its free and open-source software libraries to provide support for &lt;a href=&#34;https://guardianproject.info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/&#34;&gt;multiple emergency hardware triggers&lt;/a&gt;, more &lt;a href=&#34;https://guardianproject.info/code/netcipher&#34;&gt;secure network communication&lt;/a&gt;, and defense against surveillance and censorship.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;Updated and new versions of the app will be available by May 1, 2017. &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;About Circle of 6:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;Circle of 6 is a survivor-led and queer-led initiative, that takes a public health and harm-reduction approach to personal safety. Drawing from the experience of sexual assault survivors, youth health experts and LGBTQ users, Circle of 6 is designed to foster communities of support, encourage bystander intervention and provide inclusive and comprehensive resources. Circle of 6 was the winner of Vice President Biden’s “Apps Against Abuse” technology challenge and has 350,000 users in 36 countries.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;About Guardian Project:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;Guardian Project creates easy to use secure apps, open-source software libraries, and customized mobile dev&lt;/span&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;ices&lt;/span&gt; &lt;span style=&#34;font-weight: 400;&#34;&gt;that can be used around the world by any person looking to protect their communications and personal data from unjust intrusion, interception and monitoring. With over 10 million users of its applications, and 100 million of its software libraries, Guardian Project has made a significant impact in improving the security and privacy of mobile users worldwide.&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>“If This, Then Panic!” Sample Code for Triggering Emergency Alerts</title>
+      <link>https://guardianproject.github.io/info/2016/10/17/if-this-then-panic-sample-code-for-triggering-emergency-alerts/</link>
+      <pubDate>Mon, 17 Oct 2016 09:55:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/10/17/if-this-then-panic-sample-code-for-triggering-emergency-alerts/</guid>
+      <description>&lt;p&gt;Earlier this year, we announced the &lt;a href=&#34;https://guardianproject.info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/&#34;&gt;PanicKit Library for Android&lt;/a&gt; and &lt;a href=&#34;https://dev.guardianproject.info/news/257&#34;&gt;Ripple&lt;/a&gt;, our basic app for alerts any compatible app that you are in an emergency situation. Rather than build a solitary, enclosed “panic button” app that only can provide a specific set of functionality, we decided, as we often do, to build a framework, and encourage others to participate. Since then, we’ve had &lt;a href=&#34;https://dev.guardianproject.info/projects/panic/news&#34;&gt;over 10 different apps implement PanicKit r&lt;/a&gt;esponder functionality, including Signal, OpenKeyChain, Umbrella app, StoryMaker and Zom.&lt;/p&gt;
+
+&lt;p&gt;It is great to have so many apps implement helpful features for users to react during an emergency situation. This might include sending an emergency message, putting sensitive data behind a password, hiding the app icon, or even wiping data. All of this can be triggered by a simple tap and swipe on the Ripple’s app user interface.&lt;/p&gt;
+
+&lt;p&gt;However, we would like to promote PanicKit trigger functionality that goes beyond something a user has to actively do, or at least obviously do. In many emergency scenarios, the user might be unable to actively trigger a panic, because they are unconscious, detained or have had their device taken away. In some cases, the activation may need to be subtle, such typing an incorrect phone number. In others, rapidly pressing a button or shaking the phone, may be safer and easier than unlocking your device and using an app.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone size-thumbnail&#34; src=&#34;https://media.giphy.com/media/K673Q5D4KGWAg/giphy.gif&#34; alt=&#34;&#34; width=&#34;738&#34; height=&#34;415&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;a truly panic-inducing situation&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;PanicKit works by connecting trigger apps with receiver apps. Triggers are what create the alert that there is an emergency or panic situation. Responders receive the alert, and take an appropriate, user configured or default action.&lt;/p&gt;
+
+&lt;p&gt;The new &lt;a href=&#34;https://github.com/n8fr8/PanicKitSamples&#34;&gt;PanicKitSamples project&lt;/a&gt; demonstrates new possible triggers that could be implemented in an app like Ripple, or any app that wishes to do so. In the &lt;a href=&#34;https://github.com/n8fr8/PanicKitSamples/tree/master/app/src/main/java/info/guardianproject/fakepanicbutton/triggers&#34;&gt;“info.guardianproject.fakepanicbutton.triggers”&lt;/a&gt; package, you will find the following classes:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/n8fr8/PanicKitSamples/blob/master/app/src/main/java/info/guardianproject/fakepanicbutton/triggers/BaseTrigger.java#L40&#34;&gt;BaseTrigger&lt;/a&gt;: a base class that handles launching of the “panic intent” from a set of stored preferences to trigger the responders&lt;/p&gt;
+
+&lt;pre&gt;public static void launchPanicIntent (Context context)
+{
+    final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
+
+    String email = prefs.getString(&#34;email&#34;,null);
+    String phone = prefs.getString(&#34;phone&#34;,null);
+    String subject = prefs.getString(&#34;subject&#34;,&#34;panic message&#34;);
+    String message = prefs.getString(&#34;message&#34;,&#34;i triggered a panic!&#34;);
+
+    launchIntent(context, email, phone, subject, message);
+}
+
+public static void launchIntent (Context context, String emailAddress, String phoneNumber, String subject, String message)
+{
+    final PackageManager pm = context.getPackageManager();
+    final Set&lt;String&gt; receiverPackageNames = PanicTrigger.getResponderActivities(context);
+
+    Intent intent = new Intent(Panic.ACTION_TRIGGER);&lt;/pre&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/n8fr8/PanicKitSamples/blob/master/app/src/main/java/info/guardianproject/fakepanicbutton/triggers/GeoTrigger.java&#34;&gt;GeoTrigger&lt;/a&gt;: Using the awesome “LOST” open-source geofencing library, this trigger sends a panic if the device moves outside of a pre-defined area (in this sample, it is Times Square NYC)&lt;/p&gt;
+
+&lt;pre&gt;private void setupGeoFence ()
+{
+
+    //setup geofence for Times Square area
+    String requestId = &#34;geof1-timesSquare&#34;;
+    double latitude = 40.758896;
+    double longitude = -73.985130;
+    float radius = 0.0001f;
+
+    Geofence geofence = new Geofence.Builder()
+            .setRequestId(requestId)
+            .setCircularRegion(latitude, longitude, radius)
+            .setExpirationDuration(Geofence.NEVER_EXPIRE)
+            .build();
+
+    GeofencingRequest request = new GeofencingRequest.Builder()
+            .addGeofence(geofence)
+            .build();&lt;/pre&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/n8fr8/PanicKitSamples/blob/master/app/src/main/java/info/guardianproject/fakepanicbutton/triggers/MediaButtonTrigger.java&#34;&gt;MediaButtonTrigger&lt;/a&gt;: This trigger will notice multiple rapid pushes of a headset mic button or a bluetooth mic call button, and send a trigger.&lt;/p&gt;
+
+&lt;pre&gt;public class MediaButtonTrigger extends BaseTrigger {
+
+    private static int mTriggerCount = 0;
+    private final static int TRIGGER_THRESHOLD = 3;
+
+    private static long mLastTriggerTime = -1;
+
+    public MediaButtonTrigger(Activity context)
+    {
+        super (context);
+    }
+
+    @Override
+    public void activateTrigger() {
+
+        //if a headset button or a bluetooth &#34;call&#34; button is pressed, trigger this
+
+        IntentFilter filter = new IntentFilter(Intent.ACTION_MEDIA_BUTTON);
+        MediaButtonIntentReceiver r = new MediaButtonIntentReceiver();
+        getContext().registerReceiver(r, filter);
+
+
+    }
+
+    public class MediaButtonIntentReceiver extends BroadcastReceiver {
+
+        public MediaButtonIntentReceiver() {
+            super();
+        }
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            KeyEvent event = (KeyEvent)intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
+            if (event == null) {
+                return;
+            }
+
+            int action = event.getAction();
+            if (action == KeyEvent.ACTION_DOWN) {
+
+                //check for 3 rapidly pressed key events
+
+                long triggerTime = new Date().getTime();
+
+                //if the trigger is the first one, or happened with a second of the last one, then count it
+                if (mLastTriggerTime == -1 || ((triggerTime - mLastTriggerTime)&lt;1000))
+                    mTriggerCount++;
+
+                mLastTriggerTime = triggerTime;
+
+                if (mTriggerCount &gt; TRIGGER_THRESHOLD) {
+                    launchPanicIntent(context);
+                    mTriggerCount = 0;
+                }
+
+
+            }
+            abortBroadcast();
+        }
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/n8fr8/PanicKitSamples/blob/master/app/src/main/java/info/guardianproject/fakepanicbutton/triggers/PhoneNumberTrigger.java&#34;&gt;PhoneNumberTrigger&lt;/a&gt; (OutgoingCallReceiver): This trigger monitors phone calls, looking for a pre-defined fake “panic number”.&lt;/p&gt;
+
+&lt;pre&gt;public class OutgoingCallReceiver extends BroadcastReceiver {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+
+        String phoneNumber = intent.getStringExtra(Intent.EXTRA_PHONE_NUMBER);
+
+        if (phoneNumber != null
+                &amp;&amp; phoneNumber.equals(PhoneNumberTrigger.PHONE_NUMBER_TRIGGER)) {
+            PhoneNumberTrigger.launchPanicIntent(context);
+        }
+
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/n8fr8/PanicKitSamples/blob/master/app/src/main/java/info/guardianproject/fakepanicbutton/triggers/SuperShakeTrigger.java&#34;&gt;SuperShakeTrigger&lt;/a&gt;: This trigger looks for the phone being rapidly shaken. It could be expanded to wait for a series of shakes within a certain time window to avoid false positives.&lt;/p&gt;
+
+&lt;pre&gt;//setup shake detection using ShakeDetector library
+SensorManager sensorManager = (SensorManager) getContext().getSystemService(Context.SENSOR_SERVICE);
+
+ShakeDetector sd = new ShakeDetector(new ShakeDetector.Listener()
+{
+    public void hearShake() {
+
+        //you shook me!
+        launchPanicIntent(getContext());
+
+    }
+});
+
+sd.start(sensorManager);&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/n8fr8/PanicKitSamples/blob/master/app/src/main/java/info/guardianproject/fakepanicbutton/triggers/WifiTrigger.java&#34;&gt;WifiTrigger&lt;/a&gt;: This triggers waits for the user to connect to a specific wifi network (in this sample “Starbucks”). It could also be set to trigger if the devices leaves the wifi network.&lt;/p&gt;
+
+&lt;pre&gt;NetworkInfo netInfo = intent.getParcelableExtra (WifiManager.EXTRA_NETWORK_INFO);
+if (ConnectivityManager.TYPE_WIFI == netInfo.getType ()
+        &amp;&amp; netInfo.isConnected()) {
+
+    WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+    WifiInfo info = wifiManager.getConnectionInfo();
+    String ssid = info.getSSID();
+
+    //Check if I am connected to the &#34;trigger&#34; SSID, and if so send an alert!
+
+    if (!TextUtils.isEmpty(ssid)
+        &amp;&amp; ssid.equals(WIFI_SSID_TRIGGER))
+    {
+        launchPanicIntent(getContext());
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;All of these samples are configured to work with the FakePanicButton sample app, which allows you to choose a contact to alert, and set a panic message. That said, these are meant to point in a direction of functionality, and have not been fully debugged or tested on all devices and OS versions.&lt;/p&gt;
+
+&lt;p&gt;If you have more ideas on other panic triggers that could be implemented, please share them here. We are also happy to take pull requests or fixes to our sample project, in order to improve on the ideas we have. Finally, we will announce more Panic responder and trigger apps, as they are available in the coming months. We looking forward to the continued growth of our PanicKit ecosystem, though of course, we hope even more for a world where there are less reasons to panic.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PanicKit: making your whole phone respond to a panic button</title>
+      <link>https://guardianproject.github.io/info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/</link>
+      <pubDate>Tue, 12 Jan 2016 08:59:41 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png&#34; rel=&#34;attachment wp-att-13221&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png&#34; alt=&#34;round hazard button&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13221&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Our mobile devices do so many things for us, making it easy to communicate with people in all manners while giving us access to all sorts of information wherever we are. But in times of anxiety and panic, it is difficult to quickly use them. Will you be too shaky to type in your PIN or lock pattern? Will you have enough time to find your trusted contacts and send them a message? On top of that, our mobile devices carry massive amounts of private information in them: banking details, pictures, all of our messages and call logs.&lt;/p&gt;
+
+&lt;p&gt;The kinds of data that we worry about vary widely based on where we are. In many places in the world, the stuff you are reading or the music you are listening to can get you arrested, or the people you are communicating with is enough to send you to jail. We have been adding “panic buttons” to our apps for 5 years now, and now we want to create an ecosystem of apps to create flexible and system-wide responses when we are unfortunate enough to require pressing the personal panic button.&lt;/p&gt;
+
+&lt;p&gt;This work seeks to establish a new level of awareness, understanding and capability for providing specific mobile software features for users who are in a “panic” situations. We define “panic” as at risk of having their mobile device physically compromised or removed from their body, being physically detained themselves, or facing an immediate threat of violence, injury, kidnapping or death. This is not to say we are are building a global “911” system. We seek to explore how software that is explicitly designed for these situations, can provide some amount of assistance to the user, by either protecting their privacy, ensuring that sensitive data is hidden or unrecoverable, or that their support networks are notified of the panic event, and provided with the necessary information to take action.&lt;/p&gt;
+
+&lt;p&gt;Over the past year, we have developed user experience design patterns, an Android library, a new panic button app, and example projects to communicate how a system-wide panic should look. For a quick introduction, check out this video demonstrating a very simple panic setup of &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.ripple&#34; target=&#34;_blank&#34;&gt;Ripple&lt;/a&gt;, a panic button, triggering &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.browser&#34; target=&#34;_blank&#34;&gt;Orweb&lt;/a&gt;, a private browser:&lt;/p&gt;
+
+&lt;h2 id=&#34;make-your-app-respond-in-times-of-panic&#34;&gt;Make your app respond in times of panic&lt;/h2&gt;
+
+&lt;p&gt;The ultimate goal of PanicKit is of course to make apps respond with actions that help protect the user. This can be as simple as locking the app when it has a passphrase, or the response can combine a number of actions into a coherent response: a messaging app locks its data and disguises itself as a game while sending out the panic message that includes the user’s location. There is a lot of complexity in all this, especially with many apps involved, so it is essential to always simplify the experience as much as possible. Thinking about panic situations is stressful, setting up the panic response should not add to that stress. Towards that end, it is better to sacrifice some flexibility if that means solid gains in simplicity.&lt;/p&gt;
+
+&lt;p&gt;The first key design pattern is the default, non-destructive response. If all apps that support PanicKit include sensible defaults, then pressing the panic button can have a useful response without the user having to setup anything at all. In order to achieve this, we divide possible responses into two categories: non-destructive vs destructive. An app that has a PIN lock can be locked without destroying anything, the user just needs to unlock it. A browser that wipes the cache can always just download the files again next time the user goes to that website. If an app only has a default, non-destructive response, then there is no need to have a configuration interface; it can be represented purely in the trigger app’s list of responders, where it will be marked “App hides when triggered”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/01/02.0.png&#34; rel=&#34;attachment wp-att-13212&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/01/02.0-939x1024.png&#34; alt=&#34;panic responder setup&#34; width=&#34;780&#34; height=&#34;851&#34; class=&#34;alignnone size-large wp-image-13212&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/01/02.0-939x1024.png 939w, https://guardianproject.info/wp-content/uploads/2016/01/02.0-275x300.png 275w, https://guardianproject.info/wp-content/uploads/2016/01/02.0-768x838.png 768w&#34; sizes=&#34;(max-width: 780px) 100vw, 780px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Many of the most valuable panic responses require doing something that can not be undone, so we classify these as destructive. Deleting data is exactly what is needed in a panic situation, but the user must opt-in to enable this kind of response in order to prevent data from being mistakenly deleted. Sending a message can also be a very valuable panic response. But sending a message to the wrong person can cause harm, sending it at the wrong time can destroy people’s expectations: if you cry wolf too often, then people will stop hearing it. Disguising an app can also save people a lot of trouble. But if the user does not know this is going to happen, their experience will be that the app was deleted. So these are all destructive responses and require the user to enable them via a panic setup screen.&lt;/p&gt;
+
+&lt;p&gt;For apps that offer configurable responses, it is essential to present those options clearly with as little clutter as possible. The panic setup should be on a devoted screen, not mixed in with other settings, and takes up the full screen. Panic is a time of stress, the panic response should strive to avoid adding any stress on top of that. When an app offers a few options for responses, then even the devoted screen can quickly get complicated: a list of possibilities, a text field for a message, and a way to manage the contacts to send to. It is important that the entire response is easily visible in one screen so that the user can quickly and easily tell how that app will respond. The entire panic setup should be on a single screen with as little scrolling as possible. Large widgets like a message text field should be placed at the bottom, and be collapsed if not active.&lt;/p&gt;
+
+&lt;p&gt;To get started, add the PanicKit library to your &lt;em&gt;build.gradle&lt;/em&gt;: &lt;code&gt;info.guardianproject.panic:panic:0.5&lt;/code&gt;, then check out the FakePanicResponder example app, as well as how it is implemented in real apps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SMSSecure/SMSSecure/blob/8b2d61161716dcae33c7ae2fd9540931b632030a/src/org/smssecure/smssecure/PanicResponderActivity.java&#34; target=&#34;_blank&#34;&gt;SMSSecure lock as default response&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/theScrabi/NewPipe/pull/133&#34; target=&#34;_blank&#34;&gt;NewPipe clear search history as default response&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zom/Zom-Android/blob/master/app/src/main/java/org/awesomeapp/messenger/ui/PanicSetupActivity.java&#34; target=&#34;_blank&#34;&gt;Zom with multiple destructive responses and a default lock response&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;make-your-own-panic-button-app&#34;&gt;Make your own panic button app&lt;/h2&gt;
+
+&lt;p&gt;One key reason why we took on this project is to spur more innovation in what a “panic button” can look like. There are currently two solid panic trigger apps that use PanicKit: &lt;a href=&#34;https://panicbutton.io&#34; target=&#34;_blank&#34;&gt;PanicButton&lt;/a&gt; and &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.ripple&#34; target=&#34;_blank&#34;&gt;Ripple&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are many ideas for what a panic button can look like, now it is easy to make one that will actually trigger real things. A custom panic button app only needs to send the trigger message (technically an &lt;code&gt;ACTION_TRIGGER Intent&lt;/code&gt;), which will make apps lock, hide, delete private data, send a message, etc. Here are some ideas for panic button apps that we would love to see:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a “&lt;a href=&#34;https://en.wikipedia.org/wiki/Dead_man%27s_switch&#34; target=&#34;_blank&#34;&gt;dead man’s switch&lt;/a&gt;” that triggers if the user has not checked in within the last hour&lt;/li&gt;
+&lt;li&gt;a “geo-fence” that triggers if the device comes too close to a known detention center&lt;/li&gt;
+&lt;li&gt;a sensor monitor that triggers on absence of movement&lt;/li&gt;
+&lt;li&gt;a custom Bluetooth button that looks like a belt buckle, &lt;a href=&#34;http://news.discovery.com/tech/gear-and-gadgets/sleek-jewelry-hides-a-panic-button-140220.htm&#34; target=&#34;_blank&#34;&gt;brooch&lt;/a&gt;, or other innocuous object&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/01/01.3.png&#34; rel=&#34;attachment wp-att-13207&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/01/01.3-149x300.png&#34; alt=&#34;Ripple&#39;s responders&#34; width=&#34;149&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-13207&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/01/01.3-149x300.png 149w, https://guardianproject.info/wp-content/uploads/2016/01/01.3-768x1544.png 768w, https://guardianproject.info/wp-content/uploads/2016/01/01.3-509x1024.png 509w, https://guardianproject.info/wp-content/uploads/2016/01/01.3.png 1006w&#34; sizes=&#34;(max-width: 149px) 100vw, 149px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;An important part of the user experience of the panic button app is how it represents what the trigger will do. For that, we paid careful attention to the design of the list of “panic responder” apps. It should quickly and clearly show which apps are enabled. In our pattern, enabled apps should be sorted to the top of the list and disabled apps should be greyed out including the app icon. There should also be a standard switch to both allow the user to enable/disable an app as well as provide extra feedback on whether an app is enabled or not. That provides three visual channels that communicate what will respond (top of the list, in full color, and with the shape of a switch that is turned on). For a thorough overview of design patterns, see &lt;a href=&#34;https://dev.guardianproject.info/boards/21/topics/390&#34; target=&#34;_blank&#34;&gt;Panic Design Patterns&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Panic responders can have both non-destructive and destructive responses, and some are only appropriate for a full on panic. If you are just feeling anxious, and are worried that the situation is getting dangerous, then deleting files is not appropriate but locking and hiding is. An app could instead be an “anxious trigger” app, and be limited to only non-destructive responses. A trigger app can only send one kind of trigger message (the &lt;code&gt;ACTION_TRIGGER Intent&lt;/code&gt;), to keep the inter-app interaction simple. So the anxious trigger app would instead not offer the “EDIT” option (implemented with an &lt;code&gt;ACTION_CONNECT Intent&lt;/code&gt;), and that limits the responses to the default, non-destructive responses in all the apps that receive a trigger from the anxious trigger app.&lt;/p&gt;
+
+&lt;p&gt;To get started, add the panickit library to your build.gradle &lt;code&gt;info.guardianproject.panic:panic:0.5&lt;/code&gt;, then check out the &lt;code&gt;PanicTrigger&lt;/code&gt; class. You can see how it is implemented in these example apps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/Ripple&#34; target=&#34;_blank&#34;&gt;Ripple&lt;/a&gt; – &lt;em&gt;a real panic button that is simple enough to be an example&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/FakePanicButton&#34; target=&#34;_blank&#34;&gt;FakePanicButton&lt;/a&gt; – &lt;em&gt;a fake app that is only meant to be an example&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;more-work-and-open-questions&#34;&gt;More work and open questions&lt;/h2&gt;
+
+&lt;p&gt;There is a lot of potential for making our mobile devices help us in anxious and panicked moments. PanicKit has established that a system-wide panic response can be simple, approachable, and effective. But there is definitely much work to be done. There is an organization forming around this work, The &lt;a href=&#34;https://github.com/PanicInitiative&#34; target=&#34;_blank&#34;&gt;Panic Initiative&lt;/a&gt;, that will build upon the work done by Amnesty International, &lt;a href=&#34;https://iilab.org/&#34; target=&#34;_blank&#34;&gt;iilab&lt;/a&gt;, and our PanicKit work.&lt;/p&gt;
+
+&lt;p&gt;There are of course still many open questions that we are very interested in, and hope to see more people working on this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Should this be handled on the system level?&lt;/li&gt;
+&lt;li&gt;How the trigger app query the responder for its action without leaking private data like contacts or location?&lt;/li&gt;
+&lt;li&gt;How can panic and anxiety be represented graphically, using colors, iconography, UI, etc.?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For more discussion and resources, check out the &lt;a href=&#34;https://dev.guardianproject.info/projects/panic/wiki&#34; target=&#34;_blank&#34;&gt;PanicKit wiki&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

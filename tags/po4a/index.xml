@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Po4a on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/po4a/</link>
+    <description>Recent content in Po4a on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/po4a/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Figuring Out Crowdsourced Translation of Websites</title>
+      <link>https://guardianproject.github.io/info/2020/04/23/figuring-out-crowdsourced-translation-of-websites/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/04/23/figuring-out-crowdsourced-translation-of-websites/</guid>
+      <description>
+
+&lt;p&gt;Crowdsourced translation platforms like &lt;a href=&#34;https://weblate.org/&#34;&gt;Weblate&lt;/a&gt;, Transifex, Crowdin, etc. have proven to be a hugely productive way to actively translate apps and desktop software.  Long form texts like documentation and websites remain much more work to translate and keep translated.  Many translation services currently support Markdown and HTML, but very basically, which means much more work for translators and webmasters.  Translators can inadvertently break things, either with a typo or because of a lack of knowledge of a specific syntax.  This can make the whole page layout break.  Webmasters and documentation maintainers must carefully check the process to ensure everything is working smoothly.  With the spread of Markdown as a standard format, there is now hope!  Software developers can focus efforts on the Markdown translation workflow, and Markdown is more tolerant of syntax errors than HTML.&lt;/p&gt;
+
+&lt;p&gt;Guardian Project has been working for a decade on making localization and the long term maintenance of translation a lot easier for developers and translators.  We call this ongoing collaborative effort &amp;ldquo;Linguine&amp;rdquo; after a name chosen in a multi-project meeting.  One of the biggest usability barriers in the world of software and the internet is language.  Most of the world does not speak English, yet most of &lt;a href=&#34;https://www.bbc.com/future/article/20200414-the-many-lanuages-still-missing-from-the-internet&#34;&gt;the internet is written in English&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Maya_script&#34;&gt;&lt;img src=&#34;Tortuguero_Box_WDL2658.png&#34; alt=&#34;Tortuguero Box&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-app-workflow&#34;&gt;The App Workflow&lt;/h2&gt;
+
+&lt;p&gt;The developer of an Android or iOS app does not need to know much
+about localization or translation in order to make their apps fully
+translated.  Both supported translation from the
+beginning as a native feature.  Software strings are already broken up into
+small chunks, which fit nicely into crowdsourced translation software.  The progress bars and step-by-step user experiences map easily to these strings.  The string file formats also allow for all sorts of valuable &lt;a href=&#34;https://docs.weblate.org/en/latest/formats.html#xliff&#34;&gt;metadata&lt;/a&gt; the give translators context and guidance, as well as to enable automated checks.  The strings of an app also do not to be 100% translated to be useful.  For example, if all strings are translated except for those
+in a new feature, most users will never even notice the missing
+translations.  If only the most commonly seen strings are translated, that translation can still be useful since it will provide the user with enough to navigate all the features of the app.  Here are three examples of app strings for translation:&lt;/p&gt;
+
+&lt;p&gt;Android &lt;em&gt;strings.xml&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;string name=&amp;quot;app_details__no_versions__show_incompat_versions&amp;quot;&amp;gt;To show incompatible versions here anyway, enable the \&amp;quot;%1$s\&amp;quot; setting.&amp;lt;/string&amp;gt;
+&amp;lt;string name=&amp;quot;app_details__no_versions__no_compatible_signatures&amp;quot;&amp;gt;No versions with compatible signature&amp;lt;/string&amp;gt;
+&amp;lt;string name=&amp;quot;app_details__no_versions__none_compatible_with_device&amp;quot;&amp;gt;No versions compatible with device&amp;lt;/string&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Python &lt;em&gt;gettext .po&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-gettext&#34;&gt;#: ../fdroidserver/build.py
+msgid &amp;quot;Don&#39;t create a source tarball, useful when testing a build&amp;quot;
+msgstr &amp;quot;不创建源码 tarball 文件，便于内部版本测试&amp;quot;
+
+#: ../fdroidserver/stats.py
+msgid &amp;quot;Don&#39;t do anything logs-related&amp;quot;
+msgstr &amp;quot;请勿做任何日志相关的操作&amp;quot;
+
+#: ../fdroidserver/build.py
+msgid &amp;quot;Don&#39;t refresh the repository, useful when testing a build with no internet connection&amp;quot;
+msgstr &amp;quot;不刷新资源库，便于没有互联网时的内部版本测试&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;i18next&lt;/em&gt; JSON:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+    &amp;quot;package&amp;quot;: {
+        &amp;quot;anti_features&amp;quot;: &amp;quot;Anti-Features&amp;quot;,
+        &amp;quot;added_on&amp;quot;: &amp;quot;Added on {{ package_added_date }}&amp;quot;,
+        &amp;quot;signed_by_fdroid&amp;quot;: &amp;quot;It is built and signed by F-Droid, and guaranteed to correspond to &amp;lt;a href=\&amp;quot;{{ source_code_url }}\&amp;quot;&amp;gt;this source tarball&amp;lt;/a&amp;gt;.&amp;quot;,
+        &amp;quot;suggest_downloading_via_fdroid&amp;quot;: &amp;quot;Although APK downloads are available below to give you the choice, you should be aware that by installing that way you will not receive update notifications and it&#39;s a less secure way to download. We recommend that you install the F-Droid client and use that.&amp;quot;,
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;long-form-text&#34;&gt;Long Form Text&lt;/h2&gt;
+
+&lt;p&gt;With documentation, blog posts, and other long form text, it is a very different story.  To start with, there are lots of debates of how best to break up a text: paragraphs, sentences, or whole pages?  Does each bullet point count as a paragraph or a sentence?  Do these rules work for both blog posts, which rarely change after publication, as well as documentation, which must be kept updated?  Also, measuring the translation &amp;ldquo;completeness&amp;rdquo; of a long text is harder.  If a blog post is 80% translated, it will be very disconcerting for readers when sections switch to English and back.  A documentation page that is 20% translated is not useful.&lt;/p&gt;
+
+&lt;p&gt;With websites, there is also more varied context than with software strings: paragraphs, titles, bullet points, code blocks, &lt;a href=&#34;https://jekyllrb.com/docs/front-matter/&#34;&gt;YAML Front Matter&lt;/a&gt;, etc.  There is currently no way to add translation metadata directly to the Markdown or HTML document, so that context is often missing, or it must be manually entered in the translation platform.   One really nice property of Markdown is that the plain text version looks good, so if the writer messes up the markup syntax, all is not lost.  Translation software can be made to fully &amp;ldquo;understand&amp;rdquo; Markdown (e.g. the &lt;a href=&#34;https://en.wikipedia.org/wiki/Abstract_Syntax_Tree&#34;&gt;AST&lt;/a&gt;), and provide automated syntax checks.  Such an approach might totally fail if someone messes up the markup in the source document.  In that case, a more naive direct representation might work better.  Sites that run linters will want the AST approach, sites with non-technical writers might not.  In short: Crowdin, Transifex, and Weblate currently support Markdown, but in a limited way. And these limitations mean much more work for translators, developers, and webmasters.&lt;/p&gt;
+
+&lt;p&gt;If the translators are technically savvy and know the topic and syntaxes well, then the webmaster doesn&amp;rsquo;t need to worry too much.  The translation platform will make it easier for the translators to keep the translations maintained.  Another key benefit of crowdsourced translation is that translators don&amp;rsquo;t need as much technical skill to meaningfully contribute, as long as the project fits well into the translation workflow.  Due to the current complexity of websites and limitations of the tooling, there is still no single translation workflow for long form text that works well for the majority of websites and documentation.  That means it is important to know available workflows and understand which one fits best to your project.&lt;/p&gt;
+
+&lt;h2 id=&#34;user-experience-breakdown&#34;&gt;User Experience Breakdown&lt;/h2&gt;
+
+&lt;p&gt;Website localization is also not nearly as standardized as apps.  With apps, a single translation workflow will work for basically all cases.  For websites, that is not possible since there are so many different kinds of texts and requirements.  For some documentation, it is acceptable to have 20% of the text slightly out of date in the translation.  For other documentation, each page needs to be 100% complete, otherwise the original English should be shown.  A good translation experience therefore requires customization.&lt;/p&gt;
+
+&lt;p&gt;The workflow will also vary based on the content and the skills that the translators have.  If it is deeply technical documentation, then the translators will be comfortable markup and code syntax since they must have technical knowledge in order to translate the materials.  The translators will prefer being closer to the source format.  If the content is blog posts from an organization advocating good governance, then the translators are mostly going to be non-technical, and the workflow should minimize exposure to technical details like &lt;a href=&#34;https://jekyllrb.com/docs/front-matter/&#34;&gt;YAML Front Matter&lt;/a&gt; blocks.&lt;/p&gt;
+
+&lt;p&gt;One large, complicated example is the &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; website, which is built with Jekyll.  It has five different kinds of materials that need to be translated, each with its own distinct requirements: &lt;a href=&#34;https://hosted.weblate.org/projects/f-droid/website/&#34;&gt;chrome strings&lt;/a&gt;, &lt;a href=&#34;https://hosted.weblate.org/projects/f-droid/website-pages/&#34;&gt;pages&lt;/a&gt;, &lt;a href=&#34;https://hosted.weblate.org/projects/f-droid/website-docs/&#34;&gt;docs&lt;/a&gt;, &lt;a href=&#34;https://hosted.weblate.org/projects/f-droid/website-posts/&#34;&gt;blog posts&lt;/a&gt;, and &lt;a href=&#34;https://hosted.weblate.org/projects/f-droid/website-tutorials/&#34;&gt;tutorials&lt;/a&gt;.  In order to group the strings by these requirements, the site uses &lt;em&gt;i18next&lt;/em&gt; JSON for use in Jekyll Liquid tags and custom &lt;a href=&#34;https://po4a.org/&#34;&gt;&lt;em&gt;po4a&lt;/em&gt;&lt;/a&gt; sections to handle the Markdown and YAML Front Matter.  &lt;em&gt;po4a&lt;/em&gt; makes it possible to group the translation levels per-section, then add requirements: the entire &amp;ldquo;pages&amp;rdquo; section must be ~95% translated for inclusion, while &amp;ldquo;docs&amp;rdquo; and &amp;ldquo;blog posts&amp;rdquo; sections can be untranslated.  Each individual blog post must be completely translated to be published.  Each documentation page must be 90% translated to be published.  It is not 100% to allow for some time lag between when the original is updated, and the translated is updated.  Ideally, the source string edits could be marked as &amp;ldquo;typo correction&amp;rdquo; vs &amp;ldquo;update&amp;rdquo; to aid making better automatic decisions about which translations should still be published.&lt;/p&gt;
+
+&lt;h2 id=&#34;process-and-people&#34;&gt;Process and People&lt;/h2&gt;
+
+&lt;p&gt;If there are people fully engaged in all parts of the translation process, then it is possible to tightly coordinate the updates to the source and the translations.  Other projects rely on crowdsourced translations because
+it is easier for them to acquire volunteer contributions than increasing translation budgets.  So the advantages and disadvantages of various workflows have to be weighed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Delay publishing the source update until the translations are done.&lt;/li&gt;
+&lt;li&gt;Translated pages are reverted to English unless they are 100% updated.&lt;/li&gt;
+&lt;li&gt;Translated pages show outdated parts until they are updated.&lt;/li&gt;
+&lt;li&gt;Translated pages show English parts until they are updated.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are other trade-offs to consider in terms of the relationship between the translator and the project:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Only trusted translators who can directly update the translations:
+
+&lt;ul&gt;
+&lt;li&gt;Rapid time to publish&lt;/li&gt;
+&lt;li&gt;Less work to translate&lt;/li&gt;
+&lt;li&gt;Much fewer languages supported&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Trusted reviewers with any contributions from any translator:
+
+&lt;ul&gt;
+&lt;li&gt;More language coverage, quality control from multiple eyeballs on every string&lt;/li&gt;
+&lt;li&gt;Asynchronous, unpredictable workflow&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Contributions from any translator:
+
+&lt;ul&gt;
+&lt;li&gt;Rapid maintenance updates and even more languages&lt;/li&gt;
+&lt;li&gt;More errors in translation, including potentially vandalous or malicious contributions&lt;/li&gt;
+&lt;li&gt;Skilled translators will be less interested in contributing&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When it is possible to achieve 100% translation, like on a small site or when there is a budget to pay for all the documentation to be translated, then the workflow is a lot simpler.  That allows the tools to have a more direct user experience.  Volunteer-based, &amp;ldquo;best effort&amp;rdquo; translation is a different story.  Then it is important to clearly represent which strings and pages should be translated first, and which are non-essential.  Crowdin, for example, can show all the documents in a familiar looking file browser, with nice progress bars.  There is no indication of priority.  This is great if someone is paid to complete the full translation, but is much less clear for volunteers to jump in and contribute to the more important parts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;crowdin-markdown-dir.png&#34; alt=&#34;&#34; /&gt;
+&lt;em&gt;Crowdin project file navigation&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, there is no shining example of a user experience that covers this second scenario well.  Weblate provides one good tool, where the strings are presented to the translator in order of the priority set in the metadata (e.g. like &lt;a href=&#34;https://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#priority&#34;&gt;XLIFF&amp;rsquo;s &lt;em&gt;priority&lt;/em&gt;&lt;/a&gt;).  The translator just needs to start translating the first strings Weblate presents.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;crowdin-priority.png&#34; alt=&#34;&#34; /&gt;
+&lt;em&gt;One hack to add priority to Markdown for Crowdin&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mass-changes-versus-merge-conflicts&#34;&gt;Mass Changes versus Merge Conflicts&lt;/h2&gt;
+
+&lt;p&gt;Sometimes you have to make a small change to some of the coding of the website.  The website has suddenly gotten a lot more popular, so you need to work on making the caching work a lot better to reduce the load.  That means changing all of file references to include a version or hash value.  Those links are also in the source strings that are fed to the translation system.  And each change to the source strings prompts all of the translators to update their translations.  Normally, this is exactly what should happen.  But in this scenario, the translation should not change since it is just the links that changed.  To handle this, the webmaster or developer needs to be able to do mass edits on the source and translation while having a way to tell the translation system to ignore this change.  This can easily cause merge conflicts if a translator is working at the same time.&lt;/p&gt;
+
+&lt;p&gt;If these small changes only happen in source, the translations will be marked as needing an update.  Some platforms try to be smart about detecting changes, and will even mark strings as changed if both the source and translation were updated together.  That produces another scenario: The website fully translated into Tibetan, but now the translator has disappeared.  So those trivial changes are bumping more and more strings out of the translation, and soon it will be death by a thousand paper cuts and the Tibetan translation gets kicked out even though the underlying text is current.  It is just the inline code updates that are marking things as out of date.&lt;/p&gt;
+
+&lt;h2 id=&#34;automation-and-checks&#34;&gt;Automation and Checks&lt;/h2&gt;
+
+&lt;p&gt;One essential part of any translation workflow is automated checks to make sure that the syntax has not been broken in the translation process.  Translation platforms must provide clear errors to the translators, otherwise all of these problems will be pushed to the webmaster or developer who imports new translations.  Or worse, they are overlooked and cause crashes or break layouts.  Good metadata is a key piece of that process.  For example, &lt;em&gt;i18next&lt;/em&gt; &lt;code&gt;{{ interpolation }}&lt;/code&gt; is not the same as Python &lt;code&gt;{format_strings}&lt;/code&gt;, though they look quite similar.  The metadata should include the file type and any relevant syntaxes.  Most developers are not aware of all of the details of the translation process, so these checks should be enabled automatically, as much as possible.  Manually enabling checks can be very hard to understand, since you have to understand both the developer&amp;rsquo;s and translators points of view. These checks really pay off, like when technical contributors can go straight to strings with failing checks and fix the syntax problems, without any knowledge of the languages involved.  This is in contrast to a project&amp;rsquo;s Continuous Integration (CI) tests, which generally only the software&amp;rsquo;s maintainers follow. The barrier to entry for fixing failing checks is much lower since they are standardized across every project on the translation platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;weblate-checks.png&#34; alt=&#34;&#34; /&gt;
+&lt;em&gt;Weblate highlights failing checks, the error counts are clickable to edit them all.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;weblate-failing-checks.png&#34; alt=&#34;&#34; /&gt;
+&lt;em&gt;Reviewing a single failing check in Weblate.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Context is very important for translators, and a good translating experience will provide as much useful context as possible.  That said, it cannot replace the real thing.  Having a automatic staging website will help catch errors before publication.  It also gives translators the feeling that they are building something real, when they are working their way up to being accepted for final publication.  &lt;a href=&#34;https://staging.tails.boum.org/&#34;&gt;Tails&lt;/a&gt; and &lt;a href=&#34;https://staging.f-droid.org&#34;&gt;F-Droid&lt;/a&gt; both provide complete staging websites that include all of the the languages, not only the complete ones.  Static site generators like Hugo and Jekyll let more technically skilled contributors rapidly build a local copy, and services like GitLab Pages and GitHub Pages can host a staging website &lt;a href=&#34;https://eighthave.gitlab.io/fdroid-website/&#34;&gt;for&lt;/a&gt; &lt;a href=&#34;https://bubu.gitlab.io/fdroid-website/&#34;&gt;each&lt;/a&gt; &lt;a href=&#34;https://uniqx.gitlab.io/fdroid-website/&#34;&gt;fork&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;translation-setup-with-po4a&#34;&gt;Translation Setup with &lt;em&gt;po4a&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://po4a.org&#34;&gt;&lt;em&gt;po4a&lt;/em&gt;&lt;/a&gt; is a tool for customizing the representation of text in the translation workflow.  It is quite powerful, but also not simple to get started.  Each translation platform has its own documentation for directly using Markdown, so follow those docs for a simpler setup.  There is a lot to be said for having the translation platform directly handle the files that are being translated, without an intermediate localization format like XLIFF, &lt;em&gt;gettext&lt;/em&gt; PO, or JSON.  Sometimes other requirements mean that using &lt;em&gt;po4a&lt;/em&gt; in the middle will save a lot of effort, like the F-Droid example above.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;po4a&lt;/em&gt; approach does work quite differently: the translations are stored in the &lt;em&gt;.po&lt;/em&gt; files rather than Markdown documents. This feels a bit unnatural at first, as compared to the regular workflow of a static site generator.  Translated pages are then converted from &lt;em&gt;.po&lt;/em&gt; to &lt;em&gt;.md&lt;/em&gt; just for building the site.  It gives a lot in return, especially for crowdsourced translation with specific requirements.  For example, it makes publishing and unpublishing translated documents happen automatically, based on the pre-configured specifications, like whether it is 100% translated.&lt;/p&gt;
+
+&lt;p&gt;po4a gives fine grained control over how documents are grouped, and what percentage must be translated before the translated version is published.  The direct version means each document is represented by a single translation component.  Many websites are organized into three common buckets, folders of Markdown documents should count as a single translation component:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The base pages like &amp;ldquo;about&amp;rdquo;, &amp;ldquo;contact, etc.&lt;/li&gt;
+&lt;li&gt;Documentation&lt;/li&gt;
+&lt;li&gt;Blog posts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;projects-using-po4a&#34;&gt;Projects using &lt;em&gt;po4a&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Debian is using &lt;em&gt;po4a&lt;/em&gt; to &lt;a href=&#34;https://salsa.debian.org/manpages-l10n-team&#34;&gt;translate the &lt;em&gt;man&lt;/em&gt; pages&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The extensive &lt;a href=&#34;https://tails.boum.org/contribute/build/website/&#34;&gt;Tails documentation&lt;/a&gt; uses &lt;em&gt;po4a&lt;/em&gt; to make Markdown pages translatable in &lt;a href=&#34;https://ikiwiki.info/plugins/po/&#34;&gt;ikiwiki&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The Fedora project is using &lt;em&gt;po4a&lt;/em&gt; to translate the &lt;a href=&#34;https://pagure.io/fedora-docs/docs-fp-o&#34;&gt;documentation&lt;/a&gt; in &lt;a href=&#34;https://translate.fedoraproject.org/&#34;&gt;their own Weblate instance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stellarium.org/&#34;&gt;Stellarium Astronomy&lt;/a&gt; uses &lt;em&gt;po4a&lt;/em&gt; to &lt;a href=&#34;https://github.com/Stellarium/stellarium/pull/908&#34;&gt;translate&lt;/a&gt; &amp;ldquo;sky culture descriptions&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;coming-soon&#34;&gt;Coming Soon:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://reproducible-builds.org/&#34;&gt;https://reproducible-builds.org/&lt;/a&gt; (built with Jekyll): &lt;a href=&#34;https://salsa.debian.org/reproducible-builds/reproducible-website/-/merge_requests/56&#34;&gt;https://salsa.debian.org/reproducible-builds/reproducible-website/-/merge_requests/56&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://reuse.software&#34;&gt;https://reuse.software&lt;/a&gt; (built with Hugo): &lt;a href=&#34;https://github.com/fsfe/reuse-website/issues/26&#34;&gt;https://github.com/fsfe/reuse-website/issues/26&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

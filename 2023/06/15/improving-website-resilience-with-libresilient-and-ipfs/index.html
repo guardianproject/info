@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Improving website resilience with LibResilient and IPFS - Guardian Project</title>
+  <meta property="og:title" content="Improving website resilience with LibResilient and IPFS" />
+  <meta name="twitter:title" content="Improving website resilience with LibResilient and IPFS" />
+  <meta name="description" content="We&rsquo;re always looking for techniques to make services more resilient to all sorts of issues. That&rsquo;s why we took special interest in LibResilient and mapped out it&rsquo;s capabilities. It&rsquo;s a JavaScript library for decentralized content delivery in web-browsers and markets itself as easy to deploy to any website. We&rsquo;ve looked at LibResilient primarily in the context of static websites. While it should work with dynamic websites too, that was out of focus for us.">
+  <meta property="og:description" content="We&rsquo;re always looking for techniques to make services more resilient to all sorts of issues. That&rsquo;s why we took special interest in LibResilient and mapped out it&rsquo;s capabilities. It&rsquo;s a JavaScript library for decentralized content delivery in web-browsers and markets itself as easy to deploy to any website. We&rsquo;ve looked at LibResilient primarily in the context of static websites. While it should work with dynamic websites too, that was out of focus for us.">
+  <meta name="twitter:description" content="We&rsquo;re always looking for techniques to make services more resilient to all sorts of issues. That&rsquo;s why we took special interest in LibResilient and mapped out it&rsquo;s capabilities. …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/",
+          "name": "Improving website resilience with lib resilient and ip f s"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "uniq"
+  },
+  "headline": "Improving website resilience with LibResilient and IPFS",
+  "description" : "We&amp;rsquo;re always looking for techniques to make services more resilient to all sorts of issues. That&amp;rsquo;s why we took special interest in LibResilient and mapped out it&amp;rsquo;s capabilities. It&amp;rsquo;s a JavaScript library for decentralized content delivery in web-browsers and markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient primarily in the context of static websites. While it should work with dynamic websites too, that was out of focus for us.",
+  "inLanguage" : "en",
+  "wordCount": 1140,
+  "datePublished" : "0001-01-01T00:00:00",
+  "dateModified" : "2023-06-15T00:00:00",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "censorship, censorship circumvention, circumvention, filecoin, free software, IPFS, open source, resilience" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Improving website resilience with LibResilient and IPFS" />
+<meta property="og:description" content="We&rsquo;re always looking for techniques to make services more resilient to all sorts of issues. That&rsquo;s why we took special interest in LibResilient and mapped out it&rsquo;s capabilities. It&rsquo;s a JavaScript library for decentralized content delivery in web-browsers and markets itself as easy to deploy to any website. We&rsquo;ve looked at LibResilient primarily in the context of static websites. While it should work with dynamic websites too, that was out of focus for us.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Improving website resilience with LibResilient and IPFS" />
+  <meta name="twitter:description" content="We&rsquo;re always looking for techniques to make services more resilient to all sorts of issues. That&rsquo;s why we took special interest in LibResilient and mapped out it&rsquo;s capabilities. …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Improving website resilience with LibResilient and IPFS</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on June 15, 2023
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;uniq
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>We&rsquo;re always looking for techniques to make services more resilient to all
+sorts of issues. That&rsquo;s why we took special interest in
+<a href="https://resilient.is/">LibResilient</a> and mapped out it&rsquo;s capabilities.  It&rsquo;s a
+JavaScript library for decentralized content delivery in web-browsers and
+markets itself as easy to deploy to any website. We&rsquo;ve looked at LibResilient
+primarily in the context of static websites.  While it should work with dynamic
+websites too, that was out of focus for us.</p>
+
+<p>Under the hood LibResilient uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web
+Workers</a>.
+Technically it&rsquo;s a piece of JavaScript that websites can install into the
+browsers of their visitors.  I like to compare it to cookies, except that it&rsquo;s
+not just data but actually a program for manipulating your network request. The
+main purpose of Web Workers is to enable web apps to optimize their network
+connections. Web Workers are pretty low-level API.</p>
+
+<p>LibResilient delivers implementations for common use-cases on top of Web
+Workers in the form of plug-ins.  We&rsquo;ve looked at the 3 most basic of those
+plug-ins.</p>
+
+<ul>
+<li><em>fetch plugin</em> - routes network requests directly to the web-server as if
+LibResilient wasn&rsquo;t present.</li>
+<li><em>cache plugin</em> - stores HTML, JavaScript, images and other files inside
+the browsers local storage</li>
+<li><em>alt-fetch plugin</em> - allows to configure a list of website mirrors and tries
+to fetch files from there</li>
+</ul>
+
+<p>These enable us to keep a website online and even update it if the main
+web-server running that site has an outage.  It&rsquo;s key that visitors must have
+managed to load the website at least once before.  Only than can LibResilient
+work it&rsquo;s magic and install itself and the list of site mirrors into the users
+browser.  This solution doesn&rsquo;t work for first time visitors, during the period
+of an outage.</p>
+
+<p>Of course this requires to run website mirrors. Static websites really shine in
+this regard, because they are very easy to mirror and static web-space is quite
+inexpensive these days.</p>
+
+<p>We also looked into using IPFS Gateways as mirrors.  To accomplish this we had
+to first add and pin websites to IPFS.  Next we had to publish the pinned copy
+of the site to IPNS.  Then we could use the IPNS-key-fingerprint to use every
+public IPFS gateway as mirror.  However, public gateways tend to require quite
+long to answer requests, which is bad for LibResilient because it uses
+relatively short timeouts to fail-over between mirrors.  So to get some sense
+of reliability, paid IPFS gateways guaranteed to pin your website are a more
+stable choice.</p>
+
+<h1 id="publishing-libresilient-to-ipfs">Publishing LibResilient to IPFS</h1>
+
+<p>This is a for publishing a static LibResilient enabled website to IPFS.</p>
+
+<h2 id="requirements">requirements</h2>
+
+<p>You will need VPS, or some other kind of tiny but always online server to make
+your data available on IPFS. This guide assumes that your server is running some
+flavor of GNU/Linux. It also assumes that you are familiar with the concept of
+static websites and that your site is already hosted on the internet.</p>
+
+<p>Mind that IPFS can be very slow, if you run into timeouts don&rsquo;t give up. Just
+wait a few minutes and give it a few more retries, it will work eventually.</p>
+
+<h2 id="install-ipfs">Install IPFS</h2>
+
+<p>This short snipped will install <code>kubo</code> the official IPFS binary build on your
+server:</p>
+
+<pre><code class="language-bash">wget https://dist.ipfs.tech/kubo/v0.18.1/kubo_v0.18.1_linux-amd64.tar.gz
+echo &quot;15d42b47b8529edda3e8e2d6fe6c14958d939c4efd07dea02e204743e05216f3 kubo_v0.18.1_linux-amd64.tar.gz&quot; \
+    | sha256sum --check
+tar -xzf kubo_v0.18.1_linux-amd64.tar.gz
+mv kubo/ipfs /usr/local/bin/ipfs
+rm -rf kubo kubo_v0.18.1_linux-amd64.tar.gz
+</code></pre>
+
+<p>Setup kubo daemon to always run in background as systemd service. (Note: this
+is tested for Debian and might require different steps on other GNU/Linux
+distributions.)</p>
+
+<pre><code class="language-bash">adduser ipfs --gecos '' --disabled-password
+su ipfs -c '/usr/local/bin/ipfs init --profile server'
+
+cat &lt;&lt; EOF &gt; /etc/systemd/system/ipfs-daemon.service
+[Unit]
+Description=IPFS Daemon
+
+[Service]
+Restart=always
+User=ipfs
+group=ipfs
+WorkingDirectory=/home/ipfs
+ExecStart=/usr/local/bin/ipfs daemon
+
+[Install]
+WantedBy=default.target
+EOF
+
+systemctl enable ipfs-daemon.service
+systemctl start ipfs-daemon.service
+</code></pre>
+
+<p>Tip: If you&rsquo;re behind a firewall or NAT make sure to open ports 4001/tcp and
+4001/udp so IPFS can connect to the internet.</p>
+
+<h3 id="publish-site-to-ipfs">Publish site to IPFS</h3>
+
+<p>Next we&rsquo;ll publish the website to IPFS. You&rsquo;ll need to copy your static website
+to the IPFS server. For this guide we&rsquo;ll assume there&rsquo;s a copy of your website
+at <code>/home/ipfs/website</code>.</p>
+
+<pre><code class="language-bash">ipfs add -r /home/ipfs/website&quot;
+</code></pre>
+
+<p>The last line of the output of this command should look something like this:</p>
+
+<pre><code>added QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck website
+</code></pre>
+
+<p>Copy the CID and pin it. Pinning means that your IPFS daemon will never
+automatically delete these files to free up memeory.</p>
+
+<pre><code class="language-bash">ipfs pin add QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+</code></pre>
+
+<p>Now it&rsquo;s time to make make it available via IPNS. So we need to generate an
+IPNS key. This key will serve as address for accessing the website using IPFS.
+It also serves as key for publishing updates to your website.</p>
+
+<p>NOTE: all commands in this section are to be executed by <code>ipfs</code> user.</p>
+
+<pre><code class="language-bash">ipfs key gen --type=rsa --size=2048 example-site
+</code></pre>
+
+<p>This is how you can list your keys:</p>
+
+<pre><code class="language-bash">ipfs key list -l
+</code></pre>
+
+<p>the relevant output should look something like this:</p>
+
+<pre><code>k2k4r8ls72x686fmm2s0px4plejbHkhOm9uuzrxwedsaag1w72ene5rw     example-site
+</code></pre>
+
+<p>The hash of the key, on the left side is going to be the IPNS name of your
+website. It&rsquo;s a fixed name that doesn&rsquo;t change even when you update your site.</p>
+
+<pre><code class="language-bash">ipfs name publish --key=example-site QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck 
+</code></pre>
+
+<p>When your IPFS node is working and could connect to some peers, your site
+should now be accessible using IPNS. Although publishing may take several
+minutes. There are so-called <a href="https://ipfs.github.io/public-gateway-checker/">public
+gateways</a> which allow users to
+access IPFS and IPNS content using http. E.g.:
+<a href="https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw">https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw</a></p>
+
+<p>You can also use <code>ipfs</code> to check if the files got ingested correctly. E.g.:</p>
+
+<pre><code class="language-bash">ipfs ls /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw
+ipfs cat /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw/index.html
+</code></pre>
+
+<h3 id="update-libresilient-config-to-include-ipns-link">Update LibResilient config to include IPNS link</h3>
+
+<p>Now that your site is available on IPNS you can finally add it to your
+LibResilient <code>config.json</code>. You can actually add as many gateways as you&rsquo;d
+like with LibResilient&rsquo;s <code>alt-fetch</code> plugin. Here&rsquo;s a simple example where we
+added two gateways:</p>
+
+<pre><code class="language-json">{
+  &quot;plugins&quot;: [{
+    &quot;name&quot;: &quot;fetch&quot;
+  }, {
+    &quot;name&quot;: &quot;alt-fetch&quot;,
+    &quot;endpoints&quot;: [
+      &quot;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&quot;,
+      &quot;https://ipfs.io/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&quot;,
+    ]
+  }],
+  &quot;loggedComponents&quot;: [&quot;service-worker&quot;, &quot;fetch&quot;, &quot;alt-fetch&quot;]
+}
+</code></pre>
+
+<p>NOTE: We have to use IPNS, because as you can see we need write the IPFS
+address to a file which itself is part of the website. With IPNS updating the
+site also won&rsquo;t require changing <code>config.json</code> for every update.</p>
+
+<p>When you&rsquo;ve made your pick of IPFS gateways and added them to your
+<code>config.json</code> you can publish it to your web-server.</p>
+
+<h3 id="publish-updated-site-to-ipfs">Publish updated site to IPFS</h3>
+
+<p>Now you also need to publish the change to IPFS. Again start by copying the
+site to your IPFS server. We again assume the updated copy of your static
+website is located at <code>/home/ipfs/website</code>.</p>
+
+<p>Next we can unpin the old version of the website. (Tip: you can list pinned
+files and directories with: <code>ipfs pin ls</code> pinned directories will be marked as
+<code>recursive</code>)</p>
+
+<pre><code class="language-bash">ipfs unpin QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+</code></pre>
+
+<p>Then we can add the updated site to IPFS and publish it to IPNS again.</p>
+
+<pre><code class="language-bash">ipfs add -r /home/ipfs/website&quot;
+ipfs name publish --key=example-site QmcoZrn004DGdRvuZWf1pdcpMQXuXghjCUy7ve5Og45dNU 
+</code></pre>
+
+<p>You can repeat this step whenever you want to publish an updated version of
+your static website.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/censorship/">censorship</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/censorship-circumvention/">censorship circumvention</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/circumvention/">circumvention</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/filecoin/">filecoin</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/free-software/">free software</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/ipfs/">IPFS</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/open-source/">open source</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/resilience/">resilience</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2023/06/11/eu-should-not-require-sharing-unpatched-vulnerabilities/" data-toggle="tooltip" data-placement="top" title="EU should not require sharing unpatched vulnerabilities">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/" data-toggle="tooltip" data-placement="top" title="F-Droid&#39;s Community-controlled Backup Ceremony">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

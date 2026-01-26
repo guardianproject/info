@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frameworks on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/frameworks/</link>
+    <description>Recent content in Frameworks on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Aug 2012 12:30:15 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/frameworks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sometimes the best solution is a library, not an app</title>
+      <link>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</link>
+      <pubDate>Mon, 27 Aug 2012 12:30:15 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel-150x150.png&#34; alt=&#34;&#34; title=&#34;thinking about frameworks&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-2792&#34; /&gt;&lt;/a&gt;Our general approach to software development starts with surveying existing solutions that are available and in use, to see if there is already enough of an ecosystem or whether we need to seed that. When there is already an adundance of tools and apps out there, we work to find the good ones, provide feedback and auditing, and then build apps and tools to fill in any gaps. For example, this was our approach in the Open Secure Telephony Network.&lt;/p&gt;
+
+&lt;p&gt;When there is not an ecosystem around a given problem, then we aim to make it as easy as possible for people writing software to address the issues. In this case, we focus on making developer tools. For example, most of the data on our phones is easily accessible to someone who has physical access to the device, be it the secret police or a thief. IOCipher and SQLCipher-for-Android both provide tools to easily encrypt data, using APIs that are very familiar to anyone doing Android development. We specifically aim to take complex technical challenges and bundle them up into packages that allow developers to add functionality in a matter of hours or days rather than weeks or months.&lt;/p&gt;
+
+&lt;p&gt;With the developer tools that Guardian Project is creating, the impact is not as overt as in other software development since they are largely invisible to the users if we have done our jobs right.&lt;/p&gt;
+
+&lt;p&gt;In order for our developer projects to have a good impact, there are many different aspects that need to be covered. After assessing the current available tools to determine the general approach, the technical approach is chosen. This will influence the development time, the efficiency, and ease of use. As soon as the project is developed to a basic usable state, it is time to get feedback from willing testers to validate the techical approach. After more development and feedback, next comes documentation and beta releases. Once the project gets to a point where the releases and documentation are good enough for most people to figure out what they need, then we start evangelizing the tool and lobby the developers of existing software to adopt the new tool. As part of that, we also offer meetups and workshops for people to see demos, discuss ideas with us, get started, and learn best practices.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some Current Projects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We already have a couple well known developer tools out there, like SQLCipher-for-Android and Orlib. We have many more in development. Here’s a quick overview:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Orlib is an Android library to make it very easy to include Orbot/Tor support in any app. Any app that uses orlib can transparently route all traffic through the Tor network without requiring that the device be rooted. It is a well established project that mostly needs more documentation, developer support, and evangelizing.&lt;/li&gt;
+&lt;li&gt;SQLCipher is a custom version of the SQLite database that provides easy-to-use, flexible and robust encryption. Guardian Project created SQLCipher-for-Android, which mirrors the standard Android database API, so developers already know how to use it, and need only add support for handling the passwords.&lt;/li&gt;
+&lt;li&gt;libsqlfs provides a complete virtual disk on top of a SQLCipher database. The virtual disk is encrypted and contained in a single file, which can be easily moved around, copied, shared, etc. It is a standard FUSE filesytem that can work on Android, GNU/Linux, and Mac OS X. libsqlfs is a pre-existing tool that was abandoned by its authors and has been adopted by the Guardian Project.&lt;/li&gt;
+&lt;li&gt;IOCipher is a cousin to SQLCipher-for-Android: it provides virtual encrypted disks for Android apps without requiring the device to be rooted. It uses the standard Java API for working with files, so developers already know how to use it, and only need to handle the passwords and opening and closing the virtual disks. It is based on libsqlfs and SQLCipher.&lt;/li&gt;
+&lt;li&gt;Gnu Privacy Guard (GnuPG) for Android brings the widespread standard in OpenPGP encryption to Android. GnuPG provides solid encryption for keeping emails and files private, and for verifying that emails and files are who you think they are. GnuPG is built-in to basically every GNU/Linux distro, in GPGTools for Mac OS X and Apple Mail, a plugin for Outlook and Thunderbird, etc. We are working to bring GnuPG to Android to make it the cornerstone of Android encryption like it is elsewhere.&lt;/li&gt;
+&lt;li&gt;ffmpeg is a popular, widespread framework for transcoding and filtering digital videos. It has been essential to our apps ObscuraCam, InformaCam, and Murrow/StoryMaker. We want to now work to make it dead simple for developers to build their own apps on it. We are also extending it to provide a full framework for audio and image redaction, metadata management, and encryption of sensitive parts of the media. This will make it easy for media app developers to build in privacy to their own apps.&lt;/li&gt;
+&lt;li&gt;Portable Shared Security Tokens (PSST) is our project to tackle the issues of digital identity and crypto key management. This is perhaps the most vexing issue facing deployment of secure mobile devices today. Public-key cryptography (HTTPS/SSL, OTR chat, PGP email, etc.) is a proven, powerful way to validate digital identity while keeping the contents private. Their cryptographic keys essentially become their proof of identity, and as such that identity must be portable across computing contexts (mobile devices, desktop environments, etc.). An interoperable standard and associated developer libraries needs to be developed to make possible a portable and secure solution for establishing one’s identity.&lt;/li&gt;
+&lt;li&gt;Always Secure Messaging (“AweSoMe”) is a collaborative effort to build interoperable, open-source, secure messaging applications, that work from mobile to mobile, as well as mobile to web. In particular, the goal is to create an extremely usable and high quality experience, that simultaneously supports one-to-one and one-to-many (group) end-to-end secure messaging communications across multiple platforms.&lt;/li&gt;
+&lt;li&gt;Bazaar provides the last piece of this puzzle: easy, secure and private distribution of software. Debian GNU/Linux has proven that decentralized software stores can work well. Google Play and the Apple App Store both provide excellent examples for how to make it easy to find and distribute apps, but are often blocked or not available in many parts of the world. Bazaar combines all of these ideas to provide a decentralized, peer-to-peer app store that makes it easy to find and distribute apps.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

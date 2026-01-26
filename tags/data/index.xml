@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/data/</link>
+    <description>Recent content in Data on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 08 Jun 2017 10:58:53 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tracking usage without tracking people</title>
+      <link>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</link>
+      <pubDate>Thu, 08 Jun 2017 10:58:53 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</guid>
+      <description>&lt;p&gt;One thing that has become very clear over the past years is that there is a lot of value in data about people. Of course, the most well known examples these days are advertising and spy agencies, but tracking data is useful for many more things. For example, when trying to build software that is intuitive and easy to use, having real data about how people are using the software can make a massive difference when developers and designers are working on improving their software. Even in the case of advertisers, they mostly do not care exactly who you are, they want to know what you are interested in so that they can more effectively promote things to you.&lt;/p&gt;
+
+&lt;p&gt;From the beginning Guardian Project has focused on privacy, and worked to practice what we preach in our own software. For example, we have entirely disabled Apache web logs on our website for the past couple of years, so that we would not even have access to that rich data. We felt that we could not even store that data without fear of violating people’s privacy, let alone working with it.&lt;/p&gt;
+
+&lt;p&gt;Things have changed in the past few years, and there are now a number of well tested techniques for tracking how people are using software without actually tracking who they are. It is now possible to keep some usage data while feeling safe that no one who might get that data could use it to identify individuals. One good example of this is the &lt;a href=&#34;https://metrics.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor Project’s tracking data&lt;/a&gt;. They provide a wide variety of tracking data to follow how Tor is being used, and how well the Tor network is operating.&lt;/p&gt;
+
+&lt;p&gt;So we believe that it is now possible to responsibly track usage without violating anyone’s privacy. One piece of work along these lines is the new &lt;a href=&#34;https://github.com/cleaninsights/cleaninsights-android-sdk&#34; target=&#34;_blank&#34;&gt;Clean Insights Android SDK&lt;/a&gt;. Nathan is leading the development of that effort. And this blog post announces another new development that we are starting: tracking usage data from F-Droid app repositories.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry-300x133.png&#34; alt=&#34;tracking by country&#34; width=&#34;300&#34; height=&#34;133&#34; class=&#34;aligncenter size-medium wp-image-13632&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/06/bycountry-300x133.png 300w, https://guardianproject.info/wp-content/uploads/2017/06/bycountry.png 747w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To start with, the Apache web logs for this site will be configured to store, but only information that is not fine-grained enough to identify people:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;only the date is stored, not the time or time zone&lt;/li&gt;
+&lt;li&gt;Referer, IP Addresses, User Agent are never stored&lt;/li&gt;
+&lt;li&gt;country is stored by looking up the IP Address in the &lt;em&gt;geoip&lt;/em&gt; database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Normally, a log entries look like:&lt;/p&gt;
+
+&lt;pre&gt;189.4.73.81 testy.at.or.at - [08/Jun/2017:13:55:46 +0200] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;F-Droid&#34;
+119.29.81.134 199.119.112.126 - [08/Jun/2017:14:46:48 -0400] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;http://testy.at.or.at/fdroid/repo/index-v1.jar&#34; &#34;Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)&#34;
+&lt;/pre&gt;
+
+&lt;p&gt;This stripped version looks like:&lt;/p&gt;
+
+&lt;pre&gt;0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;-&#34; AT
+0.0.0.0 - - [08/Jun/2017:00:00:00 +0000] &#34;GET /fdroid/repo/index-v1.jar HTTP/1.1&#34; 200 147950 &#34;-&#34; &#34;-&#34; ZH
+&lt;/pre&gt;
+
+&lt;p&gt;Since the raw data is processed by the webserver, the extra information will be discarded and never written to disk. Only the sanitized usage tracking information is ever stored. This is based on Tor Project’s &lt;a href=&#34;https://gitweb.torproject.org/webstats.git/tree/src/sanitize.py&#34; target=&#34;_blank&#34;&gt;web tracking&lt;/a&gt;. It is possible to do this with &lt;em&gt;Apache&lt;/em&gt;, &lt;em&gt;lighttpd&lt;/em&gt;, &lt;em&gt;nginx&lt;/em&gt;, and probably other webservers. For &lt;em&gt;Apache&lt;/em&gt;, &lt;a href=&#34;https://github.com/maxmind/geoip-api-mod_geoip2/blob/master/INSTALL.md#configuration&#34;&gt;&lt;i&gt;mod_geoip&lt;/i&gt;&lt;/a&gt; needs to be installed, then only a single line is needed to configure this private logging mode:&lt;/p&gt;
+
+&lt;pre&gt;LogFormat &#34;0.0.0.0 - %u %{[%d/%b/%Y:00:00:00 %z]}t \&#34;%r\&#34; %&gt;s %b \&#34;%{Referer}i\&#34; \&#34;-\&#34; %{GEOIP_COUNTRY_CODE}e&#34; privacy+geo
+CustomLog ${APACHE_LOG_DIR}/access.log privacy+geo
+&lt;/pre&gt;
+
+&lt;p&gt;Now, we hope that we can work towards providing value from tracking data, without violating anyone’s privacy. Indeed, we are still prioritizing privacy over any value derived from tracking data. So anyone else who also wants to go follow this route needs to be fully aware that any tracking must be very carefully done, since it can easily result in inadvertent leaks. Do not take this as a stamp of approval on any tracking activity!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

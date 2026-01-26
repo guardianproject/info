@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Identity on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/identity/</link>
+    <description>Recent content in Identity on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Dec 2017 05:43:34 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/identity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a Signing Server</title>
+      <link>https://guardianproject.github.io/info/2017/12/18/building-a-signing-server/</link>
+      <pubDate>Mon, 18 Dec 2017 05:43:34 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/12/18/building-a-signing-server/</guid>
+      <description>
+
+&lt;p&gt;The Android APK signing model sets the expectation that the signing key will be the same for the entire lifetime of the app. That can be seen in the recommended lifetype of an Android signing key: &lt;a href=&#34;https://developer.android.com/studio/publish/app-signing.html#considerations&#34;&gt;20+ years&lt;/a&gt;. On top of that, it is difficult to &lt;a href=&#34;https://guardianproject.info/2015/12/29/how-to-migrate-your-android-apps-signing-key/&#34;&gt;migrate an app to a new key&lt;/a&gt;. Since the signing key is an essential part to preventing APKs from impersonating another, Android signing keys must be kept safe for the entire life of the app.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid repo signing keys follow a very similar model: the signing key is the essential way to safely identify an F-Droid repo. So the same considerations apply to F-Droid repo signing keys as to APK signing keys. This also provides some really useful benefits. Since the integrity of the repo index file and the APKs are guaranteed by the repo signature, the files can be delivered via whatever method is most convenient, and their integrity will be automatically verified by the F-Droid client app, the &lt;em&gt;f-droid.org&lt;/em&gt; deploy process, and Repomaker.&lt;/p&gt;
+
+&lt;p&gt;This means the security burden is shifted from the online, public webserver to a private signing machine. Just keeping that machine out of the public eye goes a long way towards improving security. There are a number of additional measures that can be taken to further improve the security of the signing process. Here are some approaches, starting with the easiest and least security, and going on to more secure setups that require more work to setup and run. Signing is not an resource intensive process, so any machine will work, even a 10 year old, basic laptop. We recommend using a minimal &lt;a href=&#34;https://www.debian.org&#34;&gt;Debian&lt;/a&gt; install, and rebuilding the machine from scratch.&lt;/p&gt;
+
+&lt;h3 id=&#34;automated-signing-server-with-with-hsm&#34;&gt;Automated Signing Server with with HSM&lt;/h3&gt;
+
+&lt;p&gt;For a fully automated signing setup, the machine running the signing needs to be online and running. Ideally this machine would have no remote access, at the very least remote access should be very carefully controlled and monitored. A laptop makes it easy to work with even when remote access is disabled, since it provides a built-in keyboard and monitor. If remote access is required, then any basic PC will work fine. Using a Hardware Security Module (HSM) to store the keys prevents them from being stolen if the server is broken into. An attacker could only run the signing process on that server.&lt;/p&gt;
+
+&lt;p&gt;Ideally, this machine would only be accessible via Tor. That hides the physical location of the server, and hides the traffic from network. This makes it much harder attackers to find the actual machine to attack.&lt;/p&gt;
+
+&lt;p&gt;For the HSM, we recommend using &lt;a href=&#34;https://www.nitrokey.com/&#34;&gt;Nitrokey&lt;/a&gt; hardware, since they are free software/hardware, and provide a wide range of options. Use a separate machine to put the signing keys on HSM. A good HSM will keep an audit trail of how many signatures have been made, so that information could be used to create an automatic auditing process to raise alarms if too many signatures have been made. That could mean that this server was breached and used to sign unauthorized packages.&lt;/p&gt;
+
+&lt;p&gt;Other possibility it to use a setup like &lt;a href=&#34;https://pagure.io/sigul&#34;&gt;Fedora&lt;/a&gt;‘s &lt;a href=&#34;http://www.devops-blog.net/koji/gpg-signing-rpms-with-sigul-signing-server-koji-integration&#34;&gt;Sigul&lt;/a&gt; that involves three machines.&lt;/p&gt;
+
+&lt;h3 id=&#34;basic-laptop-dedicated-to-signing&#34;&gt;Basic laptop dedicated to signing&lt;/h3&gt;
+
+&lt;p&gt;Start with a laptop that can be wiped clean and rebuilt from scratch. What is most important is that only the essential software is installed on it, and nothing else. Do not include any browser at all, for example, since that is the most common vector of attack. No remote access setup (e.g. SSH or VNC) should be installed or configured. To sign apps and repos, someone would take out this laptop, connect it to the network, and run the signing process. The signed results can then be published via the network connection. When the signing is complete, the machine can be turned off and disconnected and kept in a safe place.&lt;/p&gt;
+
+&lt;p&gt;This could be made quite automatic with some custom scripts. The person running the process would only need to take out the machine, connect it, turn it on, wait until the process completes, then put it all away again.&lt;/p&gt;
+
+&lt;h3 id=&#34;fully-offline-signing-laptop-with-usb-thumb-drives&#34;&gt;Fully offline signing laptop with USB thumb drives&lt;/h3&gt;
+
+&lt;p&gt;_&lt;strong&gt;update&lt;/strong&gt;: apt-offline has a &lt;a href=&#34;https://bugs.debian.org/871656&#34;&gt;security bug&lt;/a&gt; so it was removed from Debian/buster. It is no longer recommended! Instead, use the Debian &amp;ldquo;&lt;a href=&#34;https://www.debian.org/doc/manuals/apt-offline&#34;&gt;apt offline&lt;/a&gt;&amp;rdquo; setup._&lt;/p&gt;
+
+&lt;p&gt;This process is based on the same basic, stripped down laptop as the previous example. But this time, the networking should be entirely disabled before the install process. For example, it is easy in many laptops to physically remove the WiFi card. Therefore, it makes sense to use a laptop that does not include an ethernet jack, which are usually not possible to remove. Otherwise, blacklisting all kernel modules related to neworking can suffice. Since this machine is fully offline, the extra work of using an HSM is not as important, but it can’t hurt to include it.&lt;/p&gt;
+
+&lt;p&gt;Download the full &amp;ldquo;CD&amp;rdquo; or &amp;ldquo;DVD&amp;rdquo; image of Debian to run the install. Be sure to &lt;a href=&#34;https://www.debian.org/CD/verify&#34;&gt;verify&lt;/a&gt; the GPG signatures and the SHA-256 hashes. One essential utility is &lt;em&gt;apt-offline&lt;/em&gt;, which automates the process of downloading Debian packages, verifying their signatures, and copying them over to an offline machine.&lt;/p&gt;
+
+&lt;p&gt;To be extra careful, all of the software used should be verified. Chromebooks are nice, cheap laptops that run Linux natively. They also use Coreboot for the BIOS.&lt;/p&gt;
+
+&lt;p&gt;&lt;li id=&#34;buy-a-computer-off-the-shelf-with-cash-avoid-having-it-shipped-especially-across-borders&#34;&gt;
+  Buy a computer off the shelf with cash, avoid having it shipped, especially across borders
+&lt;/li&gt;
+&lt;li id=&#34;buy-a-debian-supported-chromebook-with-removeable-wifi-hardware-and-needs-no-binary-blobs&#34;&gt;
+  Buy a Debian-supported &lt;a href=&#34;https://www.chromium.org/chromium-os/developer-information-for-chrome-os-devices/acer-c720-chromebook&#34;&gt;Chromebook&lt;/a&gt; with removeable WiFi hardware, and needs no binary blobs
+&lt;/li&gt;
+&lt;li id=&#34;install-a-reproducibly-built-coreboot-binary&#34;&gt;
+  Install a reproducibly built coreboot binary
+&lt;/li&gt;
+&lt;li id=&#34;install-from-a-reproducibly-built-debian-image-wiping-out-chrome-os-entirely&#34;&gt;
+  Install from a reproducibly built Debian image, wiping out Chrome OS entirely
+&lt;/li&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-physical-environment&#34;&gt;The Physical Environment&lt;/h2&gt;
+
+&lt;p&gt;The last thing to consider is the physical location where signatures happen, and where essential equipment is stored. The signing environment must be physically secure. Otherwise, there is no way to prevent laptops or HSMs from being lost or used to sign inappropriate content. For the offline machines, keeping them in a locked room is a good start. For an online machine, forcing all network traffic and remote access over Tor hides the physical location of the machine from network observers.&lt;/p&gt;
+
+&lt;p&gt;For high risk signing keys, using multiple layers of defense is important:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Restricted physical access to HSMs or smart cards&lt;/li&gt;
+&lt;li&gt;Security cameras&lt;/li&gt;
+&lt;li&gt;Onsite security guards&lt;/li&gt;
+&lt;li&gt;Visitor logging&lt;/li&gt;
+&lt;li&gt;A tools-resistant server safe for online code-signing servers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The signing server should be physically separate from the rest of the infrastructure. And the logs, machine, and network should be periodically audited.&lt;/p&gt;
+
+&lt;h2 id=&#34;difficult-decisions&#34;&gt;Difficult decisions&lt;/h2&gt;
+
+&lt;p&gt;Ideally all of these practices would be put into place, but each of these security measures comes at a cost of difficulty, expense, and complexity. They can also delay the process of getting regular updates out. So there are risks of implementing too strict security policies, much like the risks of not implementing enough.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building the most private app store</title>
+      <link>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</link>
+      <pubDate>Thu, 02 Jun 2016 11:08:52 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</guid>
+      <description>&lt;p&gt;&lt;em&gt;App stores can work well without any tracking at all&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor-150x150.jpg&#34; alt=&#34;whichdoor&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13337&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Attackers are increasingly seeing app stores as a prime &lt;a href=&#34;https://guardianproject.info/2015/02/24/phishing-for-developers/&#34; target=&#34;_blank&#34;&gt;attack&lt;/a&gt; vector, whether it is aimed at the masses like &lt;a href=&#34;http://researchcenter.paloaltonetworks.com/2015/09/more-details-on-the-xcodeghost-malware-and-affected-ios-apps/&#34;&gt;XCodeGhost&lt;/a&gt; or very targeted like in FBI vs Apple. When we install software from an app store, we are placing a lot of trust in a lot of different parties involved in getting the source code from the original developer delivered to our device in a useful form. Most people are entirely unaware of how much trust they are putting into this system, which they are entrusting with their personal data. Even for people who do understand the technical details involved, figuring out whether the people and the system itself is trustworthy is difficult to do.&lt;/p&gt;
+
+&lt;p&gt;We are building an app store that requires the bare minimum of trust: only the software developers themselves and the code they produce. We consider the app store operators and servers a threat. Building an ecosystem that enables automated, effective auditing lets the computers verify to make trust decisions easier. Effective external auditing requires an ecosystem that cannot deliver targeted content to just the auditing system, while feeding users something else (aka “binary transparency”).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Most app stores track as much as possible&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The vast majority of apps stores track their users actions in detail. Some is necessary when using the business model of the app store operator taking a percentage of sales, but none of the tracking is inherent to running an app store. For example, payment verification can be handled in the app itself like shareware. A software delivery system that tracks its users makes it simple to hide malware delivery since it can target any auditing system. Most app stores know a lot about their users:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;account name&lt;/li&gt;
+&lt;li&gt;identity&lt;/li&gt;
+&lt;li&gt;payment methods&lt;/li&gt;
+&lt;li&gt;everything you search for in the app store&lt;/li&gt;
+&lt;li&gt;everything you look at in the app store&lt;/li&gt;
+&lt;li&gt;everything you download, install, uninstall&lt;/li&gt;
+&lt;li&gt;which apps you actually run&lt;/li&gt;
+&lt;li&gt;where you are, based on IP, declared preference, etc.&lt;/li&gt;
+&lt;li&gt;your preferred language&lt;/li&gt;
+&lt;li&gt;and more…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apps stores need to know very little in order to function: how to give you the files you request. That means indexes, descriptions, icons, apps, and install/delete requests (for “push” install/delete). Given that information, the client can do everything needed to provide a full app store user experience. For this work, we chose to build upon &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, a community-run Android app store that distributes verified Free Software. The community has had an interest in privacy all along, and has always worked to avoid tracking. The security architecture is based on models proven by &lt;a href=&#34;https://wiki.debian.org/SecureApt&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/docs/tuf-spec.txt&#34; target=&#34;_blank&#34;&gt;The Update Framework&lt;/a&gt; , and others:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS connections by default&lt;/li&gt;
+&lt;li&gt;pinned TLS certificate built into the client app&lt;/li&gt;
+&lt;li&gt;updates verified based on the signature on the app itself&lt;/li&gt;
+&lt;li&gt;file integrity protected by signed metadata&lt;/li&gt;
+&lt;li&gt;signed metadata includes hashes of the app and its signing key&lt;/li&gt;
+&lt;li&gt;signed metadata generated on a separate machine, which can be fully offline&lt;/li&gt;
+&lt;li&gt;public key for verifying metadata signatures built into F-Droid client app&lt;/li&gt;
+&lt;li&gt;signed metadata includes timestamp and expiry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While the current setup is already a solid platform, we are implementing a number of improvements. The signed metadata will include list of official mirrors, then the client chooses mirrors based on availability and freshness based on local criteria like whether Tor is in use, closest on the internet, etc. We are also moving the standard HTTP “etag” cache check from the server to the client so it cannot be abused to track users.&lt;/p&gt;
+
+&lt;p&gt;In order to defend against an attacker that holds the signing keys for the app repository, there must be a trustworthy source of information to compare against. Reproducible builds means that anyone with the same source code will produce the exact same binary. When paired with an auditing system, it is easy to catch malware inserted in the build process, rather than the source code, like XCodeGhost. Reproducible builds also makes it possible to have all builds of a release binary have the exact same hash. Then any app repository can build apps only from source code, and have a source of verification data from any other app repository building the same app. Building software from source has become cheap enough that many companies like gitlab.com and Travis CI are offering free, automated build services in the cloud. Since the whole F-Droid toolset is free software and designed to be easy to setup, the barriers to setting up automatic auditing are quite low. People in separate areas of the world with different risk profiles can run verification servers to provide more trustworthy information.&lt;/p&gt;
+
+&lt;p&gt;Another key aspect of the F-Droid project is to provide the complete toolset needed to run an app store. This enables a more decentralized ecosystem. Therefore, one key goal is to lower the risks of running the services, so that more people can run their own app stores. If the app store does not track its users, then that removes the hassle of protecting personal data from any attacker. These services can be run without fear of responding to secret orders for personal information. It also means that the server setup is a lot simpler because it does not need dynamic content. The app store serve only needs to serve files (e.g. indexes, apps, etc.). The app repository is generated on a secure machine, or even a fully offline machine, and posted to the server. The main server is purely a mirror of the offline machine where the signed repository is generated. Mirrors just shuffle bits from place to place, they are no longer an attack vector.&lt;/p&gt;
+
+&lt;p&gt;Putting all these pieces together provides a system where users need only audit the source code in order to verify a trustworthy app delivery. The file pipeline provides redundantly secure data transmission, the apps can be reproducibly from source code, the app repositories can be automatically audited. Of course, this system relies not only on the power of cryptography, but also the power of transparency. Debian provides a great example of the power of transparency: Debian gives a thousand volunteers root access to every Debian install (by virtue of their ability to upload signed packages that get installed as root). Yet this system has been proven over the past 20+ years to provide solid security. Ultimately we hope that this will de-emphasize the signing key as the sole protection against abuse. If malware has a decent change of being spotted, it makes it much less likely to be used since malware authors either rigorously defend their exploits, or use well known exploits that are not difficult to automatically detect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Future Work&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One attack vector that is not well covered is malware that installable by everyone, that then uses data on the local device to target specific users. That would be a way to target individuals using an app store that does not track its users. We are starting to implement automated dynamic analysis of every app using tools like &lt;a href=&#34;https://labs.mwrinfosecurity.com/tools/drozer&#34; target=&#34;_blank&#34;&gt;Drozer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We are also working towards making as many apps as possible build reproducibly. Some of our quick checks show that a large number of the apps in f-droid.org already will build reproducibly, given the right build environment. We are working on making the process of setting up that build environment as automated as possible.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid “verification server” has been prototyped, and it will be further developed with the aim of making it dead simple to run in common cloud services.&lt;/p&gt;
+
+&lt;p&gt;We already have the infrastructure in place to do verified double-signing, where the developer first signs the release bulid, then once f-droid.org reproduces that build, it adds its signature. Then Android would enforce that both signatures need to be present in order for it to be a valid update.&lt;/p&gt;
+
+&lt;p&gt;As the full localization support is built out, the language that a user is using will not be reported to the server. While speaking Spanish in Spain does not provide much information, speaking Quechua in Uzbekistan can narrow it down to a single user. Instead of dividing the index metadata by language, it will instead be grouped by app. We will then group apps so that it is difficult to tell which app in the group is the one people are interested in. For example, if one very popular app is only grouped with apps that are rarely downloaded, then it is an easy assumption that someone getting info about that block of apps is most likely looking for that popular app.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to Migrate Your Android App’s Signing Key</title>
+      <link>https://guardianproject.github.io/info/2015/12/29/how-to-migrate-your-android-apps-signing-key/</link>
+      <pubDate>Tue, 29 Dec 2015 12:03:54 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/12/29/how-to-migrate-your-android-apps-signing-key/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;It is time to update to a stronger signing key for your Android app! The old default RSA 1024-bit key is weak and officially deprecated.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;what&#34;&gt;What?&lt;/h2&gt;
+
+&lt;p&gt;The Android OS requires that every application installed be signed by a digital key. The purpose behind this signature is to identify the author of the application, allow this author and this author alone to make updates to the app, as well as provide a mechanism to establish inter-application trust. The Android security model defines an app by two things: the package name (aka &lt;a href=&#34;https://developer.android.com/reference/android/content/Context.html#getPackageName%28%29&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;packageName&lt;/code&gt;&lt;/a&gt;, &lt;a href=&#34;https://sites.google.com/a/android.com/tools/tech-docs/new-build-system/applicationid-vs-packagename&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ApplicationID&lt;/code&gt;&lt;/a&gt;, &lt;a href=&#34;https://developer.android.com/guide/topics/manifest/manifest-element.html#package&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;package&lt;/code&gt;&lt;/a&gt;) and the signing key. If either of those are different, then Android considers it a different app. When the package name and signing key of one APK match an installed app, then the APK is considered an update and Android will replace the installed app with the APK. If the APK is signed by a different key, then Android will prevent installing and updating.&lt;/p&gt;
+
+&lt;p&gt;First thing is to see what the current signing key is. Check any app’s signing key using our free utility app &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.checkey&#34; target=&#34;_blank&#34;&gt;Checkey&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div id=&#34;attachment_13170&#34; style=&#34;width: 790px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/12/checkey-1.png&#34; rel=&#34;attachment wp-att-13170&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-13170&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/12/checkey-1-1024x576.png&#34; alt=&#34;Lookout needs to generate a new key!&#34; width=&#34;780&#34; height=&#34;439&#34; class=&#34;size-large wp-image-13170&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/12/checkey-1-1024x576.png 1024w, https://guardianproject.info/wp-content/uploads/2015/12/checkey-1-300x169.png 300w, https://guardianproject.info/wp-content/uploads/2015/12/checkey-1-768x432.png 768w, https://guardianproject.info/wp-content/uploads/2015/12/checkey-1-350x197.png 350w, https://guardianproject.info/wp-content/uploads/2015/12/checkey-1-860x484.png 860w, https://guardianproject.info/wp-content/uploads/2015/12/checkey-1.png 1280w&#34; sizes=&#34;(max-width: 780px) 100vw, 780px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-13170&#34; class=&#34;wp-caption-text&#34;&gt;
+    Lookout needs to generate a new key!
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The official Android docs have tons of useful information about what the signing keys are good for, how to generate them, and how to use them. Unfortunately, it doesn’t provide any instructions for migrating, and for many years, 1024-bit RSA was the default. But first, why would you want or need to migrate?&lt;/p&gt;
+
+&lt;h2 id=&#34;why&#34;&gt;Why?&lt;/h2&gt;
+
+&lt;p&gt;Depending on when you created your signing key, you might have a particularly weak key. The primary danger of a weak key is that an adversary could break your key in order to generate fake APK signatures. Then those malicious APKs can be installed as updates to your app. There are other nefarious purposes depending on how you use the signing key in your apps. Or if you are unfortunate enough to have suffered a loss of your private key material, then it is definitely time for a new signing key.&lt;/p&gt;
+
+&lt;p&gt;According to our friends at the &lt;a href=&#34;https://androidobservatory.org/stats&#34; title=&#34;Android Observatory&#34;&gt;Android Observatory&lt;/a&gt;, over 64% of Android apps in their data store use 1024-bit signing keys (RSA or DSA).&lt;/p&gt;
+
+&lt;div id=&#34;visualization&#34; style=&#34;width: 600px; height: 400px;&#34;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There are several good reasons to migrate off of 1024-bit RSA keys, even though there is no &lt;em&gt;public&lt;/em&gt; proof of a 1024 prime factorization required to generate any 1024-bit key at will. The evidence has been mounting for a decade.&lt;/p&gt;
+
+&lt;p&gt;NIST’s &lt;a href=&#34;http://csrc.nist.gov/publications/nistpubs/800-57/sp800-57_part1_rev3_general.pdf&#34;&gt;official guidelines&lt;/a&gt; (PDF, page 64 and 67) deprecated 1024-bit RSA keys at the end of 2013. This deprecation by NIST isn’t an indication that 1024-bit RSA is compromised, instead it is a preemptive move to stay ahead of attacks. Confidence in NIST might be shaken in light of &lt;a href=&#34;http://blog.cryptographyengineering.com/2013/09/on-nsa.html&#34;&gt;recent revelations&lt;/a&gt;, but in this case increasing the RSA key size is unlikely to trigger any secret NSA backdoors. If anything, the deprecation year could have been extended slightly to allow the NSA a window where they had the capacity to factor 1024-bit keys and everyone was still using them. So, it’s time to move on.&lt;/p&gt;
+
+&lt;p&gt;For an example, a decade ago the cost of building special purpose hardware capable of breaking a single 1024-bit RSA key in one year was estimated at $10 million (&lt;a href=&#34;http://tau.ac.il/~tromer/papers/cbtwirl.pdf&#34;&gt;Adi Shamir, Eran Tromer, On the cost of factoring RSA-1024&lt;/a&gt;, 2003). Presumably the techniques have improved by orders of magnatude, and the hardware value depreciated. It is conceivable the cost has fallen enough to be affordable not only by nation-state actors, but by large criminal enterprises too.&lt;/p&gt;
+
+&lt;p&gt;For a comprehensive talk on the state of the art (as of December 2012) when it comes to breaking 1024-bit RSA, check out the 29C3 talk &lt;a href=&#34;http://events.ccc.de/congress/2012/Fahrplan/events/5275.en.html&#34; title=&#34;FactHacks: RSA factorization in the real world&#34;&gt;FactHacks: RSA factorization in the real world&lt;/a&gt; with the cryptographers Daniel J. Bernstein, Nadia Heninger, and Tanja Lange (&lt;a href=&#34;http://events.ccc.de/congress/2012/wiki/Documentation#Recordings&#34; title=&#34;29C3 Recordings&#34;&gt;watch recording&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;how&#34;&gt;How?&lt;/h2&gt;
+
+&lt;p&gt;Migrating to a strong key for an Android app is, unfortunately, not so simple. If you are publishing a &lt;em&gt;new&lt;/em&gt; app to the app store, then simply generate a new strong signing key and you’re done. Congratulations! However, there exists no easy way to update your signing key for an existing application, because an installed application can only take updates from an APK signed with &lt;em&gt;the same&lt;/em&gt; key.&lt;/p&gt;
+
+&lt;p&gt;Here we outline a basic method with which you can use to fake an update to your signing key. This is not as user friendly as we would like. Some of the hard facts of performing this process is that for most app stores including Google Play, you will lose ratings and reviews since the app will show up with a new package name, and the app store will treat it like an entirely new app. Also, the user will have to manually uninstall the original app once they finish the procedure. Here is a rough outline of the process:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;generate the new signing key, &lt;em&gt;RSA 4096&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Update the first app, &lt;em&gt;App1&lt;/em&gt;, with a mechanism for exporting private data, using &lt;a href=&#34;https://github.com/guardianproject/TrustedIntents&#34; target=&#34;_blank&#34;&gt;TrustedIntents&lt;/a&gt; with a signature pin of the new key, &lt;em&gt;RSA 4096&lt;/em&gt;, which &lt;a href=&#34;https://guardianproject.info/2014/07/30/introducing-trustedintents-for-android/&#34; target=&#34;_blank&#34;&gt;Checkey will generate for you&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create a new version of the app with a different package name, &lt;em&gt;App2&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;sign &lt;em&gt;App2&lt;/em&gt; with new key, &lt;em&gt;RSA 4096&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Add method to &lt;em&gt;App2&lt;/em&gt; for receiving user data from &lt;em&gt;App1&lt;/em&gt;, including a signature pin of the old signing key, &lt;em&gt;RSA 1024&lt;/em&gt;, for use with TrustedIntents&lt;/li&gt;
+&lt;li&gt;Publish &lt;em&gt;App2&lt;/em&gt; to the app stores&lt;/li&gt;
+&lt;li&gt;From &lt;em&gt;App1&lt;/em&gt;, prompt user to install &lt;em&gt;App2&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;runs and imports data from &lt;em&gt;App1&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;App2&lt;/em&gt; prompts user to uninstall &lt;em&gt;App1&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, there will be some easier tools for handling this. The F-Droid system is already used to multiple signing keys per app since F-Droid uses its own signing key for many of the apps it releases, and that F-Droid signing key is different from the signing key that the original developer used in their Google Play uploads. F-Droid will likely be able to support APKs with the same package name but with multiple signing keys.&lt;/p&gt;
+
+&lt;h3 id=&#34;a-note-on-compatibility&#34;&gt;A Note on Compatibility&lt;/h3&gt;
+
+&lt;p&gt;There is security vs compatibility trade off a few might be interested in. Pre-4.3, Android did not support any signature algorithms except SHA1. With Android &amp;gt;= 4.3, SHA256 support was fixed, and SHA384, SHA512, and ECDSA were added (&lt;a href=&#34;https://code.google.com/p/android/issues/detail?id=38321&#34;&gt;source&lt;/a&gt;). There are still android 2.3.3 (&lt;code&gt;android-10&lt;/code&gt;) devices being sold, so anyone interested in backwards compatibility will have to heed this.&lt;/p&gt;
+
+&lt;p&gt;Also, the larger the keysize and hashsize used, the longer it takes to install and update the application. So extremely large values might be unsuitable for slower hardware. The following probably doesn’t buy you a tremendous amount of additional security but cranks the paranoia to 11. It does so at the cost of compatibility and performance.&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+Gen with:&amp;lt;br /&amp;gt;
+  keytool -genkey -v -keystore test.keystore -alias testkey -keyalg RSA -keysize 4096 -sigalg SHA512withRSA -dname &amp;quot;cn=Test,ou=Test,c=CA&amp;quot; -validity 10000&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Sign with:&amp;lt;br /&amp;gt;
+  jarsigner -verbose -sigalg SHA512withRSA -digestalg SHA512 -keystore test.keystore test.apk testkey&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We have some scripts that we use to generate keys in our &lt;a href=&#34;https://github.com/guardianproject/smartcard-apk-signing&#34; target=&#34;_blank&#34;&gt;smartcard-apk-signing&lt;/a&gt; repo. It is also possible to generate an Android signing key using openssl or other libraries. It is often wise to use different software than standard for doing things like generating keys. Since the Java &lt;code&gt;keytool&lt;/code&gt; approach that is the standard, recommended method for Android, that makes it a target for adversaries that are interested in breaking keys. If a key was generated using &lt;code&gt;openssl&lt;/code&gt; or GNU TLS instead, for example, then that key would not be affected if &lt;code&gt;keytool&lt;/code&gt; had &lt;a href=&#34;https://freedom-to-tinker.com/blog/kroll/software-transparency-debian-openssl-bug/&#34; target=&#34;_blank&#34;&gt;a bug like Debian’s&lt;/a&gt; &lt;a href=&#34;https://security-tracker.debian.org/tracker/CVE-2008-0166&#34; target=&#34;_blank&#34;&gt;CVE-2008-0166&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing TrustedIntents for Android</title>
+      <link>https://guardianproject.github.io/info/2014/07/30/introducing-trustedintents-for-android/</link>
+      <pubDate>Wed, 30 Jul 2014 23:29:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/07/30/introducing-trustedintents-for-android/</guid>
+      <description>
+
+&lt;p&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/&#34;&gt;our research on secure Intent interactions&lt;/a&gt;, we are now announcing the first working version of the &lt;a href=&#34;https://github.com/guardianproject/TrustedIntents&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;TrustedIntents&lt;/em&gt;&lt;/a&gt; library for Android. It provides methods for checking any Intent for whether the sending and receiving app matches a specified set of trusted app providers. It does this by “pinning” to the signing certificate of the APKs. The developer includes this “pin” in the app, which includes the signing certificate to trust, then &lt;em&gt;TrustedIntents&lt;/em&gt; checks &lt;code&gt;Intent&lt;/code&gt;s against the configured certificate pins. The library includes pins for the Guardian Project and Tor Project signing certificates. It is also easy to generate the pin using our new utility &lt;a href=&#34;https://github.com/guardianproject/checkey&#34; target=&#34;_blank&#34;&gt;Checkey&lt;/a&gt; (available in &lt;a href=&#34;https://guardianproject.info/2014/06/30/new-official-guardian-project-app-repo-for-fdroid/&#34; target=&#34;_blank&#34;&gt;our FDroid repo&lt;/a&gt; and in &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.checkey&#34; target=&#34;_blank&#34;&gt;Google Play&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12560&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12560&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-300x168.png&#34; alt=&#34;Checkey displaying the signing certificate of ChatSecure&#34; width=&#34;300&#34; height=&#34;168&#34; class=&#34;size-medium wp-image-12560&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-300x168.png 300w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-1024x576.png 1024w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-100x56.png 100w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-150x84.png 150w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-200x112.png 200w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-450x253.png 450w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-600x337.png 600w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone-900x506.png 900w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-phone.png 1280w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12560&#34; class=&#34;wp-caption-text&#34;&gt;
+    Checkey displaying the signing certificate of ChatSecure
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We hope to make this process as dead simple as possible by providing developers with this library. &lt;em&gt;TrustedIntents&lt;/em&gt; is currently set up as an “Android Library Project” but it could easily be a jar too, the code is currently quite simple, the plan is to add more convenience methods and also support for TOFU/POP in addition to pinning. For usage examples, check out &lt;a href=&#34;https://github.com/guardianproject/TrustedIntentsExample&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;TrustedIntentsExample&lt;/em&gt;&lt;/a&gt; and the test project under the test/ subdir of the &lt;em&gt;TrustedIntents&lt;/em&gt; library source repo.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;TrustedIntents&lt;/em&gt; source: &lt;a href=&#34;https://github.com/guardianproject/TrustedIntents&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/TrustedIntents&#34;&gt;https://github.com/guardianproject/TrustedIntents&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;example project: &lt;a href=&#34;https://github.com/guardianproject/TrustedIntentsExample&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/TrustedIntentsExample&#34;&gt;https://github.com/guardianproject/TrustedIntentsExample&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;wiki, issue tracker, etc: &lt;a href=&#34;https://dev.guardianproject.info/projects/trustedintents/wiki&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/trustedintents/wiki&#34;&gt;https://dev.guardianproject.info/projects/trustedintents/wiki&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Checkey&lt;/em&gt; source: &lt;a href=&#34;https://github.com/guardianproject/Checkey&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/Checkey&#34;&gt;https://github.com/guardianproject/Checkey&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Checkey&lt;/em&gt; includes a simple method for generating the certificate pins. The pin is in the format of Java subclass of &lt;code&gt;ApkSignaturePin&lt;/code&gt;, which provides all needed utility functions. The create the pin file, first install the app whose certificate you want to trust. Be sure to get it from a trusted source since you are going to be trusting the signing certificate of the APK that you have installed. Launch &lt;em&gt;Checkey&lt;/em&gt; and select that app in the list, you will see the certificate details show up on the top. To generate the .java file for pinning Intents, select &lt;strong&gt;Generate Pin&lt;/strong&gt; from the menu and send the resulting file to yourself. That file is the pin, include it in your project, then load it into TrustedIntents by doing in &lt;code&gt;onCreate()&lt;/code&gt; or wherever is appropriate:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+TrustedIntents ti = TrustedIntents.get(context);&amp;lt;br /&amp;gt;
+ti.isTrustedSigner(MySigningCertificatePin.class);&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12565&#34; style=&#34;width: 610px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/07/checkey-generate-pin.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12565&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/07/checkey-generate-pin.png&#34; alt=&#34;How to generate a pin file with Checkey&#34; width=&#34;600&#34; height=&#34;444&#34; class=&#34;size-medium wp-image-12565&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/07/checkey-generate-pin-300x222.png 300w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-generate-pin-100x74.png 100w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-generate-pin-150x111.png 150w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-generate-pin-200x148.png 200w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-generate-pin-450x334.png 450w, https://guardianproject.info/wp-content/uploads/2014/07/checkey-generate-pin-600x445.png 600w&#34; sizes=&#34;(max-width: 600px) 100vw, 600px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12565&#34; class=&#34;wp-caption-text&#34;&gt;
+    How to generate a pin file with Checkey
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;gathering-all-the-edge-cases&#34;&gt;Gathering all the edge cases&lt;/h3&gt;
+
+&lt;p&gt;One of the things I’ve focused on in the &lt;em&gt;TrustedIntents&lt;/em&gt; library is thinking about all the possible edge cases and how to check for them. It is rare that the main part of a security check algorithm fails, its almost always the edge cases that are the gotcha.&lt;/p&gt;
+
+&lt;p&gt;One example: &lt;em&gt;TrustedIntents&lt;/em&gt; should properly check all signing certificates on an APK. From what I’ve seen, it is rare that APKs are signed by more than one certificate, but the spec allows for that. There might be exploits related to not handling that.&lt;/p&gt;
+
+&lt;p&gt;Another thing is that &lt;em&gt;TrustedIntents&lt;/em&gt; uses the method that the Android code uses for comparing signatures: it does a byte-by-byte comparison of the signature byte arrays. Some apps area already doing something similar based on the hash of the signing certificate (i.e. the “fingerprint”). The Android technique will also be faster than hashing since the hash algorithm has to read the whole signature byte array anyway.&lt;/p&gt;
+
+&lt;p&gt;We’d love to have feedback, flames, comments, etc on any and all of this. &lt;a href=&#34;https://guardianproject.info/contact/&#34;&gt;Let us know&lt;/a&gt; how it works for you!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Security in a thumb drive: the promise and pain of hardware security modules, take one!</title>
+      <link>https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/</link>
+      <pubDate>Fri, 28 Mar 2014 16:54:39 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg&#34; alt=&#34;security in a thumb drive&#34; width=&#34;219&#34; height=&#34;119&#34; class=&#34;alignleft size-full wp-image-12311&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg 219w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-100x54.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-150x81.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-200x108.jpg 200w&#34; sizes=&#34;(max-width: 219px) 100vw, 219px&#34; /&gt;&lt;/a&gt;Hardware Security Modules (aka Smartcards, chipcards, etc) provide a secure way to store and use cryptographic keys, while actually making the whole process a bit easier. In theory, one USB thumb drive like thing could manage all of the crypto keys you use in a way that makes them much harder to steal. That is the promise. The reality is that the world of Hardware Security Modules (HSMs) is a massive, scary minefield of endless technical gotchas, byzantine standards (PKCS#11!), technobabble, and incompatibilities. Before I dive too much into ranting about the days of my life wasted trying to find a clear path through this minefield, I’m going to tell you about one path I did find through to solve a key piece of the puzzle: Android and Java package signing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg&#34; alt=&#34;ACS ACR38-T-IBS&#34; width=&#34;320&#34; height=&#34;248&#34; class=&#34;alignright size-full wp-image-12313&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg 320w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-300x232.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-100x77.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-150x116.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-200x155.jpg 200w&#34; sizes=&#34;(max-width: 320px) 100vw, 320px&#34; /&gt;&lt;/a&gt;For this round, I am covering the &lt;a href=&#34;http://www.aventra.fi/English/products_MyEID_E.html&#34; target=&#34;_blank&#34;&gt;Aventra MyEID PKI Card&lt;/a&gt;. I bought a SIM-sized version to fit into an &lt;a href=&#34;http://www.smartcardfocus.com/ilp/id~99/ACR38T_IBS/p/readers.shtml&#34; target=&#34;_blank&#34;&gt;ACS ACR38T-IBS-R&lt;/a&gt; smartcard reader (it is apparently no longer made, and the &lt;a href=&#34;http://acs.com.hk/en/products/1/acr38t-d1-plug-in-sim-sized-card-reader/&#34; target=&#34;_blank&#34;&gt;ACT38T-D1&lt;/a&gt; is meant to replace it). Why such specificity you may ask? Because you have to be sure that your smartcard will work with your reader, and that your reader will have a working driver for you system, and that your smartcard will have a working PKCS#11 driver so that software can talk to the smartcard. Thankfully there is the &lt;a href=&#34;https://github.com/OpenSC/OpenSC/wiki&#34; target=&#34;_blank&#34;&gt;OpenSC&lt;/a&gt; project to cover the PKCS#11 part, it implements the PKCS#11 communications standard for many smartcards. On my Ubuntu/precise system, I had to install an extra driver, &lt;code&gt;libacr38u&lt;/code&gt;, to get the ACR38T reader to show up on my system.&lt;/p&gt;
+
+&lt;p&gt;So let’s start there and get this thing to show up! First we need some packages. The OpenSC packages are out-of-date in a lot of releases, you need version 0.13.0-4 or newer, so you have to add our PPA (Personal Package Archive) to get current versions, which include a &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742089&#34; target=&#34;_blank&#34;&gt;specific fix for the Aventra MyEID&lt;/a&gt;: (fingerprint: &lt;code&gt;F50E ADDD 2234 F563&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install opensc libacr38u libacsccid1 pcsc-tools usbutils
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;First thing, I use &lt;code&gt;lsusb&lt;/code&gt; in the terminal to see what USB devices the Linux kernel sees, and thankfully it sees my reader:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ lsusb
+Bus 005 Device 013: ID 072f:9000 Advanced Card Systems, Ltd ACR38 AC1038-based Smart Card Reader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, its time to try &lt;code&gt;pcsc_scan&lt;/code&gt; to see if the system can see the smartcard installed in the reader. If everything is installed and in order, then &lt;code&gt;pcsc_scan&lt;/code&gt; will report this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pcsc_scan 
+PC/SC device scanner
+V 1.4.18 (c) 2001-2011, Ludovic Rousseau &amp;lt;&amp;amp;#x6c;u&amp;amp;#x64;ov&amp;amp;#x69;c.&amp;amp;#x72;o&amp;amp;#x75;&amp;amp;#x73;s&amp;amp;#x65;au&amp;amp;#x40;f&amp;amp;#x72;&amp;amp;#x65;e&amp;amp;#x2e;fr&amp;gt;
+Compiled with PC/SC lite version: 1.7.4
+Using reader plug&#39;n play mechanism
+Scanning present readers...
+0: ACS ACR38U 00 00
+
+Thu Mar 27 14:38:36 2014
+Reader 0: ACS ACR38U 00 00
+  Card state: Card inserted, 
+  ATR: 3B F5 18 00 00 81 31 FE 45 4D 79 45 49 44 9A
+[snip]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If &lt;code&gt;pcsc_scan&lt;/code&gt; cannot see the card, then things will not work. Try re-seating the smardcard in the reader, make sure you have all the right packages installed, and if you can see the reader in &lt;code&gt;lsusb&lt;/code&gt;. If your smartcard or reader cannot be read, then &lt;code&gt;pcsc_scan&lt;/code&gt; will report something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pcsc_scan 
+PC/SC device scanner
+V 1.4.18 (c) 2001-2011, Ludovic Rousseau &amp;lt;&amp;amp;#x6c;&amp;amp;#x75;&amp;amp;#x64;&amp;amp;#x6f;&amp;amp;#x76;&amp;amp;#x69;c.rousse&amp;amp;#x61;&amp;amp;#x75;&amp;amp;#x40;&amp;amp;#x66;&amp;amp;#x72;&amp;amp;#x65;e.fr&amp;gt;
+Compiled with PC/SC lite version: 1.7.4
+Using reader plug&#39;n play mechanism
+Scanning present readers...
+Waiting for the first reader...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Moving right along… now &lt;code&gt;pcscd&lt;/code&gt; can see the smartcard, so we can start playing with using the OpenSC tools. These are needed to setup the card, put PINs on it for access control, and upload keys and certificates to it. The last annoying little preparation tasks are finding where &lt;code&gt;opensc-pkcs11.so&lt;/code&gt; is installed and the “slot” for the signing key in the card. These will go into a config file which &lt;code&gt;keytool&lt;/code&gt; and &lt;code&gt;jarsigner&lt;/code&gt; need. To get this info on Debian/Ubuntu/etc, run these:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ dpkg -S opensc-pkcs11.so
+opensc: /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so \
+&amp;gt;     --list-slots
+Available slots:
+Slot 0 (0xffffffffffffffff): Virtual hotplug slot
+  (empty)
+Slot 1 (0x1): ACS ACR38U 00 00
+  token label        : MyEID (signing)
+  token manufacturer : Aventra Ltd.
+  token model        : PKCS#15
+  token flags        : rng, login required, PIN initialized, token initialized
+  hardware version   : 0.0
+  firmware version   : 0.0
+  serial num         : 0106004065952228
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is the info needed to put into a &lt;code&gt;opensc-java.cfg&lt;/code&gt;, which &lt;code&gt;keytool&lt;/code&gt; and &lt;code&gt;jarsigner&lt;/code&gt; &lt;a href=&#34;http://docs.oracle.com/javase/7/docs/technotes/guides/security/p11guide.html&#34; target=&#34;_blank&#34;&gt;need in order to talk&lt;/a&gt; to the Aventra HSM. The name, library, and slot fields are essential, and the description is helpful. Here is how the &lt;code&gt;opensc-java.cfg&lt;/code&gt; using the above information looks:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;name = OpenSC
+description = SunPKCS11 w/ OpenSC Smart card Framework
+library = /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+slot = 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now everything should be ready for initializing the HSM, generating a new key, and uploading that key to the HSM. This process generates the key and certificate, puts them into files, then uploads them to the HSM. That means you should only run this process on a trusted machine, certainly with some kind of disk encryption, and preferably on a machine that is not connected to a network, running an OS that has never been connected to the internet. A live CD is one good example, I recommend &lt;a href=&#34;https://tails.boum.org/download/index.en.html#index4h1&#34; target=&#34;_blank&#34;&gt;Tails on a USB thumb drive&lt;/a&gt; running with the &lt;a href=&#34;https://tails.boum.org/doc/first_steps/persistence/index.en.html&#34; target=&#34;_blank&#34;&gt;secure persistent store&lt;/a&gt; on it (we have been working here and there on making a TAILS-based distro specifically for managing keys, we call it &lt;a href=&#34;https://dev.guardianproject.info/projects/psst/wiki/CleanRoom&#34; target=&#34;_blank&#34;&gt;CleanRoom&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12321&#34; style=&#34;width: 560px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cstick2.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12321&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cstick2-1024x805.jpg&#34; alt=&#34;HSM plugged into a laptop&#34; width=&#34;550&#34; height=&#34;432&#34; class=&#34;size-large wp-image-12321&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cstick2-1024x805.jpg 1024w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-300x235.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-100x78.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-150x117.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-200x157.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-450x353.jpg 450w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-600x471.jpg 600w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-900x707.jpg 900w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2.jpg 1600w&#34; sizes=&#34;(max-width: 550px) 100vw, 550px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12321&#34; class=&#34;wp-caption-text&#34;&gt;
+    HSM plugged into a laptop
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;First off, the HSM needs to be initialized, then set up with a signing PIN and a “Security Officer” PIN (which means basically an “admin” or “root” PIN). The signing PIN is the one you will use for signing APKs, the “Security Officer PIN” (SO-PIN) is used for modifying the HSM setup, like uploading new keys, etc. Because there are so many steps in the process, I’ve written up scripts to run thru all of the steps. If you want to see the details, &lt;a href=&#34;https://github.com/guardianproject/smartcard-apk-signing/blob/master/Aventra_MyEID_Setup/setup.sh&#34; target=&#34;_blank&#34;&gt;read&lt;/a&gt; &lt;a href=&#34;https://github.com/guardianproject/smartcard-apk-signing/blob/master/openssl-gen/gen.sh&#34; target=&#34;_blank&#34;&gt;the&lt;/a&gt; &lt;a href=&#34;https://github.com/guardianproject/smartcard-apk-signing/blob/master/Aventra_MyEID_Setup/finalize.sh&#34; target=&#34;_blank&#34;&gt;scripts&lt;/a&gt;. The next step is to generate the key using &lt;code&gt;openssl&lt;/code&gt; and upload it to the HSM. Then the HSM needs to be “finalized”, which means the PINs are activated, and keys cannot be uploaded. Don’t worry, as long as you have the SO-PIN, you can erase the HSM and re-initialize it. But be careful! Many HSMs will permanently self-destruct if you enter in the wrong PIN too many times, some will do that after only three wrong PINs! As long as you have not finalized the HSM, any PIN will work, so play around a lot with it before finalizing it. Run the init and key upload procedure a few times, try signing an APK, etc. Take note: the script will generate a random password for the secret files, then echo that password when it completes, so make sure no one can see your screen when you generate the real key. Alright, here goes!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;code $ git clone https://github.com/guardianproject/smartcard-apk-signing
+code $ cd smartcard-apk-signing/Aventra_MyEID_Setup
+Aventra_MyEID_Setup $ ./setup.sh 
+Edit pkcs15-init-options-file-pins to put in the PINs you want to set:
+Aventra_MyEID_Setup $ emacs pkcs15-init-options-file-pins
+Aventra_MyEID_Setup $ ./setup.sh 
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+About to erase card.
+PIN [Security Officer PIN] required.
+Please enter PIN [Security Officer PIN]: 
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+About to create PKCS #15 meta structure.
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+Found MyEID
+About to generate key.
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+Found MyEID
+About to generate key.
+next generate a key with ./gen.sh then ./finalize.sh
+Aventra_MyEID_Setup $ cd ../openssl-gen/
+openssl-gen $ ./gen.sh 
+Usage: ./gen.sh &amp;quot;CertDName&amp;quot; [4096]
+  for example:
+  &amp;quot;/C=US/ST=New York/O=Guardian Project &amp;amp;#x54;e&amp;amp;#x73;&amp;amp;#x74;/&amp;amp;#x43;N=&amp;amp;#x74;es&amp;amp;#x74;.&amp;amp;#x67;&amp;amp;#x75;a&amp;amp;#x72;di&amp;amp;#x61;np&amp;amp;#x72;o&amp;amp;#x6a;&amp;amp;#x65;c&amp;amp;#x74;&amp;amp;#x2e;i&amp;amp;#x6e;fo&amp;amp;#x2f;em&amp;amp;#x61;i&amp;amp;#x6c;&amp;amp;#x41;d&amp;amp;#x64;re&amp;amp;#x73;s=&amp;amp;#x74;e&amp;amp;#x73;&amp;amp;#x74;@&amp;amp;#x67;&amp;amp;#x75;a&amp;amp;#x72;di&amp;amp;#x61;np&amp;amp;#x72;o&amp;amp;#x6a;&amp;amp;#x65;c&amp;amp;#x74;.i&amp;amp;#x6e;fo&amp;quot;
+openssl-gen $ ./gen.sh &amp;quot;/C=US/ST=New York/O=Guardian Project Te&amp;amp;#x73;t&amp;amp;#x2f;C&amp;amp;#x4e;=&amp;amp;#x74;e&amp;amp;#x73;t&amp;amp;#x2e;g&amp;amp;#x75;ardi&amp;amp;#x61;n&amp;amp;#x70;r&amp;amp;#x6f;j&amp;amp;#x65;c&amp;amp;#x74;.&amp;amp;#x69;n&amp;amp;#x66;o/em&amp;amp;#x61;i&amp;amp;#x6c;A&amp;amp;#x64;d&amp;amp;#x72;e&amp;amp;#x73;s&amp;amp;#x3d;t&amp;amp;#x65;st&amp;amp;#x40;g&amp;amp;#x75;a&amp;amp;#x72;d&amp;amp;#x69;a&amp;amp;#x6e;p&amp;amp;#x72;o&amp;amp;#x6a;e&amp;amp;#x63;t.&amp;amp;#x69;n&amp;amp;#x66;o&amp;quot;
+Generating key, be patient...
+2048 semi-random bytes loaded
+Generating RSA private key, 2048 bit long modulus
+.......................................+++
+..................................................+++
+e is 65537 (0x10001)
+Signature ok
+subject=/C=US/ST=New York/O=Guardian Project Test/&amp;amp;#x43;&amp;amp;#x4e;&amp;amp;#x3d;&amp;amp;#x74;&amp;amp;#x65;st.gu&amp;amp;#x61;&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;&amp;amp;#x61;nproj&amp;amp;#x65;&amp;amp;#x63;&amp;amp;#x74;&amp;amp;#x2e;&amp;amp;#x69;nfo/e&amp;amp;#x6d;&amp;amp;#x61;&amp;amp;#x69;&amp;amp;#x6c;&amp;amp;#x41;ddres&amp;amp;#x73;&amp;amp;#x3d;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x73;t@gua&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;&amp;amp;#x61;&amp;amp;#x6e;proje&amp;amp;#x63;&amp;amp;#x74;&amp;amp;#x2e;&amp;amp;#x69;&amp;amp;#x6e;fo
+Getting Private key
+writing RSA key
+Your HSM will prompt you for &#39;Security Officer&#39; aka admin PIN, wait for it!
+Enter destination keystore password:  
+Entry for alias 1 successfully imported.
+Import command completed:  1 entries successfully imported, 0 entries failed or cancelled
+[Storing keystore]
+Key fingerprints for reference:
+MD5 Fingerprint=90:24:68:F3:F3:22:7D:13:8C:81:11:C3:A4:B6:9A:2F
+SHA1 Fingerprint=3D:9D:01:C9:28:BD:1F:F4:10:80:FC:02:95:51:39:F4:7D:E7:A9:B1
+SHA256 Fingerprint=C6:3A:ED:1A:C7:9D:37:C7:B0:47:44:72:AC:6E:FA:6C:3A:B2:B1:1A:76:7A:4F:42:CF:36:0F:A5:49:6E:3C:50
+The public files are: certificate.pem publickey.pem request.pem
+The secret files are: secretkey.pem certificate.p12 certificate.jkr
+The passphrase for the secret files is: fTQ*he-[:y+69RS+W&amp;amp;+!*0O5i%n
+openssl-gen $ cd ../Aventra_MyEID_Setup/
+Aventra_MyEID_Setup $ ./finalize.sh 
+Using reader with a card: ACS ACR38U 00 00
+Connecting to card in reader ACS ACR38U 00 00...
+Using card driver MyEID cards with PKCS#15 applet.
+Found MyEID
+About to delete object(s).
+Your HSM is ready for use! Put the secret key files someplace encrypted and safe!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now your HSM should be ready for use for signing. You can try it out with &lt;code&gt;keytool&lt;/code&gt; to see what is on it, using the signing PIN not the Security Officer PIN:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;smartcard-apk-signing $ /usr/bin/keytool -v \
+&amp;gt;     -providerClass sun.security.pkcs11.SunPKCS11 \
+&amp;gt;     -providerArg opensc-java.cfg \
+&amp;gt;     -providerName SunPKCS11-OpenSC -keystore NONE -storetype PKCS11 \
+&amp;gt;     -list
+Enter keystore password:  
+
+Keystore type: PKCS11
+Keystore provider: SunPKCS11-OpenSC
+
+Your keystore contains 1 entry
+
+Alias name: 1
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: &amp;amp;#x45;&amp;amp;#x4d;&amp;amp;#x41;&amp;amp;#x49;&amp;amp;#x4c;&amp;amp;#x41;&amp;amp;#x44;&amp;amp;#x44;RESS=test@g&amp;amp;#x75;&amp;amp;#x61;&amp;amp;#x72;&amp;amp;#x64;&amp;amp;#x69;&amp;amp;#x61;&amp;amp;#x6e;&amp;amp;#x70;&amp;amp;#x72;oject.info, CN=test.guardianproject.info, O=Guardian Project Test, ST=New York, C=US
+Issuer: E&amp;amp;#x4d;A&amp;amp;#x49;LA&amp;amp;#x44;D&amp;amp;#x52;ES&amp;amp;#x53;=&amp;amp;#x74;e&amp;amp;#x73;&amp;amp;#x74;@&amp;amp;#x67;u&amp;amp;#x61;rd&amp;amp;#x69;a&amp;amp;#x6e;pr&amp;amp;#x6f;j&amp;amp;#x65;ct&amp;amp;#x2e;i&amp;amp;#x6e;f&amp;amp;#x6f;, CN=test.guardianproject.info, O=Guardian Project Test, ST=New York, C=US
+Serial number: aa6887be1ec84bde
+Valid from: Fri Mar 28 16:41:26 EDT 2014 until: Mon Aug 12 16:41:26 EDT 2041
+Certificate fingerprints:
+	 MD5:  90:24:68:F3:F3:22:7D:13:8C:81:11:C3:A4:B6:9A:2F
+	 SHA1: 3D:9D:01:C9:28:BD:1F:F4:10:80:FC:02:95:51:39:F4:7D:E7:A9:B1
+	 SHA256: C6:3A:ED:1A:C7:9D:37:C7:B0:47:44:72:AC:6E:FA:6C:3A:B2:B1:1A:76:7A:4F:42:CF:36:0F:A5:49:6E:3C:50
+	 Signature algorithm name: SHA1withRSA
+	 Version: 1
+
+
+*******************************************
+*******************************************
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And let’s try signing an actual APK using the &lt;a href=&#34;https://developer.android.com/tools/publishing/app-signing.html&#34; target=&#34;_blank&#34;&gt;arguments that Google recommends&lt;/a&gt;, again, using the signing PIN:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;smartcard-apk-signing $ /usr/bin/jarsigner -verbose \
+&amp;gt;     -providerClass sun.security.pkcs11.SunPKCS11 \
+&amp;gt;     -providerArg opensc-java.cfg -providerName SunPKCS11-OpenSC \
+&amp;gt;     -keystore NONE -storetype PKCS11 \
+&amp;gt;     -sigalg SHA1withRSA -digestalg SHA1 \
+&amp;gt;     bin/LilDebi-release-unsigned.apk 1
+Enter Passphrase for keystore: 
+   adding: META-INF/1.SF
+   adding: META-INF/1.RSA
+  signing: assets/busybox
+  signing: assets/complete-debian-setup.sh
+  signing: assets/configure-downloaded-image.sh
+  signing: assets/create-debian-setup.sh
+  signing: assets/debian-archive-keyring.gpg
+  signing: assets/debootstrap.tar.bz2
+  signing: assets/e2fsck.static
+  signing: assets/gpgv
+  signing: assets/lildebi-common
+[snip]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we have a working, but elaborate, process for setting up a Hardware Security Module for signing APKs. Once the HSM is setup, using it should be quite straightforward. Next steps are to work out as many kinks in this process as possible so this will be the default way to sign APKs. That means things like figuring out how &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742831&#34; target=&#34;_blank&#34;&gt;Java can be pre-configured to use OpenSC in the Debian package&lt;/a&gt;, as well as including all &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742089&#34; target=&#34;_blank&#34;&gt;relevant fixes&lt;/a&gt; in the &lt;code&gt;pcscd&lt;/code&gt; and &lt;code&gt;opensc&lt;/code&gt; packages. Then the ultimate is to add support for using HSMs in Android’s generated build files like the &lt;code&gt;build.xml&lt;/code&gt; for &lt;code&gt;ant&lt;/code&gt; that is generated by &lt;code&gt;android update project&lt;/code&gt;. Then people could just plug in the HSM and run &lt;code&gt;ant release&lt;/code&gt; and have a signed APK!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Integrating Crypto Identities with Android</title>
+      <link>https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/</link>
+      <pubDate>Sat, 28 Dec 2013 19:42:56 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Alberti_cipher_disk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;50&#34; height=&#34;50&#34; class=&#34;alignleft size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 50px) 100vw, 50px&#34; /&gt;&lt;/a&gt;ver the past couple of years, Android has included a central database for managing information about people, it is known as the &lt;a href=&#34;https://developer.android.com/reference/android/provider/ContactsContract.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ContactsContract&lt;/code&gt;&lt;/a&gt; (that’s a mouthful). Android then provides the &lt;em&gt;People&lt;/em&gt; app and reusable interface chunks to choose contacts that work with all the information in the &lt;code&gt;ContactsContract&lt;/code&gt; database. Any time that you are adding an account in the &lt;em&gt;Settings&lt;/em&gt; app, you are setting up this integration. You can see it with Google services, &lt;em&gt;Skype&lt;/em&gt;, &lt;em&gt;Facebook&lt;/em&gt;, and many more. This system has a lot of advantages, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a unified user experience for finding and managing data about people&lt;/li&gt;
+&lt;li&gt;apps can launch common interface dialogs and screens for working with that database without having to write custom versions (launching &lt;code&gt;Activity&lt;/code&gt;s via &lt;code&gt;Intent&lt;/code&gt;s&lt;/li&gt;
+&lt;li&gt;streamlined methods for building custom UIs based on the contacts database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With our work porting &lt;a href=&#34;https://www.gnupg.org/&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; to Android, we want &lt;a href=&#34;https://guardianproject.info/code/gnupg/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt;&lt;/a&gt; for Android to be fully integrated into the Android experience. &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; registers itself as a handler for all OpenPGP file and data types in Android, so users can work with these files using standard Android methods like Share/Send buttons. Or users can start by finding the person to encrypt to in the &lt;em&gt;People&lt;/em&gt; app, then choosing the file. These flows make it intuitive to Android users, and means we have to write less code because it taps into existing Android systems. With the past release, v0.2, we laid the foundations for having the GnuPG keyring integrated into this contacts database. The next release, v0.3 will improve contacts integration a lot.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12225&#34; style=&#34;width: 560px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/gpg-contacts-integration.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12225&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/gpg-contacts-integration-1024x640.png&#34; alt=&#34;All of these contacts come from the GnuPG keyring being synced to the ContactsContract.  Nathan&#39;s contact is made up of combined info from Gnu Privacy Guard and Google. To encrypt a file to the author, select Encrypt File to... on his contact page.&#34; width=&#34;550&#34; height=&#34;343&#34; class=&#34;size-large wp-image-12225&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/gpg-contacts-integration-1024x640.png 1024w, https://guardianproject.info/wp-content/uploads/2013/12/gpg-contacts-integration-300x187.png 300w&#34; sizes=&#34;(max-width: 550px) 100vw, 550px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12225&#34; class=&#34;wp-caption-text&#34;&gt;
+    All of these contacts come from the GnuPG keyring being synced to the &lt;code&gt;ContactsContract&lt;/code&gt;. Nathan’s contact is made up of combined info from &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; and Google. To encrypt a file to the author, select &lt;strong&gt;Encrypt file to…&lt;/strong&gt; on his contact page.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One of the concerns that has been voiced about integrating with the &lt;code&gt;ContactsContract&lt;/code&gt; database is that all the data put there will be then uploaded to the other accounts, like the Google account of the phone, or other accounts. As far as we can tell, there is no automatic syncing of data between accounts in the &lt;code&gt;ContactsContract&lt;/code&gt;, instead it is a system of individual, local databases. We have not confirmed this with a code audit whether there is any data leakage from &lt;code&gt;ContactsContract&lt;/code&gt;, and would love to hear more information on that. There is a layer of matching rules for locally merging those local databases into a single, unified view of that data. A good example of this unified data view in action is the built-in &lt;em&gt;People&lt;/em&gt; app. It will show data from all of the local databases, and it will link profiles together in a single view based on programmatic rules that look at email addresses, names, etc. In any case, &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; only syncs one way. It treats the GnuPG keyring as canonical and clones the GnuPG keyring contacts to the &lt;code&gt;ContactsContract&lt;/code&gt; whenever a sync is run. The sync process never reads from the &lt;code&gt;ContactsContract&lt;/code&gt;, and currently no data is ever imported from it. So at the very least, the ContactsContract should not serve as a point to inject data into the GnuPG keyring.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12211&#34; style=&#34;width: 330px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ContactsContract.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12211&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ContactsContract.png&#34; alt=&#34;The ContactsContract builds up the complete view of all contacts based on RawContacts provided by each account type, which are in turn built up of standard data types like name, email, phone number, etc.&#34; width=&#34;320&#34; height=&#34;189&#34; class=&#34;size-full wp-image-12211&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ContactsContract.png 320w, https://guardianproject.info/wp-content/uploads/2013/12/ContactsContract-300x177.png 300w&#34; sizes=&#34;(max-width: 320px) 100vw, 320px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12211&#34; class=&#34;wp-caption-text&#34;&gt;
+    The &lt;code&gt;ContactsContract&lt;/code&gt; builds up the complete view of all contacts based on &lt;code&gt;RawContacts&lt;/code&gt; provided by each account type, which are in turn built up of standard data types like name, email, phone number, etc.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One unexplored idea is for apps that need to use crypto to use only the standard Android contacts API to fetch crypto identity information like public keys and fingerprints. For example, PGP email app &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.fsck.k9&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;K-9&lt;/em&gt;&lt;/a&gt; could look up OpenPGP info at the same time it is looking in the contacts database for email addresses. It probably even makes sense for &lt;em&gt;K-9&lt;/em&gt; to offload even more to an OpenPGP provider, and have &lt;em&gt;K-9&lt;/em&gt; just query the PGP provider whether there is a signing key available, whether the receiver has a PGP key, etc.&lt;/p&gt;
+
+&lt;p&gt;It is also tempting to think about using a similar technique for storing other types of keys like OTR keys for secure chat. The hard part is that OTR has no method built-in to the key for verifying whether that key is trusted. OpenPGP has key signing and the Web-of-Trust, with all of its issues, but the OpenPGP security model is designed around untrusted methods of moving public key data around. Using the contacts database for moving around public key material for later verification will work equally well for OTR, OpenPGP, etc.&lt;/p&gt;
+
+&lt;p&gt;On a similar note, we are also working with Dominik Schürmann and the &lt;em&gt;K-9&lt;/em&gt; devs to create &lt;a href=&#34;https://dev.guardianproject.info/projects/gpgandroid/wiki/API_Sketch&#34; target=&#34;_blank&#34;&gt;a common Android API for a generic OpenPGP provider&lt;/a&gt;. This is similar to the contacts system in recent versions of Android in that there is a single, central contacts system that any app can tap into for managing data related to people.&lt;/p&gt;
+
+&lt;p&gt;We have decided to go with Dominik Schürmann’s approach of using an AIDL API to an Android Service. AIDL does have some downsides mostly around it being overcomplicated. But AIDL is the main Android method for inter-process communication with &lt;code&gt;Service&lt;/code&gt;s, so we are stuck with it, more or less. The beautiful thing is that this arrangement will make it possible for apps to fully offload the crypto handling to the &lt;code&gt;Service&lt;/code&gt;, including all the required GUI bits like passphrase prompting, progress dialog overlays, key selection, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://csunplugged.org/public-key-encryption&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public-key-encryption-cartoon-300x292.jpg&#34; alt=&#34;contacts with keys&#34; width=&#34;300&#34; height=&#34;292&#34; class=&#34;alignright size-medium wp-image-12212&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public-key-encryption-cartoon-300x292.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/12/public-key-encryption-cartoon.jpg 414w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;For example of how this idea would work, we can look at &lt;em&gt;K-9&lt;/em&gt; email again. If an incoming email includes a public key or fingerprint, either of these can be sent to the OpenPGP provider for importing. An &lt;code&gt;OPENPGP4FPR:&lt;/code&gt; URI will trigger downloading the public key from a keyserver. A public key contained in an attached file will be received by the OpenPGP provider via the Android file associations, which will then prompts the user to import it. When &lt;em&gt;K-9&lt;/em&gt; goes to send a OpenPGP-encrypted email to that new key, it checks the ContactsContract to see whether the recipient has a OpenPGP key. If so, it sends the email to the OpenPGP provider to be encrypted. The OpenPGP provider can then look up which key to use in it’s local keyring by using the recipient’s email address. If there are multiple keys for that email address, it prompts the user to choose. It could also base it’s choice on the OpenPGP trust level for that key.&lt;/p&gt;
+
+&lt;p&gt;These are currently all ideas for how GnuPG can be integrated into Android. Some of these are implemented and ready for you to try out on your device. The common OpenPGP provider idea is still very much a work in progress.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keys, signatures, certificates, verifications, etc. What are all these for?</title>
+      <link>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</link>
+      <pubDate>Thu, 12 Dec 2013 13:20:09 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key-150x150.jpg&#34; alt=&#34;portable shared security token&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12129&#34; /&gt;&lt;/a&gt;For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally &lt;a href=&#34;https://dev.guardianproject.info/projects/psst/wiki/PSST&#34; title=&#34;PSST Wiki&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Tokens aka PSST&lt;/a&gt;. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are. One thing we learned a lot about is how to portray and discuss tools for private or anonymous communications to people who just want to communicate and are not interested in technical discussion. This is becoming a central issue among a lot of people working to make usable privacy tools.&lt;/p&gt;
+
+&lt;p&gt;The widely established way of talking about privacy tools comes from the lingo of the underlying methods: cryptography, networking, etc. We talk about public and private keys, signing, validation, verification, key exchange, certificates, and fingerprints. In order for cryptography to work, keys need to be marked whether they are verified or not. &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm-300x190.png&#34; alt=&#34;hide the guts of what is happening&#34; width=&#34;300&#34; height=&#34;190&#34; class=&#34;alignleft size-medium wp-image-12135&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm-300x190.png 300w, https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm.png 500w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Few computers users understand what these terms are referring to, even highly technical people who regularly use encryption do not know the meaning of all these things, nor should they. This is a low level detail that is not important to how the vast majority of users understand privacy in computers. Keys and verification are far too abstract to be generally understandable, and what other kind of key has a fingerprint? Even more so, few people can tell you the difference between validation and verification when it comes to keys, signatures and certificates. The software should not be exposing all this, but instead should be minimizing the complexity as much as possible, and providing as simple a user experience as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Defining the Concepts that Define the Experience&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A key part of defining that simple user experience is defining the core concepts that the software is organized around. In our discussions, we mostly talked about the ideas of identity and trust, while some discussion of verifying identity seemed unavoidable. Talking about identity and trust is a lot more relevant in day-to-day life, i.e. knowing that the message came from the person you think it did, and trusting that it was private. It is most direct to talk about establishing a trusted connection to another person, but that’s not something that crypto can ever promise because there is still the analog gap between the person and the device. These core ideas must represent what is technically possible, so we searched for widely understood concepts that map well to the technical limitations: “a private conversation”, “a trusted app”, “verifiable video”.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_12128&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ecc.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12128&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ecc-150x150.jpg&#34; alt=&#34;create metaphors based on what users know&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-thumbnail wp-image-12128&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ecc-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2013/12/ecc-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/12/ecc.jpg 350w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p id=&#34;caption-attachment-12128&#34; class=&#34;wp-caption-text&#34;&gt;
+    create metaphors based on what users know
+  &lt;/p&gt;
+&lt;/div&gt;Diving in deeper, we concluded that the balance point between technical accuracy and widely understandable lingo was to talk about trusting the device, not the person. The technology can provide trusted connections between devices, and it is pretty close to how people experience digital communications. There is the laptop, the mobile phone, the net cafe, the friend’s computer, computer at work, etc. etc. When I look at my phone to see a message from a friend, it is easy to picture that friend typing that message out on that device, though it does take some conscious effort. The hard part here is that as we communicate more and more with our devices, there is less and less separation in our minds about whether we were talking in person, via voice, or by sending text. This is a point to focus on when thinking about designing the experience of private, secure communications software.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Let the Software Handle It!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a forming consensus in the world of usable security to focus on figuring out how to automate as much as possible then figure out how best tailor the experience of the essential parts that cannot be automated. The hard part will remain explaining the limitations of a given privacy tool.&lt;/p&gt;
+
+&lt;p&gt;At Guardian Project, we work a lot on incremental progress, so many of our projects are focused on specific, narrow improvements. With &lt;a href=&#34;https://guardianproject.info/apps/chatsecure/&#34; target=&#34;_blank&#34;&gt;ChatSecure&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/apps/keysync/&#34; target=&#34;_blank&#34;&gt;Keysync&lt;/a&gt; , we were able to automate one small part of the whole process, cryptography identity portability, which provides the foundation to provide private communications and verifiable media. Allowing users to sync their trust profiles between desktop and mobile makes it much more likely that users will have fully verified OTR conversations when chatting on their devices and laptops.&lt;/p&gt;
+
+&lt;p&gt;With &lt;a href=&#34;https://guardianproject.info/code/gnupg/&#34; target=&#34;_blank&#34;&gt;Gnu Privacy Guard for Android (GPGA)&lt;/a&gt;, we have made it easy to import keys via QRCode as well as &lt;code&gt;openpgp4fpr:&lt;/code&gt; URLs (a standard defined in conjuction with the &lt;a href=&#34;http://web.monkeysphere.info/&#34; title=&#34;Monkeysphere Home Page&#34; target=&#34;_blank&#34;&gt;Monkeysphere&lt;/a&gt; project. We are also working on a common method of using NFC for OpenPGP key signing in conjuction with &lt;a href=&#34;http://sufficientlysecure.org/index.php/openpgp-keychain/&#34; title=&#34;OpenPGP Keychain home page&#34; target=&#34;_blank&#34;&gt;OpenPGP Keychain&lt;/a&gt;. Even little things like optimizing support for standard file extensions can go a long way to make things easier, so GPGA automatically sets itself up to receive files with the &lt;a href=&#34;https://tools.ietf.org/html/rfc2015&#34; target=&#34;_blank&#34;&gt;standard OpenPGP MIME types&lt;/a&gt; (&lt;code&gt;application/pgp-keys&lt;/code&gt;, &lt;code&gt;application/pgp-encrypted&lt;/code&gt;, &lt;code&gt;application/pgp-signature&lt;/code&gt;) as well as the corresponding file extensions (&lt;code&gt;.pkr&lt;/code&gt;, &lt;code&gt;.skr&lt;/code&gt;, &lt;code&gt;.key&lt;/code&gt;, &lt;code&gt;.sig&lt;/code&gt;, &lt;code&gt;.asc&lt;/code&gt;, etc.). That makes it so a user can just click on one of these files, and GPGA will walk them through the whole process, doing as much as possible automatically.&lt;/p&gt;
+
+&lt;p&gt;Another interesting idea that is a big step in this direction is “secure introductions”. The idea is to automatically share trusted identity information when securely communicating with multiple people. For example, whenever you send a signed, encrypted email to multiple people, the email program should include the key fingerprints of each recipient in that email. Then the email program of the people receiving that email should automatically mark those keys as verified if the sender’s key is trusted and the signature is valid. There is not a meaningful amount of detail leaked in this interaction, since the existence of all the people’s keys and email address is already present in a secure email. The tricky part is figuring out how to make it harder for someone to use this maliciously to spread false identity information while keeping things as automatic as possible. This is very much a long term research idea: there are no widespread implementations of it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting keys into your keyring with Gnu Privacy Guard for Android</title>
+      <link>https://guardianproject.github.io/info/2013/12/06/getting-keys-into-your-keyring-with-gnu-privacy-guard-for-android/</link>
+      <pubDate>Fri, 06 Dec 2013 15:11:53 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/12/06/getting-keys-into-your-keyring-with-gnu-privacy-guard-for-android/</guid>
+      <description>&lt;p&gt;Now that you can have a full &lt;a href=&#34;https://www.gnupg.org&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;GnuPG&lt;/em&gt;&lt;/a&gt; on your Android device with &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt;&lt;/a&gt; for Android, the next step is getting keys you need onto your device and included in &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;. We have tried to make it as easy as possible without compromising privacy, and have implemented a few approaches, while working on others. There are a few ways to get this done right now.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt; registered itself with Android as a handler of all the standard &lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc3156.txt&#34; title=&#34;RFC3156: MIME Security with OpenPGP&#34; target=&#34;_blank&#34;&gt;OpenPGP MIME types&lt;/a&gt; (&lt;code&gt;application/pgp-keys&lt;/code&gt;, &lt;code&gt;application/pgp-encrypted&lt;/code&gt;, &lt;code&gt;application/pgp-signature&lt;/code&gt;), as well as all of the OpenPGP and GnuPG file extensions (&lt;code&gt;.pkr&lt;/code&gt; &lt;code&gt;.skr&lt;/code&gt; &lt;code&gt;.key&lt;/code&gt; &lt;code&gt;.sig&lt;/code&gt; &lt;code&gt;.asc&lt;/code&gt; &lt;code&gt;.gpg&lt;/code&gt; &lt;code&gt;.bin&lt;/code&gt;). This means that users just have to share a file to &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; using any of the standard Android methods, these files can be launched from an email attachment, opened from the SD card using a file browser, clicked in the Downloads view, etc.&lt;/p&gt;
+
+&lt;p&gt;So if you want to quickly send your whole public keyring from your laptop to your mobile device, you can just grab the database file directly from &lt;em&gt;GnuPG&lt;/em&gt; and copy it to your SD card. Here is how:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;plug your device into your laptop via USB so you can copy files to the SD card&lt;/li&gt;
+&lt;li&gt;find your &lt;em&gt;GnuPG&lt;/em&gt; home folder (on GNU/Linux and Mac OS X, it will be in &lt;code&gt;~/.gnupg/pubring.gpg&lt;/code&gt;, on Windows it is &lt;code&gt;%APPDATA%\gnupg&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;In your &lt;em&gt;GnuPG&lt;/em&gt; home folder, copy &lt;strong&gt;pubring.gpg&lt;/strong&gt; to your device’s SD card&lt;/li&gt;
+&lt;li&gt;unmount and unplug your device&lt;/li&gt;
+&lt;li&gt;on your device, open your favorite file manager app (&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.openintents.filemanager&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;OI File Manager&lt;/em&gt;&lt;/a&gt;, &lt;em&gt;Astro&lt;/em&gt;, etc)&lt;/li&gt;
+&lt;li&gt;go to the SD card&lt;/li&gt;
+&lt;li&gt;long-click on &lt;strong&gt;pubring.gpg&lt;/strong&gt; and share it to &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;click OK on the Import Keys dialog&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After that, &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; will do the rest. Give is some time to sync to the Contacts database, then you’ll see all of your keys from your desktop are now in your People app and are listed in &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; itself. You can now encrypt files to any of those keys, or verify files signed by any of those keys. Here are a couple screenshots to illustrate key points in the process, using &lt;em&gt;OI File Manager&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p align=&#34;center&#34;&gt;
+  &lt;div id=&#34;attachment_12155&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-0.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12155&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-0-199x300.png&#34; alt=&#34;send your public keyring file&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12155&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-0-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-0.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+    
+    &lt;p id=&#34;caption-attachment-12155&#34; class=&#34;wp-caption-text&#34;&gt;
+      1. send your public keyring file
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12156&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-1.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12156&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-1-199x300.png&#34; alt=&#34;choose Gnu Privacy Guard to send the file to&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12156&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-1-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-1.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12156&#34; class=&#34;wp-caption-text&#34;&gt;
+    2. choose &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; to send the file to
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_12157&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-2.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12157&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-2-199x300.png&#34; alt=&#34;click OK to import the key file&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12157&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-2-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-2.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12157&#34; class=&#34;wp-caption-text&#34;&gt;
+    3. click OK to import the key file
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_12158&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-3.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12158&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-3-199x300.png&#34; alt=&#34;now you can see the imported keys in Gnu Privacy Guard&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12158&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-3-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-3.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12158&#34; class=&#34;wp-caption-text&#34;&gt;
+    4. now you can see the imported keys in &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;There are many ways to get the keyring files like &lt;strong&gt;pubring.gpg&lt;/strong&gt; to your device: you can also share the keyring files via email, chat, or even services like &lt;em&gt;Dropbox&lt;/em&gt; or &lt;em&gt;Google Drive&lt;/em&gt;. Then once the files are on your device, you can import them using the same procedure as above. But keep in mind that you are sending your whole collection of secure contacts to that service, which will have full access to read it. If you have any worries about leaking your keyring to anyone, then a good method is to copy it directly to the SD card.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12192&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-search-keyserver.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12192&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-search-keyserver-199x300.png&#34; alt=&#34;search the keyserver for the author&#39;s key (I lost the key from 1998, so don&#39;t use that one...)&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12192&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-search-keyserver-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-search-keyserver.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12192&#34; class=&#34;wp-caption-text&#34;&gt;
+    search the keyserver for the author’s key (the key from 1998 is lost, don’t use that one…)
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can also search and download keys via the public pool of OpenPGP keyservers. If you already know someone’s keyid or fingerprint, you can search using that. Otherwise, you can search based on name or email address. But be careful! Downloading a key from a keyserver does not give you a key you can trust. Anyone can upload a key to the keyservers, and they can make that key have any name or email address. Downloading from the keyservers is a convenient way to download a key, but you must verify the key’s fingerprint with the person you are trying to find.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_12184&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12184&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr-150x150.png&#34; alt=&#34;scan this QR Code to get the author&#39;s OpenPGP key&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-thumbnail wp-image-12184&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr.png 330w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p id=&#34;caption-attachment-12184&#34; class=&#34;wp-caption-text&#34;&gt;
+    scan this QR Code to get the author’s OpenPGP key
+  &lt;/p&gt;
+&lt;/div&gt;In conjunction with the&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://web.monkeysphere.info/&#34; target=&#34;_blank&#34;&gt;Monkeysphere&lt;/a&gt; project, we developed a standard URI scheme for sending OpenPGP key fingerprints. For example, you can find my key ID here: &lt;a href=&#34;openpgp4fpr:9F0FE587374BBE81&#34;&gt;&lt;code&gt;openpgp4fpr:9F0FE587374BBE81&lt;/code&gt;&lt;/a&gt;. This provides a clickable way to get an OpenPGP key. On an Android device with &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; installed, you can click on this link to download my key from the keyservers. This URI scheme also works well in QR Codes. Scan this QR Code on your device with an app like &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.zxing.client.android&#34; title=&#34;Barcode Scanner in the Google Play Store&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Barcode Scanner&lt;/em&gt;&lt;/a&gt;, and click &lt;strong&gt;Open Browser&lt;/strong&gt;, and Gnu Privacy Guard will download my key to your device.&lt;/p&gt;
+
+&lt;p&gt;There are other ideas out there that we also want to support. For example, &lt;a href=&#34;http://sufficientlysecure.org/index.php/openpgp-keychain/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;OpenPGP Keychain&lt;/em&gt;&lt;/a&gt; includes a way to transmit the whole public key via &lt;a href=&#34;https://en.wikipedia.org/wiki/Near_field_communication&#34; title=&#34;Near Field Communication&#34; target=&#34;_blank&#34;&gt;NFC&lt;/a&gt;. This allows people can swap keys directly from phone to phone without having internet access at all. But NFC is quite slow to transmit data so the devices need to be held together for a while until the whole key is received. NFC could be used to rapidly transmit an &lt;code&gt;openpgp4fpr:&lt;/code&gt; URI, and then the whole public key would be fetched from a keyserver, but that then requires internet access and also leaks a bit of metadata to the internet. A better technique would be to transmit the entire public key over Bluetooth, using NFC to setup the Bluetooth session. We’re also looking at ways to do this via WiFi and &lt;a href=&#34;https://en.wikipedia.org/wiki/Bonjour_(software)&#34; target=&#34;_blank&#34;&gt;Bonjour (mDNS)&lt;/a&gt; local service advertisements.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On Verifying Identity Using Cryptography</title>
+      <link>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</link>
+      <pubDate>Mon, 19 Mar 2012 11:27:51 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity.gif&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity-150x150.gif&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1684&#34; /&gt;&lt;/a&gt;One of the most important uses of cryptography these days is verifying the identity of the other side of a digital conversation. That conversation could be between two people using OTR-encrypted IM, a web browser showing a bank website, a Debian Developer uploading a package to the Debian build server, an ssh client logging into an ssh server, and on and on. In all of these cases, cryptography is used to ensure that the software is indeed receiving replies from the expected entity. This happens by checking the current cryptographic key against one that is known to be correct. That is essential to the whole process. If you see the key for the first time, you have no way of knowing whether that is indeed the key you are expecting because there is no point of reference.&lt;/p&gt;
+
+&lt;p&gt;In order for this validation of identity to work, there needs to be a method of verifying any given key and making it a reference. There are many ideas about how to do this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a trusted list of central certificate authorities like in HTTPS&lt;/li&gt;
+&lt;li&gt;key-signing parties where people validate and sign each other’s keys in person, like used with the OpenPGP Web of Trust&lt;/li&gt;
+&lt;li&gt;“trust on first use” (aka “Persistence of Pseudonym”), where you save the key the first time you see it, and then use that as a reference (this is the way most people use SSH)&lt;/li&gt;
+&lt;li&gt;fingerprint verification, where the two people wanting to communicate cryptographically use another channel to manually check each other’s key fingerprints, like a phone call (this is used a lot in OTR and OpenPGP)&lt;/li&gt;
+&lt;li&gt;the Socialist Millionaires’ Protocol (SMP), which is a combination of user-generated question/answer pairs with a cryptographic technique that lets each side confirm whether the other answered the question correctly without divulging any information (this was recently added to OTR and is implemented in Pidgin, Gibberbot, and maybe a couple other programs)&lt;/li&gt;
+&lt;li&gt;a manually confirmed shared secret like a short password (ZRTP uses this when starting secure phone calls)&lt;/li&gt;
+&lt;li&gt;whitelists of fingerprints of widely used keys (aka &lt;a href=&#34;http://www.imperialviolet.org/2011/05/04/pinning.html&#34; target=&#34;_blank&#34;&gt;public key pinning&lt;/a&gt;) (this was recently added to Chrome in the wake of the HTTPS certificate authority failures)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/fingerprint.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/fingerprint-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1686&#34; /&gt;&lt;/a&gt;Each of these techniques has its advantages and disadvantages, but generally the higher level of verification provided means the more work to do the process. Most people don’t need the high level of verification provided by OpenPGP key signing parties, but maybe if it was fun and much easier to do, then a lot more people would do it. “Trust on first use” is really easy to use and implement, and has been working pretty well for a lot of people who use SSH and OTR. But it has big shortcomings in environments where the state or other central authority that provides the internet infrastructure wants to spy on its users. HTTPS has proven to be quite easy to use, but it has also &lt;a href=&#34;https://www.eff.org/deeplinks/2011/08/iranian-man-middle-attack-against-google&#34; target=&#34;_blank&#34;&gt;proven&lt;/a&gt; to be &lt;a href=&#34;http://www.theregister.co.uk/2011/08/29/fraudulent_google_ssl_certificate/&#34; target=&#34;_blank&#34;&gt;quite&lt;/a&gt; &lt;a href=&#34;https://arstechnica.com//security/news/2011/03/how-the-comodo-certificate-fraud-calls-ca-trust-into-question.ars&#34; title=&#34;How the Comodo certificate fraud calls CA trust into question&#34; target=&#34;_blank&#34;&gt;breakable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Currently, each of these techniques described above is used as the sole means of verification, then the level of verification is represented as “verified” or “not verified”. This is definitely the way that HTTPS and SSH handle it. OTR is a bit different, it has 3 states of verification: “new key”, “unverified key” i.e. trusted on first use, or “verified”, and good OTR chat apps will represent these three states in the UI. Then OpenPGP is perhaps the opposite extreme: it provides both chains of verification signatures via the Web of Trust but also user-set “trust levels” from 0 to 255 for any given key.&lt;/p&gt;
+
+&lt;p&gt;Perhaps an answer is to cryptographically link up these different ways of verification and represent key verification as a continuum. Then when the possibility of linking in “trust on first use” and other techniques was there, people could gradually build up cryptographic trust as they needed it. Starting with “I have seen this key before”, then on to “I have gotten them to verify their OTR key with an SMP question/answer”, then to “I have an OpenPGP trust path to them”, to “I have met them in person and manually verified their key and identity”.&lt;/p&gt;
+
+&lt;p&gt;To go into technical detail as an example, GnuPG supports RSA, DSA, ECDSA, El Gamal, and other key types as subkeys for an OpenPGP key. Those core algorithms core basically all of the most common uses of cryptography, including HTTPS, SSH, OTR, and OpenPGP. The link between an OpenPGP key and its subkeys is perhaps the strongest link for verification that exists, so if a given person includes their OTR key, for example, into their OpenPGP key, that provides a strong cryptographic link between them, and one that is easily publicly sharable via the OpenPGP public keyservers. When two people verify their OTR keys using the SMP question/answer, this verification could then extend to their OpenPGP keys if their OTR keys were subkeys. (&lt;a href=&#34;http://web.monkeysphere.info&#34; target=&#34;_blank&#34;&gt;The Monkeysphere Project&lt;/a&gt; is one such implementation of this idea, using OpenPGP keys for SSH and HTTPS).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/verified.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/verified-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1685&#34; /&gt;&lt;/a&gt;Then the last piece of this puzzle is how to represent all of this complexity to the users. The essential part is to stop representing trust as binary yes/no. A one-dimensional continuum provides a lot more info and is a very commonly understood concept in computers (think progress bars). The hard part of this question is ranking the various techniques in how much progress they provide towards the goal of solid identity verification.&lt;/p&gt;
+
+&lt;p&gt;For this round of the &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; title=&#34;Portable Shared Security Tokens&#34; target=&#34;_blank&#34;&gt;PSST Project&lt;/a&gt;, we have focused on first allowing people to easily move around their OTR identities, then worked on testing out the idea of linking in all identity keys into an OpenPGP key. From what we have seen so far, we believe this is not only feasible but will provide a solid platform for linking together all these verification techniques and identity keys. And on top of that, with diligent attention to user experience and testing, it should be possible to create user interfaces that make navigating all of this a common, daily task for most computer users.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

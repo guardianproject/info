@@ -1,0 +1,12 @@
+{
+  "plugins": [{
+    "name": "fetch"
+  }, {
+    "name": "alt-fetch",
+    "endpoints": [
+      "https://guardianproject.github.io/info/",
+      "https://guardianproject.gitlab.io/info/"
+    ]
+  }],
+  "loggedComponents": ["service-worker", "fetch", "alt-fetch"]
+}

@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Distribution on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/distribution/</link>
+    <description>Recent content in Distribution on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/distribution/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Distribution in Depth: Mirrors as a Source of Resiliency</title>
+      <link>https://guardianproject.github.io/info/2020/12/07/distribution-in-depth-mirrors-as-a-source-of-resiliency/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/12/07/distribution-in-depth-mirrors-as-a-source-of-resiliency/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;distribution.png&#34; alt=&#34;distribution&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are many ways to get the apps and media, even when the Internet is expensive, slow, blocked, or even completely unavailable.  Censorshop circumvention tools from ShadowSocks to Pluggable Transports can evade blocks.  Sneakernets and &lt;a href=&#34;https://briarproject.org/how-it-works/&#34;&gt;nearby connections&lt;/a&gt; work without any network connection.   Hosting on Content Delivery Networks (CDNs) can make hosting drastically cheaper and faster.  One method that is often overlooked these days is repository mirrors.  Distribution setups that support mirrors give users the flexibility to find a huge array of solutions for problems when things are not just working.  Mirrors on local networks can be much cheaper. Mirrors in specific countries are often not blocked or filtered.  Mirrors can be copied onto portable storage and moved to where the users are.&lt;/p&gt;
+
+&lt;p&gt;Repository mirrors are mostly associated with free software distribution.  Every major GNU/Linux distro, from &lt;a href=&#34;https://www.debian.org/mirror/list&#34;&gt;Debian&lt;/a&gt; to Red Hat, is available via mirrors.  Software collections like Android/Java&amp;rsquo;s &lt;a href=&#34;https://maven.apache.org/guides/mini/guide-mirror-settings.html&#34;&gt;Maven Central&lt;/a&gt; and Python&amp;rsquo;s &lt;a href=&#34;https://pip.pypa.io/en/stable/reference/pip_install/#install-index-url&#34;&gt;PyPI&lt;/a&gt; support mirrors as well.  &lt;a href=&#34;https://f-droid.org/docs/Running_a_Mirror/&#34;&gt;F-Droid&lt;/a&gt;&amp;rsquo;s infrastructure is also based on mirrors.  Free software repositories have proven so valuable, that there generally are mirrors maintained around the world.  Local mirrors of popular free software repositories are available in all continents, and most countries.&lt;/p&gt;
+
+&lt;p&gt;Mirrors also add conceptual complexity to distribution. Users who are used to internet services that work without configuration could easily find discussion of mirrors confusing.  Mirrors also mean that more pieces of infrastructure need to be maintained.  When systems with mirrors are well organized, then this work can be broken into small chunks and widely shared, often even by volunteers, so that the overall system is resilient and maintainable even given limited resources.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:InternetPopulation2011_DeSabbata_Graham_OII.png&#34;&gt;&lt;img src=&#34;InternetPopulation2011_DeSabbata_Graham_OII.png&#34; alt=&#34;Internet Population&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;building-a-repository-mirror-system&#34;&gt;Building a repository mirror system&lt;/h2&gt;
+
+&lt;p&gt;Good mirroring support must disconnect how the data is downloaded from how the data integrity is maintained.  That means data can come from anywhere, and still be properly verified before installing it.  This is usually done with an index of files signed by public key cryptography.  A system built on HTTPS and trusted servers is a bad candidate for mirroring.  This separation of concerns is a key property of distribution systems that allows them to be flexible while still providing fully verified distribution.&lt;/p&gt;
+
+&lt;p&gt;Then, it must be easy for users to configure the mirrors in use.  First and foremost, mirrors should work without the user doing anything.  To ensure flexibility, they must be easy to add and remove, and new mirrors must be easy to find.  Both end users and repository operators should be able to specify mirrors to be used.  Legal requirements must also be heeded: the whole system should not require any service that might be legally questionable in any relevant jurisdiction.  EU users need GDPR-compliant services.  If the aim is to distribute in China, then the system cannot require Google Cloud Services.  Instead, it should also be able to go through cloud services available in China.&lt;/p&gt;
+
+&lt;p&gt;There are many CDN providers around the world.  Many of these are in effect a mirroring service since they are pointed at a website hosted elsewhere, then they just cache the files.  Some of them are so cheap, that files can be hosted there without signing up.  This happens usually via source code repositories like GitHub.  For example, &lt;a href=&#34;https://rawgit.org/&#34;&gt;RawGit&lt;/a&gt; is an automatic, CloudFlare-based CDN for any public repository on GitHub, &lt;a href=&#34;https://gitlab.com&#34;&gt;gitlab.com&lt;/a&gt;, or BitBucket.  These fronting services are so cheap because they are basically only serving cached files.  Each given URL is set to be served from the cache for a long time, up to a year, without checking whether the file has changed.  In order to taken advantage of this kind of CDN setup, the repository must be designed accordingly.  That means each unique file should have a unchanging, unique URL.  There are two techniques for doing that:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;For software, include the version in the filename or path, e.g. &lt;code&gt;org.fdroid.fdroid_1001000.apk&lt;/code&gt; or &lt;code&gt;1.10/F-Droid.apk&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;For media, include the hash of the file in the filename or path, e.g. &lt;code&gt;icon_CQLCGleZNBzDPRNp1ADs121TecVHFmUbe-Au-4qXF08=.png&lt;/code&gt; or &lt;code&gt;CQLCGleZNBzDPRNp1ADs121TecVHFmUbe-Au-4qXF08=/icon.png&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mirrors are like all internet services in that there are always potential &lt;a href=&#34;https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;privacy leaks&lt;/a&gt;.  To protect users&amp;rsquo; privacy, it is important to be conscious of the potential metadata that is visible in the system, and who can get that data.  For example, transport encryption (TLS, HTTPS, etc) should be used even though the signed index provides strong integrity checks in order to reduce metadata leaks.  Even with transport encryption, the oeprators of the mirrors themselves will still see the metadata.  When there are individual files that users can download, the mirror operators could see which user is downloading which file.  Metadata like the description of a movie file or the icon of an app will give away the user&amp;rsquo;s interests.  When possible, this metadata should be grouped to reduce the detail in the metadata.  Icons can be downloaded in random groups of 10.  Text descriptions can be grouped by language or other more neutral grouping.&lt;/p&gt;
+
+&lt;h2 id=&#34;example-f-droid&#34;&gt;Example: F-Droid&lt;/h2&gt;
+
+&lt;p&gt;F-Droid repositories, aka &amp;ldquo;&lt;em&gt;repos&lt;/em&gt;&amp;rdquo;, are collections of packages, mostly Android APK app files, which are organized in a single folder. That folder contains a signed index file which lists the entire contents and related metadata.  This includes descriptive texts, available graphics, etc.  This file structure is not tied to any particular transport method as long as the &lt;em&gt;repo/&lt;/em&gt; folder and index remain intact.  The client keeps the public key of the index signature locally, and uses that to verify the index file.  The index also includes a list of URLs pointing to official mirrors.  By default, repositories are served over HTTPS, but nothing in the repository structure requires that.  This allows F-Droid to use repositories from SD Cards and USB OTG thumb drives using &lt;code&gt;file:///&lt;/code&gt; URLs.  A mirror is then simply defined: a mirror is any available copy of a repository.  The mirror need not even be a complete copy, as long as the index and desired packages are present.&lt;/p&gt;
+
+&lt;p&gt;F-Droid automatically handles much of the process of using the mirrors.  Each &lt;em&gt;repo&lt;/em&gt; can include a list of official mirrors in the index.  The F-Droid Android client will automatically use all of the official mirrors, automatically choosing one when downloading based on which is working.  The mirrors are still completely configurable.  Anyone can create their own mirror, either via the &lt;code&gt;fdroid mirror&lt;/code&gt; command for any &lt;em&gt;repo&lt;/em&gt;, or &lt;a href=&#34;https://f-droid.org/docs/Running_a_Mirror/&#34;&gt;via &lt;em&gt;rsync&lt;/em&gt;&lt;/a&gt; for &lt;em&gt;f-droid.org&lt;/em&gt;.  And F-Droid user can then &lt;a href=&#34;https://f-droid.org/tutorials/add-repo/&#34;&gt;&amp;ldquo;subscribe&amp;rdquo;&lt;/a&gt; to any mirror via the mirror URL.  Users can also disable any mirror from the repo&amp;rsquo;s details screen.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://guardianproject.github.io/info/css/hugo-easy-gallery.css&#34; /&gt;
+&lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;add-mirror.png&#34; alt=&#34;add-mirror.png&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;add-mirror.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;click a link to add a new mirror&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;br /&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;disable-mirrors.png&#34; alt=&#34;disable-mirrors.png&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;disable-mirrors.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;disabling selected mirrors&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://guardianproject.info/fdroid/&#34;&gt;Guardian Project&lt;/a&gt; &lt;em&gt;repo&lt;/em&gt; includes many of these mirroring channels: Mayfirst webserver, Tor Onion Service, Amazon AWS S3, GitHub Pages, GitHub Raw (Fastly), gitlab.com (Google Cloud), GitCDN/RawGit/Cloudflare and of course SD Card and USB OTG drives.  F-Droid &lt;em&gt;repos&lt;/em&gt; are particularly well suited to this kind of mirroring since the files are available via URLs that do not change.  CDNs cache files by URL.  &lt;a href=&#34;https://f-droid.org&#34;&gt;f-droid.org&lt;/a&gt; is mirrored by free software mirror providers around the world, including &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/fdroid/repo&#34;&gt;China&lt;/a&gt;, &lt;a href=&#34;https://fdroid.tetaneutral.net/fdroid/repo&#34;&gt;France&lt;/a&gt;, &lt;a href=&#34;https://ftp.fau.de/fdroid/repo&#34;&gt;Germany&lt;/a&gt;, &lt;a href=&#34;https://plug-mirror.rcac.purdue.edu/fdroid/repo&#34;&gt;Indiana&lt;/a&gt;, &lt;a href=&#34;https://fdroid-mirror.calyxinstitute.org/fdroid/repo&#34;&gt;New York&lt;/a&gt;, &lt;a href=&#34;https://ftp.osuosl.org/pub/fdroid/repo&#34;&gt;Oregon&lt;/a&gt;, &lt;a href=&#34;https://mirror.librelabucm.org/fdroid/repo/&#34;&gt;Spain&lt;/a&gt;, &lt;a href=&#34;https://ftp.lysator.liu.se/pub/fdroid/repo&#34;&gt;Sweden&lt;/a&gt;, and &lt;a href=&#34;http://lysator7eknrfl47rlyxvgeamrv7ucefgrrlhk7rouv3sna25asetwid.onion/pub/fdroid/repo&#34;&gt;Tor Onion Service&lt;/a&gt;.  Local mirrors mean faster, more reliable, and cheaper access, especially for people in places like China, where government policy and infrastructure design works to downplay access to foreign networks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/&#34;&gt;Extensive&lt;/a&gt; &lt;a href=&#34;https://f-droid.org/docs/Security_Model/&#34;&gt;work&lt;/a&gt; has gone into making F-Droid the most private &amp;ldquo;app store&amp;rdquo; for mobile devices, including minimizing the potential metadata leaks.  There is a single index file for all the packages, and it includes all the translations.  So all users fetch the exact same index file, so the &lt;em&gt;f-droid.org&lt;/em&gt; and mirror servers cannot infer from the index which language the device is using.  The app icons and screenshsots are downloaded on demand, so that is one metadata leak.  F-Droid requires either HTTPS or Tor Onion Service transport encryption to minimize such leaks.&lt;/p&gt;
+
+&lt;p&gt;F-Droid &lt;em&gt;repos&lt;/em&gt; default to keeping 3 releases per package available. Also, the index is not tied to the mirror, the F-Droid Android client will happily fetch the index from one mirror, and each package from other mirrors.  F-Droid will keep searching all the mirrors for a package until it finds it, so a mirror can be out of date yet still useful. Today&amp;rsquo;s update might only bring a couple new files, even if a mirror is delayed, it will still have all the previous content.  That property ensures that distribution is not an all-or-nothing prospect.  Instead, it can still transparently provide some level of access when there are troubles with the internet.  This makes lots of different kinds of relibility problems look quite similar from the point of view of the F-Droid client app: outages, network troubles, blocks, and even working around expensive data.&lt;/p&gt;
+
+&lt;p&gt;Someone with a Raspberry Pi with an SD Card can be a local mirror server, even if they have irregular access to the internet.  The Raspberry Pi can be easily brought to unmetered WiFi, then synced up with the main &lt;em&gt;repo&lt;/em&gt; using &lt;code&gt;fdroid mirror&lt;/code&gt; or &lt;code&gt;rsync&lt;/code&gt;.  Then when it is brought back to its home, the local users can get apps and updates even if there is no active internet connection in the area.  This also works with &lt;a href=&#34;https://en.wikipedia.org/wiki/USB_On-The-Go&#34;&gt;USB OTG&lt;/a&gt; flash drives.  A whole &lt;em&gt;repo&lt;/em&gt; can be zipped up and broadcasted using a service like the satellite TV &amp;ldquo;&lt;a href=&#34;https://knapsackforhope.org/&#34;&gt;Knapsack for Hope&lt;/a&gt;&amp;rdquo; service, their app already makes it easy to decode the broadcast and write it to USB OTG.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+
+
+&lt;div class=&#34;box&#34; style=&#34;max-width:60%&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;usb-otg-mirror.png&#34; alt=&#34;usb-otg-mirror.png&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;usb-otg-mirror.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;A f-droid.org mirror available via USB OTG drive.&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;example-ubuntu&#34;&gt;Example: Ubuntu&lt;/h2&gt;
+
+&lt;p&gt;Ubuntu uses a system of mixed mirrors and CDNs &lt;a href=&#34;https://wiki.ubuntu.com/Mirrors#Country_mirror_requirements&#34;&gt;based on standardized domain names&lt;/a&gt;, which includes some level of &lt;a href=&#34;https://wiki.ubuntu.com/DynamicMirrorDecisions&#34;&gt;automatic setup&lt;/a&gt; based on measurement.  The domain name is &lt;code&gt;COUNTRYCODE.archive.ubuntu.com&lt;/code&gt;.  During install, the user chooses the country to set up the device accordingly.  The mirror is then set to use the mirror domain name based on that country, e.g. a device set to Uganda would use &lt;code&gt;ug.archive.ubuntu.com&lt;/code&gt;.  When a country-specific mirrors exists, that domain name points to it.  Ubuntu has over 50 in-country mirrors. Otherwise, any other &lt;code&gt;*.archive.ubuntu.com&lt;/code&gt; domain name points to a mirror running on a major CDN.  This setup allows Ubuntu to change the mirror server-side setup separately from the user&amp;rsquo;s selection on their device.  Additionally, users are then still free to edit the configuration and use any URL that they want, including pointing to local media like CDROMs and thumb drives.  And anyone can &lt;a href=&#34;https://wiki.ubuntu.com/Mirrors&#34;&gt;create their own mirror&lt;/a&gt; without first getting permission.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&#34;select best server&#34; src=&#34;select-best-server.png&#34; width=&#34;100%&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;Select-Ubuntu-Mirror-Archive.png&#34; alt=&#34;Select-Ubuntu-Mirror-Archive&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use Onions/HTTPS for software updates</title>
+      <link>https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/</link>
+      <pubDate>Wed, 23 Jan 2019 06:35:40 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/</guid>
+      <description>
+
+&lt;p&gt;There is a new &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2019/msg00010.html&#34; target=&#34;_blank&#34;&gt;vulnerability in Debian’s apt&lt;/a&gt; that allows anything that can Man-in-the-Middle (MITM) your traffic to get root on your Debian/Ubuntu/etc boxes. Using encrypted connections for downloading updates, like HTTPS or Tor Onion Services, reduces this vulnerability to requiring root on the mirror server in order to exploit it. That is a drastic reduction in exposure. We have been pushing for this &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;since 2014&lt;/a&gt;, and &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://ftp.fau.de&#34; target=&#34;_blank&#34;&gt;mirror&lt;/a&gt; &lt;a href=&#34;https://mirrors.kernel.org&#34; target=&#34;_blank&#34;&gt;operators&lt;/a&gt;, and others in the ecosystem have taken some big steps towards making this the standard. This should finally put to rest the idea that plain &lt;a href=&#34;https://whydoesaptnotusehttps.com/&#34; target=&#34;_blank&#34;&gt;HTTP is enough&lt;/a&gt; for software updates with signed metadata.&lt;/p&gt;
+
+&lt;p&gt;To this end, we have always supported &lt;a href=&#34;https://f-droid.org/docs/Security_Model/&#34; target=&#34;_blank&#34;&gt;F-Droid’s practice&lt;/a&gt; of requiring HTTPS connections to f-droid.org and mirrors, even though the signed metadata file is the essential mechanism for providing security.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-encrypted-connections-on-your-server&#34;&gt;Using encrypted connections on your server&lt;/h2&gt;
+
+&lt;p&gt;Over the years, we have been honing our &lt;code&gt;apt&lt;/code&gt; sources setup to use encrypted connections as much as possible, while getting updates as fast as possible. The hard part of this is that the &lt;a href=&#34;http://security.debian.org&#34; target=&#34;_blank&#34;&gt;official Debian security server&lt;/a&gt; only provides HTTP. There are mirrors of that that are available over HTTPS, but they can receive updates hours or days later. The best fix for this would be for Debian to provide an HTTPS connection to &lt;code&gt;security.debian.org&lt;/code&gt;. There are still things in the &lt;code&gt;apt&lt;/code&gt; source configuration that can help. There are three levels we use:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;only Tor Onion Services for all updates, this means always encrypted and over Tor, but can mean that updates are delayed, for example if Tor traffic is blocked.&lt;/li&gt;
+&lt;li&gt;First try Tor Onion, then try HTTPS. This provides a backup connection method in case Tor is not working, for whatever reason, but still could get updates slower than the official security source&lt;/li&gt;
+&lt;li&gt;First try Tor Onion, then try HTTPS, then try HTTP. But HTTP is only enabled for &lt;code&gt;security.debian.org&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You can see an example of the final option by looking at &lt;a href=&#34;https://gitlab.com/fdroid/fdroid-cfarm-bootstrap/commit/24389018a164e110e7204f2b2c62a7b81863cdd4&#34; target=&#34;_blank&#34;&gt;F-Droid’s compile farm server config&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;fixing-your-boxes&#34;&gt;Fixing your boxes&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;@abelxluck&lt;/code&gt; aka &lt;code&gt;@abeluck&lt;/code&gt; put out an &lt;a href=&#34;https://gist.github.com/abeluck/67525909a17403060cd1722b53d57d00&#34; target=&#34;_blank&#34;&gt;Ansible Playbook&lt;/a&gt; to do this update. Here is a quick script for securely updating on Debian/stretch/amd64 based on the &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2019/msg00010.html&#34; target=&#34;_blank&#34;&gt;info published&lt;/a&gt; on the debian-security list:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+#!/bin/sh -ex&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;apt -o Acquire::http::AllowRedirect=false update || true&amp;lt;br /&amp;gt;
+apt -o Acquire::http::AllowRedirect=false upgrade --download-only || true&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cd /var/cache/apt/archives&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;1da507155c7b1ad140739c62fdacceaf5b5ee3765b1a00c3a3527d9d82a8d533  apt-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-transport-https-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;59f3e1c91664fe3b47048794560ebe9c41f1eeccbdd95f7715282f8cbe449060  apt-transport-https-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-transport-https_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;c8c4366d1912ff8223615891397a78b44f313b0a2f15a970a82abe48460490cb  apt-transport-https_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-utils-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;e3e157c291b05b2899a545331c7597ab36ca04e02cd9010562b9985b76af60db  apt-utils-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-utils_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;fb227d1c4615197a6263e7312851ac3601d946221cfd85f20427a15ab9658d15  apt-utils_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;dddf4ff686845b82c6c778a70f1f607d0bb9f8aa43f2fb7983db4ff1a55f5fae  apt_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e libapt-inst2.0-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;0e66db1f74827f06c55ac36cc961e932cd0a9a6efab91b7d1159658bab5f533e  libapt-inst2.0-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e libapt-inst2.0_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;a099c57d20b3e55d224433b7a1ee972f6fdb79911322882d6e6f6a383862a57d  libapt-inst2.0_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg-dev_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;cfb0a03ecd22aba066d97e75d4d00d791c7a3aceb2e5ec4fbee7176389717404  libapt-pkg-dev_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg5.0-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;cdb03ddd57934e773a579a89f32f11567710a39d6ac289e73efb20e8825874d1  libapt-pkg5.0-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg5.0_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;03281e3d1382826d5989c12c77a9b27f5f752b0f6aa28b524a2df193f7296e0b  libapt-pkg5.0_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&lt;/code&gt;``````````````````&lt;code&gt;apt -o Acquire::http::AllowRedirect=false upgrade&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wind is a Mozilla &amp; National Science Foundation Grand Prize Winner</title>
+      <link>https://guardianproject.github.io/info/2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/</link>
+      <pubDate>Wed, 26 Sep 2018 10:54:38 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/</guid>
+      <description>&lt;p&gt;On August 14th, members of the Guardian Project team traveled to Mountain View to compete in the final round of the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation for a Networked Society (WINS) Challenge&lt;/a&gt;. We learned in July that our &lt;a href=&#34;https://guardianproject.info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/&#34;&gt;Wind  project was a finalist&lt;/a&gt;, and we now had the opportunity to compete for one of the grand prizes, in a TED-meets-SharkTank style event, at Mozilla HQ.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wind&#34;&gt;Wind&lt;/a&gt; is a network designed for opportunistic communication and sharing of local knowledge that provides off-grid services for everyday people, using the mobile devices they already have. In the Wind network, Chime is the hyperlink, but one that exists in time and space, discoverable through beacon broadcasts and human-to-human sharing. All of this is powered by free and open-source software, running on readily available consumer hardware, and can be deployed at little to no cost, in a very short amount of time.&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/fGuiy3rlOVQ&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p style=&#34;font-size:23px&#34;&gt;
+  Yesterday, on the Mozilla blog, the &lt;a href=&#34;https://blog.mozilla.org/blog/2018/09/25/1-6-million-to-connect-unconnected-americans-our-nsf-wins-competition-grand-prize-winners/&#34;&gt;winners were announced.&lt;/a&gt; We are honored to be one of them, claiming the 4th Grand Prize.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;p class=&#34;has-background has-pale-cyan-blue-background-color&#34;&gt;
+  You can watch our 5 minute power presentation below, or jump to the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;project page&lt;/a&gt; or &lt;a href=&#34;https://github.com/guardianproject/wind&#34;&gt;github repo&lt;/a&gt; for more detail. We have also published our entire &lt;a href=&#34;https://github.com/guardianproject/wind/blob/master/Mozilla%20NSF%20Off-Grid%20Challenge_%20Wind.pdf&#34;&gt;Wind Concept Proposal Submission paper.&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/FOWrappjLsY&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;We are so grateful to be associated not only with the challenge itself, but with all the other impressive finalists and winners. Our work on Wind took quite a different approach than the others, and thus fills some niches and gaps not addressed by the other systems. We believe there are numerous opportunities for collaboration, and looking forward to helping fulfill the complete vision set forth by the WINS challenges.&lt;/p&gt;
+
+&lt;p&gt;We will use the funding to continue development work on our &lt;a href=&#34;https://github.com/sabzo/ayanda&#34;&gt;Ayanda&lt;/a&gt; and &lt;a href=&#34;https://github.com/guardianproject/chimeapp&#34;&gt;Chime&lt;/a&gt; apps, protocols and libraries. We will also support partners like F-Droid, OpenArchive, LibraryBox to help promote adoption. We will travel and work in the field, finding communities in need both in the U.S., and abroad, who can benefit from a Wind deployment. Lastly, we’ll reach out to colleagues in the humanitarian response communities, to gain feedback and build awareness about our suite of tools and capabilities.&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-13904&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5.jpg 1275w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-768x768.jpg 768w, https://guardianproject.info/wp-content/uploads/2017/11/wind_v3-5-1024x1024.jpg 1024w&#34; sizes=&#34;(max-width: 1275px) 100vw, 1275px&#34; /&gt; &lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Some thanks are definitely in order for members of the Guardian Project team and community. Hans’ leadership and collaboration with the &lt;a href=&#34;https://f-droid.org/&#34;&gt;F-Droid.org team&lt;/a&gt; over the last few years, provided innovative and fully functional foundation for the “Off Grid App Store”. In particular, his work implementing USB sharing with F-Droid (see the video above for that in action), enabled a true sneakernet mode, that was a key part of our demo.&lt;br /&gt;
+&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1.jpg&#34; alt=&#34;&#34; class=&#34;wp-image-14002&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1.jpg 1920w, https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1-300x182.jpg 300w, https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1-768x466.jpg 768w, https://guardianproject.info/wp-content/uploads/2018/09/disaster_1-1-1024x622.jpg 1024w&#34; sizes=&#34;(max-width: 1920px) 100vw, 1920px&#34; /&gt; &lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://okthanks.com/&#34;&gt;Okthanks&lt;/a&gt;, our design team, created amazing &lt;a href=&#34;https://okthanks.com/blog/peronas-latin-america&#34;&gt;user-centered foundations, personas and methods&lt;/a&gt; as our guide, and that helped our video presentations turn out great. Rosa and Fabiola ensured we stayed true to communities in Latin America who could benefit from this effort. Fabiola also was a fantastic presenter in front of the judges (again, to the video!). Early on, David conceived of a geocaching based concept that led to the Chime protocol, and which we plan to keep exploring. &lt;a href=&#34;http://sabelo.io/about/&#34;&gt;Sabelo&lt;/a&gt; pushed forward our work on our nearby communications with his &lt;a href=&#34;https://github.com/sabzo/ayanda&#34;&gt;Ayanda software library&lt;/a&gt;. Natalie and the &lt;a href=&#34;https://open-archive.org/&#34;&gt;OpenArchive&lt;/a&gt; team let us prototype support for nearby media publishing. Jason and his &lt;a href=&#34;http://librarybox.us/&#34;&gt;LibraryBoxen&lt;/a&gt; provided some early inspiration for how an off-grid system can be useful in everyday life.&lt;/p&gt;
+
+&lt;p&gt;Again, our sincere thanks to Mozilla and the National Science Foundation for this wonderful opportunity and financial support. Here’s to a more Windy future for the unconnected world ahead.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Our “Wind” project is a Mozilla-NSF challenge finalist!</title>
+      <link>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</link>
+      <pubDate>Fri, 20 Jul 2018 14:28:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</guid>
+      <description>&lt;p&gt;For the last few years, we’ve been working on the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind network concept&lt;/a&gt;, as a nearby, local, off-grid companion, or alternative, to the Web. This year, we decided to participate in the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation Challenge&lt;/a&gt;, sponsored by Mozilla and the National Science Foundation. Today, it was announced that we are a finalist in, as they put it, &lt;a href=&#34;https://blog.mozilla.org/blog/2018/07/19/a-science-fair-with-1-6-million-in-prizes/&#34;&gt;“A Science Fair with $1.6 Million in Prizes”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Watch the video below to learn more about Wind, or jump right over to the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind project page&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/fGuiy3rlOVQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;_&lt;br /&gt;
+When disaster strikes, connectivity becomes difficult. Information can save your life, guiding you to safety and services. Networks today are fragile and easy overloaded. There has not been enough investment in the many other possible nets, that may be better suited for situations where connections to the global internet are not available or affordable. The potential in radios, sensors and processing available in the cheapest of smartphones and routers are not fully utilized or realized._&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Announcing new libraries: F-Droid Update Channels</title>
+      <link>https://guardianproject.github.io/info/2017/05/31/announcing-new-libraries-f-droid-update-channels/</link>
+      <pubDate>Wed, 31 May 2017 11:40:27 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/05/31/announcing-new-libraries-f-droid-update-channels/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/05/refresh-525698_640.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/05/refresh-525698_640-150x150.png&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-13626&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/05/refresh-525698_640-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2017/05/refresh-525698_640-300x297.png 300w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+In many places in the world, it is very common to find Android apps via a multitude of sources: third party app stores, Bluetooth transfers, swapping SD cards, or directly downloaded from websites. As developers, we want to make sure that our users get secure and timely update no matter how they got our apps. We still recommend that people get apps from trusted sources like F-Droid or Google Play.&lt;/p&gt;
+
+&lt;p&gt;Building upon the F-Droid distribution ecosystem, there is a new suite of libraries: “&lt;a href=&#34;https://gitlab.com/fdroid/update-channels/&#34; target=&#34;_blank&#34;&gt;F-Droid Update Channels&lt;/a&gt;“. It is a suite of libraries for making sure your that your app can always find updates, no matter where someone got it from. Currently, there are two specific libraries: “Get F-Droid” and “App Updater”.&lt;/p&gt;
+
+&lt;h4 id=&#34;get-f-droid-aka-org-fdroid-getfdroid&#34;&gt;“Get F-Droid” aka &lt;code&gt;org.fdroid.getfdroid&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;Checks whether F-Droid is installed. If not, it will help the user to download and install F-Droid. F-Droid then provides the update channel. This is the preferred method of getting updates since F-Droid provides strong privacy protection and lets the user control when and where updates happen. Also, if F-Droid came pre-installed on the device or was “flashed” onto it as part of a custom Android ROM, then F-Droid does not need “Unknown Sources” enabled.&lt;/p&gt;
+
+&lt;h4 id=&#34;app-updater-aka-org-fdroid-appupdater&#34;&gt;“App Updater” aka &lt;code&gt;org.fdroid.appupdater&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;Keeps the app current by checking the hard-coded app repository set up by the developer. This is similar to the popular “App Updater” library, but is secure due to the F-Droid signed metadata. The _&lt;a href=&#34;https://gitlab.com/fdroid/fdroidserver&#34; target=&#34;_blank&#34;&gt;fdroidserver&lt;/a&gt;_ tools handle the creation and maintenance of the app repository.&lt;/p&gt;
+
+&lt;p&gt;Both of these libraries also check whether Google Play is installed, if so, will disable itself. This allows apps to include this library in APKs that are uploaded to Google Play since it will not violate the Google Play Terms of Service.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Build Your Own App Store: Android Media Distribution for Everyone</title>
+      <link>https://guardianproject.github.io/info/2017/02/22/build-your-own-app-store-android-media-distribution-for-everyone/</link>
+      <pubDate>Wed, 22 Feb 2017 09:45:11 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/02/22/build-your-own-app-store-android-media-distribution-for-everyone/</guid>
+      <description>
+
+&lt;p&gt;Most people get their Android apps from Google Play. It is usually the simplest and most secure option for them. But there are also many people who do not have access to Google Play. This might be due to lack of a proper internet connection or simply because Google Play is blocked within their country.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://f-droid.org/&#34;&gt;F-Droid&lt;/a&gt; project already offers &lt;a href=&#34;https://guardianproject.github.io/info/2015/06/02/building-a-trustworthy-app-store-that-respects-privacy/&#34;&gt;tools to create independent app distribution channels for Android apps&lt;/a&gt;. These tools are ready for production, but require expert knowledge and the command-line to be used. Now, we want to build upon this foundation and develop curation tools that can also be used by people with little technical knowledge, thus making the app distribution technology more broadly available.&lt;/p&gt;
+
+&lt;h3 id=&#34;use-cases&#34;&gt;Use-Cases&lt;/h3&gt;
+
+&lt;p&gt;The primary use-case we want to address is to circumvent app store censorship and blocking. But there are other use-cases that benefit from easy-to-setup app stores as well.&lt;/p&gt;
+
+&lt;p&gt;There are Android phones and tablets that do not have Google Play available, either because their manufacturer did not get a license from Google or because their owners prefer their phones Google-free.&lt;/p&gt;
+
+&lt;p&gt;Similar to Apple’s app store, the terms of service of Google Play exclude certain apps from being distributed and these are being removed on a regular basis. Having alternative means for distribution of apps is often the only way to bring those apps to people.&lt;/p&gt;
+
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+
+&lt;h4 id=&#34;core-features&#34;&gt;Core Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a new app repository&lt;/li&gt;
+&lt;li&gt;Add new apps/media to the repository&lt;/li&gt;
+&lt;li&gt;Update existing apps/media to the repository&lt;/li&gt;
+&lt;li&gt;Update the description and metadata of apps/media&lt;/li&gt;
+&lt;li&gt;Remove apps/media from the repository&lt;/li&gt;
+&lt;li&gt;Automatic generation of repository website with QR Code (and instructions)&lt;/li&gt;
+&lt;li&gt;Import apps directly from other repositories&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;optional-future-features&#34;&gt;Optional Future Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Archive apps/media to archive repository&lt;/li&gt;
+&lt;li&gt;Remove installed apps/media from user’s devices&lt;/li&gt;
+&lt;li&gt;Provide hosted web-app with user-management (Sign-Up, Lost Password) as a service&lt;/li&gt;
+&lt;li&gt;Allow multiple curators to manage the same repository&lt;/li&gt;
+&lt;li&gt;Import apps (and their description) from Google Play&lt;/li&gt;
+&lt;li&gt;Check for updates from Google Play periodically and automatically import them&lt;/li&gt;
+&lt;li&gt;Making the repository available through the Tor network&lt;/li&gt;
+&lt;li&gt;Generate custom white-labelled repository app (based on F-Droid)&lt;/li&gt;
+&lt;li&gt;App security scanner for vulnerable libraries and Virus Total (opt-in) upload&lt;/li&gt;
+&lt;li&gt;App browsing and download on generated repository website&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;target-audience&#34;&gt;Target Audience&lt;/h3&gt;
+
+&lt;p&gt;The main audience for this work are activists and trainers with moderate technical knowledge who need to securely distribute apps and updates to their community. This is especially a concern in countries where the official app store is blocked. Organizations like Amnesty International for example still need to enable people in those countries to securely receive their apps and updates.&lt;/p&gt;
+
+&lt;p&gt;The person maintaining the repository might use any operating system and in some cases might not even have a laptop/desktop computer available. They might be targeted by advanced attackers that can intercept and insert arbitrary traffic, but do not have the ability to compromise large service providers such as Amazon.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, this work might also be used by the following groups:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;service providers (who want own distribution and update mechanism for their apps)&lt;/li&gt;
+&lt;li&gt;individual software developers (who want to distribute beta releases for e.g. user-testing)&lt;/li&gt;
+&lt;li&gt;everybody else who needs full control of the entire distribution and update process&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;implementation-options&#34;&gt;Implementation Options&lt;/h3&gt;
+
+&lt;p&gt;There are roughly four different ways, the app store curation tool could be implemented. Each has their own pro and cons as well as different implications for the usability.&lt;/p&gt;
+
+&lt;h4 id=&#34;command-line-interface&#34;&gt;Command-line interface&lt;/h4&gt;
+
+&lt;p&gt;The current app repository tools are already used via the command-line, but they require some setup and several non-intuitive commands to be executed. The goal here would be to reduce the number of required commands as much as possible and make them easy to understand and remember. This would be similar to how Letsencrypt’s Certbot simplified SSL certificate management.&lt;/p&gt;
+
+&lt;p&gt;Pros&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;least amount of work building directly on existing tools&lt;/li&gt;
+&lt;li&gt;signing key could be created and stored on local device&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;too difficult to use for people with no prior command-line experience&lt;/li&gt;
+&lt;li&gt;off-putting and not inviting for potential non-expert curators&lt;/li&gt;
+&lt;li&gt;adds little benefit to existing solution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;cross-platform-desktop-application&#34;&gt;Cross-Platform Desktop Application&lt;/h4&gt;
+
+&lt;p&gt;A graphical user interface (GUI) could be added to the existing tools to make them easier to use. Existing UI toolkits such as Qt, Gtk or Tcl/Tk could be used for this.&lt;/p&gt;
+
+&lt;p&gt;Pros&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;can make use of existing python tools&lt;/li&gt;
+&lt;li&gt;signing key could be created and stored on local device&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;requires a desktop computer and installation procedure (possibly of dependencies as well)&lt;/li&gt;
+&lt;li&gt;need to maintain and support install packages for Windows and MacOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;android-app&#34;&gt;Android App&lt;/h4&gt;
+
+&lt;p&gt;The free software &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid app&lt;/a&gt; already includes repository functionality used for direct app swapping. This could be modified to publish repositories to remote servers and extended by curation functionality. Alternatively, a new app could be developed that is dedicated to repository curation and could contrary to F-Droid even be distributed via Google Play.&lt;/p&gt;
+
+&lt;p&gt;Pros&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Simple installation&lt;/li&gt;
+&lt;li&gt;No desktop computer required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Needs reimplementation of existing Python code in Java&lt;/li&gt;
+&lt;li&gt;Signing key stored on potentially less secure mobile device&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;web-app&#34;&gt;Web App&lt;/h4&gt;
+
+&lt;p&gt;The user interface for repository curation could be implemented as a web application that is accessed through a web browser. Low-risk curators could use a hosted instance for maximum simplicity while others could also access the interface through a local (built-in) web-server. Powerful web frameworks such as Flask or Django might be a good choice for that job.&lt;/p&gt;
+
+&lt;p&gt;Pros&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Very easy to use from every device&lt;/li&gt;
+&lt;li&gt;Does not need installation (lower usage barrier)&lt;/li&gt;
+&lt;li&gt;Can make use of existing python tools&lt;/li&gt;
+&lt;li&gt;Makes multi-curator feature potentially easier to implement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cons&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In hosted mode: signing keys need to be stored permanently on a web server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;security-considerations&#34;&gt;Security Considerations&lt;/h3&gt;
+
+&lt;h4 id=&#34;repository-attacks&#34;&gt;Repository Attacks&lt;/h4&gt;
+
+&lt;p&gt;The technology used for app distribution needs to ensure the integrity and authenticity of apps provided in the repository. It can not prevent malicious apps from being &lt;em&gt;intentionally&lt;/em&gt; distributed, but can offer a security scanner to reduce the risk of unintentional distribution. An attack is considered successful when the content provided by the curator of the repository can be altered so that the changes propagate to users’ devices.&lt;/p&gt;
+
+&lt;p&gt;Malicious apps might compromise the targeted application or the entire phones (root exploit). There are two defenses against unintentional distribution of malicious apps:&lt;/p&gt;
+
+&lt;ol type=&#34;1&#34;&gt;
+  &lt;li&gt;
+    app package signatures: clients trust the provided app signature on first installation (TOFU) and refuse updates with a different signature.
+  &lt;/li&gt;
+  &lt;li&gt;
+    repository signature: clients check signature when repository is installed and with every update. They warn and refuse operations with the repository when the signature is invalid.
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first defense is out of scope for this work, because app packages are signed when the app is built so that they are already signed when added to the repository. The repository curation should still not allow to publish an update that carries a different signature.&lt;/p&gt;
+
+&lt;p&gt;The second defense needs to be provided automatically by the curation tools. A repository signing key needs to be created and securely stored. If this key is compromised, an attacker can modify app metadata and can inject modified apps for specific or all users when they install them for the first time. Malicious updates of already installed apps are prevented by above package signature.&lt;/p&gt;
+
+&lt;p&gt;If the repository key is created and stored automatically by a service (see implementation option 4), the curator needs to trust the service and the hosting provider. Both need to be out of reach of attackers from the curators’ threat-model. For example, if the Guardian Project provides a repository service hosted in Amazon’s Cloud, this service should be out of reach of most attackers that have neither the ability to compromise the Guardian Project, nor Amazon. Advanced nation-state adversaries could compromise both and thus the repository. Recipients of apps need to trust their distributors/curators and their ability to keep their own system secure.&lt;/p&gt;
+
+&lt;p&gt;However, we can generally not protect against attackers who has the ability to directly compromise the users’ devices. All that can be done is to prevent malicious applications from being installed &lt;em&gt;via the repository&lt;/em&gt; (without knowledge of the curator). If the attacker can compromise users’ devices through other means, this defense does not matter anymore.&lt;/p&gt;
+
+&lt;h4 id=&#34;root-and-unknown-sources&#34;&gt;Root and Unknown Sources&lt;/h4&gt;
+
+&lt;p&gt;In order to get content from the provided repository onto a generic device, the user needs to install F-Droid which requires allowing the installation of apps from unknown sources. This can put the user at risk, because it makes installing malicious application very easy. Alternatively, super user privileges (root) can be used to install F-Droid’s system extension effectively trusting all apps installed via F-Droid. However, the security risks associated with super user privileges are even more severe as they can lead to compromise of the entire device.&lt;/p&gt;
+
+&lt;h4 id=&#34;lack-of-updates&#34;&gt;Lack of Updates&lt;/h4&gt;
+
+&lt;p&gt;If a repository is the user’s sole source for an application, any delay in providing updates might put the user at risk of an adversary exploiting a vulnerability in that application that would have otherwise been fixed by the missing update.&lt;/p&gt;
+
+&lt;h3 id=&#34;what-we-will-do&#34;&gt;What We Will Do&lt;/h3&gt;
+
+&lt;p&gt;The main goal of the curation tools is to make creating and maintaining repositories as easy as possible for our target audience.&lt;/p&gt;
+
+&lt;p&gt;This rules out the command line and the desktop application, since today’s user experience expectations are no longer being fulfilled by these technologies. While a desktop application comes closer, the need for an installation procedure and for maintaining it for different operating systems makes it too difficult and error-prone compared to the two other remaining options.&lt;/p&gt;
+
+&lt;p&gt;Implementing the curation tools within an Android application has its merits. It comes with an easy installation procedure, provides a familiar state-of-the-art user interface and allows apps to be added directly from the curators’ device. However, some existing functionality would need to be reimplemented in Java and maintained along-side the existing Python codebase. Also the curator needs to provide an external storage location for the repository which can be a barrier for many users and needs its own documentation.&lt;/p&gt;
+
+&lt;p&gt;The easiest and most flexible solution is a web-application based on the existing Python tools. More advanced curators can use it on a local desktop computer with a built-in web-server just like a desktop application, only that the UI is in the browser. This usage scenario comes with the same pros and cons like the desktop application. The repository signing key for example is stored locally under the curator’s control.&lt;/p&gt;
+
+&lt;p&gt;But it allows for other usage scenarios as well. If installed on a trusted web-server as a service, the curation tools can also be used by curators with little technical knowledge. The curators don’t need to install anything and can use them from any device. They can even switch devices without a data migration. However, they would need to give up control over the signing key.&lt;/p&gt;
+
+&lt;p&gt;If time permits, the app store creator can be turned into a full repository service that allows user registrations and several repositories per user. A trusted organization such as the Guardian Project could host this as a service and provide it to an activist community. Software freedom would allow other organizations to host their own repository services as well. You can imagine the activist collective Riseup for example not only hosting its own repository of recommended apps, but also allowing its users to create and curate their own repositories.&lt;/p&gt;
+
+&lt;p&gt;This becomes even more interesting when people fill their repositories not only with apps, but with all sorts of files such as books, music and photos.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;a href=&#34;https://labs.riseup.net/code/issues/8143&#34; target=&#34;_blank&#34;&gt;HTTPS to get security updates&lt;/a&gt; improves this situation a lot, but by measuring the size of data transfers, it is still possible to &lt;a href=&#34;http://www0.cs.ucl.ac.uk/staff/G.Danezis/papers/TLSanon.pdf&#34; target=&#34;_blank&#34;&gt;track which files are being downloaded&lt;/a&gt;. A Tor Onion Service provides end-to-end encryption like the HTTPS connection. It also mixes up the traffic with lots of other traffic, so its not easy to see what traffic goes together. That makes it a lot harder for a network observer to tell when a security update is being downloaded. Additionally, using a Tor Onion Service forces the traffic over Tor, so that the Debian mirror server cannot see which server is requesting the updates. That helps prevent targeted attacks.&lt;/p&gt;
+
+&lt;p&gt;There are other benefits as well, besides just for the person running the high security server in this example, especially if all of the traffic is coming over Tor. When updates are delivered over Tor, then that means the Debian mirror operators have less to worry about because they are handling less metadata that might have privacy concerns. It means that when law enforcement requests logs from the mirror operators, the mirror operators can more easily hand over anything they have since the mirror operator knows that there is not private information in the logs. Reducing the legal risks and privacy concerns makes it easier to run mirrors, and that helps internet services work better.&lt;/p&gt;
+
+&lt;p&gt;One disadvantage of this approach as it now stands is that your server will get updates from the same mirror every time. There is only a single Tor Onion Service for the main archive. An alternate approach using the combination of Tor and &lt;a href=&#34;http://httpredir.debian.org/&#34;&gt;http://httpredir.debian.org/&lt;/a&gt; as the package source means that your server will get updates from a different mirror each time Tor changes its exit node (I believe that’s every 10 minutes or so).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How can you set up your Debian machine to get updates over Tor?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg&#34; alt=&#34;debian and tor&#34; width=&#34;300&#34; height=&#34;173&#34; class=&#34;alignright size-medium wp-image-13395&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-768x444.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Right now, the best way to set up a Debian machine to force traffic over Tor is to use &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy&#34; target=&#34;_blank&#34;&gt;transparent proxying&lt;/a&gt; via &lt;em&gt;iptables&lt;/em&gt; rules. If you have that setup, then you can add the onion addresses as Debian apt sources as if they are any other HTTP Debian mirror. Another option is to install &lt;em&gt;apt-transport-tor&lt;/em&gt; like TAILS does, then you can use &lt;a href=&#34;http://people.skolelinux.org/pere/blog/Always_download_Debian_packages_using_Tor___the_simple_recipe.html&#34; target=&#34;_blank&#34;&gt;special syntax to add the Tor Onion Services&lt;/a&gt;. And another way is to install an HTTP proxy like &lt;em&gt;privoxy&lt;/em&gt; and enable apt HTTP proxy support as &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;I described before&lt;/a&gt;. The &lt;em&gt;apt-transport-tor&lt;/em&gt; and &lt;em&gt;privoxy&lt;/em&gt; approaches both have the downside of having to trust an added piece of software, whereas the transparent proxy technique uses what is already present in the Linux kernel. I’ve been using the &lt;em&gt;privoxy&lt;/em&gt; method since that is what I got working in 2014 and it has been working reliably on multiple servers since then. Also, I need &lt;em&gt;privoxy&lt;/em&gt; installed for another application anyway.&lt;/p&gt;
+
+&lt;p&gt;Here’s how to set up the apt sources to get packages and updates via Tor Onion Services without delaying security updates. First, remove &lt;em&gt;/etc/apt/sources.list&lt;/em&gt; and &lt;em&gt;/etc/apt/sources.list.d/*.list&lt;/em&gt; to start with a clean slate. Next add &lt;em&gt;/etc/apt/sources.list.d/00.vwakviie2ienjx6t.onion.list&lt;/em&gt; to get the main Debian repositories:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://vwakviie2ienjx6t.onion/debian/ jessie main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie main
+
+# aka volatile
+deb http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+
+deb http://vwakviie2ienjx6t.onion/debian jessie-backports main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-backports main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next add the new Tor Onion Service for the security update repository at &lt;em&gt;/etc/apt/sources.list.d/00.sgvtcaew4bxjd7ln.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://sgvtcaew4bxjd7ln.onion/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then last, include the normal HTTP security.debian.org archive to ensure that your server gets the latest security updates, even if the &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Onion Service mirror&lt;/a&gt; is behind or there is some other issue related to Tor. This goes in &lt;em&gt;/etc/apt/sources.list.d/99.security.debian.org.list&lt;/em&gt; to ensure that it is always the last repository that is tried, and apt loads files from /etc/apt/source.list.d/ in alphabetical order, so it’ll always try to get the security updates from the Onion Service before falling back to the HTTP source as a last resort.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://security.debian.org/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also run an unofficial mirror of the security updates on &lt;a href=&#34;http://dju2peblv7upfz3q.onion/debian&#34;&gt;http://dju2peblv7upfz3q.onion/debian&lt;/a&gt; if you want to add another backup, i.e. &lt;em&gt;/etc/apt/sources.list.d/00.dju2peblv7upfz3q.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building a trustworthy app store that respects privacy</title>
+      <link>https://guardianproject.github.io/info/2015/06/02/building-a-trustworthy-app-store-that-respects-privacy/</link>
+      <pubDate>Tue, 02 Jun 2015 16:38:03 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/06/02/building-a-trustworthy-app-store-that-respects-privacy/</guid>
+      <description>&lt;p&gt;One core piece of our approach is thinking about very high risk situations, like Ai Weiwei or Edward Snowden, then making the tools for operating under that pressure as easy to use as possible. That means that we might occasionally come across as a little paranoid. It is important to dive into the depths of what might be possible. That is an essential step in evaluating what the risks and defenses are, and how to prioritize them. Making usable software is not just making things easy, but rather making tools for real world situations that are a simple as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/06/hrome-crash.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/hrome-crash.png&#34; alt=&#34;chrome crash&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-full wp-image-12966&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We recently received some vindication of our paranoia: we have been resistant to putting all of our trust into the Google Play app store, despite many obvious advantages. Even though Google Play is probably the most secure of the big app stores, its security approach is rather thin, &lt;a href=&#34;https://jon.oberheide.org/blog/2010/06/28/a-peek-inside-the-gtalkservice-connection/&#34; target=&#34;_blank&#34;&gt;relying mainly on HTTPS with no signature for verification&lt;/a&gt;, and the Five Eyes partnership (NSA, GCHQ, etc) noticed this, and &lt;a href=&#34;https://firstlook.org/theintercept/2015/05/21/nsa-five-eyes-google-samsung-app-stores-spyware&#34; target=&#34;_blank&#34;&gt;worked to exploit it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Android/Google Play security model is relatively simple, and that is mostly a good thing. There are two essential pieces: the signature on the APK file itself and the TLS connection to Google that provides the APK file. Once an app is installed, all APK files used to update an app must have a matching signing key. That provides a reasonably strong mechanism to defend against malware that wants to install over existing apps.&lt;/p&gt;
+
+&lt;p&gt;Unlike package systems like Debian, there is no path to verify that the APK signing key. That means Google Play relies heavily on the TLS transport encryption to protect the APK files for when installing an Android apps for the first time. The first time an app is installed, the signing key in that app’s APK file is blindly trusted (this is called “Trust On First Use” or TOFU). It turns out that TOFU has a solid track record for security in the real world. One key aspect of implementing a good TOFU system is to make the first use indistinguishable from any other use, so that it is difficult to target only first uses while ignoring repeat uses. Intercepting repeat uses is very likely to trigger a warning and alert the user that something is wrong.&lt;/p&gt;
+
+&lt;p&gt;Now let’s put together the pieces based on what the Chinese government can do. A few TLS certificate authorities have been caught &lt;a href=&#34;https://arstechnica.com//security/2010/03/govts-certificate-authorities-conspire-to-spy-on-ssl-users/&#34; target=&#34;_blank&#34;&gt;issuing &lt;/a&gt;&lt;a href=&#34;https://arstechnica.com//security/2011/08/earlier-this-year-an-iranian/&#34; target=&#34;_blank&#34;&gt;fake&lt;/a&gt; &lt;a href=&#34;https://arstechnica.com//business/2012/02/critics-slam-ssl-authority-for-minting-cert-used-to-impersonate-sites/&#34; target=&#34;_blank&#34;&gt;certificates&lt;/a&gt;. A company affiliated with CNNIC &lt;a href=&#34;https://arstechnica.com/security/2015/04/google-chrome-will-banish-chinese-certificate-authority-for-breach-of-trust/&#34; target=&#34;_blank&#34;&gt;was caught issuing certificates for Google domains&lt;/a&gt;. A trusted certificate authority can issue usable certificates for any domain, so any computer that trusts CNNIC would trust their fake certificates for Google. That lets the Chinese government transparently Man-in-the-Middle traffic to Google servers. China could then use the Great Firewall to generate targeted malware on the fly, seeing the user credentials that Google Play requires, seeing the list of apps that each user has installed, etc. Then when the targeted user goes to install a new app, the APK file is intercepted, malware is added, then it is re-signed and transparently sent off to the user.&lt;/p&gt;
+
+&lt;p&gt;This targeted malware can be designed to avoid the malware scanners in Google Play, Lookout, etc. since it would be direct addition of code rather than via an exploit. It would be just adding Java classes to the APK. Or alternatively, in combination with some of the signing exploits that have been discovered in Android, like &lt;a href=&#34;http://www.saurik.com/id/19&#34; target=&#34;_blank&#34;&gt;Master Key&lt;/a&gt;, the Great Firewall is able to inject malware into the real APK itself without changing the signature.&lt;/p&gt;
+
+&lt;p&gt;Of course, when Google Play’s TLS connection includes X.509 &lt;a href=&#34;https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning&#34; target=&#34;_blank&#34;&gt;certificate pinning&lt;/a&gt;, then the above attack would not be possible since the client would have a whitelist of certificate authorities that it trusts for play.google.com, and CNNIC would probably not be on that whitelist. This highlights the importance of pinning certificate authorities in apps that need good security over TLS or HTTPS. All TLS connections &lt;a href=&#34;http://nelenkov.blogspot.com/2012/12/certificate-pinning-in-android-42.html&#34; target=&#34;_blank&#34;&gt;support pinning at the system level&lt;/a&gt; starting in Android 4.2. We are crazy enough to support down to Android 2.3 since there are lots of older Android devices in use, and even &lt;a href=&#34;https://arstechnica.com/gadgets/2014/12/android-2-3-gingerbread-four-years-later-the-os-just-wont-die/&#34; target=&#34;_blank&#34;&gt;new devices being sold with Android 2.3.3&lt;/a&gt;. That means we think about making apps self-contained in terms of security improvements like pinning.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/06/sadballs.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/06/sadballs-150x300.png&#34; alt=&#34;sad balls&#34; width=&#34;150&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-12969&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/06/sadballs-150x300.png 150w, https://guardianproject.info/wp-content/uploads/2015/06/sadballs.png 400w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It gets worse&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Many indigenous app stores like &lt;a href=&#34;http://cafebazaar.ir&#34; target=&#34;_blank&#34;&gt;Cafe Bazaar&lt;/a&gt; and Xiaomi’s &lt;a href=&#34;http://app.mi.com&#34; target=&#34;_blank&#34;&gt;MiMarket&lt;/a&gt; lack basic protections like TLS, making targeted attacks trivial for governments, or even anyone who gains control of a piece of the network path. These days that is actually easy to do by exploiting home routers, which are &lt;a href=&#34;https://arstechnica.com/security/2015/05/researchers-uncover-self-sustaining-botnets-of-poorly-secured-routers/&#34; target=&#34;_blank&#34;&gt;generally&lt;/a&gt; &lt;a href=&#34;https://arstechnica.com/security/2015/04/no-patch-for-remote-code-execution-bug-in-d-link-and-trendnet-routers/&#34; target=&#34;_blank&#34;&gt;easy&lt;/a&gt; to &lt;a href=&#34;https://arstechnica.com/security/2015/05/the-moose-is-loose-linux-based-worm-turns-routers-into-social-network-bots/&#34; target=&#34;_blank&#34;&gt;exploit&lt;/a&gt;. One of those botnets would easily start looking for app installs in the network traffic, then add exploits accordingly. As long as the first install is easy to detect and the user easy to track, then the malware can transparently inject malware designed to be difficult to detect by malware scanners and people alike.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png&#34; alt=&#34;fdroidheader3&#34; width=&#34;720&#34; height=&#34;180&#34; class=&#34;alignnone size-full wp-image-11906&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png 720w, https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png 300w&#34; sizes=&#34;(max-width: 720px) 100vw, 720px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;The Alternative&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;FDroid&lt;/a&gt; also has the key advantage of being designed from the beginning to avoid tracking users, and to use proven methods of delivering software, following the signed repository model of Debian, Ubuntu, etc. but then served over a solid HTTPS channel for increased privacy and a backup layer of security. It is also possible to use privacy proxies like Tor or I2P via the proxy settings. There is no user credentials needed, it is all free software, so FDroid users can even hide themselves from the server delivering the apps, as well as any network observers. Since all APKs are delivered via signed metadata that is verified using a key built into the FDroid client app, there is no risk of getting served malware even if the HTTPS connection is completely and transparently broken.&lt;/p&gt;
+
+&lt;p&gt;As part of our &lt;a href=&#34;https://dev.guardianproject.info/project/bazaar/wiki&#34; target=&#34;_blank&#34;&gt;Bazaar Project&lt;/a&gt;, we have been putting more and more efforts into the FDroid project, and working to make it much easier to use. All Guardian Project apps are available in FDroid, as well as all the core apps that you might need like Firefox, a Twitter client, K-9 email, etc. Tech journalist &lt;a href=&#34;https://medium.com/backchannel/why-i-m-saying-goodbye-to-apple-google-and-microsoft-78af12071bd&#34; target=&#34;_blank&#34;&gt;Dan Gillmor agrees&lt;/a&gt;: free software that respects privacy is not only for the über-geek anymore.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Complete, reproducible app distribution achieved!</title>
+      <link>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</link>
+      <pubDate>Wed, 11 Feb 2015 14:51:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</guid>
+      <description>&lt;p&gt;With &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, we have been working towards getting a complete app distribution channel that is able to reproducibly build each Android app from source. while this may sound like a mundane detail, it does provide lots of tangible benefits. First, it means that anyone can verify that the app that they are using is 100% built from the source code, with nothing else added. That verifies that the app is indeed 100% free, open source software.&lt;/p&gt;
+
+&lt;p&gt;It also verifies that there have not been any malicious bits of code added into the app during the build process. As has been &lt;a href=&#34;https://www.youtube.com/watch?v=5pAen7beYNc&#34; target=&#34;_blank&#34;&gt;demonstrated&lt;/a&gt; in the &lt;a href=&#34;http://events.ccc.de/congress/2014/Fahrplan/events/6240.html&#34; target=&#34;_blank&#34;&gt;31c3 Reproducible Builds talk&lt;/a&gt;, just flipping a single bit is enough to create a usable exploit in an app.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid project is leading the way with its system for publishing verified builds. We know have our first full example, building upon our previous work with making &lt;a href=&#34;https://guardianproject.info/2014/06/09/our-first-deterministic-build-lil-debi-0-4-7/&#34; target=&#34;_blank&#34;&gt;Lil’ Debi build reproducibly&lt;/a&gt;. We started with our simple little utility app &lt;a href=&#34;https://github.com/guardianproject/checkey&#34; target=&#34;_blank&#34;&gt;Checkey&lt;/a&gt; since it has few moving parts (first get one working, then the rest).&lt;/p&gt;
+
+&lt;p style=&#34;float: left&#34; &gt;
+  &lt;a href=&#34;https://guardianproject.info/releases/Checkey-0.1.1.apk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png&#34; alt=&#34;Checkey&#34; width=&#34;128&#34; height=&#34;128&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;float: left; text-align: center; line-height: 128px; font-size: 1000%&#34; &gt;
+  =
+&lt;/p&gt;
+
+&lt;p style=&#34;float: left&#34; &gt;
+  &lt;a href=&#34;https://f-droid.org/repo/info.guardianproject.checkey_101.apk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png&#34; alt=&#34;Checkey&#34; width=&#34;128&#34; height=&#34;128&#34; style=&#34;float: right&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;clear: both;&#34;&gt;
+  &lt;p&gt;
+    When you download Checkey from f-droid.org, you will get an APK that was signed using the official Guardian Project offline signing key that was built by f-droid.org. No, we did not give them a copy of our key, instead, the fdroid publish process now looks for the Binaries: tag in the build recipe. If it sees that, it downloads that APK, then builds the app from source, then checks to make sure that they match using a simple diff of the APK contents and by checking that the signature on the official APK also validates on the APK that f-droid.org built.
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;p&gt;
+    Now that we have our little Checkey working, we can work towards getting all of our apps verifying in the same way, eliminating a whole field of exploits that we have to worry about. You can follow the progress of this work on the F-Droid wiki &lt;a href=&#34;https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds&#34; target=&#34;_blank&#34;&gt;Reproducible Builds&lt;/a&gt; page, and learn about a future application of it on the &lt;a href=&#34;https://f-droid.org/wiki/page/Verification_Server&#34; target=&#34;_blank&#34;&gt;Verification Server&lt;/a&gt; page.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    The next two apps that are in the reproducible pipeline are &lt;a href=&#34;https://leap.se/&#34; target=&#34;_blank&#34;&gt;LEAP&lt;/a&gt;‘s &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/tree/master/metadata/se.leap.bitmaskclient.txt&#34; target=&#34;_blank&#34;&gt;Bitmask&lt;/a&gt; and our &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/info.guardianproject.locationprivacy.txt&#34; target=&#34;_blank&#34;&gt;LocationPrivacy&lt;/a&gt;.
+  &lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reducing metadata leakage from software updates</title>
+      <link>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</link>
+      <pubDate>Thu, 16 Oct 2014 12:48:04 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: now you can &lt;a href=&#34;https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;do this with Tor Onion Services&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.&lt;/p&gt;
+
+&lt;p&gt;That means that potentially private information is leaking. That private information could be which packages you have installed and which versions. That information can help an attacker figure out the best way to break into the target machine. Also, a unique fingerprint can be generated based on which packages a machine has installed, and that could help de-anonymize traffic that goes over Tor or other anonymity tool.&lt;/p&gt;
+
+&lt;p&gt;For people who use &lt;code&gt;apt-get&lt;/code&gt; in Debian, Ubuntu or any related GNU/Linux distro, there is a lot of metadata leaked to the internet when &lt;code&gt;apt-get&lt;/code&gt; contacts Debian repositories using a standard configuration. Mostly, that is because by default, the connections are unencrypted (http, ftp, rsync). The integrity of the package itself is not reason enough to use HTTPS since the GPG signing is much more reliable for that task. Here is how I break it down:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity&lt;br /&gt;
+(&lt;em&gt;software can be modified while being downloaded&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;repo availability&lt;br /&gt;
+( &lt;em&gt;whole sites or specific URL paths can be selectively blocked by governments and companies&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;package availability&lt;br /&gt;
+(&lt;em&gt;software security updates can be individually blocked&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;who’s downloading what package (&lt;em&gt;currently visible to anyone who can see the&lt;br /&gt;
+network traffic, including open wifi, etc.&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The current apt model covers #1 well, but only covers #2 and #3 with a two week window (the expiration date on the repo metadata). And it does not cover #4 at all. Using HTTPS for apt repos is a simple way to improve the security of all 4. It adds a weak backup security layer for #1, it makes it much more difficult for a portion of a large internet mirror to be seletively blocked (e.g. #2 and #3). For example, if you use HTTPS to mirrors.kernel.org, everything has to be blocked to block Debian repos or packages. And pipelining downloads through a reused HTTPS connection makes it very difficult for the network observer to track metadata about packages, #4).&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg&#34; alt=&#34;leakage control&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12701&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-100x100.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control-200x200.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-control.jpg 300w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Luckily, there are some relatively easy steps that greatly reduce the amount of metadata that is leaked: using HTTPS connections to the mirrors and running those connections through Tor. Setting &lt;code&gt;apt-get&lt;/code&gt; to pipeline as many transactions into a given HTTPS session is also useful, but currently only supported for HTTP and not HTTPS. Even though HTTPS/TLS has security weaknesses, it is a lot better than nothing, and can help provide real world protection. The downside is that it is not common for Debian machines to connect to apt mirrors using HTTPS, so that potentially marks the install as a machine worth targeting. There are more and more HTTPS mirrors, and more interest in using them, so I think in time, that will only lessen as a concern. Here are the HTTPS mirrors that I have had good luck with:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mirrors.ece.ubc.ca&lt;/li&gt;
+&lt;li&gt;mirrors.kernel.org&lt;/li&gt;
+&lt;li&gt;mirror.cse.unsw.edu.au&lt;/li&gt;
+&lt;li&gt;spout.ussg.indiana.edu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On that note, here is the config that I have been using on a number of Debian-deriv machines, and it has been working well. It requires &lt;code&gt;apt-transport-https&lt;/code&gt;, and &lt;a href=&#34;http://ubuntuguide.org/wiki/Tor#Privoxy&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;privoxy&lt;/code&gt; setup as an HTTP proxy for Tor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;$ cat /etc/apt/apt.conf.d/99force-tor
+# force everything through privoxy HTTP proxy to tor
+Acquire::ftp::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::http::Proxy &#34;http://127.0.0.1:8118&#34;;
+Acquire::https::Proxy &#34;http://127.0.0.1:8118&#34;;
+
+# don&#39;t use SSL, its insecure, only use TLS
+Acquire::https::SslForceVersion &#34;TLSv1&#34;;
+&lt;/pre&gt;
+
+&lt;p&gt;I have found about 10 official Debian mirrors that have reliable HTTPS. Then I have a &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; target=&#34;_blank&#34;&gt;script that finds all of them&lt;/a&gt;, but many have self-signed certs and other issues. A number of the HTTPS mirrors also mirror the “security” archive, but I recommend that the &lt;code&gt;http&lt;/code&gt; URL to the official &lt;code&gt;security.debian.org&lt;/code&gt; repo is still included to make sure that security updates are promptly available.&lt;/p&gt;
+
+&lt;p&gt;I also have a test security repo running that is only available via an .onion address. I hope to encourage people to run official mirrors on a Tor Hidden Service, then HTTPS is not needed. Note that &lt;code&gt;apt-transport-tor&lt;/code&gt; is not required if a tor proxy is setup. To try mine, add it to your &lt;code&gt;sources.list&lt;/code&gt; (and make sure &lt;code&gt;apt-get&lt;/code&gt; is somehow using Tor). The order is important, that determines the priority of where &lt;code&gt;apt-get&lt;/code&gt; will get the package from is all other variables are the same.&lt;/p&gt;
+
+&lt;pre&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ wheezy/updates main
+deb http://security.debian.org/ wheezy/updates main
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Use the official &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Debian Tor Onion Services&lt;/a&gt; now, &lt;tt&gt;dju2peblv7upfz3q.onion&lt;/tt&gt; is deprecated and will be shut down!&lt;/p&gt;
+
+&lt;h3 id=&#34;a-specific-example-tails&#34;&gt;A specific example: TAILS&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png&#34; alt=&#34;Tails&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-12711&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/Tails-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-100x100.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/Tails-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/Tails.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;a href=&#34;https://tails.boum.org/&#34; target=&#34;_blank&#34;&gt;TAILS&lt;/a&gt; is an operating system that aims to be as private and anonymous as possible to enable, and has allowed &lt;a href=&#34;https://freedom.press/blog/2014/04/help-support-little-known-privacy-tool-has-been-critical-journalists-reporting-nsa&#34; target=&#34;_blank&#34;&gt;journalists&lt;/a&gt; like &lt;a href=&#34;https://www.wired.com/2014/10/laura-poitras-crypto-tools-made-snowden-film-possible/&#34; target=&#34;_blank&#34;&gt;Laura Poitras&lt;/a&gt; to work without leaking information despite being targeted by some very skilled and highly resourced organizations. TAILS mostly works as a “live CD”, meaning the whole operating system is downloaded as a single “image” file, then either burned to a CD/DVD, or to a USB thumb drive. Updates work the same way. But TAILS has an optional feature to use the Debian package system to install and persist packages that are not included by default. TAILS does not use the default set of mirrors that a standard Debian install uses, it is set up by default with a range of possible Debian package sources, including the current stable version (called wheezy), the versions in testing, and packages backported to the stable version. That means that when this feature is used, TAILS fetches the metadata for all of those sections of Debian (stable/wheezy, testing, wheezy-backports, unstable).&lt;/p&gt;
+
+&lt;p&gt;Given all of the proven fingerprinting approaches, like using the font list from the browser, I think its a safe assumption that the apt-get metadata will also provide similar fingerprinting opportunities. For basic TAILS use, this is all avoided since updates are done via ISO images. But once a user installs packages via &lt;code&gt;apt-get&lt;/code&gt;, that changes since TAILS then goes out onto the internet to fetch all of the repo metadata. That goes over Tor since TAILS forces all network traffic over Tor, so that helps break the link between the machine downloading the updates and those that can see that machines internet traffic.&lt;/p&gt;
+
+&lt;p&gt;It seems quite likely that the set of mirrors and the order in which they are run will provide a way to identify the system as TAILS. As for identifying individual machines, &lt;code&gt;apt-get&lt;/code&gt; sends a lot of metadata, like language that the system is using, which packages need updates, etc. On top of the set of mirrors used, there is potentially enough metadata there to fingerprint the individual machine.&lt;/p&gt;
+
+&lt;p&gt;One open question is how the &lt;code&gt;apt-get&lt;/code&gt; downloads map to different Tor circuits. If all of the traffic from a given &lt;code&gt;apt-get&lt;/code&gt; session goes over a single Tor circuit, then the exit node, the mirror server, and any network observer that can see the traffic between those two can use that as the fingerprint.&lt;/p&gt;
+
+&lt;p&gt;To expand on this, if TAILS fetched all of its apt sources (wheezy, backports, testing, etc) via HTTPS from the same mirror (e.g. mirrors.kernel.org), then the exit node and network observer could not really distinguish the distro the machine making the connection was running since mirrors.kernel.org hosts many distro mirrors. There are two key parts here: using HTTPS to encrypt the data, and using HTTP pipelining so that network connections are reused for multiple downloads, rather than the default behavior of making a new HTTPS for each individual download. This setup would also prevent the custom pattern of apt sources from being distinguished since it would just show as downloading some series of files, and those files could be packages, package metadata, perl modules, source tarballs, etc.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Question: central server, federated, or p2p? Answer: all!</title>
+      <link>https://guardianproject.github.io/info/2014/09/18/question-central-server-federated-or-p2p-answer-all/</link>
+      <pubDate>Thu, 18 Sep 2014 00:30:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/09/18/question-central-server-federated-or-p2p-answer-all/</guid>
+      <description>&lt;p&gt;There are many ideas of core architectures for providing digital services, each with their own advantages and disadvantages. I break it down along the lines of central servers, federated servers, and peer-to-peer, serverless systems.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12631&#34; style=&#34;width: 210px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12631&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png&#34; alt=&#34;a central service with clients connecting to it&#34; width=&#34;200&#34; height=&#34;207&#34; class=&#34;size-full wp-image-12631&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png 200w, https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_-100x103.png 100w, https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_-150x155.png 150w&#34; sizes=&#34;(max-width: 200px) 100vw, 200px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12631&#34; class=&#34;wp-caption-text&#34;&gt;
+    a central service with clients connecting to it
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Most big internet companies operate in effect as a central server (even though they are implemented differently). There is only facebook.com, there are no other services that can inter-operate with facebook.com. Have a single, central repo makes problems of finding the service and finding people within the service a lot easier. Once you are in Facebook, you just need to know the name of the person you want to contact and you are connected. The Facebook apps just need to talk to facebook.com, so the user does not need to know which service they are using in order to configure the app.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12633&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;http://www.bendevane.com/RDC2012/ians/2012/10/09/campsiteofthefutur/&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12633&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-300x170.png&#34; alt=&#34;email as federated service&#34; width=&#34;300&#34; height=&#34;170&#34; class=&#34;size-medium wp-image-12633&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-300x170.png 300w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-100x56.png 100w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-150x85.png 150w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-200x113.png 200w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-450x255.png 450w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-600x341.png 600w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582-900x511.png 900w, https://guardianproject.info/wp-content/uploads/2014/09/Federated-01-1024x582.png 1024w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12633&#34; class=&#34;wp-caption-text&#34;&gt;
+    email as federated service
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Email is a great example of a federated system. Each email provider acts like a central server, but then each of those central servers can easily talk to each other and exchange data. So fastmail.fm and gmail.com are both centralized services, but users do not need to know any extra information in order to exchange emails between the two services, or any other of the millions of email servers out there. A federated system provides a lot of the benefits of a centralized server with more flexibility. The downside is that federated services generally require more configuration to use them (though webmail makes that much less of an issue).&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12632&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12632&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram.png&#34; alt=&#34;a peer-to-peer network&#34; width=&#34;300&#34; height=&#34;245&#34; class=&#34;size-full wp-image-12632&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram.png 300w, https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram-100x81.png 100w, https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram-150x122.png 150w, https://guardianproject.info/wp-content/uploads/2014/09/300px-Unstructured_peer-to-peer_network_diagram-200x163.png 200w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12632&#34; class=&#34;wp-caption-text&#34;&gt;
+    a peer-to-peer network
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Peer-to-peer systems can provide unique benefits of bandwidth efficiency as well as working around blockages in the internet. Sharing large files with thousands of people is quite expensive when using a central server, but with bittorrent, anyone can share large files to many many people using only a basic broadband connection.&lt;/p&gt;
+
+&lt;p&gt;Over the past year and a half of our Bazaar project, we have been thinking a lot about how to distribute apps to people who face a number of challenges. Each of these systems offers distinct advantages and disadvantages, so it is quite difficult to choose only one. Instead, we thought why not try to make a system that combines all three? Android’s APK app package format is a good format to work in this model because they are self-contained and containing a form of embedded identity in the app signature. So if you already have an Android app installed, then Android will enforce that only APKs signed by the same key as the installed app can be installed over it.&lt;/p&gt;
+
+&lt;p&gt;That means in theory, it does not matter where the APK came from as long as it has a valid signature. There are some details where it does matter, mostly related to exploits like “Master Key” that can inject code into an existing APK. The FDroid app repository signature has a similar property: once you trust the repository signing key, it does not matter how you got the repository files as long as the signature validates. This is a model proven by GNU/Linux distros like Debian. The repository metadata also provides a way to validate APKs have not been modified since they were added to the signed repository. Since both of these do not rely on the method of transport to prove their authenticity, this combination provides a great testbed for this idea of combining a central service, with decentralized servers and peer-to-peer distribution.&lt;/p&gt;
+
+&lt;p&gt;This work was all incorporated in the &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;FDroid&lt;/a&gt; app store for Android. The central f-droid.org app repository means that FDroid can deliver well over one thousand apps without any configuration on the part of the user. The “fdroidserver” developer tools means that anyone can set up their own repository of apps, and users can easily add that repository to FDroid. It is not quite zero configuration, but the process is not too difficult, and there is more we are planning to do to smooth out that process even more. This also provides a channel for users to get apps via “collateral freedom” techniques like using Amazon S3, Akamai, etc. to distribute files where many such services are filtered or blocked. Lastly, we made it possible to have the FDroid app itself act as an app repository, and other devices can connect to that repository using local WiFi, mesh, Bluetooth, and removable media.&lt;/p&gt;
+
+&lt;p&gt;This stuff is all implemented and included in the FDroid app and fdroidserver developer tools. The big remaining challenge is combining them all into a usable experience for people who do not know the technical details. This has been tested, discussed, sketched out, and there is a prototype implementation in the works. So I can end with a quick overview of some positive and negative observations about the various peer-to-peer connections that we experimented with:&lt;/p&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; Bluetooth is ubiquitous
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; very slow data rate
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; pairing is difficult
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; WiFi is very widespread
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; local connections are very fast
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; access points and proxies can block host-to-host connections
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; running access points on a device is not common nor easy
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; NFC makes Bluetooth very easy to use
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; NFC is not commonly used or available
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; NFC is far to slow and fiddly to be used as the data transmission medium
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; SD cards can move lots of data securely
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; not all devices have removable SD cards
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; swapping SD cards can be a fiddly process
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; swapping SD cards can not be automatic
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul style=&#34;list-style-type: none;&#34;&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; USB thumb drives can move lots of data securely
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;+&lt;/strong&gt; they can be easily swapped between devices
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; swapping SD cards can not be automatic
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; not all devices support USB-OTG i.e. attached devices
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;strong&gt;–&lt;/strong&gt; USB-OTG is not widely used
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New Official Guardian Project app repo for FDroid!</title>
+      <link>https://guardianproject.github.io/info/2014/06/30/new-official-guardian-project-app-repo-for-fdroid/</link>
+      <pubDate>Mon, 30 Jun 2014 20:26:39 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/06/30/new-official-guardian-project-app-repo-for-fdroid/</guid>
+      <description>
+
+&lt;p&gt;We now have an official &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;FDroid&lt;/a&gt; app repository that is available via three separate methods, to guarantee access to a trusted distribution channel throughout the world! To start with, you must have FDroid installed. Right now, I recommend using the latest test release since it has support for Tor and .onion addresses (earlier versions should work for non-onion addresses):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org/repo/org.fdroid.fdroid_710.apk&#34;&gt;https://f-droid.org/repo/org.fdroid.fdroid_710.apk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to add this repo to your FDroid config, you can either click directly on these links on your devices and FDroid will recognize them, or you can click on them on your desktop, and you will be presented with a QR Code to scan. Here are your options:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTPS: &lt;a href=&#34;https://guardianproject.info/fdroid/repo?fingerprint=B7C2EEFD8DAC7806AF67DFCD92EB18126BC08312A7F2D6F3862E46013C7A6135&#34;&gt;https://guardianproject.info/fdroid/repo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tor Hidden Service aka onion address: &lt;a href=&#34;http://bdf2wcxujkg6qqff.onion/fdroid/repo?fingerprint=B7C2EEFD8DAC7806AF67DFCD92EB18126BC08312A7F2D6F3862E46013C7A6135&#34;&gt;http://bdf2wcxujkg6qqff.onion/fdroid/repo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Amazon AWS S3 Bucket (&lt;em&gt;this does not show up in a browser&lt;/em&gt;): &lt;a href=&#34;https://s3.amazonaws.com/guardianproject/fdroid/repo?fingerprint=B7C2EEFD8DAC7806AF67DFCD92EB18126BC08312A7F2D6F3862E46013C7A6135&#34;&gt;https://s3.amazonaws.com/guardianproject/fdroid/repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From here on out, our old FDroid repo (&lt;a href=&#34;https://guardianproject.info/repo&#34;&gt;https://guardianproject.info/repo&lt;/a&gt;) is considered deprecated and will no longer be updated. It will eventually be removed. Update to the new one!&lt;/p&gt;
+
+&lt;p&gt;Also, if you missed it before, all of our test builds are also &lt;a href=&#34;https://guardianproject.info/2014/06/06/automatic-private-distribution-of-our-test-builds/&#34;&gt;available for testing only via FDroid&lt;/a&gt;. Just remember, the builds in the test repo are only debug builds, not fully trusted builds, so use them for testing only.&lt;/p&gt;
+
+&lt;h3 id=&#34;automate-it-all&#34;&gt;Automate it all!&lt;/h3&gt;
+
+&lt;p&gt;This setup has three distribution channels that are all mirrors of a repo that is generated on a fully offline machine. This is only manageable because of lots of new automation features in the &lt;a href=&#34;https://gitlab.com/fdroid/fdroidserver&#34; target=&#34;_blank&#34;&gt;fdroidserver&lt;/a&gt; tools for building and managing app repos. You can now set up a USB thumb drive as the automatic courier for shuffling the repo from the offline machine to an online machine. The repo is generated, updated, and signed using &lt;code&gt;fdroid update&lt;/code&gt;, then those signed files are synced to the USB thumb drive using &lt;code&gt;fdroid server update&lt;/code&gt;. Then the online machine syncs the signed files from that USB thumb drive to multiple servers via SSH and Amazon S3 with a single command: &lt;code&gt;fdroid server update&lt;/code&gt;. The magic is in setting up the config options and letting the tools do the rest.&lt;/p&gt;
+
+&lt;h3 id=&#34;new-repo-signing-key&#34;&gt;New Repo Signing Key&lt;/h3&gt;
+
+&lt;p&gt;For part of this, I’ve completed the process of generating a new, fully offline fdroid &lt;a href=&#34;https://guardianproject.info/home/signing-keys/&#34;&gt;signing key&lt;/a&gt;. So that means there is a new signing key for the FDroid repo, and the old repo signing key is being retired.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/releases/guardianproject-rsa4096-fdroid-repo-signing-key.pem&#34;&gt;guardianproject-rsa4096-fdroid-repo-signing-key.pem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/releases/guardianproject-rsa4096-fdroid-repo-signing-key.pem.sig&#34;&gt;guardianproject-rsa4096-fdroid-repo-signing-key.pem.sig&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The fingerprints for this signing key are:&lt;/p&gt;
+
+&lt;pre&gt;Owner: EMAILADDRESS=root@guardianp&amp;#x72;&amp;#x6f;&amp;#x6a;&amp;#x65;&amp;#x63;&amp;#x74;&amp;#x2e;&amp;#x69;&amp;#x6e;&amp;#x66;&amp;#x6f;, CN=guardianproject.info, O=Guardian Project, OU=FDroid Repo, L=New York, ST=New York, C=US
+Issuer: &amp;#x45;&amp;#x4d;&amp;#x41;ILADD&amp;#x52;&amp;#x45;&amp;#x53;&amp;#x53;=roo&amp;#x74;&amp;#x40;&amp;#x67;&amp;#x75;ardi&amp;#x61;&amp;#x6e;&amp;#x70;&amp;#x72;oject&amp;#x2e;&amp;#x69;&amp;#x6e;&amp;#x66;o, CN=guardianproject.info, O=Guardian Project, OU=FDroid Repo, L=New York, ST=New York, C=US
+Serial number: a397b4da7ecda034
+Valid from: Thu Jun 26 15:39:18 EDT 2014 until: Sun Nov 10 14:39:18 EST 2041
+Certificate fingerprints:
+ MD5:  8C:BE:60:6F:D7:7E:0D:2D:B8:06:B5:B9:AD:82:F5:5D
+ SHA1: 63:9F:F1:76:2B:3E:28:EC:CE:DB:9E:01:7D:93:21:BE:90:89:CD:AD
+ SHA256: B7:C2:EE:FD:8D:AC:78:06:AF:67:DF:CD:92:EB:18:12:6B:C0:83:12:A7:F2:D6:F3:86:2E:46:01:3C:7A:61:35
+ Signature algorithm name: SHA1withRSA
+ Version: 1
+&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automatic, private distribution of our test builds</title>
+      <link>https://guardianproject.github.io/info/2014/06/06/automatic-private-distribution-of-our-test-builds/</link>
+      <pubDate>Fri, 06 Jun 2014 17:17:01 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/06/06/automatic-private-distribution-of-our-test-builds/</guid>
+      <description>&lt;p&gt;One thing we are very lucky to have is a good community of people willing to test out unfinished builds of our software. That is a very valuable contribution to the process of developing usable, secure apps. So we want to make this process as easy as possible while keeping it as secure and private as possible. To that end, we have set up an &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;FDroid&lt;/a&gt; repository of apps generated from the test builds that our build server generates automatically every time we publish new code.&lt;/p&gt;
+
+&lt;p&gt;After this big burst of development focused on FDroid, it has become clear that FDroid has lots of promise for becoming a complete solution for the whole process of delivering software from developers to users. We have tried other ways of delivering test builds like HockeyApp and Google Play’s Alpha and Beta channels and have found them lacking. The process did not seem as easy as it should be. And of course, both of them leave a lot to be desired when it comes to privacy of the users. So this is the first step in hopefully a much bigger project.&lt;/p&gt;
+
+&lt;p&gt;To use our new test build service, first install FDroid by downloading it from the official source: &lt;a href=&#34;https://f-droid.org&#34;&gt;https://f-droid.org&lt;/a&gt;. Then using a QR Code scanner like &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.zxing.client.android&#34; target=&#34;_blank&#34;&gt;Barcode Scanner&lt;/a&gt;, just scan the QR Code below, and send it to FDroid &lt;strong&gt;Repositories&lt;/strong&gt;. You can also browse to this page on your Android device, and click the link below to add it to FDroid:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.guardianproject.info/fdroid/repo?fingerprint=F8ED4C73C125E7A67F99DB269480DAF50BE1758952E07EE5ABF116FE4B2DB1E8&#34;&gt;https://dev.guardianproject.info/fdroid/repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.guardianproject.info/fdroid/repo?fingerprint=F8ED4C73C125E7A67F99DB269480DAF50BE1758952E07EE5ABF116FE4B2DB1E8&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/06/dev.guardianproject.info-QR-e1402010770323.png&#34; alt=&#34;dev.guardianproject.info&#34; width=&#34;245&#34; height=&#34;245&#34; class=&#34;aligncenter size-full wp-image-12462&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also use our test repo via an anonymized connection using the Tor Hidden Service (as of this moment, that means downloading an &lt;a href=&#34;https://f-droid.org/repo/org.fdroid.fdroid_710.apk&#34;&gt;official FDroid v0.71 build&lt;/a&gt;). Just get &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&#34; target=&#34;_blank&#34;&gt;Orbot&lt;/a&gt; and turn it on, and the following .onion address will automatically work in FDroid, as long as you have a new enough version (0.69 or later).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://k6e4p7yji2rioxbm.onion/fdroid/repo?fingerprint=F8ED4C73C125E7A67F99DB269480DAF50BE1758952E07EE5ABF116FE4B2DB1E8&#34;&gt;http://k6e4p7yji2rioxbm.onion/fdroid/repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://k6e4p7yji2rioxbm.onion/fdroid/repo?fingerprint=F8ED4C73C125E7A67F99DB269480DAF50BE1758952E07EE5ABF116FE4B2DB1E8&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/06/k6e4p7yji2rioxbm.onion-QR-e1402010779963.png&#34; alt=&#34;k6e4p7yji2rioxbm.onion&#34; width=&#34;245&#34; height=&#34;245&#34; class=&#34;aligncenter size-full wp-image-12463&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turn Your Device Into an App Store</title>
+      <link>https://guardianproject.github.io/info/2013/11/18/turn-your-device-into-an-app-store/</link>
+      <pubDate>Mon, 18 Nov 2013 16:27:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/18/turn-your-device-into-an-app-store/</guid>
+      <description>&lt;p&gt;As we’ve touched upon in &lt;a href=&#34;https://guardianproject.info/2013/11/05/setting-up-your-own-app-store-with-f-droid/&#34;&gt;previous blog posts &lt;/a&gt; the Google Play model of application distribution has some disadvantages. Google does not make the Play store universally available, instead limiting availability to a subset of countries. Using the Play store to install apps necessitates both sharing personal information with Google and enabling Google to remotely remove apps from your device (colloquially referred to as &lt;a href=&#34;http://www.engadget.com/2008/10/16/google-implemented-an-android-kill-switch-those-rascals/&#34;&gt;having a ‘kill switch’&lt;/a&gt;). Using the Play store also requires a functional data connection (wifi or otherwise) to allow apps to be downloaded. Often there is a need to quickly bootstrap users during training sessions in countries with unreliable/restricted data connectivity, or in extreme cases, &lt;a href=&#34;http://www.nytimes.com/2011/01/29/technology/internet/29cutoff.html?_r=0&#34;&gt;no internet connectivity at all&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org/&#34;&gt;F-Droid&lt;/a&gt; addresses many of these concerns, but still requires a functional data connection in order to access the repository housing applications available for install. Wouldn’t it be great if there was an easy way for users to share applications amongst themselves, in absence of a reliable data connection? Today we would like to announce initial steps the Guardian Project is taking to enable this exact functionality. We’ve been working on a prototype application capable of building F-Droid repositories &lt;strong&gt;on-device&lt;/strong&gt;, allowing users to share apps they already have installed to other users through F-Droid. In this way savvy users can quickly and securely share applications they already know and trust with friends and family without requiring a central market/repository or a reliable internet connection.&lt;/p&gt;
+
+&lt;p&gt;To start, we’ve built a stand-alone prototype application we call “_&lt;strong&gt;Kerplapp&lt;/strong&gt;_” (as in &lt;em&gt;Kerplop for Apps)&lt;/em&gt;. Using Kerplapp an established user can select applications already installed on their phone that they wish to make available to other users. Using the selected applications Kerplapp builds a &lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository&#34;&gt;simple binary F-Droid repostiory&lt;/a&gt; on the user’s device. The local on-device repository is then made available over a WiFi connection to other users on the local area network. Kerplapp will even display a QR code with the information required to add the local Kerplapp repo as a source repository for an F-Droid client running on another device. We hope to eventually merge our work back into the official F-droid Android client, but while we work out the kinks the Kerplapp application operates side-by-side with the F-Droid client app.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_11966&#34; style=&#34;width: 190px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-11966&#34; class=&#34;size-medium wp-image-11966&#34; alt=&#34;Sharing access to a Kerplapp repo with a QR code.&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48-180x300.png&#34; width=&#34;180&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48-180x300.png 180w, https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48-614x1024.png 614w, https://guardianproject.info/wp-content/uploads/2013/11/Screenshot_2013-11-18-16-02-48.png 768w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-11966&#34; class=&#34;wp-caption-text&#34;&gt;
+    Sharing access to a Kerplapp repo with a QR code.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Building on top of F-Droid has a number of advantages. First, we can directly benefit from the tremendous effort and success of the F-Droid project! We’ve been actively contributing improvements &lt;a href=&#34;https://gitorious.org/f-droid/fdroidclient/merge_requests/39&#34;&gt;back to both the F-droid client&lt;/a&gt; and &lt;a href=&#34;https://gitorious.org/f-droid/fdroidserver/merge_requests/127&#34;&gt;the F-droid server&lt;/a&gt;, making it easier for everyone to set up new F-Droid repos and share connection details. Secondly, by using a binary F-Droid repository we can ensure that when users share apps between each other that the apps will continue to receive updates through other channels. That is, if I share an app with you through Kerplapp you will be able to install updates to the app from other F-Droid binary repos and other Kerplapp users – wherever the app and its updates are available with the same APK signature. The F-Droid client will do the hard work of determining what updates are available and compatible with your device&lt;/p&gt;
+
+&lt;p&gt;There’s a lot of work left to be done! One of our short term goals include enabling Bonjour support so that the F-Droid client can find repositories on the local network without requiring them to be added manually. We’re interested in supporting device to device app transfer over a number of channels, starting with HTTPS and eventually adding support for bluetooth and NFC. Building on the success of ChatSecure we’re actively working on supporting F-Droid app transfer over &lt;a href=&#34;https://dev.guardianproject.info/projects/gibberbot/wiki/OTRDATA_Specifications&#34;&gt;OTR-Data&lt;/a&gt;, the ChatSecure proposal for in-band OTR encrypted file transfers. With F-Droid as an OTR-DATA endpoint we can support peer to peer app transfer over a trusted, authenticated, and encrypted channel. We’re also exploring how we can use the OTR keys your contacts already trust to &lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Signing&#34;&gt;sign the F-Droid repository metadata index&lt;/a&gt;, providing greater trust in the accuracy of the metadata provided by peer to peer repositories.&lt;/p&gt;
+
+&lt;p&gt;If you’re curious you can &lt;a href=&#34;https://dev.guardianproject.info/projects/bazaar&#34;&gt;follow Kerplapp’s development on our project tracker.&lt;/a&gt; We’re also looking for adventurous users &lt;a href=&#34;https://guardianproject.info/builds/Kerplapp/&#34;&gt;to install the Kerplapp prototype application&lt;/a&gt; to provide feedback and testing.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own app store with F-Droid</title>
+      <link>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</link>
+      <pubDate>Tue, 05 Nov 2013 11:55:43 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</guid>
+      <description>
+
+&lt;p&gt;(_This blog post as now been cooked into an &lt;a href=&#34;https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo&#34; target=&#34;_blank&#34;&gt;updated HOWTO&lt;/a&gt;_)&lt;/p&gt;
+
+&lt;p&gt;The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are &lt;a href=&#34;http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links&#34; target=&#34;_blank&#34;&gt;actively tapping&lt;/a&gt; into &lt;a href=&#34;http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html&#34; target=&#34;_blank&#34;&gt;the raw data streams&lt;/a&gt; of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/your-own-app-store.png&#34; alt=&#34;your-own-app-store&#34; width=&#34;300&#34; height=&#34;203&#34; class=&#34;alignright size-full wp-image-11896&#34; /&gt; &lt;a href=&#34;https://f-droid.org&#34; title=&#34;F-Droid Home Page&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; is a wonderful, free app store for Android. It is modeled after the &lt;a href=&#34;http://www.debian.org&#34; title=&#34;Debian home page&#34; target=&#34;_blank&#34;&gt;Debian GNU/Linux&lt;/a&gt; distro. It has its own package repositories (repos) and build servers for all the apps that are part of the official OS. Like Debian and Ubuntu, you can also setup your own repos for anyone to use. Any free software can be added to the official F-Droid repos, where they are built and signed by the F-Droid server. This can be annoying because it means that your apps in F-Droid are signed by a different key than your apps in the Google Play Store. If you host your own F-Droid repo, then people can use F-Droid to install your own builds signed by your own signing key.&lt;/p&gt;
+
+&lt;p&gt;This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the &lt;code&gt;fdroidserver&lt;/code&gt; tools and a webserver. For the webserver, here we use &lt;em&gt;nginx&lt;/em&gt; for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: &lt;tt&gt;F50E ADDD 2234 F563&lt;/tt&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install fdroidserver nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the case of this HOWTO, we’re going to setup a “&lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository&#34; target=&#34;_blank&#34;&gt;Simple Binary Repository&lt;/a&gt;” to host our official APKs. The repo will be set up in the recommended &lt;code&gt;fdroid/&lt;/code&gt; subdirectory. This gives the &lt;code&gt;fdroid&lt;/code&gt; tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let’s give our normal user control over this subdirectory in the web root so that we don’t need to run the F-Droid tools as root (with &lt;em&gt;nginx&lt;/em&gt;, the webroot is &lt;code&gt;/usr/share/nginx/www&lt;/code&gt;, it is different for other webservers):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mkdir /usr/share/nginx/www/fdroid
+sudo chown -R $USER /usr/share/nginx/www/fdroid
+cd /usr/share/nginx/www/fdroid
+fdroid init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now put your APK files into &lt;code&gt;/usr/share/nginx/www/fdroid/repo&lt;/code&gt; and you are ready to run the commands to build the repo (if &lt;code&gt;fdroid init&lt;/code&gt; cannot find your Android SDK in &lt;code&gt;/opt/android-sdk&lt;/code&gt; or &lt;code&gt;$ANDROID_HOME&lt;/code&gt;, it will prompt you for the path):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /usr/share/nginx/www/fdroid
+cp /path/to/*.apk /usr/share/nginx/www/fdroid/repo/
+fdroid update -c
+fdroid update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png&#34; alt=&#34;fdroidheader3&#34; width=&#34;300&#34; height=&#34;75&#34; class=&#34;alignleft size-medium wp-image-11906&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png 720w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Voila! Now you have a working F-Droid Repo! Add it to an F-Droid client on your Android device to test it out. That is done in the &lt;strong&gt;Manage Repos&lt;/strong&gt; screen available from the menu. Your repo URL will be the hostname or IP address of your machine with &lt;code&gt;/fdroid/repo/&lt;/code&gt; added to the end of it, i.e. &lt;code&gt;https://mysecureserver.com/fdroid/repo/&lt;/code&gt; or &lt;code&gt;http://192.168.2.53/fdroid/repo/&lt;/code&gt;. You can temporarily uncheck the official repos to easily see what F-Droid found in your new repo.&lt;/p&gt;
+
+&lt;h2 id=&#34;customization&#34;&gt;Customization&lt;/h2&gt;
+
+&lt;p&gt;You can also customize your repo by editing the config file. Be sure to use a programming text editor, like &lt;code&gt;editor /usr/share/nginx/www/fdroid/config.py&lt;/code&gt;. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;repo_url = &amp;quot;https://guardianproject.info/fdroid/repo&amp;quot;
+repo_name = &amp;quot;My Local Repo&amp;quot;
+repo_icon = &amp;quot;GP_Logo_hires.png&amp;quot;
+repo_description = &amp;quot;&amp;quot;&amp;quot;
+This is a local test repository of Hans-Christoph Steiner &amp;lt;&amp;amp;#x68;a&amp;amp;#x6e;s@&amp;amp;#x67;ua&amp;amp;#x72;d&amp;amp;#x69;&amp;amp;#x61;n&amp;amp;#x70;ro&amp;amp;#x6a;e&amp;amp;#x63;&amp;amp;#x74;.&amp;amp;#x69;nf&amp;amp;#x6f;&amp;gt;.  It is a repository of Guardian Project apps.
+&amp;quot;&amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To put your icon into your repo, choose a PNG image to put in your repo. The PNG goes in &lt;code&gt;/usr/share/nginx/www/fdroid/&lt;/code&gt;, the file can be named whatever you want (by default its &lt;code&gt;fdroid-icon.png&lt;/code&gt;). If you change the name from the default, be sure to update &lt;code&gt;repo_icon&lt;/code&gt; and &lt;code&gt;archive_icon&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;more-security&#34;&gt;More Security&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png&#34; alt=&#34;apg&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1029&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/02/apg.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Now that you have a working repo, its time to improve the security. Generating a repo in place is very easy, that is why this HOWTO started there, but it is not as secure as it should be if your repo is going to be your main distribution point. When generating the repo in place, make sure that &lt;code&gt;config.py&lt;/code&gt; is not accessible via the web, since it contains passwords. If the file permissions are correct (e.g. &lt;code&gt;chmod 0600 config.py&lt;/code&gt;), then &lt;code&gt;config.py&lt;/code&gt; will not be readable by the webserver. But the signing keys will still be that public server. To improve this situation, generate the repo on a non-public machine like your laptop, keeping &lt;code&gt;config.py&lt;/code&gt; and the keystore only on that machine, then use &lt;code&gt;fdroid server update&lt;/code&gt; to publish the changes to your repo on a separate server. You just need to set &lt;code&gt;serverwebroot&lt;/code&gt; in &lt;code&gt;config.py&lt;/code&gt; properly, then &lt;code&gt;fdroid server update&lt;/code&gt; will do the publishing via rsync over ssh. So both computers will have to have ssh and rsync installed and setup.&lt;/p&gt;
+
+&lt;p&gt;You can also use your own existing signing key rather than the one generated by &lt;code&gt;fdroid init&lt;/code&gt;, just edit &lt;code&gt;repo_keyalias&lt;/code&gt;, &lt;code&gt;keystore&lt;/code&gt;, &lt;code&gt;keystorepass&lt;/code&gt;, &lt;code&gt;keypass&lt;/code&gt;, and &lt;code&gt;keydname&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we like Tor and its Hidden Services for providing privacy, we also want to setup an F-Droid repository that is accessible over a Tor Hidden Service aka onion address. This will be covered in a future HOWTO.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Issues when distributing software</title>
+      <link>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</link>
+      <pubDate>Thu, 31 Oct 2013 15:51:19 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</guid>
+      <description>&lt;p&gt;There is currently a &lt;a href=&#34;http://lists.debian.org/debian-security/2013/10/msg00027.html&#34; target=&#34;_blank&#34;&gt;discussion underway on the Debian-security list&lt;/a&gt; about adding TLS and Tor functionality to the official repositories (repos) of Debian packages that is highlighting how we need to update how we think about the risks when distributing software. Mostly, we are used to thinking about making sure that the software that the user is installing is the same exact software that has been posted for distribution. This is generally handled by signing the software package, then verifying that signature on the user’s machine. This is how it works on Mac OS X, Windows, Debian, etc. etc.&lt;/p&gt;
+
+&lt;p&gt;But the authenticity of a software package is not the only issue that needs to be addressed, especially these days where many companies and governments around the world are trying to track everything that anyone is doing on the internet. In order to understand why Tor and TLS would be useful here, it good to break down the various concerns (or threats if you prefer):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;package authenticity &lt;em&gt;(software can be modified while being downloaded)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;package availability &lt;em&gt;(software security updates can be individually blocked)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;repo availability &lt;em&gt;(internet services can be blocked by governments and companies)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;who’s downloading what package &lt;em&gt;(currently visible to anyone who can see the network traffic, including open wifi, etc.)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Most people distributing software are used to thinking about #1 verifying packages when thinking about the security of software distribution. #2, #3, and #4 are also important, and currently not well addressed. This is where TLS and Tor come in. Both can help prevent Man-In-The-Middle manipulations as well as reduce the amount of information that is leaked to the network. Tor can also help with #3. Since Tor is difficult to block, it is often uses to circumvent censorship. In this case a software repo could be blocked entirely, and Tor could help with gaining access to it. The Update Framework has &lt;a href=&#34;https://github.com/theupdateframework/tuf/blob/develop/README.md&#34; title=&#34;TUF: The Update Framework -  Security&#34; target=&#34;_blank&#34;&gt;a good overview of the possible attacks&lt;/a&gt; against software repos.&lt;/p&gt;
+
+&lt;p&gt;So having software repos available with both TLS and Tor available as options is a very good idea. As far as I have seen, there are not any Debian repos available via a Tor Hidden Service. There are a number of official mirrors that already support TLS/HTTPS. You can find them using &lt;a href=&#34;https://gist.github.com/eighthave/7285154&#34; title=&#34;the script in a gist paste&#34; target=&#34;_blank&#34;&gt;this script:&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#!/usr/bin/python
+
+import urllib2
+import re
+import ssl
+import sys
+
+# # find generic mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/mirror/list&#39;)
+https = []
+for line in mirrors.readlines():
+    m = re.match(&#39;.*&amp;lt;td valign=&amp;quot;top&amp;quot;&amp;gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            https.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+# print &#39;HTTPS apt repos:&#39;
+#for url in https:
+#    print url
+
+
+# # find security mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/mirror/list-full&#39;)
+securitys = []
+for line in mirrors.readlines():
+    m = re.match(&#39;.*&amp;lt;/tt&amp;gt;&amp;lt;br&amp;gt;Security updates over HTTP: &amp;lt;tt&amp;gt;&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*/debian-security/&amp;lt;/a&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            securitys.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+# print &#39;HTTPS security repos:&#39;
+# for url in securitys:
+#     print url
+
+
+# now find the backports mirrors
+mirrors = urllib2.urlopen(&#39;http://backports-master.debian.org/Mirrors/&#39;)
+backports = []
+for line in mirrors.readlines():
+#&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http://be.mirror.eurid.eu/debian-backports/&amp;quot;&amp;gt;/debian-backports/&amp;lt;/a&amp;gt;
+    m = re.match(&#39;.*&amp;lt;td&amp;gt;&amp;lt;a href=&amp;quot;http(.*)&amp;quot;&amp;gt;.*/debian-backports/&amp;lt;/a&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            backports.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+#print &#39;HTTPS backports repos:&#39;
+#for url in backports:
+#    print url
+
+
+# now find the CD image mirrors
+mirrors = urllib2.urlopen(&#39;http://www.debian.org/CD/http-ftp/&#39;)
+cds = []
+for line in mirrors.readlines():
+# &amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http://mirror.easyspeedy.com/debian-cd/&amp;quot;&amp;gt;HTTP&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    m = re.match(&#39;.*&amp;lt;a rel=&amp;quot;nofollow&amp;quot; href=&amp;quot;http(:.*)&amp;quot;&amp;gt;HTTP&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;.*&#39;, line)
+    if m:
+        url = &#39;https&#39; + m.group(1)
+        print &#39;trying: &#39;,
+        print url,
+        print &#39;...&#39;,
+        sys.stdout.flush()
+        try:
+            response=urllib2.urlopen(url, timeout=1)
+            cds.append(url)
+            print &#39;success!&#39;
+        except urllib2.URLError as err:
+            print &#39;fail!&#39;
+        except ssl.SSLError as err:
+            print &#39;bad SSL!&#39;
+
+print &#39;HTTPS CD image repos:&#39;
+for url in cds:
+    print url
+
+
+# now write everything to a file
+f = open(&#39;/tmp/https-debian-archives.txt&#39;, &#39;w&#39;)
+
+f.write(&#39;HTTPS apt repos\n&#39;)
+f.write(&#39;---------------\n&#39;)
+for url in https:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS security repos\n&#39;)
+f.write(&#39;---------------\n&#39;)
+for url in securitys:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS backports repos\n&#39;)
+f.write(&#39;--------------------\n&#39;)
+for url in backports:
+    f.write(url + &#39;\n&#39;)
+
+f.write(&#39;\n\nHTTPS CD image repos\n&#39;)
+f.write(&#39;--------------------\n&#39;)
+for url in cds:
+    f.write(url + &#39;\n&#39;)
+
+
+f.close()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

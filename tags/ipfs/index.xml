@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ipfs on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/ipfs/</link>
+    <description>Recent content in Ipfs on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/ipfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>
+
+&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all
+sorts of issues. That&amp;rsquo;s why we took special interest in
+&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a
+JavaScript library for decentralized content delivery in web-browsers and
+markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient
+primarily in the context of static websites.  While it should work with dynamic
+websites too, that was out of focus for us.&lt;/p&gt;
+
+&lt;p&gt;Under the hood LibResilient uses &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API&#34;&gt;Web
+Workers&lt;/a&gt;.
+Technically it&amp;rsquo;s a piece of JavaScript that websites can install into the
+browsers of their visitors.  I like to compare it to cookies, except that it&amp;rsquo;s
+not just data but actually a program for manipulating your network request. The
+main purpose of Web Workers is to enable web apps to optimize their network
+connections. Web Workers are pretty low-level API.&lt;/p&gt;
+
+&lt;p&gt;LibResilient delivers implementations for common use-cases on top of Web
+Workers in the form of plug-ins.  We&amp;rsquo;ve looked at the 3 most basic of those
+plug-ins.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;fetch plugin&lt;/em&gt; - routes network requests directly to the web-server as if
+LibResilient wasn&amp;rsquo;t present.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;cache plugin&lt;/em&gt; - stores HTML, JavaScript, images and other files inside
+the browsers local storage&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;alt-fetch plugin&lt;/em&gt; - allows to configure a list of website mirrors and tries
+to fetch files from there&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These enable us to keep a website online and even update it if the main
+web-server running that site has an outage.  It&amp;rsquo;s key that visitors must have
+managed to load the website at least once before.  Only than can LibResilient
+work it&amp;rsquo;s magic and install itself and the list of site mirrors into the users
+browser.  This solution doesn&amp;rsquo;t work for first time visitors, during the period
+of an outage.&lt;/p&gt;
+
+&lt;p&gt;Of course this requires to run website mirrors. Static websites really shine in
+this regard, because they are very easy to mirror and static web-space is quite
+inexpensive these days.&lt;/p&gt;
+
+&lt;p&gt;We also looked into using IPFS Gateways as mirrors.  To accomplish this we had
+to first add and pin websites to IPFS.  Next we had to publish the pinned copy
+of the site to IPNS.  Then we could use the IPNS-key-fingerprint to use every
+public IPFS gateway as mirror.  However, public gateways tend to require quite
+long to answer requests, which is bad for LibResilient because it uses
+relatively short timeouts to fail-over between mirrors.  So to get some sense
+of reliability, paid IPFS gateways guaranteed to pin your website are a more
+stable choice.&lt;/p&gt;
+
+&lt;h1 id=&#34;publishing-libresilient-to-ipfs&#34;&gt;Publishing LibResilient to IPFS&lt;/h1&gt;
+
+&lt;p&gt;This is a for publishing a static LibResilient enabled website to IPFS.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;requirements&lt;/h2&gt;
+
+&lt;p&gt;You will need VPS, or some other kind of tiny but always online server to make
+your data available on IPFS. This guide assumes that your server is running some
+flavor of GNU/Linux. It also assumes that you are familiar with the concept of
+static websites and that your site is already hosted on the internet.&lt;/p&gt;
+
+&lt;p&gt;Mind that IPFS can be very slow, if you run into timeouts don&amp;rsquo;t give up. Just
+wait a few minutes and give it a few more retries, it will work eventually.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-ipfs&#34;&gt;Install IPFS&lt;/h2&gt;
+
+&lt;p&gt;This short snipped will install &lt;code&gt;kubo&lt;/code&gt; the official IPFS binary build on your
+server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://dist.ipfs.tech/kubo/v0.18.1/kubo_v0.18.1_linux-amd64.tar.gz
+echo &amp;quot;15d42b47b8529edda3e8e2d6fe6c14958d939c4efd07dea02e204743e05216f3 kubo_v0.18.1_linux-amd64.tar.gz&amp;quot; \
+    | sha256sum --check
+tar -xzf kubo_v0.18.1_linux-amd64.tar.gz
+mv kubo/ipfs /usr/local/bin/ipfs
+rm -rf kubo kubo_v0.18.1_linux-amd64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setup kubo daemon to always run in background as systemd service. (Note: this
+is tested for Debian and might require different steps on other GNU/Linux
+distributions.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adduser ipfs --gecos &#39;&#39; --disabled-password
+su ipfs -c &#39;/usr/local/bin/ipfs init --profile server&#39;
+
+cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/ipfs-daemon.service
+[Unit]
+Description=IPFS Daemon
+
+[Service]
+Restart=always
+User=ipfs
+group=ipfs
+WorkingDirectory=/home/ipfs
+ExecStart=/usr/local/bin/ipfs daemon
+
+[Install]
+WantedBy=default.target
+EOF
+
+systemctl enable ipfs-daemon.service
+systemctl start ipfs-daemon.service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tip: If you&amp;rsquo;re behind a firewall or NAT make sure to open ports 4001/tcp and
+4001/udp so IPFS can connect to the internet.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-site-to-ipfs&#34;&gt;Publish site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Next we&amp;rsquo;ll publish the website to IPFS. You&amp;rsquo;ll need to copy your static website
+to the IPFS server. For this guide we&amp;rsquo;ll assume there&amp;rsquo;s a copy of your website
+at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The last line of the output of this command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;added QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck website
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy the CID and pin it. Pinning means that your IPFS daemon will never
+automatically delete these files to free up memeory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs pin add QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s time to make make it available via IPNS. So we need to generate an
+IPNS key. This key will serve as address for accessing the website using IPFS.
+It also serves as key for publishing updates to your website.&lt;/p&gt;
+
+&lt;p&gt;NOTE: all commands in this section are to be executed by &lt;code&gt;ipfs&lt;/code&gt; user.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key gen --type=rsa --size=2048 example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is how you can list your keys:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key list -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the relevant output should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;k2k4r8ls72x686fmm2s0px4plejbHkhOm9uuzrxwedsaag1w72ene5rw     example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The hash of the key, on the left side is going to be the IPNS name of your
+website. It&amp;rsquo;s a fixed name that doesn&amp;rsquo;t change even when you update your site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs name publish --key=example-site QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When your IPFS node is working and could connect to some peers, your site
+should now be accessible using IPNS. Although publishing may take several
+minutes. There are so-called &lt;a href=&#34;https://ipfs.github.io/public-gateway-checker/&#34;&gt;public
+gateways&lt;/a&gt; which allow users to
+access IPFS and IPNS content using http. E.g.:
+&lt;a href=&#34;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&#34;&gt;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also use &lt;code&gt;ipfs&lt;/code&gt; to check if the files got ingested correctly. E.g.:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs ls /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw
+ipfs cat /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;update-libresilient-config-to-include-ipns-link&#34;&gt;Update LibResilient config to include IPNS link&lt;/h3&gt;
+
+&lt;p&gt;Now that your site is available on IPNS you can finally add it to your
+LibResilient &lt;code&gt;config.json&lt;/code&gt;. You can actually add as many gateways as you&amp;rsquo;d
+like with LibResilient&amp;rsquo;s &lt;code&gt;alt-fetch&lt;/code&gt; plugin. Here&amp;rsquo;s a simple example where we
+added two gateways:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;plugins&amp;quot;: [{
+    &amp;quot;name&amp;quot;: &amp;quot;fetch&amp;quot;
+  }, {
+    &amp;quot;name&amp;quot;: &amp;quot;alt-fetch&amp;quot;,
+    &amp;quot;endpoints&amp;quot;: [
+      &amp;quot;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+      &amp;quot;https://ipfs.io/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+    ]
+  }],
+  &amp;quot;loggedComponents&amp;quot;: [&amp;quot;service-worker&amp;quot;, &amp;quot;fetch&amp;quot;, &amp;quot;alt-fetch&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;NOTE: We have to use IPNS, because as you can see we need write the IPFS
+address to a file which itself is part of the website. With IPNS updating the
+site also won&amp;rsquo;t require changing &lt;code&gt;config.json&lt;/code&gt; for every update.&lt;/p&gt;
+
+&lt;p&gt;When you&amp;rsquo;ve made your pick of IPFS gateways and added them to your
+&lt;code&gt;config.json&lt;/code&gt; you can publish it to your web-server.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-updated-site-to-ipfs&#34;&gt;Publish updated site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Now you also need to publish the change to IPFS. Again start by copying the
+site to your IPFS server. We again assume the updated copy of your static
+website is located at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next we can unpin the old version of the website. (Tip: you can list pinned
+files and directories with: &lt;code&gt;ipfs pin ls&lt;/code&gt; pinned directories will be marked as
+&lt;code&gt;recursive&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs unpin QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then we can add the updated site to IPFS and publish it to IPNS again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+ipfs name publish --key=example-site QmcoZrn004DGdRvuZWf1pdcpMQXuXghjCUy7ve5Og45dNU 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can repeat this step whenever you want to publish an updated version of
+your static website.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DWeb versus Web3: An Intern&#39;s Journey!</title>
+      <link>https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/</guid>
+      <description>&lt;p&gt;Close your eyes and imagine. You are sitting, designing the next game-changing innovative idea; however, you are not worried about any information leakage or spread, as you are in control. You not only hold ownership of your data, but with each online activity, your fear of being tracked dissipates more. This new internet you explore on understands each input, tailoring the content to your specific needs as it no longer runs on basic commands, but rather uses the combination of technologies and concepts such as machine learning, big data, and decentralized ledger technology to process information in a smart, human-like manner. This image in your mind is no longer a distant fantasy, but rather a closely approaching reality – this reality is the decentralized web, otherwise referred to as the DWeb.&lt;/p&gt;
+
+&lt;p&gt;The DWeb can be understood through comparison to the current internet paradigm. Currently all web traffic travels through centralized servers controlled by the well-known oligopoly that consists of Meta, Google, AWS, etc. Hence, these servers not only hold power by controlling web traffic, permissions and protocols, but also expose our information as an asset to be exploited for profit. Contrastingly, decentralization implies that users retain control of their own data; to hold permission access there can be no middle-man in the process of sending and receiving data, meaning there is peer-to-peer connectivity and links point not to the web server where the information resides, rather the content itself. For these reasons, content can be stored in multiple places at once, thus eliminating the need for a centralized server. While this may seem complicated, the benefits it reaps are unparalleled; from better security to improved privacy rights, user control over data and even greater adaptability to changes. However, the key idea is that through decentralization no monopoly can form, or so one would hope.&lt;/p&gt;
+
+&lt;p&gt;Having understood the DWeb as any decentralized technical project, the question arises if the implementation of decentralization actually follows through with the virtues of shared ownership and governance. To answer this question, we look towards the ubiquitous example of a decentralized project, Web3 – the Ethereum Solana based application. While the two terms have been interchangeably used, it is necessary to differentiate the theory, the DWeb, and how it can be manipulated in its application, starting with Web3. The DWeb is the umbrella term for all decentralized technological projects, while Web3 is an application of the decentralized web whose services are increasingly powered by blockchains, crypto-assets, artificial intelligence, machine learning, and meta-verses. As the current web, Web2, revolves around personal data being commercialized and is largely dictated by monopoly, censorship and control, Web3 is advertised as the revolutionary shift that solves these problems.&lt;/p&gt;
+
+&lt;p&gt;When understanding if Web3 can fulfill this shift we look to why Web2 was a cause for concern. As 90% of websites are controlled by a handful of companies, they hold power and influence over its design and experience, thus manipulating it for self-benefit. While Web3 claims to overcome this through the umbrella of decentralization as enabling end-users to own their own data, the fact of the matter is that the same venture capital investors who guided the development of Web2 are now funding Web3 and thus shaping the design and experience to cater to their needs; hence, most of the benefits associated with a decentralized web no longer stand. For instance, what has been understood as a positive side effect of Web3 is the emphasis it will create towards open source software. Particularly with regard to the ineffective traditional funding model, a cause of the misalignment of big corporation&amp;rsquo;s profit models and open source projects, Web3 is said to face this concern as startups will be able to fund themselves with cryptocurrencies. However, if the system designers’ goal is to distribute wealth into the hands of the already wealthy, then the advancement of software that is free and open to all will not be a foremost priority. Hence, while the theory pushes forth ideas of shared ownership, the application is subject to the people who are in control and what they stand to gain.&lt;/p&gt;
+
+&lt;p&gt;While it is now clear that applications of decentralization don’t necessarily follow through with the virtues of shared ownership and governance, decentralization is not the problem. Rather, when a term is as broadly applicable as this one, greater effort needs to be given to clearly defining it, differentiating its theory and how it can be realized to reflect its core tenets or principles. For instance, when looking at Web3, a step towards ensuring the control remains in the hands of the users, not only does the system need to be decentralized, but its funding should be as well.&lt;/p&gt;
+
+&lt;p&gt;Sources:
+- &lt;a href=&#34;https://supplain.io/news/web3-solve-web2-problems&#34;&gt;https://supplain.io/news/web3-solve-web2-problems&lt;/a&gt;
+- &lt;a href=&#34;https://metal.equinix.com/blog/web3-and-open-source/&#34;&gt;https://metal.equinix.com/blog/web3-and-open-source/&lt;/a&gt;
+- &lt;a href=&#34;https://hypha.coop/dripline/debate-over-dweb-vs-web3/&#34;&gt;https://hypha.coop/dripline/debate-over-dweb-vs-web3/&lt;/a&gt;
+- &lt;a href=&#34;https://coinmarketcap.com/alexandria/article/what-is-web-3-0&#34;&gt;https://coinmarketcap.com/alexandria/article/what-is-web-3-0&lt;/a&gt;
+- &lt;a href=&#34;http://milesberry.net/2006/11/open-source-and-web-20/&#34;&gt;http://milesberry.net/2006/11/open-source-and-web-20/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Decentralizing Distribution</title>
+      <link>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</guid>
+      <description>
+
+&lt;p&gt;Guardian Project has been awarded a grant from the &lt;a href=&#34;https://www.ffdweb.org/guardian-project-annoucement&#34;&gt;Filecoin Foundation for the Decentralized Web (FFDW)&lt;/a&gt; to work on decentralizing veracity and distribution (DVD).  FFDW’s Mission is to “ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.”  Filecoin is built on top of IPFS, which is &amp;ldquo;&lt;a href=&#34;https://docs.ipfs.io/concepts/what-is-ipfs/&#34;&gt;a distributed system for storing and accessing files&lt;/a&gt;&amp;rdquo;.  The distribution component of the FFDW-DVD project is focused on improving F-Droid&amp;rsquo;s free, open, and decentralized mobile app ecosystem.  On top of the flagship unified experience offered by this website and the F-Droid official app, F-Droid provides all the pieces for anyone to create, build, remix, publish, reproduce, redistribute and review mobile apps.&lt;/p&gt;
+
+&lt;p&gt;This is important to F-Droid users because it means that they are not locked into F-Droid as the monopoly app provider.  The F-Droid community needs to stay responsive to its users because it is possible to fork all of F-Droid (okay, except for the signing keys 🚫Ψ📝🔑😉).  Decentralization is also important because each user has specific needs and wishes that potentially conflict with other users.  Many want only free software, but others are willing to compromise in key places, and still others have strong privacy needs that conflict with other users&amp;rsquo; favorite features.  Decentralized app repositories provide users that flexibility without having to move away from the main F-Droid infrastructure.&lt;/p&gt;
+
+&lt;p&gt;We share the concerns about the walled garden approach to app stores. While their design may have been driven out of concern for security and simplicity, they have become a source of unbridled control, censorship and surveillance.  Smartphones are the primary computer for most and apps are the central mobile tool.  Centralized, locked down phones keep the real power of modern computing needlessly out of reach of most of the world&amp;rsquo;s population.  The FFDW-DVD project will push F-Droid forward towards realizing full support for customization, curation, mirroring, censorship circumvention, and peer-to-peer sharing.  We can provide a more free and less fragile solution for the sharing of capability and knowledge to all.  On top of that, this project will give us focused time to work on making our processes run more efficiently and reliably.&lt;/p&gt;
+
+&lt;p&gt;IPFS and Filecoin are central to this mission.  IPFS has the potential to provide the plumbing for the entire F-Droid ecosystem.  It is a decentralized filesystem where files are accessible by their &lt;a href=&#34;https://docs.ipfs.io/concepts/hashing/&#34;&gt;hash&lt;/a&gt; compiled into a &lt;a href=&#34;https://docs.ipfs.io/concepts/content-addressing/&#34;&gt;Content Identifier (CID)&lt;/a&gt;.  That means the unique signature of each file can be used to fetch that file from IPFS, no matter where it is actually stored.  It can be stored on some server farm or the other smartphone next to you when on a mountain top.  If the IPFS storage is reachable and contains the CID you need, it can be retrieved.  Internet is not required.  Additionally, if a file is important to you, you can &amp;ldquo;&lt;a href=&#34;https://docs.ipfs.io/how-to/pin-files/&#34;&gt;pin&lt;/a&gt;&amp;rdquo; it in your own IPFS storage or pay someone else to do it using Filecoin.  As long as someone is interested in having a file publicly available, it can be maintained in IPFS, even if the original creator has taken it down.&lt;/p&gt;
+
+&lt;p&gt;IPFS is working now, and services are using it, including &lt;a href=&#34;https://blog.archive.org/2021/04/01/filecoin-foundation-grants-50000-fil-to-the-internet-archive/&#34;&gt;archive.org&lt;/a&gt;.  But there is much work to be done before it really can replace current web hosting and file distribution methods.  That means we will integrate IPFS in a hybrid approach, and we are already reporting our experiences upstream to help improve IPFS.  F-Droid already supports repositories and mirrors, and IPFS will plug right into those channels.  This gives the F-Droid ecosystem another layer of resiliency and flexibility.&lt;/p&gt;
+
+&lt;p&gt;Since the &amp;ldquo;decentralized web&amp;rdquo; includes all sorts of things, it is important to also mention things that we will &lt;a href=&#34;https://www.theregister.com/2021/12/06/the_dark_equation_of_harm/&#34;&gt;not&lt;/a&gt; be doing with this grant.  We are not looking at NFTs, blockchain, DAOs, smart contracts or related aspects of &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Web3&#34;&gt;Web3&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;funded-work&#34;&gt;Funded work&lt;/h2&gt;
+
+&lt;p&gt;This work is focused on strengthening F-Droid foundations while enabling repositories to be hosted on decentralized storage, while spreading our platform as a viable alternative for all kinds of users and organizations.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Break out and overhaul core client logic around publishing and consuming repositories.&lt;/li&gt;
+&lt;li&gt;Make client logic into libraries to make it easy to embed repositories in any app that needs it.&lt;/li&gt;
+&lt;li&gt;Add support for mirroring repositories onto both IPFS and Filecoin.&lt;/li&gt;
+&lt;li&gt;Add support in F-Droid client to use mirrors and repositories hosted on IPFS and Filecoin.&lt;/li&gt;
+&lt;li&gt;Improve F-Droid “white labeling”.&lt;/li&gt;
+&lt;li&gt;Enhance F-Droid client’s existing “nearby” and “app swap” capabilities, including utilizing libp2p-based communication.&lt;/li&gt;
+&lt;li&gt;Improve the capability and usability of publishing and distributing multimedia content (documents, presentations, photos, videos, map files, and more).&lt;/li&gt;
+&lt;li&gt;Update F-Droid’s RepoMaker tool (for easy “point and click” curation and publishing of app repos) and add support for IPFS publishing.&lt;/li&gt;
+&lt;li&gt;Expand access to F-Droid repositories to non-Android devices and the mobile web (progressive web apps, content).&lt;/li&gt;
+&lt;li&gt;Set up a full archive of the f-droid.org repository on IPFS.&lt;/li&gt;
+&lt;li&gt;Expand outreach and assistance to software developers, media organization, tech companies and more to promote adoption of the F-Droid platform for their software, content and devices (example: Mozilla could easily run a Mozilla app store that includes all the Mozilla channels: releases, nightlies, etc.  They could also include a curated collection of reproducibly built apps that Mozilla approves of.  Someone who trusts Mozilla can then easily choose to only have access to the Mozilla-curated app store)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can follow the work funded under this grant by checking the &lt;code&gt;FFDW-DVD&lt;/code&gt; label on &lt;a href=&#34;https://gitlab.com/groups/fdroid/-/issues?scope=all&amp;amp;state=opened&amp;amp;label_name[]=FFDW-DVD&#34;&gt;issues&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/groups/fdroid/-/merge_requests?scope=all&amp;amp;state=opened&amp;amp;label_name[]=FFDW-DVD&#34;&gt;merge requests&lt;/a&gt; in GitLab.&lt;/p&gt;
+
+&lt;p&gt;Our first priority is splitting out the core client pieces as standalone
+libraries. We will take this opportunity to modernize the index format and
+ensure it works well with IPFS.  That effort is tracked using the &lt;code&gt;index-v2&lt;/code&gt; label on &lt;a href=&#34;https://gitlab.com/groups/fdroid/-/issues?scope=all&amp;amp;state=opened&amp;amp;label_name[]=index-v2&#34;&gt;issues&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/groups/fdroid/-/merge_requests?scope=all&amp;amp;state=opened&amp;amp;label_name[]=index-v2&#34;&gt;merge requests&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

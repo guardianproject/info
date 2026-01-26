@@ -1,0 +1,1686 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Free Software on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/free-software/</link>
+    <description>Recent content in Free Software on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 13 Nov 2025 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/free-software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kindness Mode: Help People Connect to Tor on World Kindness Day</title>
+      <link>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</link>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</guid>
+      <description>
+
+&lt;p&gt;Today is &lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;World Kindness Day&lt;/a&gt;. As stated on Wikipedia, &amp;ldquo;World Kindness Day is to highlight good deeds in the community focusing on the positive power and the common thread of kindness for good which binds us.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;&lt;img src=&#34;worldkindnessday.png&#34; width=200/&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that word &lt;strong&gt;bind&lt;/strong&gt; is particularly meaningful to use in a technical way - when a remote computer connects to another computer over a network, whether peer-to-peer or a server, one way to state what happens is &amp;ldquo;binding to their socket port&amp;rdquo;. The decentralized, privacy-focused &lt;a href=&#34;https://torproject.org&#34;&gt;tor network&lt;/a&gt; is powered by volunteer organizations and inviduals around the world sharing their network resources. On Tor, there is a great deal of positive, community &amp;ldquo;good which binds us&amp;rdquo; going on.&lt;/p&gt;
+
+&lt;p&gt;With that in mind on this auspicious day, we have released new guidance about &lt;strong&gt;KINDNESS MODE&lt;/strong&gt;, a feature for helping others in need, available in our app, &lt;a href=&#34;https://orbot.app&#34;&gt;Orbot for Android and iOS&lt;/a&gt;. Kindness Mode is our name for the underlying technology also known as &amp;ldquo;Snowflake&amp;rdquo;, which helps people get around extreme forms of network censorship and filtering.&lt;/p&gt;
+
+&lt;h2 id=&#34;running-a-snowflake-proxy&#34;&gt;Running a Snowflake Proxy&lt;/h2&gt;
+
+&lt;p&gt;Running a &lt;a href=&#34;https://snowflake.torproject.org&#34;&gt;Snowflake Proxy&lt;/a&gt; is one of the easiest, safest, and most impactful ways to help people circumvent censorship, especially if you’re in a place with an open and free internet. Your device, through your public IP address, becomes an essential bridge for people where Tor is blocked (in, say, Iran or China) and the entrance to the Tor network. There are many ways you can run a Snowflake Proxy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Orbot’s “Kindness Mode” on iOS and Android: &lt;a href=&#34;https://orbot.app/kindness&#34;&gt;https://orbot.app/kindness&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Snowflake add-on for Firefox, Chrome or Edge: &lt;a href=&#34;https://snowflake.torproject.org&#34;&gt;https://snowflake.torproject.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WEPN home device: &lt;a href=&#34;https://we-pn.com/kindness-faq.html&#34;&gt;https://we-pn.com/kindness-faq.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;key-facts-to-know&#34;&gt;Key Facts to Know&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You are not using Tor yourself, you are simply a bridge for someone else.&lt;/li&gt;
+&lt;li&gt;All of the data passing through your device is encrypted; nothing is visible to you.&lt;/li&gt;
+&lt;li&gt;There will be an impact on your bandwidth, but it is minimal, and you can set limits.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;kindessmodehandout.pdf&#34;&gt;&lt;img src=&#34;kindessmode1.jpg&#34; alt=&#34;Kindness Mode diagram&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;risks-and-considerations&#34;&gt;Risks and Considerations&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Legality&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In most countries, running a Snowflake Proxy is legal. It’s equivalent to making an online “VOIP” call between two points on the internet.&lt;/li&gt;
+&lt;li&gt;In high-censorship networks, this traffic could draw attention, and since your internet is not free and open, it doesn’t make sense to run a Snowflake Proxy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Privacy and IP Visibility&lt;/li&gt;
+&lt;li&gt;The fact that your device was connected to by a remote device on the internet can be seen and logged by your internet service provider.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Your IP address will appear in the central Snowflake “Broker” logs since it is necessary to share your proxy’s existence so others can find it.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the app or browser activity of the person you are helping, YOUR IP address is NOT visible and there is no link to your or your device.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Network and Bandwidth load&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Any data used by the device proxying through your connection will count as data on your service or plan. It is best on wifi or with unlimited plans.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Proxying can slow your connection slightly. However by default only a very limited number of devices can use your proxy at a time.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;how-to-minimize-risks&#34;&gt;How to Minimize Risks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run Snowflake from a trusted, unrestricted, unlimited network.&lt;/li&gt;
+&lt;li&gt;Don’t use it on shared, public, or corporate networks where administrators might block or misinterpret traffic.&lt;/li&gt;
+&lt;li&gt;When you can, set limits to when and how the Snowflake Proxy should be available.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;orbot-is-kind&#34;&gt;Orbot is Kind!&lt;/h2&gt;
+
+&lt;p&gt;Now that you have all this important knowledge, you can understand better if you are in a position to be kind, and share your network. &lt;a href=&#34;https://orbot.app/downlaod&#34;&gt;Get Orbot Today&lt;/a&gt; and see how good it feels each time someone connects through your Kindness Mode Snowflake Proxy!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;kindessmodehandout.pdf&#34;&gt;View our Orbot Kindness Mode How-To Guide PDF&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>7ASecurity Completes Security Audit of Círculo</title>
+      <link>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</guid>
+      <description>&lt;p&gt;Over the last six months, we’ve been working with &lt;a href=&#34;https://7asecurity.com/&#34;&gt;7ASecurity&lt;/a&gt; through support from the &lt;a href=&#34;https://www.opentech.fund/impact/security-safety-audits/&#34;&gt;Open Technology Fund’s Security Safety Audits&lt;/a&gt;, to complete an audit of our &lt;a href=&#34;https://encirculo.org&#34;&gt;Círculo project&lt;/a&gt;.  The public report on that is &lt;a href=&#34;https://www.opentech.fund/security-safety-audits/circulo-security-audit/&#34;&gt;now available&lt;/a&gt;. You can also read the &lt;a href=&#34;https://7asecurity.com/blog/2025/03/circulo-security-audit-by-7asecurity/&#34;&gt;blog post on the audit from 7ASecurity&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you don’t know about Circulo, this is a physical check-in safety app we have developed, alongside Article 19’s Mexico City team, for a number of years, focused on providing secure location sharing and urgent notifications within small trusted groups, for people under threat of physical violence. The free and open-source &lt;a href=&#34;https://gitlab.com/circuloapp&#34;&gt;code we have developed&lt;/a&gt; includes iOS and Android mobile apps, as well as server infrastructure, largely based on the &lt;a href=&#34;https://matrix.org/&#34;&gt;Matrix Protocol&lt;/a&gt;, including the mobile software development kits (SDKs), &lt;a href=&#34;https://matrix.org/docs/matrix-concepts/end-to-end-encryption/&#34;&gt;MegaOLM encryption&lt;/a&gt;, and &lt;a href=&#34;https://github.com/element-hq/synapse&#34;&gt;Synapse Server&lt;/a&gt;. You can read about the last round of work we completed on Circulo, including design, development, and community building, in a &lt;a href=&#34;https://guardianproject.info/releases/CirculoFinalReport20232024.pdf&#34;&gt;public report released in November&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The primary summary from the audit is as follows: “Overall, the auditors found that the app defended itself well against a broad range of attack vectors.”. We are happy with that assessment, though a number of issues were found, both in our mobile app code and in our infrastructure. While some of them were difficult to address, we have done our best to fix or mitigate to the extent we are able. More detail on that below.&lt;/p&gt;
+
+&lt;p&gt;As the report states:
+&lt;em&gt;Of the nine vulnerabilities identified one was flagged as “high-risk,” and seven were considered “medium-risk”&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The one high-risk vulnerability discovered was summarized as “Android &amp;amp; iOS apps are vulnerable to DoS attacks via DNS spoofing”. This means that while the Círculo app was using TLS to encrypt the network encryption, as well as to authenticate the domain it connects to, it was not using any special method for ensuring the IP address provided by the DNS lookup was secure. Instead, Círculo relies on the mobile OS to provide secure DNS options for the user to enable, or on the user themselves adopting a third-party secure DNS tool.&lt;/p&gt;
+
+&lt;p&gt;The primary harm from this high-risk vulnerability is that if someone was targeted in this way, they would not be able to access or share or see check-in and location updates from Círculo. No private information would be compromised. While we take app and service blocking and censorship seriously, we know there are many ways to avoid it, including third-party VPN apps like our own Orbot.&lt;/p&gt;
+
+&lt;p&gt;As one method of remediating this vulnerability, we were able to build in support on Círculo Android for DNS-over-HTTPS (DoH), currently with support for Cloudflare, but in the future, as a configurable option as well. You can see the &lt;a href=&#34;https://gitlab.com/circuloapp/circulo-keanu-android/-/commit/955c5a3198a9fbfd887ee3fa57b3f331373e9127&#34;&gt;code commit on gitlab&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Most of the other medium and lower issues we resolved last year and already included in public app releases. You can view all the open tickets responding to the medium and lower issues in the report on our &lt;a href=&#34;https://gitlab.com/groups/circuloapp/-/milestones/19#tab-issues&#34;&gt;public bug tracker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You will notice there are still open issues in the tracker, which we continue to consider how to implement. These are marked as “enhancements” as we see them as providing additional security beyond our established threat model. They also require significant changes in the core Matrix SDK which we rely upon, and that is shared with other Matrix-based applications such as Element.&lt;/p&gt;
+
+&lt;p&gt;On the infrastructure side, 7ASecurity was very helpful in pointing out many ways to harden our deployment by taking advantage of additional security configurations and options available through Amazon Web Services.&lt;/p&gt;
+
+&lt;p&gt;There are two open issues related to our production server infrastructure.&lt;/p&gt;
+
+&lt;p&gt;“Synapse Admin API exposed to the internet”: The Admin API is utilized by our system moderators to handle emergency requests from authenticated users and partners to delete or disable accounts and rooms, if they have lost access to them due to extreme circumstances (device taken, lost, destroyed, or had to delete the app due to physical threat concern).&lt;/p&gt;
+
+&lt;p&gt;“Data leaks in Nginx and CloudWatch logs”: The Synapse logging detail level is capturing too much data clearly. This was useful during staging deployment and development, but needs to be reduced. No personal information is leaked, only tokens and ids of rooms.&lt;/p&gt;
+
+&lt;p&gt;These are both issues we are working to address by requiring additional network authentication to access the Admin API, and by reducing the log detail that we are storing. We also ensure our existing admin accounts and authentication credentials are stored securely in multi-factor password managers.&lt;/p&gt;
+
+&lt;p&gt;One important aspect of Círculo to point out, is that anyone can run their own server, to fully control the stack and infrastructure. It is a complete standard Matrix Synapse deployment. You can also pay a third-party hosting provider to host your own private Matrix server instance. While we are happy to offer a default community service, we believe in open, decentralized, and federated systems, along with data sovereignty.&lt;/p&gt;
+
+&lt;p&gt;In summary, Círculo’s security and usability is constantly improving, with security audits from organizations like 7ASecurity and support from OTF, being a critical part to that progress. If you have any questions or concerns, please reach out to us at the Guardian Project help desk at &lt;a href=&#34;mailto:support@guardianproject.info&#34;&gt;support@guardianproject.info&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Look Back at 2024: F-Droid&#39;s Progress and What’s Coming in 2025</title>
+      <link>https://guardianproject.github.io/info/2025/01/21/a-look-back-at-2024-f-droids-progress-and-whats-coming-in-2025/</link>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2025/01/21/a-look-back-at-2024-f-droids-progress-and-whats-coming-in-2025/</guid>
+      <description>
+
+&lt;p&gt;With 2024 now behind us, we wanted to take a moment to reflect on the growth and achievements we accomplished as a community last year, and celebrate the incredible support we received from the FOSS community throughout the journey.&lt;/p&gt;
+
+&lt;p&gt;This year has been a milestone for us, with significant strides in decentralizing app distribution, expanding the F-Droid ecosystem, and solidifying our infrastructure. All of these advancements were made possible thanks to donations, grants, our volunteers and regular contributors. So thank you again to everyone who helped make 2024 another great year for F-Droid. Now let&amp;rsquo;s take a closer look at what we accomplished.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-review-of-key-accomplishments-in-2024&#34;&gt;A Review of Key Accomplishments in 2024&lt;/h2&gt;
+
+&lt;h3 id=&#34;decentralizing-app-distribution-a-core-focus&#34;&gt;Decentralizing App Distribution: A Core Focus&lt;/h3&gt;
+
+&lt;p&gt;One of the most important initiatives we worked on in 2024 was the continued development of our app decentralization efforts. Our aim is to make F-Droid a more robust and accessible platform, making further in-roads into the hold Big Tech currently has on app distribution.  Building on the &lt;a href=&#34;https://f-droid.org/2022/02/05/decentralizing-distribution.html&#34;&gt;work we started in 2022&lt;/a&gt;, as a part of the &lt;a href=&#34;https://www.ffdweb.org/blog/guardian-project-annoucement/&#34;&gt;Filecoin Foundation for the Decentralized Web grant&lt;/a&gt;, we continued to make substantial progress this year in providing developers and end-users with more options to distribute their apps through a decentralized, equitable and privacy-oriented process. The goal for this project is to enable individuals and organizations to mirror and distribute F-Droid apps in a community-driven fashion, reducing reliance on centralized services. This work ties into a larger vision of creating a truly open-source ecosystem for Android apps that is not governed by proprietary companies.&lt;/p&gt;
+
+&lt;p&gt;In 2024 we completed the following infrastructure upgrades:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Broke out and overhauled core client logic around publishing and consuming repositories.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Made client logic into &lt;a href=&#34;https://f-droid.org/2023/05/02/three-client-libraries.html&#34;&gt;libraries&lt;/a&gt; to make it easy to embed repositories in any app that needs it.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Added support for mirroring repositories onto both IPFS and Filecoin.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Added support in F-Droid client to use mirrors and repositories hosted on IPFS and Filecoin.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Improved F-Droid client “&lt;a href=&#34;https://f-droid.org/docs/Whitelabel_Builds/&#34;&gt;whitelabel builds&lt;/a&gt;”.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Enhanced F-Droid client’s existing “nearby” and “app swap” capabilities.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Updated F-Droid’s Repomaker tool (for easy “point and click” curation and publishing of app repos) and add support for IPFS publishing.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Supported iOS apps and progressive web apps (PWA) as packages that can be shipped via repositories.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2024 marked the end of this grant period, however the tools, features and policies established within the scope of the grant, will continue to be developed thanks to donations and other funders who are committed to further decentralizing app distribution.&lt;/p&gt;
+
+&lt;h2 id=&#34;expanding-the-f-droid-ecosystem-repomaker-and-mobifree&#34;&gt;Expanding the F-Droid Ecosystem: Repomaker and Mobifree&lt;/h2&gt;
+
+&lt;p&gt;Another key project we &lt;a href=&#34;https://f-droid.org/2024/05/24/mobifree.html&#34;&gt;started&lt;/a&gt; in 2024 was the further exploration and expansion of tools within the F-Droid ecosystem. Thanks to a major grant from &lt;a href=&#34;https://cordis.europa.eu/project/id/101135795&#34;&gt;EU Horizon Europe&lt;/a&gt;, we were able to deepen our focus on tools like &lt;a href=&#34;https://f-droid.org/repomaker/&#34;&gt;Repomaker&lt;/a&gt;, which helps developers create their own F-Droid-compatible repositories. This tool is crucial for maintaining and growing the diverse range of apps available on F-Droid, and its expansion will support more developers who wish to contribute to the platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://mobifree.org/&#34;&gt;Mobifree&lt;/a&gt; is an initiative that aims to provide a free, open-source, and decentralized alternative to traditional mobile app stores. It focuses on the freedom of choice, privacy, and user empowerment. Our contributions to this project will help strengthen the ties between F-Droid and other decentralized app distribution systems, ensuring that we remain a key player in the future of open-source mobile software.&lt;/p&gt;
+
+&lt;p&gt;Do you have your own project ideas for Mobifree?  You can apply for up to 50,000€ from &lt;a href=&#34;https://nlnet.nl/mobifree/&#34;&gt;NLnet NGI Mobifree&lt;/a&gt;.  We can help you apply, just reach out via the &lt;a href=&#34;https://f-droid.org/about/#contact&#34;&gt;regular F-Droid channels&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Key Contributions in 2024:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;User research to understand app developer distribution workflows, compensation models, index preferences and APK metadata.&lt;/li&gt;
+&lt;li&gt;Built on existing Fastlane tooling to further automate the app package and upload the process to F-Droid.&lt;/li&gt;
+&lt;li&gt;Repomaker feature development made the repo creation and distribution process easier for non-tech users, non-profit and humanitarian organizations.&lt;/li&gt;
+&lt;li&gt;Created a central registry of all DAPPER compatible repos and API for app stores like Murena&amp;rsquo;s &lt;a href=&#34;https://doc.e.foundation/app-lounge-main&#34;&gt;App Lounge&lt;/a&gt; to pull in compatible repos and further decentralize app distribution process.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In 2025, we continue to contribute to the Mobifree project, getting our tools, apps and software ready for pilot testing this spring. From there, we will continue to improve the software based on user-testing feedback, ultimately making the tools available for the general public to use and enjoy.&lt;/p&gt;
+
+&lt;h3 id=&#34;f-droid-community-engagement&#34;&gt;F-Droid Community Engagement&lt;/h3&gt;
+
+&lt;p&gt;None of this would be possible without the incredible contributions from the FOSS community. In 2024, we saw a substantial increase in the number of contributions to F-Droid. From bug fixes and app updates to new apps being added to the store, our community of developers, testers, and contributors have been pivotal in keeping F-Droid running smoothly.&lt;/p&gt;
+
+&lt;p&gt;Here are some statistics that highlight the community’s impact this year:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;App Updates: Over 7205 app updates were made, keeping the app catalog fresh and secure.&lt;/li&gt;
+&lt;li&gt;New Apps Added: We welcomed over 402 new apps to the F-Droid repository, further expanding the variety of open-source apps available to users.&lt;/li&gt;
+&lt;li&gt;Archived Apps: 939 Apps were successfully archived.&lt;/li&gt;
+&lt;li&gt;Packages per Hour: Approximately 2-3 packages were created every hour, without interruption. Between updated and new apps, F-Droid built apps over 7600 times. Since most modern apps are split per device architecture, this  means that each app version required multiple packages to be built, sometimes up to 4 packages for each app version. This increases the real number of builds by 2.5-3x. Putting it all together, that would equal between 2-3 packages created per hour, without interruption in 2024.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These numbers are a reflection of the dedication and passion of the F-Droid community. We are immensely grateful for each and every contributor who made these achievements possible.&lt;/p&gt;
+
+&lt;h2 id=&#34;looking-ahead-in-2025&#34;&gt;Looking Ahead in 2025&lt;/h2&gt;
+
+&lt;h3 id=&#34;new-team-members-and-big-plans-for-2025&#34;&gt;New Team Members and Big Plans for 2025&lt;/h3&gt;
+
+&lt;p&gt;As we look forward to 2025, we are excited to announce two key additions to the F-Droid team who will help us scale our efforts in the coming year. Hailey Still has joined us as a new project manager and UX designer. Hailey brings a diverse background of experience in managing complex projects and designing user-friendly and intuitive interfaces. Her expertise will continue to be instrumental in helping us secure new grant opportunities, streamline our operations and improve the user experience tools we work on.&lt;/p&gt;
+
+&lt;p&gt;We are also pleased to welcome Nzambi Kakusu as our new grant administrator. Nzambi will play a crucial role in helping us secure and manage funding for F-Droid&amp;rsquo;s continued development. With her experience in grant management, Nzambi will help ensure that we can continue to sustain and grow the project in a way that aligns with our mission and values.&lt;/p&gt;
+
+&lt;h3 id=&#34;otf-grant-and-infrastructure-work&#34;&gt;OTF Grant and Infrastructure Work&lt;/h3&gt;
+
+&lt;p&gt;In 2025 we are thrilled to begin working on a grant funded by the &lt;a href=&#34;https://www.opentech.fund/funds/free-and-open-source-software-sustainability-fund/&#34;&gt;Open Technology Fund&lt;/a&gt;. This grant will help us maintain F-Droid and focus on critical infrastructure work that was often overlooked, due to lack of consistent funding in the past. We’ll be working on improving the resilience and security of our systems, ensuring that F-Droid continues to serve as a reliable, open-source app distribution platform for years to come. There will be an official announcement article coming soon.&lt;/p&gt;
+
+&lt;h2 id=&#34;to-wrap-it-up&#34;&gt;To Wrap it Up&lt;/h2&gt;
+
+&lt;p&gt;As we continue to grow and evolve, we are committed to our mission of decentralizing app distribution, expanding the F-Droid ecosystem, and empowering users with open-source alternatives to proprietary software. With the support of our community, our volunteers, and our new team members, we are excited for what 2025 will bring.&lt;/p&gt;
+
+&lt;p&gt;Thank you for being part of the F-Droid journey!&lt;/p&gt;
+
+&lt;p&gt;We look forward to an exciting year ahead, and we invite you to continue supporting F-Droid through &lt;a href=&#34;https://f-droid.org/contribute/&#34;&gt;contributions&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org/donate/&#34;&gt;donations&lt;/a&gt;, and &lt;a href=&#34;https://floss.social/@fdroidorg&#34;&gt;spreading the word&lt;/a&gt; about our mission. Let’s make 2025 another year of progress for the open-source community!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using TLS ECH from Python</title>
+      <link>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</guid>
+      <description>&lt;p&gt;At first, the idea of encrypting more of the metadata found inside the initial packet (the &amp;ldquo;ClientHello&amp;rdquo;) of a TLS
+connection may seem simple and obvious, but there are of course reasons that this wasn&amp;rsquo;t done right from the start.
+In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields,
+and present a working code example using a fork of CPython built with DEfO project&amp;rsquo;s OpenSSL fork to connect to
+ECH-enabled HTTPS servers.&lt;/p&gt;
+
+&lt;p&gt;To understand why this is an issue, let&amp;rsquo;s take a step back and look at how websites are hosted.
+Many websites are hosted on shared servers, which means that a single server machine is responsible for serving
+multiple, possibly hundreds or thousands, of websites.
+This is known as the shared hosting model.
+In this setup, when a user types in a URL or clicks on a link to visit a website and the browser connects to the server,
+the server needs to know which website the users is requesting.
+This is where the Server Name Indication (SNI) comes in - it&amp;rsquo;s a field in the initial packet of a TLS connection that
+tells the server which website the user is trying to access.
+The server can then send the correct certificate so that the browser can authenticate the connection, and then send the
+requested website content.&lt;/p&gt;
+
+&lt;p&gt;Because this field was sent unencrypted, this means that anyone who can see the traffic between the user&amp;rsquo;s browser and
+the server can intercept the SNI and know which website the user is trying to visit.
+This can be a privacy concern, as it allows ISPs, network administrators, or other unwanted observers to build a profile
+of the user&amp;rsquo;s browsing history.
+It&amp;rsquo;s not just about the websites they visit, but also about the potential for censorship or targeted attacks.
+With the SNI being unencrypted, it&amp;rsquo;s like sending a postcard with the address visible to anyone who handles it - it may
+not be the end of the world for most browsing activity, but it&amp;rsquo;s certainly not private.
+Encrypted Client Hello aims to change this by encrypting the SNI and other metadata, making it much harder for third
+parties to intercept and exploit this information.&lt;/p&gt;
+
+&lt;p&gt;So, why wasn&amp;rsquo;t it easy to protect the SNI and other metadata from the start?
+The main challenge was that, in order to encrypt the SNI, the client (i.e., the user&amp;rsquo;s browser) needs to know the
+public key that the server wants the ClientHello to be encrypted with in advance.
+However, the server&amp;rsquo;s ECH public key is tied to the specific website being requested, and there wasn&amp;rsquo;t a straightforward
+way to discover a public key that could be used to talk to the server without revealing the SNI.
+This created a chicken-and-egg problem, where the client couldn&amp;rsquo;t encrypt the SNI without knowing the server&amp;rsquo;s public
+key, but it couldn&amp;rsquo;t know the server&amp;rsquo;s public key without sending the SNI in plaintext.&lt;/p&gt;
+
+&lt;p&gt;This problem is solved with ECH by introducing a new type of DNS record, called an
+&lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc9460&#34;&gt;HTTPS record&lt;/a&gt;.
+An HTTPS record is a special type of DNS record that contains the ECH public key of the server, along with other metadata,
+in a way that can be retrieved by the client without revealing the SNI (the website name is still leaked via the DNS
+request, but it is possible to protect your requests using DNS-over-TLS or DNS-over-HTTPS).
+The HTTPS record is typically retrieved by the client during the DNS lookup process, before the TLS connection is
+established.&lt;/p&gt;
+
+&lt;p&gt;The HTTPS record contains an ECH configuration, which is used to encrypt the SNI and other metadata.
+This is generated by the server and is tied to the specific configuration of the server, rather than to a specific
+website.
+By using HTTPS records to retrieve the server&amp;rsquo;s ECH public key, we are able to break the chicken-and-egg problem and
+provide a way to encrypt the SNI and other metadata.&lt;/p&gt;
+
+&lt;p&gt;Before we can lookup the HTTPS record, it&amp;rsquo;s first necessary to work out where that record would live.
+These records have been designed to be quite flexible, so can accommodate services running on non-default port numbers.
+If the default port number is in use then the HTTPS record will be on the same domain name as the website, but for
+non-default port numbers, there will be a prefix to the domain name:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def svcbname(url: str) -&amp;gt; str:
+    &amp;quot;&amp;quot;&amp;quot;Derive DNS name of SVCB/HTTPS record corresponding to target URL.&amp;quot;&amp;quot;&amp;quot;
+    parsed = urllib.parse.urlparse(url)
+    if parsed.scheme == &amp;quot;https&amp;quot;:
+        if (parsed.port or 443) == 443:
+            return parsed.hostname
+        else:
+            return f&amp;quot;_{parsed.port}._https.{parsed.hostname}&amp;quot;
+    elif parsed.scheme == &amp;quot;http&amp;quot;:
+        if (parsed.port or 80) in (443, 80):
+            return parsed.hostname
+        else:
+            return f&amp;quot;_{parsed.port}._https.{parsed.hostname}&amp;quot;
+    else:
+        # For now, no other scheme is supported
+        return None
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To keep it simple, the examples in this post will use plain DNS but the technique is equally applicable to DNS-over-TLS
+and DNS-over-HTTPS. Now that we have the domain name to query, we can fetch the ECH configuration from the DNS using
+the &lt;a href=&#34;https://www.dnspython.org/&#34;&gt;dnspython&lt;/a&gt; library:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def get_ech_configs(domain) -&amp;gt; List[bytes]:
+    try:
+        answers = dns.resolver.resolve(domain, &amp;quot;HTTPS&amp;quot;)
+    except dns.resolver.NoAnswer:
+        logging.warning(f&amp;quot;No HTTPS record found for {domain}&amp;quot;)
+        return []
+    except Exception as e:
+        logging.critical(f&amp;quot;DNS query failed: {e}&amp;quot;)
+        sys.exit(1)
+    configs: List[bytes] = []
+    for rdata in answers:
+        if hasattr(rdata, &amp;quot;params&amp;quot;):
+            params = rdata.params
+            echconfig = params.get(5)
+            if echconfig:
+                configs.append(echconfig.ech)
+    if len(configs) == 0:
+        logging.warning(f&amp;quot;No echconfig found in HTTPS record for {domain}&amp;quot;)
+    return configs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the ECH configurations are known, these can be used to establish the connection and fetch the website:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def get_http(url, ech_configs) -&amp;gt; bytes:
+    parser = urllib.parse.urlparse(url)
+    hostname, port, path = url.hostname, url.port, url.path
+    logging.debug(&amp;quot;Performing GET request for https://{hostname}:{port}/{path}&amp;quot;)
+    context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    context.load_verify_locations(certifi.where())
+    for config in ech_configs:
+        try:
+            context.set_ech_config(config)
+        except ssl.SSLError as e:
+            logging.error(f&amp;quot;SSL error: {e}&amp;quot;)
+            pass
+    with socket.create_connection((hostname, port)) as sock:
+        with context.wrap_socket(sock, server_hostname=hostname, do_handshake_on_connect=False) as ssock:
+            try:
+                ssock.do_handshake()
+                logging.debug(&amp;quot;Handshake completed with ECH status: %s&amp;quot;, ssock.get_ech_status().name)
+                logging.debug(&amp;quot;Inner SNI: %s, Outer SNI: %s&amp;quot;, ssock.server_hostname, ssock.outer_server_hostname)
+                request = f&#39;GET {path} HTTP/1.1\r\nHost: {hostname}\r\nConnection: close\r\n\r\n&#39;
+                ssock.sendall(request.encode(&#39;utf-8&#39;))
+                response = b&#39;&#39;
+                while True:
+                    data = ssock.recv(4096)
+                    if not data:
+                        break
+                    response += data
+                return response
+            except ssl.SSLError as e:
+                logging.error(f&amp;quot;SSL error: {e}&amp;quot;)
+                raise e
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The important step here is the new
+&lt;a href=&#34;https://irl.github.io/cpython/library/ssl.html#ssl.SSLContext.set_ech_config&#34;&gt;&lt;code&gt;set_ech_config&lt;/code&gt;&lt;/a&gt; method on the
+&lt;code&gt;SSLContext&lt;/code&gt; that allows you to add the ECH configuration containing the public key.
+If there are multiple records, the underlying OpenSSL will determine which of the keys to use.
+There are also a few new methods that allow you to get the status information relating to ECH from the &lt;code&gt;SSLSocket&lt;/code&gt;
+after the completion of the handshake.&lt;/p&gt;
+
+&lt;p&gt;In the simple case, that&amp;rsquo;s all there is to it.
+If you were to watch the connection with Wireshark you would not be able to see the true SNI being sent to the server
+and would only see the decoy SNI present in the unencrypted &amp;ldquo;ClientHelloOuter&amp;rdquo;.
+This decoy SNI is added to appease &lt;a href=&#34;https://en.wikipedia.org/wiki/Middlebox&#34;&gt;middleboxes&lt;/a&gt; that may block traffic,
+accidentally or deliberately, if that field is missing entirely.
+There are also further protections against such middleboxes from the application of GREASE:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If the client attempts to connect to a server and does not have an ECHConfig structure available for the server, it
+SHOULD send a GREASE &amp;ldquo;encrypted_client_hello&amp;rdquo; extension in the first ClientHello [&amp;hellip;]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This means that if your client supports ECH but does not have the configuration available to use it, the client should
+still send an ECH extension filled with nonsense anyway.
+This will help to detect deployment issues early as errors will be immediately obvious to users and won&amp;rsquo;t rely on
+servers having deployed ECH before the errors are triggered.&lt;/p&gt;
+
+&lt;p&gt;Finally, if the server sees this GREASE ECH extension then it can use this to know that you support ECH but didn&amp;rsquo;t
+have a configuration available.
+In its reply, it can send a &amp;ldquo;retry config&amp;rdquo; and then terminate the connection.
+You then have the configuration available to start the connection again with a real ECH extension this time, and can
+cache that for future requests too.&lt;/p&gt;
+
+&lt;p&gt;For a full client example including the use of retry configs, you can see our
+&lt;a href=&#34;https://github.com/defo-project/docker-defo-client/blob/main/pyclient.py&#34;&gt;example Python client&lt;/a&gt; at GitHub.
+You&amp;rsquo;ll need to use this with our &lt;a href=&#34;https://github.com/irl/cpython&#34;&gt;CPython fork&lt;/a&gt; and
+&lt;a href=&#34;https://github.com/defo-project/openssl&#34;&gt;OpenSSL fork&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Seeking Ruby/Jekyll contractors to start ASAP</title>
+      <link>https://guardianproject.github.io/info/2024/12/06/seeking-ruby/jekyll-contractors-to-start-asap/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2024/12/06/seeking-ruby/jekyll-contractors-to-start-asap/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Guardian Project is seeking Ruby/Jekyll contractors for mobile/free software and privacy work!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We’re looking for self-motivated, free software hackers to work with Guardian Project on privacy and internet freedom for mobile devices. Our work is 100% free software and we have a steady stream of projects that tie into F-Droid, Debian, Android, Fastlane, Mobifree and other exciting projects. We work to support people and communities around the world. This is a flexible, remote position but we also like to work in person when possible.&lt;/p&gt;
+
+&lt;h2 id=&#34;about-you&#34;&gt;About you&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Have at least a few years of experience with Ruby/Jekyll.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Demonstrated the ability to work collaboratively.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Understand public, free software workflows&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Are proactive and self-directed.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Fluent in Git.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;bonus-points-for&#34;&gt;Bonus points for&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Debian (and derivatives)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Experience with GitLab CI&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Python and bash skills&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Understanding privacy implications of metadata&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Life experiences that are underrepresented in tech work&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Fluency in more than one language&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;User research and UX design&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Blogging and writing&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;about-us&#34;&gt;About us&lt;/h2&gt;
+
+&lt;p&gt;This is for projects managed by Hans-Christoph Steiner. We are centered in Vienna, Austria so ideally you work in a similar time zone, but that is not a requirement. We work in English but our team members speak many languages. This work is tied to specific projects and will be contracted per project.&lt;/p&gt;
+
+&lt;p&gt;Please reply to jobs@guardianproject.info or find us in any of the regular channels!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Seeking part-time Grant Administrator</title>
+      <link>https://guardianproject.github.io/info/2024/08/05/seeking-part-time-grant-administrator/</link>
+      <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2024/08/05/seeking-part-time-grant-administrator/</guid>
+      <description>
+
+&lt;p&gt;Location: Fully remote (African/European time zone) or Vienna, Austria.&lt;/p&gt;
+
+&lt;p&gt;Type: Part-time contractor.&lt;/p&gt;
+
+&lt;h2 id=&#34;about-us&#34;&gt;About us&lt;/h2&gt;
+
+&lt;p&gt;Guardian Project is a small organization working to make a big impact in data privacy and secure communications. From the average person looking to use the internet and their mobile device more securely, to journalists needing to safely communicate with sources, to activists looking for secure communication channels, Guardian Project creates solutions that focus on privacy so you have true freedom.&lt;/p&gt;
+
+&lt;p&gt;Since we started this work back in 2008, our team has grown significantly and our impact reach has as well. To help us scale our project even further, we are looking for a dynamic and skilled Grand Administrator to join our team. This role is crucial for the smooth operation of our contractor administration and the effective management of our grants and funding opportunities.&lt;/p&gt;
+
+&lt;p&gt;This team is rooted in Vienna, Austria with a number of contractors around the world. We work mainly in English, our team members speak many languages. Work is contract-based but with the possibility to shift into full-time employment in the future.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-you-ll-do&#34;&gt;What you&amp;rsquo;ll do&lt;/h2&gt;
+
+&lt;h3 id=&#34;support-our-contractors&#34;&gt;Support our Contractors&lt;/h3&gt;
+
+&lt;p&gt;Our team consists primarily of independent contractors, passionate about creating meaningful change through technological solutions. Our freelancers need your support in the following areas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Drafting and executing working contracts for new and existing team members&lt;/li&gt;
+&lt;li&gt;Onboarding new team members and making them feel welcome, introducing them to our internal communication platforms&lt;/li&gt;
+&lt;li&gt;Setting up email accounts&lt;/li&gt;
+&lt;li&gt;Conducting monthly check-ins with team members to confirm the contract status and update records as necessary&lt;/li&gt;
+&lt;li&gt;Process contractor invoices and liaise with our tax accountant&lt;/li&gt;
+&lt;li&gt;Event planning and organizing our annual team retreat&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;grant-management&#34;&gt;Grant Management&lt;/h3&gt;
+
+&lt;p&gt;Since our organization&amp;rsquo;s funding is partially dependent on grants, we are looking for someone to support us in all things grant management, including the following areas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Research and identify new upcoming grant and private funding opportunities relevant for our organization´s mission&lt;/li&gt;
+&lt;li&gt;Inform and liaise with the team to assess suitability and requirements&lt;/li&gt;
+&lt;li&gt;Prepare grant applications together with team support&lt;/li&gt;
+&lt;li&gt;Build and sustain relationships with grant funders and partners&lt;/li&gt;
+&lt;li&gt;Manage reporting requirements for various grants, ensuring all reporting is accurate and submitted on time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;networking-and-relationship-management&#34;&gt;Networking and Relationship Management&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Stay up to date on industry events and networking opportunities to enhance visibility and outreach opportunities&lt;/li&gt;
+&lt;li&gt;Attend industry conventions and gatherings to represent Guardian Project&lt;/li&gt;
+&lt;li&gt;Manage leads for private funding opportunities and maintain relationships with existing and potential grant partners&lt;/li&gt;
+&lt;li&gt;Liaise with other impactful technology and human rights organizations around the world and stakeholders at different levels&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;enhance-our-outreach-and-engagement&#34;&gt;Enhance our Outreach and Engagement&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Monitor our blog and social media accounts&lt;/li&gt;
+&lt;li&gt;Curate relevant content on our online channels to engage our community and enhance our impact&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;who-you-are&#34;&gt;Who You Are&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Strong organizational skills with the ability to manage multiple tasks and deadlines effectively&lt;/li&gt;
+&lt;li&gt;Results oriented and willing to expand your current skill set&lt;/li&gt;
+&lt;li&gt;Excellent communication skills, both written and verbal, with a knack for relationship building and stakeholder management&lt;/li&gt;
+&lt;li&gt;Comfortable working independently in a small team&lt;/li&gt;
+&lt;li&gt;Proficient in using office and financial software, including MS Office and cloud-based document management.&lt;/li&gt;
+&lt;li&gt;Detail-oriented with a high level of accuracy in handling administrative and financial duties.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;it-s-a-bonus-if-you&#34;&gt;It&amp;rsquo;s a bonus if you&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Have a Bachelor’s degree in Business Administration or Non-profit Management&lt;/li&gt;
+&lt;li&gt;Have experience in grant writing and administration&lt;/li&gt;
+&lt;li&gt;Have experience working in an international, multicultural team&lt;/li&gt;
+&lt;li&gt;Are based in Vienna, Austria and can speak German&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;what-we-offer&#34;&gt;What We Offer&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A supportive and dynamic work environment where your work directly contributes to Guardian Project´s mission&lt;/li&gt;
+&lt;li&gt;Flexible working hours and vacation time&lt;/li&gt;
+&lt;li&gt;Fully or mostly remote work environment&lt;/li&gt;
+&lt;li&gt;A great deal of autonomy and responsibility, with a huge impact on our organization&lt;/li&gt;
+&lt;li&gt;A competitive hourly rate&lt;/li&gt;
+&lt;li&gt;In-person team retreats and meet-ups&lt;/li&gt;
+&lt;li&gt;Opportunities for professional development and growth within the organization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ready-to-apply&#34;&gt;Ready to Apply?&lt;/h2&gt;
+
+&lt;p&gt;Please send your resume and a cover letter explaining why you are a good fit for this position to &lt;a href=&#34;mailto:jobs@guardianproject.info&#34;&gt;jobs@guardianproject.info&lt;/a&gt;.  We aim to fill this position in September 2024.
+Join us in our mission to create a safer, more secure internet and mobile experience! We look forward to receiving your application!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The future of our fdroid-compatible app repository</title>
+      <link>https://guardianproject.github.io/info/2024/02/24/the-future-of-our-fdroid-compatible-app-repository/</link>
+      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2024/02/24/the-future-of-our-fdroid-compatible-app-repository/</guid>
+      <description>&lt;p&gt;Guardian Project has been running its own &lt;a href=&#34;https://guardianproject.info/fdroid/&#34;&gt;fdroid-compatible app repository&lt;/a&gt; since &lt;a href=&#34;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository-out-of-date/&#34;&gt;2012&lt;/a&gt;. Up until now, we worked to ensure that our repository had the same standards of free software as the official F-Droid repository.  Therefore, the Guardian Project repository was included in the official F-Droid client app by default.  A lot has changed since then, for the better.  F-Droid has long since stopped shipping pre-built binaries from any provider.  Back in the day, F-Droid shipped some binaries, like Mozilla&amp;rsquo;s Firefox APKs, and allowed some non-free libraries in apps.  The free software ecosystem on Android has since blossomed, so F-Droid no longer needs to make those kinds of compromises.  And F-Droid is completing a big update on how repositories are handled.&lt;/p&gt;
+
+&lt;p&gt;Guardian Project remains committed to producing free software.  But for some of our key use cases, it is unfortunately not yet possible to address them without including some proprietary libraries in our free software apps.  This means that the Guardian Project repository is &lt;a href=&#34;https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1302&#34;&gt;no longer included&lt;/a&gt; in F-Droid by default.  Now, F-Droid can enforce that apps only use free software libraries while Guardian Project cannot yet.  This ties in nicely to two other key development efforts with the official F-Droid client app.  First, the index signer keys for selected repositories are now &lt;a href=&#34;https://gitlab.com/fdroid/fdroidclient/-/merge_requests/1296/diffs?commit_id=54e3975660f97c60ffdd038b1965a30822e033db&#34;&gt;built-in&lt;/a&gt;, that means that the client will automatically verify that the user added the real repository.  Second, F-Droid &lt;a href=&#34;https://gitlab.com/fdroid/fdroidclient/-/merge_requests?milestone_title=1.20&#34;&gt;v1.20&lt;/a&gt; will ship a massive overhaul of the core plumbing and user experience for adding, removing, and managing repositories.  This makes it much easier and safer for users to use repositories that are not built-in.&lt;/p&gt;
+
+&lt;p&gt;What kinds of exceptions does Guardian Project make?  We still work to avoid as many kinds of tracking as possible.  And the code that we create is free software.  The exceptions are all related to proprietary libraries getting built into some of our apps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ProofMode uses a number of Google Play Services libraries, such as Play Integrity (SafetyNet), FusionLocationProvider, and others, to provide extra assurances about the provenance of media files generated on an Android device.&lt;/li&gt;
+&lt;li&gt;Circulo and Haven use proprietary Google libraries to assist with accurately finding location and to display maps.&lt;/li&gt;
+&lt;li&gt;Save (aka OpenArchive) needs to integrate with widespread proprietary services like Dropbox or Google Drive. When it is useful, we produce free software versions of our apps and get them included on &lt;a href=&#34;https://f-droid.org/packages/net.opendasharchive.openarchive.release/&#34;&gt;f-droid.org&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;There is work underway to get Tor Browser &lt;a href=&#34;https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/27539#note_2989340&#34;&gt;included&lt;/a&gt; in f-droid.org.  One key blocker has been a proprietary binary library that the build system is &lt;a href=&#34;https://gitlab.com/guardianproject/fdroid-metadata/-/issues/3&#34;&gt;including&lt;/a&gt; anyway, even though it should be disabled in the build.&lt;/li&gt;
+&lt;li&gt;Getting Orbot into f-droid.org is on our roadmap, it is already free software and otherwise compliant.  We welcome help maintaining the &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/org.torproject.android.yml&#34;&gt;build metadata&lt;/a&gt; in &lt;em&gt;fdroiddata&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will continue to &lt;a href=&#34;https://gitlab.com/guardianproject/fdroid-metadata/-/issues/4&#34;&gt;mark&lt;/a&gt; the apps in our repository with Anti-Features according to the &lt;a href=&#34;https://f-droid.org/docs/Anti-Features/&#34;&gt;F-Droid standard&lt;/a&gt;.  If you have found something we have overlooked, please &lt;a href=&#34;https://gitlab.com/guardianproject/fdroid-metadata/-/issues&#34;&gt;open an issue&lt;/a&gt; so we can fix it.  One side benefit of this change is that we can now also include some other important apps for privacy, until there are free software alternatives without any proprietary libraries. Firefox and Signal are two likely candidates, since both apps can be built as free software, but the official builds include proprietary libraries.  In any case, any third party apps we might include here will have to meet the same standards as our own apps.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quick set up guide for Encrypted Client Hello (ECH)</title>
+      <link>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</guid>
+      <description>
+
+&lt;p&gt;The Encrypted Client Hello (ECH) mechanism &lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-tls-esni&#34;&gt;draft-spec&lt;/a&gt; is a way to plug a few privacy-holes that remain in the Transport Layer Security (TLS) protocol that&amp;rsquo;s used as the security layer for the web. OpenSSL is a widely used library that provides an implementation of the TLS protocol. The &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO project&lt;/a&gt; has developed an implementation of ECH for OpenSSL, and proof-of-concept implementations of various clients and servers that use OpenSSL, and other TLS libraries, as a demonstration and for interoperability testing. DEfO is funded by the Open Technology Fund (OTF).&lt;/p&gt;
+
+&lt;p&gt;This guide is aimed at those who would like to try out ECH with our experimental Debian &lt;em&gt;unstable&lt;/em&gt; packages for OpenSSL, &lt;em&gt;curl&lt;/em&gt; and &lt;em&gt;nginx&lt;/em&gt;. The DEfO project is making packages temporarily available so people can carry out such experiments before upstream maintainers include ECH in standard releases.&lt;/p&gt;
+
+&lt;p&gt;This guide describes two set ups: one assumes that you want to setup everything (i.e. a web server and associated DNS authoritative server) on one virtual machine and a second describes a way to set up an ECH-enabled web server if you have an existing DNS configuration elsewhere. Many other configurations are of course possible. Comments/questions are welcome via &lt;a href=&#34;mailto:info@defo.ie&#34;&gt;email&lt;/a&gt; or as GitLab issues/merge requests.&lt;/p&gt;
+
+&lt;p&gt;In summary this guide shows how to:
+- find and install our Debian &lt;em&gt;unstable&lt;/em&gt; packages
+- configure a minimal DNS setup (using dnsmasq or bind) that enables use of ECH from browsers
+- configure a minimal &lt;em&gt;nginx&lt;/em&gt; setup for an ECH enabled web sites
+- test your DNS set up and that ECH is working&lt;/p&gt;
+
+&lt;p&gt;We assume the reader is comfortable with simple DNS management and system administration tasks.
+When commands shown below should be run as &lt;code&gt;root&lt;/code&gt; they are prepended with a &amp;lsquo;#&amp;rsquo;, if not they are prepended with a &amp;lsquo;$&amp;rsquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-packages&#34;&gt;Install packages&lt;/h2&gt;
+
+&lt;p&gt;You need to first have access to a virtual machine running Debian &lt;em&gt;unstable&lt;/em&gt;. Many online resources describe many ways to do this.&lt;/p&gt;
+
+&lt;p&gt;We start with an empty (minimal) Debian &lt;em&gt;unstable&lt;/em&gt; system and install OpenSSL from the DEfO apt repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# apt install ca-certificates
+# echo &amp;quot;deb [trusted=yes] https://defo.ie/debian/ ./&amp;quot; &amp;gt; /etc/apt/sources.list.d/defo.list
+# apt update
+# apt install openssl
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;pick-some-dns-names-to-use&#34;&gt;Pick some DNS names to use&lt;/h2&gt;
+
+&lt;p&gt;In the text below we assume that the web server for which we wish to benefit from ECH is called &lt;code&gt;hidden.example.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;ECH also involves a so-called &lt;code&gt;public_name&lt;/code&gt; - that&amp;rsquo;s present in the outer ClientHello when ECH is used and hence is visible to a network observer, unlike the server name we include inside the Encrypted Client Hello. The &lt;code&gt;public_name&lt;/code&gt; we use below is &lt;code&gt;example.com&lt;/code&gt;`&lt;/p&gt;
+
+&lt;p&gt;You should obviously substitute your chosen DNS names.&lt;/p&gt;
+
+&lt;h2 id=&#34;generate-an-ech-key-pair&#34;&gt;Generate an ECH key pair&lt;/h2&gt;
+
+&lt;p&gt;For ECH to work, we need a new asymmetric key pair. (Different from those used for TLS server authentication), so next we generate an ECH key pair:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# mkdir /etc/echkeydir/
+# openssl ech -public_name example.com -out /etc/echkeydir/example.pem.ech
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that we need this file later to set up DNS as well as &lt;em&gt;nginx&lt;/em&gt;. &lt;em&gt;Nginx&lt;/em&gt; will make use of the private key from the ECH key file, whilst the DNS will be used to publish the corresponding public key in an HTTPS resource record (that&amp;rsquo;s where ECH-enabled browsers will look for ECH public keys).&lt;/p&gt;
+
+&lt;p&gt;The file name chosen should end with &lt;code&gt;.pem.ech&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;set-up-dns&#34;&gt;Set up DNS&lt;/h2&gt;
+
+&lt;p&gt;There are many ways in which one can set up the DNS records required to enable experimenting with ECH. We document two ways here, the first is where the main DNS name with which you&amp;rsquo;re experimenting is newly registered DNS name and has no existing DNS set up. The second describes a case where a DNS name exists but we need to add some new resource records to enable ECH.&lt;/p&gt;
+
+&lt;p&gt;In both cases, &lt;code&gt;&amp;lt;IP&amp;gt;&lt;/code&gt; should be the IPv4 address for the host running the web server. (We leave IPv6 handling as an exercise for the reader, but there&amp;rsquo;s nothing ECH-specific required for IPv6.)&lt;/p&gt;
+
+&lt;h3 id=&#34;standalone-new-setup-dnsmasq-as-a-authoritative-dns-server-to-serve-the-ech-key-on-the-same-vm&#34;&gt;Standalone/New setup : dnsmasq as a authoritative DNS server to serve the ECH key (on the same VM)&lt;/h3&gt;
+
+&lt;p&gt;In this case we also need to pick some DNS nameserver names, we assume the authoritative primary nameserver for both web server DNS names is &lt;code&gt;ns.example.com&lt;/code&gt; with a secondary of &lt;code&gt;ns2.example.com&lt;/code&gt;`&lt;/p&gt;
+
+&lt;p&gt;The DNS set up to use starting from a clean dnsmasq install:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# apt install dnsmasq
+# cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/dnsmasq.d/example.conf
+no-resolv
+no-hosts
+auth-server=ns.example.com,ns2.example.com
+auth-zone=example.com
+auth-sec-servers=ns2.example.com
+auth-soa=42,admin.example.com
+host-record=example.com,&amp;lt;IP&amp;gt;
+host-record=hidden.example.com,&amp;lt;IP&amp;gt;
+dns-rr=hidden.example.com,65,&amp;lt;ascii-hex encoded HTTPS rdata&amp;gt;
+EOF
+# systemctl restart dnsmasq
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that you need to bump the SOA version (42 in the above) every time you change the config and make sure the zone distributes to ns2.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;&amp;lt;ascii-hex encoded HTTPS rdata&amp;gt;&lt;/code&gt; will be published as the HTTPS resource record (type == 65) for &lt;code&gt;hidden.example.com&lt;/code&gt; and can be produced from the file we generated earlier via a shell script you can download and use as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ _curl_ https://raw.githubusercontent.com/sftcd/openssl/ECH-draft-13c/esnistuff/pem2rr.sh -o pem2rr.sh
+$ chmod u+x pem2rr.sh
+$ ./pem2rr.sh /etc/echkeydir/example.pem.ech
+0001000005003b0039fe0d0035db0020002059907d619054c907a1f296ceb63dde1d57f72f15db172601a2f6b55e66e7cd0f00040001000100066261722e69650000
+$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;existing-dns-name-setup-using-bind-to-publish-new-ech-related-resource-records&#34;&gt;Existing DNS name setup: using bind to publish new ECH related resource records&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s assume you have an existing bind-based DNS setup for &lt;code&gt;example.com&lt;/code&gt;&lt;code&gt;, but are moving the IP address for that to a new VM that&#39;ll run the ECH-enabled web server for both&lt;/code&gt;example.com&lt;code&gt;and&lt;/code&gt;hidden.example.com`&lt;code&gt;. The change you might then make using the bind&lt;/code&gt;nsupdate` command on the authoritative DNS server would then look like:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Change/add IP address records for our DNS names.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bind&#34;&gt;$ sudo nsupdate -l
+&amp;gt; update delete example.com a
+&amp;gt; update delete example.com aaaa
+&amp;gt; update add example.com 300 a &amp;lt;IP&amp;gt;
+&amp;gt; update add hidden.example.com 300 a &amp;lt;IP&amp;gt;
+&amp;gt; send
+&amp;gt; quit
+$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Add new HTTPS resource record for &lt;code&gt;hidden.example.com&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;First we need to get the base64 encoded public from our &lt;code&gt;/etc/echkeydir/example.pem.ech&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ tail -2 /etc/echkeydir/example.pem.ech | head -1
+ADr+DQA2mQAgACAF7cLT+KtK0oR2DrRCGXmzBWM1eHgJgDEGLqL644/OcAAEAAEAAQAHaG9iYS5pZQAA
+$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That base64 encoded value is what we need to publish in the DNS&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo nsupdate -l
+&amp;gt; update delete hidden.example.com HTTPS
+&amp;gt; update add hidden.example.com 300 HTTPS 1 . ech=&amp;lt;base64-encoded-value&amp;gt;
+&amp;gt; send
+&amp;gt; quit
+$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;checking-your-dns-set-up&#34;&gt;Checking your DNS set up&lt;/h2&gt;
+
+&lt;p&gt;You can check that value is correctly published in the DNS e.g. using the &lt;code&gt;dig command&lt;/code&gt;`:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ dig +short https hidden.example.com
+1 . ech=ADr+DQA2mQAgACAF7cLT+KtK0oR2DrRCGXmzBWM1eHgJgDEGLqL644/OcAAEAAEAAQAHaG9iYS5pZQAA
+$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If your version of &lt;code&gt;dig&lt;/code&gt; is older and doesn&amp;rsquo;t know about HTTPS resource records, then you may need to check via:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ dig +short +unknownformat -t TYPE65 hidden.example.com
+\# 67 0001000005003C003AFE0D0036990020002005EDC2D3F8AB4AD28476 0EB4421979B30563357878098031062EA2FAE38FCE70000400010001 0007686F62612E69650000
+$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The 2nd-last invocation of &lt;code&gt;dig&lt;/code&gt; above shows the presentation format version of the HTTPS resource record. The last invocation above shows the equivalent in ascii-hex, which (minus the spaces) is what &lt;code&gt;dnsmasq&lt;/code&gt; needs in it&amp;rsquo;s configuration file.&lt;/p&gt;
+
+&lt;p&gt;We assume &lt;code&gt;dnsmasq&lt;/code&gt; will likely accept presentation format for HTTPS resource records in future as &lt;code&gt;bind&lt;/code&gt; tooling already.&lt;/p&gt;
+
+&lt;h2 id=&#34;set-up-nginx-to-serve-an-outer-and-an-inner-hidden-website&#34;&gt;Set up &lt;em&gt;nginx&lt;/em&gt; to serve an outer and an inner (hidden) website&lt;/h2&gt;
+
+&lt;p&gt;Install &lt;em&gt;nginx&lt;/em&gt;-light from the DEfO repo, as above:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# apt install _nginx_-light certbot python3-certbot-_nginx_
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t already have a web server config for &lt;code&gt;example.com&lt;/code&gt; then you can create a basic pair of &lt;code&gt;sites-enabled&lt;/code&gt; configuration files via the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# rm /etc/_nginx_/sites-enabled/default
+# cp /etc/_nginx_/sites-available/default /etc/_nginx_/sites-enabled/example.conf
+# sed -i &#39;s/server_name _;/server_name example.com;/&#39; /etc/_nginx_/sites-enabled/example.conf
+# echo &amp;quot;ssl_echkeydir /etc/echkeydir/;&amp;quot; &amp;gt;&amp;gt; /etc/_nginx_/sites-enabled/example.conf
+# cp /etc/_nginx_/sites-available/default /etc/_nginx_/sites-enabled/hidden.example.conf
+# sed -i -e &#39;s/server_name _;/server_name hidden.example.com;/&#39; -e sed &#39;s/\(listen.*\)default_server;/\1;/&#39; /etc/_nginx_/sites-enabled/hidden.example.conf
+# systemctl restart _nginx_
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s possible the &lt;code&gt;sed&lt;/code&gt; commands above may not work for you, e.g. if default files change, or perhaps you won&amp;rsquo;t use those if you have an existing web server config for &lt;code&gt;example.com&lt;/code&gt;&lt;code&gt;. In that case you can simply edit the config files to ensure the following, before running&lt;/code&gt;certbot``:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;you have &lt;code&gt;example.com&lt;/code&gt; and &lt;code&gt;hidden.example.com&lt;/code&gt; servers set up with correct &lt;code&gt;server_name&lt;/code&gt;`&lt;/li&gt;
+&lt;li&gt;optionally change the DocRoot (&lt;code&gt;root&lt;/code&gt;) in these configuration files to serve different content&lt;/li&gt;
+&lt;li&gt;there&amp;rsquo;s a line within the &lt;code&gt;http&lt;/code&gt; stanza as follows:
+  &lt;code&gt;ssl_echkeydir /etc/echkeydir/;&lt;/code&gt;`&lt;/li&gt;
+&lt;li&gt;the &lt;code&gt;ssl_echkeydir&lt;/code&gt; line can in &lt;code&gt;_nginx_.conf&lt;/code&gt; within the &lt;code&gt;http&lt;/code&gt; stanza or within either of the files in &lt;code&gt;sites-enabled&lt;/code&gt; when it must be outside the &lt;code&gt;server&lt;/code&gt; stanza&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;run-certbot-to-get-a-tls-server-certificate&#34;&gt;Run certbot to get a TLS server certificate&lt;/h2&gt;
+
+&lt;p&gt;Next you need to rRun &lt;code&gt;certbot&lt;/code&gt; to get TLS server public keys certificates for both DNS names (&lt;code&gt;example.com` and `hidden.example.com&lt;/code&gt;). Those can be in the same certificate (or not) for the purposes of this experimental setup.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# certbot --nginx
+...iteractions...
+#
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;certbot&lt;/code&gt; may prompt you for e.g. an email address or approval and if you have an existing certificate for &lt;code&gt;example.com&lt;/code&gt; you may be prompted as to whether you want to add &lt;code&gt;hidden.example.com&lt;/code&gt; to that certificate.&lt;/p&gt;
+
+&lt;h2 id=&#34;use-curl-to-test-the-set-up&#34;&gt;Use &lt;em&gt;curl&lt;/em&gt; to test the set up&lt;/h2&gt;
+
+&lt;p&gt;Install our ECH-enabled &lt;em&gt;curl&lt;/em&gt; package from the DEfO repo and run:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ curl -v --ech true --doh-url https://1.1.1.1/dns-query https://hidden.example.com/ |&amp;amp; grep Succeeded
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should see this in the output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ECH: result: status is Succeeded, inner is hidden.example.com, outer is example.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;check-with-browsers&#34;&gt;Check with browsers&lt;/h2&gt;
+
+&lt;p&gt;If you&amp;rsquo;re running a recent browser version (chromium-based since version 105, firefox since before then:-) you can enable ECH in the browser by &lt;a href=&#34;https://defo.ie/#clients&#34;&gt;following our client configuration instructions&lt;/a&gt;. Unfortunately, browsers don&amp;rsquo;t provide user interface to show if ECH has succeeded or not, but you can verify that your browser is able to use ECH if you visit &lt;a href=&#34;https://defo.ie/ech-check.php&#34;&gt;https://defo.ie/ech-check.php&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;feedback&#34;&gt;Feedback&lt;/h2&gt;
+
+&lt;p&gt;All going well, you should now have an ECH-enabled web site and be able to extend/play with that as you like. We&amp;rsquo;d appreciate feedback on this guide if you have a chance. As before, comments/questions are welcome via &lt;a href=&#34;mailto:info@defo.ie&#34;&gt;email&lt;/a&gt; or as GitLab issues/merge requests.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>
+
+&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;
+
+&lt;p&gt;As the IETF standard for ECH completes, our key objectives are to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Upstream DEfO code&lt;/li&gt;
+&lt;li&gt;Integrate ECH into more clients and servers&lt;/li&gt;
+&lt;li&gt;Gain and document operational experience&lt;/li&gt;
+&lt;li&gt;Submit key code for red team audits&lt;/li&gt;
+&lt;li&gt;Publish open-source ECH provisioning tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The key challenges we expect to face in meeting those objectives are: firstly, dealing with the OpenSSL and other upstream code bases (e.g. nginx, Apache HTTP Server) - satisfying upstream developers when dealing with complex code changes, as are involved here, has proven to be quite time and effort consuming. Secondly, it is a challenge to arrange the trials we have envisaged for DEfO-2 but doing so should help to demonstrate that web sites can easily and safely enable ECH without putting themselves at risk of interoperability failures or adverse attention from censors and without further centralising the web. Lastly, there are some remaining technical challenges not addressed in DEfO-1 (proprietary TLS ClientHello extension handling, interactions between TLS Hello Retry Request and ECH, and privacy analyses of split-mode ECH deployments) that we plan to address in DEfO-2.&lt;/p&gt;
+
+&lt;p&gt;The key challenges we aim to mitigate for users is the ease with which user activity can be tracked and blocked based on clear text SNI. Secondarily, our focus on web-server integrations and provisioning mechanisms for ECH addresses Internet centralisation (which itself poses potential risks for censorship) by ensuring this technology can be easily deployed without having to depend on entities such as global-scale CDNs.&lt;/p&gt;
+
+&lt;p&gt;The primary gaps addressed by DEfO are: the privacy-leak that is clear text SNI in TLS and secondly that nobody else has been developing an ECH implementation for OpenSSL, which is one of the most widely used TLS stacks, particularly for web servers. That situation has not changed since DEfO-1 started. Arguably filling that gap has become more pressing as some browsers now ship with ECH support.&lt;/p&gt;
+
+&lt;p&gt;ECH is designed to contribute to the safety of users by removing one the the main remaining aspects of the web that allows network observers to easily monitor and censor web traffic based on either client DNS queries (browsers typically only use ECH when DoH has been used) and the Server Name Indication (SNI) in the TLS handshake, which is encrypted via ECH. The eventual goal is that use of ECH becomes near ubiquitous, and that goal is very achievable for web sites that make use of a CDN. DEfO however also has a focus on ECH support in various web servers and proxies (Apache, nginx, lighttpd, HAProxy) so that users of deployments that don’t use a commercial CDN can also benefit from ECH. The result of using ECH should be that neither the DNS query nor the TLS exchange leak the name of the web server with which the browser is establishing contact, thus taking away a still-easy opportunity for monitoring and censorship.&lt;/p&gt;
+
+&lt;p&gt;Censors however, especially at the nation-state level, might choose to block all uses of ECH, which is something that is to be expected. The main mitigation for that envisaged is that browsers, even while not using ECH, will emit “fake” (or GREASEd) ECH values, thus increasing the costs if a censor decides to block all use of ECH. The extent to which GREASEing will be an effective mitigation for blocking all ECH will essentially
+end up as a political/commercial decision for censors, browser makers, and web sites, but what we can say is that for now at least, browser makers and the larger CDNs do seem committed to making use of ECH. So we can have some hope that even the most capable censors might have to think hard before blocking all ECH. In DEfO-2 we are also planning some significant-scale trials that, if successful, should go a long way towards helping other significant web sites overcome fears related to enabling ECH. Overcoming a fear that one’s web site may be blocked if one deploys ECH will be a valuable result of DEfO-2 should our trials come to fruition as we hope.&lt;/p&gt;
+
+&lt;p&gt;We do see a number of usability issues for those deploying web servers that need to be addressed, and that we plan to address in DEfO-2. Our approach is to aim for the same level of usability for web server administrators as has been achieved by &lt;a href=&#34;https://certbot.eff.org/&#34;&gt;&lt;em&gt;certbot&lt;/em&gt;&lt;/a&gt; as it interacts with Let&amp;rsquo;s Encrypt or other CAs. Making it easy to enable ECH, especially for &amp;ldquo;smaller&amp;rdquo; web properties is high priority for DEfO.&lt;/p&gt;
+
+&lt;p&gt;The outcome for which we hope is the upstreaming of ECH into important code bases, and to have demonstrated that one can deploy ECH easily at either small or large scale. The impact we expect is that we continue to significantly contribute to the use of ECH becoming near ubiquitous.&lt;/p&gt;
+
+&lt;h2 id=&#34;timeliness&#34;&gt;Timeliness&lt;/h2&gt;
+
+&lt;p&gt;The time is now ripe for DEfO-2:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello&#34;&gt;Firefox&lt;/a&gt; now supports ECH by default.&lt;/li&gt;
+&lt;li&gt;Chrome supports ECH in &lt;a href=&#34;https://groups.google.com/a/chromium.org/g/blink-dev/c/KrPqrd-pO2M/m/_8Lfd5xcAwAJ&#34;&gt;10% of stable releases&lt;/a&gt; as of August 2023.&lt;/li&gt;
+&lt;li&gt;Brave now also supports ECH, &lt;a href=&#34;https://github.com/brave/brave-browser/issues/1851#issuecomment-1763176335&#34;&gt;behind the same flags&lt;/a&gt; as Chromium&lt;/li&gt;
+&lt;li&gt;These browser developments, plus the server code developed by DEfO-1, now enable us to plan real-world experiments&lt;/li&gt;
+&lt;li&gt;Cloudflare has &lt;a href=&#34;https://developers.cloudflare.com/ssl/edge-certificates/ech/&#34;&gt;beta support&lt;/a&gt; for enabling ECH.&lt;/li&gt;
+&lt;li&gt;During the run-time of DEfO-2 we expect to be in a position to run trials with significant players that could significantly assist with the goal of making use of ECH common for large web sites.&lt;/li&gt;
+&lt;li&gt;The DEfO-2 project timeline should also cover the finalisation of the IETF specification for ECH, significant progress on ancillary specifications (e.g. for provisioning) and provide sufficient time for upstreaming of DEfO code&lt;/li&gt;
+&lt;li&gt;DEfO-2 benefits from the same team as DEfO-1 – Tolerant Networks and the Guardian Project having co-operated successfully on DEfO-1 are looking forward to continuing that collaboration and to extending the team for DEfO-2&lt;/li&gt;
+&lt;li&gt;HPKE, a core part of ECH, but with broader applicability, is now RFC9180 and the OpenSSL maintainers merged our DEfO code for HPKE in November 2022.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;our-development-projects&#34;&gt;Our development projects&lt;/h2&gt;
+
+&lt;p&gt;The DEfO project implemented Encrypted ClientHello (ECH) support for OpenSSL and Conscrypt, carried out interoperability testing of those implementations, and also used those libraries to ECH-enable various web servers and clients. We deployed services using these web servers and the DNS infrastructure required to support automated key upated for the HTTPS RRs associated with those services. Here we provide a short overview of that work in order to help with larger scale experiments and with further development of the ECH specification.&lt;/p&gt;
+
+&lt;h3 id=&#34;libraries&#34;&gt;Libraries&lt;/h3&gt;
+
+&lt;p&gt;As part of the DEfO project, we ECH-enabled two important TLS libraries:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.conscrypt.org/&#34;&gt;Conscrypt&lt;/a&gt; is a Java Security Provide (a library) that provides a Java &amp;ldquo;wrapper&amp;rdquo; for the C++ language boringssl library. Conscrypt is commonly used as the TLS provider for applications running on Android devices and is thus an attractive target to allow many clients to be ECH-enabled. (We do not target browser clients in DEfO as work on ECH-enabling those is being done by browser-makers.) The authors of boringssl (Google) have added ECH support to a version of their code, and we used that to enhance Conscrypt to call the new borinssl APIs required to use ECH and to provide mechanisms for applications to default to, or signal use of, ECH.&lt;/li&gt;
+&lt;li&gt;OpenSSL is a long-lived library providing cryptographic and TLS services that is used by many applications, including many web servers and hence is an attractive target for ECH-enabling, especially for server-side functionality. Our ECH-enabled fork of OpenSSL is here.&lt;/li&gt;
+&lt;li&gt;We have and will continue to work with the developers of other TLS libraries (e.g. wolfSSL) to assist in ECH-enabling their code, mostly via interoperability testing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;clients&#34;&gt;Clients&lt;/h3&gt;
+
+&lt;p&gt;We ECH-enabled implemented the following TLS client applications:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OpenSSL &lt;code&gt;s_client&lt;/code&gt; - this client application comes as part of the OpenSSL build but is commonly used for testing and as an extremely simple scriptable TLS client.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;curl&lt;/em&gt; is a widely-used command line web client that can use OpenSSL for TLS support, so we &lt;a href=&#34;https://github.com/sftcd/curl/blob/ECH-experimental/docs/ECH.md&#34;&gt;ECH-enabled that&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;F-Droid is an Android client application that provides an installable catalogue of FOSS applications and that uses Conscrypt. We made an ECH-enabled build called &lt;a href=&#34;https://f-droid.org/packages/ie.defo.ech_apps/&#34;&gt;DEfO ECH Apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;servers&#34;&gt;Servers&lt;/h3&gt;
+
+&lt;p&gt;We ECH-enabled implemented the following web servers:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Apache HTTP Server is one of the two most commonly used web servers today, you can try our &lt;a href=&#34;https://github.com/sftcd/httpd&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;nginx&lt;/em&gt; is the other web server in the &amp;ldquo;top two.&amp;rdquo;, you can try our &lt;a href=&#34;https://github.com/sftcd/nginx&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;lighttpd is a web server that is commonly used on smaller devices such as home routers, you can try our &lt;a href=&#34;https://github.com/sftcd/lighttpd1.4&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;HAProxy is widely used as an HTTP ingress proxy and so is a good target for exploring ECH split-mode, you can try our &lt;a href=&#34;https://github.com/sftcd/haproxy&#34;&gt;ECH-enabled fork&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;OpenSSL &lt;code&gt;s_server&lt;/code&gt; - this example server application is part of the OpenSSL build and is commonly used for testing and experimentation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;test-tools&#34;&gt;Test tools&lt;/h3&gt;
+
+&lt;p&gt;Amongst the test tooling we developed are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Comprehensive OpenSSL make test targets for HPKE and ECH.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/defo-project/EchInteropTest&#34;&gt;ECHInteropTest&lt;/a&gt; is a Java client for interoperability testing on Android.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sftcd/echdnsfuzz&#34;&gt;&lt;em&gt;echdnsfuzz&lt;/em&gt;&lt;/a&gt; is a catalogue of &amp;ldquo;interesting&amp;rdquo; ECHConfigList values that could cause issues for clients combined with a service to randomly select one of those for publication in the public DNS every 30 minutes. This is a useful part of fuzz-testing an ECH-enabled client application.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;issues-arising&#34;&gt;Issues Arising&lt;/h2&gt;
+
+&lt;p&gt;We saw the following issues that could benefit from further work to ease deployment of ECH:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For HAProxy, since DEfO-1 we have achieved support for HelloRetryRequest in ECH split-mode but have further work to do on ECH key rotation.&lt;/li&gt;
+&lt;li&gt;There can sometimes be a lack of clarity as to which software component should be responsible for choosing to attempt real (i.e. non-GREASEd) ECH, and hence to be responsible for the additional DNS queries required to acquire an ECHConfig. For libraries like OpenSSL and boringssl it clearly only makes sense for that decision (and hence any new DNS handling code) to be outside the library. For a browser, it as clearly makes sense for that code to be in the browser application layer. With &amp;ldquo;middleware&amp;rdquo; though, such as OkHTTP or Conscrypt it can be hard to know which is the correct decision.&lt;/li&gt;
+&lt;li&gt;The new DNS code required for handling HTTPS RRs is not too complex but the full generality of SVCB is extremely complex. Adding such complexity (and associated caching) is a major change for clients like curl that have to date only had to have a very simple model for DNS - essentially only querying A/AAAA and having almost trivial caching in the application itself.&lt;/li&gt;
+&lt;li&gt;The client implementation of ECH is relatively complex in that it &amp;ldquo;touches&amp;rdquo; the TLS state machine in many ways, and hence requires changes in a lot of places. As well as increasing the cost of implementing this also increases the costs associated with testing and upstreaming.&lt;/li&gt;
+&lt;li&gt;Achieving the same level of usability as &lt;code&gt;certbot&lt;/code&gt; for web server administrators may be challenging, but is an important goal to make it easy for web server administrators to be able to easily deploy ECH.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;ECH is demonstrably implementable and can be deployed. We don&amp;rsquo;t yet know if new issues will become apparent as larger-scale experiments are carried out, but we should find out during the run-time of DEfO-2.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>F-Droid&#39;s Community-controlled Backup Ceremony</title>
+      <link>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</guid>
+      <description>&lt;p&gt;(&lt;em&gt;Guest post from F-Droid, originally on &lt;a href=&#34;https://f-droid.org/2023/07/15/community-controlled-backup-ceremony.html&#34;&gt;f-droid.org&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;Seven core contributors and one board member met in Scotland, the birthplace of F-Droid, for the first in-person F-Droid team meeting.  One of the most pressing tasks we needed to take care of was setting up a contributor-controlled backup of all of our signing keys.  The requirements made it necessary to have a lengthy, in-person, consensus-driven planning session.  We found no good documentation of such a procedure, so we&amp;rsquo;re going out on a limb here and publishing the general outline of our process.  This process was informally audited by multiple people with varying expertise before the public key was used to encrypt anything.&lt;/p&gt;
+
+&lt;p&gt;F-Droid manages secret signing keys for thousands of apps.  Someone who has control over those keys could create malicious app releases that could be transparently installed as updates.  On top of that, &lt;a href=&#34;https://developer.android.com/about/versions/pie/android-9.0#apk-key-rotation&#34;&gt;Android&lt;/a&gt; does &lt;a href=&#34;https://guardianproject.info/2015/12/29/how-to-migrate-your-android-apps-signing-key/&#34;&gt;not&lt;/a&gt; make it &lt;a href=&#34;https://anandbose.gitlab.io/android-development/2020/05/08/android-signing-key-rotation-explained/&#34;&gt;easy&lt;/a&gt; to rotate to new signing keys, unlike TLS or Signal. So &lt;a href=&#34;https://f-droid.org/docs/Signing_Process/&#34;&gt;these keys&lt;/a&gt; are very important to &lt;a href=&#34;https://f-droid.org/docs/Building_a_Signing_Server/&#34;&gt;protect&lt;/a&gt;.  They are also very important to backup, since the Android OS uses the signing key combined with the Application ID as the unique identifier to represent each installed app. This meeting gave us the perfect opportunity to create a new backup process that ensures that at least 4 trusted community members must be physically present in order to decrypt the backup of all the keys.  First, we started with the requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Regular backups as new keys get added.&lt;/li&gt;
+&lt;li&gt;Strong, proven encryption for all backups.&lt;/li&gt;
+&lt;li&gt;Minimum of four participants to decrypt.&lt;/li&gt;
+&lt;li&gt;Specific technical experience should not be required to be a participant.&lt;/li&gt;
+&lt;li&gt;The components should be physically spread out across jurisdictions.&lt;/li&gt;
+&lt;li&gt;Access should minimized as much as possible (e.g. the signing server maintainer does not need access to the backups).&lt;/li&gt;
+&lt;li&gt;As low a stress level as possible for each participant.&lt;/li&gt;
+&lt;li&gt;Each participant could hand over their component if they are forced to, without jeopardizing the encryption.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then we mapped out who was present:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Seven core contributors.&lt;/li&gt;
+&lt;li&gt;One board member.&lt;/li&gt;
+&lt;li&gt;One trusted external witness.&lt;/li&gt;
+&lt;li&gt;No one else.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From that, we built the process:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Three roles for physical control: operator of the signing server, encrypted backup holder, passphrase shard holder.&lt;/li&gt;
+&lt;li&gt;Each person only takes on a single role, for example, shard holders do not have access to the signing keys or the encrypted backup.&lt;/li&gt;
+&lt;li&gt;The encryption key used for the data is public key cryptography.&lt;/li&gt;
+&lt;li&gt;The private key was generated on a one-time-use, in-memory, disposable &lt;a href=&#34;https://tails.boum.org/&#34;&gt;TAILS&lt;/a&gt; session.&lt;/li&gt;
+&lt;li&gt;The private key was sharded using &lt;a href=&#34;https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing&#34;&gt;Shamir&amp;rsquo;s Secret Sharing&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We used an implementation of Shamir&amp;rsquo;s Secret Sharing that has been maintained for over 15 years.  The installation that was used was confirmed via reproducible builds.&lt;/li&gt;
+&lt;li&gt;Each shard was written to a removeable storage device bought in a store with cash without pre-order or registration.&lt;/li&gt;
+&lt;li&gt;Each removeable storage device with a shard was physically handed each shard holder to pack in a tamper-evident envelope as the others observed.&lt;/li&gt;
+&lt;li&gt;Backups must not be transmitted over the internet, only exchanged via in-person meetings between people who know each other.&lt;/li&gt;
+&lt;li&gt;All involved sat around a table for the duration of the ceremony.  The security profile of in-person discussions is drastically easier to manage than secure online discussions.&lt;/li&gt;
+&lt;li&gt;All present were observers of each step of the process, and verbally confirmed their agreement.&lt;/li&gt;
+&lt;li&gt;The operators of the signing server and the holders of the backup data verified each others&amp;rsquo; identities via F-Droid networks, PGP Web of Trust, and checks of government issued IDs.&lt;/li&gt;
+&lt;li&gt;Pieces from a minimum of two jurisdictions are required to decrypt: EU, Europe non-EU, US.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One important factor in reliable backups is regular updates.  New apps are constantly being added, and those usually get a new signing key assigned.  So we needed a system where it was easy to update the backup data while involving as few people as possible.  An operator of the signing server receives the public key to encrypt the backups via in-person exchange with a holder of the backups.  The holders of the backup data receives the encrypted backups from an operator of the signing server via in-person exchange.&lt;/p&gt;
+
+&lt;p&gt;Holding such important secrets also brings some unavoidable stresses to the people holding them. One key design goal was to create a protocol that did not add to the stress of any existing operators.  Furthermore, we aimed to keep the individual stress as low as possible for all roles in this protocol.  That makes it possible to empower volunteer contributors without overburdening them.&lt;/p&gt;
+
+&lt;p&gt;For restoring, we agreed that it should happen in an in-person meeting.  The process requires three shard holders meet with one encrypted backup holder, then the results need be given to a signing server operator. Requiring an in-person meeting could delay the restore process, but the added trust seemed worth it.  So this is the default process.  We could still switch to partially online process if the need arises.  That would require the agreement of five participants.&lt;/p&gt;
+
+&lt;p&gt;We believe this is a secure and reliable backup procedure for very sensitive data.  We welcome further scrutiny and plan to update the procedure as needed in a future meeting.&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;Travel costs for this meeting were paid for by the &lt;a href=&#34;https://guardianproject.info/2022/02/05/decentralizing-distribution/&#34;&gt;FFDW-DVD grant&lt;/a&gt;.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>
+
+&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all
+sorts of issues. That&amp;rsquo;s why we took special interest in
+&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a
+JavaScript library for decentralized content delivery in web-browsers and
+markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient
+primarily in the context of static websites.  While it should work with dynamic
+websites too, that was out of focus for us.&lt;/p&gt;
+
+&lt;p&gt;Under the hood LibResilient uses &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API&#34;&gt;Web
+Workers&lt;/a&gt;.
+Technically it&amp;rsquo;s a piece of JavaScript that websites can install into the
+browsers of their visitors.  I like to compare it to cookies, except that it&amp;rsquo;s
+not just data but actually a program for manipulating your network request. The
+main purpose of Web Workers is to enable web apps to optimize their network
+connections. Web Workers are pretty low-level API.&lt;/p&gt;
+
+&lt;p&gt;LibResilient delivers implementations for common use-cases on top of Web
+Workers in the form of plug-ins.  We&amp;rsquo;ve looked at the 3 most basic of those
+plug-ins.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;fetch plugin&lt;/em&gt; - routes network requests directly to the web-server as if
+LibResilient wasn&amp;rsquo;t present.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;cache plugin&lt;/em&gt; - stores HTML, JavaScript, images and other files inside
+the browsers local storage&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;alt-fetch plugin&lt;/em&gt; - allows to configure a list of website mirrors and tries
+to fetch files from there&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These enable us to keep a website online and even update it if the main
+web-server running that site has an outage.  It&amp;rsquo;s key that visitors must have
+managed to load the website at least once before.  Only than can LibResilient
+work it&amp;rsquo;s magic and install itself and the list of site mirrors into the users
+browser.  This solution doesn&amp;rsquo;t work for first time visitors, during the period
+of an outage.&lt;/p&gt;
+
+&lt;p&gt;Of course this requires to run website mirrors. Static websites really shine in
+this regard, because they are very easy to mirror and static web-space is quite
+inexpensive these days.&lt;/p&gt;
+
+&lt;p&gt;We also looked into using IPFS Gateways as mirrors.  To accomplish this we had
+to first add and pin websites to IPFS.  Next we had to publish the pinned copy
+of the site to IPNS.  Then we could use the IPNS-key-fingerprint to use every
+public IPFS gateway as mirror.  However, public gateways tend to require quite
+long to answer requests, which is bad for LibResilient because it uses
+relatively short timeouts to fail-over between mirrors.  So to get some sense
+of reliability, paid IPFS gateways guaranteed to pin your website are a more
+stable choice.&lt;/p&gt;
+
+&lt;h1 id=&#34;publishing-libresilient-to-ipfs&#34;&gt;Publishing LibResilient to IPFS&lt;/h1&gt;
+
+&lt;p&gt;This is a for publishing a static LibResilient enabled website to IPFS.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;requirements&lt;/h2&gt;
+
+&lt;p&gt;You will need VPS, or some other kind of tiny but always online server to make
+your data available on IPFS. This guide assumes that your server is running some
+flavor of GNU/Linux. It also assumes that you are familiar with the concept of
+static websites and that your site is already hosted on the internet.&lt;/p&gt;
+
+&lt;p&gt;Mind that IPFS can be very slow, if you run into timeouts don&amp;rsquo;t give up. Just
+wait a few minutes and give it a few more retries, it will work eventually.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-ipfs&#34;&gt;Install IPFS&lt;/h2&gt;
+
+&lt;p&gt;This short snipped will install &lt;code&gt;kubo&lt;/code&gt; the official IPFS binary build on your
+server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget https://dist.ipfs.tech/kubo/v0.18.1/kubo_v0.18.1_linux-amd64.tar.gz
+echo &amp;quot;15d42b47b8529edda3e8e2d6fe6c14958d939c4efd07dea02e204743e05216f3 kubo_v0.18.1_linux-amd64.tar.gz&amp;quot; \
+    | sha256sum --check
+tar -xzf kubo_v0.18.1_linux-amd64.tar.gz
+mv kubo/ipfs /usr/local/bin/ipfs
+rm -rf kubo kubo_v0.18.1_linux-amd64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Setup kubo daemon to always run in background as systemd service. (Note: this
+is tested for Debian and might require different steps on other GNU/Linux
+distributions.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;adduser ipfs --gecos &#39;&#39; --disabled-password
+su ipfs -c &#39;/usr/local/bin/ipfs init --profile server&#39;
+
+cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/ipfs-daemon.service
+[Unit]
+Description=IPFS Daemon
+
+[Service]
+Restart=always
+User=ipfs
+group=ipfs
+WorkingDirectory=/home/ipfs
+ExecStart=/usr/local/bin/ipfs daemon
+
+[Install]
+WantedBy=default.target
+EOF
+
+systemctl enable ipfs-daemon.service
+systemctl start ipfs-daemon.service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Tip: If you&amp;rsquo;re behind a firewall or NAT make sure to open ports 4001/tcp and
+4001/udp so IPFS can connect to the internet.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-site-to-ipfs&#34;&gt;Publish site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Next we&amp;rsquo;ll publish the website to IPFS. You&amp;rsquo;ll need to copy your static website
+to the IPFS server. For this guide we&amp;rsquo;ll assume there&amp;rsquo;s a copy of your website
+at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The last line of the output of this command should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;added QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck website
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy the CID and pin it. Pinning means that your IPFS daemon will never
+automatically delete these files to free up memeory.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs pin add QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s time to make make it available via IPNS. So we need to generate an
+IPNS key. This key will serve as address for accessing the website using IPFS.
+It also serves as key for publishing updates to your website.&lt;/p&gt;
+
+&lt;p&gt;NOTE: all commands in this section are to be executed by &lt;code&gt;ipfs&lt;/code&gt; user.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key gen --type=rsa --size=2048 example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is how you can list your keys:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs key list -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;the relevant output should look something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;k2k4r8ls72x686fmm2s0px4plejbHkhOm9uuzrxwedsaag1w72ene5rw     example-site
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The hash of the key, on the left side is going to be the IPNS name of your
+website. It&amp;rsquo;s a fixed name that doesn&amp;rsquo;t change even when you update your site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs name publish --key=example-site QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When your IPFS node is working and could connect to some peers, your site
+should now be accessible using IPNS. Although publishing may take several
+minutes. There are so-called &lt;a href=&#34;https://ipfs.github.io/public-gateway-checker/&#34;&gt;public
+gateways&lt;/a&gt; which allow users to
+access IPFS and IPNS content using http. E.g.:
+&lt;a href=&#34;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&#34;&gt;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also use &lt;code&gt;ipfs&lt;/code&gt; to check if the files got ingested correctly. E.g.:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs ls /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw
+ipfs cat /ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw/index.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;update-libresilient-config-to-include-ipns-link&#34;&gt;Update LibResilient config to include IPNS link&lt;/h3&gt;
+
+&lt;p&gt;Now that your site is available on IPNS you can finally add it to your
+LibResilient &lt;code&gt;config.json&lt;/code&gt;. You can actually add as many gateways as you&amp;rsquo;d
+like with LibResilient&amp;rsquo;s &lt;code&gt;alt-fetch&lt;/code&gt; plugin. Here&amp;rsquo;s a simple example where we
+added two gateways:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;plugins&amp;quot;: [{
+    &amp;quot;name&amp;quot;: &amp;quot;fetch&amp;quot;
+  }, {
+    &amp;quot;name&amp;quot;: &amp;quot;alt-fetch&amp;quot;,
+    &amp;quot;endpoints&amp;quot;: [
+      &amp;quot;https://cloudflare-ipfs.com/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+      &amp;quot;https://ipfs.io/ipns/k51qzi5uqu5dlfqyi5ofzusx23myrrfzxlbzjho4nso0nq28lueo1994l0uwzw&amp;quot;,
+    ]
+  }],
+  &amp;quot;loggedComponents&amp;quot;: [&amp;quot;service-worker&amp;quot;, &amp;quot;fetch&amp;quot;, &amp;quot;alt-fetch&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;NOTE: We have to use IPNS, because as you can see we need write the IPFS
+address to a file which itself is part of the website. With IPNS updating the
+site also won&amp;rsquo;t require changing &lt;code&gt;config.json&lt;/code&gt; for every update.&lt;/p&gt;
+
+&lt;p&gt;When you&amp;rsquo;ve made your pick of IPFS gateways and added them to your
+&lt;code&gt;config.json&lt;/code&gt; you can publish it to your web-server.&lt;/p&gt;
+
+&lt;h3 id=&#34;publish-updated-site-to-ipfs&#34;&gt;Publish updated site to IPFS&lt;/h3&gt;
+
+&lt;p&gt;Now you also need to publish the change to IPFS. Again start by copying the
+site to your IPFS server. We again assume the updated copy of your static
+website is located at &lt;code&gt;/home/ipfs/website&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next we can unpin the old version of the website. (Tip: you can list pinned
+files and directories with: &lt;code&gt;ipfs pin ls&lt;/code&gt; pinned directories will be marked as
+&lt;code&gt;recursive&lt;/code&gt;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs unpin QmcoZGQZnaGGdcv3zWf1pdcpMQXuXz74tUy7veWdxCiPck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then we can add the updated site to IPFS and publish it to IPNS again.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ipfs add -r /home/ipfs/website&amp;quot;
+ipfs name publish --key=example-site QmcoZrn004DGdRvuZWf1pdcpMQXuXghjCUy7ve5Og45dNU 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can repeat this step whenever you want to publish an updated version of
+your static website.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Steps towards trusted VPNs</title>
+      <link>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</guid>
+      <description>
+
+&lt;p&gt;VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&amp;rsquo;s server.  That is how VPNs &amp;ldquo;unblock&amp;rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04&#34;&gt;adblocker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To answer the question about whether they are a useful privacy tool, let&amp;rsquo;s start with the history of where VPNs came from.  VPN stands for Virtual Private Network.  They were developed by large companies with multiple offices and travelling employees.  The goal was to link together all of these offices so that internal data could be freely shared between them without that data going over the internet as easily readable unencrypted plain text.  Then travelling employees could also safely access the internal data via any internet connection.  The key piece of this picture is that the users, employees in this case, already had to trust their VPN provider.  The VPN provider was the company they worked for, and the data they were handling belonged to the company.  So there was no attempt to hide user information from the VPN provider.  Indeed quite the opposite: companies linked the VPN access to each employee&amp;rsquo;s &amp;ldquo;single sign-on&amp;rdquo; account.  Built into the design of VPNs is full trust of the VPN provider, with the aim of keeping the data private from the internet. This setup was also by design, since many large companies wanted to ensure their employees work laptops were still going through the corporate firewall, where the company could block certain sites (e.g. malware, porn), then also &lt;a href=&#34;https://www.fortinet.com/resources/cyberglossary/data-exfiltration&#34;&gt;monitor employees&lt;/a&gt; internet activity to ensure they are not exposing files that the company does not want to be public.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Virtual_Private_Network_overview.svg&#34;&gt;&lt;img src=&#34;Virtual_Private_Network_overview.svg.png&#34; alt=&#34;Virtual Private Network overview&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This does not paint a good picture for a tool to protect privacy.  But there is hope!  It is possible to use a VPN to improve your privacy if you pay attention to some key details.  For VPN services to provide privacy, you have to put a lot of trust in the people who are operating the service.  The VPN provider can see &lt;strong&gt;all&lt;/strong&gt; of your traffic that goes over the VPN, and they have a strong link to your user account with them.  The privacy advantage of a VPN is that the destination sites cannot see which IP address your device is coming from, they will see the VPN provider&amp;rsquo;s IP address.  And your ISP will see you are using a VPN, but not which sites you visit.  With HTTPS, TLS, and end-to-end encryption being widespread, any encrypted content will be protected from the VPN provider also.  But the VPN provider can still see where you are connecting from, which sites and services you are using, what time of day, and even potentially correlate traffic to link activities of their users.  In other words, the VPN operator sees lots of metadata about you, so much so that they could paint a quite detailed portrait of your personal life if they ever did let their data be analyzed.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-build-a-privacy-respecting-vpn-service&#34;&gt;How to build a privacy-respecting VPN service&lt;/h2&gt;
+
+&lt;p&gt;There are good signals that VPN services can send to show that they are tackling the real issues.  For example, shipping free software clients, maintaining a &lt;a href=&#34;https://www.eff.org/deeplinks/2016/05/canary-watch-one-year-later&#34;&gt;warrant canary&lt;/a&gt;, posting a clear privacy policy describing the logging policy, and publishing the unredacted results of third party audits.  If the VPN operator is doing the right thing, then VPNs can provide a relatively private way to access the internet.  With a consistent track record of transparency, they can build up a trusted reputation for protecting privacy.  Unfortunately, we cannot rest there since a VPN provider can change their setup quite easily, whether willingly or under duress.  Maintaining consistent, regular, and transparent communications is therefore essential.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Calyx Institute&amp;rsquo;s &lt;a href=&#34;https://calyxinstitute.org/legal/privacy-policy&#34;&gt;Privacy Policy&lt;/a&gt;
+and &lt;a href=&#34;https://calyxinstitute.org/about/financials-and-annual-reports&#34;&gt;Financials and Annual Reports&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mozilla&amp;rsquo;s &lt;a href=&#34;https://www.mozilla.org/en-US/privacy/principles/&#34;&gt;Data Privacy Principles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mullvad&amp;rsquo;s &lt;a href=&#34;https://mullvad.net/help/swedish-legislation/&#34;&gt;Swedish legislation relevant to us as a VPN provider&lt;/a&gt; and &lt;a href=&#34;https://mullvad.net/help/no-logging-data-policy/&#34;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of that, the &lt;a href=&#34;https://vpnalyzer.org/&#34;&gt;VPNalyzer&lt;/a&gt; project is working to make monitoring VPN services a lot easier and possible to crowdsource.  This gives a third party perspective from some respected organizations.&lt;/p&gt;
+
+&lt;h3 id=&#34;know-as-little-as-possible-about-your-users&#34;&gt;Know as little as possible about your users&lt;/h3&gt;
+
+&lt;p&gt;Many VPN providers require an account and payment information.  This is usually personally identifiable information, like name, credit card information, email address, phone number, billing address, etc.  The most private services have &lt;a href=&#34;https://f-droid.org/2022/02/28/no-user-accounts-by-design.html&#34;&gt;no user accounts by design&lt;/a&gt;.  Calyx, Lavabit, and Riseup VPNs do not require any account or payment at all, so they do not have that information to give out or leak.  Providers that accept payment need a way to tie payment to service, that is usually done using accounts tied to email addresses or phone numbers.  Personal details are not required to make accounts and payments work.  Mullvad uses a randomly generated account number only, there is no link to other identifiers unless you provide them.  Additionally, Mullvad is one of the few VPN vendors that accepts cash payments.  Many technically minded implementers laugh at the idea of processing envelopes of cash, but it is an effective, real world solution to minimizing personal data that software methods struggle to match.&lt;/p&gt;
+
+&lt;h3 id=&#34;keep-as-little-information-as-possible&#34;&gt;Keep as little information as possible&lt;/h3&gt;
+
+&lt;p&gt;The VPN servers unavoidably see lots of information about what users are doing.  The default with most servers is to keep logs of that data. The longer this data is kept, the greater the risk it will be used to identify users and their activities. It does not help that standard practice for running servers is to keep logs for a long time.  Many service providers keep those logs for years.&lt;/p&gt;
+
+&lt;p&gt;VPN providers must be clear about what logs they are keeping, and how long they are stored.  Even better, they will provide information about how they do store the data that they do keep.  For example, if the servers do not use full disk encryption, then it would be straightforward to recover the deleted logs.  That is much harder on systems using full disk encryption.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&#34;https://cure53.de/audit-report_ivpn.pdf&#34;&gt;2019 audit&lt;/a&gt; of &lt;a href=&#34;https://www.ivpn.net/blog/independent-security-audit-concluded&#34;&gt;IVPN&lt;/a&gt; showed that, at that time, the auditors confirmed that IVPN performed no &amp;ldquo;statistical logging of customer-traffic&amp;rdquo;, &amp;ldquo;logging of traffic, IP addresses or DNS requests&amp;rdquo; on the servers that the auditors were given access to.&lt;/li&gt;
+&lt;li&gt;Mullvad says, &amp;ldquo;we never store any activity logs of any kind.&amp;rdquo; in their &lt;a href=&#34;https://mullvad.net/en/help/no-logging-data-policy/&#34;&gt;no logging data policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;proven-track-record-of-resisting-unjust-legal-intrusion&#34;&gt;Proven track record of resisting unjust legal intrusion&lt;/h3&gt;
+
+&lt;p&gt;There are many legal ways for authorities to get private data, this is an essential part of a functioning justice system.  But these powers are sadly abused in basically every country in the world, it is only a question of degrees.  A VPN provider needs to represent its users legal interests, and push back on legal orders when there is the possibility they are unjust.  Calyx Institute&amp;rsquo;s Nick Merrill provides the shining example in this regard.  With the ACLU, he fought a &lt;a href=&#34;https://en.wikipedia.org/wiki/Doe_v._Ashcroft&#34;&gt;legal case&lt;/a&gt; for over a decade to prevent unjust intrusion for his users.  Ladar Levison shut down his email company &lt;a href=&#34;https://en.wikipedia.org/wiki/Lavabit&#34;&gt;Lavabit&lt;/a&gt; rather than allow the US Government to monitor Edward Snowden&amp;rsquo;s email account.&lt;/p&gt;
+
+&lt;p&gt;There are other ways to ensure that the legal processes are not abused.  These include warrant canaries and disclosure when data had to be turned over via legal procedures.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mozilla&amp;rsquo;s &lt;a href=&#34;https://www.mozilla.org/en-US/about/policy/transparency/&#34;&gt;Transparency&lt;/a&gt; policy&lt;/li&gt;
+&lt;li&gt;ProtonVPN&amp;rsquo;s &lt;a href=&#34;https://protonvpn.com/blog/transparency-report/&#34;&gt;Transparency Report &amp;amp; Warrant Canary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Riseup&amp;rsquo;s &lt;a href=&#34;https://riseup.net/canary&#34;&gt;Canary Statement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publish-as-much-as-possible-as-free-open-source-software&#34;&gt;Publish as much as possible as free open source software&lt;/h3&gt;
+
+&lt;p&gt;F-Droid works to build &lt;a href=&#34;https://f-droid.org/2022/05/24/buildserver-overhaul-sponsored-by-calyx-institute.html&#34;&gt;services&lt;/a&gt; where free software, &lt;a href=&#34;https://f-droid.org/2022/07/22/maven-central.html&#34;&gt;code&lt;/a&gt; &lt;a href=&#34;https://f-droid.org/2022/09/30/free-software-and-inspection-are-key-to-software-we-can-trust.html&#34;&gt;inspection&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org/2023/01/15/towards-a-reproducible-fdroid.html&#34;&gt;reproducible builds&lt;/a&gt; provide a method to ensure that the software we deliver is trustworthy.  VPN vendors recognize how important trust is, so the good ones work to get their apps into f-droid.org.  The F-Droid community provides the best screening for ensuring Android apps are truly free software.  On top of that, F-Droid flags apps for &lt;a href=&#34;https://f-droid.org/docs/Anti-Features/&#34;&gt;Anti-Features&lt;/a&gt;, which are things that users may not like, but might accept.  Here are VPN clients that do maintain their free software clients in f-droid.org:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/se.leap.bitmaskclient/&#34;&gt;Bitmask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.calyxinstitute.vpn/&#34;&gt;Calyx VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/nl.eduvpn.app/&#34;&gt;eduVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/net.ivpn.client/&#34;&gt;IVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.lavabit.pahoehoe/&#34;&gt;Lavabit Encrypted Proxy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/net.mullvad.mullvadvpn/&#34;&gt;Mullvad VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.outline.android.client/&#34;&gt;Outline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/ch.protonvpn.android/&#34;&gt;ProtonVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/one.librem.tunnel/&#34;&gt;Purism Librem Tunnel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/se.leap.riseupvpn/&#34;&gt;Riseup VPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.tailscale.ipn/&#34;&gt;Tailscale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.wireguard.android/&#34;&gt;WireGuard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;use-external-auditors-to-confirm-source-code-and-operations&#34;&gt;Use external auditors to confirm source code and operations&lt;/h3&gt;
+
+&lt;p&gt;External auditors are important because they can bring fresh eyes on the source code, and good auditors are experts at finding issues in source code and server setups.  And responsible organizations will publish the full, unredacted audit report once they have fixed the issues.  Even if a VPN app is included in F-Droid, there are key aspects of the service that cannot be independently verified.  For this, we must rely on the people who run the service to do the right thing.  Audits can demonstrate that they were doing the right thing at the point of time of the audit.  Here are some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IVPN&amp;rsquo;s &lt;a href=&#34;https://cure53.de/audit-report_ivpn.pdf&#34;&gt;2019 audit of IVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mozilla VPN had their app source code &lt;a href=&#34;https://blog.mozilla.org/security/files/2021/08/FVP-02-report.final_.pdf&#34;&gt;audited&lt;/a&gt; in 2021 and fixed the issues that were found.&lt;/li&gt;
+&lt;li&gt;Mullvad&amp;rsquo;s &lt;a href=&#34;https://cure53.de/pentest-report_mullvad_2020_v2.pdf&#34;&gt;Pentest-Report Mullvad Apps, Clients &amp;amp; API 05.2020&lt;/a&gt;, &lt;a href=&#34;https://cure53.de/pentest-report_mullvad_v2.pdf&#34;&gt;Pentest-Report Mullvad VPN Clients 09.2018&lt;/a&gt;, and &lt;a href=&#34;https://mullvad.net/en/blog/2021/1/20/no-pii-or-privacy-leaks-found-cure53s-infrastructure-audit/&#34;&gt;2020 Infrastructure Audit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Outline&amp;rsquo;s &lt;a href=&#34;https://s3.amazonaws.com/outline-vpn/static_downloads/ros-report.pdf&#34;&gt;2017 Pentratration Test Report&lt;/a&gt; and &lt;a href=&#34;https://s3.amazonaws.com/outline-vpn/static_downloads/cure53-report.pdf&#34;&gt;Pentest &amp;amp; Audit Report Jigsaw Outline 09.-12.2018&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Proton VPN open sourced their client apps and had them &lt;a href=&#34;https://www.zdnet.com/article/protonvpn-apps-handed-to-open-source-community-in-transparency-security-push/&#34;&gt;audited&lt;/a&gt; in 2019.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;publicly-verifiable-binaries-via-reproducible-builds&#34;&gt;Publicly verifiable binaries via reproducible builds&lt;/h3&gt;
+
+&lt;p&gt;Source code is the easiest place to conduct an audit of software, but it is the binary files that actually run on your device.  Auditing binaries rarely happens since it is so much more time intensive.  And yet, there are ways to change how software works without changing the source code. This can be done by injecting changes into the process that converts the source code into the executable binary.  &lt;a href=&#34;https://reproducible-builds.org/&#34;&gt;Reproducible Builds&lt;/a&gt; is the indisputable method for proving that a given binary was generated by given source code.&lt;/p&gt;
+
+&lt;p&gt;There are some generic VPN clients in Debian that are built reproducibly, but there are no Android or iOS VPN apps or  branded desktop client apps that meet this standard yet.  We recommend that VPN providers work with &lt;a href=&#34;https://wiki.debian.org/ReproducibleBuilds&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;f-droid.org/docs/Reproducible_Builds&#34;&gt;F-Droid&lt;/a&gt;, the &lt;a href=&#34;https://reproducible-builds.org/&#34;&gt;Reproducible Builds&lt;/a&gt; group, or any other relevant &lt;a href=&#34;https://reproducible-builds.org/who/projects/&#34;&gt;project&lt;/a&gt; to achieve this key step.&lt;/p&gt;
+
+&lt;h3 id=&#34;apple-ios&#34;&gt;Apple iOS&lt;/h3&gt;
+
+&lt;p&gt;This post focuses on Android because iOS has a number of issues that make using VPNs for privacy less effective.  For example, VPNs on iOS will &lt;a href=&#34;https://www.bleepingcomputer.com/news/security/unpatched-ios-bug-blocks-vpns-from-encrypting-all-traffic/&#34;&gt;leak IP addresses&lt;/a&gt;.  Apple knows about this issue, yet still has &lt;a href=&#34;https://www.theregister.com/2022/08/19/apple_ios_vpn/&#34;&gt;not fixed&lt;/a&gt; it after a couple years.  On top of that, it is not possible to have reproducible builds on iOS because the actual executable binaries are encrypted by Apple&amp;rsquo;s proprietary Digital Restrictions Management (DRM), so only Apple could ever reproducibly build something.  If you are running Apple iOS, you are stuck trusting Apple to do the right thing, since they operate a relatively opaque, proprietary, strictly walled garden.&lt;/p&gt;
+
+&lt;h2 id=&#34;run-your-own-vpn&#34;&gt;Run your own VPN&lt;/h2&gt;
+
+&lt;p&gt;The VPN security model means you have to put a ton of trust in the operator.  Questions of trust get much easier when you are talking about yourself or own organization.  There are many projects that aim to make it as easy as possible to run your own VPN service.  The good ones are all free software and have been audited, both the client source code and the server side setup.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://amnezia.org&#34;&gt;Amnezia&lt;/a&gt; is a free service to create a personal VPN on your server.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://leap.se/&#34;&gt;LEAP VPN&lt;/a&gt; is a &amp;ldquo;white label&amp;rdquo; VPN setup used to build Bitmask, CalyxVPN, RiseupVPN and more.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://getoutline.org/&#34;&gt;Outline&lt;/a&gt; &amp;ldquo;makes it easy to create a VPN server, giving anyone access to the free and open internet.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://we-pn.com/&#34;&gt;WEPN&lt;/a&gt; is a free software kit to become your own VPN provider, designed around a small hardware device.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are also generic VPN client apps based on standard protocols:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/nl.eduvpn.app/&#34;&gt;eduVPN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/de.blinkt.openvpn/&#34;&gt;OpenVPN for Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/en/packages/com.github.shadowsocks/&#34;&gt;Shadowsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/org.strongswan.android/&#34;&gt;strongSwan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://f-droid.org/packages/com.WireGuard.android/&#34;&gt;WireGuard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;comparing-vpns-to-tor-and-masque&#34;&gt;Comparing VPNs to Tor and MASQUE&lt;/h2&gt;
+
+&lt;p&gt;If it is privacy that you seek, then there are other tools to review.  Tor is a longstanding community project that aims to make privacy proxies without compromise. Tor works similarly to VPN in that it is tunneling traffic to shared servers, the big difference is that your traffic is tunneled through three relays (in comparison to single hop VPNs). Each individual Tor relay cannot see the enough to put together a picture of who is doing what. At most, a relay can see what is done, but not who.  Or that someone is accessing Tor, but not their destination.  &lt;a href=&#34;https://guardianproject.info/apps/org.torproject.android/&#34;&gt;Orbot&lt;/a&gt; provides a VPN mode, but this is still full Tor protection, since it is just using the device&amp;rsquo;s VPN user experience to provide access to the Tor network.  &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor Browser&lt;/a&gt; then adds whole other layers of privacy protection that can only be implemented in the internet-enabled app.  This includes things like reducing metadata leaks in the HTTPS connection or web APIs, or isolating websites from each other within the browser, so they cannot read data about other sites the user has visited.&lt;/p&gt;
+
+&lt;p&gt;A new approach that is somewhere in between a VPN and Tor are multi-hop &lt;a href=&#34;https://guardianproject.info/2020/02/25/masque-review/&#34;&gt;MASQUE&lt;/a&gt; relays.  MASQUE is a new protocol that is similar to VPN and proxy protocols.  MASQUE is built on HTTP/3 aka QUIC, so it does not stick out as much as VPN or WireGuard traffic.  It also allows for multi-hop configurations.  MASQUE is only newly deployed, so there is not the two decades of experience working to minimize metadata leaks in the processes for relaying traffic.&lt;/p&gt;
+
+&lt;p&gt;Apple iCloud Private Relay is a &lt;a href=&#34;https://blog.cloudflare.com/icloud-private-relay/&#34;&gt;two hop deployment&lt;/a&gt; on MASQUE, which means that the Apple side can see that the user is sending traffic, and the Cloudflare side can see the destination, but not the user.  That does provide a real privacy improvement over a single hop system.  Unfortunately, Apple iCloud Private Relay fails most of the other tests laid out in this post.  Plus given the history of NSA programs like PRISM, and the willingness for US companies like Apple and Google to &lt;a href=&#34;https://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data&#34;&gt;take part&lt;/a&gt;, this setup is not clear protection from NSA and Five Eyes surveillance and targeting.  It would be relatively straightforward for those kinds of agencies to correlate the data from the Apple and Cloudflare side if they have access to the metadata from both sides.&lt;/p&gt;
+
+&lt;p&gt;If privacy is your primary concern, then it is worth investing time into tools like Tor.  If you have limited time and are mostly concerned about mass surveillance, then a good VPN is worth considering for some added privacy protection.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Decentralizing Distribution</title>
+      <link>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</guid>
+      <description>
+
+&lt;p&gt;Guardian Project has been awarded a grant from the &lt;a href=&#34;https://www.ffdweb.org/guardian-project-annoucement&#34;&gt;Filecoin Foundation for the Decentralized Web (FFDW)&lt;/a&gt; to work on decentralizing veracity and distribution (DVD).  FFDW’s Mission is to “ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.”  Filecoin is built on top of IPFS, which is &amp;ldquo;&lt;a href=&#34;https://docs.ipfs.io/concepts/what-is-ipfs/&#34;&gt;a distributed system for storing and accessing files&lt;/a&gt;&amp;rdquo;.  The distribution component of the FFDW-DVD project is focused on improving F-Droid&amp;rsquo;s free, open, and decentralized mobile app ecosystem.  On top of the flagship unified experience offered by this website and the F-Droid official app, F-Droid provides all the pieces for anyone to create, build, remix, publish, reproduce, redistribute and review mobile apps.&lt;/p&gt;
+
+&lt;p&gt;This is important to F-Droid users because it means that they are not locked into F-Droid as the monopoly app provider.  The F-Droid community needs to stay responsive to its users because it is possible to fork all of F-Droid (okay, except for the signing keys 🚫Ψ📝🔑😉).  Decentralization is also important because each user has specific needs and wishes that potentially conflict with other users.  Many want only free software, but others are willing to compromise in key places, and still others have strong privacy needs that conflict with other users&amp;rsquo; favorite features.  Decentralized app repositories provide users that flexibility without having to move away from the main F-Droid infrastructure.&lt;/p&gt;
+
+&lt;p&gt;We share the concerns about the walled garden approach to app stores. While their design may have been driven out of concern for security and simplicity, they have become a source of unbridled control, censorship and surveillance.  Smartphones are the primary computer for most and apps are the central mobile tool.  Centralized, locked down phones keep the real power of modern computing needlessly out of reach of most of the world&amp;rsquo;s population.  The FFDW-DVD project will push F-Droid forward towards realizing full support for customization, curation, mirroring, censorship circumvention, and peer-to-peer sharing.  We can provide a more free and less fragile solution for the sharing of capability and knowledge to all.  On top of that, this project will give us focused time to work on making our processes run more efficiently and reliably.&lt;/p&gt;
+
+&lt;p&gt;IPFS and Filecoin are central to this mission.  IPFS has the potential to provide the plumbing for the entire F-Droid ecosystem.  It is a decentralized filesystem where files are accessible by their &lt;a href=&#34;https://docs.ipfs.io/concepts/hashing/&#34;&gt;hash&lt;/a&gt; compiled into a &lt;a href=&#34;https://docs.ipfs.io/concepts/content-addressing/&#34;&gt;Content Identifier (CID)&lt;/a&gt;.  That means the unique signature of each file can be used to fetch that file from IPFS, no matter where it is actually stored.  It can be stored on some server farm or the other smartphone next to you when on a mountain top.  If the IPFS storage is reachable and contains the CID you need, it can be retrieved.  Internet is not required.  Additionally, if a file is important to you, you can &amp;ldquo;&lt;a href=&#34;https://docs.ipfs.io/how-to/pin-files/&#34;&gt;pin&lt;/a&gt;&amp;rdquo; it in your own IPFS storage or pay someone else to do it using Filecoin.  As long as someone is interested in having a file publicly available, it can be maintained in IPFS, even if the original creator has taken it down.&lt;/p&gt;
+
+&lt;p&gt;IPFS is working now, and services are using it, including &lt;a href=&#34;https://blog.archive.org/2021/04/01/filecoin-foundation-grants-50000-fil-to-the-internet-archive/&#34;&gt;archive.org&lt;/a&gt;.  But there is much work to be done before it really can replace current web hosting and file distribution methods.  That means we will integrate IPFS in a hybrid approach, and we are already reporting our experiences upstream to help improve IPFS.  F-Droid already supports repositories and mirrors, and IPFS will plug right into those channels.  This gives the F-Droid ecosystem another layer of resiliency and flexibility.&lt;/p&gt;
+
+&lt;p&gt;Since the &amp;ldquo;decentralized web&amp;rdquo; includes all sorts of things, it is important to also mention things that we will &lt;a href=&#34;https://www.theregister.com/2021/12/06/the_dark_equation_of_harm/&#34;&gt;not&lt;/a&gt; be doing with this grant.  We are not looking at NFTs, blockchain, DAOs, smart contracts or related aspects of &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Web3&#34;&gt;Web3&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;funded-work&#34;&gt;Funded work&lt;/h2&gt;
+
+&lt;p&gt;This work is focused on strengthening F-Droid foundations while enabling repositories to be hosted on decentralized storage, while spreading our platform as a viable alternative for all kinds of users and organizations.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Break out and overhaul core client logic around publishing and consuming repositories.&lt;/li&gt;
+&lt;li&gt;Make client logic into libraries to make it easy to embed repositories in any app that needs it.&lt;/li&gt;
+&lt;li&gt;Add support for mirroring repositories onto both IPFS and Filecoin.&lt;/li&gt;
+&lt;li&gt;Add support in F-Droid client to use mirrors and repositories hosted on IPFS and Filecoin.&lt;/li&gt;
+&lt;li&gt;Improve F-Droid “white labeling”.&lt;/li&gt;
+&lt;li&gt;Enhance F-Droid client’s existing “nearby” and “app swap” capabilities, including utilizing libp2p-based communication.&lt;/li&gt;
+&lt;li&gt;Improve the capability and usability of publishing and distributing multimedia content (documents, presentations, photos, videos, map files, and more).&lt;/li&gt;
+&lt;li&gt;Update F-Droid’s RepoMaker tool (for easy “point and click” curation and publishing of app repos) and add support for IPFS publishing.&lt;/li&gt;
+&lt;li&gt;Expand access to F-Droid repositories to non-Android devices and the mobile web (progressive web apps, content).&lt;/li&gt;
+&lt;li&gt;Set up a full archive of the f-droid.org repository on IPFS.&lt;/li&gt;
+&lt;li&gt;Expand outreach and assistance to software developers, media organization, tech companies and more to promote adoption of the F-Droid platform for their software, content and devices (example: Mozilla could easily run a Mozilla app store that includes all the Mozilla channels: releases, nightlies, etc.  They could also include a curated collection of reproducibly built apps that Mozilla approves of.  Someone who trusts Mozilla can then easily choose to only have access to the Mozilla-curated app store)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can follow the work funded under this grant by checking the &lt;code&gt;FFDW-DVD&lt;/code&gt; label on &lt;a href=&#34;https://gitlab.com/groups/fdroid/-/issues?scope=all&amp;amp;state=opened&amp;amp;label_name[]=FFDW-DVD&#34;&gt;issues&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/groups/fdroid/-/merge_requests?scope=all&amp;amp;state=opened&amp;amp;label_name[]=FFDW-DVD&#34;&gt;merge requests&lt;/a&gt; in GitLab.&lt;/p&gt;
+
+&lt;p&gt;Our first priority is splitting out the core client pieces as standalone
+libraries. We will take this opportunity to modernize the index format and
+ensure it works well with IPFS.  That effort is tracked using the &lt;code&gt;index-v2&lt;/code&gt; label on &lt;a href=&#34;https://gitlab.com/groups/fdroid/-/issues?scope=all&amp;amp;state=opened&amp;amp;label_name[]=index-v2&#34;&gt;issues&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/groups/fdroid/-/merge_requests?scope=all&amp;amp;state=opened&amp;amp;label_name[]=index-v2&#34;&gt;merge requests&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Free Software Tooling for Android Feature Extraction</title>
+      <link>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</guid>
+      <description>
+
+&lt;p&gt;As part of the Tracking the Trackers project, we are inspecting
+thousands of Android apps to see what kinds of tracking we can find.
+We are looking at both the binary APK files as well as the source
+code.  Source code is of course easy to inspect, since it is already a
+form that is meant to be read and reviewed by people.  Android APK
+binaries are a very different story.  They are first and foremost a
+machine-executable format.  On top of that, many developers
+deliberately obfuscate as much as possible in the APK to resist
+inspection.&lt;/p&gt;
+
+&lt;p&gt;That means inspection requires using tools to look into the binary APK
+format.  There is actually a massive amount of work that goes into
+inspecting APKs because this is required in order to do useful malware
+analysis.  For the most part, these inspection techniques are the
+malware companies&amp;rsquo; &amp;ldquo;special sauce&amp;rdquo;, so they are proprietary and
+generally kept secret.  On top of that, malware companies keep secret
+a lot of the conclusions they about what is useful data to collect,
+and what should be ignored.&lt;/p&gt;
+
+&lt;p&gt;One key piece of the Tracking the Trackers project is to make all of
+research, tooling, and conclusions free, open, and publicly available.
+First and foremost, that means the tools must be free software.  They
+should also be easily installable so the barrier to entry for new
+inspectors is as low as possible.  We focus on getting software as
+part of Debian, since once there, so many people have access to those
+packages since Ubuntu, Kali, and so many other GNU/Linux distros are
+based on Debian.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-available-in-debian-already&#34;&gt;What is available in Debian already&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/2015/04/30/getting-android-tools-into-debian/&#34;&gt;Our
+work&lt;/a&gt;
+with the &lt;a href=&#34;https://wiki.debian.org/AndroidTools&#34;&gt;Debian Android Tools
+Team&lt;/a&gt; and &lt;a href=&#34;https://java.debian.net/&#34;&gt;Debian Java
+Team&lt;/a&gt; over the years means many key tools
+are already included in Debian and its derivatives, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;key Android SDK components like &lt;em&gt;apksigner&lt;/em&gt;, &lt;em&gt;dx&lt;/em&gt; and &lt;em&gt;android.jar&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;apktool&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;dexdump/dexlist&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;enjarify&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;LibScout&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;libsmali&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;procyon&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tools-we-are-using&#34;&gt;Tools we are using&lt;/h2&gt;
+
+&lt;p&gt;One key aspect of our research is that working with terabytes of APKs,
+this is necessary to be able to spot and map out as many trackers as
+possible.  Since feature extraction can be a slow and resource
+intensive process, we needed to use some tools that emphasize speed
+over flexibility.  Even with fast extraction tools, we still have to
+build up tailored processes to speed things up.  Some of these
+straightforward feature extraction processes would take months to run
+on ~3TB of APKs on a 32-thread machine with 144GB of RAM.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/reddr/LibScout&#34;&gt;LibScout&lt;/a&gt; - detect SDKs/libraries with their version in binary APKs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/avast/apkparser&#34;&gt;https://github.com/avast/apkparser&lt;/a&gt; - faster manifest/resources parser&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/avast/apkverifier&#34;&gt;https://github.com/avast/apkverifier&lt;/a&gt; - faster APK signature verifier&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jedisct1/ipgrep&#34;&gt;https://github.com/jedisct1/ipgrep&lt;/a&gt; - ipgrep extracts possibly obfuscated host names and IP addresses from text, resolves host names, and prints them, sorted by ASN.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/stricaud/faup&#34;&gt;https://github.com/stricaud/faup&lt;/a&gt; - Fast URL decoder library&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cryptax/droidlysis&#34;&gt;https://github.com/cryptax/droidlysis&lt;/a&gt; - Quickly analyze APKs for the most essential features: permissions, &lt;code&gt;Activity&lt;/code&gt; and &lt;code&gt;BroadcastReceiver&lt;/code&gt; names, and key method calls.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;apkverifier&lt;/em&gt;, &lt;em&gt;apkparser&lt;/em&gt;, and &lt;em&gt;droidlysis&lt;/em&gt; are generally useful, but
+not yet in Debian.  So we packaged them to make them easily available.
+They are currently in the &lt;a href=&#34;https://ftp-master.debian.org/new.html&#34;&gt;Debian
+NEW&lt;/a&gt; queue, awaiting final
+review before inclusion.&lt;/p&gt;
+
+&lt;p&gt;These tools have been assembled into scripts to run the actual feature
+extract processes, they are maintained in the
+&lt;a href=&#34;https://gitlab.com/trackingthetrackers/extracted-features&#34;&gt;https://gitlab.com/trackingthetrackers/extracted-features&lt;/a&gt; repo.  When
+the actual data generated is small enough and there are not copyright
+conflicts, the data is also included there.  Mostly, the data sets are
+too large and sometimes touch on copyright restrictions, so they are
+unfortunately not publicly available.&lt;/p&gt;
+
+&lt;p&gt;There are lots of other tasks, including managing large APK
+collections, gathering data to generate statistics about the features,
+and downloading publicly available tracker SDK.  Those scripts are
+maintained in &lt;a href=&#34;https://gitlab.com/trackingthetrackers/scripts&#34;&gt;https://gitlab.com/trackingthetrackers/scripts&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;gradle-plugins&#34;&gt;Gradle Plugins&lt;/h3&gt;
+
+&lt;p&gt;When working with source code, then it is possible to do other kinds
+of analysis.  Most Android apps are built with the Gradle tool.  So we
+reviewed a wide range of Gradle plugins, and found these three useful
+in our investigations.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/autonomousapps/dependency-analysis-android-gradle-plugin&#34;&gt;dependency-analysis-android-gradle-plugin&lt;/a&gt; - Produce a report of unused direct dependencies and used transitive dependencies.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jeremylong/DependencyCheck&#34;&gt;OWASP Dependency-Check&lt;/a&gt; - utility that detects publicly disclosed vulnerabilities in application dependencies&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vanniktech/gradle-dependency-graph-generator-plugin/&#34;&gt;gradle-dependency-graph-generator-plugin&lt;/a&gt; - Gradle plugin that lets you visualize your Java library dependencies in a graph.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;tools-we-reviewed&#34;&gt;Tools we reviewed&lt;/h2&gt;
+
+&lt;p&gt;We looked at quite a few existing tools, and found many interesting
+and useful ones.  While they all produced useful output, many of these
+were not useful to this project because they were tailored around the
+use case of a person inspecting a small set of apps, so for example,
+they were too slow or did not produce machine readable output suitable
+for working with large APK collections.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/U039b/android_permissions_harvester&#34;&gt;android_permissions_harvester&lt;/a&gt; - for finding which permissions are used based on method calls&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cryptax/droidlysis&#34;&gt;droidlysis&lt;/a&gt; - cryptax&amp;rsquo;s (aXelle&amp;rsquo;s) tool: &amp;ldquo;DroidLysis is a property extractor for Android apps&amp;rdquo;. See also her &lt;a href=&#34;https://cfp.hack.lu/hacklu19/talk/ZZKNSM/&#34;&gt;talk at hacklu 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rednaga/APKiD&#34;&gt;APKiD&lt;/a&gt; - &amp;ldquo;In addition to detecting packers, obfuscators, and other weird stuff, it can also identify if an app was compiled by the standard Android compilers or dexlib&amp;rdquo;&lt;a href=&#34;https://rednaga.io/2016/07/31/detecting_pirated_and_malicious_android_apps_with_apkid/&#34;&gt;[1]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebook/redex&#34;&gt;redex&lt;/a&gt; - &amp;ldquo;taking advantage of Redex allows us to normalise the applications prior to analysis&amp;rdquo;&lt;a href=&#34;https://blog.quarkslab.com/android-application-diffing-analysis-of-modded-version.html&#34;&gt;[1]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kaitai-io/kaitai_struct_formats/blob/master/executable/dex.ksy&#34;&gt;kaitai_struct_formats&lt;/a&gt; - generic binary struct parser tool, useful for directly parsing Android &lt;em&gt;classes.dex&lt;/em&gt; files.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/armijnhemel/binaryanalysis-ng&#34;&gt;binaryanalysis-ng&lt;/a&gt; - a framework for unpacking files recursively and running checks on the unpacked files.  Great for someone who needs to inspect small sets of a wide variety of file types.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/plum-umd/redexer&#34;&gt;redexer&lt;/a&gt; - infer with which parameters the app uses certain permissions (we name this feature RefineDroid)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ytliu/apk-static-xref&#34;&gt;apk-static-xref&lt;/a&gt; - staticallly generate a cross-reference-graph (XRG) of a component (e.g., Service) of Android APK file&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dorneanu/smalisca&#34;&gt;smalisca&lt;/a&gt; - Static Code analysis tool that generates call graphs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(&lt;em&gt;This work was supported by NLnet&amp;rsquo;s &lt;a href=&#34;https://nlnet.nl/thema/NGIZeroPET.html&#34;&gt;NGI Zero PET&lt;/a&gt; fund.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Promise and Hazards of COVID Contact Tracing Apps</title>
+      <link>https://guardianproject.github.io/info/2020/04/09/the-promise-and-hazards-of-covid-contact-tracing-apps/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/04/09/the-promise-and-hazards-of-covid-contact-tracing-apps/</guid>
+      <description>&lt;p&gt;There has been increasing interest in the possibilities of tracking
+people who are infected with Coronavirus using all of the various
+methods that smart phones provide.  There is good reason: &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Contact_tracing&#34;&gt;contact
+tracing&lt;/a&gt;&amp;rdquo; has been a
+pillar of public health efforts for decades.  It is an effective means
+to curtail the spread of infectious disease.  At the same time,
+governments, companies, and organizations are acting fast to offer
+services to help end this current pandemic.  The problem is that many
+of these are taking advantage of these times to introduce more
+tracking of people, more data collection, and more control over
+people.  We must not let contact tracing be used to reduce privacy
+and increase unnecessary data collection.&lt;/p&gt;
+
+&lt;p&gt;Privacy International has been collecting examples of
+&lt;a href=&#34;https://privacyinternational.org/examples/tracking-global-response-covid-19&#34;&gt;new data and tracking that are being introduced&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then there this is the specific issue of contact tracing apps that are
+being introduced around the world.  These apps can be made in a way to
+fully respect privacy, and to build trust with its users.  Unfortunately the majority of the ones introduced are failing to live up to this promise.  Singapore&amp;rsquo;s TraceTogether was the first to rise to prominence, it is proprietary software with obfuscated operations. (&lt;em&gt;update: the source for a &lt;a href=&#34;https://github.com/opentrace-community&#34;&gt;reference implementation&lt;/a&gt; has since been released, but TraceTogether is still proprietary&lt;/em&gt;)   A &lt;a href=&#34;https://medium.com/@zerotypic/reversing-tracetogether-initial-analysis-edc940e86aa8&#34;&gt;some&lt;/a&gt; &lt;a href=&#34;https://splira.com/2020-03-28/&#34;&gt;audits&lt;/a&gt; pointed to failings, including potentially sending location data to a third-party analytics service.  There are now many of these apps, and based on &lt;a href=&#34;https://forensic.defensive-lab.agency/covid/&#34;&gt;this analysis&lt;/a&gt;, most of them are sending data to third party tracking companies.&lt;/p&gt;
+
+&lt;p&gt;On top of that, these audits took much more effort because the apps
+were not open source.  There have been many pledges of making these
+apps open source, but the only one that we have found that is actually
+open source is &lt;a href=&#34;https://privatekit.mit.edu/&#34;&gt;Private Kit&lt;/a&gt;.  &lt;a href=&#34;https://fsfe.org/news/2020/news-20200402-02.en.html&#34;&gt;Free, open
+source software is essential&lt;/a&gt;
+for software that needs to be widely
+trusted.  This is only key design element, the CCC has laid out a
+complete list of &lt;a href=&#34;https://www.ccc.de/en/updates/2020/contact-tracing-requirements&#34;&gt;requirements for creating trustworthy contact
+tracing apps&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We stand ready to help any of these efforts achieve real privacy and
+build public confidence.  People must trust these apps for them to be
+effective.  Transparency is essential to building trust.  They must be
+secure so they do not leak personal data.  And they must be usable by
+the vast majority of the population.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Improving Crowdsourced Translation of Long Form Text</title>
+      <link>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</guid>
+      <description>
+
+&lt;p&gt;We are happy to announce the start of work on another step in
+improving crowdsourced localization, funded by the ISC Project.  This
+is the second part of our ongoing &amp;ldquo;Linguine&amp;rdquo; collaboration to move
+crowdsourced translation to privacy-respecting free software.&lt;/p&gt;
+
+&lt;p&gt;Crowdsourced translation has proven enormously successful getting apps
+and website software translated into many languages.  Using tools like
+Weblate or Transifex, developers can quite easily incorporate
+translated app strings into their mobile apps and websites.  Any kinds
+of text that is easily broken down into phrases and sentences will fit
+easily into the crowdsourced workflow.  Localization Lab enables a
+wide range of volunteers to contribute to the most important projects
+in a wide array of languages.&lt;/p&gt;
+
+&lt;p&gt;For long form text, from blogs to documentation, large technical
+hurdles prevent the same fluid workflow.  One clear example: Tor
+Browser is available in 25 languages, but the documentation is still
+largely just in English.  The standard workflow is to first complete
+the English version, then submit that to translators, then wait for a
+complete translation.  For the regular, small changes that come with
+maintaining documentation, that workflow makes the update cycle heavy
+and slow.&lt;/p&gt;
+
+&lt;p&gt;Few webmasters can review translations. Tools like Weblate establish a
+review process, then developers need only to run an automatic import
+to get approved translations from trusted translators.&lt;/p&gt;
+
+&lt;p&gt;The ideal workflow starts with the traditional method of translating
+in one complete unit, but now, that work can easily be shared by
+multiple contributors.  Whenever the original documents are updated,
+those translations can then be maintained via the crowdsourcing.  Even
+for organizations which directly cover their own translation needs,
+like a blogger who writes in both English and Tibetan, the workflow
+provided by tools like Weblate makes managing many small changes to
+documents drastically easier.&lt;/p&gt;
+
+&lt;p&gt;While blog posts generally do not need frequent updates, a smooth path
+to crowdsourced translations means, given the same effort, a larger
+audience can be reached since the information will be available in
+more languages.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-we-are-doing-this&#34;&gt;How we are doing this&lt;/h2&gt;
+
+&lt;p&gt;There are already many key building blocks in place:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Weblate and Transifex already have basic support for directly translating long form text&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;po4a&lt;/em&gt; provides good format conversion between &lt;em&gt;Markdown&lt;/em&gt; and other text formats&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Markdown&lt;/em&gt; is a widely adopted mark-up format for documentation and blog posts&lt;/li&gt;
+&lt;li&gt;Weblate already supports validating &lt;em&gt;Markdown&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;po4a&lt;/em&gt; integration with Jekyll&lt;/li&gt;
+&lt;li&gt;Static Site Generators like Jekyll and Hugo have existing methods of supporting localization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What needs doing is fixing lots of little issues here and there to
+complete the whole workflow.  For example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Code blocks are quite common in technical documentation, and they often contain texts that should not be translated, e.g. the words from a programming language.  &lt;em&gt;po4a&lt;/em&gt; can be made to automatically recognize these blocks, and mark them as &amp;ldquo;do not translate&amp;rdquo; using standard tags, which Weblate communicates to translators.&lt;/li&gt;
+&lt;li&gt;Most translators do not have strong technical skills, so specialized syntax like &lt;em&gt;Markdown&lt;/em&gt; or configuration examples need to be validated to ensure that the translator did not inadvertently break something with a typo.  There are existing methods and tools for validating a wide variety of markup, code, and configuration formats.  These will be integrated into the translation review process to ensure that translations will not break the website layout or generation.&lt;/li&gt;
+&lt;li&gt;When using translation sites that do not have good support for long form text, &lt;em&gt;po4a&lt;/em&gt; can be integrated via &amp;ldquo;plugins&amp;rdquo; to static site generators like Jekyll or Hugo.&lt;/li&gt;
+&lt;li&gt;Not all workflows allow for transparent integration, for example, Hugo to Weblate.  In these cases, there needs to be some “glue” tools to make it work.  We will produce and distribute tools for gluing together some common setups to work smoothly with Weblate and/or Transifex.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since this project is about getting lots of pieces to integrate nicely, all the code generated will be included in all the relevant projects.  That is also where we will be looking for feedback, so file issues with &lt;a href=&#34;https://github.com/WeblateOrg/weblate/issues/&#34;&gt;Weblate&lt;/a&gt;, &lt;a href=&#34;https://gitlab.com/fdroid/fdroid-website/issues&#34;&gt;&lt;em&gt;f-droid.org&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;https://gitlab.com/guardianproject/info/issues&#34;&gt;&lt;em&gt;guardianproject.info&lt;/em&gt;&lt;/a&gt;, etc. and we will track them there!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own app store with F-Droid</title>
+      <link>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</link>
+      <pubDate>Tue, 05 Nov 2013 11:55:43 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</guid>
+      <description>
+
+&lt;p&gt;(_This blog post as now been cooked into an &lt;a href=&#34;https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo&#34; target=&#34;_blank&#34;&gt;updated HOWTO&lt;/a&gt;_)&lt;/p&gt;
+
+&lt;p&gt;The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are &lt;a href=&#34;http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links&#34; target=&#34;_blank&#34;&gt;actively tapping&lt;/a&gt; into &lt;a href=&#34;http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html&#34; target=&#34;_blank&#34;&gt;the raw data streams&lt;/a&gt; of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/your-own-app-store.png&#34; alt=&#34;your-own-app-store&#34; width=&#34;300&#34; height=&#34;203&#34; class=&#34;alignright size-full wp-image-11896&#34; /&gt; &lt;a href=&#34;https://f-droid.org&#34; title=&#34;F-Droid Home Page&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; is a wonderful, free app store for Android. It is modeled after the &lt;a href=&#34;http://www.debian.org&#34; title=&#34;Debian home page&#34; target=&#34;_blank&#34;&gt;Debian GNU/Linux&lt;/a&gt; distro. It has its own package repositories (repos) and build servers for all the apps that are part of the official OS. Like Debian and Ubuntu, you can also setup your own repos for anyone to use. Any free software can be added to the official F-Droid repos, where they are built and signed by the F-Droid server. This can be annoying because it means that your apps in F-Droid are signed by a different key than your apps in the Google Play Store. If you host your own F-Droid repo, then people can use F-Droid to install your own builds signed by your own signing key.&lt;/p&gt;
+
+&lt;p&gt;This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the &lt;code&gt;fdroidserver&lt;/code&gt; tools and a webserver. For the webserver, here we use &lt;em&gt;nginx&lt;/em&gt; for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: &lt;tt&gt;F50E ADDD 2234 F563&lt;/tt&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install fdroidserver nginx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the case of this HOWTO, we’re going to setup a “&lt;a href=&#34;https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository&#34; target=&#34;_blank&#34;&gt;Simple Binary Repository&lt;/a&gt;” to host our official APKs. The repo will be set up in the recommended &lt;code&gt;fdroid/&lt;/code&gt; subdirectory. This gives the &lt;code&gt;fdroid&lt;/code&gt; tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let’s give our normal user control over this subdirectory in the web root so that we don’t need to run the F-Droid tools as root (with &lt;em&gt;nginx&lt;/em&gt;, the webroot is &lt;code&gt;/usr/share/nginx/www&lt;/code&gt;, it is different for other webservers):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mkdir /usr/share/nginx/www/fdroid
+sudo chown -R $USER /usr/share/nginx/www/fdroid
+cd /usr/share/nginx/www/fdroid
+fdroid init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now put your APK files into &lt;code&gt;/usr/share/nginx/www/fdroid/repo&lt;/code&gt; and you are ready to run the commands to build the repo (if &lt;code&gt;fdroid init&lt;/code&gt; cannot find your Android SDK in &lt;code&gt;/opt/android-sdk&lt;/code&gt; or &lt;code&gt;$ANDROID_HOME&lt;/code&gt;, it will prompt you for the path):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /usr/share/nginx/www/fdroid
+cp /path/to/*.apk /usr/share/nginx/www/fdroid/repo/
+fdroid update -c
+fdroid update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png&#34; alt=&#34;fdroidheader3&#34; width=&#34;300&#34; height=&#34;75&#34; class=&#34;alignleft size-medium wp-image-11906&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png 720w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Voila! Now you have a working F-Droid Repo! Add it to an F-Droid client on your Android device to test it out. That is done in the &lt;strong&gt;Manage Repos&lt;/strong&gt; screen available from the menu. Your repo URL will be the hostname or IP address of your machine with &lt;code&gt;/fdroid/repo/&lt;/code&gt; added to the end of it, i.e. &lt;code&gt;https://mysecureserver.com/fdroid/repo/&lt;/code&gt; or &lt;code&gt;http://192.168.2.53/fdroid/repo/&lt;/code&gt;. You can temporarily uncheck the official repos to easily see what F-Droid found in your new repo.&lt;/p&gt;
+
+&lt;h2 id=&#34;customization&#34;&gt;Customization&lt;/h2&gt;
+
+&lt;p&gt;You can also customize your repo by editing the config file. Be sure to use a programming text editor, like &lt;code&gt;editor /usr/share/nginx/www/fdroid/config.py&lt;/code&gt;. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;repo_url = &amp;quot;https://guardianproject.info/fdroid/repo&amp;quot;
+repo_name = &amp;quot;My Local Repo&amp;quot;
+repo_icon = &amp;quot;GP_Logo_hires.png&amp;quot;
+repo_description = &amp;quot;&amp;quot;&amp;quot;
+This is a local test repository of Hans-Christoph Steiner &amp;lt;&amp;amp;#x68;a&amp;amp;#x6e;s@&amp;amp;#x67;ua&amp;amp;#x72;d&amp;amp;#x69;&amp;amp;#x61;n&amp;amp;#x70;ro&amp;amp;#x6a;e&amp;amp;#x63;&amp;amp;#x74;.&amp;amp;#x69;nf&amp;amp;#x6f;&amp;gt;.  It is a repository of Guardian Project apps.
+&amp;quot;&amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To put your icon into your repo, choose a PNG image to put in your repo. The PNG goes in &lt;code&gt;/usr/share/nginx/www/fdroid/&lt;/code&gt;, the file can be named whatever you want (by default its &lt;code&gt;fdroid-icon.png&lt;/code&gt;). If you change the name from the default, be sure to update &lt;code&gt;repo_icon&lt;/code&gt; and &lt;code&gt;archive_icon&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;more-security&#34;&gt;More Security&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png&#34; alt=&#34;apg&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1029&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/02/apg.png 256w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Now that you have a working repo, its time to improve the security. Generating a repo in place is very easy, that is why this HOWTO started there, but it is not as secure as it should be if your repo is going to be your main distribution point. When generating the repo in place, make sure that &lt;code&gt;config.py&lt;/code&gt; is not accessible via the web, since it contains passwords. If the file permissions are correct (e.g. &lt;code&gt;chmod 0600 config.py&lt;/code&gt;), then &lt;code&gt;config.py&lt;/code&gt; will not be readable by the webserver. But the signing keys will still be that public server. To improve this situation, generate the repo on a non-public machine like your laptop, keeping &lt;code&gt;config.py&lt;/code&gt; and the keystore only on that machine, then use &lt;code&gt;fdroid server update&lt;/code&gt; to publish the changes to your repo on a separate server. You just need to set &lt;code&gt;serverwebroot&lt;/code&gt; in &lt;code&gt;config.py&lt;/code&gt; properly, then &lt;code&gt;fdroid server update&lt;/code&gt; will do the publishing via rsync over ssh. So both computers will have to have ssh and rsync installed and setup.&lt;/p&gt;
+
+&lt;p&gt;You can also use your own existing signing key rather than the one generated by &lt;code&gt;fdroid init&lt;/code&gt;, just edit &lt;code&gt;repo_keyalias&lt;/code&gt;, &lt;code&gt;keystore&lt;/code&gt;, &lt;code&gt;keystorepass&lt;/code&gt;, &lt;code&gt;keypass&lt;/code&gt;, and &lt;code&gt;keydname&lt;/code&gt; in &lt;code&gt;/usr/share/nginx/www/fdroid/config.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we like Tor and its Hidden Services for providing privacy, we also want to setup an F-Droid repository that is accessible over a Tor Hidden Service aka onion address. This will be covered in a future HOWTO.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

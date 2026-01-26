@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Progressive Web Application on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/progressive-web-application/</link>
+    <description>Recent content in Progressive Web Application on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 29 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/progressive-web-application/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Announcement: AnyNews 1.0: Censorship-Resistant News and Media Distribution</title>
+      <link>https://guardianproject.github.io/info/2021/11/29/announcement-anynews-1.0-censorship-resistant-news-and-media-distribution/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/11/29/announcement-anynews-1.0-censorship-resistant-news-and-media-distribution/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;For content publishers, AnyNews is a news distribution suite focused on service to censorship-prone geographies, easily integrated into existing content sources.  AnyNews is open-source and easily branded (or customized, if desired) without extensive effort or expense.  AnyNews integrates technologies to counter a range of censorship regimes and is designed to accommodate new technologies more easily and quickly as they arise. Tools are provided to support a range of publishing options for environments that suffer from connectivity or performance problems. Service engagements are possible when custom software is required.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./anynews_homescreen_cubanet.jpg&#34; alt=&#34;AnyNews Home Screen&#34; width=&#34;380px&#34; height=&#34;800px&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;product-concept&#34;&gt;Product Concept&lt;/h2&gt;
+
+&lt;p&gt;Content providers of all types are confronted with a diversity of censorship and network-disruption regimes around the world, with widely-varying political and social forces involved, and manifesting a bewildering array of content access issues to users.  Further, within a given community, independent individuals are impacted by political and social forces in different ways.  In such an environment, it has been a difficult technical struggle to stand up censorship resilient services that provide an easy, understandable user experience while also satisfying the heavy security and privacy demands of the most heavily-impacted users.  New thinking is required to avoid the nightmare scenario of costly and slow application development focused on the most challenging technical demands while, in doing so, alienating many others who give up in frustration and put themselves at risk.&lt;/p&gt;
+
+&lt;p&gt;AnyNews is an open source software project that incorporates a variety of censorship-resistant technologies to mitigate these threats and does so in a way that is responsive to a wider range of use cases.&lt;/p&gt;
+
+&lt;h2 id=&#34;core-capability&#34;&gt;Core Capability&lt;/h2&gt;
+
+&lt;p&gt;AnyNews is designed for information publication - a one-way, source-to-user interaction - using news feed technologies. The published content can be text, media (imagery, audio, video) or a combination.  Information is typically organized by reverse chronology and/or defined categories.  Most common publication formats are already integrated.  The AnyNews Web Client updates its content regularly without user interaction. Changes to your edition of the AnyNews application occur automatically and immediately upon publication without requiring a special user interaction.&lt;/p&gt;
+
+&lt;p&gt;The AnyNews Web Client is a &amp;ldquo;news reader&amp;rdquo; type application pre-configured to read a single feed, or a defined set (typically, as offered by a single publisher, with a single publisher&amp;rsquo;s branding). The user experience is clear and straight-forward but offers full-integrated media play and features like saving and sharing.  Internationalization of the application is easily accommodated.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;./anynews_media_playlist.jpg&#34; alt=&#34;AnyNews Media Playlist Screen&#34; width=&#34;380px&#34; height=&#34;800px&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;supported-content-formats&#34;&gt;Supported Content Formats&lt;/h2&gt;
+
+&lt;p&gt;AnyNews has built-in support for &lt;a href=&#34;https://validator.w3.org/feed/docs/rss1.html&#34;&gt;RSS 1.0&lt;/a&gt;, &lt;a href=&#34;https://cyber.harvard.edu/rss/rss.html&#34;&gt;RSS 2.0&lt;/a&gt;, and &lt;a href=&#34;https://www.tutorialspoint.com/rss/what-is-atom.htm&#34;&gt;ATOM 1.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Publishers with customized versions of these formats, RDF, NewsML, JSON, XML or later versions of ATOM (such as OData.org&amp;rsquo;s &lt;a href=&#34;https://www.odata.org/documentation/odata-version-3-0/atom-format/&#34;&gt;version&lt;/a&gt;) can be supported via a service engagement in one of two ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Modification of our deployment/mirroring tools to convert the published format to one of our supported formats (fastest, cheapest approach)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Modify the AnyNews Web Client to support the custom format (slower, costlier approach better suited to engagements where the Web Client itself is almost being customized)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;circumvention-in-the-anynews-web-client&#34;&gt;Circumvention in the AnyNews Web Client&lt;/h2&gt;
+
+&lt;p&gt;The AnyNews Web Client is built using Progressive Web App (PWA) technology.  While on the one hand accessing the AnyNews Web Client feels like accessing a web page in the browser, the AnyNews Web Client is saved to the device’s home screen on first use and, henceforth, acts like a native application.  With this approach, users don&amp;rsquo;t visit their vendor&amp;rsquo;s app store (which might censor your app or be otherwise unaccessible in their country). AnyNews Web Client technology also allows automatic update of the app without app store access or (in the case of Apple/iOS) app store approval.&lt;/p&gt;
+
+&lt;p&gt;Within the AnyNews Web Client itself, censorship or surveillance can be mitigated with optional CDN mirroring.  The Web Client is initially configured to retrieve from one or more mirror sites, each user selecting a mirror randomly on initial startup and then re-trying from the set in random-round-robin style if/when the initial mirror fails.  These hosts can be on different CDN providers and/or in different geographies.  The actual set of mirroring hosts can be changed over time and automatically updated to the AnyNews Web Client.  For some content providers, it is also useful to host the AnyNews Web Client itself on a CDN mirror as well.&lt;/p&gt;
+
+&lt;h2 id=&#34;serving-marginalized-communities&#34;&gt;Serving Marginalized Communities&lt;/h2&gt;
+
+&lt;p&gt;AnyNews provides tools to pre-process news content for delivery to community-centered hubs at the very edge of the network in places where Internet connectivity for individuals is poor, non-existent or expensive, or under circumstances of natural disaster that make individual connection to the network impossible. These tools can be used to re-publish content to a laptop, tablet or IoT device as small as a Raspberry Pi powered by solar panels and with a highly-intermittent Internet connection.&lt;/p&gt;
+
+&lt;h2 id=&#34;native-application-wrappers&#34;&gt;Native Application &amp;ldquo;Wrappers&amp;rdquo;&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s possible to produce versions of the AnyNews Web Client &lt;em&gt;wrapped&lt;/em&gt; in a native (iOS, Android) application layer for delivery to users via the App Stores.  While the App Stores are sometimes subject to censorship, most users are more familiar with this model for acquiring applications and may have a greater sense of trust in applications delivered in that way.&lt;/p&gt;
+
+&lt;p&gt;On Google’s Android, two additional circumvention technologies can be integrated in the native application:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Integration with Tor via Guardian Project’s &lt;em&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&#34;&gt;Orbot&lt;/a&gt;, Tor for Android&lt;/em&gt;. The AnyNews Android app checks for the presence of Orbot on the user’s device and automatically configures itself to run using Orbot when present.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Integration with Clostra&amp;rsquo;s &lt;em&gt;&lt;a href=&#34;https://www.clostra.com/newnode-mesh-network&#34;&gt;NewNode technology&lt;/a&gt;&lt;/em&gt;.  NewNode is automatically activated at start-up if Orbot is not present on the device.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As we are working through some operating system limitations, our AnyNews native app for iOS does not offer circumvention technologies beyond the mirroring capabilities in the PWA.&lt;/p&gt;
+
+&lt;p&gt;Our tools for building the native app wrappers are not ready for public consumption at this point, so native wrappers are an optional part of Anynews and available via service engagement.&lt;/p&gt;
+
+&lt;h2 id=&#34;repository&#34;&gt;Repository&lt;/h2&gt;
+
+&lt;p&gt;The AnyNews repositories are &lt;a href=&#34;https://gitlab.com/guardianproject/anynews&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;issue-trackers&#34;&gt;Issue Trackers&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/guardianproject/anynews/anynews-web-client/-/issues&#34;&gt;AnyNews Web Client Issue Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/guardianproject/anynews/AnyNews-Republisher/-/issues&#34;&gt;AnyNews Republisher Issue Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;AnyNews is released under &lt;a href=&#34;https://www.gnu.org/licenses/gpl-3.0.txt&#34;&gt;GNU Public License v3.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;service-engagement-opportunities&#34;&gt;Service Engagement Opportunities&lt;/h2&gt;
+
+&lt;p&gt;AnyNews is open source.  We’ve documented the steps you’ll need to make AnyNews work with your content and simplify deployment. If you&amp;rsquo;d prefer help in developing your AnyNews strategy, we can assist.  Engagement types:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Assistance with Open Source&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Branding-only Engagement&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Deployment Strategy Engagement&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Customization Engagement (customized Web Clients or news source customizations)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Native App &amp;ldquo;Wrappers&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Long-term Deployment Support&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;p&gt;Guardian Project thanks the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;Open Technology Fund&lt;/a&gt;, via it&amp;rsquo;s &lt;a href=&#34;https://www.opentech.fund/labs/engineering-lab/&#34;&gt;Engineering Lab&lt;/a&gt;, for funding the improvements in AnyNews that led to this release.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replicant on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/replicant/</link>
+    <description>Recent content in Replicant on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/replicant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PanicKit 1.0: built-in panic button and full app wipes</title>
+      <link>https://guardianproject.github.io/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/</guid>
+      <description>
+
+&lt;p&gt;Panic Kit is 1.0!  After over three years of use, it is time to call
+this stable and ready for widespread use.&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://guardianproject.github.io/info/css/jquery.fancybox-3.4.0.min.css&#34; /&gt;
+&lt;script src=&#34;https://guardianproject.github.io/info/js/jquery-3.3.1.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://guardianproject.github.io/info/js/jquery.fancybox.min.js&#34;&gt;&lt;/script&gt;
+&lt;div class=&#34;gallery&#34;&gt;
+  
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551039.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551039.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551407.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551407.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive0.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive0.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive1.png.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive1.png.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_ripple.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_ripple.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;built-in-panic-button&#34;&gt;Built-in panic button&lt;/h2&gt;
+
+&lt;p&gt;This round of work includes a new prototype for embedding PanicKit
+directly into Android.  Android 9.0 Pie introduced a new &amp;ldquo;lockdown&amp;rdquo;
+mode which follows some of the patterns laid out by PanicKit.  There
+is an &lt;em&gt;Enter lockdown&lt;/em&gt; button available on the power button menu, so
+it is rapidly available.  This is a great panic trigger button, so we
+made a prototype of a System Settings app that lets users connect the
+full flexibility of PanicKit responses to this &lt;em&gt;Enter lockdown&lt;/em&gt;
+button.  The functionality that Google links to this new button is
+extremely limited, it seems to be a &lt;a href=&#34;https://www.androidpolice.com/2018/03/08/android-p-feature-spotlight-new-lockdown-option-power-menu-turns-off-fingerprint-unlocking-something-called-extended-access/&#34;&gt;one time restriction on how you
+login&lt;/a&gt;.
+The PanicKit responses are in addition to what Google
+included. CalyxOS is
+&lt;a href=&#34;https://gitlab.com/calyxos/calyxos/issues/72&#34;&gt;working&lt;/a&gt; to integrate
+this, look for test releases soon!&lt;/p&gt;
+
+&lt;h2 id=&#34;full-wipes-of-selected-apps&#34;&gt;Full wipes of selected apps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid v1.7-alpha1&lt;/a&gt; has alpha support for
+uninstalling and wiping all data from selected apps in response to a
+panic trigger, including Ripple and F-Droid.  So the whole panic setup
+could be wiped as part of the response.  It is essential to have a
+complete, tested backup before trying this new feature, since it will
+delete all of the data for each app that is uninstalled.&lt;/p&gt;
+
+&lt;p&gt;This requires &lt;a href=&#34;https://f-droid.org/packages/org.fdroid.fdroid.privileged.ota&#34;&gt;F-Droid Privileged
+Extension&lt;/a&gt;
+be installed on the device, in order to uninstall apps without a
+prompt for each app.  Android ROMs like CalyxOS, CopperheadOS,
+Fairphone Open, Replicant, and Lineage-for-microG all include F-Droid
+Privileged Extension.&lt;/p&gt;
+
+&lt;h2 id=&#34;ripple-is-polished-up&#34;&gt;Ripple is polished up&lt;/h2&gt;
+
+&lt;p&gt;Ripple also received some modernization and polish.  Google has
+reinstated the Ripple app in Google Play, so it is again widely
+available.  Ripple was of course available the whole time via F-Droid.
+Google suspended Ripple without explanation, then a long while later
+reinstated it without explanation.&lt;/p&gt;
+
+&lt;p&gt;This work was made possible in part from donations from Handshake Foundation.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

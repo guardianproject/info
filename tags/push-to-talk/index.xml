@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Push to Talk on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/push-to-talk/</link>
+    <description>Recent content in Push to Talk on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 31 Jan 2013 02:05:50 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/push-to-talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mumble and the Bandwidth – Anonymous CB radio with Mumble and Tor</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</link>
+      <pubDate>Thu, 31 Jan 2013 02:05:50 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-3186&#34; alt=&#34;mumble and the bandwidth&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34; width=&#34;800&#34; height=&#34;478&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg 800w, https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth-300x179.jpg 300w&#34; sizes=&#34;(max-width: 800px) 100vw, 800px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The journey towards anonymous and secure voice communication is a long one. There’s lots of roadblocks to get your voice from point A to point B over the Internet if you need to prevent eavesdropping or censorship. There is the limited bandwidth of mobile data connections. There is the high latency of the TCP protocol. &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#whyweneedtor&#34;&gt;To achieve anonymity via Tor&lt;/a&gt;, there’s even more latency added to each packet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mumble.sourceforge.net/&#34;&gt;Mumble&lt;/a&gt; is a non-standard protocol that was originally designed for realtime voice chat for video games. If you’ve ever played Halo or World of Warcraft, this should sound familiar. If not, think of it as a conference call you don’t have to ring. You simply connect to a Mumble server over the Internet and your voice will transmit to everyone else.&lt;/p&gt;
+
+&lt;p&gt;Mumble clients are available for &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient&amp;amp;feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5tb3JsdW5rLm11bWJsZWNsaWVudCJd&#34;&gt;Android&lt;/a&gt; and &lt;a href=&#34;https://itunes.apple.com/us/app/mumble/id443472808?ls=1&amp;amp;mt=8&#34;&gt;iOS&lt;/a&gt;, as well as a cross-platform desktop client. The server software is also cross-platform. Guardian Project is focusing on the Android client named &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.morlunk.mumbleclient&amp;amp;feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5tb3JsdW5rLm11bWJsZWNsaWVudCJd&#34;&gt;Plumble&lt;/a&gt; and the official server &lt;a href=&#34;https://packages.debian.org/search?keywords=mumble&amp;amp;searchon=names&amp;amp;section=all&amp;amp;suite=squeeze-backports&#34;&gt;backported to Debian stable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A cool feature of Mumble is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Push-to-talk&#34;&gt;Push To Talk&lt;/a&gt; (PTT) method to speak to the channel. Your voice is only transmitted when you press the PTT button in the user interface. Another lower level feature that’s important for our anonymity goal is TCP support. For any application to run over Tor, it must use the TCP protocol. This rules out most VoIP clients, since they use UDP. Here is a case where Mumble’s non-standard protocol works to our advantage.&lt;/p&gt;
+
+&lt;p&gt;When Tor is running and your Mumble client is configured to use TCP, connecting to your local SOCKS5 proxy offered by Tor allows you to join a Mumble server anonymously. The big problem is as suspected, latency. The traffic passing through the Tor network must make &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#thesolution&#34;&gt;an indeterminate number of proxy hops&lt;/a&gt; to be anonymized successfully. Each hop adds more and more latency. This makes a typical syncronous voice call impossible since there’s no way to determine when one person has stopped talking and when the other can respond without interrupting.&lt;/p&gt;
+
+&lt;p&gt;Latency in human speech transmision has deep psychological impact on a conversation. A &lt;a href=&#34;https://sites.google.com/site/qurihara/top-english/speechjammer&#34;&gt;Japanese research project called SpeechJammer&lt;/a&gt; exploited this part of our senses by inventing a “shut up gun.” When pointed at a person it makes them immediately stop talking. Everyone who has used a cell phone knows the frustration of “echo” where you hear your own voice, slightly delayed. The delay is caused by the network latency of the cellular carrier.&lt;/p&gt;
+
+&lt;p&gt;Another similar example is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Voip&#34;&gt;VoIP&lt;/a&gt; call on a congested network. The side effect of the latency is that one person accidently interrupts the other person because he thinks the other person has finished talking, when in reality the other person’s voice hasn’t yet arrived at the other end. Interruption ensues, no one is happy nor do they know anything new since the transmission was not understood. High latency makes &lt;a href=&#34;https://en.wikipedia.org/wiki/Full-duplex#Full-duplex&#34;&gt;full-duplex communication ineffective&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The contemporary telephone you are acustomed to allows both sides to talk and listen simultaneously. This is called full-duplex. Early radio telephones like walkie talkies, CB radio or aviation radio are half-duplex systems, meaning that for any given transmission, only one side can talk while the other side listens. Running Mumble over Tor takes a full-duplex technology and effectively reduces it to half-duplex. Even though the protocol is full-duplex, when run through a high latency network like Tor, the transmit and receive channels are so far out of sync there is no point in allowng both sides to talk at once. Again, interruption ensues.&lt;/p&gt;
+
+&lt;p&gt;Then it hit me. Radio telephones have been around since the turn of the 20th century, when people figured out a reasonable way to do voice chat without the technology causing accidental interruptions in the conversation. In particular, the use of procedure words, or &lt;a href=&#34;https://en.wikipedia.org/wiki/Procedure_word&#34;&gt;prowords&lt;/a&gt;, are essential for one speaker to acknowledge the transmission of the other (Roger), to signify that one party is finished speaking (Over), or indicate when one party has left the conversation (Out).&lt;/p&gt;
+
+&lt;p&gt;Here in the USA, some prowords evolved into a coloquial language, complete with &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_CB_slang&#34;&gt;slang&lt;/a&gt; thanks to the Citizen Band radio boom of the 1960s and the truck driving culture that used it to communicate while on the road. The 1977 film &lt;a href=&#34;http://www.imdb.com/title/tt0076729/?ref_=sr_1&#34;&gt;Smokey and the Bandit&lt;/a&gt; is more than just a touching love story with world class actors, it is an amazing dramatization of an information culture that resembled pre-Internet &lt;a href=&#34;https://en.wikipedia.org/wiki/Bulletin_board_system&#34;&gt;BBS systems&lt;/a&gt; and current day &lt;a href=&#34;https://en.wikipedia.org/wiki/IRC&#34;&gt;Internet Relay Chat (IRC)&lt;/a&gt; networks around the globe. The truck drivers portrayed in that movie have a mobile, decentralized information sharing network that is anonymous. The users have pseudonyms and a language of their own. Many of them have never met their CB radio friends IRL. They are invisible companions on the lonely road of the US of A.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Old ideas are worth bringing back if they have strong roots. CB and general purpose radio telephones have a long history, unlike the standard the standard of tody, VoIP. Perhaps these features are thought of as obsolete or not cutting-edge enough to model into a digital system. Regardless of the reason, if you are looking for a mobile and open source PTT solution to use on the Internet with anonymity and security, Mumble over Tor is currently the state of the art. All you have to do is throw in some prowords to keep the conversation flowing.&lt;/p&gt;
+
+&lt;p&gt;The Guardian Project is operating a private Mumble server during a testing phase, and we have plans to open this to the public as part of the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN research effort&lt;/a&gt;. When that happens, I will post application-specific tutorials to install and configure the Plumble client. I will also publish a cookbook to build a Mumble server.&lt;/p&gt;
+
+&lt;p&gt;Finally, an example transmission log with some prowords:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Internet&lt;/em&gt;: Guardian Project. I have a ping response from your server, over.&lt;br /&gt;
+&lt;em&gt;GP&lt;/em&gt;: Roger Internet. Ping was sent, over.&lt;br /&gt;
+&lt;em&gt;Internet&lt;/em&gt;: Guardian Project. Build anonymous PTT system with open source software, over.&lt;br /&gt;
+&lt;em&gt;GP&lt;/em&gt;: Internet, build anonymous PTT system with open source software, wilco. Out.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

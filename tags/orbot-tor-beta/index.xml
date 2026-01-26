@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Orbot Tor Beta on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/orbot-tor-beta/</link>
+    <description>Recent content in Orbot Tor Beta on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Mar 2010 16:14:01 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/orbot-tor-beta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Orbot goes Beta</title>
+      <link>https://guardianproject.github.io/info/2010/03/04/orbot-goes-beta/</link>
+      <pubDate>Thu, 04 Mar 2010 16:14:01 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/03/04/orbot-goes-beta/</guid>
+      <description>&lt;p&gt;As announced on the &lt;a href=&#34;https://blog.torproject.org/blog/tor-android&#34;&gt;Tor Blog&lt;/a&gt;, an important development:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The Tor Project has been working very closely with &lt;a href=&#34;http://openideals.com/&#34;&gt;Nathan Freitas&lt;/a&gt; and &lt;a href=&#34;http://openideals.com/guardian/&#34;&gt;The Guardian Project&lt;/a&gt; to create an Android release. This is an early beta release and is not yet suitable for high security needs. The Android web browser is not protected by Torbutton and we have not yet developed an anonymous browser on the Android platform. Please be cautious with this release, it’s probably pretty fragile and it’s certainly not ready for serious use.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We just want to emphasize the word “fragile”. While we are proud of this work, it is a first release, and with all security, anti-censorship, anti-surveillance software, you must take each step slowly, deliberately, and seriously. So please, &lt;a href=&#34;https://blog.torproject.org/blog/tor-android&#34;&gt;download the Orbot APK build&lt;/a&gt;, test the frack out of it, &lt;a href=&#34;https://bugs.torproject.org/flyspray/index.php?tasks=all&amp;amp;project=8&#34;&gt;report bugs and feedback here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are some really cool features in Orbot, specifically “Per App Torification” if you have a modified/rooted device, running &lt;a href=&#34;http://cyanogenmod.com&#34;&gt;CyanogenMOD&lt;/a&gt; or another alternative firmware. However, even if you have a stock Android device straight from a T-Mobile, Verizon or China Mobile store, this is for you!&lt;/p&gt;
+
+&lt;p&gt;If you’d like to do the QRCode scan install thing, point your Android camera at this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-186&#34; title=&#34;orbot-qr-code-latest&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png&#34; alt=&#34;&#34; width=&#34;123&#34; height=&#34;123&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest.png 123w, https://guardianproject.info/wp-content/uploads/2010/03/orbot-qr-code-latest-64x64.png 64w&#34; sizes=&#34;(max-width: 123px) 100vw, 123px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

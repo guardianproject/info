@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sip on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/sip/</link>
+    <description>Recent content in Sip on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 Nov 2013 19:07:17 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/sip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VoIP security architecture in brief</title>
+      <link>https://guardianproject.github.io/info/2013/11/21/voip-security-architecture-in-brief/</link>
+      <pubDate>Thu, 21 Nov 2013 19:07:17 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/11/21/voip-security-architecture-in-brief/</guid>
+      <description>&lt;p&gt;Voice over IP (VoIP) has been around for a long time. It’s ubiquitous in homes, data centers and carrier networks. Despite this ubiquity, security is rarely a priority. With the combination of a handful of important standard protocols, it is possible to make untappable end to end encryption for an established VoIP call.&lt;/p&gt;
+
+&lt;p&gt;TLS is the security protocol between the signaling endpoints of the session. It’s the same technology that exists for SSL web sites; ecommerce, secure webmail, Tor and many others use TLS for security. Unlike web sites, VoIP uses a different protocol called the Session Initiation Protocol (SIP) for signaling: actions like ringing an endpoint, answering a call and hanging up. This is the metadata of calls. SIP-TLS uses the standard Certificate Authorities for key agreement. This implies trust between the certificate issuer and the calling endpoints.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12006&#34; style=&#34;width: 440px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;http://www.siptutorial.net/SIP/relation.htm&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12006&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/relation.gif&#34; alt=&#34;SIP Dialog&#34; width=&#34;430&#34; height=&#34;322&#34; class=&#34;size-full wp-image-12006&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12006&#34; class=&#34;wp-caption-text&#34;&gt;
+    An example of a SIP dialog
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To add a little complexity, the content of calls has only a small relationship to SIP. The key agreement protocol for P2P VoIP content is called ZRTP. In a true P2P system, all the key agreement and encryption of a call’s content happens in the endpoint applications. An important distinction between VoIP and other networked communications is that all devices are both client and server at once, so we have only “endpoints” rather than “clients” or “servers”. Once the endpoints agree on a shared secret, the ZRTP session ends and the SRTP session begins. When established, all audio and video content going over the network is encrypted. Only the two peer endpoints who established a session with ZRTP can decrypt the media stream. This is the part of the conversation that cannot be wiretapped nor can metadata of sessions in progress be spied on.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12008&#34; style=&#34;width: 560px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/11/zrtp_overview.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12008&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/zrtp_overview-902x1024.png&#34; alt=&#34;ZRTP Overview&#34; width=&#34;550&#34; height=&#34;624&#34; class=&#34;size-large wp-image-12008&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/zrtp_overview-902x1024.png 902w, https://guardianproject.info/wp-content/uploads/2013/11/zrtp_overview-264x300.png 264w, https://guardianproject.info/wp-content/uploads/2013/11/zrtp_overview.png 986w&#34; sizes=&#34;(max-width: 550px) 100vw, 550px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12008&#34; class=&#34;wp-caption-text&#34;&gt;
+    An example ZRTP key exchange
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To step back a little, let’s review some acronyms. First there is &lt;a href=&#34;http://www.siptutorial.net/SIP/background.html&#34;&gt;SIP&lt;/a&gt; (Session Initialization Protocol). This protocol is encrypted with TLS. It contains the IP addresses of the endpoints who wish to communicate but it does not interact with the audio or video stream.&lt;/p&gt;
+
+&lt;p&gt;Second, there is ZRTP. This protocol enters into the mix after a successful SIP dialog establishes a call session by locating the two endpoints. It transmits key agreement information over a unverified SRTP channel between the peers. The peers use their voices to speak a secret that verifies that the channel is secure between only the two peers.&lt;/p&gt;
+
+&lt;p&gt;Third, enter SRTP. Only after the ZRTP key exchange succeeds is the call content encrypted with the Secure Real Time Protocol. From this point forward, all audio and video is secure and uniquely keyed to each individual session.&lt;/p&gt;
+
+&lt;p&gt;This brief was inspired by the numerous discussions I’ve participated in online and offline during my ongoing operation of ostel.co, a secure VoIP service sponsored by The Guardian Project. I understand that VoIP is complex when compared to HTTP and the mainstream understanding of the securirty elements often omits the ZRTP/SRTP content, rather focusing on only the SIP-TLS signaling. While signaling is important, few calls would be useful without content.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Jitsi, ostel.co and ISP censorship</title>
+      <link>https://guardianproject.github.io/info/2013/07/22/jitsi-ostel.co-and-isp-censorship/</link>
+      <pubDate>Mon, 22 Jul 2013 15:33:44 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/22/jitsi-ostel.co-and-isp-censorship/</guid>
+      <description>&lt;p&gt;Earlier last week n8fr8 suspected something changed on the ostel.co server, due to many users emailing support specifically about Jitsi connectivity to ostel.co. The common question was “why did it work a few weeks ago and now it doesn’t anymore?”&lt;/p&gt;
+
+&lt;p&gt;The tl;dr follows, skip to keyword CONCLUSION to hear only the punch line.&lt;/p&gt;
+
+&lt;p&gt;To support n8fr8’s hypothesis, there was a small change to the server but I wan’t convinced it effected anything since all my clients continued to work properly, including Jitsi. Obviously &lt;em&gt;something&lt;/em&gt; had changed but none of us knew what it was. After some testing we discovered the problem was related to insecure connections from Jitsi to UDP port 5060 on ostel.co. Secure connections (on TCP port 5061) continued to work as expected.&lt;/p&gt;
+
+&lt;p&gt;To make matters more confusing, I could register and make calls with two different clients (CSipSimple and Linphone) on the same network (my home ISP, Verizon FiOS) using an insecure connection to ostel.co on UDP port 5060.&lt;/p&gt;
+
+&lt;p&gt;At this point I was like WTF?&lt;/p&gt;
+
+&lt;p&gt;I went back to the server, diffed all the configs, checked server versions, connected with every client I could find that would run on any of my computers. The only change was a Kamailio upgrade from 4.0.1 to 4.0.2. A minor point release. The problem with Jitsi remained. What could the server be doing to this poor client?&lt;/p&gt;
+
+&lt;p&gt;I did a packet trace on the ostel.co server’s public network interface, filtered to dump packets only on UDP port 5060 that match my SIP username. I opened Jitsi and things got interesting. For the curious, here’s the utility and options I used. If you are new to operating a SIP network, ngrep is an excellent tool for debugging.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ngrep -d eth0 -t -p -W byline foo port 5060&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll include an excerpt (I’ve included only the relevant headers for this issue) of the initial request from Jitsi. IP addresses and usernames have been changed to protect the innocent.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;U 2013/07/19 22:17:34.920749 0.0.0.0:5060 -&amp;gt; 66.151.32.200:5060&amp;lt;br /&amp;gt;
+REGISTER sip:ostel.co SIP/2.0.&amp;lt;br /&amp;gt;
+CSeq: 1 REGISTER.&amp;lt;br /&amp;gt;
+From: &amp;quot;foo&amp;quot; &amp;lt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&amp;gt;;tag=1eb3467e.&amp;lt;br /&amp;gt;
+To: &amp;quot;foo&amp;quot; &amp;lt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&amp;gt;.&amp;lt;br /&amp;gt;
+Via: SIP/2.0/UDP 0.0.0.0:49152;branch=z9hG4bK-393535-2269e43afef0b312554eb419a8d0540e.&amp;lt;br /&amp;gt;
+User-Agent: Jitsi2.3.4752Linux.&amp;lt;br /&amp;gt;
+Contact: &amp;quot;foo&amp;quot; &amp;lt;sip:foo@0.0.0.0:49152;transport=udp;registering_acc=ostel_co&amp;gt;;expires=600.&amp;lt;br /&amp;gt;
+.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;U 2013/07/19 22:17:34.921155 66.151.32.200:5060 -&amp;gt; 0.0.0.0:5060&lt;br /&gt;
+SIP/2.0 401 Unauthorized.&lt;br /&gt;
+CSeq: 1 REGISTER.&lt;br /&gt;
+From: “foo” &lt;a href=&#34;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&#34;&gt;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&lt;/a&gt;;tag=1eb3467e.&lt;br /&gt;
+To: “foo” &lt;a href=&#34;sip:foo@&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&#34;&gt;sip:foo@&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;l.co&lt;/a&gt;;tag=e01f0de2cdfebbeefc5ff0c8eabbb8b3.2f1f.&lt;br /&gt;
+Via: SIP/2.0/UDP 0.0.0.0:49152;branch=z9hG4bK-393535-2269e43afef0b312554eb419a8d0540e;rport=5060.&lt;br /&gt;
+WWW-Authenticate: Digest realm=”ostel.co”, nonce=”Uen0alHp8z4d6ePDl83RtMwARltAxzQu”, qop=”auth”.&lt;br /&gt;
+Server: kamailio (4.0.2 (x86_64/linux)).&lt;/p&gt;
+
+&lt;p&gt;If you read the response, you’ll see Kamailio sent 401 Unauthorized. This is normal for SIP authentication. A second client request should follow it, which should contain an Authorization header with an md5 and a nonce. When Kamailio receives this request, checks the auth database and sends a 200 OK response, the client is authenticated.&lt;/p&gt;
+
+&lt;p&gt;The SIP dialog looks good but Jitsi continues not to register. The dialog flow is cut off after the 401 Unauthorized response. It’s almost like something has blocked the response to the client.&lt;/p&gt;
+
+&lt;p&gt;Since I could register Linphone using the same account, I did the same trace for that client. Here’s the excerpt.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;U 2013/07/19 22:33:18.372770 0.0.0.0:42680 -&amp;gt; 66.151.32.200:5060&amp;lt;br /&amp;gt;
+REGISTER sip:ostel.co SIP/2.0.&amp;lt;br /&amp;gt;
+Via: SIP/2.0/UDP 0.0.0.0:49153;rport;branch=z9hG4bK359459505.&amp;lt;br /&amp;gt;
+From: &amp;lt;sip:f&amp;amp;#x6f;o&amp;amp;#x40;&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;&amp;amp;#x2e;c&amp;amp;#x6f;&amp;gt;;tag=142131416.&amp;lt;br /&amp;gt;
+To: &amp;lt;sip:fo&amp;amp;#x6f;@&amp;amp;#x6f;s&amp;amp;#x74;e&amp;amp;#x6c;.&amp;amp;#x63;o&amp;gt;.&amp;lt;br /&amp;gt;
+CSeq: 3 REGISTER.&amp;lt;br /&amp;gt;
+Contact: &amp;lt;sip:foo@0.0.0.0:49153;line=65da8bffcabe8c4&amp;gt;.&amp;lt;br /&amp;gt;
+User-Agent: LinphoneAndroid/2.1.2-1-g23b7fc0 (eXosip2/3.6.0).&amp;lt;br /&amp;gt;
+.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;U 2013/07/19 22:33:18.373112 66.151.32.200:5060 -&amp;gt; 0.0.0.0:42680&lt;br /&gt;
+SIP/2.0 401 Unauthorized.&lt;br /&gt;
+Via: SIP/2.0/UDP 0.0.0.0:49153;rport=42680;branch=z9hG4bK359459505.&lt;br /&gt;
+From: &lt;a href=&#34;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&#34;&gt;sip:&amp;amp;#x66;&amp;amp;#x6f;&amp;amp;#x6f;&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;&amp;amp;#x65;&amp;amp;#x6c;&amp;amp;#x2e;&amp;amp;#x63;&amp;amp;#x6f;&lt;/a&gt;;tag=142131416.&lt;br /&gt;
+To: &lt;a href=&#34;sip:foo&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;el.c&amp;amp;#x6f;&#34;&gt;sip:foo&amp;amp;#x40;&amp;amp;#x6f;&amp;amp;#x73;&amp;amp;#x74;el.c&amp;amp;#x6f;&lt;/a&gt;;tag=e01f0de2cdfebbeefc5ff0c8eabbb8b3.4065.&lt;br /&gt;
+CSeq: 3 REGISTER.&lt;br /&gt;
+WWW-Authenticate: Digest realm=”ostel.co”, nonce=”Uen4GlHp9u4FwHNY/uE1iQQNCfGHJiob”, qop=”auth”.&lt;br /&gt;
+Server: kamailio (4.0.2 (x86_64/linux)).&lt;/p&gt;
+
+&lt;p&gt;This 401 Unauthorized response was received by the client and the follow up request with the Authorization header was sent with the correct digest. Linphone registered. I made a call. Everything worked fine. Indeed WTF?&lt;/p&gt;
+
+&lt;p&gt;I stared at these traces for a while to get a clue. Look again at the first line of the request from Jitsi. You’ll see a timestamp followed by two IP:port pairs. Notice the port on the first IP is 5060 and the port on the second IP is also 5060. This means that the &lt;strong&gt;source port&lt;/strong&gt; used by Jitsi on my home network is UDP port 5060. In order for a response to come back to Jitsi, it must enter my network on the same port it exited. Now read the top line of the response from Kamailio. Indeed, the server sent the response to UDP port 5060.&lt;/p&gt;
+
+&lt;p&gt;Now look at the same flow for Linphone. There is a very different source port in that dialog. In this case, Kamailio sent the response to UDP port 42680 and Linphone received it. Also notice the IP address used by Kamailio as the destination of the response is the same one in the dialog from Jitsi.&lt;/p&gt;
+
+&lt;p&gt;The question remained, why can’t Jitsi get the same kind of SIP response on UDP port 5060? Why is Jitsi using a single source port for outgoing traffic anyway? That value can be dynamic. I configured Jitsi to use a different port for insecure SIP. It has an advanced configuration for SIP with the key “SIP client port”. I set this to 5062 (5061 is conventionally used for secure SIP traffic so I incremented by 2) and tried to register again.&lt;/p&gt;
+
+&lt;p&gt;SUCCESSSSSSSSSSSS!&lt;/p&gt;
+
+&lt;p&gt;To be thorough, I changed Jitsi’s SIP port again to a 5 digit number I randomly typed on my keyboard without looking.&lt;/p&gt;
+
+&lt;p&gt;SUCCESSSSSSSSSSSS!&lt;/p&gt;
+
+&lt;p&gt;So if Jitsi can register to Kamailio on any port other than UDP port 5060, WTF is going on? I had a suspicion. I tried one more test before I called it. I configured Jitsi to connect on TCP port 5060. It registered successfully. Now I know what’s going on. I have a sad 🙁&lt;/p&gt;
+
+&lt;p&gt;CONCLUSION&lt;/p&gt;
+
+&lt;p&gt;My ISP, Verizon FiOS, has a firewall running somewhere upstream (it could be on the router they provided, I haven’t checked yet) that blocks incoming UDP traffic to port 5060. This probably falls under their TOS section which forbids “running servers” since Verizon provides voice services for an additional fee on top of data service, despite both running over the same fiber connection to my house. It seems like Verizon doesn’t want their data-only customers to get in the way of that sweet cheddar delivery each month in exchange for “phone service”.&lt;/p&gt;
+
+&lt;p&gt;This sucks on two levels.&lt;/p&gt;
+
+&lt;p&gt;LEVEL 1&lt;/p&gt;
+
+&lt;p&gt;Why is my ISP censoring my incoming traffic when I have 5 mbps of incoming bandwidth? I assume the answer is “because they can.” *desolate frowny face*&lt;/p&gt;
+
+&lt;p&gt;LEVEL 2&lt;/p&gt;
+
+&lt;p&gt;Why doesn’t Jitsi use a dynamic source port for SIP requests? I assume the answer is “Jitsi is open source, why don’t I change this and send a patch upstream?”&lt;/p&gt;
+
+&lt;p&gt;Both levels are formidable challenges to overcome. Convincing Verizon to play nice on the Internet feels like a vanity project. I’m writing that off. To make a change to the SIP stack in Jitsi is well within the area of the GP team’s expertise, myself included but it’s not a trivial undertaking. Since this is a default configuration change there is probably a reason upstream devs made this choice so in addition to the programming work there’s the work to convince the developers this would be a change worth a new release.&lt;/p&gt;
+
+&lt;p&gt;Since this is specific to Jitsi, I’m going to follow up with the developers and see if I missed anything. Stay tuned for part two.&lt;/p&gt;
+
+&lt;p&gt;Thanks for listening. Stay safe!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>&lt;!--:en--&gt;OSTN secure VoIP wizard now built into CSipSimple for Android&lt;!--:--&gt;</title>
+      <link>https://guardianproject.github.io/info/2012/05/26/en-ostn-secure-voip-wizard-now-built-into-csipsimple-for-android/</link>
+      <pubDate>Sat, 26 May 2012 21:14:52 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/26/en-ostn-secure-voip-wizard-now-built-into-csipsimple-for-android/</guid>
+      <description>&lt;p&gt;&lt;!--:en--&gt;If you saw our last post about how to&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/2012/05/17/build-your-own-open-secure-telephony-network-some-assembly-required/&#34;&gt;setup your own secure voice-over-IP server instance&lt;/a&gt;, then this news is for you.&lt;/p&gt;
+
+&lt;p&gt;If you are an Android user looking for the &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;best open-source VoIP app&lt;/a&gt;, and really need one that can support &lt;a href=&#34;https://OSTel.co&#34;&gt;secure communications&lt;/a&gt;, then this post is ALSO for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;CSipSimple&lt;/a&gt;, the previously mentioned “best VoIP app”, now includes a wizard for setting up an account configuration for any server which complies with our &lt;a href=&#34;https://guardianproject.info/wiki/OSTN_Compliance_Specification&#34;&gt;Open Secure Telephony Network specification&lt;/a&gt;. In short, this means it uses TLS or SSL to secure the SIP signaling traffic, and supports proxying of the RTP media streams for the actual voice or video calls, without in any way interfering with the ZRTP encryption passing through it.&lt;/p&gt;
+
+&lt;p&gt;There are currently two OSTN compliant public services, &lt;a href=&#34;https://OSTel.co&#34;&gt;OSTel&lt;/a&gt; and &lt;a href=&#34;https://intimi.ca:4242/&#34;&gt;PillowTalk&lt;/a&gt;, but we hope and expect there to be many more, both public and private, and are very happy that this secure by default wizard configuration is now included in the core CSipSimple project. In addition, by having this support in a multiple purpose client (as opposed to a single OStel-only app), you can simultaneously use multiple VoIP accounts. For example, you might setup a second account with Callcentric, that is less secure, but that would allow you to make calls over the standard telephone system.&lt;/p&gt;
+
+&lt;p&gt;Below are screenshots of CSipSimple account setup running on an Android 4 ICS 7″ Tablet.&lt;/p&gt;
+
+&lt;p&gt;First, select “Add account”, scroll down to Generic wizards, and select OSTN.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/Screenshot_2012-05-26-20-46-05.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-2282&#34; title=&#34;Screenshot_2012-05-26-20-46-05&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/Screenshot_2012-05-26-20-46-05.png&#34; alt=&#34;&#34; width=&#34;614&#34; height=&#34;360&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/Screenshot_2012-05-26-20-46-05.png 1024w, https://guardianproject.info/wp-content/uploads/2012/05/Screenshot_2012-05-26-20-46-05-300x175.png 300w&#34; sizes=&#34;(max-width: 614px) 100vw, 614px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then enter your username, password, and the OSTN compliant server you wish to connect to.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/Screenshot_2012-05-26-20-53-56.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-2283&#34; title=&#34;Screenshot_2012-05-26-20-53-56&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/Screenshot_2012-05-26-20-53-56.png&#34; alt=&#34;&#34; width=&#34;614&#34; height=&#34;360&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/Screenshot_2012-05-26-20-53-56.png 1024w, https://guardianproject.info/wp-content/uploads/2012/05/Screenshot_2012-05-26-20-53-56-300x175.png 300w&#34; sizes=&#34;(max-width: 614px) 100vw, 614px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you hit “Save”, the account should be configured, attempt to register, and be ready to make calls.&lt;/p&gt;
+
+&lt;p&gt;Learn more about the CSipSimple project: &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;https://code.google.com/p/csipsimple/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Download the latest &lt;a href=&#34;http://nightlies.csipsimple.com/trunk/&#34;&gt;CSipSimple nightly trunk here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Many thanks to the brilliant Ooze and R3gis for their continued support.&lt;!--:--&gt;&lt;/p&gt;
+
+&lt;!--:pt--&gt;
+
+&lt;!--:--&gt;
+
+&lt;!--:es--&gt;
+
+&lt;!--:--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>&lt;!--:en--&gt;Build your own Open Secure Telephony Network, some assembly required&lt;!--:--&gt;</title>
+      <link>https://guardianproject.github.io/info/2012/05/17/en-build-your-own-open-secure-telephony-network-some-assembly-required/</link>
+      <pubDate>Thu, 17 May 2012 17:13:39 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/17/en-build-your-own-open-secure-telephony-network-some-assembly-required/</guid>
+      <description>&lt;p&gt;&lt;!--:en--&gt;The Open Secure Telephony Network is a standard that defines how to configure a VoIP softswitch with the capability to have secure two-way VoIP conversations if both parties are using the same server. The system requires both backend and frontend components, which makes OSTN is a little different than some of the other Guardian apps. Unlike Gibberbot, there are few public SIP services that support secure signalling for a mobile app to connect with. Notably&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://tanstagi.net&#34;&gt;Tanstagi.net&lt;/a&gt; offers free accounts. But it’s more fun to run your own.&lt;/p&gt;
+
+&lt;p&gt;Ready? Here’s the 12 step program.&lt;/p&gt;
+
+&lt;p&gt;The core server system is what provides user registration and media proxying. The reference application I used is called Freeswitch. It has a plethora of configuration options, so I chose to use a configuration management system called Chef to get everything set correctly.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Bootstrap a Debian server. Right now the only supported platform for an automated installation is Debian 6 “Squeeze”. The adventerous may try to run the cookbook on another platform and do some bug fixing&lt;/li&gt;
+&lt;li&gt;Install sudo, curl and git if you don’t already have them. &lt;code&gt;apt-get install sudo curl git-core&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Get a static IP address. This is crucial! Your users will need a place to register from anywhere in the world&lt;/li&gt;
+&lt;li&gt;Get a domain name. This is also crucial! Your users will prefer to register to a name rather than an IP address&lt;/li&gt;
+&lt;li&gt;Configure a local hostname. This is a dependency for the cookbook to properly configure Freeswitch to serve your custom domain. Unfortunately, this process varies based on OS and has bizarre conventions that make no sense. Just &lt;a href=&#34;http://serverfault.com/questions/331936/setting-the-hostname-fqdn-or-short-name&#34;&gt;follow the instructions&lt;/a&gt; and don’t ask questions. Remember to reboot after changing the hostname&lt;/li&gt;
+&lt;li&gt;Install Chef from the &lt;a href=&#34;http://www.opscode.com/chef/install/&#34;&gt;opscode full stack&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Download the &lt;a href=&#34;https://github.com/lazzarello/chef-twelvetone&#34;&gt;freeswitch cookbook&lt;/a&gt; and &lt;a href=&#34;https://github.com/lazzarello/chef-twelvetone/tree/master/cookbooks/freeswitch&#34;&gt;execute it&lt;/a&gt; with chef-solo&lt;/li&gt;
+&lt;li&gt;Walk away and have some coffee or a beer, depending on where the sun is relative to you&lt;/li&gt;
+&lt;li&gt;When the Chef run is finished, Freeswitch will be up and running. Check with &lt;code&gt;netstat -lntp&lt;/code&gt; you should see freeswitch listening on TCP port 5061&lt;/li&gt;
+&lt;li&gt;Create users by running &lt;code&gt;/opt/chef/embedded/bin/ruby /usr/local/freeswitch/scripts/gen_users&lt;/code&gt;. Without arguments, it will print the required parameters. Run it with an offset of 1000 and as many users as you like. Copy the XML files output by the script to &lt;code&gt;/usr/local/freeswitch/conf/directory/default/&lt;/code&gt; The script will also output a file with plaintext passwords so you can provision user handsets. Put this file somewhere safe and encrypted&lt;/li&gt;
+&lt;li&gt;Reload the XML into Freeswitch’s memory. &lt;code&gt;/usr/local/freeswitch/bin/fs_cli -x &amp;quot;reloadxml&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install &lt;a href=&#34;http://nightlies.csipsimple.com/trunk/&#34;&gt;CSipSimple&lt;/a&gt; and configure it to connect to your domain name with the username/password pair&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you make it through these steps, congratulations! You are now a Freeswitch operator. If you’re curious what is behind all of this and why it works, you should read about &lt;a href=&#34;https://en.wikipedia.org/wiki/Session_Initiation_Protocol&#34;&gt;SIP&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/ZRTP&#34;&gt;ZRTP&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Session_Description_Protocol&#34;&gt;SDP&lt;/a&gt;. It’s also worth noting that the Chef cookbook configures the server to act as an SSL &lt;a href=&#34;https://en.wikipedia.org/wiki/Certificate_authority&#34;&gt;Certificate Authority&lt;/a&gt;. This is used for Secure SIP. The current landscape of using commercially signed certificates in Freeswitch is far more complicated than any HTTPS web server you may have worked with.&lt;/p&gt;
+
+&lt;p&gt;If you’d like to get help from me or another Guardian Project hacker, you can create issues &lt;a href=&#34;https://dev.guardianproject.info/projects/ostn&#34;&gt;in our tracker&lt;/a&gt; and message SteeleNivenson on Freenode or OFTC in channel #guardianproject. Oh yeah, and there’s Twitter @leeazzarello.&lt;!--:--&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cross-Domain calling, or “toll-free long distance VoIP”</title>
+      <link>https://guardianproject.github.io/info/2012/05/04/cross-domain-calling-or-toll-free-long-distance-voip/</link>
+      <pubDate>Fri, 04 May 2012 17:34:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/04/cross-domain-calling-or-toll-free-long-distance-voip/</guid>
+      <description>&lt;p&gt;In a standard &lt;a href=&#34;https://guardianproject.info/wiki/OSTN_Compliance_Specification&#34;&gt;OSTN configuration&lt;/a&gt;, the Fully Qualified Domain Name (&lt;a href=&#34;https://en.wikipedia.org/wiki/FQDN&#34;&gt;FQDN&lt;/a&gt;) of the server running Freeswitch is a core dependency to operate the service. For example, the domain ostel.me was first configured as a DNS record, a server was bootstrapped with ostel.me as the local hostname and a &lt;a href=&#34;https://github.com/lazzarello/chef-twelvetone&#34;&gt;Freeswitch cookbook&lt;/a&gt; was run using the Chef automation system. Because the domain was configured both in DNS and locally, the cookbook has enough information to automatically build an operational OSTN node.&lt;/p&gt;
+
+&lt;p&gt;Once the node is operational, accounts are provisioned on the node and users install the OSTel Android application on their mobile handsets. Users may place secure calls to other users within the domain ostel.me.&lt;/p&gt;
+
+&lt;p&gt;This week I reached a milestone. I placed a call from a user at ostel.me to a user on a second private debugging domain. Both domains were configured as an OSTN node and two handsets were registered, one on each node. This kind of cross domain calling is something that is rare in the VoIP world when compared to other communications protocols on the Internet, for example email and XMPP. This is due in part to the complexity of the SIP protocol. I’m &lt;a href=&#34;https://guardianproject.info/wiki/The_challenges_with_secure_cross-domain_calling&#34;&gt;documenting the extended details&lt;/a&gt; on the wiki.&lt;/p&gt;
+
+&lt;p&gt;I configured both servers to register to each other, establishing a two way link between them. This is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Voice_peering&#34;&gt;VoIP peering&lt;/a&gt;. The more nodes in the network, the more peering relationships must exist. For example, this picture illustrates the relationships between a fully interconnected network with four nodes, named A, B, C and D.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_2082&#34; style=&#34;width: 287px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/full_mesh_network.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2082&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/full_mesh_network-277x300.png&#34; alt=&#34;Four Node Peering Network&#34; width=&#34;277&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-2082&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/full_mesh_network-277x300.png 277w, https://guardianproject.info/wp-content/uploads/2012/05/full_mesh_network.png 400w&#34; sizes=&#34;(max-width: 277px) 100vw, 277px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2082&#34; class=&#34;wp-caption-text&#34;&gt;
+    Four Node Peering Network
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The implementation of this kind of peering network differs for each application. Once the peering configuration is completed by the operator of each node, they must also enable cross domain calling in the Freeswitch dialplan. In Freeswitch, the peers create a “gateway” to route calls to a non-local domain. When a non-local call is placed, Freeswitch will attempt to find a gateway to that domain. If it exists, it will route the call to the other server, which will in turn ring the handset belonging to the registered username.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_2110&#34; style=&#34;width: 610px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/sip-peering-situation.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2110&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/sip-peering-situation.png&#34; alt=&#34;Protocol flow between two domains&#34; width=&#34;600&#34; height=&#34;188&#34; class=&#34;size-full wp-image-2110&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/sip-peering-situation.png 600w, https://guardianproject.info/wp-content/uploads/2012/05/sip-peering-situation-300x94.png 300w&#34; sizes=&#34;(max-width: 600px) 100vw, 600px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2110&#34; class=&#34;wp-caption-text&#34;&gt;
+    Cross Domain SIP Call
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The user interface to place this type of call in the OSTel app is experimental due to our security requirements. In my test, the non-local domain was debug.ostel.me. To place a call from &amp;#x62;o&amp;#x62;@o&amp;#x73;t&amp;#x65;l.&amp;#x6d;e to alice@debug&amp;#x2e;&amp;#x6f;&amp;#x73;&amp;#x74;&amp;#x65;&amp;#x6c;&amp;#x2e;&amp;#x6d;&amp;#x65; I had to type a fully qualified &lt;a href=&#34;https://en.wikipedia.org/wiki/Uniform_resource_identifier&#34;&gt;SIP URI&lt;/a&gt; into the OSTel dialer interface. It looks like &lt;code&gt;sip:&amp;amp;#x61;l&amp;amp;#x69;ce&amp;amp;#x40;de&amp;amp;#x62;u&amp;amp;#x67;&amp;amp;#x2e;o&amp;amp;#x73;te&amp;amp;#x6c;.&amp;amp;#x6d;&amp;amp;#x65;;transport=tls&lt;/code&gt;. The transport=tls attribute is due to the secure SIP requirement. Without that, the app will try and connect to debug.ostel.me over the insecure SIP port, which is not open on an OSTN node.&lt;/p&gt;
+
+&lt;p&gt;This test proved that cross domain SIP calling is possible but as I’ve shown above, there are significant hurdles on both the user and operator side. Some of these hurdles may be overcome by using a &lt;a href=&#34;http://www.opensips.org/&#34;&gt;SIP application other than Freeswitch&lt;/a&gt;, some may be solved on the client side, &lt;a href=&#34;http://www.e164.org/&#34;&gt;others with DNS&lt;/a&gt;. It’s great to have a secure voice service with a network of trusted peers. I’m looking forward to future research and development to remove the hurdles to create these peering agreements. Eventually we’ll all have the ability to call our friends email addresses.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Acrobits Groundwire – OSTN supports iPhone</title>
+      <link>https://guardianproject.github.io/info/2012/03/21/acrobits-groundwire-ostn-supports-iphone/</link>
+      <pubDate>Wed, 21 Mar 2012 09:09:21 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/21/acrobits-groundwire-ostn-supports-iphone/</guid>
+      <description>&lt;p&gt;The Guardian Project develops open source software primarily for the Android platform &lt;a href=&#34;https://guardianproject.info/home/use-cases/&#34;&gt;but we strive for security by design to be a part of all platforms&lt;/a&gt;. With &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN&lt;/a&gt;, there are two major components. The the first is the server, which operates as the primary user directory and call switch. The other is the client, which is the program you interact with to send and receive calls.&lt;/p&gt;
+
+&lt;p&gt;While the Apple App Store &lt;a href=&#34;http://michelf.com/weblog/2011/gpl-ios-app-store/&#34;&gt;forbids distribution of GPL licensed software from their service&lt;/a&gt;, the underlying protocols used by OSTN are open, so even iPhone developers may implement them in a proprietary client application without breaking any intellectual property laws.&lt;/p&gt;
+
+&lt;p&gt;And Acrobits software, an iOS dev shop in Prague, Czech Republic did just that. The result is an excellent OSTN compilant app for iPhone called &lt;a href=&#34;http://www.acrobits.cz/11/acrobits-groundwire-for-iphone&#34;&gt;Groundwire&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.acrobits.cz/userfiles/images/groundwire_icon.png&#34; alt=&#34;Groundwire logo&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Groundwire is not cheap when compared to competing apps for Android or desktop computers. They distribute it as a &lt;a href=&#34;https://en.wikipedia.org/wiki/Crippleware&#34;&gt;feature-limited&lt;/a&gt; app for $9.99. Unfortunately, one of the limited features is required to bring the app up to &lt;a href=&#34;https://guardianproject.info/wiki/OSTN_Compliance_Specification&#34;&gt;OSTN spec&lt;/a&gt;, namely ZRTP support. ZRTP is the key exchange protocol to securely authenticate two caller’s identities during a call. To enable this feature, the user must pay a $24.99 fee as an “in-app purchase.” This purchase is only required to enable &lt;strong&gt;outgoing&lt;/strong&gt; ZRTP calls. If you don’t have a need for this, you must only pay the $9.99 purchase price to get up and running.&lt;/p&gt;
+
+&lt;p&gt;The good news is that Groundwire is an excellent app. I’m testing it on an original iPhone with firmware 3.1.3. It supports push notifications to receive incoming calls even when the iPhone is asleep or Groundwire is in the background. This feature depends on Acrobits secure push servers, and a full security audit has not yet been performed to determine if this creates a risk.&lt;/p&gt;
+
+&lt;p&gt;I expect Groundwire to be a very popular client for OSTel, due to the high number of iPhones in the field. If you’d like to sign up for our alpha tested, named OSTel.me, &lt;a href=&#34;https://ostel.me/&#34;&gt;fill out the form&lt;/a&gt; and we’ll be in touch soon thereafter. You can also checkout another OSTN-compliant service at Tanstagi: &lt;a href=&#34;https://tanstagi.net/&#34;&gt;https://tanstagi.net/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VoIP Survey Results of NGOs, Human Rights Groups and Activists</title>
+      <link>https://guardianproject.github.io/info/2012/03/07/voip-survey-results-of-ngos-human-rights-groups-and-activists/</link>
+      <pubDate>Wed, 07 Mar 2012 18:58:29 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/07/voip-survey-results-of-ngos-human-rights-groups-and-activists/</guid>
+      <description>&lt;p&gt;In November 2011, 25 individuals were surveyed using an online form, representing typical end-users, global journalists, activist and human rights organization perspectives (Thank you to all the participants!). The goal of the survey was to establish a baseline understanding of the types of tools and expectations our target user community has around making “telephone calls” over the internet, otherwise known as Voice over Internet Protocol (VoIP).&lt;/p&gt;
+
+&lt;p&gt;This survey is part of our work on the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;Open Secure Telephony Net (OSTN)&lt;/a&gt;. In summary, we believe there is too great a reliance upon closed systems, proprietary protocols, and expensive commercial solutions, among the very people and groups who need a verifiable secure system based on free software. While using GPG for email, or OTR-encryption for chat have become somewhat standards go-tos for these groups, there has not been the same progress made on the secure voice front. OSTN aims to change that, but before we can, we need to understand where our target user community stand today.&lt;/p&gt;
+
+&lt;p&gt;Below you will find the questions and results from our small survey. We don’t claim to be big data scientists, but this is our starting point.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1Kj2xqnnxxbJxOP2myEMoDgd7uV_Z7S4&#34; alt=&#34;&#34; width=&#34;584&#34; height=&#34;269&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As expected, it was Skype, Skype, Skype, with a little Google Talk and Cisco thrown in here and there. Everyone knows Skypes, it works very well, and is even quite good at getting around firewalls.&lt;/p&gt;
+
+&lt;div&gt;
+   The other in this survey was “Cisco”, which could either be a corporate or small business product. In some cases, these products are actually more standards compliant than something like Skype. One aspect of our research is to audit the compliance of existing commercial products with security standards such as TLS, SSL, SRTP and ZRTP.
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1pVfXla66rcmmbst2uvDF_i08-f9ANKw&#34; alt=&#34;&#34; width=&#34;585&#34; height=&#34;277&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was interesting to see that Google Talk was a strong second to Skype. Other services like Facebook video calling or Apple Facetime are newer, and may not have had time for full adoption. Others included ippi.fr, a “free” SIP service that works with mobile phones. Not included in this list are Google+ Hangouts, which seem like a growing tool for group communications.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1neY0xPavF3sh91mvSelfIwzCMV21qJM&#34; alt=&#34;&#34; width=&#34;585&#34; height=&#34;479&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We hoped to understand how personal communications behavior might affect their use of VoIP systems in more professional settings. It seems like Skype again rules here.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1haSfmhdxc9zT7oghdyBQMFC8ZYv6m_Y&#34; alt=&#34;&#34; width=&#34;584&#34; height=&#34;475&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The most troubling issue is that most people likely utilize the same account for both personal and professional communication. Skype does not make it easy to switch accounts or have multiple accounts open at once, unlike email programs or instant messaging programs. You must have one identity. This creates a huge amount of opportunity for social engineering type attacks, though analysis of that was beyond the scope of this survey.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1S3EGlInCGdh8Pj7IOefWvfLI1Ikw4gs&#34; alt=&#34;&#34; width=&#34;559&#34; height=&#34;147&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We were glad to see that the majority of people surveyed were concerned about the privacy of their conversations, but it was a slim majority.&lt;/p&gt;
+
+&lt;p&gt;The possibilities of the “no” group may be that they feel the solutions they are using (Skype) are secure enough, as they have been told that by the providers. In addition, many NGO groups who fear foreign or remote threats, often feel no sense of privacy risk when operating in their home country. They only consider security issues when they engage in field work, but have very lax practices on a day to day basis. That perception of threat is a outdated in the age of a fully connected global network, through which physical locations and borders matter little.&lt;/p&gt;
+
+&lt;p&gt;In the end, the challenge is, as most everyone knows, to build a system that is as easy to use as Skype, but more secure. We realize that we are just a small open-source effort, and that ultimately we can’t compete with the likes of a Microsoft or even Google for that matter. Our goal is to help people and organizations who need to communicate sensitive information securely and safely, to have better options than they do now for both hosting their own servers and using simple client applications. Keep your eyes on the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN Wiki&lt;/a&gt; and this blog, as we progress over the coming weeks and months.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

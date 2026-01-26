@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Updates on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/updates/</link>
+    <description>Recent content in Updates on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 02 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/updates/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trusted Update Channels vs. Scratching Your Itch</title>
+      <link>https://guardianproject.github.io/info/2019/12/02/trusted-update-channels-vs.-scratching-your-itch/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/12/02/trusted-update-channels-vs.-scratching-your-itch/</guid>
+      <description>&lt;p&gt;One of the great things about free software is that people can easily take a functional program or library and customize it as they see fit.  Anyone can come along, submit bug fixes or improvements, and they can be easily shared across many people, projects, and organizations.  With distribution systems like Python&amp;rsquo;s &lt;a href=&#34;https://pypi.python.org&#34;&gt;pypi&lt;/a&gt;, there is an update channel that the trusted maintainers can publish fixes so consumers of the library can easily get updates.  When talking about update channels and code, it is unavoidable to also talk about people and trust.  One key piece is the trust relationship between the consumer and the maintainer.  The ideal software distribution system would be a blind, trustworthy pipe between the software maintainers and each end user.&lt;/p&gt;
+
+&lt;p&gt;Since we are talking about libraries of code, the natural relationship turns out to be different than the trust relationship: it is between the consumer and the library itself, not the maintainers.  I use Requests for handling HTTP, not @nateprewitt&amp;rsquo;s fork.  My &lt;em&gt;setup.py&lt;/em&gt; includes a reference to &lt;code&gt;&#39;requests&#39;&lt;/code&gt;, not to the maintainers who I trust to keep the library updated.&lt;/p&gt;
+
+&lt;p&gt;There have been cases were libraries were &lt;a href=&#34;https://www.zdnet.com/article/backdoor-code-found-in-11-ruby-libraries/&#34;&gt;taken&lt;/a&gt; &lt;a href=&#34;https://www.theregister.co.uk/2018/07/12/npm_eslint/&#34;&gt;over&lt;/a&gt; and used to distribute malware.  Or &lt;a href=&#34;https://www.theregister.co.uk/2018/11/26/npm_repo_bitcoin_stealer/&#34;&gt;another case&lt;/a&gt; where someone offered to take over a popular library, then inserted malware into it.  If it is really easy for maintainers to hand over a library to someone else, then that will be abused.  If they are too hard to hand over, then many valuable libraries will be abandoned or forked.  Having to check for forks is an added cost for library consumers, so ideally there would always be a trusted maintainer.&lt;/p&gt;
+
+&lt;p&gt;For large projects like Requests or distros like Debian, there is a process for ensuring that new maintainers are doing the right thing.  There are also many small libraries that are very valuable.  For example, &lt;a href=&#34;https://github.com/rory/apache-log-parser&#34;&gt;apache_log_parser&lt;/a&gt; or &lt;a href=&#34;https://pypi.org/project/PyMTP/&#34;&gt;pymtp&lt;/a&gt;.   In these cases, the cost of doing a proper process of handing over to a new maintainer is quite large as compared to the overall effort the library author put into the library.  Or it might be a single maintainer who is now overburdened with other work.&lt;/p&gt;
+
+&lt;p&gt;In F-Droid, reviewing app merge requests, aka &lt;em&gt;fdroiddata&lt;/em&gt;, is also about reviewing whether the trust relationship is changing.  This is on top of making sure the new code works, ensuring its still free software, and that all of the Anti-Features are properly marked.  Getting this review right is important especially when you consider that in F-Droid, many apps are automatically updated without core contributors reviewing it.&lt;/p&gt;
+
+&lt;p&gt;All developers must consider these trust issues at a number of key points in the process of developing software, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;when adding a library to any piece of software&lt;/li&gt;
+&lt;li&gt;helping a new maintainer take over existing software&lt;/li&gt;
+&lt;li&gt;reviewing changes to the URL of the source code reposistory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are also some ideas about how to better map who we need to trust to the process of including software.  One interesting example is &lt;a href=&#34;https://dpc.pw/cargo-crev-and-rust-2019-fearless-code-reuse&#34;&gt;&lt;em&gt;cargo-crev&lt;/em&gt;&lt;/a&gt; for the Rust ecosystem.  It provides a system of describing and cryptographically linking trusted developers and their reviews of software packages.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use Onions/HTTPS for software updates</title>
+      <link>https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/</link>
+      <pubDate>Wed, 23 Jan 2019 06:35:40 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/</guid>
+      <description>
+
+&lt;p&gt;There is a new &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2019/msg00010.html&#34; target=&#34;_blank&#34;&gt;vulnerability in Debian’s apt&lt;/a&gt; that allows anything that can Man-in-the-Middle (MITM) your traffic to get root on your Debian/Ubuntu/etc boxes. Using encrypted connections for downloading updates, like HTTPS or Tor Onion Services, reduces this vulnerability to requiring root on the mirror server in order to exploit it. That is a drastic reduction in exposure. We have been pushing for this &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;since 2014&lt;/a&gt;, and &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://ftp.fau.de&#34; target=&#34;_blank&#34;&gt;mirror&lt;/a&gt; &lt;a href=&#34;https://mirrors.kernel.org&#34; target=&#34;_blank&#34;&gt;operators&lt;/a&gt;, and others in the ecosystem have taken some big steps towards making this the standard. This should finally put to rest the idea that plain &lt;a href=&#34;https://whydoesaptnotusehttps.com/&#34; target=&#34;_blank&#34;&gt;HTTP is enough&lt;/a&gt; for software updates with signed metadata.&lt;/p&gt;
+
+&lt;p&gt;To this end, we have always supported &lt;a href=&#34;https://f-droid.org/docs/Security_Model/&#34; target=&#34;_blank&#34;&gt;F-Droid’s practice&lt;/a&gt; of requiring HTTPS connections to f-droid.org and mirrors, even though the signed metadata file is the essential mechanism for providing security.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-encrypted-connections-on-your-server&#34;&gt;Using encrypted connections on your server&lt;/h2&gt;
+
+&lt;p&gt;Over the years, we have been honing our &lt;code&gt;apt&lt;/code&gt; sources setup to use encrypted connections as much as possible, while getting updates as fast as possible. The hard part of this is that the &lt;a href=&#34;http://security.debian.org&#34; target=&#34;_blank&#34;&gt;official Debian security server&lt;/a&gt; only provides HTTP. There are mirrors of that that are available over HTTPS, but they can receive updates hours or days later. The best fix for this would be for Debian to provide an HTTPS connection to &lt;code&gt;security.debian.org&lt;/code&gt;. There are still things in the &lt;code&gt;apt&lt;/code&gt; source configuration that can help. There are three levels we use:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;only Tor Onion Services for all updates, this means always encrypted and over Tor, but can mean that updates are delayed, for example if Tor traffic is blocked.&lt;/li&gt;
+&lt;li&gt;First try Tor Onion, then try HTTPS. This provides a backup connection method in case Tor is not working, for whatever reason, but still could get updates slower than the official security source&lt;/li&gt;
+&lt;li&gt;First try Tor Onion, then try HTTPS, then try HTTP. But HTTP is only enabled for &lt;code&gt;security.debian.org&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;You can see an example of the final option by looking at &lt;a href=&#34;https://gitlab.com/fdroid/fdroid-cfarm-bootstrap/commit/24389018a164e110e7204f2b2c62a7b81863cdd4&#34; target=&#34;_blank&#34;&gt;F-Droid’s compile farm server config&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;fixing-your-boxes&#34;&gt;Fixing your boxes&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;@abelxluck&lt;/code&gt; aka &lt;code&gt;@abeluck&lt;/code&gt; put out an &lt;a href=&#34;https://gist.github.com/abeluck/67525909a17403060cd1722b53d57d00&#34; target=&#34;_blank&#34;&gt;Ansible Playbook&lt;/a&gt; to do this update. Here is a quick script for securely updating on Debian/stretch/amd64 based on the &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2019/msg00010.html&#34; target=&#34;_blank&#34;&gt;info published&lt;/a&gt; on the debian-security list:&lt;br /&gt;
+&lt;code&gt;&amp;lt;br /&amp;gt;
+#!/bin/sh -ex&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;apt -o Acquire::http::AllowRedirect=false update || true&amp;lt;br /&amp;gt;
+apt -o Acquire::http::AllowRedirect=false upgrade --download-only || true&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;cd /var/cache/apt/archives&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;1da507155c7b1ad140739c62fdacceaf5b5ee3765b1a00c3a3527d9d82a8d533  apt-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-transport-https-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;59f3e1c91664fe3b47048794560ebe9c41f1eeccbdd95f7715282f8cbe449060  apt-transport-https-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-transport-https_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;c8c4366d1912ff8223615891397a78b44f313b0a2f15a970a82abe48460490cb  apt-transport-https_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-utils-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;e3e157c291b05b2899a545331c7597ab36ca04e02cd9010562b9985b76af60db  apt-utils-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt-utils_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;fb227d1c4615197a6263e7312851ac3601d946221cfd85f20427a15ab9658d15  apt-utils_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e apt_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;dddf4ff686845b82c6c778a70f1f607d0bb9f8aa43f2fb7983db4ff1a55f5fae  apt_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e libapt-inst2.0-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;0e66db1f74827f06c55ac36cc961e932cd0a9a6efab91b7d1159658bab5f533e  libapt-inst2.0-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;test -e libapt-inst2.0_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;a099c57d20b3e55d224433b7a1ee972f6fdb79911322882d6e6f6a383862a57d  libapt-inst2.0_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg-dev_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;cfb0a03ecd22aba066d97e75d4d00d791c7a3aceb2e5ec4fbee7176389717404  libapt-pkg-dev_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg5.0-dbgsym_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;cdb03ddd57934e773a579a89f32f11567710a39d6ac289e73efb20e8825874d1  libapt-pkg5.0-dbgsym_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;test -e libapt-pkg5.0_1.4.9_amd64.deb &amp;amp;&amp;amp; \&amp;lt;br /&amp;gt;
+echo &amp;quot;03281e3d1382826d5989c12c77a9b27f5f752b0f6aa28b524a2df193f7296e0b  libapt-pkg5.0_1.4.9_amd64.deb&amp;quot; | sha256sum -c&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&lt;/code&gt;``````````````````&lt;code&gt;apt -o Acquire::http::AllowRedirect=false upgrade&amp;lt;br /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

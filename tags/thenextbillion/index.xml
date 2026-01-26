@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thenextbillion on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/thenextbillion/</link>
+    <description>Recent content in Thenextbillion on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 16 May 2018 07:42:38 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/thenextbillion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Orbot: Over 20 Million Served, Ready for the Next Billion</title>
+      <link>https://guardianproject.github.io/info/2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/</link>
+      <pubDate>Wed, 16 May 2018 07:42:38 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/</guid>
+      <description>&lt;p&gt;We recently published the &lt;a href=&#34;https://github.com/n8fr8/orbot/releases/tag/16.0.2-RC-1&#34;&gt;latest release of Orbot (16.0.2!)&lt;/a&gt;, and as usual, we make it available via &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&amp;amp;hl=en_US&#34;&gt;Google Play&lt;/a&gt;, as well &lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;F-Droid&lt;/a&gt;, and through &lt;a href=&#34;https://guardianproject.info/releases/&#34;&gt;direct download&lt;/a&gt; on our website. Whether we like it or not, Google keeps tracks of things like total installs and active installs (i.e. not uninstalled), and reports on that for us through their dashboard. While publishing this release, we noticed a milestone that made us a bit proud… so pardon this humblebrag.&lt;/p&gt;
+
+&lt;p&gt;Since we release Orbot roughly 8 years ago, it has been &lt;strong&gt;installed more than 20 million times&lt;/strong&gt;, by people from hundreds of different countries and walks of life. Even better, we have cross the &lt;strong&gt;2 million active user&lt;/strong&gt; mark, with growing adoption in many “mobile first” parts of the world.&lt;/p&gt;
+
+&lt;p&gt;Of course, none of this would be possible without Tor Project itself, at the core of what we do, and empowering us through the years, to pave the way on free, open, mobile circumvention. We are also especially excited about the direction things are headed with &lt;a href=&#34;https://blog.torproject.org/announcing-tors-next-executive-director-isabela-bagueros&#34;&gt;Tor’s new executive director, Isabela Bagueros.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That is because Isa understands that the vast majority of the world, including her home country of Brazil, accesses the internet using smartphones, which essentially include surveillance, censorship and privacy invasion as core features. Fortunately, she shares our optimism that with the right software and service, we can fight back against this and provide working solutions for human rights defenders, activists, journalists and everyday people. We are really excited about &lt;a href=&#34;https://blog.torproject.org/blog/upping-support-mobile-browsing&#34;&gt;Tor’s new mobile initiative&lt;/a&gt; and their new stewardship of Orfox (soon to be Tor browser for Android!). &lt;em&gt;Also, if you didn’t know Isa is the one responsible for &lt;a href=&#34;https://guardianproject.info/2012/05/02/orbot-your-twitter/&#34;&gt;Twitter adding proxy features&lt;/a&gt; into their Android app many years ago!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;With that global population in mind, we’ve focused this latest release of Orbot on size and efficiency, with the goal of making the app &lt;strong&gt;less than 10 megabytes in size&lt;/strong&gt;. This 10MB limit qualifies Orbot to be promoted to &lt;a href=&#34;https://www.android.com/versions/oreo-8-0/go-edition/&#34;&gt;Android Go devices&lt;/a&gt;, which is Google’s attempt to serve &lt;a href=&#34;https://www.blog.google/topics/next-billion-users/&#34;&gt;“the next billion”&lt;/a&gt;. You might have heard about lightweight “Go” editions of apps like YouTube, that are both smaller in size, and have features that enable data saving and offline use. With Orbot, we have started by focusing on reducing our binary size (which adds up over time with regular updates, etc), to reduce it by nearly &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt;, instead of just letting it grow bigger and bigger with each release. Over the next year, we will be working with the core Tor team to improve the core efficiency of the service running on mobile architectures, and to implement new features for data management, battery saving and more.&lt;/p&gt;
+
+&lt;p&gt;A deep, onion-infused thank you to the multitudes who have helped us get to this point. We couldn’t have done it with out all of your patches, bug reports, complaints, praise, donations and encouragement. Now, let’s keep it up until we get to the billion install mark!&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

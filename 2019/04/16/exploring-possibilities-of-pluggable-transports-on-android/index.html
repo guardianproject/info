@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Exploring possibilities of Pluggable Transports on Android - Guardian Project</title>
+  <meta property="og:title" content="Exploring possibilities of Pluggable Transports on Android" />
+  <meta name="twitter:title" content="Exploring possibilities of Pluggable Transports on Android" />
+  <meta name="description" content="Pluggable Transports (PT) give software developers the means to establishing reliable connections in DPI-filtered network scenarios. A variety of techniques are supported, all available by implementing just one standard. We looked into how this can be put to work in Android Apps. Hence we crafted 3 fully functional PT-enabled prototype Apps based on well known open source projects.
+All our prototypes rely on obfs4 which is a stable PT implementation widely deployed by Tor.">
+  <meta property="og:description" content="Pluggable Transports (PT) give software developers the means to establishing reliable connections in DPI-filtered network scenarios. A variety of techniques are supported, all available by implementing just one standard. We looked into how this can be put to work in Android Apps. Hence we crafted 3 fully functional PT-enabled prototype Apps based on well known open source projects.
+All our prototypes rely on obfs4 which is a stable PT implementation widely deployed by Tor.">
+  <meta name="twitter:description" content="Pluggable Transports (PT) give software developers the means to establishing reliable connections in DPI-filtered network scenarios. A variety of techniques are supported, all available by …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/",
+          "name": "Exploring possibilities of pluggable transports on android"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "uniq"
+  },
+  "headline": "Exploring possibilities of Pluggable Transports on Android",
+  "description" : "Pluggable Transports (PT) give software developers the means to establishing reliable connections in DPI-filtered network scenarios. A variety of techniques are supported, all available by implementing just one standard. We looked into how this can be put to work in Android Apps. Hence we crafted 3 fully functional PT-enabled prototype Apps based on well known open source projects.
+All our prototypes rely on obfs4 which is a stable PT implementation widely deployed by Tor.",
+  "inLanguage" : "en",
+  "wordCount": 821,
+  "datePublished" : "2019-04-16T15:00:00",
+  "dateModified" : "2019-04-16T15:00:00",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, circumvention, pluggable transports" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Exploring possibilities of Pluggable Transports on Android" />
+<meta property="og:description" content="Pluggable Transports (PT) give software developers the means to establishing reliable connections in DPI-filtered network scenarios. A variety of techniques are supported, all available by implementing just one standard. We looked into how this can be put to work in Android Apps. Hence we crafted 3 fully functional PT-enabled prototype Apps based on well known open source projects.
+All our prototypes rely on obfs4 which is a stable PT implementation widely deployed by Tor.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Exploring possibilities of Pluggable Transports on Android" />
+  <meta name="twitter:description" content="Pluggable Transports (PT) give software developers the means to establishing reliable connections in DPI-filtered network scenarios. A variety of techniques are supported, all available by …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Exploring possibilities of Pluggable Transports on Android</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on April 16, 2019
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;uniq
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="https://www.pluggabletransports.info">Pluggable Transports</a> (PT) give software developers the means
+to establishing reliable connections in <a href="https://en.wikipedia.org/wiki/Deep_packet_inspection">DPI-filtered</a> network scenarios.
+A variety of techniques are supported, all available by implementing just one
+standard.  We looked into how this can be put to work in Android Apps.
+Hence we crafted 3 fully functional
+<a href="https://gitlab.com/uniqx/anynews-android#anynews-pt">PT-enabled</a>
+<a href="https://gitlab.com/uniqx/fdroidclient-pt#f-droid-pt">prototype</a>
+<a href="https://gitlab.com/uniqx/apps-android-wikipedia-pt#wikipedia-android-pt">Apps</a>
+based on well known open source projects.</p>
+
+<p>All our prototypes rely on <a href="https://github.com/Yawning/obfs4">obfs4</a> which is a stable
+PT implementation widely deployed by Tor.  Guardian Project published
+a library called <a href="https://github.com/guardianproject/AndroidPluggableTransports">AndroidPluggableTransports</a> for giving Android
+developers access easy access to PT.  Since we could not find any easily
+accessible sample code, we created a <a href="https://gitlab.com/uniqx/pt-obfs4proxy-minimal-demo">minimal demo project</a>,
+illustrating a minimal setup for sending a HTTP-request through a OBFS4
+connection.</p>
+
+<p>Conceptually, a PT establishes point to point connections between a PT client
+and a PT server.  PT servers are also known as &ldquo;bridges&rdquo;.  Most app back-ends,
+on the other hand, consist of multiple services and third party APIs.  We&rsquo;re
+using SOCKS5 for multiplexing several connections over a single PT connection.
+A nice benefit to this approach is that client side integration looks similar
+to integrating Tor.</p>
+
+<p>Every PT bridge generates an individual set of parameters. These are required
+for establishing connections to that bridge. In the context of Tor, these
+parameters are often referred to as a &ldquo;bridge line&rdquo;, which also implies a
+quasi-standardized formatting of these parameters.</p>
+
+<p>Starting a PT connection involves several layers of proxying.  This diagram
+should give you an idea of what&rsquo;s really going on when we start a PT
+connection:</p>
+
+<p><img src="apt-setup-socks5.png" alt="Schematic overview of establishing a PT connection used" /></p>
+
+<p>For many organizations it is not an option to run open proxies on the Internet
+because the bandwidth bills would be too large, or the security risks too high.
+This means we need to refine our SOCKS5 based approach a bit.  An obvious
+solution is to restrict usage of a PT bridge for one specific app.  This can
+be achieved simply by whitelisting outgoing connections on a bridge&rsquo;s
+SOCKS5 server.  Some SOCKS5 servers have built-in support for this, so we&rsquo;re
+covered.  We published the deployment script we&rsquo;re using to set up our <a href="https://gitlab.com/uniqx/pt-socks5-over-obfs4proxy">SOCKS5-enabled bridges</a> in our prototype environment.</p>
+
+<p>While SOCKS5 support is widespread these days, some apps might still need to
+rely on HTTP-proxying.  That&rsquo;s why we also included an embedded HTTP-proxy in
+our prototype Apps.  This proxy is configured to transparently send requests
+through the SOCK5 connection, which in turn runs through a PT connection.</p>
+
+<p>All that required from the app developer&rsquo;s perspective is to configure APT
+(and our soon-to-be upstreamed proxy helper library) with a bridge line,
+then configure all network connections to use a either a SOCKS5 or HTTP proxy.</p>
+
+<p>We also looked into ways for distributing parameters for
+<a href="https://github.com/guardianproject/AndroidPluggableTransports/pull/15">PT connections</a>. We started out by supporting bridge-lines as
+used in Tor browser and Orbot. Copy and pasting these is not very convenient
+and probably looks arcane to most users. So we came up with the idea of
+sharing bridge connection parameters as URLs.  HTTP(S) URLs are clickable in
+most Android Apps which makes sharing a lot easier.  Apps can subscribe to
+URL patterns.  This way it&rsquo;s possible to intercept clicks on PT bridge
+parameters and configure PT settings accordingly. While these URLs still
+look somewhat arcane, they hopefully enable an improved user experience.</p>
+
+<p>Here&rsquo;s an example of a bridge-line and how it looks like the in all URL formats:</p>
+
+<pre><code>Bridge obfs4 104.224.78.19:443 FD9DAEE45A2FDF70D462914A75ADE99A29957920 cert=LSOd9qOffpIFM4az+ueou7sY0eQRAsI/joW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA iat-mode=0
+bridge://obfs4@104.224.78.19:443/FD9DAEE45A2FDF70D462914A75ADE99A29957920?cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;iat-mode=0
+http://bridge.onion/FD9DAEE45A2FDF70D462914A75ADE99A29957920?transport=obfs4&amp;ip=104.224.78.19&amp;port=443&amp;cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;iat-mode=0
+https://bridges.torproject.org/FD9DAEE45A2FDF70D462914A75ADE99A29957920?transport=obfs4&amp;ip=104.224.78.19&amp;port=443&amp;cert=LSOd9qOffpIFM4az%2Bueou7sY0eQRAsI%2FjoW4QgCl/LSDo2ecQzAQHNu281oAivLDZuTQNA&amp;iat-mode=0
+</code></pre>
+
+<p>There&rsquo;s still some room for refining this. Tor Browser, for example, will
+happily accept but fail using our experimental SOCKS5 bridges.  Meanwhile our
+prototype apps will accept but fail to connect to Tor bridges.  So it would
+make sense to explore what metadata apps need to decide whether they are
+capable of connecting to a specific bridge or not.</p>
+
+<p>An important missing puzzle piece in this regard also is to make sure DNS
+queries can not get filtered.  <a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS">DNS-over-HTTPS (DoH)</a> could be
+a suiteable mitigation. Further down the road, it certainly would make sense
+to look into sending DNS requests over pluggable transports too.</p>
+
+<p>Many Android apps use <code>WebView</code> for transparently embedding web content.
+Sadly, proxy support of <code>WebView</code> is not very developer friendly.  We are
+shipping a well-tested helper library with <a href="https://gitlab.com/guardianproject/NetCipher/#webview">NetCipher</a> to
+ease this pain.</p>
+
+<p>We also explored an alternative approach to control the networking of
+Android&rsquo;s <code>WebView</code>. It&rsquo;s possible to replace all network requests
+a <code>WebView</code> sends by overriding <code>WebViewClient.shouldInterceptRequest()</code>.
+This technique will work well for read-only (HTTP GET) connections.  Sending
+data (HTTP POST and PUT) is not feasible though. There is no interface,
+either exposed or hidden, in Android&rsquo;s API which would allow us to retrieve
+a HTTP request&rsquo;s body.</p>
+
+<p>Finally here&rsquo;s a list of alternative scenarios we came up with for using PT
+on Android.  They are not as generic as the approach we chose to implement in
+the prototype Apps.  In some situations these might be easier to implement,
+perform better or simply convey how PT can be put to use.</p>
+
+<p><img src="apt-setup-scenarios.png" alt="Schematic overview of establishing a PT connection used" /></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/circumvention/">circumvention</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/pluggable-transports/">pluggable transports</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/" data-toggle="tooltip" data-placement="top" title="Use Onions/HTTPS for software updates">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/" data-toggle="tooltip" data-placement="top" title="PanicKit 1.0: built-in panic button and full app wipes">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>KeySync: Syncing Trusted Identities - Guardian Project</title>
+  <meta property="og:title" content="KeySync: Syncing Trusted Identities" />
+  <meta name="twitter:title" content="KeySync: Syncing Trusted Identities" />
+  <meta name="description" content="Privacy and security software like OTR encryption for chat and GnuPG for email and files all create digital identities that we can mark as trusted through a verification process. When using this software, each app needs completely new security identities that are separate from any existing identities used by the other apps. Then again, mobile software needs it own versions of these identity files. When setting up ChatSecure on a mobile device, all of the trust information from existing chat apps like Adium or Pidgin also needs to be converted and transferred so that ChatSecure has the same trusted identities.">
+  <meta property="og:description" content="Privacy and security software like OTR encryption for chat and GnuPG for email and files all create digital identities that we can mark as trusted through a verification process. When using this software, each app needs completely new security identities that are separate from any existing identities used by the other apps. Then again, mobile software needs it own versions of these identity files. When setting up ChatSecure on a mobile device, all of the trust information from existing chat apps like Adium or Pidgin also needs to be converted and transferred so that ChatSecure has the same trusted identities.">
+  <meta name="twitter:description" content="Privacy and security software like OTR encryption for chat and GnuPG for email and files all create digital identities that we can mark as trusted through a verification process. When using this …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/archive/keysync/",
+          "name": "Key sync syncing trusted identities"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "mark"
+  },
+  "headline": "KeySync: Syncing Trusted Identities",
+  "description" : "Privacy and security software like OTR encryption for chat and GnuPG for email and files all create digital identities that we can mark as trusted through a verification process. When using this software, each app needs completely new security identities that are separate from any existing identities used by the other apps. Then again, mobile software needs it own versions of these identity files. When setting up ChatSecure on a mobile device, all of the trust information from existing chat apps like Adium or Pidgin also needs to be converted and transferred so that ChatSecure has the same trusted identities.",
+  "inLanguage" : "en",
+  "wordCount": 882,
+  "datePublished" : "2013-09-12T15:50:07",
+  "dateModified" : "2013-09-12T15:50:07",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/archive/keysync/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="KeySync: Syncing Trusted Identities" />
+<meta property="og:description" content="Privacy and security software like OTR encryption for chat and GnuPG for email and files all create digital identities that we can mark as trusted through a verification process. When using this software, each app needs completely new security identities that are separate from any existing identities used by the other apps. Then again, mobile software needs it own versions of these identity files. When setting up ChatSecure on a mobile device, all of the trust information from existing chat apps like Adium or Pidgin also needs to be converted and transferred so that ChatSecure has the same trusted identities.">
+<meta property="og:image" content="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png" />
+<meta property="og:url" content="https://guardianproject.github.io/info/archive/keysync/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="KeySync: Syncing Trusted Identities" />
+  <meta name="twitter:description" content="Privacy and security software like OTR encryption for chat and GnuPG for email and files all create digital identities that we can mark as trusted through a verification process. When using this …">
+  <meta name="twitter:image" content="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png" />
+  <meta name="twitter:image" content="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/archive/keysync/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="archive-heading">
+              
+                <h1>KeySync: Syncing Trusted Identities</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png"><img src="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png" alt="KeySync" width="196" height="196" class="alignright size-full wp-image-11797" srcset="https://guardianproject.info/wp-content/uploads/2013/09/keysync.png 256w, https://guardianproject.info/wp-content/uploads/2013/09/keysync-150x150.png 150w" sizes="(max-width: 196px) 100vw, 196px" /></a>Privacy and security software like OTR encryption for chat and GnuPG for email and files all create digital identities that we can mark as trusted through a verification process. When using this software, each app needs completely new security identities that are separate from any existing identities used by the other apps. Then again, mobile software needs it own versions of these identity files. When setting up ChatSecure on a mobile device, all of the trust information from existing chat apps like Adium or Pidgin also needs to be converted and transferred so that ChatSecure has the same trusted identities. Or when switching from Pidgin to Jitsi for instant messaging, the trust information needs to be converted and synced so the trust information is not lost.</p>
+
+<p>This is where KeySync comes in. KeySync reads and writes many different formats of OTR chat apps and converts between them. It also makes it easy to sync the trust information to your Android device for use with ChatSecure. There is also some exploratory support for syncing identities between OTR and OpenPGP via GnuPG support in KeySync.</p>
+
+<h2 id="how-to-sync-to-chatsecure">How To Sync To ChatSecure</h2>
+
+<p>To sync between ChatSecure and your desktop apps, First plug in your phone or device<br />
+via USB. Start KeySync and it should automatically detect your device. If KeySync cannot find your device, it will save the file for you to manually copy the <strong>otr_keystore.ofcaes</strong> file over to your device&rsquo;s SD Card, where ChatSecure looks for it. Once the file is in place on your device, start ChatSecure. In ChatSecure, go to the <strong>Accounts</strong>, then select <strong>Activate KeySync</strong> from the menu. This will guide you to scan the QRCode that KeySync shows you in order to complete the sync.</p>
+
+<p>The <code>otr_keystore.ofcaes</code> file is encrypted to prevent your private information from leaking out. That QRCode is the password to your keystore, so do not share it with anyone. Also, the <code>otr_keystore.ofcaes</code> file is only intended for use in this sync procedure. Do not email it or send it anywhere over the internet!</p>
+
+<h2 id="warning">Warning!</h2>
+
+<p>This is beta software, do not rely on it for strong identity verification. It is unlikely to mess up so bad as to produce compromised private keys, but anything is possible. Also, keep in mind that program is handling your private OTR keys, so make sure that you don&rsquo;t copy, send or email the `otr_keystore.ofcaes` file somewhere nsafe. All that said, testing and feedback is greatly appreciated, so we can get it to the point where we can trust it.</p>
+
+<h2 id="reporting-bugs">Reporting Bugs</h2>
+
+<p>Please report any bugs or issues that you have with this app! We want to hear from you, no need to worry about technical details or language skills. Help us improve this software by filing bug reports about any problem that you encounter. Feature requests and patches are also welcome!</p>
+
+<ul>
+<li><p><a href="https://dev.guardianproject.info/projects/keysync/issues/new"><img src="https://guardianproject.info/wp-content/uploads/2011/02/reportbug-150x150.jpg" alt="report bug" width="150" height="150" class="size-thumbnail wp-image-12362" srcset="https://guardianproject.info/wp-content/uploads/2011/02/reportbug-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2011/02/reportbug-100x100.jpg 100w, https://guardianproject.info/wp-content/uploads/2011/02/reportbug-200x200.jpg 200w, https://guardianproject.info/wp-content/uploads/2011/02/reportbug.jpg 225w" sizes="(max-width: 150px) 100vw, 150px" /> <strong style="font-size: 200%">Report a Bug or Issue</strong></a></p></li>
+
+<li><p><a href="https://dev.guardianproject.info/projects/keysync/issues?query_id=27" title="Issue Tracker" target="_blank">List of all open issues</a></p></li>
+
+<li><p><a href="https://dev.guardianproject.info/projects/keysync/issues/new" title="New Issue Tracker" target="_blank">submit a new issue report</a></p></li>
+</ul>
+
+<p><a name="download"></a></p>
+
+<h2 id="download">Download</h2>
+
+<p>*<img src="https://guardianproject.info/builds/.icons/platform_windows.gif" alt="Windows" /> <strong>Windows</strong> executable
+      * Download and install OpenSSL: <a href="https://slproweb.com/download/Win32OpenSSL_Light-1_0_1f.exe">Win32OpenSSL_Light-1_0_1f.exe</a>
+      * When prompted install into the &ldquo;Windows system directory&rdquo;
+      * Note: The prompt asking for a donation will go to the company that produces OpenSSL installers for Windows, not The Guardian Project.
+      * If you get an error when trying to install OpenSSL, you probably need in stall the <a href="https://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF">Visual C++ 2008 Redistributables</a> from Microsoft.
+      * Download KeySync - no installation required: <a href="https://guardianproject.info/releases/KeySync-0.2.exe">KeySync-0.2.exe</a>
+          * <a href="https://guardianproject.info/releases/KeySync-0.2.exe.asc">detached gpg signature</a>
+          * MD5: <code>1fb7a5ec050d03f59104a41494c559fd</code>
+          * SHA256: <code>422fd0ddb6d85a6f509a1c9a868ce87437af7ac895ba8c4fa7f366d83114be07</code>
+      *<img src="https://guardianproject.info/builds/.icons/platform_mac_os_x.gif" alt="Mac OS X" /> <strong>Mac OS X</strong> <em>(10.6 or newer, 64-bit only)</em>: <a href="https://guardianproject.info/releases/KeySync-0.2.app.zip">KeySync-0.2.app.zip</a>
+          * <a href="https://guardianproject.info/releases/KeySync-0.2.app.zip.sig">detached gpg signature</a>
+          * MD5: <code>f6a1744a783d1cc5dc3070e1a16d79fd</code>
+          * SHA256: <code>429dc303fb1d2673b953a2543b0e168f0410ce1cd14d4167f0dbf888fdf162d0</code>
+      *<img src="https://guardianproject.info/builds/.icons/platform_ubuntu_linux.gif" alt="Ubuntu" /> <strong>Ubuntu, Linux Mint, etc.</strong> Run this in the Terminal to add <a href="https://launchpad.net/~guardianproject/+archive/ppa/" title="Guardian Project PPA on Launchpad" target="_blank">our PPA</a> to your package sources. You only need to do this once, you&rsquo;ll get updated versions automatically once this is complete (fingerprint: <code>F50E ADDD 2234 F563</code>): <pre style="font-size: small;">sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install keysync
+</pre></p>
+
+<pre><code>  *![Fedora](https://guardianproject.info/builds/.icons/platform_fedora_linux.gif) **Fedora 17, 18, 19**: Run this in your Terminal to add &lt;a href=&quot;https://build.opensuse.org/project/show/security:guardianproject&quot;  target=&quot;_blank&quot;&gt;our repository&lt;/a&gt; to your package sources. You only need to do this once, you'll get updated versions automatically once this is complete (fingerprint: `AC38 BED1 E879 79EA FD54`): &lt;pre style=&quot;font-size: small;&quot;&gt;source /etc/os-release
+</code></pre>
+
+<p>sudo wget <a href="https://download.opensuse.org/repositories/security:guardianproject/Fedora_${VERSION_ID}/security:guardianproject.repo">https://download.opensuse.org/repositories/security:guardianproject/Fedora_${VERSION_ID}/security:guardianproject.repo</a> -O /etc/yum.repos.d/security:guardianproject.repo
+sudo yum install keysync
+</pre></p>
+
+<pre><code>  *![Debian](https://guardianproject.info/builds/.icons/platform_debian_gnu_linux.gif) **Debian**: &lt;a href=&quot;https://packages.debian.org/search?keywords=keysync&quot; target=&quot;_blank&quot;&gt;included in the official repos&lt;/a&gt;. For wheezy, get it from backports: &lt;pre style=&quot;font-size: small;&quot;&gt;apt-get -t wheezy-backports install keysync
+</code></pre>
+
+<p></pre></p>
+
+<pre><code>  *![Arch Linux](https://guardianproject.info/builds/.icons/platform_arch_linux.gif) **Arch Linux**: &lt;a href=&quot;https://aur.archlinux.org/packages/keysync/&quot; target=&quot;_blank&quot;&gt;included in the AUR&lt;/a&gt;. Please vote for it so it can be included in the official community repository. 
+  *![Python pypi](https://guardianproject.info/builds/.icons/python-logo.gif) Any Platform with Python, install via &lt;a href=&quot;https://pypi.python.org/pypi/keysync&quot; target=&quot;_blank&quot;&gt;pypi&lt;/a&gt; (see the &lt;a href=&quot;https://github.com/guardianproject/keysync/blob/master/win32/README.md&quot; target=&quot;_blank&quot; title=&quot;Building KeySync on Windows&quot;&gt;special instructions for Windows&lt;/a&gt;) &lt;pre style=&quot;font-size: small;&quot;&gt;pip install keysync
+</code></pre>
+
+<p></pre></ul></p>
+
+<pre><code>&lt;a name=&quot;source&quot;&gt;&lt;/a&gt;
+
+### Source
+
+  * For more info on the code and installation, &lt;a href=&quot;https://github.com/guardianproject/keysync/blob/master/README.md&quot; target=&quot;_blank&quot;&gt;see the README&lt;/a&gt;
+  * github: &lt;a href=&quot;https://github.com/guardianproject/keysync&quot; title=&quot;KeySync source repo&quot; target=&quot;_blank&quot;&gt;https://github.com/guardianproject/keysync&lt;/a&gt;
+  * &lt;a href=&quot;https://github.com/guardianproject/keysync/releases&quot; title=&quot;KeySync source tarballs&quot; target=&quot;_blank&quot;&gt;downloadable tags on github&lt;/a&gt;
+## Known Issues
+
+See the &lt;a href=&quot;https://dev.guardianproject.info/projects/keysync/roadmap&quot; title=&quot;KeySync Development Roadmap&quot; target=&quot;_blank&quot;&gt;KeySync Roadmap&lt;/a&gt; for our development plan. Here are some notable known issues:
+
+  * does not handle multiple keys/fingerprints for a given account (&lt;a href=&quot;https://dev.guardianproject.info/issues/1868&quot; target=&quot;_blank&quot;&gt;#1868&lt;/a&gt;)
+  * GUI only syncs to ChatSecure (full two-way sync is planned) (&lt;a href=&quot;https://dev.guardianproject.info/issues/1968&quot; target=&quot;_blank&quot;&gt;#1968&lt;/a&gt;)
+  * no way to handle conflicting private keys for an account (&lt;a href=&quot;https://dev.guardianproject.info/issues/1963&quot; target=&quot;_blank&quot;&gt;#1963&lt;/a&gt;)
+  * no translations, only in English (&lt;a href=&quot;https://dev.guardianproject.info/issues/2170&quot; target=&quot;_blank&quot;&gt;#2170&lt;/a&gt;)
+  * &lt;a title=&quot;existing KeySync issues&quot; href=&quot;https://dev.guardianproject.info/projects/keysync/issues&quot; target=&quot;_blank&quot;&gt;View all open issues&lt;/a&gt;
+</code></pre>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/archive/weatherrepo/" data-toggle="tooltip" data-placement="top" title="Weather Repo">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/archive/keysync/" data-toggle="tooltip" data-placement="top" title="KeySync: Syncing Trusted Identities">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

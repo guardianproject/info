@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Keys, signatures, certificates, verifications, etc. What are all these for? - Guardian Project</title>
+  <meta property="og:title" content="Keys, signatures, certificates, verifications, etc. What are all these for?" />
+  <meta name="twitter:title" content="Keys, signatures, certificates, verifications, etc. What are all these …" />
+  <meta name="description" content="For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally Portable Shared Security Tokens aka PSST. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are.">
+  <meta property="og:description" content="For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally Portable Shared Security Tokens aka PSST. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are.">
+  <meta name="twitter:description" content="For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/",
+          "name": "Keys, signatures, certificates, verifications, etc. what are all these for?"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hans-Christoph Steiner"
+  },
+  "headline": "Keys, signatures, certificates, verifications, etc. What are all these for?",
+  "description" : "For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally Portable Shared Security Tokens aka PSST. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are.",
+  "inLanguage" : "en",
+  "wordCount": 1038,
+  "datePublished" : "2013-12-12T13:20:09",
+  "dateModified" : "2013-12-12T13:20:09",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "encryption, identity, nfc, openpgp, otr, pgp, privacy, psst, qrcode, secure introductions, security, signing, trust, usability" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Keys, signatures, certificates, verifications, etc. What are all these for?" />
+<meta property="og:description" content="For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally Portable Shared Security Tokens aka PSST. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Keys, signatures, certificates, verifications, etc. What are all these …" />
+  <meta name="twitter:description" content="For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Keys, signatures, certificates, verifications, etc. What are all these for?</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on December 12, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Hans-Christoph Steiner
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="https://guardianproject.info/wp-content/uploads/2013/12/key.jpg"><img src="https://guardianproject.info/wp-content/uploads/2013/12/key-150x150.jpg" alt="portable shared security token" width="150" height="150" class="alignright size-thumbnail wp-image-12129" /></a>For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally <a href="https://dev.guardianproject.info/projects/psst/wiki/PSST" title="PSST Wiki" target="_blank">Portable Shared Security Tokens aka PSST</a>. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are. One thing we learned a lot about is how to portray and discuss tools for private or anonymous communications to people who just want to communicate and are not interested in technical discussion. This is becoming a central issue among a lot of people working to make usable privacy tools.</p>
+
+<p>The widely established way of talking about privacy tools comes from the lingo of the underlying methods: cryptography, networking, etc. We talk about public and private keys, signing, validation, verification, key exchange, certificates, and fingerprints. In order for cryptography to work, keys need to be marked whether they are verified or not. <a href="https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm.png"><img src="https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm-300x190.png" alt="hide the guts of what is happening" width="300" height="190" class="alignleft size-medium wp-image-12135" srcset="https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm-300x190.png 300w, https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm.png 500w" sizes="(max-width: 300px) 100vw, 300px" /></a>Few computers users understand what these terms are referring to, even highly technical people who regularly use encryption do not know the meaning of all these things, nor should they. This is a low level detail that is not important to how the vast majority of users understand privacy in computers. Keys and verification are far too abstract to be generally understandable, and what other kind of key has a fingerprint? Even more so, few people can tell you the difference between validation and verification when it comes to keys, signatures and certificates. The software should not be exposing all this, but instead should be minimizing the complexity as much as possible, and providing as simple a user experience as possible.</p>
+
+<p><strong>Defining the Concepts that Define the Experience</strong></p>
+
+<p>A key part of defining that simple user experience is defining the core concepts that the software is organized around. In our discussions, we mostly talked about the ideas of identity and trust, while some discussion of verifying identity seemed unavoidable. Talking about identity and trust is a lot more relevant in day-to-day life, i.e. knowing that the message came from the person you think it did, and trusting that it was private. It is most direct to talk about establishing a trusted connection to another person, but that’s not something that crypto can ever promise because there is still the analog gap between the person and the device. These core ideas must represent what is technically possible, so we searched for widely understood concepts that map well to the technical limitations: “a private conversation”, “a trusted app”, “verifiable video”.</p>
+
+<p><div id="attachment_12128" style="width: 160px" class="wp-caption alignright">
+  <a href="https://guardianproject.info/wp-content/uploads/2013/12/ecc.jpg"><img aria-describedby="caption-attachment-12128" src="https://guardianproject.info/wp-content/uploads/2013/12/ecc-150x150.jpg" alt="create metaphors based on what users know" width="150" height="150" class="size-thumbnail wp-image-12128" srcset="https://guardianproject.info/wp-content/uploads/2013/12/ecc-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2013/12/ecc-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/12/ecc.jpg 350w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+
+<p><p id="caption-attachment-12128" class="wp-caption-text">
+    create metaphors based on what users know
+  </p>
+</div>Diving in deeper, we concluded that the balance point between technical accuracy and widely understandable lingo was to talk about trusting the device, not the person. The technology can provide trusted connections between devices, and it is pretty close to how people experience digital communications. There is the laptop, the mobile phone, the net cafe, the friend’s computer, computer at work, etc. etc. When I look at my phone to see a message from a friend, it is easy to picture that friend typing that message out on that device, though it does take some conscious effort. The hard part here is that as we communicate more and more with our devices, there is less and less separation in our minds about whether we were talking in person, via voice, or by sending text. This is a point to focus on when thinking about designing the experience of private, secure communications software.</p>
+
+<p><strong>Let the Software Handle It!</strong></p>
+
+<p>There is a forming consensus in the world of usable security to focus on figuring out how to automate as much as possible then figure out how best tailor the experience of the essential parts that cannot be automated. The hard part will remain explaining the limitations of a given privacy tool.</p>
+
+<p>At Guardian Project, we work a lot on incremental progress, so many of our projects are focused on specific, narrow improvements. With <a href="https://guardianproject.info/apps/chatsecure/" target="_blank">ChatSecure</a> and <a href="https://guardianproject.info/apps/keysync/" target="_blank">Keysync</a> , we were able to automate one small part of the whole process, cryptography identity portability, which provides the foundation to provide private communications and verifiable media. Allowing users to sync their trust profiles between desktop and mobile makes it much more likely that users will have fully verified OTR conversations when chatting on their devices and laptops.</p>
+
+<p>With <a href="https://guardianproject.info/code/gnupg/" target="_blank">Gnu Privacy Guard for Android (GPGA)</a>, we have made it easy to import keys via QRCode as well as <code>openpgp4fpr:</code> URLs (a standard defined in conjuction with the <a href="http://web.monkeysphere.info/" title="Monkeysphere Home Page" target="_blank">Monkeysphere</a> project. We are also working on a common method of using NFC for OpenPGP key signing in conjuction with <a href="http://sufficientlysecure.org/index.php/openpgp-keychain/" title="OpenPGP Keychain home page" target="_blank">OpenPGP Keychain</a>. Even little things like optimizing support for standard file extensions can go a long way to make things easier, so GPGA automatically sets itself up to receive files with the <a href="https://tools.ietf.org/html/rfc2015" target="_blank">standard OpenPGP MIME types</a> (<code>application/pgp-keys</code>, <code>application/pgp-encrypted</code>, <code>application/pgp-signature</code>) as well as the corresponding file extensions (<code>.pkr</code>, <code>.skr</code>, <code>.key</code>, <code>.sig</code>, <code>.asc</code>, etc.). That makes it so a user can just click on one of these files, and GPGA will walk them through the whole process, doing as much as possible automatically.</p>
+
+<p>Another interesting idea that is a big step in this direction is “secure introductions”. The idea is to automatically share trusted identity information when securely communicating with multiple people. For example, whenever you send a signed, encrypted email to multiple people, the email program should include the key fingerprints of each recipient in that email. Then the email program of the people receiving that email should automatically mark those keys as verified if the sender’s key is trusted and the signature is valid. There is not a meaningful amount of detail leaked in this interaction, since the existence of all the people’s keys and email address is already present in a secure email. The tricky part is figuring out how to make it harder for someone to use this maliciously to spread false identity information while keeping things as automatic as possible. This is very much a long term research idea: there are no widespread implementations of it.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/encryption/">encryption</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/identity/">identity</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/nfc/">nfc</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/openpgp/">openpgp</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/otr/">otr</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/pgp/">pgp</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/privacy/">privacy</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/psst/">psst</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/qrcode/">qrcode</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/secure-introductions/">secure introductions</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/security/">security</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/signing/">signing</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/trust/">trust</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/usability/">usability</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2013/12/10/sqlcipher-has-100m-mobile-users-thanks-to-wechat/" data-toggle="tooltip" data-placement="top" title="SQLCipher has 100M&#43; Mobile Users (Thanks to WeChat!)">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/" data-toggle="tooltip" data-placement="top" title="Integrating Crypto Identities with Android">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

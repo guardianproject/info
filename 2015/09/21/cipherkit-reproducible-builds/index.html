@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>CipherKit reproducible builds - Guardian Project</title>
+  <meta property="og:title" content="CipherKit reproducible builds" />
+  <meta name="twitter:title" content="CipherKit reproducible builds" />
+  <meta name="description" content="We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the exact same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).">
+  <meta property="og:description" content="We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the exact same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).">
+  <meta name="twitter:description" content="We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/",
+          "name": "Cipher kit reproducible builds"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hans-Christoph Steiner"
+  },
+  "headline": "CipherKit reproducible builds",
+  "description" : "We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the exact same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).",
+  "inLanguage" : "en",
+  "wordCount": 805,
+  "datePublished" : "2015-09-21T10:54:05",
+  "dateModified" : "2015-09-21T10:54:05",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, bazaar, cipherkit, deterministic build, faketime, iocipher, martusvmm, reproducible builds, reproducible builds, security" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="CipherKit reproducible builds" />
+<meta property="og:description" content="We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the exact same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="CipherKit reproducible builds" />
+  <meta name="twitter:description" content="We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>CipherKit reproducible builds</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on September 21, 2015
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Hans-Christoph Steiner
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg"><img src="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg" alt="alberti cipher disk" width="150" height="150" class="alignright size-thumbnail wp-image-3079" srcset="https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+
+<p>We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the <em>exact</em> same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).</p>
+
+<p>Our core CipherKit libraries are the more sensitive areas, so that’s where we’ve started. We generally work on Debian and Ubuntu and recommend that platform, but we recognized that OSX is a popular platform for Android developers also. So this process will work on OSX too, using your favorite package manager (e.g. Fink, MacPorts, or Homebrew).</p>
+
+<p>Then you will end up with <code>IOCipher-v0.3.zip</code>, which includes the .jar and .so files. If your setup is close enough to our release build setup, the contents of that ZIP file will be the same as the official release. Right now, it is difficult to get the exact same binary file (e.g. the same sha256 sum) because of the timestamps in the .zip and varitions caused by using different versions of Java, and Android SDK and NDK. To check the contents of your build versus the official release:</p>
+
+<pre>sudo apt-get install faketime unzip wget meld
+cd /tmp
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip
+wget https://guardianproject.info/releases/IOCipher-v0.3.zip.sig
+gpg --verify IOCipher-v0.3.zip.sig
+git clone https://github.com/guardianproject/IOCipher
+cd IOCipher
+git checkout v0.3
+./make-release-build
+./compare-to-official-release IOCipher-v0.3.zip /tmp/IOCipher-v0.3.zip
+</pre>
+
+<h3 id="what-is-happening-here">What is happening here?</h3>
+
+<p><em>meld</em> (<em>FileMerge</em> on OSX) will show a listing of all files listed, and which ones are different. You can see that the contents of the <em>.class</em> files and <em>.so</em> files all match, but there will be inevitable differences in some of the metadata. Native builds are much more sensitive to changes in the toolchain. The Java <em>.class</em> files are usually reproducible even when using different versions of Java and the Android SDK. Native builds are almost never reproducible if the NDK version is at all different. Sometimes even the host platform where the NDK is running (e.g. Ubuntu vs OSX, or 64-bit vs 32-bit) will cause differences in the final binaries.</p>
+
+<div id="attachment_13105" style="width: 883px" class="wp-caption alignnone">
+  <a href="https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png"><img aria-describedby="caption-attachment-13105" src="https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png" alt="The NDK version and build platform are listed in the manifest." width="873" height="591" class="size-full wp-image-13105" srcset="https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-MANIFEST.MF-_tmp-IOCipher-v0.3-MANIFEST.MF-Meld-300x203.png 300w" sizes="(max-width: 873px) 100vw, 873px" /></a>
+  
+  <p id="caption-attachment-13105" class="wp-caption-text">
+    The NDK version and build platform are listed in the manifest.
+  </p>
+</div>
+
+<div id="attachment_13104" style="width: 883px" class="wp-caption alignnone">
+  <a href="https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png"><img aria-describedby="caption-attachment-13104" src="https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png" alt="The Java .class files are exactly the same, but the native .so files are not." width="873" height="591" class="size-full wp-image-13104" srcset="https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld.png 873w, https://guardianproject.info/wp-content/uploads/2015/09/Screenshot-.-IOCipher-v0.3-_tmp-IOCipher-v0.3-Meld-300x203.png 300w" sizes="(max-width: 873px) 100vw, 873px" /></a>
+  
+  <p id="caption-attachment-13104" class="wp-caption-text">
+    The Java .class files are exactly the same, but the native .so files are not.
+  </p>
+</div>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png"><img src="https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png" alt="faketime" width="150" height="150" class="alignright size-thumbnail wp-image-13098" srcset="https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2015/09/1024px-End_CEST.svg_.png 1024w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+
+<p>Timestamps are a very common issue when trying to reproduce a build. The release build process uses <a href="https://github.com/wolfcw/libfaketime" target="_blank"><code>faketime</code></a> to provide consistent timestamps, which are picked from the git commit. <code>faketime</code> freezes the clock entirely for native builds, so any timestamps from that process will always be exactly the same. Unfortunately, some parts of the <code>ant</code> Java build rely on the clock moving forward, so freezing clock makes the build freeze forever. Instead, <code>faketime</code> sets the clock using the time from the git commit, then moves time forward at 5% of the normal speed. That makes it much more likely that the timestamps will be the same, but usually what seems to happen is that the timestamps are 2 seconds off, which is the time resolution of the ZIP format. A better solution is needed here for JARs, they are easiest to verify using a sha256 sum. JAR signatures mostly seem not worth the pain they introduce. APKs signatures do not sign the whole APK, only the contents, so the varying timestamps do not matter when verifying using a APK signature. Another example of a difference: if comparing a debug build to a release build, then <code>BuildConfig.class</code> will be difference because of the debug stuff. The sort order of the metadata in the jar MANIFEST.MF might also be different.</p>
+
+<h3 id="the-end-goal">The end goal</h3>
+
+<p>Reproducing builds is an arcane process, for sure. It is a means to an end. The goal is to get to the point where well known binaries, published in places like MavenCentral or jCenter, can easily be verified by anyone who cares to try. Or people could even set up <a href="https://f-droid.org/wiki/page/Verification_Server" target="_blank">servers that automatically try</a> to reproduce any JAR used in a project.</p>
+
+<p>Then people can verify those JARs in a fully decentralized manner, and publish certifications in their preferred format (GPG signatures, SHA256 sums for gradle-witness, etc). Then we can feel safe getting the release from anywhere on the internet, no matter the level of security or malware infestation.</p>
+
+<p>Towards that goal, we have been getting our libraries all nicely packaged up and submitted to jCenter (the default gradle repository for Android). Here are the relevant bits to include in your build.gradle:</p>
+
+<pre>compile 'info.guardianproject.cacheword:cachewordlib:0.1'
+compile 'info.guardianproject.iocipher:IOCipher:0.3'
+compile 'info.guardianproject.netcipher:netcipher:1.2'
+compile 'info.guardianproject.trustedintents:trustedintents:0.0'
+
+compile 'net.freehaven.tor.control:jtorctl:0.2'
+</pre>
+
+<p>SQLCipher-for-Android is coming soon:<br />
+<a href="https://github.com/sqlcipher/android-database-sqlcipher/pull/197" target="_blank"><a href="https://github.com/sqlcipher/android-database-sqlcipher/pull/197">https://github.com/sqlcipher/android-database-sqlcipher/pull/197</a></a><br />
+I hope to also get them up on MavenCentral as well, since that one is also quite common on Android, and is a community run resource versus Bintray’s jCenter, which is purely a for-profit company.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/bazaar/">bazaar</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/cipherkit/">cipherkit</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/deterministic-build/">deterministic build</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/faketime/">faketime</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/iocipher/">iocipher</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/martusvmm/">martusvmm</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/reproducible-builds/">reproducible builds</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/reproducible-builds/">reproducible builds</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/security/">security</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/" data-toggle="tooltip" data-placement="top" title="Orfox: Aspiring to bring Tor Browser to Android">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2015/12/09/first-reproducible-builds-summit/" data-toggle="tooltip" data-placement="top" title="First Reproducible Builds Summit">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backup on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/backup/</link>
+    <description>Recent content in Backup on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>F-Droid&#39;s Community-controlled Backup Ceremony</title>
+      <link>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</guid>
+      <description>&lt;p&gt;(&lt;em&gt;Guest post from F-Droid, originally on &lt;a href=&#34;https://f-droid.org/2023/07/15/community-controlled-backup-ceremony.html&#34;&gt;f-droid.org&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;Seven core contributors and one board member met in Scotland, the birthplace of F-Droid, for the first in-person F-Droid team meeting.  One of the most pressing tasks we needed to take care of was setting up a contributor-controlled backup of all of our signing keys.  The requirements made it necessary to have a lengthy, in-person, consensus-driven planning session.  We found no good documentation of such a procedure, so we&amp;rsquo;re going out on a limb here and publishing the general outline of our process.  This process was informally audited by multiple people with varying expertise before the public key was used to encrypt anything.&lt;/p&gt;
+
+&lt;p&gt;F-Droid manages secret signing keys for thousands of apps.  Someone who has control over those keys could create malicious app releases that could be transparently installed as updates.  On top of that, &lt;a href=&#34;https://developer.android.com/about/versions/pie/android-9.0#apk-key-rotation&#34;&gt;Android&lt;/a&gt; does &lt;a href=&#34;https://guardianproject.info/2015/12/29/how-to-migrate-your-android-apps-signing-key/&#34;&gt;not&lt;/a&gt; make it &lt;a href=&#34;https://anandbose.gitlab.io/android-development/2020/05/08/android-signing-key-rotation-explained/&#34;&gt;easy&lt;/a&gt; to rotate to new signing keys, unlike TLS or Signal. So &lt;a href=&#34;https://f-droid.org/docs/Signing_Process/&#34;&gt;these keys&lt;/a&gt; are very important to &lt;a href=&#34;https://f-droid.org/docs/Building_a_Signing_Server/&#34;&gt;protect&lt;/a&gt;.  They are also very important to backup, since the Android OS uses the signing key combined with the Application ID as the unique identifier to represent each installed app. This meeting gave us the perfect opportunity to create a new backup process that ensures that at least 4 trusted community members must be physically present in order to decrypt the backup of all the keys.  First, we started with the requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Regular backups as new keys get added.&lt;/li&gt;
+&lt;li&gt;Strong, proven encryption for all backups.&lt;/li&gt;
+&lt;li&gt;Minimum of four participants to decrypt.&lt;/li&gt;
+&lt;li&gt;Specific technical experience should not be required to be a participant.&lt;/li&gt;
+&lt;li&gt;The components should be physically spread out across jurisdictions.&lt;/li&gt;
+&lt;li&gt;Access should minimized as much as possible (e.g. the signing server maintainer does not need access to the backups).&lt;/li&gt;
+&lt;li&gt;As low a stress level as possible for each participant.&lt;/li&gt;
+&lt;li&gt;Each participant could hand over their component if they are forced to, without jeopardizing the encryption.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then we mapped out who was present:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Seven core contributors.&lt;/li&gt;
+&lt;li&gt;One board member.&lt;/li&gt;
+&lt;li&gt;One trusted external witness.&lt;/li&gt;
+&lt;li&gt;No one else.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From that, we built the process:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Three roles for physical control: operator of the signing server, encrypted backup holder, passphrase shard holder.&lt;/li&gt;
+&lt;li&gt;Each person only takes on a single role, for example, shard holders do not have access to the signing keys or the encrypted backup.&lt;/li&gt;
+&lt;li&gt;The encryption key used for the data is public key cryptography.&lt;/li&gt;
+&lt;li&gt;The private key was generated on a one-time-use, in-memory, disposable &lt;a href=&#34;https://tails.boum.org/&#34;&gt;TAILS&lt;/a&gt; session.&lt;/li&gt;
+&lt;li&gt;The private key was sharded using &lt;a href=&#34;https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing&#34;&gt;Shamir&amp;rsquo;s Secret Sharing&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We used an implementation of Shamir&amp;rsquo;s Secret Sharing that has been maintained for over 15 years.  The installation that was used was confirmed via reproducible builds.&lt;/li&gt;
+&lt;li&gt;Each shard was written to a removeable storage device bought in a store with cash without pre-order or registration.&lt;/li&gt;
+&lt;li&gt;Each removeable storage device with a shard was physically handed each shard holder to pack in a tamper-evident envelope as the others observed.&lt;/li&gt;
+&lt;li&gt;Backups must not be transmitted over the internet, only exchanged via in-person meetings between people who know each other.&lt;/li&gt;
+&lt;li&gt;All involved sat around a table for the duration of the ceremony.  The security profile of in-person discussions is drastically easier to manage than secure online discussions.&lt;/li&gt;
+&lt;li&gt;All present were observers of each step of the process, and verbally confirmed their agreement.&lt;/li&gt;
+&lt;li&gt;The operators of the signing server and the holders of the backup data verified each others&amp;rsquo; identities via F-Droid networks, PGP Web of Trust, and checks of government issued IDs.&lt;/li&gt;
+&lt;li&gt;Pieces from a minimum of two jurisdictions are required to decrypt: EU, Europe non-EU, US.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One important factor in reliable backups is regular updates.  New apps are constantly being added, and those usually get a new signing key assigned.  So we needed a system where it was easy to update the backup data while involving as few people as possible.  An operator of the signing server receives the public key to encrypt the backups via in-person exchange with a holder of the backups.  The holders of the backup data receives the encrypted backups from an operator of the signing server via in-person exchange.&lt;/p&gt;
+
+&lt;p&gt;Holding such important secrets also brings some unavoidable stresses to the people holding them. One key design goal was to create a protocol that did not add to the stress of any existing operators.  Furthermore, we aimed to keep the individual stress as low as possible for all roles in this protocol.  That makes it possible to empower volunteer contributors without overburdening them.&lt;/p&gt;
+
+&lt;p&gt;For restoring, we agreed that it should happen in an in-person meeting.  The process requires three shard holders meet with one encrypted backup holder, then the results need be given to a signing server operator. Requiring an in-person meeting could delay the restore process, but the added trust seemed worth it.  So this is the default process.  We could still switch to partially online process if the need arises.  That would require the agreement of five participants.&lt;/p&gt;
+
+&lt;p&gt;We believe this is a secure and reliable backup procedure for very sensitive data.  We welcome further scrutiny and plan to update the procedure as needed in a future meeting.&lt;/p&gt;
+
+&lt;p&gt;(&lt;em&gt;Travel costs for this meeting were paid for by the &lt;a href=&#34;https://guardianproject.info/2022/02/05/decentralizing-distribution/&#34;&gt;FFDW-DVD grant&lt;/a&gt;.&lt;/em&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

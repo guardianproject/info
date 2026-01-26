@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Audit on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/audit/</link>
+    <description>Recent content in Audit on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/audit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>7ASecurity Completes Security Audit of Círculo</title>
+      <link>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</guid>
+      <description>&lt;p&gt;Over the last six months, we’ve been working with &lt;a href=&#34;https://7asecurity.com/&#34;&gt;7ASecurity&lt;/a&gt; through support from the &lt;a href=&#34;https://www.opentech.fund/impact/security-safety-audits/&#34;&gt;Open Technology Fund’s Security Safety Audits&lt;/a&gt;, to complete an audit of our &lt;a href=&#34;https://encirculo.org&#34;&gt;Círculo project&lt;/a&gt;.  The public report on that is &lt;a href=&#34;https://www.opentech.fund/security-safety-audits/circulo-security-audit/&#34;&gt;now available&lt;/a&gt;. You can also read the &lt;a href=&#34;https://7asecurity.com/blog/2025/03/circulo-security-audit-by-7asecurity/&#34;&gt;blog post on the audit from 7ASecurity&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you don’t know about Circulo, this is a physical check-in safety app we have developed, alongside Article 19’s Mexico City team, for a number of years, focused on providing secure location sharing and urgent notifications within small trusted groups, for people under threat of physical violence. The free and open-source &lt;a href=&#34;https://gitlab.com/circuloapp&#34;&gt;code we have developed&lt;/a&gt; includes iOS and Android mobile apps, as well as server infrastructure, largely based on the &lt;a href=&#34;https://matrix.org/&#34;&gt;Matrix Protocol&lt;/a&gt;, including the mobile software development kits (SDKs), &lt;a href=&#34;https://matrix.org/docs/matrix-concepts/end-to-end-encryption/&#34;&gt;MegaOLM encryption&lt;/a&gt;, and &lt;a href=&#34;https://github.com/element-hq/synapse&#34;&gt;Synapse Server&lt;/a&gt;. You can read about the last round of work we completed on Circulo, including design, development, and community building, in a &lt;a href=&#34;https://guardianproject.info/releases/CirculoFinalReport20232024.pdf&#34;&gt;public report released in November&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The primary summary from the audit is as follows: “Overall, the auditors found that the app defended itself well against a broad range of attack vectors.”. We are happy with that assessment, though a number of issues were found, both in our mobile app code and in our infrastructure. While some of them were difficult to address, we have done our best to fix or mitigate to the extent we are able. More detail on that below.&lt;/p&gt;
+
+&lt;p&gt;As the report states:
+&lt;em&gt;Of the nine vulnerabilities identified one was flagged as “high-risk,” and seven were considered “medium-risk”&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The one high-risk vulnerability discovered was summarized as “Android &amp;amp; iOS apps are vulnerable to DoS attacks via DNS spoofing”. This means that while the Círculo app was using TLS to encrypt the network encryption, as well as to authenticate the domain it connects to, it was not using any special method for ensuring the IP address provided by the DNS lookup was secure. Instead, Círculo relies on the mobile OS to provide secure DNS options for the user to enable, or on the user themselves adopting a third-party secure DNS tool.&lt;/p&gt;
+
+&lt;p&gt;The primary harm from this high-risk vulnerability is that if someone was targeted in this way, they would not be able to access or share or see check-in and location updates from Círculo. No private information would be compromised. While we take app and service blocking and censorship seriously, we know there are many ways to avoid it, including third-party VPN apps like our own Orbot.&lt;/p&gt;
+
+&lt;p&gt;As one method of remediating this vulnerability, we were able to build in support on Círculo Android for DNS-over-HTTPS (DoH), currently with support for Cloudflare, but in the future, as a configurable option as well. You can see the &lt;a href=&#34;https://gitlab.com/circuloapp/circulo-keanu-android/-/commit/955c5a3198a9fbfd887ee3fa57b3f331373e9127&#34;&gt;code commit on gitlab&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Most of the other medium and lower issues we resolved last year and already included in public app releases. You can view all the open tickets responding to the medium and lower issues in the report on our &lt;a href=&#34;https://gitlab.com/groups/circuloapp/-/milestones/19#tab-issues&#34;&gt;public bug tracker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You will notice there are still open issues in the tracker, which we continue to consider how to implement. These are marked as “enhancements” as we see them as providing additional security beyond our established threat model. They also require significant changes in the core Matrix SDK which we rely upon, and that is shared with other Matrix-based applications such as Element.&lt;/p&gt;
+
+&lt;p&gt;On the infrastructure side, 7ASecurity was very helpful in pointing out many ways to harden our deployment by taking advantage of additional security configurations and options available through Amazon Web Services.&lt;/p&gt;
+
+&lt;p&gt;There are two open issues related to our production server infrastructure.&lt;/p&gt;
+
+&lt;p&gt;“Synapse Admin API exposed to the internet”: The Admin API is utilized by our system moderators to handle emergency requests from authenticated users and partners to delete or disable accounts and rooms, if they have lost access to them due to extreme circumstances (device taken, lost, destroyed, or had to delete the app due to physical threat concern).&lt;/p&gt;
+
+&lt;p&gt;“Data leaks in Nginx and CloudWatch logs”: The Synapse logging detail level is capturing too much data clearly. This was useful during staging deployment and development, but needs to be reduced. No personal information is leaked, only tokens and ids of rooms.&lt;/p&gt;
+
+&lt;p&gt;These are both issues we are working to address by requiring additional network authentication to access the Admin API, and by reducing the log detail that we are storing. We also ensure our existing admin accounts and authentication credentials are stored securely in multi-factor password managers.&lt;/p&gt;
+
+&lt;p&gt;One important aspect of Círculo to point out, is that anyone can run their own server, to fully control the stack and infrastructure. It is a complete standard Matrix Synapse deployment. You can also pay a third-party hosting provider to host your own private Matrix server instance. While we are happy to offer a default community service, we believe in open, decentralized, and federated systems, along with data sovereignty.&lt;/p&gt;
+
+&lt;p&gt;In summary, Círculo’s security and usability is constantly improving, with security audits from organizations like 7ASecurity and support from OTF, being a critical part to that progress. If you have any questions or concerns, please reach out to us at the Guardian Project help desk at &lt;a href=&#34;mailto:support@guardianproject.info&#34;&gt;support@guardianproject.info&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Threats and Usability of Secure Voice</title>
+      <link>https://guardianproject.github.io/info/2012/07/10/threats-and-usability-of-secure-voice/</link>
+      <pubDate>Tue, 10 Jul 2012 12:48:18 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/07/10/threats-and-usability-of-secure-voice/</guid>
+      <description>&lt;p&gt;In my &lt;a href=&#34;https://guardianproject.info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/&#34;&gt;previous post&lt;/a&gt; I found that end-to-end encryption with OSTN is both effective and usable. There are two important things the user must be aware of when using OSTN. They must confirm with each phone call that the encryption icon is present and  they must correctly complete SAS verification dialog boxes. So on a basic level, encrypted voice just works. But, what does this all mean? This post looks at the threats to security and usability of encrypted ZRTP phone calls in CSipSimple.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Usable Security&lt;/strong&gt;&lt;br /&gt;
+Crypto wizards have created and refined algorithms that bring strong encryption to the everyday user. Yet, more often then not, security is compromised through user error. This is a usability problem. Information security is abstract and the practicalities of the real world demand that encryption software ‘just works’ for the average user. It is more dangerous for a user to be unaware of a loss of encryption then that they fail to get it working. Government P25 handheld radios were found to have such poor usability for encryption that a &lt;a href=&#34;http://www.crypto.com/blog/p25&#34;&gt;research team&lt;/a&gt; found many government agents accidentally transmitting sensitive information in the clear. ZRTP and CSipSimple’s implementation fair much better however.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_2606&#34; style=&#34;width: 283px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/07/whitdiff.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2606&#34; class=&#34;wp-image-2606 &#34; title=&#34;whitdiff&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/07/whitdiff-300x244.jpg&#34; alt=&#34;Whit Diffie&#34; width=&#34;273&#34; height=&#34;222&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/07/whitdiff-300x244.jpg 300w, https://guardianproject.info/wp-content/uploads/2012/07/whitdiff.jpg 528w&#34; sizes=&#34;(max-width: 273px) 100vw, 273px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2606&#34; class=&#34;wp-caption-text&#34;&gt;
+    Whitfield Diffie is pioneer of modern cryptography
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_2612&#34; style=&#34;width: 250px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/07/gandalf22.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2612&#34; class=&#34; wp-image-2612&#34; title=&#34;gandalf&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/07/gandalf22-300x283.jpg&#34; alt=&#34;Gandalf&#34; width=&#34;240&#34; height=&#34;226&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/07/gandalf22-300x283.jpg 300w, https://guardianproject.info/wp-content/uploads/2012/07/gandalf22.jpg 546w&#34; sizes=&#34;(max-width: 240px) 100vw, 240px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2612&#34; class=&#34;wp-caption-text&#34;&gt;
+    Whit and Gandalf fight evil with magic abilities gained by pouring through dusty tomes full of obscure symbols. (Borrowed from this excellent &lt;a href=&#34;http://www.subspacefield.org/security/math_rules_cyberspace_20120421/math_rules_cyberspace_20120421.pdf&#34;&gt;Math Rules Cyberspace&lt;/a&gt; presentation)
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Although not required for the average user, its good to have a basic background of cryptography. This is not an full introduction, but it will provide some background on ZRTP and the importance of authentication.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ZRTP, Authentication, PKI&lt;/strong&gt;&lt;br /&gt;
+Most usability issues with encrypted communications deals with Public-Key-Infrastructure or PKI. Public Key Infrastructure is how we verify the identity of each participant in a communication channel. Verifying the identity of the other party is important to prevent &lt;a href=&#34;https://en.wikipedia.org/wiki/Man-in-the-middle_attack&#34;&gt;Man-In-The-Middle-Attacks&lt;/a&gt;. These attacks allow an attacker the opportunity to eavesdrop. PKI is a crucial point to understand in almost all encryption schemes. It inherently effects how the encrypted communication medium will be used.&lt;/p&gt;
+
+&lt;p&gt;Basically, to use encryption, both users must exchange secret keys without transmitting them in the clear. This is a bootstrapping problem, exchanging keys safely requires both users to already have exchanged keys! Public key cryptography has solved the problem of needing to secretly exchange keys in advance. Rather, a user can exchange public keys that don’t require secrecy. These keys can be published to the world. The issue is then whether or not the public key is &lt;strong&gt;authentic&lt;/strong&gt;. How does one user know that they received the right public key and not the public key of an attacker attempting a MITM attack?&lt;/p&gt;
+
+&lt;p&gt;Different communities have different approaches to PKI. Smaller distributed technical communities have long relied on the web-of-trust model supported by &lt;a href=&#34;https://en.wikipedia.org/wiki/Pretty_Good_Privacy&#34;&gt;PGP&lt;/a&gt;. This was the first widely available open-source software that provided strong cryptography to everyone. It was created by Phil Zimmerman who also created ZRTP to encrypt voice.  Its work flow, while fine for some, has precluded its widespread adoption outside of the tech community.&lt;/p&gt;
+
+&lt;p&gt;Websites rely on a Certificate Authorities to make encryption transparent for the user.  It does not require the user to make manual trust decisions and ‘just works’. However, it never obtained the goal of strong end-to-end encryption the way PGP has because it relies on the trust of centralized authorities that have proven time and time again to not be trustworthy. The future of SSL is a heavily researched area. For some approaches to this issue I’d personally suggest looking into &lt;a href=&#34;https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions&#34;&gt;DNSSEC&lt;/a&gt;, &lt;a href=&#34;http://blog.thoughtcrime.org/ssl-and-the-future-of-authenticity&#34;&gt;Convergence&lt;/a&gt;, and this &lt;a href=&#34;http://events.ccc.de/congress/2010/Fahrplan/events/4295.en.html&#34;&gt;talk&lt;/a&gt; from Dan J. Bernstein, a cryptographer and professor at the University of Illinois. &lt;a href=&#34;https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=Z7Wl2FW2TcA&#34;&gt;This talk&lt;/a&gt; by Moxie Marlinspike at Blackhat 2011 is great, it introduces Convergence and provides an interesting dialogue on the SSL issue.&lt;/p&gt;
+
+&lt;p&gt;Modern cryptographic protocols such as OTR(instant messaging) and ZRTP(voice) have come a long way in providing easy to use end-to-end encryption. They are open standards that strike a great balance between usability and security. They both have adopted to the TOFU POP model (Trust on First Use- Persistence of Pseudonym).  This is similar to what SSH does: when you first connect to the server you are asked if you want to save and trust the server’s public key. ZRTP takes it a step farther and &lt;strong&gt;verifies&lt;/strong&gt; the other party’s identity on first use.  A commitment protocol is used that requires the users to discuss whether they both are viewing the same string of text in a dialog box. This guarantees that the person you hear on the other end of the phone is the actual person your talking to.&lt;/p&gt;
+
+&lt;p&gt;This is great because by saving the public key and trusting it an attacker can no longer pretend to represent someone else’s key. This relies on the first conversation not being actively attacked. The commitment protocol strengthens this by making sure that the first time you trust a key, you actually have a way to verify it. This solves the issue of MITM attacks!&lt;/p&gt;
+
+&lt;p&gt;If all this doesn’t make sense, that is OK, you don’t actually have to understand cryptography to use OSTN. You just need to understand what it provides you (Confidentiality!). More information about authentication and verification was written in a great &lt;a href=&#34;https://guardianproject.info/2012/03/19/on-verifying-identity-using-cryptography/&#34;&gt;post by Hans&lt;/a&gt;. Guardian also has a great research project called &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34;&gt;PSST&lt;/a&gt; that is actively solving verification problems like this across multiple platforms and communication schemes.&lt;/p&gt;
+
+&lt;p&gt;Below are the threats to the current ZRTP implementation in CSipSimple from both the user’s perspective and attacker’s perspective.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User Threats&lt;/strong&gt;&lt;br /&gt;
+ZRTP is great in this regard. It is one of the most user friendly ways to enable verified end-to-end encryption. This said, there are two concepts that a user should understand:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Verification:&lt;/strong&gt; The first time you call someone with ZRTP a dialog box is displayed that asks both users to confirm that they see the same SAS (Short Authentication String). Once confirmed this identity will persist within your OSTN account and when you call the same person this dialog will not appear. If your conversation is not verified it is possible that the call is susceptible to a certain kind of attack (MITM) that allows someone to listen to your phone call. As seen in the pictures above it is easy to tell if your phone call is encrypted but not if it is verified. It is up to the user to make sure they pay attention to the SAS dialog at the beginning of a conversation. Key’s are remembered after first verification so lack of a SAS box indicates the user’s have both hit OK on a previous SAS box.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Opportunistic Encryption: &lt;/strong&gt;This means that encryption is only attempted, but not forced. If you have encryption on, but you happen to talk to a friend who has managed to turn it off, then your call will silently remain unencrypted.  Since encryption can not be forced, a user must not  expect to be encrypted but rather check their phone at the beginning of every call to be sure. This is how opportunistic encryption should work, but it would be easy for a user to assume otherwise. Don’t do it!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Adversarial Threats&lt;/strong&gt;&lt;br /&gt;
+Currently, I see two opportunities for attackers that are related to the same two usability concerns listed above.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MITM: &lt;/strong&gt;I mentioned before that unverified conversations are susceptible to eavesdropping. This is solved by verifying each conversation by sharing a 4 letter code before starting a conversation. You must actually cancel or ignore the SAS dialog for this to happen. Don’t!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Force clear-voice communication:&lt;/strong&gt; Opportunistic encryption presents a more interesting problem. It is possible for someone to selectively block a ZRTP negotiation packets. This would force two users to start a conversation in clear-voice despite both setting their accounts to use ZRTP. It would be obvious to the user if they check for the lock icon, but friends who frequently communicate with OSTN might forget to check each time. This could be prevented by having a setting to force encryption. In this case the call would simply fail. In Wireshark, I was clearly able to distinguish the ZRTP negotiation packets. An attacker who can filter your traffic on the application layer can perform this attack. ISPs, Governments, and adversaries on your LAN may reasonably be in a position to do this.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The MITM attack can be mitigated with verification. The selective blocking of ZRTP packets can not be avoided (because ZRTP can’t stop censorship) but the consequences can be mitigated by paying attention to when your calls are encrypted.&lt;/p&gt;
+
+&lt;p&gt;**Improving ZRTP usability&lt;br /&gt;
+**&lt;br /&gt;
+Given the threats listed above, I see a couple things that would increase usability and prevent accidental misunderstandings by the user.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Forced ZRTP Encryption&lt;/strong&gt;: ZRTP in CSipSimple has two modes: off or opportunistic. I would propose changing these options to &lt;strong&gt;ZRTP Off, Attempt ZRTP&lt;/strong&gt;, and &lt;strong&gt;Force ZRTP&lt;/strong&gt;. Force ZRTP would provide a huge security benefit to accounts in CSipSimple that you would always expect to use encryption with.OSTN would of course be the ideal example here.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&#34;attachment_2621&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/07/zrtpoptions.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2621&#34; class=&#34;size-medium wp-image-2621&#34; title=&#34;zrtpoptions&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/07/zrtpoptions-300x240.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;240&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/07/zrtpoptions-300x240.png 300w, https://guardianproject.info/wp-content/uploads/2012/07/zrtpoptions.png 447w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2621&#34; class=&#34;wp-caption-text&#34;&gt;
+    Current ZRTP options in CSipSimple
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Verification Status:&lt;/strong&gt; Currently you can tell when your conversation is ZRTP encrypted by the lock icon. This is great because this allows the user to avoid problems with opportunistic encryption or a downgrade attack. It would make sense to allow the user to see whether their call has also been authenticated correctly. Feedback might encourage users to continue to correctly use the SAS function.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&#34;attachment_2622&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/07/lockicon.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2622&#34; class=&#34;size-medium wp-image-2622&#34; title=&#34;lockicon&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/07/lockicon-300x298.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;298&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/07/lockicon-300x298.png 300w, https://guardianproject.info/wp-content/uploads/2012/07/lockicon-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2012/07/lockicon.png 350w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2622&#34; class=&#34;wp-caption-text&#34;&gt;
+    This means your OSTN call is encrypted. It would be useful if it displayed the verification status of the caller as well.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Verification Options: &lt;/strong&gt;Currently when verifying an identity the user is displayed with the SAS. They have the option to press ‘OK’ or ‘Cancel’. Cancel effectively ignores this step, OK means that the SAS has been verified. This is non-intuitive. I would propose simply having three options: &lt;strong&gt;Verify, Ignore, Reject. &lt;/strong&gt;The current function of OK is mapped to Verify, Cancel is mapped to Ignore, and Reject ends the phone conversation in situations in which the SAS doesn’t match.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&#34;attachment_2623&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/07/sasbox.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2623&#34; class=&#34;size-medium wp-image-2623&#34; title=&#34;sasbox&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/07/sasbox-300x199.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;199&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/07/sasbox-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2012/07/sasbox.png 447w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2623&#34; class=&#34;wp-caption-text&#34;&gt;
+    Suggested improvement would present “Verify, Ignore, and Reject” as options to the user
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Wrapping up&lt;/strong&gt;&lt;br /&gt;
+It should be noted that I pick on CSipSimple over the other clients because it is both great software and the recommended client to use with OSTN. It is still considered experimental software and requires the nightly release for OSTN support. Other clients may suffer from these ZRTP usability issues as well. The good thing is that by simply implementing a working ZRTP client you should have most of the protocol benefits thanks to its simple and elegant design. The recommendations I make here should applicable across all ZRTP implementations. A future comparison of of these implementations may be in order.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Network Analysis of Encrypted Voice over OSTN</title>
+      <link>https://guardianproject.github.io/info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/</link>
+      <pubDate>Thu, 05 Jul 2012 14:23:50 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Introduction to OSTN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN&lt;/a&gt; network stands for Open Source Telephony Network. It is a federated network standard for supporting Internet calling with end-to-end encryption ala ZRTP. Its very similar to e-mail in that VOIP calls can be routed to addresses such as &amp;#x75;&amp;#x73;&amp;#x65;&amp;#x72;@doma&amp;#x69;&amp;#x6e;&amp;#x2e;&amp;#x74;ld. Its a simple concept, but I believe it to be ground breaking implementation! Never before have I seen such an accessible solution to encrypted VOIP calls. OSTN is platform independent, is a federated network, and it is an open standard such that it is widely adoptable. There are two main components that are required to use OSTN with encryption: a VOIP client that supports ZRTP for end-to-end encryption and user account with an OSTN provider.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OSTEL is the first working OSTN provider. Sign up for an account at &lt;a href=&#34;https://ostel.me/&#34; title=&#34;ostel.me&#34;&gt;ostel.me&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;CSipSimple is the recommended VOIP client for use with OSTN. It has a built in  profile for OSTN accounts and supports ZRTP. You must use the &lt;a href=&#34;http://nightlies.csipsimple.com/trunk/&#34;&gt;nightly build&lt;/a&gt;! This is the latest version and requires that you allow outside applications on Android by checking the Settings&amp;gt;Applications&amp;gt;’Unknown sources’ box. Information on setting it up for your Android device can be found on &lt;a href=&#34;https://guardianproject.info/wiki/Ostel&#34; title=&#34;our wiki&#34;&gt;our wiki&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While this post focuses on using OSTN with the recommended CSipSimple software, the concepts extend to all OSTN platforms. Check out &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;the project page&lt;/a&gt; for more info on alternative clients.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Looking at Encrypted VOIP with Wireshark&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Traffic dumps of an OSTN call and a ZRTP encrypted OSTN call were logged and analyzed in Wireshark for comparison. This is how someone between you and your caller would see your VOIP traffic. I was looking for three things in this audit&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Confirm encryption was working in conjunction with what a user would logically expect&lt;/li&gt;
+&lt;li&gt;Demonstrate how easy it is to capture and view non-encrypted VOIP&lt;/li&gt;
+&lt;li&gt;Identify threats what types of security ZRTP provides&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I can confirm that the encryption works as expected. The traffic logs of both phone calls can be found at the end of this post. First, here is a look at a normal non-encrypted phone call over OSTN with CSipSimple and secure call.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_2466&#34; style=&#34;width: 246px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/06/uncrypt.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2466&#34; class=&#34; wp-image-2466&#34; title=&#34;Non-secure VOIP&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/06/uncrypt.png&#34; alt=&#34;&#34; width=&#34;236&#34; height=&#34;360&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2466&#34; class=&#34;wp-caption-text&#34;&gt;
+    Cleartext phone calls are noted by absence of ZRTP overlay.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_2467&#34; style=&#34;width: 246px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/06/ostncall-encrypted.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2467&#34; class=&#34; wp-image-2467&#34; title=&#34;Secure VOIP&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/06/ostncall-encrypted.png&#34; alt=&#34;&#34; width=&#34;236&#34; height=&#34;360&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2467&#34; class=&#34;wp-caption-text&#34;&gt;
+    ZRTP Enabled phone calls are indicated by lock icon
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;It is quite clear to the user that ZTRP has been enabled by the lock icon that appears in both phones.  Traffic logging has also confirmed that when you see the lock icon, ZRTP has successfully been set up and is being used. So far, so good. Make sure you see the lock sign if you are expecting to be talking on a secure conversation.&lt;/p&gt;
+
+&lt;p&gt;CSipSimple uses &lt;strong&gt;opportunistic&lt;/strong&gt; ZRTP encryption that is enabled by default for OSTN accounts with CSipSimple. This means that all calls will begin without encryption and then send ‘ZRTP Hello’ packets to let each host know that a ZRTP conversation can begin. From here ZRTP negotiates a secure connection and then transfers the conversation to encrypted voice. Here are two pictures from Wireshark showing the very beginning of a (ZRTP enabled) OSTN phone call and where the encryption actually switches on. The SRTP protocol indicates that you are using encrypted voice. ZRTP simply defines the negotiation process for SRTP. This is not a minor thing however, it is because of this that ZRTP can provide end-to-end encryption. End-to-end encryption prevents a third-party from eavesdropping and possibly passing information on to higher authorities.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_2474&#34; style=&#34;width: 709px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/06/zrtpstart.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2474&#34; class=&#34;size-full wp-image-2474 &#34; title=&#34;zrtpstart&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/06/zrtpstart.png&#34; alt=&#34;&#34; width=&#34;699&#34; height=&#34;97&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/06/zrtpstart.png 699w, https://guardianproject.info/wp-content/uploads/2012/06/zrtpstart-300x41.png 300w&#34; sizes=&#34;(max-width: 699px) 100vw, 699px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2474&#34; class=&#34;wp-caption-text&#34;&gt;
+    First UDP packets of an ZRTP enabled phone call. ZTRP Hello is sent out at the same time as the first RTP packet.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_2475&#34; style=&#34;width: 709px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/06/zrtpswitch.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-2475&#34; class=&#34;size-full wp-image-2475 &#34; title=&#34;zrtpswitch&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/06/zrtpswitch.png&#34; alt=&#34;&#34; width=&#34;699&#34; height=&#34;82&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/06/zrtpswitch.png 699w, https://guardianproject.info/wp-content/uploads/2012/06/zrtpswitch-300x35.png 300w&#34; sizes=&#34;(max-width: 699px) 100vw, 699px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-2475&#34; class=&#34;wp-caption-text&#34;&gt;
+    Successful ZRTP hand-off. Connection switches from normal RTP to encrypted RTP here.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The important part to notice here is that the hand-off is fast. Comparing the times of the first RTP packet to the first encrypted packet takes about 1.5 seconds. Multiple traffic logs confirmed that this is a consistent number. This means that if you immediately start talking during the start of an encrypted phone it is possible for some of your voice to be transmitted clear-text. I attempted to record this section by talking in the very beginning of a call and extracting voice. I wasn’t successful, but I wouldn’t discount that you will release some clear voice audio at the beginning of a conversation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What ZRTP Guarantees&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So, things look good with OSTN calls. ZRTP is enabled by default on all OSTN accounts with CSipSimple and it uses opportunistic encryption. Also, it is very easy for the user to tell that their call has been successfully encrypted. Great! What does this mean for the user? When correctly using ZRTP, a user can expect that their phone calls are fully &lt;strong&gt;confidential&lt;/strong&gt;. No third party can intercept, listen, or mangle your phone call. This includes your OSTN provider of course.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What ZRTP Doesn’t Guarantee&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;ZRTP does not stop&lt;strong&gt; censorship &lt;/strong&gt; or provide &lt;strong&gt;anonymity.  &lt;/strong&gt;This is something Orbot might be able to help with one day. Currently, the latency of the Tor network prevents real-time protocols from working. The current best solution would be to use a VPN provider to tunnel ZRTP traffic. However, now that VOIP is illegal in many countries it is not recommended that anyone trust this solution until a tested and verified method is published.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Using end-to-end voice encryption has never been this easy! This analysis confirmed that OSTN works quite well in practice. There are two things the user should do to ensure secure communication: make sure to read and confirm the verification dialog boxes and check to make sure your calls have the lock icon when you are counting on them to be encrypted. Just like that, you too can be a &lt;a href=&#34;https://en.wikipedia.org/wiki/Cypherpunk&#34;&gt;cypherpunk&lt;/a&gt; (or just someone with a reasonable expectation of privacy!). Like Phil Zimmerman, the creator of ZRTP,  has said: “[OSTN] lets you whisper in someone’s ear a thousand miles away” Check back for our upcoming post which will look in more detail at the threat model of an OSTN phone call.&lt;/p&gt;
+
+&lt;p&gt;You can download the traffic log of a encrypted and unencrypted OSTN call &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/07/ostnlogs.zip&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

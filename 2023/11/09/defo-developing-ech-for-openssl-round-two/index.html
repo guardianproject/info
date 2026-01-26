@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>DEfO - Developing ECH for OpenSSL (round two) - Guardian Project</title>
+  <meta property="og:title" content="DEfO - Developing ECH for OpenSSL (round two)" />
+  <meta name="twitter:title" content="DEfO - Developing ECH for OpenSSL (round two)" />
+  <meta name="description" content="Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI). This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (CDN). A visible domain name also provides a straightforward method for censors to block websites and internet services.">
+  <meta property="og:description" content="Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI). This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (CDN). A visible domain name also provides a straightforward method for censors to block websites and internet services.">
+  <meta name="twitter:description" content="Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/",
+          "name": "D ef o developing e c h for open s s l (round two)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Stephen Farrell"
+  },
+  "headline": "DEfO - Developing ECH for OpenSSL (round two)",
+  "description" : "Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI). This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (CDN). A visible domain name also provides a straightforward method for censors to block websites and internet services.",
+  "inLanguage" : "en",
+  "wordCount": 2005,
+  "datePublished" : "0001-01-01T00:00:00",
+  "dateModified" : "2023-11-09T00:00:00",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Apache, Conscrypt, curl, DEfO, ECH, F-Droid, free software, HAProxy, IETF, metadata, nginx, open source, OpenSSL, privacy, resilience, TLS" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="DEfO - Developing ECH for OpenSSL (round two)" />
+<meta property="og:description" content="Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI). This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (CDN). A visible domain name also provides a straightforward method for censors to block websites and internet services.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="DEfO - Developing ECH for OpenSSL (round two)" />
+  <meta name="twitter:description" content="Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>DEfO - Developing ECH for OpenSSL (round two)</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on November 9, 2023
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Stephen Farrell
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (<a href="https://en.wikipedia.org/wiki/Content_delivery_network">CDN</a>). A visible domain name also provides a straightforward method for censors to block websites and internet services. <a href="https://www.tolerantnetworks.com/about-us.html">Tolerant Networks Limited</a> and the Guardian Project successfully ran the <a href="https://www.opentech.fund/">OTF</a>-funded <a href="https://defo.ie/">DEfO</a> project that <a href="https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/">developed interoperable implementations</a> of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.</p>
+
+<p>As the IETF standard for ECH completes, our key objectives are to:</p>
+
+<ul>
+<li>Upstream DEfO code</li>
+<li>Integrate ECH into more clients and servers</li>
+<li>Gain and document operational experience</li>
+<li>Submit key code for red team audits</li>
+<li>Publish open-source ECH provisioning tools</li>
+</ul>
+
+<p>The key challenges we expect to face in meeting those objectives are: firstly, dealing with the OpenSSL and other upstream code bases (e.g. nginx, Apache HTTP Server) - satisfying upstream developers when dealing with complex code changes, as are involved here, has proven to be quite time and effort consuming. Secondly, it is a challenge to arrange the trials we have envisaged for DEfO-2 but doing so should help to demonstrate that web sites can easily and safely enable ECH without putting themselves at risk of interoperability failures or adverse attention from censors and without further centralising the web. Lastly, there are some remaining technical challenges not addressed in DEfO-1 (proprietary TLS ClientHello extension handling, interactions between TLS Hello Retry Request and ECH, and privacy analyses of split-mode ECH deployments) that we plan to address in DEfO-2.</p>
+
+<p>The key challenges we aim to mitigate for users is the ease with which user activity can be tracked and blocked based on clear text SNI. Secondarily, our focus on web-server integrations and provisioning mechanisms for ECH addresses Internet centralisation (which itself poses potential risks for censorship) by ensuring this technology can be easily deployed without having to depend on entities such as global-scale CDNs.</p>
+
+<p>The primary gaps addressed by DEfO are: the privacy-leak that is clear text SNI in TLS and secondly that nobody else has been developing an ECH implementation for OpenSSL, which is one of the most widely used TLS stacks, particularly for web servers. That situation has not changed since DEfO-1 started. Arguably filling that gap has become more pressing as some browsers now ship with ECH support.</p>
+
+<p>ECH is designed to contribute to the safety of users by removing one the the main remaining aspects of the web that allows network observers to easily monitor and censor web traffic based on either client DNS queries (browsers typically only use ECH when DoH has been used) and the Server Name Indication (SNI) in the TLS handshake, which is encrypted via ECH. The eventual goal is that use of ECH becomes near ubiquitous, and that goal is very achievable for web sites that make use of a CDN. DEfO however also has a focus on ECH support in various web servers and proxies (Apache, nginx, lighttpd, HAProxy) so that users of deployments that don’t use a commercial CDN can also benefit from ECH. The result of using ECH should be that neither the DNS query nor the TLS exchange leak the name of the web server with which the browser is establishing contact, thus taking away a still-easy opportunity for monitoring and censorship.</p>
+
+<p>Censors however, especially at the nation-state level, might choose to block all uses of ECH, which is something that is to be expected. The main mitigation for that envisaged is that browsers, even while not using ECH, will emit “fake” (or GREASEd) ECH values, thus increasing the costs if a censor decides to block all use of ECH. The extent to which GREASEing will be an effective mitigation for blocking all ECH will essentially
+end up as a political/commercial decision for censors, browser makers, and web sites, but what we can say is that for now at least, browser makers and the larger CDNs do seem committed to making use of ECH. So we can have some hope that even the most capable censors might have to think hard before blocking all ECH. In DEfO-2 we are also planning some significant-scale trials that, if successful, should go a long way towards helping other significant web sites overcome fears related to enabling ECH. Overcoming a fear that one’s web site may be blocked if one deploys ECH will be a valuable result of DEfO-2 should our trials come to fruition as we hope.</p>
+
+<p>We do see a number of usability issues for those deploying web servers that need to be addressed, and that we plan to address in DEfO-2. Our approach is to aim for the same level of usability for web server administrators as has been achieved by <a href="https://certbot.eff.org/"><em>certbot</em></a> as it interacts with Let&rsquo;s Encrypt or other CAs. Making it easy to enable ECH, especially for &ldquo;smaller&rdquo; web properties is high priority for DEfO.</p>
+
+<p>The outcome for which we hope is the upstreaming of ECH into important code bases, and to have demonstrated that one can deploy ECH easily at either small or large scale. The impact we expect is that we continue to significantly contribute to the use of ECH becoming near ubiquitous.</p>
+
+<h2 id="timeliness">Timeliness</h2>
+
+<p>The time is now ripe for DEfO-2:</p>
+
+<ul>
+<li><a href="https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello">Firefox</a> now supports ECH by default.</li>
+<li>Chrome supports ECH in <a href="https://groups.google.com/a/chromium.org/g/blink-dev/c/KrPqrd-pO2M/m/_8Lfd5xcAwAJ">10% of stable releases</a> as of August 2023.</li>
+<li>Brave now also supports ECH, <a href="https://github.com/brave/brave-browser/issues/1851#issuecomment-1763176335">behind the same flags</a> as Chromium</li>
+<li>These browser developments, plus the server code developed by DEfO-1, now enable us to plan real-world experiments</li>
+<li>Cloudflare has <a href="https://developers.cloudflare.com/ssl/edge-certificates/ech/">beta support</a> for enabling ECH.</li>
+<li>During the run-time of DEfO-2 we expect to be in a position to run trials with significant players that could significantly assist with the goal of making use of ECH common for large web sites.</li>
+<li>The DEfO-2 project timeline should also cover the finalisation of the IETF specification for ECH, significant progress on ancillary specifications (e.g. for provisioning) and provide sufficient time for upstreaming of DEfO code</li>
+<li>DEfO-2 benefits from the same team as DEfO-1 – Tolerant Networks and the Guardian Project having co-operated successfully on DEfO-1 are looking forward to continuing that collaboration and to extending the team for DEfO-2</li>
+<li>HPKE, a core part of ECH, but with broader applicability, is now RFC9180 and the OpenSSL maintainers merged our DEfO code for HPKE in November 2022.</li>
+</ul>
+
+<h2 id="our-development-projects">Our development projects</h2>
+
+<p>The DEfO project implemented Encrypted ClientHello (ECH) support for OpenSSL and Conscrypt, carried out interoperability testing of those implementations, and also used those libraries to ECH-enable various web servers and clients. We deployed services using these web servers and the DNS infrastructure required to support automated key upated for the HTTPS RRs associated with those services. Here we provide a short overview of that work in order to help with larger scale experiments and with further development of the ECH specification.</p>
+
+<h3 id="libraries">Libraries</h3>
+
+<p>As part of the DEfO project, we ECH-enabled two important TLS libraries:</p>
+
+<ul>
+<li><a href="https://www.conscrypt.org/">Conscrypt</a> is a Java Security Provide (a library) that provides a Java &ldquo;wrapper&rdquo; for the C++ language boringssl library. Conscrypt is commonly used as the TLS provider for applications running on Android devices and is thus an attractive target to allow many clients to be ECH-enabled. (We do not target browser clients in DEfO as work on ECH-enabling those is being done by browser-makers.) The authors of boringssl (Google) have added ECH support to a version of their code, and we used that to enhance Conscrypt to call the new borinssl APIs required to use ECH and to provide mechanisms for applications to default to, or signal use of, ECH.</li>
+<li>OpenSSL is a long-lived library providing cryptographic and TLS services that is used by many applications, including many web servers and hence is an attractive target for ECH-enabling, especially for server-side functionality. Our ECH-enabled fork of OpenSSL is here.</li>
+<li>We have and will continue to work with the developers of other TLS libraries (e.g. wolfSSL) to assist in ECH-enabling their code, mostly via interoperability testing.</li>
+</ul>
+
+<h3 id="clients">Clients</h3>
+
+<p>We ECH-enabled implemented the following TLS client applications:</p>
+
+<ul>
+<li>OpenSSL <code>s_client</code> - this client application comes as part of the OpenSSL build but is commonly used for testing and as an extremely simple scriptable TLS client.</li>
+<li><em>curl</em> is a widely-used command line web client that can use OpenSSL for TLS support, so we <a href="https://github.com/sftcd/curl/blob/ECH-experimental/docs/ECH.md">ECH-enabled that</a>.</li>
+<li>F-Droid is an Android client application that provides an installable catalogue of FOSS applications and that uses Conscrypt. We made an ECH-enabled build called <a href="https://f-droid.org/packages/ie.defo.ech_apps/">DEfO ECH Apps</a></li>
+</ul>
+
+<h3 id="servers">Servers</h3>
+
+<p>We ECH-enabled implemented the following web servers:</p>
+
+<ul>
+<li>The Apache HTTP Server is one of the two most commonly used web servers today, you can try our <a href="https://github.com/sftcd/httpd">ECH-enabled fork</a>.</li>
+<li><em>nginx</em> is the other web server in the &ldquo;top two.&rdquo;, you can try our <a href="https://github.com/sftcd/nginx">ECH-enabled fork</a>.</li>
+<li>lighttpd is a web server that is commonly used on smaller devices such as home routers, you can try our <a href="https://github.com/sftcd/lighttpd1.4">ECH-enabled fork</a>.</li>
+<li>HAProxy is widely used as an HTTP ingress proxy and so is a good target for exploring ECH split-mode, you can try our <a href="https://github.com/sftcd/haproxy">ECH-enabled fork</a>.</li>
+<li>OpenSSL <code>s_server</code> - this example server application is part of the OpenSSL build and is commonly used for testing and experimentation.</li>
+</ul>
+
+<h3 id="test-tools">Test tools</h3>
+
+<p>Amongst the test tooling we developed are:</p>
+
+<ul>
+<li>Comprehensive OpenSSL make test targets for HPKE and ECH.</li>
+<li><a href="https://github.com/defo-project/EchInteropTest">ECHInteropTest</a> is a Java client for interoperability testing on Android.</li>
+<li><a href="https://github.com/sftcd/echdnsfuzz"><em>echdnsfuzz</em></a> is a catalogue of &ldquo;interesting&rdquo; ECHConfigList values that could cause issues for clients combined with a service to randomly select one of those for publication in the public DNS every 30 minutes. This is a useful part of fuzz-testing an ECH-enabled client application.</li>
+</ul>
+
+<h2 id="issues-arising">Issues Arising</h2>
+
+<p>We saw the following issues that could benefit from further work to ease deployment of ECH:</p>
+
+<ul>
+<li>For HAProxy, since DEfO-1 we have achieved support for HelloRetryRequest in ECH split-mode but have further work to do on ECH key rotation.</li>
+<li>There can sometimes be a lack of clarity as to which software component should be responsible for choosing to attempt real (i.e. non-GREASEd) ECH, and hence to be responsible for the additional DNS queries required to acquire an ECHConfig. For libraries like OpenSSL and boringssl it clearly only makes sense for that decision (and hence any new DNS handling code) to be outside the library. For a browser, it as clearly makes sense for that code to be in the browser application layer. With &ldquo;middleware&rdquo; though, such as OkHTTP or Conscrypt it can be hard to know which is the correct decision.</li>
+<li>The new DNS code required for handling HTTPS RRs is not too complex but the full generality of SVCB is extremely complex. Adding such complexity (and associated caching) is a major change for clients like curl that have to date only had to have a very simple model for DNS - essentially only querying A/AAAA and having almost trivial caching in the application itself.</li>
+<li>The client implementation of ECH is relatively complex in that it &ldquo;touches&rdquo; the TLS state machine in many ways, and hence requires changes in a lot of places. As well as increasing the cost of implementing this also increases the costs associated with testing and upstreaming.</li>
+<li>Achieving the same level of usability as <code>certbot</code> for web server administrators may be challenging, but is an important goal to make it easy for web server administrators to be able to easily deploy ECH.</li>
+</ul>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>ECH is demonstrably implementable and can be deployed. We don&rsquo;t yet know if new issues will become apparent as larger-scale experiments are carried out, but we should find out during the run-time of DEfO-2.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/apache/">Apache</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/conscrypt/">Conscrypt</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/curl/">curl</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/defo/">DEfO</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/ech/">ECH</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/f-droid/">F-Droid</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/free-software/">free software</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/haproxy/">HAProxy</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/ietf/">IETF</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/metadata/">metadata</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/nginx/">nginx</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/open-source/">open source</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/openssl/">OpenSSL</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/privacy/">privacy</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/resilience/">resilience</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/tls/">TLS</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2023/11/03/fifa2023-report/" data-toggle="tooltip" data-placement="top" title="FIFA2023 Report">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/" data-toggle="tooltip" data-placement="top" title="Quick set up guide for Encrypted Client Hello (ECH)">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

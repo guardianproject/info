@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nearby on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/nearby/</link>
+    <description>Recent content in Nearby on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Jul 2018 14:28:23 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/nearby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Our “Wind” project is a Mozilla-NSF challenge finalist!</title>
+      <link>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</link>
+      <pubDate>Fri, 20 Jul 2018 14:28:23 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</guid>
+      <description>&lt;p&gt;For the last few years, we’ve been working on the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind network concept&lt;/a&gt;, as a nearby, local, off-grid companion, or alternative, to the Web. This year, we decided to participate in the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation Challenge&lt;/a&gt;, sponsored by Mozilla and the National Science Foundation. Today, it was announced that we are a finalist in, as they put it, &lt;a href=&#34;https://blog.mozilla.org/blog/2018/07/19/a-science-fair-with-1-6-million-in-prizes/&#34;&gt;“A Science Fair with $1.6 Million in Prizes”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Watch the video below to learn more about Wind, or jump right over to the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind project page&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/fGuiy3rlOVQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;_&lt;br /&gt;
+When disaster strikes, connectivity becomes difficult. Information can save your life, guiding you to safety and services. Networks today are fragile and easy overloaded. There has not been enough investment in the many other possible nets, that may be better suited for situations where connections to the global internet are not available or affordable. The potential in radios, sensors and processing available in the cheapest of smartphones and routers are not fully utilized or realized._&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

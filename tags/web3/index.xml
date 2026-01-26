@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web3 on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/web3/</link>
+    <description>Recent content in Web3 on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Aug 2022 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/web3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DWeb versus Web3: An Intern&#39;s Journey!</title>
+      <link>https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/</guid>
+      <description>&lt;p&gt;Close your eyes and imagine. You are sitting, designing the next game-changing innovative idea; however, you are not worried about any information leakage or spread, as you are in control. You not only hold ownership of your data, but with each online activity, your fear of being tracked dissipates more. This new internet you explore on understands each input, tailoring the content to your specific needs as it no longer runs on basic commands, but rather uses the combination of technologies and concepts such as machine learning, big data, and decentralized ledger technology to process information in a smart, human-like manner. This image in your mind is no longer a distant fantasy, but rather a closely approaching reality – this reality is the decentralized web, otherwise referred to as the DWeb.&lt;/p&gt;
+
+&lt;p&gt;The DWeb can be understood through comparison to the current internet paradigm. Currently all web traffic travels through centralized servers controlled by the well-known oligopoly that consists of Meta, Google, AWS, etc. Hence, these servers not only hold power by controlling web traffic, permissions and protocols, but also expose our information as an asset to be exploited for profit. Contrastingly, decentralization implies that users retain control of their own data; to hold permission access there can be no middle-man in the process of sending and receiving data, meaning there is peer-to-peer connectivity and links point not to the web server where the information resides, rather the content itself. For these reasons, content can be stored in multiple places at once, thus eliminating the need for a centralized server. While this may seem complicated, the benefits it reaps are unparalleled; from better security to improved privacy rights, user control over data and even greater adaptability to changes. However, the key idea is that through decentralization no monopoly can form, or so one would hope.&lt;/p&gt;
+
+&lt;p&gt;Having understood the DWeb as any decentralized technical project, the question arises if the implementation of decentralization actually follows through with the virtues of shared ownership and governance. To answer this question, we look towards the ubiquitous example of a decentralized project, Web3 – the Ethereum Solana based application. While the two terms have been interchangeably used, it is necessary to differentiate the theory, the DWeb, and how it can be manipulated in its application, starting with Web3. The DWeb is the umbrella term for all decentralized technological projects, while Web3 is an application of the decentralized web whose services are increasingly powered by blockchains, crypto-assets, artificial intelligence, machine learning, and meta-verses. As the current web, Web2, revolves around personal data being commercialized and is largely dictated by monopoly, censorship and control, Web3 is advertised as the revolutionary shift that solves these problems.&lt;/p&gt;
+
+&lt;p&gt;When understanding if Web3 can fulfill this shift we look to why Web2 was a cause for concern. As 90% of websites are controlled by a handful of companies, they hold power and influence over its design and experience, thus manipulating it for self-benefit. While Web3 claims to overcome this through the umbrella of decentralization as enabling end-users to own their own data, the fact of the matter is that the same venture capital investors who guided the development of Web2 are now funding Web3 and thus shaping the design and experience to cater to their needs; hence, most of the benefits associated with a decentralized web no longer stand. For instance, what has been understood as a positive side effect of Web3 is the emphasis it will create towards open source software. Particularly with regard to the ineffective traditional funding model, a cause of the misalignment of big corporation&amp;rsquo;s profit models and open source projects, Web3 is said to face this concern as startups will be able to fund themselves with cryptocurrencies. However, if the system designers’ goal is to distribute wealth into the hands of the already wealthy, then the advancement of software that is free and open to all will not be a foremost priority. Hence, while the theory pushes forth ideas of shared ownership, the application is subject to the people who are in control and what they stand to gain.&lt;/p&gt;
+
+&lt;p&gt;While it is now clear that applications of decentralization don’t necessarily follow through with the virtues of shared ownership and governance, decentralization is not the problem. Rather, when a term is as broadly applicable as this one, greater effort needs to be given to clearly defining it, differentiating its theory and how it can be realized to reflect its core tenets or principles. For instance, when looking at Web3, a step towards ensuring the control remains in the hands of the users, not only does the system need to be decentralized, but its funding should be as well.&lt;/p&gt;
+
+&lt;p&gt;Sources:
+- &lt;a href=&#34;https://supplain.io/news/web3-solve-web2-problems&#34;&gt;https://supplain.io/news/web3-solve-web2-problems&lt;/a&gt;
+- &lt;a href=&#34;https://metal.equinix.com/blog/web3-and-open-source/&#34;&gt;https://metal.equinix.com/blog/web3-and-open-source/&lt;/a&gt;
+- &lt;a href=&#34;https://hypha.coop/dripline/debate-over-dweb-vs-web3/&#34;&gt;https://hypha.coop/dripline/debate-over-dweb-vs-web3/&lt;/a&gt;
+- &lt;a href=&#34;https://coinmarketcap.com/alexandria/article/what-is-web-3-0&#34;&gt;https://coinmarketcap.com/alexandria/article/what-is-web-3-0&lt;/a&gt;
+- &lt;a href=&#34;http://milesberry.net/2006/11/open-source-and-web-20/&#34;&gt;http://milesberry.net/2006/11/open-source-and-web-20/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

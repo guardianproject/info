@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tor on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/tor/</link>
+    <description>Recent content in Tor on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Jul 2023 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/categories/tor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Achieve Onion Layers of Security with the Triad of Apple-tizing Apps!</title>
+      <link>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Our summer intern Alfred just graduated high-school and is preparing to attend a major university to focus on a technical degree. He has a personal interest in privacy and security, and is working with us on a variety of projects this summer as part of a broad, crash-course in all things Guardian Project!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Last week, I worked with three different apps for the iPhone that, when they work together, allow for a secure and private mobile internet experience. Since they all build on the Tor Network, they also offer an untraceable way to share and download media. My task was to test the user experience in these apps and see how they interact with each other and to make sure that they’re working in the intended ways following a test plan.&lt;/p&gt;
+
+&lt;p&gt;The first app Orbot, which acts as a secure vpn is the core of the security. It makes it very difficult to track the user when browsing. The first thing you want to do before you start browsing is to open the Orbot app and complete the setup with the vpn configuration.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image5.jpg&#34; alt=&#34;orbot ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once set up you could press start to use the default vpn or if you’d need more security you would click the ‘Choose how to Connect’ option below that and it’ll take you to a page where you can connect to an even more secure network because Orbot provides you with a network proxy. Choosing other options provides you with even more proxies making your ip or your browsing harder to detect or track.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image2.jpg&#34; alt=&#34;orbot ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that you’ve activated the Orbot vpn you can access the Onion Browser where you can freely browse as if you were using your regular browsing app like Chrome or Safari but now with even more security and privacy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;onionbrowser.png&#34; alt=&#34;onion browser app&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, I continued my testing with the Onion Share mobile app. This app allows you to freely and securely share media using a secure “.onion” download link, that can be opened by anyone with Onion Browser or Tor Browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image3.png&#34; alt=&#34;onionshare for ios&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see in the interface you can choose to send photos, files, or even whole folders to share media in. OnionShare then creates a link that can only be accessed through using any Tor-enabled web browser, such as Onion Browser or Tor Browser. You can then download the files and view them as normal.&lt;/p&gt;
+
+&lt;p&gt;This is the screen you’re greeted with when launching Tor Browser on the desktop. As you can see the interface resembles that of a normal browser. When connected to the Tor now, you’re able to open up links from OnionShare which can’t be opened anywhere else.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image1.png&#34; alt=&#34;tor browser on desktop&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is what the OnionShare screen on the desktop looks like using the Tor Browser. From here you can select to download the files and view them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;image4.png&#34; alt=&#34;tor browser on desktop&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I think it&amp;rsquo;s interesting and very helpful how the usage of the combination of these apps not only provides you a secure browsing experience but also allows you to share different forms of media while also making it incredibly difficult to trace and track.&lt;/p&gt;
+
+&lt;p&gt;You can download the Orbot+Onion Browser+OnionShare for iOS QA Test Plan that was used to guide this work here: &lt;a href=&#34;https://github.com/guardianproject/orbot-apple/blob/main/testing/OrbotOnionBrowserOnionShareiOS-TestPlan-July2023.xlsx&#34;&gt;Download Test Plan&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Improving Usability of Tor on Smartphones in Latin America</title>
+      <link>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</guid>
+      <description>&lt;p&gt;Between 2022 and 2023 Guardian Project, with support from &lt;a href=&#34;https://okthanks.com&#34;&gt;Okthanks&lt;/a&gt; and the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor Project&lt;/a&gt;, organized and participated in a total of 12 workshops in Ecuador, Mexico and Brazil with the participation of 161 people. The workshops focused both on the broad topic of “Tor for Smartphones”, while also taking deeper dives into specific topics like virtual private networks VPNs) and anonymous web browsing. Through a variety of methods, we gathered feedback from the participants in each of those sessions. We also ran detailed individual tests with volunteers to collect insights related to new features and usability improvements on specific apps.
+Our top takeaways from this process were, as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;gpchiapasworkshop.png&#34; alt=&#34;chiapas workshop photo&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Changing Misconceptions of Performance&lt;/strong&gt; A positive outcome of each workshop was the opportunity to show participants how much has the Tor network speed improved and address misconceptions related to downloading files and watching videos, one of the main reasons why users stopped using Tor in the past.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ease of Onboarding Matters&lt;/strong&gt; When working with at-risk individuals, it’s important for the first experience to be easy and straightforward.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support Flexible Use&lt;/strong&gt; People’s behaviors around using VPNs tend to vary. Many will use it in certain situations. They are not running it all of the time for everything, but only when they need it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consider Physical Security&lt;/strong&gt; One of the high-level threats we identified during the workshops we ran was the existence of physical check-points run by drug cartels in the south of Mexico. People entering or leaving an area are asked either to provide access to their phones for review or leave them at the checkpoint until they leave the area. It is not clear what they are looking for when they get access to a device, but in many cases, people who left their devices at the checkpoint do not return to claim them out of fear. For this reason, we encourage the use of app icon camouflage features on privacy and security focused apps.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Awareness and Education&lt;/strong&gt; The primary reason people in Latin America have been slow to adopt Tor tools is not that they do not work in their context, but due to awareness they exist. They have a hard time understanding what they do and how they work, and have many misconceptions about them. Continued outreach and education about which tools to use when is needed to increase adoption.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;gpusabilitycuecards.png&#34; alt=&#34;usability cue cards&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We are proud to share this 20 page report on our usability focused work on Tor in Latin America&lt;/strong&gt;
+Thank you to everyone who made this work possible, from our partners at Tor Project, our community partners, funders, designers, developers, and other supporters. Without all of you, we would not be able to do this important work to broaden the reach and effectiveness of privacy-enhancing tools in Latin America.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;GuardianProject-TorUsabilityOnSmartphonesLatinAmerica-May2023-v0.0.2.pdf&#34;&gt;Download the full report PDF here.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Orbot: Over 20 Million Served, Ready for the Next Billion</title>
+      <link>https://guardianproject.github.io/info/2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/</link>
+      <pubDate>Wed, 16 May 2018 07:42:38 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/</guid>
+      <description>&lt;p&gt;We recently published the &lt;a href=&#34;https://github.com/n8fr8/orbot/releases/tag/16.0.2-RC-1&#34;&gt;latest release of Orbot (16.0.2!)&lt;/a&gt;, and as usual, we make it available via &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&amp;amp;hl=en_US&#34;&gt;Google Play&lt;/a&gt;, as well &lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;F-Droid&lt;/a&gt;, and through &lt;a href=&#34;https://guardianproject.info/releases/&#34;&gt;direct download&lt;/a&gt; on our website. Whether we like it or not, Google keeps tracks of things like total installs and active installs (i.e. not uninstalled), and reports on that for us through their dashboard. While publishing this release, we noticed a milestone that made us a bit proud… so pardon this humblebrag.&lt;/p&gt;
+
+&lt;p&gt;Since we release Orbot roughly 8 years ago, it has been &lt;strong&gt;installed more than 20 million times&lt;/strong&gt;, by people from hundreds of different countries and walks of life. Even better, we have cross the &lt;strong&gt;2 million active user&lt;/strong&gt; mark, with growing adoption in many “mobile first” parts of the world.&lt;/p&gt;
+
+&lt;p&gt;Of course, none of this would be possible without Tor Project itself, at the core of what we do, and empowering us through the years, to pave the way on free, open, mobile circumvention. We are also especially excited about the direction things are headed with &lt;a href=&#34;https://blog.torproject.org/announcing-tors-next-executive-director-isabela-bagueros&#34;&gt;Tor’s new executive director, Isabela Bagueros.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That is because Isa understands that the vast majority of the world, including her home country of Brazil, accesses the internet using smartphones, which essentially include surveillance, censorship and privacy invasion as core features. Fortunately, she shares our optimism that with the right software and service, we can fight back against this and provide working solutions for human rights defenders, activists, journalists and everyday people. We are really excited about &lt;a href=&#34;https://blog.torproject.org/blog/upping-support-mobile-browsing&#34;&gt;Tor’s new mobile initiative&lt;/a&gt; and their new stewardship of Orfox (soon to be Tor browser for Android!). &lt;em&gt;Also, if you didn’t know Isa is the one responsible for &lt;a href=&#34;https://guardianproject.info/2012/05/02/orbot-your-twitter/&#34;&gt;Twitter adding proxy features&lt;/a&gt; into their Android app many years ago!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;With that global population in mind, we’ve focused this latest release of Orbot on size and efficiency, with the goal of making the app &lt;strong&gt;less than 10 megabytes in size&lt;/strong&gt;. This 10MB limit qualifies Orbot to be promoted to &lt;a href=&#34;https://www.android.com/versions/oreo-8-0/go-edition/&#34;&gt;Android Go devices&lt;/a&gt;, which is Google’s attempt to serve &lt;a href=&#34;https://www.blog.google/topics/next-billion-users/&#34;&gt;“the next billion”&lt;/a&gt;. You might have heard about lightweight “Go” editions of apps like YouTube, that are both smaller in size, and have features that enable data saving and offline use. With Orbot, we have started by focusing on reducing our binary size (which adds up over time with regular updates, etc), to reduce it by nearly &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt;, instead of just letting it grow bigger and bigger with each release. Over the next year, we will be working with the core Tor team to improve the core efficiency of the service running on mobile architectures, and to implement new features for data management, battery saving and more.&lt;/p&gt;
+
+&lt;p&gt;A deep, onion-infused thank you to the multitudes who have helped us get to this point. We couldn’t have done it with out all of your patches, bug reports, complaints, praise, donations and encouragement. Now, let’s keep it up until we get to the billion install mark!&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;a href=&#34;https://labs.riseup.net/code/issues/8143&#34; target=&#34;_blank&#34;&gt;HTTPS to get security updates&lt;/a&gt; improves this situation a lot, but by measuring the size of data transfers, it is still possible to &lt;a href=&#34;http://www0.cs.ucl.ac.uk/staff/G.Danezis/papers/TLSanon.pdf&#34; target=&#34;_blank&#34;&gt;track which files are being downloaded&lt;/a&gt;. A Tor Onion Service provides end-to-end encryption like the HTTPS connection. It also mixes up the traffic with lots of other traffic, so its not easy to see what traffic goes together. That makes it a lot harder for a network observer to tell when a security update is being downloaded. Additionally, using a Tor Onion Service forces the traffic over Tor, so that the Debian mirror server cannot see which server is requesting the updates. That helps prevent targeted attacks.&lt;/p&gt;
+
+&lt;p&gt;There are other benefits as well, besides just for the person running the high security server in this example, especially if all of the traffic is coming over Tor. When updates are delivered over Tor, then that means the Debian mirror operators have less to worry about because they are handling less metadata that might have privacy concerns. It means that when law enforcement requests logs from the mirror operators, the mirror operators can more easily hand over anything they have since the mirror operator knows that there is not private information in the logs. Reducing the legal risks and privacy concerns makes it easier to run mirrors, and that helps internet services work better.&lt;/p&gt;
+
+&lt;p&gt;One disadvantage of this approach as it now stands is that your server will get updates from the same mirror every time. There is only a single Tor Onion Service for the main archive. An alternate approach using the combination of Tor and &lt;a href=&#34;http://httpredir.debian.org/&#34;&gt;http://httpredir.debian.org/&lt;/a&gt; as the package source means that your server will get updates from a different mirror each time Tor changes its exit node (I believe that’s every 10 minutes or so).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How can you set up your Debian machine to get updates over Tor?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg&#34; alt=&#34;debian and tor&#34; width=&#34;300&#34; height=&#34;173&#34; class=&#34;alignright size-medium wp-image-13395&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-300x173.jpg 300w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11-768x444.jpg 768w, https://guardianproject.info/wp-content/uploads/2016/07/tor-logo-2011_11.jpg 800w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Right now, the best way to set up a Debian machine to force traffic over Tor is to use &lt;a href=&#34;https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy&#34; target=&#34;_blank&#34;&gt;transparent proxying&lt;/a&gt; via &lt;em&gt;iptables&lt;/em&gt; rules. If you have that setup, then you can add the onion addresses as Debian apt sources as if they are any other HTTP Debian mirror. Another option is to install &lt;em&gt;apt-transport-tor&lt;/em&gt; like TAILS does, then you can use &lt;a href=&#34;http://people.skolelinux.org/pere/blog/Always_download_Debian_packages_using_Tor___the_simple_recipe.html&#34; target=&#34;_blank&#34;&gt;special syntax to add the Tor Onion Services&lt;/a&gt;. And another way is to install an HTTP proxy like &lt;em&gt;privoxy&lt;/em&gt; and enable apt HTTP proxy support as &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;I described before&lt;/a&gt;. The &lt;em&gt;apt-transport-tor&lt;/em&gt; and &lt;em&gt;privoxy&lt;/em&gt; approaches both have the downside of having to trust an added piece of software, whereas the transparent proxy technique uses what is already present in the Linux kernel. I’ve been using the &lt;em&gt;privoxy&lt;/em&gt; method since that is what I got working in 2014 and it has been working reliably on multiple servers since then. Also, I need &lt;em&gt;privoxy&lt;/em&gt; installed for another application anyway.&lt;/p&gt;
+
+&lt;p&gt;Here’s how to set up the apt sources to get packages and updates via Tor Onion Services without delaying security updates. First, remove &lt;em&gt;/etc/apt/sources.list&lt;/em&gt; and &lt;em&gt;/etc/apt/sources.list.d/*.list&lt;/em&gt; to start with a clean slate. Next add &lt;em&gt;/etc/apt/sources.list.d/00.vwakviie2ienjx6t.onion.list&lt;/em&gt; to get the main Debian repositories:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://vwakviie2ienjx6t.onion/debian/ jessie main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie main
+
+# aka volatile
+deb http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-updates main
+
+deb http://vwakviie2ienjx6t.onion/debian jessie-backports main
+deb-src http://vwakviie2ienjx6t.onion/debian/ jessie-backports main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next add the new Tor Onion Service for the security update repository at &lt;em&gt;/etc/apt/sources.list.d/00.sgvtcaew4bxjd7ln.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://sgvtcaew4bxjd7ln.onion/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then last, include the normal HTTP security.debian.org archive to ensure that your server gets the latest security updates, even if the &lt;a href=&#34;https://onion.debian.org/&#34; target=&#34;_blank&#34;&gt;Onion Service mirror&lt;/a&gt; is behind or there is some other issue related to Tor. This goes in &lt;em&gt;/etc/apt/sources.list.d/99.security.debian.org.list&lt;/em&gt; to ensure that it is always the last repository that is tried, and apt loads files from /etc/apt/source.list.d/ in alphabetical order, so it’ll always try to get the security updates from the Onion Service before falling back to the HTTP source as a last resort.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://security.debian.org/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also run an unofficial mirror of the security updates on &lt;a href=&#34;http://dju2peblv7upfz3q.onion/debian&#34;&gt;http://dju2peblv7upfz3q.onion/debian&lt;/a&gt; if you want to add another backup, i.e. &lt;em&gt;/etc/apt/sources.list.d/00.dju2peblv7upfz3q.onion.list&lt;/em&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;deb http://dju2peblv7upfz3q.onion/debian-security/ jessie/updates main
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

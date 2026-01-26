@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Steps towards trusted VPNs - Guardian Project</title>
+  <meta property="og:title" content="Steps towards trusted VPNs" />
+  <meta name="twitter:title" content="Steps towards trusted VPNs" />
+  <meta name="description" content="VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool. The question is whether using a VPN does improve privacy. It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked. VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.">
+  <meta property="og:description" content="VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool. The question is whether using a VPN does improve privacy. It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked. VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.">
+  <meta name="twitter:description" content="VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool. The question is whether using a VPN does improve privacy. It is clear …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/",
+          "name": "Steps towards trusted vpns"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hans-Christoph Steiner"
+  },
+  "headline": "Steps towards trusted VPNs",
+  "description" : "VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool. The question is whether using a VPN does improve privacy. It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked. VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.",
+  "inLanguage" : "en",
+  "wordCount": 2444,
+  "datePublished" : "0001-01-01T00:00:00",
+  "dateModified" : "2023-02-28T00:00:00",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, circumvention, F-Droid, free software, MASQUE, open source, OpenVPN, privacy, security, Tor, VPN, WireGuard" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Steps towards trusted VPNs" />
+<meta property="og:description" content="VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool. The question is whether using a VPN does improve privacy. It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked. VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Steps towards trusted VPNs" />
+  <meta name="twitter:description" content="VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool. The question is whether using a VPN does improve privacy. It is clear …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Steps towards trusted VPNs</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on February 28, 2023
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Hans-Christoph Steiner
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&rsquo;s server.  That is how VPNs &ldquo;unblock&rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide <a href="https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04">adblocker</a>.</p>
+
+<p>To answer the question about whether they are a useful privacy tool, let&rsquo;s start with the history of where VPNs came from.  VPN stands for Virtual Private Network.  They were developed by large companies with multiple offices and travelling employees.  The goal was to link together all of these offices so that internal data could be freely shared between them without that data going over the internet as easily readable unencrypted plain text.  Then travelling employees could also safely access the internal data via any internet connection.  The key piece of this picture is that the users, employees in this case, already had to trust their VPN provider.  The VPN provider was the company they worked for, and the data they were handling belonged to the company.  So there was no attempt to hide user information from the VPN provider.  Indeed quite the opposite: companies linked the VPN access to each employee&rsquo;s &ldquo;single sign-on&rdquo; account.  Built into the design of VPNs is full trust of the VPN provider, with the aim of keeping the data private from the internet. This setup was also by design, since many large companies wanted to ensure their employees work laptops were still going through the corporate firewall, where the company could block certain sites (e.g. malware, porn), then also <a href="https://www.fortinet.com/resources/cyberglossary/data-exfiltration">monitor employees</a> internet activity to ensure they are not exposing files that the company does not want to be public.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/File:Virtual_Private_Network_overview.svg"><img src="Virtual_Private_Network_overview.svg.png" alt="Virtual Private Network overview" /></a></p>
+
+<p>This does not paint a good picture for a tool to protect privacy.  But there is hope!  It is possible to use a VPN to improve your privacy if you pay attention to some key details.  For VPN services to provide privacy, you have to put a lot of trust in the people who are operating the service.  The VPN provider can see <strong>all</strong> of your traffic that goes over the VPN, and they have a strong link to your user account with them.  The privacy advantage of a VPN is that the destination sites cannot see which IP address your device is coming from, they will see the VPN provider&rsquo;s IP address.  And your ISP will see you are using a VPN, but not which sites you visit.  With HTTPS, TLS, and end-to-end encryption being widespread, any encrypted content will be protected from the VPN provider also.  But the VPN provider can still see where you are connecting from, which sites and services you are using, what time of day, and even potentially correlate traffic to link activities of their users.  In other words, the VPN operator sees lots of metadata about you, so much so that they could paint a quite detailed portrait of your personal life if they ever did let their data be analyzed.</p>
+
+<h2 id="how-to-build-a-privacy-respecting-vpn-service">How to build a privacy-respecting VPN service</h2>
+
+<p>There are good signals that VPN services can send to show that they are tackling the real issues.  For example, shipping free software clients, maintaining a <a href="https://www.eff.org/deeplinks/2016/05/canary-watch-one-year-later">warrant canary</a>, posting a clear privacy policy describing the logging policy, and publishing the unredacted results of third party audits.  If the VPN operator is doing the right thing, then VPNs can provide a relatively private way to access the internet.  With a consistent track record of transparency, they can build up a trusted reputation for protecting privacy.  Unfortunately, we cannot rest there since a VPN provider can change their setup quite easily, whether willingly or under duress.  Maintaining consistent, regular, and transparent communications is therefore essential.</p>
+
+<ul>
+<li>Calyx Institute&rsquo;s <a href="https://calyxinstitute.org/legal/privacy-policy">Privacy Policy</a>
+and <a href="https://calyxinstitute.org/about/financials-and-annual-reports">Financials and Annual Reports</a></li>
+<li>Mozilla&rsquo;s <a href="https://www.mozilla.org/en-US/privacy/principles/">Data Privacy Principles</a></li>
+<li>Mullvad&rsquo;s <a href="https://mullvad.net/help/swedish-legislation/">Swedish legislation relevant to us as a VPN provider</a> and <a href="https://mullvad.net/help/no-logging-data-policy/">Privacy Policy</a></li>
+</ul>
+
+<p>On top of that, the <a href="https://vpnalyzer.org/">VPNalyzer</a> project is working to make monitoring VPN services a lot easier and possible to crowdsource.  This gives a third party perspective from some respected organizations.</p>
+
+<h3 id="know-as-little-as-possible-about-your-users">Know as little as possible about your users</h3>
+
+<p>Many VPN providers require an account and payment information.  This is usually personally identifiable information, like name, credit card information, email address, phone number, billing address, etc.  The most private services have <a href="https://f-droid.org/2022/02/28/no-user-accounts-by-design.html">no user accounts by design</a>.  Calyx, Lavabit, and Riseup VPNs do not require any account or payment at all, so they do not have that information to give out or leak.  Providers that accept payment need a way to tie payment to service, that is usually done using accounts tied to email addresses or phone numbers.  Personal details are not required to make accounts and payments work.  Mullvad uses a randomly generated account number only, there is no link to other identifiers unless you provide them.  Additionally, Mullvad is one of the few VPN vendors that accepts cash payments.  Many technically minded implementers laugh at the idea of processing envelopes of cash, but it is an effective, real world solution to minimizing personal data that software methods struggle to match.</p>
+
+<h3 id="keep-as-little-information-as-possible">Keep as little information as possible</h3>
+
+<p>The VPN servers unavoidably see lots of information about what users are doing.  The default with most servers is to keep logs of that data. The longer this data is kept, the greater the risk it will be used to identify users and their activities. It does not help that standard practice for running servers is to keep logs for a long time.  Many service providers keep those logs for years.</p>
+
+<p>VPN providers must be clear about what logs they are keeping, and how long they are stored.  Even better, they will provide information about how they do store the data that they do keep.  For example, if the servers do not use full disk encryption, then it would be straightforward to recover the deleted logs.  That is much harder on systems using full disk encryption.</p>
+
+<ul>
+<li>A <a href="https://cure53.de/audit-report_ivpn.pdf">2019 audit</a> of <a href="https://www.ivpn.net/blog/independent-security-audit-concluded">IVPN</a> showed that, at that time, the auditors confirmed that IVPN performed no &ldquo;statistical logging of customer-traffic&rdquo;, &ldquo;logging of traffic, IP addresses or DNS requests&rdquo; on the servers that the auditors were given access to.</li>
+<li>Mullvad says, &ldquo;we never store any activity logs of any kind.&rdquo; in their <a href="https://mullvad.net/en/help/no-logging-data-policy/">no logging data policy</a></li>
+</ul>
+
+<h3 id="proven-track-record-of-resisting-unjust-legal-intrusion">Proven track record of resisting unjust legal intrusion</h3>
+
+<p>There are many legal ways for authorities to get private data, this is an essential part of a functioning justice system.  But these powers are sadly abused in basically every country in the world, it is only a question of degrees.  A VPN provider needs to represent its users legal interests, and push back on legal orders when there is the possibility they are unjust.  Calyx Institute&rsquo;s Nick Merrill provides the shining example in this regard.  With the ACLU, he fought a <a href="https://en.wikipedia.org/wiki/Doe_v._Ashcroft">legal case</a> for over a decade to prevent unjust intrusion for his users.  Ladar Levison shut down his email company <a href="https://en.wikipedia.org/wiki/Lavabit">Lavabit</a> rather than allow the US Government to monitor Edward Snowden&rsquo;s email account.</p>
+
+<p>There are other ways to ensure that the legal processes are not abused.  These include warrant canaries and disclosure when data had to be turned over via legal procedures.</p>
+
+<ul>
+<li>Mozilla&rsquo;s <a href="https://www.mozilla.org/en-US/about/policy/transparency/">Transparency</a> policy</li>
+<li>ProtonVPN&rsquo;s <a href="https://protonvpn.com/blog/transparency-report/">Transparency Report &amp; Warrant Canary</a></li>
+<li>Riseup&rsquo;s <a href="https://riseup.net/canary">Canary Statement</a></li>
+</ul>
+
+<h3 id="publish-as-much-as-possible-as-free-open-source-software">Publish as much as possible as free open source software</h3>
+
+<p>F-Droid works to build <a href="https://f-droid.org/2022/05/24/buildserver-overhaul-sponsored-by-calyx-institute.html">services</a> where free software, <a href="https://f-droid.org/2022/07/22/maven-central.html">code</a> <a href="https://f-droid.org/2022/09/30/free-software-and-inspection-are-key-to-software-we-can-trust.html">inspection</a>, <a href="https://f-droid.org/2023/01/15/towards-a-reproducible-fdroid.html">reproducible builds</a> provide a method to ensure that the software we deliver is trustworthy.  VPN vendors recognize how important trust is, so the good ones work to get their apps into f-droid.org.  The F-Droid community provides the best screening for ensuring Android apps are truly free software.  On top of that, F-Droid flags apps for <a href="https://f-droid.org/docs/Anti-Features/">Anti-Features</a>, which are things that users may not like, but might accept.  Here are VPN clients that do maintain their free software clients in f-droid.org:</p>
+
+<ul>
+<li><a href="https://f-droid.org/packages/se.leap.bitmaskclient/">Bitmask</a></li>
+<li><a href="https://f-droid.org/packages/org.calyxinstitute.vpn/">Calyx VPN</a></li>
+<li><a href="https://f-droid.org/packages/nl.eduvpn.app/">eduVPN</a></li>
+<li><a href="https://f-droid.org/packages/net.ivpn.client/">IVPN</a></li>
+<li><a href="https://f-droid.org/packages/com.lavabit.pahoehoe/">Lavabit Encrypted Proxy</a></li>
+<li><a href="https://f-droid.org/packages/net.mullvad.mullvadvpn/">Mullvad VPN</a></li>
+<li><a href="https://f-droid.org/packages/org.outline.android.client/">Outline</a></li>
+<li><a href="https://f-droid.org/packages/ch.protonvpn.android/">ProtonVPN</a></li>
+<li><a href="https://f-droid.org/packages/one.librem.tunnel/">Purism Librem Tunnel</a></li>
+<li><a href="https://f-droid.org/packages/se.leap.riseupvpn/">Riseup VPN</a></li>
+<li><a href="https://f-droid.org/packages/com.tailscale.ipn/">Tailscale</a></li>
+<li><a href="https://f-droid.org/packages/com.wireguard.android/">WireGuard</a></li>
+</ul>
+
+<h3 id="use-external-auditors-to-confirm-source-code-and-operations">Use external auditors to confirm source code and operations</h3>
+
+<p>External auditors are important because they can bring fresh eyes on the source code, and good auditors are experts at finding issues in source code and server setups.  And responsible organizations will publish the full, unredacted audit report once they have fixed the issues.  Even if a VPN app is included in F-Droid, there are key aspects of the service that cannot be independently verified.  For this, we must rely on the people who run the service to do the right thing.  Audits can demonstrate that they were doing the right thing at the point of time of the audit.  Here are some examples:</p>
+
+<ul>
+<li>IVPN&rsquo;s <a href="https://cure53.de/audit-report_ivpn.pdf">2019 audit of IVPN</a></li>
+<li>Mozilla VPN had their app source code <a href="https://blog.mozilla.org/security/files/2021/08/FVP-02-report.final_.pdf">audited</a> in 2021 and fixed the issues that were found.</li>
+<li>Mullvad&rsquo;s <a href="https://cure53.de/pentest-report_mullvad_2020_v2.pdf">Pentest-Report Mullvad Apps, Clients &amp; API 05.2020</a>, <a href="https://cure53.de/pentest-report_mullvad_v2.pdf">Pentest-Report Mullvad VPN Clients 09.2018</a>, and <a href="https://mullvad.net/en/blog/2021/1/20/no-pii-or-privacy-leaks-found-cure53s-infrastructure-audit/">2020 Infrastructure Audit</a></li>
+<li>Outline&rsquo;s <a href="https://s3.amazonaws.com/outline-vpn/static_downloads/ros-report.pdf">2017 Pentratration Test Report</a> and <a href="https://s3.amazonaws.com/outline-vpn/static_downloads/cure53-report.pdf">Pentest &amp; Audit Report Jigsaw Outline 09.-12.2018</a></li>
+<li>Proton VPN open sourced their client apps and had them <a href="https://www.zdnet.com/article/protonvpn-apps-handed-to-open-source-community-in-transparency-security-push/">audited</a> in 2019.</li>
+</ul>
+
+<h3 id="publicly-verifiable-binaries-via-reproducible-builds">Publicly verifiable binaries via reproducible builds</h3>
+
+<p>Source code is the easiest place to conduct an audit of software, but it is the binary files that actually run on your device.  Auditing binaries rarely happens since it is so much more time intensive.  And yet, there are ways to change how software works without changing the source code. This can be done by injecting changes into the process that converts the source code into the executable binary.  <a href="https://reproducible-builds.org/">Reproducible Builds</a> is the indisputable method for proving that a given binary was generated by given source code.</p>
+
+<p>There are some generic VPN clients in Debian that are built reproducibly, but there are no Android or iOS VPN apps or  branded desktop client apps that meet this standard yet.  We recommend that VPN providers work with <a href="https://wiki.debian.org/ReproducibleBuilds">Debian</a>, <a href="f-droid.org/docs/Reproducible_Builds">F-Droid</a>, the <a href="https://reproducible-builds.org/">Reproducible Builds</a> group, or any other relevant <a href="https://reproducible-builds.org/who/projects/">project</a> to achieve this key step.</p>
+
+<h3 id="apple-ios">Apple iOS</h3>
+
+<p>This post focuses on Android because iOS has a number of issues that make using VPNs for privacy less effective.  For example, VPNs on iOS will <a href="https://www.bleepingcomputer.com/news/security/unpatched-ios-bug-blocks-vpns-from-encrypting-all-traffic/">leak IP addresses</a>.  Apple knows about this issue, yet still has <a href="https://www.theregister.com/2022/08/19/apple_ios_vpn/">not fixed</a> it after a couple years.  On top of that, it is not possible to have reproducible builds on iOS because the actual executable binaries are encrypted by Apple&rsquo;s proprietary Digital Restrictions Management (DRM), so only Apple could ever reproducibly build something.  If you are running Apple iOS, you are stuck trusting Apple to do the right thing, since they operate a relatively opaque, proprietary, strictly walled garden.</p>
+
+<h2 id="run-your-own-vpn">Run your own VPN</h2>
+
+<p>The VPN security model means you have to put a ton of trust in the operator.  Questions of trust get much easier when you are talking about yourself or own organization.  There are many projects that aim to make it as easy as possible to run your own VPN service.  The good ones are all free software and have been audited, both the client source code and the server side setup.</p>
+
+<ul>
+<li><a href="https://amnezia.org">Amnezia</a> is a free service to create a personal VPN on your server.</li>
+<li><a href="https://leap.se/">LEAP VPN</a> is a &ldquo;white label&rdquo; VPN setup used to build Bitmask, CalyxVPN, RiseupVPN and more.</li>
+<li><a href="https://getoutline.org/">Outline</a> &ldquo;makes it easy to create a VPN server, giving anyone access to the free and open internet.&rdquo;</li>
+<li><a href="https://we-pn.com/">WEPN</a> is a free software kit to become your own VPN provider, designed around a small hardware device.</li>
+</ul>
+
+<p>There are also generic VPN client apps based on standard protocols:</p>
+
+<ul>
+<li><a href="https://f-droid.org/packages/nl.eduvpn.app/">eduVPN</a></li>
+<li><a href="https://f-droid.org/packages/de.blinkt.openvpn/">OpenVPN for Android</a></li>
+<li><a href="https://f-droid.org/en/packages/com.github.shadowsocks/">Shadowsocks</a></li>
+<li><a href="https://f-droid.org/packages/org.strongswan.android/">strongSwan</a></li>
+<li><a href="https://f-droid.org/packages/com.WireGuard.android/">WireGuard</a></li>
+</ul>
+
+<h2 id="comparing-vpns-to-tor-and-masque">Comparing VPNs to Tor and MASQUE</h2>
+
+<p>If it is privacy that you seek, then there are other tools to review.  Tor is a longstanding community project that aims to make privacy proxies without compromise. Tor works similarly to VPN in that it is tunneling traffic to shared servers, the big difference is that your traffic is tunneled through three relays (in comparison to single hop VPNs). Each individual Tor relay cannot see the enough to put together a picture of who is doing what. At most, a relay can see what is done, but not who.  Or that someone is accessing Tor, but not their destination.  <a href="https://guardianproject.info/apps/org.torproject.android/">Orbot</a> provides a VPN mode, but this is still full Tor protection, since it is just using the device&rsquo;s VPN user experience to provide access to the Tor network.  <a href="https://www.torproject.org/">Tor Browser</a> then adds whole other layers of privacy protection that can only be implemented in the internet-enabled app.  This includes things like reducing metadata leaks in the HTTPS connection or web APIs, or isolating websites from each other within the browser, so they cannot read data about other sites the user has visited.</p>
+
+<p>A new approach that is somewhere in between a VPN and Tor are multi-hop <a href="https://guardianproject.info/2020/02/25/masque-review/">MASQUE</a> relays.  MASQUE is a new protocol that is similar to VPN and proxy protocols.  MASQUE is built on HTTP/3 aka QUIC, so it does not stick out as much as VPN or WireGuard traffic.  It also allows for multi-hop configurations.  MASQUE is only newly deployed, so there is not the two decades of experience working to minimize metadata leaks in the processes for relaying traffic.</p>
+
+<p>Apple iCloud Private Relay is a <a href="https://blog.cloudflare.com/icloud-private-relay/">two hop deployment</a> on MASQUE, which means that the Apple side can see that the user is sending traffic, and the Cloudflare side can see the destination, but not the user.  That does provide a real privacy improvement over a single hop system.  Unfortunately, Apple iCloud Private Relay fails most of the other tests laid out in this post.  Plus given the history of NSA programs like PRISM, and the willingness for US companies like Apple and Google to <a href="https://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data">take part</a>, this setup is not clear protection from NSA and Five Eyes surveillance and targeting.  It would be relatively straightforward for those kinds of agencies to correlate the data from the Apple and Cloudflare side if they have access to the metadata from both sides.</p>
+
+<p>If privacy is your primary concern, then it is worth investing time into tools like Tor.  If you have limited time and are mostly concerned about mass surveillance, then a good VPN is worth considering for some added privacy protection.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/circumvention/">circumvention</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/f-droid/">F-Droid</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/free-software/">free software</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/masque/">MASQUE</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/open-source/">open source</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/openvpn/">OpenVPN</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/privacy/">privacy</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/security/">security</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/tor/">Tor</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/vpn/">VPN</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/wireguard/">WireGuard</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2022/09/28/scanning-apps-off-the-record/" data-toggle="tooltip" data-placement="top" title="Scanning apps, off the record">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/" data-toggle="tooltip" data-placement="top" title="Arti, next-gen Tor on mobile">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

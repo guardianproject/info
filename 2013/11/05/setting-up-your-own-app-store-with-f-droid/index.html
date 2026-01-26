@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Setting up your own app store with F-Droid - Guardian Project</title>
+  <meta property="og:title" content="Setting up your own app store with F-Droid" />
+  <meta name="twitter:title" content="Setting up your own app store with F-Droid" />
+  <meta name="description" content="(_This blog post as now been cooked into an updated HOWTO_)
+The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone.">
+  <meta property="og:description" content="(_This blog post as now been cooked into an updated HOWTO_)
+The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone.">
+  <meta name="twitter:description" content="(_This blog post as now been cooked into an updated HOWTO_)
+The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/",
+          "name": "Setting up your own app store with f droid"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hans-Christoph Steiner"
+  },
+  "headline": "Setting up your own app store with F-Droid",
+  "description" : "(_This blog post as now been cooked into an updated HOWTO_)
+The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone.",
+  "inLanguage" : "en",
+  "wordCount": 1006,
+  "datePublished" : "2013-11-05T11:55:43",
+  "dateModified" : "2013-11-05T11:55:43",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, bazaar, debian, distribution, F-Droid, fdroid, free software, howto, mobile, open source, privacy, signing, ubuntu" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Setting up your own app store with F-Droid" />
+<meta property="og:description" content="(_This blog post as now been cooked into an updated HOWTO_)
+The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Setting up your own app store with F-Droid" />
+  <meta name="twitter:description" content="(_This blog post as now been cooked into an updated HOWTO_)
+The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Setting up your own app store with F-Droid</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on November 5, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Hans-Christoph Steiner
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>(_This blog post as now been cooked into an <a href="https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo" target="_blank">updated HOWTO</a>_)</p>
+
+<p>The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are <a href="http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links" target="_blank">actively tapping</a> into <a href="http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html" target="_blank">the raw data streams</a> of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.</p>
+
+<p><img src="https://guardianproject.info/wp-content/uploads/2013/11/your-own-app-store.png" alt="your-own-app-store" width="300" height="203" class="alignright size-full wp-image-11896" /> <a href="https://f-droid.org" title="F-Droid Home Page" target="_blank">F-Droid</a> is a wonderful, free app store for Android. It is modeled after the <a href="http://www.debian.org" title="Debian home page" target="_blank">Debian GNU/Linux</a> distro. It has its own package repositories (repos) and build servers for all the apps that are part of the official OS. Like Debian and Ubuntu, you can also setup your own repos for anyone to use. Any free software can be added to the official F-Droid repos, where they are built and signed by the F-Droid server. This can be annoying because it means that your apps in F-Droid are signed by a different key than your apps in the Google Play Store. If you host your own F-Droid repo, then people can use F-Droid to install your own builds signed by your own signing key.</p>
+
+<p>This is a quick HOWTO for how to setup such a repository on a Debian or Ubuntu box. It is somewhat technical, you will use the terminal, but you don’t need to be a terminal expert to follow along. First you need a the <code>fdroidserver</code> tools and a webserver. For the webserver, here we use <em>nginx</em> for the webserver since its lightweight, but any will do if you already have one running. The fdroidserver tools are not yet in the official Debian/Ubuntu/etc repos, so you have to add our PPA (Personal Package Archive) to get it (fingerprint: <tt>F50E ADDD 2234 F563</tt>):</p>
+
+<pre><code>sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install fdroidserver nginx
+</code></pre>
+
+<p>In the case of this HOWTO, we’re going to setup a “<a href="https://f-droid.org/manual/fdroid.html#Simple-Binary-Repository" target="_blank">Simple Binary Repository</a>” to host our official APKs. The repo will be set up in the recommended <code>fdroid/</code> subdirectory. This gives the <code>fdroid</code> tool its own directory to work in, and makes the repo URL clearly marked as an FDroid repo. Let’s give our normal user control over this subdirectory in the web root so that we don’t need to run the F-Droid tools as root (with <em>nginx</em>, the webroot is <code>/usr/share/nginx/www</code>, it is different for other webservers):</p>
+
+<pre><code>sudo mkdir /usr/share/nginx/www/fdroid
+sudo chown -R $USER /usr/share/nginx/www/fdroid
+cd /usr/share/nginx/www/fdroid
+fdroid init
+</code></pre>
+
+<p>Now put your APK files into <code>/usr/share/nginx/www/fdroid/repo</code> and you are ready to run the commands to build the repo (if <code>fdroid init</code> cannot find your Android SDK in <code>/opt/android-sdk</code> or <code>$ANDROID_HOME</code>, it will prompt you for the path):</p>
+
+<pre><code>cd /usr/share/nginx/www/fdroid
+cp /path/to/*.apk /usr/share/nginx/www/fdroid/repo/
+fdroid update -c
+fdroid update
+</code></pre>
+
+<p><a href="https://f-droid.org"><img src="https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png" alt="fdroidheader3" width="300" height="75" class="alignleft size-medium wp-image-11906" srcset="https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3-300x75.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/fdroidheader3.png 720w" sizes="(max-width: 300px) 100vw, 300px" /></a>Voila! Now you have a working F-Droid Repo! Add it to an F-Droid client on your Android device to test it out. That is done in the <strong>Manage Repos</strong> screen available from the menu. Your repo URL will be the hostname or IP address of your machine with <code>/fdroid/repo/</code> added to the end of it, i.e. <code>https://mysecureserver.com/fdroid/repo/</code> or <code>http://192.168.2.53/fdroid/repo/</code>. You can temporarily uncheck the official repos to easily see what F-Droid found in your new repo.</p>
+
+<h2 id="customization">Customization</h2>
+
+<p>You can also customize your repo by editing the config file. Be sure to use a programming text editor, like <code>editor /usr/share/nginx/www/fdroid/config.py</code>. In the config file, you can set the name of the repo, the description, the icon, paths to specific versions of the build tools, links to a related wiki, and whether to keep stats. Here’s the basic repo description block:</p>
+
+<pre><code>repo_url = &quot;https://guardianproject.info/fdroid/repo&quot;
+repo_name = &quot;My Local Repo&quot;
+repo_icon = &quot;GP_Logo_hires.png&quot;
+repo_description = &quot;&quot;&quot;
+This is a local test repository of Hans-Christoph Steiner &lt;&amp;#x68;a&amp;#x6e;s@&amp;#x67;ua&amp;#x72;d&amp;#x69;&amp;#x61;n&amp;#x70;ro&amp;#x6a;e&amp;#x63;&amp;#x74;.&amp;#x69;nf&amp;#x6f;&gt;.  It is a repository of Guardian Project apps.
+&quot;&quot;&quot;
+</code></pre>
+
+<p>To put your icon into your repo, choose a PNG image to put in your repo. The PNG goes in <code>/usr/share/nginx/www/fdroid/</code>, the file can be named whatever you want (by default its <code>fdroid-icon.png</code>). If you change the name from the default, be sure to update <code>repo_icon</code> and <code>archive_icon</code> in <code>/usr/share/nginx/www/fdroid/config.py</code></p>
+
+<h2 id="more-security">More Security</h2>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2010/02/apg.png"><img src="https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png" alt="apg" width="150" height="150" class="alignright size-thumbnail wp-image-1029" srcset="https://guardianproject.info/wp-content/uploads/2010/02/apg-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2010/02/apg.png 256w" sizes="(max-width: 150px) 100vw, 150px" /></a>Now that you have a working repo, its time to improve the security. Generating a repo in place is very easy, that is why this HOWTO started there, but it is not as secure as it should be if your repo is going to be your main distribution point. When generating the repo in place, make sure that <code>config.py</code> is not accessible via the web, since it contains passwords. If the file permissions are correct (e.g. <code>chmod 0600 config.py</code>), then <code>config.py</code> will not be readable by the webserver. But the signing keys will still be that public server. To improve this situation, generate the repo on a non-public machine like your laptop, keeping <code>config.py</code> and the keystore only on that machine, then use <code>fdroid server update</code> to publish the changes to your repo on a separate server. You just need to set <code>serverwebroot</code> in <code>config.py</code> properly, then <code>fdroid server update</code> will do the publishing via rsync over ssh. So both computers will have to have ssh and rsync installed and setup.</p>
+
+<p>You can also use your own existing signing key rather than the one generated by <code>fdroid init</code>, just edit <code>repo_keyalias</code>, <code>keystore</code>, <code>keystorepass</code>, <code>keypass</code>, and <code>keydname</code> in <code>/usr/share/nginx/www/fdroid/config.py</code></p>
+
+<p>Since we like Tor and its Hidden Services for providing privacy, we also want to setup an F-Droid repository that is accessible over a Tor Hidden Service aka onion address. This will be covered in a future HOWTO.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/bazaar/">bazaar</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/debian/">debian</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/distribution/">distribution</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/f-droid/">F-Droid</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/fdroid/">fdroid</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/free-software/">free software</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/howto/">howto</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/mobile/">mobile</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/open-source/">open source</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/privacy/">privacy</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/signing/">signing</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/ubuntu/">ubuntu</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/" data-toggle="tooltip" data-placement="top" title="Issues when distributing software">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/" data-toggle="tooltip" data-placement="top" title="Your own private dropbox with free software">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

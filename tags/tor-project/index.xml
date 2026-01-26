@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tor Project on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/tor-project/</link>
+    <description>Recent content in Tor Project on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 24 Jul 2013 12:32:45 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/tor-project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Orbot v12 now in beta</title>
+      <link>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</link>
+      <pubDate>Wed, 24 Jul 2013 12:32:45 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</guid>
+      <description>&lt;p&gt;After much too long, we’ve got a new build of Orbot out, and it is… a stable beta! Nothing radically new here, just many small changes to continue to improve the experience of our hundreds of thousands of active users out in the world. There will likely be one or two more “beta” releases to iron out small issues in v12, but for now, this one is good to go.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/07/mightyorbot.jpg&#34;&gt;&lt;img alt=&#34;mightyorbot&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/07/mightyorbot-225x300.jpg&#34; width=&#34;225&#34; height=&#34;300&#34; /&gt;&lt;br /&gt;
+&lt;/a&gt; &lt;em&gt;a very might orbot&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The really exciting aspect of this release is that we have ironed out some integration points with other apps, like our own Gibberbot, and third-party apps like DuckDuckGo. These apps can now tell if Orbot is installed, running, and if not, request it to start up. Once Orbot is started, it will return to the calling app, and let them know they can proceed with routing their traffic over Tor. We hope that through use of our &lt;a href=&#34;https://github.com/guardianproject/OnionKit/blob/master/libonionkit/src/info/guardianproject/onionkit/ui/OrbotHelper.java&#34;&gt;OrbotHelper utility&lt;/a&gt; (part of the &lt;a href=&#34;https://github.com/guardianproject/OnionKit&#34;&gt;OnionKit/NetCipher library&lt;/a&gt;), many more apps will choose to provide their users with better anonymity and privacy of their network traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;Since we haven’t done a release in awhile, and we have some new build &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;tools, I mostly want to make sure I have not done something terribly &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;wrong in the build process. Please confirm back if you are able to &lt;/span&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;successfully use this release. You can report issues &lt;a href=&#34;https://dev.guardianproject.info/projects/orbot/issues/new&#34;&gt;on our bug tracker&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve switched versioning styles to a simpler major.minor.bugfix “semantic” model, so this is now Orbot 12.0.1.&lt;/p&gt;
+
+&lt;p&gt;Signed 12.0.1 beta release build is here:&lt;br /&gt;
+&lt;a href=&#34;https://rink.hockeyapp.net/apps/92ace552aa5344d1a802decb71525897/&#34;&gt;https://rink.hockeyapp.net/apps/92ace552aa5344d1a802decb71525897/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Direct APK is here: &lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk&#34;&gt;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk&lt;/a&gt; (&lt;a href=&#34;https://guardianproject.info/releases/Orbot-release-12.0.1-beta-1.apk.asc&#34;&gt;gpg sig&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;We also have automated “nightly” debug builds from the development branch:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/builds/Orbot/&#34;&gt;https://guardianproject.info/builds/Orbot/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Updates in 12.0.1:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;updated to Tor 0.2.4.15-RC&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;flashy screen bug fixed&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;now shows traffic stats in notification area&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;better handling of preference settings changes&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;added superuser permission for Cyanogen&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;better support for “start” Intent, integration with other apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tagged source is here:&lt;br /&gt;
+&lt;a href=&#34;https://gitweb.torproject.org/n8fr8/orbot.git/log/refs/tags/12.0.1&#34;&gt;https://gitweb.torproject.org/n8fr8/orbot.git/log/refs/tags/12.0.1&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Psst on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/psst/</link>
+    <description>Recent content in Psst on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 28 Dec 2013 19:42:56 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/psst/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Integrating Crypto Identities with Android</title>
+      <link>https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/</link>
+      <pubDate>Sat, 28 Dec 2013 19:42:56 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Alberti_cipher_disk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;50&#34; height=&#34;50&#34; class=&#34;alignleft size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 50px) 100vw, 50px&#34; /&gt;&lt;/a&gt;ver the past couple of years, Android has included a central database for managing information about people, it is known as the &lt;a href=&#34;https://developer.android.com/reference/android/provider/ContactsContract.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ContactsContract&lt;/code&gt;&lt;/a&gt; (that’s a mouthful). Android then provides the &lt;em&gt;People&lt;/em&gt; app and reusable interface chunks to choose contacts that work with all the information in the &lt;code&gt;ContactsContract&lt;/code&gt; database. Any time that you are adding an account in the &lt;em&gt;Settings&lt;/em&gt; app, you are setting up this integration. You can see it with Google services, &lt;em&gt;Skype&lt;/em&gt;, &lt;em&gt;Facebook&lt;/em&gt;, and many more. This system has a lot of advantages, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a unified user experience for finding and managing data about people&lt;/li&gt;
+&lt;li&gt;apps can launch common interface dialogs and screens for working with that database without having to write custom versions (launching &lt;code&gt;Activity&lt;/code&gt;s via &lt;code&gt;Intent&lt;/code&gt;s&lt;/li&gt;
+&lt;li&gt;streamlined methods for building custom UIs based on the contacts database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With our work porting &lt;a href=&#34;https://www.gnupg.org/&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; to Android, we want &lt;a href=&#34;https://guardianproject.info/code/gnupg/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt;&lt;/a&gt; for Android to be fully integrated into the Android experience. &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; registers itself as a handler for all OpenPGP file and data types in Android, so users can work with these files using standard Android methods like Share/Send buttons. Or users can start by finding the person to encrypt to in the &lt;em&gt;People&lt;/em&gt; app, then choosing the file. These flows make it intuitive to Android users, and means we have to write less code because it taps into existing Android systems. With the past release, v0.2, we laid the foundations for having the GnuPG keyring integrated into this contacts database. The next release, v0.3 will improve contacts integration a lot.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12225&#34; style=&#34;width: 560px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/gpg-contacts-integration.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12225&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/gpg-contacts-integration-1024x640.png&#34; alt=&#34;All of these contacts come from the GnuPG keyring being synced to the ContactsContract.  Nathan&#39;s contact is made up of combined info from Gnu Privacy Guard and Google. To encrypt a file to the author, select Encrypt File to... on his contact page.&#34; width=&#34;550&#34; height=&#34;343&#34; class=&#34;size-large wp-image-12225&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/gpg-contacts-integration-1024x640.png 1024w, https://guardianproject.info/wp-content/uploads/2013/12/gpg-contacts-integration-300x187.png 300w&#34; sizes=&#34;(max-width: 550px) 100vw, 550px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12225&#34; class=&#34;wp-caption-text&#34;&gt;
+    All of these contacts come from the GnuPG keyring being synced to the &lt;code&gt;ContactsContract&lt;/code&gt;. Nathan’s contact is made up of combined info from &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; and Google. To encrypt a file to the author, select &lt;strong&gt;Encrypt file to…&lt;/strong&gt; on his contact page.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One of the concerns that has been voiced about integrating with the &lt;code&gt;ContactsContract&lt;/code&gt; database is that all the data put there will be then uploaded to the other accounts, like the Google account of the phone, or other accounts. As far as we can tell, there is no automatic syncing of data between accounts in the &lt;code&gt;ContactsContract&lt;/code&gt;, instead it is a system of individual, local databases. We have not confirmed this with a code audit whether there is any data leakage from &lt;code&gt;ContactsContract&lt;/code&gt;, and would love to hear more information on that. There is a layer of matching rules for locally merging those local databases into a single, unified view of that data. A good example of this unified data view in action is the built-in &lt;em&gt;People&lt;/em&gt; app. It will show data from all of the local databases, and it will link profiles together in a single view based on programmatic rules that look at email addresses, names, etc. In any case, &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; only syncs one way. It treats the GnuPG keyring as canonical and clones the GnuPG keyring contacts to the &lt;code&gt;ContactsContract&lt;/code&gt; whenever a sync is run. The sync process never reads from the &lt;code&gt;ContactsContract&lt;/code&gt;, and currently no data is ever imported from it. So at the very least, the ContactsContract should not serve as a point to inject data into the GnuPG keyring.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12211&#34; style=&#34;width: 330px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ContactsContract.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12211&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ContactsContract.png&#34; alt=&#34;The ContactsContract builds up the complete view of all contacts based on RawContacts provided by each account type, which are in turn built up of standard data types like name, email, phone number, etc.&#34; width=&#34;320&#34; height=&#34;189&#34; class=&#34;size-full wp-image-12211&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ContactsContract.png 320w, https://guardianproject.info/wp-content/uploads/2013/12/ContactsContract-300x177.png 300w&#34; sizes=&#34;(max-width: 320px) 100vw, 320px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12211&#34; class=&#34;wp-caption-text&#34;&gt;
+    The &lt;code&gt;ContactsContract&lt;/code&gt; builds up the complete view of all contacts based on &lt;code&gt;RawContacts&lt;/code&gt; provided by each account type, which are in turn built up of standard data types like name, email, phone number, etc.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One unexplored idea is for apps that need to use crypto to use only the standard Android contacts API to fetch crypto identity information like public keys and fingerprints. For example, PGP email app &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.fsck.k9&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;K-9&lt;/em&gt;&lt;/a&gt; could look up OpenPGP info at the same time it is looking in the contacts database for email addresses. It probably even makes sense for &lt;em&gt;K-9&lt;/em&gt; to offload even more to an OpenPGP provider, and have &lt;em&gt;K-9&lt;/em&gt; just query the PGP provider whether there is a signing key available, whether the receiver has a PGP key, etc.&lt;/p&gt;
+
+&lt;p&gt;It is also tempting to think about using a similar technique for storing other types of keys like OTR keys for secure chat. The hard part is that OTR has no method built-in to the key for verifying whether that key is trusted. OpenPGP has key signing and the Web-of-Trust, with all of its issues, but the OpenPGP security model is designed around untrusted methods of moving public key data around. Using the contacts database for moving around public key material for later verification will work equally well for OTR, OpenPGP, etc.&lt;/p&gt;
+
+&lt;p&gt;On a similar note, we are also working with Dominik Schürmann and the &lt;em&gt;K-9&lt;/em&gt; devs to create &lt;a href=&#34;https://dev.guardianproject.info/projects/gpgandroid/wiki/API_Sketch&#34; target=&#34;_blank&#34;&gt;a common Android API for a generic OpenPGP provider&lt;/a&gt;. This is similar to the contacts system in recent versions of Android in that there is a single, central contacts system that any app can tap into for managing data related to people.&lt;/p&gt;
+
+&lt;p&gt;We have decided to go with Dominik Schürmann’s approach of using an AIDL API to an Android Service. AIDL does have some downsides mostly around it being overcomplicated. But AIDL is the main Android method for inter-process communication with &lt;code&gt;Service&lt;/code&gt;s, so we are stuck with it, more or less. The beautiful thing is that this arrangement will make it possible for apps to fully offload the crypto handling to the &lt;code&gt;Service&lt;/code&gt;, including all the required GUI bits like passphrase prompting, progress dialog overlays, key selection, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://csunplugged.org/public-key-encryption&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public-key-encryption-cartoon-300x292.jpg&#34; alt=&#34;contacts with keys&#34; width=&#34;300&#34; height=&#34;292&#34; class=&#34;alignright size-medium wp-image-12212&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public-key-encryption-cartoon-300x292.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/12/public-key-encryption-cartoon.jpg 414w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;For example of how this idea would work, we can look at &lt;em&gt;K-9&lt;/em&gt; email again. If an incoming email includes a public key or fingerprint, either of these can be sent to the OpenPGP provider for importing. An &lt;code&gt;OPENPGP4FPR:&lt;/code&gt; URI will trigger downloading the public key from a keyserver. A public key contained in an attached file will be received by the OpenPGP provider via the Android file associations, which will then prompts the user to import it. When &lt;em&gt;K-9&lt;/em&gt; goes to send a OpenPGP-encrypted email to that new key, it checks the ContactsContract to see whether the recipient has a OpenPGP key. If so, it sends the email to the OpenPGP provider to be encrypted. The OpenPGP provider can then look up which key to use in it’s local keyring by using the recipient’s email address. If there are multiple keys for that email address, it prompts the user to choose. It could also base it’s choice on the OpenPGP trust level for that key.&lt;/p&gt;
+
+&lt;p&gt;These are currently all ideas for how GnuPG can be integrated into Android. Some of these are implemented and ready for you to try out on your device. The common OpenPGP provider idea is still very much a work in progress.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keys, signatures, certificates, verifications, etc. What are all these for?</title>
+      <link>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</link>
+      <pubDate>Thu, 12 Dec 2013 13:20:09 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key-150x150.jpg&#34; alt=&#34;portable shared security token&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12129&#34; /&gt;&lt;/a&gt;For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally &lt;a href=&#34;https://dev.guardianproject.info/projects/psst/wiki/PSST&#34; title=&#34;PSST Wiki&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Tokens aka PSST&lt;/a&gt;. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are. One thing we learned a lot about is how to portray and discuss tools for private or anonymous communications to people who just want to communicate and are not interested in technical discussion. This is becoming a central issue among a lot of people working to make usable privacy tools.&lt;/p&gt;
+
+&lt;p&gt;The widely established way of talking about privacy tools comes from the lingo of the underlying methods: cryptography, networking, etc. We talk about public and private keys, signing, validation, verification, key exchange, certificates, and fingerprints. In order for cryptography to work, keys need to be marked whether they are verified or not. &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm-300x190.png&#34; alt=&#34;hide the guts of what is happening&#34; width=&#34;300&#34; height=&#34;190&#34; class=&#34;alignleft size-medium wp-image-12135&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm-300x190.png 300w, https://guardianproject.info/wp-content/uploads/2013/12/public_key_cryptography_sm.png 500w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Few computers users understand what these terms are referring to, even highly technical people who regularly use encryption do not know the meaning of all these things, nor should they. This is a low level detail that is not important to how the vast majority of users understand privacy in computers. Keys and verification are far too abstract to be generally understandable, and what other kind of key has a fingerprint? Even more so, few people can tell you the difference between validation and verification when it comes to keys, signatures and certificates. The software should not be exposing all this, but instead should be minimizing the complexity as much as possible, and providing as simple a user experience as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Defining the Concepts that Define the Experience&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A key part of defining that simple user experience is defining the core concepts that the software is organized around. In our discussions, we mostly talked about the ideas of identity and trust, while some discussion of verifying identity seemed unavoidable. Talking about identity and trust is a lot more relevant in day-to-day life, i.e. knowing that the message came from the person you think it did, and trusting that it was private. It is most direct to talk about establishing a trusted connection to another person, but that’s not something that crypto can ever promise because there is still the analog gap between the person and the device. These core ideas must represent what is technically possible, so we searched for widely understood concepts that map well to the technical limitations: “a private conversation”, “a trusted app”, “verifiable video”.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_12128&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ecc.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12128&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ecc-150x150.jpg&#34; alt=&#34;create metaphors based on what users know&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-thumbnail wp-image-12128&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/ecc-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2013/12/ecc-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/12/ecc.jpg 350w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p id=&#34;caption-attachment-12128&#34; class=&#34;wp-caption-text&#34;&gt;
+    create metaphors based on what users know
+  &lt;/p&gt;
+&lt;/div&gt;Diving in deeper, we concluded that the balance point between technical accuracy and widely understandable lingo was to talk about trusting the device, not the person. The technology can provide trusted connections between devices, and it is pretty close to how people experience digital communications. There is the laptop, the mobile phone, the net cafe, the friend’s computer, computer at work, etc. etc. When I look at my phone to see a message from a friend, it is easy to picture that friend typing that message out on that device, though it does take some conscious effort. The hard part here is that as we communicate more and more with our devices, there is less and less separation in our minds about whether we were talking in person, via voice, or by sending text. This is a point to focus on when thinking about designing the experience of private, secure communications software.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Let the Software Handle It!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There is a forming consensus in the world of usable security to focus on figuring out how to automate as much as possible then figure out how best tailor the experience of the essential parts that cannot be automated. The hard part will remain explaining the limitations of a given privacy tool.&lt;/p&gt;
+
+&lt;p&gt;At Guardian Project, we work a lot on incremental progress, so many of our projects are focused on specific, narrow improvements. With &lt;a href=&#34;https://guardianproject.info/apps/chatsecure/&#34; target=&#34;_blank&#34;&gt;ChatSecure&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/apps/keysync/&#34; target=&#34;_blank&#34;&gt;Keysync&lt;/a&gt; , we were able to automate one small part of the whole process, cryptography identity portability, which provides the foundation to provide private communications and verifiable media. Allowing users to sync their trust profiles between desktop and mobile makes it much more likely that users will have fully verified OTR conversations when chatting on their devices and laptops.&lt;/p&gt;
+
+&lt;p&gt;With &lt;a href=&#34;https://guardianproject.info/code/gnupg/&#34; target=&#34;_blank&#34;&gt;Gnu Privacy Guard for Android (GPGA)&lt;/a&gt;, we have made it easy to import keys via QRCode as well as &lt;code&gt;openpgp4fpr:&lt;/code&gt; URLs (a standard defined in conjuction with the &lt;a href=&#34;http://web.monkeysphere.info/&#34; title=&#34;Monkeysphere Home Page&#34; target=&#34;_blank&#34;&gt;Monkeysphere&lt;/a&gt; project. We are also working on a common method of using NFC for OpenPGP key signing in conjuction with &lt;a href=&#34;http://sufficientlysecure.org/index.php/openpgp-keychain/&#34; title=&#34;OpenPGP Keychain home page&#34; target=&#34;_blank&#34;&gt;OpenPGP Keychain&lt;/a&gt;. Even little things like optimizing support for standard file extensions can go a long way to make things easier, so GPGA automatically sets itself up to receive files with the &lt;a href=&#34;https://tools.ietf.org/html/rfc2015&#34; target=&#34;_blank&#34;&gt;standard OpenPGP MIME types&lt;/a&gt; (&lt;code&gt;application/pgp-keys&lt;/code&gt;, &lt;code&gt;application/pgp-encrypted&lt;/code&gt;, &lt;code&gt;application/pgp-signature&lt;/code&gt;) as well as the corresponding file extensions (&lt;code&gt;.pkr&lt;/code&gt;, &lt;code&gt;.skr&lt;/code&gt;, &lt;code&gt;.key&lt;/code&gt;, &lt;code&gt;.sig&lt;/code&gt;, &lt;code&gt;.asc&lt;/code&gt;, etc.). That makes it so a user can just click on one of these files, and GPGA will walk them through the whole process, doing as much as possible automatically.&lt;/p&gt;
+
+&lt;p&gt;Another interesting idea that is a big step in this direction is “secure introductions”. The idea is to automatically share trusted identity information when securely communicating with multiple people. For example, whenever you send a signed, encrypted email to multiple people, the email program should include the key fingerprints of each recipient in that email. Then the email program of the people receiving that email should automatically mark those keys as verified if the sender’s key is trusted and the signature is valid. There is not a meaningful amount of detail leaked in this interaction, since the existence of all the people’s keys and email address is already present in a secure email. The tricky part is figuring out how to make it harder for someone to use this maliciously to spread false identity information while keeping things as automatic as possible. This is very much a long term research idea: there are no widespread implementations of it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting keys into your keyring with Gnu Privacy Guard for Android</title>
+      <link>https://guardianproject.github.io/info/2013/12/06/getting-keys-into-your-keyring-with-gnu-privacy-guard-for-android/</link>
+      <pubDate>Fri, 06 Dec 2013 15:11:53 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/12/06/getting-keys-into-your-keyring-with-gnu-privacy-guard-for-android/</guid>
+      <description>&lt;p&gt;Now that you can have a full &lt;a href=&#34;https://www.gnupg.org&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;GnuPG&lt;/em&gt;&lt;/a&gt; on your Android device with &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt;&lt;/a&gt; for Android, the next step is getting keys you need onto your device and included in &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;. We have tried to make it as easy as possible without compromising privacy, and have implemented a few approaches, while working on others. There are a few ways to get this done right now.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt; registered itself with Android as a handler of all the standard &lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc3156.txt&#34; title=&#34;RFC3156: MIME Security with OpenPGP&#34; target=&#34;_blank&#34;&gt;OpenPGP MIME types&lt;/a&gt; (&lt;code&gt;application/pgp-keys&lt;/code&gt;, &lt;code&gt;application/pgp-encrypted&lt;/code&gt;, &lt;code&gt;application/pgp-signature&lt;/code&gt;), as well as all of the OpenPGP and GnuPG file extensions (&lt;code&gt;.pkr&lt;/code&gt; &lt;code&gt;.skr&lt;/code&gt; &lt;code&gt;.key&lt;/code&gt; &lt;code&gt;.sig&lt;/code&gt; &lt;code&gt;.asc&lt;/code&gt; &lt;code&gt;.gpg&lt;/code&gt; &lt;code&gt;.bin&lt;/code&gt;). This means that users just have to share a file to &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; using any of the standard Android methods, these files can be launched from an email attachment, opened from the SD card using a file browser, clicked in the Downloads view, etc.&lt;/p&gt;
+
+&lt;p&gt;So if you want to quickly send your whole public keyring from your laptop to your mobile device, you can just grab the database file directly from &lt;em&gt;GnuPG&lt;/em&gt; and copy it to your SD card. Here is how:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;plug your device into your laptop via USB so you can copy files to the SD card&lt;/li&gt;
+&lt;li&gt;find your &lt;em&gt;GnuPG&lt;/em&gt; home folder (on GNU/Linux and Mac OS X, it will be in &lt;code&gt;~/.gnupg/pubring.gpg&lt;/code&gt;, on Windows it is &lt;code&gt;%APPDATA%\gnupg&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;In your &lt;em&gt;GnuPG&lt;/em&gt; home folder, copy &lt;strong&gt;pubring.gpg&lt;/strong&gt; to your device’s SD card&lt;/li&gt;
+&lt;li&gt;unmount and unplug your device&lt;/li&gt;
+&lt;li&gt;on your device, open your favorite file manager app (&lt;a href=&#34;https://play.google.com/store/apps/details?id=org.openintents.filemanager&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;OI File Manager&lt;/em&gt;&lt;/a&gt;, &lt;em&gt;Astro&lt;/em&gt;, etc)&lt;/li&gt;
+&lt;li&gt;go to the SD card&lt;/li&gt;
+&lt;li&gt;long-click on &lt;strong&gt;pubring.gpg&lt;/strong&gt; and share it to &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;click OK on the Import Keys dialog&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After that, &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; will do the rest. Give is some time to sync to the Contacts database, then you’ll see all of your keys from your desktop are now in your People app and are listed in &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; itself. You can now encrypt files to any of those keys, or verify files signed by any of those keys. Here are a couple screenshots to illustrate key points in the process, using &lt;em&gt;OI File Manager&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p align=&#34;center&#34;&gt;
+  &lt;div id=&#34;attachment_12155&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+    &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-0.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12155&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-0-199x300.png&#34; alt=&#34;send your public keyring file&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12155&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-0-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-0.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+    
+    &lt;p id=&#34;caption-attachment-12155&#34; class=&#34;wp-caption-text&#34;&gt;
+      1. send your public keyring file
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12156&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-1.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12156&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-1-199x300.png&#34; alt=&#34;choose Gnu Privacy Guard to send the file to&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12156&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-1-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-1.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12156&#34; class=&#34;wp-caption-text&#34;&gt;
+    2. choose &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; to send the file to
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_12157&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-2.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12157&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-2-199x300.png&#34; alt=&#34;click OK to import the key file&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12157&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-2-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-2.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12157&#34; class=&#34;wp-caption-text&#34;&gt;
+    3. click OK to import the key file
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;attachment_12158&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption alignright&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-3.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12158&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-3-199x300.png&#34; alt=&#34;now you can see the imported keys in Gnu Privacy Guard&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12158&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-3-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-import-key-file-3.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12158&#34; class=&#34;wp-caption-text&#34;&gt;
+    4. now you can see the imported keys in &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;There are many ways to get the keyring files like &lt;strong&gt;pubring.gpg&lt;/strong&gt; to your device: you can also share the keyring files via email, chat, or even services like &lt;em&gt;Dropbox&lt;/em&gt; or &lt;em&gt;Google Drive&lt;/em&gt;. Then once the files are on your device, you can import them using the same procedure as above. But keep in mind that you are sending your whole collection of secure contacts to that service, which will have full access to read it. If you have any worries about leaking your keyring to anyone, then a good method is to copy it directly to the SD card.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_12192&#34; style=&#34;width: 209px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-search-keyserver.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12192&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-search-keyserver-199x300.png&#34; alt=&#34;search the keyserver for the author&#39;s key (I lost the key from 1998, so don&#39;t use that one...)&#34; width=&#34;199&#34; height=&#34;300&#34; class=&#34;size-medium wp-image-12192&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/GPGA-search-keyserver-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/12/GPGA-search-keyserver.png 319w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-12192&#34; class=&#34;wp-caption-text&#34;&gt;
+    search the keyserver for the author’s key (the key from 1998 is lost, don’t use that one…)
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You can also search and download keys via the public pool of OpenPGP keyservers. If you already know someone’s keyid or fingerprint, you can search using that. Otherwise, you can search based on name or email address. But be careful! Downloading a key from a keyserver does not give you a key you can trust. Anyone can upload a key to the keyservers, and they can make that key have any name or email address. Downloading from the keyservers is a convenient way to download a key, but you must verify the key’s fingerprint with the person you are trying to find.&lt;/p&gt;
+
+&lt;p&gt;&lt;div id=&#34;attachment_12184&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12184&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr-150x150.png&#34; alt=&#34;scan this QR Code to get the author&#39;s OpenPGP key&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-thumbnail wp-image-12184&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/12/0x9F0FE587374BBE81-qr.png 330w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p id=&#34;caption-attachment-12184&#34; class=&#34;wp-caption-text&#34;&gt;
+    scan this QR Code to get the author’s OpenPGP key
+  &lt;/p&gt;
+&lt;/div&gt;In conjunction with the&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://web.monkeysphere.info/&#34; target=&#34;_blank&#34;&gt;Monkeysphere&lt;/a&gt; project, we developed a standard URI scheme for sending OpenPGP key fingerprints. For example, you can find my key ID here: &lt;a href=&#34;openpgp4fpr:9F0FE587374BBE81&#34;&gt;&lt;code&gt;openpgp4fpr:9F0FE587374BBE81&lt;/code&gt;&lt;/a&gt;. This provides a clickable way to get an OpenPGP key. On an Android device with &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; installed, you can click on this link to download my key from the keyservers. This URI scheme also works well in QR Codes. Scan this QR Code on your device with an app like &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.zxing.client.android&#34; title=&#34;Barcode Scanner in the Google Play Store&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Barcode Scanner&lt;/em&gt;&lt;/a&gt;, and click &lt;strong&gt;Open Browser&lt;/strong&gt;, and Gnu Privacy Guard will download my key to your device.&lt;/p&gt;
+
+&lt;p&gt;There are other ideas out there that we also want to support. For example, &lt;a href=&#34;http://sufficientlysecure.org/index.php/openpgp-keychain/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;OpenPGP Keychain&lt;/em&gt;&lt;/a&gt; includes a way to transmit the whole public key via &lt;a href=&#34;https://en.wikipedia.org/wiki/Near_field_communication&#34; title=&#34;Near Field Communication&#34; target=&#34;_blank&#34;&gt;NFC&lt;/a&gt;. This allows people can swap keys directly from phone to phone without having internet access at all. But NFC is quite slow to transmit data so the devices need to be held together for a while until the whole key is received. NFC could be used to rapidly transmit an &lt;code&gt;openpgp4fpr:&lt;/code&gt; URI, and then the whole public key would be fetched from a keyserver, but that then requires internet access and also leaks a bit of metadata to the internet. A better technique would be to transmit the entire public key over Bluetooth, using NFC to setup the Bluetooth session. We’re also looking at ways to do this via WiFi and &lt;a href=&#34;https://en.wikipedia.org/wiki/Bonjour_(software)&#34; target=&#34;_blank&#34;&gt;Bonjour (mDNS)&lt;/a&gt; local service advertisements.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keeping data private means it must be truly deletable!</title>
+      <link>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</link>
+      <pubDate>Fri, 23 Aug 2013 17:36:49 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive-150x150.jpg&#34; alt=&#34;deleting data&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-11598&#34; /&gt;&lt;/a&gt;There are lots of apps these days that promise to keep your data secure, and even some that promise to wipe away private information mere seconds or minutes after it has been received. It is one thing to keep data out of view from people you don’t want seeing it, it is also important to be able to truly delete information. Unfortunately computers make it very difficult to make data truly disappear. When we tell a computer to delete a file, it only deletes the reference to the data. The data itself remains on the disk unchanged. For any UNIX geek out there, you can easily see an example of that by greping a partition (e.g. &lt;code&gt;sudo grep password /dev/sda3&lt;/code&gt;. To solve this problem, there are “secure delete” options. Secure deletion removes the reference like regular deletion, then wipes the data on the disk by overwriting it with random data. That’s much better, but not always good enough. It turns out that its possible to remove the hard disk and read magnetic residue and recover even wiped data.&lt;/p&gt;
+
+&lt;p&gt;Mobile devices only make that problem worse because they almost always rely on flash memory for disk storage. Flash memory has wear-leveling programming built into it, so it is not possible to guarantee that a file will be wiped without overwriting the whole flash disk, then deleting it all and overwriting the whole thing again. Not only is it not practical to delete the whole disk just to remove one file, it also takes a long time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack-300x199.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignleft size-medium wp-image-11600&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack-300x199.jpg 300w, https://guardianproject.info/wp-content/uploads/2013/08/coldbootattack.jpg 1024w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;So what can we do about this? Use encryption! [&lt;a href=&#34;http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.225.6872&#34; title=&#34;Secure Data Deletion for USB Flash Memory (2011)&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt;] If the data is encrypted before its written to either a classic hard drive or flash memory disk, then the actual data is never on the disk itself. If the data is encrypted with a good passphrase, then just “forgetting” the key will make it basically impossible to recover the data. Additionally, encrypted data looks like random data, so it is easy to hide the deleted, encrypted data from the recovery techniques by adding random garbage to the disk. It turns out that with the right architecture, a key can be forgotten quite quickly, much quicker than even the most basic secure deletion.&lt;/p&gt;
+
+&lt;p&gt;This logic is built into our new passphrase library &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34; target=&#34;_blank&#34;&gt;Cacheword&lt;/a&gt;. Cacheword is a library for securely working with and caching passphrases. It plugs right into &lt;a href=&#34;https://guardianproject.info/code/sqlcipher&#34; target=&#34;_blank&#34;&gt;SQLCipher for Android&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/code/iocipher&#34; target=&#34;_blank&#34;&gt;IOCipher&lt;/a&gt;. SQLCipher and IOCipher are both ways for easily storing data using strong AES-256 encryption. Cacheword then handles getting the passphrase from the user. Instead of feeding that passphrase directly to SQLCipher or IOCipher, it creates an encrypted file for storing a strong AES-256 key and that is what is used to lock SQLCipher and IOCipher. The user’s passphrase then just unlocks that encrypted key file.&lt;/p&gt;
+
+&lt;p&gt;The means you can get rapid deletion of data stores of any size by just deleting the key file. The user never sees the actual key so they cannot divulge it. Since the user’s passphrase is not the key for the data but instead the key to the Cacheword key file, the secure deletion can first focus on that key file. The key file is small, so that can happen very quickly. Then even if the data files are recovered, the user does not has the passphrase to the data, its only locked away in the now deleted key file. The key was stored encrypted, so a standard deletion will provide decent protection: it will look like random data on the disk.&lt;/p&gt;
+
+&lt;p&gt;To really ensure the key and the data is gone for good, an app can implement a full wiping procedure. Normal wiping procedures can follow as a background task, making it harder and harder to recover the data, no matter who the adversary is. The full wiping procedure would go something like this (with a rough timeframe for each step):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Cacheword wipes the passphrase from memory (nanoseconds to milliseconds)&lt;/li&gt;
+&lt;li&gt;the Cacheword key file is deleted (milliseconds)&lt;/li&gt;
+&lt;li&gt;write random garbage to disk patterned after the key file to obscure the deleted key file (milliseconds to minutes)&lt;/li&gt;
+&lt;li&gt;delete the SQLCipher/IOCipher data files (seconds to minutes)&lt;/li&gt;
+&lt;li&gt;fill entire memory (RAM) with random garbage (minutes to hours)&lt;/li&gt;
+&lt;li&gt;fill entire disk with random garbage (hours)&lt;/li&gt;
+&lt;li&gt;power off device&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s the overview of the process. But of course, there are always annoying technical details, and I’ll continue on about some of them, for those who like such things.&lt;/p&gt;
+
+&lt;p&gt;To start with, the user’s passphrase will most likely be stored in memory by code outside of Cacheword, SQLCipher, and IOCipher. For example, the Android text entry widget will have the passphrase pass thru it, and inevitably will store that data in memory. It is up to the garbage collection to remove that from memory, and the garbage collection might not zero out the memory before deallocating it. We’re still looking into ideas for how to trigger that, and would love to hear suggestions.&lt;/p&gt;
+
+&lt;p&gt;To truly wipe the data from the disk, there would need to be multiple passes where the entire disk is filled up then the entire disk is deleted. That is rarely practical. So hiding the existence of the encrypted data stores is difficult to do in practice. The encrypted data will remain encrypted with AES-256 using a random, full length key, so it would be basically impossible to crack using publicly known technology and techniques.&lt;/p&gt;
+
+&lt;p&gt;The best bet for preventing the most advanced adversary from getting the deleted data would involve a few cycles of rebooting, filling up the memory and disk with random garbage after doing the procedure outlined above. A more rapid version of that would be to delay filling the disk until after a reboot. That would ensure that the key to the data is thoroughly wiped as quickly as possible before starting in on the much less important and long lasting task of wiping the entire disk to hide the deleted data files.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GnuPG for Android progress: we have an command line app!</title>
+      <link>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</link>
+      <pubDate>Thu, 09 May 2013 10:48:52 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png&#34; alt=&#34;GnuPG for Android&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-3680&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/05/icon-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/05/icon.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+This alpha release of our command-line developer tool brings GnuPG to Android for the first time!&lt;/p&gt;
+
+&lt;p&gt;GNU Privacy Guard Command-Line (gpgcli) gives you command line access to the entire &lt;a href=&#34;http://gnupg.org&#34; title=&#34;Gnu Privacy Guard home page&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; suite of encryption software. GPG is GNU’s tool for end-to-end secure communication and encrypted data storage. This trusted protocol is the free software alternative to PGP. GnuPG 2.1 is the new modularized version of GnuPG that now supports OpenPGP and S/MIME.&lt;/p&gt;
+
+&lt;p&gt;You can get it from the Play Store:&lt;br /&gt;
+&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Or download the &lt;code&gt;.apk&lt;/code&gt; from our nightly builds:&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/builds/GnuPrivacyGuard/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/builds/GnuPrivacyGuard/&#34;&gt;https://guardianproject.info/builds/GnuPrivacyGuard/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;Before using gpgcli, be sure to launch the app and let it finish its installation process. Once it has completed, then you’re ready to use it. The easiest way to get started with gpgcli is to install &lt;a href=&#34;https://play.google.com/store/apps/details?id=jackpal.androidterm&#34; title=&#34;download Android Terminal emulator from the Google Play Store&#34;  target=&#34;_blank&#34;&gt;Android Terminal Emulator&lt;/a&gt;. gpgcli will automatically configure Android Terminal Emulator as long as you have the _Allow PATH extensions&amp;lt;/em settings enabled.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;TRUSTED SECURITY: This technology already seamlessly integrates into Linux on Debian, Ubuntu, Fedora, Mac OSX (GPGtools), Windows (gpg4win)&lt;/li&gt;
+&lt;li&gt;PUBLIC KEY ENCRYPTION: Full interoperable replacement of the proprietary Pretty Good Privacy (PGP) standard that uses a serial combination of hashing, data compression, symmetric-key cryptography and finally public-key cryptography; each step uses one of several supported algorithms.&lt;/li&gt;
+&lt;li&gt;BROAD ALGORITHM LANDSCAPE: Supports 3DES, AES, Blowfish, CAST5, DSA, ElGamal, MD5, RSA, RIPDE-MD-160, SHA-1, TIGER, and Twofish.&lt;/li&gt;
+&lt;li&gt;VERIFIABLE INTEGRITY AND AUTHENTICITY: Digital signatures create a trusted trail of ownership.&lt;/li&gt;
+&lt;li&gt;CONFIRMED SECURITY: Italian Police, the FBI, and British police have been unable to crack its security and have resorted to demanding private keys. It’s been likened as “the closest you’re likely to get to military-grade encryption” by cryptographer Bruce Schneier.&lt;/li&gt;
+&lt;li&gt;HELP SYSTEM: A quick help tool is built in.&lt;/li&gt;
+&lt;li&gt;KEYSERVER SUPPORT: Integrated support for HKP and LDAP keyservers (keys.gnupg.net).&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;OPEN STANDARD COMPLIANT: Full OpenPGP implementation. Learn more about standards &lt;a href=&#34;http://tools.ietf.org/html/rfc2440&#34; target=&#34;_blank&#34;&gt;RFC2440&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://tools.ietf.org/html/rfc4880&#34; target=&#34;_blank&#34;&gt;RFC4880&lt;/a&gt; &lt;/ul&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;please-report-bugs&#34;&gt;Please Report Bugs&lt;/h2&gt;
+
+&lt;p&gt;This is an early release of a big project, so there will inevitable be bugs. Help us improve this software by filing bug reports about any problem that you encounter. Feature requests are also welcome!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/gpgandroid/issues&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/gpgandroid/issues&#34;&gt;https://dev.guardianproject.info/projects/gpgandroid/issues&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;coming-soon&#34;&gt;Coming Soon&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SECURITY FOR APPS: We have an API in the works so that developers can&lt;br /&gt;
+easily embed this into any app to give it state of the art security features.&lt;/li&gt;
+&lt;li&gt;GUI: We’re building a graphical user interface for easy key management.&lt;/li&gt;
+&lt;li&gt;STAY UP TO DATE: Sign up for our low-traffic &lt;a href=&#34;https://lists.mayfirst.org/mailman/listinfo/guardian-dev&#34; title=&#34;subscribe to the guardian-dev mailing list&#34; target=&#34;_blank&#34;&gt;Guardian-Dev&lt;/a&gt; mailing list to&lt;br /&gt;
+be notified when the API and GUI are released:&lt;br /&gt;
+&lt;a href=&#34;https://lists.mayfirst.org/mailman/listinfo/guardian-dev&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://lists.mayfirst.org/mailman/listinfo/guardian-dev&#34;&gt;https://lists.mayfirst.org/mailman/listinfo/guardian-dev&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Find us in IRC, we want feedback!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;irc://irc.freenode.net/guardianproject&#34;&gt;#guardianproject on freenode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;irc://irc.oftc.net/guardianproject&#34;&gt;#guardianproject on oftc&lt;/a&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;.&lt;/li&gt; &lt;/ul&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher beta: easy encrypted file storage for your Android app</title>
+      <link>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</link>
+      <pubDate>Thu, 07 Feb 2013 14:45:28 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</guid>
+      <description>&lt;p&gt;At long last, we are proud to announce the &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;first beta release of IOCipher&lt;/a&gt;, an easy framework for providing virtual encrypted disks for Android apps.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;does not require root or any special permissions at all&lt;/li&gt;
+&lt;li&gt;the API is a drop-in replacement for the standard java.io.File API, so if you have ever worked with files in Java, you already know how to use IOCipher&lt;/li&gt;
+&lt;li&gt;works easiest in an app that stores all files in IOCipher, but using standard java.io with IOCipher is possible&lt;/li&gt;
+&lt;li&gt;supports android-7 v2.1 and above&lt;/li&gt;
+&lt;li&gt;licensed under the LGPL v3+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can download it here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;https://guardianproject.info/code/iocipher/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adding IOCipher to our InformaCam and NoteCipher apps is already in the&lt;br /&gt;
+works. There is already one app in the Play Store built with IOCipher: &lt;a title=&#34;Gryphn Secure Messaging in the Play Store&#34; href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Messaging&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve recently done some heavy testing and bug fixing and this is ready for beta status. That means for many applications, it should be stable with reasonable performance. But its not done yet, and there are some known edge cases documented in our bug tracker which we aim to address in the next beta release:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/iocipher/issues&#34;&gt;https://dev.guardianproject.info/projects/iocipher/issues&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some additional notes on usage:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;single thread/sequential access is the preferred way of using IOCipher&lt;/li&gt;
+&lt;li&gt;multi-threaded access possible, but potentially unstable under very high load&lt;/li&gt;
+&lt;li&gt;VFS now has beginTransaction and completeTransaction to optimize performance&lt;/li&gt;
+&lt;li&gt;parts of java.io not currently supported: vectored I/O, memory-mapped files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;featured photo &lt;a href=&#34;http://www.flickr.com/photos/pong/288491653/&#34;&gt;“Safe” from Pong on Flickr&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>report on IOCipher beta dev sprint</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</link>
+      <pubDate>Thu, 31 Jan 2013 19:45:44 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</guid>
+      <description>&lt;p&gt;We are just wrapping up an intensive dev sprint on &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;IOCipher&lt;/a&gt; in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code. Aaron Huttner of &lt;a href=&#34;http://gryphn.co/&#34; target=&#34;_blank&#34;&gt;Gryphn&lt;/a&gt; found IOCipher while developing their &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; title=&#34;Gryphn Secure Text Messaging in the Google Play store&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Text Messaging&lt;/a&gt; and thought it was a remarkable easy way to add encrypted storage of files, and it worked quickly for him, so he included it his app before we had even announced an alpha release (thanks again for the vote of confidence!).&lt;/p&gt;
+
+&lt;p&gt;Aaron worked through a lot of the bugs with us, providing good bug reports and real, working test cases in code. What more could we ask for? We made progress on them slowly but surely. Gryphn then decided they needed IOCipher to work for them ASAP so they could put out a real release. They approached us about funding a development sprint and we thought it was a great idea. This also allowed us to bring in Stephen Lombardo and Nick Parker of &lt;a href=&#34;http://zetetic.net/&#34; target=&#34;_blank&#34;&gt;Zetetic&lt;/a&gt; to apply their &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34;&gt;SQLCipher&lt;/a&gt; and SQLite expertise. Our very own David Oliver put together the deal, and off we went. So we put our heads down and focused everything on getting IOCipher to be a real file system.&lt;/p&gt;
+
+&lt;p&gt;To begin with, we focused on the core of IOCipher, &lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34; target=&#34;_blank&#34;&gt;libsqlfs&lt;/a&gt;, since we could run that on GNU/Linux, greatly speeding up the testing cycle. It started out with about 3 full days of Abel and I running &lt;code&gt;fsx&lt;/code&gt; (File System eXersizer) tests of all shapes and sizes on libsqlfs mounts to try to pin down the crashes. It seemed like we were swimming in mountains of test results that vaguely pointed somewhere. We had some vague leads, but were excited to find that memory-mapped writes were far and away the most common crash. Since IOCipher does not use mapped writes at all, we could safely ignore those crashes for now. Turns out that using libsqlfs as a FUSE mount for our test platform has produced this one red herring.&lt;/p&gt;
+
+&lt;p&gt;One thing we knew all along is that both reads and writes were really slow, so Zetetic started with that. We all had the idea that the block sizes should all be aligned, and that should likely speed things up. This means Java stream readers and writers, writes in our Posix-style JNI layer, and the page size of the SQLite database. Zetetic did some testing and found that using 8k block sizes throughout produces some dramatic speed increases, here are some ballpark figures for doing a 2MB write with no contention:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;~710 seconds: default 256 byte blocks and no buffering, one SQLite transaction per block&lt;/li&gt;
+&lt;li&gt;~65 seconds: wrapping all the 8192 write calls for each 256 byte block in a single SQLite transaction&lt;/li&gt;
+&lt;li&gt;~20 seconds: same as above with the IOCipher FileOutputStream wrapped in a BufferedOutputStream&lt;/li&gt;
+&lt;li&gt;~5 seconds: increase internal IOCipher block size to 4k&lt;/li&gt;
+&lt;li&gt;~10 seconds: 8k sqlfs block size, 8k sqlite page size, and 8k BufferedOutputStream buffer, one SQLite transaction per block&lt;/li&gt;
+&lt;li&gt;~1 second: same as above, all blocks written in a single SQLite transaction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ok, now we had something you could actually use. Pretty slow still, but no longer ridiculous. Through much reading of code and testing, we figured out that there is one spot of the code that assumed it would always be able to read from the database. Under heavy load, this was not possible, especially when you have 9 minute blocking write operations. So the next step was to figure out all of the locking and make sure that was working right. The libsqlfs code from 2006 had the remnants of three separate locking mechanisms in it, SQLite locking, pthread locking, and a delay-retry timeout mechanism. Zetetic dove into updating libsqlfs to replace all that and use all of the modern SQLite tricks like &lt;code&gt;sqlite3_busy_timeout()&lt;/code&gt; to replace the delay-retry logic, &lt;a href=&#34;https://www.sqlite.org/lockingv3.html&#34; target=&#34;_blank&#34;&gt;v3.0 locks&lt;/a&gt; and v3.7 &lt;a href=&#34;https://www.sqlite.org/draft/wal.html&#34; target=&#34;_blank&#34;&gt;Write-Ahead-Logging&lt;/a&gt; which gave libsqlfs a huge improvement in read/write concurrency, and putting libsqlfs and IOCipher reasonable performance in the realm of other encrypted file systems. I’ll let Stephen explain it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;First, we changed the transaction command in begin_transaction to use “begin immediate”. This seeks an immediate reserved lock on the database, but does not exclusively lock it. This reduces unresolvable contention for write locks that would normally occur with deferred transactions, and is less restrictive than an exclusive lock, since it will continue to allow shared locks for reading.&lt;/p&gt;
+
+&lt;p&gt;It is extremely important that we prevent write operations from failing to execute due to busy timeouts, even if another process/thread has the database locked. Even using WAL, it is still possible for a command to be blocked during attempted concurrent write operations. This causes the write operation to fail leading to corruption. While libsqlfs has some “delay()” code that provides rudimentary busy handling, it is only in use for a small number of operations leaving other critical calls unprotected. Therefore, our second change was to register SQLite’s internal busy handler with a relatively high timeout (currently 10 seconds, but open for discussion) via sqlite3_busy_timeout. This provides protection for all operations in libsqlfs, reducing the likelihood that a write operation would fail outright, though it may be delayed.&lt;/p&gt;
+
+&lt;p&gt;Finally, we enabled WAL mode to speed up write operations and further improve concurrency between readers and writers. Note that WAL mode only fsync()s on checkpoint operations, so it may be possible to enable NORMAL synchronous mode with lower overhead than the standard journal mode (we didn’t change this yet).&lt;/p&gt;
+
+&lt;p&gt;With these changes in place, three concurrent fsx processes running in parallel on a single fuse mount produced no errors in a 24hr test run. The tests also shows improved performance on read and writes. In light of these results, we’d like to get your feedback on these changes, and request that you run your own tests in the multi-threaded Android application to see if they resolve the problems that were reported.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This was the final kicker. Who would of thought we could again get performance improvements of an order of magnitude twice in a single dev sprint. Now we have a encrypted filesystem that is stable and with reasonable performance that is really easy to use. And since that means that there is only very short chunks of time where everything is blocked (no more 9 minute writes), the crashes have basically vanished under real world loads. We have run super heavy file system tests over hundreds of thousands of operations without data corruption or crashes. We know that there is the theoretical potential for crashes in certain operations under super heavy load. We aim to address that in upcoming releases. And in conclusion, I’ll quote Aaron since he summarized what we are trying to achieve when we make developer tools:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Between &lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-for-android/&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34; target=&#34;_blank&#34;&gt;IOCipher&lt;/a&gt; I don’t think it could get any easier to implement cryptography on Android, hopefully people pick up on this.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So grab the code now from git, if you’re ready to dive in! Or for the more patient, we’re developing tutorials to go along with the beta release that is coming any day now.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher lives! encrypted virtual file system for Android</title>
+      <link>https://guardianproject.github.io/info/2012/05/17/iocipher-lives-encrypted-virtual-file-system-for-android/</link>
+      <pubDate>Thu, 17 May 2012 16:44:35 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/17/iocipher-lives-encrypted-virtual-file-system-for-android/</guid>
+      <description>&lt;p&gt;Nathan and I just got the first complete test of IOCipher working in the IOCipherServer/SpotSync app. We created a filesystem sqlite.db file, then mounted it and got all the files via HTTP. In the test suite, I have lots of operations all running fine and encrypting! The core idea here is a java.io API replacement that transparently writes to an encrypted store. So for the most part, just change your import statements from:&lt;/p&gt;
+
+&lt;pre&gt;java.io.*   ---&gt;   info.guardianproject.iocipher.*&lt;/pre&gt;
+
+&lt;p&gt;Then in your code, make a &lt;code&gt;VirtualFileSystem&lt;/code&gt; instance and mount it, and unmount it. That’s about it. Right now, you can have only a single filesystem per app, but you can unmount one and mount another. We hope to add support for multiple filesystems in the not-too-distant future.&lt;/p&gt;
+
+&lt;p&gt;Its ready for people to try, some kind of early alpha. Here’s the framework itself:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34;&gt;https://github.com/guardianproject/IOCipher&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;THe easiest way to get started right now is probably the test suite:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/IOCipherTests&#34; title=&#34;IOCipherTests&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipherTests&#34;&gt;https://github.com/guardianproject/IOCipherTests&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Our first app using it is here:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/IOCipherServer&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipherServer&#34;&gt;https://github.com/guardianproject/IOCipherServer&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Comments, feedback, criticism, welcome and wanted!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>User scenarios to guide our crypto development</title>
+      <link>https://guardianproject.github.io/info/2012/04/14/user-scenarios-to-guide-our-crypto-development/</link>
+      <pubDate>Sat, 14 Apr 2012 20:16:03 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/04/14/user-scenarios-to-guide-our-crypto-development/</guid>
+      <description>&lt;p&gt;At Guardian Project, we find user-centered development to be essential to producing useful software that addresses real world needs. To drive this, we work with user stories and scenarios as part of the process of developing software. One particular development focus is the &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; title=&#34;Portable Shared Security Token&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Token (PSST)&lt;/a&gt; project, which aims to make it easy to use encryption across both mobile and desktop computers, as well as keep the stores of cryptographic identities (i.e. trusted keys, certificates, etc) in sync between devices.&lt;/p&gt;
+
+&lt;p&gt;This post outlines some initial user scenarios that PSST aims to address. We believe them to be common enough so that our solutions will be readily applicable to real world people now. They are a small subset of all of the types of users that we feel can ultimately benefit from the PSST core research, so these user stories provide a starting place for honing the tools for the needs of actual working organizations. These stories also discuss how the software could be used in these situations. The software as described mostly exists, but not all details are currently implemented or even fully vetted as secure practices.&lt;/p&gt;
+
+&lt;p&gt;We are very eager for feedback, comments, and criticism on any aspect of these scenarios, from whether they are plausible to whether the user interactions described are built upon realistic expectations of actual members of organizations like the ones described here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Small Cabal&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/04/activists-meeting.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/activists-meeting.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;224&#34; class=&#34;alignright size-full wp-image-1799&#34; /&gt;&lt;/a&gt;There is a small group of people that needs to communicate as securely and anonymously as possible. They all meet up in person. They generate keys, and individually sign each person’s key and get that person’s signature on their own key. These are local-only unpublishable signatures. No one uploads their keys to any other server or device. They each generate a revocation certificate and hook it up to their panic button app. Once the panic button is hit, the phone broadcasts the revocation certificate to the pre-determined list of people.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Diffuse Activist Organization&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;An activist organization has members spread out all over their country, with concentrations in certain areas, and a handful abroad. They are working in a country that aggressively tracks communications, but encryption is not banned nor aggressively tracked. Since there are many members and they are widely spread, very few of the members have met the whole membership. Many members often meet up in person at various places around the country, and some people also travel to regional and national meet-ups. The central forum for the whole group is on the internet, and there are many big group discussions and announcements that happen on internet forums.&lt;/p&gt;
+
+&lt;p&gt;Each member has a cryptographic key that represents their online identity, which they post to the public keyservers. They generate and store a revocation certificate to upload to the keyservers in case of a compromised key or computer. They do not post any signatures to the key servers so that the social graph information remains private. Whenever they meet another person that they trust, they sign each others’ keys and swap all signature data using direct peer-to-peer communication.&lt;/p&gt;
+
+&lt;p&gt;When interacting with members who they only know on the internet, they check whether they have a cryptographic trust path to each others’ keys, and if not, they establish the first step of trust via OTR by doing key verification via question/answer, shared secret or manual fingerprint validation over a trusted channel, like the phone. When they hit there panic button the post the revocation certificate to the keyserver. Each member’s computer/phone automatically checks the public keyservers for revocations hourly, and marks any revoked key as invalid as soon as it receives a revocation certificate.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Multinational Organization&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/04/orgmtg.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/orgmtg.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;158&#34; class=&#34;alignleft size-full wp-image-1800&#34; /&gt;&lt;/a&gt;An organization has many members in a number of different countries. Some of the governments are supportive of the organization’s goals, while some of the governments are strongly hostile and are actively seeking out local members. Many members work in countries where there is little chance of active tracking and monitoring of their use of encryption, while others work in high risk environments from time to time. Certain local contacts and members work in aggressively monitored countries where use of encryption is a flag for the secret police.&lt;/p&gt;
+
+&lt;p&gt;The public figures of the organization in safe countries have a public trust profile that is freely downloadable. They use the public OpenPGP infrastructure and publicly share all public signatures. These members also have private, unpublishable signatures related to the members in high risk situations. Operatives in high risk situations use only unpublishable local signatures and the whole collection of signatures is stored in an encrypted form. There devices only contact keyservers via anonymized connections like Tor or VPNs.&lt;/p&gt;
+
+&lt;p&gt;When members are signing each other’s keys, the signatures are always sent to the key owner via encrypted email. The signer can then mark the signature as private or public, or their software can be set to always mark all keys as private and unpublishable. When the key owner receives the emailed signature, she can then decide how to manage the signatures: either privately import the signature to their keyring, where it will be stored in an unpublishable format; or publicly import the signature into their keyring and sync it via the public PGP servers. If the signer emailed a private signature to the key owner, then the key management software will automatically make it a private signature.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Improvised movement organized via social software&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Tahrir_Square_during_8_February_2011.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/Tahrir_Square_during_8_February_2011-300x225.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;alignright size-medium wp-image-1791&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/04/Tahrir_Square_during_8_February_2011-300x225.jpg 300w, https://guardianproject.info/wp-content/uploads/2012/04/Tahrir_Square_during_8_February_2011-1024x768.jpg 1024w, https://guardianproject.info/wp-content/uploads/2012/04/Tahrir_Square_during_8_February_2011.jpg 1600w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;People from all over a region join a popular movement to help organize protests, distribute media, spread information, etc. Many join in groups of friends or family, but overall the group is not socially well connected together. The common cause is the central binding of the group. In their communications, they want to avoid keyword filtering and communications tracking, as well as try to hinder infiltration and the injection of misinformation. They need to communicate and exchange media with some level of trust. Since the group wants as many members as possible, the infrastructure must be relatively open and public.&lt;/p&gt;
+
+&lt;p&gt;Users who do not have any shared history will trust each other’s keys on first contact, and rely on the continued validation against the initial mark of trust (known as TOFU/POP or Trust On First Use/Persistence of Pseudonym). Once users build up some context with each other, they can deepen the cryptographic trust by using OTR question/answer or shared secret authentication. Users publicly share their TOFU/POP and OTR marks of trust on public exchanges so that people can build up public trust in their cryptographic identity.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Foreign Journalist, Diplomat, Business Person, etc.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This user is working in a place with active monitoring, tracking and filtering. She has strong links to institutions outside of the country that can help in case of trouble. She has clear outsider status so is able to use encryption and anonymizing software without a large risk of persecution. She wants to keep her communications private in the face of active monitoring.&lt;/p&gt;
+
+&lt;p&gt;Standard public cryptography tools cover most of this situation, but they must be made easier to use, and work on mobile devices. If this user needs encrypted exchanges with locals at high risk of monitoring, local unpublishable signatures can be used in those situations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transparent encrypted virtual disks for Android (we call it IOCipher)</title>
+      <link>https://guardianproject.github.io/info/2012/04/03/transparent-encrypted-virtual-disks-for-android-we-call-it-iocipher/</link>
+      <pubDate>Tue, 03 Apr 2012 13:16:41 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/04/03/transparent-encrypted-virtual-disks-for-android-we-call-it-iocipher/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png&#34; alt=&#34;&#34; width=&#34;200&#34; height=&#34;200&#34; class=&#34;alignleft size-full wp-image-1764&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png 200w, https://guardianproject.info/wp-content/uploads/2012/04/blog_sed-150x150.png 150w&#34; sizes=&#34;(max-width: 200px) 100vw, 200px&#34; /&gt;&lt;/a&gt;When using phones, laptops, computers, etc. it feels like a private experience, as if our screen was the same as a piece of paper, and when that paper is gone, then no one can see it anymore. Digital media works very differently. While the user interface portrays the deletion of files as very final, for someone with the right tools, it is actually not hard to recover deleted files. Also, digital information takes up so little space, we now regularly carry vast amounts of information in our pockets. Our phones have become amazingly powerful computers, storing as many photos, videos, documents, etc. in our pockets as would have required a room not so long ago. So when you lose this phone, or it gets stolen, or accessed against your wishes, the lies of the interface are laid bare, and vast troves of your information is now in someone else’s hands. So how can we capitalize on all this power without giving up control of our information?&lt;/p&gt;
+
+&lt;p&gt;Encryption provides the building blocks for making the experience no longer a lie. With properly encrypted data, it is possible to throw away the key and delete it, and then no one can get the data ever again. The problem now is how best to use encryption to make our private information actually private with as few complicated decisions or onerous interfaces as possible. Full disk encryption is one popular choice. It does a good job of providing a transparent experience, merely type in a password when you boot up your computer, and the rest is totally normal. But it also offers limited protection. When your full disk encryption is unlocked and your computer is running, that disk behaves no differently than an unencrypted disk. Someone with access to the computer has full access to the files, malware does too, undelete tools will still work, etc. You have to power off the computer to get the protection that full disk encryption provides.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/04/fde.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/fde.jpg&#34; alt=&#34;&#34; width=&#34;350&#34; height=&#34;250&#34; class=&#34;alignright size-full wp-image-1763&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/04/fde.jpg 350w, https://guardianproject.info/wp-content/uploads/2012/04/fde-300x214.jpg 300w&#34; sizes=&#34;(max-width: 350px) 100vw, 350px&#34; /&gt;&lt;/a&gt;Another option is providing virtual encrypted disks like &lt;a href=&#34;http://www.truecrypt.org/&#34; target=&#34;_blank&#34;&gt;TrueCrypt&lt;/a&gt; or &lt;a href=&#34;http://support.apple.com/kb/HT1578&#34; target=&#34;_blank&#34;&gt;Apple’s encrypted disk images&lt;/a&gt;. Then you can decide on what needs to be in which compartment and what is always unlocked versus what is locked away behind a long, cryptic password with a short timeout. This provides good security and privacy when managed properly, but requires a fair amount of skill and time to setup and manage everything. These techniques also require root access since they mount these virtual disks as file systems. We focus a lot on Android, where most people do not have root access.&lt;/p&gt;
+
+&lt;p&gt;A related approach is to have a software layer automatically encrypt each file. This is how the &lt;a href=&#34;http://support.apple.com/kb/HT1578&#34; target=&#34;_blank&#34;&gt;EncFS FUSE module&lt;/a&gt; and the &lt;a href=&#34;https://mapl.certgate.com/&#34; target=&#34;_blank&#34;&gt;Certgate MAPL&lt;/a&gt; file access work. This provides transparent encryption, but since each file is individually encrypted, a lot of information is still available without decrypting anything: the file size, modification and access times, etc.&lt;/p&gt;
+
+&lt;p&gt;We’re working on another approach similar to the approach we took with &lt;a href=&#34;https://guardianproject.info/code/sqlcipher/&#34; target=&#34;_blank&#34;&gt;SQLCipher for Android&lt;/a&gt;. We’re calling it &lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34;&gt;IOCipher&lt;/a&gt;. In SQLCipher for Android, we took the code from Android’s core android.database.* classes used for working with the built-in SQLite and replaced the guts with the SQLCipher encrypted database. This allows Android app developers to use the familiar and well documented android.database.* API to build in encrypted storage into their apps. With IOCipher, we are again using SQLCipher as the core, but this time we are wrapping it with &lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34; target=&#34;_blank&#34;&gt;libsqlfs&lt;/a&gt; to make it behave like a filesystem, then grabbing the code to Android’s java.io.* API and replacing the guts with calls to libsqlfs on top of SQLCipher. libsqlfs is also a &lt;a href=&#34;http://fuse.sourceforge.net/&#34; target=&#34;_blank&#34;&gt;FUSE&lt;/a&gt;&lt;em&gt;(Filesystem in Userspace)&lt;/em&gt; module, so it provides an API very similar to the POSIX API for working with files and directories. So that makes it easy to take &lt;code&gt;java.io.File&lt;/code&gt;, for example, and replace all the calls to &lt;code&gt;read()&lt;/code&gt;, &lt;code&gt;open()&lt;/code&gt;, &lt;code&gt;write()&lt;/code&gt;, &lt;code&gt;stat()&lt;/code&gt;, etc. with calls to &lt;code&gt;sqlfs_proc_read()&lt;/code&gt;, &lt;code&gt;sqlfs_proc_open()&lt;/code&gt;, &lt;code&gt;sqlfs_proc_write()&lt;/code&gt;, &lt;code&gt;sqlfs_proc_stat()&lt;/code&gt;, etc. Then all the Android developer needs to do is to java their &lt;code&gt;import java.io.*&lt;/code&gt; to &lt;code&gt;import info.guardianproject.iocipher.*&lt;/code&gt;, specify the database file to use, and the key to lock/unlock it, and the rest is normal Java programming.&lt;/p&gt;
+
+&lt;p&gt;The beauty of using libsqlfs+SQLCipher is that its built of top of SQLite, which gives us a single, very portable file that is the whole filesystem, like a Mac OS X .dmg file or TrueCrypt .tc file. SQLite also allows multiple processes to access the same database file, so that means multiple apps can mount an IOCipher virtual disk, and can use Android permissions and native filesystem permissions to control access to the virtual filesystem. Lastly, libsqlfs is already a FUSE module. FUSE is already nicely integrated into most GNU/Linux distributions, and also available for Mac OS X and BSD. That means that the single file that represents a IOCipher file system could also be easily mounted on GNU/Linux, Mac OS X and BSD (we are already doing this on Debian and Ubuntu, Mac OS X will require some more work).&lt;/p&gt;
+
+&lt;p&gt;All in all we think this approach will make filesystem encryption easier to include in Android apps, and also make it possible to have the encryption be trivial to setup and very transparent to the user. Its close to being usable, once it is, we’ll post instructions on how you can use it in your apps. For now, you can follow our progress here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34;&gt;https://github.com/guardianproject/libsqlfs&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34;&gt;https://github.com/guardianproject/IOCipher&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/libsqlfs&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/wiki/Products_of_PSST_Work&#34;&gt;https://guardianproject.info/wiki/Products_of_PSST_Work&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On Verifying Identity Using Cryptography</title>
+      <link>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</link>
+      <pubDate>Mon, 19 Mar 2012 11:27:51 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity.gif&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity-150x150.gif&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1684&#34; /&gt;&lt;/a&gt;One of the most important uses of cryptography these days is verifying the identity of the other side of a digital conversation. That conversation could be between two people using OTR-encrypted IM, a web browser showing a bank website, a Debian Developer uploading a package to the Debian build server, an ssh client logging into an ssh server, and on and on. In all of these cases, cryptography is used to ensure that the software is indeed receiving replies from the expected entity. This happens by checking the current cryptographic key against one that is known to be correct. That is essential to the whole process. If you see the key for the first time, you have no way of knowing whether that is indeed the key you are expecting because there is no point of reference.&lt;/p&gt;
+
+&lt;p&gt;In order for this validation of identity to work, there needs to be a method of verifying any given key and making it a reference. There are many ideas about how to do this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a trusted list of central certificate authorities like in HTTPS&lt;/li&gt;
+&lt;li&gt;key-signing parties where people validate and sign each other’s keys in person, like used with the OpenPGP Web of Trust&lt;/li&gt;
+&lt;li&gt;“trust on first use” (aka “Persistence of Pseudonym”), where you save the key the first time you see it, and then use that as a reference (this is the way most people use SSH)&lt;/li&gt;
+&lt;li&gt;fingerprint verification, where the two people wanting to communicate cryptographically use another channel to manually check each other’s key fingerprints, like a phone call (this is used a lot in OTR and OpenPGP)&lt;/li&gt;
+&lt;li&gt;the Socialist Millionaires’ Protocol (SMP), which is a combination of user-generated question/answer pairs with a cryptographic technique that lets each side confirm whether the other answered the question correctly without divulging any information (this was recently added to OTR and is implemented in Pidgin, Gibberbot, and maybe a couple other programs)&lt;/li&gt;
+&lt;li&gt;a manually confirmed shared secret like a short password (ZRTP uses this when starting secure phone calls)&lt;/li&gt;
+&lt;li&gt;whitelists of fingerprints of widely used keys (aka &lt;a href=&#34;http://www.imperialviolet.org/2011/05/04/pinning.html&#34; target=&#34;_blank&#34;&gt;public key pinning&lt;/a&gt;) (this was recently added to Chrome in the wake of the HTTPS certificate authority failures)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/fingerprint.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/fingerprint-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-1686&#34; /&gt;&lt;/a&gt;Each of these techniques has its advantages and disadvantages, but generally the higher level of verification provided means the more work to do the process. Most people don’t need the high level of verification provided by OpenPGP key signing parties, but maybe if it was fun and much easier to do, then a lot more people would do it. “Trust on first use” is really easy to use and implement, and has been working pretty well for a lot of people who use SSH and OTR. But it has big shortcomings in environments where the state or other central authority that provides the internet infrastructure wants to spy on its users. HTTPS has proven to be quite easy to use, but it has also &lt;a href=&#34;https://www.eff.org/deeplinks/2011/08/iranian-man-middle-attack-against-google&#34; target=&#34;_blank&#34;&gt;proven&lt;/a&gt; to be &lt;a href=&#34;http://www.theregister.co.uk/2011/08/29/fraudulent_google_ssl_certificate/&#34; target=&#34;_blank&#34;&gt;quite&lt;/a&gt; &lt;a href=&#34;https://arstechnica.com//security/news/2011/03/how-the-comodo-certificate-fraud-calls-ca-trust-into-question.ars&#34; title=&#34;How the Comodo certificate fraud calls CA trust into question&#34; target=&#34;_blank&#34;&gt;breakable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Currently, each of these techniques described above is used as the sole means of verification, then the level of verification is represented as “verified” or “not verified”. This is definitely the way that HTTPS and SSH handle it. OTR is a bit different, it has 3 states of verification: “new key”, “unverified key” i.e. trusted on first use, or “verified”, and good OTR chat apps will represent these three states in the UI. Then OpenPGP is perhaps the opposite extreme: it provides both chains of verification signatures via the Web of Trust but also user-set “trust levels” from 0 to 255 for any given key.&lt;/p&gt;
+
+&lt;p&gt;Perhaps an answer is to cryptographically link up these different ways of verification and represent key verification as a continuum. Then when the possibility of linking in “trust on first use” and other techniques was there, people could gradually build up cryptographic trust as they needed it. Starting with “I have seen this key before”, then on to “I have gotten them to verify their OTR key with an SMP question/answer”, then to “I have an OpenPGP trust path to them”, to “I have met them in person and manually verified their key and identity”.&lt;/p&gt;
+
+&lt;p&gt;To go into technical detail as an example, GnuPG supports RSA, DSA, ECDSA, El Gamal, and other key types as subkeys for an OpenPGP key. Those core algorithms core basically all of the most common uses of cryptography, including HTTPS, SSH, OTR, and OpenPGP. The link between an OpenPGP key and its subkeys is perhaps the strongest link for verification that exists, so if a given person includes their OTR key, for example, into their OpenPGP key, that provides a strong cryptographic link between them, and one that is easily publicly sharable via the OpenPGP public keyservers. When two people verify their OTR keys using the SMP question/answer, this verification could then extend to their OpenPGP keys if their OTR keys were subkeys. (&lt;a href=&#34;http://web.monkeysphere.info&#34; target=&#34;_blank&#34;&gt;The Monkeysphere Project&lt;/a&gt; is one such implementation of this idea, using OpenPGP keys for SSH and HTTPS).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/verified.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/verified-150x150.jpg&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1685&#34; /&gt;&lt;/a&gt;Then the last piece of this puzzle is how to represent all of this complexity to the users. The essential part is to stop representing trust as binary yes/no. A one-dimensional continuum provides a lot more info and is a very commonly understood concept in computers (think progress bars). The hard part of this question is ranking the various techniques in how much progress they provide towards the goal of solid identity verification.&lt;/p&gt;
+
+&lt;p&gt;For this round of the &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; title=&#34;Portable Shared Security Tokens&#34; target=&#34;_blank&#34;&gt;PSST Project&lt;/a&gt;, we have focused on first allowing people to easily move around their OTR identities, then worked on testing out the idea of linking in all identity keys into an OpenPGP key. From what we have seen so far, we believe this is not only feasible but will provide a solid platform for linking together all these verification techniques and identity keys. And on top of that, with diligent attention to user experience and testing, it should be possible to create user interfaces that make navigating all of this a common, daily task for most computer users.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How many ways to store 5 numbers?</title>
+      <link>https://guardianproject.github.io/info/2012/02/23/how-many-ways-to-store-5-numbers/</link>
+      <pubDate>Thu, 23 Feb 2012 12:29:49 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/02/23/how-many-ways-to-store-5-numbers/</guid>
+      <description>&lt;p&gt;At the core of all software that aims to be secure, private and anonymous is encryption, or as I think of it, amazing math tricks with really large numbers. These really large numbers can serve as a token of identity or the key to information locked away behind the encryption math. There are a number of different encryption methods commonly used based on different mathematical ideas, but they all rely on people managing sets of really large numbers, usually known as keys.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/stevendepolo/3378152784/&#34; title=&#34;Skeleton Keys IMG_0774 by stevendepolo, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3589/3378152784_2be2969ae6.jpg&#34; alt=&#34;Skeleton Keys IMG_0774&#34; width=&#34;500&#34; height=&#34;333&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It turns out that managing these sets of really large numbers can be tricky to do well, so there are all manner of key management apps and approaches. On top of that, there seems to be decades of people wanting to make their own formats for these sets of really large numbers. So if you want to work directly with the keys themselves, you not only have to sort out the difference between the kinds of numbers used in DSA, RSA, Elliptical Curve, etc., but you will also have to figure out which of the many many formats those numbers are stored in. There are base64 formats, hex formats, standardized binary formats with names like PKCS#8/DER and X.509, old formats like S-Expressions (sexp) as well as non-standard formats like keyczar’s JSON format that uses web-safe base64. Then, there are different ways of reading and writing those different formats into a file.&lt;/p&gt;
+
+&lt;p&gt;We started out working on the particular problem of translating the 5 numbers (x, y, p, q, g) used in DSA keys. DSA keys are used for OTR encryption, and we want to make it possible to translate the DSA key information stored by one OTR messaging app into the format used by others. Here are three examples of storing DSA keys:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(In general, its a very bad idea to post private keys anywhere at all public. These three are private keys that have been generated for test purposes)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;libotr private key from Pidgin (sexp with hex numbers):&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;(account&lt;br /&gt;
+(name “&amp;#x67;p&amp;#x74;&amp;#x65;s&amp;#x74;@j&amp;#x61;bb&amp;#x65;r.&amp;#x6f;rg/”)&lt;br /&gt;
+(protocol prpl-jabber)&lt;br /&gt;
+(private-key&lt;br /&gt;
+(dsa&lt;br /&gt;
+(p&lt;br /&gt;
+#00CD96479A2F404FB600F9C85EE3DCD69FDF93F217AEE54A1286069983BA7731D0C73C7CB3B8CFA482A0AF6FF906E470EB4EF7F4D201D087AEDBF0086710F3039CBF42358C1BFA7D86A36332E21D32BE31538571CBC8D4F281DDD1076BA2B29B549ED29B3C19C341AEF83C80157E87FF2930B5E15C84A09AFCE28A06E06A62BCEF#)&lt;br /&gt;
+(q #00D5B4647E688974D1B6B199E1A59AB2F985DBCE01#)&lt;br /&gt;
+(g&lt;br /&gt;
+#0093E333135FCBCE68FC6E410B304482F2F95D82BF53534C3636EADB0C22241CF35BD294B096070DC08138EFE73B03C88FD444595974E9455274F695147AF9D46B85286B4CFEF3D00BCA1D3BEB8C7EFFBA08132E1A1E4D9F115B863C52C72971F4695758354FC3BE3C4A45AF6A47747B59733905C33EE86ED68D9D90494877AE33#)&lt;br /&gt;
+(y&lt;br /&gt;
+#362C06B9CDD67FC4E7A7A62289D6C1E8BA061A024946A5ACC1A7DC70F6B03D99A1D3B3215D20BC4F8458EEC3F31E1391E9B519FDCDCC3CF0FBA38F8A7213551B32D59DE655F506633FB6B0EA94C4174D227DB614EF6723AB057B40CF36E2A414D0A8DCF223EE7EDD851793C4DC92282C79503030045D49A0ABCC3C6CC4080909#)&lt;br /&gt;
+(x #24FE542B1C7DC8337F6F8030C7D639B7BF091B40#)&lt;br /&gt;
+)&lt;br /&gt;
+)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;otr4j private key from Gibberbot (PKCS#8 DER with ASCII armor, escaped for Java Properties):&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#x67;p&amp;#x74;es&amp;#x74;@&amp;#x6a;ab&amp;#x62;e&amp;#x72;.o&amp;#x72;g&amp;#x2e;&amp;#x70;r&amp;#x69;va&amp;#x74;e&amp;#x4b;ey=MIIBSgIBADCCASsGByqGSM44BAEwggEeAoGBAMtPbcgvf2CAHN4djUb+gCPw/e8Xpeyc9GknS9zs\nJjSCg9vgiKBVlQBceiKAkK8SVVEaA671SS0XO575OK/sAc4j0n2t9QJP1wyGCOhV79WbwhPPEVhs\ncpAHakr9IAW6WdSnwhL/seZLYRKiVGpxXJffwN+sYjH00PulKNxmz2+DAhUAxh9yFSC1uuGk6IR0\ntnVAfsPUt7cCgYBGfHU40n0HgKIkVe3XtX0G3CbiGbR++qaEjNqnfWynggqeeVkYliLaDlVrR4B0\nnLrHZLEcUMO38YKmrwug02acp9P65IcjZ2yaioPBSmV7R6pMGOdJFR3V7Pd5R2+NcUdJd2xSffLf\nrChM82SKqa7b3DOPHkSoIdp/vJiRgikZrwQWAhRE5snYBaoR84hWVdxlumAYkBRUEA\=\=&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;private key from keyczar (JSON with websafe base64):&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;{&lt;br /&gt;
+“publicKey”: {&lt;br /&gt;
+“q”: “AJJfsQZrhUV8p6TmpPqa084JwX9j”,&lt;br /&gt;
+“p”: “AIAAAAAAAAXxHhQxJRZ-PPj2BDrHHLV8c8pX6nyOLAW3Bc7CX_SfBiGH2VyImoz6JlAOZi6x_XspxdUvpTjV7J9uO9hwnF31m3SQjdkZW2DQDb5OS1rW_4MGrTJCktKtlZz7f8_5AoO8yHSY2XWNDqrpBEiNvaTX1ttQ59nREiR1”,&lt;br /&gt;
+“y”: “AGlQuRpbat4drE_fcdSZrEVfS6Fme3tNfUoJVRec1pUhoSo9PBHKFx3lbBmI8Vnub8vuY1nM2yTadOZ8H4-TYxB5JNMVTK7vLNdVcWvUUF9zRZCwps1bl0_Al29X0I1iQYJN6Klxi_QbKaSf5PhfXLVom9bJYp7_TwZCouaab296”,&lt;br /&gt;
+“g”: “AES5hk-DKXP__t6yDsXIdykf7lhSKHqQCW5H2V5dMg8JkoFBSP7mIvaCHT4IxoxdM2AIpWgcoi5XSrd_hD2sjNa1JHTb9BUh31dHJLym6rTsV12ClN6f78Cjt0oKFIRI\__yWn9KM-vLEsjpd10VHlPfbEgKYePCnXFt7Y78G0wGr”,&lt;br /&gt;
+“size”: 1024&lt;br /&gt;
+},&lt;br /&gt;
+“x”: “AGLJry5Q0CZo9cH6XRYd2ZZZppwg”,&lt;br /&gt;
+“size”: 1024,&lt;br /&gt;
+}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There are many instant messaging (IM) apps that provide solid support for the OTR chat encryption protocol. Many people use the same IM account across multiple computers and programs, but this generally causes lots of headaches when using OTR. One technique for eliminating these headaches is to use the same private OTR key across all programs and computers, but since each program has a different file format, this is hard to setup. In order to address this issue, we first mapped out the key and file formats for a number of the most widely used OTR programs (Pidgin, Adium, Gibberbot, Jitsi, irssi). As part of the &lt;a href=&#34;https://github.com/guardianproject/otrfileconverter&#34;&gt;OTRFileConverter project&lt;/a&gt;, we have written parsers for these file formats, and are close to being able to convert between all of them. These parsers not only convert the private keys for each account, but also the known public keys of remote accounts as well as their verified status. In this process, we discovered a fundamental incompatibility in the otr4j library used in Gibberbot, Jitsi, beem-otr, and other software. Fortunately, it should be possible to fix the otr4j library itself and all the software based on it should have the issue transparently fixed by including the updated otr4j.&lt;/p&gt;
+
+&lt;p&gt;Coming soon, OTRFileConverter will be able to sync all of your key information between Pidgin and Gibberbot, so that means private keys, other people’s public keys, and whether those keys have been manually verified, or verified via the Socialist Millionaire’s Protocol (SMP).&lt;/p&gt;
+
+&lt;p&gt;Track our progress at: &lt;a href=&#34;https://github.com/guardianproject/otrfileconverter&#34;&gt;https://github.com/guardianproject/otrfileconverter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

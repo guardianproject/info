@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Getting Android tools into Debian - Guardian Project</title>
+  <meta property="og:title" content="Getting Android tools into Debian" />
+  <meta name="twitter:title" content="Getting Android tools into Debian" />
+  <meta name="description" content="As part of Debian’s project in Google Summer of Code, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the Debian Java Team team, Markus Koschany. We are going to be working on getting the Android SDK and tools into Debian, as part of the Debian Android Tools team, building upon the existing work already included from the Java and Android Tools teams.">
+  <meta property="og:description" content="As part of Debian’s project in Google Summer of Code, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the Debian Java Team team, Markus Koschany. We are going to be working on getting the Android SDK and tools into Debian, as part of the Debian Android Tools team, building upon the existing work already included from the Java and Android Tools teams.">
+  <meta name="twitter:description" content="As part of Debian’s project in Google Summer of Code, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the Debian Java Team team, Markus Koschany. We are …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/",
+          "name": "Getting android tools into debian"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Hans-Christoph Steiner"
+  },
+  "headline": "Getting Android tools into Debian",
+  "description" : "As part of Debian’s project in Google Summer of Code, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the Debian Java Team team, Markus Koschany. We are going to be working on getting the Android SDK and tools into Debian, as part of the Debian Android Tools team, building upon the existing work already included from the Java and Android Tools teams.",
+  "inLanguage" : "en",
+  "wordCount": 1031,
+  "datePublished" : "2015-04-30T11:13:26",
+  "dateModified" : "2015-04-30T11:13:26",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, bazaar, debian, gnu/linux, gradle, gsoc, java, linux, open source, packaging, summer of code" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Getting Android tools into Debian" />
+<meta property="og:description" content="As part of Debian’s project in Google Summer of Code, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the Debian Java Team team, Markus Koschany. We are going to be working on getting the Android SDK and tools into Debian, as part of the Debian Android Tools team, building upon the existing work already included from the Java and Android Tools teams.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Getting Android tools into Debian" />
+  <meta name="twitter:description" content="As part of Debian’s project in Google Summer of Code, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the Debian Java Team team, Markus Koschany. We are …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Getting Android tools into Debian</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on April 30, 2015
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Hans-Christoph Steiner
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg"><img src="https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg" alt="debian" width="150" height="150" class="alignright size-thumbnail wp-image-12920" srcset="https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/04/debian-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/04/debian-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/04/debian-230x230.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg 600w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2015/04/android.png"><img src="https://guardianproject.info/wp-content/uploads/2015/04/android-150x150.png" alt="android" width="150" height="150" class="alignright size-thumbnail wp-image-12919" srcset="https://guardianproject.info/wp-content/uploads/2015/04/android-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/04/android-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/04/android-230x230.png 230w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+
+<p>As part of Debian’s project in Google <a href="https://wiki.debian.org/SummerOfCode2015" target="_blank">Summer of Code</a>, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the <a href="https://wiki.debian.org/Teams/JavaPackaging" target="_blank">Debian Java Team</a> team, <a href="https://&#x71;a&#x2e;d&#x65;b&#x69;a&#x6e;.&#x6f;r&#x67;/dev&#x65;l&#x6f;p&#x65;r&#x2e;p&#x68;p&#x3f;l&#x6f;gin=&#x61;p&#x6f;@&#x67;a&#x6d;b&#x61;r&#x75;.&#x64;e" target="_blank">Markus Koschany</a>. We are going to be working on getting the Android SDK and tools into Debian, as part of the Debian <a href="https://wiki.debian.org/AndroidTools" target="_blank">Android Tools</a> team, building upon the existing work already included from the Java and <a href="https://wiki.debian.org/Teams/AndroidTools" target="_blank">Android Tools</a> teams. This project is in conjunction with the Java team since there is overlap between Android and Java tools, like <code>gradle</code>, <code>maven</code>, etc. Since this work is in Debian, all of the Debian-derivatives will automatically inherit this work. That includes: Ubuntu, Mint, Elementary, and many more.</p>
+
+<p>The first question a lot of Android developers are probably asking is: why would we want to put the Android tools into Debian when there is already an official distribution from Google with it’s own update tools? It turns out there are many reasons, mostly centered around making things much easier to use, as well as addressing some key security concerns. For example:</p>
+
+<ul>
+<li>automatic trustworthy downloads, no need to verify hash sums or think about HTTPS</li>
+<li>eliminate need for insecure wrapper scripts, like <code>./gradlew</code></li>
+<li>easy install and update channel that all Debian users already know</li>
+<li>trivial install for specific tools, like <code>adb</code>, <code>fastboot</code>, etc.</li>
+<li>setting up a Debian/Ubuntu/etc box for Android development is easier when everything is included</li>
+</ul>
+
+<p><a href="https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing.jpg"><img src="https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-150x150.jpg" alt="320px-Trawling_Drawing" width="150" height="150" class="alignright size-thumbnail wp-image-12873" srcset="https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-230x230.jpg 230w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+
+<p>The most glaring issue from my point of view is the security issues in <code>gradle</code>. It will happily download and execute code without any kind of verification whatsoever. It inherits this terrible practice from maven, which has been shown to be an <a href="http://blog.ontoillogical.com/blog/2014/07/28/how-to-take-over-any-java-developer/" target="_blank">easy path to exploit anyone using it</a>. This is especially concerning considering that developers are more and more <a href="https://guardianproject.info/2015/02/24/phishing-for-developers/" target="_blank">being directly targeted</a>. At least it is more common for <code>gradle</code> configs to use HTTPS, but it is still quite easy mess up a config and force users to use HTTP instead. Fragile configs are really bad for security. Even if <a href="https://github.com/WhisperSystems/gradle-witness" target="_blank">gradle-witness</a> is used to pin the hash for the jars used in the project, <code>gradle-wrapper</code> might still downloading insecure code an executing it immediately, giving attackers potential full user access to that machine. That is because <code>gradle-wrapper</code> will download versions of <code>gradle</code> that it needs, and <code>gradle-witness</code> can not be used to pin the hash of the <code>gradle</code> files. And the repositories that <code>gradle</code> uses only provide methods to protect against network-based attacks. If the server that holds the jars is exploited, the attacker can replace the jars and the sum files at the same time. There is <a href="https://github.com/gradle/gradle/pull/448" target="_blank">a pull request open for <code>gradle</code></a> to allow pinning of the <code>gradle</code> executables themselves, which will help this situation.</p>
+
+<p>On a different note, many people who are not developers at all want to use tools like <code>adb</code> and <code>fastboot</code> to access their Android device, or even root it. Having them in Debian means they are trivial for people to install, vastly easier than trying to figure out how to download and install the Android SDK. What lots of people end up doing instead is downloading random binaries from insecure internet forums and using those. For many devices, it is already possible to use only tools in Debian to root the device. As we get more of the Android tools packaged and updated in Debian, that will become the norm.</p>
+
+<p><strong>Updates when you need them, built upon a stable base</strong></p>
+
+<p>One common complaint about packages in Debian is that they are old and outdated. It is part of the core mission of Debian/stable to provide an operating system that changes as little as possible. That mission is contrary to what most developers need from their SDKs and sometimes even the development tools. But stability is also important for developers as well. For example, tools like <code>make</code>, used to build native code using the Android NDK (<code>ndk-build</code> is a <code>make</code> script) and even Android itself, has been around a long time and is used in so many projects. That is a tool that almost every developer wants to have very stable.</p>
+
+<p>For the packages that developers need to have completely up-to-date, like the Android SDK itself, there are many options for distribution. Ubuntu Personal Package Archives (PPA) have proven easy and useful for exactly this kind of thing, and Debian is working on adding support for PPAs. Official repositories for <a href="http://backports.debian.org/" target="_blank">backports</a> are another avenue for timely updates.</p>
+
+<p><strong>Help us figure this out</strong></p>
+
+<p>We want lots of feedback on how to do this right! A great example is how to best support the various versions of <code>gradle</code>. It seems to me that <code>gradle</code> is starting to stabilize, and it is no longer necessary to track very specific releases of <code>gradle</code>. For example, <code>gradle</code> v2.2.1 will work well with projects that were setup with just about any v2.x version. And projects still using 1.x, they mostly seem to work using v1.12. So if this is the case, then this fits into a common pattern with build tools in Debian:</p>
+
+<ul>
+<li>GNU Compiler Collection is packaged as <code>gcc4.8</code>, <code>gcc4.7</code>, etc.</li>
+<li>Apache Maven is packaged as <code>maven</code> and <code>maven2</code></li>
+<li>GNU automake is packaged as <code>automake1.14</code>, <code>automake1.13</code>, etc.</li>
+</ul>
+
+<p>I’m currently thinking that the best solution for gradle is like Maven, with the package called <code>gradle</code> (v2.3) being the most up-to-date in conjunction with specific packages to support older versions, like <code>gradle1</code> (v1.12). But maybe it makes sense to do something like gcc, with a gcc meta-package to install the currently best supported version, then all versions packaged with name that includes that version, i.e. a gradle meta-package with <code>gradle1</code>, <code>gradle2</code>, <code>gradle3</code>, etc.</p>
+
+<p>Other issues that we will have to grapple with include:</p>
+
+<ul>
+<li>how to package various NDK versions?</li>
+<li>How do we best work with the upstream Android team?</li>
+<li>is packaging Android Studio feasible?</li>
+</ul>
+
+<p>We also hope to provide an example that any other packaging systems can learn from and build upon. GNU/Linux distros like Arch and Fedora are the obvious ones, but also projects like Homebrew, MacPorts, and Cygwin could also use this work to include Android tools as packages in their system. Indeed, some of the work already included in Debian was derived from <a href="https://wiki.archlinux.org/index.php/Android#Android_SDK_core_components" target="_blank">some Arch packages</a>.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/bazaar/">bazaar</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/debian/">debian</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/gnu/linux/">gnu/linux</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/gradle/">gradle</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/gsoc/">gsoc</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/java/">java</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/linux/">linux</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/open-source/">open source</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/packaging/">packaging</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/summer-of-code/">summer of code</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2015/02/24/phishing-for-developers/" data-toggle="tooltip" data-placement="top" title="Phishing for developers">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2015/05/07/hiding-apps-in-plain-sight/" data-toggle="tooltip" data-placement="top" title="Hiding Apps in Plain Sight">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

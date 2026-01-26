@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Using TLS ECH from Python - Guardian Project</title>
+  <meta property="og:title" content="Using TLS ECH from Python" />
+  <meta name="twitter:title" content="Using TLS ECH from Python" />
+  <meta name="description" content="At first, the idea of encrypting more of the metadata found inside the initial packet (the &ldquo;ClientHello&rdquo;) of a TLS connection may seem simple and obvious, but there are of course reasons that this wasn&rsquo;t done right from the start. In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields, and present a working code example using a fork of CPython built with DEfO project&rsquo;s OpenSSL fork to connect to ECH-enabled HTTPS servers.">
+  <meta property="og:description" content="At first, the idea of encrypting more of the metadata found inside the initial packet (the &ldquo;ClientHello&rdquo;) of a TLS connection may seem simple and obvious, but there are of course reasons that this wasn&rsquo;t done right from the start. In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields, and present a working code example using a fork of CPython built with DEfO project&rsquo;s OpenSSL fork to connect to ECH-enabled HTTPS servers.">
+  <meta name="twitter:description" content="At first, the idea of encrypting more of the metadata found inside the initial packet (the &ldquo;ClientHello&rdquo;) of a TLS connection may seem simple and obvious, but there are of course reasons …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/",
+          "name": "Using t l s e c h from python"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "irl"
+  },
+  "headline": "Using TLS ECH from Python",
+  "description" : "At first, the idea of encrypting more of the metadata found inside the initial packet (the &amp;ldquo;ClientHello&amp;rdquo;) of a TLS connection may seem simple and obvious, but there are of course reasons that this wasn&amp;rsquo;t done right from the start. In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields, and present a working code example using a fork of CPython built with DEfO project&amp;rsquo;s OpenSSL fork to connect to ECH-enabled HTTPS servers.",
+  "inLanguage" : "en",
+  "wordCount": 1353,
+  "datePublished" : "0001-01-01T00:00:00",
+  "dateModified" : "2025-01-10T00:00:00",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "DEfO, ECH, free software, open source, OpenSSL, privacy, Python, resilience, TLS" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Using TLS ECH from Python" />
+<meta property="og:description" content="At first, the idea of encrypting more of the metadata found inside the initial packet (the &ldquo;ClientHello&rdquo;) of a TLS connection may seem simple and obvious, but there are of course reasons that this wasn&rsquo;t done right from the start. In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields, and present a working code example using a fork of CPython built with DEfO project&rsquo;s OpenSSL fork to connect to ECH-enabled HTTPS servers.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="Using TLS ECH from Python" />
+  <meta name="twitter:description" content="At first, the idea of encrypting more of the metadata found inside the initial packet (the &ldquo;ClientHello&rdquo;) of a TLS connection may seem simple and obvious, but there are of course reasons …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Using TLS ECH from Python</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on January 10, 2025
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;irl
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>At first, the idea of encrypting more of the metadata found inside the initial packet (the &ldquo;ClientHello&rdquo;) of a TLS
+connection may seem simple and obvious, but there are of course reasons that this wasn&rsquo;t done right from the start.
+In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields,
+and present a working code example using a fork of CPython built with DEfO project&rsquo;s OpenSSL fork to connect to
+ECH-enabled HTTPS servers.</p>
+
+<p>To understand why this is an issue, let&rsquo;s take a step back and look at how websites are hosted.
+Many websites are hosted on shared servers, which means that a single server machine is responsible for serving
+multiple, possibly hundreds or thousands, of websites.
+This is known as the shared hosting model.
+In this setup, when a user types in a URL or clicks on a link to visit a website and the browser connects to the server,
+the server needs to know which website the users is requesting.
+This is where the Server Name Indication (SNI) comes in - it&rsquo;s a field in the initial packet of a TLS connection that
+tells the server which website the user is trying to access.
+The server can then send the correct certificate so that the browser can authenticate the connection, and then send the
+requested website content.</p>
+
+<p>Because this field was sent unencrypted, this means that anyone who can see the traffic between the user&rsquo;s browser and
+the server can intercept the SNI and know which website the user is trying to visit.
+This can be a privacy concern, as it allows ISPs, network administrators, or other unwanted observers to build a profile
+of the user&rsquo;s browsing history.
+It&rsquo;s not just about the websites they visit, but also about the potential for censorship or targeted attacks.
+With the SNI being unencrypted, it&rsquo;s like sending a postcard with the address visible to anyone who handles it - it may
+not be the end of the world for most browsing activity, but it&rsquo;s certainly not private.
+Encrypted Client Hello aims to change this by encrypting the SNI and other metadata, making it much harder for third
+parties to intercept and exploit this information.</p>
+
+<p>So, why wasn&rsquo;t it easy to protect the SNI and other metadata from the start?
+The main challenge was that, in order to encrypt the SNI, the client (i.e., the user&rsquo;s browser) needs to know the
+public key that the server wants the ClientHello to be encrypted with in advance.
+However, the server&rsquo;s ECH public key is tied to the specific website being requested, and there wasn&rsquo;t a straightforward
+way to discover a public key that could be used to talk to the server without revealing the SNI.
+This created a chicken-and-egg problem, where the client couldn&rsquo;t encrypt the SNI without knowing the server&rsquo;s public
+key, but it couldn&rsquo;t know the server&rsquo;s public key without sending the SNI in plaintext.</p>
+
+<p>This problem is solved with ECH by introducing a new type of DNS record, called an
+<a href="https://datatracker.ietf.org/doc/html/rfc9460">HTTPS record</a>.
+An HTTPS record is a special type of DNS record that contains the ECH public key of the server, along with other metadata,
+in a way that can be retrieved by the client without revealing the SNI (the website name is still leaked via the DNS
+request, but it is possible to protect your requests using DNS-over-TLS or DNS-over-HTTPS).
+The HTTPS record is typically retrieved by the client during the DNS lookup process, before the TLS connection is
+established.</p>
+
+<p>The HTTPS record contains an ECH configuration, which is used to encrypt the SNI and other metadata.
+This is generated by the server and is tied to the specific configuration of the server, rather than to a specific
+website.
+By using HTTPS records to retrieve the server&rsquo;s ECH public key, we are able to break the chicken-and-egg problem and
+provide a way to encrypt the SNI and other metadata.</p>
+
+<p>Before we can lookup the HTTPS record, it&rsquo;s first necessary to work out where that record would live.
+These records have been designed to be quite flexible, so can accommodate services running on non-default port numbers.
+If the default port number is in use then the HTTPS record will be on the same domain name as the website, but for
+non-default port numbers, there will be a prefix to the domain name:</p>
+
+<pre><code class="language-python">def svcbname(url: str) -&gt; str:
+    &quot;&quot;&quot;Derive DNS name of SVCB/HTTPS record corresponding to target URL.&quot;&quot;&quot;
+    parsed = urllib.parse.urlparse(url)
+    if parsed.scheme == &quot;https&quot;:
+        if (parsed.port or 443) == 443:
+            return parsed.hostname
+        else:
+            return f&quot;_{parsed.port}._https.{parsed.hostname}&quot;
+    elif parsed.scheme == &quot;http&quot;:
+        if (parsed.port or 80) in (443, 80):
+            return parsed.hostname
+        else:
+            return f&quot;_{parsed.port}._https.{parsed.hostname}&quot;
+    else:
+        # For now, no other scheme is supported
+        return None
+</code></pre>
+
+<p>To keep it simple, the examples in this post will use plain DNS but the technique is equally applicable to DNS-over-TLS
+and DNS-over-HTTPS. Now that we have the domain name to query, we can fetch the ECH configuration from the DNS using
+the <a href="https://www.dnspython.org/">dnspython</a> library:</p>
+
+<pre><code class="language-python">def get_ech_configs(domain) -&gt; List[bytes]:
+    try:
+        answers = dns.resolver.resolve(domain, &quot;HTTPS&quot;)
+    except dns.resolver.NoAnswer:
+        logging.warning(f&quot;No HTTPS record found for {domain}&quot;)
+        return []
+    except Exception as e:
+        logging.critical(f&quot;DNS query failed: {e}&quot;)
+        sys.exit(1)
+    configs: List[bytes] = []
+    for rdata in answers:
+        if hasattr(rdata, &quot;params&quot;):
+            params = rdata.params
+            echconfig = params.get(5)
+            if echconfig:
+                configs.append(echconfig.ech)
+    if len(configs) == 0:
+        logging.warning(f&quot;No echconfig found in HTTPS record for {domain}&quot;)
+    return configs
+</code></pre>
+
+<p>Once the ECH configurations are known, these can be used to establish the connection and fetch the website:</p>
+
+<pre><code class="language-python">def get_http(url, ech_configs) -&gt; bytes:
+    parser = urllib.parse.urlparse(url)
+    hostname, port, path = url.hostname, url.port, url.path
+    logging.debug(&quot;Performing GET request for https://{hostname}:{port}/{path}&quot;)
+    context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    context.load_verify_locations(certifi.where())
+    for config in ech_configs:
+        try:
+            context.set_ech_config(config)
+        except ssl.SSLError as e:
+            logging.error(f&quot;SSL error: {e}&quot;)
+            pass
+    with socket.create_connection((hostname, port)) as sock:
+        with context.wrap_socket(sock, server_hostname=hostname, do_handshake_on_connect=False) as ssock:
+            try:
+                ssock.do_handshake()
+                logging.debug(&quot;Handshake completed with ECH status: %s&quot;, ssock.get_ech_status().name)
+                logging.debug(&quot;Inner SNI: %s, Outer SNI: %s&quot;, ssock.server_hostname, ssock.outer_server_hostname)
+                request = f'GET {path} HTTP/1.1\r\nHost: {hostname}\r\nConnection: close\r\n\r\n'
+                ssock.sendall(request.encode('utf-8'))
+                response = b''
+                while True:
+                    data = ssock.recv(4096)
+                    if not data:
+                        break
+                    response += data
+                return response
+            except ssl.SSLError as e:
+                logging.error(f&quot;SSL error: {e}&quot;)
+                raise e
+</code></pre>
+
+<p>The important step here is the new
+<a href="https://irl.github.io/cpython/library/ssl.html#ssl.SSLContext.set_ech_config"><code>set_ech_config</code></a> method on the
+<code>SSLContext</code> that allows you to add the ECH configuration containing the public key.
+If there are multiple records, the underlying OpenSSL will determine which of the keys to use.
+There are also a few new methods that allow you to get the status information relating to ECH from the <code>SSLSocket</code>
+after the completion of the handshake.</p>
+
+<p>In the simple case, that&rsquo;s all there is to it.
+If you were to watch the connection with Wireshark you would not be able to see the true SNI being sent to the server
+and would only see the decoy SNI present in the unencrypted &ldquo;ClientHelloOuter&rdquo;.
+This decoy SNI is added to appease <a href="https://en.wikipedia.org/wiki/Middlebox">middleboxes</a> that may block traffic,
+accidentally or deliberately, if that field is missing entirely.
+There are also further protections against such middleboxes from the application of GREASE:</p>
+
+<blockquote>
+<p>If the client attempts to connect to a server and does not have an ECHConfig structure available for the server, it
+SHOULD send a GREASE &ldquo;encrypted_client_hello&rdquo; extension in the first ClientHello [&hellip;]</p>
+</blockquote>
+
+<p>This means that if your client supports ECH but does not have the configuration available to use it, the client should
+still send an ECH extension filled with nonsense anyway.
+This will help to detect deployment issues early as errors will be immediately obvious to users and won&rsquo;t rely on
+servers having deployed ECH before the errors are triggered.</p>
+
+<p>Finally, if the server sees this GREASE ECH extension then it can use this to know that you support ECH but didn&rsquo;t
+have a configuration available.
+In its reply, it can send a &ldquo;retry config&rdquo; and then terminate the connection.
+You then have the configuration available to start the connection again with a real ECH extension this time, and can
+cache that for future requests too.</p>
+
+<p>For a full client example including the use of retry configs, you can see our
+<a href="https://github.com/defo-project/docker-defo-client/blob/main/pyclient.py">example Python client</a> at GitHub.
+You&rsquo;ll need to use this with our <a href="https://github.com/irl/cpython">CPython fork</a> and
+<a href="https://github.com/defo-project/openssl">OpenSSL fork</a>.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/defo/">DEfO</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/ech/">ECH</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/free-software/">free software</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/open-source/">open source</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/openssl/">OpenSSL</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/privacy/">privacy</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/python/">Python</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/resilience/">resilience</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/tls/">TLS</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2024/12/06/seeking-ruby/jekyll-contractors-to-start-asap/" data-toggle="tooltip" data-placement="top" title="Seeking Ruby/Jekyll contractors to start ASAP">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2025/01/21/a-look-back-at-2024-f-droids-progress-and-whats-coming-in-2025/" data-toggle="tooltip" data-placement="top" title="A Look Back at 2024: F-Droid&#39;s Progress and What’s Coming in 2025">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

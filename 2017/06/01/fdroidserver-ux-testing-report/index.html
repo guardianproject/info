@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>fdroidserver UX Testing Report - Guardian Project</title>
+  <meta property="og:title" content="fdroidserver UX Testing Report" />
+  <meta name="twitter:title" content="fdroidserver UX Testing Report" />
+  <meta name="description" content="We ran user tests of fdroidserver, the tools for developers to create and manage F-Droid repositories of apps and media. This test was set up to gather usability feedback about the tools themselves and the related documentation. These tests were put together and run by Seamus Tuohy/Prudent Innovation.
+Methodology Participants completed a pretest demographic/background information questionnaire. The facilitator then explained that the amount of time taken to complete the test task will be measured and that exploratory behavior within the app should take place after the tasks are completed.">
+  <meta property="og:description" content="We ran user tests of fdroidserver, the tools for developers to create and manage F-Droid repositories of apps and media. This test was set up to gather usability feedback about the tools themselves and the related documentation. These tests were put together and run by Seamus Tuohy/Prudent Innovation.
+Methodology Participants completed a pretest demographic/background information questionnaire. The facilitator then explained that the amount of time taken to complete the test task will be measured and that exploratory behavior within the app should take place after the tasks are completed.">
+  <meta name="twitter:description" content="We ran user tests of fdroidserver, the tools for developers to create and manage F-Droid repositories of apps and media. This test was set up to gather usability feedback about the tools themselves …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2017/06/01/fdroidserver-ux-testing-report/",
+          "name": "Fdroidserver u x testing report"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Seamus Tuohy"
+  },
+  "headline": "fdroidserver UX Testing Report",
+  "description" : "We ran user tests of fdroidserver, the tools for developers to create and manage F-Droid repositories of apps and media. This test was set up to gather usability feedback about the tools themselves and the related documentation. These tests were put together and run by Seamus Tuohy/Prudent Innovation.
+Methodology Participants completed a pretest demographic/background information questionnaire. The facilitator then explained that the amount of time taken to complete the test task will be measured and that exploratory behavior within the app should take place after the tasks are completed.",
+  "inLanguage" : "en",
+  "wordCount": 3538,
+  "datePublished" : "2017-06-01T04:36:14",
+  "dateModified" : "2017-06-01T04:36:14",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "Android, bazaar, F-Droid, fdroid, usability" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2017/06/01/fdroidserver-ux-testing-report/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="fdroidserver UX Testing Report" />
+<meta property="og:description" content="We ran user tests of fdroidserver, the tools for developers to create and manage F-Droid repositories of apps and media. This test was set up to gather usability feedback about the tools themselves and the related documentation. These tests were put together and run by Seamus Tuohy/Prudent Innovation.
+Methodology Participants completed a pretest demographic/background information questionnaire. The facilitator then explained that the amount of time taken to complete the test task will be measured and that exploratory behavior within the app should take place after the tasks are completed.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2017/06/01/fdroidserver-ux-testing-report/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="fdroidserver UX Testing Report" />
+  <meta name="twitter:description" content="We ran user tests of fdroidserver, the tools for developers to create and manage F-Droid repositories of apps and media. This test was set up to gather usability feedback about the tools themselves …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2017/06/01/fdroidserver-ux-testing-report/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>fdroidserver UX Testing Report</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on June 1, 2017
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Seamus Tuohy
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>We ran user tests of <a href="https://gitlab.com/fdroid/fdroidserver" target="_blank"><em>fdroidserver</em></a>, the tools for developers to create and manage F-Droid repositories of apps and media. This test was set up to gather usability feedback about the tools themselves and the related documentation. These tests were put together and run by Seamus Tuohy/Prudent Innovation.</p>
+
+<h1 id="methodology">Methodology</h1>
+
+<p>Participants completed a pretest demographic/background information questionnaire. The facilitator then explained that the amount of time taken to complete the test task will be measured and that exploratory behavior within the app should take place after the tasks are completed. </p></p>
+
+<p>The participant was then provided a laptop with a browser window open to the F-Droid documentation. The facilitator let the participant know that if they felt they need anything external that they could ask the facilitator for that. </p></p>
+
+<p>At the start of each task, the participant was provided the task, and shown the resources that were available for them to use on a USB stick provided by the facilitator. The participant was then instructed to read the task description from the printed copy and begin the task. Time-on-task measurement began when the participant started the task. </p></p>
+
+<p>The facilitator instructed the participant to ‘think aloud’ so that they could capture their otherwise internal thoughts about interactions with the F-Droid server software. The facilitator observed and entered participant behavior, participant comments, and system actions into their record of the event. </p></p>
+
+<p>After each task, the participant spoke with the facilitator about the task. After all task scenarios were attempted, the participant completed a post-test satisfaction questionnaire.</p></p>
+
+<h1 id="task-completion-p">Task Completion</p></h1>
+
+<p>Each participant was asked to complete six specific tasks. At the start of each task, the participant was read the task, and shown the resources that are available for them to use. The participant was then instructed to read the task description from the printed copy and begin the task. </p></p>
+
+<h2 id="tasks">Tasks</h2>
+
+<ol>
+<li>Set Up an F-Droid application repository with the applications on this USB Drive.</li>
+<li>Connect to that repository using the F-Droid client.</li>
+<li>Group the applications under your repositories name in the F-Droid interface.</li>
+<li>Download the barcode scanner application using the F-Droid client.</li>
+<li>Update your F-Droid repository with an update to the barcode scanner app.</li>
+<li>Download the update using the phone.</li>
+</ol>
+
+<p>Tasks are marked as “complete” after the participant says they have completed the task or after the test facilitator has enough evidence that the task has been completed. Tasks are marked as “uncompleted” after the participant says they cannot complete the task and requests assistance.</p>
+
+<p><img src="https://annoyingtechnicaldetails.files.wordpress.com/2017/06/null2.png" width="574" height="353" alt="" title="" /></p>
+
+<h1 id="task-completion-time">Task Completion Time</h1>
+
+<p>Test time will begin after the participant says they have understood the task and will begin. Testing time will end after the participant says they have completed the task or after the test facilitator has enough evidence that the task has been completed. In the case of a critical error, test time will stop after the participant says they cannot complete the task and request assistance.</p>
+
+<p><img src="https://guardianproject.info/wp-content/uploads/2017/06/null3.png" width="577" height="356" alt="" title="" /></p>
+
+<h2 id="usability-metrics">Usability Metrics</h2>
+
+<p>Usability metrics refers to participant performance when completing the assigned tasks. This is includes completion success rates, error rates, time to task completion and subjective evaluations/interviews. </p></p>
+
+<ul>
+<li><strong>Critical Errors</strong>: Critical errors are reported as errors that result in failure to complete the task. Participants may or may not be aware that the task goal is incorrect or incomplete. Independent completion of the task is the goal; help from the test facilitator or others is to be marked as a critical error.</li>
+<li><strong>Non-critical Errors</strong>: Non-critical errors are errors that the participant recovers from alone and are not such that the participant can no longer complete the task. They can include errors such as excessive steps taken to complete a task or initially using an incorrect function but recovering from that incorrect step.</li>
+<li><strong>Exploratory Behavior</strong>: Errors that are off task from the main task attempting to be completed will be marked as exploratory behavior.</li>
+</ul>
+
+<p><img src="https://guardianproject.info/wp-content/uploads/2017/06/null4.png" width="600" height="370" alt="" title="" /></p>
+
+<p>It should be noted that many of the errors that were encountered in tasks two, four, and six were the result of configuration decisions and non-critical errors in tasks one and five. More information about why this is the case can be found in the “Task Specific Findings.”</p>
+
+<p><img src="https://guardianproject.info/wp-content/uploads/2017/06/null5.png" width="600" height="370" alt="" title="" /> </p></p>
+
+<h1 id="task-specific-findings-p">Task Specific Findings</p></h1>
+
+<h2 id="task-1-set-up-an-f-droid-application-repository-with-the-applications-on-this-usb-drive">Task 1: Set Up an F-Droid application repository with the applications on this USB Drive.</h2>
+
+<ul>
+<li><strong>Average Time</strong>: 53 Minutes</li>
+<li><strong>Number of Participants with Critical Errors</strong>: 1</li>
+</ul>
+
+<h3 id="docs-needed-for-configuring-the-remote-server">Docs needed for configuring the remote server</h3>
+
+<p>The participants were provided a remote server that was pre-configured to host F-Droid applications. The research team did this because setting up a web-server to host an F-Droid repository seemed out of scope, and it would increase the length of the UX session to an unacceptable length.</p></p>
+
+<p>During this activity the participants were consistently confused by the documentation related to setting up the F-Droid host server (even though the server was pre-configured for them.) Documentation around file permissions on the remote server were especially troublesome.FOOTNOTE: Footnote</p>
+
+<h4 id="feedback">Feedback:</h4>
+
+<ul>
+<li>The participant was confused about where the documentation begins to start deploying the server.</li>
+<li>The participant stated that there is not enough information on how to configure the remote server.</li>
+<li>It is missing in the documentation that before doing “fdroid server update” the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.</li>
+<li>In the documentation, the information about the file permissions and configuration of the server at Fdroid level is missing. The documentation should say what permissions contain the generated files, (or what permissions they should contain).</li>
+<li>It is missing in the documentation that before doing “fdroid server update” the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.</li>
+<li>The participant did not use the command fdroid server update to push the apps to the remote server, instead of that, he used the command SCP to send the data of manually.</li>
+<li>The participant was confused about the location of the files hosted on the web server. Doubt resolved after reviewing the documentation.</li>
+</ul>
+
+<h3 id="confusing-ordering-of-documentation">Confusing ordering of documentation</h3>
+
+<p>The participants felt that the documentation was confusingly ordered. While a few noted that the individual pieces of documentation were correct, and even clear once a participant is familiar with themFOOTNOTE: Footnote, the overall organization and ordering of documentation made it made it difficult to use.</p>
+
+<h4 id="feedback-1">Feedback:</h4>
+
+<ul>
+<li>There were many doubts regarding the order of the steps, there was also a sensation of ordered list of steps when in practice the information were related to different activities (eg. Local Demo and Real World setup)</li>
+<li>The documentation is not understandable, not in terms of language but in the way of explaining, it should be more detailed. It feels difficult to understand for entry level people.</li>
+<li>The way information is presented and how it is structured seems to be disconcerting and overloaded.</li>
+<li>In outlines, poorly structured, getting started should have the section “set repo” and “install”, should not make emphasis on FAQs.</li>
+<li>The participant considers that documentation is confusing as to the step by step, he ends up diverting from the task received.</li>
+<li>The participant said that the content of the list in the overview section is not detailed in subsequent sections in the Setup an Fdroid App Repo page.</li>
+<li>It seems more logical for him if in the main page of the documentation are placed first the tutorials and in the end the FAQs.</li>
+<li>The participant had to use the Ctrl + F function several times to find keywords in the index file of the documentation. It seemed unclear and messy to him.</li>
+</ul>
+
+<h3 id="metadata">MetaData</h3>
+
+<p>All but one of the participants left their app and repository metadata empty during this task. There is a possibility that this is because it was not explicitly stated in the tasks requirements, because it is not clearly marked in the instructions, or because the overall difficulty of the other components of this task distracted them from this component of the task.</p>
+
+<h4 id="feedback-2">Feedback:</h4>
+
+<ul>
+<li>The participant did not complete the repository or application metadata.</li>
+<li>The metadata of the apps and the server was not configured, however the server was running with the given applications.</li>
+<li>The participant did not place the metadata of applications or repository.</li>
+<li>The participant generated the skeleton metadata and did not update the information.</li>
+<li>The participant modifies the metadata files in the visual environment of the local machine (Nautilus and Gedit) because it was more comfortable.</li>
+</ul>
+
+<h3 id="docs-to-help-address-errors">Docs to help address errors</h3>
+
+<p>When participants did encounter errors there was little assistance to be found in the existing documentation. The current documentation assumes success. Participants who encountered errors desired that the documentation also included guidance about what could have gone wrong when they encounter errors.</p>
+
+<h4 id="feedback-3">Feedback</h4>
+
+<ul>
+<li>The participant felt frustrated because he did not find a place in the documentation where he could consult errors.In many times, he wanted to use Google to help with the debug process but would not find relevant information there either. The participant wanted a section in the documentation showing how to validate the steps of the process and again a section with common problems in the implementation and configuration.</li>
+<li>Documentation should have a guide of error messages which can be received, e.g. those related to the metadata.</li>
+<li>The participant says that it could be useful a section in the documentation for Troubleshooting</li>
+</ul>
+
+<h3 id="android-dependencies">Android Dependencies</h3>
+
+<p>Multiple participants were unclear about what android related dependencies were required and how to obtain them.</p>
+
+<h4 id="feedback-4">Feedback:</h4>
+
+<ul>
+<li>The participant seeks for information on how to download Android Studio</li>
+<li>The participant was confused about the need to install the dependencies related to Android in order to complete the task. After reviewing the documentation, the participant decided not to install these dependencies.</li>
+<li>Documentation should be more evident regarding to dependency management. e.g. If the binary installation includes Android dependencies.</li>
+<li>The participant doubts whether to do the setup to create app builds, and if the installation of the corresponding dependencies is covered with the installation itself of Fdroid server.</li>
+</ul>
+
+<h2 id="task-2-connect-to-that-repository-using-the-f-droid-client">Task 2: Connect to that repository using the F-Droid client.</h2>
+
+<ul>
+<li><strong>Average Time</strong>: 13 Minutes</li>
+<li><strong>Number of Participants with Critical Errors</strong>: 2</li>
+</ul>
+
+<h3 id="https-defaults-on-repository-address">HTTPS Defaults on Repository Address</h3>
+
+<p>Even though the developers thought the client was relatively easy to use some encountered issues related to the assumptions that F-Droid makes around the security of a repository. </p></p>
+
+<p>When adding a new repository to the client application if the participant leaves the protocol blank (e.g. no HTTP or HTTPS) the client defaults to using HTTPS. If the server does not support HTTPS the repository will fail to set up. A repository that does not support HTTPS is clearly undesirable. But, even so, F-Droid’s implicit assumption, without accompanying documentation and/or errors to alert the developer and participant, caused issues for participants.</p>
+
+<h4 id="feedback-5">Feedback:</h4>
+
+<ul>
+<li>The error the participant was experiencing was that the client by default adds the HTTPS protocol to URLs that don’t explicitly state HTTP(s), and the server used for the task did not support HTTPS.</li>
+<li>It should have had documentation on how to input the URL of the repository to be properly recognized.</li>
+<li>The participant received errors when setting the repository address incorrectly with HTTPS as was suggested by default on the client application on the android phone. Then the participant noticed the situation and changed the address to HTTP.</li>
+<li>The client is intuitive to use.</li>
+<li>The solution to the issue presented does not seem complex to the participant but is not documented and is liable to make mistakes.</li>
+</ul>
+
+<h3 id="interconnected-documentation-needed">Interconnected Documentation Needed</h3>
+
+<p>When switching from building a repository to using the repository the participants had to search for client documentation in other parts of the F-Droid website and online. Multiple participants suggested that client documentation related to the use of the F-Droid server being set up should be more easily accessed from the server setup documentation. </p></p>
+
+<p>It should be noted that the participants were using a development build of the new documentation, and, as such it was not directly linked to the F-Droid website where the client documentation is available.</p>
+
+<h4 id="feedback-6">Feedback:</h4>
+
+<ul>
+<li>In the documentation, there was no information about how setup the client’s app.</li>
+<li>The client documentation should be accessible in the server-setup documentation. For example, including how to install and setup the client.</li>
+<li>The participant claimed the task was completed, however the connection was not successful because he wrongly placed the URL repository in the Android client (root@1xx.1xx.1xx.1xx:/var/www/html /). The participant was then assisted to move on to the next activity.He explains that in the client FAQ does not appear how to fill the URL of new repositories in the client</li>
+<li>Very confused about how to get started.</li>
+<li>Within the app was easy to complete the task, since it is an intuitive application. It becomes necessary to have a step-by-step list of how to set the repositories in the client, especially the URLs.</li>
+<li>A link to home of fdroid.org could be placed in the documentation.</li>
+</ul>
+
+<h2 id="task-3-group-the-applications-under-your-repositories-name-in-the-f-droid-interface">Task 3: Group the applications under your repositories name in the F-Droid interface.</h2>
+
+<ul>
+<li><strong>Average Time</strong>: 1 Minute</li>
+<li><strong>Number of Participants with Critical Errors</strong>: 0</li>
+</ul>
+
+<h3 id="metadata-1">MetaData</h3>
+
+<p>Participants had quick success and no critical errors during this task. But, the participants achieved this by circumventing the aim of the test. Instead of appropriately setting the metadata of their app, and searching for it within the Client, they disabled all other repositories to make it so that only their apps showed in the client. This rapid and common adoption of this specific method of circumventing the need to set, and use, metadata is specifically troubling.</p>
+
+<h4 id="feedback-7">Feedback:</h4>
+
+<ul>
+<li>The participant felt confused about what was expected in the task. However, he thought that disabling other repositories on the client list could be enough.</li>
+<li>There should be an option to disable all repositories included in the software.</li>
+<li>At the beginning, it was confusing to understand which switches had to be disabled and which ones to enabled in order to see the applications of the own repository. It was simple a few seconds later but it should be specified in the documentation.</li>
+<li>There should be in the documentation an instructive manual on the use of the client to manage repositories.</li>
+<li>The participant found very easy to disable other repositories in order to see only the applications of the server used</p></li>
+</ul>
+
+<h2 id="task-4-download-the-barcode-scanner-application-using-the-f-droid-client">Task 4: Download the barcode scanner application using the F-Droid client.</h2>
+
+<ul>
+<li><strong>Average Time</strong>: 15 Minutes</li>
+<li><strong>Number of Participants with Critical Errors</strong>: 2</li>
+</ul>
+
+<p>The issues that the participants faced in this task were actually related to earlier tasks with “critical issues” that were undetectable until this point. Without the file permission issues, described below, downloading apps was seen as a very easy task. This highlights the overall feeling by the developer participants that the client is generally easy and intuitive to use.</p></p>
+
+<h3 id="server-permissions">Server Permissions</h3>
+
+<p>The participants encountered multiple difficult to diagnose issues related to file permissions on the remote server. These issues only appear once a participant is attempting to download an application from a F-Droid repository. As such, permission issues can easily slip past a repo maker who merely updates their repository and checks to ensure that it can be connected to.</p>
+
+<h4 id="feedback-8">Feedback:</h4>
+
+<ul>
+<li>The participant received in the Android client the error “Unsuccessful Non-critical error download”, understood at the time as a permissions error on the (min 1) remote server, which he modified directly at the time by accessing through SSH before re-testing the download.</li>
+<li>Extremely comfortable and fast if the operation of permissions on the Subjective remote server is known. The participant works with this permissions evaluation management every day and says that’s why it became so easy, but perhaps for another person without such familiarity on web servers could be more complicated.</li>
+<li>“It’s easy once you know how to configure file permissions.”</li>
+<li>The participant did not locate any documentation about remote server configuration, especially related to file permissions on the web server. The participant suggests that for many people this would be necessary.</li>
+<li>In the documentation, the information about the file permissions and configuration of the server at Fdroid level is missing. The documentation should say what permissions contain the generated files, (or what permissions they should contain).</li>
+<li>The participant understood how to resolve the permissions problem on the remote server and corrected it by placing 775 permissions on the remote server’s files. However other actions meant that the activity could not be completed successfully.</li>
+<li>The client displayed the error “Connection refused”, the participant concluded that it was due to a problem of permissions on the remote server, however decided to address it by modifying the nginx configuration file, resulting in the inability to read and download files from the remote server.</p></li>
+</ul>
+
+<h2 id="task-5-update-the-f-droid-repository-with-an-update-to-the-barcode-scanner-app">Task 5: Update the F-Droid repository with an update to the barcode scanner app.</h2>
+
+<ul>
+<li><strong>Average Time</strong>: 9 Minutes</li>
+<li><strong>Number of Participants with Critical Errors</strong>: 0</li>
+</ul>
+
+<h3 id="updating-the-server">Updating the Server</h3>
+
+<p>Some participants had continued difficulty working with the server during updates. While some of this was related to difficulty differentiating tasks that should be conducted on the client vs. those that should be conducted on the server when reading the documentation, others were related to the behavior of the software.</p>
+
+<h4 id="feedback-9">Feedback:</h4>
+
+<ul>
+<li>The upgrade process is better documented compared to other parts of the documentation, but still could be more detailed.</li>
+<li>The terminal was giving an error on the local machine when running the update command saying “CRITICAL: Failed to get repo pubkey!”, later the participant discovered that the update was pushed anyway to the server saying that the task was completed.</li>
+<li>The participant felt confused about which commands must be executed in the local machine and which commands in the remote evaluation server. The participant says that if he needs to configure an exclusively local instance he would not know how to do it. The participant says that it could be useful a section in the documentation for Troubleshooting</li>
+<li>The participant does not know exactly where to place the update files.</li>
+<li>The participant is not clear whether it is necessary to run the command fdroid update and then fdroid server update, or just by running fdroid server update would both of the commands run automatically.</li>
+<li>The participant cannot read the update from the client and doubts whether to run a command on the remote server as part of the update process, then he solves by doing update of the local repository before pushing the remote server.</li>
+<li>The participant was not clear if Fdroid update, actually updates the remote server, then after running it he was able to access via SSH to the remote server in order to check if the updated application was present, when seeing that it was not updated, the participant understood that he also had to run Fdroid server update</li>
+</ul>
+
+<h3 id="documentation-is-intuitive-once-understood">Documentation is Intuitive Once Understood</h3>
+
+<p>Once participants got comfortable with the documentation, server setup, and/or updating process they felt that it was relatively easy to use.</p>
+
+<h4 id="feedback-10">Feedback:</h4>
+
+<ul>
+<li>Very well designed software to handle the updates, it ends up being very easy to use.</li>
+<li>The task was easy once you understand the file structure in the repository.</li>
+<li>The task was very pleasant to complete at the software level.</li>
+<li>Documentation is clear but yet confusing at first reading.</li>
+<li>The upgrade process is better documented compared to other parts of the documentation, but still could be more detailed.</p></li>
+</ul>
+
+<h2 id="task-6-download-the-update-using-the-phone">Task 6: Download the update using the phone.</h2>
+
+<ul>
+<li><strong>Average Time</strong>: 7 Minutes</li>
+<li><strong>Number of Participants with Critical Errors</strong>: 1</li>
+</ul>
+
+<h3 id="permissions-cont">Permissions Cont.</h3>
+
+<p>Permissions issues that went unaddressed in task 5 caused issues during the, otherwise very easy task, of downloading updates to an application.</p>
+
+<h4 id="feedback-11">Feedback:</h4>
+
+<ul>
+<li>Once understood the issue of file permissions on the remote server, is easy to address the download of the update.</li>
+<li>It’s easy once you know how to configure file permissions.</li>
+<li>Replaying of the same issue of permissions and the error “Download unsuccessful”, then resolved by knowing how permissions are handled on the remote server.</li>
+<li>It is missing in the documentation that before doing “fdroid server update” the permissions of the files to be served can be changed locally since they are transmitted to the remote server with the same local permissions.</li>
+<li>Very pleasant on the Android client side, but it should be documented the type of permissions that the files on the remote server should contain.</li>
+<li>The update is loaded in the remote repo but it does not show on the</li>
+<li>Fdroid client, then the participant suspects it is because of the file permissions. After 12 minutes the participant says that he does not know how to fix the issue and stopped the task. The participant suspects before notifying the failure in the task completion that the issue could be related to some commands and files created as root that creating conflicts with the tasks triggered by the server update command.</p></li>
+</ul>
+
+<h2 id="miscellaneous-feedback-and-requests">Miscellaneous Feedback and Requests</h2>
+
+<h3 id="complexity-of-language-in-the-documentation">Complexity of Language in the Documentation</h3>
+
+<ul>
+<li>One participant used Google Translator for a better understanding of some terms within the documentation. This participant was also the only participant who speaks English as their primary language. All other participants speak Spanish as their primary language.</li>
+</ul>
+
+<h3 id="documentation-requests">Documentation requests</h3>
+
+<ul>
+<li>One participant wanted example configuration files in the Gitlab repository of F-Droid-server.</li>
+</ul>
+
+<h3 id="more-explicit-documentation">More explicit documentation</h3>
+
+<ul>
+<li>The documentation must specify that a set of files has been created when fdroid init runs</li>
+<li>It should have specified that commands with Fdroid should be executed in the main directory of the repository (e.g. ~/fdroid) and not in other directories within it (e.g. ~/fdroid /repo).</p></li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/android/">Android</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/bazaar/">bazaar</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/f-droid/">F-Droid</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/fdroid/">fdroid</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/usability/">usability</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2017/05/31/announcing-new-libraries-f-droid-update-channels/" data-toggle="tooltip" data-placement="top" title="Announcing new libraries: F-Droid Update Channels">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/" data-toggle="tooltip" data-placement="top" title="Tracking usage without tracking people">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prototype on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/prototype/</link>
+    <description>Recent content in Prototype on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/prototype/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PanicKit 1.0: built-in panic button and full app wipes</title>
+      <link>https://guardianproject.github.io/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/</guid>
+      <description>
+
+&lt;p&gt;Panic Kit is 1.0!  After over three years of use, it is time to call
+this stable and ready for widespread use.&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://guardianproject.github.io/info/css/jquery.fancybox-3.4.0.min.css&#34; /&gt;
+&lt;script src=&#34;https://guardianproject.github.io/info/js/jquery-3.3.1.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://guardianproject.github.io/info/js/jquery.fancybox.min.js&#34;&gt;&lt;/script&gt;
+&lt;div class=&#34;gallery&#34;&gt;
+  
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551039.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551039.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551407.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/Screenshot_1559551407.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive0.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive0.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive1.png.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_fdroid_destructive1.png.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  &lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_ripple.png&#34;&gt;
+    &lt;img src=&#34;https://guardianproject.github.io/info/info/2019/06/04/panickit-1.0-built-in-panic-button-and-full-app-wipes/screenshot_ripple.png&#34;&gt;  &lt;br/&gt;
+  &lt;/a&gt;
+  
+  
+&lt;/div&gt;
+
+
+&lt;h2 id=&#34;built-in-panic-button&#34;&gt;Built-in panic button&lt;/h2&gt;
+
+&lt;p&gt;This round of work includes a new prototype for embedding PanicKit
+directly into Android.  Android 9.0 Pie introduced a new &amp;ldquo;lockdown&amp;rdquo;
+mode which follows some of the patterns laid out by PanicKit.  There
+is an &lt;em&gt;Enter lockdown&lt;/em&gt; button available on the power button menu, so
+it is rapidly available.  This is a great panic trigger button, so we
+made a prototype of a System Settings app that lets users connect the
+full flexibility of PanicKit responses to this &lt;em&gt;Enter lockdown&lt;/em&gt;
+button.  The functionality that Google links to this new button is
+extremely limited, it seems to be a &lt;a href=&#34;https://www.androidpolice.com/2018/03/08/android-p-feature-spotlight-new-lockdown-option-power-menu-turns-off-fingerprint-unlocking-something-called-extended-access/&#34;&gt;one time restriction on how you
+login&lt;/a&gt;.
+The PanicKit responses are in addition to what Google
+included. CalyxOS is
+&lt;a href=&#34;https://gitlab.com/calyxos/calyxos/issues/72&#34;&gt;working&lt;/a&gt; to integrate
+this, look for test releases soon!&lt;/p&gt;
+
+&lt;h2 id=&#34;full-wipes-of-selected-apps&#34;&gt;Full wipes of selected apps&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid v1.7-alpha1&lt;/a&gt; has alpha support for
+uninstalling and wiping all data from selected apps in response to a
+panic trigger, including Ripple and F-Droid.  So the whole panic setup
+could be wiped as part of the response.  It is essential to have a
+complete, tested backup before trying this new feature, since it will
+delete all of the data for each app that is uninstalled.&lt;/p&gt;
+
+&lt;p&gt;This requires &lt;a href=&#34;https://f-droid.org/packages/org.fdroid.fdroid.privileged.ota&#34;&gt;F-Droid Privileged
+Extension&lt;/a&gt;
+be installed on the device, in order to uninstall apps without a
+prompt for each app.  Android ROMs like CalyxOS, CopperheadOS,
+Fairphone Open, Replicant, and Lineage-for-microG all include F-Droid
+Privileged Extension.&lt;/p&gt;
+
+&lt;h2 id=&#34;ripple-is-polished-up&#34;&gt;Ripple is polished up&lt;/h2&gt;
+
+&lt;p&gt;Ripple also received some modernization and polish.  Google has
+reinstated the Ripple app in Google Play, so it is again widely
+available.  Ripple was of course available the whole time via F-Droid.
+Google suspended Ripple without explanation, then a long while later
+reinstated it without explanation.&lt;/p&gt;
+
+&lt;p&gt;This work was made possible in part from donations from Handshake Foundation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>F-Droid Lubbock Report – What We Want to Know</title>
+      <link>https://guardianproject.github.io/info/2017/04/17/f-droid-lubbock-report-what-we-want-to-know/</link>
+      <pubDate>Mon, 17 Apr 2017 08:07:47 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2017/04/17/f-droid-lubbock-report-what-we-want-to-know/</guid>
+      <description>
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;f-droid-lbk-usability-study-report-what-we-want-to-know-p&#34;&gt;F-Droid LBK Usability Study Report – What We Want to Know&lt;/p&gt;&lt;/h1&gt;
+
+&lt;p&gt;Prepared by Carrie Winfrey&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Preliminary Version – April 17, 2017&lt;/em&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;When planning this user test, the team outlined features and flows within the app on which we wanted feedback. From there, we created tasks for participants to complete that would access these areas, and produce insights related to our inquires.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;This document is organized by the tasks participants completed. Initial inquiry questions are outlined under each task, followed by the feedback and observations gained from the test. Last, within each section, I’ve listed suggestions for improvement related to the task.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;In the Lubbock sessions, 11 people participated in this focused usability study. More information on participant demographics, test methodology, metrics, and follow-up activities and insights will be provided soon.&lt;/p&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;PAGE_BREAK: PageBreak&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;task-a-search-for-an-app-that-you-would-like-to-download-install-the-app-you-have-selected&#34;&gt;TASK A – Search for an app that you would like to download. Install the app you have selected.&lt;/h1&gt;
+
+&lt;p&gt;Average difficulty: 1.9&lt;/p&gt;
+
+&lt;p&gt;Number of participants with critical errors: 0&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;PARTICIPANT QUOTES&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“App won’t install. Found the game easily, though.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;What we want feedback on&lt;/u&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Are users able to locate the search button?
+
+&lt;ul&gt;
+&lt;li&gt;Yes. Most users found the search button right away.&lt;/li&gt;
+&lt;li&gt;Some (3 out of 10) browsed through the latest or category view to find an app instead of using search.&lt;/li&gt;
+&lt;li&gt;One participant said he never saw the search button.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Are they able to effectively use search?
+
+&lt;ul&gt;
+&lt;li&gt;Yes.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Are they able to find what they’re looking for?
+
+&lt;ul&gt;
+&lt;li&gt;Not always. Searching for mainstream apps like Gmail, ESPN, Facebook and Twitter returns no relevant results.&lt;/li&gt;
+&lt;li&gt;“It took about 10 tries to find an app I searched for. It might be difficult for users to find the app they have an interest in.”&lt;/li&gt;
+&lt;li&gt;One participant searched for recipes, but misspelled it, so no relevant results were displayed.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Other insights:&lt;/li&gt;
+&lt;li&gt;Many users expressed that it was difficult to know if and app had installed.
+
+&lt;ul&gt;
+&lt;li&gt;“I found it difficult to figure out if the apps had installed. No notification?”&lt;/li&gt;
+&lt;li&gt;Some participants searched on the home screen of the phone, then in the apps on their phone to see if the app had installed.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;4 participants were unable to install apps all together due to a bug in the app version being tested.&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;u&gt;Suggestions for improvement:&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Location of search&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Though most people didn’t have trouble locating search, a majority are most familiar with finding it at the top of the screen.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Search results&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Display more relevant search results. Ex: If someone searches for Gmail and we don’t have it, offer alternative email apps.&lt;/li&gt;
+&lt;li&gt;Use suggestive results to help users avoid spelling errors and to make the action of searching quicker.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feedback once installed&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Provide better feedback once an app is installed for views within the app (installed from list view, app details and updates views).&lt;/li&gt;
+&lt;li&gt;Show a system notification when an app is installed.&lt;/li&gt;
+&lt;li&gt;Give the option to add installed apps to the home screen of the phone.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fix bugs&lt;/strong&gt; Fix bugs with installing apps.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;PAGE_BREAK: PageBreak&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;task-b-there-is-an-app-that-needs-to-be-updated-find-the-app-and-install-the-update&#34;&gt;TASK B – There is an app that needs to be updated. Find the app and install the update.&lt;/h1&gt;
+
+&lt;p&gt;Average difficulty: 2.3&lt;/p&gt;
+
+&lt;p&gt;Number of participants with critical errors: 0&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;PARTICIPANT QUOTES&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“The update icon at the bottom with red number notifications was easy to find.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“It took me multiple attempts to update the applications.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;What we want feedback on&lt;/u&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Is it clear where to go to find updates?
+
+&lt;ul&gt;
+&lt;li&gt;Yes. Every participant easily located the updates tab.&lt;/li&gt;
+&lt;li&gt;“It was very easy to spot apps that need updating.”&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Can users successfully update an app?
+
+&lt;ul&gt;
+&lt;li&gt;No.&lt;/li&gt;
+&lt;li&gt;The difference in word choice on app details than in updates view confused multiple users.
+
+&lt;ul&gt;
+&lt;li&gt;“The update icon at the bottom with red number notifications was easy to find. Once I clicked on the specific app to update it gave the option to uninstall or upgrade. I wasn’t sure if upgrade was the same as update or not – it sounded like something I’d have to pay for.”&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Every participant that tried to update an app from the updates view had problems.
+
+&lt;ul&gt;
+&lt;li&gt;“Took me multiple attempts to update the applications. Not positive the update occurred. There was no indication of completion.”&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;It was unclear if an app had successfully updated. Participants were not confident that they had updated the app.&lt;/li&gt;
+&lt;li&gt;We need to provide better feedback once an update is complete and successful.&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;u&gt;Suggestions for improvement:&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Word Choice&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Change ‘upgrade’ to updates in app details.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feedback&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Provide better feedback once an update is complete and successful within the updates view.&lt;/li&gt;
+&lt;li&gt;Give a system notification when an update is successful.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fix bugs&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I’ve shared a screen record that reveals the problems.&lt;/li&gt;
+&lt;li&gt;For some users, the red badge indicator didn’t change after they updated the app. This behavior needs to be tested internally.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;PAGE_BREAK: PageBreak&lt;/p&gt;
+
+&lt;h1 id=&#34;task-c-find-a-game-app-that-looks-interesting-to-you-install-the-app&#34;&gt;TASK C – Find a game app that looks interesting to you. Install the app.&lt;/h1&gt;
+
+&lt;p&gt;Average difficulty: 1.7&lt;/p&gt;
+
+&lt;p&gt;Number of participants with critical errors: 0&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;What we want feedback on&lt;/u&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;How do users browse when looking for a specific kind of app, like a game? Do they search, look in categories, browse, etc.
+
+&lt;ul&gt;
+&lt;li&gt;Most participants looked through the games category. Some browsed latest. Some used search.&lt;/li&gt;
+&lt;li&gt;Many people found the categories view appealing, and spent more time there than on the latest view, when looking for apps. One participant compared it to the iTunes Store, but commented that it was even easier.&lt;/ul&gt; &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;task-d-search-for-a-crossword-puzzle-app-within-the-games-category&#34;&gt;TASK D – Search for a crossword puzzle app within the games category.&lt;/h1&gt;
+
+&lt;p&gt;Average difficulty: 1.1&lt;/p&gt;
+
+&lt;p&gt;Number of participants with critical errors: 0&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;What we want feedback on&lt;/u&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Are users able to effectively search within categories?
+
+&lt;ul&gt;
+&lt;li&gt;We saw a variety of behaviors with this task. But, overall, people were able to do this without problems.
+
+&lt;ul&gt;
+&lt;li&gt;4 participants searched in within categories&lt;/li&gt;
+&lt;li&gt;2 participants searched from search&lt;/li&gt;
+&lt;li&gt;2 participants browsed in horizontal view of the category&lt;/li&gt;
+&lt;li&gt;2 participants opened category and scrolled down to find &lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;u&gt;Suggestions for improvement:&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easier use of chip&lt;/strong&gt; Once you clear a chip, there’s no easy way to get it back if you want to search within that category.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;PAGE_BREAK: PageBreak&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;task-e-if-you-had-no-internet-how-would-you-download-an-app&#34;&gt;TASK E – If you had no internet, how would you download an app?&lt;/h1&gt;
+
+&lt;p&gt;Average difficulty: 3.1&lt;/p&gt;
+
+&lt;p&gt;Number of participants with critical errors: 7 of 10 that attempted the task were unable to identify the nearby feature as the place to download apps without internet.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;PARTICIPANT QUOTES&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“Nearby didn’t give me the idea of downloading while offline.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;What we want feedback on&lt;/u&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Are users able to discover how to download apps offline?
+
+&lt;ul&gt;
+&lt;li&gt;A few. But not the majority.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Is it clear that you use they nearby feature to do this?
+
+&lt;ul&gt;
+&lt;li&gt;No.&lt;/li&gt;
+&lt;li&gt;70% of participants never identified the nearby feature as the means for doing this.&lt;/li&gt;
+&lt;li&gt;“Nearby didn’t give me the idea of downloading while offline.”&lt;/li&gt;
+&lt;li&gt;30% successfully identified nearby. Though, most after looking several other places?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;What other behaviors are observed?
+
+&lt;ul&gt;
+&lt;li&gt;Turning WiFi off to see if the interface changed&lt;/li&gt;
+&lt;li&gt;Going into airplane mode&lt;/li&gt;
+&lt;li&gt;Downloading an airplane mode app&lt;/li&gt;
+&lt;li&gt;Opening settings and looking in WiFi options&lt;/li&gt;
+&lt;li&gt;Searching google.&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;u&gt;Additional Observations&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;People did not make the connection between ‘nearby’ and downloading apps offline.&lt;/li&gt;
+&lt;li&gt;Not one participant read the text on the Nearby view when they initially tapped on it.&lt;/li&gt;
+&lt;li&gt;Multiple people compared nearby to Air Drop on iOS&lt;/li&gt;
+&lt;li&gt;“It’s going to airdrop a virus to your phone.”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;u&gt;Suggestions for improvement:&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Word choice&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reconsider the word choice.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offline mode&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The experience of the app should be obviously different when there’s no internet connection.&lt;/li&gt;
+&lt;li&gt;Guide users toward the nearby feature if there’s no connection.&lt;/li&gt;
+&lt;li&gt;Consider providing info in settings&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More engaging visuals&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If we want people to pay attention to the Nearby view, it needs to be more engaging.&lt;/li&gt;
+&lt;li&gt;If we keep the language about offline, consider using iconography that communicates that.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;PAGE_BREAK: PageBreak&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;task-f-your-friend-emails-you-a-link-to-a-collection-of-their-favorite-apps-open-gmail-and-click-on-the-link-they-have-sent-you-add-the-collection-of-apps-that-your-friend-emailed-to-you-to-f-droid-locate-an-app-called-habitica-from-the-collection-you-just-downloaded&#34;&gt;TASK F – Your friend emails you a link to a collection of their favorite apps. Open gmail and click on the link they have sent you. Add the collection of apps that your friend emailed to you to F-Droid. Locate an app called Habitica from the collection you just downloaded.&lt;/h1&gt;
+
+&lt;p&gt;Average difficulty: 2.2&lt;/p&gt;
+
+&lt;p&gt;Number of participants with critical errors: Every participant was able to add add the repo. 4 of 11 participants were unable to locate the Habitica app that was added from the repo.&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;PARTICIPANT QUOTES&lt;/p&gt;
+
+&lt;p&gt;“I was able to find the link the email and accept the apps, but have no idea where to find the collection from my friend in F-Droid.”&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;What we want feedback on&lt;/u&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Are users able to add a repo from a link opened on mobile?
+
+&lt;ul&gt;
+&lt;li&gt;Yes. No one had problems with this.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Is the webpage for adding a repo clear?
+
+&lt;ul&gt;
+&lt;li&gt;Yes.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Are users able to find the apps from a repo they have added?
+
+&lt;ul&gt;
+&lt;li&gt;No. Participants were very confused.&lt;/li&gt;
+&lt;li&gt;100% participants didn’t know if they had added the repo successfully after completing the steps.&lt;/li&gt;
+&lt;li&gt;“I was able to find the link in the email and accept the apps, but I have no idea where to find the collection from my friend in F-Droid.”&lt;/li&gt;
+&lt;li&gt;Some were able to find one app by searching for it.&lt;/li&gt;
+&lt;li&gt;Average non-critical errors for finding the app—2
+
+&lt;ul&gt;
+&lt;li&gt;5 users were able to locate the app; most after multiple attempts&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Average critical errors for finding the app—3.73
+
+&lt;ul&gt;
+&lt;li&gt;3 users were unable to locate the app added from the repo&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Other places people looked
+
+&lt;ul&gt;
+&lt;li&gt;In categories thinking the latest apps added would be shown first&lt;/li&gt;
+&lt;li&gt;In the latest view&lt;/li&gt;
+&lt;li&gt;In settings &amp;gt; Manage installed apps&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Do users understand that the apps added from a repo are only made available to them, and not auto-downloaded and installed?
+
+&lt;ul&gt;
+&lt;li&gt;Not really. It was hard to know for sure since the users never saw a list of those apps on the phone once they added the repo.&lt;/li&gt;
+&lt;li&gt;It seemed that some participants were surprised to see that they still had to download the app Habitica after finding it via search.&lt;/li&gt;
+&lt;li&gt;Many participants assumed the apps from a repo would download.&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;u&gt;Suggestions for improvement:&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Feedback&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Currently, there’s no indication of completion.&lt;/li&gt;
+&lt;li&gt;The experience of adding an app cannot end after they tap add. People are way too confused. Also, currently after tapping add, the app returns to the screen they were previously on within the app, which could be anything.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Make apps accessible&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The user needs to immediately be able to see the apps they just added to their phone. Note: it should be clear that these are made available, but not downloaded automatically.&lt;/li&gt;
+&lt;li&gt;The user needs to be able to access the apps within a repo later on.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Handle delay&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Is there a delay in the repo updating? We noticed that some people tried to search for an app that was within a repo they added, but even then, it didn’t show up.&lt;/li&gt;
+&lt;li&gt;Update only the repo that was added instead of all. Not sure what the current behavior is.&lt;/p&gt; &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;PAGE_BREAK: PageBreak&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;task-g-last-task-add-the-collection-of-apps-displayed-on-the-computer-to-f-droid&#34;&gt;TASK G (Last Task) – Add the collection of apps displayed on the computer to F-Droid.&lt;/h1&gt;
+
+&lt;p&gt;Average difficulty: 2.6&lt;/p&gt;
+
+&lt;p&gt;Number of participants with critical errors: 0&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;PARTICIPANT QUOTES&lt;/p&gt;
+
+&lt;p&gt;“I followed the steps on the computer but wasn’t sure where the code from the QR scanner went. I added a new repository and there was a link already in it so I just clicked add, but have no idea what it did.”&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;__&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;What we want feedback on&lt;/u&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Are users able to add a repo from a collection they view on desktop?
+
+&lt;ul&gt;
+&lt;li&gt;Yes. Surprisingly, the majority of participants did not have trouble scanned the QR code and adding the repo.&lt;/li&gt;
+&lt;li&gt;Same confusions as mentioned above about knowing if it worked and locating the repo.&lt;/li&gt;
+&lt;li&gt;“I don’t know if it worked. How do I know if it worked?”&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Is the word choice clear?
+
+&lt;ul&gt;
+&lt;li&gt;Somewhat. It didn’t trip people up from completing the task.&lt;/li&gt;
+&lt;li&gt;Multiple people commented that the word repository didn’t resonate with them. They preferred the word Collections.&lt;/ul&gt; &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;u&gt;Suggestions for improvement:&lt;/u&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fix bugs&lt;/strong&gt; F-Droid crashed a lot after people scanned the code, opened F-Droid and tapped add. I think this was due to the phone being in landscape then portrait mode.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrate QR code scanner&lt;/strong&gt; within the add repo view.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Word choice&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;PAGE_BREAK: PageBreak&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;additional-observations&#34;&gt;Additional Observations&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Concerns of Malware&lt;/strong&gt; While most participants were not keen on security and the potential risk of downloading apps from a source other than Google Play, one participant was keenly aware. He made multiple comments about how the app is an open door for malware.
+
+&lt;ul&gt;
+&lt;li&gt;**We need to address the security risks, and what F-Droid does to mitigate those risks. We need to be open and transparent in our communications to build trust.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tablet&lt;/strong&gt; Optimize the latest view for tablet. Show more grid tiles horizontally (i.e. display 3 instead of 2 in portrait mode) and increase font size.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;more-information-coming-soon&#34;&gt;More information coming soon!&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Methodology (Note: All tasks were completed in different orders by the participants with the exception of Task G, which was always completed last.)&lt;/li&gt;
+&lt;li&gt;Participant demographic&lt;/li&gt;
+&lt;li&gt;Desirability toolkit&lt;/li&gt;
+&lt;li&gt;Follow-up survey results&lt;/li&gt;
+&lt;li&gt;Usability metrics &amp;amp; stats&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PanicKit: making your whole phone respond to a panic button</title>
+      <link>https://guardianproject.github.io/info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/</link>
+      <pubDate>Tue, 12 Jan 2016 08:59:41 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png&#34; rel=&#34;attachment wp-att-13221&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png&#34; alt=&#34;round hazard button&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13221&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Our mobile devices do so many things for us, making it easy to communicate with people in all manners while giving us access to all sorts of information wherever we are. But in times of anxiety and panic, it is difficult to quickly use them. Will you be too shaky to type in your PIN or lock pattern? Will you have enough time to find your trusted contacts and send them a message? On top of that, our mobile devices carry massive amounts of private information in them: banking details, pictures, all of our messages and call logs.&lt;/p&gt;
+
+&lt;p&gt;The kinds of data that we worry about vary widely based on where we are. In many places in the world, the stuff you are reading or the music you are listening to can get you arrested, or the people you are communicating with is enough to send you to jail. We have been adding “panic buttons” to our apps for 5 years now, and now we want to create an ecosystem of apps to create flexible and system-wide responses when we are unfortunate enough to require pressing the personal panic button.&lt;/p&gt;
+
+&lt;p&gt;This work seeks to establish a new level of awareness, understanding and capability for providing specific mobile software features for users who are in a “panic” situations. We define “panic” as at risk of having their mobile device physically compromised or removed from their body, being physically detained themselves, or facing an immediate threat of violence, injury, kidnapping or death. This is not to say we are are building a global “911” system. We seek to explore how software that is explicitly designed for these situations, can provide some amount of assistance to the user, by either protecting their privacy, ensuring that sensitive data is hidden or unrecoverable, or that their support networks are notified of the panic event, and provided with the necessary information to take action.&lt;/p&gt;
+
+&lt;p&gt;Over the past year, we have developed user experience design patterns, an Android library, a new panic button app, and example projects to communicate how a system-wide panic should look. For a quick introduction, check out this video demonstrating a very simple panic setup of &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.ripple&#34; target=&#34;_blank&#34;&gt;Ripple&lt;/a&gt;, a panic button, triggering &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.browser&#34; target=&#34;_blank&#34;&gt;Orweb&lt;/a&gt;, a private browser:&lt;/p&gt;
+
+&lt;h2 id=&#34;make-your-app-respond-in-times-of-panic&#34;&gt;Make your app respond in times of panic&lt;/h2&gt;
+
+&lt;p&gt;The ultimate goal of PanicKit is of course to make apps respond with actions that help protect the user. This can be as simple as locking the app when it has a passphrase, or the response can combine a number of actions into a coherent response: a messaging app locks its data and disguises itself as a game while sending out the panic message that includes the user’s location. There is a lot of complexity in all this, especially with many apps involved, so it is essential to always simplify the experience as much as possible. Thinking about panic situations is stressful, setting up the panic response should not add to that stress. Towards that end, it is better to sacrifice some flexibility if that means solid gains in simplicity.&lt;/p&gt;
+
+&lt;p&gt;The first key design pattern is the default, non-destructive response. If all apps that support PanicKit include sensible defaults, then pressing the panic button can have a useful response without the user having to setup anything at all. In order to achieve this, we divide possible responses into two categories: non-destructive vs destructive. An app that has a PIN lock can be locked without destroying anything, the user just needs to unlock it. A browser that wipes the cache can always just download the files again next time the user goes to that website. If an app only has a default, non-destructive response, then there is no need to have a configuration interface; it can be represented purely in the trigger app’s list of responders, where it will be marked “App hides when triggered”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/01/02.0.png&#34; rel=&#34;attachment wp-att-13212&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/01/02.0-939x1024.png&#34; alt=&#34;panic responder setup&#34; width=&#34;780&#34; height=&#34;851&#34; class=&#34;alignnone size-large wp-image-13212&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/01/02.0-939x1024.png 939w, https://guardianproject.info/wp-content/uploads/2016/01/02.0-275x300.png 275w, https://guardianproject.info/wp-content/uploads/2016/01/02.0-768x838.png 768w&#34; sizes=&#34;(max-width: 780px) 100vw, 780px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Many of the most valuable panic responses require doing something that can not be undone, so we classify these as destructive. Deleting data is exactly what is needed in a panic situation, but the user must opt-in to enable this kind of response in order to prevent data from being mistakenly deleted. Sending a message can also be a very valuable panic response. But sending a message to the wrong person can cause harm, sending it at the wrong time can destroy people’s expectations: if you cry wolf too often, then people will stop hearing it. Disguising an app can also save people a lot of trouble. But if the user does not know this is going to happen, their experience will be that the app was deleted. So these are all destructive responses and require the user to enable them via a panic setup screen.&lt;/p&gt;
+
+&lt;p&gt;For apps that offer configurable responses, it is essential to present those options clearly with as little clutter as possible. The panic setup should be on a devoted screen, not mixed in with other settings, and takes up the full screen. Panic is a time of stress, the panic response should strive to avoid adding any stress on top of that. When an app offers a few options for responses, then even the devoted screen can quickly get complicated: a list of possibilities, a text field for a message, and a way to manage the contacts to send to. It is important that the entire response is easily visible in one screen so that the user can quickly and easily tell how that app will respond. The entire panic setup should be on a single screen with as little scrolling as possible. Large widgets like a message text field should be placed at the bottom, and be collapsed if not active.&lt;/p&gt;
+
+&lt;p&gt;To get started, add the PanicKit library to your &lt;em&gt;build.gradle&lt;/em&gt;: &lt;code&gt;info.guardianproject.panic:panic:0.5&lt;/code&gt;, then check out the FakePanicResponder example app, as well as how it is implemented in real apps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SMSSecure/SMSSecure/blob/8b2d61161716dcae33c7ae2fd9540931b632030a/src/org/smssecure/smssecure/PanicResponderActivity.java&#34; target=&#34;_blank&#34;&gt;SMSSecure lock as default response&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/theScrabi/NewPipe/pull/133&#34; target=&#34;_blank&#34;&gt;NewPipe clear search history as default response&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zom/Zom-Android/blob/master/app/src/main/java/org/awesomeapp/messenger/ui/PanicSetupActivity.java&#34; target=&#34;_blank&#34;&gt;Zom with multiple destructive responses and a default lock response&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;make-your-own-panic-button-app&#34;&gt;Make your own panic button app&lt;/h2&gt;
+
+&lt;p&gt;One key reason why we took on this project is to spur more innovation in what a “panic button” can look like. There are currently two solid panic trigger apps that use PanicKit: &lt;a href=&#34;https://panicbutton.io&#34; target=&#34;_blank&#34;&gt;PanicButton&lt;/a&gt; and &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.ripple&#34; target=&#34;_blank&#34;&gt;Ripple&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are many ideas for what a panic button can look like, now it is easy to make one that will actually trigger real things. A custom panic button app only needs to send the trigger message (technically an &lt;code&gt;ACTION_TRIGGER Intent&lt;/code&gt;), which will make apps lock, hide, delete private data, send a message, etc. Here are some ideas for panic button apps that we would love to see:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;a “&lt;a href=&#34;https://en.wikipedia.org/wiki/Dead_man%27s_switch&#34; target=&#34;_blank&#34;&gt;dead man’s switch&lt;/a&gt;” that triggers if the user has not checked in within the last hour&lt;/li&gt;
+&lt;li&gt;a “geo-fence” that triggers if the device comes too close to a known detention center&lt;/li&gt;
+&lt;li&gt;a sensor monitor that triggers on absence of movement&lt;/li&gt;
+&lt;li&gt;a custom Bluetooth button that looks like a belt buckle, &lt;a href=&#34;http://news.discovery.com/tech/gear-and-gadgets/sleek-jewelry-hides-a-panic-button-140220.htm&#34; target=&#34;_blank&#34;&gt;brooch&lt;/a&gt;, or other innocuous object&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/01/01.3.png&#34; rel=&#34;attachment wp-att-13207&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/01/01.3-149x300.png&#34; alt=&#34;Ripple&#39;s responders&#34; width=&#34;149&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-13207&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/01/01.3-149x300.png 149w, https://guardianproject.info/wp-content/uploads/2016/01/01.3-768x1544.png 768w, https://guardianproject.info/wp-content/uploads/2016/01/01.3-509x1024.png 509w, https://guardianproject.info/wp-content/uploads/2016/01/01.3.png 1006w&#34; sizes=&#34;(max-width: 149px) 100vw, 149px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;An important part of the user experience of the panic button app is how it represents what the trigger will do. For that, we paid careful attention to the design of the list of “panic responder” apps. It should quickly and clearly show which apps are enabled. In our pattern, enabled apps should be sorted to the top of the list and disabled apps should be greyed out including the app icon. There should also be a standard switch to both allow the user to enable/disable an app as well as provide extra feedback on whether an app is enabled or not. That provides three visual channels that communicate what will respond (top of the list, in full color, and with the shape of a switch that is turned on). For a thorough overview of design patterns, see &lt;a href=&#34;https://dev.guardianproject.info/boards/21/topics/390&#34; target=&#34;_blank&#34;&gt;Panic Design Patterns&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Panic responders can have both non-destructive and destructive responses, and some are only appropriate for a full on panic. If you are just feeling anxious, and are worried that the situation is getting dangerous, then deleting files is not appropriate but locking and hiding is. An app could instead be an “anxious trigger” app, and be limited to only non-destructive responses. A trigger app can only send one kind of trigger message (the &lt;code&gt;ACTION_TRIGGER Intent&lt;/code&gt;), to keep the inter-app interaction simple. So the anxious trigger app would instead not offer the “EDIT” option (implemented with an &lt;code&gt;ACTION_CONNECT Intent&lt;/code&gt;), and that limits the responses to the default, non-destructive responses in all the apps that receive a trigger from the anxious trigger app.&lt;/p&gt;
+
+&lt;p&gt;To get started, add the panickit library to your build.gradle &lt;code&gt;info.guardianproject.panic:panic:0.5&lt;/code&gt;, then check out the &lt;code&gt;PanicTrigger&lt;/code&gt; class. You can see how it is implemented in these example apps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/Ripple&#34; target=&#34;_blank&#34;&gt;Ripple&lt;/a&gt; – &lt;em&gt;a real panic button that is simple enough to be an example&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/guardianproject/FakePanicButton&#34; target=&#34;_blank&#34;&gt;FakePanicButton&lt;/a&gt; – &lt;em&gt;a fake app that is only meant to be an example&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;more-work-and-open-questions&#34;&gt;More work and open questions&lt;/h2&gt;
+
+&lt;p&gt;There is a lot of potential for making our mobile devices help us in anxious and panicked moments. PanicKit has established that a system-wide panic response can be simple, approachable, and effective. But there is definitely much work to be done. There is an organization forming around this work, The &lt;a href=&#34;https://github.com/PanicInitiative&#34; target=&#34;_blank&#34;&gt;Panic Initiative&lt;/a&gt;, that will build upon the work done by Amnesty International, &lt;a href=&#34;https://iilab.org/&#34; target=&#34;_blank&#34;&gt;iilab&lt;/a&gt;, and our PanicKit work.&lt;/p&gt;
+
+&lt;p&gt;There are of course still many open questions that we are very interested in, and hope to see more people working on this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Should this be handled on the system level?&lt;/li&gt;
+&lt;li&gt;How the trigger app query the responder for its action without leaking private data like contacts or location?&lt;/li&gt;
+&lt;li&gt;How can panic and anxiety be represented graphically, using colors, iconography, UI, etc.?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For more discussion and resources, check out the &lt;a href=&#34;https://dev.guardianproject.info/projects/panic/wiki&#34; target=&#34;_blank&#34;&gt;PanicKit wiki&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Complete, reproducible app distribution achieved!</title>
+      <link>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</link>
+      <pubDate>Wed, 11 Feb 2015 14:51:22 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</guid>
+      <description>&lt;p&gt;With &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, we have been working towards getting a complete app distribution channel that is able to reproducibly build each Android app from source. while this may sound like a mundane detail, it does provide lots of tangible benefits. First, it means that anyone can verify that the app that they are using is 100% built from the source code, with nothing else added. That verifies that the app is indeed 100% free, open source software.&lt;/p&gt;
+
+&lt;p&gt;It also verifies that there have not been any malicious bits of code added into the app during the build process. As has been &lt;a href=&#34;https://www.youtube.com/watch?v=5pAen7beYNc&#34; target=&#34;_blank&#34;&gt;demonstrated&lt;/a&gt; in the &lt;a href=&#34;http://events.ccc.de/congress/2014/Fahrplan/events/6240.html&#34; target=&#34;_blank&#34;&gt;31c3 Reproducible Builds talk&lt;/a&gt;, just flipping a single bit is enough to create a usable exploit in an app.&lt;/p&gt;
+
+&lt;p&gt;The F-Droid project is leading the way with its system for publishing verified builds. We know have our first full example, building upon our previous work with making &lt;a href=&#34;https://guardianproject.info/2014/06/09/our-first-deterministic-build-lil-debi-0-4-7/&#34; target=&#34;_blank&#34;&gt;Lil’ Debi build reproducibly&lt;/a&gt;. We started with our simple little utility app &lt;a href=&#34;https://github.com/guardianproject/checkey&#34; target=&#34;_blank&#34;&gt;Checkey&lt;/a&gt; since it has few moving parts (first get one working, then the rest).&lt;/p&gt;
+
+&lt;p style=&#34;float: left&#34; &gt;
+  &lt;a href=&#34;https://guardianproject.info/releases/Checkey-0.1.1.apk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png&#34; alt=&#34;Checkey&#34; width=&#34;128&#34; height=&#34;128&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;float: left; text-align: center; line-height: 128px; font-size: 1000%&#34; &gt;
+  =
+&lt;/p&gt;
+
+&lt;p style=&#34;float: left&#34; &gt;
+  &lt;a href=&#34;https://f-droid.org/repo/info.guardianproject.checkey_101.apk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/ic_launcher-web.png&#34; alt=&#34;Checkey&#34; width=&#34;128&#34; height=&#34;128&#34; style=&#34;float: right&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&#34;clear: both;&#34;&gt;
+  &lt;p&gt;
+    When you download Checkey from f-droid.org, you will get an APK that was signed using the official Guardian Project offline signing key that was built by f-droid.org. No, we did not give them a copy of our key, instead, the fdroid publish process now looks for the Binaries: tag in the build recipe. If it sees that, it downloads that APK, then builds the app from source, then checks to make sure that they match using a simple diff of the APK contents and by checking that the signature on the official APK also validates on the APK that f-droid.org built.
+  &lt;/p&gt;
+  
+
+&lt;p&gt;&lt;p&gt;
+    Now that we have our little Checkey working, we can work towards getting all of our apps verifying in the same way, eliminating a whole field of exploits that we have to worry about. You can follow the progress of this work on the F-Droid wiki &lt;a href=&#34;https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds&#34; target=&#34;_blank&#34;&gt;Reproducible Builds&lt;/a&gt; page, and learn about a future application of it on the &lt;a href=&#34;https://f-droid.org/wiki/page/Verification_Server&#34; target=&#34;_blank&#34;&gt;Verification Server&lt;/a&gt; page.
+  &lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+    The next two apps that are in the reproducible pipeline are &lt;a href=&#34;https://leap.se/&#34; target=&#34;_blank&#34;&gt;LEAP&lt;/a&gt;‘s &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/tree/master/metadata/se.leap.bitmaskclient.txt&#34; target=&#34;_blank&#34;&gt;Bitmask&lt;/a&gt; and our &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/blob/master/metadata/info.guardianproject.locationprivacy.txt&#34; target=&#34;_blank&#34;&gt;LocationPrivacy&lt;/a&gt;.
+  &lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Experimental app to improve privacy in location sharing</title>
+      <link>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</link>
+      <pubDate>Thu, 29 Jan 2015 07:36:58 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png&#34; alt=&#34;ic_launcher-web&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-12835&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-230x230.png 230w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png 512w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;As part of the T2 Panic effort, I’ve recently been diving deep into the issues of sharing location. It is unfortunately looking really bad, with many services, including Google, frequently sharing location as plain text over the network. I’ve started to write up some of the issues &lt;a href=&#34;https://guardianproject.github.io/info/tag/panic&#34;&gt;on this blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As part of this, I’ve put together an experimental Android app that aims to act as a privacy filter for all ways of sharing location. Mostly, that means it accepts all sorts of URLs from location services, and tries to parse the location from the URL, then rewrites it into a &lt;a href=&#34;http://geouri.org&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;geo:&lt;/code&gt; URI&lt;/a&gt;, which is the standard way to share location in Android (and hopefully soon all others). As of ChatSecure v14.1.0, these &lt;code&gt;geo:&lt;/code&gt; URLs are also clickable.&lt;/p&gt;
+
+&lt;p&gt;Many URLs are not parsable, like &lt;code&gt;http://goo.gl/maps/Cji0V&lt;/code&gt;. LocationPrivacy then goes online and to try to fetch the location. This should happen over Tor, but it does not yet. You have been warned! Otherwise, it changes the URL to &lt;code&gt;HTTPS&lt;/code&gt; on services that support it.&lt;/p&gt;
+
+&lt;p&gt;You can get LocationPrivacy from all the usual channels, including on FDroid in the Guardian Project repo:&lt;br /&gt;
+&lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://f-droid.org&#34;&gt;https://f-droid.org&lt;/a&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://guardianproject.info/fdroid&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;https://guardianproject.info/fdroid&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Or from Google Play:&lt;br /&gt;
+&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.locationprivacy&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Source code:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/LocationPrivacy&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/LocationPrivacy&#34;&gt;https://github.com/guardianproject/LocationPrivacy&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Report issues here:&lt;br /&gt;
+&lt;a href=&#34;https://dev.guardianproject.info/projects/panic/issues&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://dev.guardianproject.info/projects/panic/issues&#34;&gt;https://dev.guardianproject.info/projects/panic/issues&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Please do not rely on this app for strong privacy, it is still very much a new, beta app.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First working test of IOCipher for Obj-C</title>
+      <link>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</link>
+      <pubDate>Mon, 26 Jan 2015 04:32:29 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Every so often, we revisit our core libraries in the process of improving our existing apps, and creating new ones. IOCipher has become a standard part of our apps since it provides a really easy way to include encrypted file storage in Android apps. And we are now working on spreading it to iOS as well, headed up by Chris Ballinger, with the first preliminary tests of &lt;a href=&#34;https://github.com/ChatSecure/IOCipher-ObjC&#34; target=&#34;_blank&#34;&gt;IOCipher for Obj-C&lt;/a&gt;. Testing and contributions are most welcome! Find us in our &lt;a href=&#34;https://guardianproject.github.io/info/contact/&#34; target=&#34;_blank&#34;&gt;chat room or mailing list&lt;/a&gt; for questions, or just post a comment below! Since the iOS version is based on the exact same core library, libsqlfs, the container files they produce will also be fully compatible with each other.&lt;/p&gt;
+
+&lt;p&gt;Now that iOS 8 has full disk encryption by default and a &lt;a href=&#34;https://www.blackbagtech.com/blog/2014/09/24/ios-8-and-its-impact-on-investigations&#34; title=&#34;iOS 8 and its Impact on Investigations&#34; target=&#34;_blank&#34;&gt;host of other security improvements&lt;/a&gt;, you might be wondering why you would bother with app-specific encryption. The problem with full disk encryption is that the disk is only locked when your iPhone is fully turned off. Using IOCipher adds protection for sensitive data that helps in a few different scenarios.&lt;/p&gt;
+
+&lt;p&gt;First, full disk encryption does not protect the data at all if malware is able to get root on the device. That malware will be free to read all files on the device. Second, for people who have not set up a strong passphrase on their iOS device, using app-specific encrypted storage make it harder to access that app’s data on devices with no passcode set, especially if any additional passphrase is stored in the keychain and disallowed from backup, or if it’s just stored in your own memory.&lt;/p&gt;
+
+&lt;p&gt;Third is for added protetion from forensic acquisition systems, which often work using root exploits in order to read the entire filesystem without unlocking the screen&lt;a href=&#34;https://www.elcomsoft.com/news/591.html&#34; target=&#34;_blank&#34;&gt;[1]&lt;/a&gt;&lt;a href=&#34;https://www.elcomsoft.com/news/586.html&#34; target=&#34;_blank&#34;&gt;[2]&lt;/a&gt;&lt;a href=&#34;http://www.htcia.org/2013/12/iphone-forensics-what-you-need-to-know/&#34; target=&#34;_blank&#34;&gt;[3]&lt;/a&gt;. By having an app-specific encrypted file container that is not mounted like a filesystem, then even root cannot directly access the files in the container. Even root needs to get the key in order to unlock the IOCipher container, whether it is in use or not, and getting that key means either a key logger, which means planning ahead, or reading they key from memory if the container is unlocked, which is a more elaborate and targeted attack that full disk acquisition after rooting.&lt;/p&gt;
+
+&lt;p&gt;Now consider that there is a large market 0days, i.e. unpublished exploits, and companies like &lt;a href=&#34;https://netzpolitik.org/2014/gamma-finfisher-hacked-40-gb-of-internal-documents-and-source-code-of-government-malware-published/&#34; target=&#34;_blank&#34;&gt;VUPEN, FinFisher&lt;/a&gt;, and &lt;a href=&#34;https://citizenlab.org/2014/06/backdoor-hacking-teams-tradecraft-android-implant/&#34; target=&#34;_blank&#34;&gt;Hacking Team&lt;/a&gt; making it easy to purchase them, even providing guarantees that one of their exploits will work within 30 days, it seems quite likely that customers of such companies have access to secret root exploits to even iOS 8. While there are ethical and lawful reasons to use software like this, many governments are also using them for &lt;a href=&#34;https://www.eff.org/deeplinks/2012/02/spy-tech-companies-their-authoritarian-customers-part-i-finfisher-and-amesys&#34; target=&#34;_blank&#34;&gt;illegal&lt;/a&gt; &lt;a href=&#34;http://www.economist.com/blogs/pomegranate/2014/07/internet-monitoring-gulf&#34; target=&#34;_blank&#34;&gt;and&lt;/a&gt; &lt;a href=&#34;http://www.theguardian.com/technology/2014/sep/16/wikileaks-finfisher-files-malware-surveillance&#34; target=&#34;_blank&#34;&gt;unethical&lt;/a&gt; &lt;a href=&#34;https://citizenlab.org/2013/03/you-only-click-twice-finfishers-global-proliferation-2/&#34; target=&#34;_blank&#34;&gt;things&lt;/a&gt;. Since we believe that everyone has a right to privacy, to speak freely, and to peaceably protest, it is important to provide protection to people who are unfairly targeted.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/open-source/&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2010/05/skitch.png&#34; alt=&#34;SQLCipher&#34; width=&#34;64&#34; height=&#34;72&#34; class=&#34;alignleft size-full wp-image-3613&#34; /&gt;&lt;/a&gt;There is also another key advantage of the IOCipher approach when it comes to mobile devices. IOCipher is ultimately based on SQLite transactions in &lt;a href=&#34;https://www.zetetic.net/sqlcipher/&#34; target=&#34;_blank&#34;&gt;SQLCipher&lt;/a&gt;, which means that it does not require being mounted in the normal sense. There is no open state once a transaction is complete. Each read or write operation is a self-contained SQLite transaction, so if the file system is forcably quit, SQLite’s transactions prevent the whole file system from being corrupted. This is important in mobile operating systems like Android and iOS since any app or process can be killed at any moment without warning. That means that the worst that can happen to an IOCipher volume is a single write command does not get written. The whole file system will not be corrupted if the process is killed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Coming Soon&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When IOCipher is used in conjunction with our &lt;a href=&#34;https://github.com/guardianproject/CacheWord&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt; library, it is possible for an app to provide protection even against the &lt;a href=&#34;https://xkcd.com/538/&#34; target=&#34;_blank&#34;&gt;$5 wrench attack&lt;/a&gt;. CacheWord generates a strong passphrase and manages feeding it to IOCipher and SQLCipher. The user provides their own password for encrypting that strong passphrase. That CacheWord file is tiny, and can be rapidly deleted. Once it is gone, the actual passphrase that unlocks the IOCipher encryption is gone, the user’s passphrase will not unlock IOCipher directly. This is something we are working to add in all of our apps, and to also hook it up to panic button triggers. We would be quite happy to see you beat us to it by adding this feature to your app!&lt;/p&gt;
+
+&lt;p&gt;IOCipher with a hardware security module (HSM) aka smartcard would be really nice, since it would provide some measure of added protection without the user setting an app-specific passphrase. HSMs provide write-only private key storage locked by pin code, so even if some was able to get the encrypted file and the pincode, they would not be able to retrieve the key to unlock the encrypted file. The only way to unlock the file would be with the physical device itself, or by finding the key backup, if that existed. This is possible now using an external &lt;a href=&#34;http://www.smartcard-hsm.com/features.html&#34; target=&#34;_blank&#34;&gt;microSD&lt;/a&gt; &lt;a href=&#34;http://www.go-trust.com/nist-adds-go-trusts-sdencrypter-microsd-hsm-to-the-in-process-fips-140-2-module-validation-list/&#34; target=&#34;_blank&#34;&gt;HSM&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automatic, private distribution of our test builds</title>
+      <link>https://guardianproject.github.io/info/2014/06/06/automatic-private-distribution-of-our-test-builds/</link>
+      <pubDate>Fri, 06 Jun 2014 17:17:01 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2014/06/06/automatic-private-distribution-of-our-test-builds/</guid>
+      <description>&lt;p&gt;One thing we are very lucky to have is a good community of people willing to test out unfinished builds of our software. That is a very valuable contribution to the process of developing usable, secure apps. So we want to make this process as easy as possible while keeping it as secure and private as possible. To that end, we have set up an &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;FDroid&lt;/a&gt; repository of apps generated from the test builds that our build server generates automatically every time we publish new code.&lt;/p&gt;
+
+&lt;p&gt;After this big burst of development focused on FDroid, it has become clear that FDroid has lots of promise for becoming a complete solution for the whole process of delivering software from developers to users. We have tried other ways of delivering test builds like HockeyApp and Google Play’s Alpha and Beta channels and have found them lacking. The process did not seem as easy as it should be. And of course, both of them leave a lot to be desired when it comes to privacy of the users. So this is the first step in hopefully a much bigger project.&lt;/p&gt;
+
+&lt;p&gt;To use our new test build service, first install FDroid by downloading it from the official source: &lt;a href=&#34;https://f-droid.org&#34;&gt;https://f-droid.org&lt;/a&gt;. Then using a QR Code scanner like &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.zxing.client.android&#34; target=&#34;_blank&#34;&gt;Barcode Scanner&lt;/a&gt;, just scan the QR Code below, and send it to FDroid &lt;strong&gt;Repositories&lt;/strong&gt;. You can also browse to this page on your Android device, and click the link below to add it to FDroid:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.guardianproject.info/fdroid/repo?fingerprint=F8ED4C73C125E7A67F99DB269480DAF50BE1758952E07EE5ABF116FE4B2DB1E8&#34;&gt;https://dev.guardianproject.info/fdroid/repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.guardianproject.info/fdroid/repo?fingerprint=F8ED4C73C125E7A67F99DB269480DAF50BE1758952E07EE5ABF116FE4B2DB1E8&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/06/dev.guardianproject.info-QR-e1402010770323.png&#34; alt=&#34;dev.guardianproject.info&#34; width=&#34;245&#34; height=&#34;245&#34; class=&#34;aligncenter size-full wp-image-12462&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also use our test repo via an anonymized connection using the Tor Hidden Service (as of this moment, that means downloading an &lt;a href=&#34;https://f-droid.org/repo/org.fdroid.fdroid_710.apk&#34;&gt;official FDroid v0.71 build&lt;/a&gt;). Just get &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&#34; target=&#34;_blank&#34;&gt;Orbot&lt;/a&gt; and turn it on, and the following .onion address will automatically work in FDroid, as long as you have a new enough version (0.69 or later).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://k6e4p7yji2rioxbm.onion/fdroid/repo?fingerprint=F8ED4C73C125E7A67F99DB269480DAF50BE1758952E07EE5ABF116FE4B2DB1E8&#34;&gt;http://k6e4p7yji2rioxbm.onion/fdroid/repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://k6e4p7yji2rioxbm.onion/fdroid/repo?fingerprint=F8ED4C73C125E7A67F99DB269480DAF50BE1758952E07EE5ABF116FE4B2DB1E8&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/06/k6e4p7yji2rioxbm.onion-QR-e1402010779963.png&#34; alt=&#34;k6e4p7yji2rioxbm.onion&#34; width=&#34;245&#34; height=&#34;245&#34; class=&#34;aligncenter size-full wp-image-12463&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IOCipher lives! encrypted virtual file system for Android</title>
+      <link>https://guardianproject.github.io/info/2012/05/17/iocipher-lives-encrypted-virtual-file-system-for-android/</link>
+      <pubDate>Thu, 17 May 2012 16:44:35 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/17/iocipher-lives-encrypted-virtual-file-system-for-android/</guid>
+      <description>&lt;p&gt;Nathan and I just got the first complete test of IOCipher working in the IOCipherServer/SpotSync app. We created a filesystem sqlite.db file, then mounted it and got all the files via HTTP. In the test suite, I have lots of operations all running fine and encrypting! The core idea here is a java.io API replacement that transparently writes to an encrypted store. So for the most part, just change your import statements from:&lt;/p&gt;
+
+&lt;pre&gt;java.io.*   ---&gt;   info.guardianproject.iocipher.*&lt;/pre&gt;
+
+&lt;p&gt;Then in your code, make a &lt;code&gt;VirtualFileSystem&lt;/code&gt; instance and mount it, and unmount it. That’s about it. Right now, you can have only a single filesystem per app, but you can unmount one and mount another. We hope to add support for multiple filesystems in the not-too-distant future.&lt;/p&gt;
+
+&lt;p&gt;Its ready for people to try, some kind of early alpha. Here’s the framework itself:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipher&#34;&gt;https://github.com/guardianproject/IOCipher&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;THe easiest way to get started right now is probably the test suite:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/IOCipherTests&#34; title=&#34;IOCipherTests&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipherTests&#34;&gt;https://github.com/guardianproject/IOCipherTests&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Our first app using it is here:&lt;br /&gt;
+&lt;a href=&#34;https://github.com/guardianproject/IOCipherServer&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/guardianproject/IOCipherServer&#34;&gt;https://github.com/guardianproject/IOCipherServer&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Comments, feedback, criticism, welcome and wanted!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mobile mesh in a real world test</title>
+      <link>https://guardianproject.github.io/info/2012/05/02/mobile-mesh-in-a-real-world-test/</link>
+      <pubDate>Wed, 02 May 2012 15:37:37 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/05/02/mobile-mesh-in-a-real-world-test/</guid>
+      <description>&lt;p&gt;Nathan, Mark, Lee, and I tried some OLSR mesh testing during the May Day protests and marches. We were able to get 4 devices to associate and mesh together, but not without some trials and travails. Two pairs of devices setup two separate BSSIDs, so were on separate networks. We turned them all off, then associated them one at a time, and then they all got onto the same BSSID and olsrd started doing its thing. This made us think that we should just use a hard-coded BSSID in the setup, with a preference to allow standard ad-hoc association to find a BSSID. &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n-300x225.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;alignright size-medium wp-image-2037&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n-300x225.jpg 300w, https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n.jpg 600w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next we tried to use some services. We were going to try running a &lt;a href=&#34;https://crypto.cat/&#34; target=&#34;_blank&#34;&gt;cryptocat&lt;/a&gt; session, but the phone that was running cryptocat via a &lt;a href=&#34;https://github.com/guardianproject/lildebi&#34; target=&#34;_blank&#34;&gt;Lil’ Debi&lt;/a&gt; Debian install was having trouble staying connected to the mesh. Next we tried a serverless direct SIP call using &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34; target=&#34;_blank&#34;&gt;CSIPSimple&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;CSIPSimple uses the Android Java API to determine if the device is online. The current approach to configuring the ad-hoc mode used by Android-Wifi-Tether-based apps including Serval and Barnacle-based apps including OLSR-Mesh-Tether disables the wifi via the Android Java API, then configures ad-hoc mode using command line tools. This means that Android believe that the wifi is off, and when apps query the network status via the normal Android API, Android will tell it what it believes: there is no network connection.&lt;/p&gt;
+
+&lt;p&gt;This works in &lt;a href=&#34;http://www.servalproject.org/&#34; target=&#34;_blank&#34;&gt;Serval&lt;/a&gt; because Serval is a self-contained system with its own SIP client and server, etc. This does not work for situations where we want to provide generic IP service using OLSR mesh on Android phones. I’m going to try to see if I can get the ad-hoc setup to work while making Android believe that the wifi is an and associated with infrastructure-mode network.&lt;/p&gt;
+
+&lt;p&gt;Also, in the process of setting up the mesh while mixing in a crowd and walking with a crowd down the street we realized two key things: 1) the setup process should be tolerant of frequent interruptions, and 2) it should be as easy as possible for people to give the mesh app itself from one phone to another. We’ll be working on #1 as part of our &lt;a href=&#34;https://code.commotionwireless.net/projects&#34; target=&#34;_blank&#34;&gt;Commotion&lt;/a&gt; work and we will focus on making a UI that clearly shows its status and lets the user continue where they left off. We will be working directly on #2 as part of a separate project, so we’ll try to keep everyone informed on our progress with that.&lt;/p&gt;
+
+&lt;p&gt;Another idea we discussed was how to have a “strength meter” for mesh, like the GSM or wifi bars. We talked about taking a tally of how many first hop connections there are, the total connections, and the total willingness of all of the first hop connections.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adventures in Porting: GnuPG 2.1.x to Android!</title>
+      <link>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</link>
+      <pubDate>Thu, 15 Mar 2012 13:00:30 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</guid>
+      <description>&lt;p&gt;PGP started with Phil Zimmerman’s Pretty Good Privacy, which is now turned into an open IETF standard known as OpenPGP. These days, the reference OpenPGP platform seems to be &lt;a href=&#34;http://gnupg.org/&#34;&gt;GnuPG&lt;/a&gt;: its used by Debian and all its derivatives in the OS itself for verifying packages and more. It is also at the core of all Debian development work, allowing the very diffuse body of Debian, Ubuntu, etc developers to communicate and share work effectively while maintaining a high level of security. It is also used for email encryption in Thunderbird + Enigmail, Apple Mail + GPGMail, GNOME Evolution, KDE KMail, Microsoft Outlook + Gpg4win.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_1651&#34; style=&#34;width: 160px&#34; class=&#34;wp-caption alignleft&#34;&gt;
+  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/Encryption.jpg&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-1651&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/Encryption-150x150.jpg&#34; alt=&#34;lots of one and zeros&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;size-thumbnail wp-image-1651&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p id=&#34;caption-attachment-1651&#34; class=&#34;wp-caption-text&#34;&gt;
+    Yes, encryption means lots of ones and zeros that you can&#39;t read!
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After actively using GnuPG for a few years, I thought it would be a good idea and not too difficult to port it to Android. I dove in and started with the code from git since I was hoping to involve the GnuPG developers. I had recently seen that they were stopping development on the 1.4.x branch, so the 2.1.x branch seemed like the logical choice to give us a reasonably complete OpenPGP implementation. Now I am happy to say we have it working on Android, with a couple of loose ends to tie up in order to get everything working.&lt;/p&gt;
+
+&lt;p&gt;One thing I do have to say is that GnuPG has evolved into a large and elaborate project that not only covers OpenPGP, but also PGP/MIME and things that have nothing to do with PGP like AES symmetric encryption and S/MIME email cryptography. That means it know is made up of many moving parts. It uses many libraries: libassuan, libgpg-error, libksba, npth, openldap, pinentry, and more if you want. It is also made up of a handful of programs to handle different aspects: &lt;code&gt;gpg&lt;/code&gt; is the command line interface, &lt;code&gt;gpg-agent&lt;/code&gt; seems to be the central key handler and task broker, &lt;code&gt;dirmngr&lt;/code&gt; manages connections with directories like OpenPGP keyservers, &lt;code&gt;pinentry&lt;/code&gt; handles getting passphrases from the user, etc.&lt;/p&gt;
+
+&lt;p&gt;The complexity does not stop there for our purposes: we need a Java API so we can make an Android app. So next up we built the &lt;a href=&#34;http://www.gnupg.org/related_software/gpgme/&#34; target=&#34;_blank&#34;&gt;GPGME&lt;/a&gt; (Gnu Privacy Guard Made Easy) library to provide a C/C++ API which is then wrapped in &lt;a href=&#34;https://github.com/smartrevolution/gnupg-for-java&#34; target=&#34;_blank&#34;&gt;gpgme-for-java&lt;/a&gt;, a JNI library to make the GPGME functions available in Java. And just to heap on the layers, we are making a GUI on top of all that so that when you use it, you have no idea that all these little pieces that I have just described are even there at all.&lt;/p&gt;
+
+&lt;p&gt;You can follow our progress on this work on our &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; target=&#34;_blank&#34;&gt;PSST wiki: &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34;&gt;https://guardianproject.info/wiki/PSST&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;_(coming soon: sketching a mobile UI for OpenPGP, follow our notes here: &lt;a href=&#34;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&#34;&gt;https://guardianproject.info/wiki/GnuPrivacyGuard_for_Android&lt;/a&gt;&lt;/a&gt;)_&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ushahidi-Linda: “Testimony” &#43; “Protection”</title>
+      <link>https://guardianproject.github.io/info/2010/03/10/ushahidi-linda-testimony-protection/</link>
+      <pubDate>Wed, 10 Mar 2010 19:53:00 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2010/03/10/ushahidi-linda-testimony-protection/</guid>
+      <description>&lt;p&gt;Ushahidi-linda (“Testimony” + “Protection” – &lt;em&gt;disclaimer: we don’t speak Swahili so this was a shot in the dark!&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;This is a fork of the &lt;a href=&#34;https://github.com/ushahidi/Ushahidi_Android&#34;&gt;Ushahidi on Android&lt;/a&gt; app, done as a way to prototype the implementation of increased security, anonymity and privacy for users viewing and submitting reports through &lt;a href=&#34;http://ushahidi.com&#34;&gt;Ushahidi&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png&#34;&gt;&lt;img class=&#34;size-full wp-image-199 alignleft&#34; title=&#34;ushahidi_android_splash&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png&#34; alt=&#34;&#34; width=&#34;224&#34; height=&#34;336&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png 320w, https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash-200x300.png 200w&#34; sizes=&#34;(max-width: 224px) 100vw, 224px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ushahidi is a platform that crowdsources crisis information, allowing anyone to submit crisis information through text messaging using a mobile phone, email or web form.&lt;/p&gt;
+
+&lt;p&gt;The network code for the Ushahidi app has been tied into &lt;a href=&#34;https://guardianproject.github.io/info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; (Tor on Android) using a SOCKS5 client. This does NOT require a rooted device to work – both it and Orbot can be run on stock, off the shelf Android devices on any mobile operator that offers at least a GPRS connection. This version of the app will ONLY work if Orbot is activated and connected to the Tor Network. Otherwise, network connections will fail.&lt;/p&gt;
+
+&lt;p&gt;We plan/hope to work with the Ushahidi team to integrate this functionality into the main branch of code, and offer a clear, easy way for users to activate/deactivate use of the anonymity/anti-surveillence features.&lt;/p&gt;
+
+&lt;p&gt;You can access the complete source code for Ushahidi-Linda on Android via our &lt;a href=&#34;https://github.com/guardianproject/Ushahidi_Android&#34;&gt;Git repository&lt;/a&gt; and also &lt;a href=&#34;https://github.com/guardianproject/Ushahidi_Android/downloads&#34;&gt;download test builds&lt;/a&gt; as they are available. &lt;strong&gt;PLEASE NOTE: Until further notice and formal announcements, these builds should be considered ALPHA and are for testing, proof of concept use only.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Specifically you can see how we have provided a new &lt;a href=&#34;https://github.com/guardianproject/Ushahidi_Android/tree/master/src/info/guardianproject/net/&#34;&gt;SocksHTTPClient package&lt;/a&gt; that proxies all GET and POST connections through SOCKS.&lt;/p&gt;
+
+&lt;p&gt;From here, the plan is to implement a security pin on startup, local data encryption for storage of data both in the database and on the sdcard, as well as quick “delete all” features.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Learn more about the Tor Project and how network anonymity works at&lt;/em&gt; &lt;a href=&#34;https://www.torproject.org&#34;&gt;&lt;em&gt;https://www.torproject.org&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

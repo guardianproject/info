@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Skype on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/skype/</link>
+    <description>Recent content in Skype on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 07 Mar 2012 18:58:29 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/skype/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VoIP Survey Results of NGOs, Human Rights Groups and Activists</title>
+      <link>https://guardianproject.github.io/info/2012/03/07/voip-survey-results-of-ngos-human-rights-groups-and-activists/</link>
+      <pubDate>Wed, 07 Mar 2012 18:58:29 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2012/03/07/voip-survey-results-of-ngos-human-rights-groups-and-activists/</guid>
+      <description>&lt;p&gt;In November 2011, 25 individuals were surveyed using an online form, representing typical end-users, global journalists, activist and human rights organization perspectives (Thank you to all the participants!). The goal of the survey was to establish a baseline understanding of the types of tools and expectations our target user community has around making “telephone calls” over the internet, otherwise known as Voice over Internet Protocol (VoIP).&lt;/p&gt;
+
+&lt;p&gt;This survey is part of our work on the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;Open Secure Telephony Net (OSTN)&lt;/a&gt;. In summary, we believe there is too great a reliance upon closed systems, proprietary protocols, and expensive commercial solutions, among the very people and groups who need a verifiable secure system based on free software. While using GPG for email, or OTR-encryption for chat have become somewhat standards go-tos for these groups, there has not been the same progress made on the secure voice front. OSTN aims to change that, but before we can, we need to understand where our target user community stand today.&lt;/p&gt;
+
+&lt;p&gt;Below you will find the questions and results from our small survey. We don’t claim to be big data scientists, but this is our starting point.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1Kj2xqnnxxbJxOP2myEMoDgd7uV_Z7S4&#34; alt=&#34;&#34; width=&#34;584&#34; height=&#34;269&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As expected, it was Skype, Skype, Skype, with a little Google Talk and Cisco thrown in here and there. Everyone knows Skypes, it works very well, and is even quite good at getting around firewalls.&lt;/p&gt;
+
+&lt;div&gt;
+   The other in this survey was “Cisco”, which could either be a corporate or small business product. In some cases, these products are actually more standards compliant than something like Skype. One aspect of our research is to audit the compliance of existing commercial products with security standards such as TLS, SSL, SRTP and ZRTP.
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1pVfXla66rcmmbst2uvDF_i08-f9ANKw&#34; alt=&#34;&#34; width=&#34;585&#34; height=&#34;277&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was interesting to see that Google Talk was a strong second to Skype. Other services like Facebook video calling or Apple Facetime are newer, and may not have had time for full adoption. Others included ippi.fr, a “free” SIP service that works with mobile phones. Not included in this list are Google+ Hangouts, which seem like a growing tool for group communications.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1neY0xPavF3sh91mvSelfIwzCMV21qJM&#34; alt=&#34;&#34; width=&#34;585&#34; height=&#34;479&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We hoped to understand how personal communications behavior might affect their use of VoIP systems in more professional settings. It seems like Skype again rules here.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1haSfmhdxc9zT7oghdyBQMFC8ZYv6m_Y&#34; alt=&#34;&#34; width=&#34;584&#34; height=&#34;475&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The most troubling issue is that most people likely utilize the same account for both personal and professional communication. Skype does not make it easy to switch accounts or have multiple accounts open at once, unlike email programs or instant messaging programs. You must have one identity. This creates a huge amount of opportunity for social engineering type attacks, though analysis of that was beyond the scope of this survey.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://docs.google.com/document/pubimage?id=12bEHuMBXDqw4CG2R8nn2PbDJTa4HU8lh-rZRR22nSQA&amp;image_id=1S3EGlInCGdh8Pj7IOefWvfLI1Ikw4gs&#34; alt=&#34;&#34; width=&#34;559&#34; height=&#34;147&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We were glad to see that the majority of people surveyed were concerned about the privacy of their conversations, but it was a slim majority.&lt;/p&gt;
+
+&lt;p&gt;The possibilities of the “no” group may be that they feel the solutions they are using (Skype) are secure enough, as they have been told that by the providers. In addition, many NGO groups who fear foreign or remote threats, often feel no sense of privacy risk when operating in their home country. They only consider security issues when they engage in field work, but have very lax practices on a day to day basis. That perception of threat is a outdated in the age of a fully connected global network, through which physical locations and borders matter little.&lt;/p&gt;
+
+&lt;p&gt;In the end, the challenge is, as most everyone knows, to build a system that is as easy to use as Skype, but more secure. We realize that we are just a small open-source effort, and that ultimately we can’t compete with the likes of a Microsoft or even Google for that matter. Our goal is to help people and organizations who need to communicate sensitive information securely and safely, to have better options than they do now for both hosting their own servers and using simple client applications. Keep your eyes on the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN Wiki&lt;/a&gt; and this blog, as we progress over the coming weeks and months.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

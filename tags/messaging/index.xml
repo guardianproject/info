@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Messaging on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/messaging/</link>
+    <description>Recent content in Messaging on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 08 Mar 2013 12:54:50 -0400</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/messaging/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gibberbot v11 is not just secure, its also simple, snappy and super fun!</title>
+      <link>https://guardianproject.github.io/info/2013/03/08/gibberbot-v11-is-not-just-secure-its-also-simple-snappy-and-super-fun/</link>
+      <pubDate>Fri, 08 Mar 2013 12:54:50 -0400</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2013/03/08/gibberbot-v11-is-not-just-secure-its-also-simple-snappy-and-super-fun/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Gibberbot v11 is now final as of RC3 release: &lt;a href=&#34;https://github.com/guardianproject/Gibberbot/tree/0.0.11-RC3&#34;&gt;https://github.com/guardianproject/Gibberbot/tree/0.0.11-RC3&lt;/a&gt;. From here, the only changes to v11 we will be making will be critical bug fixes. We are now focused on our v12 release, which you can track here: &lt;a href=&#34;https://dev.guardianproject.info/versions/39&#34;&gt;https://dev.guardianproject.info/versions/39&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_&lt;strong&gt;Please promote our new Gibberbot how-to interactive tutorial available here: &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34;&gt;https://guardianproject.info/howto/chatsecurely/&lt;/a&gt;&lt;/a&gt;&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;p&gt;If you have been tracking our efforts here for the last few years, you will know that Gibberbot, our secure instant messaging app, started out as a big old mess of an app called “ORChat” as and then “OTRChat” and then “Gibber” (or “Jibber”?), and then finally settled down into the name and app it is known as now. Really it was a proof of concept, showing that you could indeed use the &lt;a href=&#34;https://github.com/gpolitis/otr4j&#34;&gt;OTR4J library&lt;/a&gt; built for desktops app, on Android.&lt;/p&gt;
+
+&lt;p&gt;Gibberbot was the first Android app, and perhaps real mobile app, that supported end-to-end encrypted chat using open standards like OTR and XMPP. In the early days, we were just so excited this was possible, and that we could also send the chat connections over Tor, that we didn’t think too much about how easy or fun it was to use the app itself. We were focused on our magic tricks, and not how it was to live and use the app on a daily basis.&lt;/p&gt;
+
+&lt;p&gt;A few months ago, we realized that on Google Play, we had a lot of reviews that basically said “This is a great idea, but it doesn’t work for me”, or “I like these guys, but the app is kinda buggy”, and even “This app gives my device crazy flash seizures”. All of these reviews were true, and we swallowed the hard medicine, that if we didn’t spend more time focusing on how the core features of being a mobile instant messaging chat client worked, that nobody would care about how secure the app was, because there would be no one using it.&lt;/p&gt;
+
+&lt;p&gt;We set about then not only continuing our focus on improving the core security and technical core of Gibberbot, but also focusing on a user interface update. We completed “stage 1” of that update, with another major round of effort planned for v12.&lt;/p&gt;
+
+&lt;p&gt;Here a few new features and improvements along those lines, that were completed for v11:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;&lt;strong&gt;Simplify setup of Google Gmail and Google Domain accounts…. DONE!&lt;/strong&gt; We now support the built-in authentication system on your Android phone, so if you phone is already setup with a Google account, we can tap right into that. No extra password entry needed, no need to enter anthing really. Just choose “Google Account” from the account type list.&lt;/span&gt;&lt;/span&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Streamline Orbot integration to make Tor user easier… DONE! &lt;/strong&gt;Using the new &lt;a href=&#34;https://guardianproject.github.io/info/code/onionkit&#34;&gt;OnionKit library&lt;/a&gt;, Gibberbot can now tell if Orbot is installed and running, and if not, prompt the user to either install it, or ask if they want to start up and connect to the Tor network.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Make it easy for services using SSL certs not signed by the Root CA cartel to be easily verified and accepted by the user… DONE!&lt;/strong&gt; Increasingly, it has become less and less valuable to have the TLS or SSL certificate you use with your website or XMPP server to be signed by a Root Certificate Authority, because as many point out, the SSL is broken, as long as trust this strange collection of hundreds of organizations we have no reason to really trust. Previously, Gibberbot would not handle non-Root CA certs very well, so you would just have to turn off verification. Now thanks to the concept of TOFU-POP (Trust on First Use, Persistence of Psuedonym) and the excellent &lt;a href=&#34;https://github.com/ge0rg/MemorizingTrustManager/wiki&#34;&gt;MemorizingTrustManager&lt;/a&gt; library, user’s can now decided in an on-demand and interactive manner, whether or not they want to trust the TLS connection they are using. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ensure Gibberbot only runs and signs in when the user wants it to… DONE! &lt;/strong&gt;Previously, Gibberbot was a bit too aggresive about trying to stay connecting to your account, and starting up on device boot. Many users want to conserve battery, and some do not like apps that run without them asking them to first (imagine that?!). We have put Gibberbot now at the user’s beck and call, such that there are preferences to control starting on boot, and when you SIGN OUT, it really means do not every login again, until I login.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improve the user interface to make app that is clean, fast, modern and customizable… DONE! &lt;/strong&gt;Not only have we continued to focus on a clean, simple user interface that uses the latest interface conventions and guidelines from Google, we also wanted to start adding some fun user personalization options. One size does not fit all, and just because our app is secure, does not mean it has to be boring. As you can see below, Gibberbot now supports light and dark themes, as well as user configured app wallpaper.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am happy to say, that will all of these improvements, we are much happier users, and are receiving much better reviews on Google Play, such as:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“Easy to set up and pretty stable and easy to use.” “Fixed on jelly bean and does exactly what it should do” and the best… “Perfect (but no ICQ Support*)” &lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em id=&#34;__mceDel&#34;&gt;*We may add ICQ support, just so we can be extra perfect for that one user who wants it! 🙂&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;All in all, we hope you agree, and that our new found focus on usability can push us from 100,000+ downloads to over 500,000+ in the coming months. We have big ideas for the future of secure mobile messaging, and making Gibberbot the best it can be is a huge part of that plan.&lt;/p&gt;
+
+&lt;p&gt;As always you can find the Gibberbot download (and &lt;a href=&#34;https://guardianproject.github.io/info/apps&#34;&gt;all of our apps&lt;/a&gt;) in a variety of places:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;line-height: 13px;&#34;&gt;Through our direct APK download: &lt;a href=&#34;https://guardianproject.info/releases/gibberbot-latest.apk&#34;&gt;https://guardianproject.info/releases/gibberbot-latest.apk&lt;/a&gt; (and &lt;a href=&#34;https://guardianproject.info/releases/gibberbot-latest.apk.asc&#34;&gt;gpg sig&lt;/a&gt;)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;on &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&#34;&gt;Google Play&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;or through our &lt;a href=&#34;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository/&#34;&gt;F-Droid Repo&lt;/a&gt;, which you can &lt;a href=&#34;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository/&#34;&gt;learn how to use here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can also scan this QR code, which links to the direct APK download above:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/03/gibberbotqr.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-3373&#34; alt=&#34;gibberbotqr&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/03/gibberbotqr.png&#34; width=&#34;123&#34; height=&#34;123&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://lh4.ggpht.com/TAtK2o9v79g1dVsAuii2XWQcdN1JdZgnRPAT0inGrQjDKkPLO_zLWLHlGdm6xxki6w&#34; width=&#34;288&#34; height=&#34;512&#34; /&gt;  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-021839.jpg&#34;&gt;&lt;img alt=&#34;device-2013-02-20-021839&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-021839.jpg&#34; width=&#34;288&#34; height=&#34;512&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://lh4.ggpht.com/ShD1S-pNv-1nUdK4e4C4d-GBNz4A1Vr7bS6_-uYMm2zjOZ2T88HL_Iogsn71ePBVmTWk&#34; width=&#34;288&#34; height=&#34;512&#34; /&gt;   &lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://lh4.ggpht.com/cLhiajC5VIk8SZ4iDq08PKAmhiZQMze62avh0h2JNArZFRHKR4LJgWdS0tfALe1uFeHg&#34; width=&#34;288&#34; height=&#34;512&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-3375&#34; alt=&#34;device-2013-02-20-025148&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148.png&#34; width=&#34;538&#34; height=&#34;302&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148.png 1280w, https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148-300x168.png 300w, https://guardianproject.info/wp-content/uploads/2013/03/device-2013-02-20-025148-1024x576.png 1024w&#34; sizes=&#34;(max-width: 538px) 100vw, 538px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

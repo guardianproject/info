@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>On the classification of tracking - Guardian Project</title>
+  <meta property="og:title" content="On the classification of tracking" />
+  <meta name="twitter:title" content="On the classification of tracking" />
+  <meta name="description" content="This position paper tries to outline a framework for defining trackers in smart phones and lists mechanisms for identifying them. It hopes to serve as the foundation for the work done in the Tracking-the-Trackers project.
+In section 1 we start with an abstract analysis of levels of unwanted behaviour in the context of tracking.
+Next, in section 2, we focus on an attacker’s perspective, on anonymity and pseudonymity. This foundation allows us to define terms which are needed throughout the paper.">
+  <meta property="og:description" content="This position paper tries to outline a framework for defining trackers in smart phones and lists mechanisms for identifying them. It hopes to serve as the foundation for the work done in the Tracking-the-Trackers project.
+In section 1 we start with an abstract analysis of levels of unwanted behaviour in the context of tracking.
+Next, in section 2, we focus on an attacker’s perspective, on anonymity and pseudonymity. This foundation allows us to define terms which are needed throughout the paper.">
+  <meta name="twitter:description" content="This position paper tries to outline a framework for defining trackers in smart phones and lists mechanisms for identifying them. It hopes to serve as the foundation for the work done in the …"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Guardian Project",
+    
+    "url": "https://guardianproject.github.io/info"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https://guardianproject.github.io/info"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://guardianproject.github.io/info",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://guardianproject.github.io/info/2020/05/20/on-the-classification-of-tracking/",
+          "name": "On the classification of tracking"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Aaron Kaplan"
+  },
+  "headline": "On the classification of tracking",
+  "description" : "This position paper tries to outline a framework for defining trackers in smart phones and lists mechanisms for identifying them. It hopes to serve as the foundation for the work done in the Tracking-the-Trackers project.
+In section 1 we start with an abstract analysis of levels of unwanted behaviour in the context of tracking.
+Next, in section 2, we focus on an attacker’s perspective, on anonymity and pseudonymity. This foundation allows us to define terms which are needed throughout the paper.",
+  "inLanguage" : "en",
+  "wordCount": 1925,
+  "datePublished" : "0001-01-01T00:00:00",
+  "dateModified" : "2020-05-20T00:00:00",
+  "image" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+  "keywords" : [ "NGI0 PET, NLnet, open source, privacy, tracking, Tracking the Trackers" ],
+  "mainEntityOfPage" : "https://guardianproject.github.io/info/2020/05/20/on-the-classification-of-tracking/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https://guardianproject.github.io/info",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="On the classification of tracking" />
+<meta property="og:description" content="This position paper tries to outline a framework for defining trackers in smart phones and lists mechanisms for identifying them. It hopes to serve as the foundation for the work done in the Tracking-the-Trackers project.
+In section 1 we start with an abstract analysis of levels of unwanted behaviour in the context of tracking.
+Next, in section 2, we focus on an attacker’s perspective, on anonymity and pseudonymity. This foundation allows us to define terms which are needed throughout the paper.">
+<meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2020/05/20/on-the-classification-of-tracking/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="twitter:title" content="On the classification of tracking" />
+  <meta name="twitter:description" content="This position paper tries to outline a framework for defining trackers in smart phones and lists mechanisms for identifying them. It hopes to serve as the foundation for the work done in the …">
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:image" content="https://guardianproject.github.io/info/Guardian_Project_LogoMark_Full_Color.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://guardianproject.github.io/info/2020/05/20/on-the-classification-of-tracking/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guardian Project" />
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="alternate" href="https://guardianproject.github.io/info/index.xml" type="application/rss+xml" title="Guardian Project">
+
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/fork-awesome/css/fork-awesome.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/katex.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/bootstrap.min.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/main.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/fonts.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/syntax.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/codeblock.css" /><link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://guardianproject.github.io/info/css/photoswipe.default-skin.min.css" /><script defer src="https://guardianproject.github.io/info/libresilient.js"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+	<a class="navbar-brand" title="Guardian Project" href="https://guardianproject.github.io/info"><img src="https://guardianproject.github.io/info/Guardian_Project_Horizontal_Logo_Full_Color.svg" alt="Guardian Project" height="48" style="float:left;margin-top:-15px"/>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">about</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/blog/">Blog</a>
+                
+                  <a href="https://guardianproject.info/podcast/">podcast</a>
+                
+                  <a href="https://guardianproject.github.io/info/brand/">New Branding</a>
+                
+                  <a href="https://guardianproject.github.io/info/story/">Our Story</a>
+                
+                  <a href="https://guardianproject.github.io/info/partners/">Partners and Funding</a>
+                
+                  <a href="https://guardianproject.github.io/info/press/">Press</a>
+                
+                  <a href="https://guardianproject.github.io/info/services/">Services</a>
+                
+                  <a href="https://guardianproject.github.io/info/signing-keys/">Signing Keys</a>
+                
+                  <a href="https://guardianproject.github.io/info/team/">Team</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">apps</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.checkey/">Checkey: info on local apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/circulo/">Círculo</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.havenapp.main/">Haven</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.locationprivacy/">Location Privacy - BETA</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.sscphase1/">ObscuraCam: The Privacy Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.android/">Orbot: Proxy with Tor</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.orfox/">Orfox</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.pixelknot/">PixelKnot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.witness.proofmode/">ProofMode: Verified Visuals</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/info.guardianproject.ripple/">Ripple: respond when panicking</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/net.opendasharchive.openarchive.release/">Save</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser/">Tor Browser for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torbrowser_alpha/">Tor Browser for Android (Alpha)</a>
+                
+                  <a href="https://guardianproject.github.io/info/apps/org.torproject.torservices/">TorServices (alpha)</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">code</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/code/cleaninsights/">Clean Insights: Privacy Preserving Measurement</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/iocipher/">IOCipher: Virtual Encrypted Disks</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/netcipher/">NetCipher: Secured Networking</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/panickit/">PanicKit: system-wide panic responses</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/sqlcipher/">SQLCipher: Encrypted Database</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/tor-android/">TorService: Tor library for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/trustedintents/">TrustedIntents: flexible trusted interactions between Android apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/code/wind/">Wind: Off-Grid Services for Everyday People</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">archive</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/archive/apps/">Archived Apps</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/cacheword/">CacheWord: Passphrase Caching and Management</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/camerav/">CameraV: Secure Verifiable Photo &amp; Video Camera</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/courier/">Courier: Secure News reader</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/developersquare/">Developer Square</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ffmpeg/">FFMPEG: Media Privacy Framework</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/firefoxprivacy/">Firefox Mobile: Privacy Enhanced</a>
+                
+                  <a href="https://guardianproject.github.io/info/freebird/">Freebird Workshop</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/gnupg/">GnuPG: OpenPGP Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/hardware/">Hardware Guide</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/informacam/">InformaCam: Verified Mobile Media</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/keysync/">KeySync: Syncing Trusted Identities</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/luks/">LUKS: Disk Encryption</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/lildebi/">Lil&#39; Debi: Mobile Debian Installer</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/onionkit/">OnionKit for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orbot/">Orbot: Tor for Android</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/orweb/">Orweb: Private Web Browser</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/ostel/">Ostel: Encrypted Phone Calls</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/pixelknot/">Pixelknot: Hidden Messages</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/tutorials/">Tutorials</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/weatherrepo/">Weather Repo</a>
+                
+                  <a href="https://guardianproject.github.io/info/archive/libsqlfs/">libsqlfs: filesystem on top of SQLite/SQLCipher</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">contact</a>
+              <div class="navlinks-children">
+                
+                  <a href="https://guardianproject.github.io/info/contact/">Contact</a>
+                
+                  <a href="https://guardianproject.github.io/info/how-you-can-work-with-us/">How You Can Work With Us</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/join/">Jobs and Internships</a>
+                
+                  <a href="https://guardianproject.github.io/info/contact/chat/">Live Chatrooms</a>
+                
+                  <a href="https://social.librem.one/@guardianproject">Toot @guardianproject@librem.one</a>
+                
+                  <a href="https://twitter.com/guardianproject">Tweet @guardianproject</a>
+                
+              </div>
+            </li>
+          
+        
+
+            <li class="navlinks-container">
+              <a class="navlinks-parent" title="Language">
+		<i class="fa fa-language" style="font-size: 1.75em"></i>
+	      </a>
+	      
+            </li>
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>On the classification of tracking</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+                <span class="post-meta">
+  
+  <i class="fa fa-calendar"></i>&nbsp;Posted on May 20, 2020
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fa fa-user"></i>&nbsp;Aaron Kaplan
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>This position paper tries to outline a framework for defining trackers
+in smart phones and lists mechanisms for identifying them.  It hopes
+to serve as the foundation for the work done in the
+Tracking-the-Trackers project.</p>
+
+<p>In <a href="#section-1-levels-of-unwanted-behaviour">section 1</a> we start with
+an abstract analysis of levels of unwanted behaviour in the context of
+tracking.</p>
+
+<p>Next, in <a href="#section-2-an-attacker-s-perspective-and-a-taxonomy">section
+2</a>, we focus on
+an attacker’s perspective, on anonymity and pseudonymity. This
+foundation allows us to define terms which are needed throughout the
+paper.</p>
+
+<p>Finally, we list proposed mechanisms for identifying trackers - based
+on the threat model (attacker) as well as the level of acceptable
+tracking.</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>This document talks about trackers in general on mobile devices
+(smartphones). However, for the purpose of verification, we
+exclusively focus on Android apps. First of all, Android has a <a href="https://www.idc.com/promo/smartphone-market-share/os">85%
+global market
+share</a>, secondly
+Android apps (APKs) are easier to work on.  With iOS apps, monitoring
+trackers (or instrumenting running code) is not as easy as on Android
+based systems.  Therefore, whenever any claims are made, we refer to
+the Android ecosystem. We however believe that very similar behaviours
+exist on iOS based systems.</p>
+
+<p>Also, this document does not talk about contact tracing (as in
+Covid-19 contact tracing).</p>
+
+<h2 id="section-1-levels-of-unwanted-behaviour">Section 1: Levels of unwanted behaviour</h2>
+
+<p>The following section tries to categorize tracking respectively
+potential unwanted behaviour in apps by level of severity. This is
+done with a perspective for categories (labels) in a machine learning
+approach.</p>
+
+<h3 id="level-0-no-tracking-at-all-no-network-communication">Level 0: No tracking at all / no network communication</h3>
+
+<p>The most harmless situation: an app is downloaded or shared in an
+anonymous way (Tor, etc.) and only uses offline features and/or uses
+unlinkable side channels for updates (for example flash cards).  An
+example could be a map application which only displays a map and reads
+a phone’s GPS position to display the user’s location. There is no
+network communication at all and it still offers a useful service to
+its users. Map updates may be installed via flash cards or other
+physical transportation media. The app does not need to request a new
+map interactively from any server.</p>
+
+<h3 id="level-1-inadvertent-tracking">Level 1: Inadvertent tracking</h3>
+
+<p>This category includes tracking but the service provider and the app
+never intended to actually use the resulting data / meta-data for the
+purpose of tracking individuals.</p>
+
+<p><strong>Example</strong>: to illustrate this category, recall our map app from above. Only
+this time, it does request map (base layer) updates from a map server  every 7
+days. It also checks every day, if the map viewer app is the latest version.
+Based on this information, an attack could theoretically derive weekly IP
+address &ldquo;beacons&rdquo; from some user. Since the update check was not personalized,
+an attack can not be for sure, if an update request is from the same person or
+not.  Hence, a user still has potentially enough anonymity.</p>
+
+<p>This and the next category probably (to be verified) constitute the majority of
+&ldquo;clean&rdquo; apps.</p>
+
+<h3 id="level-2-unintentional-tracking-by-use-of-chatty-libraries">Level 2: Unintentional tracking by use of chatty libraries</h3>
+
+<p>This category tracks users already quite heavily. The motive is not to increase
+ad revenue, build up user profiles to sell them nor to pass on the data to an
+aggregator. The unintentional tracking stems more from the fact that the app
+developer(s) used libraries which help them in developing the app and/or which
+are simply useful for the overall user experience.</p>
+
+<p><strong>Example</strong>: if we revisit our map example, we could imagine that the map app
+now also includes a search functionality. Users can type in the initial letters
+of a street name and for every letter they type, an AJAX HTTP request is sent
+to the map server. In addition, the developers felt that it would be useful to
+receive APM (application performance monitoring) logs as well as crash reports
+as well as a set of libraries to measure which features of an app the users
+actually use the most. These logs are sent periodically to some log collection
+server run by the developers.</p>
+
+<p>Note that we still do not talk about (Google, Facebook etc) cookies here. We
+only talk about watching what users are typing (including backspace and
+corrections - an attacker can literally watch their thoughts via the global
+click-stream).</p>
+
+<h3 id="level-3-ad-revenue-focused-tracking-of-users-and-or-user-behaviour-pseudonymized">Level 3: Ad-revenue focused tracking of users and/or user behaviour (pseudonymized)</h3>
+
+<p>With this category, we are entering the area often described as surveillance
+capitalism: users are receiving cookies (if it&rsquo;s a web based app) and or have
+unique IDs embedded in the app and these unique identifies (which are not tied
+to a person in the first place and hence are a &lsquo;nym of the user) are being sent
+for nearly every network interaction. These IDs may (but not necessarily have
+to ) serve as authentication / authorization token ( see OAUTH 1,2, OpenID
+Connect) or may be purely auto-generated and simply serve for tracking actions
+users takes over the course of his day (so that the interest of a user may be
+extracted). These tracking IDs may then be forwarded and sold to aggregators.</p>
+
+<p>While this may be acceptable to some users, since the techniques use
+pseudonymization, there is an implicit trap hidden in this approach: unique IDs
+are usually long enough so that they are unique globally (for example UUID
+strings). Thus, they can easily be correlated with real PII data and the
+pseudonymization vanishes instantly.</p>
+
+<h3 id="level-4-ad-revenue-focused-tracking-of-users-and-or-user-behaviour-linked-to-person">Level 4: Ad-revenue focused tracking of users and/or user behaviour (linked to person)</h3>
+
+<p>This category fits most non-open source commercial apps such as FB messenger,
+twitter, etc. (but it can occur as well in open source apps).  The business
+model is to fully understand a user, his/her interests, his/her behaviour,
+location (-&gt; location tracking),  and very important - his/her circle of
+friends (contacts), etc.  The &ldquo;gold&rdquo; in the app gold rush is a users&rsquo; interest
+and intent. In order to serve him/her adds better and faster (in the
+sub-millisecond range). Again, as in the previous category, these tracking IDs
+may then be forwarded and sold to aggregators.</p>
+
+<p>We assume the vast majority of apps fall into this category.</p>
+
+<h3 id="level-5-full-scale-stealthy-tracking-surveilling-the-spouse-kids-state-actors-apt-attacks-general-surveillance-etc">Level 5: Full scale stealthy tracking (surveilling the spouse, kids, state actors, APT attacks, general surveillance, etc.)</h3>
+
+<p>This category would fit any technique which tries to secretly monitor as many
+actions on the whole smartphone (or potentially also via the smart phone on
+computers) of a person.</p>
+
+<p><strong>Example</strong>: kids tracking apps. Or hidden apps which check what your
+husband/wife is doing on his/her phone (and forwarding call logs , messages,
+etc.). State actors tracking dissidents, journalists or any chosen target also
+would use these techniques.</p>
+
+<p>Often these apps can be identified by their extended permissions but not
+necessarily so. Well written apps in this category may be impossible to detect
+without major reverse engineering efforts.</p>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>Our work in the Tracking the Trackers project limits itself to Levels 3 and 4.
+We intentionally omit level 5, since this is a cat-and-mouse game with the
+attackers. It is rather trivial to change some behaviour for an attacker while
+our detection mechanism remains open source.</p>
+
+<h1 id="section-2-an-attacker-s-perspective-and-a-taxonomy">Section 2: an attacker’s perspective and a taxonomy</h1>
+
+<blockquote>
+<p>&ldquo;There is nothing as practical as a good theory&rdquo;
+ &ndash; Kurt Lewin</p>
+</blockquote>
+
+<p>This section builds upon the work of <a href="http://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.31.pdf">Pfitzmann and
+Hansen</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>
+who did (to the author&rsquo;s knowledge) the first thorough comparison of
+terminology in literature with respect to the concepts of anonymity,
+linkability, pseudonymity, etc. We believe that their work is a good
+framework for thought. It also hints at some connections to Shannon&rsquo;s
+information theory and probability. However, the paper does not follow
+through on the maths.</p>
+
+<p>The core insight of their work is that - if you include metadata of
+communication flows over the internet, and if you assume an attacker which can
+observe the whole network (passively)<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>, then true anonymity is nearly
+impossible to achieve for any regular app or program.</p>
+
+<p>In this paper, we first briefly describe Pfitzmann&rsquo;s and Hansens&rsquo; model and
+especially their attacker&rsquo;s model / threat model. We then replicate their
+definitions and add some definitions of our own. The next step is to link their
+definitions to our categories of tracking.</p>
+
+<p>Equipped with these theoretical tools, we can proceed to define what we
+consider tracking in Android apps and derive feature sets for an ML based
+approach.</p>
+
+<h2 id="the-pfitzmann-hansen-threat-model">The Pfitzmann-Hansen threat model</h2>
+
+<p>The threat model assumes a classical sender-receiver (source/sink) information
+model where the communication network is usually the internet. They assume an
+attacker to be yet another (possibly all-knowing) passive receiver. If messages
+pass the communication network, attributes (i.e. meta-data<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">3</a></sup> such as time +
+time zone when a message was sent, received, the packet size, the protocols
+used etc) may be derived by a receiver. These attributes may become another new
+message.</p>
+
+<p><img src="sender-receiver-model.png" alt="sender-receiver-model" /></p>
+
+<p>If we apply  Pfitzmann&rsquo;s and Hansens&rsquo; model to our levels, we arrive at the following insights:</p>
+
+<ul>
+<li><strong>Level 0</strong>: the app is quiet → no harm, an all-knowing attacker can see the download of a level 0 app in the very best of cases.</li>
+<li><strong>Level 1</strong>: the passive attack may derive IP addresses (and hence some ideas of a user’s location) and time stamps of when the app was in use. → the passive attacker can already track the user to some extent iff (if and only if) he also has access to the telecom’s IP address assignment database for that particular time window. This is usually only possible for nation state attackers. <strong>→</strong> out of scope.</li>
+<li><strong>Level 2</strong>: In this scenario, it already depends a lot if the app is sending APMs, crash reports, or other “chatty library” messages. If unencrypted, a passive attacker may - already in this category gain a lot of information on the user.  <strong>→</strong> we propose to include detection of APMs/crash reporting libraries in future versions of the tracking the trackers project.</li>
+<li><strong>Level 3</strong>: While it is nice to notice that the developers tried to pseudonymise tracking in this category, it does not help the user very much. As long as a passive attacker may detect the pseudonymized IDs in messages flowing to a central server, he wins. He can track the user. Countermeasure: a guaranteed rotation of these unique IDs/tokens every x seconds (at fixed intervals).
+→ we propose to look at this level of tracking in our research in order to identify unique tokens/API keys, unique IDs in apps which are easily detectable in order to guide the F-Droid store developer on how to avoid common pitfalls associated with fixed IDs/API keys etc.</li>
+<li><strong>Level 4</strong>: for an attacker, this is the gold mine. Here, nearly every action may be passively observed. This is the case, we assume to be the most prevalent one in most apps (proof: just take a random app and look at the tcpdump stream of data it sends every second). We will aim to detect the most common tracking libraries.</li>
+<li><strong>Level 5</strong>: here the attacker basically gains an upgrade from a passive attacker to an active attacker should he wish so. Game over for the user → out of scope for our research.</li>
+</ul>
+
+<h1 id="summary">Summary</h1>
+
+<p>We identified a rough categorization of 5 levels of tracking. We reasoned what
+information an attacker may gain at each level and we defined the scope of our
+research.</p>
+
+<hr />
+
+<p>(<em>This work was supported by NLnet&rsquo;s <a href="https://nlnet.nl/thema/NGIZeroPET.html">NGI Zero PET</a> fund.</em>)</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">&ldquo;Anonymity, Unlinkability, Undetectability, Unobservability, Pseudonymity, and Identity Management – A Consolidated Proposal for Terminology&rdquo;, 2008, Andreas Pfitzmann (TU Dresden), Marit Hansen (ULD Kiel). <a href="http://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.31.pdf">http://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.31.pdf</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">An assumption which is not far fetched - see the Snowden papers.
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3">Compare with the quote &ldquo;we kill people based on metadata&rdquo; by the former CIA/NSA director Hayden. <a href="https://abcnews.go.com/blogs/headlines/2014/05/ex-nsa-chief-we-kill-people-based-on-metadata">https://abcnews.go.com/blogs/headlines/2014/05/ex-nsa-chief-we-kill-people-based-on-metadata</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://guardianproject.github.io/info/tags/ngi0-pet/">NGI0 PET</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/nlnet/">NLnet</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/open-source/">open source</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/privacy/">privacy</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/tracking/">tracking</a>&nbsp;
+            
+              <a href="https://guardianproject.github.io/info/tags/tracking-the-trackers/">Tracking the Trackers</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/" data-toggle="tooltip" data-placement="top" title="Free Software Tooling for Android Feature Extraction">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://guardianproject.github.io/info/2020/06/02/onion-browser-release-2.6-tutorial/" data-toggle="tooltip" data-placement="top" title="Onion Browser Release 2.6 Tutorial">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a rel="me" href="https://social.librem.one/@guardianproject" title="mastodon">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-mastodon fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://twitter.com/guardianproject" title="twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" title="matrix">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-matrix-org fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://github.com/guardianproject" title="github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://gitlab.com/guardianproject" title="gitlab">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li>
+            <a href="https://liberapay.com/GuardianProject" title="liberapay">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-liberapay fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2009 - 2026
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://guardianproject.github.io/info">Guardian Project</a>
+          
+        </p>
+	<p class="credits text-center text-muted">
+	  
+	</p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://guardianproject.github.io/info/js/katex.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/auto-render.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/jquery.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/bootstrap.min.js"></script>
+
+<script src="https://guardianproject.github.io/info/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://guardianproject.github.io/info/js/photoswipe.min.js"></script>
+<script src="https://guardianproject.github.io/info/js/photoswipe-ui-default.min.js"></script><script src="https://guardianproject.github.io/info/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sdks on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/sdks/</link>
+    <description>Recent content in Sdks on Guardian Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://guardianproject.github.io/info/tags/sdks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Clean Insights: February 2021 Update on Privacy-Preserving Measurement</title>
+      <link>https://guardianproject.github.io/info/2021/02/10/clean-insights-february-2021-update-on-privacy-preserving-measurement/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://guardianproject.github.io/info/2021/02/10/clean-insights-february-2021-update-on-privacy-preserving-measurement/</guid>
+      <description>&lt;p&gt;Greetings, all. I hope this finds you healthy and well, finding ways to enjoy the season (whichever it may be). While everyday still provides new challenges in the life of our team at Guardian Project, we continue to strive to be productive as productive as we can be in our professional and personal lives.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve just posted an updated presentation on &lt;a href=&#34;https://cleaninsights.org&#34;&gt;Clean Insights&lt;/a&gt;, reflecting on the symposium in May, and the work we have done since then. You can see and share it from here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vo6FI-WDLG0&#34;&gt;Watch update on YouTube&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You can also listen to this update on the &lt;a href=&#34;https://guardianproject.info/podcast/2021/clean-insights-update.html&#34;&gt;Guardian Project Podcast&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&#34;https://die.netzarchitekten.com/&#34;&gt;Benjamin Erhart&lt;/a&gt;, our lead developer on Clean Insights, we&amp;rsquo;ve made substantial progress over the last few months on delivering our new software development kits. If you visit our Gitlab project page, you will find design documents and SDKs for Android, iOS, Javascript (both for desktop and web) and soon Python (Thanks, to &lt;a href=&#34;https://irl.xyz&#34;&gt;Iain Learmonth&lt;/a&gt; for this contribution). While this work is ongoing, the code is stable, and we feel it is ready to start getting it into all of your hands, so that you can start asking all the questions we have yet to consider.&lt;br /&gt;
+&lt;a href=&#34;https://gitlab.com/cleaninsights&#34;&gt;Clean Insights on Gitlab&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an example of how easy it is to implement a measurement of a specific event or a visit to certain view in your app:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-android-sdk/-/blob/master/app/src/main/java/org/cleaninsights/example/Main2Activity.java#L48&#34;&gt;Sample code for Android integration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are still relying on Matomo as our backend aggregator, analysis tool and dashboard, and it continues to work well enough for our 1.0 solution. That said, to enhance the privacy of Clean Insight-enabled clients, we&amp;rsquo;ve design and implemented a proxy service, the &lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-matomo-proxy&#34;&gt;Clean Insights Matomo Proxy&lt;/a&gt;. The CIMP reduces the amount of metadata and logging that Matomo can do, since it is only communicate to directly by the no-logging proxy.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitlab.com/cleaninsights/clean-insights-matomo-proxy&#34;&gt;Clean Insights Matomo Proxy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of this software is available for you to implement and deploy on your own. We also have a public testbed and hosted service available at &lt;a href=&#34;https://metrics.cleaninsights.org&#34;&gt;https://metrics.cleaninsights.org&lt;/a&gt; that we can make available for anyone who isn&amp;rsquo;t able to run and maintain their own instance. We can also assist you with considering the insights you want to gain, threat modeling the risks it poses to your users, and implementing the SDK into your software, be it a mobile app, web app, desktop app, back-end service or operating system. Our deisgn partners at Okthanks also have a variety of concepts and soon sample projects and code for implementing effective and ethical Consent UX to achieve the right kind of &amp;ldquo;opt-in&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Please reach out if you have interest in using Clean Insights. We have weekly scrum meetings, email lists and a public discussion room on the Matrix
+network. More info on these on the &lt;a href=&#34;https://cleaninsights.org/dev&#34;&gt;Developer Page&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

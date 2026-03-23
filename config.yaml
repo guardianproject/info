@@ -45,9 +45,6 @@ menu:
     - name: "Toot @guardianproject@librem.one"
       url: "https://social.librem.one/@guardianproject"
       parent: contact
-    - name: "Tweet @guardianproject"
-      url: "https://twitter.com/guardianproject"
-      parent: contact
 
 languages:
   en: {weight: 1}

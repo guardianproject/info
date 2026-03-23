@@ -24,7 +24,7 @@ width:200px;margin:10px;float:left
 </style>
 <div>
 <a href="https://proofmode.org"><img src="projects/proof-feature.png"/ class="caseimage"/></a><br/>
-<a href="https://proofmode.org">ProofMode</a> - We believe in a future, where every camera will have a “Proof Mode” that can be enabled and every viewer an ability to verify-then-trust what they are seeing.
+<a href="https://proofmode.org">Proofmode</a> - We believe in a future, where every camera will have a “Proof Mode” that can be enabled and every viewer an ability to verify-then-trust what they are seeing.
 </div>
 <div style="clear:both;">
 <a href="https://encirculo.org"><img src="projects/circulo.jpg" class="caseimage"/></a><br/><a href="https://encirculo.org">Círculo</a> helps you stay securely connected to a circle of support. Establish safety and check-in protocols, send alerts, share your location and keep those in your circle informed. We have worked extensively with <a href="https://www.article19.org/regional-office/mexico-and-central-america/">Article 19</a> on this project.

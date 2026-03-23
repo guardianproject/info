@@ -18,6 +18,6 @@ aliases:
   - apps/pixelknot
 menu:
   main:
-    parent: apps
+    parent: archive
 ---
 

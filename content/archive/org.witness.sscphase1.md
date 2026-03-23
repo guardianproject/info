@@ -19,6 +19,6 @@ aliases:
   - apps/obscuracam
 menu:
   main:
-    parent: apps
+    parent: archive
 ---
 

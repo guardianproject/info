@@ -18,6 +18,6 @@ aliases:
   - apps/haven
 menu:
   main:
-    parent: apps
+    parent: archive
 ---
 

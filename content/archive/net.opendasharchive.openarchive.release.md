@@ -16,6 +16,6 @@ aliases:
   - apps/save
 menu:
   main:
-    parent: apps
+    parent: archive
 ---
 

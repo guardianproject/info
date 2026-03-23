@@ -15,7 +15,7 @@ Guardian Project is committed to the security and privacy of our users. We welco
 
 This policy covers security vulnerabilities found in:
 
-- Any software project developed or maintained by Guardian Project, including but not limited to Orbot, ObscuraCam, Haven, ProofMode, and all libraries and tools published under the [Guardian Project GitHub organization](https://github.com/guardianproject)
+- Any software project developed or maintained by Guardian Project, including but not limited to Orbot, ObscuraCam, Haven, Proofmode, and all libraries and tools published under the [Guardian Project GitHub organization](https://github.com/guardianproject) or [Gitlab Group](https://gitlab.com/guardianproject/)
 - Projects we actively contribute to, where we can coordinate disclosure with the upstream maintainers
 - The Guardian Project website and any internet-facing infrastructure we operate
 

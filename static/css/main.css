@@ -802,3 +802,8 @@ h4.see-also {
      object-fit: cover;
      flex-grow: 1;
  }
+
+ /* keep android open banner */
+ body {
+   margin-top: 95.5px;
+ }

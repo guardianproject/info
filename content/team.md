@@ -15,4 +15,4 @@ Over the last fifteen years, we've had many amazing contributors to the project.
 
 We'd also like to recognize the many contributions of patches, bug reports, feedback and ideas we have received from members of our larger community.
 
-{{% team-list %}}
+{{< team-list >}}

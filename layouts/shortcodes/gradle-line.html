@@ -1,4 +1,6 @@
-{{ $bintray := getJSON "https://search.maven.org/solrsearch/select?wt=json&q=g:" (.Get "groupId") "+AND+a:" (.Get "artifactId") }}
+{{ $url := printf "https://search.maven.org/solrsearch/select?wt=json&q=g:%s+AND+a:%s" (.Get "groupId") (.Get "artifactId") }}
+{{ $res := resources.GetRemote $url }}
+{{ $bintray := $res | transform.Unmarshal }}
 {{ $version := (index $bintray.response.docs 0).latestVersion }}
 {{ $libname := .Get "artifactId" }}
 {{ $jcenterbase := printf "https://repo1.maven.org/maven2/%s/%s" (replace (.Get "groupId") "." "/") (.Get "artifactId") }}

@@ -1,63 +1,44 @@
 {{ define "main" }}
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        {{ with .Content }}
-          <div class="well">
-            {{.}}
-          </div>
-        {{ end }}
-        <div class="posts-list">
-          {{ range .Paginator.Pages }}
-            <article class="post-preview">
-              <a href="{{ .Permalink }}">
-                <h2 class="post-title">{{ .Title }}</h2>
-
-                {{ if .Params.subtitle }}
-                  <h3 class="post-subtitle">
-                    {{ .Params.subtitle }}
-                  </h3>
-                {{ end }}
-              </a>
-
-              <p class="post-meta">
-                {{ partial "post_meta.html" . }}
-              </p>
-              <div class="post-entry">
-                {{ if .Truncated }}
-                  {{ .Summary }}
-                  <a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
-                {{ else }}
-                  {{ .Content }}
-                {{ end }}
-              </div>
-
-              {{ if .Params.tags }}
-                <div class="blog-tags">
-                  {{ range .Params.tags }}
-                    <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-                  {{ end }}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      {{ with .Title }}
+        <h2 class="text-primary mb-16 text-center text-4xl font-bold xl:text-6xl">{{ . }}</h2>
+      {{ end }}
+      {{ with .Params.description }}
+        <p class="mx-auto mb-16 text-center xl:max-w-[50%]">{{ . }}</p>
+      {{ end }}
+      {{ with .Content }}
+        <div class="prose prose-lg mx-auto mb-16 max-w-none">
+          {{ . }}
+        </div>
+      {{ end }}
+      <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        {{ range (.Paginate .RegularPages).Pages }}
+          <a class="border-primary/25 h-full rounded border p-6 hover:shadow-lg duration-300" href="{{ .Permalink }}">
+            {{ with .Params.image }}
+              {{ if strings.HasPrefix . "http" }}
+                <div class="aspect-video mb-4 overflow-hidden rounded">
+                  <img src="{{ . }}" alt="" class="h-full w-full object-cover" />
                 </div>
               {{ end }}
-
-            </article>
-          {{ end }}
-        </div>
-        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-          <ul class="pager main-pager">
-            {{ if .Paginator.HasPrev }}
-              <li class="previous">
-                <a href="{{ .RelPermalink }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
-              </li>
             {{ end }}
-            {{ if .Paginator.HasNext }}
-              <li class="next">
-                <a href="{{ .RelPermalink }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
-              </li>
-            {{ end }}
-          </ul>
+            <h5 class="text-primary mb-2 text-xl font-semibold">{{ .Title }}</h5>
+            {{ with .Date }}<p class="mb-2 text-xs text-gray-500">{{ .Format "January 2, 2006" }}</p>{{ end }}
+            <p class="">{{ .Summary | plainify | truncate 150 }}</p>
+          </a>
         {{ end }}
       </div>
+      {{ $pag := .Paginator }}
+      {{ if gt $pag.TotalPages 1 }}
+        <div class="mt-16 flex justify-center gap-4">
+          {{ if $pag.HasPrev }}
+            <a href="{{ $pag.Prev.URL }}" class="text-primary border-primary rounded border px-4 py-2">&larr; Prev</a>
+          {{ end }}
+          {{ if $pag.HasNext }}
+            <a href="{{ $pag.Next.URL }}" class="text-primary border-primary rounded border px-4 py-2">Next &rarr;</a>
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
-  </div>
+  </section>
 {{ end }}

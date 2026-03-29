@@ -1,0 +1,5 @@
+<meta name="twitter:card" content="summary" />
+{{ with .Site.Params.twitter }}<meta name="twitter:site" content="@{{ . }}" />{{ end }}
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+{{ with .Params.image }}<meta name="twitter:image" content="{{ . | absURL }}" />{{ end }}

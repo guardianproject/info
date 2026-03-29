@@ -13,12 +13,11 @@ security efforts. In addition we are building developer-focused
 libraries, tools and source code for you to add security-oriented
 features and capabilities to your own apps.
 
-<div>
-  <style>img {display: inline;}</style>
+<div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; justify-content: center;">
   <a href="https://gitlab.com/guardianproject/" target="_blank" title="Guardian Project on Gitlab">
-    <img src="/img/view-on-gitlab.svg" height="80"/>
+    <img src="/img/view-on-gitlab.svg" style="height: 96px; width: auto;" />
   </a>
   <a href="https://github.com/guardianproject/" target="_blank" title="Guardian Project on Github">
-    <img src="/img/view-on-github.png" height="80"/>
+    <img src="/img/view-on-github.png" style="height: 96px; width: auto;" />
   </a>
 </div>

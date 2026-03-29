@@ -1,0 +1,133 @@
+<nav class="border-b border-gray-100 relative z-40">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4">
+    <a class="flex items-center" href="{{ .Site.BaseURL }}">
+      <img src="{{ "images/wordlogo.svg" | absURL }}" alt="{{ .Site.Title }}" class="h-10 xl:h-12" />
+    </a>
+
+    {{/* Mobile hamburger */}}
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      id="menuOpen"
+      aria-label="Open Menu"
+    >
+      {{ partial "heroicons/bars-4" }}
+    </button>
+
+    {{/* Desktop nav */}}
+    <ul class="hidden xl:flex xl:flex-row xl:gap-1 xl:items-center">
+      {{ range site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              {{ with .URL }}href="{{ . }}"{{ end }}
+            >
+              {{ .Name }}
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              {{ range .Children }}
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="{{ .URL }}">
+                    {{ .Name }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          </li>
+        {{ else }}
+          {{ if .URL }}
+            <li>
+              <a class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-block" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+
+  {{/* Mobile menu overlay */}}
+  <div id="mobileMenu" class="fixed inset-0 z-50 hidden xl:hidden">
+    {{/* Backdrop */}}
+    <div id="menuBackdrop" class="absolute inset-0 bg-black/30"></div>
+
+    {{/* Slide-in panel */}}
+    <div class="absolute inset-y-0 right-0 w-full max-w-sm bg-white shadow-xl overflow-y-auto">
+      {{/* Panel header */}}
+      <div class="flex items-center justify-between px-4 py-4 border-b border-gray-100">
+        <a class="flex items-center" href="{{ .Site.BaseURL }}">
+          <img src="{{ "images/wordlogo.svg" | absURL }}" alt="{{ .Site.Title }}" class="h-10" />
+        </a>
+        <button id="menuClose" class="cursor-pointer" type="button" aria-label="Close Menu">
+          {{ partial "heroicons/x-mark" }}
+        </button>
+      </div>
+
+      {{/* Menu items */}}
+      <ul class="px-4 py-4">
+        {{ range site.Menus.main }}
+          {{ if .HasChildren }}
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                {{ .Name }}
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                {{ if .URL }}
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="{{ .URL }}">
+                      Overview
+                    </a>
+                  </li>
+                {{ end }}
+                {{ range .Children }}
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="{{ .URL }}">
+                      {{ .Name }}
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </li>
+          {{ else }}
+            {{ if .URL }}
+              <li class="border-b border-gray-50">
+                <a class="block py-3 text-primary font-medium" href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menu = document.getElementById('mobileMenu');
+    const openBtn = document.getElementById('menuOpen');
+    const closeBtn = document.getElementById('menuClose');
+    const backdrop = document.getElementById('menuBackdrop');
+
+    function openMenu() { menu.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { menu.classList.add('hidden'); document.body.style.overflow = ''; }
+
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+    // Accordion toggles for submenus
+    document.querySelectorAll('.mobile-accordion').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var submenu = this.nextElementSibling;
+        var chevron = this.querySelector('.mobile-chevron');
+        submenu.classList.toggle('hidden');
+        chevron.classList.toggle('rotate-180');
+      });
+    });
+  });
+</script>

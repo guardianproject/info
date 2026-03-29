@@ -1,55 +1,27 @@
 {{ define "main" }}
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        {{ .Content }}
-
-        {{ if .Params.tags }}
-          <div class="blog-tags">
-            {{ range .Params.tags }}
-              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-            {{ end }}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      {{ with .Title }}
+        <h2 class="text-primary mb-8 text-center text-4xl font-bold xl:text-6xl">{{ . }}</h2>
+      {{ end }}
+      {{ with .Date }}
+        <p class="mb-8 text-center text-sm text-gray-500">{{ .Format "January 2, 2006" }}</p>
+      {{ end }}
+      {{ with .Params.description }}
+        <p class="mx-auto mb-16 text-center xl:max-w-[50%]">{{ . }}</p>
+      {{ end }}
+      {{ with .Params.image }}
+        {{ if strings.HasPrefix . "http" }}
+          <div class="mb-8 flex justify-center">
+            <img src="{{ . }}" alt="" class="max-w-full rounded" />
           </div>
         {{ end }}
-
-        {{ if $.Param "socialShare" }}
-            <hr/>
-            <section id="social-share">
-              <div class="list-inline footer-links">
-                {{ partial "share-links" . }}
-              </div>
-            </section>
-        {{ end }}
-
-        {{ if .Site.Params.showRelatedPosts }}
-          {{ $related := .Site.RegularPages.Related . | first 3 }}
-          {{ with $related }}
-          <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
-          <ul>
-          {{ range . }}
-            <li><a href="{{ .RelPermalink }}">{{ i18n .Title | default .Title }}</a></li>
-          {{ end }}
-          </ul>
-          {{ end }}
-        {{ end }}
-      </article>
-
-      {{ if ne .Type "page" }}
-        <ul class="pager blog-pager">
-          {{ if .PrevInSection }}
-            <li class="previous">
-              <a href="{{ .PrevInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title }}">&larr; {{ i18n "previousPost" }}</a>
-            </li>
-          {{ end }}
-          {{ if .NextInSection }}
-            <li class="next">
-              <a href="{{ .NextInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .NextInSection.Title }}">{{ i18n "nextPost" }} &rarr;</a>
-            </li>
-          {{ end }}
-        </ul>
+      {{ end }}
+      {{ with .Content }}
+        <div class="prose prose-lg mx-auto max-w-none">
+          {{ . }}
+        </div>
       {{ end }}
     </div>
-  </div>
-</div>
+  </section>
 {{ end }}

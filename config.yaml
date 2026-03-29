@@ -2,9 +2,13 @@ baseURL: "http://localhost:1313/"
 title: "Guardian Project"
 
 DefaultContentLanguage: "en"
-Paginate: 20 # this is set low for demonstrating with dummy content. Set to a higher number
+Paginate: 20
 pluralizeListTitles: false
 enableRobotsTXT: true
+
+module:
+  imports:
+    - path: github.com/writeonlycode/hugo-up-business
 
 permalinks:
   blog: /:year/:month/:day/:title/
@@ -28,23 +32,30 @@ markup:
 
 menu:
   main:
-    - name: about
+    - identifier: about
+      name: About
+      url: /
       weight: -10
-    - name: apps
+    - identifier: apps
+      name: Apps
+      url: /apps/
       weight: 1
-    - name: code
-      weight: 1
-    - name: archive
+    - identifier: code
+      name: Code
+      url: /code/
       weight: 2
-    - name: contact
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 3
+    - identifier: archive
+      name: Archive
+      url: /archive/
+      weight: 4
+    - identifier: contact
+      name: Contact
+      url: /contact/
       weight: 10
-    - name: podcast
-      url: "https://guardianproject.info/podcast/"
-      parent: about
-      weight: 2
-    - name: "Toot @guardianproject@librem.one"
-      url: "https://social.librem.one/@guardianproject"
-      parent: contact
 
 languages:
   en: {weight: 1}
@@ -56,19 +67,27 @@ Params:
   rss: true
   favicon: Guardian_Project_LogoMark_Full_Color.svg
   description: "People, Apps and Code You Can Trust"
+  copyright: "© Guardian Project, 2009-2026. Licensed under CC-BY."
   mastodon: "https://social.librem.one/@guardianproject"
   twitter: "guardianproject"
   github: "guardianproject"
   gitlab: "guardianproject"
   liberapay: "GuardianProject"
   matrix: "#guardianproject:matrix.org"
-  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-  background_color_class: "bg-black"
   featured_image: "gpnewlogo2025.png"
   recent_posts_number: 2
-  mainSections: ["posts"]
+  mainSections: ["blog"]
   homeTitle: " "
+  colors:
+    primary: "#04A052"
+    secondary: "#1a1a2e"
+    tertiary: "#f0faf4"
+  social:
+    twitter: "https://social.librem.one/@guardianproject"
+    facebook: "https://github.com/guardianproject"
+  contact:
+    - "contact@guardianproject.info"
+    - "https://matrix.to/#/#guardianproject:matrix.org"
 
-# disable all the external Javascript, etc services from theme
   selfHosted: true
   useHLJS: false

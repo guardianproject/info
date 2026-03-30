@@ -27,6 +27,11 @@ menu:
 
 In the late 2000s, smartphones were becoming widely adopted, but security and privacy were largely overlooked. At the same time, governments and corporations were ramping up surveillance, putting sensitive communications at risk. A group of technologists and digital rights advocates saw the urgent need to create accessible, open-source mobile security tools.
 
+### Nathan of Guardian Project on FLOSS Weekly
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8YHgF81Ot_U?si=cMZxUYNvh3QmOZ6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 **Guardian Project** was founded with the goal of providing **secure, user-friendly privacy apps for Android devices**, enabling people worldwide to communicate and browse the internet without fear of surveillance or censorship. Now we have expanded that work to all platforms of computing and communication -- iPhone, desktops, servers, clouds, and even off-grid networks.
 
 ---
@@ -104,23 +109,23 @@ Over the years, Guardian Project's tools have been used in high-risk environment
 <div class="my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
 
 <div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
-<h4 class="mb-2 font-bold">Journalists in War Zones</h4>
-<p class="text-sm">Use Orbot and ChatSecure to communicate safely in authoritarian regimes.</p>
+<h4 class="mb-2 font-bold">Journalists Under Pressure</h4>
+<p class="text-sm">Use <a href="https://orbot.app">Orbot</a> and <a href="https://letsconvene.im">Convene</a> to communicate safely in authoritarian regimes, while gathering verifiable evidence with <a href="https://proofmode.org">Proofmode</a>.</p>
 </div>
 
 <div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
 <h4 class="mb-2 font-bold">Protesters and Activists</h4>
-<p class="text-sm">Use ObscuraCam to anonymize footage of demonstrations, protecting identities.</p>
+<p class="text-sm">Use <a href="/apps/obscuracam">ObscuraCam</a> to anonymize footage of demonstrations, protecting identities, while running a <a href="https://likebutter.app">ButterBox</a> to communicate during a shutdown.</p>
 </div>
 
 <div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
-<h4 class="mb-2 font-bold">Whistleblowers and Human Rights Defenders</h4>
-<p class="text-sm">Use Haven to detect physical intrusions or unauthorized access to their workspaces.</p>
+<h4 class="mb-2 font-bold">Election Monitors and Human Rights Defenders</h4>
+<p class="text-sm">Setup a secure help-desk with <a href="https://digiresilience.org/solutions/link/">CDR Links</a> to allow for people to ask for help and report election interference over Signal, PGP Email, Telegram, WhatsApp and more.</p>
 </div>
 
 <div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
 <h4 class="mb-2 font-bold">Users in Censored Countries</h4>
-<p class="text-sm">Rely on Orbot to bypass internet restrictions and access free information in Iran, China, Russia, and beyond.</p>
+<p class="text-sm">Rely on <a href="https://orbot.app">Orbot</a> and <a href="https://onionbrowser.com">Onion Browser</a> to bypass internet restrictions and access free information in Iran, China, Russia, and beyond, and download apps freely from <a href="https://f-droid.org">F-Droid</a>.</p>
 </div>
 
 </div>

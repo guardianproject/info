@@ -1,0 +1,8 @@
+enable: true
+title: "Get Involved"
+text: "Guardian Project is powered by open source and an open community. Whether you want to contribute code, help with translations, or support our mission, there are many ways to get involved."
+buttons:
+  - label: "Contact Us"
+    url: "/contact/"
+  - label: "View Our Code"
+    url: "/code/"

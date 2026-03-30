@@ -1,0 +1,58 @@
+enable: true
+title: "Our Work"
+text: "Whether you are an average person looking to affirm your rights or an activist, journalist or humanitarian organization looking to safeguard your work, we can help address the threats you face. Below are projects we have led, incubated, or actively contribute to and support."
+cards:
+  - image: "images/projects/orbot.jpg"
+    title: "Orbot"
+    text: "A Tor-powered VPN for Android and iOS that keeps app traffic safe and unblocked, through our 15+ year partnership with the Tor Project."
+    button:
+      label: "Learn More"
+      link: "https://orbot.app"
+  - image: "images/projects/proof-feature.png"
+    title: "Proofmode"
+    text: "We believe in a future where every camera will have a Proof Mode that can be enabled and every viewer an ability to verify-then-trust what they are seeing."
+    button:
+      label: "Learn More"
+      link: "https://proofmode.org"
+  - image: "images/projects/convene.jpg"
+    title: "Convene"
+    text: "A Matrix-based chat platform for secure and private communication and sharing, co-designed with human rights advocates and digital security trainers."
+    button:
+      label: "Learn More"
+      link: "https://letsconvene.im"
+  - image: "images/projects/circulo.jpg"
+    title: "Circulo"
+    text: "Helps you stay securely connected to a circle of support. Establish safety and check-in protocols, send alerts, and share your location."
+    button:
+      label: "Learn More"
+      link: "https://encirculo.org"
+  - image: "images/projects/cleaninsights.jpg"
+    title: "Clean Insights"
+    text: "A secure, private measurement platform focused on answering key questions about app usage patterns without invasive surveillance."
+    button:
+      label: "Learn More"
+      link: "https://cleaninsights.org"
+  - image: "images/projects/cdr.jpg"
+    title: "CDR Link"
+    text: "A secure helpdesk providing Signal, PGP, WhatsApp and Telegram channels for your community, the gold standard for human rights helpdesks."
+    button:
+      label: "Learn More"
+      link: "https://digiresilience.org/solutions/link/"
+  - image: "images/projects/butterhw.jpg"
+    title: "ButterBox"
+    text: "An off-grid, delay-tolerant communication and sharing platform, providing connectivity and services when the internet is not available or not safe."
+    button:
+      label: "Learn More"
+      link: "https://likebutter.app"
+  - image: "images/projects/onionbrowser.jpg"
+    title: "Onion Browser"
+    text: "A free, open-source Tor-powered web browser for iOS that helps you access the internet with more safety and privacy."
+    button:
+      label: "Learn More"
+      link: "https://onionbrowser.com/"
+  - image: "images/projects/fdroid.png"
+    title: "F-Droid"
+    text: "An installable catalogue of free and open source software for Android. We are longtime contributors to the platform and host our own app repository."
+    button:
+      label: "Learn More"
+      link: "https://f-droid.org/"

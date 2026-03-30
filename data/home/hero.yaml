@@ -1,0 +1,9 @@
+enable: true
+title: "People, Apps and Code You Can Trust"
+text: "Founded in 2009, Guardian Project is a global collective of designers, trainers, researchers, and developers building open software to enhance privacy and security for all. Our mission is to push the boundaries of mobile and privacy-enhancing technologies. Through this, we work to give people a voice, enhance safety, ensure authenticity, and provide access to knowledge regardless of location or connectivity."
+buttons:
+  - label: "Apps We Endorse"
+    url: "/apps/"
+  - label: "Our Code"
+    url: "/code/"
+image: "images/gpteam.jpg"

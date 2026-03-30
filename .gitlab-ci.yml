@@ -41,7 +41,7 @@ stages:
   dpkg -i hugo_extended_${HUGO_VERSION}_linux-amd64.deb
   rm hugo_extended_${HUGO_VERSION}_linux-amd64.deb
   # Install TailwindCSS CLI and other npm dependencies
-  npm install
+  npm ci
   # index-v1.jar tests need SHA1 support still, TODO switch to index.download_repo_index_v2
   sed -i 's,SHA1 denyAfter 20[0-9][0-9],SHA1 denyAfter 2024,' /usr/lib/jvm/default-java/conf/security/java.security
   set +x

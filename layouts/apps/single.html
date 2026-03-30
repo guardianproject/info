@@ -1,0 +1,111 @@
+{{ define "main" }}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+
+      {{/* App header: icon + title + subtitle */}}
+      <div class="mb-8 flex flex-col items-center gap-4 text-center">
+        {{ with .Params.icon }}
+          <img src="{{ . }}" alt="" class="size-32 rounded-2xl object-contain" />
+        {{ end }}
+        <h2 class="text-primary text-4xl font-bold xl:text-5xl">{{ .Title }}</h2>
+        {{ with .Params.subtitle }}
+          <p class="max-w-2xl text-lg text-gray-600">{{ . }}</p>
+        {{ end }}
+      </div>
+
+      {{/* Links bar: source code, blog posts, license */}}
+      <div class="mb-8 flex flex-wrap items-center justify-center gap-4 text-sm">
+        {{ with .Params.sourceCode }}
+          {{ if hasPrefix . "https://github.com/" }}
+            <a href="{{ . }}" target="_blank" class="text-primary hover:underline">GitHub</a>
+          {{ else if hasPrefix . "https://gitlab.com/" }}
+            <a href="{{ . }}" target="_blank" class="text-primary hover:underline">GitLab</a>
+          {{ end }}
+        {{ end }}
+        {{ with .Params.packageName }}
+          <a href="{{ $.Site.BaseURL }}/tags/{{ lower (index (split (index (split $.Title ":") 0) " ") 0) }}" class="text-primary hover:underline">Blog Posts</a>
+        {{ end }}
+      </div>
+
+      {{/* F-Droid repo data: screenshots + description */}}
+      {{ if .Params.packageName }}
+        {{ $app := index hugo.Data.repo.apps .Params.packageName }}
+        {{ if $app }}
+
+          {{/* Localized data */}}
+          {{ $localized := dict }}
+          {{ $graphics := dict }}
+          {{ if $app.localized }}
+            {{ with index $app.localized "en-US" }}
+              {{ $graphics = . }}
+              {{ $localized = . }}
+            {{ end }}
+          {{ end }}
+
+          {{/* License */}}
+          {{ with $app.license }}
+            <div class="mb-8 text-center text-sm text-gray-500">
+              License: <a href="https://spdx.org/licenses/{{ . }}.html" target="_blank" class="text-primary hover:underline">{{ . }}</a>
+            </div>
+          {{ end }}
+
+          {{/* Screenshots gallery */}}
+          {{ $hasScreenshots := or ($graphics.phoneScreenshots) (or ($graphics.sevenInchScreenshots) ($graphics.tenInchScreenshots)) }}
+          {{ if $hasScreenshots }}
+            {{ $allScreenshots := slice }}
+            {{ range $graphics.phoneScreenshots }}
+              {{ $allScreenshots = $allScreenshots | append (printf "phoneScreenshots/%s" .) }}
+            {{ end }}
+            {{ range $graphics.sevenInchScreenshots }}
+              {{ $allScreenshots = $allScreenshots | append (printf "sevenInchScreenshots/%s" .) }}
+            {{ end }}
+            {{ range $graphics.tenInchScreenshots }}
+              {{ $allScreenshots = $allScreenshots | append (printf "tenInchScreenshots/%s" .) }}
+            {{ end }}
+            <div class="mb-12 flex flex-wrap justify-center gap-4">
+              {{ range first 6 $allScreenshots }}
+                {{ $link := printf "https://guardianproject.info/fdroid/repo/%s/en-US/%s" $.Params.packageName . }}
+                <a href="{{ $link }}" target="_blank">
+                  <img src="{{ $link }}" alt="" class="h-64 rounded-lg shadow" />
+                </a>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{/* F-Droid localized description */}}
+          {{ with $localized.description }}
+            <div class="prose prose-lg mx-auto mb-12 max-w-none">
+              {{ . | markdownify }}
+            </div>
+          {{ end }}
+
+        {{ end }}
+      {{ end }}
+
+      {{/* Page content */}}
+      {{ with .Content }}
+        <div class="prose prose-lg mx-auto mb-12 max-w-none">
+          {{ . }}
+        </div>
+      {{ end }}
+
+      {{/* Download badges */}}
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        {{ with .Params.packageName }}
+          <a href="https://f-droid.org/packages/{{ . }}" target="_blank">
+            <img src="{{ $.Site.BaseURL }}/img/get-it-on-fdroid.png" alt="Get it on F-Droid" class="h-20" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id={{ . }}" target="_blank">
+            <img src="{{ $.Site.BaseURL }}/img/en-play-badge.png" alt="Get it on Google Play" class="h-20" />
+          </a>
+        {{ end }}
+        {{ with .Params.itunes }}
+          <a href="{{ . }}" target="_blank">
+            <img src="{{ $.Site.BaseURL }}/img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" class="h-14" />
+          </a>
+        {{ end }}
+      </div>
+
+    </div>
+  </section>
+{{ end }}

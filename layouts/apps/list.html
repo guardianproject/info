@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      {{ with .Title }}
+        <h2 class="text-primary mb-16 text-center text-4xl font-bold xl:text-6xl">{{ . }}</h2>
+      {{ end }}
+      {{ with .Content }}
+        <div class="prose prose-lg mx-auto mb-16 max-w-none">
+          {{ . }}
+        </div>
+      {{ end }}
+      <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        {{ range (.Paginate .RegularPages).Pages }}
+          <a class="border-primary/25 flex h-full gap-4 rounded border p-6 duration-300 hover:shadow-lg" href="{{ .Permalink }}">
+            {{ with .Params.icon }}
+              <img src="{{ . }}" alt="" class="size-24 shrink-0 rounded object-contain" />
+            {{ end }}
+            <div>
+              <h5 class="text-primary mb-1 text-xl font-semibold">{{ .Title }}</h5>
+              {{ with .Params.subtitle }}
+                <p class="mb-2 text-sm text-gray-600">{{ . }}</p>
+              {{ end }}
+              <div class="flex flex-wrap gap-3 text-xs text-gray-500">
+                {{ with .Params.sourceCode }}
+                  {{ if hasPrefix . "https://github.com/" }}
+                    <span>GitHub</span>
+                  {{ else if hasPrefix . "https://gitlab.com/" }}
+                    <span>GitLab</span>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </div>
+          </a>
+        {{ end }}
+      </div>
+      {{ $pag := .Paginator }}
+      {{ if gt $pag.TotalPages 1 }}
+        <div class="mt-16 flex justify-center gap-4">
+          {{ if $pag.HasPrev }}
+            <a href="{{ $pag.Prev.URL }}" class="text-primary border-primary rounded border px-4 py-2">&larr; Prev</a>
+          {{ end }}
+          {{ if $pag.HasNext }}
+            <a href="{{ $pag.Next.URL }}" class="text-primary border-primary rounded border px-4 py-2">Next &rarr;</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

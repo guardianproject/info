@@ -4,8 +4,12 @@
       {{ with .Title }}
         <h2 class="text-primary mb-8 text-center text-4xl font-bold xl:text-6xl">{{ . }}</h2>
       {{ end }}
-      {{ with .Date }}
-        <p class="mb-8 text-center text-sm text-gray-500">{{ .Format "January 2, 2006" }}</p>
+      {{ if eq .Section "blog" }}
+        <p class="mb-8 text-center text-sm text-gray-500">
+          {{- with .Params.author }}By {{ . }}{{ end -}}
+          {{- if and .Params.author .Date }} · {{ end -}}
+          {{- with .Date }}{{ .Format "January 2, 2006" }}{{ end -}}
+        </p>
       {{ end }}
       {{ with .Params.description }}
         <p class="mx-auto mb-16 text-center xl:max-w-[50%]">{{ . }}</p>

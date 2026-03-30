@@ -1,0 +1,47 @@
+<section class="bg-tertiary/30 py-16 xl:py-24">
+  <div class="container mx-auto px-4">
+    {{ with .title }}
+      <h2 class="text-primary mb-4 text-center text-4xl font-bold xl:text-5xl">{{ . }}</h2>
+    {{ end }}
+    {{ with .text }}
+      <p class="mx-auto mb-16 max-w-2xl text-center text-lg text-gray-600">{{ . }}</p>
+    {{ end }}
+    {{ if .cards }}
+      <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {{ range .cards }}
+          <div class="group overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg duration-300">
+            {{ with .image }}
+              {{ $resource := false }}
+              {{ with resources.Get . }}{{ $resource = . }}{{ end }}
+              {{ if $resource }}
+                {{ $img := $resource.Fill "600x400 Center" }}
+                <div class="aspect-[3/2] overflow-hidden">
+                  <img
+                    src="{{ $img.RelPermalink }}"
+                    width="{{ $img.Width }}"
+                    height="{{ $img.Height }}"
+                    alt=""
+                    class="h-full w-full object-cover group-hover:scale-105 duration-500"
+                  />
+                </div>
+              {{ end }}
+            {{ end }}
+            <div class="p-6 xl:p-8">
+              {{ with .title }}<h3 class="text-primary mb-3 text-xl font-bold">{{ . }}</h3>{{ end }}
+              {{ with .text }}<p class="mb-6 text-gray-600 leading-relaxed">{{ . }}</p>{{ end }}
+              {{ with .button }}
+                <a
+                  class="text-primary font-medium inline-flex items-center gap-2 hover:gap-3 duration-300"
+                  href="{{ .link }}"
+                >
+                  {{ .label }}
+                  {{ partial "icons/arrow-right" }}
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>

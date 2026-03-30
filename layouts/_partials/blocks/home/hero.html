@@ -1,0 +1,53 @@
+<section id="hero" class="hero py-12 xl:py-24">
+  <div class="container mx-auto grid gap-12 px-4 xl:grid-cols-2 xl:gap-16">
+    <div class="flex flex-col justify-center gap-6 xl:gap-10">
+      {{/* Logo + tagline */}}
+      <div class="flex items-center justify-center gap-6 xl:justify-start xl:gap-8">
+        <img src="{{ "Logomark/Guardian_Project_Logomark___Multicolor_Full_Color_Rgb%201.png" | absURL }}" alt="Guardian Project" class="size-24 shrink-0 xl:size-32" />
+        {{ with .title }}
+          <h1 class="text-primary text-3xl font-bold leading-tight xl:text-5xl">
+            {{ . | markdownify }}
+          </h1>
+        {{ end }}
+      </div>
+      {{ with .text }}
+        <p class="text-center text-lg leading-relaxed text-gray-600 xl:text-start">{{ . | markdownify }}</p>
+      {{ end }}
+      {{ if .buttons }}
+        <div class="flex flex-col items-center gap-4 xl:flex-row xl:gap-6">
+          {{ range $i, $e := .buttons }}
+            {{ if (eq $i 0) }}
+              <a class="bg-primary hover:bg-primary/90 rounded-lg px-8 py-3 text-lg font-medium text-white duration-300" href="{{ .url }}">
+                {{ .label }}
+              </a>
+            {{ else }}
+              <a
+                class="border-primary text-primary hover:bg-primary flex items-center gap-2 rounded-lg border-2 px-8 py-3 text-lg font-medium duration-300 hover:text-white"
+                href="{{ .url }}"
+              >
+                {{ .label }}
+                {{ partial "icons/arrow-right" }}
+              </a>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+    <div class="flex items-center justify-center">
+      {{ with .image }}
+        {{ $resource := false }}
+        {{ with resources.Get . }}{{ $resource = . }}{{ end }}
+        {{ if $resource }}
+          {{ $img := $resource.Fill "800x600 Center" }}
+          <img
+            src="{{ $img.RelPermalink }}"
+            width="{{ $img.Width }}"
+            height="{{ $img.Height }}"
+            alt="Guardian Project Team"
+            class="rounded-2xl shadow-xl object-cover"
+          />
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,5 @@
+module github.com/guardianproject/info
+
+go 1.25.4
+
+require github.com/writeonlycode/hugo-up-business v0.0.0-20250709124836-33d421f28c8c // indirect

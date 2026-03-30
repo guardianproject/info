@@ -20,24 +20,6 @@ cards:
     button:
       label: "Learn More"
       link: "https://letsconvene.im"
-  - image: "images/projects/circulo.jpg"
-    title: "Circulo"
-    text: "Helps you stay securely connected to a circle of support. Establish safety and check-in protocols, send alerts, and share your location."
-    button:
-      label: "Learn More"
-      link: "https://encirculo.org"
-  - image: "images/projects/cleaninsights.jpg"
-    title: "Clean Insights"
-    text: "A secure, private measurement platform focused on answering key questions about app usage patterns without invasive surveillance."
-    button:
-      label: "Learn More"
-      link: "https://cleaninsights.org"
-  - image: "images/projects/cdr.jpg"
-    title: "CDR Link"
-    text: "A secure helpdesk providing Signal, PGP, WhatsApp and Telegram channels for your community, the gold standard for human rights helpdesks."
-    button:
-      label: "Learn More"
-      link: "https://digiresilience.org/solutions/link/"
   - image: "images/projects/butterhw.jpg"
     title: "ButterBox"
     text: "An off-grid, delay-tolerant communication and sharing platform, providing connectivity and services when the internet is not available or not safe."
@@ -56,3 +38,21 @@ cards:
     button:
       label: "Learn More"
       link: "https://f-droid.org/"
+  - image: "images/projects/circulo.jpg"
+    title: "Circulo"
+    text: "Helps you stay securely connected to a circle of support. Establish safety and check-in protocols, send alerts, and share your location."
+    button:
+      label: "Learn More"
+      link: "https://encirculo.org"
+  - image: "images/projects/cleaninsights.jpg"
+    title: "Clean Insights"
+    text: "A secure, private measurement platform focused on answering key questions about app usage patterns without invasive surveillance."
+    button:
+      label: "Learn More"
+      link: "https://cleaninsights.org"
+  - image: "images/projects/cdr.jpg"
+    title: "CDR Link"
+    text: "A secure helpdesk providing Signal, PGP, WhatsApp and Telegram channels for your community, the gold standard for human rights helpdesks."
+    button:
+      label: "Learn More"
+      link: "https://digiresilience.org/solutions/link/"

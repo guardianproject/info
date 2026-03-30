@@ -10,12 +10,12 @@ needs of our target audience, we will recommend apps that work.
 
 <div style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; justify-content: center;">
   <a href="https://search.f-droid.org/?q=Guardian+Project" target="_blank">
-    <img src="../img/get-it-on-fdroid.png" alt="Get it on F-Droid" style="height: 96px; width: auto;" />
+    <img src="/img/get-it-on-fdroid.png" alt="Get it on F-Droid" style="height: 96px; width: auto;" />
   </a>
   <a href="https://play.google.com/store/apps/dev?id=6502754515281796553" target="_blank">
-    <img src="../img/en-play-badge.png" alt="Get it on Google Play" style="height: 96px; width: auto;" />
+    <img src="/img/en-play-badge.png" alt="Get it on Google Play" style="height: 96px; width: auto;" />
   </a>
   <a href="https://itunes.apple.com/by/app/onion-browser/id519296448" target="_blank">
-    <img src="../img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" style="height: 64px; width: auto;" />
+    <img src="/img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" style="height: 64px; width: auto;" />
   </a>
 </div>

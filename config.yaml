@@ -57,8 +57,6 @@ menu:
       url: /contact/
       weight: 10
 
-languages:
-  en: {weight: 1}
 
 Params:
   since: 2009

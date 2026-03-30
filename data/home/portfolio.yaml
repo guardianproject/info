@@ -1,7 +1,7 @@
 enable: true
 items:
-  - pretitle: "About Us"
-    title: "Apps We Like"
+  - pretitle: ""
+    title: "Apps We Endorse"
     text: "To achieve our goal of a comprehensive, privacy- and security-focused communications solution, Guardian is driven both by internal development and the open-source community at large. In cases where a viable, vetted, and usable product already fills the communications needs of our target audience, we will recommend apps that work."
     image: "wp-content/uploads/2010/03/teamguardianhardatwork.jpg"
     buttons:

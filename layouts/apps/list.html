@@ -10,7 +10,14 @@
         </div>
       {{ end }}
       <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-        {{ range (.Paginate .RegularPages).Pages }}
+        {{/* Deduplicate localized pages: only show the base file per packageName */}}
+        {{ $filtered := slice }}
+        {{ range .RegularPages }}
+          {{ if or (not .Params.packageName) (eq .File.ContentBaseName .Params.packageName) }}
+            {{ $filtered = $filtered | append . }}
+          {{ end }}
+        {{ end }}
+        {{ range (.Paginate $filtered).Pages }}
           <a class="border-primary/25 flex h-full gap-4 rounded border p-6 duration-300 hover:shadow-lg" href="{{ .Permalink }}">
             {{ with .Params.icon }}
               <img src="{{ . }}" alt="" class="size-24 shrink-0 rounded object-contain" />

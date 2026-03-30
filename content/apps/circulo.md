@@ -18,7 +18,7 @@ tags:
   - GPL-3.0-or-later
   - circulo
 aliases:
-  - apps/haven
+  - apps/circulo
 ---
 
 Learn more at [encirculo.org](https://encirculo.org)

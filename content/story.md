@@ -27,10 +27,9 @@ menu:
 
 In the late 2000s, smartphones were becoming widely adopted, but security and privacy were largely overlooked. At the same time, governments and corporations were ramping up surveillance, putting sensitive communications at risk. A group of technologists and digital rights advocates saw the urgent need to create accessible, open-source mobile security tools.
 
-### Nathan of Guardian Project on FLOSS Weekly
+#### Nathan of Guardian Project on FLOSS Weekly
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8YHgF81Ot_U?si=cMZxUYNvh3QmOZ6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<a href="https://www.youtube.com/watch?v=8YHgF81Ot_U" target="_new"><img src="/flossweekly.png"/></a>___click to watch___
 
 **Guardian Project** was founded with the goal of providing **secure, user-friendly privacy apps for Android devices**, enabling people worldwide to communicate and browse the internet without fear of surveillance or censorship. Now we have expanded that work to all platforms of computing and communication -- iPhone, desktops, servers, clouds, and even off-grid networks.
 

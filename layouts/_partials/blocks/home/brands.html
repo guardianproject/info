@@ -1,0 +1,22 @@
+<section id="brands" class="py-8 xl:py-16">
+  <div class="container mx-auto px-4">
+    {{ with .title }}
+      <h1 class="text-primary mb-16 text-center text-2xl font-semibold">{{ . }}</h1>
+    {{ end }}
+    {{ if .items }}
+      <div class="flex flex-col flex-wrap items-center justify-around gap-8 xl:flex-row">
+        {{ range .items }}
+          <a href="{{ .url }}" target="_blank" class="duration-300 hover:opacity-70" title="{{ .name }}">
+            {{ with .image }}
+              {{ $img := resources.Get . }}
+              {{ if $img }}
+                {{ $resized := $img.Fit "300x90" }}
+                <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $.name }}" class="h-16 w-auto object-contain" />
+              {{ end }}
+            {{ end }}
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>

@@ -1,1 +1,18 @@
-enable: false
+enable: true
+title: "Partners and Collaborators"
+items:
+  - name: "Tor Project"
+    url: "https://torproject.org"
+    image: "images/brands/torproject.png"
+  - name: "Witness"
+    url: "https://witness.org"
+    image: "images/brands/witness.png"
+  - name: "Tibet Action Institute"
+    url: "https://tibetaction.net"
+    image: "images/brands/tibetaction.png"
+  - name: "F-Droid"
+    url: "https://f-droid.org"
+    image: "images/brands/fdroid.png"
+  - name: "Content Authenticity Initiative"
+    url: "https://contentauth.org/"
+    image: "images/brands/contentauth.png"

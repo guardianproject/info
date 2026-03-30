@@ -1,1 +1,9 @@
-enable: false
+enable: true
+items:
+  - pretitle: "About Us"
+    title: "Our Story"
+    text: "Guardian Project is an open-source initiative dedicated to developing secure, privacy-enhancing mobile applications and tools. Launched in 2009, we were born out of a need to protect digital communications in an era of increasing surveillance, censorship, and cyber threats."
+    image: "wp-content/uploads/2010/03/teamguardianhardatwork.jpg"
+    buttons:
+      - label: "Read More"
+        link: "/story/"

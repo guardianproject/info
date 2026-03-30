@@ -1,0 +1,8 @@
+.hero {
+  .title {
+    strong {
+      font-weight: inherit;
+      color: var(--color-secondary);
+    }
+  }
+}

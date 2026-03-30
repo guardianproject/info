@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      {{ with .Title }}
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">{{ . }}</h2>
+      {{ end }}
+      {{ with .Params.description }}
+        <p class="mx-auto mb-16 text-center xl:max-w-[50%]">{{ . }}</p>
+      {{ end }}
+      {{ with .Content }}
+        <div class="prose prose-lg mx-auto">
+          {{ . }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

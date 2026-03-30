@@ -1,0 +1,26 @@
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    {{ with .title }}
+      <h1 class="text-primary mb-8 text-center text-6xl font-bold">{{ . }}</h1>
+    {{ end }}
+    {{ with .text }}
+      <p class="mx-auto mb-16 text-center xl:max-w-[50%]">{{ . }}</p>
+    {{ end }}
+    {{ if .cards }}
+      <div class="grid gap-12 xl:grid-cols-3">
+        {{ range .cards }}
+          <div class="bg-tertiary rounded-4xl px-6 py-12 xl:px-12 xl:py-16">
+            {{ with .image }}{{ partial "utilities/image" (dict "src" .) }}{{ end }}
+            <div class="flex flex-col items-center justify-center">
+              {{ with .title }}<h2 class="text-primary mb-4 text-center text-2xl">{{ . }}</h2>{{ end }}
+              {{ with .text }}<p class="mb-8 text-center">{{ . }}</p>{{ end }}
+              {{ with .button }}
+                {{ partial "components/button/outline" (dict "label" .label "href" .link) }}
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>

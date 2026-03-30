@@ -1,0 +1,19 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .page-item {
+    color: var(--color-primary);
+
+    &.disabled {
+      color: lightgray;
+    }
+
+    &.active {
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      {{ with .Title }}
+        <h2 class="text-primary mb-16 text-center text-6xl font-bold">{{ . }}</h2>
+      {{ end }}
+      {{ with .Params.description }}
+        <p class="mx-auto mb-16 text-center xl:max-w-[50%]">{{ . }}</p>
+      {{ end }}
+      <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        {{ range (.Paginate .RegularPages).Pages }}
+          <a class="border-primary/25 h-full rounded border" href="{{ .Permalink }}">
+            <div class="aspect-video">
+              {{ with .Params.image }}
+                {{ partial "utilities/image" (dict "src" .) }}
+              {{ else }}
+                {{ partial "utilities/image" (dict "src" "images/services-web-development.png") }}
+              {{ end }}
+            </div>
+            <div class="p-6">
+              <h5 class="text-primary mb-2 text-xl font-semibold">{{ .Title }}</h5>
+              <p class="">{{ .Summary | plainify }}</p>
+            </div>
+          </a>
+        {{ end }}
+      </div>
+      <div class="py-16">
+        {{ partial "pagination.html" . }}
+      </div>
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@import './shared/_pagination.css';
+
+@import './home/_hero.css';
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #0000009c;
+  }
+}
+
+@theme {
+  --color-primary: {{ (default "#5d57a3	" site.Params.colors.primary) }};
+  --color-secondary: {{ (default "#d33a77	" site.Params.colors.secondary) }};
+  --color-tertiary: {{ (default "#dcf0ff" site.Params.colors.tertiary) }};
+}
+
+body {
+  @apply antialiased;
+}

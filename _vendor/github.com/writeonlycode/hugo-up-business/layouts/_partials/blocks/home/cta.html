@@ -1,0 +1,17 @@
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    {{ with .title }}
+      <h1 class="text-primary mb-8 text-center text-6xl font-bold">{{ . }}</h1>
+    {{ end }}
+    {{ with .image }}
+      <div class="mb-8 flex items-center justify-center">
+        {{ partial "utilities/image.html" (dict "src" . ) }}
+      </div>
+    {{ end }}
+    {{ with .button }}
+      <div class="flex items-center justify-center">
+        {{ partial "components/button/outline" (dict "label" .label "href" .link) }}
+      </div>
+    {{ end }}
+  </div>
+</section>

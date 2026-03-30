@@ -1,0 +1,33 @@
+<section id="portfolio" class="py-8 xl:py-16">
+  <div class="container mx-auto px-4">
+    {{ range $i, $e := .items }}
+      <div class="grid xl:grid-cols-2 xl:gap-8">
+        <div class="{{ if (eq (mod $i 2) 0) }}xl:order-2{{ end }} flex flex-col items-center justify-center">
+          {{ with .image }}
+            {{ partial "utilities/image" (dict "src" .) }}
+          {{ end }}
+        </div>
+        <div class="flex flex-col justify-center">
+          {{ with .pretitle }}
+            <p class="text-secondary mb-2 text-center font-bold xl:text-start">{{ . }}</p>
+          {{ end }}
+          {{ with .title }}
+            <h1 class="text-primary mb-4 text-center text-4xl font-bold xl:text-start">{{ . }}</h1>
+          {{ end }}
+          {{ with .text }}
+            <p class="mb-6 text-center xl:text-start">{{ . }}</p>
+          {{ end }}
+          <div class="flex items-center justify-center gap-4 xl:justify-start">
+            {{ range $i, $e := .buttons }}
+              {{ if (eq $i 0) }}
+                {{ partial "components/button/primary" (dict "label" .label "href" .link) }}
+              {{ else }}
+                {{ partial "components/button/outline" (dict "label" .label "href" .link) }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</section>

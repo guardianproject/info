@@ -1,0 +1,42 @@
+{{/* Check for required arguments (src): */}}
+{{ if not .src }}
+  {{ errorf "Image Optimization: the partial 'utilities/image' is missing the 'src' argument." }}
+{{ end }}
+
+{{/* Get resource from page bundle or assets folder: */}}
+{{ $resource := dict }}
+{{ with page.Resources.Get .src }}{{ $resource = . }}{{ end }}
+{{ with resources.Get .src }}{{ $resource = . }}{{ end }}
+
+{{ if not $resource }}{{ errorf "Image Optimization: the image '%s' has not been found." .src }}{{ end }}
+
+{{/* Configure the image widths to be generated: */}}
+{{ $breakpoints := (slice 576 768 992 1200 1400) }}
+
+{{/* Generate the images: */}}
+{{ $images := slice }}
+{{ range $breakpoints }}
+  {{ if (ge $resource.Width .) }}
+    {{ $opts := (printf "%dx webp" .) }}
+    {{ $image := $resource.Resize $opts }}
+    {{ $images = append $images (slice $image) }}
+  {{ end }}
+{{ end }}
+
+{{/* Build the srcset: */}}
+{{ $srcset := slice }}
+{{ range $images }}
+  {{ $srcset = append $srcset (slice (printf "%s %dw" .Permalink .Width)) }}
+{{ end }}
+{{ $srcset = delimit $srcset ", " }}
+
+{{/* Return the img element: */}}
+<img
+  {{ with $resource.Permalink }}src="{{ . }}"{{ end }}
+  {{ with $resource.Width }}width="{{ . }}"{{ end }}
+  {{ with $resource.Height }}height="{{ . }}"{{ end }}
+  {{ with $srcset }}srcset="{{ . }}"{{ end }}
+  {{ with .sizes }}sizes="{{ . }}"{{ end }}
+  {{ with .class }}class="{{ . }}"{{ end }}
+  alt="{{ . }}"
+/>

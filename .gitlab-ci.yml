@@ -28,7 +28,10 @@ stages:
   rm /etc/apt/apt.conf.d/99nocacertificates
   apt-get update
   apt-get dist-upgrade
-  apt-get install curl fdroidserver git golang gpg gpg-wks-client locales make mawk nodejs npm python3 sassc unzip wget
+  apt-get install curl fdroidserver git golang gpg gpg-wks-client locales make mawk python3 sassc unzip wget
+  # Install Node.js 20 from NodeSource (Tailwind CSS v4 requires Node >= 20)
+  curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+  apt-get install nodejs
   grep '^en_US.UTF-8 UTF-8' /etc/locale.gen || echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
   locale-gen
   export LC_ALL=en_US.UTF-8

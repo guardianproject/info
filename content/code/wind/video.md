@@ -13,7 +13,7 @@ Nathan Freitas on [TWIT's Triangulation](https://www.youtube.com/watch?v=e984EYI
 
 {{< youtube e984EYI1M3I >}}
 
-"Making Cameras Count" (Wind Report / ProofMode / InformaCam)
+"Making Cameras Count" (Wind Report / Proofmode / InformaCam)
 
 {{< youtube lzjoAdhAKWU >}}
 

@@ -13,7 +13,7 @@ aliases:
   - apps/camerav
   - informa
 ---
-THIS PROJECT IS NO LONGER ACTIVE - Please visit [ProofMode.org][https://proofmode.org] for our latest work in verifiable media capture.
+THIS PROJECT IS NO LONGER ACTIVE - Please visit [Proofmode.org][https://proofmode.org] for our latest work in verifiable media capture.
 
 CameraV is the easiest way to capture and share verifiable photos and video proof on a smartphone or tablet, all the while keeping it entirely secure and private. _This is the official app from the [InformaCam](https://blog.witness.org/2013/01/how-informacam-improves-verification-of-mobile-media-files/) project, a partnership between the Guardian Project and [WITNESS](https://witness.org)._
 

@@ -7,6 +7,7 @@ aliases:
 menu:
   main:
     parent: about
+    weight: 100
 ---
 
 ## New Branding for 2025

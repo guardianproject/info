@@ -9,87 +9,173 @@ menu:
     parent: about
 ---
 
-## The Story of Guardian Project
+<div class="mx-auto max-w-4xl">
 
-**Guardian Project** is an open-source initiative dedicated to developing secure, privacy-enhancing mobile applications and tools. Launched in **2009**, the project was born out of a need to protect digital communications in an era of increasing surveillance, censorship, and cyber threats. Over the years, it has provided essential tools for activists, journalists, and everyday users who value privacy and security.
+<div class="mb-12 text-center">
+<p class="text-xl leading-relaxed text-gray-700">
+<strong>Guardian Project</strong> is an open-source initiative dedicated to developing secure, privacy-enhancing mobile applications and tools. Launched in <strong>2009</strong>, we were born out of a need to protect digital communications in an era of increasing surveillance, censorship, and cyber threats. Over the years, we have provided essential tools for activists, journalists, and everyday users who value privacy and security.
+</p>
+</div>
 
----
-
-### Origins and Mission  
-
-In the late 2000s, smartphones were becoming widely adopted, but security and privacy were largely overlooked. At the same time, governments and corporations were ramping up surveillance, putting sensitive communications at risk. A group of technologists and digital rights advocates, saw the urgent need to create accessible, open-source mobile security tools.
-
-**Guardian Project** was founded with the goal of providing **secure, user-friendly privacy apps for Android devices**, enabling people worldwide to communicate and browse the internet without fear of surveillance or censorship. Now we have expanded that work to all platforms of computing and communication - iPhone, desktops, servers, clouds, and even off-grid networks.
-
----
-
-### Key Innovations and Contributions  
-
-Guardian Project has developed a suite of tools that focus on secure communications, anonymous browsing, and media protection. Some of their most influential projects include:
-
-#### 1. Orbot (2009 - Present)  
-A **Tor proxy for Android**, allowing users to browse the internet anonymously by routing traffic through the Tor network. Orbot remains one of the most widely used Tor-based mobile apps, helping users in restrictive countries bypass censorship.
-
-#### 2. ChatSecure (2011 - 2019)  
-An encrypted messaging app that supports **Off-the-Record (OTR) encryption** over XMPP. It became an essential tool for journalists and activists before end-to-end encrypted messaging (like Signal) became mainstream.
-
-#### 3. Haven (2017 - Present)  
-A security app that turns an Android phone into a **motion, sound, and vibration detector**, alerting users to potential intrusions in physical spaces. It was co-developed with **Edward Snowden** to help protect human rights defenders and journalists.
-
-#### 4. ProofMode (2017 - Present)  
-A tool designed to capture **secure, verifiable media**. It adds cryptographic signatures to photos and videos, ensuring authenticity and helping to combat misinformation. It was a major influence of the [Content Provenance and Authentication (C2PA)](https://c2pa.org) standard.
-
-#### 5. ObscuraCam  
-A privacy-focused camera app that lets users **blur faces and remove metadata** from images, helping activists and journalists protect identities when sharing sensitive content.
-
-#### 6. Ostel  
-A secure **VoIP (voice over internet protocol) service**, enabling encrypted phone calls using opepn protocols including the ZRTP encryption protocol.
-
-#### 7. SQLCipher for Android
-Guardian Project team led the initial port and design of Zetetic's [SQLCipher](https://sqlcipher.net) to the Android platform, an encrypted database layer on top of SQLite. This code has been used by over 6000 apps, including Signal and WeChat. 
-
-#### 8. F-Droid App Store
-Guardian Project has been a longtime supporter of and participant in the work on [F-Droid](https://f-droid.org). F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications, as well as open-source infrastructure for any one to host their own app repository or complete app store.
----
-
-### Real-World Impact  
-
-Over the years, the **Guardian Project's** tools have been used in high-risk environments worldwide. Some notable use cases include:
-
-- **Journalists in war zones and authoritarian regimes** use Orbot and ChatSecure to communicate safely.
-- **Protesters and activists** use ObscuraCam to anonymize footage of demonstrations, protecting identities.
-- **Whistleblowers and human rights defenders** use Haven to detect physical intrusions or unauthorized access to their workspaces.
-- **Users in censored countries (like Iran, China, and Russia)** rely on Orbot to bypass internet restrictions and access free information.
-
-Their work has also influenced **larger privacy movements**, inspiring improvements in mobile security across major platforms.
+<div class="mb-16">
+<img src="/images/gpteam.jpg" alt="The Guardian Project Team" class="w-full rounded-xl shadow-lg" />
+</div>
 
 ---
 
-### Collaborations and Influence  
+## Origins and Mission
+
+In the late 2000s, smartphones were becoming widely adopted, but security and privacy were largely overlooked. At the same time, governments and corporations were ramping up surveillance, putting sensitive communications at risk. A group of technologists and digital rights advocates saw the urgent need to create accessible, open-source mobile security tools.
+
+**Guardian Project** was founded with the goal of providing **secure, user-friendly privacy apps for Android devices**, enabling people worldwide to communicate and browse the internet without fear of surveillance or censorship. Now we have expanded that work to all platforms of computing and communication -- iPhone, desktops, servers, clouds, and even off-grid networks.
+
+---
+
+## Key Innovations and Contributions
+
+Guardian Project has developed a suite of tools that focus on secure communications, anonymous browsing, and media protection. Some of our most influential projects include:
+
+<div class="my-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+
+<div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+<div class="p-6">
+<h3 class="mb-2 text-xl font-bold text-primary">2009: Circumvention on Mobile</h3>
+<p>Orbot was the first <strong>Tor proxy for Android</strong>, allowing users to browse the internet anonymously by routing traffic through the Tor network. Orbot remains one of the most widely used Tor-based mobile apps, helping users in restrictive countries bypass censorship.</p>
+</div>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+<div class="p-6">
+<h3 class="mb-2 text-xl font-bold text-primary">2010: Encrypted Chat</h3>
+<p>An encrypted messaging app that supported <strong>Off-the-Record (OTR) encryption</strong> over XMPP. It became an essential tool for journalists and activists before end-to-end encrypted messaging (like Signal) became mainstream. Signal also incorporates aspects of ChatSecure, such as the SQLCipher encrypted database, App Icon camouflage, and QR Codes for easy onboarding.</p>
+</div>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+<div class="p-6">
+<h3 class="mb-2 text-xl font-bold text-primary">2011: Visual Privacy</h3>
+<p>A privacy-focused camera app that lets users <strong>blur faces and remove metadata</strong> from images, helping activists and journalists protect identities when sharing sensitive content.</p>
+</div>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+<div class="p-6">
+<h3 class="mb-2 text-xl font-bold text-primary">2013: SmartCAMERAs for Evidence</h3>
+<p>Proofmode (CameraV, InformaCam) tool designed to capture <strong>secure, verifiable media</strong>. It adds cryptographic signatures to photos and videos, ensuring authenticity and helping to combat misinformation. It was a major influence of the <a href="https://c2pa.org">C2PA</a> standard.</p>
+</div>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+<div class="p-6">
+<h3 class="mb-2 text-xl font-bold text-primary">2017: Smartphones as Sensors</h3>
+<p>Haven was a physical security app that turns an Android phone into a <strong>motion, sound, and vibration detector</strong>, alerting users to potential intrusions in physical spaces. It was co-developed with <strong>Edward Snowden</strong> to help protect human rights defenders and journalists.</p>
+</div>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+<div class="p-6">
+<h3 class="mb-2 text-xl font-bold text-primary">2011: Encrypted Databases</h3>
+<p>Guardian Project team led the initial port and design of Zetetic's <a href="https://sqlcipher.net">SQLCipher</a> to Android, an encrypted database layer on top of SQLite. This code has been used by over 6000 apps, including Signal and WeChat.</p>
+</div>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+<div class="p-6">
+<h3 class="mb-2 text-xl font-bold text-primary">2012: Encrypted Calls</h3>
+<p>Ostel was a secure <strong>VoIP (voice over internet protocol) service</strong>, enabling encrypted phone calls using open protocols including the ZRTP encryption protocol.</p>
+</div>
+</div>
+
+<div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+<div class="p-6">
+<h3 class="mb-2 text-xl font-bold text-primary">2015: Open App Stores</h3>
+<p>Guardian Project has been a longtime supporter of and participant in the work on <a href="https://f-droid.org">F-Droid</a>. F-Droid is an installable catalogue of FOSS (Free and Open Source Software) applications, as well as open-source infrastructure for anyone to host their own app repository or complete app store.</p>
+</div>
+</div>
+
+</div>
+
+---
+
+## Real-World Impact
+
+Over the years, Guardian Project's tools have been used in high-risk environments worldwide:
+
+<div class="my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+
+<div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
+<h4 class="mb-2 font-bold">Journalists in War Zones</h4>
+<p class="text-sm">Use Orbot and ChatSecure to communicate safely in authoritarian regimes.</p>
+</div>
+
+<div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
+<h4 class="mb-2 font-bold">Protesters and Activists</h4>
+<p class="text-sm">Use ObscuraCam to anonymize footage of demonstrations, protecting identities.</p>
+</div>
+
+<div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
+<h4 class="mb-2 font-bold">Whistleblowers and Human Rights Defenders</h4>
+<p class="text-sm">Use Haven to detect physical intrusions or unauthorized access to their workspaces.</p>
+</div>
+
+<div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
+<h4 class="mb-2 font-bold">Users in Censored Countries</h4>
+<p class="text-sm">Rely on Orbot to bypass internet restrictions and access free information in Iran, China, Russia, and beyond.</p>
+</div>
+
+</div>
+
+Our work has also influenced **larger privacy movements**, inspiring improvements in mobile security across major platforms.
+
+---
+
+## Collaborations and Influence
 
 Guardian Project has worked alongside major digital rights organizations, including:
 
-- **The Tor Project** (on Orbot and censorship circumvention)
-- **Electronic Frontier Foundation (EFF)** (on privacy advocacy)
-- **Freedom of the Press Foundation** (on journalist safety tools)
-- **The Open Technology Fund** (supporting anti-censorship tools)
+- **Tibet Action Institute** -- Fighting advanced censorship and surveillance
+- **The Tor Project** -- on Orbot and censorship circumvention
+- **WITNESS** -- visual privacy and media provenance
+- **Electronic Frontier Foundation (EFF)** -- on privacy advocacy
+- **Freedom of the Press Foundation** -- on journalist safety tools
+- **The Open Technology Fund** -- supporting anti-censorship tools
+- **Center for Digital Resilience** -- secure help desk services
 
-Additionally, elements of their work have influenced mainstream privacy tools, pushing platforms like Google and Apple to improve their own security features.
-
----
-
-### The Future of the Guardian Project  
-
-While many of its early projects remain active, the Guardian Project continues to explore **new frontiers in digital privacy**, such as:
-
-- **Decentralized, censorship-resistant communications through [Butter Box](https://likebutter.app)**
-- **Content Provenance and Authentication through [ProofMode](https://proofmode.org)**
-- **Global Anti-Censorship Infrastructure through [Bypass Censorship](https://bypasscensorship.org/)**
-
-As **governments, corporations, and hackers evolve their surveillance tactics**, the Guardian Project remains a **critical force in digital freedom**, ensuring that people everywhere have access to secure, open-source privacy tools.
+Additionally, elements of our work have influenced mainstream privacy tools, pushing platforms like Google and Apple to improve their own security features.
 
 ---
 
-## Conclusion  
+## The Future
 
-The **Guardian Project** stands as one of the most impactful efforts in mobile security and digital rights. By focusing on **open-source, user-friendly, and accessible** tools, it has helped **millions** stay safe online and protect their personal freedoms. The original vision has not only shaped the mobile security landscape but has also inspired countless other privacy initiatives.
+While many of our early projects remain active, Guardian Project continues to explore **new frontiers in digital privacy**:
+
+<div class="my-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+
+<div class="rounded-xl border border-gray-200 p-6 text-center shadow-sm">
+<h4 class="mb-3 font-bold text-primary">Decentralized Communications</h4>
+<p class="text-sm">Shutdown-resistant communications through <a href="https://likebutter.app">Butter Box</a></p>
+</div>
+
+<div class="rounded-xl border border-gray-200 p-6 text-center shadow-sm">
+<h4 class="mb-3 font-bold text-primary">Content Provenance</h4>
+<p class="text-sm">Authentication and verification through <a href="https://proofmode.org">Proofmode</a></p>
+</div>
+
+<div class="rounded-xl border border-gray-200 p-6 text-center shadow-sm">
+<h4 class="mb-3 font-bold text-primary">Anti-Censorship</h4>
+<p class="text-sm">Global infrastructure through <a href="https://bypasscensorship.org/">Bypass Censorship</a></p>
+</div>
+
+</div>
+
+As governments, corporations, and hackers evolve their surveillance tactics, Guardian Project remains a **critical force in digital freedom**, ensuring that people everywhere have access to secure, open-source privacy tools.
+
+---
+
+<div class="my-12 rounded-xl bg-gray-50 p-8 text-center">
+<p class="text-lg leading-relaxed text-gray-700">
+Guardian Project stands as one of the most impactful efforts in mobile security and digital rights. By focusing on <strong>open-source, user-friendly, and accessible</strong> tools, we have helped <strong>millions</strong> stay safe online and protect their personal freedoms. Our original vision has not only shaped the mobile security landscape but has also inspired countless other privacy initiatives.
+</p>
+</div>
+
+</div>

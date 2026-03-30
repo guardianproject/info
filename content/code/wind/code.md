@@ -258,7 +258,7 @@ You can play with our javascript simulation tool in real-time here: <https://jsf
                               </p>
                               
                               <p>
-                                <span style="font-weight: 400;">Wind Report would integrate our work on the ProofMode app and service with Wind Chime and Wind Box. Adding Chime capability will allow evidence to be notarized and shared between many people in an area, without require any network infrastructure. Wind Box will be expanded to support the submission of Report generated evidence, building in chain-of-custody features, as well as a workflow for aggregating and delivering the reports to the necessary authorities and organizations.</span>
+                                <span style="font-weight: 400;">Wind Report would integrate our work on the Proofmode app and service with Wind Chime and Wind Box. Adding Chime capability will allow evidence to be notarized and shared between many people in an area, without require any network infrastructure. Wind Box will be expanded to support the submission of Report generated evidence, building in chain-of-custody features, as well as a workflow for aggregating and delivering the reports to the necessary authorities and organizations.</span>
                               </p>
                               
                               <p>

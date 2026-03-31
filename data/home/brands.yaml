@@ -16,3 +16,6 @@ items:
   - name: "OkThanks"
     url: "https://okthanks.com"
     image: "images/brands/okthanks.webp"
+  - name: "SR2 Communications"
+    url: "https://www.sr2.uk/"
+    image: "images/brands/sr2.png"

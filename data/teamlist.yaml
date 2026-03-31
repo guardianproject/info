@@ -79,12 +79,12 @@ current:
     matrix: "@paulali:matrix.org"
 
   - name: irl
-    title: {dev,sec,sys}ops
+    title: "{dev,sec,sys}ops"
     gitlab: irlxyz
     github: irl
   
   - name: acute
-    title: {dev,sec,sys}ops
+    title: "{dev,sec,sys}ops"
     gitlab: ana_c
 
 emeritus:

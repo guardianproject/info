@@ -32,29 +32,9 @@
     {{ partial "twitter_cards.html" . }}
 
 
-    <!-- Favicons from https://favicon.io/ -->
-    {{ with resources.Get "favicon.ico" }}
-      <link rel="icon" type="image/x-icon" href="{{ .Permalink }}" />
-    {{ end }}
-
-    {{ with resources.Get "apple-touch-icon.png" }}
-      <link rel="apple-touch-icon" sizes="180x180" href="{{ .Permalink }}" />
-    {{ end }}
-
-    {{ with resources.Get "favicon-32x32.png" }}
-      <link rel="icon" type="image/png" sizes="32x32" href="{{ .Permalink }}" />
-    {{ end }}
-
-    {{ with resources.Get "favicon-16x16.png" }}
-      <link rel="icon" type="image/png" sizes="16x16" href="" />
-    {{ end }}
-
-    {{ with resources.Get "site.webmanifest" }}
-      <link rel="manifest" href="{{ .Permalink }}" />
-    {{ end }}
-
-    {{ with resources.Get "safari-pinned-tab.svg" }}
-      <link rel="mask-icon" href="" color="#FFFFFF" />
+    <!-- Favicon -->
+    {{ with resources.Get "favicon.svg" }}
+      <link rel="icon" type="image/svg+xml" href="{{ .Permalink }}" />
     {{ end }}
 
 

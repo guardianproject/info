@@ -2,7 +2,7 @@
 id: 13321
 title: Data Usage and Protection Policies
 author: n8fr8
-guid: https://guardianproject.info/?page_id=13321
+guid: https://guardianproject.info/privacy
 aliases:
   - home/data-usage-and-protection-policies
   - data-usage-and-protection-policies

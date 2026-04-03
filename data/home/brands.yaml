@@ -19,3 +19,7 @@ items:
   - name: "SR2 Communications"
     url: "https://www.sr2.uk/"
     image: "images/brands/sr2.png"
+  - name: "Die Netzarchitekten"
+    url: "https://die.netzarchitekten.com/"
+    image: "images/brands/netzarchitekten.png"
+

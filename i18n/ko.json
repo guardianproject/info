@@ -10,5 +10,9 @@
   {
     "id": "gcseLabelShort",
     "translation": "검색"
+  },
+  {
+    "id": "edit",
+    "translation": "편집"
   }
 ]

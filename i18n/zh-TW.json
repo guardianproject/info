@@ -126,5 +126,9 @@
   {
     "id": "about",
     "translation": "關於"
+  },
+  {
+    "id": "edit",
+    "translation": "編輯"
   }
 ]

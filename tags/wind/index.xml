@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wind on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/wind/</link>
+    <description>Recent content in Wind on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/wind/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distribution in Depth: Mirrors as a Source of Resiliency</title>
+      <link>https://guardianproject.github.io/info/2020/12/07/distribution-in-depth-mirrors-as-a-source-of-resiliency/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/12/07/distribution-in-depth-mirrors-as-a-source-of-resiliency/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;distribution.png&#34; alt=&#34;distribution&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;There are many ways to get the apps and media, even when the Internet is expensive, slow, blocked, or even completely unavailable.  Censorshop circumvention tools from ShadowSocks to Pluggable Transports can evade blocks.  Sneakernets and &lt;a href=&#34;https://briarproject.org/how-it-works/&#34;&gt;nearby connections&lt;/a&gt; work without any network connection.   Hosting on Content Delivery Networks (CDNs) can make hosting drastically cheaper and faster.  One method that is often overlooked these days is repository mirrors.  Distribution setups that support mirrors give users the flexibility to find a huge array of solutions for problems when things are not just working.  Mirrors on local networks can be much cheaper. Mirrors in specific countries are often not blocked or filtered.  Mirrors can be copied onto portable storage and moved to where the users are.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Managing offline maps with F-Droid and OsmAnd</title>
+      <link>https://guardianproject.github.io/info/2020/11/28/managing-offline-maps-with-f-droid-and-osmand/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/11/28/managing-offline-maps-with-f-droid-and-osmand/</guid>
+      <description>&lt;p&gt;When disaster strikes, our mobile devices can provide us with many&#xA;tools to deal with a wide variety of problems.  The internet is not&#xA;available in every corner of the planet, and large scale outages&#xA;happen.  Digital maps allow us to carry detailed maps of the entire&#xA;planet in our pockets.  And the good map apps allow the user to&#xA;download entire regions to the device so that they operate without&#xA;internet at all.  Unfortunately, the big map apps from Google and&#xA;Apple provide limited offline capabilities.  For example, it is&#xA;&lt;a href=&#34;https://annoyingtechnicaldetails.wordpress.com/2020/09/23/cannot-easily-redistribute-downloaded-offline-files-for-google-maps/&#34;&gt;not possible&lt;/a&gt;&#xA;to share offline data from one device to another.  Online maps are&#xA;also a major privacy leak, since location data is the most sensitive&#xA;data.  With online maps, the service operator sees each tile of the&#xA;map that you look at, each time you look at it, as well as all the&#xA;locations you search for.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wind is a Mozilla &amp; National Science Foundation Grand Prize Winner</title>
+      <link>https://guardianproject.github.io/info/2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/</link>
+      <pubDate>Wed, 26 Sep 2018 10:54:38 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/</guid>
+      <description>&lt;p&gt;On August 14th, members of the Guardian Project team traveled to Mountain View to compete in the final round of the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation for a Networked Society (WINS) Challenge&lt;/a&gt;. We learned in July that our &lt;a href=&#34;https://guardianproject.info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/&#34;&gt;Wind  project was a finalist&lt;/a&gt;, and we now had the opportunity to compete for one of the grand prizes, in a TED-meets-SharkTank style event, at Mozilla HQ.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wind&#34;&gt;Wind&lt;/a&gt; is a network designed for opportunistic communication and sharing of local knowledge that provides off-grid services for everyday people, using the mobile devices they already have. In the Wind network, Chime is the hyperlink, but one that exists in time and space, discoverable through beacon broadcasts and human-to-human sharing. All of this is powered by free and open-source software, running on readily available consumer hardware, and can be deployed at little to no cost, in a very short amount of time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Our “Wind” project is a Mozilla-NSF challenge finalist!</title>
+      <link>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</link>
+      <pubDate>Fri, 20 Jul 2018 14:28:23 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</guid>
+      <description>&lt;p&gt;For the last few years, we’ve been working on the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind network concept&lt;/a&gt;, as a nearby, local, off-grid companion, or alternative, to the Web. This year, we decided to participate in the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation Challenge&lt;/a&gt;, sponsored by Mozilla and the National Science Foundation. Today, it was announced that we are a finalist in, as they put it, &lt;a href=&#34;https://blog.mozilla.org/blog/2018/07/19/a-science-fair-with-1-6-million-in-prizes/&#34;&gt;“A Science Fair with $1.6 Million in Prizes”&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Watch the video below to learn more about Wind, or jump right over to the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind project page&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

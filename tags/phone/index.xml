@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phone on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/phone/</link>
+    <description>Recent content in Phone on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/phone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Only Way to Visit Strongbox on a Phone</title>
+      <link>https://guardianproject.github.io/info/2013/05/16/the-only-way-to-visit-strongbox-on-a-phone/</link>
+      <pubDate>Thu, 16 May 2013 17:43:06 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/05/16/the-only-way-to-visit-strongbox-on-a-phone/</guid>
+      <description>&lt;p dir=&#34;ltr&#34;&gt;&#xA;  &lt;em&gt;The New Yorker&lt;/em&gt; magazine just launched &lt;a href=&#34;http://www.newyorker.com/online/blogs/closeread/2013/05/introducing-strongbox-anonymous-document-sharing-tool.html&#34;&gt;Strongbox&lt;/a&gt;, a whistleblower submission system that’s hosted on a hidden website. There’s only one way to access the hidden site on a phone or tablet, and that’s with our &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.browser&amp;hl=en&#34;&gt;Orweb app&lt;/a&gt;. Here’s a simple breakdown of how to do securely and anonymously blow the whistle, explained in an interactive tutorial:&#xA;&lt;/p&gt;&#xA;&lt;p style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;a href=&#34;https://guardianproject.info/howto/strongbox&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;size-medium wp-image-3719  aligncenter&#34; alt=&#34;galaxy19&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/galaxy19-199x300.png&#34; width=&#34;199&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/galaxy19-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/05/galaxy19.png 400w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p dir=&#34;ltr&#34; style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;em&gt;Visit &lt;a title=&#34;strongbox tutorial&#34; href=&#34;https://guardianproject.info/howto/strongbox&#34; target=&#34;_blank&#34;&gt;guardianproject.info/howto/strongbox&lt;/a&gt; for an interactive tutorial on using Strongbox on your phone.&lt;/em&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

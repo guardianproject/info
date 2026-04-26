@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tor on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/tor/</link>
+    <description>Recent content in Tor on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/tor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kindness Mode: Help People Connect to Tor on World Kindness Day</title>
+      <link>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</link>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</guid>
+      <description>&lt;p&gt;Today is &lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;World Kindness Day&lt;/a&gt;. As stated on Wikipedia, &amp;ldquo;World Kindness Day is to highlight good deeds in the community focusing on the positive power and the common thread of kindness for good which binds us.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;&lt;img src=&#34;worldkindnessday.png&#34; width=200/&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now that word &lt;strong&gt;bind&lt;/strong&gt; is particularly meaningful to use in a technical way - when a remote computer connects to another computer over a network, whether peer-to-peer or a server, one way to state what happens is &amp;ldquo;binding to their socket port&amp;rdquo;. The decentralized, privacy-focused &lt;a href=&#34;https://torproject.org&#34;&gt;tor network&lt;/a&gt; is powered by volunteer organizations and inviduals around the world sharing their network resources. On Tor, there is a great deal of positive, community &amp;ldquo;good which binds us&amp;rdquo; going on.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arti, next-gen Tor on mobile</title>
+      <link>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</link>
+      <pubDate>Sat, 04 Mar 2023 10:00:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</guid>
+      <description>&lt;p&gt;For software projects with recurring bugs, efficiency or security issues&#xA;there&amp;rsquo;s a joke making the rounds in the software industry: &amp;ldquo;Let&amp;rsquo;s re-write it&#xA;in &lt;a href=&#34;https://en.wikipedia.org/wiki/Rust_(programming_language)&#34;&gt;Rust&lt;/a&gt;!&amp;rdquo;  It&amp;rsquo;s a&#xA;fairly new low-level programming language with the declared goal to help&#xA;developers avoid entire classes of bugs, security issues and other pitfalls.&#xA;Re-writing software is very time consuming, so it rarely happens, especially&#xA;when just one more fix will keep a project up and running.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Steps towards trusted VPNs</title>
+      <link>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</guid>
+      <description>&lt;p&gt;VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&amp;rsquo;s server.  That is how VPNs &amp;ldquo;unblock&amp;rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04&#34;&gt;adblocker&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serving Websites Privately Over Tor Onion Services (From Your Laptop!)</title>
+      <link>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</guid>
+      <description>&lt;p&gt;In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – &lt;a href=&#34;https://community.torproject.org/onion-services/&#34;&gt;Onion Services&lt;/a&gt;. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout. But to do so, one needs to know how to set up an Onion Service.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Onion Browser Release 2.6 Tutorial</title>
+      <link>https://guardianproject.github.io/info/2020/06/02/onion-browser-release-2.6-tutorial/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/06/02/onion-browser-release-2.6-tutorial/</guid>
+      <description>&lt;p&gt;In this tutorial we&amp;rsquo;re going to talk about the best practices to browse the web securely on iOS using &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser&lt;/a&gt; Release 2.6 and the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser for iOS&lt;/a&gt; is a free, open-source web browser app developed originally by &lt;a href=&#34;https://mike.tig.as/&#34;&gt;Mike Tigas&lt;/a&gt;, with Release 2.6 as a collaboration with the Guardian Project. Onion Browser has Tor built-in and uses Tor to protect your web activity.&lt;/p&gt;&#xA;&lt;p&gt;You can also watch the &lt;a href=&#34;https://www.youtube.com/playlist?list=PL4-CVUWabKWeHeBpadBLjzlWVa7binXpj&#34;&gt;Onion Browser Video Tutorial&lt;/a&gt; on YouTube.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Onions on Apples: A New Release of Onion Browser for iOS</title>
+      <link>https://guardianproject.github.io/info/2019/10/08/onions-on-apples-a-new-release-of-onion-browser-for-ios/</link>
+      <pubDate>Tue, 08 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/10/08/onions-on-apples-a-new-release-of-onion-browser-for-ios/</guid>
+      <description>&lt;p&gt;During 2019, Guardian Project has been working with developer Mike Tigas to make improvements to his Tor-enabled web browser for iOS, &lt;a href=&#34;https://onionbrowser.com/&#34;&gt;Onion Browser&lt;/a&gt;.  Here we re-cap the major improvements currently - and soon-to-be - available.&lt;/p&gt;&#xA;&lt;p&gt;Mike developed Onion Browser on his own, in close collaboration with the Tor Project.  Though we’ve worked with Mike in the recent-past, this 2019 project &amp;ndash; funded by the Open Technology Fund &amp;ndash; gave us significantly more bandwidth to address the challenges of running Tor on iOS, especially alongside a full web-browsing feature set.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tor Project: Orfox Paved the Way for Tor Browser on Android </title>
+      <link>https://guardianproject.github.io/info/2019/09/03/tor-project-orfox-paved-the-way-for-tor-browser-on-android/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/09/03/tor-project-orfox-paved-the-way-for-tor-browser-on-android/</guid>
+      <description>&lt;p&gt;Last month, we tagged the &lt;a href=&#34;https://github.com/guardianproject/Orfox/releases/tag/Orfox-Final-RIP-v16&#34;&gt;final release of Orfox&lt;/a&gt;, an important milestone for us in our work on Tor. Today, we pushed this final build out to all the Orfox users on Google Play, which forces them to upgrade to the official Tor Browser for Android..&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;orfoxrip.png&#34; alt=&#34;Orfox RIP app image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Our goal was never to become the primary developer or maintainer of the &amp;ldquo;best&amp;rdquo; tor-enabled web browser app on Android. Instead, we chose to act as a catalyst to get the Tor Project and the Tor Browser development team themselves to take on Android development, and upstream our work into the primary codebase. This has happened, and it is a great news for everyone. The work for developing and updating Tor Browser on the desktop and Android are now coordinated and synchronized, and end-users benefit from more frequent updates and improvements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NetCipher update: global, SOCKS, and TLSv1.2</title>
+      <link>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/netcipher&#34;&gt;NetCipher&lt;/a&gt; has been relatively quiet in recent years, because it kept&#xA;on working, doing it was doing. Now, we have had some recent&#xA;discoveries about the guts of Android that mean NetCipher is a lot easier&#xA;to use on recent Android versions.  On top of that, TLSv1.2 now reigns&#xA;supreme and is basically everywhere, so it is time to turn TLSv1.0 and&#xA;TLSv1.1 entirely off.&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-single-method-to-enable-proxying-for-the-whole-app&#34;&gt;A single method to enable proxying for the whole app&lt;/h2&gt;&#xA;&lt;p&gt;As of Android 8.0 (26 aka Oreo), it is now possible to set a&#xA;&lt;code&gt;URLStreamHandlerFactory&lt;/code&gt;, which creates &lt;code&gt;URLConnection&lt;/code&gt; instances&#xA;with custom configurations.  If an app is using the built-in&#xA;&lt;code&gt;HttpURLConnection&lt;/code&gt; API for its networking, it is now possible to&#xA;enable global proxying with a single method call when the app starts:&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useGlobalProxy--&#34;&gt;&lt;code&gt;NetCipher.useGlobalProxy()&lt;/code&gt;&lt;/a&gt;.&#xA;Then the actual proxy configuration can be set dynamically, using&#xA;things like&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useTor--&#34;&gt;&lt;code&gt;NetCipher.useTor()&lt;/code&gt;&lt;/a&gt;&#xA;or&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#clearProxy--&#34;&gt;&lt;code&gt;NetCipher.clearProxy()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot v16: a whole new look, and easier to use!</title>
+      <link>https://guardianproject.github.io/info/2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/</link>
+      <pubDate>Fri, 05 Jan 2018 13:14:17 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot: Tor for Android&lt;/a&gt; has a new release (&lt;a href=&#34;https://gitweb.torproject.org/orbot.git/tag/?h=16.0.0-RC-2&#34;&gt;tag&lt;/a&gt; and &lt;a href=&#34;https://gitweb.torproject.org/orbot.git/diff/CHANGELOG?h=16.0.0-RC-1-CHANGELOG&amp;amp;id=5542e8e192fcff24284179e7fdb31cf877f79efd&#34;&gt;changelog&lt;/a&gt;), with a major update to the user experience and interface. This is the 16th major release of Orbot, since it was launched in late 2009.&lt;/p&gt;&#xA;&lt;p&gt;The main screen of the app now looks quite different, with all the major features and functions exposed for easy access. We have also added a new onboarding setup wizard for first time users, that assists with configuring connections to the Tor network for users in places where Tor itself is blocked. This release also continues to support users looking to use Orbot to unblock specific apps, that may not be available on their network or country. From the main screen, users can activate Orbot’s built-in VPN feature, and easily choose which specific apps they want to be routed over the Tor network. You can also refresh your Tor identity, rebuilding all circuit connections through the network, using the circular reload icon in the expanded notification provided by Orbot.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a Signing Server</title>
+      <link>https://guardianproject.github.io/info/2017/12/18/building-a-signing-server/</link>
+      <pubDate>Mon, 18 Dec 2017 05:43:34 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/12/18/building-a-signing-server/</guid>
+      <description>&lt;p&gt;The Android APK signing model sets the expectation that the signing key will be the same for the entire lifetime of the app. That can be seen in the recommended lifetype of an Android signing key: &lt;a href=&#34;https://developer.android.com/studio/publish/app-signing.html#considerations&#34;&gt;20+ years&lt;/a&gt;. On top of that, it is difficult to &lt;a href=&#34;https://guardianproject.info/2015/12/29/how-to-migrate-your-android-apps-signing-key/&#34;&gt;migrate an app to a new key&lt;/a&gt;. Since the signing key is an essential part to preventing APKs from impersonating another, Android signing keys must be kept safe for the entire life of the app.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No more “Root” features in Orbot… use Orfox &amp; VPN instead!</title>
+      <link>https://guardianproject.github.io/info/2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/</link>
+      <pubDate>Fri, 27 Oct 2017 13:02:02 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/</guid>
+      <description>&lt;p&gt;Since I first announced the available of Orbot: Tor for Android about &lt;a href=&#34;https://nathan.freitas.net/2009/10/22/orbot-proxy/&#34;&gt;8 years ago&lt;/a&gt; (wow!), myself and others have been working on various methods in which to make the capabilities of Tor available through the operating system. This post is to announce that as of the next, imminent release, &lt;a href=&#34;https://github.com/n8fr8/orbot/releases/tag/15.5.0-RC-1-multi-SDK16&#34;&gt;Orbot v15.5,&lt;/a&gt; we will no longer be supporting the Root-required “Transproxy” method. This is due to many reasons.&lt;/p&gt;&#xA;&lt;p&gt;First, it turns out that allowing applications to get “root” access on your device seems like a good idea, it can also be seen as huge security hole. I am on the fence myself, but considering that the ability to access root features hasn’t been standardized as part of Android, which 8 years ago I hoped it would, it means there are a whole variety of ways that this capability is managed and safeguarded (or not, in most cases). At this point in time, given the sophistication we are seeing mobile malware and rootkits, it seems like a capability that we did not want to focus time and energy on promoting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tracking usage without tracking people</title>
+      <link>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</link>
+      <pubDate>Thu, 08 Jun 2017 10:58:53 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</guid>
+      <description>&lt;p&gt;One thing that has become very clear over the past years is that there is a lot of value in data about people. Of course, the most well known examples these days are advertising and spy agencies, but tracking data is useful for many more things. For example, when trying to build software that is intuitive and easy to use, having real data about how people are using the software can make a massive difference when developers and designers are working on improving their software. Even in the case of advertisers, they mostly do not care exactly who you are, they want to know what you are interested in so that they can more effectively promote things to you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building the most private app store</title>
+      <link>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</link>
+      <pubDate>Thu, 02 Jun 2016 11:08:52 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2016/06/02/building-the-most-private-app-store/</guid>
+      <description>&lt;p&gt;&lt;em&gt;App stores can work well without any tracking at all&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/06/whichdoor-150x150.jpg&#34; alt=&#34;whichdoor&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13337&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Attackers are increasingly seeing app stores as a prime &lt;a href=&#34;https://guardianproject.info/2015/02/24/phishing-for-developers/&#34; target=&#34;_blank&#34;&gt;attack&lt;/a&gt; vector, whether it is aimed at the masses like &lt;a href=&#34;http://researchcenter.paloaltonetworks.com/2015/09/more-details-on-the-xcodeghost-malware-and-affected-ios-apps/&#34;&gt;XCodeGhost&lt;/a&gt; or very targeted like in FBI vs Apple. When we install software from an app store, we are placing a lot of trust in a lot of different parties involved in getting the source code from the original developer delivered to our device in a useful form. Most people are entirely unaware of how much trust they are putting into this system, which they are entrusting with their personal data. Even for people who do understand the technical details involved, figuring out whether the people and the system itself is trustworthy is difficult to do.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orfox: Aspiring to bring Tor Browser to Android</title>
+      <link>https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/</link>
+      <pubDate>Tue, 30 Jun 2015 15:32:16 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update 24 September, 2015: Orfox BETA is now on Google Play: &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;In the summer of 2014 (&lt;a href=&#34;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&#34;&gt;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&lt;/a&gt;{.external}), we announced that the results of work by Amogh Pradeep (&lt;a href=&#34;https://github.com/amoghbl1&#34;&gt;https://github.com/amoghbl1&lt;/a&gt;{.external}), our 2014 Google Summer of Code student, has proven we could build Firefox for Android with some of the settings and configurations from the Tor Browser desktop software. We called this app Orfox, in homage to Orbot and our current Orweb browser. This was a good first step, but we were doing the build on Mozilla’s Firefox code repository, and then retrofitting pieces from Tor Browser’s code, which wasn’t the right way to do things, honestly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reducing metadata leakage from software updates</title>
+      <link>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</link>
+      <pubDate>Thu, 16 Oct 2014 12:48:04 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: now you can &lt;a href=&#34;https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;do this with Tor Onion Services&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automatic, private distribution of our test builds</title>
+      <link>https://guardianproject.github.io/info/2014/06/06/automatic-private-distribution-of-our-test-builds/</link>
+      <pubDate>Fri, 06 Jun 2014 17:17:01 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/06/06/automatic-private-distribution-of-our-test-builds/</guid>
+      <description>&lt;p&gt;One thing we are very lucky to have is a good community of people willing to test out unfinished builds of our software. That is a very valuable contribution to the process of developing usable, secure apps. So we want to make this process as easy as possible while keeping it as secure and private as possible. To that end, we have set up an &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;FDroid&lt;/a&gt; repository of apps generated from the test builds that our build server generates automatically every time we publish new code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Your own private dropbox with free software</title>
+      <link>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</link>
+      <pubDate>Tue, 12 Nov 2013 12:50:23 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</guid>
+      <description>&lt;p&gt;There are lots of file storage and sharing software packages out there that make it easy for a group of people to share files. Dropbox is perhaps the most well known of the group, it provides an easy way for a group of people to share files. The downside of Dropbox is that it is not a private service, just like any cloud-based service. Dropbox has total access to your files that you store there. That means its likely that the NSA and its collaborators do too.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Issues when distributing software</title>
+      <link>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</link>
+      <pubDate>Thu, 31 Oct 2013 15:51:19 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/</guid>
+      <description>&lt;p&gt;There is currently a &lt;a href=&#34;http://lists.debian.org/debian-security/2013/10/msg00027.html&#34; target=&#34;_blank&#34;&gt;discussion underway on the Debian-security list&lt;/a&gt; about adding TLS and Tor functionality to the official repositories (repos) of Debian packages that is highlighting how we need to update how we think about the risks when distributing software. Mostly, we are used to thinking about making sure that the software that the user is installing is the same exact software that has been posted for distribution. This is generally handled by signing the software package, then verifying that signature on the user’s machine. This is how it works on Mac OS X, Windows, Debian, etc. etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orweb Security Advisory: Possible IP leakage with HTML5 video/audio</title>
+      <link>https://guardianproject.github.io/info/2013/08/21/orweb-security-advisory-possible-ip-leakage-with-html5-video/audio/</link>
+      <pubDate>Wed, 21 Aug 2013 16:15:36 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/08/21/orweb-security-advisory-possible-ip-leakage-with-html5-video/audio/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://guardianproject.github.io/info/apps/orweb&#34;&gt;Orweb browser app&lt;/a&gt; is vulnerable to &lt;a href=&#34;https://dev.guardianproject.info/issues/1754&#34;&gt;leak the actual IP of the device&lt;/a&gt; it is on, if it loads a page with HTML5 video or audio tags on them, and those tags are set to auto-start or display a poster frame. On some versions of Android, the video and audio player start/load events happen without the user requesting anything, and the request to the URL for the media src or through image poster is made outside of the proxy settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot v12 now in beta</title>
+      <link>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</link>
+      <pubDate>Wed, 24 Jul 2013 12:32:45 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</guid>
+      <description>&lt;p&gt;After much too long, we’ve got a new build of Orbot out, and it is… a stable beta! Nothing radically new here, just many small changes to continue to improve the experience of our hundreds of thousands of active users out in the world. There will likely be one or two more “beta” releases to iron out small issues in v12, but for now, this one is good to go.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Only Way to Visit Strongbox on a Phone</title>
+      <link>https://guardianproject.github.io/info/2013/05/16/the-only-way-to-visit-strongbox-on-a-phone/</link>
+      <pubDate>Thu, 16 May 2013 17:43:06 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/05/16/the-only-way-to-visit-strongbox-on-a-phone/</guid>
+      <description>&lt;p dir=&#34;ltr&#34;&gt;&#xA;  &lt;em&gt;The New Yorker&lt;/em&gt; magazine just launched &lt;a href=&#34;http://www.newyorker.com/online/blogs/closeread/2013/05/introducing-strongbox-anonymous-document-sharing-tool.html&#34;&gt;Strongbox&lt;/a&gt;, a whistleblower submission system that’s hosted on a hidden website. There’s only one way to access the hidden site on a phone or tablet, and that’s with our &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.browser&amp;hl=en&#34;&gt;Orweb app&lt;/a&gt;. Here’s a simple breakdown of how to do securely and anonymously blow the whistle, explained in an interactive tutorial:&#xA;&lt;/p&gt;&#xA;&lt;p style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;a href=&#34;https://guardianproject.info/howto/strongbox&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;size-medium wp-image-3719  aligncenter&#34; alt=&#34;galaxy19&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/galaxy19-199x300.png&#34; width=&#34;199&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/galaxy19-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/05/galaxy19.png 400w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p dir=&#34;ltr&#34; style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;em&gt;Visit &lt;a title=&#34;strongbox tutorial&#34; href=&#34;https://guardianproject.info/howto/strongbox&#34; target=&#34;_blank&#34;&gt;guardianproject.info/howto/strongbox&lt;/a&gt; for an interactive tutorial on using Strongbox on your phone.&lt;/em&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mumble and the Bandwidth – Anonymous CB radio with Mumble and Tor</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</link>
+      <pubDate>Thu, 31 Jan 2013 02:05:50 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-3186&#34; alt=&#34;mumble and the bandwidth&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34; width=&#34;800&#34; height=&#34;478&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg 800w, https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth-300x179.jpg 300w&#34; sizes=&#34;(max-width: 800px) 100vw, 800px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The journey towards anonymous and secure voice communication is a long one. There’s lots of roadblocks to get your voice from point A to point B over the Internet if you need to prevent eavesdropping or censorship. There is the limited bandwidth of mobile data connections. There is the high latency of the TCP protocol. &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#whyweneedtor&#34;&gt;To achieve anonymity via Tor&lt;/a&gt;, there’s even more latency added to each packet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Voice over Tor?</title>
+      <link>https://guardianproject.github.io/info/2012/12/10/voice-over-tor/</link>
+      <pubDate>Mon, 10 Dec 2012 11:00:03 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/12/10/voice-over-tor/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/12/onioncart.jpg&#34;&gt;&lt;img class=&#34; wp-image-2968&#34; title=&#34;onioncart&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2012/12/onioncart.jpg&#34; alt=&#34;&#34; width=&#34;100%&#34; height=&#34;425&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/12/onioncart.jpg 700w, https://guardianproject.info/wp-content/uploads/2012/12/onioncart-300x182.jpg 300w&#34; sizes=&#34;(max-width: 700px) 100vw, 700px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Voice calls over &lt;a title=&#34;Tor Project&#34; href=&#34;https://www.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor&lt;/a&gt; are supposed to be impossible. It seems this may no longer be the case.&lt;/p&gt;&#xA;&lt;p&gt;Without being able to do voice over IP (VOIP) conversations over the Tor network, people are prevented from being able to route  calls outside of censored networks. People ask us if there is any way they can route voice traffic through Tor to avoid blocks. To our surprise, we tested &lt;a title=&#34;skype&#34; href=&#34;http://skype.com/&#34; target=&#34;_blank&#34;&gt;Skype&lt;/a&gt; and found that it can work acceptably over &lt;a title=&#34;Orbot&#34; href=&#34;https://guardianproject.info/apps/orbot/&#34; target=&#34;_blank&#34;&gt;Orbot&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sometimes the best solution is a library, not an app</title>
+      <link>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</link>
+      <pubDate>Mon, 27 Aug 2012 12:30:15 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel-150x150.png&#34; alt=&#34;&#34; title=&#34;thinking about frameworks&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-2792&#34; /&gt;&lt;/a&gt;Our general approach to software development starts with surveying existing solutions that are available and in use, to see if there is already enough of an ecosystem or whether we need to seed that. When there is already an adundance of tools and apps out there, we work to find the good ones, provide feedback and auditing, and then build apps and tools to fill in any gaps. For example, this was our approach in the Open Secure Telephony Network.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proxy Settings Add-on for Firefox Mobile</title>
+      <link>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</link>
+      <pubDate>Mon, 08 Nov 2010 03:43:24 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</guid>
+      <description>&lt;p&gt;The latest beta of &lt;a href=&#34;https://www.mozilla.com/en-US/mobile/&#34;&gt;Firefox 4 on Android&lt;/a&gt; is proving to be very usable, stable and an increasingly viable alternative to the built-in webkit browser. However, it is unfortunately lacking the ability to manually configure proxy settings through any sort of standard user interface. This is a common problem for Android, which also lacks the ability to set browser or system wide proxy settings. This has caused real issues for us with getting &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; (aka “Tor on Android”) to work for un-rooted Android devices, because for routing through Tor to work, you must be able to set the HTTP or SOCKS proxy settings. Why this &lt;a href=&#34;https://code.google.com/p/android/issues/detail?id=1273&#34;&gt;very basic feature&lt;/a&gt; keeps getting missed or ignored is a mystery to us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot Update: New Setup Wizard at Startup</title>
+      <link>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</link>
+      <pubDate>Thu, 29 Jul 2010 17:17:08 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</guid>
+      <description>&lt;p&gt;We’ve been working away at the 0.0.9 release of &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; over the last few months, and have put a decent amount of effort into usability. Specifically, we hoped to better communicate to users what it means to run Tor on your Android phone. In addition, we wanted to clearly lay out how the various configuration options help to improve your mobile web anonymity and ability to circumvent web filters and tracking by your mobile service provider.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tor on a Tablet</title>
+      <link>https://guardianproject.github.io/info/2010/05/25/tor-on-a-tablet/</link>
+      <pubDate>Tue, 25 May 2010 16:22:01 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/05/25/tor-on-a-tablet/</guid>
+      <description>&lt;p&gt;We recently acquired a Moons e-7001 “iRobot” tablet which runs Android 1.5. This device is also known as the “aPad”. It is a very basic iPad-clone, though honestly, it can’t really compare with the iPad in terms of quality of screen, build or general use. However, it does only cost $185, supports USB host mode, has a built-in camera, and it is running Android, an actual open-source operating system! It should also be pointed out that you can also now get the &lt;a href=&#34;http://www.amazon.com/Archos-Home-Tablet-Android-Black/dp/B003COZM2C/ref=sr_1_1?ie=UTF8&amp;amp;s=electronics&amp;amp;qid=1274748337&amp;amp;sr=1-1&#34;&gt;Archos 7 Android tablet&lt;/a&gt;, which is basically the same thing as this, from Amazon for $199.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

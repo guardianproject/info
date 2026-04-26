@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/api/</link>
+    <description>Recent content in Api on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Weather Report On Security</title>
+      <link>https://guardianproject.github.io/info/2013/06/14/a-weather-report-on-security/</link>
+      <pubDate>Fri, 14 Jun 2013 13:22:28 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/06/14/a-weather-report-on-security/</guid>
+      <description>&lt;p&gt;How’s the weather outside? Sunny with a chance of IP blocking.&lt;/p&gt;&#xA;&lt;p&gt;We recently launched a new initiative we’re calling: &lt;a href=&#34;https://guardianproject.info/code/weatherrepo/&#34; title=&#34;The Weather Repo&#34;&gt;The Weather Repo&lt;/a&gt;. The goal of the project is for organizations to have a more accurate method of understanding whether the apps they’re using are “safe”. It’s hard to know whether apps that claim to be secure really are. Have they been vetted by a third party? Are there existing case studies? Has a threat analysis been performed?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Circumvention on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/circumvention/</link>
+    <description>Recent content in Circumvention on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/circumvention/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all&#xA;sorts of issues. That&amp;rsquo;s why we took special interest in&#xA;&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a&#xA;JavaScript library for decentralized content delivery in web-browsers and&#xA;markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient&#xA;primarily in the context of static websites.  While it should work with dynamic&#xA;websites too, that was out of focus for us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Steps towards trusted VPNs</title>
+      <link>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</guid>
+      <description>&lt;p&gt;VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&amp;rsquo;s server.  That is how VPNs &amp;ldquo;unblock&amp;rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04&#34;&gt;adblocker&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serving Websites Privately Over Tor Onion Services (From Your Laptop!)</title>
+      <link>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</guid>
+      <description>&lt;p&gt;In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – &lt;a href=&#34;https://community.torproject.org/onion-services/&#34;&gt;Onion Services&lt;/a&gt;. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout. But to do so, one needs to know how to set up an Onion Service.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Exploring possibilities of Pluggable Transports on Android</title>
+      <link>https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/</link>
+      <pubDate>Tue, 16 Apr 2019 15:00:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.pluggabletransports.info&#34;&gt;Pluggable Transports&lt;/a&gt; (PT) give software developers the means&#xA;to establishing reliable connections in &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspection&#34;&gt;DPI-filtered&lt;/a&gt; network scenarios.&#xA;A variety of techniques are supported, all available by implementing just one&#xA;standard.  We looked into how this can be put to work in Android Apps.&#xA;Hence we crafted 3 fully functional&#xA;&lt;a href=&#34;https://gitlab.com/uniqx/anynews-android#anynews-pt&#34;&gt;PT-enabled&lt;/a&gt;&#xA;&lt;a href=&#34;https://gitlab.com/uniqx/fdroidclient-pt#f-droid-pt&#34;&gt;prototype&lt;/a&gt;&#xA;&lt;a href=&#34;https://gitlab.com/uniqx/apps-android-wikipedia-pt#wikipedia-android-pt&#34;&gt;Apps&lt;/a&gt;&#xA;based on well known open source projects.&lt;/p&gt;&#xA;&lt;p&gt;All our prototypes rely on &lt;a href=&#34;https://github.com/Yawning/obfs4&#34;&gt;obfs4&lt;/a&gt; which is a stable&#xA;PT implementation widely deployed by Tor.  Guardian Project published&#xA;a library called &lt;a href=&#34;https://github.com/guardianproject/AndroidPluggableTransports&#34;&gt;AndroidPluggableTransports&lt;/a&gt; for giving Android&#xA;developers access easy access to PT.  Since we could not find any easily&#xA;accessible sample code, we created a &lt;a href=&#34;https://gitlab.com/uniqx/pt-obfs4proxy-minimal-demo&#34;&gt;minimal demo project&lt;/a&gt;,&#xA;illustrating a minimal setup for sending a HTTP-request through a OBFS4&#xA;connection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot v16: a whole new look, and easier to use!</title>
+      <link>https://guardianproject.github.io/info/2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/</link>
+      <pubDate>Fri, 05 Jan 2018 13:14:17 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/01/05/orbot-v16-a-whole-new-look-and-easier-to-use/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot: Tor for Android&lt;/a&gt; has a new release (&lt;a href=&#34;https://gitweb.torproject.org/orbot.git/tag/?h=16.0.0-RC-2&#34;&gt;tag&lt;/a&gt; and &lt;a href=&#34;https://gitweb.torproject.org/orbot.git/diff/CHANGELOG?h=16.0.0-RC-1-CHANGELOG&amp;amp;id=5542e8e192fcff24284179e7fdb31cf877f79efd&#34;&gt;changelog&lt;/a&gt;), with a major update to the user experience and interface. This is the 16th major release of Orbot, since it was launched in late 2009.&lt;/p&gt;&#xA;&lt;p&gt;The main screen of the app now looks quite different, with all the major features and functions exposed for easy access. We have also added a new onboarding setup wizard for first time users, that assists with configuring connections to the Tor network for users in places where Tor itself is blocked. This release also continues to support users looking to use Orbot to unblock specific apps, that may not be available on their network or country. From the main screen, users can activate Orbot’s built-in VPN feature, and easily choose which specific apps they want to be routed over the Tor network. You can also refresh your Tor identity, rebuilding all circuit connections through the network, using the circular reload icon in the expanded notification provided by Orbot.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

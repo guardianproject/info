@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teardown on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/teardown/</link>
+    <description>Recent content in Teardown on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/teardown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aPad / iRobot / Moons e7001 Teardown</title>
+      <link>https://guardianproject.github.io/info/2010/06/05/apad-/-irobot-/-moons-e7001-teardown/</link>
+      <pubDate>Sat, 05 Jun 2010 13:38:23 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/06/05/apad-/-irobot-/-moons-e7001-teardown/</guid>
+      <description>&lt;p&gt;This is the aPad or iRobot Android 7″ tablet device from &lt;a rel=&#34;nofollow&#34; href=&#34;http://www.hiapad.com/&#34;&gt;&lt;a href=&#34;https://www.hiapad.com&#34;&gt;www.hiapad.com&lt;/a&gt;&lt;/a&gt;. I decided to tear mine apart, as the unit I received has a battery issue, and I hoped to see if I could find a bad solder point. In addition, I was curious to see just how hackable or extensible the hardware was. In the end, I was mostly surprised by how much of the thing is put together with tape. I suppose that is what you get for &amp;lt; $200 Android tablet! You can find the &lt;a href=&#34;http://www.hiapad.com/?p=9&amp;amp;lang=en&#34;&gt;full product overview on the Hiapad site&lt;/a&gt;. I have also pasted in the basic specs below.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

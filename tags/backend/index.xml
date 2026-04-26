@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backend on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/backend/</link>
+    <description>Recent content in Backend on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&lt;!--:en--&gt;Build your own Open Secure Telephony Network, some assembly required&lt;!--:--&gt;</title>
+      <link>https://guardianproject.github.io/info/2012/05/17/--en--build-your-own-open-secure-telephony-network-some-assembly-required----/</link>
+      <pubDate>Thu, 17 May 2012 17:13:39 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/17/--en--build-your-own-open-secure-telephony-network-some-assembly-required----/</guid>
+      <description>&lt;!--:en--&gt;The Open Secure Telephony Network is a standard that defines how to configure a VoIP softswitch with the capability to have secure two-way VoIP conversations if both parties are using the same server. The system requires both backend and frontend components, which makes OSTN is a little different than some of the other Guardian apps. Unlike Gibberbot, there are few public SIP services that support secure signalling for a mobile app to connect with. Notably &#xA;&lt;p&gt;&lt;a href=&#34;https://tanstagi.net&#34;&gt;Tanstagi.net&lt;/a&gt; offers free accounts. But it’s more fun to run your own.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

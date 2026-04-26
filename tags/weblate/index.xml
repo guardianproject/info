@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weblate on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/weblate/</link>
+    <description>Recent content in Weblate on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/weblate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Easy translation workflows and the risks of translating in the cloud</title>
+      <link>https://guardianproject.github.io/info/2020/06/08/easy-translation-workflows-and-the-risks-of-translating-in-the-cloud/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/06/08/easy-translation-workflows-and-the-risks-of-translating-in-the-cloud/</guid>
+      <description>&lt;p&gt;Crowdsourced translation has opened up software and websites to whole&#xA;new languages, regions, and uses.  Making translating easier has&#xA;brought in more contributors, and deploying those languages requires&#xA;less work.  A number of providers now offer &amp;ldquo;live&amp;rdquo;, integrated&#xA;translation, speeding up the process of delivering translated&#xA;websites. On the surface, this looks like a big win.  Unfortunately,&#xA;the way such services have been implemented opens up a big can of&#xA;worms.  Third parties must be trusted with user data.  The translators&#xA;cannot work without being tracked. Displaying the translation requires&#xA;JavaScript.  The security profile is more complicated and harder to&#xA;defend.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Figuring Out Crowdsourced Translation of Websites</title>
+      <link>https://guardianproject.github.io/info/2020/04/23/figuring-out-crowdsourced-translation-of-websites/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/04/23/figuring-out-crowdsourced-translation-of-websites/</guid>
+      <description>&lt;p&gt;Crowdsourced translation platforms like &lt;a href=&#34;https://weblate.org/&#34;&gt;Weblate&lt;/a&gt;, Transifex, Crowdin, etc. have proven to be a hugely productive way to actively translate apps and desktop software.  Long form texts like documentation and websites remain much more work to translate and keep translated.  Many translation services currently support Markdown and HTML, but very basically, which means much more work for translators and webmasters.  Translators can inadvertently break things, either with a typo or because of a lack of knowledge of a specific syntax.  This can make the whole page layout break.  Webmasters and documentation maintainers must carefully check the process to ensure everything is working smoothly.  With the spread of Markdown as a standard format, there is now hope!  Software developers can focus efforts on the Markdown translation workflow, and Markdown is more tolerant of syntax errors than HTML.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving Crowdsourced Translation of Long Form Text</title>
+      <link>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</guid>
+      <description>&lt;p&gt;We are happy to announce the start of work on another step in&#xA;improving crowdsourced localization, funded by the ISC Project.  This&#xA;is the second part of our ongoing &amp;ldquo;Linguine&amp;rdquo; collaboration to move&#xA;crowdsourced translation to privacy-respecting free software.&lt;/p&gt;&#xA;&lt;p&gt;Crowdsourced translation has proven enormously successful getting apps&#xA;and website software translated into many languages.  Using tools like&#xA;Weblate or Transifex, developers can quite easily incorporate&#xA;translated app strings into their mobile apps and websites.  Any kinds&#xA;of text that is easily broken down into phrases and sentences will fit&#xA;easily into the crowdsourced workflow.  Localization Lab enables a&#xA;wide range of volunteers to contribute to the most important projects&#xA;in a wide array of languages.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

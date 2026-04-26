@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apk Expansion on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/apk-expansion/</link>
+    <description>Recent content in Apk Expansion on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/apk-expansion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>F-Droid now supports APK Expansion Files aka OBB</title>
+      <link>https://guardianproject.github.io/info/2017/02/22/f-droid-now-supports-apk-expansion-files-aka-obb/</link>
+      <pubDate>Wed, 22 Feb 2017 10:24:53 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/02/22/f-droid-now-supports-apk-expansion-files-aka-obb/</guid>
+      <description>&lt;p&gt;Many games, mapping, and other apps require a large amount of data to work. The APK file of an Android app is limited to 100MB in size, yet it is common for a single country map file to be well over 100MB. Also, in order to get users running as quickly as possible, they should not have to wait for huge amounts of data to download in order to just start the app for the first time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Browser on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/browser/</link>
+    <description>Recent content in Browser on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Orfox: Aspiring to bring Tor Browser to Android</title>
+      <link>https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/</link>
+      <pubDate>Tue, 30 Jun 2015 15:32:16 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update 24 September, 2015: Orfox BETA is now on Google Play: &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&#34;&gt;https://play.google.com/store/apps/details?id=info.guardianproject.orfox&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;In the summer of 2014 (&lt;a href=&#34;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&#34;&gt;https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html&lt;/a&gt;{.external}), we announced that the results of work by Amogh Pradeep (&lt;a href=&#34;https://github.com/amoghbl1&#34;&gt;https://github.com/amoghbl1&lt;/a&gt;{.external}), our 2014 Google Summer of Code student, has proven we could build Firefox for Android with some of the settings and configurations from the Tor Browser desktop software. We called this app Orfox, in homage to Orbot and our current Orweb browser. This was a good first step, but we were doing the build on Mozilla’s Firefox code repository, and then retrofitting pieces from Tor Browser’s code, which wasn’t the right way to do things, honestly.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

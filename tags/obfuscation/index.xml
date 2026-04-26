@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Obfuscation on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/obfuscation/</link>
+    <description>Recent content in Obfuscation on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/obfuscation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

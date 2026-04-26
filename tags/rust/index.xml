@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/rust/</link>
+    <description>Recent content in Rust on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arti, next-gen Tor on mobile</title>
+      <link>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</link>
+      <pubDate>Sat, 04 Mar 2023 10:00:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</guid>
+      <description>&lt;p&gt;For software projects with recurring bugs, efficiency or security issues&#xA;there&amp;rsquo;s a joke making the rounds in the software industry: &amp;ldquo;Let&amp;rsquo;s re-write it&#xA;in &lt;a href=&#34;https://en.wikipedia.org/wiki/Rust_(programming_language)&#34;&gt;Rust&lt;/a&gt;!&amp;rdquo;  It&amp;rsquo;s a&#xA;fairly new low-level programming language with the declared goal to help&#xA;developers avoid entire classes of bugs, security issues and other pitfalls.&#xA;Re-writing software is very time consuming, so it rarely happens, especially&#xA;when just one more fix will keep a project up and running.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

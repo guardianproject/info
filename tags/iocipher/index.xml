@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iocipher on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/iocipher/</link>
+    <description>Recent content in Iocipher on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/iocipher/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IOCipher 1.0 community reboot</title>
+      <link>https://guardianproject.github.io/info/2025/02/01/iocipher-1.0-community-reboot/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/02/01/iocipher-1.0-community-reboot/</guid>
+      <description>&lt;h2 id=&#34;iocipher-update-to-version-10&#34;&gt;IOCipher update to version 1.0&lt;/h2&gt;&#xA;&lt;p&gt;We are thrilled to announce that a community contributor has picked up maintaining a fork of IOCipher and updated to IOCipher 1.0,&#xA;designed to enhance your development experience and empower you to create more secure applications with ease. Here’s what’s new and why it matters to you:&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-enhanced-features&#34;&gt;1. Enhanced Features&lt;/h3&gt;&#xA;&lt;p&gt;We introduced a few new features. Most notably IOCipher is also available on Desktop Java for Linux and Windows now. (Although not all IOCipher features are fully supported on Windows).&#xA;The latest release even includes some example code for accessing IOCipher VFS using Python.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IOCipher 64-bit builds</title>
+      <link>https://guardianproject.github.io/info/2019/10/07/iocipher-64-bit-builds/</link>
+      <pubDate>Mon, 07 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/10/07/iocipher-64-bit-builds/</guid>
+      <description>&lt;p&gt;IOCipher v0.5 includes fulil 64-bit support and works with the latest&#xA;SQLCipher versions.  This means that the minimum supported SDK version&#xA;had to be bumped to &lt;em&gt;android-14&lt;/em&gt;, which is still older than what&#xA;Google Play Services and Android Support libraries require.&lt;/p&gt;&#xA;&lt;p&gt;One important thing to note is that newer SQLCipher versions require&#xA;an upgrade procedure since they changed how the data is encrypted.&#xA;Since IOCipher does use a SQLCipher database, and IOCipher virtual&#xA;disks will have to be upgraded.  That can be done by directly using the&#xA;&lt;a href=&#34;https://www.zetetic.net/sqlcipher/sqlcipher-api/#cipher_migrate&#34;&gt;SQLCipher migration method&lt;/a&gt;&#xA;on your IOCipher database files before opening them again.  It should&#xA;be possible to stick with SQLCipher&#xA;&lt;a href=&#34;https://github.com/sqlcipher/android-database-sqlcipher/issues/446&#34;&gt;v3.5.9 to avoid this&lt;/a&gt;,&#xA;but this has not been tested.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IOCipher is the antidote to “Man-in-the-Disk” attack</title>
+      <link>https://guardianproject.github.io/info/2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/</link>
+      <pubDate>Fri, 17 Aug 2018 16:56:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/</guid>
+      <description>&lt;p&gt;Recently, at DEFCON 2018, researchers at Check Point &lt;a href=&#34;https://blog.checkpoint.com/2018/08/12/man-in-the-disk-a-new-attack-surface-for-android-apps/&#34;&gt;announced a new kind of attack&lt;/a&gt; made possible by the way many Android apps are implemented. In summary, developers use the shared external storage space in an unsafe manner, by not taking into consideration that other apps also have read and write access to the same space. A malicious app can modify data used by another app, as a vector for compromising that app, causing it to be compromised or crash.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CipherKit reproducible builds</title>
+      <link>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</link>
+      <pubDate>Mon, 21 Sep 2015 10:54:05 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the &lt;em&gt;exact&lt;/em&gt; same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First working test of IOCipher for Obj-C</title>
+      <link>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</link>
+      <pubDate>Mon, 26 Jan 2015 04:32:29 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Every so often, we revisit our core libraries in the process of improving our existing apps, and creating new ones. IOCipher has become a standard part of our apps since it provides a really easy way to include encrypted file storage in Android apps. And we are now working on spreading it to iOS as well, headed up by Chris Ballinger, with the first preliminary tests of &lt;a href=&#34;https://github.com/ChatSecure/IOCipher-ObjC&#34; target=&#34;_blank&#34;&gt;IOCipher for Obj-C&lt;/a&gt;. Testing and contributions are most welcome! Find us in our &lt;a href=&#34;https://guardianproject.github.io/info/contact/&#34; target=&#34;_blank&#34;&gt;chat room or mailing list&lt;/a&gt; for questions, or just post a comment below! Since the iOS version is based on the exact same core library, libsqlfs, the container files they produce will also be fully compatible with each other.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CipherKit updates: IOCipher and CacheWord</title>
+      <link>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</link>
+      <pubDate>Fri, 26 Sep 2014 21:39:54 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</guid>
+      <description>&lt;p&gt;We’ve been on a big kick recently, updating the newest members of our CipherKit family of frameworks: &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;IOCipher&lt;/a&gt; and &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt;. There also are is a little news about the original CipherKit framework: &lt;a href=&#34;https://www.zetetic.net/sqlcipher/open-source&#34; title=&#34;SQLCipher for Android&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;iocipher-v02&#34;&gt;IOCipher v0.2&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;IOCipher is a library for storing files in an encrypted virtual disk. It’s API is the exact same as &lt;code&gt;java.io&lt;/code&gt; for working with files, and it does not need root access. That makes it the sibling of SQLCipher-for-Android, both are native Android APIs that wrap the SQLCipher database.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Keeping data private means it must be truly deletable!</title>
+      <link>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</link>
+      <pubDate>Fri, 23 Aug 2013 17:36:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive-150x150.jpg&#34; alt=&#34;deleting data&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-11598&#34; /&gt;&lt;/a&gt;There are lots of apps these days that promise to keep your data secure, and even some that promise to wipe away private information mere seconds or minutes after it has been received. It is one thing to keep data out of view from people you don’t want seeing it, it is also important to be able to truly delete information. Unfortunately computers make it very difficult to make data truly disappear. When we tell a computer to delete a file, it only deletes the reference to the data. The data itself remains on the disk unchanged. For any UNIX geek out there, you can easily see an example of that by greping a partition (e.g. &lt;code&gt;sudo grep password /dev/sda3&lt;/code&gt;. To solve this problem, there are “secure delete” options. Secure deletion removes the reference like regular deletion, then wipes the data on the disk by overwriting it with random data. That’s much better, but not always good enough. It turns out that its possible to remove the hard disk and read magnetic residue and recover even wiped data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IOCipher beta: easy encrypted file storage for your Android app</title>
+      <link>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</link>
+      <pubDate>Thu, 07 Feb 2013 14:45:28 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</guid>
+      <description>&lt;p&gt;At long last, we are proud to announce the &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;first beta release of IOCipher&lt;/a&gt;, an easy framework for providing virtual encrypted disks for Android apps.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;does not require root or any special permissions at all&lt;/li&gt;&#xA;&lt;li&gt;the API is a drop-in replacement for the standard java.io.File API, so if you have ever worked with files in Java, you already know how to use IOCipher&lt;/li&gt;&#xA;&lt;li&gt;works easiest in an app that stores all files in IOCipher, but using standard java.io with IOCipher is possible&lt;/li&gt;&#xA;&lt;li&gt;supports android-7 v2.1 and above&lt;/li&gt;&#xA;&lt;li&gt;licensed under the LGPL v3+&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can download it here:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>report on IOCipher beta dev sprint</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</link>
+      <pubDate>Thu, 31 Jan 2013 19:45:44 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</guid>
+      <description>&lt;p&gt;We are just wrapping up an intensive dev sprint on &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;IOCipher&lt;/a&gt; in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code. Aaron Huttner of &lt;a href=&#34;http://gryphn.co/&#34; target=&#34;_blank&#34;&gt;Gryphn&lt;/a&gt; found IOCipher while developing their &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; title=&#34;Gryphn Secure Text Messaging in the Google Play store&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Text Messaging&lt;/a&gt; and thought it was a remarkable easy way to add encrypted storage of files, and it worked quickly for him, so he included it his app before we had even announced an alpha release (thanks again for the vote of confidence!).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sometimes the best solution is a library, not an app</title>
+      <link>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</link>
+      <pubDate>Mon, 27 Aug 2012 12:30:15 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel-150x150.png&#34; alt=&#34;&#34; title=&#34;thinking about frameworks&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-2792&#34; /&gt;&lt;/a&gt;Our general approach to software development starts with surveying existing solutions that are available and in use, to see if there is already enough of an ecosystem or whether we need to seed that. When there is already an adundance of tools and apps out there, we work to find the good ones, provide feedback and auditing, and then build apps and tools to fill in any gaps. For example, this was our approach in the Open Secure Telephony Network.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

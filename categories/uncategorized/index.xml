@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uncategorized on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/uncategorized/</link>
+    <description>Recent content in Uncategorized on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New research report on the challenges developers face</title>
+      <link>https://guardianproject.github.io/info/2017/05/15/new-research-report-on-the-challenges-developers-face/</link>
+      <pubDate>Mon, 15 May 2017 05:07:17 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/05/15/new-research-report-on-the-challenges-developers-face/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-13792&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png&#34; alt=&#34;&#34; width=&#34;845&#34; height=&#34;375&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2017/06/tccw.png 845w, https://guardianproject.info/wp-content/uploads/2017/06/tccw-300x133.png 300w, https://guardianproject.info/wp-content/uploads/2017/06/tccw-768x341.png 768w&#34; sizes=&#34;(max-width: 845px) 100vw, 845px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The Guardian Project has been working with the &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;F-Droid&lt;/a&gt; community to make it a secure, streamlined, and verifiable app distribution channel for high-risk environments. While doing this we have started to become more aware of the challenges and risks facing software developers who build software in closed and closing spaces around the world.&lt;/p&gt;&#xA;&lt;p&gt;There are a wealth of resources available on how to support and collaborate with high-risk users. Surprisingly, we could not find any guidance on how to support and collaborate with developers where the internet is heavily monitored and/or filtered, let alone developers who might be at risk because of the software they develop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>F-Droid User Testing, Round 2</title>
+      <link>https://guardianproject.github.io/info/2017/05/01/f-droid-user-testing-round-2/</link>
+      <pubDate>Mon, 01 May 2017 04:51:24 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/05/01/f-droid-user-testing-round-2/</guid>
+      <description>&lt;p&gt;#&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2017/06/null14.png&#34; width=&#34;624&#34; height=&#34;164&#34; alt=&#34;&#34; title=&#34;&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;by Hailey Still and Carrie Winfrey&lt;/p&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;heading&#34;&gt;****&lt;/h1&gt;&#xA;&lt;p&gt;Here we outline the User Testing process and plan for the &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt; app store for Android. The key aims of F-Droid are to provide users with a) a comprehensive catalogue of open-source apps, as well as b) provide users with the the ability to transfer any app from their phone to someone in close physical proximity. With this User Test, we are hoping to gain insights into where the product design is successful and what aspects need to be further improved. Main goals are obtaining a baseline user performance and identifying potential design concerns regarding ease of use. An additional goal is to promote F-Droid as an alternative to the Google Play app store.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Advisory on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/advisory/</link>
+    <description>Recent content in Advisory on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/categories/advisory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proofmode critiques and progress</title>
+      <link>https://guardianproject.github.io/info/2017/03/30/proofmode-critiques-and-progress/</link>
+      <pubDate>Thu, 30 Mar 2017 09:53:22 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/03/30/proofmode-critiques-and-progress/</guid>
+      <description>&lt;p&gt;Bruce Schneier was kind enough to &lt;a href=&#34;https://www.schneier.com/blog/archives/2017/03/proof_mode_for_.html?utm_source=dlvr.it&amp;amp;utm_medium=twitter&#34;&gt;post about our work on Proofmode&lt;/a&gt; to his &lt;a href=&#34;https://www.schneier.com&#34;&gt;blog&lt;/a&gt;. A decent set of comments ensued, which we have considered, measured and weighed. We posted the response below on the post, and now also here. We also received an excellent set of &lt;a href=&#34;http://www.lieberbiber.de/2017/03/07/the-guardian-projects-proof-mode-app-for-activists-doesnt-work/&#34;&gt;feedback from the Lieberbiber blog&lt;/a&gt;. Below are responses to the various concerns raised, and links to work completed or in progress.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;At a high level, securely dating files, digital notarization, easy capture of sensor metadata, among other things, are not solved problems. For every day activists around the world, who may only have a cheap smartphone as their only computing device, they have no easy way to do any of these things. Even for high-level war crimes investigators, they are often using consumer point and shoot digital cameras, and documenting everything on paper.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2015 is the Year of Bore-Sec</title>
+      <link>https://guardianproject.github.io/info/2015/01/02/2015-is-the-year-of-bore-sec/</link>
+      <pubDate>Fri, 02 Jan 2015 12:35:41 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/01/02/2015-is-the-year-of-bore-sec/</guid>
+      <description>&lt;p&gt;Over the last few months, the Guardian Project team has been thinking about how to approach the next five years of our work. An idea of “security so easy and seamless, that it is boring” came to the surface through some discussions. This led us to look for inspiration in important inventions and innovations of the past, that provide safety and security to all on a day-to-day basis, without the users of these technologies hardly thinking about them. This is no longer about James Bond super-spy technologies, it is about having as little impact on your day-to-day use of mobile technology while still providing the maximum protection to your data and communications, as possible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ChatSecure v12 Provides Comprehensive Mobile Security and a Whole New Look</title>
+      <link>https://guardianproject.github.io/info/2013/10/24/chatsecure-v12-provides-comprehensive-mobile-security-and-a-whole-new-look/</link>
+      <pubDate>Thu, 24 Oct 2013 01:50:13 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/10/24/chatsecure-v12-provides-comprehensive-mobile-security-and-a-whole-new-look/</guid>
+      <description>&lt;p dir=&#34;ltr&#34;&gt;&#xA;  &lt;strong&gt;ChatSecure v12 Provides Comprehensive Mobile Security and a Whole New Look&lt;/strong&gt;&lt;strong&gt;&lt;span style=&#34;font-size: 13px;&#34;&gt;&lt;br /&gt; &lt;/span&gt;&lt;/strong&gt;&#xA;&lt;/p&gt;&#xA;&lt;p dir=&#34;ltr&#34;&gt;&#xA;  &lt;span style=&#34;font-size: 13px;&#34;&gt;The Guardian Project’s award-winning open-source app “Gibberbot” for Android, has been rebranded to “ChatSecure” for its version 12 release, unifying the branding with the iPhone and iPad apps, while offering major updates in security from the device through the network.&lt;/span&gt;&#xA;&lt;/p&gt;&#xA;&lt;p dir=&#34;ltr&#34;&gt;&#xA;  &lt;em&gt;&lt;strong&gt;Download on &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.otr.app.im&#34;&gt;Google Play&lt;/a&gt; or &lt;a href=&#34;https://guardianproject.info/releases/chatsecure-latest.apk&#34;&gt;Direct Download&lt;/a&gt; now.&lt;/strong&gt;&lt;/em&gt;&#xA;&lt;/p&gt;&#xA;&lt;p dir=&#34;ltr&#34;&gt;&#xA;  &lt;span style=&#34;font-size: 13px;&#34;&gt;October 20, New York, NY – The Guardian Project, a New York-based open-source mobile security incubator, has launched version 12 of its well-regarded secure messaging app for Android, rebranding it to “ChatSecure” to unify branding with existing open-source iPhone and iPad apps. The new upgrade brings an entirely new fluid user interface, and unprecedented security features for users looking to protect their message content (what they are saying) and their metadata (who, why and where) from malicious adversaries and apps, hostile network operators, and dragnet surveillance. It is completely open-source, utilizes interoperable protocols, and has undergone third-party security audits and code reviews.&lt;/span&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orweb Security Advisory: Possible IP leakage with HTML5 video/audio</title>
+      <link>https://guardianproject.github.io/info/2013/08/21/orweb-security-advisory-possible-ip-leakage-with-html5-video/audio/</link>
+      <pubDate>Wed, 21 Aug 2013 16:15:36 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/08/21/orweb-security-advisory-possible-ip-leakage-with-html5-video/audio/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://guardianproject.github.io/info/apps/orweb&#34;&gt;Orweb browser app&lt;/a&gt; is vulnerable to &lt;a href=&#34;https://dev.guardianproject.info/issues/1754&#34;&gt;leak the actual IP of the device&lt;/a&gt; it is on, if it loads a page with HTML5 video or audio tags on them, and those tags are set to auto-start or display a poster frame. On some versions of Android, the video and audio player start/load events happen without the user requesting anything, and the request to the URL for the media src or through image poster is made outside of the proxy settings.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

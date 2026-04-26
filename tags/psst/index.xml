@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Psst on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/psst/</link>
+    <description>Recent content in Psst on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/psst/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrating Crypto Identities with Android</title>
+      <link>https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/</link>
+      <pubDate>Sat, 28 Dec 2013 19:42:56 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Alberti_cipher_disk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;50&#34; height=&#34;50&#34; class=&#34;alignleft size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 50px) 100vw, 50px&#34; /&gt;&lt;/a&gt;ver the past couple of years, Android has included a central database for managing information about people, it is known as the &lt;a href=&#34;https://developer.android.com/reference/android/provider/ContactsContract.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ContactsContract&lt;/code&gt;&lt;/a&gt; (that’s a mouthful). Android then provides the &lt;em&gt;People&lt;/em&gt; app and reusable interface chunks to choose contacts that work with all the information in the &lt;code&gt;ContactsContract&lt;/code&gt; database. Any time that you are adding an account in the &lt;em&gt;Settings&lt;/em&gt; app, you are setting up this integration. You can see it with Google services, &lt;em&gt;Skype&lt;/em&gt;, &lt;em&gt;Facebook&lt;/em&gt;, and many more. This system has a lot of advantages, including:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Keys, signatures, certificates, verifications, etc. What are all these for?</title>
+      <link>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</link>
+      <pubDate>Thu, 12 Dec 2013 13:20:09 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key-150x150.jpg&#34; alt=&#34;portable shared security token&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12129&#34; /&gt;&lt;/a&gt;For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally &lt;a href=&#34;https://dev.guardianproject.info/projects/psst/wiki/PSST&#34; title=&#34;PSST Wiki&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Tokens aka PSST&lt;/a&gt;. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are. One thing we learned a lot about is how to portray and discuss tools for private or anonymous communications to people who just want to communicate and are not interested in technical discussion. This is becoming a central issue among a lot of people working to make usable privacy tools.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting keys into your keyring with Gnu Privacy Guard for Android</title>
+      <link>https://guardianproject.github.io/info/2013/12/06/getting-keys-into-your-keyring-with-gnu-privacy-guard-for-android/</link>
+      <pubDate>Fri, 06 Dec 2013 15:11:53 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/06/getting-keys-into-your-keyring-with-gnu-privacy-guard-for-android/</guid>
+      <description>&lt;p&gt;Now that you can have a full &lt;a href=&#34;https://www.gnupg.org&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;GnuPG&lt;/em&gt;&lt;/a&gt; on your Android device with &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt;&lt;/a&gt; for Android, the next step is getting keys you need onto your device and included in &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;. We have tried to make it as easy as possible without compromising privacy, and have implemented a few approaches, while working on others. There are a few ways to get this done right now.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt; registered itself with Android as a handler of all the standard &lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc3156.txt&#34; title=&#34;RFC3156: MIME Security with OpenPGP&#34; target=&#34;_blank&#34;&gt;OpenPGP MIME types&lt;/a&gt; (&lt;code&gt;application/pgp-keys&lt;/code&gt;, &lt;code&gt;application/pgp-encrypted&lt;/code&gt;, &lt;code&gt;application/pgp-signature&lt;/code&gt;), as well as all of the OpenPGP and GnuPG file extensions (&lt;code&gt;.pkr&lt;/code&gt; &lt;code&gt;.skr&lt;/code&gt; &lt;code&gt;.key&lt;/code&gt; &lt;code&gt;.sig&lt;/code&gt; &lt;code&gt;.asc&lt;/code&gt; &lt;code&gt;.gpg&lt;/code&gt; &lt;code&gt;.bin&lt;/code&gt;). This means that users just have to share a file to &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; using any of the standard Android methods, these files can be launched from an email attachment, opened from the SD card using a file browser, clicked in the Downloads view, etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Keeping data private means it must be truly deletable!</title>
+      <link>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</link>
+      <pubDate>Fri, 23 Aug 2013 17:36:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive-150x150.jpg&#34; alt=&#34;deleting data&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-11598&#34; /&gt;&lt;/a&gt;There are lots of apps these days that promise to keep your data secure, and even some that promise to wipe away private information mere seconds or minutes after it has been received. It is one thing to keep data out of view from people you don’t want seeing it, it is also important to be able to truly delete information. Unfortunately computers make it very difficult to make data truly disappear. When we tell a computer to delete a file, it only deletes the reference to the data. The data itself remains on the disk unchanged. For any UNIX geek out there, you can easily see an example of that by greping a partition (e.g. &lt;code&gt;sudo grep password /dev/sda3&lt;/code&gt;. To solve this problem, there are “secure delete” options. Secure deletion removes the reference like regular deletion, then wipes the data on the disk by overwriting it with random data. That’s much better, but not always good enough. It turns out that its possible to remove the hard disk and read magnetic residue and recover even wiped data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GnuPG for Android progress: we have an command line app!</title>
+      <link>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</link>
+      <pubDate>Thu, 09 May 2013 10:48:52 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png&#34; alt=&#34;GnuPG for Android&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-3680&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/05/icon-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/05/icon.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;br&gt;&#xA;This alpha release of our command-line developer tool brings GnuPG to Android for the first time!&lt;/p&gt;&#xA;&lt;p&gt;GNU Privacy Guard Command-Line (gpgcli) gives you command line access to the entire &lt;a href=&#34;http://gnupg.org&#34; title=&#34;Gnu Privacy Guard home page&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; suite of encryption software. GPG is GNU’s tool for end-to-end secure communication and encrypted data storage. This trusted protocol is the free software alternative to PGP. GnuPG 2.1 is the new modularized version of GnuPG that now supports OpenPGP and S/MIME.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IOCipher beta: easy encrypted file storage for your Android app</title>
+      <link>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</link>
+      <pubDate>Thu, 07 Feb 2013 14:45:28 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</guid>
+      <description>&lt;p&gt;At long last, we are proud to announce the &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;first beta release of IOCipher&lt;/a&gt;, an easy framework for providing virtual encrypted disks for Android apps.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;does not require root or any special permissions at all&lt;/li&gt;&#xA;&lt;li&gt;the API is a drop-in replacement for the standard java.io.File API, so if you have ever worked with files in Java, you already know how to use IOCipher&lt;/li&gt;&#xA;&lt;li&gt;works easiest in an app that stores all files in IOCipher, but using standard java.io with IOCipher is possible&lt;/li&gt;&#xA;&lt;li&gt;supports android-7 v2.1 and above&lt;/li&gt;&#xA;&lt;li&gt;licensed under the LGPL v3+&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can download it here:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>report on IOCipher beta dev sprint</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</link>
+      <pubDate>Thu, 31 Jan 2013 19:45:44 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</guid>
+      <description>&lt;p&gt;We are just wrapping up an intensive dev sprint on &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;IOCipher&lt;/a&gt; in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code. Aaron Huttner of &lt;a href=&#34;http://gryphn.co/&#34; target=&#34;_blank&#34;&gt;Gryphn&lt;/a&gt; found IOCipher while developing their &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; title=&#34;Gryphn Secure Text Messaging in the Google Play store&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Text Messaging&lt;/a&gt; and thought it was a remarkable easy way to add encrypted storage of files, and it worked quickly for him, so he included it his app before we had even announced an alpha release (thanks again for the vote of confidence!).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IOCipher lives! encrypted virtual file system for Android</title>
+      <link>https://guardianproject.github.io/info/2012/05/17/iocipher-lives-encrypted-virtual-file-system-for-android/</link>
+      <pubDate>Thu, 17 May 2012 16:44:35 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/17/iocipher-lives-encrypted-virtual-file-system-for-android/</guid>
+      <description>&lt;p&gt;Nathan and I just got the first complete test of IOCipher working in the IOCipherServer/SpotSync app. We created a filesystem sqlite.db file, then mounted it and got all the files via HTTP. In the test suite, I have lots of operations all running fine and encrypting! The core idea here is a java.io API replacement that transparently writes to an encrypted store. So for the most part, just change your import statements from:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>User scenarios to guide our crypto development</title>
+      <link>https://guardianproject.github.io/info/2012/04/14/user-scenarios-to-guide-our-crypto-development/</link>
+      <pubDate>Sat, 14 Apr 2012 20:16:03 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/04/14/user-scenarios-to-guide-our-crypto-development/</guid>
+      <description>&lt;p&gt;At Guardian Project, we find user-centered development to be essential to producing useful software that addresses real world needs. To drive this, we work with user stories and scenarios as part of the process of developing software. One particular development focus is the &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; title=&#34;Portable Shared Security Token&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Token (PSST)&lt;/a&gt; project, which aims to make it easy to use encryption across both mobile and desktop computers, as well as keep the stores of cryptographic identities (i.e. trusted keys, certificates, etc) in sync between devices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Transparent encrypted virtual disks for Android (we call it IOCipher)</title>
+      <link>https://guardianproject.github.io/info/2012/04/03/transparent-encrypted-virtual-disks-for-android-we-call-it-iocipher/</link>
+      <pubDate>Tue, 03 Apr 2012 13:16:41 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/04/03/transparent-encrypted-virtual-disks-for-android-we-call-it-iocipher/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png&#34; alt=&#34;&#34; width=&#34;200&#34; height=&#34;200&#34; class=&#34;alignleft size-full wp-image-1764&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/04/blog_sed.png 200w, https://guardianproject.info/wp-content/uploads/2012/04/blog_sed-150x150.png 150w&#34; sizes=&#34;(max-width: 200px) 100vw, 200px&#34; /&gt;&lt;/a&gt;When using phones, laptops, computers, etc. it feels like a private experience, as if our screen was the same as a piece of paper, and when that paper is gone, then no one can see it anymore. Digital media works very differently. While the user interface portrays the deletion of files as very final, for someone with the right tools, it is actually not hard to recover deleted files. Also, digital information takes up so little space, we now regularly carry vast amounts of information in our pockets. Our phones have become amazingly powerful computers, storing as many photos, videos, documents, etc. in our pockets as would have required a room not so long ago. So when you lose this phone, or it gets stolen, or accessed against your wishes, the lies of the interface are laid bare, and vast troves of your information is now in someone else’s hands. So how can we capitalize on all this power without giving up control of our information?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On Verifying Identity Using Cryptography</title>
+      <link>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</link>
+      <pubDate>Mon, 19 Mar 2012 11:27:51 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity.gif&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity-150x150.gif&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1684&#34; /&gt;&lt;/a&gt;One of the most important uses of cryptography these days is verifying the identity of the other side of a digital conversation. That conversation could be between two people using OTR-encrypted IM, a web browser showing a bank website, a Debian Developer uploading a package to the Debian build server, an ssh client logging into an ssh server, and on and on. In all of these cases, cryptography is used to ensure that the software is indeed receiving replies from the expected entity. This happens by checking the current cryptographic key against one that is known to be correct. That is essential to the whole process. If you see the key for the first time, you have no way of knowing whether that is indeed the key you are expecting because there is no point of reference.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How many ways to store 5 numbers?</title>
+      <link>https://guardianproject.github.io/info/2012/02/23/how-many-ways-to-store-5-numbers/</link>
+      <pubDate>Thu, 23 Feb 2012 12:29:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/02/23/how-many-ways-to-store-5-numbers/</guid>
+      <description>&lt;p&gt;At the core of all software that aims to be secure, private and anonymous is encryption, or as I think of it, amazing math tricks with really large numbers. These really large numbers can serve as a token of identity or the key to information locked away behind the encryption math. There are a number of different encryption methods commonly used based on different mathematical ideas, but they all rely on people managing sets of really large numbers, usually known as keys.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

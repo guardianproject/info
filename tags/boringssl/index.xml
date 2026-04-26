@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BoringSSL on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/boringssl/</link>
+    <description>Recent content in BoringSSL on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/boringssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing TLS Encrypted Client Hello</title>
+      <link>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</guid>
+      <description>&lt;p&gt;As part of the &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project, we have been working on&#xA;accelerating the development &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html&#34;&gt;Encrypted Client Hello&#xA;(ECH)&lt;/a&gt; as&#xA;standardized by the IETF.  ECH is the next step in improving Transport Layer&#xA;Security (TLS).  TLS is one of the basic building blocks of the internet, it is&#xA;what puts the S in HTTPS.  The ECH standard is nearing completion.  That is&#xA;exciting because ECH can encrypt the last plaintext TLS metadata that it is&#xA;possible to encrypt.  So ECH will bring some real improvements in privacy and&#xA;censorship resistance.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

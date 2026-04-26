@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reducing metadata leakage from software updates</title>
+      <link>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</link>
+      <pubDate>Thu, 16 Oct 2014 12:48:04 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: now you can &lt;a href=&#34;https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;do this with Tor Onion Services&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up your own app store with F-Droid</title>
+      <link>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</link>
+      <pubDate>Tue, 05 Nov 2013 11:55:43 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</guid>
+      <description>&lt;p&gt;(&lt;em&gt;This blog post as now been cooked into an &lt;a href=&#34;https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo&#34; target=&#34;_blank&#34;&gt;updated HOWTO&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;&#xA;&lt;p&gt;The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are &lt;a href=&#34;http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links&#34; target=&#34;_blank&#34;&gt;actively tapping&lt;/a&gt; into &lt;a href=&#34;http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html&#34; target=&#34;_blank&#34;&gt;the raw data streams&lt;/a&gt; of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Add-On on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/add-on/</link>
+    <description>Recent content in Add-On on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/add-on/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxy Settings Add-on for Firefox Mobile</title>
+      <link>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</link>
+      <pubDate>Mon, 08 Nov 2010 03:43:24 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</guid>
+      <description>&lt;p&gt;The latest beta of &lt;a href=&#34;https://www.mozilla.com/en-US/mobile/&#34;&gt;Firefox 4 on Android&lt;/a&gt; is proving to be very usable, stable and an increasingly viable alternative to the built-in webkit browser. However, it is unfortunately lacking the ability to manually configure proxy settings through any sort of standard user interface. This is a common problem for Android, which also lacks the ability to set browser or system wide proxy settings. This has caused real issues for us with getting &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; (aka “Tor on Android”) to work for un-rooted Android devices, because for routing through Tor to work, you must be able to set the HTTP or SOCKS proxy settings. Why this &lt;a href=&#34;https://code.google.com/p/android/issues/detail?id=1273&#34;&gt;very basic feature&lt;/a&gt; keeps getting missed or ignored is a mystery to us.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

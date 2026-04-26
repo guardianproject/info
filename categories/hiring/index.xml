@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hiring on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/hiring/</link>
+    <description>Recent content in Hiring on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/categories/hiring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Seeking Slightly Paranoid Android Developers for Hire and Internships</title>
+      <link>https://guardianproject.github.io/info/2010/11/10/seeking-slightly-paranoid-android-developers-for-hire-and-internships/</link>
+      <pubDate>Wed, 10 Nov 2010 18:59:10 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/11/10/seeking-slightly-paranoid-android-developers-for-hire-and-internships/</guid>
+      <description>&lt;p&gt;The Guardian Project is kicking off a three month project focused on finishing up our secure chat app, codenamed &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;Gibber&lt;/a&gt; but also known as “OtRChat”. We are looking for developers of all levels to join us in this work. We have already implemented the primary  &lt;a href=&#34;http://www.cypherpunks.ca/otr/&#34;&gt;“Off the Record” messaging&lt;/a&gt; functionality, and achieved interoperability with desktop clients such as Pidgin and AdiumX. From here, there is work to be done on implementing some unique features, cleaning up the user experience, and ensuring that the implementation is as secure as possible, providing all the necessary features for verifying and managing secure identities and sessions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

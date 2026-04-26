@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Libsqlfs on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/libsqlfs/</link>
+    <description>Recent content in Libsqlfs on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/libsqlfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>report on IOCipher beta dev sprint</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</link>
+      <pubDate>Thu, 31 Jan 2013 19:45:44 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</guid>
+      <description>&lt;p&gt;We are just wrapping up an intensive dev sprint on &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;IOCipher&lt;/a&gt; in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code. Aaron Huttner of &lt;a href=&#34;http://gryphn.co/&#34; target=&#34;_blank&#34;&gt;Gryphn&lt;/a&gt; found IOCipher while developing their &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; title=&#34;Gryphn Secure Text Messaging in the Google Play store&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Text Messaging&lt;/a&gt; and thought it was a remarkable easy way to add encrypted storage of files, and it worked quickly for him, so he included it his app before we had even announced an alpha release (thanks again for the vote of confidence!).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sometimes the best solution is a library, not an app</title>
+      <link>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</link>
+      <pubDate>Mon, 27 Aug 2012 12:30:15 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel-150x150.png&#34; alt=&#34;&#34; title=&#34;thinking about frameworks&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-2792&#34; /&gt;&lt;/a&gt;Our general approach to software development starts with surveying existing solutions that are available and in use, to see if there is already enough of an ecosystem or whether we need to seed that. When there is already an adundance of tools and apps out there, we work to find the good ones, provide feedback and auditing, and then build apps and tools to fill in any gaps. For example, this was our approach in the Open Secure Telephony Network.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

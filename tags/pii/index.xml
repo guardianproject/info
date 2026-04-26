@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PII on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/pii/</link>
+    <description>Recent content in PII on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/pii/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New insights into clean analytics</title>
+      <link>https://guardianproject.github.io/info/2021/03/02/new-insights-into-clean-analytics/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/03/02/new-insights-into-clean-analytics/</guid>
+      <description>&lt;p&gt;There is a giant problem with the &amp;ldquo;collect it all&amp;rdquo; status quo that pervades on the Internet, this has been clear for a long time.  Tracking people has become so &lt;a href=&#34;https://www.ghostery.com/study/&#34;&gt;widespread&lt;/a&gt; that &lt;a href=&#34;https://noyb.eu&#34;&gt;organizations&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org&#34;&gt;communities&lt;/a&gt;, &lt;a href=&#34;https://exodus-privacy.eu.org&#34;&gt;projects&lt;/a&gt; and &lt;a href=&#34;https://privacylab.yale.edu/&#34;&gt;university&lt;/a&gt; &lt;a href=&#34;https://privacylab.at&#34;&gt;labs&lt;/a&gt; have sprung up dedicated to detecting and publicizing their presence.  Data and analytics are clearly useful for software creators and funders, but they also easily lead to harming people&amp;rsquo;s privacy and well-being.  The past year of work on Clean Insights has clarified our goals to make analytics possible without injuring the very people we aim to serve.  Clean Insights takes the world of data analytics and turns it on its head.   The Clean Insights approach starts with thinking about the data, then choosing only the data that is clearly safe to use.  A user&amp;rsquo;s location, complete device description, or other identifying information is dangerous to gather.  A simple count of how many times a feature was used, or a webpage was visited, can be gathered without links to people.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

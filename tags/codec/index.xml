@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codec on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/codec/</link>
+    <description>Recent content in Codec on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/codec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lower Bounds of The Narrow Bands</title>
+      <link>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</link>
+      <pubDate>Fri, 22 Feb 2013 09:05:48 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</guid>
+      <description>&lt;p&gt;Voice is becoming a standard feature of any messaging app on mobile phones, in various forms using many different protocols. There’s the old guard, whom I will refer to as “Skype”. Some &lt;a href=&#34;https://www.privacyinternational.org/blog/skype-please-act-like-the-responsible-global-citizen-you-claim-to-be&#34;&gt;tough&lt;/a&gt; &lt;a href=&#34;http://www.skypeopenletter.com/&#34;&gt;questions&lt;/a&gt; have been thrown their way by many groups who support a free Internet. There’s Google Voice, which is not really VoIP. Apple is playing around in the hedge maze inside their walled garden with iChat. There’s also Facebook, who is rolling out &lt;a href=&#34;http://techcrunch.com/2013/01/16/facebook-rolls-out-voip-calling-to-u-s-ios-messenger-users/&#34;&gt;voice calling in Canada and the USA&lt;/a&gt; in their Messenger app on iOS.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

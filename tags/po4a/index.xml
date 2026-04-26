@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Po4a on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/po4a/</link>
+    <description>Recent content in Po4a on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/po4a/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Figuring Out Crowdsourced Translation of Websites</title>
+      <link>https://guardianproject.github.io/info/2020/04/23/figuring-out-crowdsourced-translation-of-websites/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/04/23/figuring-out-crowdsourced-translation-of-websites/</guid>
+      <description>&lt;p&gt;Crowdsourced translation platforms like &lt;a href=&#34;https://weblate.org/&#34;&gt;Weblate&lt;/a&gt;, Transifex, Crowdin, etc. have proven to be a hugely productive way to actively translate apps and desktop software.  Long form texts like documentation and websites remain much more work to translate and keep translated.  Many translation services currently support Markdown and HTML, but very basically, which means much more work for translators and webmasters.  Translators can inadvertently break things, either with a typo or because of a lack of knowledge of a specific syntax.  This can make the whole page layout break.  Webmasters and documentation maintainers must carefully check the process to ensure everything is working smoothly.  With the spread of Markdown as a standard format, there is now hope!  Software developers can focus efforts on the Markdown translation workflow, and Markdown is more tolerant of syntax errors than HTML.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pluto on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/pluto/</link>
+    <description>Recent content in Pluto on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/pluto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distribution in Depth: Mirrors as a Source of Resiliency</title>
+      <link>https://guardianproject.github.io/info/2020/12/07/distribution-in-depth-mirrors-as-a-source-of-resiliency/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/12/07/distribution-in-depth-mirrors-as-a-source-of-resiliency/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;distribution.png&#34; alt=&#34;distribution&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;There are many ways to get the apps and media, even when the Internet is expensive, slow, blocked, or even completely unavailable.  Censorshop circumvention tools from ShadowSocks to Pluggable Transports can evade blocks.  Sneakernets and &lt;a href=&#34;https://briarproject.org/how-it-works/&#34;&gt;nearby connections&lt;/a&gt; work without any network connection.   Hosting on Content Delivery Networks (CDNs) can make hosting drastically cheaper and faster.  One method that is often overlooked these days is repository mirrors.  Distribution setups that support mirrors give users the flexibility to find a huge array of solutions for problems when things are not just working.  Mirrors on local networks can be much cheaper. Mirrors in specific countries are often not blocked or filtered.  Mirrors can be copied onto portable storage and moved to where the users are.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

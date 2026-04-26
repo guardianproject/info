@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deterministic Build on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/deterministic-build/</link>
+    <description>Recent content in Deterministic Build on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/deterministic-build/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CipherKit reproducible builds</title>
+      <link>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</link>
+      <pubDate>Mon, 21 Sep 2015 10:54:05 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/09/21/cipherkit-reproducible-builds/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;We have been on a kick recently with making our build process support “reproducible builds” aka “deterministic builds”. What is this reproducible thing? Basically, what that means is that you can run a script and end up with the &lt;em&gt;exact&lt;/em&gt; same binary file as our official releases, be it a APK, JAR, AAR, whatever. That lets anyone verify that our releases are produced only from the source in git, without including anything else, whether deliberately or accidentally (like malware).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Our first deterministic build: Lil’ Debi 0.4.7</title>
+      <link>https://guardianproject.github.io/info/2014/06/09/our-first-deterministic-build-lil-debi-0.4.7/</link>
+      <pubDate>Mon, 09 Jun 2014 16:41:34 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/06/09/our-first-deterministic-build-lil-debi-0.4.7/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://abyss.uoregon.edu/~js/ast123/lectures/lec05.html&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/06/determinism.gif&#34; alt=&#34;determinism&#34; width=&#34;206&#34; height=&#34;138&#34; class=&#34;alignright size-thumbnail wp-image-12493&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;We just released Lil’ Debi 0.4.7 into the &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.lildebi&#34; target=&#34;_blank&#34;&gt;Play Store&lt;/a&gt; and &lt;a href=&#34;https://f-droid.org/repository/browse/?fdid=info.guardianproject.lildebi&#34; target=&#34;_blank&#34;&gt;f-droid.org&lt;/a&gt;. It is not really different than the 0.4.6 release except in has a new, important property: the APK contents can be reproduced on other machines to the extent that the APK signature can be swapped between the official build and builds that other people have made from source, and this will still be installable. This is known as a “deterministic build” or “reproducible build”: the build process is deterministic, meaning it runs the same way each time, and that results in an APK that is reproducible by others using only the source code. There are some limitations to this, like it has to be built using similar versions of the OpenJDK 1.7 and other build tools, for example. But this process should work on any recent version of Debian or Ubuntu. Please try the process yourself, and let us know if you can verify or not:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

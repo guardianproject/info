@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Man in the Middle on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/man-in-the-middle/</link>
+    <description>Recent content in Man in the Middle on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/man-in-the-middle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proposal for Secure Connection Notification on Android</title>
+      <link>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</link>
+      <pubDate>Thu, 15 Nov 2012 10:07:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</guid>
+      <description>&lt;p&gt;A major problem of mobile applications being increasingly used over web-based applications, is that there is no standard established for notifying the user of the state of security on the network connection. With a web browser, the evolution of the “lock” icon when an &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Secure&#34;&gt;HTTPS connection&lt;/a&gt; is made, has been one that evolved originally out of Netscape’s first implementation, to an adhoc, defact industry-standard way of letting the user know if their connection is secure. Beyond just a binary on/off, the lock icon is also the entry point into viewing more information about the digital security tokens, keys and certificates that are powering the connection – who authorized them, who requested them, and so on. More recently, with browsers such as Chrome, there has been the user of color schemes (Green is good, Red is bad), verified domain display and other indicators to help ensure the user knows when to trust their connection, and when to be wary.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

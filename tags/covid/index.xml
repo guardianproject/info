@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Covid on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/covid/</link>
+    <description>Recent content in Covid on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/covid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Promise and Hazards of COVID Contact Tracing Apps</title>
+      <link>https://guardianproject.github.io/info/2020/04/09/the-promise-and-hazards-of-covid-contact-tracing-apps/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/04/09/the-promise-and-hazards-of-covid-contact-tracing-apps/</guid>
+      <description>&lt;p&gt;There has been increasing interest in the possibilities of tracking&#xA;people who are infected with Coronavirus using all of the various&#xA;methods that smart phones provide.  There is good reason: &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Contact_tracing&#34;&gt;contact&#xA;tracing&lt;/a&gt;&amp;rdquo; has been a&#xA;pillar of public health efforts for decades.  It is an effective means&#xA;to curtail the spread of infectious disease.  At the same time,&#xA;governments, companies, and organizations are acting fast to offer&#xA;services to help end this current pandemic.  The problem is that many&#xA;of these are taking advantage of these times to introduce more&#xA;tracking of people, more data collection, and more control over&#xA;people.  We must not let contact tracing be used to reduce privacy&#xA;and increase unnecessary data collection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>We Support the Open COVID Pledge</title>
+      <link>https://guardianproject.github.io/info/2020/04/09/we-support-the-open-covid-pledge/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/04/09/we-support-the-open-covid-pledge/</guid>
+      <description>&lt;p&gt;Please join this &lt;a href=&#34;https://opencovidpledge.org&#34;&gt;Open COVID Pledge&lt;/a&gt; by&#xA;committing to freely share technology for all work that aims to end&#xA;the Coronavirus Disease 2019 (COVID-19) pandemic.&lt;/p&gt;&#xA;&lt;p&gt;We believe that free software licenses like the GNU GPL and the Apache&#xA;License already provide these key benefits.  We are making this&#xA;statement to make it clear that all of our code is available for any&#xA;effort to end the COVID Pandemic.&lt;/p&gt;&#xA;&lt;p&gt;We grant to every person and entity that wishes to accept it, a&#xA;non-exclusive, royalty-free, worldwide, fully paid-up license to fully&#xA;use, practice and exploit all our patent and copyright rights, for the&#xA;sole purpose of ending the COVID-19 pandemic and minimising the impact&#xA;of the disease, including diagnosis, prevention, containment, and&#xA;treatment.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

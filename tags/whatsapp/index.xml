@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Whatsapp on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/whatsapp/</link>
+    <description>Recent content in Whatsapp on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/whatsapp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatSecure 13.2: Important Beta!</title>
+      <link>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</link>
+      <pubDate>Tue, 05 Aug 2014 11:35:54 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</guid>
+      <description>&lt;p&gt;Today is the first public beta of ChatSecure v13.2, an important update of the user interface, networking code, and overall stability. We’ve spent the last six months tracking down crashes, memory leaks and performance issues, and have reached a stable, functional point which we want to share for public use. Reliability and simplicity our the goals, as we move towards v14 in the next few months.&lt;/p&gt;&#xA;&lt;p&gt;This beta also features a new account setup wizard that we are eager for feedback on. Our goal is to enable new users to have a much simpler experience in setting up ChatSecure to connect to existing or create new accounts. We have also provided a “one-click burner” option to quickly create throwaway accounts, that require Tor and OTR encryption always, for chatting with a single contact or even just a single conversation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Modernizing Expectations for the Nouveau Secure Mobile Messaging Movement</title>
+      <link>https://guardianproject.github.io/info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/</link>
+      <pubDate>Tue, 16 Jul 2013 00:52:31 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/07/16/modernizing-expectations-for-the-nouveau-secure-mobile-messaging-movement/</guid>
+      <description>&lt;p&gt;&lt;em&gt;The tl;dr of this lengthy (tho entertaining and immensely important!) post is this: Stopping with “We support OTR” or “We support PGP” is not enough anymore. There are at &lt;strong&gt;least seven&lt;/strong&gt;, if not more, very important security features that any app claiming to provide secure messaging must implement as soon as possible, to truly safeguard a user’s communication content, metadata and identity.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Note: The names “Gibberbot” and “ChatSecure” are used interchangeabley below, as we are in the midst of an app rebrand. Apologies!&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

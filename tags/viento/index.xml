@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Viento on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/viento/</link>
+    <description>Recent content in Viento on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/viento/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wind is a Mozilla &amp; National Science Foundation Grand Prize Winner</title>
+      <link>https://guardianproject.github.io/info/2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/</link>
+      <pubDate>Wed, 26 Sep 2018 10:54:38 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/09/26/wind-is-a-mozilla-national-science-foundation-grand-prize-winner/</guid>
+      <description>&lt;p&gt;On August 14th, members of the Guardian Project team traveled to Mountain View to compete in the final round of the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation for a Networked Society (WINS) Challenge&lt;/a&gt;. We learned in July that our &lt;a href=&#34;https://guardianproject.info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/&#34;&gt;Wind  project was a finalist&lt;/a&gt;, and we now had the opportunity to compete for one of the grand prizes, in a TED-meets-SharkTank style event, at Mozilla HQ.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wind&#34;&gt;Wind&lt;/a&gt; is a network designed for opportunistic communication and sharing of local knowledge that provides off-grid services for everyday people, using the mobile devices they already have. In the Wind network, Chime is the hyperlink, but one that exists in time and space, discoverable through beacon broadcasts and human-to-human sharing. All of this is powered by free and open-source software, running on readily available consumer hardware, and can be deployed at little to no cost, in a very short amount of time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

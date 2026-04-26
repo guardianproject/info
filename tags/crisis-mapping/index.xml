@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crisis Mapping on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/crisis-mapping/</link>
+    <description>Recent content in Crisis Mapping on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/crisis-mapping/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ushahidi-Linda: “Testimony” &#43; “Protection”</title>
+      <link>https://guardianproject.github.io/info/2010/03/10/ushahidi-linda-testimony--protection/</link>
+      <pubDate>Wed, 10 Mar 2010 19:53:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/03/10/ushahidi-linda-testimony--protection/</guid>
+      <description>&lt;p&gt;Ushahidi-linda (“Testimony” + “Protection” – &lt;em&gt;disclaimer: we don’t speak Swahili so this was a shot in the dark!&lt;/em&gt;)&lt;/p&gt;&#xA;&lt;p&gt;This is a fork of the &lt;a href=&#34;https://github.com/ushahidi/Ushahidi_Android&#34;&gt;Ushahidi on Android&lt;/a&gt; app, done as a way to prototype the implementation of increased security, anonymity and privacy for users viewing and submitting reports through &lt;a href=&#34;http://ushahidi.com&#34;&gt;Ushahidi&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png&#34;&gt;&lt;img class=&#34;size-full wp-image-199 alignleft&#34; title=&#34;ushahidi_android_splash&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png&#34; alt=&#34;&#34; width=&#34;224&#34; height=&#34;336&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash.png 320w, https://guardianproject.info/wp-content/uploads/2010/03/ushahidi_android_splash-200x300.png 200w&#34; sizes=&#34;(max-width: 224px) 100vw, 224px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ushahidi is a platform that crowdsources crisis information, allowing anyone to submit crisis information through text messaging using a mobile phone, email or web form.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

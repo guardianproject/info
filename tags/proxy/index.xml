@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/proxy/</link>
+    <description>Recent content in Proxy on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tor Project: Orfox Paved the Way for Tor Browser on Android </title>
+      <link>https://guardianproject.github.io/info/2019/09/03/tor-project-orfox-paved-the-way-for-tor-browser-on-android/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/09/03/tor-project-orfox-paved-the-way-for-tor-browser-on-android/</guid>
+      <description>&lt;p&gt;Last month, we tagged the &lt;a href=&#34;https://github.com/guardianproject/Orfox/releases/tag/Orfox-Final-RIP-v16&#34;&gt;final release of Orfox&lt;/a&gt;, an important milestone for us in our work on Tor. Today, we pushed this final build out to all the Orfox users on Google Play, which forces them to upgrade to the official Tor Browser for Android..&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;orfoxrip.png&#34; alt=&#34;Orfox RIP app image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Our goal was never to become the primary developer or maintainer of the &amp;ldquo;best&amp;rdquo; tor-enabled web browser app on Android. Instead, we chose to act as a catalyst to get the Tor Project and the Tor Browser development team themselves to take on Android development, and upstream our work into the primary codebase. This has happened, and it is a great news for everyone. The work for developing and updating Tor Browser on the desktop and Android are now coordinated and synchronized, and end-users benefit from more frequent updates and improvements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NetCipher update: global, SOCKS, and TLSv1.2</title>
+      <link>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/netcipher&#34;&gt;NetCipher&lt;/a&gt; has been relatively quiet in recent years, because it kept&#xA;on working, doing it was doing. Now, we have had some recent&#xA;discoveries about the guts of Android that mean NetCipher is a lot easier&#xA;to use on recent Android versions.  On top of that, TLSv1.2 now reigns&#xA;supreme and is basically everywhere, so it is time to turn TLSv1.0 and&#xA;TLSv1.1 entirely off.&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-single-method-to-enable-proxying-for-the-whole-app&#34;&gt;A single method to enable proxying for the whole app&lt;/h2&gt;&#xA;&lt;p&gt;As of Android 8.0 (26 aka Oreo), it is now possible to set a&#xA;&lt;code&gt;URLStreamHandlerFactory&lt;/code&gt;, which creates &lt;code&gt;URLConnection&lt;/code&gt; instances&#xA;with custom configurations.  If an app is using the built-in&#xA;&lt;code&gt;HttpURLConnection&lt;/code&gt; API for its networking, it is now possible to&#xA;enable global proxying with a single method call when the app starts:&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useGlobalProxy--&#34;&gt;&lt;code&gt;NetCipher.useGlobalProxy()&lt;/code&gt;&lt;/a&gt;.&#xA;Then the actual proxy configuration can be set dynamically, using&#xA;things like&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useTor--&#34;&gt;&lt;code&gt;NetCipher.useTor()&lt;/code&gt;&lt;/a&gt;&#xA;or&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#clearProxy--&#34;&gt;&lt;code&gt;NetCipher.clearProxy()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Only Way to Visit Strongbox on a Phone</title>
+      <link>https://guardianproject.github.io/info/2013/05/16/the-only-way-to-visit-strongbox-on-a-phone/</link>
+      <pubDate>Thu, 16 May 2013 17:43:06 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/05/16/the-only-way-to-visit-strongbox-on-a-phone/</guid>
+      <description>&lt;p dir=&#34;ltr&#34;&gt;&#xA;  &lt;em&gt;The New Yorker&lt;/em&gt; magazine just launched &lt;a href=&#34;http://www.newyorker.com/online/blogs/closeread/2013/05/introducing-strongbox-anonymous-document-sharing-tool.html&#34;&gt;Strongbox&lt;/a&gt;, a whistleblower submission system that’s hosted on a hidden website. There’s only one way to access the hidden site on a phone or tablet, and that’s with our &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.browser&amp;hl=en&#34;&gt;Orweb app&lt;/a&gt;. Here’s a simple breakdown of how to do securely and anonymously blow the whistle, explained in an interactive tutorial:&#xA;&lt;/p&gt;&#xA;&lt;p style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;a href=&#34;https://guardianproject.info/howto/strongbox&#34; target=&#34;_blank&#34;&gt;&lt;img class=&#34;size-medium wp-image-3719  aligncenter&#34; alt=&#34;galaxy19&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/galaxy19-199x300.png&#34; width=&#34;199&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/galaxy19-199x300.png 199w, https://guardianproject.info/wp-content/uploads/2013/05/galaxy19.png 400w&#34; sizes=&#34;(max-width: 199px) 100vw, 199px&#34; /&gt;&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p dir=&#34;ltr&#34; style=&#34;text-align: center;&#34;&gt;&#xA;  &lt;em&gt;Visit &lt;a title=&#34;strongbox tutorial&#34; href=&#34;https://guardianproject.info/howto/strongbox&#34; target=&#34;_blank&#34;&gt;guardianproject.info/howto/strongbox&lt;/a&gt; for an interactive tutorial on using Strongbox on your phone.&lt;/em&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proxy Settings Add-on for Firefox Mobile</title>
+      <link>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</link>
+      <pubDate>Mon, 08 Nov 2010 03:43:24 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</guid>
+      <description>&lt;p&gt;The latest beta of &lt;a href=&#34;https://www.mozilla.com/en-US/mobile/&#34;&gt;Firefox 4 on Android&lt;/a&gt; is proving to be very usable, stable and an increasingly viable alternative to the built-in webkit browser. However, it is unfortunately lacking the ability to manually configure proxy settings through any sort of standard user interface. This is a common problem for Android, which also lacks the ability to set browser or system wide proxy settings. This has caused real issues for us with getting &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; (aka “Tor on Android”) to work for un-rooted Android devices, because for routing through Tor to work, you must be able to set the HTTP or SOCKS proxy settings. Why this &lt;a href=&#34;https://code.google.com/p/android/issues/detail?id=1273&#34;&gt;very basic feature&lt;/a&gt; keeps getting missed or ignored is a mystery to us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot Update: New Setup Wizard at Startup</title>
+      <link>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</link>
+      <pubDate>Thu, 29 Jul 2010 17:17:08 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</guid>
+      <description>&lt;p&gt;We’ve been working away at the 0.0.9 release of &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; over the last few months, and have put a decent amount of effort into usability. Specifically, we hoped to better communicate to users what it means to run Tor on your Android phone. In addition, we wanted to clearly lay out how the various configuration options help to improve your mobile web anonymity and ability to circumvent web filters and tracking by your mobile service provider.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

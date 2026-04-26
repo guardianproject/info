@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Https on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/https/</link>
+    <description>Recent content in Https on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reducing metadata leakage from software updates</title>
+      <link>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</link>
+      <pubDate>Thu, 16 Oct 2014 12:48:04 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: now you can &lt;a href=&#34;https://guardianproject.info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;do this with Tor Onion Services&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Many software update systems use code signing to ensure that only the correct software is downloaded and installed, and to prevent the code from being altered. This is an effective way to prevent the code from being modified, and because of that, software update systems often use plain, unencrypted HTTP connections for downloading code updates. That means that the metadata of what packages a machine has installed is available in plain text for any network observer, from someone sitting on the same public WiFi as you, to state actors with full network observation capabilities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tweaking HTTPS for Better Security</title>
+      <link>https://guardianproject.github.io/info/2014/02/12/tweaking-https-for-better-security/</link>
+      <pubDate>Wed, 12 Feb 2014 19:14:59 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/02/12/tweaking-https-for-better-security/</guid>
+      <description>&lt;p&gt;The HTTPS protocol is based on TLS and SSL, which are standard ways to negotiate encrypted connections. There is a lot of complexity in the protocols and lots of config options, but luckily most of the config options can be ignored since the defaults are fine. But there are some things worth tweaking to ensure that as many connections as possible are using reliable encryption ciphers while providing &lt;a href=&#34;https://en.wikipedia.org/wiki/Forward_secrecy&#34;&gt;forward secrecy&lt;/a&gt;. A connection with forward secrecy provides protection to past transactions even if the server’s HTTPS private key/certificate is stolen or compromised. This protects your users from large scale network observers that can store all traffic for later decryption, like governments, ISPs, telecoms, etc. From the server operator’s point of view, it means less risk of leaking users’ data, since even if the server is compromised, past network traffic will probably not be able to be encrypted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proposal for Secure Connection Notification on Android</title>
+      <link>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</link>
+      <pubDate>Thu, 15 Nov 2012 10:07:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</guid>
+      <description>&lt;p&gt;A major problem of mobile applications being increasingly used over web-based applications, is that there is no standard established for notifying the user of the state of security on the network connection. With a web browser, the evolution of the “lock” icon when an &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Secure&#34;&gt;HTTPS connection&lt;/a&gt; is made, has been one that evolved originally out of Netscape’s first implementation, to an adhoc, defact industry-standard way of letting the user know if their connection is secure. Beyond just a binary on/off, the lock icon is also the entry point into viewing more information about the digital security tokens, keys and certificates that are powering the connection – who authorized them, who requested them, and so on. More recently, with browsers such as Chrome, there has been the user of color schemes (Green is good, Red is bad), verified domain display and other indicators to help ensure the user knows when to trust their connection, and when to be wary.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On Verifying Identity Using Cryptography</title>
+      <link>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</link>
+      <pubDate>Mon, 19 Mar 2012 11:27:51 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/19/on-verifying-identity-using-cryptography/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity.gif&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/03/identity-150x150.gif&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-1684&#34; /&gt;&lt;/a&gt;One of the most important uses of cryptography these days is verifying the identity of the other side of a digital conversation. That conversation could be between two people using OTR-encrypted IM, a web browser showing a bank website, a Debian Developer uploading a package to the Debian build server, an ssh client logging into an ssh server, and on and on. In all of these cases, cryptography is used to ensure that the software is indeed receiving replies from the expected entity. This happens by checking the current cryptographic key against one that is known to be correct. That is essential to the whole process. If you see the key for the first time, you have no way of knowing whether that is indeed the key you are expecting because there is no point of reference.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

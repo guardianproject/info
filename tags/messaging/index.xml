@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Messaging on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/messaging/</link>
+    <description>Recent content in Messaging on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/messaging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gibberbot v11 is not just secure, its also simple, snappy and super fun!</title>
+      <link>https://guardianproject.github.io/info/2013/03/08/gibberbot-v11-is-not-just-secure-its-also-simple-snappy-and-super-fun/</link>
+      <pubDate>Fri, 08 Mar 2013 12:54:50 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/03/08/gibberbot-v11-is-not-just-secure-its-also-simple-snappy-and-super-fun/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Gibberbot v11 is now final as of RC3 release: &lt;a href=&#34;https://github.com/guardianproject/Gibberbot/tree/0.0.11-RC3&#34;&gt;https://github.com/guardianproject/Gibberbot/tree/0.0.11-RC3&lt;/a&gt;. From here, the only changes to v11 we will be making will be critical bug fixes. We are now focused on our v12 release, which you can track here: &lt;a href=&#34;https://dev.guardianproject.info/versions/39&#34;&gt;https://dev.guardianproject.info/versions/39&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Please promote our new Gibberbot how-to interactive tutorial available here: &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34;&gt;https://guardianproject.info/howto/chatsecurely/&lt;/a&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;If you have been tracking our efforts here for the last few years, you will know that Gibberbot, our secure instant messaging app, started out as a big old mess of an app called “ORChat” as and then “OTRChat” and then “Gibber” (or “Jibber”?), and then finally settled down into the name and app it is known as now. Really it was a proof of concept, showing that you could indeed use the &lt;a href=&#34;https://github.com/gpolitis/otr4j&#34;&gt;OTR4J library&lt;/a&gt; built for desktops app, on Android.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

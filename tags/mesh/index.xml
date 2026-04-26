@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mesh on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/mesh/</link>
+    <description>Recent content in Mesh on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/mesh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mobile mesh in a real world test</title>
+      <link>https://guardianproject.github.io/info/2012/05/02/mobile-mesh-in-a-real-world-test/</link>
+      <pubDate>Wed, 02 May 2012 15:37:37 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/02/mobile-mesh-in-a-real-world-test/</guid>
+      <description>&lt;p&gt;Nathan, Mark, Lee, and I tried some OLSR mesh testing during the May Day protests and marches. We were able to get 4 devices to associate and mesh together, but not without some trials and travails. Two pairs of devices setup two separate BSSIDs, so were on separate networks. We turned them all off, then associated them one at a time, and then they all got onto the same BSSID and olsrd started doing its thing. This made us think that we should just use a hard-coded BSSID in the setup, with a preference to allow standard ad-hoc association to find a BSSID. &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n-300x225.jpg&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;alignright size-medium wp-image-2037&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n-300x225.jpg 300w, https://guardianproject.info/wp-content/uploads/2012/05/526191_338865336181237_184749301592842_866151_1316470506_n.jpg 600w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

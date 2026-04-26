@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Firefox on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/firefox/</link>
+    <description>Recent content in Firefox on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tor Project: Orfox Paved the Way for Tor Browser on Android </title>
+      <link>https://guardianproject.github.io/info/2019/09/03/tor-project-orfox-paved-the-way-for-tor-browser-on-android/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/09/03/tor-project-orfox-paved-the-way-for-tor-browser-on-android/</guid>
+      <description>&lt;p&gt;Last month, we tagged the &lt;a href=&#34;https://github.com/guardianproject/Orfox/releases/tag/Orfox-Final-RIP-v16&#34;&gt;final release of Orfox&lt;/a&gt;, an important milestone for us in our work on Tor. Today, we pushed this final build out to all the Orfox users on Google Play, which forces them to upgrade to the official Tor Browser for Android..&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;orfoxrip.png&#34; alt=&#34;Orfox RIP app image&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Our goal was never to become the primary developer or maintainer of the &amp;ldquo;best&amp;rdquo; tor-enabled web browser app on Android. Instead, we chose to act as a catalyst to get the Tor Project and the Tor Browser development team themselves to take on Android development, and upstream our work into the primary codebase. This has happened, and it is a great news for everyone. The work for developing and updating Tor Browser on the desktop and Android are now coordinated and synchronized, and end-users benefit from more frequent updates and improvements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proxy Settings Add-on for Firefox Mobile</title>
+      <link>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</link>
+      <pubDate>Mon, 08 Nov 2010 03:43:24 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/11/08/proxy-settings-add-on-for-firefox-mobile/</guid>
+      <description>&lt;p&gt;The latest beta of &lt;a href=&#34;https://www.mozilla.com/en-US/mobile/&#34;&gt;Firefox 4 on Android&lt;/a&gt; is proving to be very usable, stable and an increasingly viable alternative to the built-in webkit browser. However, it is unfortunately lacking the ability to manually configure proxy settings through any sort of standard user interface. This is a common problem for Android, which also lacks the ability to set browser or system wide proxy settings. This has caused real issues for us with getting &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; (aka “Tor on Android”) to work for un-rooted Android devices, because for routing through Tor to work, you must be able to set the HTTP or SOCKS proxy settings. Why this &lt;a href=&#34;https://code.google.com/p/android/issues/detail?id=1273&#34;&gt;very basic feature&lt;/a&gt; keeps getting missed or ignored is a mystery to us.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

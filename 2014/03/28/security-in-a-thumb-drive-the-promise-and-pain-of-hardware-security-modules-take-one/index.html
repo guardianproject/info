@@ -1,0 +1,1437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>Security in a thumb drive: the promise and pain of hardware security modules, take one! | Guardian Project</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="" />
+
+    
+    
+
+    <meta property="og:title" content="Security in a thumb drive: the promise and pain of hardware security modules, take one!" />
+<meta property="og:description" content="People, Apps and Code You Can Trust" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/" />
+
+<meta property="og:site_name" content="Guardian Project" />
+
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Guardian Project",
+  "url": "https:\/\/guardianproject.github.io\/info\/",
+  "description": "People, Apps and Code You Can Trust"
+}
+</script>
+
+    <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@guardianproject" />
+<meta name="twitter:title" content="Security in a thumb drive: the promise and pain of hardware security modules, take one!" />
+<meta name="twitter:description" content="People, Apps and Code You Can Trust" />
+
+
+
+
+    
+    
+      <link rel="icon" type="image/svg+xml" href="https://guardianproject.github.io/info/favicon.svg" />
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/info/css/styles.a19010b40d9686f3e754ba7e80fde4910a154a79ad45797c2d7fb6bbe5db8b35.css"
+              integrity="sha256-oZAQtA2WhvPnVLp&#43;gP3kkQoVSnmtRXl8LX&#43;2u&#43;XbizU="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/info/css/fonts.d1879df1972316d8d938b96958535f08cf5a6b3b078bd2be90bde9ccc01f9aa4.css" integrity="sha256-0Yed8ZcjFtjZOLlpWFNfCM9aazsHi9K&#43;kL3pzMAfmqQ=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/info/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+
+    
+    <script defer src="https://guardianproject.github.io/info/js/kao-banner.js"></script>
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="border-b border-gray-100 relative z-40">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4">
+    <a class="flex items-center" href="https://guardianproject.github.io/info/">
+      <img src="https://guardianproject.github.io/info/images/wordlogo.svg" alt="Guardian Project" class="h-10 xl:h-12" />
+    </a>
+
+    
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      id="menuOpen"
+      aria-label="Open Menu"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+    </button>
+
+    
+    <ul class="hidden xl:flex xl:flex-row xl:gap-1 xl:items-center">
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/"
+            >
+              About
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/brand/">
+                    New Branding
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/story/">
+                    Our Story
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/partners/">
+                    Partners and Funding
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/press/">
+                    Press
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/services/">
+                    Services
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/signing-keys/">
+                    Signing Keys
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/team/">
+                    Team
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/apps/"
+            >
+              Apps
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.checkey/">
+                    Checkey: info on local apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/circulo/">
+                    Círculo
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.havenapp.main/">
+                    Haven
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.locationprivacy/">
+                    Location Privacy - BETA
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.witness.sscphase1/">
+                    ObscuraCam: The Privacy Camera
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.android/">
+                    Orbot: Proxy with Tor
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.orfox/">
+                    Orfox
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.pixelknot/">
+                    PixelKnot: Hidden Messages
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.witness.proofmode/">
+                    ProofMode: Verified Visuals
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.ripple/">
+                    Ripple: respond when panicking
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/net.opendasharchive.openarchive.release/">
+                    Save
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torbrowser/">
+                    Tor Browser for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torbrowser_alpha/">
+                    Tor Browser for Android (Alpha)
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torservices/">
+                    TorServices (alpha)
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/code/"
+            >
+              Code
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/cleaninsights/">
+                    Clean Insights: Privacy Preserving Measurement
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/iocipher/">
+                    IOCipher: Virtual Encrypted Disks
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/netcipher/">
+                    NetCipher: Secured Networking
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/onionmobiledev/">
+                    Onion Mobile Devs: Tor Integration for Mobile Apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/panickit/">
+                    PanicKit: system-wide panic responses
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/c2pa/">
+                    Proofmode and C2PA
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/sqlcipher/">
+                    SQLCipher: Encrypted Database
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/tor-android/">
+                    TorService: Tor library for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/trustedintents/">
+                    TrustedIntents: flexible trusted interactions between Android apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/wind/">
+                    Wind: Off-Grid Services for Everyday People
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          
+            <li>
+              <a class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-block" href="/info/blog/">Blog</a>
+            </li>
+          
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/archive/"
+            >
+              Archive
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/apps/">
+                    Archived Apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/cacheword/">
+                    CacheWord: Passphrase Caching and Management
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/camerav/">
+                    CameraV: Secure Verifiable Photo &amp; Video Camera
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/courier/">
+                    Courier: Secure News reader
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/developersquare/">
+                    Developer Square
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/ffmpeg/">
+                    FFMPEG: Media Privacy Framework
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/firefoxprivacy/">
+                    Firefox Mobile: Privacy Enhanced
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/freebird/">
+                    Freebird Workshop
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/gnupg/">
+                    GnuPG: OpenPGP Encryption
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/hardware/">
+                    Hardware Guide
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/informacam/">
+                    InformaCam: Verified Mobile Media
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/keysync/">
+                    KeySync: Syncing Trusted Identities
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/libsqlfs/">
+                    libsqlfs: filesystem on top of SQLite/SQLCipher
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/lildebi/">
+                    Lil&#39; Debi: Mobile Debian Installer
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/luks/">
+                    LUKS: Disk Encryption
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/onionkit/">
+                    OnionKit for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/orbot/">
+                    Orbot: Tor for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/orweb/">
+                    Orweb: Private Web Browser
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/ostel/">
+                    Ostel: Encrypted Phone Calls
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/pixelknot/">
+                    Pixelknot: Hidden Messages
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/tutorials/">
+                    Tutorials
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/weatherrepo/">
+                    Weather Repo
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/contact/"
+            >
+              Contact
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/">
+                    Contact
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/how-you-can-work-with-us/">
+                    How You Can Work With Us
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/join/">
+                    Jobs and Internships
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/chat/">
+                    Live Chatrooms
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/disclosure-researcher/">
+                    Researcher Disclosure Policy
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/disclosure/">
+                    Responsible Disclosure Policy
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  
+  <div id="mobileMenu" class="fixed inset-0 z-50 hidden xl:hidden">
+    
+    <div id="menuBackdrop" class="absolute inset-0 bg-black/30"></div>
+
+    
+    <div class="absolute inset-y-0 right-0 w-full max-w-sm bg-white shadow-xl overflow-y-auto">
+      
+      <div class="flex items-center justify-between px-4 py-4 border-b border-gray-100">
+        <a class="flex items-center" href="https://guardianproject.github.io/info/">
+          <img src="https://guardianproject.github.io/info/images/wordlogo.svg" alt="Guardian Project" class="h-10" />
+        </a>
+        <button id="menuClose" class="cursor-pointer" type="button" aria-label="Close Menu">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+
+      
+      <ul class="px-4 py-4">
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                About
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/brand/">
+                      New Branding
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/story/">
+                      Our Story
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/partners/">
+                      Partners and Funding
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/press/">
+                      Press
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/services/">
+                      Services
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/signing-keys/">
+                      Signing Keys
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/team/">
+                      Team
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Apps
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.checkey/">
+                      Checkey: info on local apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/circulo/">
+                      Círculo
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.havenapp.main/">
+                      Haven
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.locationprivacy/">
+                      Location Privacy - BETA
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.witness.sscphase1/">
+                      ObscuraCam: The Privacy Camera
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.android/">
+                      Orbot: Proxy with Tor
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.orfox/">
+                      Orfox
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.pixelknot/">
+                      PixelKnot: Hidden Messages
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.witness.proofmode/">
+                      ProofMode: Verified Visuals
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.ripple/">
+                      Ripple: respond when panicking
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/net.opendasharchive.openarchive.release/">
+                      Save
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torbrowser/">
+                      Tor Browser for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torbrowser_alpha/">
+                      Tor Browser for Android (Alpha)
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torservices/">
+                      TorServices (alpha)
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Code
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/cleaninsights/">
+                      Clean Insights: Privacy Preserving Measurement
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/iocipher/">
+                      IOCipher: Virtual Encrypted Disks
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/netcipher/">
+                      NetCipher: Secured Networking
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/onionmobiledev/">
+                      Onion Mobile Devs: Tor Integration for Mobile Apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/panickit/">
+                      PanicKit: system-wide panic responses
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/c2pa/">
+                      Proofmode and C2PA
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/sqlcipher/">
+                      SQLCipher: Encrypted Database
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/tor-android/">
+                      TorService: Tor library for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/trustedintents/">
+                      TrustedIntents: flexible trusted interactions between Android apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/wind/">
+                      Wind: Off-Grid Services for Everyday People
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            
+              <li class="border-b border-gray-50">
+                <a class="block py-3 text-primary font-medium" href="/info/blog/">Blog</a>
+              </li>
+            
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Archive
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/apps/">
+                      Archived Apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/cacheword/">
+                      CacheWord: Passphrase Caching and Management
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/camerav/">
+                      CameraV: Secure Verifiable Photo &amp; Video Camera
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/courier/">
+                      Courier: Secure News reader
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/developersquare/">
+                      Developer Square
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/ffmpeg/">
+                      FFMPEG: Media Privacy Framework
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/firefoxprivacy/">
+                      Firefox Mobile: Privacy Enhanced
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/freebird/">
+                      Freebird Workshop
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/gnupg/">
+                      GnuPG: OpenPGP Encryption
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/hardware/">
+                      Hardware Guide
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/informacam/">
+                      InformaCam: Verified Mobile Media
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/keysync/">
+                      KeySync: Syncing Trusted Identities
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/libsqlfs/">
+                      libsqlfs: filesystem on top of SQLite/SQLCipher
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/lildebi/">
+                      Lil&#39; Debi: Mobile Debian Installer
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/luks/">
+                      LUKS: Disk Encryption
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/onionkit/">
+                      OnionKit for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/orbot/">
+                      Orbot: Tor for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/orweb/">
+                      Orweb: Private Web Browser
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/ostel/">
+                      Ostel: Encrypted Phone Calls
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/pixelknot/">
+                      Pixelknot: Hidden Messages
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/tutorials/">
+                      Tutorials
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/weatherrepo/">
+                      Weather Repo
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Contact
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/">
+                      Contact
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/how-you-can-work-with-us/">
+                      How You Can Work With Us
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/join/">
+                      Jobs and Internships
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/chat/">
+                      Live Chatrooms
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/disclosure-researcher/">
+                      Researcher Disclosure Policy
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/disclosure/">
+                      Responsible Disclosure Policy
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menu = document.getElementById('mobileMenu');
+    const openBtn = document.getElementById('menuOpen');
+    const closeBtn = document.getElementById('menuClose');
+    const backdrop = document.getElementById('menuBackdrop');
+
+    function openMenu() { menu.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { menu.classList.add('hidden'); document.body.style.overflow = ''; }
+
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+    
+    document.querySelectorAll('.mobile-accordion').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var submenu = this.nextElementSibling;
+        var chevron = this.querySelector('.mobile-chevron');
+        submenu.classList.toggle('hidden');
+        chevron.classList.toggle('rotate-180');
+      });
+    });
+  });
+</script>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-8 text-center text-4xl font-bold xl:text-6xl">Security in a thumb drive: the promise and pain of hardware security modules, take one!</h2>
+      
+      
+        <p class="mb-8 text-center text-sm text-gray-500">By Hans-Christoph Steiner · March 28, 2014</p>
+      
+      
+      
+      
+        <div class="prose prose-lg mx-auto max-w-none">
+          <p><a href="https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg"><img src="https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg" alt="security in a thumb drive" width="219" height="119" class="alignleft size-full wp-image-12311" srcset="https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg 219w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-100x54.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-150x81.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-200x108.jpg 200w" sizes="(max-width: 219px) 100vw, 219px" /></a>Hardware Security Modules (aka Smartcards, chipcards, etc) provide a secure way to store and use cryptographic keys, while actually making the whole process a bit easier. In theory, one USB thumb drive like thing could manage all of the crypto keys you use in a way that makes them much harder to steal. That is the promise. The reality is that the world of Hardware Security Modules (HSMs) is a massive, scary minefield of endless technical gotchas, byzantine standards (PKCS#11!), technobabble, and incompatibilities. Before I dive too much into ranting about the days of my life wasted trying to find a clear path through this minefield, I’m going to tell you about one path I did find through to solve a key piece of the puzzle: Android and Java package signing.</p>
+<p><a href="https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg"><img src="https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg" alt="ACS ACR38-T-IBS" width="320" height="248" class="alignright size-full wp-image-12313" srcset="https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs.jpg 320w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-300x232.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-100x77.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-150x116.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/moreinfo_acr38t_ibs-200x155.jpg 200w" sizes="(max-width: 320px) 100vw, 320px" /></a>For this round, I am covering the <a href="http://www.aventra.fi/English/products_MyEID_E.html" target="_blank">Aventra MyEID PKI Card</a>. I bought a SIM-sized version to fit into an <a href="http://www.smartcardfocus.com/ilp/id~99/ACR38T_IBS/p/readers.shtml" target="_blank">ACS ACR38T-IBS-R</a> smartcard reader (it is apparently no longer made, and the <a href="http://acs.com.hk/en/products/1/acr38t-d1-plug-in-sim-sized-card-reader/" target="_blank">ACT38T-D1</a> is meant to replace it). Why such specificity you may ask? Because you have to be sure that your smartcard will work with your reader, and that your reader will have a working driver for you system, and that your smartcard will have a working PKCS#11 driver so that software can talk to the smartcard. Thankfully there is the <a href="https://github.com/OpenSC/OpenSC/wiki" target="_blank">OpenSC</a> project to cover the PKCS#11 part, it implements the PKCS#11 communications standard for many smartcards. On my Ubuntu/precise system, I had to install an extra driver, <code>libacr38u</code>, to get the ACR38T reader to show up on my system.</p>
+<p>So let’s start there and get this thing to show up! First we need some packages. The OpenSC packages are out-of-date in a lot of releases, you need version 0.13.0-4 or newer, so you have to add our PPA (Personal Package Archive) to get current versions, which include a <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742089" target="_blank">specific fix for the Aventra MyEID</a>: (fingerprint: <code>F50E ADDD 2234 F563</code>):</p>
+<pre tabindex="0"><code>sudo add-apt-repository ppa:guardianproject/ppa
+sudo apt-get update
+sudo apt-get install opensc libacr38u libacsccid1 pcsc-tools usbutils
+</code></pre><p>First thing, I use <code>lsusb</code> in the terminal to see what USB devices the Linux kernel sees, and thankfully it sees my reader:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ lsusb
+</span></span><span style="display:flex;"><span>Bus 005 Device 013: ID 072f:9000 Advanced Card Systems, Ltd ACR38 AC1038-based Smart Card Reader
+</span></span></code></pre></div><p>Next, its time to try <code>pcsc_scan</code> to see if the system can see the smartcard installed in the reader. If everything is installed and in order, then <code>pcsc_scan</code> will report this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ pcsc_scan 
+</span></span><span style="display:flex;"><span>PC/SC device scanner
+</span></span><span style="display:flex;"><span>V 1.4.18 (c) 2001-2011, Ludovic Rousseau &lt;&amp;#x6c;u&amp;#x64;ov&amp;#x69;c.&amp;#x72;o&amp;#x75;&amp;#x73;s&amp;#x65;au&amp;#x40;f&amp;#x72;&amp;#x65;e&amp;#x2e;fr&gt;
+</span></span><span style="display:flex;"><span>Compiled with PC/SC lite version: 1.7.4
+</span></span><span style="display:flex;"><span>Using reader plug&#39;n play mechanism
+</span></span><span style="display:flex;"><span>Scanning present readers...
+</span></span><span style="display:flex;"><span>0: ACS ACR38U 00 00
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span>Thu Mar 27 14:38:36 2014
+</span></span><span style="display:flex;"><span>Reader 0: ACS ACR38U 00 00
+</span></span><span style="display:flex;"><span>  Card state: Card inserted, 
+</span></span><span style="display:flex;"><span>  ATR: 3B F5 18 00 00 81 31 FE 45 4D 79 45 49 44 9A
+</span></span><span style="display:flex;"><span>[snip]
+</span></span></code></pre></div><p>If <code>pcsc_scan</code> cannot see the card, then things will not work. Try re-seating the smardcard in the reader, make sure you have all the right packages installed, and if you can see the reader in <code>lsusb</code>. If your smartcard or reader cannot be read, then <code>pcsc_scan</code> will report something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ pcsc_scan 
+</span></span><span style="display:flex;"><span>PC/SC device scanner
+</span></span><span style="display:flex;"><span>V 1.4.18 (c) 2001-2011, Ludovic Rousseau &lt;&amp;#x6c;&amp;#x75;&amp;#x64;&amp;#x6f;&amp;#x76;&amp;#x69;c.rousse&amp;#x61;&amp;#x75;&amp;#x40;&amp;#x66;&amp;#x72;&amp;#x65;e.fr&gt;
+</span></span><span style="display:flex;"><span>Compiled with PC/SC lite version: 1.7.4
+</span></span><span style="display:flex;"><span>Using reader plug&#39;n play mechanism
+</span></span><span style="display:flex;"><span>Scanning present readers...
+</span></span><span style="display:flex;"><span>Waiting for the first reader...
+</span></span></code></pre></div><p>Moving right along… now <code>pcscd</code> can see the smartcard, so we can start playing with using the OpenSC tools. These are needed to setup the card, put PINs on it for access control, and upload keys and certificates to it. The last annoying little preparation tasks are finding where <code>opensc-pkcs11.so</code> is installed and the “slot” for the signing key in the card. These will go into a config file which <code>keytool</code> and <code>jarsigner</code> need. To get this info on Debian/Ubuntu/etc, run these:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ dpkg -S opensc-pkcs11.so
+</span></span><span style="display:flex;"><span>opensc: /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+</span></span><span style="display:flex;"><span>$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt;     --list-slots
+</span></span><span style="display:flex;"><span>Available slots:
+</span></span><span style="display:flex;"><span>Slot 0 (0xffffffffffffffff): Virtual hotplug slot
+</span></span><span style="display:flex;"><span>  (empty)
+</span></span><span style="display:flex;"><span>Slot 1 (0x1): ACS ACR38U 00 00
+</span></span><span style="display:flex;"><span>  token label        : MyEID (signing)
+</span></span><span style="display:flex;"><span>  token manufacturer : Aventra Ltd.
+</span></span><span style="display:flex;"><span>  token model        : PKCS#15
+</span></span><span style="display:flex;"><span>  token flags        : rng, login required, PIN initialized, token initialized
+</span></span><span style="display:flex;"><span>  hardware version   : 0.0
+</span></span><span style="display:flex;"><span>  firmware version   : 0.0
+</span></span><span style="display:flex;"><span>  serial num         : 0106004065952228
+</span></span></code></pre></div><p>This is the info needed to put into a <code>opensc-java.cfg</code>, which <code>keytool</code> and <code>jarsigner</code> <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/p11guide.html" target="_blank">need in order to talk</a> to the Aventra HSM. The name, library, and slot fields are essential, and the description is helpful. Here is how the <code>opensc-java.cfg</code> using the above information looks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>name = OpenSC
+</span></span><span style="display:flex;"><span>description = SunPKCS11 w/ OpenSC Smart card Framework
+</span></span><span style="display:flex;"><span>library = /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+</span></span><span style="display:flex;"><span>slot = 1
+</span></span></code></pre></div><p>Now everything should be ready for initializing the HSM, generating a new key, and uploading that key to the HSM. This process generates the key and certificate, puts them into files, then uploads them to the HSM. That means you should only run this process on a trusted machine, certainly with some kind of disk encryption, and preferably on a machine that is not connected to a network, running an OS that has never been connected to the internet. A live CD is one good example, I recommend <a href="https://tails.boum.org/download/index.en.html#index4h1" target="_blank">Tails on a USB thumb drive</a> running with the <a href="https://tails.boum.org/doc/first_steps/persistence/index.en.html" target="_blank">secure persistent store</a> on it (we have been working here and there on making a TAILS-based distro specifically for managing keys, we call it <a href="https://dev.guardianproject.info/projects/psst/wiki/CleanRoom" target="_blank">CleanRoom</a>).</p>
+<div id="attachment_12321" style="width: 560px" class="wp-caption aligncenter">
+  <a href="https://guardianproject.info/wp-content/uploads/2014/03/cstick2.jpg"><img aria-describedby="caption-attachment-12321" src="https://guardianproject.info/wp-content/uploads/2014/03/cstick2-1024x805.jpg" alt="HSM plugged into a laptop" width="550" height="432" class="size-large wp-image-12321" srcset="https://guardianproject.info/wp-content/uploads/2014/03/cstick2-1024x805.jpg 1024w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-300x235.jpg 300w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-100x78.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-150x117.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-200x157.jpg 200w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-450x353.jpg 450w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-600x471.jpg 600w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2-900x707.jpg 900w, https://guardianproject.info/wp-content/uploads/2014/03/cstick2.jpg 1600w" sizes="(max-width: 550px) 100vw, 550px" /></a>
+  <p id="caption-attachment-12321" class="wp-caption-text">
+    HSM plugged into a laptop
+  </p>
+</div>
+<p>First off, the HSM needs to be initialized, then set up with a signing PIN and a “Security Officer” PIN (which means basically an “admin” or “root” PIN). The signing PIN is the one you will use for signing APKs, the “Security Officer PIN” (SO-PIN) is used for modifying the HSM setup, like uploading new keys, etc. Because there are so many steps in the process, I’ve written up scripts to run thru all of the steps. If you want to see the details, <a href="https://github.com/guardianproject/smartcard-apk-signing/blob/master/Aventra_MyEID_Setup/setup.sh" target="_blank">read</a> <a href="https://github.com/guardianproject/smartcard-apk-signing/blob/master/openssl-gen/gen.sh" target="_blank">the</a> <a href="https://github.com/guardianproject/smartcard-apk-signing/blob/master/Aventra_MyEID_Setup/finalize.sh" target="_blank">scripts</a>. The next step is to generate the key using <code>openssl</code> and upload it to the HSM. Then the HSM needs to be “finalized”, which means the PINs are activated, and keys cannot be uploaded. Don’t worry, as long as you have the SO-PIN, you can erase the HSM and re-initialize it. But be careful! Many HSMs will permanently self-destruct if you enter in the wrong PIN too many times, some will do that after only three wrong PINs! As long as you have not finalized the HSM, any PIN will work, so play around a lot with it before finalizing it. Run the init and key upload procedure a few times, try signing an APK, etc. Take note: the script will generate a random password for the secret files, then echo that password when it completes, so make sure no one can see your screen when you generate the real key. Alright, here goes!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>code $ git clone https://github.com/guardianproject/smartcard-apk-signing
+</span></span><span style="display:flex;"><span>code $ cd smartcard-apk-signing/Aventra_MyEID_Setup
+</span></span><span style="display:flex;"><span>Aventra_MyEID_Setup $ ./setup.sh 
+</span></span><span style="display:flex;"><span>Edit pkcs15-init-options-file-pins to put in the PINs you want to set:
+</span></span><span style="display:flex;"><span>Aventra_MyEID_Setup $ emacs pkcs15-init-options-file-pins
+</span></span><span style="display:flex;"><span>Aventra_MyEID_Setup $ ./setup.sh 
+</span></span><span style="display:flex;"><span>Using reader with a card: ACS ACR38U 00 00
+</span></span><span style="display:flex;"><span>Connecting to card in reader ACS ACR38U 00 00...
+</span></span><span style="display:flex;"><span>Using card driver MyEID cards with PKCS#15 applet.
+</span></span><span style="display:flex;"><span>About to erase card.
+</span></span><span style="display:flex;"><span>PIN [Security Officer PIN] required.
+</span></span><span style="display:flex;"><span>Please enter PIN [Security Officer PIN]: 
+</span></span><span style="display:flex;"><span>Using reader with a card: ACS ACR38U 00 00
+</span></span><span style="display:flex;"><span>Connecting to card in reader ACS ACR38U 00 00...
+</span></span><span style="display:flex;"><span>Using card driver MyEID cards with PKCS#15 applet.
+</span></span><span style="display:flex;"><span>About to create PKCS #15 meta structure.
+</span></span><span style="display:flex;"><span>Using reader with a card: ACS ACR38U 00 00
+</span></span><span style="display:flex;"><span>Connecting to card in reader ACS ACR38U 00 00...
+</span></span><span style="display:flex;"><span>Using card driver MyEID cards with PKCS#15 applet.
+</span></span><span style="display:flex;"><span>Found MyEID
+</span></span><span style="display:flex;"><span>About to generate key.
+</span></span><span style="display:flex;"><span>Using reader with a card: ACS ACR38U 00 00
+</span></span><span style="display:flex;"><span>Connecting to card in reader ACS ACR38U 00 00...
+</span></span><span style="display:flex;"><span>Using card driver MyEID cards with PKCS#15 applet.
+</span></span><span style="display:flex;"><span>Found MyEID
+</span></span><span style="display:flex;"><span>About to generate key.
+</span></span><span style="display:flex;"><span>next generate a key with ./gen.sh then ./finalize.sh
+</span></span><span style="display:flex;"><span>Aventra_MyEID_Setup $ cd ../openssl-gen/
+</span></span><span style="display:flex;"><span>openssl-gen $ ./gen.sh 
+</span></span><span style="display:flex;"><span>Usage: ./gen.sh &#34;CertDName&#34; [4096]
+</span></span><span style="display:flex;"><span>  for example:
+</span></span><span style="display:flex;"><span>  &#34;/C=US/ST=New York/O=Guardian Project &amp;#x54;e&amp;#x73;&amp;#x74;/&amp;#x43;N=&amp;#x74;es&amp;#x74;.&amp;#x67;&amp;#x75;a&amp;#x72;di&amp;#x61;np&amp;#x72;o&amp;#x6a;&amp;#x65;c&amp;#x74;&amp;#x2e;i&amp;#x6e;fo&amp;#x2f;em&amp;#x61;i&amp;#x6c;&amp;#x41;d&amp;#x64;re&amp;#x73;s=&amp;#x74;e&amp;#x73;&amp;#x74;@&amp;#x67;&amp;#x75;a&amp;#x72;di&amp;#x61;np&amp;#x72;o&amp;#x6a;&amp;#x65;c&amp;#x74;.i&amp;#x6e;fo&#34;
+</span></span><span style="display:flex;"><span>openssl-gen $ ./gen.sh &#34;/C=US/ST=New York/O=Guardian Project Te&amp;#x73;t&amp;#x2f;C&amp;#x4e;=&amp;#x74;e&amp;#x73;t&amp;#x2e;g&amp;#x75;ardi&amp;#x61;n&amp;#x70;r&amp;#x6f;j&amp;#x65;c&amp;#x74;.&amp;#x69;n&amp;#x66;o/em&amp;#x61;i&amp;#x6c;A&amp;#x64;d&amp;#x72;e&amp;#x73;s&amp;#x3d;t&amp;#x65;st&amp;#x40;g&amp;#x75;a&amp;#x72;d&amp;#x69;a&amp;#x6e;p&amp;#x72;o&amp;#x6a;e&amp;#x63;t.&amp;#x69;n&amp;#x66;o&#34;
+</span></span><span style="display:flex;"><span>Generating key, be patient...
+</span></span><span style="display:flex;"><span>2048 semi-random bytes loaded
+</span></span><span style="display:flex;"><span>Generating RSA private key, 2048 bit long modulus
+</span></span><span style="display:flex;"><span>.......................................+++
+</span></span><span style="display:flex;"><span>..................................................+++
+</span></span><span style="display:flex;"><span>e is 65537 (0x10001)
+</span></span><span style="display:flex;"><span>Signature ok
+</span></span><span style="display:flex;"><span>subject=/C=US/ST=New York/O=Guardian Project Test/&amp;#x43;&amp;#x4e;&amp;#x3d;&amp;#x74;&amp;#x65;st.gu&amp;#x61;&amp;#x72;&amp;#x64;&amp;#x69;&amp;#x61;nproj&amp;#x65;&amp;#x63;&amp;#x74;&amp;#x2e;&amp;#x69;nfo/e&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x41;ddres&amp;#x73;&amp;#x3d;&amp;#x74;&amp;#x65;&amp;#x73;t@gua&amp;#x72;&amp;#x64;&amp;#x69;&amp;#x61;&amp;#x6e;proje&amp;#x63;&amp;#x74;&amp;#x2e;&amp;#x69;&amp;#x6e;fo
+</span></span><span style="display:flex;"><span>Getting Private key
+</span></span><span style="display:flex;"><span>writing RSA key
+</span></span><span style="display:flex;"><span>Your HSM will prompt you for &#39;Security Officer&#39; aka admin PIN, wait for it!
+</span></span><span style="display:flex;"><span>Enter destination keystore password:  
+</span></span><span style="display:flex;"><span>Entry for alias 1 successfully imported.
+</span></span><span style="display:flex;"><span>Import command completed:  1 entries successfully imported, 0 entries failed or cancelled
+</span></span><span style="display:flex;"><span>[Storing keystore]
+</span></span><span style="display:flex;"><span>Key fingerprints for reference:
+</span></span><span style="display:flex;"><span>MD5 Fingerprint=90:24:68:F3:F3:22:7D:13:8C:81:11:C3:A4:B6:9A:2F
+</span></span><span style="display:flex;"><span>SHA1 Fingerprint=3D:9D:01:C9:28:BD:1F:F4:10:80:FC:02:95:51:39:F4:7D:E7:A9:B1
+</span></span><span style="display:flex;"><span>SHA256 Fingerprint=C6:3A:ED:1A:C7:9D:37:C7:B0:47:44:72:AC:6E:FA:6C:3A:B2:B1:1A:76:7A:4F:42:CF:36:0F:A5:49:6E:3C:50
+</span></span><span style="display:flex;"><span>The public files are: certificate.pem publickey.pem request.pem
+</span></span><span style="display:flex;"><span>The secret files are: secretkey.pem certificate.p12 certificate.jkr
+</span></span><span style="display:flex;"><span>The passphrase for the secret files is: fTQ*he-[:y+69RS+W&amp;+!*0O5i%n
+</span></span><span style="display:flex;"><span>openssl-gen $ cd ../Aventra_MyEID_Setup/
+</span></span><span style="display:flex;"><span>Aventra_MyEID_Setup $ ./finalize.sh 
+</span></span><span style="display:flex;"><span>Using reader with a card: ACS ACR38U 00 00
+</span></span><span style="display:flex;"><span>Connecting to card in reader ACS ACR38U 00 00...
+</span></span><span style="display:flex;"><span>Using card driver MyEID cards with PKCS#15 applet.
+</span></span><span style="display:flex;"><span>Found MyEID
+</span></span><span style="display:flex;"><span>About to delete object(s).
+</span></span><span style="display:flex;"><span>Your HSM is ready for use! Put the secret key files someplace encrypted and safe!
+</span></span></code></pre></div><p>Now your HSM should be ready for use for signing. You can try it out with <code>keytool</code> to see what is on it, using the signing PIN not the Security Officer PIN:</p>
+<pre tabindex="0"><code>smartcard-apk-signing $ /usr/bin/keytool -v \
+&gt;     -providerClass sun.security.pkcs11.SunPKCS11 \
+&gt;     -providerArg opensc-java.cfg \
+&gt;     -providerName SunPKCS11-OpenSC -keystore NONE -storetype PKCS11 \
+&gt;     -list
+Enter keystore password:  
+
+Keystore type: PKCS11
+Keystore provider: SunPKCS11-OpenSC
+
+Your keystore contains 1 entry
+
+Alias name: 1
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: &amp;#x45;&amp;#x4d;&amp;#x41;&amp;#x49;&amp;#x4c;&amp;#x41;&amp;#x44;&amp;#x44;RESS=test@g&amp;#x75;&amp;#x61;&amp;#x72;&amp;#x64;&amp;#x69;&amp;#x61;&amp;#x6e;&amp;#x70;&amp;#x72;oject.info, CN=test.guardianproject.info, O=Guardian Project Test, ST=New York, C=US
+Issuer: E&amp;#x4d;A&amp;#x49;LA&amp;#x44;D&amp;#x52;ES&amp;#x53;=&amp;#x74;e&amp;#x73;&amp;#x74;@&amp;#x67;u&amp;#x61;rd&amp;#x69;a&amp;#x6e;pr&amp;#x6f;j&amp;#x65;ct&amp;#x2e;i&amp;#x6e;f&amp;#x6f;, CN=test.guardianproject.info, O=Guardian Project Test, ST=New York, C=US
+Serial number: aa6887be1ec84bde
+Valid from: Fri Mar 28 16:41:26 EDT 2014 until: Mon Aug 12 16:41:26 EDT 2041
+Certificate fingerprints:
+	 MD5:  90:24:68:F3:F3:22:7D:13:8C:81:11:C3:A4:B6:9A:2F
+	 SHA1: 3D:9D:01:C9:28:BD:1F:F4:10:80:FC:02:95:51:39:F4:7D:E7:A9:B1
+	 SHA256: C6:3A:ED:1A:C7:9D:37:C7:B0:47:44:72:AC:6E:FA:6C:3A:B2:B1:1A:76:7A:4F:42:CF:36:0F:A5:49:6E:3C:50
+	 Signature algorithm name: SHA1withRSA
+	 Version: 1
+
+
+*******************************************
+*******************************************
+</code></pre><p>And let’s try signing an actual APK using the <a href="https://developer.android.com/tools/publishing/app-signing.html" target="_blank">arguments that Google recommends</a>, again, using the signing PIN:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>smartcard-apk-signing $ /usr/bin/jarsigner -verbose \
+</span></span><span style="display:flex;"><span>&gt;     -providerClass sun.security.pkcs11.SunPKCS11 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt;     -providerArg opensc-java.cfg -providerName SunPKCS11-OpenSC <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt;     -keystore NONE -storetype PKCS11 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt;     -sigalg SHA1withRSA -digestalg SHA1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>&gt;     bin/LilDebi-release-unsigned.apk <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Enter Passphrase for keystore: 
+</span></span><span style="display:flex;"><span>   adding: META-INF/1.SF
+</span></span><span style="display:flex;"><span>   adding: META-INF/1.RSA
+</span></span><span style="display:flex;"><span>  signing: assets/busybox
+</span></span><span style="display:flex;"><span>  signing: assets/complete-debian-setup.sh
+</span></span><span style="display:flex;"><span>  signing: assets/configure-downloaded-image.sh
+</span></span><span style="display:flex;"><span>  signing: assets/create-debian-setup.sh
+</span></span><span style="display:flex;"><span>  signing: assets/debian-archive-keyring.gpg
+</span></span><span style="display:flex;"><span>  signing: assets/debootstrap.tar.bz2
+</span></span><span style="display:flex;"><span>  signing: assets/e2fsck.static
+</span></span><span style="display:flex;"><span>  signing: assets/gpgv
+</span></span><span style="display:flex;"><span>  signing: assets/lildebi-common
+</span></span><span style="display:flex;"><span>[snip]
+</span></span></code></pre></div><p>Now we have a working, but elaborate, process for setting up a Hardware Security Module for signing APKs. Once the HSM is setup, using it should be quite straightforward. Next steps are to work out as many kinks in this process as possible so this will be the default way to sign APKs. That means things like figuring out how <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742831" target="_blank">Java can be pre-configured to use OpenSC in the Debian package</a>, as well as including all <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=742089" target="_blank">relevant fixes</a> in the <code>pcscd</code> and <code>opensc</code> packages. Then the ultimate is to add support for using HSMs in Android’s generated build files like the <code>build.xml</code> for <code>ant</code> that is generated by <code>android update project</code>. Then people could just plug in the HSM and run <code>ant release</code> and have a signed APK!</p>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-primary text-white py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-12 grid gap-12 xl:grid-cols-12">
+      
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center gap-3" href="https://guardianproject.github.io/info/">
+          <img src="https://guardianproject.github.io/info/images/logo.svg" alt="" class="size-10 brightness-0 invert" />
+          <span class="text-xl font-semibold uppercase xl:text-2xl">Guardian Project</span>
+        </a>
+        <p class="text-center text-sm text-white/80 xl:text-start">People, Apps and Code You Can Trust</p>
+        
+        <ul class="mt-2 flex gap-4">
+          
+            <li>
+              <a href="https://social.librem.one/@guardianproject" rel="me" aria-label="Mastodon" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765 2.79.765.504 1.783.504 5.253c-.005.76-.01 1.666.013 2.63.073 3.22.55 6.395 3.328 7.187 1.28.364 2.38.44 3.268.388 1.612-.095 2.516-.612 2.516-.612l-.053-1.154s-1.15.362-2.443.318c-1.28-.044-2.633-.138-2.84-1.716a3 3 0 0 1-.026-.442s1.257.308 2.853.381c.975.045 1.888-.057 2.813-.169m1.256-2.26v-4.15c0-.85-.217-1.523-.652-2.023-.45-.5-1.038-.755-1.77-.755-1.846 0-2.333 1.036-2.333 1.036V8.56H7.903V4.073S7.416 3.037 5.57 3.037c-.732 0-1.32.256-1.77.755-.434.5-.65 1.174-.65 2.024v4.15h1.96V6.067s0-.892.644-1.227c.417-.216.955-.24 1.225.14.307.432.302 1.058.302 1.058v3.928h1.96V6.038s-.005-.626.302-1.058c.27-.38.808-.356 1.225-.14.644.335.644 1.227.644 1.227v3.899z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://github.com/guardianproject" aria-label="GitHub" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://gitlab.com/guardianproject" aria-label="GitLab" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="m15.734 6.1-.022-.058L13.534.358a.57.57 0 0 0-.563-.356.6.6 0 0 0-.328.122.6.6 0 0 0-.193.294l-1.47 4.499H5.025l-1.47-4.5A.572.572 0 0 0 2.47.001a.57.57 0 0 0-.563.356L.289 6.04l-.022.057A4.044 4.044 0 0 0 1.61 10.77l.007.006.02.014 3.318 2.485 1.64 1.242 1 .755a.67.67 0 0 0 .814 0l1-.755 1.64-1.242 3.338-2.5.009-.006a4.05 4.05 0 0 0 1.34-4.668z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" aria-label="Matrix" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.488.32.45.214.773.553.964 1.02.303-.423.7-.778 1.2-1.06.494-.282 1.034-.421 1.612-.421.44 0 .842.06 1.215.18.37.12.69.316.957.574.27.258.482.582.622.974.14.39.21.863.21 1.414v5.862h-2.02V11.09c0-.313-.02-.616-.063-.906a1.74 1.74 0 0 0-.226-.691 1.16 1.16 0 0 0-.456-.435c-.194-.1-.452-.15-.764-.15-.31 0-.566.05-.767.148-.2.1-.36.24-.477.42a1.76 1.76 0 0 0-.25.645 3.94 3.94 0 0 0-.07.778v5.1h-2.02v-5.37c0-.262-.01-.522-.03-.78a2.07 2.07 0 0 0-.168-.68 1.12 1.12 0 0 0-.418-.47c-.186-.12-.448-.18-.788-.18-.108 0-.25.024-.424.07a1.37 1.37 0 0 0-.48.233c-.153.112-.29.27-.41.48-.12.208-.18.475-.18.79v5.91h-2.02V7.81zm16.046 15.69V.55H21.72V0H24v24h-2.28v-.55z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://liberapay.com/GuardianProject" aria-label="Liberapay" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 80 80"><path d="M26.3 77.6c-5.4 0-9.3-1.1-11.8-3.4-2.5-2.3-3.3-5.7-2.4-10.2l11-52.5c.2-.8.3-1.6.3-2.4 0-2-.9-3.1-2.6-3.1-1.7 0-3.2.8-4.5 2.4l-2-2.4C18 2 22.4 0 27.3 0c3.5 0 6.1.8 7.7 2.5 1.6 1.6 2.1 4 1.4 7.1l-4 19.2h.2c3.7-4.5 8.2-6.8 13.5-6.8 4.8 0 8.2 1.6 10.2 4.7 2 3.1 2.3 7.5.7 13-1.3 4.7-3.2 8.9-5.7 12.7a33 33 0 0 1-9 9.5c-3.5 2.5-7.3 3.8-11.3 3.8-2.3 0-4.1-.5-5.5-1.6-1.4-1.1-2.1-2.6-2.1-4.5h-.3l-2.3 10.8c-.5 2.5 0 4.3 1.5 5.3 1.5 1 4.2 1.5 7.9 1.5zm9.7-20.6c2.2 0 4.3-1.1 6.2-3.3 1.9-2.2 3.5-5 4.7-8.5 1.2-3.5 1.4-6.3.7-8.5-.7-2.2-2.5-3.3-5.3-3.3-2.2 0-4.2 1.1-6.2 3.2-1.9 2.2-3.4 5-4.5 8.6-1.1 3.5-1.3 6.3-.6 8.5.8 2.2 2.6 3.3 5 3.3z"/></svg>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-2">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Navigate</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/">About</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/apps/">Apps</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/code/">Code</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/blog/">Blog</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/contact/">Contact</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-3">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Projects</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://orbot.app">Orbot</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://proofmode.org">Proofmode</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://letsconvene.im">Convene</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://likebutter.app">Butter Box</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://cleaninsights.org">Clean Insights</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-3">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Get In Touch</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="mailto:support@guardianproject.info">support@guardianproject.info</a>
+          </li>
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="https://matrix.to/#/#guardianproject:matrix.org">Matrix Chat</a>
+          </li>
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="/contact/">Contact Form</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/20 pt-8 text-center text-sm text-white/60">
+      
+        <p>© Guardian Project, 2009-2026. Licensed under CC-BY.</p>
+      
+      <p class="mt-2">People, Apps and Code You Can Trust &mdash; Since 2009</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

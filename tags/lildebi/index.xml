@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lildebi on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/lildebi/</link>
+    <description>Recent content in Lildebi on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/lildebi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Complete, reproducible app distribution achieved!</title>
+      <link>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</link>
+      <pubDate>Wed, 11 Feb 2015 14:51:22 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/02/11/complete-reproducible-app-distribution-achieved/</guid>
+      <description>&lt;p&gt;With &lt;a href=&#34;https://f-droid.org&#34; target=&#34;_blank&#34;&gt;F-Droid&lt;/a&gt;, we have been working towards getting a complete app distribution channel that is able to reproducibly build each Android app from source. while this may sound like a mundane detail, it does provide lots of tangible benefits. First, it means that anyone can verify that the app that they are using is 100% built from the source code, with nothing else added. That verifies that the app is indeed 100% free, open source software.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

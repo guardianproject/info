@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webkit on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/webkit/</link>
+    <description>Recent content in Webkit on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/webkit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NetCipher update: global, SOCKS, and TLSv1.2</title>
+      <link>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/netcipher&#34;&gt;NetCipher&lt;/a&gt; has been relatively quiet in recent years, because it kept&#xA;on working, doing it was doing. Now, we have had some recent&#xA;discoveries about the guts of Android that mean NetCipher is a lot easier&#xA;to use on recent Android versions.  On top of that, TLSv1.2 now reigns&#xA;supreme and is basically everywhere, so it is time to turn TLSv1.0 and&#xA;TLSv1.1 entirely off.&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-single-method-to-enable-proxying-for-the-whole-app&#34;&gt;A single method to enable proxying for the whole app&lt;/h2&gt;&#xA;&lt;p&gt;As of Android 8.0 (26 aka Oreo), it is now possible to set a&#xA;&lt;code&gt;URLStreamHandlerFactory&lt;/code&gt;, which creates &lt;code&gt;URLConnection&lt;/code&gt; instances&#xA;with custom configurations.  If an app is using the built-in&#xA;&lt;code&gt;HttpURLConnection&lt;/code&gt; API for its networking, it is now possible to&#xA;enable global proxying with a single method call when the app starts:&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useGlobalProxy--&#34;&gt;&lt;code&gt;NetCipher.useGlobalProxy()&lt;/code&gt;&lt;/a&gt;.&#xA;Then the actual proxy configuration can be set dynamically, using&#xA;things like&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useTor--&#34;&gt;&lt;code&gt;NetCipher.useTor()&lt;/code&gt;&lt;/a&gt;&#xA;or&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#clearProxy--&#34;&gt;&lt;code&gt;NetCipher.clearProxy()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

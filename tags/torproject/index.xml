@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Torproject on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/torproject/</link>
+    <description>Recent content in Torproject on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/torproject/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Achieve Onion Layers of Security with the Triad of Apple-tizing Apps!</title>
+      <link>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Our summer intern Alfred just graduated high-school and is preparing to attend a major university to focus on a technical degree. He has a personal interest in privacy and security, and is working with us on a variety of projects this summer as part of a broad, crash-course in all things Guardian Project!&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Last week, I worked with three different apps for the iPhone that, when they work together, allow for a secure and private mobile internet experience. Since they all build on the Tor Network, they also offer an untraceable way to share and download media. My task was to test the user experience in these apps and see how they interact with each other and to make sure that they’re working in the intended ways following a test plan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving Usability of Tor on Smartphones in Latin America</title>
+      <link>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</guid>
+      <description>&lt;p&gt;Between 2022 and 2023 Guardian Project, with support from &lt;a href=&#34;https://okthanks.com&#34;&gt;Okthanks&lt;/a&gt; and the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor Project&lt;/a&gt;, organized and participated in a total of 12 workshops in Ecuador, Mexico and Brazil with the participation of 161 people. The workshops focused both on the broad topic of “Tor for Smartphones”, while also taking deeper dives into specific topics like virtual private networks VPNs) and anonymous web browsing. Through a variety of methods, we gathered feedback from the participants in each of those sessions. We also ran detailed individual tests with volunteers to collect insights related to new features and usability improvements on specific apps.&#xA;Our top takeaways from this process were, as follows:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security Awareness Party</title>
+      <link>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</link>
+      <pubDate>Fri, 26 Apr 2013 09:05:36 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/04/26/security-awareness-party/</guid>
+      <description>&lt;p&gt;In the security world, there’s a pesky belief that a tool can either be secure or easy to use, but not both. Some experts also argue that training people to be safe online is too hard and doesn’t accomplish much (see Bruce Schneier’s recent post &lt;a href=&#34;http://www.schneier.com/blog/archives/2013/03/security_awaren_1.html&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Security Awareness Training&lt;/em&gt;&lt;/a&gt;). Without a thoughtful approach, that’s usually how it plays out. But it doesn’t have to be that way! We’re committed to making online security fun to learn and fun to use, and we’re launching a new series of interactive tutorials to make it happen. Consider this post an invitation to our festive Security Awareness Party. &lt;a href=&#34;https://guardianproject.info/home/how-you-can-work-with-us/&#34; target=&#34;_blank&#34;&gt;Beer is encouraged&lt;/a&gt;, especially if it comes from &lt;a title=&#34;Android-powered beer kegerator&#34; href=&#34;https://kegbot.org/&#34; target=&#34;_blank&#34;&gt;an Android-powered kegbot&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beem&#43;Orbot: Mobile Instant Messaging over Tor</title>
+      <link>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</link>
+      <pubDate>Mon, 10 May 2010 16:32:01 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</guid>
+      <description>&lt;p&gt;It is no secret that we are big fans of open-source here at Guardian. In fact, it is &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;what we are made of&lt;/a&gt;. Guardian is not just a single app or just one phone, it is a vision for a more private and secure future for personal mobile telecommunications. As part of our work, we are constantly on the lookout other similar, like-minded projects that are developing open-source communications tools for the Android OS which we can make to work with our underlying security platform.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

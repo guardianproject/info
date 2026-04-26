@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design Pattern on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/design-pattern/</link>
+    <description>Recent content in Design Pattern on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PanicKit: making your whole phone respond to a panic button</title>
+      <link>https://guardianproject.github.io/info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/</link>
+      <pubDate>Tue, 12 Jan 2016 08:59:41 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2016/01/12/panickit-making-your-whole-phone-respond-to-a-panic-button/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png&#34; rel=&#34;attachment wp-att-13221&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png&#34; alt=&#34;round hazard button&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-13221&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard-200x200.png 200w, https://guardianproject.info/wp-content/uploads/2016/01/round-button-hazard.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Our mobile devices do so many things for us, making it easy to communicate with people in all manners while giving us access to all sorts of information wherever we are. But in times of anxiety and panic, it is difficult to quickly use them. Will you be too shaky to type in your PIN or lock pattern? Will you have enough time to find your trusted contacts and send them a message? On top of that, our mobile devices carry massive amounts of private information in them: banking details, pictures, all of our messages and call logs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

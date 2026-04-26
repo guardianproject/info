@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nostr on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/nostr/</link>
+    <description>Recent content in Nostr on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/nostr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DiVine Supports Proofmode</title>
+      <link>https://guardianproject.github.io/info/2025/12/01/divine-supports-proofmode/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/12/01/divine-supports-proofmode/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Reposted from &lt;a href=&#34;https://proofmode.org/blog/divine-proofmode&#34;&gt;proofmode.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;If you haven&amp;rsquo;t heard the news that Vine is back, relaunched as DiVine by Evan &amp;ldquo;Rabble&amp;rdquo; Henshaw-Plath, with support from Jack Dorsey. As part of the launch news, they have made it clear that AI Creators are not welcome, and that they want to &amp;ldquo;raise the bar for authenticity&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;To build this citadel of authenticity, DiVine is relying on Proofmode&amp;rsquo;s free and open-source technology. You can learn more how they have implemented it in the DiVine app and service the DiVine Proofmode page, or read on below.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

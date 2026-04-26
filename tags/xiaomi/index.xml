@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaomi on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/xiaomi/</link>
+    <description>Recent content in Xiaomi on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/xiaomi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a trustworthy app store that respects privacy</title>
+      <link>https://guardianproject.github.io/info/2015/06/02/building-a-trustworthy-app-store-that-respects-privacy/</link>
+      <pubDate>Tue, 02 Jun 2015 16:38:03 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/06/02/building-a-trustworthy-app-store-that-respects-privacy/</guid>
+      <description>&lt;p&gt;One core piece of our approach is thinking about very high risk situations, like Ai Weiwei or Edward Snowden, then making the tools for operating under that pressure as easy to use as possible. That means that we might occasionally come across as a little paranoid. It is important to dive into the depths of what might be possible. That is an essential step in evaluating what the risks and defenses are, and how to prioritize them. Making usable software is not just making things easy, but rather making tools for real world situations that are a simple as possible.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenSSL on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/openssl/</link>
+    <description>Recent content in OpenSSL on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/openssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using TLS ECH from Python</title>
+      <link>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</guid>
+      <description>&lt;p&gt;At first, the idea of encrypting more of the metadata found inside the initial packet (the &amp;ldquo;ClientHello&amp;rdquo;) of a TLS&#xA;connection may seem simple and obvious, but there are of course reasons that this wasn&amp;rsquo;t done right from the start.&#xA;In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields,&#xA;and present a working code example using a fork of CPython built with DEfO project&amp;rsquo;s OpenSSL fork to connect to&#xA;ECH-enabled HTTPS servers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quick set up guide for Encrypted Client Hello (ECH)</title>
+      <link>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</guid>
+      <description>&lt;p&gt;The Encrypted Client Hello (ECH) mechanism &lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-tls-esni&#34;&gt;draft-spec&lt;/a&gt; is a way to plug a few privacy-holes that remain in the Transport Layer Security (TLS) protocol that&amp;rsquo;s used as the security layer for the web. OpenSSL is a widely used library that provides an implementation of the TLS protocol. The &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO project&lt;/a&gt; has developed an implementation of ECH for OpenSSL, and proof-of-concept implementations of various clients and servers that use OpenSSL, and other TLS libraries, as a demonstration and for interoperability testing. DEfO is funded by the Open Technology Fund (OTF).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IETF116 Conference Report: Tuesday March 28, 2023</title>
+      <link>https://guardianproject.github.io/info/2023/03/29/ietf116-conference-report-tuesday-march-28-2023/</link>
+      <pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/03/29/ietf116-conference-report-tuesday-march-28-2023/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Day Two of the &lt;a href=&#34;https://www.ietf.org/how/meetings/116/&#34;&gt;116th IETF meeting&lt;/a&gt; in Yokohama Japan.  For the rundown on Day One, see my &lt;a href=&#34;https://guardianproject.info/2023/03/28/ietf116-conference-report-monday-march-28-2023/&#34;&gt;daily report&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://datatracker.ietf.org/wg/ohai/about/&#34;&gt;OHAI Working Group&lt;/a&gt; has submitted the core draft of &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ietf-ohai-ohttp/&#34;&gt;Oblivious HTTP Application Intermediation&lt;/a&gt; to the RFC Editor for editorial finalization and publication. OHAI is designed to support &lt;em&gt;transational&lt;/em&gt; uses of the HTTP protocol that seek IP address privacy (by means of a relay pair, one associated with the client and one associated with the target resource). The target resource is, thus, said to be &lt;em&gt;oblivious&lt;/em&gt; to the requester&amp;rsquo;s IP address.  While the initially-imagined use case for OHAI was access to the DNS service (with some in the IETF feeling DNS-over-HTTP did not go far enough to protect user privacy), the dominant  use case imagined today is &lt;em&gt;telemetry&lt;/em&gt; - monitoring vendor-, application- or operating system-defined usage parameters on centralized systems.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IETF: Year End Review 2021</title>
+      <link>https://guardianproject.github.io/info/2021/12/23/ietf-year-end-review-2021/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/12/23/ietf-year-end-review-2021/</guid>
+      <description>&lt;p&gt;In terms of potential impact on Internet Freedom, it’s been a banner year at the Internet Engineering Task Force &lt;a href=&#34;https://ietf.org/&#34;&gt;(IETF)&lt;/a&gt;.  &lt;a href=&#34;https://datatracker.ietf.org/doc/rfc9000/&#34;&gt;QUIC&lt;/a&gt; (featuring the improved privacy and security of &lt;a href=&#34;https://datatracker.ietf.org/doc/html/rfc8446&#34;&gt;TLS1.3&lt;/a&gt;) reached Proposed Standard status, with implementations and rollouts from every major vendor on both server and client, and with multiple &lt;a href=&#34;https://en.wikipedia.org/wiki/QUIC#Source_Code&#34;&gt;open source toolkit options&lt;/a&gt; for developers.  &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ietf-tls-esni/&#34;&gt;Encrypted Client Hello&lt;/a&gt; for TLS1.3 gained traction via the &lt;a href=&#34;https://defo.ie&#34;&gt;DEfO project&lt;/a&gt; that, through pull requests, makes a huge privacy enhancement easily available to the major security library (OpenSSL) underpinning the Internet’s most important service engines (nginx, apache, lighttpd, haproxy on the server, even curl on the client).  IP address privacy got new attention with a working group formed around Oblivious HTTP Application Intermediation (&lt;a href=&#34;https://datatracker.ietf.org/doc/charter-ietf-ohai/&#34;&gt;OHAI&lt;/a&gt;), as did Privacy-Preserving Measurement (&lt;a href=&#34;https://datatracker.ietf.org/doc/bofreq-privacy-preserving-measurement/&#34;&gt;PPM&lt;/a&gt;) which seeks to drastically reduce the amount of personal information swept up in the pervasive monitoring of all public Internet activity.  Meanwhile, the Internet Research Task Force (&lt;a href=&#34;https://irtf.org&#34;&gt;IRTF&lt;/a&gt;) has focused on developing new cryptographic techniques to serve these rapidly-evolving privacy-focused activities. IRTF also fosters work on truly-global Internet access and, in a sense, serves as the IETF’s conscience through it’s work on the &lt;a href=&#34;https://datatracker.ietf.org/rg/hrpc/about/&#34;&gt;human rights implications of protocol design&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Implementing TLS Encrypted Client Hello</title>
+      <link>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</guid>
+      <description>&lt;p&gt;As part of the &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project, we have been working on&#xA;accelerating the development &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html&#34;&gt;Encrypted Client Hello&#xA;(ECH)&lt;/a&gt; as&#xA;standardized by the IETF.  ECH is the next step in improving Transport Layer&#xA;Security (TLS).  TLS is one of the basic building blocks of the internet, it is&#xA;what puts the S in HTTPS.  The ECH standard is nearing completion.  That is&#xA;exciting because ECH can encrypt the last plaintext TLS metadata that it is&#xA;possible to encrypt.  So ECH will bring some real improvements in privacy and&#xA;censorship resistance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security in a thumb drive: the promise and pain of hardware security modules, take one!</title>
+      <link>https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/</link>
+      <pubDate>Fri, 28 Mar 2014 16:54:39 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg&#34; alt=&#34;security in a thumb drive&#34; width=&#34;219&#34; height=&#34;119&#34; class=&#34;alignleft size-full wp-image-12311&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg 219w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-100x54.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-150x81.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-200x108.jpg 200w&#34; sizes=&#34;(max-width: 219px) 100vw, 219px&#34; /&gt;&lt;/a&gt;Hardware Security Modules (aka Smartcards, chipcards, etc) provide a secure way to store and use cryptographic keys, while actually making the whole process a bit easier. In theory, one USB thumb drive like thing could manage all of the crypto keys you use in a way that makes them much harder to steal. That is the promise. The reality is that the world of Hardware Security Modules (HSMs) is a massive, scary minefield of endless technical gotchas, byzantine standards (PKCS#11!), technobabble, and incompatibilities. Before I dive too much into ranting about the days of my life wasted trying to find a clear path through this minefield, I’m going to tell you about one path I did find through to solve a key piece of the puzzle: Android and Java package signing.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

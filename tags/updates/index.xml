@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Updates on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/updates/</link>
+    <description>Recent content in Updates on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/updates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trusted Update Channels vs. Scratching Your Itch</title>
+      <link>https://guardianproject.github.io/info/2019/12/02/trusted-update-channels-vs.-scratching-your-itch/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/12/02/trusted-update-channels-vs.-scratching-your-itch/</guid>
+      <description>&lt;p&gt;One of the great things about free software is that people can easily take a functional program or library and customize it as they see fit.  Anyone can come along, submit bug fixes or improvements, and they can be easily shared across many people, projects, and organizations.  With distribution systems like Python&amp;rsquo;s &lt;a href=&#34;https://pypi.python.org&#34;&gt;pypi&lt;/a&gt;, there is an update channel that the trusted maintainers can publish fixes so consumers of the library can easily get updates.  When talking about update channels and code, it is unavoidable to also talk about people and trust.  One key piece is the trust relationship between the consumer and the maintainer.  The ideal software distribution system would be a blind, trustworthy pipe between the software maintainers and each end user.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Use Onions/HTTPS for software updates</title>
+      <link>https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/</link>
+      <pubDate>Wed, 23 Jan 2019 06:35:40 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/</guid>
+      <description>&lt;p&gt;There is a new &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2019/msg00010.html&#34; target=&#34;_blank&#34;&gt;vulnerability in Debian’s apt&lt;/a&gt; that allows anything that can Man-in-the-Middle (MITM) your traffic to get root on your Debian/Ubuntu/etc boxes. Using encrypted connections for downloading updates, like HTTPS or Tor Onion Services, reduces this vulnerability to requiring root on the mirror server in order to exploit it. That is a drastic reduction in exposure. We have been pushing for this &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;since 2014&lt;/a&gt;, and &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Debian&lt;/a&gt;, &lt;a href=&#34;https://ftp.fau.de&#34; target=&#34;_blank&#34;&gt;mirror&lt;/a&gt; &lt;a href=&#34;https://mirrors.kernel.org&#34; target=&#34;_blank&#34;&gt;operators&lt;/a&gt;, and others in the ecosystem have taken some big steps towards making this the standard. This should finally put to rest the idea that plain &lt;a href=&#34;https://whydoesaptnotusehttps.com/&#34; target=&#34;_blank&#34;&gt;HTTP is enough&lt;/a&gt; for software updates with signed metadata.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

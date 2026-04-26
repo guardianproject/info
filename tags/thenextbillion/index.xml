@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thenextbillion on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/thenextbillion/</link>
+    <description>Recent content in Thenextbillion on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/thenextbillion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Orbot: Over 20 Million Served, Ready for the Next Billion</title>
+      <link>https://guardianproject.github.io/info/2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/</link>
+      <pubDate>Wed, 16 May 2018 07:42:38 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/</guid>
+      <description>&lt;p&gt;We recently published the &lt;a href=&#34;https://github.com/n8fr8/orbot/releases/tag/16.0.2-RC-1&#34;&gt;latest release of Orbot (16.0.2!)&lt;/a&gt;, and as usual, we make it available via &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&amp;amp;hl=en_US&#34;&gt;Google Play&lt;/a&gt;, as well &lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;F-Droid&lt;/a&gt;, and through &lt;a href=&#34;https://guardianproject.info/releases/&#34;&gt;direct download&lt;/a&gt; on our website. Whether we like it or not, Google keeps tracks of things like total installs and active installs (i.e. not uninstalled), and reports on that for us through their dashboard. While publishing this release, we noticed a milestone that made us a bit proud… so pardon this humblebrag.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

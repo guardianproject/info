@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conscrypt on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/conscrypt/</link>
+    <description>Recent content in Conscrypt on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/conscrypt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Implementing TLS Encrypted Client Hello</title>
+      <link>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</guid>
+      <description>&lt;p&gt;As part of the &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project, we have been working on&#xA;accelerating the development &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html&#34;&gt;Encrypted Client Hello&#xA;(ECH)&lt;/a&gt; as&#xA;standardized by the IETF.  ECH is the next step in improving Transport Layer&#xA;Security (TLS).  TLS is one of the basic building blocks of the internet, it is&#xA;what puts the S in HTTPS.  The ECH standard is nearing completion.  That is&#xA;exciting because ECH can encrypt the last plaintext TLS metadata that it is&#xA;possible to encrypt.  So ECH will bring some real improvements in privacy and&#xA;censorship resistance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NetCipher &#43; Conscrypt for the best possible TLS</title>
+      <link>https://guardianproject.github.io/info/2019/12/17/netcipher--conscrypt-for-the-best-possible-tls/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/12/17/netcipher--conscrypt-for-the-best-possible-tls/</guid>
+      <description>&lt;p&gt;A new NetCipher library has recently been merged:&#xA;&lt;a href=&#34;https://gitlab.com/guardianproject/NetCipher/merge_requests/86&#34;&gt;&lt;em&gt;netcipher-conscrypt&lt;/em&gt;&lt;/a&gt;.&#xA;In the same vein as the other NetCipher libraries,&#xA;&lt;em&gt;netcipher-conscrypt&lt;/em&gt; wraps the Google&#xA;&lt;a href=&#34;https://source.android.com/devices/architecture/modular-system/conscrypt&#34;&gt;Conscrypt&lt;/a&gt;&#xA;library, which provides the latest&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34;&gt;TLS&lt;/a&gt; for any&#xA;app that includes it.  &lt;em&gt;netcipher-conscrypt&lt;/em&gt; lets apps then disable old&#xA;TLS versions like TLSv1.0 and TLSv1.1, as well as disable TLS Session&#xA;Tickets.  This is an alpha release because it only works on recent&#xA;Android versions (8.1 or newer).  The actual functionality works well,&#xA;the hard part remains making sure that it is possible to inject&#xA;&lt;em&gt;netcipher-conscrypt&lt;/em&gt; as the TLS provider on all Android devices and&#xA;versions.  And the last missing piece is finding the right place in&#xA;Conscrypt to configure proxying to support Tor or other privacy&#xA;proxies&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

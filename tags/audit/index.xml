@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Audit on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/audit/</link>
+    <description>Recent content in Audit on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/audit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>7ASecurity Completes Security Audit of Círculo</title>
+      <link>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</guid>
+      <description>&lt;p&gt;Over the last six months, we’ve been working with &lt;a href=&#34;https://7asecurity.com/&#34;&gt;7ASecurity&lt;/a&gt; through support from the &lt;a href=&#34;https://www.opentech.fund/impact/security-safety-audits/&#34;&gt;Open Technology Fund’s Security Safety Audits&lt;/a&gt;, to complete an audit of our &lt;a href=&#34;https://encirculo.org&#34;&gt;Círculo project&lt;/a&gt;.  The public report on that is &lt;a href=&#34;https://www.opentech.fund/security-safety-audits/circulo-security-audit/&#34;&gt;now available&lt;/a&gt;. You can also read the &lt;a href=&#34;https://7asecurity.com/blog/2025/03/circulo-security-audit-by-7asecurity/&#34;&gt;blog post on the audit from 7ASecurity&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you don’t know about Circulo, this is a physical check-in safety app we have developed, alongside Article 19’s Mexico City team, for a number of years, focused on providing secure location sharing and urgent notifications within small trusted groups, for people under threat of physical violence. The free and open-source &lt;a href=&#34;https://gitlab.com/circuloapp&#34;&gt;code we have developed&lt;/a&gt; includes iOS and Android mobile apps, as well as server infrastructure, largely based on the &lt;a href=&#34;https://matrix.org/&#34;&gt;Matrix Protocol&lt;/a&gt;, including the mobile software development kits (SDKs), &lt;a href=&#34;https://matrix.org/docs/matrix-concepts/end-to-end-encryption/&#34;&gt;MegaOLM encryption&lt;/a&gt;, and &lt;a href=&#34;https://github.com/element-hq/synapse&#34;&gt;Synapse Server&lt;/a&gt;. You can read about the last round of work we completed on Circulo, including design, development, and community building, in a &lt;a href=&#34;https://guardianproject.info/releases/CirculoFinalReport20232024.pdf&#34;&gt;public report released in November&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Threats and Usability of Secure Voice</title>
+      <link>https://guardianproject.github.io/info/2012/07/10/threats-and-usability-of-secure-voice/</link>
+      <pubDate>Tue, 10 Jul 2012 12:48:18 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/07/10/threats-and-usability-of-secure-voice/</guid>
+      <description>&lt;p&gt;In my &lt;a href=&#34;https://guardianproject.info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/&#34;&gt;previous post&lt;/a&gt; I found that end-to-end encryption with OSTN is both effective and usable. There are two important things the user must be aware of when using OSTN. They must confirm with each phone call that the encryption icon is present and  they must correctly complete SAS verification dialog boxes. So on a basic level, encrypted voice just works. But, what does this all mean? This post looks at the threats to security and usability of encrypted ZRTP phone calls in CSipSimple.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Network Analysis of Encrypted Voice over OSTN</title>
+      <link>https://guardianproject.github.io/info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/</link>
+      <pubDate>Thu, 05 Jul 2012 14:23:50 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Introduction to OSTN&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN&lt;/a&gt; network stands for Open Source Telephony Network. It is a federated network standard for supporting Internet calling with end-to-end encryption ala ZRTP. Its very similar to e-mail in that VOIP calls can be routed to addresses such as user@domain.tld. Its a simple concept, but I believe it to be ground breaking implementation! Never before have I seen such an accessible solution to encrypted VOIP calls. OSTN is platform independent, is a federated network, and it is an open standard such that it is widely adoptable. There are two main components that are required to use OSTN with encryption: a VOIP client that supports ZRTP for end-to-end encryption and user account with an OSTN provider.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

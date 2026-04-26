@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hosting on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/hosting/</link>
+    <description>Recent content in Hosting on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/hosting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ostel.co secure VoIP network partners with Open Hosting</title>
+      <link>https://guardianproject.github.io/info/2013/12/03/ostel.co-secure-voip-network-partners-with-open-hosting/</link>
+      <pubDate>Tue, 03 Dec 2013 17:56:18 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/03/ostel.co-secure-voip-network-partners-with-open-hosting/</guid>
+      <description>&lt;p&gt;Ostel.co began as a R&amp;amp;D effort sponsored by The Guardian Project. The question: Is a peer-to-peer secure voice and video call network possible to build with open Internet standards and Open Source software? After two years and tens of thousands of users later, the answer is a resounding YES!&lt;/p&gt;&#xA;&lt;p&gt;Two of the crucial components of any standards based VoIP service are infrastructure to route calls and a database to locate end users. &lt;a href=&#34;http://openhosting.com/&#34;&gt;Open Hosting’s&lt;/a&gt; service was a perfect fit, so we’ve teamed up for ongoing support of ostel.co. Open Hosting has a high speed, low-latency network in the southern USA, which hosts the backend to route calls over the ostel.co domain. It also has a clearly defined, concise &lt;a href=&#34;http://openhosting.com/about-us/legal/&#34;&gt;Privacy Policy and Terms of Service&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

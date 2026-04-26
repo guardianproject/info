@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Orbot Tor Beta on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/orbot-tor-beta/</link>
+    <description>Recent content in Orbot Tor Beta on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/orbot-tor-beta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Orbot goes Beta</title>
+      <link>https://guardianproject.github.io/info/2010/03/04/orbot-goes-beta/</link>
+      <pubDate>Thu, 04 Mar 2010 16:14:01 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/03/04/orbot-goes-beta/</guid>
+      <description>&lt;p&gt;As announced on the &lt;a href=&#34;https://blog.torproject.org/blog/tor-android&#34;&gt;Tor Blog&lt;/a&gt;, an important development:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The Tor Project has been working very closely with &lt;a href=&#34;http://openideals.com/&#34;&gt;Nathan Freitas&lt;/a&gt; and &lt;a href=&#34;http://openideals.com/guardian/&#34;&gt;The Guardian Project&lt;/a&gt; to create an Android release. This is an early beta release and is not yet suitable for high security needs. The Android web browser is not protected by Torbutton and we have not yet developed an anonymous browser on the Android platform. Please be cautious with this release, it’s probably pretty fragile and it’s certainly not ready for serious use.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

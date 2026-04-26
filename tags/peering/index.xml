@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peering on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/peering/</link>
+    <description>Recent content in Peering on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/peering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cross-Domain calling, or “toll-free long distance VoIP”</title>
+      <link>https://guardianproject.github.io/info/2012/05/04/cross-domain-calling-or-toll-free-long-distance-voip/</link>
+      <pubDate>Fri, 04 May 2012 17:34:30 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/04/cross-domain-calling-or-toll-free-long-distance-voip/</guid>
+      <description>&lt;p&gt;In a standard &lt;a href=&#34;https://guardianproject.info/wiki/OSTN_Compliance_Specification&#34;&gt;OSTN configuration&lt;/a&gt;, the Fully Qualified Domain Name (&lt;a href=&#34;https://en.wikipedia.org/wiki/FQDN&#34;&gt;FQDN&lt;/a&gt;) of the server running Freeswitch is a core dependency to operate the service. For example, the domain ostel.me was first configured as a DNS record, a server was bootstrapped with ostel.me as the local hostname and a &lt;a href=&#34;https://github.com/lazzarello/chef-twelvetone&#34;&gt;Freeswitch cookbook&lt;/a&gt; was run using the Chef automation system. Because the domain was configured both in DNS and locally, the cookbook has enough information to automatically build an operational OSTN node.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WINS on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/wins/</link>
+    <description>Recent content in WINS on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/wins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing offline maps with F-Droid and OsmAnd</title>
+      <link>https://guardianproject.github.io/info/2020/11/28/managing-offline-maps-with-f-droid-and-osmand/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/11/28/managing-offline-maps-with-f-droid-and-osmand/</guid>
+      <description>&lt;p&gt;When disaster strikes, our mobile devices can provide us with many&#xA;tools to deal with a wide variety of problems.  The internet is not&#xA;available in every corner of the planet, and large scale outages&#xA;happen.  Digital maps allow us to carry detailed maps of the entire&#xA;planet in our pockets.  And the good map apps allow the user to&#xA;download entire regions to the device so that they operate without&#xA;internet at all.  Unfortunately, the big map apps from Google and&#xA;Apple provide limited offline capabilities.  For example, it is&#xA;&lt;a href=&#34;https://annoyingtechnicaldetails.wordpress.com/2020/09/23/cannot-easily-redistribute-downloaded-offline-files-for-google-maps/&#34;&gt;not possible&lt;/a&gt;&#xA;to share offline data from one device to another.  Online maps are&#xA;also a major privacy leak, since location data is the most sensitive&#xA;data.  With online maps, the service operator sees each tile of the&#xA;map that you look at, each time you look at it, as well as all the&#xA;locations you search for.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Man-in-the-Disk on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/man-in-the-disk/</link>
+    <description>Recent content in Man-in-the-Disk on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/man-in-the-disk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IOCipher is the antidote to “Man-in-the-Disk” attack</title>
+      <link>https://guardianproject.github.io/info/2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/</link>
+      <pubDate>Fri, 17 Aug 2018 16:56:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/08/17/iocipher-is-the-antidote-to-man-in-the-disk-attack/</guid>
+      <description>&lt;p&gt;Recently, at DEFCON 2018, researchers at Check Point &lt;a href=&#34;https://blog.checkpoint.com/2018/08/12/man-in-the-disk-a-new-attack-surface-for-android-apps/&#34;&gt;announced a new kind of attack&lt;/a&gt; made possible by the way many Android apps are implemented. In summary, developers use the shared external storage space in an unsafe manner, by not taking into consideration that other apps also have read and write access to the same space. A malicious app can modify data used by another app, as a vector for compromising that app, causing it to be compromised or crash.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

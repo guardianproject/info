@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operating System on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/operating-system/</link>
+    <description>Recent content in Operating System on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/operating-system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Copperhead, Guardian Project and F-Droid Partner to Build Open, Verifiably Secure Mobile Ecosystem</title>
+      <link>https://guardianproject.github.io/info/2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/</link>
+      <pubDate>Mon, 28 Mar 2016 13:42:36 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2016/03/28/copperhead-guardian-project-and-f-droid-partner-to-build-open-verifiably-secure-mobile-ecosystem/</guid>
+      <description>&lt;p&gt;Three open-source projects haved joined together to announce a new partnership to create an open, verifiably secure mobile ecosystem of software, services and hardware. Led by the work of the Toronto-based &lt;a href=&#34;https://copperhead.co/android/&#34;&gt;CopperheadOS&lt;/a&gt; team on securing the core Android OS, &lt;a href=&#34;https://guardianproject.info&#34;&gt;Guardian Project&lt;/a&gt; and &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; have joined in to partner on envisioning and developing a full mobile ecosystem. The goal is to create a solution that can be verifiably trusted from the operating system,  through the network and network services, all the way up to the app stores and apps themselves. Through a future planned crowdfunded and commercial offering, the partnership will provide affordable off-the-shelf solutions, including device hardware and self-hosted app and update distribution servers, for any individual and organizations looking for complete mobile stacks they can trust.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

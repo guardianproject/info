@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gradle on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/gradle/</link>
+    <description>Recent content in Gradle on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Android tools into Debian</title>
+      <link>https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/</link>
+      <pubDate>Thu, 30 Apr 2015 11:13:26 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/04/30/getting-android-tools-into-debian/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg&#34; alt=&#34;debian&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12920&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/04/debian-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2015/04/debian-300x300.jpg 300w, https://guardianproject.info/wp-content/uploads/2015/04/debian-270x270.jpg 270w, https://guardianproject.info/wp-content/uploads/2015/04/debian-230x230.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/04/debian.jpg 600w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android-150x150.png&#34; alt=&#34;android&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12919&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/04/android-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/04/android-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/04/android-230x230.png 230w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;As part of Debian’s project in Google &lt;a href=&#34;https://wiki.debian.org/SummerOfCode2015&#34; target=&#34;_blank&#34;&gt;Summer of Code&lt;/a&gt;, I’ll be working with two students, Kai-Chung Yan and Komal Sukhani, and another mentor from the &lt;a href=&#34;https://wiki.debian.org/Teams/JavaPackaging&#34; target=&#34;_blank&#34;&gt;Debian Java Team&lt;/a&gt; team, &lt;a href=&#34;https://&amp;#x71;a&amp;#x2e;d&amp;#x65;b&amp;#x69;a&amp;#x6e;.&amp;#x6f;r&amp;#x67;/dev&amp;#x65;l&amp;#x6f;p&amp;#x65;r&amp;#x2e;p&amp;#x68;p&amp;#x3f;l&amp;#x6f;gin=&amp;#x61;p&amp;#x6f;@&amp;#x67;a&amp;#x6d;b&amp;#x61;r&amp;#x75;.&amp;#x64;e&#34; target=&#34;_blank&#34;&gt;Markus Koschany&lt;/a&gt;. We are going to be working on getting the Android SDK and tools into Debian, as part of the Debian &lt;a href=&#34;https://wiki.debian.org/AndroidTools&#34; target=&#34;_blank&#34;&gt;Android Tools&lt;/a&gt; team, building upon the existing work already included from the Java and &lt;a href=&#34;https://wiki.debian.org/Teams/AndroidTools&#34; target=&#34;_blank&#34;&gt;Android Tools&lt;/a&gt; teams. This project is in conjunction with the Java team since there is overlap between Android and Java tools, like &lt;code&gt;gradle&lt;/code&gt;, &lt;code&gt;maven&lt;/code&gt;, etc. Since this work is in Debian, all of the Debian-derivatives will automatically inherit this work. That includes: Ubuntu, Mint, Elementary, and many more.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Secure Storage on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/secure-storage/</link>
+    <description>Recent content in Secure Storage on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/secure-storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IOCipher beta: easy encrypted file storage for your Android app</title>
+      <link>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</link>
+      <pubDate>Thu, 07 Feb 2013 14:45:28 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/02/07/iocipher-beta-easy-encrypted-file-storage-for-your-android-app/</guid>
+      <description>&lt;p&gt;At long last, we are proud to announce the &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;first beta release of IOCipher&lt;/a&gt;, an easy framework for providing virtual encrypted disks for Android apps.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;does not require root or any special permissions at all&lt;/li&gt;&#xA;&lt;li&gt;the API is a drop-in replacement for the standard java.io.File API, so if you have ever worked with files in Java, you already know how to use IOCipher&lt;/li&gt;&#xA;&lt;li&gt;works easiest in an app that stores all files in IOCipher, but using standard java.io with IOCipher is possible&lt;/li&gt;&#xA;&lt;li&gt;supports android-7 v2.1 and above&lt;/li&gt;&#xA;&lt;li&gt;licensed under the LGPL v3+&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can download it here:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

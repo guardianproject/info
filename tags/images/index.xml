@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Images on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/images/</link>
+    <description>Recent content in Images on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/images/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Our Newest App: PixelKnot</title>
+      <link>https://guardianproject.github.io/info/2013/07/18/our-newest-app-pixelknot/</link>
+      <pubDate>Thu, 18 Jul 2013 13:14:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/07/18/our-newest-app-pixelknot/</guid>
+      <description>&lt;p&gt;Have you ever hidden in plain sight? Worn camouflage in the woods or an invisibility cloak in a narrow crooked alley? It’s really hard to do properly. We’re hoping that all changes with PixelKnot.&lt;/p&gt;&#xA;&lt;p&gt;PixelKnot is an app for hiding secret messages in pictures.  Sort of like invisible ink on the back of a painting, updated to the present.  The ancient art known as steganography, now updated for the 21st century and requiring a more rigorous set of safety standards.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

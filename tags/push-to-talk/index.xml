@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Push-to-Talk on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/push-to-talk/</link>
+    <description>Recent content in Push-to-Talk on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/push-to-talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mumble and the Bandwidth – Anonymous CB radio with Mumble and Tor</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</link>
+      <pubDate>Thu, 31 Jan 2013 02:05:50 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-3186&#34; alt=&#34;mumble and the bandwidth&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34; width=&#34;800&#34; height=&#34;478&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg 800w, https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth-300x179.jpg 300w&#34; sizes=&#34;(max-width: 800px) 100vw, 800px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The journey towards anonymous and secure voice communication is a long one. There’s lots of roadblocks to get your voice from point A to point B over the Internet if you need to prevent eavesdropping or censorship. There is the limited bandwidth of mobile data connections. There is the high latency of the TCP protocol. &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#whyweneedtor&#34;&gt;To achieve anonymity via Tor&lt;/a&gt;, there’s even more latency added to each packet.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proofcheck on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/proofcheck/</link>
+    <description>Recent content in Proofcheck on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/proofcheck/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generative AI Detection in ProofCheck</title>
+      <link>https://guardianproject.github.io/info/2025/03/18/generative-ai-detection-in-proofcheck/</link>
+      <pubDate>Tue, 18 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/03/18/generative-ai-detection-in-proofcheck/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Reposted from &lt;a href=&#34;https://proofmode.org/blog/proofcheckai&#34;&gt;proofmode.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;ProofCheck is our free and open-source, multi-purpose &amp;ldquo;Swiss Army Knife&amp;rdquo; tool for image, video, and audio metadata inspection. It can work with the &amp;ldquo;Proof Pack&amp;rdquo; bundle zip files that are produced by our ProofMode camera app, and it can also inspect any multimedia file you try to throw at it. It will look for metadata formats like EXIF, C2PA, IPTC, and more, and validate ProofMode PGP signatures, OpenTimestamp notarization, and other cryptographic signatures. All of this happens locally in your browser, without any uploads to a server, ensuring privacy of your media and metadata is maintained.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

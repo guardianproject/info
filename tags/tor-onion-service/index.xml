@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tor Onion Service on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/tor-onion-service/</link>
+    <description>Recent content in Tor Onion Service on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/tor-onion-service/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

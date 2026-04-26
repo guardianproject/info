@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Onions on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/onions/</link>
+    <description>Recent content in Onions on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/categories/onions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Serving Websites Privately Over Tor Onion Services (From Your Laptop!)</title>
+      <link>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/08/29/serving-websites-privately-over-tor-onion-services-from-your-laptop/</guid>
+      <description>&lt;p&gt;In this day and age when our data is consistently being tracked and profited off of, sharing information safely and securely is difficult. However, that does not necessarily mean that all network services are subject to such scrutiny. Users now have the ability to combine the security of HTTPS with the privacy benefits of Tor Browser and share information through Tor’s anonymous network services – &lt;a href=&#34;https://community.torproject.org/onion-services/&#34;&gt;Onion Services&lt;/a&gt;. By using an onion service, users can hide their location while active, connect to other Tor users, and retain their privacy throughout. But to do so, one needs to know how to set up an Onion Service.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

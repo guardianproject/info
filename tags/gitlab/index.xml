@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitLab on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/gitlab/</link>
+    <description>Recent content in GitLab on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scanning apps, off the record</title>
+      <link>https://guardianproject.github.io/info/2022/09/28/scanning-apps-off-the-record/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/09/28/scanning-apps-off-the-record/</guid>
+      <description>&lt;p&gt;Smart phones have brought us so many wonderful capabilities.  They let people around the world access vast realms of information.  They let app developers solve problems large and small in a way most relevent to their local context.  They are personal computers for the world.  They also have given surveillance capitalism an unprecedented reach into everyone&amp;rsquo;s lives. Repressive governments use them in ways that the East German Stasi secret police could only have dreamed of.  And as promising as artificial intelligence is, it is also threatening humanity.  People around the world are pushing back.  This public interest work requires technical inspection of apps.  There are organizations highlighting algorithmic transparency and calling out surveillance capitalism.  Journalists are linking apps into key stories about the misdeeds of powerful companies.  Activists are exposing the hidden machinations of their governments.  All of these people require technical skills to see what a given app is going.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

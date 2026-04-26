@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Native on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/native/</link>
+    <description>Recent content in Native on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/native/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adventures in Porting: GnuPG 2.1.x to Android!</title>
+      <link>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</link>
+      <pubDate>Thu, 15 Mar 2012 13:00:30 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</guid>
+      <description>&lt;p&gt;PGP started with Phil Zimmerman’s Pretty Good Privacy, which is now turned into an open IETF standard known as OpenPGP. These days, the reference OpenPGP platform seems to be &lt;a href=&#34;http://gnupg.org/&#34;&gt;GnuPG&lt;/a&gt;: its used by Debian and all its derivatives in the OS itself for verifying packages and more. It is also at the core of all Debian development work, allowing the very diffuse body of Debian, Ubuntu, etc developers to communicate and share work effectively while maintaining a high level of security. It is also used for email encryption in Thunderbird + Enigmail, Apple Mail + GPGMail, GNOME Evolution, KDE KMail, Microsoft Outlook + Gpg4win.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

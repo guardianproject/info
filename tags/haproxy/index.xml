@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HAProxy on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/haproxy/</link>
+    <description>Recent content in HAProxy on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/haproxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

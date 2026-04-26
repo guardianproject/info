@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jabber on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/jabber/</link>
+    <description>Recent content in Jabber on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/jabber/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatSecure 13.2: Important Beta!</title>
+      <link>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</link>
+      <pubDate>Tue, 05 Aug 2014 11:35:54 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</guid>
+      <description>&lt;p&gt;Today is the first public beta of ChatSecure v13.2, an important update of the user interface, networking code, and overall stability. We’ve spent the last six months tracking down crashes, memory leaks and performance issues, and have reached a stable, functional point which we want to share for public use. Reliability and simplicity our the goals, as we move towards v14 in the next few months.&lt;/p&gt;&#xA;&lt;p&gt;This beta also features a new account setup wizard that we are eager for feedback on. Our goal is to enable new users to have a much simpler experience in setting up ChatSecure to connect to existing or create new accounts. We have also provided a “one-click burner” option to quickly create throwaway accounts, that require Tor and OTR encryption always, for chatting with a single contact or even just a single conversation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beem&#43;Orbot: Mobile Instant Messaging over Tor</title>
+      <link>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</link>
+      <pubDate>Mon, 10 May 2010 16:32:01 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</guid>
+      <description>&lt;p&gt;It is no secret that we are big fans of open-source here at Guardian. In fact, it is &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;what we are made of&lt;/a&gt;. Guardian is not just a single app or just one phone, it is a vision for a more private and secure future for personal mobile telecommunications. As part of our work, we are constantly on the lookout other similar, like-minded projects that are developing open-source communications tools for the Android OS which we can make to work with our underlying security platform.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

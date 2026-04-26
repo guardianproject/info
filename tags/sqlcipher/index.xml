@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sqlcipher on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/sqlcipher/</link>
+    <description>Recent content in Sqlcipher on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/sqlcipher/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First working test of IOCipher for Obj-C</title>
+      <link>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</link>
+      <pubDate>Mon, 26 Jan 2015 04:32:29 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Every so often, we revisit our core libraries in the process of improving our existing apps, and creating new ones. IOCipher has become a standard part of our apps since it provides a really easy way to include encrypted file storage in Android apps. And we are now working on spreading it to iOS as well, headed up by Chris Ballinger, with the first preliminary tests of &lt;a href=&#34;https://github.com/ChatSecure/IOCipher-ObjC&#34; target=&#34;_blank&#34;&gt;IOCipher for Obj-C&lt;/a&gt;. Testing and contributions are most welcome! Find us in our &lt;a href=&#34;https://guardianproject.github.io/info/contact/&#34; target=&#34;_blank&#34;&gt;chat room or mailing list&lt;/a&gt; for questions, or just post a comment below! Since the iOS version is based on the exact same core library, libsqlfs, the container files they produce will also be fully compatible with each other.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Keeping data private means it must be truly deletable!</title>
+      <link>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</link>
+      <pubDate>Fri, 23 Aug 2013 17:36:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive-150x150.jpg&#34; alt=&#34;deleting data&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-11598&#34; /&gt;&lt;/a&gt;There are lots of apps these days that promise to keep your data secure, and even some that promise to wipe away private information mere seconds or minutes after it has been received. It is one thing to keep data out of view from people you don’t want seeing it, it is also important to be able to truly delete information. Unfortunately computers make it very difficult to make data truly disappear. When we tell a computer to delete a file, it only deletes the reference to the data. The data itself remains on the disk unchanged. For any UNIX geek out there, you can easily see an example of that by greping a partition (e.g. &lt;code&gt;sudo grep password /dev/sda3&lt;/code&gt;. To solve this problem, there are “secure delete” options. Secure deletion removes the reference like regular deletion, then wipes the data on the disk by overwriting it with random data. That’s much better, but not always good enough. It turns out that its possible to remove the hard disk and read magnetic residue and recover even wiped data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>report on IOCipher beta dev sprint</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</link>
+      <pubDate>Thu, 31 Jan 2013 19:45:44 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/01/31/report-on-iocipher-beta-dev-sprint/</guid>
+      <description>&lt;p&gt;We are just wrapping up an intensive dev sprint on &lt;a href=&#34;https://guardianproject.info/code/iocipher/&#34;&gt;IOCipher&lt;/a&gt; in order to get the first real beta release out, and it has been a wonderfully productive session on many levels! Before we started this, we had a proof-of-concept project that was crashy and ridiculously slow. We’re talking crashes every 100 or so transactions and 9 minutes to write 2 megs. Abel and I were plodding thru the bugs, trying to find the motivation to dive into the hard problems in the guts of some of the more arcane parts of the code. Aaron Huttner of &lt;a href=&#34;http://gryphn.co/&#34; target=&#34;_blank&#34;&gt;Gryphn&lt;/a&gt; found IOCipher while developing their &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Gryphn.mms&amp;hl=en&#34; title=&#34;Gryphn Secure Text Messaging in the Google Play store&#34; target=&#34;_blank&#34;&gt;Gryphn Secure Text Messaging&lt;/a&gt; and thought it was a remarkable easy way to add encrypted storage of files, and it worked quickly for him, so he included it his app before we had even announced an alpha release (thanks again for the vote of confidence!).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sometimes the best solution is a library, not an app</title>
+      <link>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</link>
+      <pubDate>Mon, 27 Aug 2012 12:30:15 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel-150x150.png&#34; alt=&#34;&#34; title=&#34;thinking about frameworks&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-2792&#34; /&gt;&lt;/a&gt;Our general approach to software development starts with surveying existing solutions that are available and in use, to see if there is already enough of an ecosystem or whether we need to seed that. When there is already an adundance of tools and apps out there, we work to find the good ones, provide feedback and auditing, and then build apps and tools to fill in any gaps. For example, this was our approach in the Open Secure Telephony Network.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backup on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/backup/</link>
+    <description>Recent content in Backup on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>F-Droid&#39;s Community-controlled Backup Ceremony</title>
+      <link>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</guid>
+      <description>&lt;p&gt;(&lt;em&gt;Guest post from F-Droid, originally on &lt;a href=&#34;https://f-droid.org/2023/07/15/community-controlled-backup-ceremony.html&#34;&gt;f-droid.org&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;&#xA;&lt;p&gt;Seven core contributors and one board member met in Scotland, the birthplace of F-Droid, for the first in-person F-Droid team meeting.  One of the most pressing tasks we needed to take care of was setting up a contributor-controlled backup of all of our signing keys.  The requirements made it necessary to have a lengthy, in-person, consensus-driven planning session.  We found no good documentation of such a procedure, so we&amp;rsquo;re going out on a limb here and publishing the general outline of our process.  This process was informally audited by multiple people with varying expertise before the public key was used to encrypt anything.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

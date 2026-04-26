@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App Reviews on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/app-reviews/</link>
+    <description>Recent content in App Reviews on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/categories/app-reviews/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Orfox 1.2: An Overdue Update to Our Privacy-Focused Browser!</title>
+      <link>https://guardianproject.github.io/info/2016/09/25/orfox-1.2-an-overdue-update-to-our-privacy-focused-browser/</link>
+      <pubDate>Sun, 25 Sep 2016 00:43:54 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2016/09/25/orfox-1.2-an-overdue-update-to-our-privacy-focused-browser/</guid>
+      <description>&lt;div class=&#34;markdown-body&#34;&gt;&#xA;  &lt;p&gt;&#xA;    Primarily this release is the first in a long while after improving our ability to stay up-to-date with core Tor Browser development. In addition, as Mozilla adds more and more features to the core Firefox, we must review them for any issues related to increased permission request, access to data, and privacy and network leaks. This is a slow, tedious job, so thank you for your patience. We expect to have more frequent, regular releases moving forward.&#xA;  &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenArchive: Free &amp; Secure Mobile Media Sharing #DWebSummit</title>
+      <link>https://guardianproject.github.io/info/2016/06/07/openarchive-free-secure-mobile-media-sharing-%23dwebsummit/</link>
+      <pubDate>Tue, 07 Jun 2016 15:37:03 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2016/06/07/openarchive-free-secure-mobile-media-sharing-%23dwebsummit/</guid>
+      <description>&lt;p&gt;I am excited to share another new “mini app” effort we have joined up with, as part of work we are doing to create simple, focused tools that solve a single issue. We also are aiming to builds apps that are 1 to 3MB in size, and work on Android phones back to version 2.3, in order to maximize accessibility for a global audience.  &lt;a href=&#34;https://open-archive.net&#34;&gt;&lt;span class=&#34;il&#34;&gt;OpenArchive&lt;/span&gt;&lt;/a&gt; is one of these efforts. It is a project led by &lt;a href=&#34;https://www.aaronswartzday.org/openarchive/&#34;&gt;Natalie Cadranel&lt;/a&gt;, who received a &lt;a href=&#34;https://www.knightfoundation.org/grants/201448513/&#34;&gt;Knight Foundation prototype grant in 2014&lt;/a&gt;. The initial work was done by our partners at &lt;a href=&#34;https://www.scal.io/&#34;&gt;Scal.io&lt;/a&gt;, and continued now by the core Guardian Project team. The app is now in &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.opendasharchive.openarchive.release&#34;&gt;stable beta&lt;/a&gt; and ready for &lt;a href=&#34;https://github.com/OpenArchive/openarchive/issues&#34;&gt;wider testing&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot v12 now in beta</title>
+      <link>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</link>
+      <pubDate>Wed, 24 Jul 2013 12:32:45 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</guid>
+      <description>&lt;p&gt;After much too long, we’ve got a new build of Orbot out, and it is… a stable beta! Nothing radically new here, just many small changes to continue to improve the experience of our hundreds of thousands of active users out in the world. There will likely be one or two more “beta” releases to iron out small issues in v12, but for now, this one is good to go.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lower Bounds of The Narrow Bands</title>
+      <link>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</link>
+      <pubDate>Fri, 22 Feb 2013 09:05:48 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</guid>
+      <description>&lt;p&gt;Voice is becoming a standard feature of any messaging app on mobile phones, in various forms using many different protocols. There’s the old guard, whom I will refer to as “Skype”. Some &lt;a href=&#34;https://www.privacyinternational.org/blog/skype-please-act-like-the-responsible-global-citizen-you-claim-to-be&#34;&gt;tough&lt;/a&gt; &lt;a href=&#34;http://www.skypeopenletter.com/&#34;&gt;questions&lt;/a&gt; have been thrown their way by many groups who support a free Internet. There’s Google Voice, which is not really VoIP. Apple is playing around in the hedge maze inside their walled garden with iChat. There’s also Facebook, who is rolling out &lt;a href=&#34;http://techcrunch.com/2013/01/16/facebook-rolls-out-voip-calling-to-u-s-ios-messenger-users/&#34;&gt;voice calling in Canada and the USA&lt;/a&gt; in their Messenger app on iOS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot Your Twitter!</title>
+      <link>https://guardianproject.github.io/info/2012/05/02/orbot-your-twitter/</link>
+      <pubDate>Wed, 02 May 2012 17:19:27 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/02/orbot-your-twitter/</guid>
+      <description>&lt;p&gt;In some ways, Twitter is the perfect application to run over the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. It works with small bits of data, it is asynchronous, works naturally in a “store and forward” queue model, and in general, has a decent amount of &lt;a href=&#34;https://twitter.com/about/security&#34;&gt;default security built-in&lt;/a&gt; through HTTP/S support and OAuth. Compared to the problem-child of the open web, which often involves large websites, streaming video, flash embeds, and malicious javascript, Twitter is a nearly perfect candidate for use over a secure, anonymous (but sometimes high latency) network. Add to the fact that Twitter is often &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_websites_blocked_in_the_People&#39;s_Republic_of_China&#34;&gt;blocked or monitored in many countries&lt;/a&gt;who do not care for free speech and human rights, and it becomes almost a necessity that you use it with a service like Tor.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Don’t Get Burned, Anonymize Your Fire</title>
+      <link>https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/</link>
+      <pubDate>Wed, 16 Nov 2011 22:37:24 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/</guid>
+      <description>&lt;p&gt;Thanks to Jesse Vincent, aka &lt;a href=&#34;https://twitter.com/obra&#34;&gt;@obra&lt;/a&gt; of the &lt;a href=&#34;https://code.google.com/p/k9mail/&#34;&gt;K-9 mail project&lt;/a&gt;, we can say that &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot (Tor on Android)&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/apps/orweb&#34;&gt;Orweb (Privacy Browser)&lt;/a&gt; work just fine on the new &lt;a href=&#34;http://www.amazon.com/Kindle-Fire-Amazon-Tablet/dp/B0051VVOB2&#34;&gt;Amazon Kindle Fire&lt;/a&gt;. This means that while everything you do through Amazon’s store and browser are tracked and accounted for by Team Bezos, you can use our apps to more safely and privately access web content through the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. While we are mostly &lt;a href=&#34;https://guardianproject.info/hardware/&#34;&gt;Nook Color fans&lt;/a&gt; around here, we know that the Kindle Fire is going to be quite popular this Christmas, and are glad to see that mobile privacy now has a toehold on the device from Seattle.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SECURED: T-Mobile myTouch 4G gets Guardian</title>
+      <link>https://guardianproject.github.io/info/2010/11/09/secured-t-mobile-mytouch-4g-gets-guardian/</link>
+      <pubDate>Tue, 09 Nov 2010 23:26:59 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/11/09/secured-t-mobile-mytouch-4g-gets-guardian/</guid>
+      <description>&lt;p&gt;One of the services we provide at the Guardian Project is taking any off the shelf Android phone and setting it up to be generally more secure, privacy minded and updated with a powerful suite of trusted apps. Today we were excited to get our hands on a myTouch 4G, manufactured by HTC and sold by T-Mobile. Really beautiful piece of hardware, and once we got our hands on it, a powerhouse of encrypted, anonymous and circumventing communications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How To: Lockdown Your Mobile E-Mail</title>
+      <link>https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/</link>
+      <pubDate>Fri, 09 Jul 2010 11:00:25 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/07/09/how-to-lockdown-your-mobile-e-mail/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update 2015-04-27&lt;/strong&gt;: &lt;em&gt;We now recommend &lt;a href=&#34;http://www.openkeychain.org/&#34; target=&#34;_blank&#34;&gt;OpenKeychain&lt;/a&gt; over APG, the app described in this blog post. The set up is drastically easier, so you probably don’t even need this HOWTO anymore. Start by downloading K-9 and &lt;a href=&#34;http://www.openkeychain.org/&#34; target=&#34;_blank&#34;&gt;OpenKeychain&lt;/a&gt;, then go into OpenKeychain and start the config there.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Over the past few years it’s become &lt;a href=&#34;https://www.youtube.com/watch?v=Gm8NdNy4wOM&#34;&gt;increasingly popular&lt;/a&gt; to sound the call that ‘&lt;a href=&#34;http://www.pcmag.com/article2/0,2817,2343209,00.asp&#34; title=&#34;dead&#34;&gt;email is dead&lt;/a&gt;{#y8a0}.’ And while many complementary forms of synchronous and asynchronous communication – from IM to social networking – have evolved since email first came on the scene, it’s hard to see email suddenly disappearing from its role as the most important way organizations communicate. I expect to be scooting around on my &lt;a href=&#34;https://en.wikipedia.org/wiki/Hoverboard&#34;&gt;hoverboard&lt;/a&gt; by the time email goes the way of the dinosaur.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beem&#43;Orbot: Mobile Instant Messaging over Tor</title>
+      <link>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</link>
+      <pubDate>Mon, 10 May 2010 16:32:01 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</guid>
+      <description>&lt;p&gt;It is no secret that we are big fans of open-source here at Guardian. In fact, it is &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;what we are made of&lt;/a&gt;. Guardian is not just a single app or just one phone, it is a vision for a more private and secure future for personal mobile telecommunications. As part of our work, we are constantly on the lookout other similar, like-minded projects that are developing open-source communications tools for the Android OS which we can make to work with our underlying security platform.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ultimate Droid and Orbot</title>
+      <link>https://guardianproject.github.io/info/2010/04/11/ultimate-droid-and-orbot/</link>
+      <pubDate>Sun, 11 Apr 2010 14:11:11 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/04/11/ultimate-droid-and-orbot/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://www.insecuresystem.org/2010/04/ultimate-droid-and-orbot.html&#34;&gt;InsecureSystem blog&lt;/a&gt; has a nice write-up on how to get Orbot running on your Droid:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I’ve always been a supporter of net privacy and Tor in particular, and a friend of mine got me interested in &lt;a href=&#34;https://guardianproject.info/&#34;&gt;the guardian project&lt;/a&gt;, so I grabbed the beta version of &lt;a href=&#34;https://guardianproject.info/apps/orbot/&#34;&gt;Orbot&lt;/a&gt; just to try it out.. sweet, tor from my phone.&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately the Smoked Glass Rom I was using didn’t support the Iptables modules necessary for the transparent proxy method orbot used for tunnelling apps through privoxy/tor. So, I was forced to try out some other Roms and their respective kernels.. okay, forced is a bad way to put it, it was a lot of fun.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>One Solution for Push-to-Talk</title>
+      <link>https://guardianproject.github.io/info/2010/02/11/one-solution-for-push-to-talk/</link>
+      <pubDate>Thu, 11 Feb 2010 03:50:22 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/02/11/one-solution-for-push-to-talk/</guid>
+      <description>&lt;p&gt;As part of rolling out the first-phase of &lt;a href=&#34;http://openideals.com/guardian&#34;&gt;The Guardian Project&lt;/a&gt;, I will be writing short reviews of existing applications for Android-based mobile phones that share our general goals or desired functionality. The goal of Guardian, in short, is to enable safe and secure communication for activists, organizers and advocates working for good around the world through the mobile phones they carry in their pockets.&lt;/p&gt;&#xA;&lt;p&gt;The Guardian project has no official relationship with these apps or their creators, but as we work towards developing our own unique software, we want to make sure to shine the spotlight on existing efforts that we admire and which are currently available. We’d also happily collaborate with any of them (or *you* if you are a developer reading this), and have them join our open-source efforts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

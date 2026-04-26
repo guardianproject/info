@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobilsicher on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/mobilsicher/</link>
+    <description>Recent content in Mobilsicher on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/mobilsicher/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Search for Ethical Apps: Let&#39;s start with governments</title>
+      <link>https://guardianproject.github.io/info/2022/09/01/the-search-for-ethical-apps-lets-start-with-governments/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/09/01/the-search-for-ethical-apps-lets-start-with-governments/</guid>
+      <description>&lt;p&gt;Governments across the world are moving services to mobile apps.  The vast majority of these apps are only available in the Google Play store or in the Apple App store.  Installing apps from these services requires users to agree to their terms of service.  This means governments require their citizens to sign opaque and privacy invading contracts with foreign Big Tech in order to use digital services.  This feeds ever more into Big Tech data control, filtering, and information bubbles.  There are some exceptions here, like China has multiple app stores that are popular.  Chinese Big Tech also require restrictive terms of service agreements.  Additionally, many of apps are developed by the same firms that are tied into the surveillance capitalism ecosystem.  So they include features that track the end users. The governments are not demanding data transparency, and these firms have not been delivering it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

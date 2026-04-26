@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netcipher on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/netcipher/</link>
+    <description>Recent content in Netcipher on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/netcipher/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NetCipher &#43; Conscrypt for the best possible TLS</title>
+      <link>https://guardianproject.github.io/info/2019/12/17/netcipher--conscrypt-for-the-best-possible-tls/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/12/17/netcipher--conscrypt-for-the-best-possible-tls/</guid>
+      <description>&lt;p&gt;A new NetCipher library has recently been merged:&#xA;&lt;a href=&#34;https://gitlab.com/guardianproject/NetCipher/merge_requests/86&#34;&gt;&lt;em&gt;netcipher-conscrypt&lt;/em&gt;&lt;/a&gt;.&#xA;In the same vein as the other NetCipher libraries,&#xA;&lt;em&gt;netcipher-conscrypt&lt;/em&gt; wraps the Google&#xA;&lt;a href=&#34;https://source.android.com/devices/architecture/modular-system/conscrypt&#34;&gt;Conscrypt&lt;/a&gt;&#xA;library, which provides the latest&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34;&gt;TLS&lt;/a&gt; for any&#xA;app that includes it.  &lt;em&gt;netcipher-conscrypt&lt;/em&gt; lets apps then disable old&#xA;TLS versions like TLSv1.0 and TLSv1.1, as well as disable TLS Session&#xA;Tickets.  This is an alpha release because it only works on recent&#xA;Android versions (8.1 or newer).  The actual functionality works well,&#xA;the hard part remains making sure that it is possible to inject&#xA;&lt;em&gt;netcipher-conscrypt&lt;/em&gt; as the TLS provider on all Android devices and&#xA;versions.  And the last missing piece is finding the right place in&#xA;Conscrypt to configure proxying to support Tor or other privacy&#xA;proxies&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NetCipher update: global, SOCKS, and TLSv1.2</title>
+      <link>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/06/25/netcipher-update-global-socks-and-tlsv1.2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/netcipher&#34;&gt;NetCipher&lt;/a&gt; has been relatively quiet in recent years, because it kept&#xA;on working, doing it was doing. Now, we have had some recent&#xA;discoveries about the guts of Android that mean NetCipher is a lot easier&#xA;to use on recent Android versions.  On top of that, TLSv1.2 now reigns&#xA;supreme and is basically everywhere, so it is time to turn TLSv1.0 and&#xA;TLSv1.1 entirely off.&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-single-method-to-enable-proxying-for-the-whole-app&#34;&gt;A single method to enable proxying for the whole app&lt;/h2&gt;&#xA;&lt;p&gt;As of Android 8.0 (26 aka Oreo), it is now possible to set a&#xA;&lt;code&gt;URLStreamHandlerFactory&lt;/code&gt;, which creates &lt;code&gt;URLConnection&lt;/code&gt; instances&#xA;with custom configurations.  If an app is using the built-in&#xA;&lt;code&gt;HttpURLConnection&lt;/code&gt; API for its networking, it is now possible to&#xA;enable global proxying with a single method call when the app starts:&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useGlobalProxy--&#34;&gt;&lt;code&gt;NetCipher.useGlobalProxy()&lt;/code&gt;&lt;/a&gt;.&#xA;Then the actual proxy configuration can be set dynamically, using&#xA;things like&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#useTor--&#34;&gt;&lt;code&gt;NetCipher.useTor()&lt;/code&gt;&lt;/a&gt;&#xA;or&#xA;&lt;a href=&#34;https://guardianproject.github.io/NetCipher/libnetcipher/info/guardianproject/netcipher/NetCipher.html#clearProxy--&#34;&gt;&lt;code&gt;NetCipher.clearProxy()&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

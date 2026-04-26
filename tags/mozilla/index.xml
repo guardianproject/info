@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mozilla on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/mozilla/</link>
+    <description>Recent content in Mozilla on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/mozilla/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Our “Wind” project is a Mozilla-NSF challenge finalist!</title>
+      <link>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</link>
+      <pubDate>Fri, 20 Jul 2018 14:28:23 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/07/20/our-wind-project-is-a-mozilla-nsf-challenge-finalist/</guid>
+      <description>&lt;p&gt;For the last few years, we’ve been working on the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind network concept&lt;/a&gt;, as a nearby, local, off-grid companion, or alternative, to the Web. This year, we decided to participate in the &lt;a href=&#34;https://wirelesschallenge.mozilla.org/&#34;&gt;Wireless Innovation Challenge&lt;/a&gt;, sponsored by Mozilla and the National Science Foundation. Today, it was announced that we are a finalist in, as they put it, &lt;a href=&#34;https://blog.mozilla.org/blog/2018/07/19/a-science-fair-with-1-6-million-in-prizes/&#34;&gt;“A Science Fair with $1.6 Million in Prizes”&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Watch the video below to learn more about Wind, or jump right over to the &lt;a href=&#34;https://guardianproject.info/wind/&#34;&gt;Wind project page&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

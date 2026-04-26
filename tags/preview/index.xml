@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Preview on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/preview/</link>
+    <description>Recent content in Preview on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/preview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Experimental app to improve privacy in location sharing</title>
+      <link>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</link>
+      <pubDate>Thu, 29 Jan 2015 07:36:58 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png&#34; alt=&#34;ic_launcher-web&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-12835&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-230x230.png 230w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png 512w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;As part of the T2 Panic effort, I’ve recently been diving deep into the issues of sharing location. It is unfortunately looking really bad, with many services, including Google, frequently sharing location as plain text over the network. I’ve started to write up some of the issues &lt;a href=&#34;https://guardianproject.github.io/info/tag/panic&#34;&gt;on this blog&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;As part of this, I’ve put together an experimental Android app that aims to act as a privacy filter for all ways of sharing location. Mostly, that means it accepts all sorts of URLs from location services, and tries to parse the location from the URL, then rewrites it into a &lt;a href=&#34;http://geouri.org&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;geo:&lt;/code&gt; URI&lt;/a&gt;, which is the standard way to share location in Android (and hopefully soon all others). As of ChatSecure v14.1.0, these &lt;code&gt;geo:&lt;/code&gt; URLs are also clickable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GnuPG for Android progress: we have an command line app!</title>
+      <link>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</link>
+      <pubDate>Thu, 09 May 2013 10:48:52 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png&#34; alt=&#34;GnuPG for Android&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-3680&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/05/icon-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/05/icon.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;br&gt;&#xA;This alpha release of our command-line developer tool brings GnuPG to Android for the first time!&lt;/p&gt;&#xA;&lt;p&gt;GNU Privacy Guard Command-Line (gpgcli) gives you command line access to the entire &lt;a href=&#34;http://gnupg.org&#34; title=&#34;Gnu Privacy Guard home page&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; suite of encryption software. GPG is GNU’s tool for end-to-end secure communication and encrypted data storage. This trusted protocol is the free software alternative to PGP. GnuPG 2.1 is the new modularized version of GnuPG that now supports OpenPGP and S/MIME.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adventures in Porting: GnuPG 2.1.x to Android!</title>
+      <link>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</link>
+      <pubDate>Thu, 15 Mar 2012 13:00:30 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</guid>
+      <description>&lt;p&gt;PGP started with Phil Zimmerman’s Pretty Good Privacy, which is now turned into an open IETF standard known as OpenPGP. These days, the reference OpenPGP platform seems to be &lt;a href=&#34;http://gnupg.org/&#34;&gt;GnuPG&lt;/a&gt;: its used by Debian and all its derivatives in the OS itself for verifying packages and more. It is also at the core of all Debian development work, allowing the very diffuse body of Debian, Ubuntu, etc developers to communicate and share work effectively while maintaining a high level of security. It is also used for email encryption in Thunderbird + Enigmail, Apple Mail + GPGMail, GNOME Evolution, KDE KMail, Microsoft Outlook + Gpg4win.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot main screen redesign</title>
+      <link>https://guardianproject.github.io/info/2010/03/01/orbot-main-screen-redesign/</link>
+      <pubDate>Mon, 01 Mar 2010 21:48:06 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/03/01/orbot-main-screen-redesign/</guid>
+      <description>&lt;p&gt;Here’s a few screenshots of the new “ACTIVATE ORBOT!” user interface. Just polishing up some of the features and doing a last few days of diligent testing before we release to the wider public.&lt;/p&gt;&#xA;&lt;p&gt;Overall, we want Tor on Android to be a one touch type experience, while still offering all the necessary options for configuration of bridges, rate limiting, etc.&lt;/p&gt;&#xA;&lt;p&gt;The coolest Android-only feature, which unfortunately requires your device to be rooted, is the ability to choose which apps on your device will be “Torified” automatically and transparently.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

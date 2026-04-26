@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Article19 on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/article19/</link>
+    <description>Recent content in Article19 on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/article19/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>7ASecurity Completes Security Audit of Círculo</title>
+      <link>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</guid>
+      <description>&lt;p&gt;Over the last six months, we’ve been working with &lt;a href=&#34;https://7asecurity.com/&#34;&gt;7ASecurity&lt;/a&gt; through support from the &lt;a href=&#34;https://www.opentech.fund/impact/security-safety-audits/&#34;&gt;Open Technology Fund’s Security Safety Audits&lt;/a&gt;, to complete an audit of our &lt;a href=&#34;https://encirculo.org&#34;&gt;Círculo project&lt;/a&gt;.  The public report on that is &lt;a href=&#34;https://www.opentech.fund/security-safety-audits/circulo-security-audit/&#34;&gt;now available&lt;/a&gt;. You can also read the &lt;a href=&#34;https://7asecurity.com/blog/2025/03/circulo-security-audit-by-7asecurity/&#34;&gt;blog post on the audit from 7ASecurity&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you don’t know about Circulo, this is a physical check-in safety app we have developed, alongside Article 19’s Mexico City team, for a number of years, focused on providing secure location sharing and urgent notifications within small trusted groups, for people under threat of physical violence. The free and open-source &lt;a href=&#34;https://gitlab.com/circuloapp&#34;&gt;code we have developed&lt;/a&gt; includes iOS and Android mobile apps, as well as server infrastructure, largely based on the &lt;a href=&#34;https://matrix.org/&#34;&gt;Matrix Protocol&lt;/a&gt;, including the mobile software development kits (SDKs), &lt;a href=&#34;https://matrix.org/docs/matrix-concepts/end-to-end-encryption/&#34;&gt;MegaOLM encryption&lt;/a&gt;, and &lt;a href=&#34;https://github.com/element-hq/synapse&#34;&gt;Synapse Server&lt;/a&gt;. You can read about the last round of work we completed on Circulo, including design, development, and community building, in a &lt;a href=&#34;https://guardianproject.info/releases/CirculoFinalReport20232024.pdf&#34;&gt;public report released in November&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

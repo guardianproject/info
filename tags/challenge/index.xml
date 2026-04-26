@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Challenge on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/challenge/</link>
+    <description>Recent content in Challenge on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/challenge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Addressing a “Privacy Challenge” with Guardian</title>
+      <link>https://guardianproject.github.io/info/2011/03/02/addressing-a-privacy-challenge-with-guardian/</link>
+      <pubDate>Wed, 02 Mar 2011 20:39:18 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2011/03/02/addressing-a-privacy-challenge-with-guardian/</guid>
+      <description>&lt;p&gt;Organized by the &lt;a href=&#34;http://aclunc.org/&#34;&gt;ACLU&lt;/a&gt;, &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor Project&lt;/a&gt;, and &lt;a href=&#34;http://privacybydesign.ca/&#34;&gt;PrivacyByDesign.c&lt;/a&gt;a, the &lt;a href=&#34;http://www.develop4privacy.org/&#34;&gt;“Develop for Privacy Challenge”&lt;/a&gt; is an interesting new software development challenge that was announced last month. Developers (teams or individuals) have until May 31st to come up with apps which address this goal:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Develop apps for smartphones or other mobile devices that educate users about mobile privacy and give them the ability to claim or demand greater control of their own personal information.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;We don’t plan to compete in this contest ourselves, as we would rather support and encourage other developers to take a shot at it. Along those lines, we would really like to see developers use some of the &lt;a href=&#34;https://guardianproject.info/apps&#34;&gt;apps we have built&lt;/a&gt;, and &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;code we have released&lt;/a&gt;, as part of their solutions. We have been putting together a large number of “lego” building blocks over the last year, just waiting for someone to come and put them together in a revolutionary way. Here is a breakdown of some of our more useful components:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

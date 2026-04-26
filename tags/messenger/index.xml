@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Messenger on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/messenger/</link>
+    <description>Recent content in Messenger on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/messenger/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&lt;!--:en--&gt;Bye, bye, BBM! Facebook Allows Verifiable Encrypted Mobile Messaging for Android and iOS; Mobile Revenue Threatened?&lt;!--:--&gt;</title>
+      <link>https://guardianproject.github.io/info/2012/05/16/--en--bye-bye-bbm-facebook-allows-verifiable-encrypted-mobile-messaging-for-android-and-ios-mobile-revenue-threatened----/</link>
+      <pubDate>Wed, 16 May 2012 17:28:03 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/16/--en--bye-bye-bbm-facebook-allows-verifiable-encrypted-mobile-messaging-for-android-and-ios-mobile-revenue-threatened----/</guid>
+      <description>&lt;!--:en--&gt;Yes, yes, we are trying to get in on all of the Facebook pre-IPO buzz. Fortunately, the headline is true – through &#xA;&lt;p&gt;&lt;a href=&#34;https://developers.facebook.com/docs/chat/&#34;&gt;Facebook’s support for open-standards messaging&lt;/a&gt;, our secure mobile messaging app, &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;Gibberbot for Android&lt;/a&gt;, can be used to communicate securely with any other friend on Facebook who is ALSO using a secure messaging app. Whether it is &lt;a href=&#34;https://guardianproject.github.io/info/apps/gibber&#34;&gt;Gibberbot&lt;/a&gt;, &lt;a href=&#34;http://chrisballinger.info/apps/chatsecure/&#34;&gt;ChatSecure for iOS&lt;/a&gt;, Adium (Mac), Pidgin (Windows/Linux), or one of the many secure messaging apps that support the &lt;a href=&#34;http://www.cypherpunks.ca/otr/&#34;&gt;Off-the-Record encryption capability&lt;/a&gt;, Facebook allows encrypted messaging between mobile and desktops alike.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

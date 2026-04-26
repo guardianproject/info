@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2-Step Verification on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/2-step-verification/</link>
+    <description>Recent content in 2-Step Verification on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/2-step-verification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Phishing for developers</title>
+      <link>https://guardianproject.github.io/info/2015/02/24/phishing-for-developers/</link>
+      <pubDate>Tue, 24 Feb 2015 04:41:29 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/02/24/phishing-for-developers/</guid>
+      <description>&lt;p&gt;I recently received a very interesting phishing email directed at developers with apps in Google Play. One open question is, how targeted it was: did anyone else get this?&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Trawling_Drawing.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing.jpg&#34; alt=&#34;320px-Trawling_Drawing&#34; width=&#34;320&#34; height=&#34;240&#34; class=&#34;alignright size-full wp-image-12873&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing.jpg 320w, https://guardianproject.info/wp-content/uploads/2015/02/320px-Trawling_Drawing-300x225.jpg 300w&#34; sizes=&#34;(max-width: 320px) 100vw, 320px&#34; /&gt;&lt;/a&gt;&lt;br&gt;&#xA;It turns out that Google has been recently stepping up enforcement of certain terms, so it looks like some people are taking advantage of that. It is a pretty sophisticated or manually targeted phishing email since they got the name of the app, email address, and project name all correct. The one detail that gives it away is that the &lt;code&gt;From:&lt;/code&gt; address uses the fake domain, even though it would have been possible to send the email using the actual Google account in the &lt;code&gt;From:&lt;/code&gt; field. But this likely would have triggered spam and malware detection algorithms. So they took a subtly different approach by using a real Google address in the &lt;code&gt;Reply-To:&lt;/code&gt;. But they were clever enough to use the same sub-domain, &lt;code&gt;gooogle.com.de&lt;/code&gt;, in the From: address as in the phishing link &lt;code&gt;accounts.gooogle.com.de&lt;/code&gt;, following a Google pattern of subdomains. They also included other real Google links for support and as a “follow up” URL.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

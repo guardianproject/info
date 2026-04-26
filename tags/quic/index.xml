@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QUIC on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/quic/</link>
+    <description>Recent content in QUIC on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/quic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MASQUE Review</title>
+      <link>https://guardianproject.github.io/info/2020/02/25/masque-review/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/02/25/masque-review/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://datatracker.ietf.org/wg/masque/about/&#34;&gt;MASQUE&lt;/a&gt; is set of related IETF drafts for specifying flexible proxying built into a standard webserver.  It is meant to be deployed on a server that is serving public websites, then this connection can be reused for proxying generic connections.  It is very much a work in progress, so any of this can change.  It is currently built on top of the QUIC+HTTP/3 and HTTP/2+TLS+TCP protocols.  The website and proxy packets look the same, and all connections to the webserver will be shared and reused, regardless of whether its a web page request or proxy traffic.  Each new proxy/website request will reuse any existing connection, providing a key reduction in metadata that makes all the packets blend together from the point of view of the network observer.  For example, to prevent the network observer from corrolating requests to proxy with the outbound request to the destination, a client could first connect to the website, then some time later, connect to the proxy.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

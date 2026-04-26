@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>User Stories on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/user-stories/</link>
+    <description>Recent content in User Stories on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/user-stories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>User scenarios to guide our crypto development</title>
+      <link>https://guardianproject.github.io/info/2012/04/14/user-scenarios-to-guide-our-crypto-development/</link>
+      <pubDate>Sat, 14 Apr 2012 20:16:03 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/04/14/user-scenarios-to-guide-our-crypto-development/</guid>
+      <description>&lt;p&gt;At Guardian Project, we find user-centered development to be essential to producing useful software that addresses real world needs. To drive this, we work with user stories and scenarios as part of the process of developing software. One particular development focus is the &lt;a href=&#34;https://guardianproject.info/wiki/PSST&#34; title=&#34;Portable Shared Security Token&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Token (PSST)&lt;/a&gt; project, which aims to make it easy to use encryption across both mobile and desktop computers, as well as keep the stores of cryptographic identities (i.e. trusted keys, certificates, etc) in sync between devices.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geo on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/geo/</link>
+    <description>Recent content in Geo on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/geo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Experimental app to improve privacy in location sharing</title>
+      <link>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</link>
+      <pubDate>Thu, 29 Jan 2015 07:36:58 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/01/29/experimental-app-to-improve-privacy-in-location-sharing/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png&#34; alt=&#34;ic_launcher-web&#34; width=&#34;300&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-12835&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-270x270.png 270w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web-230x230.png 230w, https://guardianproject.info/wp-content/uploads/2015/01/ic_launcher-web.png 512w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;As part of the T2 Panic effort, I’ve recently been diving deep into the issues of sharing location. It is unfortunately looking really bad, with many services, including Google, frequently sharing location as plain text over the network. I’ve started to write up some of the issues &lt;a href=&#34;https://guardianproject.github.io/info/tag/panic&#34;&gt;on this blog&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;As part of this, I’ve put together an experimental Android app that aims to act as a privacy filter for all ways of sharing location. Mostly, that means it accepts all sorts of URLs from location services, and tries to parse the location from the URL, then rewrites it into a &lt;a href=&#34;http://geouri.org&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;geo:&lt;/code&gt; URI&lt;/a&gt;, which is the standard way to share location in Android (and hopefully soon all others). As of ChatSecure v14.1.0, these &lt;code&gt;geo:&lt;/code&gt; URLs are also clickable.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xmpp on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/xmpp/</link>
+    <description>Recent content in Xmpp on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/xmpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChatSecure 13.2: Important Beta!</title>
+      <link>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</link>
+      <pubDate>Tue, 05 Aug 2014 11:35:54 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/08/05/chatsecure-13.2-important-beta/</guid>
+      <description>&lt;p&gt;Today is the first public beta of ChatSecure v13.2, an important update of the user interface, networking code, and overall stability. We’ve spent the last six months tracking down crashes, memory leaks and performance issues, and have reached a stable, functional point which we want to share for public use. Reliability and simplicity our the goals, as we move towards v14 in the next few months.&lt;/p&gt;&#xA;&lt;p&gt;This beta also features a new account setup wizard that we are eager for feedback on. Our goal is to enable new users to have a much simpler experience in setting up ChatSecure to connect to existing or create new accounts. We have also provided a “one-click burner” option to quickly create throwaway accounts, that require Tor and OTR encryption always, for chatting with a single contact or even just a single conversation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gibberbot v11 is not just secure, its also simple, snappy and super fun!</title>
+      <link>https://guardianproject.github.io/info/2013/03/08/gibberbot-v11-is-not-just-secure-its-also-simple-snappy-and-super-fun/</link>
+      <pubDate>Fri, 08 Mar 2013 12:54:50 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/03/08/gibberbot-v11-is-not-just-secure-its-also-simple-snappy-and-super-fun/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Gibberbot v11 is now final as of RC3 release: &lt;a href=&#34;https://github.com/guardianproject/Gibberbot/tree/0.0.11-RC3&#34;&gt;https://github.com/guardianproject/Gibberbot/tree/0.0.11-RC3&lt;/a&gt;. From here, the only changes to v11 we will be making will be critical bug fixes. We are now focused on our v12 release, which you can track here: &lt;a href=&#34;https://dev.guardianproject.info/versions/39&#34;&gt;https://dev.guardianproject.info/versions/39&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Please promote our new Gibberbot how-to interactive tutorial available here: &lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://guardianproject.info/howto/chatsecurely/&#34;&gt;https://guardianproject.info/howto/chatsecurely/&lt;/a&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;If you have been tracking our efforts here for the last few years, you will know that Gibberbot, our secure instant messaging app, started out as a big old mess of an app called “ORChat” as and then “OTRChat” and then “Gibber” (or “Jibber”?), and then finally settled down into the name and app it is known as now. Really it was a proof of concept, showing that you could indeed use the &lt;a href=&#34;https://github.com/gpolitis/otr4j&#34;&gt;OTR4J library&lt;/a&gt; built for desktops app, on Android.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beem&#43;Orbot: Mobile Instant Messaging over Tor</title>
+      <link>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</link>
+      <pubDate>Mon, 10 May 2010 16:32:01 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</guid>
+      <description>&lt;p&gt;It is no secret that we are big fans of open-source here at Guardian. In fact, it is &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;what we are made of&lt;/a&gt;. Guardian is not just a single app or just one phone, it is a vision for a more private and secure future for personal mobile telecommunications. As part of our work, we are constantly on the lookout other similar, like-minded projects that are developing open-source communications tools for the Android OS which we can make to work with our underlying security platform.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

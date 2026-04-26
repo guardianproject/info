@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OTF Localization Lab on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/otf-localization-lab/</link>
+    <description>Recent content in OTF Localization Lab on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/otf-localization-lab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Good translations are essential to usability</title>
+      <link>https://guardianproject.github.io/info/2015/12/09/good-translations-are-essential-to-usability/</link>
+      <pubDate>Wed, 09 Dec 2015 17:20:15 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/12/09/good-translations-are-essential-to-usability/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-230x300.jpg&#34; alt=&#34;Rosetta Stone&#34; width=&#34;230&#34; height=&#34;300&#34; class=&#34;alignright size-medium wp-image-13155&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-230x300.jpg 230w, https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone-786x1024.jpg 786w, https://guardianproject.info/wp-content/uploads/2015/12/Rosetta-Stone.jpg 1164w&#34; sizes=&#34;(max-width: 230px) 100vw, 230px&#34; /&gt;&lt;/a&gt;All too often, translation of an app are treated as an afterthought. It is not something that the app developers see, since they create the software in languages that work best for them. So the software looks complete to the developers. But for anyone using the software in a different language, translation is essential in order for the app to be useful. If you can’t understand the words that you see in the app’s interface, it is going to be difficult or impossible to use that app.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

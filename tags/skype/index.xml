@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Skype on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/skype/</link>
+    <description>Recent content in Skype on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/skype/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VoIP Survey Results of NGOs, Human Rights Groups and Activists</title>
+      <link>https://guardianproject.github.io/info/2012/03/07/voip-survey-results-of-ngos-human-rights-groups-and-activists/</link>
+      <pubDate>Wed, 07 Mar 2012 18:58:29 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/07/voip-survey-results-of-ngos-human-rights-groups-and-activists/</guid>
+      <description>&lt;p&gt;In November 2011, 25 individuals were surveyed using an online form, representing typical end-users, global journalists, activist and human rights organization perspectives (Thank you to all the participants!). The goal of the survey was to establish a baseline understanding of the types of tools and expectations our target user community has around making “telephone calls” over the internet, otherwise known as Voice over Internet Protocol (VoIP).&lt;/p&gt;&#xA;&lt;p&gt;This survey is part of our work on the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;Open Secure Telephony Net (OSTN)&lt;/a&gt;. In summary, we believe there is too great a reliance upon closed systems, proprietary protocols, and expensive commercial solutions, among the very people and groups who need a verifiable secure system based on free software. While using GPG for email, or OTR-encryption for chat have become somewhat standards go-tos for these groups, there has not been the same progress made on the secure voice front. OSTN aims to change that, but before we can, we need to understand where our target user community stand today.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

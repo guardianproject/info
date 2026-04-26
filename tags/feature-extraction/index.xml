@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feature Extraction on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/feature-extraction/</link>
+    <description>Recent content in Feature Extraction on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/feature-extraction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Data Sources: API Key Identifiers and BroadcastReceiver Declarations</title>
+      <link>https://guardianproject.github.io/info/2020/12/15/new-data-sources-api-key-identifiers-and-broadcastreceiver-declarations/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/12/15/new-data-sources-api-key-identifiers-and-broadcastreceiver-declarations/</guid>
+      <description>&lt;p&gt;A central focus of the &lt;a href=&#34;https://gitlab.com/trackingthetrackers/wiki&#34;&gt;Tracking the&#xA;Trackers&lt;/a&gt; project has&#xA;been to find simple ways to detect whether a given Android APK app&#xA;file contains code which tracks the user.  The ideal scenario is a&#xA;simple program that can scan the APK and tell a non-technical user&#xA;whether it contains trackers, but as decades of experience with&#xA;anti-virus and malware scanners have clearly demonstrated, scanners&#xA;will always contain a large degree of approximation and guesswork.&#xA;Tracking the Trackers grew out of experiments in using machine&#xA;learning to detect malware.  This provided the spark to apply this to&#xA;privacy issues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>εxodus ETIP: The Canonical Database for Tracking Trackers</title>
+      <link>https://guardianproject.github.io/info/2020/12/11/%CE%B5xodus-etip-the-canonical-database-for-tracking-trackers/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/12/11/%CE%B5xodus-etip-the-canonical-database-for-tracking-trackers/</guid>
+      <description>&lt;p&gt;There is a new story to add to the list of horrors of &lt;a href=&#34;https://en.wikipedia.org/wiki/Surveillance_capitalism&#34;&gt;Surveillance Capitalism&lt;/a&gt;: the United States&amp;rsquo; Military is &lt;a href=&#34;https://www.vice.com/en/article/jgqm5x/us-military-location-data-xmode-locate-x&#34;&gt;purchasing tracking and location data&lt;/a&gt; from companies that track many millions of people.  We believe the best solution starts with making people aware of the problem, with tools like &lt;a href=&#34;https://exodus-privacy.eu.org/&#34;&gt;Exodus Privacy&lt;/a&gt;.  Then they must have real options for stepping out of &amp;ldquo;big tech&amp;rdquo;, &lt;a href=&#34;https://www.theguardian.com/technology/2017/nov/28/android-apps-third-party-tracker-google-privacy-security-yale-university&#34;&gt;where tracking dominates&lt;/a&gt;.  &lt;a href=&#34;https://f-droid.org&#34;&gt;F-Droid&lt;/a&gt; provides Android apps that are reviewed for tracking and other &lt;a href=&#34;https://f-droid.org/en/docs/Anti-Features/&#34;&gt;&amp;ldquo;anti-features&amp;rdquo;&lt;/a&gt;, and F-Droid is built into mobile platforms like &lt;a href=&#34;https://calyxos.org/&#34;&gt;CalyxOS&lt;/a&gt; that are free of proprietary, big tech software.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Free Software Tooling for Android Feature Extraction</title>
+      <link>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</guid>
+      <description>&lt;p&gt;As part of the Tracking the Trackers project, we are inspecting&#xA;thousands of Android apps to see what kinds of tracking we can find.&#xA;We are looking at both the binary APK files as well as the source&#xA;code.  Source code is of course easy to inspect, since it is already a&#xA;form that is meant to be read and reviewed by people.  Android APK&#xA;binaries are a very different story.  They are first and foremost a&#xA;machine-executable format.  On top of that, many developers&#xA;deliberately obfuscate as much as possible in the APK to resist&#xA;inspection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&#34;Features&#34; for Finding Trackers</title>
+      <link>https://guardianproject.github.io/info/2020/04/28/features-for-finding-trackers/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/04/28/features-for-finding-trackers/</guid>
+      <description>&lt;p&gt;One key component of the Tracking the Trackers project is building a&#xA;machine learning (ML) tool to aide humans to find tracking in Android&#xA;apps. One of the most important pieces of developing a machine&#xA;learning tool is figuring out which &amp;ldquo;features&amp;rdquo; should be fed to the&#xA;machine learning algorithms. In this context, features are&#xA;constrained data sets derived from the whole data set. In our case,&#xA;the whole data set is terabytes of APKs. This post is an outline of&#xA;the features that we are focusing on in this current project.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

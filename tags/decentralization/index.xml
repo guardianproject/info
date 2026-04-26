@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Decentralization on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/decentralization/</link>
+    <description>Recent content in Decentralization on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/decentralization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Decentralizing Distribution</title>
+      <link>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</guid>
+      <description>&lt;p&gt;Guardian Project has been awarded a grant from the &lt;a href=&#34;https://www.ffdweb.org/guardian-project-annoucement&#34;&gt;Filecoin Foundation for the Decentralized Web (FFDW)&lt;/a&gt; to work on decentralizing veracity and distribution (DVD).  FFDW’s Mission is to “ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.”  Filecoin is built on top of IPFS, which is &amp;ldquo;&lt;a href=&#34;https://docs.ipfs.io/concepts/what-is-ipfs/&#34;&gt;a distributed system for storing and accessing files&lt;/a&gt;&amp;rdquo;.  The distribution component of the FFDW-DVD project is focused on improving F-Droid&amp;rsquo;s free, open, and decentralized mobile app ecosystem.  On top of the flagship unified experience offered by this website and the F-Droid official app, F-Droid provides all the pieces for anyone to create, build, remix, publish, reproduce, redistribute and review mobile apps.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

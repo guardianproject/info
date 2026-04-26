@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Im on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/im/</link>
+    <description>Recent content in Im on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/im/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beem&#43;Orbot: Mobile Instant Messaging over Tor</title>
+      <link>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</link>
+      <pubDate>Mon, 10 May 2010 16:32:01 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/05/10/beem-orbot-mobile-instant-messaging-over-tor/</guid>
+      <description>&lt;p&gt;It is no secret that we are big fans of open-source here at Guardian. In fact, it is &lt;a href=&#34;https://github.com/guardianproject&#34;&gt;what we are made of&lt;/a&gt;. Guardian is not just a single app or just one phone, it is a vision for a more private and secure future for personal mobile telecommunications. As part of our work, we are constantly on the lookout other similar, like-minded projects that are developing open-source communications tools for the Android OS which we can make to work with our underlying security platform.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

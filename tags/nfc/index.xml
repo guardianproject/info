@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nfc on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/nfc/</link>
+    <description>Recent content in Nfc on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/nfc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Question: central server, federated, or p2p? Answer: all!</title>
+      <link>https://guardianproject.github.io/info/2014/09/18/question-central-server-federated-or-p2p-answer-all/</link>
+      <pubDate>Thu, 18 Sep 2014 00:30:57 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/09/18/question-central-server-federated-or-p2p-answer-all/</guid>
+      <description>&lt;p&gt;There are many ideas of core architectures for providing digital services, each with their own advantages and disadvantages. I break it down along the lines of central servers, federated servers, and peer-to-peer, serverless systems.&lt;/p&gt;&#xA;&lt;div id=&#34;attachment_12631&#34; style=&#34;width: 210px&#34; class=&#34;wp-caption aligncenter&#34;&gt;&#xA;  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12631&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png&#34; alt=&#34;a central service with clients connecting to it&#34; width=&#34;200&#34; height=&#34;207&#34; class=&#34;size-full wp-image-12631&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png 200w, https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_-100x103.png 100w, https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_-150x155.png 150w&#34; sizes=&#34;(max-width: 200px) 100vw, 200px&#34; /&gt;&lt;/a&gt;&#xA;  &lt;p id=&#34;caption-attachment-12631&#34; class=&#34;wp-caption-text&#34;&gt;&#xA;    a central service with clients connecting to it&#xA;  &lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Most big internet companies operate in effect as a central server (even though they are implemented differently). There is only facebook.com, there are no other services that can inter-operate with facebook.com. Have a single, central repo makes problems of finding the service and finding people within the service a lot easier. Once you are in Facebook, you just need to know the name of the person you want to contact and you are connected. The Facebook apps just need to talk to facebook.com, so the user does not need to know which service they are using in order to configure the app.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Keys, signatures, certificates, verifications, etc. What are all these for?</title>
+      <link>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</link>
+      <pubDate>Thu, 12 Dec 2013 13:20:09 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key-150x150.jpg&#34; alt=&#34;portable shared security token&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12129&#34; /&gt;&lt;/a&gt;For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally &lt;a href=&#34;https://dev.guardianproject.info/projects/psst/wiki/PSST&#34; title=&#34;PSST Wiki&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Tokens aka PSST&lt;/a&gt;. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are. One thing we learned a lot about is how to portray and discuss tools for private or anonymous communications to people who just want to communicate and are not interested in technical discussion. This is becoming a central issue among a lot of people working to make usable privacy tools.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

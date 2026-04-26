@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tls on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/tls/</link>
+    <description>Recent content in Tls on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/tls/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using TLS ECH from Python</title>
+      <link>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</guid>
+      <description>&lt;p&gt;At first, the idea of encrypting more of the metadata found inside the initial packet (the &amp;ldquo;ClientHello&amp;rdquo;) of a TLS&#xA;connection may seem simple and obvious, but there are of course reasons that this wasn&amp;rsquo;t done right from the start.&#xA;In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields,&#xA;and present a working code example using a fork of CPython built with DEfO project&amp;rsquo;s OpenSSL fork to connect to&#xA;ECH-enabled HTTPS servers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quick set up guide for Encrypted Client Hello (ECH)</title>
+      <link>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</guid>
+      <description>&lt;p&gt;The Encrypted Client Hello (ECH) mechanism &lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-tls-esni&#34;&gt;draft-spec&lt;/a&gt; is a way to plug a few privacy-holes that remain in the Transport Layer Security (TLS) protocol that&amp;rsquo;s used as the security layer for the web. OpenSSL is a widely used library that provides an implementation of the TLS protocol. The &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO project&lt;/a&gt; has developed an implementation of ECH for OpenSSL, and proof-of-concept implementations of various clients and servers that use OpenSSL, and other TLS libraries, as a demonstration and for interoperability testing. DEfO is funded by the Open Technology Fund (OTF).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Debian over HTTPS</title>
+      <link>https://guardianproject.github.io/info/2021/12/08/debian-over-https/</link>
+      <pubDate>Wed, 08 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/12/08/debian-over-https/</guid>
+      <description>&lt;p&gt;Debian&amp;rsquo;s package manager &lt;a href=&#34;https://wiki.debian.org/SecureApt&#34;&gt;&lt;em&gt;apt&lt;/em&gt;&lt;/a&gt; has a&#xA;time-tested method of securely providing packages from the network built on&#xA;OpenPGP signatures.  Even though this signing method works well for verifying&#xA;the indexes and package files, there are new threats that have become relevant&#xA;as man-in-the-middle attacks and data mining become ever easier.  Since 2013,&#xA;&lt;em&gt;apt&lt;/em&gt; developers have supported encrypted transport methods HTTPS and Tor Onion&#xA;Service.  We have been &lt;a href=&#34;https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/&#34;&gt;recommending&lt;/a&gt; &lt;a href=&#34;https://guardianproject.github.io/info/2019/01/23/use-onions/https-for-software-updates/&#34;&gt;their&lt;/a&gt; &lt;a href=&#34;https://guardianproject.github.io/info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34;&gt;use&lt;/a&gt; since &lt;a href=&#34;https://guardianproject.github.io/info/2013/10/31/issues-when-distributing-software/&#34;&gt;2013&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Most major mirrors already support HTTPS, and now &lt;a href=&#34;https://security.debian.org&#34;&gt;https://security.debian.org&lt;/a&gt;&#xA;has finally joined the party.  That means it is possible to use HTTPS on all of&#xA;the official repositories.  On top of that, many Debian Developers are working&#xA;on making &lt;a href=&#34;https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=992692&#34;&gt;HTTPS the&#xA;default&lt;/a&gt; for new&#xA;installs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Implementing TLS Encrypted Client Hello</title>
+      <link>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</link>
+      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/11/30/implementing-tls-encrypted-client-hello/</guid>
+      <description>&lt;p&gt;As part of the &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project, we have been working on&#xA;accelerating the development &lt;a href=&#34;https://www.ietf.org/archive/id/draft-ietf-tls-esni-13.html&#34;&gt;Encrypted Client Hello&#xA;(ECH)&lt;/a&gt; as&#xA;standardized by the IETF.  ECH is the next step in improving Transport Layer&#xA;Security (TLS).  TLS is one of the basic building blocks of the internet, it is&#xA;what puts the S in HTTPS.  The ECH standard is nearing completion.  That is&#xA;exciting because ECH can encrypt the last plaintext TLS metadata that it is&#xA;possible to encrypt.  So ECH will bring some real improvements in privacy and&#xA;censorship resistance.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NetCipher &#43; Conscrypt for the best possible TLS</title>
+      <link>https://guardianproject.github.io/info/2019/12/17/netcipher--conscrypt-for-the-best-possible-tls/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/12/17/netcipher--conscrypt-for-the-best-possible-tls/</guid>
+      <description>&lt;p&gt;A new NetCipher library has recently been merged:&#xA;&lt;a href=&#34;https://gitlab.com/guardianproject/NetCipher/merge_requests/86&#34;&gt;&lt;em&gt;netcipher-conscrypt&lt;/em&gt;&lt;/a&gt;.&#xA;In the same vein as the other NetCipher libraries,&#xA;&lt;em&gt;netcipher-conscrypt&lt;/em&gt; wraps the Google&#xA;&lt;a href=&#34;https://source.android.com/devices/architecture/modular-system/conscrypt&#34;&gt;Conscrypt&lt;/a&gt;&#xA;library, which provides the latest&#xA;&lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34;&gt;TLS&lt;/a&gt; for any&#xA;app that includes it.  &lt;em&gt;netcipher-conscrypt&lt;/em&gt; lets apps then disable old&#xA;TLS versions like TLSv1.0 and TLSv1.1, as well as disable TLS Session&#xA;Tickets.  This is an alpha release because it only works on recent&#xA;Android versions (8.1 or newer).  The actual functionality works well,&#xA;the hard part remains making sure that it is possible to inject&#xA;&lt;em&gt;netcipher-conscrypt&lt;/em&gt; as the TLS provider on all Android devices and&#xA;versions.  And the last missing piece is finding the right place in&#xA;Conscrypt to configure proxying to support Tor or other privacy&#xA;proxies&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tweaking HTTPS for Better Security</title>
+      <link>https://guardianproject.github.io/info/2014/02/12/tweaking-https-for-better-security/</link>
+      <pubDate>Wed, 12 Feb 2014 19:14:59 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/02/12/tweaking-https-for-better-security/</guid>
+      <description>&lt;p&gt;The HTTPS protocol is based on TLS and SSL, which are standard ways to negotiate encrypted connections. There is a lot of complexity in the protocols and lots of config options, but luckily most of the config options can be ignored since the defaults are fine. But there are some things worth tweaking to ensure that as many connections as possible are using reliable encryption ciphers while providing &lt;a href=&#34;https://en.wikipedia.org/wiki/Forward_secrecy&#34;&gt;forward secrecy&lt;/a&gt;. A connection with forward secrecy provides protection to past transactions even if the server’s HTTPS private key/certificate is stolen or compromised. This protects your users from large scale network observers that can store all traffic for later decryption, like governments, ISPs, telecoms, etc. From the server operator’s point of view, it means less risk of leaking users’ data, since even if the server is compromised, past network traffic will probably not be able to be encrypted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VoIP security architecture in brief</title>
+      <link>https://guardianproject.github.io/info/2013/11/21/voip-security-architecture-in-brief/</link>
+      <pubDate>Thu, 21 Nov 2013 19:07:17 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/11/21/voip-security-architecture-in-brief/</guid>
+      <description>&lt;p&gt;Voice over IP (VoIP) has been around for a long time. It’s ubiquitous in homes, data centers and carrier networks. Despite this ubiquity, security is rarely a priority. With the combination of a handful of important standard protocols, it is possible to make untappable end to end encryption for an established VoIP call.&lt;/p&gt;&#xA;&lt;p&gt;TLS is the security protocol between the signaling endpoints of the session. It’s the same technology that exists for SSL web sites; ecommerce, secure webmail, Tor and many others use TLS for security. Unlike web sites, VoIP uses a different protocol called the Session Initiation Protocol (SIP) for signaling: actions like ringing an endpoint, answering a call and hanging up. This is the metadata of calls. SIP-TLS uses the standard Certificate Authorities for key agreement. This implies trust between the certificate issuer and the calling endpoints.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Proposal for Secure Connection Notification on Android</title>
+      <link>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</link>
+      <pubDate>Thu, 15 Nov 2012 10:07:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/11/15/proposal-for-secure-connection-notification-on-android/</guid>
+      <description>&lt;p&gt;A major problem of mobile applications being increasingly used over web-based applications, is that there is no standard established for notifying the user of the state of security on the network connection. With a web browser, the evolution of the “lock” icon when an &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Secure&#34;&gt;HTTPS connection&lt;/a&gt; is made, has been one that evolved originally out of Netscape’s first implementation, to an adhoc, defact industry-standard way of letting the user know if their connection is secure. Beyond just a binary on/off, the lock icon is also the entry point into viewing more information about the digital security tokens, keys and certificates that are powering the connection – who authorized them, who requested them, and so on. More recently, with browsers such as Chrome, there has been the user of color schemes (Green is good, Red is bad), verified domain display and other indicators to help ensure the user knows when to trust their connection, and when to be wary.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

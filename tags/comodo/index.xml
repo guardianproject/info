@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Comodo on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/comodo/</link>
+    <description>Recent content in Comodo on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/comodo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CACertMan app to address DigiNotar &amp; other bad CA’s</title>
+      <link>https://guardianproject.github.io/info/2011/09/05/cacertman-app-to-address-diginotar-other-bad-cas/</link>
+      <pubDate>Mon, 05 Sep 2011 03:29:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2011/09/05/cacertman-app-to-address-diginotar-other-bad-cas/</guid>
+      <description>&lt;p&gt;As I expect many of you are aware, there was a major compromise to a Dutch Certificate Authority named “DigiNotar” recently, where they allowed SSL certs for domains like *.google.com, *.torproject.org and even *.cia.gov as well as *.*.com to be issued.&lt;/p&gt;&#xA;&lt;p&gt;It was brought up to the contribs of CyanogenMOD that they should probably remove the DigiNotar CA cert from the built-in Android OS keystore (located at /system/etc/security/cacerts.bks). Since they have 500k+ users, and can be more nimble than other ROM/device distributors, it was seen as a way to quickly address the problem, at least within their community. It turns out that it wasn’t as easy to convince them to do this (even though Mozilla, Google Chrome, IE, etc already had). You can read the thread, but it is still an open issue:&lt;br&gt;&#xA;h&lt;a href=&#34;ttp://code.google.com/p/cyanogenmod/issues/detail?id=4260&#34;&gt;ttp://code.google.com/p/cyanogenmod/issues/detail?id=4260&lt;/a&gt;{.vt-p}&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

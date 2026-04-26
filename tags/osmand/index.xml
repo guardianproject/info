@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Osmand on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/osmand/</link>
+    <description>Recent content in Osmand on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/osmand/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing offline maps with F-Droid and OsmAnd</title>
+      <link>https://guardianproject.github.io/info/2020/11/28/managing-offline-maps-with-f-droid-and-osmand/</link>
+      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/11/28/managing-offline-maps-with-f-droid-and-osmand/</guid>
+      <description>&lt;p&gt;When disaster strikes, our mobile devices can provide us with many&#xA;tools to deal with a wide variety of problems.  The internet is not&#xA;available in every corner of the planet, and large scale outages&#xA;happen.  Digital maps allow us to carry detailed maps of the entire&#xA;planet in our pockets.  And the good map apps allow the user to&#xA;download entire regions to the device so that they operate without&#xA;internet at all.  Unfortunately, the big map apps from Google and&#xA;Apple provide limited offline capabilities.  For example, it is&#xA;&lt;a href=&#34;https://annoyingtechnicaldetails.wordpress.com/2020/09/23/cannot-easily-redistribute-downloaded-offline-files-for-google-maps/&#34;&gt;not possible&lt;/a&gt;&#xA;to share offline data from one device to another.  Online maps are&#xA;also a major privacy leak, since location data is the most sensitive&#xA;data.  With online maps, the service operator sees each tile of the&#xA;map that you look at, each time you look at it, as well as all the&#xA;locations you search for.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sharing your location privately</title>
+      <link>https://guardianproject.github.io/info/2015/01/23/sharing-your-location-privately/</link>
+      <pubDate>Fri, 23 Jan 2015 15:00:10 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/01/23/sharing-your-location-privately/</guid>
+      <description>&lt;div id=&#34;attachment_12774&#34; style=&#34;width: 298px&#34; class=&#34;wp-caption alignright&#34;&gt;&#xA;  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12774&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location-576x1024.png&#34; alt=&#34;Facebook location sharing embeds the location in every single message, providing a detailed log to the recipient, Facebook, and anyone Facebook shares that data with&#34; width=&#34;288&#34; height=&#34;512&#34; class=&#34;size-large wp-image-12774&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location.png 576w, https://guardianproject.info/wp-content/uploads/2015/01/facebook-messenger-shared-location-169x300.png 169w&#34; sizes=&#34;(max-width: 288px) 100vw, 288px&#34; /&gt;&lt;/a&gt;&#xA;  &lt;p id=&#34;caption-attachment-12774&#34; class=&#34;wp-caption-text&#34;&gt;&#xA;    Facebook location sharing embeds the location in every single message, providing a detailed log to the recipient, Facebook, and anyone Facebook shares that data with&#xA;  &lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;One handy feature that many smartphones give us is the ability to easily share our exact position with other people. You can see this feature in a lot of apps. Google Maps lets you click “Share” and send a URL via any method you have available. In Facebook Messenger, you can click a button and the people on the other side of the chat will receive a little embedded map showing the received location. Of course, the question we always ask is: how can we do this in a privacy-preserving way? And the follow up question: what kinds of information are apps leaking, storing, using, etc? Location is especially valuable and sensitive metadata, especially when there is a lot of it, because it can be used to derive so much information about a person. Most people do not want to publicly post their phone number or home address on the internet, yet are unwittingly giving away far more detailed information by using the various location-based services that are available. There is a lot of specific location information that people do not want to publicize that they visit: a cancer specialist, an abortion clinic, a criminal court, a mistress’ house, or any location information to an abusive spouse. For a great illustration of the power of location metadata, you can watch &lt;a href=&#34;http://www.zeit.de/datenschutz/malte-spitz-data-retention&#34; target=&#34;_blank&#34;&gt;an animation of German politician Malte Spitz’s life, based on his telephone metadata that his telecom had stored&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

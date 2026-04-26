@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>Orfox: Aspiring to bring Tor Browser to Android | Guardian Project</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="" />
+
+    
+    
+
+    <meta property="og:title" content="Orfox: Aspiring to bring Tor Browser to Android" />
+<meta property="og:description" content="People, Apps and Code You Can Trust" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2015/06/30/orfox-aspiring-to-bring-tor-browser-to-android/" />
+
+<meta property="og:site_name" content="Guardian Project" />
+
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Guardian Project",
+  "url": "https:\/\/guardianproject.github.io\/info\/",
+  "description": "People, Apps and Code You Can Trust"
+}
+</script>
+
+    <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@guardianproject" />
+<meta name="twitter:title" content="Orfox: Aspiring to bring Tor Browser to Android" />
+<meta name="twitter:description" content="People, Apps and Code You Can Trust" />
+
+
+
+
+    
+    
+      <link rel="icon" type="image/svg+xml" href="https://guardianproject.github.io/info/favicon.svg" />
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/info/css/styles.a19010b40d9686f3e754ba7e80fde4910a154a79ad45797c2d7fb6bbe5db8b35.css"
+              integrity="sha256-oZAQtA2WhvPnVLp&#43;gP3kkQoVSnmtRXl8LX&#43;2u&#43;XbizU="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/info/css/fonts.d1879df1972316d8d938b96958535f08cf5a6b3b078bd2be90bde9ccc01f9aa4.css" integrity="sha256-0Yed8ZcjFtjZOLlpWFNfCM9aazsHi9K&#43;kL3pzMAfmqQ=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/info/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+
+    
+    <script defer src="https://guardianproject.github.io/info/js/kao-banner.js"></script>
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="border-b border-gray-100 relative z-40">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4">
+    <a class="flex items-center" href="https://guardianproject.github.io/info/">
+      <img src="https://guardianproject.github.io/info/images/wordlogo.svg" alt="Guardian Project" class="h-10 xl:h-12" />
+    </a>
+
+    
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      id="menuOpen"
+      aria-label="Open Menu"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+    </button>
+
+    
+    <ul class="hidden xl:flex xl:flex-row xl:gap-1 xl:items-center">
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/"
+            >
+              About
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/brand/">
+                    New Branding
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/story/">
+                    Our Story
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/partners/">
+                    Partners and Funding
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/press/">
+                    Press
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/services/">
+                    Services
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/signing-keys/">
+                    Signing Keys
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/team/">
+                    Team
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/apps/"
+            >
+              Apps
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.checkey/">
+                    Checkey: info on local apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/circulo/">
+                    Círculo
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.havenapp.main/">
+                    Haven
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.locationprivacy/">
+                    Location Privacy - BETA
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.witness.sscphase1/">
+                    ObscuraCam: The Privacy Camera
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.android/">
+                    Orbot: Proxy with Tor
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.orfox/">
+                    Orfox
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.pixelknot/">
+                    PixelKnot: Hidden Messages
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.witness.proofmode/">
+                    ProofMode: Verified Visuals
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.ripple/">
+                    Ripple: respond when panicking
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/net.opendasharchive.openarchive.release/">
+                    Save
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torbrowser/">
+                    Tor Browser for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torbrowser_alpha/">
+                    Tor Browser for Android (Alpha)
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torservices/">
+                    TorServices (alpha)
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/code/"
+            >
+              Code
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/cleaninsights/">
+                    Clean Insights: Privacy Preserving Measurement
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/iocipher/">
+                    IOCipher: Virtual Encrypted Disks
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/netcipher/">
+                    NetCipher: Secured Networking
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/onionmobiledev/">
+                    Onion Mobile Devs: Tor Integration for Mobile Apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/panickit/">
+                    PanicKit: system-wide panic responses
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/c2pa/">
+                    Proofmode and C2PA
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/sqlcipher/">
+                    SQLCipher: Encrypted Database
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/tor-android/">
+                    TorService: Tor library for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/trustedintents/">
+                    TrustedIntents: flexible trusted interactions between Android apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/wind/">
+                    Wind: Off-Grid Services for Everyday People
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          
+            <li>
+              <a class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-block" href="/info/blog/">Blog</a>
+            </li>
+          
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/archive/"
+            >
+              Archive
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/apps/">
+                    Archived Apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/cacheword/">
+                    CacheWord: Passphrase Caching and Management
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/camerav/">
+                    CameraV: Secure Verifiable Photo &amp; Video Camera
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/courier/">
+                    Courier: Secure News reader
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/developersquare/">
+                    Developer Square
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/ffmpeg/">
+                    FFMPEG: Media Privacy Framework
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/firefoxprivacy/">
+                    Firefox Mobile: Privacy Enhanced
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/freebird/">
+                    Freebird Workshop
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/gnupg/">
+                    GnuPG: OpenPGP Encryption
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/hardware/">
+                    Hardware Guide
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/informacam/">
+                    InformaCam: Verified Mobile Media
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/keysync/">
+                    KeySync: Syncing Trusted Identities
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/libsqlfs/">
+                    libsqlfs: filesystem on top of SQLite/SQLCipher
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/lildebi/">
+                    Lil&#39; Debi: Mobile Debian Installer
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/luks/">
+                    LUKS: Disk Encryption
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/onionkit/">
+                    OnionKit for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/orbot/">
+                    Orbot: Tor for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/orweb/">
+                    Orweb: Private Web Browser
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/ostel/">
+                    Ostel: Encrypted Phone Calls
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/pixelknot/">
+                    Pixelknot: Hidden Messages
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/tutorials/">
+                    Tutorials
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/weatherrepo/">
+                    Weather Repo
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/contact/"
+            >
+              Contact
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/">
+                    Contact
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/how-you-can-work-with-us/">
+                    How You Can Work With Us
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/join/">
+                    Jobs and Internships
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/chat/">
+                    Live Chatrooms
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/disclosure-researcher/">
+                    Researcher Disclosure Policy
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/disclosure/">
+                    Responsible Disclosure Policy
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  
+  <div id="mobileMenu" class="fixed inset-0 z-50 hidden xl:hidden">
+    
+    <div id="menuBackdrop" class="absolute inset-0 bg-black/30"></div>
+
+    
+    <div class="absolute inset-y-0 right-0 w-full max-w-sm bg-white shadow-xl overflow-y-auto">
+      
+      <div class="flex items-center justify-between px-4 py-4 border-b border-gray-100">
+        <a class="flex items-center" href="https://guardianproject.github.io/info/">
+          <img src="https://guardianproject.github.io/info/images/wordlogo.svg" alt="Guardian Project" class="h-10" />
+        </a>
+        <button id="menuClose" class="cursor-pointer" type="button" aria-label="Close Menu">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+
+      
+      <ul class="px-4 py-4">
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                About
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/brand/">
+                      New Branding
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/story/">
+                      Our Story
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/partners/">
+                      Partners and Funding
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/press/">
+                      Press
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/services/">
+                      Services
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/signing-keys/">
+                      Signing Keys
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/team/">
+                      Team
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Apps
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.checkey/">
+                      Checkey: info on local apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/circulo/">
+                      Círculo
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.havenapp.main/">
+                      Haven
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.locationprivacy/">
+                      Location Privacy - BETA
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.witness.sscphase1/">
+                      ObscuraCam: The Privacy Camera
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.android/">
+                      Orbot: Proxy with Tor
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.orfox/">
+                      Orfox
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.pixelknot/">
+                      PixelKnot: Hidden Messages
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.witness.proofmode/">
+                      ProofMode: Verified Visuals
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.ripple/">
+                      Ripple: respond when panicking
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/net.opendasharchive.openarchive.release/">
+                      Save
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torbrowser/">
+                      Tor Browser for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torbrowser_alpha/">
+                      Tor Browser for Android (Alpha)
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torservices/">
+                      TorServices (alpha)
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Code
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/cleaninsights/">
+                      Clean Insights: Privacy Preserving Measurement
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/iocipher/">
+                      IOCipher: Virtual Encrypted Disks
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/netcipher/">
+                      NetCipher: Secured Networking
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/onionmobiledev/">
+                      Onion Mobile Devs: Tor Integration for Mobile Apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/panickit/">
+                      PanicKit: system-wide panic responses
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/c2pa/">
+                      Proofmode and C2PA
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/sqlcipher/">
+                      SQLCipher: Encrypted Database
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/tor-android/">
+                      TorService: Tor library for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/trustedintents/">
+                      TrustedIntents: flexible trusted interactions between Android apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/wind/">
+                      Wind: Off-Grid Services for Everyday People
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            
+              <li class="border-b border-gray-50">
+                <a class="block py-3 text-primary font-medium" href="/info/blog/">Blog</a>
+              </li>
+            
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Archive
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/apps/">
+                      Archived Apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/cacheword/">
+                      CacheWord: Passphrase Caching and Management
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/camerav/">
+                      CameraV: Secure Verifiable Photo &amp; Video Camera
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/courier/">
+                      Courier: Secure News reader
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/developersquare/">
+                      Developer Square
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/ffmpeg/">
+                      FFMPEG: Media Privacy Framework
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/firefoxprivacy/">
+                      Firefox Mobile: Privacy Enhanced
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/freebird/">
+                      Freebird Workshop
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/gnupg/">
+                      GnuPG: OpenPGP Encryption
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/hardware/">
+                      Hardware Guide
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/informacam/">
+                      InformaCam: Verified Mobile Media
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/keysync/">
+                      KeySync: Syncing Trusted Identities
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/libsqlfs/">
+                      libsqlfs: filesystem on top of SQLite/SQLCipher
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/lildebi/">
+                      Lil&#39; Debi: Mobile Debian Installer
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/luks/">
+                      LUKS: Disk Encryption
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/onionkit/">
+                      OnionKit for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/orbot/">
+                      Orbot: Tor for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/orweb/">
+                      Orweb: Private Web Browser
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/ostel/">
+                      Ostel: Encrypted Phone Calls
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/pixelknot/">
+                      Pixelknot: Hidden Messages
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/tutorials/">
+                      Tutorials
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/weatherrepo/">
+                      Weather Repo
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Contact
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/">
+                      Contact
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/how-you-can-work-with-us/">
+                      How You Can Work With Us
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/join/">
+                      Jobs and Internships
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/chat/">
+                      Live Chatrooms
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/disclosure-researcher/">
+                      Researcher Disclosure Policy
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/disclosure/">
+                      Responsible Disclosure Policy
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menu = document.getElementById('mobileMenu');
+    const openBtn = document.getElementById('menuOpen');
+    const closeBtn = document.getElementById('menuClose');
+    const backdrop = document.getElementById('menuBackdrop');
+
+    function openMenu() { menu.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { menu.classList.add('hidden'); document.body.style.overflow = ''; }
+
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+    
+    document.querySelectorAll('.mobile-accordion').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var submenu = this.nextElementSibling;
+        var chevron = this.querySelector('.mobile-chevron');
+        submenu.classList.toggle('hidden');
+        chevron.classList.toggle('rotate-180');
+      });
+    });
+  });
+</script>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-8 text-center text-4xl font-bold xl:text-6xl">Orfox: Aspiring to bring Tor Browser to Android</h2>
+      
+      
+        <p class="mb-8 text-center text-sm text-gray-500">By n8fr8 · June 30, 2015</p>
+      
+      
+      
+      
+        <div class="prose prose-lg mx-auto max-w-none">
+          <p><strong>Update 24 September, 2015: Orfox BETA is now on Google Play: <a href="https://play.google.com/store/apps/details?id=info.guardianproject.orfox">https://play.google.com/store/apps/details?id=info.guardianproject.orfox</a></strong></p>
+<hr>
+<p> </p>
+<p>In the summer of 2014 (<a href="https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html">https://lists.mayfirst.org/pipermail/guardian-dev/2014-August/003717.html</a>{.external}), we announced that the results of work by Amogh Pradeep (<a href="https://github.com/amoghbl1">https://github.com/amoghbl1</a>{.external}), our 2014 Google Summer of Code student, has proven we could build Firefox for Android with some of the settings and configurations from the Tor Browser desktop software. We called this app Orfox, in homage to Orbot and our current Orweb browser. This was a good first step, but we were doing the build on Mozilla’s Firefox code repository, and then retrofitting pieces from Tor Browser’s code, which wasn’t the right way to do things, honestly.</p>
+<p>This summer (2015!), with fantastic continued effort by Amogh, we have switched to building the Orfox mobile app directly from the Tor Browser code repository, successfully working through any mobile OS incompatibilities in the security hardening patches added by the Tor Browser team. We also had the additional task of reviewing the Android application code in Firefox, that is not part of Tor Browser, in order to modify and patch it to work inline with the <a href="https://www.torproject.org/projects/torbrowser/design/">Tor Browser requirements and design document</a>.</p>
+<p>As of today, we have a stable alpha release ready for testing, and are rapidly moving towards a public beta in a few weeks. Our plan is to actively encourage users to move from Orweb to Orfox, and stop active development of Orweb, even removing to from the Google Play Store. If users really want to continue using a WebView-based solution and do not need all of the capabilities that Orfox/Tor Browser provides, they can use Lightning Browser (<a href="https://github.com/anthonycr/Lightning-Browser">https://github.com/anthonycr/Lightning-Browser</a>{.external}), a lightweight, open-source app that offers automatic Orbot (SOCKS) proxying on start-up.</p>
+<p>Below you will find screenshots and our current set of <a href="https://dev.guardianproject.info/projects/orfox-private-browser/wiki/Orfox_vs_Tor_Browser_FAQ">Orfox Frequently Asked Questions</a> from the <a href="https://dev.guardianproject.info/projects/orfox-private-browser/wiki">project wiki</a>.</p>
+<p>You can access the current Orfox release by installing the <a href="https://f-droid.org/">F-Droid app</a> and subscribing to our F-Droid Alpha Channel at by clicking on the following link on your phone: <a href="https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo">https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo<br>
+</a></p>
+<p> </p>
+<div id='gallery-11' class='gallery galleryid-12999 gallery-columns-3 gallery-size-medium'>
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13003" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133152.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+    </dt>
+<pre><code>&lt;dd class='wp-caption-text gallery-caption' id='gallery-11-13003'&gt;
+  Recognized as Tor Browser
+&lt;/dd&gt;
+</code></pre>
+  </dl>
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13005" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133103.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+    </dt>
+<pre><code>&lt;dd class='wp-caption-text gallery-caption' id='gallery-11-13005'&gt;
+  A match made by onions!
+&lt;/dd&gt;
+</code></pre>
+  </dl>
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13000" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133624.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+    </dt>
+<pre><code>&lt;dd class='wp-caption-text gallery-caption' id='gallery-11-13000'&gt;
+  Bookmark support!
+&lt;/dd&gt;
+</code></pre>
+  </dl>
+  <br style="clear: both" />
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13001" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133414.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+    </dt>
+<pre><code>&lt;dd class='wp-caption-text gallery-caption' id='gallery-11-13001'&gt;
+  Easy access to onion sites!
+&lt;/dd&gt;
+</code></pre>
+  </dl>
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13002" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133223.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+    </dt>
+<pre><code>&lt;dd class='wp-caption-text gallery-caption' id='gallery-11-13002'&gt;
+  Tabs!
+&lt;/dd&gt;
+</code></pre>
+  </dl>
+  <dl class='gallery-item'>
+    <dt class='gallery-icon portrait'>
+      <a href='https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png'><img width="169" height="300" src="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png" class="attachment-medium size-medium" alt="" aria-describedby="gallery-11-13004" srcset="https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-169x300.png 169w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130-576x1024.png 576w, https://guardianproject.info/wp-content/uploads/2015/06/device-2015-06-30-133130.png 720w" sizes="(max-width: 169px) 100vw, 169px" /></a>
+    </dt>
+<pre><code>&lt;dd class='wp-caption-text gallery-caption' id='gallery-11-13004'&gt;
+  Tor-relevant default sites
+&lt;/dd&gt;
+</code></pre>
+  </dl>
+  <br style="clear: both" />
+</div>
+<p><strong>Where can I find all the relevant Orfox project pieces?</strong></p>
+<ul>
+<li>The Orfox project tracker roadmap is here: <a href="https://dev.guardianproject.info/projects/orfox-private-browser/roadmap">https://dev.guardianproject.info/projects/orfox-private-browser/roadmap</a>{.external}</li>
+<li>The Orfox branch of the Tor Browser repository is here: <a href="https://github.com/guardianproject/tor-browser">https://github.com/guardianproject/tor-browser</a>{.external}</li>
+<li>The Orfox build project is here: <a href="https://github.com/guardianproject/orfoxfennec">https://github.com/guardianproject/orfoxfennec</a>{.external}</li>
+<li>The primary Tor Browser repository is here: <a href="https://gitweb.torproject.org/tor-browser.git/">https://gitweb.torproject.org/tor-browser.git/</a>{.external}</li>
+<li>Automated debug builds of Orfox alpha are available via F-Droid here (install F-Droid on your phone, then copy/paste or open the link to add the repo): <a href="https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo">https://dev.guardianproject.info/debug/info.guardianproject.orfox/fdroid/repo</a>{.external}</li>
+</ul>
+<p><strong>How is Orfox different than Tor Browser for desktop?</strong></p>
+<p>Orfox is built from the same source code as Tor Browser (which is built upon Firefox), but with a few minor modifications to the privacy enhancing features to make them compatible with Firefox for Android and the Android operating system. In as many ways as possible, we will adhere to the design goals of Tor Browser (<a href="https://www.torproject.org/projects/torbrowser/design/">https://www.torproject.org/projects/torbrowser/design/</a>{.external}), by supporting as much of their actual code as possible, and extending their work into the additional AF-Droid appndroid components of Firefox for Android.</p>
+<ul>
+<li>
+<p>The Orfox code repository is at <a href="https://github.com/guardianproject/tor-browser">https://github.com/guardianproject/tor-browser</a>{.external} and the Tor Browser repository is here:<a href="https://gitweb.torproject.org/tor-browser.git/">https://gitweb.torproject.org/tor-browser.git/</a>{.external}. The Orfox repository is a fork of the Tor Browser repository with the necessary modification and Android-specific code as patches on top of the Tor Browser work. We will keep our repository in sync with updates and release of Tor Browser.</p>
+</li>
+<li>
+<p>Orfox is built from the Tor Browser repo based on ESR38 (<a href="https://dev.guardianproject.info/issues/5146">https://dev.guardianproject.info/issues/5146</a>{.external}<a href="https://dev.guardianproject.info/news/221">https://dev.guardianproject.info/news/221</a>{.external}) and has only two modified patches that were not relevant or necessary for Android</p>
+</li>
+<li>
+<p>Orfox does not currently include the mobile versions of HTTPS Everywhere, No Script and the Tor Browser Button, but these we will be added shortly, now that we have discovered how to properly support automatic installation of extensions on Android (<a href="https://dev.guardianproject.info/issues/5360">https://dev.guardianproject.info/issues/5360</a>{.external})</p>
+</li>
+<li>
+<p>Orfox includes a “Request Mobile Site” option that allows you to change the user-agent from the standard Tor Browser agent to a modified Android specific one: “Mozilla/5.0 (Android; Mobile; rv:31.0) Gecko/20100101 Firefox/31.0”. (<a href="https://dev.guardianproject.info/issues/5404">https://dev.guardianproject.info/issues/5404</a>{.external}). This is useful for being able to see the mobile version of a website, but does reduce the amount your browser blends in with other browsers.</p>
+</li>
+<li>
+<p>Orfox currently allows for users to bookmark sites, and may have additional data written to disk beyond what the core gecko browser component does. We are still auditing all disk write code, and determining how to appropriately disable or harden it. (<a href="https://dev.guardianproject.info/issues/5437">https://dev.guardianproject.info/issues/5437</a>{.external})</p>
+</li>
+<li>
+<p>Orfox cannot yet be built deterministically, but based on work with the FDroid project, we are aiming for this to be possible in the next year (<a href="https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise">https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise</a>{.external} <a href="https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds">https://f-droid.org/wiki/page/Deterministic,_Reproducible_Builds</a>{.external})</p>
+</li>
+</ul>
+<p><strong>How is Orfox different than Firefox for Android?</strong></p>
+<p>Beyond the core Tor Browser components, Orfox also must ensure all Android-specific code is properly routed through the Tor proxy, and otherwise hardened to protect against data and privacy leaks.</p>
+<ul>
+<li>
+<p>Orfox adds patches at the Android Java code layer to enable proxying of all Java network HTTP communications through the local Orbot HTTP proxy (HTTP localhost:8118 for now, but moving to SOCKS). (<a href="https://dev.guardianproject.info/issues/5235">https://dev.guardianproject.info/issues/5235</a>{.external} <a href="https://dev.guardianproject.info/issues/5317">https://dev.guardianproject.info/issues/5317</a>{.external})</p>
+</li>
+<li>
+<p>Orfox removes the Android permissions for Contacts, Camera, Microphone, Location and NFC (<a href="https://dev.guardianproject.info/issues/3822">https://dev.guardianproject.info/issues/3822</a>{.external}) since the capability of using these features are not in line with the spirit of Tor Browser</p>
+</li>
+<li>
+<p>Orfox removes features like WebRTC and support for interaction with Chromecasts or Roku devices, since this type of communication is not compatibility with proxying communication through a TCP-based network like Tor (<a href="https://dev.guardianproject.info/issues/5358">https://dev.guardianproject.info/issues/5358</a>{.external} <a href="https://dev.guardianproject.info/issues/5357">https://dev.guardianproject.info/issues/5357</a>{.external})</p>
+</li>
+</ul>
+<p><strong>How is Orfox different than Orweb?</strong></p>
+<ul>
+<li>
+<p>Orweb is our current default browser for Orbot/Tor mobile users (<a href="https://guardianproject.info/apps/orweb">https://guardianproject.info/apps/orweb</a>{.external}) that has been downloaded over 2 million times. It is VERY VERY SIMPLE, as it only has one tab, no bookmark capability, and an extremely minimal user experience.</p>
+</li>
+<li>
+<p>Orweb is built upon the bundled WebView (Webkit) browser component inside of the Android operating system. This has proven to be problematic because we cannot control the version of that component, and cannot upgrade it directly when bugs are found. In addition, Google has made it very difficult to effectively control the network proxy settings of all aspects of this component, making it difficult to guarantee that traffic will not leak on all devices and OS versions.</p>
+</li>
+<li>
+<p>Orweb also only provides a very limited amount of capability of Tor Browser, primarily related to reducing browser fingerprinting, minimizing disk writes, and cookie and history management. It trys to mimic some of the settings of Tor Browser, but doesn’t actually use any of the actual code written for Tor Browser security hardening.</p>
+</li>
+<li>
+<p>Orweb does have an advantage which is that it less than 2MB while Orfox is in the 25-30MB range. This is primarily because Orweb relies on many components built into Android, so it does not need to bundle them. Orfox contains the full stack of code necessary for a complete browser, and thus is more secure and dependable, but also larger. The Mozilla Mobile team is working on reducing the size of their binaries, and the Orfox team is focused on this, as well, since we are disabling some of the components that have contributed the browser bloat.</p>
+</li>
+</ul>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-primary text-white py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-12 grid gap-12 xl:grid-cols-12">
+      
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center gap-3" href="https://guardianproject.github.io/info/">
+          <img src="https://guardianproject.github.io/info/images/logo.svg" alt="" class="size-10 brightness-0 invert" />
+          <span class="text-xl font-semibold uppercase xl:text-2xl">Guardian Project</span>
+        </a>
+        <p class="text-center text-sm text-white/80 xl:text-start">People, Apps and Code You Can Trust</p>
+        
+        <ul class="mt-2 flex gap-4">
+          
+            <li>
+              <a href="https://social.librem.one/@guardianproject" rel="me" aria-label="Mastodon" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765 2.79.765.504 1.783.504 5.253c-.005.76-.01 1.666.013 2.63.073 3.22.55 6.395 3.328 7.187 1.28.364 2.38.44 3.268.388 1.612-.095 2.516-.612 2.516-.612l-.053-1.154s-1.15.362-2.443.318c-1.28-.044-2.633-.138-2.84-1.716a3 3 0 0 1-.026-.442s1.257.308 2.853.381c.975.045 1.888-.057 2.813-.169m1.256-2.26v-4.15c0-.85-.217-1.523-.652-2.023-.45-.5-1.038-.755-1.77-.755-1.846 0-2.333 1.036-2.333 1.036V8.56H7.903V4.073S7.416 3.037 5.57 3.037c-.732 0-1.32.256-1.77.755-.434.5-.65 1.174-.65 2.024v4.15h1.96V6.067s0-.892.644-1.227c.417-.216.955-.24 1.225.14.307.432.302 1.058.302 1.058v3.928h1.96V6.038s-.005-.626.302-1.058c.27-.38.808-.356 1.225-.14.644.335.644 1.227.644 1.227v3.899z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://github.com/guardianproject" aria-label="GitHub" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://gitlab.com/guardianproject" aria-label="GitLab" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="m15.734 6.1-.022-.058L13.534.358a.57.57 0 0 0-.563-.356.6.6 0 0 0-.328.122.6.6 0 0 0-.193.294l-1.47 4.499H5.025l-1.47-4.5A.572.572 0 0 0 2.47.001a.57.57 0 0 0-.563.356L.289 6.04l-.022.057A4.044 4.044 0 0 0 1.61 10.77l.007.006.02.014 3.318 2.485 1.64 1.242 1 .755a.67.67 0 0 0 .814 0l1-.755 1.64-1.242 3.338-2.5.009-.006a4.05 4.05 0 0 0 1.34-4.668z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" aria-label="Matrix" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.488.32.45.214.773.553.964 1.02.303-.423.7-.778 1.2-1.06.494-.282 1.034-.421 1.612-.421.44 0 .842.06 1.215.18.37.12.69.316.957.574.27.258.482.582.622.974.14.39.21.863.21 1.414v5.862h-2.02V11.09c0-.313-.02-.616-.063-.906a1.74 1.74 0 0 0-.226-.691 1.16 1.16 0 0 0-.456-.435c-.194-.1-.452-.15-.764-.15-.31 0-.566.05-.767.148-.2.1-.36.24-.477.42a1.76 1.76 0 0 0-.25.645 3.94 3.94 0 0 0-.07.778v5.1h-2.02v-5.37c0-.262-.01-.522-.03-.78a2.07 2.07 0 0 0-.168-.68 1.12 1.12 0 0 0-.418-.47c-.186-.12-.448-.18-.788-.18-.108 0-.25.024-.424.07a1.37 1.37 0 0 0-.48.233c-.153.112-.29.27-.41.48-.12.208-.18.475-.18.79v5.91h-2.02V7.81zm16.046 15.69V.55H21.72V0H24v24h-2.28v-.55z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://liberapay.com/GuardianProject" aria-label="Liberapay" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 80 80"><path d="M26.3 77.6c-5.4 0-9.3-1.1-11.8-3.4-2.5-2.3-3.3-5.7-2.4-10.2l11-52.5c.2-.8.3-1.6.3-2.4 0-2-.9-3.1-2.6-3.1-1.7 0-3.2.8-4.5 2.4l-2-2.4C18 2 22.4 0 27.3 0c3.5 0 6.1.8 7.7 2.5 1.6 1.6 2.1 4 1.4 7.1l-4 19.2h.2c3.7-4.5 8.2-6.8 13.5-6.8 4.8 0 8.2 1.6 10.2 4.7 2 3.1 2.3 7.5.7 13-1.3 4.7-3.2 8.9-5.7 12.7a33 33 0 0 1-9 9.5c-3.5 2.5-7.3 3.8-11.3 3.8-2.3 0-4.1-.5-5.5-1.6-1.4-1.1-2.1-2.6-2.1-4.5h-.3l-2.3 10.8c-.5 2.5 0 4.3 1.5 5.3 1.5 1 4.2 1.5 7.9 1.5zm9.7-20.6c2.2 0 4.3-1.1 6.2-3.3 1.9-2.2 3.5-5 4.7-8.5 1.2-3.5 1.4-6.3.7-8.5-.7-2.2-2.5-3.3-5.3-3.3-2.2 0-4.2 1.1-6.2 3.2-1.9 2.2-3.4 5-4.5 8.6-1.1 3.5-1.3 6.3-.6 8.5.8 2.2 2.6 3.3 5 3.3z"/></svg>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-2">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Navigate</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/">About</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/apps/">Apps</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/code/">Code</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/blog/">Blog</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/contact/">Contact</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-3">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Projects</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://orbot.app">Orbot</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://proofmode.org">Proofmode</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://letsconvene.im">Convene</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://likebutter.app">Butter Box</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://cleaninsights.org">Clean Insights</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-3">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Get In Touch</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="mailto:support@guardianproject.info">support@guardianproject.info</a>
+          </li>
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="https://matrix.to/#/#guardianproject:matrix.org">Matrix Chat</a>
+          </li>
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="/contact/">Contact Form</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/20 pt-8 text-center text-sm text-white/60">
+      
+        <p>© Guardian Project, 2009-2026. Licensed under CC-BY.</p>
+      
+      <p class="mt-2">People, Apps and Code You Can Trust &mdash; Since 2009</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

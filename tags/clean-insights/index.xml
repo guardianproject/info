@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clean Insights on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/clean-insights/</link>
+    <description>Recent content in Clean Insights on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/clean-insights/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Privacy Preserving Analytics in the Real World: Mailvelope Case Study</title>
+      <link>https://guardianproject.github.io/info/2022/02/28/privacy-preserving-analytics-in-the-real-world-mailvelope-case-study/</link>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/02/28/privacy-preserving-analytics-in-the-real-world-mailvelope-case-study/</guid>
+      <description>&lt;p&gt;We love &lt;a href=&#34;https://mailvelope.com/&#34;&gt;Mailvelope&lt;/a&gt;. It&amp;rsquo;s a popular browser extension for encrypting email messages. Now, &lt;a href=&#34;https://cleaninsights.org&#34;&gt;Clean Insights&lt;/a&gt; is helping Mailvelope understand which webmail providers are most popular with their users so they can prioritize their development efforts.&lt;/p&gt;&#xA;&lt;p&gt;Anyone who has written software knows it takes hard work to craft a great user experience. That&amp;rsquo;s even more challenging in Mailvelope&amp;rsquo;s case. Their browser extension integrates with more than a dozen ever-changing third party webmail interfaces. The Mailvelope team asks itself questions like, &amp;ldquo;Is time better spent improving the GMail integration or the mailbox.org one?&amp;rdquo; The answer often hinges on which providers are most popular among Mailvelope users, information not yet readily available to the Mailvelope team.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New insights into clean analytics</title>
+      <link>https://guardianproject.github.io/info/2021/03/02/new-insights-into-clean-analytics/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/03/02/new-insights-into-clean-analytics/</guid>
+      <description>&lt;p&gt;There is a giant problem with the &amp;ldquo;collect it all&amp;rdquo; status quo that pervades on the Internet, this has been clear for a long time.  Tracking people has become so &lt;a href=&#34;https://www.ghostery.com/study/&#34;&gt;widespread&lt;/a&gt; that &lt;a href=&#34;https://noyb.eu&#34;&gt;organizations&lt;/a&gt;, &lt;a href=&#34;https://f-droid.org&#34;&gt;communities&lt;/a&gt;, &lt;a href=&#34;https://exodus-privacy.eu.org&#34;&gt;projects&lt;/a&gt; and &lt;a href=&#34;https://privacylab.yale.edu/&#34;&gt;university&lt;/a&gt; &lt;a href=&#34;https://privacylab.at&#34;&gt;labs&lt;/a&gt; have sprung up dedicated to detecting and publicizing their presence.  Data and analytics are clearly useful for software creators and funders, but they also easily lead to harming people&amp;rsquo;s privacy and well-being.  The past year of work on Clean Insights has clarified our goals to make analytics possible without injuring the very people we aim to serve.  Clean Insights takes the world of data analytics and turns it on its head.   The Clean Insights approach starts with thinking about the data, then choosing only the data that is clearly safe to use.  A user&amp;rsquo;s location, complete device description, or other identifying information is dangerous to gather.  A simple count of how many times a feature was used, or a webpage was visited, can be gathered without links to people.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Usability: the wonderful, powerful idea that betrayed us</title>
+      <link>https://guardianproject.github.io/info/2021/02/18/usability-the-wonderful-powerful-idea-that-betrayed-us/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/02/18/usability-the-wonderful-powerful-idea-that-betrayed-us/</guid>
+      <description>&lt;p&gt;Usability triggered a revolution in computing, taking arcane number crunching machines and making them essential tools in so many human endeavors, even those that have little to do with mathematics.  It turned the traditional design approach on its head.  Initially, experts first built a system then trained users to follow it. User experience design starts with goals, observes how people actually think and act in the relevant context, then designs around those observations, and tests with users to ensure it fits the users&amp;rsquo; understanding.  These ideas were pioneered in the Silicon Valley. This was driven by the unusual confluence of a pioneering spirit and deep engineering skills. That merged with a strong &lt;a href=&#34;https://en.wikipedia.org/wiki/Midpeninsula_Free_University&#34;&gt;counter&lt;/a&gt;-&lt;a href=&#34;https://en.wikipedia.org/wiki/Homebrew_Computer_Club&#34;&gt;culture&lt;/a&gt; looking to &lt;a href=&#34;https://en.wikipedia.org/wiki/People%27s_Computer_Company&#34;&gt;empower&lt;/a&gt; individuals and communities. So much of the best of digital technology has its roots in these ideas.  I feel fortunate to have grown up immersed in these ideas in the Silicon Valley of the 70s and 80s, and still feel that sense of idealism that these ideas can truly make the world a better place.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clean Insights: February 2021 Update on Privacy-Preserving Measurement</title>
+      <link>https://guardianproject.github.io/info/2021/02/10/clean-insights-february-2021-update-on-privacy-preserving-measurement/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/02/10/clean-insights-february-2021-update-on-privacy-preserving-measurement/</guid>
+      <description>&lt;p&gt;Greetings, all. I hope this finds you healthy and well, finding ways to enjoy the season (whichever it may be). While everyday still provides new challenges in the life of our team at Guardian Project, we continue to strive to be productive as productive as we can be in our professional and personal lives.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve just posted an updated presentation on &lt;a href=&#34;https://cleaninsights.org&#34;&gt;Clean Insights&lt;/a&gt;, reflecting on the symposium in May, and the work we have done since then. You can see and share it from here:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tracking usage without tracking people</title>
+      <link>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</link>
+      <pubDate>Thu, 08 Jun 2017 10:58:53 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/06/08/tracking-usage-without-tracking-people/</guid>
+      <description>&lt;p&gt;One thing that has become very clear over the past years is that there is a lot of value in data about people. Of course, the most well known examples these days are advertising and spy agencies, but tracking data is useful for many more things. For example, when trying to build software that is intuitive and easy to use, having real data about how people are using the software can make a massive difference when developers and designers are working on improving their software. Even in the case of advertisers, they mostly do not care exactly who you are, they want to know what you are interested in so that they can more effectively promote things to you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How can we learn without watching?</title>
+      <link>https://guardianproject.github.io/info/2017/01/30/how-can-we-learn-without-watching/</link>
+      <pubDate>Mon, 30 Jan 2017 14:40:05 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/01/30/how-can-we-learn-without-watching/</guid>
+      <description>&lt;p&gt;What kind of measurement, tracking or analytics do you use, and can you sleep at night with your decision?&lt;/p&gt;&#xA;&lt;p&gt;As part of the &lt;a href=&#34;https://berkmankleinassembly.org/&#34;&gt;Berkman-Klein Assembly&lt;/a&gt; program at Harvard, I am working with a team to imagine a next-generation mobile and IoT analytics system that has privacy, confidentiality and anonymity at its core. The hope is we can find ways to learn what our users like and understand how our apps are performing without having to rely on proprietary cloud services, logging liability, network vulnerabilities, and invasive app permissions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

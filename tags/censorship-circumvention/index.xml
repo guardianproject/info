@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Censorship Circumvention on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/censorship-circumvention/</link>
+    <description>Recent content in Censorship Circumvention on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/censorship-circumvention/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all&#xA;sorts of issues. That&amp;rsquo;s why we took special interest in&#xA;&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a&#xA;JavaScript library for decentralized content delivery in web-browsers and&#xA;markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient&#xA;primarily in the context of static websites.  While it should work with dynamic&#xA;websites too, that was out of focus for us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Announcement: AnyNews 1.0: Censorship-Resistant News and Media Distribution</title>
+      <link>https://guardianproject.github.io/info/2021/11/29/announcement-anynews-1.0-censorship-resistant-news-and-media-distribution/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2021/11/29/announcement-anynews-1.0-censorship-resistant-news-and-media-distribution/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;For content publishers, AnyNews is a news distribution suite focused on service to censorship-prone geographies, easily integrated into existing content sources.  AnyNews is open-source and easily branded (or customized, if desired) without extensive effort or expense.  AnyNews integrates technologies to counter a range of censorship regimes and is designed to accommodate new technologies more easily and quickly as they arise. Tools are provided to support a range of publishing options for environments that suffer from connectivity or performance problems. Service engagements are possible when custom software is required.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>P2p on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/p2p/</link>
+    <description>Recent content in P2p on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/p2p/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Question: central server, federated, or p2p? Answer: all!</title>
+      <link>https://guardianproject.github.io/info/2014/09/18/question-central-server-federated-or-p2p-answer-all/</link>
+      <pubDate>Thu, 18 Sep 2014 00:30:57 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/09/18/question-central-server-federated-or-p2p-answer-all/</guid>
+      <description>&lt;p&gt;There are many ideas of core architectures for providing digital services, each with their own advantages and disadvantages. I break it down along the lines of central servers, federated servers, and peer-to-peer, serverless systems.&lt;/p&gt;&#xA;&lt;div id=&#34;attachment_12631&#34; style=&#34;width: 210px&#34; class=&#34;wp-caption aligncenter&#34;&gt;&#xA;  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12631&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png&#34; alt=&#34;a central service with clients connecting to it&#34; width=&#34;200&#34; height=&#34;207&#34; class=&#34;size-full wp-image-12631&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_.png 200w, https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_-100x103.png 100w, https://guardianproject.info/wp-content/uploads/2014/09/200px-Server-based-network.svg_-150x155.png 150w&#34; sizes=&#34;(max-width: 200px) 100vw, 200px&#34; /&gt;&lt;/a&gt;&#xA;  &lt;p id=&#34;caption-attachment-12631&#34; class=&#34;wp-caption-text&#34;&gt;&#xA;    a central service with clients connecting to it&#xA;  &lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Most big internet companies operate in effect as a central server (even though they are implemented differently). There is only facebook.com, there are no other services that can inter-operate with facebook.com. Have a single, central repo makes problems of finding the service and finding people within the service a lot easier. Once you are in Facebook, you just need to know the name of the person you want to contact and you are connected. The Facebook apps just need to talk to facebook.com, so the user does not need to know which service they are using in order to configure the app.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

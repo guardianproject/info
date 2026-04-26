@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Surveillance on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/surveillance/</link>
+    <description>Recent content in Surveillance on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/surveillance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RightsCon Report: Surveillance and Facial Recognition: Protection or Instruments of Control?</title>
+      <link>https://guardianproject.github.io/info/2022/07/20/rightscon-report-surveillance-and-facial-recognition-protection-or-instruments-of-control/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/07/20/rightscon-report-surveillance-and-facial-recognition-protection-or-instruments-of-control/</guid>
+      <description>&lt;p&gt;Safety is one of the foremost questions we seek to answer as we roam about in our everyday lives, taking precautions to reduce the likelihood of all threats. It is the very reasoning behind the use of surveillance technology from civilians to the state government, as it hinders crime through fear of persecution and retribution. However, variables such as the time taken for assistance can limit this objective. In these instances, surveillance is not a means of protection, but rather justice, as facial recognition technology can discern the perpetrator to bring to justice. However, the concern arises: do those with the access to this means of seeking justice utilize it for other purposes?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tracking the Trackers: using machine learning to aid ethical decisions</title>
+      <link>https://guardianproject.github.io/info/2020/01/16/tracking-the-trackers-using-machine-learning-to-aid-ethical-decisions/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/01/16/tracking-the-trackers-using-machine-learning-to-aid-ethical-decisions/</guid>
+      <description>&lt;p&gt;F-Droid is a free software community app store that has been working since 2010 to make all forms of tracking and advertising visible to users. It has become the trusted name for privacy in Android, and app developers who sell based on privacy make the extra effort to get their apps included in the F-Droid.org collection. These include &lt;a href=&#34;https://f-droid.org/packages/com.nextcloud.client&#34;&gt;Nextcloud&lt;/a&gt;, Tor Browser, &lt;a href=&#34;https://f-droid.org/packages/de.thecode.android.tazreader&#34;&gt;TAZ.de&lt;/a&gt;, and &lt;a href=&#34;https://f-droid.org/packages/de.tutao.tutanota&#34;&gt;Tutanota&lt;/a&gt;.  Auditing apps for tracking is labor intensive and error prone, yet ever more in demand. F-Droid already has tools to aide contributors in this process, visible in the &lt;a href=&#34;https://gitlab.com/fdroid/fdroiddata/merge_requests&#34;&gt;app submission&lt;/a&gt; and &lt;a href=&#34;https://gitlab.com/fdroid/rfp/issues&#34;&gt;Request For Packaging (RFP)&lt;/a&gt; issue trackers.  We also have functional prototypes of using machine learning to drastically speed up this process by augmenting humans, rather than replacing them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Haven: Building the Most Secure Baby Monitor Ever?</title>
+      <link>https://guardianproject.github.io/info/2017/12/22/haven-building-the-most-secure-baby-monitor-ever/</link>
+      <pubDate>Fri, 22 Dec 2017 09:07:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/12/22/haven-building-the-most-secure-baby-monitor-ever/</guid>
+      <description>&lt;p&gt;About eight months ago, friends at the &lt;a href=&#34;https://freedom.press/&#34;&gt;Freedom of the Press Foundation&lt;/a&gt; reached out to us, to see if we were interested in prototyping an idea they had been batting around. They knew that from projects like &lt;a href=&#34;https://guardianproject.info/apps/camerav&#34;&gt;CameraV&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/2017/02/24/combating-fake-news-with-a-smartphone-proof-mode/&#34;&gt;Proofmode&lt;/a&gt;, that we knew how to tap into the sensors on smartphones to do interesting things. They also knew we could connect devices together using encrypted messaging and onion routing, through our work on &lt;a href=&#34;https://chatsecure.org&#34;&gt;ChatSecure&lt;/a&gt; and Tor (&lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot!&lt;/a&gt;). They also knew of our deep interest in bringing ideas to life that can solve real problems faced by people out on the front lines (both at home and abroad), who often are more in danger from physical threats, than digital. They had a concept that would bring all of these things together, and just wanted to see if it was even possible. We were game, and well, here we are today, announcing a real working public beta, and a new open-source project, that we are extremely excited about.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot v12 now in beta</title>
+      <link>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</link>
+      <pubDate>Wed, 24 Jul 2013 12:32:45 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/07/24/orbot-v12-now-in-beta/</guid>
+      <description>&lt;p&gt;After much too long, we’ve got a new build of Orbot out, and it is… a stable beta! Nothing radically new here, just many small changes to continue to improve the experience of our hundreds of thousands of active users out in the world. There will likely be one or two more “beta” releases to iron out small issues in v12, but for now, this one is good to go.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

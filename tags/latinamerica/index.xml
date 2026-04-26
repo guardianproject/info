@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latinamerica on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/latinamerica/</link>
+    <description>Recent content in Latinamerica on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/latinamerica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Improving Usability of Tor on Smartphones in Latin America</title>
+      <link>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</guid>
+      <description>&lt;p&gt;Between 2022 and 2023 Guardian Project, with support from &lt;a href=&#34;https://okthanks.com&#34;&gt;Okthanks&lt;/a&gt; and the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor Project&lt;/a&gt;, organized and participated in a total of 12 workshops in Ecuador, Mexico and Brazil with the participation of 161 people. The workshops focused both on the broad topic of “Tor for Smartphones”, while also taking deeper dives into specific topics like virtual private networks VPNs) and anonymous web browsing. Through a variety of methods, we gathered feedback from the participants in each of those sessions. We also ran detailed individual tests with volunteers to collect insights related to new features and usability improvements on specific apps.&#xA;Our top takeaways from this process were, as follows:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gpg on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/gpg/</link>
+    <description>Recent content in Gpg on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/gpg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrating Crypto Identities with Android</title>
+      <link>https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/</link>
+      <pubDate>Sat, 28 Dec 2013 19:42:56 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/28/integrating-crypto-identities-with-android/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Alberti_cipher_disk&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;50&#34; height=&#34;50&#34; class=&#34;alignleft size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 50px) 100vw, 50px&#34; /&gt;&lt;/a&gt;ver the past couple of years, Android has included a central database for managing information about people, it is known as the &lt;a href=&#34;https://developer.android.com/reference/android/provider/ContactsContract.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;ContactsContract&lt;/code&gt;&lt;/a&gt; (that’s a mouthful). Android then provides the &lt;em&gt;People&lt;/em&gt; app and reusable interface chunks to choose contacts that work with all the information in the &lt;code&gt;ContactsContract&lt;/code&gt; database. Any time that you are adding an account in the &lt;em&gt;Settings&lt;/em&gt; app, you are setting up this integration. You can see it with Google services, &lt;em&gt;Skype&lt;/em&gt;, &lt;em&gt;Facebook&lt;/em&gt;, and many more. This system has a lot of advantages, including:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting keys into your keyring with Gnu Privacy Guard for Android</title>
+      <link>https://guardianproject.github.io/info/2013/12/06/getting-keys-into-your-keyring-with-gnu-privacy-guard-for-android/</link>
+      <pubDate>Fri, 06 Dec 2013 15:11:53 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/06/getting-keys-into-your-keyring-with-gnu-privacy-guard-for-android/</guid>
+      <description>&lt;p&gt;Now that you can have a full &lt;a href=&#34;https://www.gnupg.org&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;GnuPG&lt;/em&gt;&lt;/a&gt; on your Android device with &lt;a href=&#34;https://play.google.com/store/apps/details?id=info.guardianproject.gpg&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt;&lt;/a&gt; for Android, the next step is getting keys you need onto your device and included in &lt;em&gt;Gnu Privacy Guard&lt;/em&gt;. We have tried to make it as easy as possible without compromising privacy, and have implemented a few approaches, while working on others. There are a few ways to get this done right now.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Gnu Privacy Guard&lt;/em&gt; registered itself with Android as a handler of all the standard &lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc3156.txt&#34; title=&#34;RFC3156: MIME Security with OpenPGP&#34; target=&#34;_blank&#34;&gt;OpenPGP MIME types&lt;/a&gt; (&lt;code&gt;application/pgp-keys&lt;/code&gt;, &lt;code&gt;application/pgp-encrypted&lt;/code&gt;, &lt;code&gt;application/pgp-signature&lt;/code&gt;), as well as all of the OpenPGP and GnuPG file extensions (&lt;code&gt;.pkr&lt;/code&gt; &lt;code&gt;.skr&lt;/code&gt; &lt;code&gt;.key&lt;/code&gt; &lt;code&gt;.sig&lt;/code&gt; &lt;code&gt;.asc&lt;/code&gt; &lt;code&gt;.gpg&lt;/code&gt; &lt;code&gt;.bin&lt;/code&gt;). This means that users just have to share a file to &lt;em&gt;Gnu Privacy Guard&lt;/em&gt; using any of the standard Android methods, these files can be launched from an email attachment, opened from the SD card using a file browser, clicked in the Downloads view, etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GnuPG for Android progress: we have an command line app!</title>
+      <link>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</link>
+      <pubDate>Thu, 09 May 2013 10:48:52 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/05/09/gnupg-for-android-progress-we-have-an-command-line-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png&#34; alt=&#34;GnuPG for Android&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-3680&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/05/icon-150x150.png 150w, https://guardianproject.info/wp-content/uploads/2013/05/icon-300x300.png 300w, https://guardianproject.info/wp-content/uploads/2013/05/icon.png 512w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;&lt;br&gt;&#xA;This alpha release of our command-line developer tool brings GnuPG to Android for the first time!&lt;/p&gt;&#xA;&lt;p&gt;GNU Privacy Guard Command-Line (gpgcli) gives you command line access to the entire &lt;a href=&#34;http://gnupg.org&#34; title=&#34;Gnu Privacy Guard home page&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; suite of encryption software. GPG is GNU’s tool for end-to-end secure communication and encrypted data storage. This trusted protocol is the free software alternative to PGP. GnuPG 2.1 is the new modularized version of GnuPG that now supports OpenPGP and S/MIME.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sometimes the best solution is a library, not an app</title>
+      <link>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</link>
+      <pubDate>Mon, 27 Aug 2012 12:30:15 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/08/27/sometimes-the-best-solution-is-a-library-not-an-app/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/08/framework_wheel-150x150.png&#34; alt=&#34;&#34; title=&#34;thinking about frameworks&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignleft size-thumbnail wp-image-2792&#34; /&gt;&lt;/a&gt;Our general approach to software development starts with surveying existing solutions that are available and in use, to see if there is already enough of an ecosystem or whether we need to seed that. When there is already an adundance of tools and apps out there, we work to find the good ones, provide feedback and auditing, and then build apps and tools to fill in any gaps. For example, this was our approach in the Open Secure Telephony Network.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adventures in Porting: GnuPG 2.1.x to Android!</title>
+      <link>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</link>
+      <pubDate>Thu, 15 Mar 2012 13:00:30 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/15/adventures-in-porting-gnupg-2.1.x-to-android/</guid>
+      <description>&lt;p&gt;PGP started with Phil Zimmerman’s Pretty Good Privacy, which is now turned into an open IETF standard known as OpenPGP. These days, the reference OpenPGP platform seems to be &lt;a href=&#34;http://gnupg.org/&#34;&gt;GnuPG&lt;/a&gt;: its used by Debian and all its derivatives in the OS itself for verifying packages and more. It is also at the core of all Debian development work, allowing the very diffuse body of Debian, Ubuntu, etc developers to communicate and share work effectively while maintaining a high level of security. It is also used for email encryption in Thunderbird + Enigmail, Apple Mail + GPGMail, GNOME Evolution, KDE KMail, Microsoft Outlook + Gpg4win.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

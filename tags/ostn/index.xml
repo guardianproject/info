@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ostn on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/ostn/</link>
+    <description>Recent content in Ostn on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/ostn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ostel.co secure VoIP network partners with Open Hosting</title>
+      <link>https://guardianproject.github.io/info/2013/12/03/ostel.co-secure-voip-network-partners-with-open-hosting/</link>
+      <pubDate>Tue, 03 Dec 2013 17:56:18 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/03/ostel.co-secure-voip-network-partners-with-open-hosting/</guid>
+      <description>&lt;p&gt;Ostel.co began as a R&amp;amp;D effort sponsored by The Guardian Project. The question: Is a peer-to-peer secure voice and video call network possible to build with open Internet standards and Open Source software? After two years and tens of thousands of users later, the answer is a resounding YES!&lt;/p&gt;&#xA;&lt;p&gt;Two of the crucial components of any standards based VoIP service are infrastructure to route calls and a database to locate end users. &lt;a href=&#34;http://openhosting.com/&#34;&gt;Open Hosting’s&lt;/a&gt; service was a perfect fit, so we’ve teamed up for ongoing support of ostel.co. Open Hosting has a high speed, low-latency network in the southern USA, which hosts the backend to route calls over the ostel.co domain. It also has a clearly defined, concise &lt;a href=&#34;http://openhosting.com/about-us/legal/&#34;&gt;Privacy Policy and Terms of Service&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VoIP security architecture in brief</title>
+      <link>https://guardianproject.github.io/info/2013/11/21/voip-security-architecture-in-brief/</link>
+      <pubDate>Thu, 21 Nov 2013 19:07:17 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/11/21/voip-security-architecture-in-brief/</guid>
+      <description>&lt;p&gt;Voice over IP (VoIP) has been around for a long time. It’s ubiquitous in homes, data centers and carrier networks. Despite this ubiquity, security is rarely a priority. With the combination of a handful of important standard protocols, it is possible to make untappable end to end encryption for an established VoIP call.&lt;/p&gt;&#xA;&lt;p&gt;TLS is the security protocol between the signaling endpoints of the session. It’s the same technology that exists for SSL web sites; ecommerce, secure webmail, Tor and many others use TLS for security. Unlike web sites, VoIP uses a different protocol called the Session Initiation Protocol (SIP) for signaling: actions like ringing an endpoint, answering a call and hanging up. This is the metadata of calls. SIP-TLS uses the standard Certificate Authorities for key agreement. This implies trust between the certificate issuer and the calling endpoints.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jitsi, ostel.co and ISP censorship</title>
+      <link>https://guardianproject.github.io/info/2013/07/22/jitsi-ostel.co-and-isp-censorship/</link>
+      <pubDate>Mon, 22 Jul 2013 15:33:44 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/07/22/jitsi-ostel.co-and-isp-censorship/</guid>
+      <description>&lt;p&gt;Earlier last week n8fr8 suspected something changed on the ostel.co server, due to many users emailing support specifically about Jitsi connectivity to ostel.co. The common question was “why did it work a few weeks ago and now it doesn’t anymore?”&lt;/p&gt;&#xA;&lt;p&gt;The tl;dr follows, skip to keyword CONCLUSION to hear only the punch line.&lt;/p&gt;&#xA;&lt;p&gt;To support n8fr8’s hypothesis, there was a small change to the server but I wan’t convinced it effected anything since all my clients continued to work properly, including Jitsi. Obviously &lt;em&gt;something&lt;/em&gt; had changed but none of us knew what it was. After some testing we discovered the problem was related to insecure connections from Jitsi to UDP port 5060 on ostel.co. Secure connections (on TCP port 5061) continued to work as expected.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Carrier Grade, Verizon and the NSA</title>
+      <link>https://guardianproject.github.io/info/2013/06/12/carrier-grade-verizon-and-the-nsa/</link>
+      <pubDate>Wed, 12 Jun 2013 06:38:46 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/06/12/carrier-grade-verizon-and-the-nsa/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT.png&#34;&gt;&lt;img class=&#34;size-medium wp-image-4188 alignleft&#34; alt=&#34;PHONE_BOLT&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT-268x300.png&#34; width=&#34;268&#34; height=&#34;300&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT-268x300.png 268w, https://guardianproject.info/wp-content/uploads/2013/06/PHONE_BOLT.png 514w&#34; sizes=&#34;(max-width: 268px) 100vw, 268px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Last week Glenn Greenwald at The Guardian broke the news that &lt;a href=&#34;http://www.guardian.co.uk/world/2013/jun/06/nsa-phone-records-verizon-court-order&#34;&gt;Verizon has been providing the NSA with metadata&lt;/a&gt; about all of the calls over a subsidiary’s network. This subsidiary is called &lt;a href=&#34;http://investing.businessweek.com/research/stocks/private/snapshot.asp?privcapId=4259068&#34;&gt;Verizon Business Network Services&lt;/a&gt;. It is a privately held company that “owns, operates, monitors, and maintains data and Internet networks in North America, Europe, Asia, Latin America, Australia, Japan, and Africa. The company provides converged communication solutions, such as local and long-distance voice, messaging, and Internet access services.” It is likely this company owns equipment that holds caller detail records for millions of customers. The order used &lt;a href=&#34;http://www.aclu.org/free-speech-national-security-technology-and-liberty/reform-patriot-act-section-215&#34;&gt;section 215 of The Patriot Act&lt;/a&gt;, which allows the FBI to order any person or entity to turn over “any tangible things,” so long as the FBI “specif[ies]” that the order is “for an authorized investigation . . . to protect against international terrorism or clandestine intelligence activities.” The “tangible things” could have been the physical servers or hard disks that store the logged details.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lower Bounds of The Narrow Bands</title>
+      <link>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</link>
+      <pubDate>Fri, 22 Feb 2013 09:05:48 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/02/22/lower-bounds-of-the-narrow-bands/</guid>
+      <description>&lt;p&gt;Voice is becoming a standard feature of any messaging app on mobile phones, in various forms using many different protocols. There’s the old guard, whom I will refer to as “Skype”. Some &lt;a href=&#34;https://www.privacyinternational.org/blog/skype-please-act-like-the-responsible-global-citizen-you-claim-to-be&#34;&gt;tough&lt;/a&gt; &lt;a href=&#34;http://www.skypeopenletter.com/&#34;&gt;questions&lt;/a&gt; have been thrown their way by many groups who support a free Internet. There’s Google Voice, which is not really VoIP. Apple is playing around in the hedge maze inside their walled garden with iChat. There’s also Facebook, who is rolling out &lt;a href=&#34;http://techcrunch.com/2013/01/16/facebook-rolls-out-voip-calling-to-u-s-ios-messenger-users/&#34;&gt;voice calling in Canada and the USA&lt;/a&gt; in their Messenger app on iOS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mumble and the Bandwidth – Anonymous CB radio with Mumble and Tor</title>
+      <link>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</link>
+      <pubDate>Thu, 31 Jan 2013 02:05:50 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/01/31/mumble-and-the-bandwidth-anonymous-cb-radio-with-mumble-and-tor/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-3186&#34; alt=&#34;mumble and the bandwidth&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg&#34; width=&#34;800&#34; height=&#34;478&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth.jpg 800w, https://guardianproject.info/wp-content/uploads/2013/01/mumble-and-the-bandwidth-300x179.jpg 300w&#34; sizes=&#34;(max-width: 800px) 100vw, 800px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The journey towards anonymous and secure voice communication is a long one. There’s lots of roadblocks to get your voice from point A to point B over the Internet if you need to prevent eavesdropping or censorship. There is the limited bandwidth of mobile data connections. There is the high latency of the TCP protocol. &lt;a href=&#34;https://www.torproject.org/about/overview.html.en#whyweneedtor&#34;&gt;To achieve anonymity via Tor&lt;/a&gt;, there’s even more latency added to each packet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Threats and Usability of Secure Voice</title>
+      <link>https://guardianproject.github.io/info/2012/07/10/threats-and-usability-of-secure-voice/</link>
+      <pubDate>Tue, 10 Jul 2012 12:48:18 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/07/10/threats-and-usability-of-secure-voice/</guid>
+      <description>&lt;p&gt;In my &lt;a href=&#34;https://guardianproject.info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/&#34;&gt;previous post&lt;/a&gt; I found that end-to-end encryption with OSTN is both effective and usable. There are two important things the user must be aware of when using OSTN. They must confirm with each phone call that the encryption icon is present and  they must correctly complete SAS verification dialog boxes. So on a basic level, encrypted voice just works. But, what does this all mean? This post looks at the threats to security and usability of encrypted ZRTP phone calls in CSipSimple.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Network Analysis of Encrypted Voice over OSTN</title>
+      <link>https://guardianproject.github.io/info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/</link>
+      <pubDate>Thu, 05 Jul 2012 14:23:50 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/07/05/a-network-analysis-of-encrypted-voice-over-ostn/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Introduction to OSTN&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN&lt;/a&gt; network stands for Open Source Telephony Network. It is a federated network standard for supporting Internet calling with end-to-end encryption ala ZRTP. Its very similar to e-mail in that VOIP calls can be routed to addresses such as user@domain.tld. Its a simple concept, but I believe it to be ground breaking implementation! Never before have I seen such an accessible solution to encrypted VOIP calls. OSTN is platform independent, is a federated network, and it is an open standard such that it is widely adoptable. There are two main components that are required to use OSTN with encryption: a VOIP client that supports ZRTP for end-to-end encryption and user account with an OSTN provider.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&lt;!--:en--&gt;OSTN secure VoIP wizard now built into CSipSimple for Android&lt;!--:--&gt;</title>
+      <link>https://guardianproject.github.io/info/2012/05/26/--en--ostn-secure-voip-wizard-now-built-into-csipsimple-for-android----/</link>
+      <pubDate>Sat, 26 May 2012 21:14:52 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/26/--en--ostn-secure-voip-wizard-now-built-into-csipsimple-for-android----/</guid>
+      <description>&lt;!--:en--&gt;If you saw our last post about how to &#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/2012/05/17/build-your-own-open-secure-telephony-network-some-assembly-required/&#34;&gt;setup your own secure voice-over-IP server instance&lt;/a&gt;, then this news is for you.&lt;/p&gt;&#xA;&lt;p&gt;If you are an Android user looking for the &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;best open-source VoIP app&lt;/a&gt;, and really need one that can support &lt;a href=&#34;https://OSTel.co&#34;&gt;secure communications&lt;/a&gt;, then this post is ALSO for you.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;CSipSimple&lt;/a&gt;, the previously mentioned “best VoIP app”, now includes a wizard for setting up an account configuration for any server which complies with our &lt;a href=&#34;https://guardianproject.info/wiki/OSTN_Compliance_Specification&#34;&gt;Open Secure Telephony Network specification&lt;/a&gt;. In short, this means it uses TLS or SSL to secure the SIP signaling traffic, and supports proxying of the RTP media streams for the actual voice or video calls, without in any way interfering with the ZRTP encryption passing through it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&lt;!--:en--&gt;Build your own Open Secure Telephony Network, some assembly required&lt;!--:--&gt;</title>
+      <link>https://guardianproject.github.io/info/2012/05/17/--en--build-your-own-open-secure-telephony-network-some-assembly-required----/</link>
+      <pubDate>Thu, 17 May 2012 17:13:39 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/17/--en--build-your-own-open-secure-telephony-network-some-assembly-required----/</guid>
+      <description>&lt;!--:en--&gt;The Open Secure Telephony Network is a standard that defines how to configure a VoIP softswitch with the capability to have secure two-way VoIP conversations if both parties are using the same server. The system requires both backend and frontend components, which makes OSTN is a little different than some of the other Guardian apps. Unlike Gibberbot, there are few public SIP services that support secure signalling for a mobile app to connect with. Notably &#xA;&lt;p&gt;&lt;a href=&#34;https://tanstagi.net&#34;&gt;Tanstagi.net&lt;/a&gt; offers free accounts. But it’s more fun to run your own.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cross-Domain calling, or “toll-free long distance VoIP”</title>
+      <link>https://guardianproject.github.io/info/2012/05/04/cross-domain-calling-or-toll-free-long-distance-voip/</link>
+      <pubDate>Fri, 04 May 2012 17:34:30 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/05/04/cross-domain-calling-or-toll-free-long-distance-voip/</guid>
+      <description>&lt;p&gt;In a standard &lt;a href=&#34;https://guardianproject.info/wiki/OSTN_Compliance_Specification&#34;&gt;OSTN configuration&lt;/a&gt;, the Fully Qualified Domain Name (&lt;a href=&#34;https://en.wikipedia.org/wiki/FQDN&#34;&gt;FQDN&lt;/a&gt;) of the server running Freeswitch is a core dependency to operate the service. For example, the domain ostel.me was first configured as a DNS record, a server was bootstrapped with ostel.me as the local hostname and a &lt;a href=&#34;https://github.com/lazzarello/chef-twelvetone&#34;&gt;Freeswitch cookbook&lt;/a&gt; was run using the Chef automation system. Because the domain was configured both in DNS and locally, the cookbook has enough information to automatically build an operational OSTN node.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Singing and Dancing for Encryption</title>
+      <link>https://guardianproject.github.io/info/2012/04/19/singing-and-dancing-for-encryption/</link>
+      <pubDate>Thu, 19 Apr 2012 09:30:48 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/04/19/singing-and-dancing-for-encryption/</guid>
+      <description>&lt;p style=&#34;text-align: center&#34;&gt;&#xA;  &lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;&lt;a href=&#34;https://secure.flickr.com/photos/ksd-photography/4899157618/&#34;&gt;&lt;img class=&#34;aligncenter&#34; src=&#34;https://farm5.staticflickr.com/4099/4899157618_b35f53be23_z.jpg&#34; alt=&#34;【KSD Photography】 Capturing Life&#34; width=&#34;640&#34; height=&#34;343&#34; /&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;/p&gt;&#xA;&lt;p style=&#34;text-align: left&#34;&gt;&#xA;  &lt;span style=&#34;color: #000000&#34;&gt;&lt;span style=&#34;font-family: ArialMT,sans-serif&#34;&gt;&lt;span style=&#34;font-size: small&#34;&gt;If you see me dancing or singing with my phone in my hand, I may not just be having a great time, but also creating an encryption key. Part of the issue with security is that it can often be difficult to implement or an added step in what users want to be an easy and seamless process. What if we can make secure and private communications fun and easy?&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Call My Email</title>
+      <link>https://guardianproject.github.io/info/2012/03/22/call-my-email/</link>
+      <pubDate>Thu, 22 Mar 2012 16:31:45 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/22/call-my-email/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:PFC_Gladys_Bellon,_Basile,_Louisiana,_one_of_the_27_WAC_switchboard_operators_flown_from_Paris_for_the_Potsdam..._-_NARA_-_199010.jpg&#34;&gt;&lt;img class=&#34;aligncenter&#34; src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/PFC_Gladys_Bellon%2C_Basile%2C_Louisiana%2C_one_of_the_27_WAC_switchboard_operators_flown_from_Paris_for_the_Potsdam..._-_NARA_-_199010.jpg/764px-PFC_Gladys_Bellon%2C_Basile%2C_Louisiana%2C_one_of_the_27_WAC_switchboard_operators_flown_from_Paris_for_the_Potsdam..._-_NARA_-_199010.jpg&#34; alt=&#34;PFC Gladys Bellon, Basile, Louisiana, one of the 27 WAC switchboard operators flown from Paris for the Potsdam Conference and Sgt. Robert Scott of Pittsburgh, Pennsylvania, test lines in the frame room of the Victory switchboard at U. S. headquarters at Babelsburg, Germany.&#34; width=&#34;600/&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;What if you could call me directly through my email? No exchanging of phone numbers or searching for handles on Skype. Just plain and simple email. Now what if we can make that phone call as secure as it is easy. That’s the goal of what we’re doing here at &lt;a title=&#34;Open Secure Telephony Network (OSTN) &#34; href=&#34;https://guardianproject.info/wiki/OSTN&#34; target=&#34;_blank&#34;&gt;Open Secure Telephony Network (OSTN)&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Acrobits Groundwire – OSTN supports iPhone</title>
+      <link>https://guardianproject.github.io/info/2012/03/21/acrobits-groundwire-ostn-supports-iphone/</link>
+      <pubDate>Wed, 21 Mar 2012 09:09:21 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/21/acrobits-groundwire-ostn-supports-iphone/</guid>
+      <description>&lt;p&gt;The Guardian Project develops open source software primarily for the Android platform &lt;a href=&#34;https://guardianproject.info/home/use-cases/&#34;&gt;but we strive for security by design to be a part of all platforms&lt;/a&gt;. With &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN&lt;/a&gt;, there are two major components. The the first is the server, which operates as the primary user directory and call switch. The other is the client, which is the program you interact with to send and receive calls.&lt;/p&gt;&#xA;&lt;p&gt;While the Apple App Store &lt;a href=&#34;http://michelf.com/weblog/2011/gpl-ios-app-store/&#34;&gt;forbids distribution of GPL licensed software from their service&lt;/a&gt;, the underlying protocols used by OSTN are open, so even iPhone developers may implement them in a proprietary client application without breaking any intellectual property laws.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VoIP Survey Results of NGOs, Human Rights Groups and Activists</title>
+      <link>https://guardianproject.github.io/info/2012/03/07/voip-survey-results-of-ngos-human-rights-groups-and-activists/</link>
+      <pubDate>Wed, 07 Mar 2012 18:58:29 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/03/07/voip-survey-results-of-ngos-human-rights-groups-and-activists/</guid>
+      <description>&lt;p&gt;In November 2011, 25 individuals were surveyed using an online form, representing typical end-users, global journalists, activist and human rights organization perspectives (Thank you to all the participants!). The goal of the survey was to establish a baseline understanding of the types of tools and expectations our target user community has around making “telephone calls” over the internet, otherwise known as Voice over Internet Protocol (VoIP).&lt;/p&gt;&#xA;&lt;p&gt;This survey is part of our work on the &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;Open Secure Telephony Net (OSTN)&lt;/a&gt;. In summary, we believe there is too great a reliance upon closed systems, proprietary protocols, and expensive commercial solutions, among the very people and groups who need a verifiable secure system based on free software. While using GPG for email, or OTR-encryption for chat have become somewhat standards go-tos for these groups, there has not been the same progress made on the secure voice front. OSTN aims to change that, but before we can, we need to understand where our target user community stand today.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Free SIP Providers with ZRTP support</title>
+      <link>https://guardianproject.github.io/info/2012/02/22/free-sip-providers-with-zrtp-support/</link>
+      <pubDate>Wed, 22 Feb 2012 19:10:11 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/02/22/free-sip-providers-with-zrtp-support/</guid>
+      <description>&lt;p&gt;This post is part of a series on our work researching the &lt;a href=&#34;https://guardianproject.info/tag/ostn/&#34;&gt;Open Secure Telephony Network&lt;/a&gt;. After you have &lt;a href=&#34;https://code.google.com/p/csipsimple/&#34;&gt;CSipSimple installed&lt;/a&gt; on your mobile handset, you will need a place to register a SIP username so you can contact others. The fastest way to get started with this is to use one of a handful of free SIP providers. I like the &lt;a href=&#34;https://www.ekiga.net/index.php?page=register&#34;&gt;Ekiga free SIP service&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/andwar/45070135/&#34; title=&#34;Red Telephone Boxes by Andwar, on Flickr&#34;&gt;&lt;img src=&#34;https://farm1.staticflickr.com/26/45070135_a1dd5889a7.jpg&#34; alt=&#34;Red Telephone Boxes&#34; width=&#34;500&#34; height=&#34;375&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Open Source SIP Client for Android</title>
+      <link>https://guardianproject.github.io/info/2012/02/22/open-source-sip-client-for-android/</link>
+      <pubDate>Wed, 22 Feb 2012 16:12:25 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/02/22/open-source-sip-client-for-android/</guid>
+      <description>&lt;p&gt;The first step in the &lt;a href=&#34;https://guardianproject.info/tag/ostn/&#34;&gt;Open Secure Telephony Network (OSTN)&lt;/a&gt; is a client. We can’t make a phone call without a phone. In this case there are three primary goals and a number of optional features. The primary goal is an application which speaks the SIP protocol for signalling. It must also speak the ZRTP protocol for peer to peer encryption key exchange. Finally the client must have source code freely available with a license that allows free redistribution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Open Secure Telephony Network</title>
+      <link>https://guardianproject.github.io/info/2012/02/22/open-secure-telephony-network/</link>
+      <pubDate>Wed, 22 Feb 2012 15:39:26 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2012/02/22/open-secure-telephony-network/</guid>
+      <description>&lt;p&gt;Over the last two months, I have been working on a project to research and develop a set of tools to provide secure peer to peer Voice over IP on the Android mobile platform. It is called the Open Secure Telephony Network, or &lt;a href=&#34;https://guardianproject.info/wiki/OSTN&#34;&gt;OSTN&lt;/a&gt;. This work is done under the umbrella of &lt;a href=&#34;https://guardianproject.info/&#34;&gt;The Guardian Project&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/stuartbarr/5893549665/&#34; title=&#34;Telephone wires by Stuart Barr, on Flickr&#34;&gt;&lt;img src=&#34;https://farm6.staticflickr.com/5119/5893549665_24943d362e.jpg&#34; alt=&#34;Telephone wires&#34; width=&#34;500&#34; height=&#34;333&#34; /&gt;&lt;br&gt;&#xA;&lt;/a&gt; &lt;em&gt;this is not the type of “open” we mean, and definitely not secure&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenVPN on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/openvpn/</link>
+    <description>Recent content in OpenVPN on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/openvpn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Steps towards trusted VPNs</title>
+      <link>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</guid>
+      <description>&lt;p&gt;VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&amp;rsquo;s server.  That is how VPNs &amp;ldquo;unblock&amp;rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04&#34;&gt;adblocker&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

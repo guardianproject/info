@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Org.article19.circulo on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/org.article19.circulo/</link>
+    <description>Recent content in Org.article19.circulo on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/org.article19.circulo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The future of our fdroid-compatible app repository</title>
+      <link>https://guardianproject.github.io/info/2024/02/24/the-future-of-our-fdroid-compatible-app-repository/</link>
+      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2024/02/24/the-future-of-our-fdroid-compatible-app-repository/</guid>
+      <description>&lt;p&gt;Guardian Project has been running its own &lt;a href=&#34;https://guardianproject.info/fdroid/&#34;&gt;fdroid-compatible app repository&lt;/a&gt; since &lt;a href=&#34;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository-out-of-date/&#34;&gt;2012&lt;/a&gt;. Up until now, we worked to ensure that our repository had the same standards of free software as the official F-Droid repository.  Therefore, the Guardian Project repository was included in the official F-Droid client app by default.  A lot has changed since then, for the better.  F-Droid has long since stopped shipping pre-built binaries from any provider.  Back in the day, F-Droid shipped some binaries, like Mozilla&amp;rsquo;s Firefox APKs, and allowed some non-free libraries in apps.  The free software ecosystem on Android has since blossomed, so F-Droid no longer needs to make those kinds of compromises.  And F-Droid is completing a big update on how repositories are handled.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Círculo</title>
+      <link>https://guardianproject.github.io/info/apps/circulo/</link>
+      <pubDate>Mon, 21 Jan 2019 14:57:14 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/apps/circulo/</guid>
+      <description>&lt;p&gt;Learn more at &lt;a href=&#34;https://encirculo.org&#34;&gt;encirculo.org&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

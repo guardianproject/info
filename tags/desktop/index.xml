@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desktop on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/desktop/</link>
+    <description>Recent content in Desktop on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/desktop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your own private dropbox with free software</title>
+      <link>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</link>
+      <pubDate>Tue, 12 Nov 2013 12:50:23 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</guid>
+      <description>&lt;p&gt;There are lots of file storage and sharing software packages out there that make it easy for a group of people to share files. Dropbox is perhaps the most well known of the group, it provides an easy way for a group of people to share files. The downside of Dropbox is that it is not a private service, just like any cloud-based service. Dropbox has total access to your files that you store there. That means its likely that the NSA and its collaborators do too.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

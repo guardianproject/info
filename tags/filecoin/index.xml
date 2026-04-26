@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Filecoin on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/filecoin/</link>
+    <description>Recent content in Filecoin on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/filecoin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>F-Droid&#39;s Community-controlled Backup Ceremony</title>
+      <link>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</guid>
+      <description>&lt;p&gt;(&lt;em&gt;Guest post from F-Droid, originally on &lt;a href=&#34;https://f-droid.org/2023/07/15/community-controlled-backup-ceremony.html&#34;&gt;f-droid.org&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;&#xA;&lt;p&gt;Seven core contributors and one board member met in Scotland, the birthplace of F-Droid, for the first in-person F-Droid team meeting.  One of the most pressing tasks we needed to take care of was setting up a contributor-controlled backup of all of our signing keys.  The requirements made it necessary to have a lengthy, in-person, consensus-driven planning session.  We found no good documentation of such a procedure, so we&amp;rsquo;re going out on a limb here and publishing the general outline of our process.  This process was informally audited by multiple people with varying expertise before the public key was used to encrypt anything.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all&#xA;sorts of issues. That&amp;rsquo;s why we took special interest in&#xA;&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a&#xA;JavaScript library for decentralized content delivery in web-browsers and&#xA;markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient&#xA;primarily in the context of static websites.  While it should work with dynamic&#xA;websites too, that was out of focus for us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DWeb versus Web3: An Intern&#39;s Journey!</title>
+      <link>https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/</guid>
+      <description>&lt;p&gt;Close your eyes and imagine. You are sitting, designing the next game-changing innovative idea; however, you are not worried about any information leakage or spread, as you are in control. You not only hold ownership of your data, but with each online activity, your fear of being tracked dissipates more. This new internet you explore on understands each input, tailoring the content to your specific needs as it no longer runs on basic commands, but rather uses the combination of technologies and concepts such as machine learning, big data, and decentralized ledger technology to process information in a smart, human-like manner. This image in your mind is no longer a distant fantasy, but rather a closely approaching reality – this reality is the decentralized web, otherwise referred to as the DWeb.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Decentralizing Distribution</title>
+      <link>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</guid>
+      <description>&lt;p&gt;Guardian Project has been awarded a grant from the &lt;a href=&#34;https://www.ffdweb.org/guardian-project-annoucement&#34;&gt;Filecoin Foundation for the Decentralized Web (FFDW)&lt;/a&gt; to work on decentralizing veracity and distribution (DVD).  FFDW’s Mission is to “ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.”  Filecoin is built on top of IPFS, which is &amp;ldquo;&lt;a href=&#34;https://docs.ipfs.io/concepts/what-is-ipfs/&#34;&gt;a distributed system for storing and accessing files&lt;/a&gt;&amp;rdquo;.  The distribution component of the FFDW-DVD project is focused on improving F-Droid&amp;rsquo;s free, open, and decentralized mobile app ecosystem.  On top of the flagship unified experience offered by this website and the F-Droid official app, F-Droid provides all the pieces for anyone to create, build, remix, publish, reproduce, redistribute and review mobile apps.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

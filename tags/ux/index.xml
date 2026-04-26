@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ux on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/ux/</link>
+    <description>Recent content in Ux on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/ux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Orbot Update: New Setup Wizard at Startup</title>
+      <link>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</link>
+      <pubDate>Thu, 29 Jul 2010 17:17:08 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2010/07/29/orbot-update-new-setup-wizard-at-startup/</guid>
+      <description>&lt;p&gt;We’ve been working away at the 0.0.9 release of &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot&lt;/a&gt; over the last few months, and have put a decent amount of effort into usability. Specifically, we hoped to better communicate to users what it means to run Tor on your Android phone. In addition, we wanted to clearly lay out how the various configuration options help to improve your mobile web anonymity and ability to circumvent web filters and tracking by your mobile service provider.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/git/</link>
+    <description>Recent content in Git on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A tag-team git workflow that incorporates auditing</title>
+      <link>https://guardianproject.github.io/info/2013/11/21/a-tag-team-git-workflow-that-incorporates-auditing/</link>
+      <pubDate>Thu, 21 Nov 2013 14:03:22 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/11/21/a-tag-team-git-workflow-that-incorporates-auditing/</guid>
+      <description>&lt;p&gt;Git is as wonderful as it is terrible, it is immensly flexible but also far from intuitive. So to make our lives easier, we try to use git as it was originally intended, as a toolkit for building workflows.&lt;/p&gt;&#xA;&lt;div id=&#34;attachment_11990&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;&#xA;  &lt;a href=&#34;http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows#Integration-Manager-Workflow&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-11990&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow-300x121.png&#34; alt=&#34;Integration-Manager Workflow&#34; width=&#34;300&#34; height=&#34;121&#34; class=&#34;size-medium wp-image-11990&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow-300x121.png 300w, https://guardianproject.info/wp-content/uploads/2013/11/integration_manager_workflow.png 500w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&#xA;  &lt;p id=&#34;caption-attachment-11990&#34; class=&#34;wp-caption-text&#34;&gt;&#xA;    Integration-Manager Workflow&#xA;  &lt;/p&gt;&#xA;&lt;/div&gt;We use a simple version of the “&#xA;&lt;p&gt;&lt;a href=&#34;http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows&#34; target=&#34;_blank&#34;&gt;Integration-Manager Workflow&lt;/a&gt;“. One key difference is that we often have multiple contributors acting as the integration manager. This means that there is always someone else besides the original author reviewing each commit. For example: I make a commit and push it to my public developer’s repo. I ask Abel to review my commit, and if he agrees with it, he then pushes it to the official public “&lt;em&gt;upstream&lt;/em&gt;” repo (aka “blessed repository”). And since git will tell us if a remote repo is different than our local repo, this process makes it harder for an attacker to slip a commit into our remote repo without us noticing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Your own private dropbox with free software</title>
+      <link>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</link>
+      <pubDate>Tue, 12 Nov 2013 12:50:23 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/11/12/your-own-private-dropbox-with-free-software/</guid>
+      <description>&lt;p&gt;There are lots of file storage and sharing software packages out there that make it easy for a group of people to share files. Dropbox is perhaps the most well known of the group, it provides an easy way for a group of people to share files. The downside of Dropbox is that it is not a private service, just like any cloud-based service. Dropbox has total access to your files that you store there. That means its likely that the NSA and its collaborators do too.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

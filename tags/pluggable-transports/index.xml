@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pluggable Transports on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/pluggable-transports/</link>
+    <description>Recent content in Pluggable Transports on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/pluggable-transports/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arti, next-gen Tor on mobile</title>
+      <link>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</link>
+      <pubDate>Sat, 04 Mar 2023 10:00:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/03/04/arti-next-gen-tor-on-mobile/</guid>
+      <description>&lt;p&gt;For software projects with recurring bugs, efficiency or security issues&#xA;there&amp;rsquo;s a joke making the rounds in the software industry: &amp;ldquo;Let&amp;rsquo;s re-write it&#xA;in &lt;a href=&#34;https://en.wikipedia.org/wiki/Rust_(programming_language)&#34;&gt;Rust&lt;/a&gt;!&amp;rdquo;  It&amp;rsquo;s a&#xA;fairly new low-level programming language with the declared goal to help&#xA;developers avoid entire classes of bugs, security issues and other pitfalls.&#xA;Re-writing software is very time consuming, so it rarely happens, especially&#xA;when just one more fix will keep a project up and running.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MASQUE Review</title>
+      <link>https://guardianproject.github.io/info/2020/02/25/masque-review/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/02/25/masque-review/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://datatracker.ietf.org/wg/masque/about/&#34;&gt;MASQUE&lt;/a&gt; is set of related IETF drafts for specifying flexible proxying built into a standard webserver.  It is meant to be deployed on a server that is serving public websites, then this connection can be reused for proxying generic connections.  It is very much a work in progress, so any of this can change.  It is currently built on top of the QUIC+HTTP/3 and HTTP/2+TLS+TCP protocols.  The website and proxy packets look the same, and all connections to the webserver will be shared and reused, regardless of whether its a web page request or proxy traffic.  Each new proxy/website request will reuse any existing connection, providing a key reduction in metadata that makes all the packets blend together from the point of view of the network observer.  For example, to prevent the network observer from corrolating requests to proxy with the outbound request to the destination, a client could first connect to the website, then some time later, connect to the proxy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Exploring possibilities of Pluggable Transports on Android</title>
+      <link>https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/</link>
+      <pubDate>Tue, 16 Apr 2019 15:00:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/04/16/exploring-possibilities-of-pluggable-transports-on-android/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.pluggabletransports.info&#34;&gt;Pluggable Transports&lt;/a&gt; (PT) give software developers the means&#xA;to establishing reliable connections in &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspection&#34;&gt;DPI-filtered&lt;/a&gt; network scenarios.&#xA;A variety of techniques are supported, all available by implementing just one&#xA;standard.  We looked into how this can be put to work in Android Apps.&#xA;Hence we crafted 3 fully functional&#xA;&lt;a href=&#34;https://gitlab.com/uniqx/anynews-android#anynews-pt&#34;&gt;PT-enabled&lt;/a&gt;&#xA;&lt;a href=&#34;https://gitlab.com/uniqx/fdroidclient-pt#f-droid-pt&#34;&gt;prototype&lt;/a&gt;&#xA;&lt;a href=&#34;https://gitlab.com/uniqx/apps-android-wikipedia-pt#wikipedia-android-pt&#34;&gt;Apps&lt;/a&gt;&#xA;based on well known open source projects.&lt;/p&gt;&#xA;&lt;p&gt;All our prototypes rely on &lt;a href=&#34;https://github.com/Yawning/obfs4&#34;&gt;obfs4&lt;/a&gt; which is a stable&#xA;PT implementation widely deployed by Tor.  Guardian Project published&#xA;a library called &lt;a href=&#34;https://github.com/guardianproject/AndroidPluggableTransports&#34;&gt;AndroidPluggableTransports&lt;/a&gt; for giving Android&#xA;developers access easy access to PT.  Since we could not find any easily&#xA;accessible sample code, we created a &lt;a href=&#34;https://gitlab.com/uniqx/pt-obfs4proxy-minimal-demo&#34;&gt;minimal demo project&lt;/a&gt;,&#xA;illustrating a minimal setup for sending a HTTP-request through a OBFS4&#xA;connection.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Education on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/education/</link>
+    <description>Recent content in Education on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/categories/education/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Onion Browser Release 2.6 Tutorial</title>
+      <link>https://guardianproject.github.io/info/2020/06/02/onion-browser-release-2.6-tutorial/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/06/02/onion-browser-release-2.6-tutorial/</guid>
+      <description>&lt;p&gt;In this tutorial we&amp;rsquo;re going to talk about the best practices to browse the web securely on iOS using &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser&lt;/a&gt; Release 2.6 and the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. &lt;a href=&#34;https://onionbrowser.com&#34;&gt;Onion Browser for iOS&lt;/a&gt; is a free, open-source web browser app developed originally by &lt;a href=&#34;https://mike.tig.as/&#34;&gt;Mike Tigas&lt;/a&gt;, with Release 2.6 as a collaboration with the Guardian Project. Onion Browser has Tor built-in and uses Tor to protect your web activity.&lt;/p&gt;&#xA;&lt;p&gt;You can also watch the &lt;a href=&#34;https://www.youtube.com/playlist?list=PL4-CVUWabKWeHeBpadBLjzlWVa7binXpj&#34;&gt;Onion Browser Video Tutorial&lt;/a&gt; on YouTube.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contact on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/contact/</link>
+    <description>Recent content in Contact on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/contact/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jobs and Internships</title>
+      <link>https://guardianproject.github.io/info/contact/join/</link>
+      <pubDate>Wed, 31 Mar 2010 18:30:31 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/contact/join/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2010/03/teamguardianhardatwork.jpg&#34;&gt;&lt;img title=&#34;teamguardianhardatwork&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2010/03/teamguardianhardatwork.jpg&#34; alt=&#34;&#34; width=&#34;576&#34; height=&#34;384&#34; /&gt;&lt;br&gt;&#xA;&lt;/a&gt; &lt;em&gt;Don&amp;rsquo;t let the visual anonymity fool you - Team Guardian is hard at work and proud of it!&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;jobs&#34;&gt;Jobs&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;You&lt;/strong&gt; - We&amp;rsquo;re looking for developers of all levels to join us - primarily mobile application developers with skills ranging from user interface design down to the core app work at the network and data level. For experienced developers we expect you to have at least one app released in public and prefer that you have experience with open-source and community-led projects. Experience with security software and standards is desired, but not required. The ability to assist in the localization of software to different regions / languages is a plus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Live Chatrooms</title>
+      <link>https://guardianproject.github.io/info/contact/chat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/contact/chat/</guid>
+      <description>&lt;ul style=&#34;line-height:150%&#34;&gt;&#xA;  &lt;li&gt;&#xA;    We welcome all questions, from the most beginner to advanced topics&#xA;  &lt;/li&gt;&#xA;  &lt;li&gt;&#xA;    Just ask your question, you don&#39;t need to ask permission first&#xA;  &lt;/li&gt;&#xA;  &lt;li&gt;&#xA;    Be patient, it might take some time for someone to see and answer your question.&#xA;  &lt;/li&gt;&#xA;  &lt;li&gt;&#xA;    We want your questions, and we try to answer as many as we can!&#xA;  &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://matrix.to/#/%23guardianproject%3amatrix.org&#34;&gt;&lt;img src=&#34;https://guardianproject.github.io/info/wp-content/uploads/2010/05/chat.jpg&#34; alt=&#34;#guardianproject:matrix.org&#34;&gt;&lt;/a&gt;&#xA;&lt;br/&gt;&lt;/p&gt;&#xA;&lt;center&gt;&lt;a href=&#34;https://matrix.to/#/%23guardianproject%3amatrix.org&#34;&gt;#guardianproject:matrix.org&lt;/a&gt;&lt;/center&gt;</description>
+    </item>
+    <item>
+      <title>Seeking Android/Python contractors</title>
+      <link>https://guardianproject.github.io/info/contact/android-python-contractor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/contact/android-python-contractor/</guid>
+      <description>&lt;p&gt;Guardian Project is seeking Android/Python contractors for mobile/free software/privacy work!&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;re looking for self-motivated, free software hackers to work with Guardian Project on privacy and internet freedom for mobile devices. Our work is 100% free software and we have a steady stream of projects that tie into F-Droid, Tor, IPFS, Debian, and censorship circumvention.  We work to support people and communities around the world.  This is a flexible, remote position but we also like to work in person when possible.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

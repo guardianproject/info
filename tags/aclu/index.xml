@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aclu on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/aclu/</link>
+    <description>Recent content in Aclu on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/aclu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ACLU believes “Software Developers Can Put Privacy First!” (and so do we!)</title>
+      <link>https://guardianproject.github.io/info/2011/08/19/aclu-believes-software-developers-can-put-privacy-first-and-so-do-we/</link>
+      <pubDate>Fri, 19 Aug 2011 19:46:40 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2011/08/19/aclu-believes-software-developers-can-put-privacy-first-and-so-do-we/</guid>
+      <description>&lt;p&gt;A &lt;a href=&#34;http://www.aclu-wa.org/blog/software-developers-can-put-privacy-first&#34;&gt;bit more on our big win&lt;/a&gt; in the Develop4Privacy contest, from Brian Robick at the &lt;a href=&#34;http://www.aclu-wa.org/&#34;&gt;ACLU of Washington State&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;When software developers put privacy first, everybody wins!&lt;/p&gt;&#xA;&lt;p&gt;Too often, user privacy is an afterthought in the design of computer software and online services.  In recent months, social networks have rolled back changes, cell phone manufacturers have altered the way that location tracking data is stored, and most recently, mobile application developers have been caught inappropriately collecting children’s personal data. For companies, the costs in lost consumer confidence, fines, and corrective measures can be substantial. Everyday users pay a price as well, and for victims of domestic violence, political protesters, whistleblowers, and others whose safety and livelihood could hinge on their privacy, those costs can be devastating.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

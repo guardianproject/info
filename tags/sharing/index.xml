@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sharing on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/sharing/</link>
+    <description>Recent content in Sharing on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/sharing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kindness Mode: Help People Connect to Tor on World Kindness Day</title>
+      <link>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</link>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</guid>
+      <description>&lt;p&gt;Today is &lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;World Kindness Day&lt;/a&gt;. As stated on Wikipedia, &amp;ldquo;World Kindness Day is to highlight good deeds in the community focusing on the positive power and the common thread of kindness for good which binds us.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;&lt;img src=&#34;worldkindnessday.png&#34; width=200/&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now that word &lt;strong&gt;bind&lt;/strong&gt; is particularly meaningful to use in a technical way - when a remote computer connects to another computer over a network, whether peer-to-peer or a server, one way to state what happens is &amp;ldquo;binding to their socket port&amp;rdquo;. The decentralized, privacy-focused &lt;a href=&#34;https://torproject.org&#34;&gt;tor network&lt;/a&gt; is powered by volunteer organizations and inviduals around the world sharing their network resources. On Tor, there is a great deal of positive, community &amp;ldquo;good which binds us&amp;rdquo; going on.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Our Newest App: PixelKnot</title>
+      <link>https://guardianproject.github.io/info/2013/07/18/our-newest-app-pixelknot/</link>
+      <pubDate>Thu, 18 Jul 2013 13:14:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/07/18/our-newest-app-pixelknot/</guid>
+      <description>&lt;p&gt;Have you ever hidden in plain sight? Worn camouflage in the woods or an invisibility cloak in a narrow crooked alley? It’s really hard to do properly. We’re hoping that all changes with PixelKnot.&lt;/p&gt;&#xA;&lt;p&gt;PixelKnot is an app for hiding secret messages in pictures.  Sort of like invisible ink on the back of a painting, updated to the present.  The ancient art known as steganography, now updated for the 21st century and requiring a more rigorous set of safety standards.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

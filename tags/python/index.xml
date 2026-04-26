@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/python/</link>
+    <description>Recent content in Python on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using TLS ECH from Python</title>
+      <link>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</guid>
+      <description>&lt;p&gt;At first, the idea of encrypting more of the metadata found inside the initial packet (the &amp;ldquo;ClientHello&amp;rdquo;) of a TLS&#xA;connection may seem simple and obvious, but there are of course reasons that this wasn&amp;rsquo;t done right from the start.&#xA;In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields,&#xA;and present a working code example using a fork of CPython built with DEfO project&amp;rsquo;s OpenSSL fork to connect to&#xA;ECH-enabled HTTPS servers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trusted Update Channels vs. Scratching Your Itch</title>
+      <link>https://guardianproject.github.io/info/2019/12/02/trusted-update-channels-vs.-scratching-your-itch/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2019/12/02/trusted-update-channels-vs.-scratching-your-itch/</guid>
+      <description>&lt;p&gt;One of the great things about free software is that people can easily take a functional program or library and customize it as they see fit.  Anyone can come along, submit bug fixes or improvements, and they can be easily shared across many people, projects, and organizations.  With distribution systems like Python&amp;rsquo;s &lt;a href=&#34;https://pypi.python.org&#34;&gt;pypi&lt;/a&gt;, there is an update channel that the trusted maintainers can publish fixes so consumers of the library can easily get updates.  When talking about update channels and code, it is unavoidable to also talk about people and trust.  One key piece is the trust relationship between the consumer and the maintainer.  The ideal software distribution system would be a blind, trustworthy pipe between the software maintainers and each end user.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

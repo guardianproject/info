@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Smartcard on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/smartcard/</link>
+    <description>Recent content in Smartcard on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/smartcard/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Signing Server</title>
+      <link>https://guardianproject.github.io/info/2017/12/18/building-a-signing-server/</link>
+      <pubDate>Mon, 18 Dec 2017 05:43:34 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/12/18/building-a-signing-server/</guid>
+      <description>&lt;p&gt;The Android APK signing model sets the expectation that the signing key will be the same for the entire lifetime of the app. That can be seen in the recommended lifetype of an Android signing key: &lt;a href=&#34;https://developer.android.com/studio/publish/app-signing.html#considerations&#34;&gt;20+ years&lt;/a&gt;. On top of that, it is difficult to &lt;a href=&#34;https://guardianproject.info/2015/12/29/how-to-migrate-your-android-apps-signing-key/&#34;&gt;migrate an app to a new key&lt;/a&gt;. Since the signing key is an essential part to preventing APKs from impersonating another, Android signing keys must be kept safe for the entire life of the app.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First working test of IOCipher for Obj-C</title>
+      <link>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</link>
+      <pubDate>Mon, 26 Jan 2015 04:32:29 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Every so often, we revisit our core libraries in the process of improving our existing apps, and creating new ones. IOCipher has become a standard part of our apps since it provides a really easy way to include encrypted file storage in Android apps. And we are now working on spreading it to iOS as well, headed up by Chris Ballinger, with the first preliminary tests of &lt;a href=&#34;https://github.com/ChatSecure/IOCipher-ObjC&#34; target=&#34;_blank&#34;&gt;IOCipher for Obj-C&lt;/a&gt;. Testing and contributions are most welcome! Find us in our &lt;a href=&#34;https://guardianproject.github.io/info/contact/&#34; target=&#34;_blank&#34;&gt;chat room or mailing list&lt;/a&gt; for questions, or just post a comment below! Since the iOS version is based on the exact same core library, libsqlfs, the container files they produce will also be fully compatible with each other.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security in a thumb drive: the promise and pain of hardware security modules, take one!</title>
+      <link>https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/</link>
+      <pubDate>Fri, 28 Mar 2014 16:54:39 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/03/28/security-in-a-thumb-drive-the-promise-and-pain-of-hardware-security-modules-take-one/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg&#34; alt=&#34;security in a thumb drive&#34; width=&#34;219&#34; height=&#34;119&#34; class=&#34;alignleft size-full wp-image-12311&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software.jpg 219w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-100x54.jpg 100w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-150x81.jpg 150w, https://guardianproject.info/wp-content/uploads/2014/03/cryptostick-usb-flash-drive-security-software-200x108.jpg 200w&#34; sizes=&#34;(max-width: 219px) 100vw, 219px&#34; /&gt;&lt;/a&gt;Hardware Security Modules (aka Smartcards, chipcards, etc) provide a secure way to store and use cryptographic keys, while actually making the whole process a bit easier. In theory, one USB thumb drive like thing could manage all of the crypto keys you use in a way that makes them much harder to steal. That is the promise. The reality is that the world of Hardware Security Modules (HSMs) is a massive, scary minefield of endless technical gotchas, byzantine standards (PKCS#11!), technobabble, and incompatibilities. Before I dive too much into ranting about the days of my life wasted trying to find a clear path through this minefield, I’m going to tell you about one path I did find through to solve a key piece of the puzzle: Android and Java package signing.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

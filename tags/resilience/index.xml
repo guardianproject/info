@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resilience on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/resilience/</link>
+    <description>Recent content in Resilience on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/resilience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using TLS ECH from Python</title>
+      <link>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</guid>
+      <description>&lt;p&gt;At first, the idea of encrypting more of the metadata found inside the initial packet (the &amp;ldquo;ClientHello&amp;rdquo;) of a TLS&#xA;connection may seem simple and obvious, but there are of course reasons that this wasn&amp;rsquo;t done right from the start.&#xA;In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields,&#xA;and present a working code example using a fork of CPython built with DEfO project&amp;rsquo;s OpenSSL fork to connect to&#xA;ECH-enabled HTTPS servers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quick set up guide for Encrypted Client Hello (ECH)</title>
+      <link>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</guid>
+      <description>&lt;p&gt;The Encrypted Client Hello (ECH) mechanism &lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-tls-esni&#34;&gt;draft-spec&lt;/a&gt; is a way to plug a few privacy-holes that remain in the Transport Layer Security (TLS) protocol that&amp;rsquo;s used as the security layer for the web. OpenSSL is a widely used library that provides an implementation of the TLS protocol. The &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO project&lt;/a&gt; has developed an implementation of ECH for OpenSSL, and proof-of-concept implementations of various clients and servers that use OpenSSL, and other TLS libraries, as a demonstration and for interoperability testing. DEfO is funded by the Open Technology Fund (OTF).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all&#xA;sorts of issues. That&amp;rsquo;s why we took special interest in&#xA;&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a&#xA;JavaScript library for decentralized content delivery in web-browsers and&#xA;markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient&#xA;primarily in the context of static websites.  While it should work with dynamic&#xA;websites too, that was out of focus for us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Decentralizing Distribution</title>
+      <link>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</guid>
+      <description>&lt;p&gt;Guardian Project has been awarded a grant from the &lt;a href=&#34;https://www.ffdweb.org/guardian-project-annoucement&#34;&gt;Filecoin Foundation for the Decentralized Web (FFDW)&lt;/a&gt; to work on decentralizing veracity and distribution (DVD).  FFDW’s Mission is to “ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.”  Filecoin is built on top of IPFS, which is &amp;ldquo;&lt;a href=&#34;https://docs.ipfs.io/concepts/what-is-ipfs/&#34;&gt;a distributed system for storing and accessing files&lt;/a&gt;&amp;rdquo;.  The distribution component of the FFDW-DVD project is focused on improving F-Droid&amp;rsquo;s free, open, and decentralized mobile app ecosystem.  On top of the flagship unified experience offered by this website and the F-Droid official app, F-Droid provides all the pieces for anyone to create, build, remix, publish, reproduce, redistribute and review mobile apps.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

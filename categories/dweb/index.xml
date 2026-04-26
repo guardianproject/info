@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dweb on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/dweb/</link>
+    <description>Recent content in Dweb on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/categories/dweb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DWeb versus Web3: An Intern&#39;s Journey!</title>
+      <link>https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/08/19/dweb-versus-web3-an-interns-journey/</guid>
+      <description>&lt;p&gt;Close your eyes and imagine. You are sitting, designing the next game-changing innovative idea; however, you are not worried about any information leakage or spread, as you are in control. You not only hold ownership of your data, but with each online activity, your fear of being tracked dissipates more. This new internet you explore on understands each input, tailoring the content to your specific needs as it no longer runs on basic commands, but rather uses the combination of technologies and concepts such as machine learning, big data, and decentralized ledger technology to process information in a smart, human-like manner. This image in your mind is no longer a distant fantasy, but rather a closely approaching reality – this reality is the decentralized web, otherwise referred to as the DWeb.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

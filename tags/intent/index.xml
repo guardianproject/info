@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intent on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/intent/</link>
+    <description>Recent content in Intent on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/intent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Improving trust and flexibility in interactions between Android apps</title>
+      <link>https://guardianproject.github.io/info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/</link>
+      <pubDate>Tue, 21 Jan 2014 13:51:57 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/01/21/improving-trust-and-flexibility-in-interactions-between-android-apps/</guid>
+      <description>&lt;div id=&#34;attachment_12240&#34; style=&#34;width: 310px&#34; class=&#34;wp-caption alignright&#34;&gt;&#xA;  &lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents.png&#34;&gt;&lt;img aria-describedby=&#34;caption-attachment-12240&#34; src=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents-300x61.png&#34; alt=&#34;Activity1 sending an Intent that either Activity2 or Activity3 can handle.&#34; width=&#34;300&#34; height=&#34;61&#34; class=&#34;size-medium wp-image-12240&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents-300x61.png 300w, https://guardianproject.info/wp-content/uploads/2014/01/Android-Intents.png 600w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&#xA;  &lt;p id=&#34;caption-attachment-12240&#34; class=&#34;wp-caption-text&#34;&gt;&#xA;    &lt;code&gt;Activity1&lt;/code&gt; sending an &lt;code&gt;Intent&lt;/code&gt; that either &lt;code&gt;Activity2&lt;/code&gt; or &lt;code&gt;Activity3&lt;/code&gt; can handle.&#xA;  &lt;/p&gt;&#xA;&lt;/div&gt;Android provides a flexible system of messaging between apps in the form of &#xA;&lt;p&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;https://developer.android.com/guide/components/intents-filters.html&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Intent&amp;lt;/a&amp;gt;&lt;/code&gt;s. It also provides the framework for reusing large chunks of apps based on the &lt;code&gt;&amp;lt;a href=&amp;quot;https://developer.android.com/reference/android/app/Activity.html&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Activity&amp;lt;/a&amp;gt;&lt;/code&gt; class. &lt;code&gt;Intent&lt;/code&gt;s are the messages that make the requests, and &lt;code&gt;Activity&lt;/code&gt;s are the basic chunk of functionality in an app, including its interface. This combination allows apps to reuse large chunks of functionality while keeping the user experience seamless and fluent. For example, an app can send an Intent to request a camera &lt;code&gt;Activity&lt;/code&gt; to prompt the user to take a picture, and that process can feel integrated into the original app that made the request. Another common use of this paradigm is choosing account information from the contacts database (aka the &lt;em&gt;People&lt;/em&gt; app). When a user is composing an new email, they will want to select who the message gets sent to. Android provides both the contacts database, and a nice overlay screen for finding and selecting the person to send to. This combination is an &lt;code&gt;Activity&lt;/code&gt; provided by Android. The message that the email program sends in order to trigger that &lt;code&gt;Activity&lt;/code&gt; is an &lt;code&gt;Intent&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

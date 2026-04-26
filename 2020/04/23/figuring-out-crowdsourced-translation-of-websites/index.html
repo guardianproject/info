@@ -1,0 +1,1375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    
+      <title>Figuring Out Crowdsourced Translation of Websites | Guardian Project</title>
+    
+
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    
+    
+      
+    
+    <meta name="description" content="" />
+
+    
+    
+
+    <meta property="og:title" content="Figuring Out Crowdsourced Translation of Websites" />
+<meta property="og:description" content="People, Apps and Code You Can Trust" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://guardianproject.github.io/info/2020/04/23/figuring-out-crowdsourced-translation-of-websites/" />
+
+<meta property="og:site_name" content="Guardian Project" />
+
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Guardian Project",
+  "url": "https:\/\/guardianproject.github.io\/info\/",
+  "description": "People, Apps and Code You Can Trust"
+}
+</script>
+
+    <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@guardianproject" />
+<meta name="twitter:title" content="Figuring Out Crowdsourced Translation of Websites" />
+<meta name="twitter:description" content="People, Apps and Code You Can Trust" />
+
+
+
+
+    
+    
+      <link rel="icon" type="image/svg+xml" href="https://guardianproject.github.io/info/favicon.svg" />
+    
+
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+    
+    
+      
+        
+          
+          
+            <link
+              rel="stylesheet"
+              href="/info/css/styles.a19010b40d9686f3e754ba7e80fde4910a154a79ad45797c2d7fb6bbe5db8b35.css"
+              integrity="sha256-oZAQtA2WhvPnVLp&#43;gP3kkQoVSnmtRXl8LX&#43;2u&#43;XbizU="
+              crossorigin="anonymous"
+            />
+          
+        
+      
+    
+
+
+    
+    
+      
+        
+        
+          <link rel="stylesheet" href="/info/css/fonts.d1879df1972316d8d938b96958535f08cf5a6b3b078bd2be90bde9ccc01f9aa4.css" integrity="sha256-0Yed8ZcjFtjZOLlpWFNfCM9aazsHi9K&#43;kL3pzMAfmqQ=" crossorigin="anonymous" />
+        
+      
+    
+
+
+    
+        
+      
+      <script src="/info/js/main.7b57960741aab0c5345ed2de96e3271beece68496732534388fb608dad5f5490.min.js" defer></script>
+    
+
+    
+    <script defer src="https://guardianproject.github.io/info/js/kao-banner.js"></script>
+  </head>
+  <body class="">
+    <div class="flex min-h-screen flex-col">
+      <nav class="border-b border-gray-100 relative z-40">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4">
+    <a class="flex items-center" href="https://guardianproject.github.io/info/">
+      <img src="https://guardianproject.github.io/info/images/wordlogo.svg" alt="Guardian Project" class="h-10 xl:h-12" />
+    </a>
+
+    
+    <button
+      class="cursor-pointer xl:hidden"
+      type="button"
+      id="menuOpen"
+      aria-label="Open Menu"
+    >
+      <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+  />
+</svg>
+
+    </button>
+
+    
+    <ul class="hidden xl:flex xl:flex-row xl:gap-1 xl:items-center">
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/"
+            >
+              About
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/brand/">
+                    New Branding
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/story/">
+                    Our Story
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/partners/">
+                    Partners and Funding
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/press/">
+                    Press
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/services/">
+                    Services
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/signing-keys/">
+                    Signing Keys
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/team/">
+                    Team
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/apps/"
+            >
+              Apps
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.checkey/">
+                    Checkey: info on local apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/circulo/">
+                    Círculo
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.havenapp.main/">
+                    Haven
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.locationprivacy/">
+                    Location Privacy - BETA
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.witness.sscphase1/">
+                    ObscuraCam: The Privacy Camera
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.android/">
+                    Orbot: Proxy with Tor
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.orfox/">
+                    Orfox
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.pixelknot/">
+                    PixelKnot: Hidden Messages
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.witness.proofmode/">
+                    ProofMode: Verified Visuals
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/info.guardianproject.ripple/">
+                    Ripple: respond when panicking
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/net.opendasharchive.openarchive.release/">
+                    Save
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torbrowser/">
+                    Tor Browser for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torbrowser_alpha/">
+                    Tor Browser for Android (Alpha)
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/apps/org.torproject.torservices/">
+                    TorServices (alpha)
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/code/"
+            >
+              Code
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/cleaninsights/">
+                    Clean Insights: Privacy Preserving Measurement
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/iocipher/">
+                    IOCipher: Virtual Encrypted Disks
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/netcipher/">
+                    NetCipher: Secured Networking
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/onionmobiledev/">
+                    Onion Mobile Devs: Tor Integration for Mobile Apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/panickit/">
+                    PanicKit: system-wide panic responses
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/c2pa/">
+                    Proofmode and C2PA
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/sqlcipher/">
+                    SQLCipher: Encrypted Database
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/tor-android/">
+                    TorService: Tor library for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/trustedintents/">
+                    TrustedIntents: flexible trusted interactions between Android apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/code/wind/">
+                    Wind: Off-Grid Services for Everyday People
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          
+            <li>
+              <a class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-block" href="/info/blog/">Blog</a>
+            </li>
+          
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/archive/"
+            >
+              Archive
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/apps/">
+                    Archived Apps
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/cacheword/">
+                    CacheWord: Passphrase Caching and Management
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/camerav/">
+                    CameraV: Secure Verifiable Photo &amp; Video Camera
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/courier/">
+                    Courier: Secure News reader
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/developersquare/">
+                    Developer Square
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/ffmpeg/">
+                    FFMPEG: Media Privacy Framework
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/firefoxprivacy/">
+                    Firefox Mobile: Privacy Enhanced
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/freebird/">
+                    Freebird Workshop
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/gnupg/">
+                    GnuPG: OpenPGP Encryption
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/hardware/">
+                    Hardware Guide
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/informacam/">
+                    InformaCam: Verified Mobile Media
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/keysync/">
+                    KeySync: Syncing Trusted Identities
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/libsqlfs/">
+                    libsqlfs: filesystem on top of SQLite/SQLCipher
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/lildebi/">
+                    Lil&#39; Debi: Mobile Debian Installer
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/luks/">
+                    LUKS: Disk Encryption
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/onionkit/">
+                    OnionKit for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/orbot/">
+                    Orbot: Tor for Android
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/orweb/">
+                    Orweb: Private Web Browser
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/ostel/">
+                    Ostel: Encrypted Phone Calls
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/pixelknot/">
+                    Pixelknot: Hidden Messages
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/tutorials/">
+                    Tutorials
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/archive/weatherrepo/">
+                    Weather Repo
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+          <li class="group relative">
+            <a
+              class="text-primary font-medium hover:text-primary/70 duration-300 px-4 py-2 inline-flex items-center gap-1 cursor-pointer"
+              href="/info/contact/"
+            >
+              Contact
+              <svg class="size-4 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </a>
+            <ul class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full mt-0 w-64 rounded-lg border border-gray-100 bg-white py-2 shadow-lg transition-all duration-200">
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/">
+                    Contact
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/how-you-can-work-with-us/">
+                    How You Can Work With Us
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/join/">
+                    Jobs and Internships
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/contact/chat/">
+                    Live Chatrooms
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/disclosure-researcher/">
+                    Researcher Disclosure Policy
+                  </a>
+                </li>
+              
+                <li>
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-tertiary/50 hover:text-primary duration-200 text-left" href="/info/disclosure/">
+                    Responsible Disclosure Policy
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  
+  <div id="mobileMenu" class="fixed inset-0 z-50 hidden xl:hidden">
+    
+    <div id="menuBackdrop" class="absolute inset-0 bg-black/30"></div>
+
+    
+    <div class="absolute inset-y-0 right-0 w-full max-w-sm bg-white shadow-xl overflow-y-auto">
+      
+      <div class="flex items-center justify-between px-4 py-4 border-b border-gray-100">
+        <a class="flex items-center" href="https://guardianproject.github.io/info/">
+          <img src="https://guardianproject.github.io/info/images/wordlogo.svg" alt="Guardian Project" class="h-10" />
+        </a>
+        <button id="menuClose" class="cursor-pointer" type="button" aria-label="Close Menu">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  
+    class="size-6"
+  
+>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
+        </button>
+      </div>
+
+      
+      <ul class="px-4 py-4">
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                About
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/brand/">
+                      New Branding
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/story/">
+                      Our Story
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/partners/">
+                      Partners and Funding
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/press/">
+                      Press
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/services/">
+                      Services
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/signing-keys/">
+                      Signing Keys
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/team/">
+                      Team
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Apps
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.checkey/">
+                      Checkey: info on local apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/circulo/">
+                      Círculo
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.havenapp.main/">
+                      Haven
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.locationprivacy/">
+                      Location Privacy - BETA
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.witness.sscphase1/">
+                      ObscuraCam: The Privacy Camera
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.android/">
+                      Orbot: Proxy with Tor
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.orfox/">
+                      Orfox
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.pixelknot/">
+                      PixelKnot: Hidden Messages
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.witness.proofmode/">
+                      ProofMode: Verified Visuals
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/info.guardianproject.ripple/">
+                      Ripple: respond when panicking
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/net.opendasharchive.openarchive.release/">
+                      Save
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torbrowser/">
+                      Tor Browser for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torbrowser_alpha/">
+                      Tor Browser for Android (Alpha)
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/apps/org.torproject.torservices/">
+                      TorServices (alpha)
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Code
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/cleaninsights/">
+                      Clean Insights: Privacy Preserving Measurement
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/iocipher/">
+                      IOCipher: Virtual Encrypted Disks
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/netcipher/">
+                      NetCipher: Secured Networking
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/onionmobiledev/">
+                      Onion Mobile Devs: Tor Integration for Mobile Apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/panickit/">
+                      PanicKit: system-wide panic responses
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/c2pa/">
+                      Proofmode and C2PA
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/sqlcipher/">
+                      SQLCipher: Encrypted Database
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/tor-android/">
+                      TorService: Tor library for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/trustedintents/">
+                      TrustedIntents: flexible trusted interactions between Android apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/code/wind/">
+                      Wind: Off-Grid Services for Everyday People
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            
+              <li class="border-b border-gray-50">
+                <a class="block py-3 text-primary font-medium" href="/info/blog/">Blog</a>
+              </li>
+            
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Archive
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/apps/">
+                      Archived Apps
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/cacheword/">
+                      CacheWord: Passphrase Caching and Management
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/camerav/">
+                      CameraV: Secure Verifiable Photo &amp; Video Camera
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/courier/">
+                      Courier: Secure News reader
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/developersquare/">
+                      Developer Square
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/ffmpeg/">
+                      FFMPEG: Media Privacy Framework
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/firefoxprivacy/">
+                      Firefox Mobile: Privacy Enhanced
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/freebird/">
+                      Freebird Workshop
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/gnupg/">
+                      GnuPG: OpenPGP Encryption
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/hardware/">
+                      Hardware Guide
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/informacam/">
+                      InformaCam: Verified Mobile Media
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/keysync/">
+                      KeySync: Syncing Trusted Identities
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/libsqlfs/">
+                      libsqlfs: filesystem on top of SQLite/SQLCipher
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/lildebi/">
+                      Lil&#39; Debi: Mobile Debian Installer
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/luks/">
+                      LUKS: Disk Encryption
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/onionkit/">
+                      OnionKit for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/orbot/">
+                      Orbot: Tor for Android
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/orweb/">
+                      Orweb: Private Web Browser
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/ostel/">
+                      Ostel: Encrypted Phone Calls
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/pixelknot/">
+                      Pixelknot: Hidden Messages
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/tutorials/">
+                      Tutorials
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/archive/weatherrepo/">
+                      Weather Repo
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+            <li class="border-b border-gray-50">
+              <button
+                class="mobile-accordion flex w-full items-center justify-between py-3 text-left text-primary font-medium"
+                type="button"
+              >
+                Contact
+                <svg class="mobile-chevron size-4 shrink-0 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <ul class="mobile-submenu hidden pb-2 pl-4">
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/">
+                      Overview
+                    </a>
+                  </li>
+                
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/">
+                      Contact
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/how-you-can-work-with-us/">
+                      How You Can Work With Us
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/join/">
+                      Jobs and Internships
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/contact/chat/">
+                      Live Chatrooms
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/disclosure-researcher/">
+                      Researcher Disclosure Policy
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a class="block py-2 text-sm text-gray-600 hover:text-primary duration-200" href="/info/disclosure/">
+                      Responsible Disclosure Policy
+                    </a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menu = document.getElementById('mobileMenu');
+    const openBtn = document.getElementById('menuOpen');
+    const closeBtn = document.getElementById('menuClose');
+    const backdrop = document.getElementById('menuBackdrop');
+
+    function openMenu() { menu.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { menu.classList.add('hidden'); document.body.style.overflow = ''; }
+
+    if (openBtn) openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+    
+    document.querySelectorAll('.mobile-accordion').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var submenu = this.nextElementSibling;
+        var chevron = this.querySelector('.mobile-chevron');
+        submenu.classList.toggle('hidden');
+        chevron.classList.toggle('rotate-180');
+      });
+    });
+  });
+</script>
+
+      <div class="grow">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      
+        <h2 class="text-primary mb-8 text-center text-4xl font-bold xl:text-6xl">Figuring Out Crowdsourced Translation of Websites</h2>
+      
+      
+        <p class="mb-8 text-center text-sm text-gray-500">By Hans-Christoph Steiner · April 23, 2020</p>
+      
+      
+      
+      
+        <div class="prose prose-lg mx-auto max-w-none">
+          <p>Crowdsourced translation platforms like <a href="https://weblate.org/">Weblate</a>, Transifex, Crowdin, etc. have proven to be a hugely productive way to actively translate apps and desktop software.  Long form texts like documentation and websites remain much more work to translate and keep translated.  Many translation services currently support Markdown and HTML, but very basically, which means much more work for translators and webmasters.  Translators can inadvertently break things, either with a typo or because of a lack of knowledge of a specific syntax.  This can make the whole page layout break.  Webmasters and documentation maintainers must carefully check the process to ensure everything is working smoothly.  With the spread of Markdown as a standard format, there is now hope!  Software developers can focus efforts on the Markdown translation workflow, and Markdown is more tolerant of syntax errors than HTML.</p>
+<p>Guardian Project has been working for a decade on making localization and the long term maintenance of translation a lot easier for developers and translators.  We call this ongoing collaborative effort &ldquo;Linguine&rdquo; after a name chosen in a multi-project meeting.  One of the biggest usability barriers in the world of software and the internet is language.  Most of the world does not speak English, yet most of <a href="https://www.bbc.com/future/article/20200414-the-many-lanuages-still-missing-from-the-internet">the internet is written in English</a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Maya_script"><img src="Tortuguero_Box_WDL2658.png" alt="Tortuguero Box"></a></p>
+<h2 id="the-app-workflow">The App Workflow</h2>
+<p>The developer of an Android or iOS app does not need to know much
+about localization or translation in order to make their apps fully
+translated.  Both supported translation from the
+beginning as a native feature.  Software strings are already broken up into
+small chunks, which fit nicely into crowdsourced translation software.  The progress bars and step-by-step user experiences map easily to these strings.  The string file formats also allow for all sorts of valuable <a href="https://docs.weblate.org/en/latest/formats.html#xliff">metadata</a> the give translators context and guidance, as well as to enable automated checks.  The strings of an app also do not to be 100% translated to be useful.  For example, if all strings are translated except for those
+in a new feature, most users will never even notice the missing
+translations.  If only the most commonly seen strings are translated, that translation can still be useful since it will provide the user with enough to navigate all the features of the app.  Here are three examples of app strings for translation:</p>
+<p>Android <em>strings.xml</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;string</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;app_details__no_versions__show_incompat_versions&#34;</span><span style="color:#f92672">&gt;</span>To show incompatible versions here anyway, enable the \&#34;%1$s\&#34; setting.<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;string</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;app_details__no_versions__no_compatible_signatures&#34;</span><span style="color:#f92672">&gt;</span>No versions with compatible signature<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;string</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;app_details__no_versions__none_compatible_with_device&#34;</span><span style="color:#f92672">&gt;</span>No versions compatible with device<span style="color:#f92672">&lt;/string&gt;</span>
+</span></span></code></pre></div><p>Python <em>gettext .po</em>:</p>
+<pre tabindex="0"><code class="language-gettext" data-lang="gettext">#: ../fdroidserver/build.py
+msgid &#34;Don&#39;t create a source tarball, useful when testing a build&#34;
+msgstr &#34;不创建源码 tarball 文件，便于内部版本测试&#34;
+
+#: ../fdroidserver/stats.py
+msgid &#34;Don&#39;t do anything logs-related&#34;
+msgstr &#34;请勿做任何日志相关的操作&#34;
+
+#: ../fdroidserver/build.py
+msgid &#34;Don&#39;t refresh the repository, useful when testing a build with no internet connection&#34;
+msgstr &#34;不刷新资源库，便于没有互联网时的内部版本测试&#34;
+</code></pre><p><em>i18next</em> JSON:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;package&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;anti_features&#34;</span>: <span style="color:#e6db74">&#34;Anti-Features&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;added_on&#34;</span>: <span style="color:#e6db74">&#34;Added on {{ package_added_date }}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;signed_by_fdroid&#34;</span>: <span style="color:#e6db74">&#34;It is built and signed by F-Droid, and guaranteed to correspond to &lt;a href=\&#34;{{ source_code_url }}\&#34;&gt;this source tarball&lt;/a&gt;.&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;suggest_downloading_via_fdroid&#34;</span>: <span style="color:#e6db74">&#34;Although APK downloads are available below to give you the choice, you should be aware that by installing that way you will not receive update notifications and it&#39;s a less secure way to download. We recommend that you install the F-Droid client and use that.&#34;</span>,
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="long-form-text">Long Form Text</h2>
+<p>With documentation, blog posts, and other long form text, it is a very different story.  To start with, there are lots of debates of how best to break up a text: paragraphs, sentences, or whole pages?  Does each bullet point count as a paragraph or a sentence?  Do these rules work for both blog posts, which rarely change after publication, as well as documentation, which must be kept updated?  Also, measuring the translation &ldquo;completeness&rdquo; of a long text is harder.  If a blog post is 80% translated, it will be very disconcerting for readers when sections switch to English and back.  A documentation page that is 20% translated is not useful.</p>
+<p>With websites, there is also more varied context than with software strings: paragraphs, titles, bullet points, code blocks, <a href="https://jekyllrb.com/docs/front-matter/">YAML Front Matter</a>, etc.  There is currently no way to add translation metadata directly to the Markdown or HTML document, so that context is often missing, or it must be manually entered in the translation platform.   One really nice property of Markdown is that the plain text version looks good, so if the writer messes up the markup syntax, all is not lost.  Translation software can be made to fully &ldquo;understand&rdquo; Markdown (e.g. the <a href="https://en.wikipedia.org/wiki/Abstract_Syntax_Tree">AST</a>), and provide automated syntax checks.  Such an approach might totally fail if someone messes up the markup in the source document.  In that case, a more naive direct representation might work better.  Sites that run linters will want the AST approach, sites with non-technical writers might not.  In short: Crowdin, Transifex, and Weblate currently support Markdown, but in a limited way. And these limitations mean much more work for translators, developers, and webmasters.</p>
+<p>If the translators are technically savvy and know the topic and syntaxes well, then the webmaster doesn&rsquo;t need to worry too much.  The translation platform will make it easier for the translators to keep the translations maintained.  Another key benefit of crowdsourced translation is that translators don&rsquo;t need as much technical skill to meaningfully contribute, as long as the project fits well into the translation workflow.  Due to the current complexity of websites and limitations of the tooling, there is still no single translation workflow for long form text that works well for the majority of websites and documentation.  That means it is important to know available workflows and understand which one fits best to your project.</p>
+<h2 id="user-experience-breakdown">User Experience Breakdown</h2>
+<p>Website localization is also not nearly as standardized as apps.  With apps, a single translation workflow will work for basically all cases.  For websites, that is not possible since there are so many different kinds of texts and requirements.  For some documentation, it is acceptable to have 20% of the text slightly out of date in the translation.  For other documentation, each page needs to be 100% complete, otherwise the original English should be shown.  A good translation experience therefore requires customization.</p>
+<p>The workflow will also vary based on the content and the skills that the translators have.  If it is deeply technical documentation, then the translators will be comfortable markup and code syntax since they must have technical knowledge in order to translate the materials.  The translators will prefer being closer to the source format.  If the content is blog posts from an organization advocating good governance, then the translators are mostly going to be non-technical, and the workflow should minimize exposure to technical details like <a href="https://jekyllrb.com/docs/front-matter/">YAML Front Matter</a> blocks.</p>
+<p>One large, complicated example is the <a href="https://f-droid.org">F-Droid</a> website, which is built with Jekyll.  It has five different kinds of materials that need to be translated, each with its own distinct requirements: <a href="https://hosted.weblate.org/projects/f-droid/website/">chrome strings</a>, <a href="https://hosted.weblate.org/projects/f-droid/website-pages/">pages</a>, <a href="https://hosted.weblate.org/projects/f-droid/website-docs/">docs</a>, <a href="https://hosted.weblate.org/projects/f-droid/website-posts/">blog posts</a>, and <a href="https://hosted.weblate.org/projects/f-droid/website-tutorials/">tutorials</a>.  In order to group the strings by these requirements, the site uses <em>i18next</em> JSON for use in Jekyll Liquid tags and custom <a href="https://po4a.org/"><em>po4a</em></a> sections to handle the Markdown and YAML Front Matter.  <em>po4a</em> makes it possible to group the translation levels per-section, then add requirements: the entire &ldquo;pages&rdquo; section must be ~95% translated for inclusion, while &ldquo;docs&rdquo; and &ldquo;blog posts&rdquo; sections can be untranslated.  Each individual blog post must be completely translated to be published.  Each documentation page must be 90% translated to be published.  It is not 100% to allow for some time lag between when the original is updated, and the translated is updated.  Ideally, the source string edits could be marked as &ldquo;typo correction&rdquo; vs &ldquo;update&rdquo; to aid making better automatic decisions about which translations should still be published.</p>
+<h2 id="process-and-people">Process and People</h2>
+<p>If there are people fully engaged in all parts of the translation process, then it is possible to tightly coordinate the updates to the source and the translations.  Other projects rely on crowdsourced translations because
+it is easier for them to acquire volunteer contributions than increasing translation budgets.  So the advantages and disadvantages of various workflows have to be weighed:</p>
+<ul>
+<li>Delay publishing the source update until the translations are done.</li>
+<li>Translated pages are reverted to English unless they are 100% updated.</li>
+<li>Translated pages show outdated parts until they are updated.</li>
+<li>Translated pages show English parts until they are updated.</li>
+</ul>
+<p>There are other trade-offs to consider in terms of the relationship between the translator and the project:</p>
+<ul>
+<li>Only trusted translators who can directly update the translations:
+<ul>
+<li>Rapid time to publish</li>
+<li>Less work to translate</li>
+<li>Much fewer languages supported</li>
+</ul>
+</li>
+<li>Trusted reviewers with any contributions from any translator:
+<ul>
+<li>More language coverage, quality control from multiple eyeballs on every string</li>
+<li>Asynchronous, unpredictable workflow</li>
+</ul>
+</li>
+<li>Contributions from any translator:
+<ul>
+<li>Rapid maintenance updates and even more languages</li>
+<li>More errors in translation, including potentially vandalous or malicious contributions</li>
+<li>Skilled translators will be less interested in contributing</li>
+</ul>
+</li>
+</ul>
+<p>When it is possible to achieve 100% translation, like on a small site or when there is a budget to pay for all the documentation to be translated, then the workflow is a lot simpler.  That allows the tools to have a more direct user experience.  Volunteer-based, &ldquo;best effort&rdquo; translation is a different story.  Then it is important to clearly represent which strings and pages should be translated first, and which are non-essential.  Crowdin, for example, can show all the documents in a familiar looking file browser, with nice progress bars.  There is no indication of priority.  This is great if someone is paid to complete the full translation, but is much less clear for volunteers to jump in and contribute to the more important parts.</p>
+<p><img src="crowdin-markdown-dir.png" alt="">
+<em>Crowdin project file navigation</em></p>
+<p>Unfortunately, there is no shining example of a user experience that covers this second scenario well.  Weblate provides one good tool, where the strings are presented to the translator in order of the priority set in the metadata (e.g. like <a href="https://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#priority">XLIFF&rsquo;s <em>priority</em></a>).  The translator just needs to start translating the first strings Weblate presents.</p>
+<p><img src="crowdin-priority.png" alt="">
+<em>One hack to add priority to Markdown for Crowdin</em></p>
+<h2 id="mass-changes-versus-merge-conflicts">Mass Changes versus Merge Conflicts</h2>
+<p>Sometimes you have to make a small change to some of the coding of the website.  The website has suddenly gotten a lot more popular, so you need to work on making the caching work a lot better to reduce the load.  That means changing all of file references to include a version or hash value.  Those links are also in the source strings that are fed to the translation system.  And each change to the source strings prompts all of the translators to update their translations.  Normally, this is exactly what should happen.  But in this scenario, the translation should not change since it is just the links that changed.  To handle this, the webmaster or developer needs to be able to do mass edits on the source and translation while having a way to tell the translation system to ignore this change.  This can easily cause merge conflicts if a translator is working at the same time.</p>
+<p>If these small changes only happen in source, the translations will be marked as needing an update.  Some platforms try to be smart about detecting changes, and will even mark strings as changed if both the source and translation were updated together.  That produces another scenario: The website fully translated into Tibetan, but now the translator has disappeared.  So those trivial changes are bumping more and more strings out of the translation, and soon it will be death by a thousand paper cuts and the Tibetan translation gets kicked out even though the underlying text is current.  It is just the inline code updates that are marking things as out of date.</p>
+<h2 id="automation-and-checks">Automation and Checks</h2>
+<p>One essential part of any translation workflow is automated checks to make sure that the syntax has not been broken in the translation process.  Translation platforms must provide clear errors to the translators, otherwise all of these problems will be pushed to the webmaster or developer who imports new translations.  Or worse, they are overlooked and cause crashes or break layouts.  Good metadata is a key piece of that process.  For example, <em>i18next</em> <code>{{ interpolation }}</code> is not the same as Python <code>{format_strings}</code>, though they look quite similar.  The metadata should include the file type and any relevant syntaxes.  Most developers are not aware of all of the details of the translation process, so these checks should be enabled automatically, as much as possible.  Manually enabling checks can be very hard to understand, since you have to understand both the developer&rsquo;s and translators points of view. These checks really pay off, like when technical contributors can go straight to strings with failing checks and fix the syntax problems, without any knowledge of the languages involved.  This is in contrast to a project&rsquo;s Continuous Integration (CI) tests, which generally only the software&rsquo;s maintainers follow. The barrier to entry for fixing failing checks is much lower since they are standardized across every project on the translation platform.</p>
+<p><img src="weblate-checks.png" alt="">
+<em>Weblate highlights failing checks, the error counts are clickable to edit them all.</em></p>
+<p><img src="weblate-failing-checks.png" alt="">
+<em>Reviewing a single failing check in Weblate.</em></p>
+<p>Context is very important for translators, and a good translating experience will provide as much useful context as possible.  That said, it cannot replace the real thing.  Having a automatic staging website will help catch errors before publication.  It also gives translators the feeling that they are building something real, when they are working their way up to being accepted for final publication.  <a href="https://staging.tails.boum.org/">Tails</a> and <a href="https://staging.f-droid.org">F-Droid</a> both provide complete staging websites that include all of the the languages, not only the complete ones.  Static site generators like Hugo and Jekyll let more technically skilled contributors rapidly build a local copy, and services like GitLab Pages and GitHub Pages can host a staging website <a href="https://eighthave.gitlab.io/fdroid-website/">for</a> <a href="https://bubu.gitlab.io/fdroid-website/">each</a> <a href="https://uniqx.gitlab.io/fdroid-website/">fork</a>.</p>
+<h2 id="translation-setup-with-po4a">Translation Setup with <em>po4a</em></h2>
+<p><a href="https://po4a.org"><em>po4a</em></a> is a tool for customizing the representation of text in the translation workflow.  It is quite powerful, but also not simple to get started.  Each translation platform has its own documentation for directly using Markdown, so follow those docs for a simpler setup.  There is a lot to be said for having the translation platform directly handle the files that are being translated, without an intermediate localization format like XLIFF, <em>gettext</em> PO, or JSON.  Sometimes other requirements mean that using <em>po4a</em> in the middle will save a lot of effort, like the F-Droid example above.</p>
+<p>The <em>po4a</em> approach does work quite differently: the translations are stored in the <em>.po</em> files rather than Markdown documents. This feels a bit unnatural at first, as compared to the regular workflow of a static site generator.  Translated pages are then converted from <em>.po</em> to <em>.md</em> just for building the site.  It gives a lot in return, especially for crowdsourced translation with specific requirements.  For example, it makes publishing and unpublishing translated documents happen automatically, based on the pre-configured specifications, like whether it is 100% translated.</p>
+<p>po4a gives fine grained control over how documents are grouped, and what percentage must be translated before the translated version is published.  The direct version means each document is represented by a single translation component.  Many websites are organized into three common buckets, folders of Markdown documents should count as a single translation component:</p>
+<ul>
+<li>The base pages like &ldquo;about&rdquo;, &ldquo;contact, etc.</li>
+<li>Documentation</li>
+<li>Blog posts</li>
+</ul>
+<h3 id="projects-using-po4a">Projects using <em>po4a</em></h3>
+<ul>
+<li>Debian is using <em>po4a</em> to <a href="https://salsa.debian.org/manpages-l10n-team">translate the <em>man</em> pages</a>.</li>
+<li>The extensive <a href="https://tails.boum.org/contribute/build/website/">Tails documentation</a> uses <em>po4a</em> to make Markdown pages translatable in <a href="https://ikiwiki.info/plugins/po/">ikiwiki</a>.</li>
+<li>The Fedora project is using <em>po4a</em> to translate the <a href="https://pagure.io/fedora-docs/docs-fp-o">documentation</a> in <a href="https://translate.fedoraproject.org/">their own Weblate instance</a></li>
+<li><a href="https://stellarium.org/">Stellarium Astronomy</a> uses <em>po4a</em> to <a href="https://github.com/Stellarium/stellarium/pull/908">translate</a> &ldquo;sky culture descriptions&rdquo;.</li>
+</ul>
+<h4 id="coming-soon">Coming Soon:</h4>
+<ul>
+<li><a href="https://reproducible-builds.org/">https://reproducible-builds.org/</a> (built with Jekyll): <a href="https://salsa.debian.org/reproducible-builds/reproducible-website/-/merge_requests/56">https://salsa.debian.org/reproducible-builds/reproducible-website/-/merge_requests/56</a></li>
+<li><a href="https://reuse.software">https://reuse.software</a> (built with Hugo): <a href="https://github.com/fsfe/reuse-website/issues/26">https://github.com/fsfe/reuse-website/issues/26</a></li>
+</ul>
+
+        </div>
+      
+    </div>
+  </section>
+</div>
+      <footer class="bg-primary text-white py-16">
+  <div class="container mx-auto px-4">
+    <div class="mb-12 grid gap-12 xl:grid-cols-12">
+      
+      <div class="flex flex-col items-center gap-4 xl:col-span-4 xl:items-start">
+        <a class="flex items-center gap-3" href="https://guardianproject.github.io/info/">
+          <img src="https://guardianproject.github.io/info/images/logo.svg" alt="" class="size-10 brightness-0 invert" />
+          <span class="text-xl font-semibold uppercase xl:text-2xl">Guardian Project</span>
+        </a>
+        <p class="text-center text-sm text-white/80 xl:text-start">People, Apps and Code You Can Trust</p>
+        
+        <ul class="mt-2 flex gap-4">
+          
+            <li>
+              <a href="https://social.librem.one/@guardianproject" rel="me" aria-label="Mastodon" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765 2.79.765.504 1.783.504 5.253c-.005.76-.01 1.666.013 2.63.073 3.22.55 6.395 3.328 7.187 1.28.364 2.38.44 3.268.388 1.612-.095 2.516-.612 2.516-.612l-.053-1.154s-1.15.362-2.443.318c-1.28-.044-2.633-.138-2.84-1.716a3 3 0 0 1-.026-.442s1.257.308 2.853.381c.975.045 1.888-.057 2.813-.169m1.256-2.26v-4.15c0-.85-.217-1.523-.652-2.023-.45-.5-1.038-.755-1.77-.755-1.846 0-2.333 1.036-2.333 1.036V8.56H7.903V4.073S7.416 3.037 5.57 3.037c-.732 0-1.32.256-1.77.755-.434.5-.65 1.174-.65 2.024v4.15h1.96V6.067s0-.892.644-1.227c.417-.216.955-.24 1.225.14.307.432.302 1.058.302 1.058v3.928h1.96V6.038s-.005-.626.302-1.058c.27-.38.808-.356 1.225-.14.644.335.644 1.227.644 1.227v3.899z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://github.com/guardianproject" aria-label="GitHub" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://gitlab.com/guardianproject" aria-label="GitLab" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="m15.734 6.1-.022-.058L13.534.358a.57.57 0 0 0-.563-.356.6.6 0 0 0-.328.122.6.6 0 0 0-.193.294l-1.47 4.499H5.025l-1.47-4.5A.572.572 0 0 0 2.47.001a.57.57 0 0 0-.563.356L.289 6.04l-.022.057A4.044 4.044 0 0 0 1.61 10.77l.007.006.02.014 3.318 2.485 1.64 1.242 1 .755a.67.67 0 0 0 .814 0l1-.755 1.64-1.242 3.338-2.5.009-.006a4.05 4.05 0 0 0 1.34-4.668z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://matrix.to/#/%23guardianproject%3amatrix.org" aria-label="Matrix" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.488.32.45.214.773.553.964 1.02.303-.423.7-.778 1.2-1.06.494-.282 1.034-.421 1.612-.421.44 0 .842.06 1.215.18.37.12.69.316.957.574.27.258.482.582.622.974.14.39.21.863.21 1.414v5.862h-2.02V11.09c0-.313-.02-.616-.063-.906a1.74 1.74 0 0 0-.226-.691 1.16 1.16 0 0 0-.456-.435c-.194-.1-.452-.15-.764-.15-.31 0-.566.05-.767.148-.2.1-.36.24-.477.42a1.76 1.76 0 0 0-.25.645 3.94 3.94 0 0 0-.07.778v5.1h-2.02v-5.37c0-.262-.01-.522-.03-.78a2.07 2.07 0 0 0-.168-.68 1.12 1.12 0 0 0-.418-.47c-.186-.12-.448-.18-.788-.18-.108 0-.25.024-.424.07a1.37 1.37 0 0 0-.48.233c-.153.112-.29.27-.41.48-.12.208-.18.475-.18.79v5.91h-2.02V7.81zm16.046 15.69V.55H21.72V0H24v24h-2.28v-.55z"/></svg>
+              </a>
+            </li>
+          
+          
+            <li>
+              <a href="https://liberapay.com/GuardianProject" aria-label="Liberapay" class="flex size-10 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 80 80"><path d="M26.3 77.6c-5.4 0-9.3-1.1-11.8-3.4-2.5-2.3-3.3-5.7-2.4-10.2l11-52.5c.2-.8.3-1.6.3-2.4 0-2-.9-3.1-2.6-3.1-1.7 0-3.2.8-4.5 2.4l-2-2.4C18 2 22.4 0 27.3 0c3.5 0 6.1.8 7.7 2.5 1.6 1.6 2.1 4 1.4 7.1l-4 19.2h.2c3.7-4.5 8.2-6.8 13.5-6.8 4.8 0 8.2 1.6 10.2 4.7 2 3.1 2.3 7.5.7 13-1.3 4.7-3.2 8.9-5.7 12.7a33 33 0 0 1-9 9.5c-3.5 2.5-7.3 3.8-11.3 3.8-2.3 0-4.1-.5-5.5-1.6-1.4-1.1-2.1-2.6-2.1-4.5h-.3l-2.3 10.8c-.5 2.5 0 4.3 1.5 5.3 1.5 1 4.2 1.5 7.9 1.5zm9.7-20.6c2.2 0 4.3-1.1 6.2-3.3 1.9-2.2 3.5-5 4.7-8.5 1.2-3.5 1.4-6.3.7-8.5-.7-2.2-2.5-3.3-5.3-3.3-2.2 0-4.2 1.1-6.2 3.2-1.9 2.2-3.4 5-4.5 8.6-1.1 3.5-1.3 6.3-.6 8.5.8 2.2 2.6 3.3 5 3.3z"/></svg>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-2">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Navigate</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/">About</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/apps/">Apps</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/code/">Code</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/blog/">Blog</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/archive/">Archive</a>
+              </li>
+            
+          
+            
+              <li class="text-center xl:text-start">
+                <a class="hover:text-white duration-300" href="/info/contact/">Contact</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-3">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Projects</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://orbot.app">Orbot</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://proofmode.org">Proofmode</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://letsconvene.im">Convene</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://likebutter.app">Butter Box</a></li>
+          <li class="text-center xl:text-start"><a class="hover:text-white duration-300" href="https://cleaninsights.org">Clean Insights</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="xl:col-span-3">
+        <h2 class="mb-4 text-center text-lg font-bold xl:text-start">Get In Touch</h2>
+        <ul class="flex flex-col gap-2 text-sm text-white/80">
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="mailto:support@guardianproject.info">support@guardianproject.info</a>
+          </li>
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="https://matrix.to/#/#guardianproject:matrix.org">Matrix Chat</a>
+          </li>
+          <li class="text-center xl:text-start">
+            <a class="hover:text-white duration-300" href="/contact/">Contact Form</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/20 pt-8 text-center text-sm text-white/60">
+      
+        <p>© Guardian Project, 2009-2026. Licensed under CC-BY.</p>
+      
+      <p class="mt-2">People, Apps and Code You Can Trust &mdash; Since 2009</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tor on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/categories/tor/</link>
+    <description>Recent content in Tor on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/categories/tor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Achieve Onion Layers of Security with the Triad of Apple-tizing Apps!</title>
+      <link>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/07/25/achieve-onion-layers-of-security-with-the-triad-of-apple-tizing-apps/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Our summer intern Alfred just graduated high-school and is preparing to attend a major university to focus on a technical degree. He has a personal interest in privacy and security, and is working with us on a variety of projects this summer as part of a broad, crash-course in all things Guardian Project!&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Last week, I worked with three different apps for the iPhone that, when they work together, allow for a secure and private mobile internet experience. Since they all build on the Tor Network, they also offer an untraceable way to share and download media. My task was to test the user experience in these apps and see how they interact with each other and to make sure that they’re working in the intended ways following a test plan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving Usability of Tor on Smartphones in Latin America</title>
+      <link>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/06/02/improving-usability-of-tor-on-smartphones-in-latin-america/</guid>
+      <description>&lt;p&gt;Between 2022 and 2023 Guardian Project, with support from &lt;a href=&#34;https://okthanks.com&#34;&gt;Okthanks&lt;/a&gt; and the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor Project&lt;/a&gt;, organized and participated in a total of 12 workshops in Ecuador, Mexico and Brazil with the participation of 161 people. The workshops focused both on the broad topic of “Tor for Smartphones”, while also taking deeper dives into specific topics like virtual private networks VPNs) and anonymous web browsing. Through a variety of methods, we gathered feedback from the participants in each of those sessions. We also ran detailed individual tests with volunteers to collect insights related to new features and usability improvements on specific apps.&#xA;Our top takeaways from this process were, as follows:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbot: Over 20 Million Served, Ready for the Next Billion</title>
+      <link>https://guardianproject.github.io/info/2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/</link>
+      <pubDate>Wed, 16 May 2018 07:42:38 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2018/05/16/orbot-over-20-million-served-ready-for-the-next-billion/</guid>
+      <description>&lt;p&gt;We recently published the &lt;a href=&#34;https://github.com/n8fr8/orbot/releases/tag/16.0.2-RC-1&#34;&gt;latest release of Orbot (16.0.2!)&lt;/a&gt;, and as usual, we make it available via &lt;a href=&#34;https://play.google.com/store/apps/details?id=org.torproject.android&amp;amp;hl=en_US&#34;&gt;Google Play&lt;/a&gt;, as well &lt;a href=&#34;https://guardianproject.info/fdroid&#34;&gt;F-Droid&lt;/a&gt;, and through &lt;a href=&#34;https://guardianproject.info/releases/&#34;&gt;direct download&lt;/a&gt; on our website. Whether we like it or not, Google keeps tracks of things like total installs and active installs (i.e. not uninstalled), and reports on that for us through their dashboard. While publishing this release, we noticed a milestone that made us a bit proud… so pardon this humblebrag.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HOWTO: get all your Debian packages via Tor Onion Services</title>
+      <link>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</link>
+      <pubDate>Sun, 31 Jul 2016 17:28:57 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2016/07/31/howto-get-all-your-debian-packages-via-tor-onion-services/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage.png&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png&#34; alt=&#34;leakage&#34; width=&#34;300&#34; height=&#34;199&#34; class=&#34;alignright size-medium wp-image-12699&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2014/10/leakage-300x199.png 300w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-100x66.png 100w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-150x99.png 150w, https://guardianproject.info/wp-content/uploads/2014/10/leakage-200x132.png 200w, https://guardianproject.info/wp-content/uploads/2014/10/leakage.png 410w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;Following up on &lt;a href=&#34;https://guardianproject.info/2014/10/16/reducing-metadata-leakage-from-software-updates/&#34; target=&#34;_blank&#34;&gt;some privacy leaks that we looked into a while back&lt;/a&gt;, there are now official Debian &lt;a href=&#34;https://onion.debian.org&#34; target=&#34;_blank&#34;&gt;Tor Onion Services&lt;/a&gt; for getting software packages and security updates, thanks to the Debian Sys Admin team. This is important for high risk use cases like TAILS covers, but also it is useful to make it more difficult to do some kinds of targeted attacks against high-security servers. The default Debian and Ubuntu package servers use plain HTTP with unencrypted connections. That means anyone with access to the network streams could both monitor and fingerprint traffic. When an request for a security update is spotted, an attacker knows that machine is vulnerable to an exploit, and could reliably exploit it before the security update is applied.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Smart Camera on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/smart-camera/</link>
+    <description>Recent content in Smart Camera on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/smart-camera/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Haven: Building the Most Secure Baby Monitor Ever?</title>
+      <link>https://guardianproject.github.io/info/2017/12/22/haven-building-the-most-secure-baby-monitor-ever/</link>
+      <pubDate>Fri, 22 Dec 2017 09:07:00 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/12/22/haven-building-the-most-secure-baby-monitor-ever/</guid>
+      <description>&lt;p&gt;About eight months ago, friends at the &lt;a href=&#34;https://freedom.press/&#34;&gt;Freedom of the Press Foundation&lt;/a&gt; reached out to us, to see if we were interested in prototyping an idea they had been batting around. They knew that from projects like &lt;a href=&#34;https://guardianproject.info/apps/camerav&#34;&gt;CameraV&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/2017/02/24/combating-fake-news-with-a-smartphone-proof-mode/&#34;&gt;Proofmode&lt;/a&gt;, that we knew how to tap into the sensors on smartphones to do interesting things. They also knew we could connect devices together using encrypted messaging and onion routing, through our work on &lt;a href=&#34;https://chatsecure.org&#34;&gt;ChatSecure&lt;/a&gt; and Tor (&lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot!&lt;/a&gt;). They also knew of our deep interest in bringing ideas to life that can solve real problems faced by people out on the front lines (both at home and abroad), who often are more in danger from physical threats, than digital. They had a concept that would bring all of these things together, and just wanted to see if it was even possible. We were game, and well, here we are today, announcing a real working public beta, and a new open-source project, that we are extremely excited about.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

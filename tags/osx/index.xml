@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Osx on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/osx/</link>
+    <description>Recent content in Osx on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First working test of IOCipher for Obj-C</title>
+      <link>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</link>
+      <pubDate>Mon, 26 Jan 2015 04:32:29 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2015/01/26/first-working-test-of-iocipher-for-obj-c/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;Every so often, we revisit our core libraries in the process of improving our existing apps, and creating new ones. IOCipher has become a standard part of our apps since it provides a really easy way to include encrypted file storage in Android apps. And we are now working on spreading it to iOS as well, headed up by Chris Ballinger, with the first preliminary tests of &lt;a href=&#34;https://github.com/ChatSecure/IOCipher-ObjC&#34; target=&#34;_blank&#34;&gt;IOCipher for Obj-C&lt;/a&gt;. Testing and contributions are most welcome! Find us in our &lt;a href=&#34;https://guardianproject.github.io/info/contact/&#34; target=&#34;_blank&#34;&gt;chat room or mailing list&lt;/a&gt; for questions, or just post a comment below! Since the iOS version is based on the exact same core library, libsqlfs, the container files they produce will also be fully compatible with each other.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qrcode on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/qrcode/</link>
+    <description>Recent content in Qrcode on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/qrcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Keys, signatures, certificates, verifications, etc. What are all these for?</title>
+      <link>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</link>
+      <pubDate>Thu, 12 Dec 2013 13:20:09 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/12/12/keys-signatures-certificates-verifications-etc.-what-are-all-these-for/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/12/key-150x150.jpg&#34; alt=&#34;portable shared security token&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-12129&#34; /&gt;&lt;/a&gt;For the past two years, we have been thinking about how to make it easier for anyone to achieve private communications. One particular focus has been on the “security tokens” that are required to make private communications systems work. This research area is called internally &lt;a href=&#34;https://dev.guardianproject.info/projects/psst/wiki/PSST&#34; title=&#34;PSST Wiki&#34; target=&#34;_blank&#34;&gt;Portable Shared Security Tokens aka PSST&lt;/a&gt;. All of the privacy tools that we are working on require “keys” and “signatures”, to use the language of cryptography, and these are the core of what “security tokens” are. One thing we learned a lot about is how to portray and discuss tools for private or anonymous communications to people who just want to communicate and are not interested in technical discussion. This is becoming a central issue among a lot of people working to make usable privacy tools.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

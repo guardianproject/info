@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kindle on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/kindle/</link>
+    <description>Recent content in Kindle on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/kindle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Don’t Get Burned, Anonymize Your Fire</title>
+      <link>https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/</link>
+      <pubDate>Wed, 16 Nov 2011 22:37:24 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2011/11/16/dont-get-burned-anonymize-your-fire/</guid>
+      <description>&lt;p&gt;Thanks to Jesse Vincent, aka &lt;a href=&#34;https://twitter.com/obra&#34;&gt;@obra&lt;/a&gt; of the &lt;a href=&#34;https://code.google.com/p/k9mail/&#34;&gt;K-9 mail project&lt;/a&gt;, we can say that &lt;a href=&#34;https://guardianproject.info/apps/orbot&#34;&gt;Orbot (Tor on Android)&lt;/a&gt; and &lt;a href=&#34;https://guardianproject.info/apps/orweb&#34;&gt;Orweb (Privacy Browser)&lt;/a&gt; work just fine on the new &lt;a href=&#34;http://www.amazon.com/Kindle-Fire-Amazon-Tablet/dp/B0051VVOB2&#34;&gt;Amazon Kindle Fire&lt;/a&gt;. This means that while everything you do through Amazon’s store and browser are tracked and accounted for by Team Bezos, you can use our apps to more safely and privately access web content through the &lt;a href=&#34;https://torproject.org&#34;&gt;Tor network&lt;/a&gt;. While we are mostly &lt;a href=&#34;https://guardianproject.info/hardware/&#34;&gt;Nook Color fans&lt;/a&gt; around here, we know that the Kindle Fire is going to be quite popular this Christmas, and are glad to see that mobile privacy now has a toehold on the device from Seattle.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

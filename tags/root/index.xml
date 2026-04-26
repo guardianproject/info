@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Root on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/root/</link>
+    <description>Recent content in Root on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/root/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No more “Root” features in Orbot… use Orfox &amp; VPN instead!</title>
+      <link>https://guardianproject.github.io/info/2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/</link>
+      <pubDate>Fri, 27 Oct 2017 13:02:02 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2017/10/27/no-more-root-features-in-orbot-use-orfox-vpn-instead/</guid>
+      <description>&lt;p&gt;Since I first announced the available of Orbot: Tor for Android about &lt;a href=&#34;https://nathan.freitas.net/2009/10/22/orbot-proxy/&#34;&gt;8 years ago&lt;/a&gt; (wow!), myself and others have been working on various methods in which to make the capabilities of Tor available through the operating system. This post is to announce that as of the next, imminent release, &lt;a href=&#34;https://github.com/n8fr8/orbot/releases/tag/15.5.0-RC-1-multi-SDK16&#34;&gt;Orbot v15.5,&lt;/a&gt; we will no longer be supporting the Root-required “Transproxy” method. This is due to many reasons.&lt;/p&gt;&#xA;&lt;p&gt;First, it turns out that allowing applications to get “root” access on your device seems like a good idea, it can also be seen as huge security hole. I am on the fence myself, but considering that the ability to access root features hasn’t been standardized as part of Android, which 8 years ago I hoped it would, it means there are a whole variety of ways that this capability is managed and safeguarded (or not, in most cases). At this point in time, given the sophistication we are seeing mobile malware and rootkits, it seems like a capability that we did not want to focus time and energy on promoting.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

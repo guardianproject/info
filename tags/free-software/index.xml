@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Free Software on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/free-software/</link>
+    <description>Recent content in Free Software on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/free-software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kindness Mode: Help People Connect to Tor on World Kindness Day</title>
+      <link>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</link>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/11/13/kindness-mode-help-people-connect-to-tor-on-world-kindness-day/</guid>
+      <description>&lt;p&gt;Today is &lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;World Kindness Day&lt;/a&gt;. As stated on Wikipedia, &amp;ldquo;World Kindness Day is to highlight good deeds in the community focusing on the positive power and the common thread of kindness for good which binds us.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/World_Kindness_Day&#34;&gt;&lt;img src=&#34;worldkindnessday.png&#34; width=200/&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now that word &lt;strong&gt;bind&lt;/strong&gt; is particularly meaningful to use in a technical way - when a remote computer connects to another computer over a network, whether peer-to-peer or a server, one way to state what happens is &amp;ldquo;binding to their socket port&amp;rdquo;. The decentralized, privacy-focused &lt;a href=&#34;https://torproject.org&#34;&gt;tor network&lt;/a&gt; is powered by volunteer organizations and inviduals around the world sharing their network resources. On Tor, there is a great deal of positive, community &amp;ldquo;good which binds us&amp;rdquo; going on.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>7ASecurity Completes Security Audit of Círculo</title>
+      <link>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/03/17/7asecurity-completes-security-audit-of-c%C3%ADrculo/</guid>
+      <description>&lt;p&gt;Over the last six months, we’ve been working with &lt;a href=&#34;https://7asecurity.com/&#34;&gt;7ASecurity&lt;/a&gt; through support from the &lt;a href=&#34;https://www.opentech.fund/impact/security-safety-audits/&#34;&gt;Open Technology Fund’s Security Safety Audits&lt;/a&gt;, to complete an audit of our &lt;a href=&#34;https://encirculo.org&#34;&gt;Círculo project&lt;/a&gt;.  The public report on that is &lt;a href=&#34;https://www.opentech.fund/security-safety-audits/circulo-security-audit/&#34;&gt;now available&lt;/a&gt;. You can also read the &lt;a href=&#34;https://7asecurity.com/blog/2025/03/circulo-security-audit-by-7asecurity/&#34;&gt;blog post on the audit from 7ASecurity&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you don’t know about Circulo, this is a physical check-in safety app we have developed, alongside Article 19’s Mexico City team, for a number of years, focused on providing secure location sharing and urgent notifications within small trusted groups, for people under threat of physical violence. The free and open-source &lt;a href=&#34;https://gitlab.com/circuloapp&#34;&gt;code we have developed&lt;/a&gt; includes iOS and Android mobile apps, as well as server infrastructure, largely based on the &lt;a href=&#34;https://matrix.org/&#34;&gt;Matrix Protocol&lt;/a&gt;, including the mobile software development kits (SDKs), &lt;a href=&#34;https://matrix.org/docs/matrix-concepts/end-to-end-encryption/&#34;&gt;MegaOLM encryption&lt;/a&gt;, and &lt;a href=&#34;https://github.com/element-hq/synapse&#34;&gt;Synapse Server&lt;/a&gt;. You can read about the last round of work we completed on Circulo, including design, development, and community building, in a &lt;a href=&#34;https://guardianproject.info/releases/CirculoFinalReport20232024.pdf&#34;&gt;public report released in November&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Look Back at 2024: F-Droid&#39;s Progress and What’s Coming in 2025</title>
+      <link>https://guardianproject.github.io/info/2025/01/21/a-look-back-at-2024-f-droids-progress-and-whats-coming-in-2025/</link>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/01/21/a-look-back-at-2024-f-droids-progress-and-whats-coming-in-2025/</guid>
+      <description>&lt;p&gt;With 2024 now behind us, we wanted to take a moment to reflect on the growth and achievements we accomplished as a community last year, and celebrate the incredible support we received from the FOSS community throughout the journey.&lt;/p&gt;&#xA;&lt;p&gt;This year has been a milestone for us, with significant strides in decentralizing app distribution, expanding the F-Droid ecosystem, and solidifying our infrastructure. All of these advancements were made possible thanks to donations, grants, our volunteers and regular contributors. So thank you again to everyone who helped make 2024 another great year for F-Droid. Now let&amp;rsquo;s take a closer look at what we accomplished.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using TLS ECH from Python</title>
+      <link>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2025/01/10/using-tls-ech-from-python/</guid>
+      <description>&lt;p&gt;At first, the idea of encrypting more of the metadata found inside the initial packet (the &amp;ldquo;ClientHello&amp;rdquo;) of a TLS&#xA;connection may seem simple and obvious, but there are of course reasons that this wasn&amp;rsquo;t done right from the start.&#xA;In this post I will describe the flow of a connection using Encrypted Client Hello (ECH) to protect the metadata fields,&#xA;and present a working code example using a fork of CPython built with DEfO project&amp;rsquo;s OpenSSL fork to connect to&#xA;ECH-enabled HTTPS servers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Seeking Ruby/Jekyll contractors to start ASAP</title>
+      <link>https://guardianproject.github.io/info/2024/12/06/seeking-ruby/jekyll-contractors-to-start-asap/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2024/12/06/seeking-ruby/jekyll-contractors-to-start-asap/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Guardian Project is seeking Ruby/Jekyll contractors for mobile/free software and privacy work!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;We’re looking for self-motivated, free software hackers to work with Guardian Project on privacy and internet freedom for mobile devices. Our work is 100% free software and we have a steady stream of projects that tie into F-Droid, Debian, Android, Fastlane, Mobifree and other exciting projects. We work to support people and communities around the world. This is a flexible, remote position but we also like to work in person when possible.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Seeking part-time Grant Administrator</title>
+      <link>https://guardianproject.github.io/info/2024/08/05/seeking-part-time-grant-administrator/</link>
+      <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2024/08/05/seeking-part-time-grant-administrator/</guid>
+      <description>&lt;p&gt;Location: Fully remote (African/European time zone) or Vienna, Austria.&lt;/p&gt;&#xA;&lt;p&gt;Type: Part-time contractor.&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-us&#34;&gt;About us&lt;/h2&gt;&#xA;&lt;p&gt;Guardian Project is a small organization working to make a big impact in data privacy and secure communications. From the average person looking to use the internet and their mobile device more securely, to journalists needing to safely communicate with sources, to activists looking for secure communication channels, Guardian Project creates solutions that focus on privacy so you have true freedom.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The future of our fdroid-compatible app repository</title>
+      <link>https://guardianproject.github.io/info/2024/02/24/the-future-of-our-fdroid-compatible-app-repository/</link>
+      <pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2024/02/24/the-future-of-our-fdroid-compatible-app-repository/</guid>
+      <description>&lt;p&gt;Guardian Project has been running its own &lt;a href=&#34;https://guardianproject.info/fdroid/&#34;&gt;fdroid-compatible app repository&lt;/a&gt; since &lt;a href=&#34;https://guardianproject.info/2012/03/15/our-new-f-droid-app-repository-out-of-date/&#34;&gt;2012&lt;/a&gt;. Up until now, we worked to ensure that our repository had the same standards of free software as the official F-Droid repository.  Therefore, the Guardian Project repository was included in the official F-Droid client app by default.  A lot has changed since then, for the better.  F-Droid has long since stopped shipping pre-built binaries from any provider.  Back in the day, F-Droid shipped some binaries, like Mozilla&amp;rsquo;s Firefox APKs, and allowed some non-free libraries in apps.  The free software ecosystem on Android has since blossomed, so F-Droid no longer needs to make those kinds of compromises.  And F-Droid is completing a big update on how repositories are handled.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quick set up guide for Encrypted Client Hello (ECH)</title>
+      <link>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/10/quick-set-up-guide-for-encrypted-client-hello-ech/</guid>
+      <description>&lt;p&gt;The Encrypted Client Hello (ECH) mechanism &lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-tls-esni&#34;&gt;draft-spec&lt;/a&gt; is a way to plug a few privacy-holes that remain in the Transport Layer Security (TLS) protocol that&amp;rsquo;s used as the security layer for the web. OpenSSL is a widely used library that provides an implementation of the TLS protocol. The &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO project&lt;/a&gt; has developed an implementation of ECH for OpenSSL, and proof-of-concept implementations of various clients and servers that use OpenSSL, and other TLS libraries, as a demonstration and for interoperability testing. DEfO is funded by the Open Technology Fund (OTF).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DEfO - Developing ECH for OpenSSL (round two)</title>
+      <link>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/11/09/defo-developing-ech-for-openssl-round-two/</guid>
+      <description>&lt;p&gt;Encrypted ClientHello (ECH) plugs a privacy-hole in TLS, hiding previously visible details from network observers. The most important being the name of the web-site the client wishes to visit (the Server Name Indication or SNI).  This can be a major privacy leak, like when accessing a dissident news source hosted on a Content Delivery Network (&lt;a href=&#34;https://en.wikipedia.org/wiki/Content_delivery_network&#34;&gt;CDN&lt;/a&gt;). A visible domain name also provides a straightforward method for censors to block websites and internet services. &lt;a href=&#34;https://www.tolerantnetworks.com/about-us.html&#34;&gt;Tolerant Networks Limited&lt;/a&gt; and the Guardian Project successfully ran the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;OTF&lt;/a&gt;-funded &lt;a href=&#34;https://defo.ie/&#34;&gt;DEfO&lt;/a&gt; project that &lt;a href=&#34;https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/&#34;&gt;developed interoperable implementations&lt;/a&gt; of ECH for OpenSSL, Conscrypt and, via those libraries, a range of ECH-enabled web servers and clients.  This second funded project, DEfO-2, is a timely continuation of that project from the same the team.  As needed for disambiguation, we use DEfO-1 to refer the completed project and DEfO-2 for this current project. When there’s no ambiguity, we use the DEfO acronym to cover both past and future work related to ECH for OpenSSL, related applications and other TLS stacks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>F-Droid&#39;s Community-controlled Backup Ceremony</title>
+      <link>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/07/15/f-droids-community-controlled-backup-ceremony/</guid>
+      <description>&lt;p&gt;(&lt;em&gt;Guest post from F-Droid, originally on &lt;a href=&#34;https://f-droid.org/2023/07/15/community-controlled-backup-ceremony.html&#34;&gt;f-droid.org&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;&#xA;&lt;p&gt;Seven core contributors and one board member met in Scotland, the birthplace of F-Droid, for the first in-person F-Droid team meeting.  One of the most pressing tasks we needed to take care of was setting up a contributor-controlled backup of all of our signing keys.  The requirements made it necessary to have a lengthy, in-person, consensus-driven planning session.  We found no good documentation of such a procedure, so we&amp;rsquo;re going out on a limb here and publishing the general outline of our process.  This process was informally audited by multiple people with varying expertise before the public key was used to encrypt anything.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving website resilience with LibResilient and IPFS</title>
+      <link>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/06/15/improving-website-resilience-with-libresilient-and-ipfs/</guid>
+      <description>&lt;p&gt;We&amp;rsquo;re always looking for techniques to make services more resilient to all&#xA;sorts of issues. That&amp;rsquo;s why we took special interest in&#xA;&lt;a href=&#34;https://resilient.is/&#34;&gt;LibResilient&lt;/a&gt; and mapped out it&amp;rsquo;s capabilities.  It&amp;rsquo;s a&#xA;JavaScript library for decentralized content delivery in web-browsers and&#xA;markets itself as easy to deploy to any website. We&amp;rsquo;ve looked at LibResilient&#xA;primarily in the context of static websites.  While it should work with dynamic&#xA;websites too, that was out of focus for us.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Steps towards trusted VPNs</title>
+      <link>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</guid>
+      <description>&lt;p&gt;VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&amp;rsquo;s server.  That is how VPNs &amp;ldquo;unblock&amp;rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04&#34;&gt;adblocker&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Decentralizing Distribution</title>
+      <link>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/02/05/decentralizing-distribution/</guid>
+      <description>&lt;p&gt;Guardian Project has been awarded a grant from the &lt;a href=&#34;https://www.ffdweb.org/guardian-project-annoucement&#34;&gt;Filecoin Foundation for the Decentralized Web (FFDW)&lt;/a&gt; to work on decentralizing veracity and distribution (DVD).  FFDW’s Mission is to “ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.”  Filecoin is built on top of IPFS, which is &amp;ldquo;&lt;a href=&#34;https://docs.ipfs.io/concepts/what-is-ipfs/&#34;&gt;a distributed system for storing and accessing files&lt;/a&gt;&amp;rdquo;.  The distribution component of the FFDW-DVD project is focused on improving F-Droid&amp;rsquo;s free, open, and decentralized mobile app ecosystem.  On top of the flagship unified experience offered by this website and the F-Droid official app, F-Droid provides all the pieces for anyone to create, build, remix, publish, reproduce, redistribute and review mobile apps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Free Software Tooling for Android Feature Extraction</title>
+      <link>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/05/06/free-software-tooling-for-android-feature-extraction/</guid>
+      <description>&lt;p&gt;As part of the Tracking the Trackers project, we are inspecting&#xA;thousands of Android apps to see what kinds of tracking we can find.&#xA;We are looking at both the binary APK files as well as the source&#xA;code.  Source code is of course easy to inspect, since it is already a&#xA;form that is meant to be read and reviewed by people.  Android APK&#xA;binaries are a very different story.  They are first and foremost a&#xA;machine-executable format.  On top of that, many developers&#xA;deliberately obfuscate as much as possible in the APK to resist&#xA;inspection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Promise and Hazards of COVID Contact Tracing Apps</title>
+      <link>https://guardianproject.github.io/info/2020/04/09/the-promise-and-hazards-of-covid-contact-tracing-apps/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/04/09/the-promise-and-hazards-of-covid-contact-tracing-apps/</guid>
+      <description>&lt;p&gt;There has been increasing interest in the possibilities of tracking&#xA;people who are infected with Coronavirus using all of the various&#xA;methods that smart phones provide.  There is good reason: &amp;ldquo;&lt;a href=&#34;https://en.wikipedia.org/wiki/Contact_tracing&#34;&gt;contact&#xA;tracing&lt;/a&gt;&amp;rdquo; has been a&#xA;pillar of public health efforts for decades.  It is an effective means&#xA;to curtail the spread of infectious disease.  At the same time,&#xA;governments, companies, and organizations are acting fast to offer&#xA;services to help end this current pandemic.  The problem is that many&#xA;of these are taking advantage of these times to introduce more&#xA;tracking of people, more data collection, and more control over&#xA;people.  We must not let contact tracing be used to reduce privacy&#xA;and increase unnecessary data collection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Improving Crowdsourced Translation of Long Form Text</title>
+      <link>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/03/05/improving-crowdsourced-translation-of-long-form-text/</guid>
+      <description>&lt;p&gt;We are happy to announce the start of work on another step in&#xA;improving crowdsourced localization, funded by the ISC Project.  This&#xA;is the second part of our ongoing &amp;ldquo;Linguine&amp;rdquo; collaboration to move&#xA;crowdsourced translation to privacy-respecting free software.&lt;/p&gt;&#xA;&lt;p&gt;Crowdsourced translation has proven enormously successful getting apps&#xA;and website software translated into many languages.  Using tools like&#xA;Weblate or Transifex, developers can quite easily incorporate&#xA;translated app strings into their mobile apps and websites.  Any kinds&#xA;of text that is easily broken down into phrases and sentences will fit&#xA;easily into the crowdsourced workflow.  Localization Lab enables a&#xA;wide range of volunteers to contribute to the most important projects&#xA;in a wide array of languages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting up your own app store with F-Droid</title>
+      <link>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</link>
+      <pubDate>Tue, 05 Nov 2013 11:55:43 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/11/05/setting-up-your-own-app-store-with-f-droid/</guid>
+      <description>&lt;p&gt;(&lt;em&gt;This blog post as now been cooked into an &lt;a href=&#34;https://f-droid.org/wiki/page/Setup_an_FDroid_App_Repo&#34; target=&#34;_blank&#34;&gt;updated HOWTO&lt;/a&gt;&lt;/em&gt;)&lt;/p&gt;&#xA;&lt;p&gt;The Google Play Store for Android is not available in all parts of the world, US law restricts its use in certain countries like Iran, and many countries block access to the Play Store, like China. Also, the Google Play Store tracks all user actions, reporting back to Google what apps have been installed and also run on the phone. Because of the NSA leaks, we’re seeing that governments are &lt;a href=&#34;http://www.theguardian.com/technology/2013/oct/30/google-reports-nsa-secretly-intercepts-data-links&#34; target=&#34;_blank&#34;&gt;actively tapping&lt;/a&gt; into &lt;a href=&#34;http://www.nytimes.com/2013/10/31/technology/nsa-is-mining-google-and-yahoo-abroad.html&#34; target=&#34;_blank&#34;&gt;the raw data streams&lt;/a&gt; of Google, Yahoo, and others. So that means the information the Google Play Store sends back to Google is also intercepted by the NSA (and probably other country’s agencies), and that information is shared with other governments. In other words, your activity on the Google Play Store is far from private. Lastly, the Google Play Store is not free software, unlike the core of Android itself. It is proprietary software that Google entirely controls.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

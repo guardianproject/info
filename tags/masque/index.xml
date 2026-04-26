@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MASQUE on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/masque/</link>
+    <description>Recent content in MASQUE on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/masque/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Steps towards trusted VPNs</title>
+      <link>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2023/02/28/steps-towards-trusted-vpns/</guid>
+      <description>&lt;p&gt;VPNs have become quite popular in recent years for a number of reasons, and more and more they are being touted as a privacy tool.  The question is whether using a VPN does improve privacy.  It is clear that VPNs are quite useful for getting access to things on the internet when direct connections are blocked.  VPN providers include a number of tactics in both their client apps and server infrastructure to ensure that their users are able to make a connection.  Then once users are connected, all of their traffic that goes over the VPN will see the internet from the point of view of the VPN&amp;rsquo;s server.  That is how VPNs &amp;ldquo;unblock&amp;rdquo; the internet.  In contrast, some are using VPNs to selectively block things, like making a system-wide &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-block-advertisements-at-the-dns-level-using-pi-hole-and-openvpn-on-ubuntu-16-04&#34;&gt;adblocker&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IETF114 Hackathon Report: Sunday July 24, 2022</title>
+      <link>https://guardianproject.github.io/info/2022/07/24/ietf114-hackathon-report-sunday-july-24-2022/</link>
+      <pubDate>Sun, 24 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2022/07/24/ietf114-hackathon-report-sunday-july-24-2022/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This post begins a daily blog, live from the 114th meeting of the &lt;a href=&#34;https://www.ietf.org/how/meetings/114/&#34;&gt;Internet Engineering Task Force&lt;/a&gt; in Philadelpha Pennsylvania USA, July 23-29, 2022 (in-person meetings having restarted in March 2022 after the COVID pandemic abated). We&amp;rsquo;re focusing on standards activities of importance to the Internet Freedom community.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://www.ietf.org/how/runningcode/hackathons/114-hackathon/&#34;&gt;Hackathon&lt;/a&gt; event kicks off each IETF event, with projects that run the gamut from early implementations of just-emerging specifications to full multi-vendor interoperability testing of nearly-mature protocols. At this event, I sat in on the &lt;a href=&#34;https://datatracker.ietf.org/wg/masque/about/&#34;&gt;MASQUE&lt;/a&gt; team&amp;rsquo;s effort to commence work on the new &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ietf-masque-connect-ip/&#34;&gt;CONNECT-IP&lt;/a&gt; specification. With the recent completion of two key specifications -  &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ietf-masque-connect-udp/&#34;&gt;CONNECT-UDP&lt;/a&gt; and &lt;a href=&#34;https://datatracker.ietf.org/doc/draft-ietf-masque-h3-datagram/&#34;&gt;H3 Datagrams&lt;/a&gt; - MASQUE has become IETF&amp;rsquo;s solution for proxying all types of network traffic over QUIC and HTTP/3, including VPN and other privacy-focused scenarios. CONNECT-IP will complete the trio.  But this initial effort didn&amp;rsquo;t go well.  Google and Ericcson (co-authors on the spec) had brought teams who, indeed, implemented the key protocol elements of CONNECT-IP live and in-the-moment but were both stymied setting up testbeds that could deliver raw IP packets for routing by this new code. Wait, you might say, aren&amp;rsquo;t these network engineers?  True, but it was mostly the practicalities that got in the way - only laptops as test machines, working from the open source &lt;a href=&#34;https://github.com/google/quiche&#34;&gt;QUICHE&lt;/a&gt; repository on a machine that also hosts an environment for building production code, even deciding what sort of packets could be used for testing and where to route them. These are the frustrations of a first-ever effort.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MASQUE Review</title>
+      <link>https://guardianproject.github.io/info/2020/02/25/masque-review/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://guardianproject.github.io/info/2020/02/25/masque-review/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://datatracker.ietf.org/wg/masque/about/&#34;&gt;MASQUE&lt;/a&gt; is set of related IETF drafts for specifying flexible proxying built into a standard webserver.  It is meant to be deployed on a server that is serving public websites, then this connection can be reused for proxying generic connections.  It is very much a work in progress, so any of this can change.  It is currently built on top of the QUIC+HTTP/3 and HTTP/2+TLS+TCP protocols.  The website and proxy packets look the same, and all connections to the webserver will be shared and reused, regardless of whether its a web page request or proxy traffic.  Each new proxy/website request will reuse any existing connection, providing a key reduction in metadata that makes all the packets blend together from the point of view of the network observer.  For example, to prevent the network observer from corrolating requests to proxy with the outbound request to the destination, a client could first connect to the website, then some time later, connect to the proxy.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

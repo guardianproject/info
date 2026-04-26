@@ -1,0 +1,150 @@
+
+ErrorDocument 404 /404.html
+
+# Redirect old home page URL
+RedirectMatch permanent "^/home/?$" "/"
+
+# redirect all /wind/ to /code/wind/
+RedirectMatch permanent "^/wind/(.*)" "/code/wind/$1"
+RedirectPermanent /wind /code/wind
+
+# redirect Wordpress tags to Hugo tags
+RedirectPermanent /tag/	/tags/
+RedirectPermanent /tag	/tags/
+
+# redirect tags for confusing cases
+RedirectPermanent /tags/reproducible-build/ /tags/reproducible-builds/
+RedirectPermanent /tags/smart-card/ /tags/smartcard/
+RedirectPermanent /tags/signing-key/ /tags/signing/
+
+# redirect Wordpress feed to Hugo feed
+RedirectMatch permanent "/feed/.*$" "/blog/index.xml"
+RedirectPermanent /feed /blog/index.xml
+
+# redirect standard fdroid repo per-package URLs
+RedirectMatch permanent "^/packages/(.*)" "/apps/$1"
+RedirectPermanent /packages/ /apps/
+
+# redirect archived stuff
+RedirectPermanent /code/cacheword /archive/cacheword
+RedirectPermanent /code/libsqlfs /archive/libsqlfs
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTP_HOST} ^www\.guardianproject\.info
+    RewriteRule ^(.*)$ https://guardianproject.info/$1 [R=301,L]
+
+    # BEGIN (abel) letsencrypt redirect for XMPP server
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    #  testing note: `curl http://xmpp.guardianproject.info/.well-known/acme-challenge/test` outputs 'hello-world'
+    #                so when http://guardianproject.info/.well-known/acme-challenge/test also outputs that, we know
+    #                that the redirect is working                                                          ~abel
+    RewriteRule ^\.well-known/acme-challenge/(.+)$ "http://xmpp.guardianproject.info/.well-known/acme-challenge/$1" [P]
+    # END (abel) letsencrypt redirect for XMPP server
+</IfModule>
+
+
+# cache all files without checking until max-age, after that, the
+# browser check the ETag value to see whether it needs to redownload
+
+<IfModule mod_headers.c>
+    # 10 minutes
+    <FilesMatch "\.(css|html|js)$">
+	Header set Cache-Control "max-age=600, public, immutable"
+    </FilesMatch>
+
+    # 1 month
+    <FilesMatch "\.(gif|jpg|jpeg|png|svg)$">
+	Header set Cache-Control "max-age=2592000, public, immutable"
+    </FilesMatch>
+</IfModule>
+
+
+# ============================================================================== #
+# https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
+#
+# Instruct FLoC capable browsers to not profile users on our website
+#
+
+Header always set Permissions-Policy: "interest-cohort=()"
+
+
+# ============================================================================== #
+# HTTP security headers
+
+# This site needs hardly any JS features, so disable them.
+#
+Header always set Feature-Policy: "\
+    ambient-light-sensor 'none'; \
+    autoplay 'none'; \
+    accelerometer 'none'; \
+    camera 'none'; \
+    display-capture 'none'; \
+    document-domain 'none'; \
+    encrypted-media 'none'; \
+    fullscreen 'none'; \
+    geolocation 'none'; \
+    gyroscope 'none'; \
+    magnetometer 'none'; \
+    microphone 'none'; \
+    midi 'none'; \
+    payment 'none'; \
+    picture-in-picture 'none'; \
+    speaker 'none'; \
+    sync-xhr 'none'; \
+    usb 'none'; \
+    wake-lock 'none'; \
+    webauthn 'none'; \
+    vr 'none'; \
+    xr 'none'; \
+"
+
+# Content Security Policy is delivered via a HTTP response header and
+# defines approved sources of content that the browser may load.
+#
+# * https://f-droid.org so staging copies can fetch icons
+# * https://fdroid.gitlab.io for "Get on F-Droid" badges
+Header always set Content-Security-Policy: "\
+    default-src 'none'; \
+    \
+    base-uri 'self'; \
+    block-all-mixed-content; \
+    connect-src 'self'; \
+    font-src 'self'; \
+    form-action 'self'; \
+    frame-ancestors 'self'; \
+    img-src 'self' https://*.static.flickr.com https://*.staticflickr.com; \
+    media-src 'self'; \
+    script-src 'self' 'unsafe-inline'; \
+    style-src 'self' 'unsafe-inline'; \
+"
+
+# Disallow plain HTTP connections
+Header always set Strict-Transport-Security: "max-age=31536000"
+
+# The browser will set the referrer header to the origin from which
+# the request was made, but only send referrer info to HTTPS
+# sites. This will strip any path information from the referrer
+# information.
+Header always set Referrer-Policy: "strict-origin"
+
+# Setting this header will prevent MSIE from interpreting files as
+# something else than declared by the content type in the HTTP
+# headers.  Requires mod_headers to be enabled.
+Header always set X-Content-Type-Options: "nosniff"
+
+# Setting this header will prevent other sites from embedding pages
+# from this site as frames. This defends against clickjacking attacks.
+# Requires mod_headers to be enabled.
+Header always set X-Frame-Options: "sameorigin"
+
+# This header is used to configure the built in reflective XSS
+# protection found in Internet Explorer, Chrome and Safari
+# (Webkit). Valid settings for the header are 0, which disables the
+# protection, 1 which enables the protection and 1; mode=block which
+# tells the browser to block the response if it detects an attack
+# rather than sanitising the script.
+Header always set X-Xss-Protection: "1; mode=block"

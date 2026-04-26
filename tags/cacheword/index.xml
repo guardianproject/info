@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cacheword on Guardian Project</title>
+    <link>https://guardianproject.github.io/info/tags/cacheword/</link>
+    <description>Recent content in Cacheword on Guardian Project</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2026 04:04:45 +0000</lastBuildDate>
+    <atom:link href="https://guardianproject.github.io/info/tags/cacheword/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CipherKit updates: IOCipher and CacheWord</title>
+      <link>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</link>
+      <pubDate>Fri, 26 Sep 2014 21:39:54 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2014/09/26/cipherkit-updates-iocipher-and-cacheword/</guid>
+      <description>&lt;p&gt;We’ve been on a big kick recently, updating the newest members of our CipherKit family of frameworks: &lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;IOCipher&lt;/a&gt; and &lt;a href=&#34;https://github.com/guardianproject/cacheword&#34; target=&#34;_blank&#34;&gt;CacheWord&lt;/a&gt;. There also are is a little news about the original CipherKit framework: &lt;a href=&#34;https://www.zetetic.net/sqlcipher/open-source&#34; title=&#34;SQLCipher for Android&#34; target=&#34;_blank&#34;&gt;SQLCipher-for-Android&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;iocipher-v02&#34;&gt;IOCipher v0.2&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://guardianproject.github.io/info/code/iocipher&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg&#34; alt=&#34;alberti cipher disk&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-3079&#34; srcset=&#34;https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk-150x150.jpg 150w, https://guardianproject.info/wp-content/uploads/2012/10/alberti_cipher_disk.jpg 245w&#34; sizes=&#34;(max-width: 150px) 100vw, 150px&#34; /&gt;&lt;/a&gt;IOCipher is a library for storing files in an encrypted virtual disk. It’s API is the exact same as &lt;code&gt;java.io&lt;/code&gt; for working with files, and it does not need root access. That makes it the sibling of SQLCipher-for-Android, both are native Android APIs that wrap the SQLCipher database.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Keeping data private means it must be truly deletable!</title>
+      <link>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</link>
+      <pubDate>Fri, 23 Aug 2013 17:36:49 -0400</pubDate>
+      <guid>https://guardianproject.github.io/info/2013/08/23/keeping-data-private-means-it-must-be-truly-deletable/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive.jpg&#34;&gt;&lt;img src=&#34;https://guardianproject.info/wp-content/uploads/2013/08/erase-hard-drive-150x150.jpg&#34; alt=&#34;deleting data&#34; width=&#34;150&#34; height=&#34;150&#34; class=&#34;alignright size-thumbnail wp-image-11598&#34; /&gt;&lt;/a&gt;There are lots of apps these days that promise to keep your data secure, and even some that promise to wipe away private information mere seconds or minutes after it has been received. It is one thing to keep data out of view from people you don’t want seeing it, it is also important to be able to truly delete information. Unfortunately computers make it very difficult to make data truly disappear. When we tell a computer to delete a file, it only deletes the reference to the data. The data itself remains on the disk unchanged. For any UNIX geek out there, you can easily see an example of that by greping a partition (e.g. &lt;code&gt;sudo grep password /dev/sda3&lt;/code&gt;. To solve this problem, there are “secure delete” options. Secure deletion removes the reference like regular deletion, then wipes the data on the disk by overwriting it with random data. That’s much better, but not always good enough. It turns out that its possible to remove the hard disk and read magnetic residue and recover even wiped data.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

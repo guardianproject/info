@@ -14,6 +14,9 @@ If you'd like to learn more about Guardian [from the team directly](https://guar
 
 <ul style="line-height: 200%;">
   <li>
+Contact us via <a href="https://signal.me/#p/+447886176827">Signal</a> or <a href="https://wa.me/+447886176827">WhatsApp</a> at +447886176827
+	</li>
+  <li>
     <a href="https://lists.mayfirst.org/mailman/listinfo/guardian-dev">Guardian-Dev Discussion List</a>: If you are a developer, designer, power user, hacker, MOD'r, cryptophreak or just anyone interested in following the development side, this is for you!
   </li>
   <li>
@@ -46,6 +49,6 @@ If you'd like to learn more about Guardian [from the team directly](https://guar
   </li>
   
   <li>
-    The best place to chat with us live is on the <a href="https://matrix.org">Matrix network</a>. We are in the <a href="https://riot.im/app/#/room/#guardianproject:matrix.org">#guardianproject:matrix.org</a> room on Matrix.org. You can most easily reach us there via the <a href="https://riot.im/app/">Matrix "Riot" web app</a>. There are also many wonderful <a href="https://matrix.org/docs/projects/try-matrix-now.html">Matrix apps for every OS</a>. We are also available via #guardianproject on Freenode and OFTC IRC networks, but aren't as active there as we used to be.
+    The best place to chat with us live is on the <a href="https://matrix.org">Matrix network</a>. We are in the <a href="https://matrix.to/#/#guardianproject:matrix.org">#guardianproject:matrix.org</a> room on Matrix.org. You can most easily reach us there via the <a href="https://element.im/app/">Element app</a>. There are also many wonderful <a href="https://matrix.org/docs/projects/try-matrix-now.html">Matrix apps for every OS</a>. We are also available via #guardianproject on Freenode and OFTC IRC networks, but aren't as active there as we used to be.
   </li>
 </ul>

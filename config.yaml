@@ -44,14 +44,18 @@ menu:
       name: Code
       url: /code/
       weight: 2
+    - identifier: services
+      name: Services
+      url: /services/
+      weight: 3
     - identifier: blog
       name: Blog
       url: /blog/
-      weight: 3
+      weight: 4
     - identifier: archive
       name: Archive
       url: /archive/
-      weight: 4
+      weight: 5
     - identifier: contact
       name: Contact
       url: /contact/

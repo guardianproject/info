@@ -2,7 +2,7 @@
 title: Digital Security Advisory and Training Services
 date: 2026-04-14T23:58:19-04:00
 author: n8fr8
-permalink: /services/digital-security
+url: /services/digital-security/
 menu:
   main:
     parent: services
@@ -11,7 +11,7 @@ menu:
 
 ## Governments change. People change. Institutions shift. Your threat model should too. Security isn’t a one-time fix, it’s an ongoing process that needs to adapt as risks evolve.  That’s where we come in. 
 
-At Guardian Project DSATS program we take a **holistic**, people-first approach to digital security assessments, analyzing not just your technology, but the **processes, policies, and individuals that keep your organization and the communities you serve safe**. With 15 years of experience in privacy-first technology and human rights, we specialize in securing mission-critical teams and networks that serve vulnerable communities.
+At Guardian Project DSATS program we take a **holistic**, people-first approach to digital security assessments, analyzing not just your technology, but also the **processes, policies, and individuals that keep your organization and the communities you serve safe**. With 15 years of experience in privacy-first technology and human rights, we specialize in securing mission-critical teams and networks that serve vulnerable communities.
 
 ### Interested in our Services? 
 

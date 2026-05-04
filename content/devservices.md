@@ -5,7 +5,7 @@ date: 2016-11-14T23:58:19-04:00
 author: n8fr8
 guid: https://guardianproject.info/?page_id=13442
 image: https://guardianproject.info/wp-content/uploads/2015/06/5399436072_d9bcbbab50_b.jpg
-permalink: /services/development
+url: /services/development/
 menu:
   main:
     parent: services

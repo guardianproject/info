@@ -1,8 +1,16 @@
 ---
-slug: butterbox-spring-2026-update
-title: ButterBox: Spring 2026 Update!
-authors: [trob,nxf99,fabby]
-tags: [funding]
+title: "ButterBox: Spring 2026 Update!"
+date: 2026-05-01
+author: ButterBox Teaem
+categories:
+  - butter
+  - shutdown
+tags:
+  - free software
+  - open source
+  - offgrid
+  - offline
+  - resilience
 ---
 
 The [ButterBox Project](https://likebutter.app) recently completed a four month intensive development sprint, supported by the [Open Technology Fund](https://www.opentech.fund/), focused on improving support for the Eastern European context in ButterBox. Our previous community building and adoption efforts for ButterBox have focused on Latin America and Southern Africa. This latest round of work helped us expand our understanding, threat and risk modeling, and feature set to better support people and communities facing internet shutdowns and lack of connectivity in the Eastern European region. Through our collaboration with regional partners, we successfully tuned the solution to better meet their needs, while collaborating to produce new localized documentation and content packs.

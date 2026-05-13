@@ -12,6 +12,7 @@ tags:
   - security
   - internet freedom
   - transparency
+images: ["/images/default-social.jpg"]
 ---
 
 Free, libre and open-source software (FLOSS) is a core value of Guardian Project's work, not a stylistic preference or a marketing line. Everything we produce, write, and create is meant to be accessible, transparent, and auditable. That commitment rests on a fundamental conviction: defending privacy and security in a human rights context using proprietary, commercial software is antithetical to the mission. You cannot ask people to trust their lives, their reporting, or their organizing to tools they are not allowed to inspect.

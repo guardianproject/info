@@ -90,6 +90,8 @@ Params:
   contact:
     - "contact@guardianproject.info"
     - "https://matrix.to/#/#guardianproject:matrix.org"
+  images:
+    - /images/default-social.jpg
 
   selfHosted: true
   useHLJS: false

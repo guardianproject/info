@@ -43,6 +43,6 @@ Funding for internet freedom work is unpredictable. Grant cycles end. Priorities
 
 The threat landscape is changing. We are entering a period in which tools that write complex exploits will become publicly available and widely used. The main defense is to have already run those tools against our own code, as a routine part of the development process, before an adversary does. We should be using automated machine analysis — "AI" in some cases — to find weaknesses, vulnerabilities, and exploits in our code and live applications, regardless of whether they are open or closed source. We already use some cloud-based vulnerability and code scanning tools, and because our code is open, we can also benefit from a wide range of pro bono and community auditing tools and services that would not be accessible to a closed project.
 
-## The Clarity in Transarency
+## The Clarity in Transparency
 
 A free and open internet cannot be defended by closed and opaque software. The people most in need of privacy and security tools are precisely those least able to take a vendor's word for it. They need to be able to verify, fork, audit, translate, and outlive any single organization that ships code on their behalf. That is what FLOSS makes possible, and it is why we treat it as a baseline commitment rather than an implementation detail.

@@ -2,5 +2,9 @@
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}" />{{ end }}
+{{ $ogImage := "" }}
+{{ with .Params.images }}{{ $ogImage = index . 0 }}{{ end }}
+{{ if not $ogImage }}{{ with .Params.image }}{{ $ogImage = . }}{{ end }}{{ end }}
+{{ if not $ogImage }}{{ with .Site.Params.images }}{{ $ogImage = index . 0 }}{{ end }}{{ end }}
+{{ with $ogImage }}<meta property="og:image" content="{{ . | absURL }}" />{{ end }}
 <meta property="og:site_name" content="{{ .Site.Title }}" />

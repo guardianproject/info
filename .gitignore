@@ -1,8 +1,11 @@
-
+.direnv/
 gitlab.yaml
 userconfig.yaml
 data/git.yaml
 /public/
+node_modules/
+.hugo_build.lock
+/resources/_gen/
 
 # generated pages
 /content/*.[a-z][a-z].md

@@ -9,11 +9,7 @@ menu:
     parent: archive
 ---
 
-{{< source-code name="CacheWord" >}}
-
-CacheWord is an Android library project for passphrase caching and management.  
-It helps app developers securely generate, store, and access secrets derived  
-from a user's passphrase. It is designed to work easily with [IOCipher](/code/iocipher) and <a href="https://www.zetetic.net/sqlcipher/open-source" target="_blank">SQLCipher-for-Android</a>, but it can be used any time an app needs to manage a password. Broadly speaking this library assists developers with two related problems:
+CacheWord is an Android library project for passphrase caching and management. It helps app developers securely generate, store, and access secrets derived from a user's passphrase. It is designed to work easily with [IOCipher](/code/iocipher) and <a href="https://www.zetetic.net/sqlcipher/open-source" target="_blank">SQLCipher-for-Android</a>, but it can be used any time an app needs to manage a password. Broadly speaking this library assists developers with two related problems:
 
   1. Secrets Management: how the secret key material for your app is generated, stored, and accessed
   2. Passphrase Caching: store the passphrase in memory to avoid constantly prompting the user
@@ -34,4 +30,3 @@ CacheWord manages key derivation, verification, persistence, passphrase resettin
   * library, helpers, tests, and sample project: <https://github.com/guardianproject/cacheword></ul>
 
 
-{{< gradle-line groupId="info.guardianproject.cacheword" artifactId="cachewordlib" >}}

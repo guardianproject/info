@@ -21,6 +21,7 @@ pre-serve:
 	echo "commitDate: \"$$( git log -n 1 --pretty=format:%ci )\"" >> data/git.yaml
 
 wkd = public/.well-known/openpgpkey
+GPG_WKS_CLIENT ?= /usr/lib/gnupg/gpg-wks-client
 keyids := $(shell grep -Eo '^ *gpg: *[A-Fa-f0-9]{40}.*' data/teamlist.yaml | awk '{print $$2}')
 gnupg-web-key-directory:
 	gpg --import team-keyring.gpg
@@ -29,7 +30,7 @@ gnupg-web-key-directory:
 	touch $(wkd)/policy
 	cd $(wkd)/.. && for keyid in $(keyids); do \
 		gpg --list-options show-only-fpr-mbox --list-public-keys $$keyid \
-			| /usr/lib/gnupg/gpg-wks-client -v --install-key; \
+			| $(GPG_WKS_CLIENT) -v --install-key; \
 	done
 
 clean:

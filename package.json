@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "NODE_ENV=development /snap/bin/hugo server --disableFastRender"
+    "dev": "NODE_ENV=development hugo server --disableFastRender"
   },
   "devDependencies": {
     "tailwindcss": "^4.0.0",

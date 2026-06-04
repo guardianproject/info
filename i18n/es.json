@@ -1,7 +1,7 @@
 [
   {
     "id": "about",
-    "translation": "acerca"
+    "translation": "acerca de"
   },
   {
     "id": "apps",
@@ -89,7 +89,7 @@
   },
   {
     "id": "poweredBy",
-    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> equipado &nbsp;&bull;&nbsp; Tema por <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptado para <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
+    "translation": "<a href=\"http://gohugo.io\">Hugo v{{ .Hugo.Version }}</a> equipado &nbsp;•&nbsp; Tema por <a href=\"http://deanattali.com/beautiful-jekyll/\">Beautiful Jekyll</a> adaptado para <a href=\"https://github.com/halogenica/beautifulhugo\">Beautiful Hugo</a>"
   },
   {
     "id": "toggleNavigation",

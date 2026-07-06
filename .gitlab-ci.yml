@@ -102,7 +102,7 @@ guardianproject.info:
     - rsync -axv --omit-dir-times --delete
          --exclude-from=.rsync-deploy-exclude-list
          public/* .htaccess
-         gpbuilds@guardianproject.info:/home/members/nfreitas/sites/guardianproject.info/users/guardianproject/guardianproject.info/web/
+         gpbuilds@shell.mayfirst.org:/home/sites/26512/web/
 
 
 GitHub Pages:

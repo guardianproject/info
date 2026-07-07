@@ -103,6 +103,14 @@ guardianproject.info:
          --exclude-from=.rsync-deploy-exclude-list
          public/* .htaccess
          gpbuilds@shell.mayfirst.org:/home/sites/26512/web/
+  after_script:
+    - >
+      if [ $CI_JOB_STATUS != 'success' ]; then
+          echo "May First has a very unusual SSH setup:"
+          echo "https://help.mayfirst.org/en/guide/how-to-connect-to-your-website-host-with-ssh-or-sftp#two-factor-authentication"
+          echo "https://admin.docs.mayfirst.org/shell/#trouble-shooting"
+          echo "https://help.mayfirst.org/en/guide/how-to-automate-ssh-access"
+      fi
 
 
 GitHub Pages:

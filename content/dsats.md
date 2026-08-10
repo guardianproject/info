@@ -1,5 +1,5 @@
 ---
-title: Digital Security Advisory and Training Services
+title: WAYFINDERS - Digital Security Advice and Training
 date: 2026-04-14T23:58:19-04:00
 author: n8fr8
 url: /services/digital-security/
@@ -9,17 +9,24 @@ menu:
 
 ---
 
-## Governments change. People change. Institutions shift. Your threat model should too. Security isn’t a one-time fix, it’s an ongoing process that needs to adapt as risks evolve.  That’s where we come in. 
 
-At Guardian Project DSATS program we take a **holistic**, people-first approach to digital security assessments, analyzing not just your technology, but also the **processes, policies, and individuals that keep your organization and the communities you serve safe**. With 15 years of experience in privacy-first technology and human rights, we specialize in securing mission-critical teams and networks that serve vulnerable communities.
 
-### Interested in our Services? 
+## Situations evolve. Institutions shift. Conditions change.
+### Your threat model, policies and practices should too. Security isn’t a one-time fix, it’s an ongoing process that needs to adapt as new risks appear.  ___We help you find your way through the chaos and complexity.___
 
-- [Email us directly](mailto:hello@guardianproject.info)
-- Contact us via [Signal](https://signal.me/#p/+447886176827) or [WhatsApp](https://wa.me/+447886176827) at +447886176827
-- [Find other ways to contact us here](/contact/)
+<center><img src="/images/wayfinders-icon.svg"/></center>
 
-## Types of Services
+## As Guardian Project WAYFINDERS, we take a holistic, people-first approach to digital security assessments and advice, analyzing not just your technology, but also the processes, policies, and individuals that keep your organization and the communities you serve safe and on-track. 
+
+___With 15 years of experience in privacy-first technology and human rights, we specialize in securing mission-critical teams and networks that serve vulnerable communities.___
+
+<center><img src="/images/wayfinders-icon.svg"/></center>
+
+### Interested in our Wayfinding Services? Contact us via [Signal](https://signal.me/#p/+447886176827) or [WhatsApp](https://wa.me/+447886176827) at +447886176827 - or, you can always [email us](mailto:hello@guardianproject.info)
+
+<center><img src="/images/wayfinders-icon.svg"/></center>
+
+## What We Can Do For You
 
 ✅ Identifying and mitigating common threats and vulnerabilities
 
@@ -35,7 +42,7 @@ At Guardian Project DSATS program we take a **holistic**, people-first approach 
 
 ✅ Tailored action plans, providing clear, actionable recommendations for mitigation and process optimization
 
-## Why Choose Guardian Project for your Digital Security & Advisory Training?
+## Why Choose WAYFINDERS for your Digital Security &amp; Advisory Training?
 
 📌 **Real-World Risk Mapping**
 

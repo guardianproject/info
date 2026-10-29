@@ -30,8 +30,8 @@ width:200px;margin:10px;float:left
 <a href="https://encirculo.org"><img src="projects/circulo.jpg" class="caseimage"/></a><br/><a href="https://encirculo.org">Círculo</a> helps you stay securely connected to a circle of support. Establish safety and check-in protocols, send alerts, share your location and keep those in your circle informed. We have worked extensively with <a href="https://www.article19.org/regional-office/mexico-and-central-america/">Article 19</a> on this project.
 </div>
 <div style="clear:both;">
-<a href="https://letsconvene.im"><img src="projects/convene.jpg" class="caseimage"/></a>
-<a href="https://letsconvene.im">Convene</a> is a Matrix-based chat platform that supports secure and private communication and sharing. It was co-designed with human rights advocates and digital security trainers at <a href="https://rightsactionlab.org">Rights Action Lab</a>.
+<a href="https://keanu.im"><img src="projects/convene.jpg" class="caseimage"/></a>
+<a href="https://keanu.im">The Keanu Engine</a> is a Matrix-based chat platform that supports secure and private communication and sharing. It was co-designed with human rights advocates and digital security trainers at <a href="https://rightsactionlab.org">Rights Action Lab</a>.
 </div>
 <div style="clear:both;">
 <a href="https://likebutter.app"><img src="projects/butterlogo.svg" class="caseimage"/></a>

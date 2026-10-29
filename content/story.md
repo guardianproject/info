@@ -109,7 +109,7 @@ Over the years, Guardian Project's tools have been used in high-risk environment
 
 <div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">
 <h4 class="mb-2 font-bold">Journalists Under Pressure</h4>
-<p class="text-sm">Use <a href="https://orbot.app">Orbot</a> and <a href="https://letsconvene.im">Convene</a> to communicate safely in authoritarian regimes, while gathering verifiable evidence with <a href="https://proofmode.org">Proofmode</a>.</p>
+<p class="text-sm">Use <a href="https://orbot.app">Orbot</a> and <a href="https://keanu.im">Keanu Engine</a> to communicate safely in authoritarian regimes, while gathering verifiable evidence with <a href="https://proofmode.org">Proofmode</a>.</p>
 </div>
 
 <div class="rounded-lg border-l-4 border-primary bg-green-50 p-6">

@@ -15,11 +15,11 @@ cards:
       label: "Learn More"
       link: "https://proofmode.org"
   - image: "images/projects/convene.jpg"
-    title: "Convene"
+    title: "Keanu Engine"
     text: "A Matrix-based chat platform for secure and private communication and sharing, co-designed with human rights advocates and digital security trainers."
     button:
       label: "Learn More"
-      link: "https://letsconvene.im"
+      link: "https://keanu.im"
   - image: "images/projects/butterhw.jpg"
     title: "ButterBox"
     text: "An off-grid, delay-tolerant communication and sharing platform, providing connectivity and services when the internet is not available or not safe."

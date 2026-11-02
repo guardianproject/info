@@ -1,5 +1,5 @@
 ---
-title: "Project “Cider” (aka Onions on Apples): Bringing Tor Browser to iOS"
+title: "Brewing Onion Cider: Bringing a full Tor Browser to iOS"
 date: 2026-11-02
 author: Guardian Project Team
 categories:
@@ -17,13 +17,13 @@ tags:
   - privacy
   - circumvention
   - censorship
-images: ["/images/onionsonapples.png"]
+images: ["/images/onioncidervinegar.jpeg"]
 ---
 
-*Supporting the existing Tor on iOS ecosystem, while bringing Tor Browser to iOS.*
+*Announcing Project 'Cider': Our plan to support the existing Tor on iOS ecosystem, while bringing Tor Browser to iOS.*
 
-![Onions on Apples](/images/onionsonapples.png)
-<small>*Credit: Techno Fishy*</small>
+![Fermenting Onions in Apple Cider Vinegar](/images/onioncidervinegar.jpeg)
+<small>*Credit: Daily Knowledge*</small>
 
 In September of 2026, some of the Guardian Project team met, mostly in-person, in Lisbon, after the wonderful Global Gathering 2026 event, to discuss our strategic plan to bring [Tor Browser](https://www.torproject.org/) to Apple iOS devices. This work is supported by the funds we so gratefully received through the crowdfunding support from [Funding the Commons and Tor Project earlier this year](https://blog.torproject.org/funding-internet-freedom-together/). While we understand the technical work ahead, the regulatory and policy environment we are operating in is a bit more murky.
 

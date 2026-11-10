@@ -20,7 +20,7 @@ tags:
 images: ["/images/onioncidervinegar.jpeg"]
 ---
 
-*Announcing Project 'Cider': Our plan to support the existing Tor on iOS ecosystem, while bringing Tor Browser to iOS.*
+*Announcing Project 'Onion Cider': Our plan to support the existing Tor on iOS ecosystem, while bringing Tor Browser to iOS.*
 
 ![Fermenting Onions in Apple Cider Vinegar](/images/onioncidervinegar.jpeg)
 <small>*Credit: Daily Knowledge*</small>

@@ -31,6 +31,8 @@ Thanks to [new policy doors](https://developer.apple.com/support/apps-in-the-eu/
 
 Building on over ten years of work developing and shipping [Onion Browser](https://onionbrowser.com) and [Orbot for iOS](https://orbot.app), as well as being the original team who brought Tor Browser to Android ([Orfox!](https://blog.torproject.org/tor-heart-orbot-and-orfox/)), we are well positioned to tackle these questions and the technical work ahead. Our goal is simple: deliver a genuine Tor Browser experience powered by Mozilla's Firefox Gecko engine on iOS, with all of the improvements and patches from the Tor Project team, and our own experience with Onion Browser. By giving iOS users real browser engine choices beyond WebKit, we're making it easier than ever to enjoy strong privacy, reliable anti-censorship and circumvention capabilities, all within the trust and security that Apple devices are known for.
 
+**Update Nov 2026: We know have a (very very alpha) [Onion Cider Project Repository](https://github.com/tladesignz/onion-cider)**
+
 ## One Year Roadmap Plan
 
 Even with the uncertainty about which is the best path forward, we did put together a one year roadmap for this project, giving structure upon which we can make forward progress.
@@ -40,7 +42,7 @@ Even with the uncertainty about which is the best path forward, we did put toget
 * Continue to maintain and update Onion Browser and Orbot on iOS
 * Share our announcement and public plans about bringing full Tor Browser to iOS
 * Dig into tech challenges and research key questions to weigh our options
-  * The open route: [Reynard Browser for iOS](https://github.com/minh-ton/reynard-browser)
+  * The open route: [Reynard Browser for iOS](https://github.com/minh-ton/reynard-browser) - **Update Nov 20, 2026: We know have an [Onion-Cider Alpha Prototype Repository](https://github.com/tladesignz/onion-cider)** 
   * The Apple route: Gecko via iOS BrowserEngineKit through the [EU DMA and Japan alternative browser engine programs](https://developer.apple.com/support/alternative-browser-engines/)
 * Kick off a risk/threat analysis on Apple as a platform and distributor for this work
 * Set up a rough one year budget based on our initial goals and the funds we have raised/received
